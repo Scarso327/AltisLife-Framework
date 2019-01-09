@@ -40,7 +40,7 @@ _cfgPatches = []; _binConfigPatches = configFile >> "CfgPatches"; for "_i" from 
 
 1. Paste the results into a source code editor such as [Notepad++](https://notepad-plus-plus.org/) or [Atom](https://atom.io/). 
 2. Open SpyGlass/[fn_initSpy.sqf](https://github.com/AsYetUntitled/Framework/blob/master/Altis_Life.Altis/SpyGlass/fn_initSpy.sqf) and find `_patchList =`
-3. Edit the result that you got from executing the code to include this at the start: `["life_server",`
+3. Edit the result that you got from executing the code to include this at the start: `["ff_server",`
 4. Paste in your results and follow the existing structure.
 
 This should fix any issues with SpyGlass. If you continue to experience issues then please see [contact on Contributing to AsYetUntitled](https://github.com/AsYetUntitled/Framework/blob/master/.github/CONTRIBUTING.md#contact). 

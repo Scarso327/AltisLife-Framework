@@ -5,10 +5,20 @@
 #define BANK life_atmbank
 #define GANG_FUNDS group player getVariable ["gang_bank",0];
 
+// Functions
+#define LIFE(func) life_fnc_##func // Life Functions...
+#define DB(func) SOCK_fnc_##func // Session Functions..
+#define SPY(func) SPY_fnc_##func // Spyglass Functions..
+#define FF(func) FF_fnc_##func // Custom "FreeFlight" Functions..
+
 //RemoteExec Macros
 #define RSERV 2 //Only server
 #define RCLIENT -2 //Except server
 #define RANY 0 //Global
+
+// Directories
+#define ICON(file) format["data\icons\%1", file]
+#define TEXTURE(file) format["data\textures\%1", file]
 
 //Scripting Macros
 #define CONST(var1,var2) var1 = compileFinal (if (var2 isEqualType "") then {var2} else {str(var2)})

@@ -37,14 +37,14 @@ _near_units = [];
     };
 } forEach _near_units;
 
-_mstatus ctrlSetStructuredText parseText format ["<img size='1.3' image='icons\ico_bank.paa'/> <t size='0.8px'>$%1</t><br/><img size='1.2' image='icons\ico_money.paa'/> <t size='0.8'>$%2</t>",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+_mstatus ctrlSetStructuredText parseText format ["<img size='1.3' image='data\icons\ico_bank.paa'/> <t size='0.8px'>$%1</t><br/><img size='1.2' image='data\icons\ico_money.paa'/> <t size='0.8'>$%2</t>",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
 ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 
 {
     if (ITEM_VALUE(configName _x) > 0) then {
         _inv lbAdd format ["%2 [x%1]",ITEM_VALUE(configName _x),localize (getText(_x >> "displayName"))];
         _inv lbSetData [(lbSize _inv)-1,configName _x];
-        _icon = M_CONFIG(getText,"VirtualItems",configName _x,"icon");
+        _icon = ICON(M_CONFIG(getText,"VirtualItems",configName _x,"icon"));
         if (!(_icon isEqualTo "")) then {
             _inv lbSetPicture [(lbSize _inv)-1,_icon];
         };

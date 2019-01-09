@@ -7,7 +7,7 @@ overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the ov
 #include "config\Config_Master.hpp"
 
 class CfgServer {
-    DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
+    DatabaseName = "FF_DB"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
     DebugMode = 0; //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled)
     HeadlessSupport = 0; //Enable/Disable Headless client support. Default: 1 (1 = Enabled / 0 = Disabled)
     /*
@@ -141,7 +141,7 @@ class CfgNotifications {
 
     class TextMessage {
         title = "$STR_TextMessage_Title";
-        iconPicture = "icons\ico_messageNew.paa";
+        iconPicture = "data\icons\ico_messageNew.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -149,7 +149,7 @@ class CfgNotifications {
 
     class PoliceDispatch {
         title = "$STR_PoliceDispatch_Title";
-        iconPicture = "icons\ico_messagePolice.paa";
+        iconPicture = "data\icons\ico_messagePolice.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -157,7 +157,7 @@ class CfgNotifications {
 
     class AdminDispatch {
         title = "$STR_AdminDispatch_Title";
-        iconPicture = "icons\ico_messageAdmin.paa";
+        iconPicture = "data\icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -165,7 +165,7 @@ class CfgNotifications {
 
     class AdminMessage {
         title = "$STR_AdminMessage_Title";
-        iconPicture = "icons\ico_messageAdmin.paa";
+        iconPicture = "data\icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
         priority = 5;

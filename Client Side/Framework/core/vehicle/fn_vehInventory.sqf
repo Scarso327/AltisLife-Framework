@@ -30,7 +30,7 @@ if (count _data isEqualTo 0) then {_veh setVariable ["Trunk",[[],0],true]; _data
     if (_val > 0) then {
         _pInv lbAdd format ["[%1] - %2",_val,localize (getText(_x >> "displayName"))];
         _pInv lbSetData [(lbSize _pInv)-1,configName _x];
-        _icon = (getText(_x >> "icon"));
+        _icon = ICON((getText(_x >> "icon")));
         if (!(_icon isEqualTo "")) then {
             _pInv lbSetPicture [(lbSize _pInv)-1,_icon];
         };
@@ -45,7 +45,7 @@ if (count _data isEqualTo 0) then {_veh setVariable ["Trunk",[[],0],true]; _data
     if (_val > 0) then {
         _tInv lbAdd format ["[%1] - %2",_val,localize _name];
         _tInv lbSetData [(lbSize _tInv)-1,(_x select 0)];
-        _icon = M_CONFIG(getText,"VirtualItems",(_x select 0),"icon");
+        _icon = ICON(M_CONFIG(getText,"VirtualItems",(_x select 0),"icon"));
         if (!(_icon isEqualTo "")) then {
             _tInv lbSetPicture [(lbSize _tInv)-1,_icon];
         };

@@ -1161,3 +1161,17 @@ class Life_RscToolbox {
     font = "RobotoCondensed";
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 };
+
+class FF_RscProgress {
+    type = 8;
+    style = 0;
+    x = 0.344;
+    y = 0.619;
+    w = 0.313726;
+    h = 0.0261438;
+    texture = "";
+    shadow = 2;
+    colorFrame[] = {0, 0, 0, 0};
+    colorBackground[] = {0, 0, 0, 0.5};
+    colorBar[] =  {0, 0, 0, 0.5};
+};

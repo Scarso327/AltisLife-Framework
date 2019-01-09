@@ -53,8 +53,8 @@
 #define LIFE_SETTINGS(TYPE,SETTING) TYPE(missionConfigFile >> "CfgSettings" >> SETTING)
 
 //UI Macros
-#define LIFEdisplay (uiNamespace getVariable ["playerHUD",displayNull])
-#define LIFEctrl(ctrl) ((uiNamespace getVariable ["playerHUD",displayNull]) displayCtrl ctrl)
+#define LIFEdisplay (uiNamespace getVariable ["RscPlayerHUD",displayNull])
+#define LIFEctrl(ctrl) ((uiNamespace getVariable ["RscPlayerHUD",displayNull]) displayCtrl ctrl)
 
 //SpyGlass Macros
 #define SPYGLASS_END \

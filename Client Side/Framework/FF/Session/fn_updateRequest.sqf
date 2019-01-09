@@ -42,3 +42,5 @@ if (life_HC_isActive) then {
 } else {
     _packet remoteExecCall ["DB_fnc_updateRequest",RSERV];
 };
+
+[] call life_fnc_hudUpdate;

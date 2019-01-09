@@ -2,6 +2,7 @@ Added:
     Intro Text (Scarso)
 
 Updated:
+    Player HUD (Scarso)
     Backend File Structure (Scarso)
 
 Removed:

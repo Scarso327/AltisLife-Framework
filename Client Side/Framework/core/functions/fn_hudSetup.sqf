@@ -8,7 +8,7 @@
 */
 disableSerialization;
 
-cutRsc ["playerHUD", "PLAIN", 2, false];
+cutRsc ["RscPlayerHUD", "PLAIN", 2, false];
 [] call life_fnc_hudUpdate;
 
 [] spawn
@@ -16,7 +16,8 @@ cutRsc ["playerHUD", "PLAIN", 2, false];
     private ["_dam"];
     for "_i" from 0 to 1 step 0 do {
         _dam = damage player;
-        waitUntil {!((damage player) isEqualTo _dam)};
+        _money = CASH;
+        waitUntil {!((damage player) isEqualTo _dam) || !(CASH isEqualTo _money)};
         [] call life_fnc_hudUpdate;
     };
 };

@@ -30,49 +30,49 @@ class CfgSounds {
     sounds[] = {};
     class sirenLong {
         name = "sirenLong";
-        sound[] = {"\sounds\sirenLong.ogg", 1.0, 1};
+        sound[] = {"\data\sounds\sirenLong.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class medicSiren {
         name = "medicSiren";
-        sound[] = {"\sounds\medicSiren.ogg", 1.0, 1};
+        sound[] = {"\data\sounds\medicSiren.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class tazerSound {
         name = "tazerSound";
-        sound[] = {"\sounds\tazer.ogg", 0.5, 1};
+        sound[] = {"\data\sounds\tazer.ogg", 0.5, 1};
         titles[] = {};
     };
 
     class flashbang {
         name = "flashbang";
-        sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
+        sound[] = {"\data\sounds\flashbang.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class mining {
         name = "mining";
-        sound[] = {"\sounds\mining.ogg", 1.0, 1};
+        sound[] = {"\data\sounds\mining.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class harvest {
         name = "harvest";
-        sound[] = {"\sounds\harvest.ogg", 1.0, 1};
+        sound[] = {"\data\sounds\harvest.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class lockCarSound {
         name = "lockCarSound";
-        sound[] = {"\sounds\carLock.ogg", 1.0, 1};
+        sound[] = {"\data\sounds\carLock.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class unlockCarSound {
         name = "unlockCarSound";
-        sound[] = {"\sounds\carUnlock.ogg", 0.75, 1};
+        sound[] = {"\data\sounds\carUnlock.ogg", 0.75, 1};
         titles[] = {};
     };
 };

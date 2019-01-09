@@ -1,4 +1,4 @@
-#include "..\script_macros.hpp"
+#include "..\..\..\script_macros.hpp"
 /*
     File: fn_initMedic.sqf
     Author: Bryan "Tonic" Boardwine

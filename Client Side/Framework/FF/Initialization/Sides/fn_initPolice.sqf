@@ -1,4 +1,4 @@
-#include "..\script_macros.hpp"
+#include "..\..\..\script_macros.hpp"
 /*
     File: fn_initCop.sqf
     Author: Bryan "Tonic" Boardwine

@@ -1,3 +1,4 @@
+#include "..\..\script_macros.hpp"
 /*
     File: fn_spawnConfirm.sqf
     Author: Bryan "Tonic" Boardwine
@@ -56,7 +57,7 @@ if (life_spawn_point isEqualTo []) then {
 
 if (life_firstSpawn) then {
     life_firstSpawn = false;
-    [] call life_fnc_welcomeNotification;
+    [] call FF(welcomeNotification);
 };
 [] call life_fnc_playerSkins;
 [] call life_fnc_hudSetup;

@@ -1,6 +1,6 @@
-#include "..\script_macros.hpp"
+#include "..\..\script_macros.hpp"
 /*
-    File: init.sqf
+    File: fn_Initialization.sqf
     Author: Bryan "Tonic" Boardwine
 
     Description:
@@ -28,11 +28,11 @@ diag_log "::Life Client:: Initialization Variables";
 
 diag_log "::Life Client:: Variables initialized";
 diag_log "::Life Client:: Setting up Eventhandlers";
-[] call life_fnc_setupEVH;
+[] call FF(setupEVH);
 
 diag_log "::Life Client:: Eventhandlers completed";
 diag_log "::Life Client:: Setting up user actions";
-[] call life_fnc_setupActions;
+[] call FF(setupActions);
 
 diag_log "::Life Client:: User actions completed";
 diag_log "::Life Client:: Waiting for server functions to transfer..";
@@ -52,13 +52,13 @@ if (life_server_extDB_notLoaded) exitWith {
 };
 
 waitUntil {life_server_isReady};
-[] call SOCK_fnc_dataQuery;
+[] call DB(dataQuery);
 waitUntil {life_session_completed};
 0 cutText[localize "STR_Init_ClientFinish","BLACK FADED"];
 0 cutFadeOut 9999999;
 
 //diag_log "::Life Client:: Group Base Execution";
-[] spawn life_fnc_escInterupt;
+[] spawn LIFE(escInterupt);
 
 //Set bank amount for new players
 switch (playerSide) do {
@@ -75,17 +75,17 @@ switch (playerSide) do {
 
 switch (playerSide) do {
     case west: {
-        _handle = [] spawn life_fnc_initCop;
+        _handle = [] spawn FF(initPolice);
         waitUntil {scriptDone _handle};
     };
     case civilian: {
         //Initialize Civilian Settings
-        _handle = [] spawn life_fnc_initCiv;
+        _handle = [] spawn FF(initCivilian);
         waitUntil {scriptDone _handle};
     };
     case independent: {
         //Initialize Medics and blah
-        _handle = [] spawn life_fnc_initMedic;
+        _handle = [] spawn FF(initMedic);
         waitUntil {scriptDone _handle};
     };
 };
@@ -106,7 +106,7 @@ diag_log "Display 46 Found";
 
 [player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];
 0 cutText ["","BLACK IN"];
-[] call life_fnc_hudSetup;
+[] call LIFE(hudSetup);
 
 /* Set up frame-by-frame handlers */
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
@@ -139,7 +139,7 @@ CONSTVAR(life_paycheck); //Make the paycheck static.
 if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 0) then {player enableFatigue false;};
 
 if (LIFE_SETTINGS(getNumber,"pump_service") isEqualTo 1) then {
-    [] execVM "core\fn_setupStationService.sqf";
+    [] execVM "FF\Initialization\Setup\fn_setupStationService.sqf";
 };
 
 /*

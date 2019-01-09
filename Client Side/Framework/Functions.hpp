@@ -21,18 +21,34 @@ class SpyGlass {
     };
 };
 
+class FF_Core {
+    tag = "FF";
+
+    class Master_Directory {
+        file = "FF";
+        class welcomeNotification {};
+    };
+
+    class Initialization_Sides {
+        file = "FF\Initialization\Sides";
+        class initCivilian {};
+        class initPolice {};
+        class initMedic {};
+    };
+
+    class Initialization_Setup {
+        file = "FF\Initialization\Setup";
+        class setupActions {};
+        class setupEVH {};
+    };
+};
+
 class Life_Client_Core {
     tag = "life";
 
     class Master_Directory {
         file = "core";
-        class initCiv {};
-        class initCop {};
-        class initMedic {};
-        class setupActions {};
-        class setupEVH {};
         class survival {};
-        class welcomeNotification {};
     };
 
     class Actions {

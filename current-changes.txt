@@ -1,7 +1,9 @@
-
+Added:
+    Intro Text (Scarso)
 
 Updated:
     Backend File Structure (Scarso)
 
-
-
+Removed:
+    Welcome Notification Screen (Scarso)
+        Replaced by Intro Text

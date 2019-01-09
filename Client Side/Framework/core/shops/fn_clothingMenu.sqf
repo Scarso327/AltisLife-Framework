@@ -14,11 +14,11 @@ if (_shop isEqualTo "") exitWith {};
 if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"];};
 
 /* License check & config validation */
-if !(isClass(missionConfigFile >> "Clothing" >> _shop)) exitWith {}; //Bad config entry.
+if !(isClass(missionConfigFile >> "CfgClothing" >> _shop)) exitWith {}; //Bad config entry.
 
-private _shopTitle = M_CONFIG(getText,"Clothing",_shop,"title");
-private _shopSide = M_CONFIG(getText,"Clothing",_shop,"side");
-private _conditions = M_CONFIG(getText,"Clothing",_shop,"conditions");
+private _shopTitle = M_CONFIG(getText,"CfgClothing",_shop,"title");
+private _shopSide = M_CONFIG(getText,"CfgClothing",_shop,"side");
+private _conditions = M_CONFIG(getText,"CfgClothing",_shop,"conditions");
 
 private _exit = false;
 
@@ -145,9 +145,9 @@ if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 1) then {
 life_clothing_store = _shop;
 
 /* Store license check */
-if (isClass(missionConfigFile >> "Licenses" >> life_clothing_store)) then {
-    _flag = M_CONFIG(getText,"Licenses",life_clothing_store,"side");
-    _displayName = M_CONFIG(getText,"Licenses",life_clothing_store,"displayName");
+if (isClass(missionConfigFile >> "CfgLicenses" >> life_clothing_store)) then {
+    _flag = M_CONFIG(getText,"CfgLicenses",life_clothing_store,"side");
+    _displayName = M_CONFIG(getText,"CfgLicenses",life_clothing_store,"displayName");
     if !(LICENSE_VALUE(life_clothing_store,_flag)) exitWith {
         hint format [localize "STR_Shop_YouNeed",localize _displayName];
         closeDialog 0;

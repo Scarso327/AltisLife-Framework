@@ -23,7 +23,7 @@ if (dialog) exitWith {};
 if (_shop isEqualTo "") exitWith {};
 if (!(_sideCheck isEqualTo sideUnknown) && {!(playerSide isEqualTo _sideCheck)}) exitWith {hint localize "STR_Shop_Veh_NotAllowed"};
 
-private _conditions = M_CONFIG(getText,"CarShops",_shop,"conditions");
+private _conditions = M_CONFIG(getText,"CfgVehicleStores",_shop,"conditions");
 if !([_conditions] call life_fnc_levelCheck) exitWith {hint localize "STR_Shop_Veh_NotAllowed"};
 
 if (LIFE_SETTINGS(getNumber,"vehicleShop_3D") isEqualTo 1) then {
@@ -42,7 +42,7 @@ if (_disableBuy) then {
 };
 
 //Fetch the shop config.
-_vehicleList = M_CONFIG(getArray,"CarShops",_shop,"vehicles");
+_vehicleList = M_CONFIG(getArray,"CfgVehicleStores",_shop,"vehicles");
 
 private _control = CONTROL(2300,2302);
 lbClear _control; //Flush the list.

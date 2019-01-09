@@ -46,7 +46,7 @@ class FSM
     class Split
     {
       name = "Split";
-      init = /*%FSM<STATEINIT""">*/"systemChat format [localize ""STR_FSM_Paycheck"",(getNumber(missionConfigFile >> ""Life_Settings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
+      init = /*%FSM<STATEINIT""">*/"systemChat format [localize ""STR_FSM_Paycheck"",(getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -56,7 +56,7 @@ class FSM
           priority = 0.000000;
           to="Split";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"(time - _lastcheck) > ((getNumber(missionConfigFile >> ""Life_Settings"" >> ""paycheck_period"")) * 60)"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _lastcheck) > ((getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period"")) * 60)"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"if (!alive player) then {" \n
            "    systemChat localize ""STR_FSM_MissedPay"";" \n
            "} else {" \n

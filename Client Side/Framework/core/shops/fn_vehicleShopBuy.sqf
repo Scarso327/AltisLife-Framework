@@ -15,8 +15,8 @@ life_action_delay = time;
 
 private _className = lbData[2302,(lbCurSel 2302)];
 private _vIndex = lbValue[2302,(lbCurSel 2302)];
-private _vehicleList = M_CONFIG(getArray,"CarShops",(life_veh_shop select 0),"vehicles");
-private _shopSide = M_CONFIG(getText,"CarShops",(life_veh_shop select 0),"side");
+private _vehicleList = M_CONFIG(getArray,"CfgVehicleStores",(life_veh_shop select 0),"vehicles");
+private _shopSide = M_CONFIG(getText,"CfgVehicleStores",(life_veh_shop select 0),"side");
 
 
 private _initalPrice = M_CONFIG(getNumber,"LifeCfgVehicles",_className,"price");

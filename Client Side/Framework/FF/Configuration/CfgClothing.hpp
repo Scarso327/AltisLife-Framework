@@ -14,7 +14,7 @@
 *   Backpacks/remaining classnames can be found here (TIP: Search page for "pack"): https://community.bistudio.com/wiki/Arma_3_CfgVehicles_EMPTY
 *
 */
-class Clothing {
+class CfgClothing {
     class bruce {
         title = "STR_Shops_C_Bruce";
         conditions = "";

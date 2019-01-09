@@ -35,17 +35,17 @@ if (count _data isEqualTo 0) then {_veh setVariable ["Trunk",[[],0],true]; _data
             _pInv lbSetPicture [(lbSize _pInv)-1,_icon];
         };
     };
-} forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+} forEach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
 //Trunk Inventory Items
 {
-    _name = M_CONFIG(getText,"VirtualItems",(_x select 0),"displayName");
+    _name = M_CONFIG(getText,"CfgItems",(_x select 0),"displayName");
     _val = (_x select 1);
 
     if (_val > 0) then {
         _tInv lbAdd format ["[%1] - %2",_val,localize _name];
         _tInv lbSetData [(lbSize _tInv)-1,(_x select 0)];
-        _icon = ICON(M_CONFIG(getText,"VirtualItems",(_x select 0),"icon"));
+        _icon = ICON(M_CONFIG(getText,"CfgItems",(_x select 0),"icon"));
         if (!(_icon isEqualTo "")) then {
             _tInv lbSetPicture [(lbSize _tInv)-1,_icon];
         };

@@ -17,9 +17,9 @@ _priceTag = CONTROL(38400,38404);
 
 if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
     _item = CONTROL_DATAI(_control,_index);
-    _itemArray = M_CONFIG(getArray,"WeaponShops",_shop,"items");
-    _itemArray append M_CONFIG(getArray,"WeaponShops",_shop,"mags");
-    _itemArray append M_CONFIG(getArray,"WeaponShops",_shop,"accs");
+    _itemArray = M_CONFIG(getArray,"CfgWeapons",_shop,"items");
+    _itemArray append M_CONFIG(getArray,"CfgWeapons",_shop,"mags");
+    _itemArray append M_CONFIG(getArray,"CfgWeapons",_shop,"accs");
     _item = [_item,_itemArray] call TON_fnc_index;
     _price = ((_itemArray select _item) select 3);
     _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#8cff9b'>$%1</t></t>",[(_price)] call life_fnc_numberText];
@@ -42,7 +42,7 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
                         _var = _x select 0;
                         _count = {_x == _var} count _itemArray;
                         if (_count > 0) exitWith {_bool = true};
-                    } forEach M_CONFIG(getArray,"WeaponShops",_shop,"mags");
+                    } forEach M_CONFIG(getArray,"CfgWeapons",_shop,"mags");
                     if (_bool) then {
                         ((findDisplay 38400) displayCtrl 38406) ctrlEnable true;
                     } else {
@@ -86,7 +86,7 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
                         _var = _x select 0;
                         _count = {_x == _var} count _itemArray;
                         if (_count > 0) exitWith {_bool = true};
-                    } forEach M_CONFIG(getArray,"WeaponShops",_shop,"accs");
+                    } forEach M_CONFIG(getArray,"CfgWeapons",_shop,"accs");
                     if (_bool) then {
                         ((findDisplay 38400) displayCtrl 38407) ctrlEnable true;
                     } else {

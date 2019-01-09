@@ -89,7 +89,7 @@ life_vehicles = [];
 //Setup variable inv vars.
 {
     missionNamespace setVariable [ITEM_VARNAME(configName _x), 0];
-} forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+} forEach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
 /* Setup the BLAH! */
 {
@@ -97,4 +97,4 @@ life_vehicles = [];
     _sideFlag = getText(_x >> "side");
 
     missionNamespace setVariable [LICENSE_VARNAME(_varName,_sideFlag), false];
-} forEach ("true" configClasses (missionConfigFile >> "Licenses"));
+} forEach ("true" configClasses (missionConfigFile >> "CfgLicenses"));

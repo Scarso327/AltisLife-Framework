@@ -15,12 +15,12 @@ _type = [_this,3,"",[""]] call BIS_fnc_param;
 if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10)) exitWith {};
 life_action_inUse = true;//Lock out other actions during processing.
 
-if (isClass (missionConfigFile >> "ProcessAction" >> _type)) then {
+if (isClass (missionConfigFile >> "CfgProcess" >> _type)) then {
     _filter = false;
-    _materialsRequired = M_CONFIG(getArray,"ProcessAction",_type,"MaterialsReq");
-    _materialsGiven = M_CONFIG(getArray,"ProcessAction",_type,"MaterialsGive");
-    _noLicenseCost = M_CONFIG(getNumber,"ProcessAction",_type,"NoLicenseCost");
-    _text = M_CONFIG(getText,"ProcessAction",_type,"Text");
+    _materialsRequired = M_CONFIG(getArray,"CfgProcess",_type,"MaterialsReq");
+    _materialsGiven = M_CONFIG(getArray,"CfgProcess",_type,"MaterialsGive");
+    _noLicenseCost = M_CONFIG(getNumber,"CfgProcess",_type,"NoLicenseCost");
+    _text = M_CONFIG(getText,"ProceCfgProcessssAction",_type,"Text");
 } else {_filter = true;};
 
 if (_filter) exitWith {life_action_inUse = false;};

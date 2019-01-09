@@ -20,12 +20,12 @@ _illegal = 0;
 _inv = "";
 if (count _invs > 0) then {
     {
-        _displayName = M_CONFIG(getText,"VirtualItems",(_x select 0),"displayName");
+        _displayName = M_CONFIG(getText,"CfgItems",(_x select 0),"displayName");
         _inv = _inv + format ["%1 %2<br/>",(_x select 1),(localize _displayName)];
-        _price = M_CONFIG(getNumber,"VirtualItems",(_x select 0),"sellPrice");
-        if (!isNull (missionConfigFile >> "VirtualItems" >> (_x select 0) >> "processedItem")) then {
-            _processed = M_CONFIG(getText,"VirtualItems",(_x select 0),"processedItem");
-            _price = M_CONFIG(getNumber,"VirtualItems",_processed,"sellPrice");
+        _price = M_CONFIG(getNumber,"CfgItems",(_x select 0),"sellPrice");
+        if (!isNull (missionConfigFile >> "CfgItems" >> (_x select 0) >> "processedItem")) then {
+            _processed = M_CONFIG(getText,"CfgItems",(_x select 0),"processedItem");
+            _price = M_CONFIG(getNumber,"CfgItems",_processed,"sellPrice");
         };
 
         if (!(_price isEqualTo -1)) then {

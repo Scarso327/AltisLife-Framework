@@ -16,7 +16,7 @@
         default: {}
 */
 
-class Housing {
+class CfgHouses {
   
     class Altis {
 

@@ -27,14 +27,14 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
     } forEach _queryResult;
 };
 
-_blacklistedHouses = "count (getArray (_x >> 'garageBlacklists')) > 0" configClasses (missionconfigFile >> "Housing" >> worldName);
-_blacklistedGarages = "count (getArray (_x >> 'garageBlacklists')) > 0" configClasses (missionconfigFile >> "Garages" >> worldName);
+_blacklistedHouses = "count (getArray (_x >> 'garageBlacklists')) > 0" configClasses (missionconfigFile >> "CfgHouses" >> worldName);
+_blacklistedGarages = "count (getArray (_x >> 'garageBlacklists')) > 0" configClasses (missionconfigFile >> "CfgGarages" >> worldName);
 _blacklistedHouses = _blacklistedHouses apply {configName _x};
 _blacklistedGarages = _blacklistedGarages apply {configName _x};
 
 for "_i" from 0 to count(_blacklistedHouses)-1 do {
     _className = _blacklistedHouses select _i;
-    _positions = getArray(missionConfigFile >> "Housing" >> worldName >> _className >> "garageBlacklists");
+    _positions = getArray(missionConfigFile >> "CfgHouses" >> worldName >> _className >> "garageBlacklists");
     {
         _obj = nearestObject [_x,_className];
         if (isNull _obj) then {
@@ -45,7 +45,7 @@ for "_i" from 0 to count(_blacklistedHouses)-1 do {
 
 for "_i" from 0 to count(_blacklistedGarages)-1 do {
     _className = _blacklistedGarages select _i;
-    _positions = getArray(missionConfigFile >> "Garages" >> worldName >> _className >> "garageBlacklists");
+    _positions = getArray(missionConfigFile >> "CfgGarages" >> worldName >> _className >> "garageBlacklists");
     {
         _obj = nearestObject [_x,_className];
         if (isNull _obj) then {

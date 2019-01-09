@@ -1,5 +1,5 @@
 #include "..\script_macros.hpp"
-#define SPY_SETTINGS(TYPE,SETTING) TYPE(missionConfigFile >> "SpyGlass" >> SETTING)
+#define SPY_SETTINGS(TYPE,SETTING) TYPE(missionConfigFile >> "CfgSpyGlass" >> SETTING)
 /*
     File: fn_variableCheck.sqf
     Author:

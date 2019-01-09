@@ -9,7 +9,7 @@
 private ["_type","_index","_price","_amount","_name"];
 if ((lbCurSel 2402) isEqualTo -1) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];
-_price = M_CONFIG(getNumber,"VirtualItems",_type,"sellPrice");
+_price = M_CONFIG(getNumber,"CfgItems",_type,"sellPrice");
 if (_price isEqualTo -1) exitWith {};
 
 _amount = ctrlText 2405;
@@ -20,7 +20,7 @@ if ((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDe
 life_action_delay = time;
 
 _price = (_price * _amount);
-_name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
+_name = M_CONFIG(getText,"CfgItems",_type,"displayName");
 if ([false,_type,_amount] call life_fnc_handleInv) then {
     hint format [localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText];
     CASH = CASH + _price;

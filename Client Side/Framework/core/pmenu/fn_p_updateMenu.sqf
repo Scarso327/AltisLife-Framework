@@ -44,12 +44,12 @@ ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
     if (ITEM_VALUE(configName _x) > 0) then {
         _inv lbAdd format ["%2 [x%1]",ITEM_VALUE(configName _x),localize (getText(_x >> "displayName"))];
         _inv lbSetData [(lbSize _inv)-1,configName _x];
-        _icon = ICON(M_CONFIG(getText,"VirtualItems",configName _x,"icon"));
+        _icon = ICON(M_CONFIG(getText,"CfgItems",configName _x,"icon"));
         if (!(_icon isEqualTo "")) then {
             _inv lbSetPicture [(lbSize _inv)-1,_icon];
         };
     };
-} forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+} forEach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
 {
     _displayName = getText(_x >> "displayName");
@@ -57,7 +57,7 @@ ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
     if (LICENSE_VALUE(configName _x,_side)) then {
         _struct = _struct + format ["%1<br/>",localize _displayName];
     };
-} forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_side] configClasses (missionConfigFile >> "Licenses"));
+} forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_side] configClasses (missionConfigFile >> "CfgLicenses"));
 
 if (_struct isEqualTo "") then {
     _struct = "No Licenses";

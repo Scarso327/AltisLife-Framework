@@ -4,7 +4,7 @@
 /*
     Master settings for various features and functionality
 */
-class Life_Settings {
+class CfgSettings {
 /* Logging and Security Settings*/
     /* Security Settings */
     spyGlass_toggle = true; //Spyglass On/Off Toggle --> True = On & False = Off
@@ -218,13 +218,14 @@ class Life_Settings {
     
 };
 
-#include "Config_Clothing.hpp"
-#include "Config_Licenses.hpp"
-#include "Config_Vehicles.hpp"
-#include "Config_vItems.hpp"
-#include "Config_Weapons.hpp"
-#include "Config_Gather.hpp"
-#include "Config_SpawnPoints.hpp"
-#include "Config_Process.hpp"
-#include "Config_Housing.hpp"
-#include "Config_Garages.hpp"
+#include "CfgClothing.hpp"
+#include "CfgLicenses.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgItems.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgGather.hpp"
+#include "CfgSpawnPoints.hpp"
+#include "CfgProcess.hpp"
+#include "CfgHouses.hpp"
+#include "CfgGarages.hpp"
+#include "CfgShops.hpp"

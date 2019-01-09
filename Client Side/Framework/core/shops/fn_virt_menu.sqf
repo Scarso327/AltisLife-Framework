@@ -15,7 +15,7 @@ params [
 
 if (isNull _shopNPC || {_shopType isEqualTo ""}) exitWith {};
 
-private _shopSide = M_CONFIG(getText,"VirtualShops",_shopType,"side");
+private _shopSide = M_CONFIG(getText,"CfgShops",_shopType,"side");
 
 life_shop_type = _shopType;
 life_shop_npc = _shopNPC;
@@ -29,7 +29,7 @@ if !(_shopSide isEqualTo "") then {
 
 if (_exit) exitWith {};
 
-private _conditions = M_CONFIG(getText,"VirtualShops",_shopType,"conditions");
+private _conditions = M_CONFIG(getText,"CfgShops",_shopType,"conditions");
 
 if !([_conditions] call life_fnc_levelCheck) exitWith {hint localize "STR_Shop_Veh_NotAllowed";};
 

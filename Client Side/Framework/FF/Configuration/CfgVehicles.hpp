@@ -1,4 +1,4 @@
-class CarShops {
+class CfgVehicleStores {
     /*
     *    ARRAY FORMAT:
     *        0: STRING (Classname)

@@ -8,7 +8,7 @@
         default: {}
 */
 
-class Garages {
+class CfgGarages {
 
     class Altis {
 

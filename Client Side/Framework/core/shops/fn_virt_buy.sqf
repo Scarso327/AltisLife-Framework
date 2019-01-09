@@ -24,7 +24,7 @@ if ((_price * _amount) > CASH && {!isNil "_hideout" && {!isNil {group player get
 if ((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDelay";};
 life_action_delay = time;
 
-_name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
+_name = M_CONFIG(getText,"CfgItems",_type,"displayName");
 
 if ([true,_type,_amount] call life_fnc_handleInv) then {
     if (!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") >= _price}) then {

@@ -25,7 +25,7 @@ if (!(_diff isEqualTo (parseNumber _val))) then {
 } else {
     if ([true,_item,(parseNumber _val)] call life_fnc_handleInv) then {
         private "_type";
-        _type = M_CONFIG(getText,"VirtualItems",_item,"displayName");
+        _type = M_CONFIG(getText,"CfgItems",_item,"displayName");
         hint format [localize "STR_NOTF_GivenItem",_from getVariable ["realname",name _from],_val,(localize _type)];
     } else {
         [_from,_item,_val,_unit,false] remoteExecCall ["life_fnc_giveDiff",_from];

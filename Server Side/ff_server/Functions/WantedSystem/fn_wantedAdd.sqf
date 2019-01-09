@@ -18,7 +18,7 @@ params [
 if (_uid isEqualTo "" || {_type isEqualTo ""} || {_name isEqualTo ""}) exitWith {}; //Bad data passed.
 
 //What is the crime?
-private _crimesConfig = getArray(missionConfigFile >> "Life_Settings" >> "crimes");
+private _crimesConfig = getArray(missionConfigFile >> "CfgSettings" >> "crimes");
 private _index = [_type,_crimesConfig] call TON_fnc_index;
 
 if (_index isEqualTo -1) exitWith {};

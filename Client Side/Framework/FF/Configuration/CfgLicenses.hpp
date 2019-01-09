@@ -6,7 +6,7 @@
 *        illegal = Illegal License
 *        side = side indicator
 */
-class Licenses {
+class CfgLicenses {
     //Civilian Licenses
     class driver {
         variable = "driver";

@@ -16,7 +16,7 @@
 *   };
 */
 
-class ProcessAction {
+class CfgProcess {
     class oil {
         MaterialsReq[] = {{"oil_unprocessed",1}};
         MaterialsGive[] = {{"oil_processed",1}};

@@ -19,7 +19,7 @@
 *    Item classnames can be found here: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Items
 *
 */
-class WeaponShops {
+class CfgWeapons {
     //Armory Shops
     class gun {
         name = "Billy Joe's Firearms";

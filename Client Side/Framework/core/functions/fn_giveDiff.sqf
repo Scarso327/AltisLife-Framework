@@ -13,7 +13,7 @@ _item = _this select 1;
 _val = _this select 2;
 _from = _this select 3;
 _bool = if (count _this > 4) then {true} else {false};
-_type = M_CONFIG(getText,"VirtualItems",_item,"displayName");
+_type = M_CONFIG(getText,"CfgItems",_item,"displayName");
 
 if (_bool) then {
     if ([true,_item,(parseNumber _val)] call life_fnc_handleInv) then {

@@ -7,9 +7,9 @@
     Something
 */
 
-private _shopTitle = M_CONFIG(getText,"WeaponShops",(_this select 3),"name");
-private _shopSide = M_CONFIG(getText,"WeaponShops",(_this select 3),"side");
-private _conditions = M_CONFIG(getText,"WeaponShops",(_this select 3),"conditions");
+private _shopTitle = M_CONFIG(getText,"CfgWeapons",(_this select 3),"name");
+private _shopSide = M_CONFIG(getText,"CfgWeapons",(_this select 3),"side");
+private _conditions = M_CONFIG(getText,"CfgWeapons",(_this select 3),"conditions");
 
 private _exit = false;
 if !(_shopSide isEqualTo "") then {
@@ -29,7 +29,7 @@ uiNamespace setVariable ["Magazine_Array",[]];
 uiNamespace setVariable ["Accessories_Array",[]];
 
 if !(createDialog "life_weapon_shop") exitWith {};
-if (!isClass(missionConfigFile >> "WeaponShops" >> (_this select 3))) exitWith {}; //Bad config entry.
+if (!isClass(missionConfigFile >> "CfgWeapons" >> (_this select 3))) exitWith {}; //Bad config entry.
 
 disableSerialization;
 

@@ -10,8 +10,8 @@ private _house = param [0,"",[""]];
 
 if (_house isEqualTo "") exitWith {[]}; 
 
-private _houseConfig = missionConfigFile >> "Housing" >> worldName >> _house; 
-private _garageConfig = missionConfigFile >> "Garages" >> worldName >> _house; 
+private _houseConfig = missionConfigFile >> "CfgHouses" >> worldName >> _house; 
+private _garageConfig = missionConfigFile >> "CfgGarages" >> worldName >> _house; 
 
 private _config = [_garageConfig,_houseConfig] select {isClass _x};
 

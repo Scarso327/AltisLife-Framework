@@ -13,7 +13,7 @@ if (isNull _cop) exitWith {}; //Bad entry
 _licenses = "";
 
 //Config entries for licenses that are civilian
-_licensesConfigs = "getText(_x >> 'side') isEqualTo 'civ'" configClasses (missionConfigFile >> "Licenses");
+_licensesConfigs = "getText(_x >> 'side') isEqualTo 'civ'" configClasses (missionConfigFile >> "CfgLicenses");
 
 {
     if (LICENSE_VALUE(configName _x,"civ")) then {

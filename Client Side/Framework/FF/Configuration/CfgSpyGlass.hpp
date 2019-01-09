@@ -1,4 +1,4 @@
-class SpyGlass {
+class CfgSpyGlass {
     civSlotNumber = 100;
     copSlotNumber = 19;
     medSlotNumber = 6;

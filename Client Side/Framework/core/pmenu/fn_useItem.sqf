@@ -78,9 +78,9 @@ switch (true) do {
     };
 
     case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","donuts","tbacon","peach"]): {
-        if (!(M_CONFIG(getNumber,"VirtualItems",_item,"edible") isEqualTo -1)) then {
+        if (!(M_CONFIG(getNumber,"CfgItems",_item,"edible") isEqualTo -1)) then {
             if ([false,_item,1] call life_fnc_handleInv) then {
-                _val = M_CONFIG(getNumber,"VirtualItems",_item,"edible");
+                _val = M_CONFIG(getNumber,"CfgItems",_item,"edible");
                 _sum = life_hunger + _val;
                 switch (true) do {
                     case (_val < 0 && _sum < 1): {life_hunger = 5;}; //This adds the ability to set the entry edible to a negative value and decrease the hunger without death

@@ -13,8 +13,8 @@ params [
 ];
 
 _className = typeOf _garageObj;
-private _houseConfig = missionConfigFile >> "Housing" >> worldName >> _className;
-private _garageConfig = missionConfigFile >> "Garages" >> worldName >> _className;
+private _houseConfig = missionConfigFile >> "CfgHouses" >> worldName >> _className;
+private _garageConfig = missionConfigFile >> "CfgGarages" >> worldName >> _className;
 
 private _config = [_garageConfig,_houseConfig] select {isClass _x};
 

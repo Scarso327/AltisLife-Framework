@@ -86,7 +86,7 @@ if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
         _profileName = [_profileQuery, 2] call HC_fnc_asyncCall;
         _profileName = _profileName select 0;
         {
-            _isIllegal = M_CONFIG(getNumber,"VirtualItems",_x select 0,"illegal");
+            _isIllegal = M_CONFIG(getNumber,"CfgItems",_x select 0,"illegal");
 
             _isIllegal = if (_isIllegal isEqualTo 1) then { true }    else { false };
 

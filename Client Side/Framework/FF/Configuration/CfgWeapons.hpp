@@ -114,6 +114,7 @@ class CfgWeapons {
             { "ItemCompass", "", 50, 25, "" },
             { "ItemWatch", "", 50, 25, "" },
             { "FirstAidKit", "", 150, 75, "" },
+            { "ToolKit", "", 2500, 1250, "" },
             { "NVGoggles", "", 2000, 1000, "" },
             { "Chemlight_red", "", 300, 150, "" },
             { "Chemlight_yellow", "", 300, 150, "" },
@@ -135,6 +136,7 @@ class CfgWeapons {
             { "ItemCompass", "", 250, 25, "" },
             { "ItemWatch", "", 250, 25, "" },
             { "FirstAidKit", "", 750, 75, "" },
+            { "ToolKit", "", 2500, 1250, "" },
             { "NVGoggles", "", 10000, 1000, "" },
             { "Chemlight_red", "", 1500, 150, "" },
             { "Chemlight_yellow", "", 1500, 150, "" },
@@ -154,6 +156,7 @@ class CfgWeapons {
             { "Binocular", "", 150, 75, "" },
             { "ItemGPS", "", 100, 50, "" },
             { "FirstAidKit", "", 150, 75, "" },
+            { "ToolKit", "", 2500, 1250, "" },
             { "NVGoggles", "", 2000, 1000, "" },
             { "HandGrenade_Stone", $STR_W_items_Flashbang, 1700, 850, "" },
             { "hgun_P07_snds_F", $STR_W_items_StunPistol, 2000, 1000, "" },
@@ -196,6 +199,7 @@ class CfgWeapons {
             { "ItemGPS", "", 100, 50, "" },
             { "Binocular", "", 150, 75, "" },
             { "FirstAidKit", "", 150, 75, "" },
+            { "ToolKit", "", 2500, 1250, "" },
             { "NVGoggles", "", 1200, 600, "" }
         };
         mags[] = {};

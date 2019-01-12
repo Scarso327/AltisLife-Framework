@@ -3,12 +3,18 @@ Added:
     Police Uniforms (Scarso)
         - Junior Uniform
         - Senior Uniform
+    Tool kits to Stores (Scarso)
+
+Changed:
+    Virtual Tool Kit - > Physical (Scarso)
+    You can repair vehicles without tool kit but it's slower (Scarso)
 
 Updated:
     Player HUD (Scarso)
     Police Clothing Store Uniforms (Scarso)
     Backend File Structure (Scarso)
-
+    
 Removed:
     Welcome Notification Screen (Scarso)
         Replaced by Intro Text
+    Virtual Tool kit (Scarso)

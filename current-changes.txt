@@ -8,7 +8,8 @@ Added:
 Changed:
     Virtual Tool Kit - > Physical (Scarso)
     You can repair vehicles without tool kit but it's slower (Scarso)
-
+    Store Conditional Checks (Scarso)
+    
 Updated:
     Player HUD (Scarso)
     Police Clothing Store Uniforms (Scarso)

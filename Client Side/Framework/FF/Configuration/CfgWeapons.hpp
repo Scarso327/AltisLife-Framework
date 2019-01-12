@@ -23,8 +23,11 @@ class CfgWeapons {
     //Armory Shops
     class gun {
         name = "Billy Joe's Firearms";
-        side = "civ";
-        conditions = "license_civ_gun";
+        requiredSide[] = { "Civilian" }; 
+		requiredWhitelist[] = {}; 
+		requiredAchievements[] = {}; 
+		requiredProfessions[] = {}; 
+		requiredLicenses[] = { "gun" }; 
         items[] = {
             { "hgun_Rook40_F", "", 6500, 3250, "" },
             { "hgun_Pistol_01_F", "", 7000, 3500, "" }, //Apex DLC
@@ -49,8 +52,11 @@ class CfgWeapons {
 
     class rebel {
         name = "Mohammed's Jihadi Shop";
-        side = "civ";
-        conditions = "license_civ_rebel";
+        requiredSide[] = { "Civilian" }; 
+		requiredWhitelist[] = {}; 
+		requiredAchievements[] = {}; 
+		requiredProfessions[] = {}; 
+		requiredLicenses[] = { "rebel" }; 
         items[] = {
             { "arifle_TRG20_F", "", 25000, 12500, "" },
             { "arifle_Katiba_F", "", 30000, 15000, "" },
@@ -82,8 +88,11 @@ class CfgWeapons {
 
     class gang {
         name = "Hideout Armament";
-        side = "civ";
-        conditions = "";
+        requiredSide[] = { "Civilian" }; 
+		requiredWhitelist[] = {}; 
+		requiredAchievements[] = {}; 
+		requiredProfessions[] = {}; 
+		requiredLicenses[] = {}; 
         items[] = {
             { "hgun_Rook40_F", "", 1500, 750, "" },
             { "hgun_Pistol_heavy_02_F", "", 2500, 1250, "" },
@@ -105,8 +114,11 @@ class CfgWeapons {
     //Basic Shops
     class genstore {
         name = "Altis General Store";
-        side = "civ";
-        conditions = "";
+        requiredSide[] = { "Police", "NHS", "Civilian" }; 
+		requiredWhitelist[] = {}; 
+		requiredAchievements[] = {}; 
+		requiredProfessions[] = {}; 
+		requiredLicenses[] = {}; 
         items[] = {
             { "Binocular", "", 150, 75, "" },
             { "ItemGPS", "", 100, 50, "" },
@@ -127,8 +139,11 @@ class CfgWeapons {
 
     class f_station_store {
         name = "Altis Fuel Station Store";
-        side = "";
-        conditions = "";
+        requiredSide[] = { "Police", "NHS", "Civilian" }; 
+		requiredWhitelist[] = {}; 
+		requiredAchievements[] = {}; 
+		requiredProfessions[] = {}; 
+		requiredLicenses[] = {}; 
         items[] = {
             { "Binocular", "", 750, 75, "" },
             { "ItemGPS", "", 500, 50, "" },
@@ -150,8 +165,11 @@ class CfgWeapons {
     //Cop Shops
     class cop_basic {
         name = "Altis Cop Shop";
-        side = "cop";
-        conditions = "";
+        requiredSide[] = { "Police" }; 
+		requiredWhitelist[] = {}; 
+		requiredAchievements[] = {}; 
+		requiredProfessions[] = {}; 
+		requiredLicenses[] = {}; 
         items[] = {
             { "Binocular", "", 150, 75, "" },
             { "ItemGPS", "", 100, 50, "" },
@@ -193,8 +211,11 @@ class CfgWeapons {
     //Medic Shops
     class med_basic {
         name = "store";
-        side = "med";
-        conditions = "";
+        requiredSide[] = { "NHS" }; 
+		requiredWhitelist[] = {}; 
+		requiredAchievements[] = {}; 
+		requiredProfessions[] = {}; 
+		requiredLicenses[] = {}; 
         items[] = {
             { "ItemGPS", "", 100, 50, "" },
             { "Binocular", "", 150, 75, "" },

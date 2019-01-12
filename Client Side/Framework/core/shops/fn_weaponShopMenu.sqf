@@ -8,19 +8,50 @@
 */
 
 private _shopTitle = M_CONFIG(getText,"CfgWeapons",(_this select 3),"name");
-private _shopSide = M_CONFIG(getText,"CfgWeapons",(_this select 3),"side");
-private _conditions = M_CONFIG(getText,"CfgWeapons",(_this select 3),"conditions");
+private _shopSides = M_CONFIG(getArray,"CfgWeapons",(_this select 3),"requiredSide");
+private _shopLicenses = M_CONFIG(getArray,"CfgWeapons",(_this select 3),"requiredLicenses");
+private _shopWhitelist = M_CONFIG(getArray,"CfgWeapons",(_this select 3),"requiredWhitelist");
 
-private _exit = false;
-if !(_shopSide isEqualTo "") then {
-    private _flag = switch (playerSide) do {case west: {"cop"}; case independent: {"med"}; default {"civ"};};
-    if !(_flag isEqualTo _shopSide) then {_exit = true;};
+// Check Sides
+private _sideMatch = false;
+{
+    private _side = switch (_x) do {case "Police": {west}; case "NHS" : {independent}; case "Civilian" : {civilian};};
+
+    if (side player == _side) exitWith {
+        _sideMatch = true;
+    };
+} forEach _shopSides;
+
+if (!_sideMatch) exitWith { hint format["You must be one of the following sides to use this store: %1", _shopSides]; };
+
+// Check Licenses
+private _hasLicense = true;
+if(count(_shopLicenses) > 0) then {
+    {
+        private _flag = M_CONFIG(getText,"Licenses",_x,"side");
+        if(!(LICENSE_VALUE(_x,_flag))) exitWith {_hasLicense = false;};
+    } forEach _shopLicenses;
 };
 
-if (_exit) exitWith {};
+if (!_hasLicense) exitWith { hint format["You must have the following licenses to use this store: %1", _shopLicenses]; };
 
-_exit = [_conditions] call life_fnc_levelCheck;
-if !(_exit) exitWith {hint localize "STR_Shop_Veh_NotAllowed";};
+// New Whitelist Check
+private _isWhitelisted = true; // Assume Whitelisted
+if(count(_shopWhitelist) > 0) then {
+    {
+        _type = _x select 0; // Required Type Example: life_coplevel
+        _levelReq = _x select 1; // Required Minimum Level
+
+        _myLevel = GVAR_MNS _type;
+	    if(typeName _myLevel == typeName {}) then {_myLevel = FETCH_CONST(_myLevel);};
+
+        if(!(_myLevel >= _levelReq)) exitWith {
+            _isWhitelisted = false;
+        };
+    } forEach _shopWhitelist;
+};
+
+if (!_isWhitelisted) exitWith { hint format["You must have the following access levels to use this store: %1", _shopWhitelist]; };
 
 uiNamespace setVariable ["Weapon_Shop",(_this select 3)];
 uiNamespace setVariable ["Weapon_Magazine",0];

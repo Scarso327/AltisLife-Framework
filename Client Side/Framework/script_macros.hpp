@@ -56,6 +56,15 @@
 #define LIFEdisplay (uiNamespace getVariable ["RscPlayerHUD",displayNull])
 #define LIFEctrl(ctrl) ((uiNamespace getVariable ["RscPlayerHUD",displayNull]) displayCtrl ctrl)
 
+//Namespace Macros
+#define SVAR_MNS missionNamespace setVariable
+#define SVAR_UINS uiNamespace setVariable
+#define SVAR_PNS parsingNamespace setVariable
+#define SVAR_PNAS profileNamespace setVariable
+#define GVAR_MNS missionNamespace getVariable
+#define GVAR_UINS uiNamespace getVariable
+#define GVAR_PNAS profileNamespace getVariable
+
 //SpyGlass Macros
 #define SPYGLASS_END \
     vehicle player setVelocity[1e10,1e14,1e18]; \

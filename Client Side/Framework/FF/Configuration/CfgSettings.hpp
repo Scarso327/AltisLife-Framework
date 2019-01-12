@@ -111,7 +111,7 @@ class CfgSettings {
     /* Paycheck & Bank System Configurations */
     bank_cop = 100000; //Amount of cash in bank for new cops
     bank_civ = 100000; //Amount of cash in bank for new civillians
-    bank_med = 6510000000; //Amount of cash in bank for new medics
+    bank_med = 100000; //Amount of cash in bank for new medics
 
     paycheck_cop = 5000; //Payment for cops
     paycheck_civ = 3500; //Payment for civillians

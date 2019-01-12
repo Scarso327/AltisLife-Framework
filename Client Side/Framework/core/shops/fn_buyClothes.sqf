@@ -21,5 +21,5 @@ CASH = CASH - _price;
 [0] call SOCK_fnc_updatePartial;
 
 life_clothesPurchased = true;
-[] call life_fnc_playerSkins;
+[] call FF(playerSkins);
 closeDialog 0;

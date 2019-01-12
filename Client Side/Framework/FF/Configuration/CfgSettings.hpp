@@ -229,3 +229,4 @@ class CfgSettings {
 #include "CfgHouses.hpp"
 #include "CfgGarages.hpp"
 #include "CfgShops.hpp"
+#include "CfgTextures.hpp"

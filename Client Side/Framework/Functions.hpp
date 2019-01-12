@@ -41,6 +41,11 @@ class FF_Core {
         class setupActions {};
         class setupEVH {};
     };
+
+    class Functions {
+        file = "FF\Functions";
+        class playerSkins {};
+    };
 };
 
 class Life_Client_Core {
@@ -220,7 +225,6 @@ class Life_Client_Core {
         class numberText {};
         class onFired {};
         class onTakeItem {};
-        class playerSkins {};
         class playerTags {};
         class postNewsBroadcast {};
         class pullOutVeh {};

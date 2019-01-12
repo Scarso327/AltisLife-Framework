@@ -59,5 +59,5 @@ if (life_firstSpawn) then {
     life_firstSpawn = false;
     [] spawn FF(welcomeNotification);
 };
-[] call life_fnc_playerSkins;
+[] call FF(playerSkins);
 [] call life_fnc_hudSetup;

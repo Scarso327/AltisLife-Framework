@@ -1,8 +1,12 @@
 Added:
     Intro Text (Scarso)
+    Police Uniforms (Scarso)
+        - Junior Uniform
+        - Senior Uniform
 
 Updated:
     Player HUD (Scarso)
+    Police Clothing Store Uniforms (Scarso)
     Backend File Structure (Scarso)
 
 Removed:

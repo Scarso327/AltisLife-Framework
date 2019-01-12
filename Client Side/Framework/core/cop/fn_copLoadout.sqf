@@ -6,8 +6,9 @@
     Description:
     Loads the cops out with the default gear.
 */
-private ["_handle"];
-_handle = [] spawn life_fnc_stripDownPlayer;
+#include "..\..\script_macros.hpp"
+
+private _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
@@ -28,5 +29,5 @@ player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 player linkItem "ItemGPS";
 
-[] call life_fnc_playerSkins;
+[] call FF(playerSkins);
 [] call life_fnc_saveGear;

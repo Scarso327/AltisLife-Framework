@@ -19,3 +19,4 @@ Removed:
     Welcome Notification Screen (Scarso)
         Replaced by Intro Text
     Virtual Tool kit (Scarso)
+    Rebel Spawns (Scarso)

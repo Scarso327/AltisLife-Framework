@@ -17,7 +17,7 @@ if (isClass (_cfgTexture >> (uniform player))) then {
     _texture = getText(_cfgTexture >> (uniform player) >> "texture");
     player setObjectTextureGlobal [0, TEXTURE(_texture)];
     
-    if((getNumber(_cfgTexture >> (uniform player) >> "invisBackpack")) isEqualTo 1) then {
+    if(((getArray(_cfgTexture >> (uniform player) >> "invisBackpack")) select 0) isEqualTo 3) then {
         _isInvisible = true;
     };
 };

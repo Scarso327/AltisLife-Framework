@@ -21,7 +21,10 @@ class CfgItems {
         buyPrice = 750;
         sellPrice = 350;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_pickaxe.paa";
     };
 
@@ -32,7 +35,10 @@ class CfgItems {
         buyPrice = 900;
         sellPrice = 450;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_defibrillator.paa";
     };
 
@@ -43,7 +49,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 10;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_fuelEmpty.paa";
     };
 
@@ -54,7 +63,10 @@ class CfgItems {
         buyPrice = 850;
         sellPrice = 500;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_fuel.paa";
     };
 
@@ -65,7 +77,10 @@ class CfgItems {
         buyPrice = 2500;
         sellPrice = 1200;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_spikeStrip.paa";
     };
 
@@ -76,7 +91,10 @@ class CfgItems {
         buyPrice = 150;
         sellPrice = 75;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_lockpick.paa";
     };
 
@@ -87,7 +105,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 95000;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_goldBar.paa";
     };
 
@@ -98,7 +119,10 @@ class CfgItems {
         buyPrice = 35000;
         sellPrice = 10000;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_blastingCharge.paa";
     };
 
@@ -109,7 +133,10 @@ class CfgItems {
         buyPrice = 7500;
         sellPrice = 1000;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_boltCutter.paa";
     };
 
@@ -120,7 +147,10 @@ class CfgItems {
         buyPrice = 2500;
         sellPrice = 2000;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_defuseKit.paa";
     };
 
@@ -131,7 +161,10 @@ class CfgItems {
         buyPrice = 75000;
         sellPrice = 50000;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_storageSmall.paa";
     };
 
@@ -142,7 +175,10 @@ class CfgItems {
         buyPrice = 150000;
         sellPrice = 125000;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_storageBig.paa";
     };
 
@@ -154,7 +190,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_oilUnprocessed.paa";
     };
 
@@ -165,7 +204,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 3200;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_oilProcessed.paa";
     };
 
@@ -176,7 +218,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_copperOre.paa";
     };
 
@@ -187,7 +232,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 1500;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_copper.paa";
     };
 
@@ -198,7 +246,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_ironOre.paa";
     };
 
@@ -209,7 +260,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 3200;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_iron.paa";
     };
 
@@ -220,7 +274,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_saltUnprocessed.paa";
     };
 
@@ -231,7 +288,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 1450;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_saltProcessed.paa";
     };
 
@@ -242,7 +302,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_sand.paa";
     };
 
@@ -253,7 +316,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 1450;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_glass.paa";
     };
 
@@ -264,7 +330,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 750;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_diamondUncut.paa";
     };
 
@@ -275,7 +344,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 2000;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_diamondCut.paa";
     };
 
@@ -286,7 +358,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_rock.paa";
     };
 
@@ -297,7 +372,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 1950;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_cement.paa";
     };
 
@@ -309,7 +387,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_heroinUnprocessed.paa";
         processedItem = "heroin_processed";
     };
@@ -321,7 +402,10 @@ class CfgItems {
         buyPrice = 3500;
         sellPrice = 2560;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_heroinProcessed.paa";
     };
 
@@ -332,7 +416,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_cannabis.paa";
         processedItem = "marijuana";
     };
@@ -344,7 +431,10 @@ class CfgItems {
         buyPrice = 2800;
         sellPrice = 2350;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_marijuana.paa";
     };
 
@@ -355,7 +445,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_cocaineUnprocessed.paa";
         processedItem = "cocaine_processed";
     };
@@ -367,7 +460,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 5000;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_cocaineProcessed.paa";
     };
 
@@ -379,7 +475,10 @@ class CfgItems {
         buyPrice = 1500;
         sellPrice = 200;
         illegal = false;
-        edible = 100;
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 100;
+        };
         icon = "ico_redgull.paa";
     };
 
@@ -390,7 +489,10 @@ class CfgItems {
         buyPrice = 10;
         sellPrice = 5;
         illegal = false;
-        edible = 100;
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 100;
+        };
         icon = "ico_coffee.paa";
     };
 
@@ -401,7 +503,10 @@ class CfgItems {
         buyPrice = 10;
         sellPrice = 5;
         illegal = false;
-        edible = 100;
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 100;
+        };
         icon = "ico_waterBottle.paa";
     };
 
@@ -413,7 +518,10 @@ class CfgItems {
         buyPrice = 65;
         sellPrice = 50;
         illegal = false;
-        edible = 10;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 10;
+        };
         icon = "ico_apple.paa";
     };
 
@@ -424,7 +532,10 @@ class CfgItems {
         buyPrice = 68;
         sellPrice = 55;
         illegal = false;
-        edible = 10;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 10;
+        };
         icon = "ico_peach.paa";
     };
 
@@ -435,7 +546,10 @@ class CfgItems {
         buyPrice = 75;
         sellPrice = 25;
         illegal = false;
-        edible = 40;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
         icon = "ico_tBacon.paa";
     };
 
@@ -446,7 +560,10 @@ class CfgItems {
         buyPrice = 120;
         sellPrice = 60;
         illegal = false;
-        edible = 30;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 30;
+        };
         icon = "ico_donuts.paa";
     };
 
@@ -457,7 +574,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 95;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_rabbitRaw.paa";
     };
 
@@ -468,7 +588,10 @@ class CfgItems {
         buyPrice = 150;
         sellPrice = 115;
         illegal = false;
-        edible = 20;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 20;
+        };
         icon = "ico_rabbit.paa";
     };
 
@@ -479,7 +602,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 45;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_salemaRaw.paa";
     };
 
@@ -490,7 +616,10 @@ class CfgItems {
         buyPrice = 75;
         sellPrice = 55;
         illegal = false;
-        edible = 30;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 30;
+        };
         icon = "ico_cookedFish.paa";
     };
 
@@ -501,7 +630,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 40;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_ornateRaw.paa";
     };
 
@@ -512,7 +644,10 @@ class CfgItems {
         buyPrice = 175;
         sellPrice = 150;
         illegal = false;
-        edible = 25;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 25;
+        };
         icon = "ico_cookedFish.paa";
     };
 
@@ -523,7 +658,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 175;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_mackerelRaw.paa";
     };
 
@@ -534,7 +672,10 @@ class CfgItems {
         buyPrice = 250;
         sellPrice = 200;
         illegal = false;
-        edible = 30;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 30;
+        };
         icon = "ico_cookedFish.paa";
     };
 
@@ -545,7 +686,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 700;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_tunaRaw.paa";
     };
 
@@ -556,7 +700,10 @@ class CfgItems {
         buyPrice = 1250;
         sellPrice = 1000;
         illegal = false;
-        edible = 100;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 100;
+        };
         icon = "ico_cookedFish.paa";
     };
 
@@ -567,7 +714,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 250;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_mulletRaw.paa";
     };
 
@@ -578,7 +728,10 @@ class CfgItems {
         buyPrice = 600;
         sellPrice = 400;
         illegal = false;
-        edible = 80;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 80;
+        };
         icon = "ico_cookedFish.paa";
     };
 
@@ -589,7 +742,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 300;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_catsharkRaw.paa";
     };
 
@@ -600,7 +756,10 @@ class CfgItems {
         buyPrice = 750;
         sellPrice = 500;
         illegal = false;
-        edible = 100;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 100;
+        };
         icon = "ico_cookedFish.paa";
     };
 
@@ -611,7 +770,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 3000;
         illegal = true;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_turtleRaw.paa";
     };
 
@@ -622,7 +784,10 @@ class CfgItems {
         buyPrice = 1000;
         sellPrice = 750;
         illegal = false;
-        edible = 100;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 100;
+        };
         icon = "ico_turtleSoup.paa";
     };
 
@@ -633,7 +798,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 65;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_wholeChickenRaw.paa";
     };
 
@@ -644,7 +812,10 @@ class CfgItems {
         buyPrice = 115;
         sellPrice = 85;
         illegal = false;
-        edible = 65;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 65;
+        };
         icon = "ico_wholeChicken.paa";
     };
 
@@ -655,7 +826,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 65;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_chickenDrumstickRaw.paa";
     };
 
@@ -666,7 +840,10 @@ class CfgItems {
         buyPrice = 90;
         sellPrice = 85;
         illegal = false;
-        edible = 45;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 45;
+        };
         icon = "ico_chickenDrumstick.paa";
     };
 
@@ -677,7 +854,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 95;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            value = -1;
+        };
         icon = "ico_lambChopRaw.paa";
     };
 
@@ -688,7 +868,10 @@ class CfgItems {
         buyPrice = 155;
         sellPrice = 115;
         illegal = false;
-        edible = 100;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 100;
+        };
         icon = "ico_lambChop.paa";
     };
 
@@ -699,7 +882,10 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 115;
         illegal = false;
-        edible = -1;
+        class edibility {
+            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both/Both
+            value = -1;
+        };
         icon = "ico_muttonLegRaw.paa";
     };
 
@@ -710,7 +896,10 @@ class CfgItems {
         buyPrice = 175;
         sellPrice = 135;
         illegal = false;
-        edible = 100;
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 100;
+        };
         icon = "ico_muttonLeg.paa";
     };
 };

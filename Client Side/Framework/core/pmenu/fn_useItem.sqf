@@ -12,9 +12,9 @@ if ((lbCurSel 2005) isEqualTo -1) exitWith {hint localize "STR_ISTR_SelectItemFi
 _item = CONTROL_DATA(2005);
 
 switch (true) do {
-    case (_item in ["waterBottle","coffee","redgull"]): {
+    case (_item in FF_Drinks): {
         if ([false,_item,1] call life_fnc_handleInv) then {
-            life_thirst = 100;
+            life_thirst = life_thirst + getNumber(missionConfigFile >> "CfgItems" >> _item >> "edibility" >> "value");
             if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 0;};
             if (_item isEqualTo "redgull" && {LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1}) then {
                 [] spawn {
@@ -77,16 +77,17 @@ switch (true) do {
         closeDialog 0;
     };
 
-    case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","donuts","tbacon","peach"]): {
-        if (!(M_CONFIG(getNumber,"CfgItems",_item,"edible") isEqualTo -1)) then {
+    case (_item in FF_Food): {
+        if (((getArray(missionConfigFile >> "CfgItems" >> _item >> "edibility" >> "edible")) select 0) isEqualTo 1) then {
             if ([false,_item,1] call life_fnc_handleInv) then {
-                _val = M_CONFIG(getNumber,"CfgItems",_item,"edible");
+                _val = getNumber(missionConfigFile >> "CfgItems" >> _item >> "edibility" >> "value");
                 _sum = life_hunger + _val;
                 switch (true) do {
                     case (_val < 0 && _sum < 1): {life_hunger = 5;}; //This adds the ability to set the entry edible to a negative value and decrease the hunger without death
                     case (_sum > 100): {life_hunger = 100;};
                     default {life_hunger = _sum;};
                 };
+                hint format["You've eaten %1 and gained %2 hunger", _item, _val];
             };
         };
     };

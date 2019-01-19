@@ -4,6 +4,7 @@ Added:
         - Junior Uniform
         - Senior Uniform
     Tool kits to Stores (Scarso)
+    Different Thirst Values for Drinks (Scarso)
 
 Changed:
     Virtual Tool Kit - > Physical (Scarso)

@@ -83,12 +83,38 @@ life_istazed = false;
 life_isknocked = false;
 life_vehicles = [];
 
+FF_Drinks = [];
+FF_Food = [];
+
 /*
     Master Array of items?
 */
 //Setup variable inv vars.
 {
     missionNamespace setVariable [ITEM_VARNAME(configName _x), 0];
+    
+    // Setup Eat/Drink Settings...
+    _cfgEdible = (_x >> "edibility"); // Config....
+
+    // Variables...
+    _isEdible = (getArray(_cfgEdible >> "edible")) select 0;
+    _type = (getArray(_cfgEdible >> "edible")) select 1;
+    _item = getText(_x >> "variable");
+
+    if (_isEdible isEqualTo 1) then {
+        switch (_type) do {
+            case "Hunger": {
+                FF_Food pushBack _item;
+            };
+            case "Thirst": {
+                FF_Drinks pushBack _item;
+            };
+            default { // Both...
+                FF_Drinks pushBack _item;
+                FF_Food pushBack _item;
+            };
+        };
+    };
 } forEach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
 /* Setup the BLAH! */

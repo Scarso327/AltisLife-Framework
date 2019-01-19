@@ -19,7 +19,9 @@ _return = call {
 			case 6: {["Chief Inspector", "\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"]};
 			case 7: {["Superintendent", "\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"]};
 			case 8: {["Chief Superintendent", "\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"]};
-			default {["Police Cadet", "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"]};
+			case 9: {["Deputy Chief Constable", "\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"]};
+			case 10: {["Chief Constable", "\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"]};
+			default {["Police Community Support Officer", "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"]};
 		};
 	};
 };

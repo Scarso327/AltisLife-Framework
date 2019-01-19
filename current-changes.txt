@@ -22,3 +22,4 @@ Removed:
         Replaced by Intro Text
     Virtual Tool kit (Scarso)
     Rebel Spawns (Scarso)
+    Clothing Store Localizations (Scarso)

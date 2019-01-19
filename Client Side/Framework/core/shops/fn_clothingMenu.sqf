@@ -48,7 +48,7 @@ life_oldHat = headgear player;
 createDialog "Life_Clothing";
 disableSerialization;
 
-ctrlSetText [3103,localize _shopTitle];
+ctrlSetText [3103, _shopTitle];
 
 (findDisplay 3100) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {closeDialog 0; [] call FF(playerSkins);}"]; //Fix Custom Skin after ESC
 

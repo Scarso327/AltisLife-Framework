@@ -46,6 +46,11 @@ class FF_Core {
         file = "FF\Functions";
         class playerSkins {};
     };
+
+    class Factions {
+        file = "FF\Factions";
+        class getRank {};
+    };
 };
 
 class Life_Client_Core {

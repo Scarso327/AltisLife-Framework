@@ -13,6 +13,7 @@ Changed:
     
 Updated:
     Player HUD (Scarso)
+    Player Name Tags (Scarso)
     Police Clothing Store Uniforms (Scarso)
     Police Clothing Store Hats (Scarso)
     Police Clothing Store Vests (Scarso)

@@ -82,6 +82,7 @@ CASH = 0;
 life_istazed = false;
 life_isknocked = false;
 life_vehicles = [];
+life_nametags = [];
 
 FF_Drinks = [];
 FF_Food = [];

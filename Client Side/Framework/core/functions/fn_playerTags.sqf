@@ -22,61 +22,85 @@ if (isNull _ui) then {
 };
 
 _units = nearestObjects[(visiblePosition player),["CAManBase","Land_Pallet_MilBoxes_F","Land_Sink_F"],50];
-_units = _units - [player];
 
 _masks = LIFE_SETTINGS(getArray,"clothing_masks");
+
+{
+	_idc = _ui displayCtrl _x;
+	_idc ctrlShow false;
+} forEach life_nametags;
+life_nametags = [];
 
 private _index = -1;
 {
     private "_text";
     _idc = _ui displayCtrl (iconID + _forEachIndex);
+    life_nametags pushBack (iconID + _forEachIndex);
     if (!(lineIntersects [eyePos player, eyePos _x, player, _x]) && alive _x && {!isNil {_x getVariable "realname"}}) then {
         _pos = switch (typeOf _x) do {
             case "Land_Pallet_MilBoxes_F": {[visiblePosition _x select 0, visiblePosition _x select 1, (getPosATL _x select 2) + 1.5]};
             case "Land_Sink_F": {[visiblePosition _x select 0, visiblePosition _x select 1, (getPosATL _x select 2) + 2]};
-            default {[visiblePosition _x select 0, visiblePosition _x select 1, ((_x modelToWorld (_x selectionPosition "head")) select 2)+.5]};
+            default {[visiblePosition _x select 0, visiblePosition _x select 1, ((_x modelToWorld (_x selectionPosition "head")) select 2)+.6]};
         };
         _sPos = worldToScreen _pos;
         _distance = _pos distance player;
-        if (!((headgear _x) in _masks || (goggles _x) in _masks || (uniform _x) in _masks)) then {
-            if (count _sPos > 1 && {_distance < 15}) then {
-                _text = switch (true) do {
-                    case (_x in (units group player) && playerSide isEqualTo civilian): {format ["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
-                    case (side _x isEqualTo west && {!isNil {_x getVariable "rank"}}): {format ["<img image='%1' size='1'></img> %2",switch ((_x getVariable "rank")) do {
-                        case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"};
-                        case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
-                        case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
-                        case 5: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
-                        case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
-                        case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
-                        case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
-                        default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
-                        },_x getVariable ["realname",name _x]]};
-                    case (side _x isEqualTo independent): {format ["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x getVariable ["realname",name _x]]};
-                    default {
-                        if (!isNil {(group _x) getVariable "gang_name"}) then {
-                            format ["%1<br/><t size='0.8' color='#B6B6B6'>%2</t>",_x getVariable ["realname",name _x],(group _x) getVariable ["gang_name",""]];
-                        } else {
-                            if (alive _x) then {
-                                _x getVariable ["realname",name _x];
-                            } else {
-                                if (!isPlayer _x) then {
-                                    _x getVariable ["realname","ERROR"];
-                                };
-                            };
-                        };
-                    };
+
+        if (count _sPos > 1 && {_distance < 4}) then {
+            _name = "";
+            _icon = "";
+            _subtitle = "";
+            
+            // Get settings...
+            switch (true) do {
+                // Masked Player...
+                case ((headgear _x) in _masks || {(goggles _x) in _masks} || {(uniform _x) in _masks}): {
+                    _name = "Unknown";
+                    _subtitle = "Masked Player";
                 };
 
-                _idc ctrlSetStructuredText parseText _text;
-                _idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
-                _idc ctrlSetScale scale;
-                _idc ctrlSetFade 0;
-                _idc ctrlCommit 0;
-                _idc ctrlShow true;
-            } else {
-                _idc ctrlShow false;
+                case ((side _x) isEqualTo west): {
+                    _rankDetails = [] call FF(getRank);
+                    _icon = _rankDetails select 1;
+                    _subtitle = _rankDetails select 0;
+                };
+                
+                // Gang Member...
+                case (_x in (units grpPlayer) && playerSide isEqualTo civilian): {
+                    _name = format["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];
+                    _subtitle = (group _x) getVariable ["gang_name",""];
+                };
+
+                // Civilian...
+                case (!isNil {(group _x) getVariable "gang_name"}): {
+                    _subtitle = (group _x) getVariable ["gang_name",""];
+                };
+
+                // Could be an object?
+                case (!isNil {_x getVariable "icon"} || !isNil {_x getVariable "subtitle"}): {
+                    _icon = _x getVariable["icon",""];
+                    _subtitle = _x getVariable["subtitle",""];
+                };
             };
+
+            if(_name isEqualTo "") then {_name = _x getVariable ["realname",name _x]};
+
+            _text = "";
+            _textRaw = [];
+
+            _textRaw pushBack "<t align='center'>"; // Styling....
+            if(_icon != "") then {_textRaw pushBack format["<img image='%1' size='2.5'></img><br/>",_icon];};
+            _textRaw pushBack format["<t size='1.3'>%1</t><br/>", _name]; // Naming...
+            if(_subtitle != "") then {_textRaw pushBack format["<t size='1'>%1</t><br/>",_subtitle];};	
+            _textRaw pushBack "</t>"; // Styling....
+            
+            { _text = _text + _x} forEach _textRaw; // Output...
+
+            _idc ctrlSetStructuredText parseText _text;
+            _idc ctrlSetPosition [(_sPos select 0) - 0.125, _sPos select 1, 0.4, 0.65];
+            _idc ctrlSetScale scale;
+            _idc ctrlSetFade 0;
+            _idc ctrlCommit 0;
+            _idc ctrlShow true;
         } else {
             _idc ctrlShow false;
         };

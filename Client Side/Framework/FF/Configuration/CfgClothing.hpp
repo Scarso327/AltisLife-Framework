@@ -168,10 +168,10 @@ class CfgClothing {
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "V_Rangemaster_belt", "", 800, "" },
-            { "V_TacVest_blk_POLICE", "", 1000, "call life_coplevel >= 1" },
-            { "V_TacVest_gen_F", "", 1000, "call life_coplevel >= 1" }, //Apex DLC
-            { "V_PlateCarrier2_rgr", "", 1500, "call life_coplevel >= 2" }
+            { "V_Rangemaster_belt", "Ammo Belt", 5000, "" },
+            { "V_DeckCrew_yellow_F", "Fluorescent Vest", 75000, "" },
+            { "V_TacVest_blk_POLICE", "Patrol Vest", 100000, "" },
+            { "V_TacVestIR_blk", "Senior Patrol Vest", 100000, "call life_coplevel >= 2" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },

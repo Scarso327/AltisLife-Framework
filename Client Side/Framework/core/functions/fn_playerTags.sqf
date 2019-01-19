@@ -96,7 +96,7 @@ private _index = -1;
             { _text = _text + _x} forEach _textRaw; // Output...
 
             _idc ctrlSetStructuredText parseText _text;
-            _idc ctrlSetPosition [(_sPos select 0) - 0.125, _sPos select 1, 0.4, 0.65];
+            _idc ctrlSetPosition [(_sPos select 0) - 0.13, _sPos select 1, 0.4, 0.65];
             _idc ctrlSetScale scale;
             _idc ctrlSetFade 0;
             _idc ctrlCommit 0;

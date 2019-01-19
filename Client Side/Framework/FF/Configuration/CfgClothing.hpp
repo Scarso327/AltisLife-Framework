@@ -140,15 +140,9 @@ class CfgClothing {
         };
         headgear[] = {
             { "NONE", "Remove Headgear", 0, "" },
-            { "H_Cap_police", "", 25, "" },
-            { "H_Booniehat_mcamo", "", 120, "call life_coplevel >= 1" },
-            { "H_HelmetB_plain_mcamo", "", 75, "call life_coplevel >= 1" },
-            { "H_HelmetB_Enh_tna_F", "", 80, "call life_coplevel >= 1" }, //Apex DLC
-            { "H_Beret_blk_POLICE", "", 50, "call life_coplevel >= 2" },
-            { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 2" },
-            { "H_MilCap_gen_F", "", 1200, "call life_coplevel >= 2" }, //Apex DLC
-            { "H_MilCap_tna_F", "", 1200, "call life_coplevel >= 2" }, //Apex DLC
-            { "H_MilCap_oucamo", "", 1200, "call life_coplevel >= 2" }
+            { "H_Cap_police", "Academy Cadet Cap", 10000, "" },
+            { "H_Beret_blk", "Standard Beret", 50000, "call life_coplevel >= 2" },
+            { "H_Beret_02", "Command Beret", 250000, "call life_coplevel >= 6" }
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, "" },

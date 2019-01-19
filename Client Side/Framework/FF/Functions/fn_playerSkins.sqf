@@ -22,7 +22,16 @@ if (isClass (_cfgTexture >> (uniform player))) then {
     };
 };
 
-// Remove backpacks....
-if (_isInvisible && backpack player != "") then {
-    (unitBackpack player) setObjectTextureGlobal [0, ""];
+// Backpack
+if (backpack player != "") then {
+    // Remove backpacks....
+    if (_isInvisible) then {
+        (unitBackpack player) setObjectTextureGlobal [0, ""];
+    } else {
+        // Retexture Backpack...
+        if (isClass (_cfgTexture >> (backpack player))) then {
+            _texture = getText(_cfgTexture >> (backpack player) >> "texture");
+            (unitBackpack player) setObjectTextureGlobal [0, TEXTURE(_texture)];
+        };
+    };
 };

@@ -32,13 +32,15 @@
 
 //System Macros
 #define LICENSE_VARNAME(varName,flag) format ["license_%1_%2",flag,M_CONFIG(getText,"CfgLicenses",varName,"variable")]
-#define LICENSE_VALUE(varName,flag) missionNamespace getVariable [LICENSE_VARNAME(varName,flag),false]
+#define LICENSE_VALUE(varName,flag) GVAR_MNS [LICENSE_VARNAME(varName,flag),false]
 #define ITEM_VARNAME(varName) format ["life_inv_%1",M_CONFIG(getText,"CfgItems",varName,"variable")]
-#define ITEM_VALUE(varName) missionNamespace getVariable [ITEM_VARNAME(varName),0]
+#define ITEM_VALUE(varName) GVAR_MNS [ITEM_VARNAME(varName),0]
 #define ITEM_ILLEGAL(varName) M_CONFIG(getNumber,"CfgItems",varName,"illegal")
 #define ITEM_SELLPRICE(varName) M_CONFIG(getNumber,"CfgItems",varName,"sellPrice")
 #define ITEM_BUYPRICE(varName) M_CONFIG(getNumber,"CfgItems",varName,"buyPrice")
 #define ITEM_NAME(varName) M_CONFIG(getText,"CfgItems",varName,"displayName")
+#define PROF_VARNAME(varName) format["%1",M_CONFIG(getText,"CfgProfessions",varName,"variable")]
+#define PROF_VALUE(varName) GVAR_MNS [PROF_VARNAME(varName),0]
 
 //Condition Macros
 #define KINDOF_ARRAY(a,b) [##a,##b] call {_veh = _this select 0;_types = _this select 1;_res = false; {if (_veh isKindOf _x) exitWith { _res = true };} forEach _types;_res}

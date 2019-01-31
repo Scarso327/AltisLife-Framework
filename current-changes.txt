@@ -5,6 +5,8 @@ Added:
         - Senior Uniform
     Tool kits to Stores (Scarso)
     Different Thirst Values for Drinks (Scarso)
+    Professions (Scarso)
+        - Gathering
 
 Changed:
     Virtual Tool Kit - > Physical (Scarso)

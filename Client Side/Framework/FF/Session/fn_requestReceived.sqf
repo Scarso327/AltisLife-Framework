@@ -57,6 +57,9 @@ switch (playerSide) do {
             life_thirst = ((_this select 10) select 1);
             player setDamage ((_this select 10) select 2);
         };
+
+        // Professions
+        if (count (_this select 12) > 0) then { {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 12); };
     };
 
     case civilian: {
@@ -90,6 +93,9 @@ switch (playerSide) do {
             [] spawn life_fnc_initGang;
         };
         [] spawn life_fnc_initHouses;
+
+        // Professions
+        if (count (_this select 13) > 0) then { {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 13); };
     };
 
     case independent: {
@@ -100,6 +106,9 @@ switch (playerSide) do {
             life_thirst = ((_this select 9) select 1);
             player setDamage ((_this select 9) select 2);
         };
+
+        // Professions
+        if (count (_this select 11) > 0) then { {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 11); };
     };
 };
 

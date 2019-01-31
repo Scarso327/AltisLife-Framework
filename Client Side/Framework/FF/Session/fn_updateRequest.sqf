@@ -9,6 +9,7 @@
 private ["_packet","_array","_flag","_alive","_position"];
 _packet = [getPlayerUID player,(profileName),playerSide,CASH,BANK];
 _array = [];
+private _professions = [];
 _alive = alive player;
 _position = getPosATL player;
 _flag = switch (playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
@@ -17,6 +18,14 @@ _flag = switch (playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case
     _varName = LICENSE_VARNAME(configName _x,_flag);
     _array pushBack [_varName,LICENSE_VALUE(configName _x,_flag)];
 } forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_flag] configClasses (missionConfigFile >> "CfgLicenses"));
+
+{
+    private _side = switch (playerSide) do {case west: {"Police"}; case independent: {"NHS"}; case civilian : {"Civ"}; default {"Unknown"};};
+    if((getText(_x >> "side")) isEqualTo _side) then {
+        _varName = PROF_VARNAME(configName _x);
+        _professions pushBack [_varName,PROF_VALUE(configName _x)];
+    };
+} foreach ("true" configClasses (missionConfigFile >> "CfgProfessions"));
 
 _packet pushBack _array;
 
@@ -28,6 +37,8 @@ _array pushBack life_hunger;
 _array pushBack life_thirst;
 _array pushBack (damage player);
 _packet pushBack _array;
+
+_packet pushBack _professions;
 
 switch (playerSide) do {
     case civilian: {

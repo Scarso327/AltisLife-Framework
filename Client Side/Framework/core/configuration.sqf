@@ -118,10 +118,17 @@ FF_Food = [];
     };
 } forEach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
-/* Setup the BLAH! */
+// Licenses
 {
     _varName = getText(_x >> "variable");
     _sideFlag = getText(_x >> "side");
 
-    missionNamespace setVariable [LICENSE_VARNAME(_varName,_sideFlag), false];
+    SVAR_MNS [LICENSE_VARNAME(_varName,_sideFlag), false];
 } forEach ("true" configClasses (missionConfigFile >> "CfgLicenses"));
+
+// Professions
+{
+	_varName = getText(_x >> "variable");
+
+	SVAR_MNS [PROF_VARNAME(_varName),0];
+} foreach ("true" configClasses (missionConfigFile >> "CfgProfessions"));

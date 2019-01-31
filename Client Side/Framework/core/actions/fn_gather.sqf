@@ -17,6 +17,12 @@ _zone = "";
 _requiredItem = "";
 _exit = false;
 
+// Professions...
+private _profession = [];
+private _profZone = "";
+private _profXP = 0;
+private _profChance = 0;
+
 _resourceCfg = missionConfigFile >> "CfgGather" >> "Resources";
 for "_i" from 0 to count(_resourceCfg)-1 do {
 
@@ -26,6 +32,7 @@ for "_i" from 0 to count(_resourceCfg)-1 do {
     _zoneSize = getNumber(_curConfig >> "zoneSize");
     _resourceZones = getArray(_curConfig >> "zones");
     _requiredItem = getText(_curConfig >> "item");
+    _profession = getArray(_curConfig >> "profession");
     {
         if ((player distance (getMarkerPos _x)) < _zoneSize) exitWith {_zone = _x;};
     } forEach _resourceZones;
@@ -34,6 +41,10 @@ for "_i" from 0 to count(_resourceCfg)-1 do {
 };
 
 if (_zone isEqualTo "") exitWith {life_action_inUse = false;};
+
+_profZone = _profession select 0;
+_profXP = _profession select 1;
+_profChance = _profession select 2;
 
 if (_requiredItem != "") then {
     _valItem = missionNamespace getVariable "life_inv_" + _requiredItem;
@@ -69,6 +80,9 @@ for "_i" from 0 to 4 do {
 
 if ([true,_resource,_diff] call life_fnc_handleInv) then {
     _itemName = M_CONFIG(getText,"CfgItems",_resource,"displayName");
+
+    [_profZone,_profXP,_profChance] call FF_fnc_increaseProfession;
+
     titleText[format [localize "STR_NOTF_Gather_Success",(localize _itemName),_diff],"PLAIN"];
 };
 

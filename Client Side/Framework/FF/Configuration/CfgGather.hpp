@@ -4,6 +4,7 @@ class CfgGather {
             amount = 5;
             zones[] = { "apple_1", "apple_2", "apple_3", "apple_4" };
             item = "";
+            profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
         };
 
@@ -11,6 +12,7 @@ class CfgGather {
             amount = 5;
             zones[] = { "peaches_1", "peaches_2", "peaches_3", "peaches_4" };
             item = "";
+            profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
         };
 
@@ -18,6 +20,7 @@ class CfgGather {
             amount = 3;
             zones[] = { "heroin_1" };
             item = "";
+            profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
         };
 
@@ -25,6 +28,7 @@ class CfgGather {
             amount = 3;
             zones[] = { "cocaine_1" };
             item = "";
+            profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
         };
 
@@ -32,6 +36,7 @@ class CfgGather {
             amount = 3;
             zones[] = { "weed_1" };
             item = "";
+            profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
         };
     };

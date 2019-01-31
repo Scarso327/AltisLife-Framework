@@ -230,3 +230,4 @@ class CfgSettings {
 #include "CfgGarages.hpp"
 #include "CfgShops.hpp"
 #include "CfgTextures.hpp"
+#include "CfgProfessions.hpp"

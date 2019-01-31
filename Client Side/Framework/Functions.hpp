@@ -51,6 +51,11 @@ class FF_Core {
         file = "FF\Factions";
         class getRank {};
     };
+
+    class Professions {
+        file = "FF\Professions";
+        class increaseProfession {};
+    };
 };
 
 class Life_Client_Core {

@@ -1,6 +1,7 @@
 class CfgGather {
     class Resources {
         class apple {
+            text = "Gathering Apples";
             amount = 5;
             zones[] = { "apple_1", "apple_2", "apple_3", "apple_4" };
             item = "";
@@ -9,6 +10,7 @@ class CfgGather {
         };
 
         class peach {
+            text = "Gathering Peaches";
             amount = 5;
             zones[] = { "peaches_1", "peaches_2", "peaches_3", "peaches_4" };
             item = "";
@@ -17,6 +19,7 @@ class CfgGather {
         };
 
         class heroin_unprocessed {
+            text = "Gathering Heroin";
             amount = 3;
             zones[] = { "heroin_1" };
             item = "";
@@ -25,6 +28,7 @@ class CfgGather {
         };
 
         class cocaine_unprocessed {
+            text = "Gathering Cocaine Leaves";
             amount = 3;
             zones[] = { "cocaine_1" };
             item = "";
@@ -33,6 +37,7 @@ class CfgGather {
         };
 
         class cannabis {
+            text = "Gathering Cannabis";
             amount = 3;
             zones[] = { "weed_1" };
             item = "";

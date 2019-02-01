@@ -1,4 +1,3 @@
-#include "..\..\script_macros.hpp"
 /*
     File: fn_gather.sqf
     Author: Devilfloh
@@ -6,7 +5,8 @@
     Description:
     Main functionality for gathering.
 */
-private ["_maxGather","_resource","_amount","_maxGather","_requiredItem"];
+#include "..\..\script_macros.hpp"
+
 if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
 if (player getVariable "restrained") exitWith {hint localize "STR_NOTF_isrestrained";};
@@ -14,7 +14,10 @@ if (player getVariable "playerSurrender") exitWith {hint localize "STR_NOTF_surr
 
 life_action_inUse = true;
 _zone = "";
-_requiredItem = "";
+private _resource = "";
+private _requiredItem = "";
+private _maxGather = 1;
+private _upp = "Gathering Something";
 _exit = false;
 
 // Professions...
@@ -33,6 +36,7 @@ for "_i" from 0 to count(_resourceCfg)-1 do {
     _resourceZones = getArray(_curConfig >> "zones");
     _requiredItem = getText(_curConfig >> "item");
     _profession = getArray(_curConfig >> "profession");
+    _upp = getText(_curConfig >> "text");
     {
         if ((player distance (getMarkerPos _x)) < _zoneSize) exitWith {_zone = _x;};
     } forEach _resourceZones;
@@ -60,7 +64,7 @@ if (_requiredItem != "") then {
 
 if (_exit) exitWith {life_action_inUse = false;};
 
-_amount = round(random(_maxGather)) + 1;
+private _amount = round(random(_maxGather)) + 1;
 _diff = [_resource,_amount,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if (_diff isEqualTo 0) exitWith {
     hint localize "STR_NOTF_InvFull";
@@ -72,11 +76,36 @@ switch (_requiredItem) do {
     default {[player,"harvest",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
 };
 
-for "_i" from 0 to 4 do {
+// Progress Bar!
+disableSerialization;
+"progressBar" cutRsc ["life_progress","PLAIN"];
+private _ui = uiNamespace getVariable "life_progress";
+private _progress = _ui displayCtrl 38201;
+private _pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format ["%2 (1%1)...","%",_upp];
+_progress progressSetPosition 0.01;
+private _cP = 0.01;
+
+for "_i" from 0 to 1 step 0 do {
     player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
     waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-    sleep 0.5;
+
+    uiSleep 0.5;
+
+    _cP = _cP + 0.01;
+    _progress progressSetPosition _cP;
+    _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+    if (_cP >= 1) exitWith {};
+    if !(alive player) exitWith {};
+    if !(isNull objectParent player) exitWith {};
+    if (life_interrupted) exitWith {};
 };
+
+"progressBar" cutText ["","PLAIN"];
+player playActionNow "stop";
+if !(alive player) exitWith {};
+if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
+if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"]; life_action_inUse = false;};
 
 if ([true,_resource,_diff] call life_fnc_handleInv) then {
     _itemName = M_CONFIG(getText,"CfgItems",_resource,"displayName");

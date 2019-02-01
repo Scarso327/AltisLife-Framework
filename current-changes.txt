@@ -12,6 +12,7 @@ Changed:
     Virtual Tool Kit - > Physical (Scarso)
     You can repair vehicles without tool kit but it's slower (Scarso)
     Store Conditional Checks (Scarso)
+    Gathering is now Progress Bar based (Scarso)
     
 Updated:
     Player HUD (Scarso)

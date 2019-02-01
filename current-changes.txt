@@ -3,6 +3,8 @@ Added:
     Police Uniforms (Scarso)
         - Junior Uniform
         - Senior Uniform
+    Police Car Textures (Scarso)
+        - Police SUV
     Tool kits to Stores (Scarso)
     Different Thirst Values for Drinks (Scarso)
     Professions (Scarso)

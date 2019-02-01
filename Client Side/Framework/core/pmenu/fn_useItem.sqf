@@ -15,6 +15,11 @@ switch (true) do {
     case (_item in FF_Drinks): {
         if ([false,_item,1] call life_fnc_handleInv) then {
             life_thirst = life_thirst + getNumber(missionConfigFile >> "CfgItems" >> _item >> "edibility" >> "value");
+            switch (true) do {
+                case (_val < 0 && _sum < 1): {life_thirst = 5;};
+                case (_sum > 100): {life_thirst = 100;};
+                default {life_thirst = _sum;};
+            };
             if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 0;};
             if (_item isEqualTo "redgull" && {LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1}) then {
                 [] spawn {

@@ -83,6 +83,23 @@ switch (playerSide) do {
     };
 };
 
+{
+	_x displayAddEventHandler ["KeyDown", {
+		_this call {
+			params ["","_key","_shift"];
+			if (_key isEqualTo 74 && {_shift}) exitWith {
+				if !(userInputDisabled) then {
+					disableUserInput true;
+					if (userInputDisabled) then {
+						disableUserInput false;
+					};
+				};
+				true
+			};
+		};
+	}];
+} forEach allDisplays;
+
 switch (playerSide) do {
     case west: {
         _handle = [] spawn FF(initPolice);

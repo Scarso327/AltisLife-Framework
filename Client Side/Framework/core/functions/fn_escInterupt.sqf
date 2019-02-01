@@ -35,18 +35,36 @@ private _canUseControls = {
 
 for "_i" from 0 to 1 step 0 do {
     waitUntil {!isNull (findDisplay 49)};
-    private _abortButton = CONTROL(49,104);
+    private _display = (findDisplay 49);
+    private _abortButton = _display displayCtrl 104;
     _abortButton buttonSetAction "call SOCK_fnc_updateRequest; [player] remoteExec [""TON_fnc_cleanupRequest"",2];";
-    private _respawnButton = CONTROL(49,1010);
-    private _fieldManual = CONTROL(49,122);
-    private _saveButton = CONTROL(49,103);
+    private _respawnButton = _display displayCtrl 1010;
+    private _fieldManual = _display displayCtrl 122;
+    private _saveButton = _display displayCtrl 103;
     _saveButton ctrlSetText "";
 
+    // Block Endmission cheat
+    _display displayAddEventHandler ["KeyDown", {
+		_this call {
+			params ["","_key","_shift"];
+			if (_key isEqualTo 74 && {_shift}) exitWith {
+				if !(userInputDisabled) then {
+					disableUserInput true;
+
+					if (userInputDisabled) then {
+						disableUserInput false;
+					};
+				};
+				true
+			};
+		};
+	}];
+    
     //Extras
     if (LIFE_SETTINGS(getNumber,"escapeMenu_displayExtras") isEqualTo 1) then {
-        private _topButton = CONTROL(49,2);
+        private _topButton = _display displayCtrl 2;
         _topButton ctrlEnable false;
-        _topButton ctrlSetText format ["%1",LIFE_SETTINGS(getText,"escapeMenu_displayText")];
+        _topButton ctrlSetText format ["LifePLUS Framework v1"];
         _saveButton ctrlEnable false;
         _saveButton ctrlSetText format ["Player UID: %1",getPlayerUID player];
     };

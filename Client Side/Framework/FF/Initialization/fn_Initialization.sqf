@@ -19,10 +19,20 @@ diag_log "--------------------------------- Starting Altis Life Client Init ----
 diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
 diag_log "----------------------------------------------------------------------------------------------------";
 waitUntil {!isNull player && player == player}; //Wait till the player is ready
+
+// Setup Colouring...
+diag_log "::Life Client:: Colouring UI";
+profileNamespace setVariable ["GUI_BCG_RGB_R", 0];
+profileNamespace setVariable ["GUI_BCG_RGB_G", 0];
+profileNamespace setVariable ["GUI_BCG_RGB_B", 0];
+profileNamespace setVariable ["GUI_BCG_RGB_A", 1];
+saveProfileNamespace;
+
 [] call compile preprocessFileLineNumbers "core\clientValidator.sqf";
 enableSentences false;
 
 //Setup initial client core functions
+diag_log "::Life Client:: UI Coloured";
 diag_log "::Life Client:: Initialization Variables";
 [] call compile preprocessFileLineNumbers "core\configuration.sqf";
 

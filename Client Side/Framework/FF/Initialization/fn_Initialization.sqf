@@ -22,9 +22,9 @@ waitUntil {!isNull player && player == player}; //Wait till the player is ready
 
 // Setup Colouring...
 diag_log "::Life Client:: Colouring UI";
-profileNamespace setVariable ["GUI_BCG_RGB_R", 0];
-profileNamespace setVariable ["GUI_BCG_RGB_G", 0];
-profileNamespace setVariable ["GUI_BCG_RGB_B", 0];
+profileNamespace setVariable ["GUI_BCG_RGB_R", 0.09];
+profileNamespace setVariable ["GUI_BCG_RGB_G", 0.09];
+profileNamespace setVariable ["GUI_BCG_RGB_B", 0.09];
 profileNamespace setVariable ["GUI_BCG_RGB_A", 1];
 saveProfileNamespace;
 

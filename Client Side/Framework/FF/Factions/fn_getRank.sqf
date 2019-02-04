@@ -9,9 +9,11 @@
 
 private _return = ["", ""];
 
+if (!params [["_player", objNull, [objNull]]] || isNull _player) exitWith {_return;};
+
 _return = call {
-	if(playerSide isEqualTo west) exitWith {
-		switch (FETCH_CONST(life_coplevel)) do {
+	if((side _player) isEqualTo west) exitWith {
+		switch (_player getVariable ["rank", 0]) do {
 			case 2: {["Police Constable", "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"]};
 			case 3: {["Senior Police Constable", "\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"]};
 			case 4: {["Sergeant", "\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"]};

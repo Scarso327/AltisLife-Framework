@@ -84,6 +84,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   `civ_licenses` text NOT NULL,
   `cop_licenses` text NOT NULL,
   `med_licenses` text NOT NULL,
+  `professions` text NOT NULL,
   `civ_gear` text NOT NULL,
   `cop_gear` text NOT NULL,
   `med_gear` text NOT NULL,

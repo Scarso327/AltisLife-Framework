@@ -59,7 +59,7 @@ private _index = -1;
                 };
 
                 case ((side _x) isEqualTo west): {
-                    _rankDetails = [] call FF(getRank);
+                    _rankDetails = _x call FF(getRank);
                     _icon = _rankDetails select 1;
                     _subtitle = _rankDetails select 0;
                 };

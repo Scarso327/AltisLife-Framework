@@ -8,7 +8,7 @@
     @Description: Sets players uniform skins.
 */
 #include "..\..\script_macros.hpp"
-#define CONFIG missionConfigFile >> "CfgTextures";
+#define CONFIG missionConfigFile >> "CfgTextures"
 
 private _isInvisible = false; // Backpack...
 

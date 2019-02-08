@@ -55,6 +55,8 @@ if (_levelUp) then {
 			if (_newLevel <= 0) then {_newLevel = 0};
 		};
 	};
+	
+	[format["Your %1 Profession is now level <t color = '#7300e6'>%2</t>", _displayName, _newLevel]] spawn FF_fnc_notify;
 
 	SVAR_MNS [_varName,_newLevel]; // Set the variable...
 	[] call SOCK_fnc_updateRequest; // Force Sync!

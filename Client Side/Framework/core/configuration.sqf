@@ -46,6 +46,11 @@ life_markers_active = false;
 life_canpay_bail = true;
 life_storagePlacing = scriptNull;
 
+// FF scripts...
+FF_activeEventFeedControls = [];
+FF_eventControl = 20000;
+FF_eventFeedQueue = 0;
+
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast", true];
 life_settings_enableSidechannel = profileNamespace getVariable ["life_enableSidechannel", true];

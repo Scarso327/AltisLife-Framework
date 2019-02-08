@@ -30,7 +30,7 @@ class CfgSounds {
     sounds[] = {};
     class sirenLong {
         name = "sirenLong";
-        sound[] = {"\data\sounds\sirenLong.ogg", 1.0, 1};
+        sound[] = {"\data\sounds\britishSiren.ogg", 1.0, 1};
         titles[] = {};
     };
 

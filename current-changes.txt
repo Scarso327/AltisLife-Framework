@@ -19,6 +19,7 @@ Changed:
     Default UI Header Colouring to Black (Scarso)
     Jump Key (Shift + Space - > Shift + "Vault Key") (Scarso)
         - You can still only jump while moving
+    Police Siren from US -> UK Sound (Scarso)
     
 Updated:
     Player HUD (Scarso)

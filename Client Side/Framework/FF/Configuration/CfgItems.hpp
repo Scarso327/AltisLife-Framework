@@ -32,6 +32,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_pickaxe.paa";
+        conditions = "";
     };
 
     class defibrillator {
@@ -52,6 +53,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_defibrillator.paa";
+        conditions = "";
     };
 
     class fuelEmpty {
@@ -72,6 +74,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_fuelEmpty.paa";
+        conditions = "";
     };
 
     class fuelFull {
@@ -92,6 +95,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_fuel.paa";
+        conditions = "";
     };
 
     class spikeStrip {
@@ -112,6 +116,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_spikeStrip.paa";
+        conditions = "";
     };
 
     class lockpick {
@@ -132,6 +137,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_lockpick.paa";
+        conditions = "";
     };
 
     class goldbar {
@@ -152,6 +158,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_goldBar.paa";
+        conditions = "";
     };
 
     class blastingcharge {
@@ -172,6 +179,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_blastingCharge.paa";
+        conditions = "";
     };
 
     class boltcutter {
@@ -192,6 +200,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_boltCutter.paa";
+        conditions = "";
     };
 
     class defusekit {
@@ -212,6 +221,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_defuseKit.paa";
+        conditions = "";
     };
 
     class storagesmall {
@@ -232,6 +242,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_storageSmall.paa";
+        conditions = "";
     };
 
     class storagebig {
@@ -252,6 +263,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_storageBig.paa";
+        conditions = "";
     };
 
     //Mined Items
@@ -273,6 +285,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_oilUnprocessed.paa";
+        conditions = "";
     };
 
     class oil_processed {
@@ -293,6 +306,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_oilProcessed.paa";
+        conditions = "";
     };
 
     class copper_unrefined {
@@ -313,6 +327,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_copperOre.paa";
+        conditions = "";
     };
 
     class copper_refined {
@@ -333,6 +348,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_copper.paa";
+        conditions = "";
     };
 
     class iron_unrefined {
@@ -353,6 +369,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_ironOre.paa";
+        conditions = "";
     };
 
     class iron_refined {
@@ -373,6 +390,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_iron.paa";
+        conditions = "";
     };
 
     class salt_unrefined {
@@ -393,6 +411,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_saltUnprocessed.paa";
+        conditions = "";
     };
 
     class salt_refined {
@@ -413,6 +432,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_saltProcessed.paa";
+        conditions = "";
     };
 
     class sand {
@@ -433,6 +453,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_sand.paa";
+        conditions = "";
     };
 
     class glass {
@@ -453,6 +474,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_glass.paa";
+        conditions = "";
     };
 
     class diamond_uncut {
@@ -473,6 +495,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_diamondUncut.paa";
+        conditions = "";
     };
 
     class diamond_cut {
@@ -493,6 +516,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_diamondCut.paa";
+        conditions = "";
     };
 
     class rock {
@@ -513,6 +537,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_rock.paa";
+        conditions = "";
     };
 
     class cement {
@@ -533,6 +558,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_cement.paa";
+        conditions = "";
     };
 
     //Drugs
@@ -555,6 +581,7 @@ class CfgItems {
         };
         icon = "ico_heroinUnprocessed.paa";
         processedItem = "heroin_processed";
+        conditions = "";
     };
 
     class heroin_processed {
@@ -575,6 +602,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_heroinProcessed.paa";
+        conditions = "";
     };
 
     class cannabis {
@@ -596,6 +624,7 @@ class CfgItems {
         };
         icon = "ico_cannabis.paa";
         processedItem = "marijuana";
+        conditions = "";
     };
 
     class marijuana {
@@ -616,6 +645,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_marijuana.paa";
+        conditions = "";
     };
 
     class cocaine_unprocessed {
@@ -637,6 +667,7 @@ class CfgItems {
         };
         icon = "ico_cocaineUnprocessed.paa";
         processedItem = "cocaine_processed";
+        conditions = "";
     };
 
     class cocaine_processed {
@@ -657,6 +688,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_cocaineProcessed.paa";
+        conditions = "";
     };
 
     //Drink
@@ -678,6 +710,7 @@ class CfgItems {
             value = 100;
         };
         icon = "ico_redgull.paa";
+        conditions = "";
     };
 
     class coffee {
@@ -698,6 +731,7 @@ class CfgItems {
             value = 100;
         };
         icon = "ico_coffee.paa";
+        conditions = "";
     };
 
     class waterBottle {
@@ -718,6 +752,7 @@ class CfgItems {
             value = 100;
         };
         icon = "ico_waterBottle.paa";
+        conditions = "";
     };
 
     //Food
@@ -739,6 +774,7 @@ class CfgItems {
             value = 10;
         };
         icon = "ico_apple.paa";
+        conditions = "";
     };
 
     class peach {
@@ -759,6 +795,7 @@ class CfgItems {
             value = 10;
         };
         icon = "ico_peach.paa";
+        conditions = "";
     };
 
     class tbacon {
@@ -779,6 +816,7 @@ class CfgItems {
             value = 40;
         };
         icon = "ico_tBacon.paa";
+        conditions = "";
     };
 
     class donuts {
@@ -799,6 +837,7 @@ class CfgItems {
             value = 30;
         };
         icon = "ico_donuts.paa";
+        conditions = "";
     };
 
     class rabbit_raw {
@@ -819,6 +858,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_rabbitRaw.paa";
+        conditions = "";
     };
 
     class rabbit {
@@ -839,6 +879,7 @@ class CfgItems {
             value = 20;
         };
         icon = "ico_rabbit.paa";
+        conditions = "";
     };
 
     class salema_raw {
@@ -859,6 +900,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_salemaRaw.paa";
+        conditions = "";
     };
 
     class salema {
@@ -879,6 +921,7 @@ class CfgItems {
             value = 30;
         };
         icon = "ico_cookedFish.paa";
+        conditions = "";
     };
 
     class ornate_raw {
@@ -899,6 +942,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_ornateRaw.paa";
+        conditions = "";
     };
 
     class ornate {
@@ -919,6 +963,7 @@ class CfgItems {
             value = 25;
         };
         icon = "ico_cookedFish.paa";
+        conditions = "";
     };
 
     class mackerel_raw {
@@ -939,6 +984,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_mackerelRaw.paa";
+        conditions = "";
     };
 
     class mackerel {
@@ -959,6 +1005,7 @@ class CfgItems {
             value = 30;
         };
         icon = "ico_cookedFish.paa";
+        conditions = "";
     };
 
     class tuna_raw {
@@ -979,6 +1026,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_tunaRaw.paa";
+        conditions = "";
     };
 
     class tuna {
@@ -999,6 +1047,7 @@ class CfgItems {
             value = 100;
         };
         icon = "ico_cookedFish.paa";
+        conditions = "";
     };
 
     class mullet_raw {
@@ -1019,6 +1068,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_mulletRaw.paa";
+        conditions = "";
     };
 
     class mullet {
@@ -1039,6 +1089,7 @@ class CfgItems {
             value = 80;
         };
         icon = "ico_cookedFish.paa";
+        conditions = "";
     };
 
     class catshark_raw {
@@ -1059,6 +1110,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_catsharkRaw.paa";
+        conditions = "";
     };
 
     class catshark {
@@ -1079,6 +1131,7 @@ class CfgItems {
             value = 100;
         };
         icon = "ico_cookedFish.paa";
+        conditions = "";
     };
 
     class turtle_raw {
@@ -1099,6 +1152,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_turtleRaw.paa";
+        conditions = "";
     };
 
     class turtle_soup {
@@ -1119,6 +1173,7 @@ class CfgItems {
             value = 100;
         };
         icon = "ico_turtleSoup.paa";
+        conditions = "";
     };
 
     class hen_raw {
@@ -1139,6 +1194,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_wholeChickenRaw.paa";
+        conditions = "";
     };
 
     class hen {
@@ -1159,6 +1215,7 @@ class CfgItems {
             value = 65;
         };
         icon = "ico_wholeChicken.paa";
+        conditions = "";
     };
 
     class rooster_raw {
@@ -1179,6 +1236,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_chickenDrumstickRaw.paa";
+        conditions = "";
     };
 
     class rooster {
@@ -1199,6 +1257,7 @@ class CfgItems {
             value = 45;
         };
         icon = "ico_chickenDrumstick.paa";
+        conditions = "";
     };
 
     class sheep_raw {
@@ -1219,6 +1278,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_lambChopRaw.paa";
+        conditions = "";
     };
 
     class sheep {
@@ -1239,6 +1299,7 @@ class CfgItems {
             value = 100;
         };
         icon = "ico_lambChop.paa";
+        conditions = "";
     };
 
     class goat_raw {
@@ -1259,6 +1320,7 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_muttonLegRaw.paa";
+        conditions = "";
     };
 
     class goat {
@@ -1279,5 +1341,6 @@ class CfgItems {
             value = 100;
         };
         icon = "ico_muttonLeg.paa";
+        conditions = "";
     };
 };

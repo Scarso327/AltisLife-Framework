@@ -21,6 +21,12 @@ class CfgItems {
         buyPrice = 750;
         sellPrice = 350;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -35,6 +41,12 @@ class CfgItems {
         buyPrice = 900;
         sellPrice = 450;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -49,6 +61,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 10;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -63,6 +81,12 @@ class CfgItems {
         buyPrice = 850;
         sellPrice = 500;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -77,6 +101,12 @@ class CfgItems {
         buyPrice = 2500;
         sellPrice = 1200;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -91,6 +121,12 @@ class CfgItems {
         buyPrice = 150;
         sellPrice = 75;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -105,6 +141,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 95000;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -119,6 +161,12 @@ class CfgItems {
         buyPrice = 35000;
         sellPrice = 10000;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -133,6 +181,12 @@ class CfgItems {
         buyPrice = 7500;
         sellPrice = 1000;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -147,6 +201,12 @@ class CfgItems {
         buyPrice = 2500;
         sellPrice = 2000;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -161,6 +221,12 @@ class CfgItems {
         buyPrice = 75000;
         sellPrice = 50000;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -175,6 +241,12 @@ class CfgItems {
         buyPrice = 150000;
         sellPrice = 125000;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -190,6 +262,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -204,6 +282,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 3200;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -218,6 +302,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -232,6 +322,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 1500;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -246,6 +342,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -260,6 +362,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 3200;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -274,6 +382,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -288,6 +402,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 1450;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -302,6 +422,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -316,6 +442,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 1450;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -330,6 +462,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 750;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -344,6 +482,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 2000;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -358,6 +502,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -372,6 +522,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 1950;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -387,6 +543,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -402,6 +564,12 @@ class CfgItems {
         buyPrice = 3500;
         sellPrice = 2560;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -416,6 +584,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -431,6 +605,12 @@ class CfgItems {
         buyPrice = 2800;
         sellPrice = 2350;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -445,6 +625,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -460,6 +646,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 5000;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -475,6 +667,12 @@ class CfgItems {
         buyPrice = 1500;
         sellPrice = 200;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Thirst"};
             value = 100;
@@ -489,6 +687,12 @@ class CfgItems {
         buyPrice = 10;
         sellPrice = 5;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Thirst"};
             value = 100;
@@ -503,6 +707,12 @@ class CfgItems {
         buyPrice = 10;
         sellPrice = 5;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Thirst"};
             value = 100;
@@ -518,6 +728,12 @@ class CfgItems {
         buyPrice = 65;
         sellPrice = 50;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 10;
@@ -532,6 +748,12 @@ class CfgItems {
         buyPrice = 68;
         sellPrice = 55;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 10;
@@ -546,6 +768,12 @@ class CfgItems {
         buyPrice = 75;
         sellPrice = 25;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 40;
@@ -560,6 +788,12 @@ class CfgItems {
         buyPrice = 120;
         sellPrice = 60;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 30;
@@ -574,6 +808,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 95;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -588,6 +828,12 @@ class CfgItems {
         buyPrice = 150;
         sellPrice = 115;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 20;
@@ -602,6 +848,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 45;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -616,6 +868,12 @@ class CfgItems {
         buyPrice = 75;
         sellPrice = 55;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 30;
@@ -630,6 +888,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 40;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -644,6 +908,12 @@ class CfgItems {
         buyPrice = 175;
         sellPrice = 150;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 25;
@@ -658,6 +928,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 175;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -672,6 +948,12 @@ class CfgItems {
         buyPrice = 250;
         sellPrice = 200;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 30;
@@ -686,6 +968,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 700;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -700,6 +988,12 @@ class CfgItems {
         buyPrice = 1250;
         sellPrice = 1000;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 100;
@@ -714,6 +1008,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 250;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -728,6 +1028,12 @@ class CfgItems {
         buyPrice = 600;
         sellPrice = 400;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 80;
@@ -742,6 +1048,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 300;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -756,6 +1068,12 @@ class CfgItems {
         buyPrice = 750;
         sellPrice = 500;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 100;
@@ -770,6 +1088,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 3000;
         illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -784,6 +1108,12 @@ class CfgItems {
         buyPrice = 1000;
         sellPrice = 750;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 100;
@@ -798,6 +1128,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 65;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -812,6 +1148,12 @@ class CfgItems {
         buyPrice = 115;
         sellPrice = 85;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 65;
@@ -826,6 +1168,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 65;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -840,6 +1188,12 @@ class CfgItems {
         buyPrice = 90;
         sellPrice = 85;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 45;
@@ -854,6 +1208,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 95;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
             value = -1;
@@ -868,6 +1228,12 @@ class CfgItems {
         buyPrice = 155;
         sellPrice = 115;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 100;
@@ -882,6 +1248,12 @@ class CfgItems {
         buyPrice = -1;
         sellPrice = 115;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both/Both
             value = -1;
@@ -896,6 +1268,12 @@ class CfgItems {
         buyPrice = 175;
         sellPrice = 135;
         illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {600, 800}; // Lowest Price, Highest Price
+        };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 100;

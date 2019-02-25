@@ -17,7 +17,7 @@ _flag = switch (playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case
 switch (_mode) do {
     case 0: {
         _packet set[2,CASH];
-        [] call life_fnc_hudUpdate;
+        [] call FF_fnc_hudUpdate;
     };
 
     case 1: {

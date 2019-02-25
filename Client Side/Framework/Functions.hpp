@@ -57,6 +57,12 @@ class FF_Core {
         file = "FF\Professions";
         class increaseProfession {};
     };
+
+    class GUI_HUD_Functions {
+        file = "FF\GUI\HUD\Functions";
+        class hudUpdate {};
+        class hudSetup {};
+    };
 };
 
 class Life_Client_Core {
@@ -222,8 +228,6 @@ class Life_Client_Core {
         class handleInv {};
         class handleItem {};
         class hideObj {};
-        class hudSetup {};
-        class hudUpdate {};
         class inventoryClosed {};
         class inventoryOpened {};
         class isUIDActive {};

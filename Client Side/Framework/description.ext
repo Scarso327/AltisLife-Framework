@@ -5,6 +5,7 @@ overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the ov
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.hpp"
 #include "FF\Configuration\CfgSettings.hpp"
+#include "FF\GUI\includes.hpp"
 
 class CfgServer {
     DatabaseName = "FF_DB"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
@@ -19,7 +20,7 @@ class CfgServer {
 class RscTitles {
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
-    #include "dialog\RscPlayerHUD.hpp"
+    #include "FF\GUI\HUD\RscPlayerHUD.hpp"
 };
 
 class CfgFunctions {

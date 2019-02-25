@@ -21,12 +21,12 @@ if (isNull _ownerID) exitWith {};
 _ownerID = owner _ownerID;
 
 private _query = switch (_side) do {
-    // West - 12 entries returned
-    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, professions FROM players WHERE pid='%1'",_uid];};
-    // Civilian - 13 entries returned
-    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime, professions FROM players WHERE pid='%1'",_uid];};
-    // Independent - 11 entries returned
-    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, professions FROM players WHERE pid='%1'",_uid];};
+    // West - 14 entries returned
+    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, professions, level, xp FROM players WHERE pid='%1'",_uid];};
+    // Civilian - 15 entries returned
+    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime, professions, level, xp FROM players WHERE pid='%1'",_uid];};
+    // Independent - 13 entries returned
+    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, professions, level, xp FROM players WHERE pid='%1'",_uid];};
 };
 
 private _tickTime = diag_tickTime;
@@ -98,6 +98,9 @@ switch (_side) do {
         _new = [(_queryResult select 12)] call DB_fnc_mresToArray;
         if (_new isEqualType "") then {_new = parseSimpleArray _new;};
         _queryResult set[12,_new];
+
+        _queryResult set[13,[(_queryResult select 13)] call DB_fnc_numberSafe]; // Level
+        _queryResult set[14,[(_queryResult select 14)] call DB_fnc_numberSafe]; // XP
     };
 
     case civilian: {
@@ -132,6 +135,9 @@ switch (_side) do {
         if (_new isEqualType "") then {_new = parseSimpleArray _new;};
         _queryResult set[13,_new];
 
+        _queryResult set[14,[(_queryResult select 14)] call DB_fnc_numberSafe]; // Level
+        _queryResult set[15,[(_queryResult select 15)] call DB_fnc_numberSafe]; // XP
+
         /* Make sure nothing else is added under here */
         _houseData = _uid spawn TON_fnc_fetchPlayerHouses;
         waitUntil {scriptDone _houseData};
@@ -164,6 +170,9 @@ switch (_side) do {
         _new = [(_queryResult select 11)] call DB_fnc_mresToArray;
         if (_new isEqualType "") then {_new = parseSimpleArray _new;};
         _queryResult set[11,_new];
+
+        _queryResult set[12,[(_queryResult select 12)] call DB_fnc_numberSafe]; // Level
+        _queryResult set[13,[(_queryResult select 13)] call DB_fnc_numberSafe]; // XP
     };
 };
 

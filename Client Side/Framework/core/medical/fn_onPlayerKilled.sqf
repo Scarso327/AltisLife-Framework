@@ -139,7 +139,7 @@ life_carryWeight = 0;
 CASH = 0;
 life_is_alive = false;
 
-[] call life_fnc_hudUpdate; //Get our HUD updated.
+[] call FF_fnc_hudUpdate; //Get our HUD updated.
 [player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];
 
 [0] call SOCK_fnc_updatePartial;

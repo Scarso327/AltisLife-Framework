@@ -40,6 +40,9 @@ _packet pushBack _array;
 
 _packet pushBack _professions;
 
+// Level Stuff...
+_packet pushBack [FF_Level, FF_XP];
+
 switch (playerSide) do {
     case civilian: {
         _packet pushBack life_is_arrested;
@@ -54,4 +57,4 @@ if (life_HC_isActive) then {
     _packet remoteExecCall ["DB_fnc_updateRequest",RSERV];
 };
 
-[] call life_fnc_hudUpdate;
+[] call FF_fnc_hudUpdate;

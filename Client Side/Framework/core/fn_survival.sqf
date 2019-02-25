@@ -12,7 +12,7 @@ _fnc_food =  {
     else
     {
         life_hunger = life_hunger - 10;
-        [] call life_fnc_hudUpdate;
+        [] call FF_fnc_hudUpdate;
         if (life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";};
         switch (life_hunger) do {
             case 30: {hint localize "STR_NOTF_EatMSG_1";};
@@ -30,7 +30,7 @@ _fnc_water = {
     else
     {
         life_thirst = life_thirst - 10;
-        [] call life_fnc_hudUpdate;
+        [] call FF_fnc_hudUpdate;
         if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
         switch (life_thirst) do  {
             case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
@@ -98,7 +98,7 @@ for "_i" from 0 to 1 step 0 do {
                 _walkDis = 0;
                 life_thirst = life_thirst - 5;
                 life_hunger = life_hunger - 5;
-                [] call life_fnc_hudUpdate;
+                [] call FF_fnc_hudUpdate;
             };
         };
         _lastPos = visiblePosition player;

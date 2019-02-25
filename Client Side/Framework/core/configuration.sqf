@@ -92,6 +92,9 @@ life_nametags = [];
 FF_Drinks = [];
 FF_Food = [];
 
+FF_Level = 1;
+FF_XP = 0;
+
 /*
     Master Array of items?
 */

@@ -1,4 +1,4 @@
-#include "..\..\script_macros.hpp"
+#include "..\..\..\..\script_macros.hpp"
 /*
     File: fn_hudSetup.sqf
     Author: Bryan "Tonic" Boardwine
@@ -9,7 +9,7 @@
 disableSerialization;
 
 cutRsc ["RscPlayerHUD", "PLAIN", 2, false];
-[] call life_fnc_hudUpdate;
+[] call FF_fnc_hudUpdate;
 
 [] spawn
 {
@@ -18,6 +18,6 @@ cutRsc ["RscPlayerHUD", "PLAIN", 2, false];
         _dam = damage player;
         _money = CASH;
         waitUntil {!((damage player) isEqualTo _dam) || !(CASH isEqualTo _money)};
-        [] call life_fnc_hudUpdate;
+        [] call FF_fnc_hudUpdate;
     };
 };

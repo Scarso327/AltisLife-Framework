@@ -1,6 +1,6 @@
 class CfgLevels {
 
-    maxLevel = 2;
+    maxLevel = 5;
     maxLevelLoopReward = 100000; // £100,000...
 
     class level_1 {

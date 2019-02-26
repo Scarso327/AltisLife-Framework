@@ -15,7 +15,28 @@ class CfgLevels {
     class level_2 {
         displayNameLong = "Level 2";
         displayNameShort = "2";
-        expRequired = 100;
+        expRequired = 200;
+        perkUnlockeds[] = {};
+    };
+    
+    class level_3 {
+        displayNameLong = "Level 3";
+        displayNameShort = "3";
+        expRequired = 1000;
+        perkUnlockeds[] = {};
+    };
+    
+    class level_4 {
+        displayNameLong = "Level 4";
+        displayNameShort = "4";
+        expRequired = 1700;
+        perkUnlockeds[] = {};
+    };
+    
+    class level_5 {
+        displayNameLong = "Level 5";
+        displayNameShort = "5";
+        expRequired = 2300;
         perkUnlockeds[] = {};
     };
 };

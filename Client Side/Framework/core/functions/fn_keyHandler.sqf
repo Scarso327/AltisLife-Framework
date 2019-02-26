@@ -94,7 +94,6 @@ if (_code in (actionKeys "GetOver")) then {
     if (_shift && {!(animationState player isEqualTo "AovrPercMrunSrasWrflDf")} && {isTouchingGround player} && {stance player isEqualTo "STAND"} && {speed player > 2} && {!life_is_arrested} && {((velocity player) select 2) < 2.5} && {time - jumpActionTime > 1.5}) then {
         jumpActionTime = time; //Update the time.
         [player] remoteExec ["life_fnc_jumpFnc",RANY]; //Global execution
-        [10, "Testing"] call FF_fnc_handleXP;
         _handled = true;
     };
 };

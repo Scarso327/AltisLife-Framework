@@ -1,5 +1,8 @@
 class CfgLevels {
 
+    maxLevel = 2;
+    maxLevelLoopReward = 100000; // £100,000...
+
     class level_1 {
         displayNameLong = "Level 1";
         displayNameShort = "1";

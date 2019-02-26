@@ -99,8 +99,8 @@ switch (_side) do {
         if (_new isEqualType "") then {_new = parseSimpleArray _new;};
         _queryResult set[12,_new];
 
-        _queryResult set[13,[(_queryResult select 13)] call DB_fnc_numberSafe]; // Level
-        _queryResult set[14,[(_queryResult select 14)] call DB_fnc_numberSafe]; // XP
+        _queryResult set[13,_queryResult select 13]; // Level
+        _queryResult set[14,_queryResult select 14]; // XP
     };
 
     case civilian: {
@@ -135,8 +135,8 @@ switch (_side) do {
         if (_new isEqualType "") then {_new = parseSimpleArray _new;};
         _queryResult set[13,_new];
 
-        _queryResult set[14,[(_queryResult select 14)] call DB_fnc_numberSafe]; // Level
-        _queryResult set[15,[(_queryResult select 15)] call DB_fnc_numberSafe]; // XP
+        _queryResult set[14,_queryResult select 14]; // Level
+        _queryResult set[15,_queryResult select 15]; // XP
 
         /* Make sure nothing else is added under here */
         _houseData = _uid spawn TON_fnc_fetchPlayerHouses;
@@ -171,8 +171,8 @@ switch (_side) do {
         if (_new isEqualType "") then {_new = parseSimpleArray _new;};
         _queryResult set[11,_new];
 
-        _queryResult set[12,[(_queryResult select 12)] call DB_fnc_numberSafe]; // Level
-        _queryResult set[13,[(_queryResult select 13)] call DB_fnc_numberSafe]; // XP
+        _queryResult set[12,_queryResult select 12]; // Level
+        _queryResult set[13,_queryResult select 13]; // XP
     };
 };
 

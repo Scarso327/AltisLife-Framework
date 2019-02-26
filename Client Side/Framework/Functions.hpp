@@ -58,6 +58,11 @@ class FF_Core {
         class increaseProfession {};
     };
 
+    class Levels {
+        file = "FF\Levels";
+        class handleXP {};
+    };
+
     class GUI_HUD_Functions {
         file = "FF\GUI\HUD\Functions";
         class hudUpdate {};

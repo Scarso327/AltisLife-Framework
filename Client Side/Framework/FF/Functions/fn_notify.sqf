@@ -62,9 +62,8 @@ _ctrl ctrlCommit 7;
 FF_activeEventFeedControls pushBack FF_eventControl;
 FF_eventControl = FF_eventControl + 1;
 
-//Dont want the noise spamming
-if (count FF_activeEventFeedControls <= 2) then { playSound "FD_Timer_F" };
-
 //Queue thing
 UISleep (0.25);
 FF_eventFeedQueue = FF_eventFeedQueue - 1;
+
+playSound "FD_Timer_F";

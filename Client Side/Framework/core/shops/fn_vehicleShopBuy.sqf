@@ -144,6 +144,8 @@ if (_mode) then {
             [(getPlayerUID player),playerSide,_vehicle,_colorIndex] remoteExecCall ["TON_fnc_vehicleCreate",RSERV];
         };
     };
+
+    [50, "Buying a Vehicle"] call FF_fnc_handleXP;
 };
 
 if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {

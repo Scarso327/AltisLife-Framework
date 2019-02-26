@@ -231,3 +231,5 @@ class CfgSettings {
 #include "CfgShops.hpp"
 #include "CfgTextures.hpp"
 #include "CfgProfessions.hpp"
+#include "CfgLevels.hpp"
+#include "CfgPerks.hpp"

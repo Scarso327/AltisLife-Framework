@@ -10,7 +10,6 @@
 #include "bank.hpp"
 #include "veh_shop.hpp"
 #include "shops.hpp"
-#include "RscPlayerHUD.hpp"
 #include "admin_menu.hpp"
 #include "cell_phone.hpp"
 #include "wanted_list.hpp"

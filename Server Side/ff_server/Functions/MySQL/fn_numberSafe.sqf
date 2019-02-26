@@ -9,9 +9,11 @@
     STRING
 */
 params [
-    ["_number",0,[0]],
+    ["_number",0,[0, ""]],
     ["_mod",3,[0]]
 ];
+
+if (_number isEqualType "") then { _number = parseNumber(_number) };
 
 _digits = _number call bis_fnc_numberDigits;
 private _digitsCount = count _digits - 1;

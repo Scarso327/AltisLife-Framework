@@ -60,6 +60,10 @@ switch (playerSide) do {
 
         // Professions
         if (count (_this select 12) > 0) then { {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 12); };
+
+        // Leveling
+        FF_Level = _this select 13;
+        FF_XP = _this select 14;
     };
 
     case civilian: {
@@ -96,6 +100,10 @@ switch (playerSide) do {
 
         // Professions
         if (count (_this select 13) > 0) then { {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 13); };
+
+        // Leveling
+        FF_Level = _this select 14;
+        FF_XP = _this select 15;
     };
 
     case independent: {
@@ -109,6 +117,10 @@ switch (playerSide) do {
 
         // Professions
         if (count (_this select 11) > 0) then { {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 11); };
+
+        // Leveling
+        FF_Level = _this select 12;
+        FF_XP = _this select 13;
     };
 };
 

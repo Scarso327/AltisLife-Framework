@@ -14,7 +14,7 @@ _item = CONTROL_DATA(2005);
 switch (true) do {
     case (_item in FF_Drinks): {
         if ([false,_item,1] call life_fnc_handleInv) then {
-            life_thirst = life_thirst + getNumber(missionConfigFile >> "CfgItems" >> _item >> "edibility" >> "value");
+            _sum = life_thirst + getNumber(missionConfigFile >> "CfgItems" >> _item >> "edibility" >> "value");
             switch (true) do {
                 case (_val < 0 && _sum < 1): {life_thirst = 5;};
                 case (_sum > 100): {life_thirst = 100;};
@@ -103,4 +103,4 @@ switch (true) do {
 };
 
 [] call life_fnc_p_updateMenu;
-[] call life_fnc_hudUpdate;
+[] call FF_fnc_hudUpdate;

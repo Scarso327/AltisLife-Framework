@@ -33,7 +33,7 @@ _control = CONTROL(39400,39402);
         };
 
         _price = M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price");
-        _chopMultiplier = LIFE_SETTINGS(getNumber,"vehicle_chopShop_multiplier");
+        _chopMultiplier = LIFE_SETTINGS(getNumber,"vehicle_chop_multiplier");
 
         _price = _price * _chopMultiplier;
         if (!isNil "_price" && count crew _x isEqualTo 0) then {

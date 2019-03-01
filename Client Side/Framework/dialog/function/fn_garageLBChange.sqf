@@ -29,7 +29,7 @@ _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 
 _price = M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price");
-_storageFee = LIFE_SETTINGS(getNumber,"vehicle_storage_fee_multiplier");
+_storageFee = LIFE_SETTINGS(getNumber,"vehicle_store_multiplier");
 
 _purchasePrice = _price * 1;
 

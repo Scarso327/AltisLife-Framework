@@ -19,21 +19,7 @@ _vIndex = (_this select 0) lbValue (_this select 1);
 _initalPrice = M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price");
 
 _buyMultiplier = 1;
-
-switch (playerSide) do {
-    case civilian: {
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_CIVILIAN");
-    };
-    case west: {
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_COP");
-    };
-    case independent: {
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_MEDIC");
-    };
-    case east: {
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_OPFOR");
-    };
-};
+_rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier");
 
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;

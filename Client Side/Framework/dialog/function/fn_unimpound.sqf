@@ -23,7 +23,7 @@ if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife)) then {
 };
 
 _price = M_CONFIG(getNumber,"LifeCfgVehicles",_vehicleLife,"price");
-_storageFee = LIFE_SETTINGS(getNumber,"vehicle_storage_fee_multiplier");
+_storageFee = LIFE_SETTINGS(getNumber,"vehicle_store_multiplier");
 
 _price = (_price * 1) * _storageFee;
 

@@ -25,21 +25,7 @@ private "_buyMultiplier";
 private "_rentMultiplier";
 
 _buyMultiplier = 1;
-
-switch (playerSide) do {
-    case civilian: {
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_CIVILIAN");
-    };
-    case west: {
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_COP");
-    };
-    case independent: {
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_MEDIC");
-    };
-    case east: {
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_OPFOR");
-    };
-};
+_rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier");
 
 private "_purchasePrice";
 

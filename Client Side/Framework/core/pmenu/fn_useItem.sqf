@@ -20,8 +20,8 @@ switch (true) do {
                 case (_sum > 100): {life_thirst = 100;};
                 default {life_thirst = _sum;};
             };
-            if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 0;};
-            if (_item isEqualTo "redgull" && {LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1}) then {
+            if (LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1) then {player setFatigue 0;};
+            if (_item isEqualTo "redgull" && {LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1}) then {
                 [] spawn {
                     life_redgull_effect = time;
                     titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];

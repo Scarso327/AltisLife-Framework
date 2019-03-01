@@ -35,7 +35,7 @@ if (!isServer && (!isNil "life_adminlevel" || !isNil "life_coplevel" || !isNil "
 CASH = parseNumber (_this select 2);
 BANK = parseNumber (_this select 3);
 CONST(life_adminlevel,(_this select 4));
-if (LIFE_SETTINGS(getNumber,"donor_level") isEqualTo 1) then {
+if (LIFE_SETTINGS(getNumber,"premium_membership") isEqualTo 1) then {
     CONST(life_donorlevel,(_this select 5));
 } else {
     CONST(life_donorlevel,0);

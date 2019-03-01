@@ -9,7 +9,7 @@
 private ["_units","_type"];
 
 if (!life_use_atm) exitWith {
-    hint format [localize "STR_Shop_ATMRobbed",(LIFE_SETTINGS(getNumber,"noatm_timer"))];
+    hint format [localize "STR_Shop_ATMRobbed",(LIFE_SETTINGS(getNumber,"atm_cooldown"))];
 };
 
 if (!dialog) then {

@@ -15,9 +15,9 @@ LIFEctrl(IDC_LIFE_BAR_FOOD) progressSetPosition (1 / (100 / life_hunger));
 LIFEctrl(IDC_LIFE_BAR_WATER) progressSetPosition (1 / (100 / life_thirst));
 LIFEctrl(IDC_LIFE_BAR_HEALTH) progressSetPosition (1 - (damage player));
 
-LIFEctrl(IDC_LIFE_FOOD_TEXT) ctrlsetText format["%1", [life_hunger, "%"] joinString ""];
-LIFEctrl(IDC_LIFE_WATER_TEXT) ctrlsetText format["%1", [life_thirst, "%"] joinString ""];
-LIFEctrl(IDC_LIFE_HEALTH_TEXT) ctrlsetText format["%1", [round((1 - (damage player)) * 100), "%"] joinString ""];
+LIFEctrl(IDC_LIFE_FOOD_TEXT) ctrlSetStructuredText parseText format["Food<t align='right'>%1</t>", [life_hunger, "%"] joinString ""];
+LIFEctrl(IDC_LIFE_WATER_TEXT) ctrlSetStructuredText parseText format["Water<t align='right'>%1</t>", [life_thirst, "%"] joinString ""];
+LIFEctrl(IDC_LIFE_HEALTH_TEXT) ctrlSetStructuredText parseText format["Health<t align='right'>%1</t>", [round((1 - (damage player)) * 100), "%"] joinString ""];
 
 // Update Cash!
 LIFEctrl(IDC_LIFE_CASH_TEXT) ctrlSetStructuredText parseText format["<t align='right'>£%1</t>", [CASH] call life_fnc_numberText];

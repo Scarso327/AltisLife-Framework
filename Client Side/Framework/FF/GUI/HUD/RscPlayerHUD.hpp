@@ -23,9 +23,6 @@ class RscPlayerHUD {
 		LIFE_FOOD_TEXT,
 		LIFE_WATER_TEXT,
 		LIFE_HEALTH_TEXT,
-		LIFE_HTEXT,
-		LIFE_FTEXT,
-		LIFE_WTEXT,
 		LIFE_CASH_TEXT,
 		LIFE_XP_TEXT,
 		LIFE_CURLVL_TEXT,
@@ -141,63 +138,34 @@ class RscPlayerHUD {
 	};
 
 	/* Text */
-
-	class LIFE_HTEXT: Life_RscText
-	{
-		idc = IDC_LIFE_HEALTH_TEXT_INFO;
-		text = "Health"; //--- ToDo: Localize;
-		x = 0.850625 * safezoneW + safezoneX;
-		y = 0.897 * safezoneH + safezoneY;
-		w = 0.0721875 * safezoneW;
-		h = 0.022 * safezoneH;
-	};
 	
-	class LIFE_FTEXT: Life_RscText
-	{
-		idc = IDC_LIFE_FOOD_TEXT_INFO;
-		text = "Food"; //--- ToDo: Localize;
-		x = 0.850625 * safezoneW + safezoneX;
-		y = 0.924 * safezoneH + safezoneY;
-		w = 0.113437 * safezoneW;
-		h = 0.022 * safezoneH;
-	};
-	class LIFE_WTEXT: Life_RscText
-	{
-		idc = IDC_LIFE_WATER_TEXT_INFO;
-		text = "Water"; //--- ToDo: Localize;
-		x = 0.850625 * safezoneW + safezoneX;
-		y = 0.951 * safezoneH + safezoneY;
-		w = 0.113437 * safezoneW;
-		h = 0.022 * safezoneH;
-	};
-	
-	class LIFE_FOOD_TEXT: Life_RscText
+	class LIFE_FOOD_TEXT: Life_RscStructuredText
 	{
 		idc = IDC_LIFE_FOOD_TEXT;
 		text = "";
-		x = 0.957206 * safezoneW + safezoneX;
+		x = 0.850625 * safezoneW + safezoneX;
 		y = 0.924 * safezoneH + safezoneY;
-		w = 0.0309375 * safezoneW;
+		w = 0.134062 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
 	
-	class LIFE_WATER_TEXT: Life_RscText
+	class LIFE_WATER_TEXT: Life_RscStructuredText
 	{
 		idc = IDC_LIFE_WATER_TEXT;
 		text = "";
-		x = 0.957206 * safezoneW + safezoneX;
+		x = 0.850625 * safezoneW + safezoneX;
 		y = 0.951 * safezoneH + safezoneY;
-		w = 0.0309375 * safezoneW;
+		w = 0.134062 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
 	
-	class LIFE_HEALTH_TEXT: Life_RscText
+	class LIFE_HEALTH_TEXT: Life_RscStructuredText
 	{
 		idc = IDC_LIFE_HEALTH_TEXT;
 		text = "";
-		x = 0.957206 * safezoneW + safezoneX;
+		x = 0.850625 * safezoneW + safezoneX;
 		y = 0.897 * safezoneH + safezoneY;
-		w = 0.0309375 * safezoneW;
+		w = 0.134062 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
 

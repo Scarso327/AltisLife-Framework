@@ -84,7 +84,7 @@ class CfgSettings {
     seize_exempt[] = {};
     seize_uniform[] = {};
     seize_vest[] = {};
-    seize_headgear[] = {}
+    seize_headgear[] = {};
     seize_minimum_rank = 2;
 
     /* Clothing System Configurations */

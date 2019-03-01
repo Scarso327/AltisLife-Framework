@@ -74,7 +74,7 @@ for "_i" from 0 to 1 step 0 do {
 	uiSleep 0.01;
 };
 
-_bar progressSetPosition (_XP / _neededXP); // Fix it...
+_bar progressSetPosition (FF_XP / _neededXP); // Fix it...
 
 LIFEctrl(IDC_LIFE_XP_TEXT) ctrlSetStructuredText parseText format["<t align='center'>%1 / %2</t>", [FF_XP] call life_fnc_numberText, [_neededXP] call life_fnc_numberText];
 

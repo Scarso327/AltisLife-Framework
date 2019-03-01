@@ -23,6 +23,7 @@ Changed:
         - You can still only jump while moving
     Police Siren from US -> UK Sound (Scarso)
     Vehicle 3D Preview Enabled (Scarso)
+    Being Arrested Wipes ALL Illegal Items (Scarso)
     
 Updated:
     Player HUD (Scarso)

@@ -15,7 +15,6 @@ params [
 if (isNull _unit) exitWith {}; //Dafuq?
 if !(_unit isEqualTo player) exitWith {}; //Dafuq?
 if (life_is_arrested) exitWith {}; //Dafuq i'm already arrested
-_illegalItems = LIFE_SETTINGS(getArray,"jail_seize_vItems");
 
 player setVariable ["restrained",false,true];
 player setVariable ["Escorting",false,true];
@@ -38,20 +37,16 @@ if (player distance (getMarkerPos "jail_marker") > 40) then {
 [1] call life_fnc_removeLicenses;
 
 {
-    _amount = ITEM_VALUE(_x);
-    if (_amount > 0) then {
+    // If we have the item and it's illegal, remove it.
+    if (ITEM_VALUE(configName _x) > 0 && (ITEM_ILLEGAL(configName _x) isEqualTo 1)) then {
         [false,_x,_amount] call life_fnc_handleInv;
     };
-} forEach _illegalItems;
+} forEach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
 life_is_arrested = true;
 
-if (LIFE_SETTINGS(getNumber,"jail_seize_inventory") isEqualTo 1) then {
-    [] spawn life_fnc_seizeClient;
-} else {
-    removeAllWeapons player;
-    {player removeMagazine _x} forEach (magazines player);
-};
+removeAllWeapons player;
+{player removeMagazine _x} forEach (magazines player);
 
 if (life_HC_isActive) then {
     [player,_bad] remoteExecCall ["HC_fnc_jailSys",HC_Life];

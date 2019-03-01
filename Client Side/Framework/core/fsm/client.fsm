@@ -62,7 +62,7 @@ class FSM
            "} else {" \n
            "    life_atmbank = life_atmbank + life_paycheck;" \n
            "    systemChat format [localize ""STR_FSM_ReceivedPay"",[life_paycheck] call life_fnc_numberText];" \n
-           "    [50, ""Recieved Paycheck""] call FF_fnc_handleXP;" \n
+           "    [50, ""Recieved Paycheck""] spawn FF_fnc_handleXP;" \n
            "};" \n
            "" \n
            "_lastcheck = time;" \n

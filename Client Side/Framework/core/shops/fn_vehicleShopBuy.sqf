@@ -145,7 +145,7 @@ if (_mode) then {
         };
     };
 
-    [50, "Buying a Vehicle"] call FF_fnc_handleXP;
+    [50, "Buying a Vehicle"] spawn FF_fnc_handleXP;
 };
 
 if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {

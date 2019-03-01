@@ -29,12 +29,13 @@ private _level = switch true do {
     default { (FF_Level + 1) };
 };
 
-private _neededXP = getNumber(missionConfigFile >> "CfgLevels" >> format["level_%1", _level] >> "expRequired");
+private _neededXPFirst = getNumber(missionConfigFile >> "CfgLevels" >> format["level_%1", _level] >> "expRequired");
+private _XP = FF_XP;
 
 disableSerialization;
 
 // Do we level up???
-if (FF_XP >= _neededXP) then {
+if (FF_XP >= _neededXPFirst) then {
 	if !(FF_Level isEqualTo MAXLVL) then {
 		FF_Level = FF_Level + 1;
 
@@ -47,7 +48,7 @@ if (FF_XP >= _neededXP) then {
 		] spawn FF_fnc_notify;
 	};
 
-	private _carryOver = (FF_XP - _neededXP);
+	private _carryOver = (FF_XP - _neededXPFirst);
 
 	if (_carryOver > 0) exitWith {
 		FF_XP = _carryOver;
@@ -63,8 +64,20 @@ private _neededXP = getNumber(missionConfigFile >> "CfgLevels" >> format["level_
 
 if (FF_XP >= _neededXP) then { FF_XP = _neededXP; };
 
+// XP Bar Handling...
+private _bar = LIFEctrl(IDC_LIFE_BAR_XP);
+private _xpPerc = (_XP / _neededXPFirst);
+
+for "_i" from 0 to 1 step 0 do {
+	if ((progressPosition _bar) >= _xpPerc) exitWith {};
+	_bar progressSetPosition ((progressPosition _bar) + 0.001);
+	uiSleep 0.01;
+};
+
+_bar progressSetPosition _xpPerc; // Fix it...
+
 LIFEctrl(IDC_LIFE_XP_TEXT) ctrlSetStructuredText parseText format["<t align='center'>%1 / %2</t>", [FF_XP] call life_fnc_numberText, [_neededXP] call life_fnc_numberText];
-LIFEctrl(IDC_LIFE_BAR_XP) progressSetPosition (FF_XP / _neededXP);
+
 
 LIFEctrl(IDC_LIFE_CURLVL_TEXT) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", FF_Level];
 LIFEctrl(IDC_LIFE_NXTLVL_TEXT) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", _level];

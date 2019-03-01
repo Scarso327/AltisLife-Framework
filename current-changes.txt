@@ -22,6 +22,7 @@ Changed:
     Jump Key (Shift + Space - > Shift + "Vault Key") (Scarso)
         - You can still only jump while moving
     Police Siren from US -> UK Sound (Scarso)
+    Vehicle 3D Preview Enabled (Scarso)
     
 Updated:
     Player HUD (Scarso)

@@ -69,12 +69,12 @@ private _bar = LIFEctrl(IDC_LIFE_BAR_XP);
 private _xpPerc = (_XP / _neededXPFirst);
 
 for "_i" from 0 to 1 step 0 do {
-	if ((progressPosition _bar) >= _xpPerc) exitWith {};
+	if ((progressPosition _bar) >= _xpPerc || ((progressPosition _bar) >= 1)) exitWith {};
 	_bar progressSetPosition ((progressPosition _bar) + 0.001);
 	uiSleep 0.01;
 };
 
-_bar progressSetPosition _xpPerc; // Fix it...
+_bar progressSetPosition (_XP / _neededXP); // Fix it...
 
 LIFEctrl(IDC_LIFE_XP_TEXT) ctrlSetStructuredText parseText format["<t align='center'>%1 / %2</t>", [FF_XP] call life_fnc_numberText, [_neededXP] call life_fnc_numberText];
 

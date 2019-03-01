@@ -38,11 +38,6 @@ switch (_mode) do {
         _packet set[2,life_gear];
     };
 
-    case 4: {
-        _packet set[2,life_is_alive];
-        _packet set[4,getPosATL player];
-    };
-
     case 5: {
         _packet set[2,life_is_arrested];
     };

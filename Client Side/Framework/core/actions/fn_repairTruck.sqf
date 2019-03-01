@@ -57,22 +57,8 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
     player playActionNow "stop";
     if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
     if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"]; life_action_inUse = false;};
-
-    _sideRepairArray = LIFE_SETTINGS(getArray,"vehicle_infiniteRepair");
-
-    //Check if playerSide has infinite repair enabled
-    if (playerSide isEqualTo civilian && (_sideRepairArray select 0) isEqualTo 0) then {
-        player removeItem "ToolKit";
-    };
-    if (playerSide isEqualTo west && (_sideRepairArray select 1) isEqualTo 0) then {
-        player removeItem "ToolKit";
-    };
-    if (playerSide isEqualTo independent && (_sideRepairArray select 2) isEqualTo 0) then {
-        player removeItem "ToolKit";
-    };
-    if (playerSide isEqualTo east && (_sideRepairArray select 3) isEqualTo 0) then {
-        player removeItem "ToolKit";
-    };
+    
+    player removeItem "ToolKit";
 
     _veh setDamage 0;
     titleText[localize "STR_NOTF_RepairedVehicle","PLAIN"];

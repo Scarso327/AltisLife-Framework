@@ -31,21 +31,19 @@ _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 _price = M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price");
 _storageFee = LIFE_SETTINGS(getNumber,"vehicle_storage_fee_multiplier");
 
+_purchasePrice = _price * 1;
+
 switch (playerSide) do {
     case civilian: {
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_CIVILIAN");
         _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_CIVILIAN");
     };
     case west: {
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_COP");
         _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_COP");
     };
     case independent: {
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_MEDIC");
         _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_MEDIC");
     };
     case east: {
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_OPFOR");
         _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_OPFOR");
     };
 };

@@ -51,16 +51,7 @@ switch (_mode) do {
             case independent: {_query = format ["UPDATE players SET med_gear='%1' WHERE pid='%2'",_value,_uid];};
         };
     };
-
-    case 4: {
-        _value = [_this,2,false,[true]] call BIS_fnc_param;
-        _value = [_value] call DB_fnc_bool;
-        _value2 = [_this,4,[],[[]]] call BIS_fnc_param;
-        _value2 = if (count _value2 isEqualTo 3) then {_value2} else {[0,0,0]};
-        _value2 = [_value2] call DB_fnc_mresArray;
-        _query = format ["UPDATE players SET civ_alive='%1', civ_position='%2' WHERE pid='%3'",_value,_value2,_uid];
-    };
-
+    
     case 5: {
         _value = [_this,2,false,[true]] call BIS_fnc_param;
         _value = [_value] call DB_fnc_bool;

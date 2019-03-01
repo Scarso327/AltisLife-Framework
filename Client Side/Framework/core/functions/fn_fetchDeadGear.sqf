@@ -11,11 +11,9 @@ params [["_unit",objNull,[objNull]]];
 
 if (isNull _unit) exitWith {};
 
-private _dropWeapons = LIFE_SETTINGS(getNumber,"drop_weapons_onDeath");
-
-private _primary = [primaryWeapon _unit, ""] select _dropWeapons;
-private _launcher = [secondaryWeapon _unit, ""] select _dropWeapons;
-private _handgun = [handGunWeapon _unit, ""] select _dropWeapons;
+private _primary = primaryWeapon _unit;
+private _launcher = secondaryWeapon _unit;
+private _handgun = handGunWeapon _unit;
 
 private _primitems = [];
 private _secitems = [];

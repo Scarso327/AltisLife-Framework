@@ -93,7 +93,6 @@ class Life_Client_Core {
         class healHospital {};
         class impoundAction {};
         class mine {};
-        class newsBroadcast {};
         class packupSpikes {};
         class pickupItem {};
         class pickupMoney {};
@@ -215,7 +214,6 @@ class Life_Client_Core {
 
     class Functions {
         file = "core\functions";
-        class AAN {};
         class accType {};
         class actionKeyHandler {};
         class animSync {};
@@ -246,7 +244,6 @@ class Life_Client_Core {
         class onFired {};
         class onTakeItem {};
         class playerTags {};
-        class postNewsBroadcast {};
         class pullOutVeh {};
         class pushObject {};
         class receiveItem {};

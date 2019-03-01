@@ -77,16 +77,6 @@ switch (playerSide) do {
             player setDamage ((_this select 9) select 2);
         };
 
-        //Position
-        if (LIFE_SETTINGS(getNumber,"save_civilian_position") isEqualTo 1) then {
-            life_is_alive = _this select 10;
-            life_civ_position = _this select 11;
-            if (life_is_alive) then {
-                if !(count life_civ_position isEqualTo 3) then {diag_log format ["[requestReceived] Bad position received. Data: %1",life_civ_position];life_is_alive =false;};
-                if (life_civ_position distance (getMarkerPos "respawn_civilian") < 300) then {life_is_alive = false;};
-            };
-        };
-
         {
             _house = nearestObject [(call compile format ["%1",(_x select 0)]), "House"];
             life_vehicles pushBack _house;
@@ -99,11 +89,11 @@ switch (playerSide) do {
         [] spawn life_fnc_initHouses;
 
         // Professions
-        if (count (_this select 13) > 0) then { {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 13); };
+        if (count (_this select 11) > 0) then { {missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 11); };
 
         // Leveling
-        FF_Level = _this select 14;
-        FF_XP = _this select 15;
+        FF_Level = _this select 12;
+        FF_XP = _this select 13;
     };
 
     case independent: {

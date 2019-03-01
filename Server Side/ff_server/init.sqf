@@ -16,7 +16,6 @@ life_server_isReady = false;
 _extDBNotLoaded = "";
 serv_sv_use = [];
 publicVariable "life_server_isReady";
-life_save_civilian_position = if (LIFE_SETTINGS(getNumber,"save_civilian_position") isEqualTo 0) then {false} else {true};
 fn_whoDoneIt = compile preprocessFileLineNumbers "\ff_server\Functions\Systems\fn_whoDoneIt.sqf";
 
 /*
@@ -77,13 +76,6 @@ diag_log "----------------------------------------------------------------------
 diag_log "---------------------------------- Starting Altis Life Server Init ---------------------------------";
 diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
 diag_log "----------------------------------------------------------------------------------------------------";
-
-if (LIFE_SETTINGS(getNumber,"save_civilian_position_restart") isEqualTo 1) then {
-    [] spawn {
-        _query = "UPDATE players SET civ_alive = '0' WHERE civ_alive = '1'";
-        [_query,1] call DB_fnc_asyncCall;
-    };
-};
 
 /* Map-based server side initialization. */
 master_group attachTo[bank_obj,[0,0,0]];

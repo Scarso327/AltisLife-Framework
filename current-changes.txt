@@ -39,3 +39,4 @@ Removed:
     Virtual Tool kit (Scarso)
     Rebel Spawns (Scarso)
     Clothing Store Localizations (Scarso)
+    Framework Support for Location Saving (Scarso)

@@ -1,199 +1,377 @@
-/*
-*    FORMAT:
-*        STRING (Conditions) - Must return boolean :
-*            String can contain any amount of conditions, aslong as the entire
-*            string returns a boolean. This allows you to check any levels, licenses etc,
-*            in any combination. For example:
-*                "call life_coplevel && license_civ_someLicense"
-*            This will also let you call any other function.
-*
-*
-*    ARRAY FORMAT:
-*        0: STRING (Classname): Item Classname
-*        1: STRING (Nickname): Nickname that will appear purely in the shop dialog
-*        2: SCALAR (Buy price)
-*        3: SCALAR (Sell price): To disable selling, this should be -1
-*        4: STRING (Conditions): Same as above conditions string
-*
-*    Weapon classnames can be found here: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Weapons
-*    Item classnames can be found here: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Items
-*
-*/
 class CfgWeapons {
-    //Armory Shops
-    class gun {
-        name = "Billy Joe's Firearms";
-        conditions = "playerSide isEqualTo civilian && license_civ_gun";
-        items[] = {
-            { "hgun_Rook40_F", "", 6500, 3250, "" },
-            { "hgun_Pistol_01_F", "", 7000, 3500, "" }, //Apex DLC
-            { "hgun_Pistol_heavy_02_F", "", 9850, 4925, "" },
-            { "hgun_ACPC2_F", "", 11500, 5750, "" },
-            { "SMG_05_F", "", 18000, 9000, "" }, //Apex DLC
-            { "hgun_PDW2000_F", "", 20000, 10000, "" }
-        };
-        mags[] = {
-            { "16Rnd_9x21_Mag", "", 125, 60, "" },
-            { "6Rnd_45ACP_Cylinder", "", 150, 75, "" },
-            { "9Rnd_45ACP_Mag", "", 200, 100, "" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "" },
-            { "30Rnd_9x21_Mag_SMG_02", "", 250, 125, "" }, //Apex DLC
-            { "10Rnd_9x21_Mag", "", 250, 125, "" } //Apex DLC
-        };
-        accs[] = {
-            { "acc_flashlight_pistol", "", 1000, 500, "" },//Pistol Flashlight
-            { "optic_ACO_grn_smg", "", 2500, 1250, "" }
-        };
-    };
-
-    class rebel {
-        name = "Mohammed's Jihadi Shop";
-        conditions = "playerSide isEqualTo civilian && license_civ_rebel";
-        items[] = {
-            { "arifle_TRG20_F", "", 25000, 12500, "" },
-            { "arifle_Katiba_F", "", 30000, 15000, "" },
-            { "srifle_DMR_01_F", "", 50000, 25000, "" },
-            { "arifle_SDAR_F", "", 20000, 10000, "" },
-            { "arifle_AK12_F", "", 22000, 11000, "" }, //Apex DLC
-            { "arifle_AKS_F", "", 22000, 11000, "" }, //Apex DLC
-            { "arifle_AKM_F", "", 22000, 11000, "" }, //Apex DLC
-            { "arifle_ARX_blk_F", "", 22000, 11000, "" }, //Apex DLC
-            { "arifle_SPAR_01_blk_F", "", 33000, 16500, "" }, //Apex DLC
-            { "arifle_CTAR_blk_F", "", 30000, 15000, "" } //Apex DLC
-        };
-        mags[] = {
-            { "30Rnd_556x45_Stanag", "", 300, 150, "" },
-            { "30Rnd_762x39_Mag_F", "", 300, 150, "" }, //Apex DLC
-            { "30Rnd_545x39_Mag_F", "", 300, 150, "" }, //Apex DLC
-            { "30Rnd_65x39_caseless_green", "", 275, 140, "" },
-            { "10Rnd_762x54_Mag", "", 500, 250, "" },
-            { "20Rnd_556x45_UW_mag", "", 125, 60, "" },
-            { "30Rnd_580x42_Mag_F", "", 125, 60, "" } //Apex DLC
-        };
-        accs[] = {
-            { "optic_ACO_grn", "", 3500, 1750, "" },
-            { "optic_Holosight", "", 3600, 1800, "" },
-            { "optic_Hamr", "", 7500, 3750, "" },
-            { "acc_flashlight", "", 1000, 500, "" }
-        };
-    };
-
-    class gang {
-        name = "Hideout Armament";
-        conditions = "playerSide isEqualTo civilian";
-        items[] = {
-            { "hgun_Rook40_F", "", 1500, 750, "" },
-            { "hgun_Pistol_heavy_02_F", "", 2500, 1250, "" },
-            { "hgun_ACPC2_F", "", 4500, 2250, "" },
-            { "hgun_PDW2000_F", "", 9500, 4750, "" }
-        };
-        mags[] = {
-            { "16Rnd_9x21_Mag", "", 125, 60, "" },
-            { "6Rnd_45ACP_Cylinder", "", 150, 75, "" },
-            { "9Rnd_45ACP_Mag", "", 200, 100, "" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "" }
-        };
-        accs[] = {
-            { "acc_flashlight_pistol", "", 500, 250, "" },//Pistol Flashlight
-            { "optic_ACO_grn_smg", "", 950, 475, "" }
-        };
-    };
-
-    //Basic Shops
-    class genstore {
-        name = "Altis General Store";
-		conditions = "";
-        items[] = {
-            { "Binocular", "", 150, 75, "" },
-            { "ItemGPS", "", 100, 50, "" },
-            { "ItemMap", "", 50, 25, "" },
-            { "ItemCompass", "", 50, 25, "" },
-            { "ItemWatch", "", 50, 25, "" },
-            { "FirstAidKit", "", 150, 75, "" },
-            { "ToolKit", "", 2500, 1250, "" },
-            { "NVGoggles", "", 2000, 1000, "" },
-            { "Chemlight_red", "", 300, 150, "" },
-            { "Chemlight_yellow", "", 300, 150, "" },
-            { "Chemlight_green", "", 300, 150, "" },
-            { "Chemlight_blue", "", 300, 150, "" }
-        };
-        mags[] = {};
-        accs[] = {};
-    };
-
-    class f_station_store {
-        name = "Altis Fuel Station Store";
+    class general_store {
+        name = "General Store";
         conditions = "";
         items[] = {
-            { "Binocular", "", 750, 75, "" },
-            { "ItemGPS", "", 500, 50, "" },
-            { "ItemMap", "", 250, 25, "" },
-            { "ItemCompass", "", 250, 25, "" },
-            { "ItemWatch", "", 250, 25, "" },
-            { "FirstAidKit", "", 750, 75, "" },
-            { "ToolKit", "", 2500, 1250, "" },
-            { "NVGoggles", "", 10000, 1000, "" },
-            { "Chemlight_red", "", 1500, 150, "" },
-            { "Chemlight_yellow", "", 1500, 150, "" },
-            { "Chemlight_green", "", 1500, 150, "" },
-            { "Chemlight_blue", "", 1500, 150, "" }
+            { "ItemMap", "Map of Altis", 0, 0, "" },
+            { "ItemGPS", "Handheld GPS", 0, 0, "" },
+            { "ItemRadio", "Mobile Phone", 0, 0, "" },
+            { "ItemCompass", "Compass", 0, 0, "" },
+            { "ItemWatch", "Wrist Watch", 0, 0, "" },
+            { "Binocular", "Binoculars", 0, 0, "" },
+            { "NVGoggles", "Night Vision Goggles", 0, 0, "" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, 0, "" }, // Premium Membership
+            { "ToolKit", "Toolkit", 0, 0, "" }
         };
         mags[] = {};
         accs[] = {};
     };
 
-    //Cop Shops
-    class cop_basic {
-        name = "Altis Cop Shop";
-        conditions = "playerSide isEqualTo west";
+    class fuel_station_Store {
+        name = "Fuel Station Store";
+        conditions = "";
         items[] = {
-            { "Binocular", "", 150, 75, "" },
-            { "ItemGPS", "", 100, 50, "" },
-            { "FirstAidKit", "", 150, 75, "" },
-            { "ToolKit", "", 2500, 1250, "" },
-            { "NVGoggles", "", 2000, 1000, "" },
-            { "HandGrenade_Stone", $STR_W_items_Flashbang, 1700, 850, "" },
-            { "hgun_P07_snds_F", $STR_W_items_StunPistol, 2000, 1000, "" },
-            { "arifle_SDAR_F", $STR_W_items_TaserRifle, 20000, 10000, "" },
-            { "hgun_P07_F", "", 7500, 3750, "" },
-            { "hgun_P07_khk_F", "", 7500, 3750, "" }, //Apex DLC
-            { "hgun_Pistol_heavy_01_F", "", 9500, 4750, "call life_coplevel >= 1" },
-            { "SMG_02_ACO_F", "", 30000, 15000, "call life_coplevel >= 2" },
-            { "arifle_MX_F", "", 35000, 17500, "call life_coplevel >= 2" },
-            { "hgun_ACPC2_F", "", 17500, 8750, "call life_coplevel >= 3" },
-            { "arifle_MXC_F", "", 30000, 15000, "call life_coplevel >= 3" },
-            { "srifle_DMR_07_blk_F", "", 32000, 16000, "call life_coplevel >= 3" } //Apex DLC Sniper
+            { "ItemMap", "Map of Altis", 0, 0, "" },
+            { "ItemGPS", "Handheld GPS", 0, 0, "" },
+            { "ItemRadio", "Mobile Phone", 0, 0, "" },
+            { "ItemCompass", "Compass", 0, 0, "" },
+            { "ItemWatch", "Wrist Watch", 0, 0, "" },
+            { "ToolKit", "Toolkit", 0, 0, "" }
+        };
+        mags[] = {};
+        accs[] = {};
+    };
+
+    class go_karting_store {
+        name = "Go-Karting Store";
+        conditions = "playerSide isEqualTo civilian && license_civ_go_karting";
+        items[] = {
+            { "ToolKit", "Toolkit", 0, 0, "" },
+            { "hgun_Pistol_Signal_F", "Starter Pistol", 0, 0, "" }
         };
         mags[] = {
-            { "16Rnd_9x21_Mag", "", 125, 60, "" },
-            { "20Rnd_556x45_UW_mag", $STR_W_mags_TaserRifle, 125, 60, "" },
-            { "11Rnd_45ACP_Mag", "", 130, 65, "call life_coplevel >= 1" },
-            { "30Rnd_65x39_caseless_mag", "", 130, 65, "call life_coplevel >= 2" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "call life_coplevel >= 2" },
-            { "9Rnd_45ACP_Mag", "", 200, 100, "call life_coplevel >= 3" },
-            { "20Rnd_650x39_Cased_Mag_F", "", 200, 100, "call life_coplevel >= 3" } //Apex DLC
+            { "6Rnd_GreenSignal_F", "6Rnd Green Single Mag", 0, 0, "" },
+            { "6Rnd_RedSignal_F", "6Rnd Red Single Mag", 0, 0, "" }
+        };
+        accs[] = {};
+    };
+
+    class handgun_store {
+        name = "Handgun Store";
+        conditions = "playerSide isEqualTo civilian && license_civ_firearms";
+        items[] = {
+            { "hgun_Pistol_01_F", "PM 9 mm", 0, 0, "" },
+            { "hgun_Rook40_F", "Rook-40 9 mm", 0, 0, "" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, 0, "" }
+        };
+        mags[] = {
+            { "10Rnd_9x21_Mag", "10Rnd 9mm Mag", 0, 0, "" },
+            { "16Rnd_9x21_Mag", "16Rnd 9mm Mag", 0, 0, "" },
+            { "30Rnd_9x21_Mag", "30Rnd 9mm Mag", 0, 0, "" },
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, 0, "" }
+        };
+        accs[] = {};
+    };
+
+    class so1_protection_officer_store {
+        name = "SO1 Protection Officer Store";
+        conditions = "playerSide isEqualTo civilian && license_civ_so1";
+        items[] = {
+            { "ItemMap", "Map of Altis", 0, 0, "" },
+            { "ItemGPS", "Handheld GPS", 0, 0, "" },
+            { "ItemRadio", "Mobile Phone", 0, 0, "" },
+            { "ItemCompass", "Compass", 0, 0, "" },
+            { "ItemWatch", "Wrist Watch", 0, 0, "" },
+            { "Binocular", "Binoculars", 0, 0, "" },
+            { "NVGoggles", "Night Vision Goggles", 0, 0, "" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, 0, "" }, // Premium Membership
+            { "ToolKit", "Toolkit", 0, 0, "" },
+            { "HandGrenade_Stone", "Flashbang", 0, 0, "" },
+            { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, 0, "" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, 0, "" },
+            { "SMG_05_F", "Protector 9 mm", 0, 0, "" },
+            { "SMG_01_F", "Vermin SMG .45 ACP", 0, 0, "" },
+            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm (Black)", 0, 0, "" },
+            { "arifle_SPAR_03_blk_F", "SPAR-17 7.62 mm (Black)", 0, 0, "" }
+        };
+        mags[] = {
+            { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, 0, "" },
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, 0, "" },
+            { "30Rnd_9x21_Mag_SMG_02", "30Rnd 9mm Mag", 0, 0, "" },
+            { "30Rnd_45ACP_Mag_SMG_01", "30Rnd .45mm Mag", 0, 0, "" },
+            { "30Rnd_556x45_Stanag", "30Rnd 5.56mm Mag", 0, 0, "" },
+            { "20Rnd_762x51_Mag", "20Rnd 7.62mm Mag", 0, 0, "" }
         };
         accs[] = {
-            { "muzzle_snds_L", "", 650, 325, "" },
-            { "optic_MRD", "", 2750, 1375, "call life_coplevel >= 1" },
-            { "acc_flashlight_pistol", "", 250, 125, "call life_coplevel >= 1" },//Pistol Flashlight
-            { "acc_flashlight", "", 750, 375, "call life_coplevel >= 2" },
-            { "optic_Holosight", "", 1200, 600, "call life_coplevel >= 2" },
-            { "optic_Arco", "", 2500, 1250, "call life_coplevel >= 2" },
-            { "muzzle_snds_H", "", 2750, 1375, "call life_coplevel >= 2" }
+            { "optic_MRD", "MRD", 0, 0, "" },
+            { "optic_Aco", "ACO (Red)", 0, 0, "" },
+            { "optic_Aco_smg", "ACO SMG (Red)", 0, 0, "" },
+            { "optic_Holosight_blk_F", "Mk17 Holosight", 0, 0, "" },
+            { "optic_Holosight_smg_blk_F", "Mk17 Holosight SMG", 0, 0, "" },
+            { "optic_Hamr", "RCO", 0, 0, "" },
+            { "optic_MRCO", "MRCO", 0, 0, "" },
+            { "optic_Arco_blk_F", "ARCO", 0, 0, "" },
+            { "optic_DMS", "DMS", 0, 0, "" },
+            { "acc_flashlight_pistol", "Pistol Flashlight", 0, 0, "" },
+            { "acc_flashlight", "Flashlight", 0, 0, "" },
+            { "acc_pointer_IR", "IR Laser Pointer", 0, 0, "" }
         };
     };
 
-    //Medic Shops
-    class med_basic {
-        name = "store";
+    class syndikat_outpost {
+        name = "Syndikat Outpost";
+        conditions = "playerSide isEqualTo civilian && license_civ_syndikat";
+        items[] = {
+            { "ItemMap", "Map of Altis", 0, 0, "" },
+            { "ItemGPS", "Handheld GPS", 0, 0, "" },
+            { "ItemRadio", "Mobile Phone", 0, 0, "" },
+            { "ItemCompass", "Compass", 0, 0, "" },
+            { "ItemWatch", "Wrist Watch", 0, 0, "" },
+            { "Binocular", "Binoculars", 0, 0, "" },
+            { "NVGoggles", "Night Vision Goggles", 0, 0, "" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, 0, "" }, // Premium Membership
+            { "ToolKit", "Toolkit", 0, 0, "" },
+            { "hgun_Pistol_01_F", "PM 9 mm", 0, 0, "" },
+            { "hgun_Rook40_F", "Rook-40 9 mm", 0, 0, "" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, 0, "" },
+            { "hgun_Pistol_heavy_02_F", "Zubr .45", 0, 0, "" },
+            { "hgun_PDW2000_F", "PDW2000 9mm", 0, 0, "" },
+            { "SMG_02_F", "Sting 9mm", 0, 0, "" },
+            { "SMG_01_F", "Vermin SMG .45 ACP", 0, 0, "" },
+            { "arifle_AKS_F", "AKS-74U 5.45 mm", 0, 0, "" },
+            { "arifle_SDAR_F", "SDAR 5.56 mm", 0, 0, "" },
+            { "arifle_TRG20_F", "TRG-20 5.56 mm", 0, 0, "" },
+            { "arifle_TRG21_F", "TRG-21 5.56 mm", 0, 0, "" },
+            { "arifle_Mk20C_plain_F", "Mk20C 5.56 mm", 0, 0, "" },
+            { "arifle_Mk20C_F", "Mk20C 5.56 mm (Camo)", 0, 0, "" },
+            { "arifle_Mk20_plain_F", "Mk20 5.56 mm", 0, 0, "" },
+            { "arifle_Mk20_F", "Mk20 5.56 mm (Camo)", 0, 0, "" },
+            { "SMG_03C_TR_black", "ADR-97C TR 5.7 mm (Black)", 0, 0, "" },
+            { "SMG_03C_TR_camo", "ADR-97C TR 5.7 mm (Camo)", 0, 0, "" },
+            { "SMG_03_TR_hex", "ADR-97C TR 5.7 mm (Hex)", 0, 0, "" },
+            { "SMG_03C_TR_khaki", "ADR-97C TR 5.7 mm (Khaki)", 0, 0, "" },
+            { "LMG_03_F", "LIM-85 5.56 mm", 0, 0, "" },
+            { "arifle_Katiba_C_F", "Katiba Carbine 6.5 mm", 0, 0, "" },
+            { "arifle_Katiba_F", "Katiba 6.5 mm", 0, 0, "" },
+            { "arifle_AKM_F", "AKM 7.62 mm", 0, 0, "" },
+            { "srifle_DMR_01_F", "Rahim 7.62 mm", 0, 0, "" },
+            { "srifle_DMR_06_olive_F", "Mk14 7.62 mm (Olive)", 0, 0, "" },
+            { "srifle_DMR_06_camo_F", "Mk14 7.62 mm (Camo)", 0, 0, "" }
+        };
+        mags[] = {
+            { "10Rnd_9x21_Mag", "10Rnd 9mm Mag", 0, 0, "" },
+            { "16Rnd_9x21_Mag", "16Rnd 9mm Mag", 0, 0, "" },
+            { "30Rnd_9x21_Mag", "30Rnd 9mm Mag", 0, 0, "" },
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, 0, "" },
+            { "6Rnd_45ACP_Cylinder", "6Rnd .45mm Cylinder", 0, 0, "" },
+            { "30Rnd_45ACP_Mag_SMG_01", "30Rnd .45mm Mag", 0, 0, "" },
+            { "30Rnd_545x39_Mag_F", "30Rnd 5.45mm Mag", 0, 0, "" },
+            { "20Rnd_556x45_UW_mag", "20Rnd 5.56mm UW Mag", 0, 0, "" },
+            { "30Rnd_556x45_Stanag", "30Rnd 5.56mm Mag", 0, 0, "" },
+            { "200Rnd_556x45_Box_F", "200Rnd 5.56mm Box", 0, 0, "" },
+            { "30Rnd_65x39_caseless_green", "30Rnd 6.5mm Mag", 0, 0, "" },
+            { "50Rnd_570x28_SMG_03", "50Rnd 5.7mm Mag", 0, 0, "" },
+            { "30Rnd_762x39_Mag_F", "30Rnd 7.62mm Mag", 0, 0, "" },
+            { "10Rnd_762x54_Mag", "10Rnd 7.62mm Mag", 0, 0, "" },
+            { "20Rnd_762x51_Mag", "20Rnd 7.62mm Mag", 0, 0, "" }
+        };
+        accs[] = {
+            { "optic_ACO_grn", "ACO (Green)", 0, 0, "" },
+            { "optic_Aco", "ACO (Red)", 0, 0, "" },
+            { "optic_ACO_grn_smg", "ACO SMG (Green)", 0, 0, "" },
+            { "optic_Aco_smg", "ACO SMG (Red)", 0, 0, "" },
+            { "optic_Holosight", "Mk17 Holosight", 0, 0, "" },
+            { "optic_Holosight_smg", "Mk17 Holosight SMG", 0, 0, "" },
+            { "optic_Hamr", "RCO", 0, 0, "" },
+            { "optic_MRCO", "MRCO", 0, 0, "" },
+            { "optic_Arco_blk_F", "ARCO", 0, 0, "" },
+            { "optic_KHS_old", "Kahlia (Old)", 0, 0, "" },
+            { "acc_flashlight_pistol", "Pistol Flashlight", 0, 0, "" },
+            { "acc_flashlight", "Flashlight", 0, 0, "" }
+        };
+    };
+
+    class tpc_general_Store {
+        name = "TPC - General Store";
+        conditions = "playerSide isEqualTo west";
+        items[] = {
+            { "ItemMap", "Map of Altis", 0, -1, "call life_coplevel >= 1" },
+            { "ItemGPS", "Handheld GPS", 0, -1, "call life_coplevel >= 1" },
+            { "ItemRadio", "Mobile Phone", 0, -1, "call life_coplevel >= 1" },
+            { "ItemCompass", "Compass", 0, -1, "call life_coplevel >= 1" },
+            { "ItemWatch", "Wrist Watch", 0, -1, "call life_coplevel >= 1" },
+            { "Binocular", "Binoculars", 0, -1, "call life_coplevel >= 1" },
+            { "Rangefinder", "Rangefinder", 0, -1, "call life_coplevel >= 2" },
+            { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "call life_coplevel >= 1" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, -1, "call life_coplevel >= 1" }, // Premium Membership
+            { "ToolKit", "Toolkit", 0, -1, "call life_coplevel >= 1" },
+            { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, 0, "call life_coplevel >= 1" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "call life_coplevel >= 5" },
+            { "SMG_05_F", "Protector 9 mm", 0, -1, "call life_coplevel >= 2" },
+            { "SMG_01_F", "Vermin SMG .45 ACP", 0, -1, "call life_coplevel >= 2" },
+            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "call life_coplevel >= 2" },
+            { "arifle_CTAR_blk_F", "CAR-95 5.8 mm", 0, -1, "call life_coplevel >= 3" },
+            { "arifle_MX_Black_F", "MX 6.5 mm", 0, -1, "call life_coplevel >= 4" },
+            { "arifle_MXM_Black_F", "MXM 6.5 mm", 0, -1, "call life_coplevel >= 5" },
+            { "arifle_MX_SW_Black_F", "MX SW 6.5 mm", 0, -1, "call life_coplevel >= 7" },
+            { "arifle_AK12_F", "AK-12 7.62 mm", 0, -1, "call life_coplevel >= 9" }
+        };
+        mags[] = {
+            { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, -1, "call life_coplevel >= 1" },
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, -1, "call life_coplevel >= 5" },
+            { "30Rnd_9x21_Mag_SMG_02", "30Rnd 9mm Mag", 0, -1, "call life_coplevel >= 5" },
+            { "30Rnd_45ACP_Mag_SMG_01", "30Rnd .45mm Mag", 0, -1, "call life_coplevel >= 2" },
+            { "30Rnd_556x45_Stanag", "30Rnd 5.56mm Mag", 0, -1, "call life_coplevel >= 2" },
+            { "30Rnd_580x42_Mag_F", "30Rnd 5.8mm Mag", 0, -1, "call life_coplevel >= 3" },
+            { "30Rnd_65x39_caseless_mag", "30Rnd 6.5mm Mag", 0, -1, "call life_coplevel >= 4" },
+            { "100Rnd_65x39_caseless_mag", "100Rnd 6.5mm Mag", 0, -1, "call life_coplevel >= 7" },
+            { "30Rnd_762x39_Mag_F", "30Rnd 7.62mm Mag", 0, -1, "call life_coplevel >= 9" }
+        };
+        accs[] = {
+            { "optic_MRD", "MRD", 0, -1, "call life_coplevel >= 1" },
+            { "optic_Aco", "ACO (Red)", 0, -1, "call life_coplevel >= 2" },
+            { "optic_Aco_smg", "ACO SMG (Red)", 0, -1, "call life_coplevel >= 2" },
+            { "optic_Holosight_blk_F", "Mk17 Holosight", 0, -1, "call life_coplevel >= 2" },
+            { "optic_Holosight_smg_blk_F", "Mk17 Holosight SMG", 0, -1, "call life_coplevel >= 2" },
+            { "optic_Hamr", "RCO", 0, -1, "call life_coplevel >= 2" },
+            { "optic_MRCO", "MRCO", 0, -1, "call life_coplevel >= 2" },
+            { "optic_Arco_blk_F", "ARCO", 0, -1, "call life_coplevel >= 2" },
+            { "optic_DMS", "DMS", 0, -1, "call life_coplevel >= 5" },
+            { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, "call life_coplevel >= 1" },
+            { "acc_flashlight", "Flashlight", 0, -1, "call life_coplevel >= 2" },
+            { "acc_pointer_IR", "IR Laser Pointer", 0, -1, "call life_coplevel >= 5" }
+        };
+    };
+
+    class tpc_asu_Store {
+        name = "TPC - ASU Store";
+        conditions = "playerSide isEqualTo west && license_cop_asu";
+        items[] = {
+            { "ItemMap", "Map of Altis", 0, -1, "" },
+            { "ItemGPS", "Handheld GPS", 0, -1, "" },
+            { "ItemRadio", "Mobile Phone", 0, -1, "" },
+            { "ItemCompass", "Compass", 0, -1, "" },
+            { "ItemWatch", "Wrist Watch", 0, -1, "" },
+            { "Binocular", "Binoculars", 0, -1, "" },
+            { "Rangefinder", "Rangefinder", 0, -1, "" },
+            { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, -1, "" }, // Premium Membership
+            { "ToolKit", "Toolkit", 0, -1, "" },
+            { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, -1, "" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "" }
+        };
+        mags[] = {
+            { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, -1, "" },
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, -1, "" }
+        };
+        accs[] = {
+            { "optic_MRD", "MRD", 0, -1, "" },
+            { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, "" }
+        };
+    };
+
+    class tpc_mpu_Store {
+        name = "TPC - MPU Store";
+        conditions = "playerSide isEqualTo west && license_cop_mpu";
+        items[] = {
+            { "ItemMap", "Map of Altis", 0, -1, "" },
+            { "ItemGPS", "Handheld GPS", 0, -1, "" },
+            { "ItemRadio", "Mobile Phone", 0, -1, "" },
+            { "ItemCompass", "Compass", 0, -1, "" },
+            { "ItemWatch", "Wrist Watch", 0, -1, "" },
+            { "Binocular", "Binoculars", 0, -1, "" },
+            { "Rangefinder", "Rangefinder", 0, -1, "" },
+            { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, -1, "" }, // Premium Membership
+            { "ToolKit", "Toolkit", 0, -1, "" },
+            { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, -1, "" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "" },
+            { "arifle_SDAR_F", "SDAR 5.56 mm", 0, -1, "" },
+            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "" },
+            { "arifle_SPAR_02_blk_F", "SPAR-16S 5.56 mm", 0, -1, "" }
+        };
+        mags[] = {
+            { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, -1, "" },
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, -1, "" },
+            { "20Rnd_556x45_UW_mag", "20Rnd UW 5.56mm Mag", 0, -1, "" },
+            { "30Rnd_556x45_Stanag", "30Rnd 5.56mm Mag", 0, -1, "" },
+            { "150Rnd_556x45_Drum_Mag_F", "150Rnd 5.56mm Mag", 0, -1, "" }
+        };
+        accs[] = {
+            { "optic_MRD", "MRD", 0, -1, "" },
+            { "optic_Aco", "ACO (Red)", 0, -1, "" },
+            { "optic_Aco_smg", "ACO SMG (Red)", 0, -1, "" },
+            { "optic_Holosight_blk_F", "Mk17 Holosight", 0, -1, "" },
+            { "optic_Holosight_smg_blk_F", "Mk17 Holosight SMG", 0, -1, "" },
+            { "optic_Hamr", "RCO", 0, -1, "" },
+            { "optic_MRCO", "MRCO", 0, -1, "" },
+            { "optic_Arco_blk_F", "ARCO", 0, -1, "" },
+            { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, "" },
+            { "acc_flashlight", "Flashlight", 0, -1, "" },
+            { "acc_pointer_IR", "IR Laser Pointer", 0, -1, "" }
+        };
+    };
+
+    class tpc_aru_Store {
+        name = "TPC - ARU Store";
+        conditions = "playerSide isEqualTo west && license_cop_aru";
+        items[] = {
+            { "ItemMap", "Map of Altis", 0, -1, "" },
+            { "ItemGPS", "Handheld GPS", 0, -1, "" },
+            { "ItemRadio", "Mobile Phone", 0, -1, "" },
+            { "ItemCompass", "Compass", 0, -1, "" },
+            { "ItemWatch", "Wrist Watch", 0, -1, "" },
+            { "Binocular", "Binoculars", 0, -1, "" },
+            { "Rangefinder", "Rangefinder", 0, -1, "" },
+            { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, -1, "" }, // Premium Membership
+            { "ToolKit", "Toolkit", 0, -1, "" },
+            { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, -1, "" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "" },
+            { "SMG_03C_TR_black", "ADR-97C TR 5.7 mm", 0, -1, "" },
+            { "SMG_03_TR_black", "ADR-97 TR 5.7 mm", 0, -1, "" },
+            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "" },
+            { "arifle_SPAR_02_blk_F", "SPAR-16S 5.56 mm", 0, -1, "" },
+            { "arifle_CTAR_blk_F", "CAR-95 5.8 mm", 0, -1, "" },
+            { "arifle_CTARS_blk_F", "CAR-95-1 5.8mm", 0, -1, "" },
+            { "arifle_MX_Black_F", "MX 6.5 mm", 0, -1, "" },
+            { "arifle_MXM_Black_F", "MXM 6.5 mm", 0, -1, "" },
+            { "arifle_MX_SW_Black_F", "MX SW 6.5 mm", 0, -1, "" },
+            { "arifle_ARX_blk_F", "Type 115 6.5 mm", 0, -1, "" },
+            { "srifle_DMR_03_F", "Mk-I EMR 7.62 mm", 0, -1, "" }
+        };
+        mags[] = {
+            { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, -1, "" },
+            { "10Rnd_50BW_Mag_F", "Rubber Bullets", 0, -1, "" },
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, -1, "" },
+            { "50Rnd_570x28_SMG_03", "30Rnd 5.7mm Mag", 0, -1, "" },
+            { "30Rnd_556x45_Stanag", "30Rnd 5.56mm Mag", 0, -1, "" },
+            { "150Rnd_556x45_Drum_Mag_F", "150Rnd 5.56mm Mag", 0, -1, "" },
+            { "30Rnd_580x42_Mag_F", "30Rnd 5.8mm Mag", 0, -1, "" },
+            { "100Rnd_580x42_Mag_F", "100Rnd 5.8mm Mag", 0, -1, "" },
+            { "20Rnd_650x39_Cased_Mag_F", "30Rnd 6.5mm Mag", 0, -1, "" },
+            { "100Rnd_65x39_caseless_mag", "100Rnd 6.5mm Mag", 0, -1, "" },
+            { "30Rnd_65x39_caseless_green", "30Rnd 6.5mm Mag", 0, -1, "" },
+            { "20Rnd_762x51_Mag", "20Rnd 7.62mm Mag", 0, -1, "" }
+        };
+        accs[] = {
+            { "optic_MRD", "MRD", 0, -1, "" },
+            { "optic_Aco", "ACO (Red)", 0, -1, "" },
+            { "optic_Aco_smg", "ACO SMG (Red)", 0, -1, "" },
+            { "optic_Holosight_blk_F", "Mk17 Holosight", 0, -1, "" },
+            { "optic_Holosight_smg_blk_F", "Mk17 Holosight SMG", 0, -1, "" },
+            { "optic_Hamr", "RCO", 0, -1, "" },
+            { "optic_MRCO", "MRCO", 0, -1, "" },
+            { "optic_Arco_blk_F", "ARCO", 0, -1, "" },
+            { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, "" },
+            { "acc_flashlight", "Flashlight", 0, -1, "" },
+            { "acc_pointer_IR", "IR Laser Pointer", 0, -1, "" }
+        };
+    };
+
+    class nhs_general_store {
+        name = "NHS - General Store";
         conditions = "playerSide isEqualTo independent";
         items[] = {
-            { "ItemGPS", "", 100, 50, "" },
-            { "Binocular", "", 150, 75, "" },
-            { "FirstAidKit", "", 150, 75, "" },
-            { "ToolKit", "", 2500, 1250, "" },
-            { "NVGoggles", "", 1200, 600, "" }
+            { "ItemMap", "Map of Altis", 0, -1, "" },
+            { "ItemGPS", "Handheld GPS", 0, -1, "" },
+            { "ItemRadio", "Mobile Phone", 0, -1, "" },
+            { "ItemCompass", "Compass", 0, -1, "" },
+            { "ItemWatch", "Wrist Watch", 0, -1, "" },
+            { "Binocular", "Binoculars", 0, -1, "" },
+            { "NVGoggles", "Night Vision Goggles", 0, -1, "" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, -1, "" }, // Premium Membership
+            { "ToolKit", "Toolkit", 0, -1, "" }
         };
         mags[] = {};
         accs[] = {};

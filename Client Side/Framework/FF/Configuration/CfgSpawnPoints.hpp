@@ -1,15 +1,4 @@
-/*
-*    Format:
-*        3: STRING (Conditions) - Must return boolean :
-*            String can contain any amount of conditions, aslong as the entire
-*            string returns a boolean. This allows you to check any levels, licenses etc,
-*            in any combination. For example:
-*                "call life_coplevel && license_civ_someLicense"
-*            This will also let you call any other function.
-*
-*/
 class CfgSpawnPoints {
-
     class Altis {
         class Civilian {
             class Kavala {
@@ -103,99 +92,94 @@ class CfgSpawnPoints {
     };
 
     class Tanoa {
-
         class Civilian {
-            class Georgetown {
+            class civ_eorgetown {
                 displayName = "Georgetown";
                 spawnMarker = "civ_spawn_1";
-                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+                icon = "\a3\ui_f\data\map\MapControl\vegetationBroadleaf_CA.paa";
                 conditions = "";
             };
 
-            class Balavu {
-                displayName = "Balavu";
-                spawnMarker = "civ_spawn_3";
-                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+            class civ_la_rochelle {
+                displayName = "La Rochelle";
+                spawnMarker = "cop_spawn_2";
+                icon = "\a3\ui_f\data\map\MapControl\lighthouse_CA.paa";
                 conditions = "";
             };
 
-            class Tuvanaka {
-                displayName = "Tuvanaka";
-                spawnMarker = "civ_spawn_2";
-                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "";
-            };
-
-            class Lijnhaven {
+            class civ_lijnhaven {
                 displayName = "Lijnhaven";
-                spawnMarker = "civ_spawn_4";
-                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+                spawnMarker = "civ_spawn_3";
+                icon = "\a3\ui_f\data\map\MapControl\fountain_CA.paa";
                 conditions = "";
             };
         };
 
         class Cop {
-            class NAirport {
-                displayName = $STR_SP_Cop_Air_N;
-                spawnMarker = "cop_spawn_1";
-                icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "";
-            };
-
-            class SWAirport {
-                displayName = $STR_SP_Cop_Air_SW;
-                spawnMarker = "cop_spawn_3";
-                icon = "\a3\ui_f\data\map\MapControl\fuelstation_ca.paa";
-                conditions = "";
-            };
-
-            class GeorgetownHQ {
+            class tpc_georgetown {
                 displayName = "Georgetown HQ";
-                spawnMarker = "cop_spawn_2";
-                icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
+                spawnMarker = "cop_spawn_1";
+                icon = "\a3\ui_f\data\map\MapControl\vegetationBroadleaf_CA.paa";
                 conditions = "";
             };
 
-            class Air {
-                displayName = $STR_MAR_Police_Air_HQ;
-                spawnMarker = "cop_spawn_4";
-                icon = "\a3\ui_f\data\map\Markers\NATO\b_air.paa";
-                conditions = "call life_coplevel >= 2 && {license_cop_cAir}";
+            class tpc_la_rochelle {
+                displayName = "La Rochelle HQ";
+                spawnMarker = "cop_spawn_2";
+                icon = "\a3\ui_f\data\map\MapControl\lighthouse_CA.paa";
+                conditions = "";
             };
 
-            class HW {
-                displayName = $STR_MAR_Highway_Patrol;
+            class tpc_lijnhaven {
+                displayName = "Lijnhaven HQ";
+                spawnMarker = "cop_spawn_3";
+                icon = "\a3\ui_f\data\map\MapControl\fountain_CA.paa";
+                conditions = "";
+            };
+
+            class tpc_airbase {
+                displayName = "Northern Airbase";
+                spawnMarker = "cop_spawn_4";
+                icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";
+                conditions = "";
+            };
+
+            class tpc_docks {
+                displayName = "Southern Docks";
                 spawnMarker = "cop_spawn_5";
-                icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
-                conditions = "call life_coplevel >= 3";
+                icon = "\a3\ui_f\data\map\Markers\NATO\c_ship.paa";
+                conditions = "";
             };
         };
 
         class Medic {
-
-            class SEHospital {
-                displayName = $STR_SP_EMS_SE;
+            class nhs_georgetown {
+                displayName = "Georgetown Clinic";
                 spawnMarker = "medic_spawn_1";
-                icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
+                icon = "\a3\ui_f\data\map\VehicleIcons\pictureLogic_ca.paa";
                 conditions = "";
             };
 
-            class TanoukaHospital {
-                displayName = $STR_SP_EMS_Tan;
+            class nhs_la_rochelle {
+                displayName = "La Rochelle Clinic";
                 spawnMarker = "medic_spawn_2";
-                icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
+                icon = "\a3\ui_f\data\map\MapControl\pictureLogic_ca.paa";
                 conditions = "";
             };
 
-            class NEAirportHospital {
-                displayName = $STR_SP_EMS_NEair;
+            class nhs_airbase {
+                displayName = "Southen Airbase";
                 spawnMarker = "medic_spawn_3";
-                icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
+                icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";
                 conditions = "";
             };
 
+            class nhs_docks {
+                displayName = "Norther Docks";
+                spawnMarker = "medic_spawn_4";
+                icon = "\a3\ui_f\data\map\Markers\NATO\c_ship.paa";
+                conditions = "";    
+            };
         };
-
     };
-
 };

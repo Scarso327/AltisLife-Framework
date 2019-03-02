@@ -1,130 +1,151 @@
-/*
-*    FORMAT:
-*        STRING (Conditions) - Must return boolean :
-*            String can contain any amount of conditions, aslong as the entire
-*            string returns a boolean. This allows you to check any levels, licenses etc,
-*            in any combination. For example:
-*                "call life_coplevel && license_civ_someLicense"
-*            This will also let you call any other function.
-*/
 class CfgShops {
-    //Virtual Shops
-    class market {
-        name = "STR_Shops_Market";
-        side = "civ";
+    class general_market {
+        name = "General Market";
         conditions = "";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "pickaxe", "fuelFull", "peach", "storagesmall", "storagebig", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw" };
+        items[] = { "water", "soda", "energy_drink", "apple", "mango", "coconut", "baguette", "croissant", "crepe", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "empty_barrel" };
     };
 
-    class med_market {
-        name = "STR_Shops_Market";
-        side = "med";
+    class property_agents {
+        name = "Property Agents";
         conditions = "";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "fuelFull", "peach", "defibrillator" };
+        items[] = { "small_container", "large_container" };
+    };
+    
+    class tea_room {
+        name = "Tea Room";
+        conditions = "";
+        items[] = { "red_bush", "pg_tips", "earl_grey", "green_tea", "coffee", "water", "soda", "english_breakfast", "tea_cake", "crumpet", "toast", "scone" };
     };
 
-    class rebel {
-        name = "STR_Shops_Rebel";
-        side = "civ";
-        conditions = "license_civ_rebel";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge" };
+    class fish_and_chip_shop {
+        name = "Fish & Chip Shop";
+        conditions = "";
+        items[] = { "water", "soda", "cheesy_chips", "fish_chips", "sausage_supper", "pasty_chips", "burger" };
     };
 
-    class gang {
-        name = "STR_Shops_Gang";
-        side = "civ";
+    class fuel_station_market {
+        name = "Fuel Station Market";
         conditions = "";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "fuel_can", "empty_fuel_can" };
     };
 
-    class wongs {
-        name = "STR_Shops_Wongs";
-        side = "civ";
+    class fish_market {
+        name = "Fish Market";
         conditions = "";
-        items[] = { "turtle_soup", "turtle_raw" };
+        items[] = { "raw_salema", "cooked_salema", "raw_ornate", "cooked_ornate", "cooked_tuna", "raw_mullet", "cooked_mullet", "raw_catshark", "cooked_catshark" };
     };
 
-    class coffee {
-        name = "STR_Shops_Coffee";
-        side = "civ";
+    class local_pub {
+        name = "Local Pub";
         conditions = "";
-        items[] = { "coffee", "donuts" };
+        items[] = { "mango_schnapps", "cococut_schnapps", "cider", "beer", "whisky", "wine" };
     };
 
-    class f_station_coffee {
-        name = "STR_Shop_Station_Coffee";
-        side = "";
+    class casino_cashier {
+        name = "Casino Cashier";
         conditions = "";
-        items[] = { "coffee", "donuts", "redgull", "fuelFull"};
+        items[] = { "1k_chip", "5k_chip", "10k_chip", "25k_chipbeer", "50k_chip", "100k_chip" };
     };
 
-    class drugdealer {
-        name = "STR_Shops_DrugDealer";
-        side = "civ";
-        conditions = "";
-        items[] = { "cocaine_processed", "heroin_processed", "marijuana" };
+    class so1_protection_market {
+        name = "Fish Market";
+        conditions = "playerSide isEqualTo civilian && license_civ_so1";
+        items[] = { "water", "soda", "energy_drink", "apple", "mango", "coconut", "baguette", "croissant", "crepe", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "gps_tracker" };
     };
 
-    class oil {
-        name = "STR_Shops_Oil";
-        side = "civ";
-        conditions = "";
-        items[] = { "oil_processed", "pickaxe", "fuelFull" };
+    class syndikat_outpost {
+        name = "Syndikat Outpost";
+        conditions = "playerSide isEqualTo civilian && license_civ_syndikat";
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "bolt_cutter" };
     };
 
-    class fishmarket {
-        name = "STR_Shops_FishMarket";
-        side = "civ";
-        conditions = "";
-        items[] = { "salema_raw", "salema", "ornate_raw", "ornate", "mackerel_raw", "mackerel", "tuna_raw", "tuna", "mullet_raw", "mullet", "catshark_raw", "catshark" };
+    class black_market {
+        name = "Black Market";
+        conditions = "playerSide isEqualTo civilian && license_civ_syndikat";
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "bolt_cutter", "explosive_charge" };
     };
 
-    class glass {
-        name = "STR_Shops_Glass";
-        side = "civ";
+    class gold_buyer {
+        name = "Gold Buyer";
         conditions = "";
-        items[] = { "glass" };
+        items[] = { "branded_gold_bar", "unbranded_gold_bar" };
     };
 
-    class iron  {
-        name = "STR_Shops_Minerals";
-        side = "civ";
+    class coal_plant {
+        name = "Coal Plant";
         conditions = "";
-        items[] = { "iron_refined", "copper_refined" };
+        items[] = { "coal" };
     };
 
-    class diamond {
-        name = "STR_Shops_Diamond";
-        side = "civ";
+    class coral_exports {
+        name = "Coral Exports";
         conditions = "";
-        items[] = { "diamond_uncut", "diamond_cut" };
+        items[] = { "coral" };
     };
 
-    class salt {
-        name = "STR_Shops_Salt";
-        side = "civ";
+    class mineral_exports {
+        name = "Mineral Exports";
         conditions = "";
-        items[] = { "salt_refined" };
+        items[] = { "tin_ore", "tin_bar", "copper_ore", "copper_bar", "silver_ore", "silver_bar", "iron_ore", "iron_bar", "tin_ore", "tin_bar", "platinum_ore", "platinum_bar" };
     };
 
-    class cement {
-        name = "STR_Shops_Cement";
-        side = "civ";
+    class cement_trader {
+        name = "Cement Trader";
         conditions = "";
-        items[] = { "cement" };
+        items[] = { "rock", "cement" };
     };
 
-    class gold {
-        name = "STR_Shops_Gold";
-        side = "civ";
+    class oil_exports {
+        name = "Oil Exports";
         conditions = "";
-        items[] = { "goldbar" };
+        items[] = { "crude_oil", "refined_oil" };
     };
 
-    class cop {
-        name = "STR_Shops_Cop";
-        side = "cop";
+    class iridium_exports {
+        name = "Iridium Exports";
         conditions = "";
-        items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "fuelFull", "defusekit", "defibrillator" };
+        items[] = { "iridium_ore", "iridium_bar" };
+    };
+
+    class gem_trader {
+        name = "Gem Trader";
+        conditions = "";
+        items[] = { "uncut_opal", "cut_opal", "uncut_sapphire", "cut_shappire", "uncut_ruby", "cut_ruby", "uncut_emerald", "cut_emerald", "uncut_diamond", "cut_diamond" };
+    };
+
+    class drug_dealer {
+        name = "Drug Dealer";
+        conditions = "";
+        items[] = { "cannabis", "marijuana", "refined_marijuana", "opium", "heroin", "refined_heroin", "coca", "cocaine", "refined_cocaine", "ephedrine", "methamphetamine", "refined_methamphetamine" };
+    };
+
+    class turtle_dealer {
+        name = "Turtle Dealer";
+        conditions = "";
+        items[] = { "raw_turtle", "cooked_turtle" };
+    };
+
+    class hmp_makret {
+        name = "HMP Market";
+        conditions = "";
+        items[] = { "water", "baguette", "first_aid_kit", "pickaxe", "rock" };
+    };
+
+    class walkin_clinic {
+        name = "Walk-In Clinic";
+        conditions = "";
+        items[] = { "water", "baguette", "first_aid_kit", "blood_bag", "stretcher" };
+    };
+
+    class tpc_market {
+        name = "TPC Market";
+        conditions = "playerSide isEqualTo west";
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "fuel_can", "empty_fuel_can", "jaws_of_life", "breathalyzer", "stinger", "gps_tracker", "road_barrier", "road_cone" };
+    };
+
+    class nhs_market {
+        name = "NHS Market";
+        conditions = "playerSide isEqualTo indpendent";
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "fuel_can", "empty_fuel_can", "jaws_of_life", "breathalyzer", "blood_bag", "stretcher", "defibrillator", "road_barrier", "road_cone" };
     };
 };

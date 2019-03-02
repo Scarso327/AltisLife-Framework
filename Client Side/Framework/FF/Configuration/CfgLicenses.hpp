@@ -188,6 +188,14 @@ class CfgLicenses {
     };
 
     // Miscellaneous
+    class so1 {
+        variable = "so1";
+        displayName = "SO1 Authorisation";
+        price = 0;
+        illegal = false;
+        side = "civ";
+    };
+
     class solicitor {
         variable = "solicitor";
         displayName = "Solicitor Registration";

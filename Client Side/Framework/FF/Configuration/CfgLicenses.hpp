@@ -244,6 +244,14 @@ class CfgLicenses {
         side = "civ";
     };
 
+    class black_market {
+        variable = "black_market";
+        displayName = "Black Market";
+        price = 0;
+        illegal = true;
+        side = "civ";
+    };
+
     // Faction Specific
     class asu {
         variable = "asu";

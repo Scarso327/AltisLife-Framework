@@ -2393,27 +2393,6 @@ class CfgItems {
         conditions = "";
     };
 
-    class stretcher {
-        variable = "stretcher";
-        displayName = "Stretcher";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
-        illegal = false;
-        save = true;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            driftPerc = 0.1;
-        };
-        class edibility {
-            edible[] = {false, ""};
-            value = -1;
-        };
-        icon = "";
-        conditions = "";
-    };
-
     class jaws_of_life {
         variable = "jaws_of_life";
         displayName = "Jaws of Life";

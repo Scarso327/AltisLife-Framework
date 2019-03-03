@@ -90,7 +90,7 @@ life_boltcutter_uses = life_boltcutter_uses + 1;
 life_action_inUse = false;
 
 if (life_boltcutter_uses >= 5) then {
-    [false,"boltcutter",1] call life_fnc_handleInv;
+    [false,"bolt_cutter",1] call life_fnc_handleInv;
     life_boltcutter_uses = 0;
 };
 

@@ -1,1346 +1,2416 @@
-/*
-*    CLASS:
-*        variable = Variable Name
-*        displayName = Item Name
-*        weight = Item Weight
-*        buyPrice = Item Buy Price
-*        sellPrice = Item Sell Price
-*        illegal = Illegal Item
-*        edible = Item Edible (-1 = Disabled)
-*        icon = Item Icon
-*        processedItem = Processed Item
-*/
 class CfgItems {
-    //Virtual Items
-
-    //Misc
-    class pickaxe {
-        variable = "pickaxe";
-        displayName = "STR_Item_Pickaxe";
-        weight = 2;
-        buyPrice = 750;
-        sellPrice = 350;
+    class water {
+        variable = "water";
+        displayName = "Bottle of Water";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_pickaxe.paa";
-        conditions = "";
-    };
-
-    class defibrillator {
-        variable = "defibrillator";
-        displayName = "STR_Item_Defibrillator";
-        weight = 4;
-        buyPrice = 900;
-        sellPrice = 450;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_defibrillator.paa";
-        conditions = "";
-    };
-
-    class fuelEmpty {
-        variable = "fuelEmpty";
-        displayName = "STR_Item_FuelE";
-        weight = 2;
-        buyPrice = -1;
-        sellPrice = 10;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_fuelEmpty.paa";
-        conditions = "";
-    };
-
-    class fuelFull {
-        variable = "fuelFull";
-        displayName = "STR_Item_FuelF";
-        weight = 5;
-        buyPrice = 850;
-        sellPrice = 500;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_fuel.paa";
-        conditions = "";
-    };
-
-    class spikeStrip {
-        variable = "spikeStrip";
-        displayName = "STR_Item_SpikeStrip";
-        weight = 15;
-        buyPrice = 2500;
-        sellPrice = 1200;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_spikeStrip.paa";
-        conditions = "";
-    };
-
-    class lockpick {
-        variable = "lockpick";
-        displayName = "STR_Item_Lockpick";
-        weight = 1;
-        buyPrice = 150;
-        sellPrice = 75;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_lockpick.paa";
-        conditions = "";
-    };
-
-    class goldbar {
-        variable = "goldBar";
-        displayName = "STR_Item_GoldBar";
-        weight = 12;
-        buyPrice = -1;
-        sellPrice = 95000;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_goldBar.paa";
-        conditions = "";
-    };
-
-    class blastingcharge {
-        variable = "blastingCharge";
-        displayName = "STR_Item_BCharge";
-        weight = 15;
-        buyPrice = 35000;
-        sellPrice = 10000;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_blastingCharge.paa";
-        conditions = "";
-    };
-
-    class boltcutter {
-        variable = "boltCutter";
-        displayName = "STR_Item_BCutter";
-        weight = 5;
-        buyPrice = 7500;
-        sellPrice = 1000;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_boltCutter.paa";
-        conditions = "";
-    };
-
-    class defusekit {
-        variable = "defuseKit";
-        displayName = "STR_Item_DefuseKit";
-        weight = 2;
-        buyPrice = 2500;
-        sellPrice = 2000;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_defuseKit.paa";
-        conditions = "";
-    };
-
-    class storagesmall {
-        variable = "storageSmall";
-        displayName = "STR_Item_StorageBS";
-        weight = 5;
-        buyPrice = 75000;
-        sellPrice = 50000;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_storageSmall.paa";
-        conditions = "";
-    };
-
-    class storagebig {
-        variable = "storageBig";
-        displayName = "STR_Item_StorageBL";
-        weight = 10;
-        buyPrice = 150000;
-        sellPrice = 125000;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_storageBig.paa";
-        conditions = "";
-    };
-
-    //Mined Items
-    class oil_unprocessed {
-        variable = "oilUnprocessed";
-        displayName = "STR_Item_OilU";
-        weight = 7;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_oilUnprocessed.paa";
-        conditions = "";
-    };
-
-    class oil_processed {
-        variable = "oilProcessed";
-        displayName = "STR_Item_OilP";
-        weight = 6;
-        buyPrice = -1;
-        sellPrice = 3200;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_oilProcessed.paa";
-        conditions = "";
-    };
-
-    class copper_unrefined {
-        variable = "copperUnrefined";
-        displayName = "STR_Item_CopperOre";
-        weight = 4;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_copperOre.paa";
-        conditions = "";
-    };
-
-    class copper_refined {
-        variable = "copperRefined";
-        displayName = "STR_Item_CopperIngot";
-        weight = 3;
-        buyPrice = -1;
-        sellPrice = 1500;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_copper.paa";
-        conditions = "";
-    };
-
-    class iron_unrefined {
-        variable = "ironUnrefined";
-        displayName = "STR_Item_IronOre";
-        weight = 5;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_ironOre.paa";
-        conditions = "";
-    };
-
-    class iron_refined {
-        variable = "ironRefined";
-        displayName = "STR_Item_IronIngot";
-        weight = 3;
-        buyPrice = -1;
-        sellPrice = 3200;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_iron.paa";
-        conditions = "";
-    };
-
-    class salt_unrefined {
-        variable = "saltUnrefined";
-        displayName = "STR_Item_Salt";
-        weight = 3;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_saltUnprocessed.paa";
-        conditions = "";
-    };
-
-    class salt_refined {
-        variable = "saltRefined";
-        displayName = "STR_Item_SaltR";
-        weight = 1;
-        buyPrice = -1;
-        sellPrice = 1450;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_saltProcessed.paa";
-        conditions = "";
-    };
-
-    class sand {
-        variable = "sand";
-        displayName = "STR_Item_Sand";
-        weight = 3;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_sand.paa";
-        conditions = "";
-    };
-
-    class glass {
-        variable = "glass";
-        displayName = "STR_Item_Glass";
-        weight = 1;
-        buyPrice = -1;
-        sellPrice = 1450;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_glass.paa";
-        conditions = "";
-    };
-
-    class diamond_uncut {
-        variable = "diamondUncut";
-        displayName = "STR_Item_DiamondU";
-        weight = 4;
-        buyPrice = -1;
-        sellPrice = 750;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_diamondUncut.paa";
-        conditions = "";
-    };
-
-    class diamond_cut {
-        variable = "diamondCut";
-        displayName = "STR_Item_DiamondC";
-        weight = 2;
-        buyPrice = -1;
-        sellPrice = 2000;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_diamondCut.paa";
-        conditions = "";
-    };
-
-    class rock {
-        variable = "rock";
-        displayName = "STR_Item_Rock";
-        weight = 6;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_rock.paa";
-        conditions = "";
-    };
-
-    class cement {
-        variable = "cement";
-        displayName = "STR_Item_CementBag";
-        weight = 5;
-        buyPrice = -1;
-        sellPrice = 1950;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_cement.paa";
-        conditions = "";
-    };
-
-    //Drugs
-    class heroin_unprocessed {
-        variable = "heroinUnprocessed";
-        displayName = "STR_Item_HeroinU";
-        weight = 6;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_heroinUnprocessed.paa";
-        processedItem = "heroin_processed";
-        conditions = "";
-    };
-
-    class heroin_processed {
-        variable = "heroinProcessed";
-        displayName = "STR_Item_HeroinP";
-        weight = 4;
-        buyPrice = 3500;
-        sellPrice = 2560;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_heroinProcessed.paa";
-        conditions = "";
-    };
-
-    class cannabis {
-        variable = "cannabis";
-        displayName = "STR_Item_Cannabis";
-        weight = 4;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_cannabis.paa";
-        processedItem = "marijuana";
-        conditions = "";
-    };
-
-    class marijuana {
-        variable = "marijuana";
-        displayName = "STR_Item_Marijuana";
-        weight = 3;
-        buyPrice = 2800;
-        sellPrice = 2350;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_marijuana.paa";
-        conditions = "";
-    };
-
-    class cocaine_unprocessed {
-        variable = "cocaineUnprocessed";
-        displayName = "STR_Item_CocaineU";
-        weight = 6;
-        buyPrice = -1;
-        sellPrice = -1;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_cocaineUnprocessed.paa";
-        processedItem = "cocaine_processed";
-        conditions = "";
-    };
-
-    class cocaine_processed {
-        variable = "cocaineProcessed";
-        displayName = "STR_Item_CocaineP";
-        weight = 4;
-        buyPrice = -1;
-        sellPrice = 5000;
-        illegal = true;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_cocaineProcessed.paa";
-        conditions = "";
-    };
-
-    //Drink
-    class redgull {
-        variable = "redgull";
-        displayName = "STR_Item_RedGull";
-        weight = 1;
-        buyPrice = 1500;
-        sellPrice = 200;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Thirst"};
-            value = 100;
+            value = 60;
         };
-        icon = "ico_redgull.paa";
+        icon = "";
         conditions = "";
     };
 
-    class coffee {
-        variable = "coffee";
-        displayName = "STR_Item_Coffee";
-        weight = 1;
-        buyPrice = 10;
-        sellPrice = 5;
+    class soda {
+        variable = "soda";
+        displayName = "Bottle of Soda";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Thirst"};
-            value = 100;
+            value = 50;
         };
-        icon = "ico_coffee.paa";
+        icon = "";
         conditions = "";
     };
 
-    class waterBottle {
-        variable = "waterBottle";
-        displayName = "STR_Item_WaterBottle";
-        weight = 1;
-        buyPrice = 10;
-        sellPrice = 5;
+    class energy_drink {
+        variable = "energy_drink";
+        displayName = "Energy Drink";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            dynmaic = true;
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Thirst"};
-            value = 100;
+            value = 20;
         };
-        icon = "ico_waterBottle.paa";
+        icon = "";
         conditions = "";
     };
 
-    //Food
     class apple {
         variable = "apple";
-        displayName = "STR_Item_Apple";
-        weight = 1;
-        buyPrice = 65;
-        sellPrice = 50;
+        displayName = "Apple";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            dynmaic = true;
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
+            edible[] = {true, "Both"};
             value = 10;
         };
-        icon = "ico_apple.paa";
+        icon = "";
         conditions = "";
     };
 
-    class peach {
-        variable = "peach";
-        displayName = "STR_Item_Peach";
-        weight = 1;
-        buyPrice = 68;
-        sellPrice = 55;
+    class mango {
+        variable = "mango";
+        displayName = "Mango";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            dynmaic = true;
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
+            edible[] = {true, "Both"};
             value = 10;
         };
-        icon = "ico_peach.paa";
+        icon = "";
         conditions = "";
     };
 
-    class tbacon {
-        variable = "tbacon";
-        displayName = "STR_Item_TBacon";
-        weight = 1;
-        buyPrice = 75;
-        sellPrice = 25;
+    class coconut {
+        variable = "coconut";
+        displayName = "Coconut";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Both"};
+            value = 10;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class baguette {
+        variable = "baguette";
+        displayName = "Baguette";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 60;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class croissant {
+        variable = "croissant";
+        displayName = "Croissant";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 40;
         };
-        icon = "ico_tBacon.paa";
+        icon = "";
         conditions = "";
     };
 
-    class donuts {
-        variable = "donuts";
-        displayName = "STR_Item_Donuts";
-        weight = 1;
-        buyPrice = 120;
-        sellPrice = 60;
+    class crepe {
+        variable = "crepe";
+        displayName = "Crepe";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {true, "Hunger"};
-            value = 30;
-        };
-        icon = "ico_donuts.paa";
-        conditions = "";
-    };
-
-    class rabbit_raw {
-        variable = "rabbitRaw";
-        displayName = "STR_Item_RabbitRaw";
-        weight = 2;
-        buyPrice = -1;
-        sellPrice = 95;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_rabbitRaw.paa";
-        conditions = "";
-    };
-
-    class rabbit {
-        variable = "rabbit";
-        displayName = "STR_Item_Rabbit";
-        weight = 1;
-        buyPrice = 150;
-        sellPrice = 115;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 20;
         };
-        icon = "ico_rabbit.paa";
+        icon = "";
         conditions = "";
     };
 
-    class salema_raw {
-        variable = "salemaRaw";
-        displayName = "STR_Item_SalemaRaw";
-        weight = 2;
-        buyPrice = -1;
-        sellPrice = 45;
+    class energy_bar {
+        variable = "energy_bar";
+        displayName = "Energy Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_salemaRaw.paa";
-        conditions = "";
-    };
-
-    class salema {
-        variable = "salema";
-        displayName = "STR_Item_Salema";
-        weight = 1;
-        buyPrice = 75;
-        sellPrice = 55;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Hunger"};
-            value = 30;
+            value = 50;
         };
-        icon = "ico_cookedFish.paa";
+        icon = "";
         conditions = "";
     };
 
-    class ornate_raw {
-        variable = "ornateRaw";
-        displayName = "STR_Item_OrnateRaw";
-        weight = 2;
-        buyPrice = -1;
-        sellPrice = 40;
+    class first_aid_kit {
+        variable = "first_aid_kit";
+        displayName = "First Aid Kit";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_ornateRaw.paa";
+        icon = "";
         conditions = "";
     };
 
-    class ornate {
-        variable = "ornate";
-        displayName = "STR_Item_Ornate";
-        weight = 1;
-        buyPrice = 175;
-        sellPrice = 150;
+    class lockpick {
+        variable = "lockpick";
+        displayName = "Lockpick";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
-            value = 25;
-        };
-        icon = "ico_cookedFish.paa";
-        conditions = "";
-    };
-
-    class mackerel_raw {
-        variable = "mackerelRaw";
-        displayName = "STR_Item_MackerelRaw";
-        weight = 4;
-        buyPrice = -1;
-        sellPrice = 175;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_mackerelRaw.paa";
+        icon = "";
         conditions = "";
     };
 
-    class mackerel {
-        variable = "mackerel";
-        displayName = "STR_Item_Mackerel";
-        weight = 2;
-        buyPrice = 250;
-        sellPrice = 200;
+    class pickaxe {
+        variable = "pickaxe";
+        displayName = "Pickaxe";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
-            value = 30;
-        };
-        icon = "ico_cookedFish.paa";
-        conditions = "";
-    };
-
-    class tuna_raw {
-        variable = "tunaRaw";
-        displayName = "STR_Item_TunaRaw";
-        weight = 6;
-        buyPrice = -1;
-        sellPrice = 700;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_tunaRaw.paa";
+        icon = "";
         conditions = "";
     };
 
-    class tuna {
-        variable = "tuna";
-        displayName = "STR_Item_Tuna";
-        weight = 3;
-        buyPrice = 1250;
-        sellPrice = 1000;
+    class fuel_can {
+        variable = "fuel_can";
+        displayName = "Fuel Can";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class empty_fuel_can {
+        variable = "empty_fuel_can";
+        displayName = "Empty Fuel Can";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class empty_barrel {
+        variable = "empty_barrel";
+        displayName = "Empty Barrel";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class small_container {
+        variable = "small_container";
+        displayName = "Small Container";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class large_container { // Premium Membership
+        variable = "large_container";
+        displayName = "Large Container";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class red_bush {
+        variable = "red_bush";
+        displayName = "Red Bush Tea";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 60;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class pg_tips {
+        variable = "pg_tips";
+        displayName = "PG Tips";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 60;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class earl_grey {
+        variable = "earl_grey";
+        displayName = "Earl Grey Tea";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 60;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class green_tea {
+        variable = "green_tea";
+        displayName = "Green Tea";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 60;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class coffee {
+        variable = "coffee";
+        displayName = "Coffee";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 60;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class english_breakfast {
+        variable = "english_breakfast";
+        displayName = "English Breakfast";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Hunger"};
             value = 100;
         };
-        icon = "ico_cookedFish.paa";
+        icon = "";
         conditions = "";
     };
 
-    class mullet_raw {
-        variable = "mulletRaw";
-        displayName = "STR_Item_MulletRaw";
-        weight = 4;
-        buyPrice = -1;
-        sellPrice = 250;
+    class tea_cake {
+        variable = "tea_cake";
+        displayName = "Tea Cake";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_mulletRaw.paa";
-        conditions = "";
-    };
-
-    class mullet {
-        variable = "mullet";
-        displayName = "STR_Item_Mullet";
-        weight = 2;
-        buyPrice = 600;
-        sellPrice = 400;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Hunger"};
-            value = 80;
+            value = 35;
         };
-        icon = "ico_cookedFish.paa";
+        icon = "";
         conditions = "";
     };
 
-    class catshark_raw {
-        variable = "catsharkRaw";
-        displayName = "STR_Item_CatSharkRaw";
-        weight = 6;
-        buyPrice = -1;
-        sellPrice = 300;
+    class crumpet {
+        variable = "crumpet";
+        displayName = "Crumpet";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
-        save = false;
-        taxed = false;
+        save = true;
+        taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
-            value = -1;
-        };
-        icon = "ico_catsharkRaw.paa";
-        conditions = "";
-    };
-
-    class catshark {
-        variable = "catshark";
-        displayName = "STR_Item_CatShark";
-        weight = 3;
-        buyPrice = 750;
-        sellPrice = 500;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
             edible[] = {true, "Hunger"};
-            value = 100;
+            value = 35;
         };
-        icon = "ico_cookedFish.paa";
+        icon = "";
         conditions = "";
     };
 
-    class turtle_raw {
-        variable = "turtleRaw";
-        displayName = "STR_Item_TurtleRaw";
-        weight = 6;
-        buyPrice = -1;
-        sellPrice = 3000;
+    class toast {
+        variable = "toast";
+        displayName = "Toast";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class scone {
+        variable = "scone";
+        displayName = "Scone";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 30;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cheesy_chips {
+        variable = "cheesy_chips";
+        displayName = "Cheesy Chips";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class fish_chips {
+        variable = "fish_chips";
+        displayName = "Fish and Chips";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 55;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class pasty_chips {
+        variable = "pasty_chips";
+        displayName = "Pasty and Chips";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 55;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class burger {
+        variable = "burger";
+        displayName = "Full Beef Burger";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 60;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_salema {
+        variable = "raw_salema";
+        displayName = "Raw Salema";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cooked_salema {
+        variable = "cooked_salema";
+        displayName = "Cooked Salema";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_ornate {
+        variable = "raw_ornate";
+        displayName = "Raw Ornate";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cooked_ornate {
+        variable = "cooked_ornate";
+        displayName = "Cooked Ornate";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_mackerel {
+        variable = "raw_mackerel";
+        displayName = "Raw Mackerel";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cooked_mackerel {
+        variable = "cooked_mackerel";
+        displayName = "Cooked Mackerel";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_tuna {
+        variable = "raw_tuna";
+        displayName = "Raw Tuna";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cooked_tuna {
+        variable = "cooked_tuna";
+        displayName = "Cooked Tuna";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_mullet {
+        variable = "raw_mullet";
+        displayName = "Raw Mullet";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cooked_mullet {
+        variable = "cooked_mullet";
+        displayName = "Cooked Mullet";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_catshark {
+        variable = "raw_catshark";
+        displayName = "Raw Catshark";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cooked_catshark {
+        variable = "cooked_catshark";
+        displayName = "Cooked Catshark";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class mango_schnapps {
+        variable = "mango_schnapps";
+        displayName = "Mango Schnapps";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 45;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cococut_schnapps {
+        variable = "cococut_schnapps";
+        displayName = "Coconut Schnapps";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 45;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cider {
+        variable = "cider";
+        displayName = "Bottle of Cider";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 40;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class beer {
+        variable = "beer";
+        displayName = "Bottle of Beer";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 20;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class whisky {
+        variable = "whisky";
+        displayName = "Bottle of Whisky";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 20;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class wine {
+        variable = "wine";
+        displayName = "Bottle of Wine";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 20;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class 1k_chip {
+        variable = "1k_chip";
+        displayName = "1K Chip";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class 5k_chip {
+        variable = "5k_chip";
+        displayName = "5K Chip";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class 10k_chip {
+        variable = "10k_chip";
+        displayName = "10K Chip";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class 25k_chip {
+        variable = "25k_chip";
+        displayName = "25K Chip";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class 50k_chip {
+        variable = "50k_chip";
+        displayName = "50K Chip";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class 100k_chip {
+        variable = "100k_chip";
+        displayName = "100K Chip";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class blindfold {
+        variable = "blindfold";
+        displayName = "Blindfold";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class gag {
+        variable = "gag";
+        displayName = "Gag";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class ear_clots {
+        variable = "ear_clots";
+        displayName = "Ear Clots";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class gps_tracker {
+        variable = "gps_tracker";
+        displayName = "GPS Tracker";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class bolt_cutter {
+        variable = "bolt_cutter";
+        displayName = "Bolt Cutter";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class explosive_charge {
+        variable = "explosive_charge";
+        displayName = "Explosive Charge";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class branded_gold_bar {
+        variable = "branded_gold_bar";
+        displayName = "Branded Gold Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = true;
         save = false;
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_turtleRaw.paa";
+        icon = "";
         conditions = "";
     };
 
-    class turtle_soup {
-        variable = "turtleSoup";
-        displayName = "STR_Item_TurtleSoup";
-        weight = 2;
-        buyPrice = 1000;
-        sellPrice = 750;
-        illegal = false;
+    class unbranded_gold_bar {
+        variable = "unbranded_gold_bar";
+        displayName = "Unbranded Gold Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
         save = false;
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
-            value = 100;
-        };
-        icon = "ico_turtleSoup.paa";
-        conditions = "";
-    };
-
-    class hen_raw {
-        variable = "henRaw";
-        displayName = "STR_Item_HenRaw";
-        weight = 1;
-        buyPrice = -1;
-        sellPrice = 65;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_wholeChickenRaw.paa";
+        icon = "";
         conditions = "";
     };
 
-    class hen {
-        variable = "hen";
-        displayName = "STR_Item_Hen";
-        weight = 1;
-        buyPrice = 115;
-        sellPrice = 85;
+    class coal {
+        variable = "coal";
+        displayName = "Coal";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
         save = false;
         taxed = false;
         class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            dynmaic = true;
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
-            value = 65;
-        };
-        icon = "ico_wholeChicken.paa";
-        conditions = "";
-    };
-
-    class rooster_raw {
-        variable = "roosterRaw";
-        displayName = "STR_Item_RoosterRaw";
-        weight = 1;
-        buyPrice = -1;
-        sellPrice = 65;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_chickenDrumstickRaw.paa";
+        icon = "";
         conditions = "";
     };
 
-    class rooster {
-        variable = "rooster";
-        displayName = "STR_Item_Rooster";
-        weight = 115;
-        buyPrice = 90;
-        sellPrice = 85;
+    class coral {
+        variable = "coral";
+        displayName = "Coral";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
         save = false;
         taxed = false;
         class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            dynmaic = true;
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
-            value = 45;
-        };
-        icon = "ico_chickenDrumstick.paa";
-        conditions = "";
-    };
-
-    class sheep_raw {
-        variable = "sheepRaw";
-        displayName = "STR_Item_SheepRaw";
-        weight = 2;
-        buyPrice = -1;
-        sellPrice = 95;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both
+            edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_lambChopRaw.paa";
+        icon = "";
         conditions = "";
     };
 
-    class sheep {
-        variable = "sheep";
-        displayName = "STR_Item_Sheep";
-        weight = 2;
-        buyPrice = 155;
-        sellPrice = 115;
+    class tin_ore {
+        variable = "tin_ore";
+        displayName = "Tin Ore";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
         save = false;
         taxed = false;
         class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            dynmaic = true;
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
-            value = 100;
-        };
-        icon = "ico_lambChop.paa";
-        conditions = "";
-    };
-
-    class goat_raw {
-        variable = "goatRaw";
-        displayName = "STR_Item_GoatRaw";
-        weight = 2;
-        buyPrice = -1;
-        sellPrice = 115;
-        illegal = false;
-        save = false;
-        taxed = false;
-        class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
-        };
-        class edibility {
-            edible[] = {false, ""}; // Edible Bool, Thirst/Hunger/Both/Both
+            edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_muttonLegRaw.paa";
+        icon = "";
         conditions = "";
     };
 
-    class goat {
-        variable = "goat";
-        displayName = "STR_Item_Goat";
-        weight = 2;
-        buyPrice = 175;
-        sellPrice = 135;
+    class tin_bar {
+        variable = "tin_bar";
+        displayName = "Tin Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class copper_ore {
+        variable = "copper_ore";
+        displayName = "Copper Ore";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
         illegal = false;
         save = false;
         taxed = false;
         class dynmarket {
-            dynmaic = false;
-            prices[] = {600, 800}; // Lowest Price, Highest Price
+            dynmaic = true;
+            prices[] = {0, 0};
         };
         class edibility {
-            edible[] = {true, "Hunger"};
-            value = 100;
+            edible[] = {false, ""};
+            value = -1;
         };
-        icon = "ico_muttonLeg.paa";
+        icon = "";
+        conditions = "";
+    };
+
+    class copper_bar {
+        variable = "copper_bar";
+        displayName = "Copper Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class silver_ore {
+        variable = "silver_ore";
+        displayName = "Silver Ore";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class silver_bar {
+        variable = "silver_bar";
+        displayName = "Silver Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class iron_ore {
+        variable = "iron_ore";
+        displayName = "Iron Ore";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class iron_bar {
+        variable = "iron_bar";
+        displayName = "Iron Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class platinum_ore {
+        variable = "platinum_ore";
+        displayName = "Platinum Ore";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class platinum_bar {
+        variable = "platinum_bar";
+        displayName = "Platinum Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class rock {
+        variable = "rock";
+        displayName = "Rock";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cement {
+        variable = "cement";
+        displayName = "Cement";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class crude_oil {
+        variable = "crude_oil";
+        displayName = "Crude Oil";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class refined_oil {
+        variable = "refined_oil";
+        displayName = "Refined Oil";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class iridium_ore {
+        variable = "iridium_ore";
+        displayName = "Iridium Ore";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class iridium_bar {
+        variable = "iridium_bar";
+        displayName = "Iridium Bar";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class uncut_opal {
+        variable = "uncut_opal";
+        displayName = "Uncut Opal";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cut_opal {
+        variable = "cut_opal";
+        displayName = "Cut Opal";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class uncut_sapphire {
+        variable = "uncut_sapphire";
+        displayName = "Uncut Sapphire";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cut_shappire {
+        variable = "cut_shappire";
+        displayName = "Cut Sapphire";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class uncut_ruby {
+        variable = "uncut_ruby";
+        displayName = "Uncut Ruby";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cut_ruby {
+        variable = "cut_ruby";
+        displayName = "Cut Ruby";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class uncut_emerald {
+        variable = "uncut_emerald";
+        displayName = "Uncut Emerald";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cut_emerald {
+        variable = "cut_emerald";
+        displayName = "Cut Emerald";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class uncut_diamond {
+        variable = "uncut_diamond";
+        displayName = "Uncut Diamond";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cut_diamond {
+        variable = "cut_diamond";
+        displayName = "Cut Diamond";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cannabis {
+        variable = "cannabis";
+        displayName = "Cannabis Leaf";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class marijuana {
+        variable = "marijuana";
+        displayName = "Marijuana";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class refined_marijuana {
+        variable = "refined_marijuana";
+        displayName = "Refined Marijuana";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class opium {
+        variable = "opium";
+        displayName = "Opium Poppy";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class heroin {
+        variable = "heroin";
+        displayName = "Heroin";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class refined_heroin {
+        variable = "refined_heroin";
+        displayName = "Refined Heroin";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class coca {
+        variable = "coca";
+        displayName = "Coca Leaf";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cocaine {
+        variable = "cocaine";
+        displayName = "Cocaine";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class refined_cocaine {
+        variable = "refined_cocaine";
+        displayName = "Refined Cocaine";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class ephedrine {
+        variable = "ephedrine";
+        displayName = "Ephedrine Barrel";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class methamphetamine {
+        variable = "methamphetamine";
+        displayName = "Methamphetamine";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class refined_methamphetamine {
+        variable = "refined_methamphetamine";
+        displayName = "Refined Methamphetamine";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_turtle {
+        variable = "raw_turtle";
+        displayName = "Raw Turtle";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class cooked_turtle {
+        variable = "cooked_turtle";
+        displayName = "Cooked Turtle";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = false;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class blood_bag {
+        variable = "blood_bag";
+        displayName = "Blood Bag";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class stretcher {
+        variable = "stretcher";
+        displayName = "Stretcher";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class stretcher {
+        variable = "stretcher";
+        displayName = "Stretcher";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class jaws_of_life {
+        variable = "jaws_of_life";
+        displayName = "Jaws of Life";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class breathalyzer {
+        variable = "breathalyzer";
+        displayName = "Breathalyzer";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class stinger {
+        variable = "stinger";
+        displayName = "Stinger";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class road_barrier {
+        variable = "road_barrier";
+        displayName = "Road Barrier";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class road_cone {
+        variable = "road_cone";
+        displayName = "Road Cone";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class defibrillator {
+        variable = "defibrillator";
+        displayName = "Defibrillator";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
         conditions = "";
     };
 };

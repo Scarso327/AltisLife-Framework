@@ -22,8 +22,8 @@ _action = [
 if (_action) then {
     private ["_box","_diff"];
     _box = switch (_containerType) do {
-        case ("B_supplyCrate_F"): {"storagebig"};
-        case ("Box_IND_Grenades_F"): {"storagesmall"};
+        case ("B_supplyCrate_F"): {"large_container"};
+        case ("Box_IND_Grenades_F"): {"small_container"};
         default {"None"};
     };
     if (_box == "None") exitWith {};

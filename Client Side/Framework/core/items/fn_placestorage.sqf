@@ -21,9 +21,9 @@ _container setPosATL [getPosATL _container select 0, getPosATL _container select
 _container allowDamage false;
 
 if ((typeOf _container) == "B_supplyCrate_F") then {
-    [false,"storagebig",1] call life_fnc_handleInv;
+    [false,"large_container",1] call life_fnc_handleInv;
 } else {
-    [false,"storagesmall",1] call life_fnc_handleInv;
+    [false,"small_container",1] call life_fnc_handleInv;
 };
 
 [_container, _isFloating] call life_fnc_placeContainer;

@@ -17,8 +17,8 @@ _uid = getPlayerUID player;
 _house = nearestObject [player, "House"];
 
 switch (true) do {
-    case (typeOf _container isEqualTo "B_supplyCrate_F"): {_type = "storagebig"};
-    case (typeOf _container isEqualTo "Box_IND_Grenades_F") : {_type = "storagesmall"};
+    case (typeOf _container isEqualTo "B_supplyCrate_F"): {_type = "large_container"};
+    case (typeOf _container isEqualTo "Box_IND_Grenades_F") : {_type = "small_container"};
     default {_type = ""};
 };
 

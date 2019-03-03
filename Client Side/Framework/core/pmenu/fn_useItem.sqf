@@ -21,7 +21,7 @@ switch (true) do {
                 default {life_thirst = _sum;};
             };
             if (LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1) then {player setFatigue 0;};
-            if (_item isEqualTo "redgull" && {LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1}) then {
+            if (_item isEqualTo "energy_drink" && {LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1}) then {
                 [] spawn {
                     life_redgull_effect = time;
                     titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
@@ -33,12 +33,12 @@ switch (true) do {
         };
     };
 
-    case (_item isEqualTo "boltcutter"): {
+    case (_item isEqualTo "bolt_cutter"): {
         [cursorObject] spawn life_fnc_boltcutter;
         closeDialog 0;
     };
 
-    case (_item isEqualTo "blastingcharge"): {
+    case (_item isEqualTo "explosive_charge"): {
         player reveal fed_bank;
         (group player) reveal fed_bank;
         [cursorObject] spawn life_fnc_blastingCharge;
@@ -50,15 +50,15 @@ switch (true) do {
         closeDialog 0;
     };
 
-    case (_item isEqualTo "storagesmall"): {
+    case (_item isEqualTo "small_container"): {
         [false] call life_fnc_storageBox;
     };
 
-    case (_item isEqualTo "storagebig"): {
+    case (_item isEqualTo "large_container"): {
         [true] call life_fnc_storageBox;
     };
 
-    case (_item isEqualTo "spikeStrip"): {
+    case (_item isEqualTo "stinger"): {
         if (!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"; closeDialog 0};
         if ([false,_item,1] call life_fnc_handleInv) then {
             [] spawn life_fnc_spikeStrip;
@@ -66,13 +66,13 @@ switch (true) do {
         };
     };
 
-    case (_item isEqualTo "fuelFull"): {
+    case (_item isEqualTo "fuel_can"): {
         if !(isNull objectParent player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
         [] spawn life_fnc_jerryRefuel;
         closeDialog 0;
     };
 
-    case (_item isEqualTo "fuelEmpty"): {
+    case (_item isEqualTo "empty_fuel_can"): {
         [] spawn life_fnc_jerryCanRefuel;
         closeDialog 0;
     };

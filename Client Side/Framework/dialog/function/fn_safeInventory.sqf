@@ -17,11 +17,11 @@ lbClear _tInv;
 _safeInfo = _safe getVariable ["safe",-1];
 if (_safeInfo < 1) exitWith {closeDialog 0; hint localize "STR_Civ_VaultEmpty";};
 
-_str = M_CONFIG(getText,"CfgItems","goldbar","displayName");
-_shrt = M_CONFIG(getText,"CfgItems","goldbar","variable");
+_str = M_CONFIG(getText,"CfgItems","branded_gold_bar","displayName");
+_shrt = M_CONFIG(getText,"CfgItems","branded_gold_bar","variable");
 _tInv lbAdd format ["[%1] - %2",_safeInfo,(localize _str)];
 _tInv lbSetData [(lbSize _tInv)-1,_shrt];
-_icon = ICON(M_CONFIG(getText,"CfgItems","goldbar","icon"));
+_icon = ICON(M_CONFIG(getText,"CfgItems","branded_gold_bar","icon"));
 if (!(_icon isEqualTo "")) then {
     _tInv lbSetPicture [(lbSize _tInv)-1,_icon];
 };

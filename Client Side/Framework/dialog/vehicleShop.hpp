@@ -53,7 +53,7 @@ class Life_Vehicle_Shop_v2 {
 
         class CloseBtn : Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);
@@ -63,7 +63,7 @@ class Life_Vehicle_Shop_v2 {
 
         class RentCar : Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_RentVeh";
+            text = "Rent";
             onButtonClick = "[false] spawn life_fnc_vehicleShopBuy;";
             x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);
@@ -73,7 +73,7 @@ class Life_Vehicle_Shop_v2 {
 
         class BuyCar : life_RscButtonMenu {
             idc = 2309;
-            text = "$STR_Global_Buy";
+            text = "Buy";
             onButtonClick = "[true] spawn life_fnc_vehicleShopBuy;";
             x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);

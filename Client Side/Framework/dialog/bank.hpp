@@ -117,7 +117,7 @@ class Life_atm_management {
 
         class CloseButtonKey: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = 0.35;
             y = 0.812;

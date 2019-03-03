@@ -18,8 +18,8 @@ if (_unit == player) exitWith {hint localize "STR_GNOTF_TransferSelf"};
 _action = [
     format [localize "STR_GNOTF_TransferMSG",_unit getVariable ["realname",name _unit]],
     localize "STR_Gang_Transfer",
-    localize "STR_Global_Yes",
-    localize "STR_Global_No"
+    "Yes",
+    "No"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {

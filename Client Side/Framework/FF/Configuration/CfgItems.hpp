@@ -10,7 +10,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -31,7 +31,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -52,7 +52,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -73,7 +73,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Both"};
@@ -94,7 +94,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Both"};
@@ -115,7 +115,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Both"};
@@ -136,7 +136,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -157,7 +157,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -178,7 +178,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -199,7 +199,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -220,7 +220,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -241,7 +241,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -262,7 +262,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -283,7 +283,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -304,7 +304,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -325,7 +325,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -346,7 +346,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -367,7 +367,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -388,7 +388,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -409,7 +409,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -430,7 +430,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -451,7 +451,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -472,7 +472,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -493,7 +493,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -514,7 +514,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -535,7 +535,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -556,7 +556,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -577,7 +577,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -598,7 +598,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -619,7 +619,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -640,7 +640,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -661,7 +661,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -682,7 +682,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -703,7 +703,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -724,7 +724,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -745,7 +745,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -766,7 +766,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -787,7 +787,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -808,7 +808,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -829,7 +829,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -850,7 +850,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -871,7 +871,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -892,7 +892,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -913,7 +913,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -934,7 +934,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -955,7 +955,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -976,7 +976,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -997,7 +997,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1018,7 +1018,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Hunger"};
@@ -1039,7 +1039,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -1060,7 +1060,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -1081,7 +1081,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -1102,7 +1102,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -1123,7 +1123,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -1144,7 +1144,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -1165,7 +1165,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {true, "Thirst"};
@@ -1186,7 +1186,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1207,7 +1207,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1228,7 +1228,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1249,7 +1249,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1270,7 +1270,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1291,7 +1291,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1312,7 +1312,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1333,7 +1333,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1354,7 +1354,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1375,7 +1375,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1396,7 +1396,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1417,7 +1417,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1438,7 +1438,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1459,7 +1459,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1480,7 +1480,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1501,7 +1501,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1522,7 +1522,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1543,7 +1543,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1564,7 +1564,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1585,7 +1585,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1606,7 +1606,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1627,7 +1627,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1648,7 +1648,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1669,7 +1669,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1690,7 +1690,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1711,7 +1711,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1732,7 +1732,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1753,7 +1753,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1774,7 +1774,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1795,7 +1795,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1816,7 +1816,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1837,7 +1837,7 @@ class CfgItems {
         taxed = true;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1858,7 +1858,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1879,7 +1879,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1900,7 +1900,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1921,7 +1921,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1942,7 +1942,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1963,7 +1963,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -1984,7 +1984,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2005,7 +2005,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2026,7 +2026,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2047,7 +2047,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2068,7 +2068,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2089,7 +2089,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2110,7 +2110,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2131,7 +2131,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2152,7 +2152,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2173,7 +2173,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2194,7 +2194,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2215,7 +2215,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2236,7 +2236,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2257,7 +2257,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2278,7 +2278,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2299,7 +2299,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2320,7 +2320,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2341,7 +2341,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = true;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2362,7 +2362,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2383,7 +2383,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2404,7 +2404,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2425,7 +2425,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2446,7 +2446,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2467,7 +2467,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2488,7 +2488,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2509,7 +2509,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};
@@ -2530,7 +2530,7 @@ class CfgItems {
         taxed = false;
         class dynmarket {
             dynmaic = false;
-            prices[] = {0, 0};
+            driftPerc = 0.1;
         };
         class edibility {
             edible[] = {false, ""};

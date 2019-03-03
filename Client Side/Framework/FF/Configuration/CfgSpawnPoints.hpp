@@ -96,13 +96,13 @@ class CfgSpawnPoints {
             class civ_eorgetown {
                 displayName = "Georgetown";
                 spawnMarker = "civ_spawn_1";
-                icon = "\a3\ui_f\data\map\MapControl\vegetationBroadleaf_CA.paa";
+                icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
                 conditions = "";
             };
 
             class civ_la_rochelle {
                 displayName = "La Rochelle";
-                spawnMarker = "cop_spawn_2";
+                spawnMarker = "civ_spawn_2";
                 icon = "\a3\ui_f\data\map\MapControl\lighthouse_CA.paa";
                 conditions = "";
             };
@@ -119,7 +119,7 @@ class CfgSpawnPoints {
             class tpc_georgetown {
                 displayName = "Georgetown HQ";
                 spawnMarker = "cop_spawn_1";
-                icon = "\a3\ui_f\data\map\MapControl\vegetationBroadleaf_CA.paa";
+                icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
                 conditions = "";
             };
 

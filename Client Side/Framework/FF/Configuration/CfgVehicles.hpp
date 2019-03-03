@@ -63,7 +63,7 @@ class CfgVehicleStores {
         };
     };
 
-    class boat_dealership {
+    class chop_shop {
         side = "civ";
         conditions = "";
         vehicles[] = {

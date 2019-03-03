@@ -89,9 +89,9 @@ class CfgDebriefing {
     };
 
     class Blacklisted {
-        title = "$STR_Blacklisted_Title";
-        subtitle = "$STR_Blacklisted_SubTitle";
-        description = "$STR_Blacklisted_Descript";
+        title = "Mission Failed.";
+        subtitle = "You are blacklisted from the TPC.";
+        description = "You are not permitted to play as a ";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
@@ -109,7 +109,7 @@ class CfgDebriefing {
 
 class CfgNotifications {
     class MedicalRequestEmerg {
-        title = "$STR_MedicalRequestEmerg_Title";
+        title = "NHS Assistant Requested";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
         description = "%1";
         duration = 5;
@@ -117,7 +117,7 @@ class CfgNotifications {
     };
 
     class DeliveryAssigned {
-        title = "$STR_DeliveryAssigned_Title";
+        title = "Delivery Job Accepted";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
         description = "%1";
         duration = 10;
@@ -125,7 +125,7 @@ class CfgNotifications {
     };
 
     class DeliveryFailed {
-        title = "$STR_DeliveryFailed_Title";
+        title = "Delivery Job Failed";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
         description = "%1";
         duration = 7;
@@ -133,7 +133,7 @@ class CfgNotifications {
     };
 
     class DeliverySucceeded {
-        title = "$STR_DeliverySucceeded_Title";
+        title = "Delivery Job Completed";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
         description = "%1";
         duration = 6;
@@ -141,7 +141,7 @@ class CfgNotifications {
     };
 
     class TextMessage {
-        title = "$STR_TextMessage_Title";
+        title = "Received A Text Message";
         iconPicture = "data\icons\ico_messageNew.paa";
         description = "%1";
         duration = 10;
@@ -149,7 +149,7 @@ class CfgNotifications {
     };
 
     class PoliceDispatch {
-        title = "$STR_PoliceDispatch_Title";
+        title = "999 Dispatch Centre";
         iconPicture = "data\icons\ico_messagePolice.paa";
         description = "%1";
         duration = 10;
@@ -157,7 +157,7 @@ class CfgNotifications {
     };
 
     class AdminDispatch {
-        title = "$STR_AdminDispatch_Title";
+        title = "Staff Dispatch Center ";
         iconPicture = "data\icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
@@ -165,7 +165,7 @@ class CfgNotifications {
     };
 
     class AdminMessage {
-        title = "$STR_AdminMessage_Title";
+        title = "Staff Message";
         iconPicture = "data\icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;

@@ -10,15 +10,15 @@ private ["_value"];
 _value = parseNumber(ctrlText 2702);
 
 //Series of stupid checks
-if (_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
+if (_value > 999999) exitWith {hint "You can't deposit more then £999,999 at a time";};
 if (_value < 0) exitWith {};
-if (!([str(_value)] call TON_fnc_isnumber)) exitWith {hint localize "STR_ATM_notnumeric"};
-if (_value > CASH) exitWith {hint localize "STR_ATM_NotEnoughCash"};
+if (!([str(_value)] call TON_fnc_isnumber)) exitWith {hint "The amount entered isn't a numeric value."};
+if (_value > CASH) exitWith {hint "You don't have that much cash on you."};
 
 CASH = CASH - _value;
 BANK = BANK + _value;
 
-hint format [localize "STR_ATM_DepositSuccess",[_value] call life_fnc_numberText];
+hint format ["You have deposited £%1 into your bank account.",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
 

@@ -20,7 +20,7 @@ class CfgProcess {
         NoLicenseCost = 0;
     };
 
-    class apple {
+    class cider {
         MaterialsReq[] = {{"apple",1}};
         MaterialsGive[] = {{"cider",1}};
         Text = "Processing Cider...";

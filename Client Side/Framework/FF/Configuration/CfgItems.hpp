@@ -923,6 +923,27 @@ class CfgItems {
         conditions = "";
     };
 
+    class apple_schnapps {
+        variable = "apple_schnapps";
+        displayName = "Apple Schnapps";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = true;
+        taxed = true;
+        class dynmarket {
+            dynmaic = false;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {true, "Thirst"};
+            value = 45;
+        };
+        icon = "";
+        conditions = "";
+    };
+
     class mango_schnapps {
         variable = "mango_schnapps";
         displayName = "Mango Schnapps";

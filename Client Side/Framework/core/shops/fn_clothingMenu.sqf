@@ -11,7 +11,7 @@
 params ["","","",["_shop","",[""]]];
 
 if (_shop isEqualTo "") exitWith {};
-if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"];};
+if !(isNull objectParent player) exitWith {titleText["You cannot do this while you are in a vehicle.","PLAIN"];};
 
 /* License check & config validation */
 if !(isClass(missionConfigFile >> "CfgClothing" >> _shop)) exitWith {}; //Bad config entry.

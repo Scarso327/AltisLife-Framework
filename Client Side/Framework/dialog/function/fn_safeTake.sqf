@@ -23,7 +23,7 @@ if (_num > _safeInfo) exitWith {hint format [localize "STR_Civ_IsntEnoughGold",_
 
 //Secondary checks
 _num = [_ctrl,_num,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if (_num isEqualTo 0) exitWith {hint localize "STR_NOTF_InvFull"};
+if (_num isEqualTo 0) exitWith {hint "Your inventory space is full."};
 
 
 //Take it

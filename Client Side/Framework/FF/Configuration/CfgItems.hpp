@@ -671,6 +671,111 @@ class CfgItems {
         conditions = "";
     };
 
+    class raw_hen {
+        variable = "raw_hen";
+        displayName = "Raw Hen";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_rooster {
+        variable = "raw_rooster";
+        displayName = "Raw Rooster";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_goat {
+        variable = "raw_goat";
+        displayName = "Raw Goat";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_sheep {
+        variable = "raw_sheep";
+        displayName = "Raw Sheep";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class raw_rabbit {
+        variable = "raw_rabbit";
+        displayName = "Raw Rabbit";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        class dynmarket {
+            dynmaic = true;
+            prices[] = {0, 0};
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
     class raw_salema {
         variable = "raw_salema";
         displayName = "Raw Salema";

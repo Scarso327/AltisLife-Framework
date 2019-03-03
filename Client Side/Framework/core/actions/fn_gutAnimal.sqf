@@ -15,17 +15,17 @@ if (player distance _animalCorpse > 3.5) exitWith {}; //WTF need check with near
 life_action_inUse = true;
 
 switch (typeOf _animalCorpse) do {
-    case "Hen_random_F": {_displayName = localize "STR_ANIM_chicken"; _item = "hen_raw";};
-    case "Cock_random_F": {_displayName = localize "STR_ANIM_Rooster"; _item = "rooster_raw";};
-    case "Goat_random_F": {_displayName = localize "STR_ANIM_Goat"; _item = "goat_raw";};
-    case "Sheep_random_F": {_displayName = localize "STR_ANIM_Sheep"; _item = "sheep_raw";};
-    case "Rabbit_F": {_displayName = localize "STR_ANIM_Rabbit"; _item = "rabbit_raw";};
+    case "Hen_random_F": {_displayName = "Chicken"; _item = "raw_hen";};
+    case "Cock_random_F": {_displayName = "Rooster"; _item = "raw_rooster";};
+    case "Goat_random_F": {_displayName = "Goat"; _item = "raw_goat";};
+    case "Sheep_random_F": {_displayName = "Sheep"; _item = "raw_sheep";};
+    case "Rabbit_F": {_displayName = "Rabbit"; _item = "raw_rabbit";};
     default {_displayName = ""; _item = "";};
 };
 
 if (_displayName isEqualTo "") exitWith {life_action_inUse = false;};
 
-_upp = format [localize "STR_NOTF_Gutting",_displayName];
+_upp = format ["Gutting %1...",_displayName];
 //Setup our progress bar.
 disableSerialization;
 "progressBar" cutRsc ["life_progress","PLAIN"];
@@ -57,12 +57,12 @@ life_action_inUse = false;
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 if (isNull _animalCorpse) exitWith {life_action_inUse = false;};
-if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
-if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"];};
+if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
+if !(isNull objectParent player) exitWith {titleText["You cannot do this while you are in a vehicle.","PLAIN"];};
 
 if ([true,_item,1] call life_fnc_handleInv) then {
     deleteVehicle _animalCorpse;
-    titleText[format [(localize "STR_NOTF_Guttingfinish"),_displayName],"PLAIN"];
+    titleText[format [("You have collected some raw %1 meat."),_displayName],"PLAIN"];
 } else {
-    titleText[(localize "STR_NOTF_InvFull"),"PLAIN"];
+    titleText[("Your inventory space is full."),"PLAIN"];
 };

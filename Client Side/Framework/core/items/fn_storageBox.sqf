@@ -31,4 +31,4 @@ clearMagazineCargoGlobal _object;
 clearItemCargoGlobal _object;
 clearBackpackCargoGlobal _object;
 
-titleText [localize "STR_NOTF_PlaceContainer", "PLAIN"];
+titleText ["Press spacebar to place the container.", "PLAIN"];

@@ -9,8 +9,8 @@
 
 if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
-if (player getVariable "restrained") exitWith {hint localize "STR_NOTF_isrestrained";};
-if (player getVariable "playerSurrender") exitWith {hint localize "STR_NOTF_surrender";};
+if (player getVariable "restrained") exitWith {hint "You cannot do this while you are restrained.";};
+if (player getVariable "playerSurrender") exitWith {hint "You cannot do this while you are surrendered.";};
 
 life_action_inUse = true;
 _zone = "";
@@ -67,7 +67,7 @@ if (_exit) exitWith {life_action_inUse = false;};
 private _amount = round(random(_maxGather)) + 1;
 _diff = [_resource,_amount,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if (_diff isEqualTo 0) exitWith {
-    hint localize "STR_NOTF_InvFull";
+    hint "Your inventory space is full.";
     life_action_inUse = false;
 };
 
@@ -104,15 +104,15 @@ for "_i" from 0 to 1 step 0 do {
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 if !(alive player) exitWith {};
-if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
-if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"]; life_action_inUse = false;};
+if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
+if !(isNull objectParent player) exitWith {titleText["You cannot do this while you are in a vehicle.","PLAIN"]; life_action_inUse = false;};
 
 if ([true,_resource,_diff] call life_fnc_handleInv) then {
     _itemName = M_CONFIG(getText,"CfgItems",_resource,"displayName");
 
     [_profZone,_profXP,_profChance] call FF_fnc_increaseProfession;
 
-    titleText[format [localize "STR_NOTF_Gather_Success",(localize _itemName),_diff],"PLAIN"];
+    titleText[format ["You have gathered %2 %1(s).",(localize _itemName),_diff],"PLAIN"];
 };
 
 sleep 1;

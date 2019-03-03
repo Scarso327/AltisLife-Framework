@@ -55,8 +55,8 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
     life_action_inUse = false;
     "progressBar" cutText ["","PLAIN"];
     player playActionNow "stop";
-    if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
-    if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"]; life_action_inUse = false;};
+    if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
+    if !(isNull objectParent player) exitWith {titleText["You cannot do this while you are in a vehicle.","PLAIN"]; life_action_inUse = false;};
     
     player removeItem "ToolKit";
 

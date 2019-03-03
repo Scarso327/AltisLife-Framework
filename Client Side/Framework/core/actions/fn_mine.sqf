@@ -11,11 +11,11 @@ private ["_maxGather", "_resource", "_amount", "_requiredItem", "_mined"];
 if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
 if (player getVariable "restrained") exitWith {
-    hint localize "STR_NOTF_isrestrained";
+    hint "You cannot do this while you are restrained.";
 };
 _exit = false;
 if (player getVariable "playerSurrender") exitWith {
-    hint localize "STR_NOTF_surrender";
+    hint "You cannot do this while you are surrendered.";
 };
 life_action_inUse = true;
 _zone = "";
@@ -69,7 +69,7 @@ if (_requiredItem != "") then {
     if (_valItem < 1) exitWith {
         switch (_requiredItem) do {
             case "pickaxe": {
-                titleText[(localize "STR_NOTF_Pickaxe"), "PLAIN"];
+                titleText[("A pickaxe is required."), "PLAIN"];
             };
         };
         life_action_inUse = false;
@@ -84,7 +84,7 @@ if (_exit) exitWith {
 _amount = round(random(_maxGather)) + 1;
 _diff = [_mined, _amount, life_carryWeight, life_maxWeight] call life_fnc_calWeightDiff;
 if (_diff isEqualTo 0) exitWith {
-    hint localize "STR_NOTF_InvFull";
+    hint "Your inventory space is full.";
     life_action_inUse = false;
 };
 

@@ -30,7 +30,7 @@ if (_vehicle isKindOf "House_F") exitWith {
 
 // Solve stupidness
 if (objectParent player isEqualTo _vehicle && {locked _vehicle isEqualTo 2}) exitWith {
-    hint localize "STR_NOTF_cannotDropKeys"
+    hint localize "You cannot drop keys to a vehicle which is locked and you are inside of."
 };
 
 life_vehicles = life_vehicles - [_vehicle];

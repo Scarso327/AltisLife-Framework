@@ -1,91 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Altis Life RPG">
-    <Package name="Admin_Notifications">
-        <Key ID="STR_ANOTF_Query">
-            <Original>Querying...</Original>
-        </Key>
-        <Key ID="STR_ANOTF_QueryGarage">
-            <Original>Searching Database for vehicles...</Original>
-        </Key>
-        <Key ID="STR_ANOTF_Query_2">
-            <Original>You are already querying a player.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_QueryFail">
-            <Original>Player no longer exists?</Original>
-        </Key>
-        <Key ID="STR_ANOTF_CompWarn">
-            <Original>You are about to give yourself $%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_Success">
-            <Original>You have added $%1 to your account.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_Fail">
-            <Original>You can not go above $999,999</Original>
-        </Key>
-        <Key ID="STR_ANOTF_Amount">
-            <Original>Please type in the amount to compensate.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_Frozen">
-            <Original>You have disabled %1's input.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_Unfrozen">
-            <Original>You have enabled %1's input.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_Error">
-            <Original>You can't do that dumbass.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_ErrorLevel">
-            <Original>Your Admin Level is not high enough.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_MDisabled">
-            <Original>Player Markers Disabled.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_MEnabled">
-            <Original>Player Markers Enabled.</Original>
-        </Key>
-        <Key ID="STR_ANOTF_godModeOn">
-            <Original>God mode enabled</Original>
-        </Key>
-        <Key ID="STR_ANOTF_godModeOff">
-            <Original>God mode disabled</Original>
-        </Key>
-        <Key ID="STR_NOTF_ActionCancel">
-            <Original>Action Cancelled</Original>
-        </Key>
-        <Key ID="STR_NOTF_CommanderView">
-            <Original>Commander/Tactical View Disabled</Original>
-        </Key>
-        <Key ID="STR_NOTF_PlaceContainer">
-            <Original>Hit spacebar to place the container.</Original>
-        </Key>
-        <Key ID="STR_NOTF_PlaceContainerAbort">
-            <Original>Placement of container has been aborted.</Original>
-        </Key>
-        <Key ID="STR_NOTF_notAllowed">
-            <Original>Your faction is not allowed to chop vehicles!</Original>
-        </Key>
-        <Key ID="STR_NOTF_Pickaxe">
-            <Original>A pickaxe is required</Original>
-        </Key>
-        <Key ID="STR_NOTF_isrestrained">
-            <Original>You are restrained</Original>
-        </Key>
-        <Key ID="STR_NOTF_surrender">
-            <Original>You can't do this while you surrender</Original>
-        </Key>
-        <Key ID="STR_NOTF_cantgather">
-            <Original>You can't gather this resource with this vehicle!</Original>
-        </Key>
-        <Key ID="STR_NOTF_adminDebugCon">
-            <Original>You have no business using this.</Original>
-        </Key>
-        <Key ID="STR_NOTF_adminHasOpenedDebug">
-            <Original>Admin %1 has opened the debug console.</Original>
-        </Key>
-        <Key ID="STR_NOTF_cannotDropKeys">
-            <Original>You cannot drop keys to a vehicle which is locked and you are inside of.</Original>
-        </Key>
-    </Package>
     <Package name="ATM_Strings">
         <Key ID="STR_ATM_Title">
             <Original>Bank Account Management</Original>
@@ -668,44 +582,6 @@
             <Original>Current Bounty Price: $%1</Original>
         </Key>
     </Package>
-    <Package name="Animals">
-        <Key ID="STR_ANIM_Salema">
-            <Original>Salema</Original>
-        </Key>
-        <Key ID="STR_ANIM_Ornate">
-            <Original>Ornate</Original>
-        </Key>
-        <Key ID="STR_ANIM_Mackerel">
-            <Original>Mackerel</Original>
-        </Key>
-        <Key ID="STR_ANIM_Tuna">
-            <Original>Tuna</Original>
-        </Key>
-        <Key ID="STR_ANIM_Mullet">
-            <Original>Mullet</Original>
-        </Key>
-        <Key ID="STR_ANIM_Catshark">
-            <Original>Cat Shark</Original>
-        </Key>
-        <Key ID="STR_ANIM_Rabbit">
-            <Original>Rabbit</Original>
-        </Key>
-        <Key ID="STR_ANIM_chicken">
-            <Original>Chicken</Original>
-        </Key>
-        <Key ID="STR_ANIM_Rooster">
-            <Original>Rooster</Original>
-        </Key>
-        <Key ID="STR_ANIM_Goat">
-            <Original>Goat</Original>
-        </Key>
-        <Key ID="STR_ANIM_Sheep">
-            <Original>Sheep</Original>
-        </Key>
-        <Key ID="STR_ANIM_Turtle">
-            <Original>Turtle</Original>
-        </Key>
-    </Package>
     <Package name="Notifications">
         <Key ID="STR_NOTF_NE_1">
             <Original>You do not have $%1 for a %2</Original>
@@ -718,12 +594,6 @@
         </Key>
         <Key ID="STR_NOTF_Fishing">
             <Original>You caught a %1</Original>
-        </Key>
-        <Key ID="STR_NOTF_Gutting">
-            <Original>Gutting %1</Original>
-        </Key>
-        <Key ID="STR_NOTF_Guttingfinish">
-            <Original>You have collected some raw %1 meat</Original>
         </Key>
         <Key ID="STR_NOTF_CaughtTurtle">
             <Original>You have taken some turtle meat</Original>
@@ -739,9 +609,6 @@
         </Key>
         <Key ID="STR_NOTF_NetUp">
             <Original>Fishing net pulled up.</Original>
-        </Key>
-        <Key ID="STR_NOTF_InvFull">
-            <Original>Your inventory space is full.</Original>
         </Key>
         <Key ID="STR_NOTF_Gathering">
             <Original>Gathering %1...</Original>
@@ -974,17 +841,11 @@
         <Key ID="STR_NOTF_Repairing">
             <Original>Repairing %1</Original>
         </Key>
-        <Key ID="STR_NOTF_ActionInVehicle">
-            <Original>You can't do that from inside the vehicle!</Original>
-        </Key>
         <Key ID="STR_NOTF_RepairedVehicle">
             <Original>You have repaired that vehicle.</Original>
         </Key>
         <Key ID="STR_NOTF_Mine_Success">
             <Original>You have mined %2 %1(s).</Original>
-        </Key>
-        <Key ID="STR_NOTF_Gather_Success">
-            <Original>You have gathered %2 %1(s).</Original>
         </Key>
         <Key ID="STR_NOTF_GatherVeh">
             <Original>You can't gather from inside a car!</Original>
@@ -992,14 +853,8 @@
         <Key ID="STR_NOTF_NoLootingPerson">
             <Original>You are not allowed to loot dead bodies.</Original>
         </Key>
-        <Key ID="STR_NOTF_Frozen">
-            <Original>You have been frozen by an administrator.</Original>
-        </Key>
         <Key ID="STR_NOTF_Teleport">
             <Original>You have teleported to your selected position.</Original>
-        </Key>
-        <Key ID="STR_NOTF_Unfrozen">
-            <Original>You have been unfrozen by an administrator.</Original>
         </Key>
         <Key ID="STR_NOTF_noOneSelected">
             <Original>No one was selected!</Original>
@@ -1782,15 +1637,6 @@
         </Key>
     </Package>
     <Package name="Other_GUI_Stuff">
-        <Key ID="STR_GUI_Garage">
-            <Original>Garage</Original>
-        </Key>
-        <Key ID="STR_GUI_YourVeh">
-            <Original>Your Vehicles</Original>
-        </Key>
-        <Key ID="STR_GUI_VehInfo">
-            <Original>Vehicle Information</Original>
-        </Key>
         <Key ID="STR_GUI_PlayerReveal">
             <Original>Automatically reveals nearest objects within 15m, turn this setting off if you are experiencing performance issues.</Original>
         </Key>

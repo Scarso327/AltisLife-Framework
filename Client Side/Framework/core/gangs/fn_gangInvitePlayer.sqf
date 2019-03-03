@@ -21,8 +21,8 @@ if (count(group player getVariable ["gang_members",8]) == (group player getVaria
 _action = [
     format [localize "STR_GNOTF_InvitePlayerMSG",_unit getVariable ["realname",name _unit]],
     localize "STR_Gang_Invitation",
-    localize "STR_Global_Yes",
-    localize "STR_Global_No"
+    "Yes",
+    "No"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {

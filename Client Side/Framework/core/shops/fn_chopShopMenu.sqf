@@ -8,7 +8,7 @@
 */
 private ["_control","_price","_nearVehicles","_chopMultiplier","_nearUnits"];
 if (life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
-if !(playerSide isEqualTo civilian) exitWith {hint localize "STR_NOTF_notAllowed"};
+if !(playerSide isEqualTo civilian) exitWith {hint "Your faction is not allowed to chop vehicles!"};
 disableSerialization;
 _nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car", "Air", "Ship"],25];
 _nearUnits = (nearestObjects[player,["CAManBase"],5]) arrayIntersect playableUnits;

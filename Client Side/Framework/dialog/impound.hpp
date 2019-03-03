@@ -26,7 +26,7 @@ class Life_impound_menu {
 
         class Title: Life_RscTitle {
             idc = 2801;
-            text = "$STR_GUI_Garage";
+            text = "Garage";
             x = 0.1;
             y = 0.2;
             w = 0.8;
@@ -35,7 +35,7 @@ class Life_impound_menu {
 
         class VehicleTitleBox: Life_RscText {
             idc = -1;
-            text = "$STR_GUI_YourVeh";
+            text = "Your Vehicles";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.11;
             y = 0.26;
@@ -45,7 +45,7 @@ class Life_impound_menu {
 
         class VehicleInfoHeader: Life_RscText {
             idc = 2830;
-            text = "$STR_GUI_VehInfo";
+            text = "Vehicle Information";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.42;
             y = 0.26;
@@ -55,7 +55,7 @@ class Life_impound_menu {
 
         class CloseBtn: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);
@@ -65,7 +65,7 @@ class Life_impound_menu {
 
         class RetrieveCar: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Retrieve";
+            text = "Retrieve";
             onButtonClick = "[] call life_fnc_unimpound;";
             x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);
@@ -75,7 +75,7 @@ class Life_impound_menu {
 
         class SellCar: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Sell";
+            text = "Sell";
             onButtonClick = "[] call life_fnc_sellGarage; closeDialog 0;";
             x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);
@@ -118,7 +118,7 @@ class Life_impound_menu {
 
         class MainHideText: Life_RscText {
             idc = 2811;
-            text = "$STR_ANOTF_QueryGarage";
+            text = "Searching database for vehicles...";
             sizeEx = 0.06;
             x = 0.24;
             y = 0.5;

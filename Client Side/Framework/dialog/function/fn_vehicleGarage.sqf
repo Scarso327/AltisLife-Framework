@@ -35,4 +35,4 @@ if (life_HC_isActive) then {
 
 createDialog "Life_impound_menu";
 disableSerialization;
-ctrlSetText[2802,(localize "STR_ANOTF_QueryGarage")];
+ctrlSetText[2802,("Searching database for vehicles...")];

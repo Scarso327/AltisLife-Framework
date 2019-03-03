@@ -14,7 +14,7 @@ if (isNull _vehicle) exitWith {hint localize "STR_ISTR_Jerry_NotLooking"};
 if (!(_vehicle isKindOF "LandVehicle") && !(_vehicle isKindOf "Air") && !(_vehicle isKindOf "Ship")) exitWith {};
 if (player distance _vehicle > 7.5) exitWith {hint localize "STR_ISTR_Jerry_NotNear"};
 
-if (!([false,"fuelFull",1] call life_fnc_handleInv)) exitWith {};
+if (!([false,"fuel_can",1] call life_fnc_handleInv)) exitWith {};
 life_action_inUse = true;
 
 _displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _vehicle),"displayName");
@@ -55,7 +55,7 @@ life_action_inUse = false;
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 if (!alive player) exitWith {};
-if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"];};
+if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"];};
 
 
 switch (true) do {
@@ -84,4 +84,4 @@ switch (true) do {
     };
 };
 titleText[format [localize "STR_ISTR_Jerry_Success",_displayName],"PLAIN"];
-[true,"fuelEmpty",1] call life_fnc_handleInv;
+[true,"empty_fuel_can",1] call life_fnc_handleInv;

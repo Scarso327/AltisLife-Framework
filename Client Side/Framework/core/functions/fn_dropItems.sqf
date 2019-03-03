@@ -40,7 +40,7 @@ _unit = _this select 0;
             };
         };
 
-        case "redgull": {
+        case "energy_drink": {
             if (_value > 0) then {
                 _pos = _unit modelToWorld[0,3,0];
                 _pos = [(_pos select 0),(_pos select 1),0];
@@ -52,7 +52,7 @@ _unit = _this select 0;
             };
         };
 
-        case "fuelEmpty": {
+        case "empty_fuel_can": {
             if (_value > 0) then {
                 _pos = _unit modelToWorld[0,3,0];
                 _pos = [(_pos select 0),(_pos select 1),0];
@@ -64,7 +64,7 @@ _unit = _this select 0;
             };
         };
 
-        case "fuelFull": {
+        case "fuel_can": {
             if (_value > 0) then {
                 _pos = _unit modelToWorld[0,3,0];
                 _pos = [(_pos select 0),(_pos select 1),0];

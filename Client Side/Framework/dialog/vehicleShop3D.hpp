@@ -36,7 +36,7 @@ class Life_Vehicle_Shop_v2_3D {
 
         class VehicleTitleBox: Life_RscText    {
             idc = -1;
-            text = "$STR_GUI_ShopStock";
+            text = "Shop Stock";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.0204687 * safezoneW + safezoneX;
             y = 0.06 * safezoneH + safezoneY;
@@ -46,7 +46,7 @@ class Life_Vehicle_Shop_v2_3D {
 
         class VehicleInfoHeader: Life_RscText {
             idc = 2330;
-            text = "$STR_GUI_VehInfo";
+            text = "Vehicle Information";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.809375 * safezoneW + safezoneX;
             y = 0.058 * safezoneH + safezoneY;
@@ -56,7 +56,7 @@ class Life_Vehicle_Shop_v2_3D {
 
         class CloseBtn: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = 0.0204687 * safezoneW + safezoneX;
             y = 0.669387 * safezoneH + safezoneY;
@@ -66,7 +66,7 @@ class Life_Vehicle_Shop_v2_3D {
 
         class RentCar: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_RentVeh";
+            text = "Rent";
             onButtonClick = "[false] spawn life_fnc_vehicleShopBuy;";
             x = 0.0964687 * safezoneW + safezoneX;
             y = 0.636393 * safezoneH + safezoneY;
@@ -76,7 +76,7 @@ class Life_Vehicle_Shop_v2_3D {
 
         class BuyCar: Life_RscButtonMenu {
             idc = 2309;
-            text = "$STR_Global_Buy";
+            text = "Buy";
             onButtonClick = "[true] spawn life_fnc_vehicleShopBuy;";
             x = 0.0204687 * safezoneW + safezoneX;
             y = 0.636393 * safezoneH + safezoneY;

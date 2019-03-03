@@ -28,7 +28,7 @@ if (playerSide isEqualTo west && _illegal isEqualTo 1) exitWith {
 
 life_action_delay = time;
 _diff = [(_itemInfo select 0),(_itemInfo select 1),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if (_diff <= 0) exitWith {hint localize "STR_NOTF_InvFull"; INUSE(_this);};
+if (_diff <= 0) exitWith {hint "Your inventory space is full."; INUSE(_this);};
 
 if (!(_diff isEqualTo (_itemInfo select 1))) then {
     if ([true,(_itemInfo select 0),_diff] call life_fnc_handleInv) then {

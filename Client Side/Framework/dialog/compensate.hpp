@@ -3,7 +3,7 @@ class Life_Admin_Compensate {
     name= "life_admin_compensate_give";
     movingEnable = 0;
     enableSimulation = 1;
-    onLoad = "[] spawn {waitUntil {!isNull (findDisplay 9920)}; ((findDisplay 9920) displayCtrl 9921) ctrlSetText localize ""STR_Admin_Amount""};";
+    onLoad = "[] spawn {waitUntil {!isNull (findDisplay 9920)}; ((findDisplay 9920) displayCtrl 9921) ctrlSetText ""Specify the amount you wish to compensate:""};";
 
     class controlsBackground {
         class Life_RscTitleBackground: Life_RscText {
@@ -39,7 +39,7 @@ class Life_Admin_Compensate {
         class Title: Life_RscTitle {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
-            text = "$STR_Admin_Compensate";
+            text = "Compensate";
             x = 0.1;
             y = 0.2;
             w = 0.5;
@@ -48,7 +48,7 @@ class Life_Admin_Compensate {
 
         class AdminCloseComp: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.5 - (1 / 25);
@@ -58,7 +58,7 @@ class Life_Admin_Compensate {
 
         class AdminCompensVer: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Admin_Compensate";
+            text = "Compensate";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] spawn life_fnc_adminCompensate;";
             x = 0.27;

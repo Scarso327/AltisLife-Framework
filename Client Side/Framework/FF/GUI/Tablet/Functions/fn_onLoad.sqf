@@ -25,12 +25,12 @@ switch (_title) do {
 			if(ITEM_VALUE(configName _x) > 0) then {
 				_list lbAdd format["%2 [x%1]",ITEM_VALUE(configName _x),(getText(_x >> "displayName"))];
 				_list lbSetData [(lbSize _list)-1,configName _x];
-				_icon = M_CONFIG(getText,"VirtualItems",configName _x,"icon");
+				_icon = M_CONFIG(getText,"CfgItems",configName _x,"icon");
 				if !(_icon isEqualTo "") then {
 					_list lbSetPicture [(lbSize _list)-1,_icon];
 				};
 			};
-		} foreach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+		} foreach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
 		if(((lbSize _list)-1) isEqualTo -1) then {
 			_list lbAdd "You don't have any items...";

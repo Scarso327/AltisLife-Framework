@@ -27,6 +27,7 @@ Changed:
     Fog is now limited to 10% (Scarso)
     
 Updated:
+    Player Menu Design (Scarso)
     Player HUD (Scarso)
     Player Name Tags (Scarso)
     Police Clothing Store Uniforms (Scarso)

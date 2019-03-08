@@ -24,6 +24,7 @@ Changed:
     Police Siren from US -> UK Sound (Scarso)
     Vehicle 3D Preview Enabled (Scarso)
     Being Arrested Wipes ALL Illegal Items (Scarso)
+    Fog is now limited to 10% (Scarso)
     
 Updated:
     Player HUD (Scarso)

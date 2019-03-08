@@ -203,3 +203,11 @@ addMissionEventHandler ["EntityRespawned", {_this call TON_fnc_entityRespawned}]
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Server Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "----------------------------------------------------------------------------------------------------";
+
+// Foggy Woggy Poggy
+for "_i" from 0 to 1 step 0 do {
+    if ( fog > 0.1 ) then {
+        0 setFog 0;
+    };
+    sleep 300;
+};

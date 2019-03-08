@@ -11,13 +11,13 @@ _world = worldName;
 sleep 3;
  
 _role1 = "Hello Fella!";
-_role1names = ["Welcome to", "Scarso's "+ _world +" Life!"];
+_role1names = ["Welcome to", "LifePlus' "+ _world +" Life!"];
 _role2 = "Forums";
-_role2names = ["Website:", "tritanhub.co.uk"];
+_role2names = ["Website:", "lifeplus.co.uk"];
 _role3 = "Teamspeak!";
-_role3names = ["Teamspeak IP:", "ts3.tritanhub.co.uk!"];
+_role3names = ["Teamspeak IP:", "ts3.lifeplus.co.uk!"];
 _role4 = "Dev Team!";
-_role4names = ["Development Team", "Scarso"];
+_role4names = ["Development Team", "Jack Williams & Lewis Mackinnon"];
 _role5 = "Version!";
 _role5names = ["Current Version: V1"];
   

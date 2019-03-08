@@ -25,7 +25,7 @@ class Chop_Shop {
         class Title: Life_RscTitle {
             colorBackground[] = {0,0,0,0};
             idc = -1;
-            text = "$STR_ChopShop_Title";
+            text = "Chop Shop";
             x = 0.1;
             y = 0.2;
             w = 0.32;

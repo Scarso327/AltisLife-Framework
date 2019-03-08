@@ -37,7 +37,7 @@ class Life_atm_management {
         class Title: Life_RscTitle {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
-            text = "$STR_ATM_Title";
+            text = "Bank Account Management";
             x = 0.35;
             y = 0.2;
             w = 0.6;
@@ -46,7 +46,7 @@ class Life_atm_management {
 
         class WithdrawButton: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_ATM_Withdraw";
+            text = "Withdraw";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_bankWithdraw";
             x = 0.425;
@@ -57,7 +57,7 @@ class Life_atm_management {
 
         class DepositButton: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_ATM_Deposit";
+            text = "Deposit";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_bankDeposit";
             x = 0.425;
@@ -86,7 +86,7 @@ class Life_atm_management {
 
         class TransferButton: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_ATM_Transfer";
+            text = "Transfer";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_bankTransfer";
             x = 0.425;
@@ -97,7 +97,7 @@ class Life_atm_management {
 
         class GangWithdraw : TransferButton {
             idc = 2705;
-            text = "$STR_ATM_WithdrawGang";
+            text = "Gang Withdraw";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_gangWithdraw";
             x = 0.365;
@@ -107,7 +107,7 @@ class Life_atm_management {
 
         class GangDeposit : TransferButton {
             idc = 2706;
-            text = "$STR_ATM_DepositGang";
+            text = "Gang Deposit";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_gangDeposit";
             x = 0.365;

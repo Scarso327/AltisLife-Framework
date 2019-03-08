@@ -20,6 +20,6 @@ _vars = [
         [profileName, getPlayerUID player, format ["VariableSetBeforeInitialized_%1", _x]] remoteExecCall ["SPY_fnc_cookieJar", RSERV];
         [profileName, format [localize "STR_SpyDetect_VariableSetBeforeClientInitialized", _x]] remoteExecCall ["SPY_fnc_notifyAdmins", RCLIENT];
         sleep 0.5;
-        failMission "SpyGlass";
+        if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
     };
 } forEach _vars;

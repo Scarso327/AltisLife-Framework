@@ -1,5 +1,4 @@
 #include "..\script_macros.hpp"
-#define SPY_SETTINGS(TYPE,SETTING) TYPE(missionConfigFile >> "CfgSpyGlass" >> SETTING)
 /*
     File: fn_variableCheck.sqf
     Author:
@@ -66,7 +65,7 @@ _checkFunction = {
                                     _find = _allowedVariables find [_x, _varType];
                                     if (_find isEqualTo -1) then {
                                         diag_log format [localize "STR_SpyDetect_Variable_MN", _x, _varType];
-                                        failMission "SpyGlass";
+                                        if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
                                     };
                                 };
                             };
@@ -86,7 +85,7 @@ _uiCheckFunction = {
                 _find = _allowedVariables_UI find [_x, _varType];
                 if (_find isEqualTo -1) then {
                     diag_log format [localize "STR_SpyDetect_Variable_UI", _x, _varType];
-                    failMission "SpyGlass";
+                    if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
                 };
             };
         };
@@ -100,14 +99,14 @@ for "_i" from 0 to 1 step 0 do {
     objNull call _uiCheckFunction;
     
     if !((count allVariables profileNameSpace) isEqualTo _profileCount) then {
-        failMission "SpyGlass";
+        if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
     };
     
     if !((count allVariables parsingNamespace) isEqualTo 0) then {
         //We should check whether both these variables are present in parsingNS on init, and whether the order is consistent, so to remove the loop
         {
             if !(_x in ["bis_rscdebugconsoleexpressionresultctrl", "bis_rscdebugconsoleexpressionresulthistory"]) then {
-                failMission "SpyGlass";
+                if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
             };
             true;
         } count (allVariables parsingNamespace);

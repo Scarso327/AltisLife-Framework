@@ -121,7 +121,7 @@ if !(_missingPatches isEqualTo []) exitWith {
     [profileName,getPlayerUID player,(str _missingPatches)] remoteExec ["SPY_fnc_cookieJar",RSERV];
     [profileName,format ["Unknown Addon Patches: %1",_missingPatches]] remoteExec ["SPY_fnc_notifyAdmins",RCLIENT];
     sleep 0.5;
-    failMission "SpyGlass";
+    if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
 };
 
 //Check for copy-pasters of Dev-Con styled execution.
@@ -139,7 +139,7 @@ private _allowedChildren = [
         [profileName,getPlayerUID player,"Modified_MPInterrupt"] remoteExec ["SPY_fnc_cookieJar",RSERV];
         [profileName,"Devcon like executor detected"] remoteExec ["SPY_fnc_notifyAdmins",RCLIENT];
         sleep 0.5;
-        failMission "SpyGlass";
+        if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
     };
     true
 } count _children;

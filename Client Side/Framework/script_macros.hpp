@@ -68,6 +68,7 @@
 #define GVAR_PNAS profileNamespace getVariable
 
 //SpyGlass Macros
+#define SPY_SETTINGS(TYPE,SETTING) TYPE(missionConfigFile >> "CfgSpyGlass" >> SETTING)
 #define SPYGLASS_END \
     vehicle player setVelocity[1e10,1e14,1e18]; \
     sleep 3; \

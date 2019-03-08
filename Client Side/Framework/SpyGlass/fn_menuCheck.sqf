@@ -126,7 +126,7 @@ for "_i" from 0 to 1 step 0 do {
         [profileName,getPlayerUID player,"No_recoil_hack"] remoteExec ["SPY_fnc_cookieJar",RSERV];
         [profileName,"No recoil hack"] remoteExec ["SPY_fnc_notifyAdmins",RCLIENT];
         sleep 0.5;
-        failMission "SpyGlass";
+        if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
     };
 
     /*

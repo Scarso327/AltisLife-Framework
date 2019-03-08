@@ -1,4 +1,6 @@
 class CfgSpyGlass {
+    debug_mode = true;
+
     civSlotNumber = 100;
     copSlotNumber = 19;
     medSlotNumber = 6;

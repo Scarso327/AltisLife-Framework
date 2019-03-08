@@ -56,7 +56,7 @@ private _idc = IDC_MAIN_BUTTONS + 1;
 #define INCREMENT_Y 0.173
 
 private _currentX = BASED_X - INCREMENT_X;
-private _currentY = 0.401;
+private _currentY = 0.236;
 
 {
   private _button = _display ctrlCreate ["FF_App_Button", _idc, _appsGrouping];

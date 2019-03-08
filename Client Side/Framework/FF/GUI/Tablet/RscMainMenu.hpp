@@ -62,9 +62,9 @@ class RepText : Life_RscStructuredText {
 class HomeView : Life_RscControlsGroupNoScrollbars {
     idc = IDC_MAIN_BUTTONS;
     x = 0.278282 * safezoneW + safezoneX;
-    y = 0.236 * safezoneH + safezoneY;
+    y = 0.401 * safezoneH + safezoneY;
     w = 0.443438 * safezoneW;
-    h = 0.506 * safezoneH;
+    h = 0.341 * safezoneH;
     colorBackground[] = {0, 0, 0, 0};
     fade = 1;
 

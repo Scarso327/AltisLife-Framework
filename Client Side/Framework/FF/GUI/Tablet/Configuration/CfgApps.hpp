@@ -30,7 +30,7 @@ class CfgApps {
     class KeyChain {
         title = "Key Chain";
         icon = "\a3\ui_f_curator\Data\RscCommon\RscAttributeInventory\filter_10_ca.paa";
-        onButtonClick = "createDialog ""Life_key_management"";";
+        onButtonClick = "[23400, ""KeyChain""] call FF_fnc_switchApp";
         conditions = "";
         disableIF = "";
         tooltip = "View all vehicle and house keys...";
@@ -106,5 +106,14 @@ class CfgApps {
         conditions = "";
         disableIF = "";
         tooltip = "Save your data to the server...";
+    };
+
+    class Admin {
+        title = "Admin Menu";
+        icon = "\a3\ui_f_curator\Data\Logos\arma3_zeus_icon_hover_ca.paa";
+        onButtonClick = "createDialog ""life_admin_menu"";";
+        conditions = "call life_adminlevel >= 1";
+        disableIF = "";
+        tooltip = "";
     };
 };

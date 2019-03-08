@@ -1,0 +1,37 @@
+/*
+	@File: fn_setupMarket.sqf
+  
+	@Author: Jack "Scarso" Farhall
+  
+	@Description: addAction for virtual shops...
+
+	@Usage Examples:
+		- [this, ["Civ", "Market"], "general_market", ""] call FF_fnc_setupMarket;
+		- [this, ["Civ", "Mineral Exports"], "mineral_exports", "playerSide isEqualTo civilian"] call FF_fnc_setupMarket;
+		- [this, ["Rebel", "Market"], "syndikat_outpost", "playerSide isEqualTo civilian && license_civ_syndikat"] call FF_fnc_setupMarket;
+		- [this, ["Police", "Market"], "tpc_market", "playerSide isEqualTo west"] call FF_fnc_setupMarket;
+		- [this, ["NHS", "Market"], "nhs_market", "playerSide isEqualTo independent"] call FF_fnc_setupMarket;
+*/
+#include "..\..\script_macros.hpp"
+params [
+	["_object", objNull, [objNull]],
+	["_title", [], [[]]],
+	["_shop", "", [""]],
+	["_conditions", "", [""]]
+];
+
+if (isNull _object || {_shop isEqualTo ""} || {(count _title) != 2}) exitWith {
+	diag_log format["[Market Setup] Failed %1 %2", _shop, _title];
+};
+
+_object enableSimulation false;
+_object allowDamage false;
+
+_object addAction[
+	format[
+		"<t color='#9000ff'>[%2]</t> %1", 
+		_title select 1, 
+		_title select 0
+	], LIFE(virt_menu), _shop, 1.5, true, true, "", _conditions,
+	5
+];

@@ -68,6 +68,10 @@ class FF_Core {
         class hudUpdate {};
         class hudSetup {};
     };
+    class Map {
+        file = "FF\Map";
+        class setupMarket {};
+    };
 };
 
 class Life_Client_Core {

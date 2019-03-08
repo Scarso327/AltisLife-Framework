@@ -23,7 +23,7 @@ switch (_title) do {
 		
 		{
 			if(ITEM_VALUE(configName _x) > 0) then {
-				_list lbAdd format["%2 [x%1]",ITEM_VALUE(configName _x),localize (getText(_x >> "displayName"))];
+				_list lbAdd format["%2 [x%1]",ITEM_VALUE(configName _x),(getText(_x >> "displayName"))];
 				_list lbSetData [(lbSize _list)-1,configName _x];
 				_icon = M_CONFIG(getText,"VirtualItems",configName _x,"icon");
 				if !(_icon isEqualTo "") then {

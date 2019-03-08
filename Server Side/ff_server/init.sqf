@@ -206,8 +206,6 @@ diag_log "----------------------------------------------------------------------
 
 // Foggy Woggy Poggy
 for "_i" from 0 to 1 step 0 do {
-    if ( fog > 0.1 ) then {
-        0 setFog 0;
-    };
-    sleep 300;
+    0 setFog 0;
+    sleep 60;
 };

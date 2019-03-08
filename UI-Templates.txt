@@ -1,0 +1,9 @@
+/* #Lilizi
+$[
+	1.063,
+	["asdasd",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[2202,"PageSpace",[1,"",["0.278282 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.443438 * safezoneW","0.495 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1003,"title",[1,"Page Title",["0.278281 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.201094 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1000,"Back",[1,"X",["0.70625 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.0154688 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/

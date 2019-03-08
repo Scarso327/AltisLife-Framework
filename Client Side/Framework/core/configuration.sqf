@@ -93,6 +93,8 @@ FF_Food = [];
 FF_Level = 1;
 FF_XP = 0;
 
+FF_curApp = "Home";
+
 /*
     Master Array of items?
 */

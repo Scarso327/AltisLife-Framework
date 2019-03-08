@@ -1,4 +1,3 @@
-#include "..\..\script_macros.hpp"
 /*
     File: fn_useItem.sqf
     Author: Bryan "Tonic" Boardwine
@@ -6,10 +5,11 @@
     Description:
     Main function for item effects and functionality through the player menu.
 */
-private "_item";
+#include "..\..\script_macros.hpp"
 disableSerialization;
-if ((lbCurSel 2005) isEqualTo -1) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
-_item = CONTROL_DATA(2005);
+
+if ((lbCurSel 23202) isEqualTo -1) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
+private _item = CONTROL_DATA(23202);
 
 switch (true) do {
     case (_item in FF_Drinks): {
@@ -102,5 +102,5 @@ switch (true) do {
     };
 };
 
-[] call life_fnc_p_updateMenu;
-[] call FF_fnc_hudUpdate;
+["Inventory"] call FF(onLoad);
+[] call FF(hudUpdate);

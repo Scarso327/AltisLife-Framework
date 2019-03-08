@@ -12,7 +12,7 @@ class CfgSpyGlass {
     */
     //ArmA 3 Functions
     BIS_Functions[] = {
-    "bis_fnc_wlsectorlisting","bis_fnc_wlinsectorarea","bis_fnc_wlsubroutine_purchasemenugetuiscale","bis_fnc_wlrequestfasttravel","bis_fnc_wlsectorhandle","bis_fnc_wlsectorselectionhandle","bis_fnc_wldroppurchase","bis_fnc_priorityqueue_isempty","bis_fnc_wlplayerstrackingserver",
+    "bis_fnc_wlsyncedtime","bis_fnc_wlparseassetlist","bis_fnc_mapgridsize","bis_fnc_wlsectorlisting","bis_fnc_wlinsectorarea","bis_fnc_wlsubroutine_purchasemenugetuiscale","bis_fnc_wlrequestfasttravel","bis_fnc_wlsectorhandle","bis_fnc_wlsectorselectionhandle","bis_fnc_wldroppurchase","bis_fnc_priorityqueue_isempty","bis_fnc_wlplayerstrackingserver",
 "bis_fnc_wlsidetofaction","bis_fnc_initmodules_warlords","bis_fnc_wlsectoriconupdate","bis_fnc_wlsubroutine_purchasemenuassetavailability","bis_fnc_wldefencesetup","bis_fnc_wlloadoutapply",
 "bis_fnc_isdatetimenewer","bis_fnc_wlaircraftarrival","bis_fnc_priorityqueue_pushitem","bis_fnc_wlosd","bis_fnc_priorityqueue_popitem","bis_fnc_wlaipurchases",
 "bis_fnc_wlsynctime","bis_fnc_priorityqueue_gethighestpriority","bis_fnc_wlreputation","bis_fnc_wlsubroutine_purchasemenusetitemslist","bis_fnc_wlvehiclehandle","bis_fnc_wlsectorinit",
@@ -288,7 +288,7 @@ class CfgSpyGlass {
         "life_fnc_wantedbounty","life_fnc_wantedbounty_meta","life_fnc_wantedfetch","life_fnc_wantedfetch_meta","life_fnc_wantedgrab","life_fnc_wantedgrab_meta","life_fnc_wantedinfo","life_fnc_wantedinfo_meta","life_fnc_wantedlist","life_fnc_wantedlist_meta","life_fnc_wantedmenu","life_fnc_wantedmenu_meta","life_fnc_wantedperson","life_fnc_wantedperson_meta","life_fnc_wantedpunish","life_fnc_wantedpunish_meta",
         "life_fnc_wantedremove","life_fnc_wantedremove_meta","life_fnc_wantedticket","life_fnc_wantedticket_meta","life_fnc_weaponshopaccs","life_fnc_weaponshopaccs_meta","life_fnc_weaponshopbuysell","life_fnc_weaponshopbuysell_meta","life_fnc_weaponshopcfg","life_fnc_weaponshopcfg_meta","life_fnc_weaponshopfilter","life_fnc_weaponshopfilter_meta","life_fnc_weaponshopmags","life_fnc_weaponshopmags_meta",
         "life_fnc_weaponshopmenu","life_fnc_weaponshopmenu_meta","life_fnc_weaponshopselection","life_fnc_weaponshopselection_meta","ff_fnc_welcomenotification","ff_fnc_welcomenotification_meta","life_fnc_whereami","life_fnc_whereami_meta","life_fnc_wiretransfer","life_fnc_wiretransfer_meta", "bis_dynamictext_spawn_5", "ff_fnc_getrank", "ff_fnc_getrank_meta", "ff_fnc_increaseprofession", "ff_fnc_increaseprofession_meta",
-        "ff_fnc_notify", "ff_fnc_notify_meta", "ff_fnc_handlexp", "ff_fnc_handlexp_meta", "ff_fnc_openmenu", "ff_fnc_openmenu_meta", "ff_fnc_switchapp", "ff_fnc_switchapp_meta"
+        "ff_fnc_notify", "ff_fnc_notify_meta", "ff_fnc_handlexp", "ff_fnc_handlexp_meta", "ff_fnc_openmenu", "ff_fnc_openmenu_meta", "ff_fnc_switchapp", "ff_fnc_switchapp_meta", "ff_fnc_escapehandle", "ff_fnc_escapehandle_meta", "ff_fnc_onload", "ff_fnc_onload_meta", "ff_fnc_setupmarket", "ff_fnc_setupmarket_meta"
     };
 
     SERVER_Functions[] = {
@@ -322,6 +322,7 @@ class CfgSpyGlass {
         ["store_shop_vendor","OBJECT"] This is for when you place a new NPC and name it in the editor
     */
     allowedVariables[] = {
+        {"ff_curapp", "STRING"},
         {"dvla_1", "OBJECT"},
         {"medic_vehicles_1", "OBJECT"},
         {"medic_vehicles_2", "OBJECT"},

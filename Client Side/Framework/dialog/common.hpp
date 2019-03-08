@@ -387,7 +387,6 @@ class Life_RscShortcutButton {
         align = "left";
     };
 };
-
 class Life_RscButtonMenu : Life_RscShortcutButton {
     idc = -1;
     type = 16;
@@ -1174,4 +1173,36 @@ class FF_RscProgress {
     colorFrame[] = {0, 0, 0, 0};
     colorBackground[] = {0, 0, 0, 0.5};
     colorBar[] =  {0, 0, 0, 0.5};
+};
+
+class Life_RscButtonMenuIcon : Life_RscButtonMenu {
+    type = 1;
+    style = "2096";
+
+    animTextureNormal = "#(argb,8,8,3)color(1,1,1,1)";
+    animTextureDisabled = "#(argb,8,8,3)color(1,1,1,1)";
+    animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
+    animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";
+    animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
+    animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
+
+    colorBackground[] = {0, 0, 0, 0.8};
+    colorBackgroundFocused[] = {1, 1, 1, 1};
+    colorBackground2[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", 1};
+
+    color[] = {1, 1, 1, 1};
+    colorFocused[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", 1};
+
+    color2[] = {0, 0, 0, 1};
+    colorText[] = {1, 1, 1, 1};
+    colorDisabled[] = {1, 1, 1, 0.25};
+    colorBackgroundActive[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", 1};
+    colorBackgroundDisabled[] = {0.1, 0.1, 0.1, 1};
+    offsetX = 0;
+    offsetY = 0;
+    offsetPressedX = 0;
+    offsetPressedY = 0;
+    colorShadow[] = {0, 0, 0, 0};
+    colorBorder[] = {0, 0, 0, 0};
+    borderSize = 0;
 };

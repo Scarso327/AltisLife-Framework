@@ -1,4 +1,3 @@
-#include "..\..\script_macros.hpp"
 /*
     File: fn_removeItem.sqf
     Author: Bryan "Tonic" Boardwine
@@ -7,10 +6,11 @@
     Removes the selected item & amount to remove from the players
     virtual inventory.
 */
-private ["_data","_value","_obj"];
+#include "..\..\script_macros.hpp"
 disableSerialization;
-_data = lbData[2005,(lbCurSel 2005)];
-_value = ctrlText 2010;
+
+private _data = lbData[23202,(lbCurSel 23202)];
+private _value = ctrlText 23205;
 
 if (_data isEqualTo "") exitWith {hint localize "STR_NOTF_didNotSelectToRemove";};
 if (!([_value] call TON_fnc_isnumber)) exitWith {hint localize "STR_NOTF_notNumberFormat";};
@@ -21,4 +21,4 @@ if (!([false,_data,(parseNumber _value)] call life_fnc_handleInv)) exitWith {hin
 
 hint format [localize "STR_NOTF_removedFromInventory",(parseNumber _value),(localize ITEM_NAME(_data))];
 
-[] call life_fnc_p_updateMenu;
+["Inventory"] call FF(onLoad);

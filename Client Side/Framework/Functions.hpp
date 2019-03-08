@@ -68,6 +68,15 @@ class FF_Core {
         class hudUpdate {};
         class hudSetup {};
     };
+
+    class GUI_Tablet_Functions {
+        file = "FF\GUI\Tablet\Functions";
+        class openMenu {};
+        class switchApp {};
+        class escapeHandle {};
+        class onLoad {};
+    };
+
     class Map {
         file = "FF\Map";
         class setupMarket {};

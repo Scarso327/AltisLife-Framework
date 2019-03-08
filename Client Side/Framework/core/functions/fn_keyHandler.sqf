@@ -212,12 +212,7 @@ switch (_code) do {
         if (!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
     };
 
-    //Y Player Menu
-    case 21: {
-        if (!_alt && !_ctrlKey && !dialog && !(player getVariable ["restrained",false]) && {!life_action_inUse}) then {
-            [] call life_fnc_p_openMenu;
-        };
-    };
+    case 21: { if (!_alt && !_ctrlKey) then { [] call FF(openMenu) }; }; // Y Player Menu
 
     //F Key
     case 33: {

@@ -69,6 +69,13 @@ class CfgProcess {
         NoLicenseCost = 0;
     };
 
+    class turtle {
+        MaterialsReq[] = {{"raw_turtle",1}};
+        MaterialsGive[] = {{"cooked_turtle",1}};
+        Text = "Cooking Turtle...";
+        NoLicenseCost = 0;
+    };
+
     class copper {
         MaterialsReq[] = {{"copper_ore",1}};
         MaterialsGive[] = {{"copper_bar",1}};

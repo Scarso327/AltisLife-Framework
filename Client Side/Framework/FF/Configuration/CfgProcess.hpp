@@ -27,10 +27,45 @@ class CfgProcess {
         NoLicenseCost = 0;
     };
 
-    class fish { // Add array for all fish types
-        MaterialsReq[] = {{"",1}};
-        MaterialsGive[] = {{"",1}};
-        Text = "Cooking Fish...";
+    class salema {
+        MaterialsReq[] = {{"raw_salema",1}};
+        MaterialsGive[] = {{"cooked_salema",1}};
+        Text = "Cooking Salema...";
+        NoLicenseCost = 0;
+    };
+
+    class ornate {
+        MaterialsReq[] = {{"raw_ornate",1}};
+        MaterialsGive[] = {{"cooked_ornate",1}};
+        Text = "Cooking Ornate...";
+        NoLicenseCost = 0;
+    };
+
+    class mackerel {
+        MaterialsReq[] = {{"raw_mackerel",1}};
+        MaterialsGive[] = {{"cooked_mackerel",1}};
+        Text = "Cooking Mackerel...";
+        NoLicenseCost = 0;
+    };
+
+    class tuna {
+        MaterialsReq[] = {{"raw_tuna",1}};
+        MaterialsGive[] = {{"cooked_tuna",1}};
+        Text = "Cooking Tuna...";
+        NoLicenseCost = 0;
+    };
+
+    class mullet {
+        MaterialsReq[] = {{"raw_mullet",1}};
+        MaterialsGive[] = {{"raw_mullet",1}};
+        Text = "Cooking Mullet...";
+        NoLicenseCost = 0;
+    };
+
+    class catshark {
+        MaterialsReq[] = {{"raw_catshark",1}};
+        MaterialsGive[] = {{"cooked_catshark",1}};
+        Text = "Cooking Catshark...";
         NoLicenseCost = 0;
     };
 
@@ -83,10 +118,38 @@ class CfgProcess {
         NoLicenseCost = 0;
     };
 
-    class gem { // Add array for all gem types
-        MaterialsReq[] = {{"",1}};
-        MaterialsGive[] = {{"",1}};
-        Text = "Processing Gems...";
+    class opal {
+        MaterialsReq[] = {{"uncut_opal",1}};
+        MaterialsGive[] = {{"uncut_opal",1}};
+        Text = "Processing Opal...";
+        NoLicenseCost = 0;
+    };
+
+    class sapphire {
+        MaterialsReq[] = {{"uncut_sapphire",1}};
+        MaterialsGive[] = {{"uncut_sapphire",1}};
+        Text = "Processing Sapphire...";
+        NoLicenseCost = 0;
+    };
+
+    class ruby {
+        MaterialsReq[] = {{"uncut_ruby",1}};
+        MaterialsGive[] = {{"cut_ruby",1}};
+        Text = "Processing Ruby...";
+        NoLicenseCost = 0;
+    };
+
+    class emerald {
+        MaterialsReq[] = {{"uncut_emerald",1}};
+        MaterialsGive[] = {{"cut_emerald",1}};
+        Text = "Processing Emerald...";
+        NoLicenseCost = 0;
+    };
+
+    class diamond {
+        MaterialsReq[] = {{"uncut_diamond",1}};
+        MaterialsGive[] = {{"cut_diamond",1}};
+        Text = "Processing Diamond...";
         NoLicenseCost = 0;
     };
 
@@ -125,17 +188,38 @@ class CfgProcess {
         NoLicenseCost = 0;
     };
 
-    class drug_refining { // Add array for all drug types
-        MaterialsReq[] = {{"",1}};
-        MaterialsGive[] = {{"",1}};
-        Text = "Refining Drugs...";
+    class refined_marijuana {
+        MaterialsReq[] = {{"marijuana",1}};
+        MaterialsGive[] = {{"refined_marijuana",1}};
+        Text = "Refining Marijuana...";
+        NoLicenseCost = 0;
+    };
+
+    class refined_heroin {
+        MaterialsReq[] = {{"heroin",1}};
+        MaterialsGive[] = {{"refined_heroin",1}};
+        Text = "Refining Heroin...";
+        NoLicenseCost = 0;
+    };
+
+    class refined_cocaine {
+        MaterialsReq[] = {{"cocaine",1}};
+        MaterialsGive[] = {{"refined_cocaine",1}};
+        Text = "Refining Cocaine...";
+        NoLicenseCost = 0;
+    };
+
+    class refined_methamphetamine {
+        MaterialsReq[] = {{"methamphetamine",1}};
+        MaterialsGive[] = {{"refined_methamphetamine",1}};
+        Text = "Refining Methamphetamine...";
         NoLicenseCost = 0;
     };
 
     class gold_debranding {
         MaterialsReq[] = {{"branded_gold_bar",1}};
         MaterialsGive[] = {{"unbranded_gold_bar",1}};
-        Text = "Unbranding Gold...";
+        Text = "Debranding Gold...";
         NoLicenseCost = 0;
     };
 };

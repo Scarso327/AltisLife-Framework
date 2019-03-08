@@ -27,6 +27,13 @@ class CfgProcess {
         NoLicenseCost = 0;
     };
 
+    class fish { // Add array for all fish types
+        MaterialsReq[] = {{"",1}};
+        MaterialsGive[] = {{"",1}};
+        Text = "Cooking Fish...";
+        NoLicenseCost = 0;
+    };
+
     class copper {
         MaterialsReq[] = {{"copper_ore",1}};
         MaterialsGive[] = {{"copper_bar",1}};
@@ -77,8 +84,8 @@ class CfgProcess {
     };
 
     class gem { // Add array for all gem types
-        MaterialsReq[] = {{"tin_ore",1}};
-        MaterialsGive[] = {{"tin_bar",1}};
+        MaterialsReq[] = {{"",1}};
+        MaterialsGive[] = {{"",1}};
         Text = "Processing Gems...";
         NoLicenseCost = 0;
     };
@@ -119,8 +126,8 @@ class CfgProcess {
     };
 
     class drug_refining { // Add array for all drug types
-        MaterialsReq[] = {{"marijuana",1}};
-        MaterialsGive[] = {{"refined_marijuana",1}};
+        MaterialsReq[] = {{"",1}};
+        MaterialsGive[] = {{"",1}};
         Text = "Refining Drugs...";
         NoLicenseCost = 0;
     };

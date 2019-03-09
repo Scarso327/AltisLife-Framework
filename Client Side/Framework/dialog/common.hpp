@@ -745,6 +745,7 @@ class Life_RscMapControl
     colorText[] = {0,0,0,1};
     font = "TahomaB";
     sizeEx = 0.04;
+    widthRailWay = 1;
     colorSea[] = {0.467,0.631,0.851,0.5};
     colorForest[] = {0.624,0.78,0.388,0.5};
     colorRocks[] = {0,0,0,0.3};

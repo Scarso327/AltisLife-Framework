@@ -81,6 +81,7 @@ class FF_Core {
         file = "FF\Map";
         class setupMarket {};
         class setupShop {};
+        class setupVehicle {};
     };
 };
 

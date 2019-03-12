@@ -92,6 +92,27 @@ FF_Food = [];
 
 FF_Level = 1;
 FF_XP = 0;
+FF_Perks = [];
+
+/* FF_Perks Structure
+[
+    // Police
+    [
+        "perk_1",
+        "perk_2"
+    ],
+    // NHS
+    [
+        "perk_1",
+        "perk_2"
+    ],
+    // Civilian
+    [
+        "perk_1",
+        "perk_2"
+    ]
+]
+*/
 
 FF_curApp = "Home";
 

@@ -322,6 +322,7 @@ class CfgSpyGlass {
         ["store_shop_vendor","OBJECT"] This is for when you place a new NPC and name it in the editor
     */
     allowedVariables[] = {
+        {"ff_perks", "ARRAY"},
         {"ff_curapp", "STRING"},
         {"dvla_1", "OBJECT"},
         {"medic_vehicles_1", "OBJECT"},

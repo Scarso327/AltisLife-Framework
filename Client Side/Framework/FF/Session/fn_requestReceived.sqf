@@ -64,6 +64,7 @@ switch (playerSide) do {
         // Leveling
         FF_Level = _this select 13;
         FF_XP = _this select 14;
+        FF_Perks = _this select 15;
     };
 
     case civilian: {
@@ -94,6 +95,7 @@ switch (playerSide) do {
         // Leveling
         FF_Level = _this select 12;
         FF_XP = _this select 13;
+        FF_Perks = _this select 14;
     };
 
     case independent: {
@@ -111,6 +113,7 @@ switch (playerSide) do {
         // Leveling
         FF_Level = _this select 12;
         FF_XP = _this select 13;
+        FF_Perks = _this select 14;
     };
 };
 

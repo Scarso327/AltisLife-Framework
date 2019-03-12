@@ -50,6 +50,11 @@ switch (_mode) do {
     case 7: {
         // Tonic is using for keychain..?
     };
+
+    // Update Active Perks...
+    case 8: {
+        _packet set[2,FF_Perks];
+    };
 };
 
 if (life_HC_isActive) then {

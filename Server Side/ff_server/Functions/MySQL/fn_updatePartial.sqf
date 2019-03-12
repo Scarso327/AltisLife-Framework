@@ -70,6 +70,13 @@ switch (_mode) do {
         _array = [_this,2,[],[[]]] call BIS_fnc_param;
         [_uid,_side,_array,0] call TON_fnc_keyManagement;
     };
+
+    // Update Active Perks...
+    case 8: {
+        _value = [_this,2,[],[[]]] call BIS_fnc_param;
+        _value = [_value] call DB_fnc_mresArray;
+        _query = format ["UPDATE players SET active_perks='%1' WHERE pid='%2'",_value,_uid];
+    };
 };
 
 if (_query isEqualTo "") exitWith {};

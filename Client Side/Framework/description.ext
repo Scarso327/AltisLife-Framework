@@ -80,9 +80,9 @@ class CfgSounds {
 
 class CfgDebriefing {
     class NotWhitelisted {
-        title = "$STR_NotWhitelisted_Title";
-        subtitle = "$STR_NotWhitelisted_SubTitle";
-        description = "$STR_NotWhitelisted_Descript";
+        title = "Mission Failed";
+        subtitle = "You are not whitelisted to use this slot.";
+        description = "You are not allowed to use this slot because you do not have the appropriate permissions.";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};

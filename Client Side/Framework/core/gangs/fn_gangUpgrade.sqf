@@ -13,7 +13,7 @@ _upgradePrice = round(_slotUpgrade * ((LIFE_SETTINGS(getNumber,"gang_upgradeBase
 
 _action = [
     format [(localize "STR_GNOTF_MaxMemberMSG")+ "<br/><br/>" +(localize "STR_GNOTF_CurrentMax")+ "<br/>" +(localize "STR_GNOTF_UpgradeMax")+ "<br/>" +(localize "STR_GNOTF_Price")+ " <t color='#8cff9b'>$%3</t>",_maxMembers,_slotUpgrade,[_upgradePrice] call life_fnc_numberText],
-    localize "STR_Gang_UpgradeMax",
+    "Upgrade Maximum Allowed Group Members",
     "Buy",
     "Cancel"
 ] call BIS_fnc_guiMessage;

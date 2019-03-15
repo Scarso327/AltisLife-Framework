@@ -1,52 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Altis Life RPG">
-    <Package name="Gang_Menu">
-        <Key ID="STR_Gang_Title">
-            <Original>Gang Management</Original>
-        </Key>
-        <Key ID="STR_Gang_Title2">
-            <Original>Gang Management - Current Gangs</Original>
-        </Key>
-        <Key ID="STR_Gang_Join">
-            <Original>Join</Original>
-        </Key>
-        <Key ID="STR_Gang_Leave">
-            <Original>Leave</Original>
-        </Key>
-        <Key ID="STR_Gang_UpgradeSlots">
-            <Original>Upgrade Slots</Original>
-        </Key>
-        <Key ID="STR_Gang_Kick">
-            <Original>Kick</Original>
-        </Key>
-        <Key ID="STR_Gang_SetLeader">
-            <Original>Set Leader</Original>
-        </Key>
-        <Key ID="STR_Gang_PriceTxt">
-            <Original>To create a gang it costs $%1</Original>
-        </Key>
-        <Key ID="STR_Gang_Create">
-            <Original>Create</Original>
-        </Key>
-        <Key ID="STR_Gang_YGN">
-            <Original>Your Gang Name</Original>
-        </Key>
-        <Key ID="STR_Gang_Invite_Player">
-            <Original>Invite Player</Original>
-        </Key>
-        <Key ID="STR_Gang_Disband_Gang">
-            <Original>Disband Gang</Original>
-        </Key>
-        <Key ID="STR_Gang_Invitation">
-            <Original>Gang Invitation</Original>
-        </Key>
-        <Key ID="STR_Gang_Transfer">
-            <Original>Transfer Gang Leadership</Original>
-        </Key>
-        <Key ID="STR_Gang_UpgradeMax">
-            <Original>Upgrade Maximum Allowed Gang Members</Original>
-        </Key>
-    </Package>
     <Package name="Gang_Notification">
         <Key ID="STR_GNOTF_CreateGang">
             <Original>You must create a gang first before capturing it!</Original>
@@ -2143,17 +2096,6 @@
         </Key>
         <Key ID="STR_FuelTank_Money">
             <Original>Your share is $%1.</Original>
-        </Key>
-    </Package>
-    <Package name="NotWhitelisted">
-        <Key ID="STR_NotWhitelisted_Title">
-            <Original>Mission Failed</Original>
-        </Key>
-        <Key ID="STR_NotWhitelisted_SubTitle">
-            <Original>You are not white-listed to use this slot.</Original>
-        </Key>
-        <Key ID="STR_NotWhitelisted_Descript">
-            <Original>You are not allowed to use this slot because you do not have the appropriate permissions. Try another slot.</Original>
         </Key>
     </Package>
     <Package name="SpyGlass">

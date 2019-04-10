@@ -187,55 +187,7 @@ class CfgLicenses {
         side = "civ";
     };
 
-    // Miscellaneous
-    class so1 {
-        variable = "so1";
-        displayName = "SO1 Authorisation";
-        price = 0;
-        illegal = false;
-        side = "civ";
-    };
-
-    class solicitor {
-        variable = "solicitor";
-        displayName = "Solicitor Registration";
-        price = 0;
-        illegal = false;
-        side = "civ";
-    };
-
-    class idap {
-        variable = "idap";
-        displayName = "International Development & Aid Project";
-        price = 0;
-        illegal = false;
-        side = "civ";
-    };
-
-    class aan {
-        variable = "aan";
-        displayName = "AAN News Registration";
-        price = 0;
-        illegal = false;
-        side = "civ";
-    };
-
-    class roadside {
-        variable = "roadside";
-        displayName = "Roadside Assistance Registration";
-        price = 0;
-        illegal = false;
-        side = "civ";
-    };
-
-    class taxi {
-        variable = "taxi";
-        displayName = "Taxi Registration";
-        price = 0;
-        illegal = false;
-        side = "civ";
-    };
-
+    // Syndikat Outpost
     class syndikat {
         variable = "syndikat";
         displayName = "Syndikat Training";
@@ -244,42 +196,43 @@ class CfgLicenses {
         side = "civ";
     };
 
-    class black_market {
-        variable = "black_market";
-        displayName = "Black Market";
-        price = 0;
-        illegal = true;
-        side = "civ";
-    };
-
-    // Faction Specific
-    class asu {
-        variable = "asu";
-        displayName = "Air Support Unit";
+    // TPC - Specialised Officers
+    class afo {
+        variable = "afo";
+        displayName = "Authorised Firearms Officer";
         price = 0;
         illegal = false;
         side = "cop";
     };
 
-    class mpu {
-        variable = "mpu";
-        displayName = "Marine Policing Unit";
+    class aso {
+        variable = "aso";
+        displayName = "Air Support Officer";
         price = 0;
         illegal = false;
         side = "cop";
     };
 
-    class aru {
-        variable = "aru";
-        displayName = "Armed Response Unit";
+    class mso {
+        variable = "mso";
+        displayName = "Marine Support Officer";
         price = 0;
         illegal = false;
         side = "cop";
     };
 
+    class fto {
+        variable = "fto";
+        displayName = "Field Training Officer";
+        price = 0;
+        illegal = false;
+        side = "med";
+    };
+
+    // NHS - Specialised Units
     class taa {
         variable = "taa";
-        displayName = "Tanona Air Ambulance";
+        displayName = "Tanoan Air Ambulance";
         price = 0;
         illegal = false;
         side = "med";
@@ -287,7 +240,7 @@ class CfgLicenses {
 
     class mru {
         variable = "mru";
-        displayName = "Maritime Response Unit";
+        displayName = "Marine Response Unit";
         price = 0;
         illegal = false;
         side = "med";

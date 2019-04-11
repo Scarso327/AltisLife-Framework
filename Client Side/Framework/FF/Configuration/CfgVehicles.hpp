@@ -29,7 +29,12 @@ class CfgVehicleStores {
             { "B_Truck_01_covered_F", "" },
             { "B_Truck_01_ammo_F", "" },
             { "B_Truck_01_fuel_F", "" },
-            { "B_Truck_01_box_F", "" }
+            { "B_Truck_01_box_F", "" },
+            { "O_T_Truck_03_transport_ghex_F", "" },
+            { "O_T_Truck_03_covered_ghex_F", "" },
+            { "O_T_Truck_03_ammo_ghex_F", "" },
+            { "O_T_Truck_03_fuel_ghex_F", "" },
+            { "O_T_Truck_03_device_ghex_F", "" }
         };
     };
 
@@ -37,7 +42,7 @@ class CfgVehicleStores {
         side = "civ";
         conditions = "license_civ_piloting";
         vehicles[] = {
-            { "C_Heli_Light_01_civil_F", "" }, // Premium Membership
+            { "C_Heli_Light_01_civil_F", "" },
             { "B_Heli_Light_01_F", "" },
             { "O_Heli_Light_02_unarmed_F", "" },
             { "I_Heli_Transport_02_F", "" }
@@ -48,7 +53,7 @@ class CfgVehicleStores {
         side = "civ";
         conditions = "license_civ_piloting";
         vehicles[] = {
-            { "C_Plane_Civil_01_F", "" } // Premium Membership
+            { "C_Plane_Civil_01_F", "" }
         };
     };
 
@@ -79,73 +84,6 @@ class CfgVehicleStores {
         };
     };
 
-    class tanoa_solicitor_registration {
-        side = "civ";
-        conditions = "license_civ_solicitor";
-        vehicles[] = {
-            { "C_SUV_01_F", "" }
-        };
-    };
-
-    class international_development_and_aid_project {
-        side = "civ";
-        conditions = "license_civ_idap";
-        vehicles[] = {
-            { "C_Offroad_01_F", "" },
-            { "C_Offroad_02_unarmed_F", "" },
-            { "C_Van_02_transport_F", "" },
-            { "C_Van_02_vehicle_F", "" },
-            { "C_Van_02_medevac_F", "" },
-            { "I_Heli_Transport_02_F", "" }
-        };
-    };
-
-    class aan_world_news {
-        side = "civ";
-        conditions = "license_civ_aan";
-        vehicles[] = {
-            { "C_SUV_01_F", "" },
-            { "C_Van_02_transport_F", "" }
-        };
-    };
-
-    class roadside_assistance_service {
-        side = "civ";
-        conditions = "license_civ_roadside";
-        vehicles[] = {
-            { "C_Offroad_01_repair_F", "" },
-            { "C_Van_02_service_F", "" }
-        };
-    };
-
-    class tanoa_taxi_service {
-        side = "civ";
-        conditions = "license_civ_taxi";
-        vehicles[] = {
-            { "C_SUV_01_F", "" }
-        };
-    };
-
-    class governors_residence {
-        side = "civ";
-        conditions = ""; // Updated Access
-        vehicles[] = {
-            { "C_Hatchback_01_F", "" },
-            { "C_SUV_01_F", "" }
-        };
-    };
-
-    class so1_protection_dealership {
-        side = "civ";
-        conditions = "license_civ_so1";
-        vehicles[] = {
-            { "C_Offroad_01_repair_F", "" },
-            { "C_Van_02_service_F", "" },
-            { "C_Heli_Light_01_civil_F", "" },
-            { "O_Heli_Light_02_unarmed_F", "" }
-        };
-    };
-
     class syndikat_outpost {
         side = "civ";
         conditions = "license_civ_syndikat";
@@ -160,61 +98,37 @@ class CfgVehicleStores {
         };
     };
 
-    class black_market {
-        side = "civ";
-        conditions = "license_civ_black_market";
-        vehicles[] = {
-            { "O_Quadbike_01_F", "" },
-            { "O_G_Offroad_01_F", "" },
-            { "O_G_Offroad_01_armed_F", "" },
-            { "O_LSV_02_unarmed_F", "" },
-            { "O_Truck_03_transport_F", "" },
-            { "O_Truck_03_covered_F", "" },
-            { "O_Truck_03_ammo_F", "" },
-            { "O_Truck_03_fuel_F", "" },
-            { "O_Truck_03_device_F", "" }
-        };
-    };
-
     class tpc_general_dealership {
         side = "cop";
         conditions = "playerSide isEqualTo west";
         vehicles[] = {
             { "C_SUV_01_F", "call life_coplevel >= 2" },
-            { "O_G_Offroad_01_F", "call life_coplevel >= 3" },
-            { "C_Hatchback_01_sport_F", "call life_coplevel >= 4" },
-            { "C_Van_02_transport_F", "call life_coplevel >= 5" }
+            { "C_Offroad_02_unarmed_F", "call life_coplevel >= 2" },
+            { "C_Hatchback_01_sport_F", "call life_coplevel >= 3" }
         };
     };
 
-    class tpc_asu_dealership {
+    class tpc_arv_dealership {
         side = "cop";
-        conditions = "playerSide isEqualTo west && license_cop_asu";
+        conditions = "playerSide isEqualTo west && license_cop_aso";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "" },
-            { "I_Heli_light_03_unarmed_F", "" }
-        };
-    };
-
-    class tpc_mpu_dealership {
-        side = "cop";
-        conditions = "playerSide isEqualTo west && license_cop_mpu";
-        vehicles[] = {
+            { "C_SUV_01_F", "" },
+            { "C_Offroad_02_unarmed_F", "" },
+            { "C_Hatchback_01_sport_F", "" },
+            { "C_Van_02_transport_F", "" },
+            { "C_Boat_Civil_01_police_F", "" },
             { "B_G_Boat_Transport_02_F", "" },
             { "B_SDV_01_F", "" }
         };
     };
 
-    class tpc_aru_dealership {
+    class tpc_aso_dealership {
         side = "cop";
-        conditions = "playerSide isEqualTo west && license_cop_aru";
+        conditions = "playerSide isEqualTo west && license_cop_aso";
         vehicles[] = {
-            { "C_SUV_01_F", "" },
-            { "O_G_Offroad_01_F", "" },
-            { "C_Hatchback_01_sport_F", "" },
-            { "C_Van_02_transport_F", "" },
-            { "B_LSV_01_unarmed_F", "" },
-            { "B_MRAP_01_F", "" }
+            { "B_Heli_Light_01_F", "" },
+            { "I_Heli_light_03_unarmed_F", "" },
+            { "O_Heli_Light_02_unarmed_F", "" }
         };
     };
 
@@ -223,9 +137,7 @@ class CfgVehicleStores {
         conditions = "playerSide isEqualTo independent";
         vehicles[] = {
             { "C_Van_02_medevac_F", "call life_medlevel >= 2" },
-            { "C_Offroad_01_F", "call life_medlevel >= 3" },
             { "C_SUV_01_F", "call life_medlevel >= 3" },
-            { "C_Offroad_02_unarmed_F", "call life_medlevel >= 4" },
             { "C_Hatchback_01_sport_F", "call life_medlevel >= 4" }
         };
     };
@@ -234,7 +146,7 @@ class CfgVehicleStores {
         side = "med";
         conditions = "playerSide isEqualTo independent && license_med_taa";
         vehicles[] = {
-            { "C_Heli_Light_01_civil_F", "" },
+            { "I_Heli_light_03_unarmed_F", "" },
             { "O_Heli_Light_02_unarmed_F", "" }
         };
     };
@@ -243,8 +155,7 @@ class CfgVehicleStores {
         side = "med";
         conditions = "playerSide isEqualTo independent && license_med_mru";
         vehicles[] = {
-            { "B_G_Boat_Transport_02_F", "" },
-            { "B_SDV_01_F", "" }
+            { "B_G_Boat_Transport_02_F", "" }
         };
     };
 };

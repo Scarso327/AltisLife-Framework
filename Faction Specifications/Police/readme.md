@@ -6,14 +6,14 @@ The Ranking Structure takes parts from the MET as well as the Northern Island Po
 
 Police Community Support Officer
 Police Constable
-Senior Police Constable (Automatically given to Senior Staff and Developers)
+Special Police Constable (Automatically given to Senior Staff and Developers)
 Sergeant
 Inspector
 Chief Inspector
 Superintendent
 Chief Superintendent
-Deputy Chief Constable
-Chief Constable
+Deputy Commissioner
+Commissioner
 
 ## Specialised Units
 

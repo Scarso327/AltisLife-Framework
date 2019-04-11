@@ -85,9 +85,7 @@ class ListHeader: Life_RscListNBox {
 			value = 0;
 		};
 	};
-
-	colorBackground[] = {0,0,0,0.8};
-}
+};
 
 class MarketItemList: Life_RscListNBox {
 	x = 0.278281 * safezoneW + safezoneX;
@@ -102,4 +100,4 @@ class MarketItemList: Life_RscListNBox {
 	drawSideArrows = false;
 	idcLeft = -1;
 	idcRight = -1;
-}
+};

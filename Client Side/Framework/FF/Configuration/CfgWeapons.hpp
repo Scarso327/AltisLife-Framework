@@ -163,7 +163,7 @@ class CfgWeapons {
 
     class tpc_afo {
         name = "TPC - AFO";
-        conditions = "playerSide isEqualTo west && license_cop_afo";
+        conditions = "playerSide isEqualTo west && license_cop_sfo";
         items[] = {
             { "ItemMap", "Map of Altis", 0, -1, "" },
             { "ItemGPS", "Handheld GPS", 0, -1, "" },

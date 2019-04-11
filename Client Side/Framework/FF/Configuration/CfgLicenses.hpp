@@ -197,9 +197,9 @@ class CfgLicenses {
     };
 
     // TPC - Specialised Officers
-    class afo {
-        variable = "afo";
-        displayName = "Authorised Firearms Officer";
+    class sfo {
+        variable = "sfo";
+        displayName = "Specialised  Firearms Officer";
         price = 0;
         illegal = false;
         side = "cop";
@@ -211,22 +211,6 @@ class CfgLicenses {
         price = 0;
         illegal = false;
         side = "cop";
-    };
-
-    class mso {
-        variable = "mso";
-        displayName = "Marine Support Officer";
-        price = 0;
-        illegal = false;
-        side = "cop";
-    };
-
-    class fto {
-        variable = "fto";
-        displayName = "Field Training Officer";
-        price = 0;
-        illegal = false;
-        side = "med";
     };
 
     // NHS - Specialised Units

@@ -91,7 +91,7 @@ class MarketItemList: Life_RscListNBox {
 	x = 0.278281 * safezoneW + safezoneX;
     y = 0.333281 * safezoneH + safezoneY;
     w = 0.443438 * safezoneW;
-    h = 0.022 * safezoneH;
+    h = 0.407 * safezoneH;
 	idc = IDC_MARKET_LIST;
 	text = "";	
 	rowHeight = 0.04;

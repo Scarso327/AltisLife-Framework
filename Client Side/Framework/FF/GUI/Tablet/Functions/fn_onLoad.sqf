@@ -95,5 +95,18 @@ switch (_title) do {
 		private _itemList = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_LIST);
 
 		[_listHeader, _itemList] call FF_fnc_setupFilter;
+
+		lnbClear _itemList; // Ensure the list is cleared...
+
+		{
+			_itemList lnbAddRow [
+				(getText(_x >> "displayName")), // Display Name...
+				["Illegal", "Legal"] select (getNumber(_x >> "illegal") isEqualto 0),
+				(getNumber(_x >> "weight")), // Item Weight...
+				[(getNumber(_x >> "sellPrice"))] call life_fnc_numberText // Item Sell Price...
+			];
+
+			_itemList lnbSetCurSelRow -1; // Set current selection...
+		} foreach ("true" configClasses (missionConfigFile >> "CfgItems"));
 	};
 };

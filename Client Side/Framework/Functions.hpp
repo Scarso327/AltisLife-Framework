@@ -75,6 +75,7 @@ class FF_Core {
         class switchApp {};
         class escapeHandle {};
         class onLoad {};
+        class setupFilter {};
     };
 
     class Map {

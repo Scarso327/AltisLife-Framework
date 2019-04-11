@@ -89,4 +89,11 @@ switch (_title) do {
 			_list lbSetData [(lbSize _list)-1,str(_x)];
 		} forEach (playableUnits select {!isNull _x && alive _x && player distance _x < 20 && !(_x isEqualTo player)});
 	};
+
+	case "Market": {
+		private _listHeader = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_HEADER);
+		private _itemList = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_LIST);
+
+		[_listHeader, _itemList] call FF_fnc_setupFilter;
+	};
 };

@@ -66,7 +66,7 @@ class CfgApps {
     class Market {
         title = "Market";
         icon = "\a3\3den\data\Displays\Display3DEN\ToolBar\vert_ATL_ca.paa";
-        onButtonClick = "";
+        onButtonClick = "[23500, ""Market""] call FF_fnc_switchApp";
         conditions = "";
         disableIF = "";
         tooltip = "View Buy/Sell Prices on the Island";

@@ -93,20 +93,33 @@ switch (_title) do {
 	case "Market": {
 		private _listHeader = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_HEADER);
 		private _itemList = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_LIST);
+		private _searchEdit = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_SEARCH);
 
-		[_listHeader, _itemList] call FF_fnc_setupFilter;
+		[_listHeader, _itemList] call FF(setupFilter);
+		["MarketUpdate"] call FF(onLoad);
+
+		_searchEdit ctrlAddEventHandler ["KeyUp", {["MarketUpdate"] call FF(onLoad);}]; // Reload when searching...
+	};
+
+	case "MarketUpdate": {
+		private _itemList = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_LIST);
+		private _searchEdit = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_SEARCH);
 
 		lnbClear _itemList; // Ensure the list is cleared...
 
 		{
-			_itemList lnbAddRow [
-				(getText(_x >> "displayName")), // Display Name...
-				["Illegal", "Legal"] select (getNumber(_x >> "illegal") isEqualto 0),
-				(getNumber(_x >> "weight")), // Item Weight...
-				[(getNumber(_x >> "sellPrice"))] call life_fnc_numberText // Item Sell Price...
-			];
+			private _name = (getText(_x >> "displayName"));
 
-			_itemList lnbSetCurSelRow -1; // Set current selection...
+			if (toUpper _name find (toUpper ctrlText _searchEdit) >= 0) then {
+				_itemList lnbAddRow [
+					(getText(_x >> "displayName")), // Display Name...
+					["Illegal", "Legal"] select (getNumber(_x >> "illegal") isEqualto 0),
+					(getNumber(_x >> "weight")), // Item Weight...
+					[(getNumber(_x >> "sellPrice"))] call life_fnc_numberText // Item Sell Price...
+				];
+			};
 		} foreach ("true" configClasses (missionConfigFile >> "CfgItems"));
+
+		_itemList lnbSetCurSelRow -1; // Set current selection...
 	};
 };

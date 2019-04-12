@@ -5,8 +5,8 @@
     Description:
     Something
 */
-private _shopTitle = M_CONFIG(getText,"WeaponShops",(_this select 3),"name");
-private _conditions = M_CONFIG(getText,"WeaponShops",(_this select 3),"conditions");
+private _shopTitle = M_CONFIG(getText,"CfgWeapons",(_this select 3),"name");
+private _conditions = M_CONFIG(getText,"CfgWeapons",(_this select 3),"conditions");
 
 _exit = [_conditions] call life_fnc_levelCheck;
 if !(_exit) exitWith {hint localize "STR_Shop_Veh_NotAllowed";};
@@ -18,7 +18,7 @@ uiNamespace setVariable ["Magazine_Array",[]];
 uiNamespace setVariable ["Accessories_Array",[]];
 
 if !(createDialog "life_weapon_shop") exitWith {};
-if (!isClass(missionConfigFile >> "WeaponShops" >> (_this select 3))) exitWith {}; //Bad config entry.
+if (!isClass(missionConfigFile >> "CfgWeapons" >> (_this select 3))) exitWith {systemChat (_this select 3); closeDialog 0}; //Bad config entry.
 
 disableSerialization;
 

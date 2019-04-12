@@ -8,6 +8,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -29,6 +30,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -50,6 +52,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -71,6 +74,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -92,6 +96,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -113,6 +118,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -134,6 +140,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -155,6 +162,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -176,6 +184,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -197,6 +206,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -218,6 +228,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -239,6 +250,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -260,6 +272,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -281,6 +294,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -302,6 +316,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -323,6 +338,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -344,6 +360,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -365,6 +382,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -386,6 +404,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -407,6 +426,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -428,6 +448,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -449,6 +470,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -470,6 +492,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -491,6 +514,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -512,6 +536,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -533,6 +558,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -554,6 +580,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -575,6 +602,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -596,6 +624,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -617,6 +646,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -638,6 +668,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -659,6 +690,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -680,6 +712,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -701,6 +734,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -722,6 +756,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -743,6 +778,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -764,6 +800,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -785,6 +822,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -806,6 +844,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -827,6 +866,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -848,6 +888,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -869,6 +910,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -890,6 +932,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -911,6 +954,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -932,6 +976,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -953,6 +998,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -974,6 +1020,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -995,6 +1042,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1016,6 +1064,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1037,6 +1086,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1058,6 +1108,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1079,6 +1130,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1100,6 +1152,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1121,6 +1174,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1142,6 +1196,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1163,6 +1218,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1184,6 +1240,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1205,6 +1262,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1226,6 +1284,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1247,6 +1306,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1268,6 +1328,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1289,6 +1350,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1310,6 +1372,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1331,6 +1394,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1352,6 +1416,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1373,6 +1438,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1394,6 +1460,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1415,6 +1482,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1436,6 +1504,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1457,6 +1526,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -1478,6 +1548,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1499,6 +1570,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1520,6 +1592,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1541,6 +1614,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1562,6 +1636,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1583,6 +1658,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1604,6 +1680,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1625,6 +1702,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1646,6 +1724,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1667,6 +1746,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1688,6 +1768,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1709,6 +1790,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1730,6 +1812,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1751,6 +1834,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1772,6 +1856,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1793,6 +1878,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1814,6 +1900,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1835,6 +1922,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = true;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1856,6 +1944,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1877,6 +1966,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1898,6 +1988,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1919,6 +2010,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1940,6 +2032,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1961,6 +2054,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -1982,6 +2076,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2003,6 +2098,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2024,6 +2120,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2045,6 +2142,7 @@ class CfgItems {
         illegal = false;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2066,6 +2164,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2087,6 +2186,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2108,6 +2208,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2129,6 +2230,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2150,6 +2252,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2171,6 +2274,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2192,6 +2296,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2213,6 +2318,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2234,6 +2340,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2255,6 +2362,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2276,6 +2384,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2297,6 +2406,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2318,6 +2428,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2339,6 +2450,7 @@ class CfgItems {
         illegal = true;
         save = false;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = true;
             driftPerc = 0.1;
@@ -2360,6 +2472,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -2381,6 +2494,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -2402,6 +2516,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -2423,6 +2538,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -2444,6 +2560,7 @@ class CfgItems {
         illegal = false;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -2465,6 +2582,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -2486,6 +2604,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;
@@ -2507,6 +2626,7 @@ class CfgItems {
         illegal = true;
         save = true;
         taxed = false;
+        marketDisplay = false;
         class dynmarket {
             dynmaic = false;
             driftPerc = 0.1;

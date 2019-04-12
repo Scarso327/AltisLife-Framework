@@ -110,7 +110,7 @@ switch (_title) do {
 		{
 			private _name = (getText(_x >> "displayName"));
 
-			if (toUpper _name find (toUpper ctrlText _searchEdit) >= 0) then {
+			if (toUpper _name find (toUpper ctrlText _searchEdit) >= 0 && { (getNumber(_x >> "marketDisplay")) isEqualTo 1 }) then {
 				_itemList lnbAddRow [
 					(getText(_x >> "displayName")), // Display Name...
 					["Illegal", "Legal"] select (getNumber(_x >> "illegal") isEqualto 0),

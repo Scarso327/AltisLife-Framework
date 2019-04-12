@@ -61,7 +61,12 @@ class FF_Core {
     class Levels {
         file = "FF\Levels";
         class handleXP {};
-    };
+    }; 
+
+    class GUI_FUNCTIONS {
+        file = "FF\GUI\Functions";
+        class setupFilter {};
+    }
 
     class GUI_HUD_Functions {
         file = "FF\GUI\HUD\Functions";
@@ -75,7 +80,6 @@ class FF_Core {
         class switchApp {};
         class escapeHandle {};
         class onLoad {};
-        class setupFilter {};
     };
 
     class Map {

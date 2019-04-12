@@ -8,8 +8,8 @@ disableserialization;
 private _ctrlFilter = param [0,controlnull,[controlnull]];
 private _display = ctrlparent _ctrlFilter;
 private _ctrlContent = param [1,controlnull,[controlnull]];
-private _columnIndexes = param [2,[],[[]]];
-private _idc = param [3,200,[0]];
+private _idc = param [2,200,[0]];
+private _columnIndexes = param [3,[],[[]]];
 
 if (isnull _ctrlFilter) exitwith {"Filter control is null." call bis_fnc_error; false};
 if (isnull _ctrlContent) exitwith {"Content control is null." call bis_fnc_error; false};

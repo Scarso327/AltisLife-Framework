@@ -95,7 +95,7 @@ switch (_title) do {
 		private _itemList = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_LIST);
 		private _searchEdit = CONTROL(IDD_TABLET_MAIN, IDC_MARKET_SEARCH);
 
-		[_listHeader, _itemList] call FF(setupFilter);
+		[_listHeader, _itemList, IDC_MARKET_HEADER_BUTTONS_BASE] call FF(setupFilter);
 		["MarketUpdate"] call FF(onLoad);
 
 		_searchEdit ctrlAddEventHandler ["KeyUp", {["MarketUpdate"] call FF(onLoad);}]; // Reload when searching...

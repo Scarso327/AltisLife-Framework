@@ -89,6 +89,7 @@ life_nametags = [];
 
 FF_Drinks = [];
 FF_Food = [];
+FF_UseableItems = [];
 
 FF_Level = 1;
 FF_XP = 0;
@@ -126,12 +127,12 @@ FF_curApp = "Home";
     missionNamespace setVariable [ITEM_VARNAME(configName _x), 0];
     
     // Setup Eat/Drink Settings...
-    _cfgEdible = (_x >> "edibility"); // Config....
+    private _cfgEdible = (_x >> "edibility"); // Config....
 
     // Variables...
-    _isEdible = (getArray(_cfgEdible >> "edible")) select 0;
-    _type = (getArray(_cfgEdible >> "edible")) select 1;
-    _item = getText(_x >> "variable");
+    private _isEdible = (getArray(_cfgEdible >> "edible")) select 0;
+    private _type = (getArray(_cfgEdible >> "edible")) select 1;
+    private _item = getText(_x >> "variable");
 
     if (_isEdible isEqualTo 1) then {
         switch (_type) do {
@@ -146,6 +147,8 @@ FF_curApp = "Home";
                 FF_Food pushBack _item;
             };
         };
+
+        FF_UseableItems pushBack _item;
     };
 } forEach ("true" configClasses (missionConfigFile >> "CfgItems"));
 

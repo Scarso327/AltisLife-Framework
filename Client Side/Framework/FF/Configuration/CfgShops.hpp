@@ -47,22 +47,10 @@ class CfgShops {
         items[] = { "1k_chip", "5k_chip", "10k_chip", "25k_chipbeer", "50k_chip", "100k_chip" };
     };
 
-    class so1_protection_market {
-        name = "Fish Market";
-        conditions = "playerSide isEqualTo civilian && license_civ_so1";
-        items[] = { "water", "soda", "energy_drink", "apple", "mango", "coconut", "baguette", "croissant", "crepe", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "gps_tracker" };
-    };
-
     class syndikat_outpost {
         name = "Syndikat Outpost";
         conditions = "playerSide isEqualTo civilian && license_civ_syndikat";
         items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "bolt_cutter" };
-    };
-
-    class black_market {
-        name = "Black Market";
-        conditions = "playerSide isEqualTo civilian && license_civ_syndikat";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "bolt_cutter", "explosive_charge" };
     };
 
     class gold_buyer {

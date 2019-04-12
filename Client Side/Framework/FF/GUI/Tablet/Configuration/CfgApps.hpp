@@ -1,12 +1,12 @@
 class CfgApps {
 
     class Inventroy {
-        title = "Inventroy";
+        title = "Inventory";
         icon = "\a3\ui_f_curator\Data\RscCommon\RscAttributeInventory\filter_10_ca.paa";
         onButtonClick = "[23200, ""Inventory""] call FF_fnc_switchApp";
         conditions = "";
         disableIF = "";
-        tooltip = "Inventroy";
+        tooltip = "Inventory";
     };
 
     class Licenses {

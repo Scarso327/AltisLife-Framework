@@ -161,7 +161,7 @@ class CfgWeapons {
         };
     };
 
-    class tpc_afo {
+    class tpc_sfo {
         name = "TPC - AFO";
         conditions = "playerSide isEqualTo west && license_cop_sfo";
         items[] = {

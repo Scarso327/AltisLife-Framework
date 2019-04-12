@@ -66,6 +66,7 @@ class FF_Core {
     class GUI_FUNCTIONS {
         file = "FF\GUI\Functions";
         class setupFilter {};
+        class searchList {};
     }
 
     class GUI_HUD_Functions {

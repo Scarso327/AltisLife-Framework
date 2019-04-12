@@ -94,6 +94,8 @@ FF_Level = 1;
 FF_XP = 0;
 FF_Perks = [];
 
+FF_originalList = [];
+
 /* FF_Perks Structure
 [
     // Police

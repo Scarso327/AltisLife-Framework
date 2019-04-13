@@ -88,6 +88,7 @@ class FF_Core {
         class setupMarket {};
         class setupShop {};
         class setupVehicle {};
+        class setupClothing {};
     };
 };
 

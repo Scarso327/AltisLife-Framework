@@ -1539,6 +1539,94 @@ class CfgItems {
         conditions = "";
     };
 
+    class bannana {
+        variable = "bannana";
+        displayName = "Bannana";
+        weight = 1;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        marketDisplay = true;
+        class dynmarket {
+            dynmaic = true;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 20;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class rice {
+        variable = "rice";
+        displayName = "Rice";
+        weight = 1;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        marketDisplay = true;
+        class dynmarket {
+            dynmaic = true;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 30;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class wood {
+        variable = "wood";
+        displayName = "Wood";
+        weight = 2;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        marketDisplay = true;
+        class dynmarket {
+            dynmaic = true;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {flase, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class lumber {
+        variable = "lumber";
+        displayName = "Lumber";
+        weight = 2;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = false;
+        save = false;
+        taxed = true;
+        marketDisplay = true;
+        class dynmarket {
+            dynmaic = true;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {flase, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
     class coal {
         variable = "coal";
         displayName = "Coal";

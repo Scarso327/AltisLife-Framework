@@ -59,6 +59,24 @@ class CfgShops {
         items[] = { "branded_gold_bar", "unbranded_gold_bar" };
     };
 
+    class banana_trader {
+        name = "Banana Trader";
+        conditions = "";
+        items[] = { "bannana" };
+    };
+
+    class rice_trader {
+        name = "Rice Trader";
+        conditions = "";
+        items[] = { "rice" };
+    };
+
+    class lumber_trader {
+        name = "Lumber Trader";
+        conditions = "";
+        items[] = { "wood", "lumber" };
+    };
+
     class coal_plant {
         name = "Coal Plant";
         conditions = "";

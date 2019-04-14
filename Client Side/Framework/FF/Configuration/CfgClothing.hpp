@@ -1,131 +1,171 @@
-/*
-*    ARRAY FORMAT:
-*        0: STRING (Classname)
-*        1: STRING (Display Name, leave as "" for default)
-*        2: SCALAR (Price)
-*        3: STRING (Conditions) - Must return boolean :
-*            String can contain any amount of conditions, aslong as the entire
-*            string returns a boolean. This allows you to check any levels, licenses etc,
-*            in any combination. For example:
-*                "call life_coplevel && license_civ_someLicense"
-*            This will also let you call any other function.
-*
-*   Clothing classnames can be found here: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Equipment
-*   Backpacks/remaining classnames can be found here (TIP: Search page for "pack"): https://community.bistudio.com/wiki/Arma_3_CfgVehicles_EMPTY
-*
-*/
 class CfgClothing {
-    class bruce {
-        title = "Bruce's Outback Clothing Store";
+    class general_clothing {
+        title = "General Clothing";
         conditions = "";
         side = "civ";
         uniforms[] = {
             { "NONE", "Remove Uniform", 0, "" },
-            { "U_C_Poloshirt_stripped", "", 125, "" },
-            { "U_C_Poloshirt_redwhite", "", 150, "" },
-            { "U_C_Poloshirt_salmon", "", 175, "" },
-            { "U_C_Poloshirt_blue", "", 250, "" },
-            { "U_C_Poloshirt_burgundy", "", 275, "" },
-            { "U_C_Poloshirt_tricolour", "", 350, "" },
-            { "U_C_Poor_2", "", 250, "" },
-            { "U_IG_Guerilla2_2", "", 650, "" },
-            { "U_IG_Guerilla3_1", "", 735, "" },
-            { "U_OrestesBody", "", 1100, "" },
-            { "U_IG_Guerilla2_3", "", 1200, "" },
-            { "U_C_HunterBody_grn", "", 1500, "" },
-            { "U_C_WorkerCoveralls", "", 2500, "" },
-            { "U_NikosBody", "", 3000, "" },
-            { "U_NikosAgedBody", $STR_C_Civ_Niko, 5000, "" },
-            { "U_C_Man_casual_1_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_2_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_3_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_4_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_5_F", "", 5000, "" }, //Apex DLC
-            { "U_C_Man_casual_6_F", "", 5000, "" }, //Apex DLC
-            { "U_C_man_sport_1_F", "", 5000, "" }, //Apex DLC
-            { "U_C_man_sport_2_F", "", 5000, "" }, //Apex DLC
-            { "U_C_man_sport_3_F", "", 5000, "" } //Apex DLC
+            { "U_C_Poor_1", "", 0, "" },
+            { "U_C_Poloshirt_stripped", "", 0, "" },
+            { "U_C_Poloshirt_blue", "", 0, "" },
+            { "U_C_Poloshirt_salmon", "", 0, "" },
+            { "U_C_Poloshirt_redwhite", "", 0, "" },
+            { "U_C_Poloshirt_burgundy", "", 0, "" },
+            { "U_C_Poloshirt_tricolour", "", 0, "" },
+            { "U_C_Man_casual_6_F", "", 0, "" },
+            { "U_C_Man_casual_4_F", "", 0, "" },
+            { "U_C_Man_casual_5_F", "", 0, "" },
+            { "U_I_C_Soldier_Bandit_1_F", "", 0, "" },
+            { "U_I_C_Soldier_Bandit_4_F", "", 0, "" },
+            { "U_I_C_Soldier_Bandit_3_F", "", 0, "" },
+            { "U_I_C_Soldier_Bandit_2_F", "", 0, "" },
+            { "U_I_C_Soldier_Bandit_5_F", "", 0, "" },
+            { "U_C_Man_casual_2_F", "", 0, "" },
+            { "U_C_Man_casual_1_F", "", 0, "" }, 
+            { "U_C_Man_casual_3_F", "", 0, "" },
+            { "U_IG_Guerilla2_3", "", 0, "" },
+            { "U_IG_Guerilla2_1", "", 0, "" },
+            { "U_IG_Guerilla2_2", "", 0, "" },
+            { "U_IG_Guerilla3_1", "", 0, "" },
+            { "U_C_HunterBody_grn", "", 0, "" },
+            { "U_OrestesBody", "Jacket and Shorts", 0, "" },
+            { "U_NikosBody", "Fine Shirt and Trousers", 0, "" }
         };
         headgear[] = {
             { "NONE", "Remove Headgear", 0, "" },
-            { "H_Bandanna_camo", "", 120, "" },
-            { "H_Bandanna_surfer", "", 130, "" },
-            { "H_Bandanna_khk", "", 145, "" },
-            { "H_Cap_blu", "", 150, "" },
-            { "H_Cap_grn", "", 150, "" },
-            { "H_Cap_grn_BI", "", 150, "" },
-            { "H_Cap_oli", "", 150, "" },
-            { "H_Cap_red", "", 150, "" },
-            { "H_Cap_tan", "", 150, "" },
-            { "H_Helmet_Skate", "", 150, "" }, //Apex DLC
-            { "H_Bandanna_gry", "", 150, "" },
-            { "H_Bandanna_sgg", "", 160, "" },
-            { "H_Bandanna_cbr", "", 165, "" },
-            { "H_StrawHat", "", 225, "" },
-            { "H_Hat_tan", "", 265, "" },
-            { "H_Hat_brown", "", 276, "" },
-            { "H_Hat_grey", "", 280, "" },
-            { "H_BandMask_blk", $STR_C_Civ_BandMask, 300, "" },
-            { "H_Hat_blue", "", 310, "" },
-            { "H_Hat_checker", "", 340, "" },
-            { "H_Booniehat_tan", "", 425, "" },
-            { "H_Booniehat_grn", "", 425, "" }
+            { "H_Bandanna_gry", "", 0, "" },
+            { "H_Bandanna_blu", "", 0, "" },
+            { "H_Bandanna_cbr", "", 0, "" },
+            { "H_Bandanna_khk_hs", "", 0, "" },
+            { "H_Bandanna_khk", "", 0, "" },
+            { "H_Bandanna_sgg", "", 0, "" },
+            { "H_Bandanna_sand", "", 0, "" },
+            { "H_Watchcap_blk", "", 0, "" },
+            { "H_Watchcap_cbr", "", 0, "" },
+            { "H_Watchcap_camo", "", 0, "" },
+            { "H_Watchcap_khk", "", 0, "" },
+            { "H_Booniehat_khk_hs", "", 0, "" },
+            { "H_Booniehat_indp", "", 0, "" },
+            { "H_Booniehat_oli", "", 0, "" },
+            { "H_Booniehat_tan", "", 0, "" },
+            { "H_Booniehat_tna_F", "", 0, "" },
+            { "H_Cap_blk", "", 0, "" },
+            { "H_Cap_blu", "", 0, "" },
+            { "H_Cap_grn", "", 0, "" },
+            { "H_Cap_oli_hs", "", 0, "" },
+            { "H_Cap_red", "", 0, "" },
+            { "H_Cap_tan", "", 0, "" },
+            { "H_Cap_khaki_specops_UK", "", 0, "" },
+            { "H_Cap_usblack", "", 0, "" },
+            { "H_Hat_blue", "", 0, "" },
+            { "H_Hat_brown", "", 0, "" },
+            { "H_Hat_camo", "", 0, "" },
+            { "H_Hat_grey", "", 0, "" },
+            { "H_Hat_tan", "", 0, "" },
+            { "H_StrawHat", "", 0, "" },
+            { "H_StrawHat_dark", "", 0, "" },
+            { "H_Hat_Safari_olive_F", "", 0, "" },
+            { "H_Hat_Safari_sand_F", "", 0, "" },
+            { "H_Helmet_Skate", "", 0, "" }
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, "" },
-            { "G_Shades_Black", "", 20, "" },
-            { "G_Shades_Blue", "", 20, "" },
-            { "G_Shades_Green", "", 20, "" },
-            { "G_Shades_Red", "", 20, "" },
-            { "G_Sport_Blackred", "", 25, "" },
-            { "G_Sport_BlackWhite", "", 25, "" },
-            { "G_Sport_Blackyellow", "", 25, "" },
-            { "G_Sport_Checkered", "", 25, "" },
-            { "G_Sport_Greenblack", "", 25, "" },
-            { "G_Sport_Red", "", 25, "" },
-            { "G_Lowprofile", "", 30, "" },
-            { "G_Squares", "", 50, "" },
-            { "G_Aviator", "", 100, "" },
-            { "G_Combat", "", 125, "" },
-            { "G_Lady_Mirror", "", 150, "" },
-            { "G_Lady_Dark", "", 150, "" },
-            { "G_Lady_Blue", "", 150, "" }
+            { "G_Aviator", "", 0, "" },
+            { "G_Shades_Black", "", 0, "" },
+            { "G_Shades_Blue", "", 0, "" },
+            { "G_Shades_Green", "", 0, "" },
+            { "G_Shades_Red", "", 0, "" },
+            { "G_Spectacles", "", 0, "" },
+            { "G_Sport_Red", "", 0, "" },
+            { "G_Sport_Blackyellow", "", 0, "" },
+            { "G_Sport_BlackWhite", "", 0, "" },
+            { "G_Sport_Checkered", "", 0, "" },
+            { "G_Sport_Blackred", "", 0, "" },
+            { "G_Sport_Greenblack", "", 0, "" },
+            { "G_Squares_Tinted", "", 0, "" },
+            { "G_Squares", "", 0, "" },
+            { "G_Spectacles_Tinted", "", 0, "" },
+            { "H_WirelessEarpiece_F", "", 0, "" }
         };
         vests[] = {
-            { "NONE", "Remove Vest", 0, "" }
+            { "NONE", "Remove Vest", 0, "" },
+            { "V_LegStrapBag_black_F", "", 0, "" },
+            { "V_LegStrapBag_coyote_F", "", 0, "" },
+            { "V_LegStrapBag_olive_F", "", 0, "" },
+            { "V_Pocketed_black_F", "", 0, "" },
+            { "V_Pocketed_coyote_F", "", 0, "" },
+            { "V_Pocketed_olive_F", "", 0, "" }
         };
         backpacks[] = {
             { "NONE", "Remove Backpacks", 0, "" },
-            { "B_OutdoorPack_blk", "", 500, "" },
-            { "B_AssaultPack_khk", "", 2000, "" },
-            { "B_AssaultPack_dgtl", "", 2000, "" },
-            { "B_AssaultPack_rgr", "", 2000, "" },
-            { "B_AssaultPack_sgg", "", 2000, "" },
-            { "B_AssaultPack_blk", "", 2000, "" },
-            { "B_AssaultPack_cbr", "", 2000, "" },
-            { "B_AssaultPack_mcamo", "", 2000, "" },
-            { "B_AssaultPack_tna_f", "", 2000, "" }, //Apex DLC
-            { "B_TacticalPack_oli", "", 2500, "" },
-            { "B_Kitbag_mcamo", "", 3500, "" },
-            { "B_Kitbag_sgg", "", 3500, "" },
-            { "B_Kitbag_cbr", "", 3500, "" },
-            { "B_FieldPack_blk", "", 5000, "" },
-            { "B_FieldPack_ocamo", "", 5000, "" },
-            { "B_FieldPack_oucamo", "", 5000, "" },
-            { "B_FieldPack_ghex_f", "", 5000, "" }, //Apex DLC
-            { "B_Bergen_sgg", "", 6500, "" },
-            { "B_Bergen_mcamo", "", 6500, "" },
-            { "B_Bergen_rgr", "", 6500, "" },
-            { "B_Bergen_blk", "", 6500, "" },
-            { "B_Carryall_ocamo", "", 7500, "" },
-            { "B_Carryall_oucamo", "", 7500, "" },
-            { "B_Carryall_mcamo", "", 7500, "" },
-            { "B_Carryall_oli", "", 7500, "" },
-            { "B_Carryall_khk", "", 7500, "" },
-            { "B_Carryall_cbr", "", 7500, "" },
-            { "B_Carryall_ghex_f", "", 7500, "" }, //Apex DLC
-            { "B_Bergen_dgtl_f", "", 9500, "" }, //Apex DLC
-            { "B_Bergen_tna_f", "", 9500, "" } //Apex DLC
+            { "B_Messenger_Black_F", "", 0, "" },
+            { "B_Messenger_Coyote_F", "", 0, "" },
+            { "B_Messenger_Gray_F", "", 0, "" },
+            { "B_Messenger_Olive_F", "", 0, "" },
+            { "B_AssaultPack_blk", "", 0, "" },
+            { "B_AssaultPack_cbr", "", 0, "" },
+            { "B_AssaultPack_rgr", "", 0, "" },
+            { "B_AssaultPack_khk", "", 0, "" },
+            { "B_AssaultPack_sgg", "", 0, "" },
+            { "B_AssaultPack_tna_F", "", 0, "" },
+            { "B_FieldPack_blk", "", 0, "" },
+            { "B_FieldPack_cbr", "", 0, "" },
+            { "B_FieldPack_khk", "", 0, "" },
+            { "B_FieldPack_oli", "", 0, "" },
+            { "B_Kitbag_cbr", "", 0, "" },
+            { "B_Kitbag_rgr", "", 0, "" },
+            { "B_Kitbag_sgg", "", 0, "" },
+            { "B_Kitbag_tan", "", 0, "" },
+            { "B_TacticalPack_blk", "", 0, "" },
+            { "B_TacticalPack_rgr", "", 0, "" },
+            { "B_TacticalPack_oli", "", 0, "" },
+            { "B_Carryall_cbr", "", 0, "" },
+            { "B_Carryall_khk", "", 0, "" },
+            { "B_Carryall_mcamo", "", 0, "" },
+            { "B_Carryall_oli", "", 0, "" },
+            { "B_Carryall_khk", "", 0, "" },
+            { "B_Carryall_cbr", "", 0, "" },
+            { "B_Bergen_dgtl_F", "", 0, "" },
+            { "B_Bergen_hex_F", "", 0, "" },
+            { "B_Bergen_mcamo", "", 0, "" } 
+        };
+    };
+
+    class diving_store {
+        title = "Diving Store";
+        conditions = "license_civ_diving";
+        side = "civ";
+        uniforms[] = {
+            { "NONE", "Remove Uniform", 0, "" },
+            { "U_C_man_sport_1_F", "", 0, "" },
+            { "U_C_man_sport_3_F", "", 0, "" },
+            { "U_B_Wetsuit", "", 0, "" },
+            { "U_O_Wetsuit", "", 0, "" },
+            { "U_I_Wetsuit", "", 0, "" }
+        };
+        headgear[] = {
+            { "NONE", "Remove Headgear", 0, "" }
+            { "H_Bandanna_surfer", "", 0, "" },
+            { "H_Bandanna_surfer_blk", "", 0, "" },
+            { "H_Bandanna_surfer_grn", "", 0, "" },
+            { "H_Cap_surfer", "", 0, "" }
+        };
+        goggles[] = {
+            { "NONE", "Remove Glasses", 0, "" },
+            { "G_B_Diving", "", 0, "" },
+            { "G_O_Diving", "", 0, "" },
+            { "G_I_Diving", "", 0, "" }
+        };
+        vests[] = {
+            { "NONE", "Remove Vest", 0, "" },
+            { "V_RebreatherB", "", 0, "" },
+            { "V_RebreatherIR", "", 0, "" },
+            { "V_RebreatherIA", "", 0, "" }
+        };
+        backpacks[] = {
+            { "NONE", "Remove Backpacks", 0, "" },
+            { "B_ViperLightHarness_blk_F", "", 0, "" },
+            { "B_ViperHarness_blk_F", "", 0, "" },
         };
     };
 
@@ -174,30 +214,6 @@ class CfgClothing {
             { "B_Kitbag_cbr", "", 800, "" },
             { "B_Bergen_sgg", "", 2500, "" },
             { "B_Carryall_cbr", "", 3500, "" }
-        };
-    };
-
-    class dive {
-        title = "Diving Store";
-        conditions = "license_civ_dive";
-        side = "civ";
-        uniforms[] = {
-            { "NONE", "Remove Uniform", 0, "" },
-            { "U_B_Wetsuit", "", 2000, "" }
-        };
-        headgear[] = {
-            { "NONE", "Remove Headgear", 0, "" }
-        };
-        goggles[] = {
-            { "NONE", "Remove Glasses", 0, "" },
-            { "G_Diving", "", 500, "" }
-        };
-        vests[] = {
-            { "NONE", "Remove Vest", 0, "" },
-            { "V_RebreatherB", "", 5000, "" }
-        };
-        backpacks[] = {
-            { "NONE", "Remove Backpacks", 0, "" }
         };
     };
 

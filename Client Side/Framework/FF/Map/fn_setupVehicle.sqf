@@ -25,11 +25,18 @@ if (isNull _object || {_shop isEqualTo []} || {(count _shop) != 5} || {(count _t
 _object enableSimulation false;
 _object allowDamage false;
 
+private _colour = switch true do {
+	case (_title select 0 isEqualTo "TPC"): {"#9000ff"};
+	case (_title select 0 isEqualTo "CIV"): {"#9000ff"};
+	case (_title select 0 isEqualTo "NHS"): {"#9000ff"};
+};
+
 _object addAction[
 	format[
-		"<t color='#9000ff'>[%2]</t> %1", 
+		"<t color='%3'>[%2]</t> %1", 
 		_title select 1, 
-		_title select 0
+		_title select 0,
+		_colour
 	], LIFE(vehicleShopMenu), _shop, 1.5, true, true, "", _conditions,
 	5
 ];

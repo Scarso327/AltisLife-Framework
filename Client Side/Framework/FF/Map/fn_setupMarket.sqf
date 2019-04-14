@@ -31,6 +31,7 @@ private _colour = switch true do {
 	case (_title select 0 isEqualTo "TPC"): {"#9000ff"};
 	case (_title select 0 isEqualTo "CIV"): {"#9000ff"};
 	case (_title select 0 isEqualTo "NHS"): {"#9000ff"};
+	default {"#9000ff"};
 };
 
 _object addAction[

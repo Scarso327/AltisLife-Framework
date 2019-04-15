@@ -22,7 +22,7 @@ switch (true) do {
 
     case (FETCH_CONST(life_coplevel) >= 9): {
         player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_gen_F";
+        player addHeadgear "H_Beret_02";
         player addVest "V_PlateCarrier1_blk";
         player addBackpack "B_TacticalPack_blk";
 
@@ -38,7 +38,7 @@ switch (true) do {
 
     default {
         player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_gen_F";
+        player addHeadgear "H_Beret_blk";
         player addVest "V_PlateCarrier1_blk";
         player addBackpack "B_TacticalPack_blk";
 

@@ -27,6 +27,33 @@ class CfgGather {
             zoneSize = 30;
         };
 
+        class bannana {
+            text = "Gathering bannanas...";
+            amount = 5;
+            zones[] = { "banana_area" };
+            item = "bannana";
+            profession[] = { "Prof_Gathering", 1, 50 };
+            zoneSize = 30;
+        };
+
+        class rice {
+            text = "Gathering rice...";
+            amount = 5;
+            zones[] = { "rice_area" };
+            item = "rice";
+            profession[] = { "Prof_Gathering", 1, 50 };
+            zoneSize = 30;
+        };
+
+        class wood {
+            text = "Gathering wood...";
+            amount = 5;
+            zones[] = { "logging_area_area_1", "logging_area_area_2", "logging_area_area_3" };
+            item = "wood";
+            profession[] = { "Prof_Gathering", 1, 50 };
+            zoneSize = 30;
+        };
+
         class cannabis {
             text = "Gathering cannabis...";
             amount = 3;

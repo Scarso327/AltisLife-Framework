@@ -1,18 +1,10 @@
-/*
-    File: fn_copLoadout.sqf
-    Author: Bryan "Tonic" Boardwine
-    Edited: Itsyuka
-
-    Description:
-    Loads the cops out with the default gear.
-*/
 #include "..\..\script_macros.hpp"
 
 private _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-switch (FETCH_CONST(life_coplevel)) do {
-    case 1: {
+switch (true) do {
+    case (FETCH_CONST(life_coplevel) isEqualTo 1): {};
         player addUniform "U_Rangemaster";
         player addHeadgear "H_Cap_police";
         player addVest "V_PlateCarrier1_blk";
@@ -28,7 +20,7 @@ switch (FETCH_CONST(life_coplevel)) do {
         player addItem "ToolKit";
     }; 
 
-    case 9: {
+    case (FETCH_CONST(life_coplevel) >= 9): {};
         player addUniform "U_Competitor";
         player addHeadgear "H_Beret_gen_F";
         player addVest "V_PlateCarrier1_blk";
@@ -43,38 +35,6 @@ switch (FETCH_CONST(life_coplevel)) do {
 
         player addItem "ToolKit";
     }; 
-
-    case 10: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_gen_F";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    }; 
-
-    case 11: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_gen_F";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    };
 
     default {
         player addUniform "U_Competitor";

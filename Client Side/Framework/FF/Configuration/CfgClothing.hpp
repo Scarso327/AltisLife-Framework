@@ -353,7 +353,7 @@ class CfgClothing {
         };
     };
 
-    class cop {
+    class police_clothing {
         title = "TPC - Clothing Store";
         conditions = "playerSide isEqualTo west";
         side = "cop";
@@ -402,7 +402,7 @@ class CfgClothing {
         };
     };
 
-    class med_clothing {
+    class medic_clothing {
         title = "Medicial Clothing Store";
         conditions = "";
         side = "med";

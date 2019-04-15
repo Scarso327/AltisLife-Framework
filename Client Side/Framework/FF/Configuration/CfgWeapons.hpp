@@ -162,7 +162,7 @@ class CfgWeapons {
     };
 
     class tpc_sfo {
-        name = "TPC - SFO";
+        name = "TPC - Specialised Firearms";
         conditions = "playerSide isEqualTo west && (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)";
         items[] = {
             { "ItemMap", "Map of Altis", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },

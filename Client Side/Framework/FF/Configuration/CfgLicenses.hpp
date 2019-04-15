@@ -197,17 +197,49 @@ class CfgLicenses {
     };
 
     // TPC - Specialised Officers
-    class sfo {
-        variable = "sfo";
-        displayName = "Specialised  Firearms Officer";
+    class sfo1 {
+        variable = "sfo1";
+        displayName = "Specialised  Firearms Officer L1";
         price = 0;
         illegal = false;
         side = "cop";
     };
 
-    class aso {
-        variable = "aso";
-        displayName = "Air Support Officer";
+    class sfo2 {
+        variable = "sfo2";
+        displayName = "Specialised  Firearms Officer L2";
+        price = 0;
+        illegal = false;
+        side = "cop";
+    };
+
+    class sfo3 {
+        variable = "sfo3";
+        displayName = "Specialised  Firearms Officer L3";
+        price = 0;
+        illegal = false;
+        side = "cop";
+    };
+
+    class aso1 {
+        variable = "aso1";
+        displayName = "Air Support Officer L1";
+        price = 0;
+        illegal = false;
+        side = "cop";
+    };
+
+    class aso2 {
+        variable = "aso2";
+        displayName = "Air Support Officer L2";
+        price = 0;
+        illegal = false;
+        side = "cop";
+    };
+
+    class aso3 {
+        variable = "aso3";
+        displayName = "Air Support Officer L3";
         price = 0;
         illegal = false;
         side = "cop";

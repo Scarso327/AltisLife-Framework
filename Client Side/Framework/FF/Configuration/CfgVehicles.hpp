@@ -110,25 +110,25 @@ class CfgVehicleStores {
 
     class tpc_arv_dealership {
         side = "cop";
-        conditions = "playerSide isEqualTo west && license_cop_aso";
+        conditions = "playerSide isEqualTo west && (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)";
         vehicles[] = {
-            { "C_SUV_01_F", "" },
-            { "C_Offroad_02_unarmed_F", "" },
-            { "C_Hatchback_01_sport_F", "" },
-            { "C_Van_02_transport_F", "" },
-            { "C_Boat_Civil_01_police_F", "" },
-            { "B_G_Boat_Transport_02_F", "" },
-            { "B_SDV_01_F", "" }
+            { "C_SUV_01_F", "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "C_Offroad_02_unarmed_F", "license_cop_sfo2 || license_cop_sfo3" },
+            { "C_Hatchback_01_sport_F", "license_cop_sfo3" },
+            { "C_Van_02_transport_F", "license_cop_sfo3" },
+            { "C_Boat_Civil_01_police_F", "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "B_G_Boat_Transport_02_F", "license_cop_sfo2 || license_cop_sfo3" },
+            { "B_SDV_01_F", "license_cop_sfo3" }
         };
     };
 
     class tpc_aso_dealership {
         side = "cop";
-        conditions = "playerSide isEqualTo west && license_cop_aso";
+        conditions = "playerSide isEqualTo west && (license_cop_aso1 || license_cop_aso2 || license_cop_aso3)";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "" },
-            { "I_Heli_light_03_unarmed_F", "" },
-            { "O_Heli_Light_02_unarmed_F", "" }
+            { "B_Heli_Light_01_F", "license_cop_aso1 || license_cop_aso2 || license_cop_aso3" },
+            { "I_Heli_light_03_unarmed_F", "license_cop_aso2 || license_cop_aso3" },
+            { "O_Heli_Light_02_unarmed_F", "license_cop_aso3" }
         };
     };
 

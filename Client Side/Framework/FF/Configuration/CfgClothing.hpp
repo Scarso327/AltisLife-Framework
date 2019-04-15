@@ -144,7 +144,7 @@ class CfgClothing {
             { "U_I_Wetsuit", "", 0, "" }
         };
         headgear[] = {
-            { "NONE", "Remove Headgear", 0, "" }
+            { "NONE", "Remove Headgear", 0, "" },
             { "H_Bandanna_surfer", "", 0, "" },
             { "H_Bandanna_surfer_blk", "", 0, "" },
             { "H_Bandanna_surfer_grn", "", 0, "" },
@@ -169,7 +169,7 @@ class CfgClothing {
         };
     };
 
-    class diving_store {
+    class gokart_store {
         title = "Go-Karting Store";
         conditions = "license_civ_go_karting";
         side = "civ";
@@ -184,7 +184,7 @@ class CfgClothing {
             { "U_C_Driver_1_yellow", "", 0, "" }
         };
         headgear[] = {
-            { "NONE", "Remove Headgear", 0, "" }
+            { "NONE", "Remove Headgear", 0, "" },
             { "H_RacingHelmet_1_black_F", "", 0, "" },
             { "H_RacingHelmet_1_blue_F", "", 0, "" },
             { "H_RacingHelmet_1_green_F", "", 0, "" },
@@ -294,7 +294,7 @@ class CfgClothing {
             { "G_Bandanna_tan", "", 0, "" }
         };
         vests[] = {
-            { "NONE", "Remove Vest", 0, "" },.
+            { "NONE", "Remove Vest", 0, "" },
             { "V_LegStrapBag_black_F", "", 0, "" },
             { "V_LegStrapBag_coyote_F", "", 0, "" },
             { "V_LegStrapBag_olive_F", "", 0, "" },

@@ -4,7 +4,7 @@ private _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 switch (true) do {
-    case (FETCH_CONST(life_coplevel) isEqualTo 1): {};
+    case (FETCH_CONST(life_coplevel) isEqualTo 1): {
         player addUniform "U_Rangemaster";
         player addHeadgear "H_Cap_police";
         player addVest "V_PlateCarrier1_blk";
@@ -20,7 +20,7 @@ switch (true) do {
         player addItem "ToolKit";
     }; 
 
-    case (FETCH_CONST(life_coplevel) >= 9): {};
+    case (FETCH_CONST(life_coplevel) >= 9): {
         player addUniform "U_Competitor";
         player addHeadgear "H_Beret_gen_F";
         player addVest "V_PlateCarrier1_blk";

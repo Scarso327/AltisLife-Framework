@@ -28,118 +28,6 @@ switch (FETCH_CONST(life_coplevel)) do {
         player addItem "ToolKit";
     }; 
 
-	case 2: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_blk_POLICE";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    }; 
-
-    case 3: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_blk_POLICE";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    }; 
-
-    case 4: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_blk_POLICE";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    }; 
-
-    case 5: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_blk_POLICE";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    }; 
-
-    case 6: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_blk_POLICE";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    }; 
-
-    case 7: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_blk_POLICE";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    }; 
-
-    case 8: {
-        player addUniform "U_Competitor";
-        player addHeadgear "H_Beret_blk_POLICE";
-        player addVest "V_PlateCarrier1_blk";
-        player addBackpack "B_TacticalPack_blk";
-
-        player linkItem "ItemMap";
-        player linkItem "ItemGPS";
-        player linkItem "ItemRadio";
-        player linkItem "ItemCompass";
-        player linkItem "ItemWatch";
-        player linkItem "Binocular";
-
-        player addItem "ToolKit";
-    }; 
-
     case 9: {
         player addUniform "U_Competitor";
         player addHeadgear "H_Beret_gen_F";
@@ -173,6 +61,22 @@ switch (FETCH_CONST(life_coplevel)) do {
     }; 
 
     case 11: {
+        player addUniform "U_Competitor";
+        player addHeadgear "H_Beret_gen_F";
+        player addVest "V_PlateCarrier1_blk";
+        player addBackpack "B_TacticalPack_blk";
+
+        player linkItem "ItemMap";
+        player linkItem "ItemGPS";
+        player linkItem "ItemRadio";
+        player linkItem "ItemCompass";
+        player linkItem "ItemWatch";
+        player linkItem "Binocular";
+
+        player addItem "ToolKit";
+    };
+
+    default {
         player addUniform "U_Competitor";
         player addHeadgear "H_Beret_gen_F";
         player addVest "V_PlateCarrier1_blk";

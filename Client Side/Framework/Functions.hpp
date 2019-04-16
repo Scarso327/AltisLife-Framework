@@ -73,6 +73,8 @@ class FF_Core {
         file = "FF\GUI\HUD\Functions";
         class hudUpdate {};
         class hudSetup {};
+        class nameTags { postInit = 1; };
+        class D3DTextCal {}; // Thanks Sig...
     };
 
     class GUI_Tablet_Functions {

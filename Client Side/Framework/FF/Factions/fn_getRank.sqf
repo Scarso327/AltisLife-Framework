@@ -27,6 +27,18 @@ _return = call {
 			default {["Police Cadet", "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"]};
 		};
 	};
+
+	if((side _player) isEqualTo independent) exitWith {
+		switch (_player getVariable ["rank", 0]) do {
+			case 2: {["Nurse", "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"]};
+			case 3: {["Nurse", "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"]};
+			case 4: {["Junior Doctor", "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"]};
+			case 5: {["Emergency Doctor", "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"]};
+			case 6: {["Consultant", "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"]};
+			case 7: {["Regional Director", "\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"]};
+			default {["Medical Student", "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"]};
+		};
+	};
 };
 
 _return;

@@ -14,17 +14,17 @@ private _hideoutObjs = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call T
 private _hideout = (nearestObjects[getPosATL player,_hideoutObjs,25]) select 0;
 private _group = _hideout getVariable ["gangOwner",grpNull];
 
-if (isNil {group player getVariable "gang_name"}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
-if (_group == group player) exitWith {titleText[localize "STR_GNOTF_Controlled","PLAIN"]};
-if ((_hideout getVariable ["inCapture",false])) exitWith {hint localize "STR_GNOTF_onePersonAtATime";};
+if (isNil {group player getVariable "gang_name"}) exitWith {titleText["You must create an organisation before capturing it!","PLAIN"];};
+if (_group == group player) exitWith {titleText["Your organisation already has control over this hideout!","PLAIN"]};
+if ((_hideout getVariable ["inCapture",false])) exitWith {hint "Only one person shall capture at once!";};
 
 private "_action";
 private "_cpRate";
 if (!isNull _group) then {
     _gangName = _group getVariable ["gang_name",""];
     _action = [
-        format [localize "STR_GNOTF_AlreadyControlled",_gangName],
-        localize "STR_GNOTF_CurrentCapture",
+        format ["This hideout is controlled by %1.&lt;br/&gt;&lt;br/&gt;Are you sure you want to take over their gang area?",_gangName],
+        "Hideout is currently under control...",
         "Yes",
         "No"
     ] call BIS_fnc_guiMessage;
@@ -34,12 +34,12 @@ if (!isNull _group) then {
     _cpRate = 0.0075;
 };
 
-if (!isNil "_action" && {!_action}) exitWith {titleText[localize "STR_GNOTF_CaptureCancel","PLAIN"];};
+if (!isNil "_action" && {!_action}) exitWith {titleText["Capturing cancelled","PLAIN"];};
 life_action_inUse = true;
 
 //Setup the progress bar
 disableSerialization;
-private _title = localize "STR_GNOTF_Capturing";
+private _title = "Capturing Hideout";
 "progressBar" cutRsc ["life_progress","PLAIN"];
 private _ui = uiNamespace getVariable "life_progress";
 private _progressBar = _ui displayCtrl 38201;
@@ -76,10 +76,10 @@ for "_i" from 0 to 1 step 0 do {
 player playActionNow "stop";
 if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;_hideout setVariable ["inCapture",false,true];};
 if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;_hideout setVariable ["inCapture",false,true];};
-if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_GNOTF_CaptureCancel","PLAIN"]; life_action_inUse = false;_hideout setVariable ["inCapture",false,true];};
+if (life_interrupted) exitWith {life_interrupted = false; titleText["Capturing cancelled","PLAIN"]; life_action_inUse = false;_hideout setVariable ["inCapture",false,true];};
 life_action_inUse = false;
 
-titleText[localize "STR_GNOTF_Captured","PLAIN"];
+titleText["Hideout has been captured.","PLAIN"];
 private _flagTexture = [
         "\A3\Data_F\Flags\Flag_red_CO.paa",
         "\A3\Data_F\Flags\Flag_green_CO.paa",
@@ -91,6 +91,6 @@ private _flagTexture = [
         "\A3\Data_F\Flags\flag_fd_orange_CO.paa"
     ] call BIS_fnc_selectRandom;
 _this select 0 setFlagTexture _flagTexture;
-[[0,1],"STR_GNOTF_CaptureSuccess",true,[name player,(group player) getVariable "gang_name"]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+[[0,1],"%1 and his gang: %2 - have taken control of a local hideout!",true,[name player,(group player) getVariable "gang_name"]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 _hideout setVariable ["inCapture",false,true];
 _hideout setVariable ["gangOwner",group player,true];

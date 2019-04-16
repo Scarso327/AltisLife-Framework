@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Altis Life RPG">
     <Package name="Gang_Notification">
-        <Key ID="STR_GNOTF_CreateGang">
-            <Original>You must create a gang first before capturing it!</Original>
-        </Key>
-        <Key ID="STR_GNOTF_Controlled">
-            <Original>Your gang already has control over this hideout!</Original>
-        </Key>
-        <Key ID="STR_GNOTF_onePersonAtATime">
-            <Original>Only one person shall capture at once!</Original>
-        </Key>
-        <Key ID="STR_GNOTF_AlreadyControlled">
-            <Original>This hideout is controlled by %1.&lt;br/&gt;&lt;br/&gt;Are you sure you want to take over their gang area?</Original>
-        </Key>
-        <Key ID="STR_GNOTF_CurrentCapture">
-            <Original>Hideout is currently under control...</Original>
-        </Key>
-        <Key ID="STR_GNOTF_CaptureCancel">
-            <Original>Capturing cancelled</Original>
-        </Key>
-        <Key ID="STR_GNOTF_Capturing">
-            <Original>Capturing Hideout</Original>
-        </Key>
-        <Key ID="STR_GNOTF_Captured">
-            <Original>Hideout has been captured.</Original>
-        </Key>
-        <Key ID="STR_GNOTF_CaptureSuccess">
-            <Original>%1 and his gang: %2 - have taken control of a local hideout!</Original>
-        </Key>
-        <Key ID="STR_GNOTF_Over32">
-            <Original>You can't have a gang name longer then 32 characters.</Original>
-        </Key>
-        <Key ID="STR_GNOTF_IncorrectChar">
-            <Original>You have invalid characters in your gang name. It can only consist of Numbers and letters with an underscore</Original>
-        </Key>
-        <Key ID="STR_GNOTF_NotEnoughMoney">
-            <Original>You do not have enough money in your bank account.\n\nYou lack: $%1</Original>
-        </Key>
-        <Key ID="STR_GNOTF_CreateSuccess">
-            <Original>You have created the gang %1 for $%2</Original>
-        </Key>
-        <Key ID="STR_GNOTF_DisbandWarn">
-            <Original>You are about to disband the gang, by disbanding the gang it will be removed from the database and the group will be dropped. &lt;br/&gt;&lt;br/&gt;Are you sure you want to disband the group? You will not be refunded the price for creating it.</Original>
-        </Key>
         <Key ID="STR_GNOTF_DisbandGangPro">
             <Original>Disbanding the gang...</Original>
         </Key>

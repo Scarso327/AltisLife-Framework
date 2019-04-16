@@ -1,2 +1,0 @@
-## The National Health Service (NHS)
-The National Health Serivce is the the second whitelisted faction after the Altis Police Constabulary. It borrows the name from the realworld health serivce in the UK named, The NHS. The job of this faction is to help those in need by providing life saving medical treatment.

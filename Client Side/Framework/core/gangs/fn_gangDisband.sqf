@@ -9,7 +9,7 @@
 */
 private "_action";
 _action = [
-    localize "STR_GNOTF_DisbandWarn",
+    localize "You are about to disband the organisation, by disbanding the organisation it will be removed from the database and the organisation will be dropped. &lt;br/&gt;&lt;br/&gt;Are you sure you want to disband the organisation? You will not be refunded the price for creating it.",
     "Disband Group",
     "Yes",
     "No"

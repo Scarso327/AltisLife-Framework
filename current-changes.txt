@@ -25,6 +25,9 @@ Changed:
     Vehicle 3D Preview Enabled (Scarso)
     Being Arrested Wipes ALL Illegal Items (Scarso)
     Fog is now limited to 10% (Scarso)
+    Name Tags System (Scarso)
+    Tasers can be used by anyone (Lewis Mackinnon)
+    Weapon used as a taser (Lewis Mackinnon)
     
 Updated:
     Player Menu Design (Scarso)
@@ -43,3 +46,6 @@ Removed:
     Clothing Store Localizations (Scarso)
     Framework Support for Location Saving (Scarso)
     AAN News Banner Support (Scarso)
+    Hunting Grounds (Scarso & Lewis Mackinnon)
+    Public Slots (Scarso)
+    House Based Spawning for Civilians (Scarso)

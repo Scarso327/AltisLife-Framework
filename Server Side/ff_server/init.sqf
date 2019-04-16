@@ -197,7 +197,7 @@ life_server_isReady = true;
 publicVariable "life_server_isReady";
 
 /* Initialize hunting zone(s) */
-aiSpawn = ["hunting_zone",30] spawn TON_fnc_huntingZone;
+// aiSpawn = ["hunting_zone",30] spawn TON_fnc_huntingZone;
 
 server_corpses = [];
 addMissionEventHandler ["EntityRespawned", {_this call TON_fnc_entityRespawned}];

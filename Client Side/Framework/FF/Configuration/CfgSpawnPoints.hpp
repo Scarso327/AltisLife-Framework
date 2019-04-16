@@ -68,25 +68,11 @@ class CfgSpawnPoints {
                 conditions = "";
             };
 
-            class nhs_la_rochelle {
-                displayName = "La Rochelle Clinic";
-                spawnMarker = "medic_spawn_2";
-                icon = "\a3\ui_f\data\map\MapControl\pictureLogic_ca.paa";
-                conditions = "";
-            };
-
             class nhs_airbase {
                 displayName = "Southen Airbase";
                 spawnMarker = "medic_spawn_3";
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";
                 conditions = "";
-            };
-
-            class nhs_docks {
-                displayName = "Norther Docks";
-                spawnMarker = "medic_spawn_4";
-                icon = "\a3\ui_f\data\map\Markers\NATO\c_ship.paa";
-                conditions = "";    
             };
         };
     };

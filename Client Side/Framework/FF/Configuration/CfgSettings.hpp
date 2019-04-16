@@ -53,12 +53,12 @@ class CfgSettings {
     save_vehicle_damage = true;
     save_vehicle_illegal = false;
 
-    vehicle_rental_multiplier = 0.65;
+    vehicle_rental_multiplier = 0.60;
     vehicle_sell_multiplier = 0.45;
     vehicle_chop_multiplier = 0.40;
     vehicle_store_multiplier = 0.01;
     vehicle_impound_multiplier = 0.03;
-    vehicle_retrieval_multiplier = 0.05;
+    vehicle_retrieval_multiplier = 0.025;
 
     /* Fuel System Configurations */
     pump_service = true;

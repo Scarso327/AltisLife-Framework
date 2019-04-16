@@ -139,7 +139,7 @@ class CfgWeapons {
             { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, 0, "call life_coplevel >= 1" },
             { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "call life_coplevel >= 2" },
             { "SMG_05_F", "Protector 9 mm", 0, -1, "call life_coplevel >= 2" },
-            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "call life_coplevel >= 3" }
+            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "call life_coplevel >= 4" }
         };
         mags[] = {
             { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, -1, "call life_coplevel >= 1" },
@@ -153,11 +153,11 @@ class CfgWeapons {
             { "optic_Aco_smg", "ACO SMG (Red)", 0, -1, "call life_coplevel >= 2" },
             { "optic_Holosight_blk_F", "Mk17 Holosight", 0, -1, "call life_coplevel >= 2" },
             { "optic_Holosight_smg_blk_F", "Mk17 Holosight SMG", 0, -1, "call life_coplevel >= 2" },
-            { "optic_Hamr", "RCO", 0, -1, "call life_coplevel >= 3" },
-            { "optic_MRCO", "MRCO", 0, -1, "call life_coplevel >= 3" },
-            { "optic_Arco_blk_F", "ARCO", 0, -1, "call life_coplevel >= 3" },
+            { "optic_Hamr", "RCO", 0, -1, "call life_coplevel >= 4" },
+            { "optic_MRCO", "MRCO", 0, -1, "call life_coplevel >= 4" },
+            { "optic_Arco_blk_F", "ARCO", 0, -1, "call life_coplevel >= 4" },
             { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, "call life_coplevel >= 1" },
-            { "acc_flashlight", "Flashlight", 0, -1, "call life_coplevel >= 2" }
+            { "acc_flashlight", "Flashlight", 0, -1, "call life_coplevel >= 4" }
         };
     };
 

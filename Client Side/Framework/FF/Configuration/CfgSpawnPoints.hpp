@@ -49,14 +49,14 @@ class CfgSpawnPoints {
                 displayName = "Northern Airbase";
                 spawnMarker = "cop_spawn_4";
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";
-                conditions = "";
+                conditions = "license_cop_aso1 || license_cop_aso2 || license_cop_aso3";
             };
 
             class tpc_docks {
                 displayName = "Southern Docks";
                 spawnMarker = "cop_spawn_5";
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_ship.paa";
-                conditions = "";
+                conditions = "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3";
             };
         };
 
@@ -70,9 +70,9 @@ class CfgSpawnPoints {
 
             class nhs_airbase {
                 displayName = "Southen Airbase";
-                spawnMarker = "medic_spawn_3";
+                spawnMarker = "medic_spawn_1";
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";
-                conditions = "";
+                conditions = "license_med_taa";
             };
         };
     };

@@ -53,12 +53,12 @@ class CfgSettings {
     save_vehicle_damage = true;
     save_vehicle_illegal = false;
 
-    vehicle_rental_multiplier = 0.65;
+    vehicle_rental_multiplier = 0.60;
     vehicle_sell_multiplier = 0.45;
     vehicle_chop_multiplier = 0.40;
     vehicle_store_multiplier = 0.01;
     vehicle_impound_multiplier = 0.03;
-    vehicle_retrieval_multiplier = 0.05;
+    vehicle_retrieval_multiplier = 0.025;
 
     /* Fuel System Configurations */
     pump_service = true;
@@ -77,7 +77,7 @@ class CfgSettings {
     gang_upgradeMultiplier = 2.5;
 
     /* Prison System Configurations */
-    sendtoJail_locations[] = {};
+    sendtoJail_locations[] = {"hmp"};
     jail_timeMultiplier = 15;
 
     /* Search & Seizure System Configurations */
@@ -90,7 +90,7 @@ class CfgSettings {
     /* Clothing System Configurations */
     clothing_noTP = false;
     clothing_box = true;
-    clothing_masks[] = {};
+    clothing_masks[] = {"H_RacingHelmet_1_black_F", "H_RacingHelmet_1_blue_F", "H_RacingHelmet_1_green_F", "H_RacingHelmet_1_orange_F", "H_RacingHelmet_1_red_F", "H_RacingHelmet_1_white_F", "H_RacingHelmet_1_yellow_F", "G_Balaclava_blk", "G_Balaclava_combat", "G_Balaclava_lowprofile", "G_Balaclava_oli", "G_Bandanna_aviator", "H_BandMask_beast", "H_BandMask_blk", "H_BandMask_khk", "G_Bandanna_oli", "G_Bandanna_shades", "G_Bandanna_sport", "G_Bandanna_tan", "G_Balaclava_TI_G_blk_F", "G_Balaclava_TI_G_blk_F"};
 
     /* Player Job System Configurations */
     delivery_points[] = {};

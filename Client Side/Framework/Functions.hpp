@@ -265,7 +265,6 @@ class Life_Client_Core {
         class numberText {};
         class onFired {};
         class onTakeItem {};
-        class playerTags {};
         class pullOutVeh {};
         class pushObject {};
         class receiveItem {};

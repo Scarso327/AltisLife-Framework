@@ -1,7 +1,7 @@
 # LifePlus-Framework
 A role-playing gamemode developed by the LifePlus Development Team.
 
-# Developers
+## Developers
 Jack Farhall,
 Lewis Mackinnon,
 Tasgall Gee

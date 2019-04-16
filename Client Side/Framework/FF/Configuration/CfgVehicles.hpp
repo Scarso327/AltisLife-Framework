@@ -102,9 +102,13 @@ class CfgVehicleStores {
         side = "cop";
         conditions = "playerSide isEqualTo west";
         vehicles[] = {
+            { "C_Quadbike_01_F", "call life_coplevel >= 1" },
+            { "C_Hatchback_01_F", "call life_coplevel >= 2" },
             { "C_SUV_01_F", "call life_coplevel >= 2" },
-            { "C_Offroad_02_unarmed_F", "call life_coplevel >= 2" },
-            { "C_Hatchback_01_sport_F", "call life_coplevel >= 3" }
+            { "C_Offroad_01_F", "call life_coplevel >= 3" },
+            { "C_Offroad_02_unarmed_F", "call life_coplevel >= 3" },
+            { "C_Hatchback_01_sport_F", "call life_coplevel >= 4" },
+            { "C_Van_02_transport_F", "call life_coplevel >= 4" }
         };
     };
 
@@ -113,12 +117,9 @@ class CfgVehicleStores {
         conditions = "playerSide isEqualTo west && (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)";
         vehicles[] = {
             { "C_SUV_01_F", "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
-            { "C_Offroad_02_unarmed_F", "license_cop_sfo2 || license_cop_sfo3" },
+            { "C_Offroad_01_F", "license_cop_sfo2 || license_cop_sfo3" },
             { "C_Hatchback_01_sport_F", "license_cop_sfo3" },
-            { "C_Van_02_transport_F", "license_cop_sfo3" },
-            { "C_Boat_Civil_01_police_F", "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
-            { "B_G_Boat_Transport_02_F", "license_cop_sfo2 || license_cop_sfo3" },
-            { "B_SDV_01_F", "license_cop_sfo3" }
+            { "C_Van_02_transport_F", "license_cop_sfo3" }
         };
     };
 
@@ -126,9 +127,21 @@ class CfgVehicleStores {
         side = "cop";
         conditions = "playerSide isEqualTo west && (license_cop_aso1 || license_cop_aso2 || license_cop_aso3)";
         vehicles[] = {
+            { "C_Heli_Light_01_civil_F", "license_cop_aso1 || license_cop_aso2 || license_cop_aso3" },
             { "B_Heli_Light_01_F", "license_cop_aso1 || license_cop_aso2 || license_cop_aso3" },
             { "I_Heli_light_03_unarmed_F", "license_cop_aso2 || license_cop_aso3" },
-            { "O_Heli_Light_02_unarmed_F", "license_cop_aso3" }
+            { "O_Heli_Light_02_unarmed_F", "license_cop_aso2 || license_cop_aso3" },
+            { "B_Heli_Transport_03_unarmed_F", "license_cop_aso3" }
+        };
+    };
+
+    class tpc_msv_dealership {
+        side = "cop";
+        conditions = "playerSide isEqualTo west && (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)";
+        vehicles[] = {
+            { "C_Boat_Civil_01_police_F", "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "B_G_Boat_Transport_02_F", "license_cop_sfo2 || license_cop_sfo3" },
+            { "B_SDV_01_F", "license_cop_sfo3" }
         };
     };
 
@@ -484,6 +497,13 @@ class LifeCfgVehicles {
     };
 
     class I_Heli_Transport_02_F { // CH-49 Mohawk
+        vItemSpace = 0;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class B_Heli_Transport_03_unarmed_F { // CH-67 Huron (Unarmed)
         vItemSpace = 0;
         conditions = "";
         price = 0;

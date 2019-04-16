@@ -14,6 +14,13 @@ Added:
         - Perks Included!
 
 Changed:
+    All Physical Stores (Lewis Mackinnon)
+    All Virtual Stores (Lewis Mackinnon)
+    All Vehicle Stores (Lewis Mackinnon)
+    All Licnece Stores (Lewis Mackinnon)
+    All Gather Sites (Lewis Mackinnon)
+    All Processing Sites (Lewis Mackinnon)
+    All Spawn Points (Lewis Mackinnon)
     Virtual Tool Kit - > Physical (Scarso)
     You can repair vehicles without tool kit but it's slower (Scarso)
     Store Conditional Checks (Scarso)
@@ -26,17 +33,22 @@ Changed:
     Being Arrested Wipes ALL Illegal Items (Scarso)
     Fog is now limited to 10% (Scarso)
     Name Tags System (Scarso)
-    Tasers can be used by anyone (Lewis Mackinnon)
+    Tasers can be used by anyone AND on anyone (Lewis Mackinnon)
     Weapon used as a taser (Lewis Mackinnon)
+    Locations for Sending to Prison (Lewis Mackinnon)
+    Distance for Sending to Prison (Lewis Mackinnon)
     
 Updated:
+    Overall Map Design (Lewis Mackinnon)
     Player Menu Design (Scarso)
     Player HUD (Scarso)
     Player Name Tags (Scarso)
     Police Clothing Store Uniforms (Scarso)
     Police Clothing Store Hats (Scarso)
     Police Clothing Store Vests (Scarso)
+    Police Spawn Loadouts (Lewis Mackinnon)
     Backend File Structure (Scarso)
+    All Masked Clothing Items (Lewis Mackinnon)
     
 Removed:
     Welcome Notification Screen (Scarso)

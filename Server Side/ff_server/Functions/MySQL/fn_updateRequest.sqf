@@ -55,9 +55,9 @@ switch (_side) do {
 _playtime_update = [_playtime_update] call DB_fnc_mresArray;
 
 switch (_side) do {
-    case west: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5', cop_stats='%6', playtime='%7', professions='%9', level='%10', xp='%11' WHERE pid='%8'",_name,_cash,_bank,_gear,_licenses,_stats,_playtime_update,_uid,_professions,[_level select 0] call DB_fnc_numberSafe, [_level select 1] call DB_fnc_numberSafe];};
-    case civilian: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%5', arrested='%6', civ_stats='%7', playtime='%8', professions='%10', level='%11', xp='%12' WHERE pid='%9'",_name,_cash,_bank,_licenses,_gear,[_this select 10] call DB_fnc_bool,_stats,_playtime_update,_uid,_professions,[_level select 0] call DB_fnc_numberSafe, [_level select 1] call DB_fnc_numberSafe];};
-    case independent: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%5', med_stats='%6', playtime='%7', professions='%9', level='%10', xp='%11' WHERE pid='%8'",_name,_cash,_bank,_licenses,_gear,_stats,_playtime_update,_uid,_professions,[_level select 0] call DB_fnc_numberSafe, [_level select 1] call DB_fnc_numberSafe];};
+    case west: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5', cop_stats='%6', playtime='%7', cop_professions='%9', level='%10', xp='%11' WHERE pid='%8'",_name,_cash,_bank,_gear,_licenses,_stats,_playtime_update,_uid,_professions,[_level select 0] call DB_fnc_numberSafe, [_level select 1] call DB_fnc_numberSafe];};
+    case civilian: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%5', arrested='%6', civ_stats='%7', playtime='%8', civ_professions='%10', level='%11', xp='%12' WHERE pid='%9'",_name,_cash,_bank,_licenses,_gear,[_this select 10] call DB_fnc_bool,_stats,_playtime_update,_uid,_professions,[_level select 0] call DB_fnc_numberSafe, [_level select 1] call DB_fnc_numberSafe];};
+    case independent: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%5', med_stats='%6', playtime='%7', med_professions='%9', level='%10', xp='%11' WHERE pid='%8'",_name,_cash,_bank,_licenses,_gear,_stats,_playtime_update,_uid,_professions,[_level select 0] call DB_fnc_numberSafe, [_level select 1] call DB_fnc_numberSafe];};
 };
 
 _queryResult = [_query,1] call DB_fnc_asyncCall;

@@ -264,7 +264,7 @@ class LifeCfgVehicles {
             }, "" },
             { "Black", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
-            }, "" }
+            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
         };
     };
 
@@ -298,8 +298,13 @@ class LifeCfgVehicles {
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa"
             }, "" },
             { "Police", "cop", {
-                 "data\textures\Police\Cars\Police_offroad.paa"
-            }, "" }
+                "data\textures\Police\Cars\Police_offroad.paa"
+            }, "" },
+            { "ARV", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };
 
@@ -369,7 +374,12 @@ class LifeCfgVehicles {
             }, "" },
             { "Police", "cop", {
                 "data\textures\Police\Cars\Police_SUV_White.paa"
-            }, "" }
+            }, "" },
+            { "ARV", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };
 
@@ -395,7 +405,12 @@ class LifeCfgVehicles {
             }, "" },
             { "Green", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
-            }, "" }
+            }, "" },
+            { "ARV", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };
 
@@ -403,7 +418,13 @@ class LifeCfgVehicles {
         vItemSpace = 90;
         conditions = "";
         price = 0;
-        textures[] = {};
+        textures[] = {
+            { "ARV", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
+        };
     };
 
     class O_G_Van_02_transport_F { // [Syndikat] Van Transport

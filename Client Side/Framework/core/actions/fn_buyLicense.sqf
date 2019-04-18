@@ -3,24 +3,31 @@
     File: fn_buyLicense.sqf
     Author: Bryan "Tonic" Boardwine
 
+    Editor: Jack "Scarso" Farhall (Allows Purchasing Through UI)
+
     Description:
     Called when purchasing a license. May need to be revised.
 */
-private ["_type","_varName","_displayName","_sideFlag","_price"];
-_type = _this select 3;
+private _type = CONTROL_DATA(4001);
 
-if (!isClass (missionConfigFile >> "CfgLicenses" >> _type)) exitWith {}; //Bad entry?
-_displayName = M_CONFIG(getText,"CfgLicenses",_type,"displayName");
-_price = M_CONFIG(getNumber,"CfgLicenses",_type,"price");
-_sideFlag = M_CONFIG(getText,"CfgLicenses",_type,"side");
-_varName = LICENSE_VARNAME(_type,_sideFlag);
+if (_type isEqualTo "") exitWith {hint "You have not selected a license to buy!"};
+if (!isClass (missionConfigFile >> "CfgLicenses" >> _type)) exitWith { systemChat "Bad Entry..." };
 
-if (CASH < _price) exitWith {hint format [localize "STR_NOTF_NE_1",[_price] call life_fnc_numberText,localize _displayName];};
+private _displayName = M_CONFIG(getText, "CfgLicenses", _type, "displayName");
+private _price = M_CONFIG(getNumber, "CfgLicenses", _type, "price");
+private _sideFlag = M_CONFIG(getText, "CfgLicenses", _type, "side");
+private _varName = LICENSE_VARNAME(_type, _sideFlag);
+
+private _side = switch (_sideFlag) do {case "cop": {west}; case "med" : {independent}; case "civ" : {civilian};};
+if !(playerSide isEqualTo _side) exitWith { hint format["You must be a %1 to purchase this license!", _sideFlag] };
+
+if (CASH < _price) exitWith {hint format [localize "STR_NOTF_NE_1",[_price] call life_fnc_numberText, _displayName];};
 CASH = CASH - _price;
 
 [0] call SOCK_fnc_updatePartial;
 
-titleText[format [localize "STR_NOTF_B_1", localize _displayName,[_price] call life_fnc_numberText],"PLAIN"];
+titleText[format [localize "STR_NOTF_B_1", _displayName,[_price] call life_fnc_numberText],"PLAIN"];
 missionNamespace setVariable [_varName,true];
 
 [2] call SOCK_fnc_updatePartial;
+closeDialog 0;

@@ -12,6 +12,8 @@ Added:
         - Gathering
     Leveling System (Scarso)
         - Perks Included!
+    License Shop UI (Scarso)
+        - Easier purchasing of licenses
 
 Changed:
     All Physical Stores (Lewis Mackinnon)

@@ -46,3 +46,5 @@ private _list = ["LandVehicle", "Ship", "Air"];
         true breakOut "main";
     };
 } count [_container, _secContainer];
+
+[] call FF(playerSkins);

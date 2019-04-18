@@ -1,8 +1,8 @@
 Added:
     Intro Text (Scarso)
     Police Uniforms (Scarso)
-        - Junior Uniform
-        - Senior Uniform
+        - Cadet Uniform
+        - Main Uniform (Insignia changes per rank)
     Police Car Textures (Scarso)
         - Police Offroad
         - Police SUV

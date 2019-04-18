@@ -17,8 +17,10 @@
 #define RANY 0 //Global
 
 // Directories
+#define MISSION_ROOT format ["mpmissions\__CUR_MP.%1\", worldName]
 #define ICON(file) format["data\icons\%1", file]
 #define TEXTURE(file) format["data\textures\%1", file]
+#define INSIGNIA(file) format["%2data\insignia\%1", file, MISSION_ROOT]
 
 //Scripting Macros
 #define CONST(var1,var2) var1 = compileFinal (if (var2 isEqualType "") then {var2} else {str(var2)})

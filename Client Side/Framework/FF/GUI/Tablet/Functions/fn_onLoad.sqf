@@ -44,12 +44,15 @@ switch (_title) do {
 
 		private _side = switch (playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
 		
+		private _keyword = ["License", "Authorisation"] select (playerSide isEqualTo west);
+		ctrlSetText[IDC_LIC_TITLE, format["%1 Menu", _keyword]];
+
 		{
 			if (LICENSE_VALUE(configName _x,_side)) then { _list lbAdd getText(_x >> "displayName") };
 		} forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_side] configClasses (missionConfigFile >> "CfgLicenses"));
 
 		if(((lbSize _list)-1) isEqualTo -1) then {
-			_list lbAdd "You don't have any licenses...";
+			_list lbAdd format["You don't have any %1s...", _keyword];
 			_list lbSetData [(lbSize _list)-1,""];
 		};
 	};

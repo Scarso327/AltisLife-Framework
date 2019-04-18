@@ -219,28 +219,6 @@ class CfgItems {
         conditions = "";
     };
 
-    class first_aid_kit {
-        variable = "first_aid_kit";
-        displayName = "First Aid Kit";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
-        illegal = false;
-        save = true;
-        taxed = true;
-        marketDisplay = false;
-        class dynmarket {
-            dynmaic = false;
-            driftPerc = 0.1;
-        };
-        class edibility {
-            edible[] = {false, ""};
-            value = -1;
-        };
-        icon = "";
-        conditions = "";
-    };
-
     class lockpick {
         variable = "lockpick";
         displayName = "Lockpick";

@@ -368,7 +368,7 @@ class CfgClothing {
             { "H_Beret_blk", "Standard Beret", 0, "call life_coplevel >= 2" },
             { "H_Beret_02", "Command Beret", 0, "call life_coplevel >= 9" },
             { "H_Beret_gen_F", "Commander Beret", 0, "call life_coplevel >= 11" },
-            { "SFO Operational Helmet", "SFO Operational Helmet", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "H_HelmetSpecB_blk", "SFO Operational Helmet", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "H_PilotHelmetHeli_B", "ASO Operational Helmet", 0, "license_cop_aso1 || license_cop_aso2 || license_cop_aso3" },
         };
         goggles[] = {

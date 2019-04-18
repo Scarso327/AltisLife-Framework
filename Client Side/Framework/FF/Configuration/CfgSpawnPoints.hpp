@@ -45,13 +45,6 @@ class CfgSpawnPoints {
                 conditions = "";
             };
 
-            class tpc_airbase {
-                displayName = "Northern Airbase";
-                spawnMarker = "cop_spawn_4";
-                icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";
-                conditions = "license_cop_aso1 || license_cop_aso2 || license_cop_aso3";
-            };
-
             class tpc_docks {
                 displayName = "Southern Docks";
                 spawnMarker = "cop_spawn_5";

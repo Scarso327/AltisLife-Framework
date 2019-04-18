@@ -21,7 +21,7 @@ class CfgApps {
     class Trainings {
         title = "Authorisations";
         icon = "\a3\ui_f_curator\Data\RscCommon\RscAttributeInventory\filter_10_ca.paa";
-        onButtonClick = "";
+        onButtonClick = "[23300, ""Licenses""] call FF_fnc_switchApp";
         conditions = "playerSide isEqualTo west";
         disableIF = "";
         tooltip = "Completed Trainings";

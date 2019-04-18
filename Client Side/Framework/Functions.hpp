@@ -67,7 +67,13 @@ class FF_Core {
         file = "FF\GUI\Functions";
         class setupFilter {};
         class searchList {};
-    }
+    };
+
+    class GUI_LIC_FUNCTIONS {
+        file = "FF\GUI\Licenses\Functions";
+        class openLicenses {};
+        class LicenseLBChanged {};
+    };
 
     class GUI_HUD_Functions {
         file = "FF\GUI\HUD\Functions";

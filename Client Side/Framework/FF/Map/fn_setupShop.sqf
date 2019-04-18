@@ -9,7 +9,7 @@
 		- [this, ["Civ", "General Store"], "general_store", ""] call FF_fnc_setupShop;
 		- [this, ["Civ", "Go-Kart Store"], "go_karting_store", "playerSide isEqualTo civilian && license_civ_go_karting"] call FF_fnc_setupShop;
 		- [this, ["Police", "Equipment Locker"], "tpc_general_Store", "playerSide isEqualTo west"] call FF_fnc_setupShop;
-		- [this, ["NHS", "General Equipment"], "nhs_general_store", "playerSide isEqualTo independent"] call FF_fnc_setupShop;
+		- [this, ["TAS", "General Equipment"], "nhs_general_store", "playerSide isEqualTo independent"] call FF_fnc_setupShop;
 */
 #include "..\..\script_macros.hpp"
 params [
@@ -29,7 +29,7 @@ _object allowDamage false;
 private _colour = switch true do {
 	case (_title select 0 isEqualTo "TPC"): {"#9000ff"};
 	case (_title select 0 isEqualTo "CIV"): {"#9000ff"};
-	case (_title select 0 isEqualTo "NHS"): {"#9000ff"};
+	case (_title select 0 isEqualTo "TAS"): {"#9000ff"};
 	default {"#9000ff"};
 };
 

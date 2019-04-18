@@ -109,7 +109,7 @@ class CfgDebriefing {
 
 class CfgNotifications {
     class MedicalRequestEmerg {
-        title = "NHS Assistant Requested";
+        title = "Medical Assistant Requested";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
         description = "%1";
         duration = 5;

@@ -10,7 +10,7 @@
 		- [this, ["Civ", "Mineral Exports"], "mineral_exports", "playerSide isEqualTo civilian"] call FF_fnc_setupMarket;
 		- [this, ["Rebel", "Market"], "syndikat_outpost", "playerSide isEqualTo civilian && license_civ_syndikat"] call FF_fnc_setupMarket;
 		- [this, ["Police", "Market"], "tpc_market", "playerSide isEqualTo west"] call FF_fnc_setupMarket;
-		- [this, ["NHS", "Market"], "nhs_market", "playerSide isEqualTo independent"] call FF_fnc_setupMarket;
+		- [this, ["TAS", "Market"], "nhs_market", "playerSide isEqualTo independent"] call FF_fnc_setupMarket;
 */
 #include "..\..\script_macros.hpp"
 params [
@@ -30,7 +30,7 @@ _object allowDamage false;
 private _colour = switch true do {
 	case (_title select 0 isEqualTo "TPC"): {"#9000ff"};
 	case (_title select 0 isEqualTo "CIV"): {"#9000ff"};
-	case (_title select 0 isEqualTo "NHS"): {"#9000ff"};
+	case (_title select 0 isEqualTo "TAS"): {"#9000ff"};
 	default {"#9000ff"};
 };
 

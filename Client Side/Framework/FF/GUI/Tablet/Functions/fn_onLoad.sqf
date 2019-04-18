@@ -42,6 +42,8 @@ switch (_title) do {
 		private _list = CONTROL(IDD_TABLET_MAIN, IDC_LIC_LIST);
 		lbClear _list;
 
+		private _side = switch (playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
+		
 		{
 			if (LICENSE_VALUE(configName _x,_side)) then { _list lbAdd getText(_x >> "displayName") };
 		} forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_side] configClasses (missionConfigFile >> "CfgLicenses"));

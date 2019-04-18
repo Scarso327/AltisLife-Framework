@@ -11,6 +11,7 @@ class CfgWeapons {
             { "Binocular", "Binoculars", 0, 0, "" },
             { "NVGoggles", "Night Vision Goggles", 0, 0, "" },
             { "G_Tactical_Black", "Night Vision Glasses", 0, 0, "" }, // Premium Membership
+            { "FirstAidKit", "First Aid Kit", 0, 0, "" },
             { "ToolKit", "Toolkit", 0, 0, "" }
         };
         mags[] = {};
@@ -26,6 +27,7 @@ class CfgWeapons {
             { "ItemRadio", "Mobile Phone", 0, 0, "" },
             { "ItemCompass", "Compass", 0, 0, "" },
             { "ItemWatch", "Wrist Watch", 0, 0, "" },
+            { "FirstAidKit", "First Aid Kit", 0, 0, "" },
             { "ToolKit", "Toolkit", 0, 0, "" }
         };
         mags[] = {};
@@ -75,6 +77,7 @@ class CfgWeapons {
             { "Binocular", "Binoculars", 0, 0, "" },
             { "NVGoggles", "Night Vision Goggles", 0, 0, "" },
             { "G_Tactical_Black", "Night Vision Glasses", 0, 0, "" }, // Premium Membership
+            { "FirstAidKit", "First Aid Kit", 0, 0, "" },
             { "ToolKit", "Toolkit", 0, 0, "" },
             { "hgun_Pistol_01_F", "PM 9 mm", 0, 0, "" },
             { "hgun_Rook40_F", "Rook-40 9 mm", 0, 0, "" },
@@ -135,6 +138,7 @@ class CfgWeapons {
             { "Rangefinder", "Rangefinder", 0, -1, "call life_coplevel >= 2" },
             { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "call life_coplevel >= 1" },
             { "G_Tactical_Black", "Night Vision Glasses", 0, -1, "call life_coplevel >= 1" }, // Premium Membership
+            { "FirstAidKit", "First Aid Kit", 0, 0, "" },
             { "ToolKit", "Toolkit", 0, -1, "call life_coplevel >= 1" },
             { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, 0, "call life_coplevel >= 1" },
             { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "call life_coplevel >= 2" },
@@ -174,6 +178,7 @@ class CfgWeapons {
             { "Rangefinder", "Rangefinder", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "G_Tactical_Black", "Night Vision Glasses", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }, // Premium Membership
+            { "FirstAidKit", "First Aid Kit", 0, 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "ToolKit", "Toolkit", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "HandGrenade_Stone", "Flashbang Grenade", 0, -1, "license_cop_sfo2 || license_cop_sfo3" },
             { "SmokeShellYellow", "Tear Gas Grenade", 0, -1, "license_cop_sfo3" },

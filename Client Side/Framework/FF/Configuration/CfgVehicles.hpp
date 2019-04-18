@@ -264,7 +264,7 @@ class LifeCfgVehicles {
             }, "" },
             { "Black", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
-            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            }, "" },
         };
     };
 

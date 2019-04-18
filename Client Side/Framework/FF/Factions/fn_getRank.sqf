@@ -15,7 +15,7 @@ _return = call {
 	if((side _player) isEqualTo west) exitWith {
 		switch (_player getVariable ["rank", 0]) do {
 			case 2: {["Police Constable", INSIGNIA("police\PC.paa")]};
-			case 3: {["Senior Police Constable", INSIGNIA("police\PC.paa")]};
+			case 3: {["Senior Police Constable", INSIGNIA("police\SPC.paa")]};
 			case 4: {["Sergeant", INSIGNIA("police\SGT.paa")]};
 			case 5: {["Inspector", INSIGNIA("police\INSP.paa")]};
 			case 6: {["Chief Inspector", INSIGNIA("police\CINSP.paa")]};
@@ -24,7 +24,7 @@ _return = call {
 			case 9: {["Deputy Commissioner", INSIGNIA("police\DCOMM.paa")]};
 			case 10: {["Commissioner", INSIGNIA("police\COMM.paa")]};
 			case 11: {["Commander", INSIGNIA("police\CMDR.paa")]};
-			default {["Police Cadet", "\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"]};
+			default {["Police Cadet", INSIGNIA("police\Cdt.paa")]};
 		};
 	};
 

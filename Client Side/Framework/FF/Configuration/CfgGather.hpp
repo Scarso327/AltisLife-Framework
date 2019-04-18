@@ -27,6 +27,15 @@ class CfgGather {
             zoneSize = 30;
         };
 
+        class coral {
+            text = "Gathering coral...";
+            amount = 5;
+            zones[] = { "coral_area" };
+            item = "coral";
+            profession[] = { "Prof_Gathering", 1, 50 };
+            zoneSize = 30;
+        };
+
         class bannana {
             text = "Gathering bannanas...";
             amount = 5;

@@ -743,7 +743,7 @@ class Mission
 			dataType="Marker";
 			position[]={5795.3286,7.9299998,10430.076};
 			name="nhs_clinic_1";
-			text="NHS Clinic";
+			text="TAS Clinic";
 			type="loc_Hospital";
 			colorName="ColorRed";
 			id=57;
@@ -1737,7 +1737,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""NHS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""NHS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""NHS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
+				init="[this, [""TAS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""TAS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
 				name="medic_general_1";
 				disableSimulation=1;
 			};
@@ -2025,7 +2025,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""NHS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
+				init="[this, [""TAS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
 				name="medic_vehicles_1";
 				disableSimulation=1;
 			};
@@ -5406,7 +5406,7 @@ class Mission
 			dataType="Marker";
 			position[]={11710.076,4.6700001,3162.1421};
 			name="nhs_airbase";
-			text="NHS Airbase";
+			text="TAS Airbase";
 			type="loc_Hospital";
 			colorName="ColorRed";
 			id=412;
@@ -22124,7 +22124,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_2";
-						description="NHS Officer";
+						description="TAS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -22217,7 +22217,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_3";
-						description="NHS Officer";
+						description="TAS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -22310,7 +22310,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_4";
-						description="NHS Officer";
+						description="TAS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -22403,7 +22403,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_5";
-						description="NHS Officer";
+						description="TAS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -22496,7 +22496,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_1";
-						description="NHS Officer";
+						description="TAS Officer";
 						isPlayable=1;
 						class Inventory
 						{

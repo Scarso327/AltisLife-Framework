@@ -132,7 +132,7 @@ private [""_msg"",""_to""];
 
     [_msg,name player,5,mapGridPosition player,player] remoteExecCall [""TON_fnc_clientMessage"",independent];
     [] call life_fnc_cellphone;
-    hint format [localize ""You have sent a message to the NHS."",_to,_msg];
+    hint format [localize ""You have sent a message to the TAS."",_to,_msg];
     ctrlShow[3022,true];
 ";
 //To One Person

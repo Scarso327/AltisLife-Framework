@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=137;
+	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=2201;
+		nextID=2202;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={964.99823,225.85464,525.47974};
-		dir[]={0.82642502,-0.5372141,0.16873591};
-		up[]={0.52636272,0.84344256,0.10747072};
-		aside[]={0.20005506,-1.0035001e-007,-0.9798165};
+		pos[]={13268.356,12.395272,13743.756};
+		dir[]={0.083748616,-0.75650108,0.64863348};
+		up[]={0.096872807,0.6539951,0.75027418};
+		aside[]={0.99178427,9.3830749e-008,-0.12805487};
 	};
 };
 binarizationWanted=0;
@@ -385,7 +385,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1050;
+		items=1051;
 		class Item0
 		{
 			dataType="Marker";
@@ -5481,7 +5481,6 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=418;
-			atlOffset=0.21165657;
 		};
 		class Item253
 		{
@@ -6079,13 +6078,13 @@ class Mission
 		class Item302
 		{
 			dataType="Marker";
-			position[]={11126.578,110.295,9583.7656};
+			position[]={11123.158,110.295,9589.5234};
 			name="gem_processing";
 			text="Gem Processing";
 			type="mil_box";
 			colorName="ColorCIV";
 			id=479;
-			atlOffset=0.0002746582;
+			atlOffset=0.60137939;
 		};
 		class Item303
 		{
@@ -8709,18 +8708,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5798.4565,9.3785372,10344.602};
-				angles[]={0,4.8638515,0};
+				position[]={5798.4565,9.3780689,10344.602};
+				angles[]={0,4.8638487,0};
 			};
 			side="Empty";
 			class Attributes
 			{
+				init="this addAction[""DVLAdriving"",FF_fnc_openLicenses,[""firearms"",""trucking"",""piloting"",""boating"",""diving"",""go_karting"",""homeowners""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="dvla_1";
 				disableSimulation=1;
 			};
 			id=680;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.32070923;
+			atlOffset=0.32024097;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9934,6 +9934,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Meth Lab"",FF_fnc_openLicenses,[""methamphetamine""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="meth_lab";
 				disableSimulation=1;
 			};
@@ -10174,6 +10175,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Licensing Store"",FF_fnc_openLicenses,[""tin"",""copper"",""silver"",""iron"",""platinum""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="mineral_processing_2";
 			};
 			id=861;
@@ -10214,6 +10216,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Licensing Store"",FF_fnc_openLicenses,[""tin"",""copper"",""silver"",""iron"",""platinum""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="mineral_processing_1";
 			};
 			id=864;
@@ -23670,8 +23673,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -23680,10 +23683,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Custom";
 								};
 							};
 						};
@@ -23727,8 +23730,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -23737,10 +23740,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Custom";
+									value=0;
 								};
 							};
 						};
@@ -27572,7 +27575,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""CIV"", ""Handgun Store""], ""handgun_store"", ""playerSide isEqualTo civilian && license_civ_firearms""] call FF_fnc_setupShop;";
+				init="this addAction[""Handgun Licences"",FF_fnc_openLicenses,[""firearms""],0,false,false,"""",' playerSide == civilian', 5];[this, [""CIV"", ""Handgun Store""], ""handgun_store"", ""playerSide isEqualTo civilian && license_civ_firearms""] call FF_fnc_setupShop;";
 				name="handgun_store_2";
 				disableSimulation=1;
 			};
@@ -27615,7 +27618,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""CIV"", ""Handgun Store""], ""handgun_store"", ""playerSide isEqualTo civilian && license_civ_firearms""] call FF_fnc_setupShop;";
+				init="this addAction[""Handgun Licences"",FF_fnc_openLicenses,[""firearms""],0,false,false,"""",' playerSide == civilian', 5];[this, [""CIV"", ""Handgun Store""], ""handgun_store"", ""playerSide isEqualTo civilian && license_civ_firearms""] call FF_fnc_setupShop;";
 				name="handgun_store_1";
 				disableSimulation=1;
 			};
@@ -30032,17 +30035,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11122.732,105.09819,9591.1074};
-				angles[]={6.2737489,3.1411216,6.2740636};
+				position[]={11122.732,105.09835,9591.1074};
+				angles[]={6.2737432,3.1411216,6.2740569};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Gem Processing"",FF_fnc_openLicenses,[""gem""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="gem_processing";
 			};
 			id=1577;
 			type="Land_Device_assembled_F";
+			atlOffset=0.00016021729;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32278,6 +32283,7 @@ class Mission
 				angles[]={0,5.1242476,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Market""], ""general_market"", """"] call FF_fnc_setupMarket;";
@@ -32286,7 +32292,7 @@ class Mission
 			};
 			id=1664;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.3564415;
+			atlOffset=0.11700058;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32402,13 +32408,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11974.64,146.70599,7461.9819};
-				angles[]={0,4.137826,0};
+				angles[]={0,4.1378264,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""CIV"", ""Syndikat Market""], ""syndikat_outpost"", """"] call FF_fnc_setupMarket; [this, [""CIV"", ""Syndikat Store""], ""syndikat_outpost"", """"] call FF_fnc_setupShop;";
+				init="this addAction[""Syndikat Licencing"",FF_fnc_openLicenses,[""syndikat""],0,false,false,"""",' playerSide == civilian', 5];[this, [""CIV"", ""Syndikat Market""], ""syndikat_outpost"", """"] call FF_fnc_setupMarket; [this, [""CIV"", ""Syndikat Store""], ""syndikat_outpost"", """"] call FF_fnc_setupShop;";
 				name="syndikat_outpost";
 				disableSimulation=1;
 			};
@@ -33061,6 +33067,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Rock Processing"",FF_fnc_openLicenses,[""rock""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="rock_processing";
 			};
 			id=1690;
@@ -33172,6 +33179,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Marijuana Processing"",FF_fnc_openLicenses,[""marijuana""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="marijuana_processing";
 				disableSimulation=1;
 			};
@@ -33207,18 +33215,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12627.169,47.394695,7930.6128};
+				position[]={12627.169,47.394714,7930.6128};
 				angles[]={0,3.1589413,0};
 			};
 			side="Empty";
 			class Attributes
 			{
+				init="this addAction[""Drug Refining"",FF_fnc_openLicenses,[""drug_refining""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="drug_refinery";
 				disableSimulation=1;
 			};
 			id=1696;
 			type="Land_Sink_F";
-			atlOffset=0.56798553;
+			atlOffset=0.56800461;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33326,6 +33335,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Cocaine Processing"",FF_fnc_openLicenses,[""cocaine""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="cocaine_processing";
 				disableSimulation=1;
 			};
@@ -33440,6 +33450,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Heroin Processing"",FF_fnc_openLicenses,[""heroin""],0,false,false,"""",' playerSide == civilian', 5];";
 				name="heroin_prcoessing";
 				disableSimulation=1;
 			};
@@ -36909,7 +36920,7 @@ class Mission
 			position[]={9523.9512,2.7263794,13570.986};
 			name="police_ground_2";
 			type="Empty";
-			angle=93.027237;
+			angle=93.027229;
 			id=1820;
 			atlOffset=3.6716461e-005;
 		};
@@ -40955,6 +40966,47 @@ class Mission
 			id=2200;
 			type="Land_InfoStand_V2_F";
 			atlOffset=0.11775303;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1050
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13267.843,5.2444363,13749.708};
+				angles[]={0.0053232545,2.2879519,0.013334315};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addAction[""Licensing Store"",FF_fnc_openLicenses,[""oil""],0,false,false,"""",' playerSide == civilian', 5];";
+				name="oil_processing_1";
+			};
+			id=2201;
+			type="Land_Device_assembled_F";
 			class CustomAttributes
 			{
 				class Attribute0

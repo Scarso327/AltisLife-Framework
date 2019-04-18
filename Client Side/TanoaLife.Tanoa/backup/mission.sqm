@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=9;
+	toggles=137;
 	class ItemIDProvider
 	{
 		nextID=2201;
@@ -743,7 +743,7 @@ class Mission
 			dataType="Marker";
 			position[]={5795.3286,7.9299998,10430.076};
 			name="nhs_clinic_1";
-			text="TAS Clinic";
+			text="NHS Clinic";
 			type="loc_Hospital";
 			colorName="ColorRed";
 			id=57;
@@ -1737,7 +1737,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""TAS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""TAS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
+				init="[this, [""NHS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""NHS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""NHS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
 				name="medic_general_1";
 				disableSimulation=1;
 			};
@@ -2025,7 +2025,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""TAS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
+				init="[this, [""NHS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
 				name="medic_vehicles_1";
 				disableSimulation=1;
 			};
@@ -5355,7 +5355,7 @@ class Mission
 			type="loc_Tree";
 			colorName="ColorYellow";
 			id=403;
-			atlOffset=27.55287;
+			atlOffset=25.139187;
 		};
 		class Item242
 		{
@@ -5406,7 +5406,7 @@ class Mission
 			dataType="Marker";
 			position[]={11710.076,4.6700001,3162.1421};
 			name="nhs_airbase";
-			text="TAS Airbase";
+			text="NHS Airbase";
 			type="loc_Hospital";
 			colorName="ColorRed";
 			id=412;
@@ -5481,6 +5481,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=418;
+			atlOffset=0.21165657;
 		};
 		class Item253
 		{
@@ -5580,7 +5581,7 @@ class Mission
 			type="loc_Tree";
 			colorName="ColorYellow";
 			id=429;
-			atlOffset=27.253265;
+			atlOffset=23.99884;
 		};
 		class Item261
 		{
@@ -6428,7 +6429,6 @@ class Mission
 			type="mil_dot";
 			colorName="ColorCIV";
 			id=514;
-			atlOffset=0.60919905;
 		};
 		class Item333
 		{
@@ -22124,7 +22124,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_2";
-						description="TAS Officer";
+						description="NHS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -22217,7 +22217,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_3";
-						description="TAS Officer";
+						description="NHS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -22310,7 +22310,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_4";
-						description="TAS Officer";
+						description="NHS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -22403,7 +22403,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_5";
-						description="TAS Officer";
+						description="NHS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -22496,7 +22496,7 @@ class Mission
 					class Attributes
 					{
 						name="medic_1";
-						description="TAS Officer";
+						description="NHS Officer";
 						isPlayable=1;
 						class Inventory
 						{
@@ -23670,8 +23670,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -23680,10 +23680,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Custom";
+									value=0;
 								};
 							};
 						};
@@ -23727,8 +23727,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -23737,10 +23737,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Custom";
 								};
 							};
 						};
@@ -26440,7 +26440,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""TPC"", ""General Market""], ""tpc_market"", ""playerSide isEqualTo west""] call FF_fnc_setupMarket; [this, [""TPC"", ""Clothing Store""], ""police_clothing"", ""playerSide isEqualTo west""] call FF_fnc_setupClothing;[this, [""TPC"", ""General Equipment""], ""tpc_general_store"", ""playerSide isEqualTo west""] call FF_fnc_setupShop; [this, [""TPC"", ""SFO Equipment""], ""tpc_sfo"", ""playerSide isEqualTo west && license_cop_sfo""] call FF_fnc_setupShop;";
+				init="[this, [""TPC"", ""General Market""], ""tpc_market"", ""playerSide isEqualTo west""] call FF_fnc_setupMarket; [this, [""TPC"", ""Clothing Store""], ""police_clothing"", ""playerSide isEqualTo west""] call FF_fnc_setupClothing;[this, [""TPC"", ""General Equipment""], ""tpc_general_store"", ""playerSide isEqualTo west""] call FF_fnc_setupShop; [this, [""TPC"", ""SFO Equipment""], ""tpc_sfo"", ""playerSide isEqualTo west && (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)""] call FF_fnc_setupShop;";
 				name="police_general_1";
 				disableSimulation=1;
 			};
@@ -32362,6 +32362,7 @@ class Mission
 				angles[]={0,2.9816995,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Market""], ""general_market"", """"] call FF_fnc_setupMarket;";
@@ -32370,7 +32371,7 @@ class Mission
 			};
 			id=1666;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.25214815;
+			atlOffset=0.1170001;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32587,6 +32588,7 @@ class Mission
 				angles[]={0,0.83772314,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Lumber Trader""], ""lumber_trader"", """"] call FF_fnc_setupMarket;";
@@ -32595,7 +32597,7 @@ class Mission
 			};
 			id=1676;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.6079421;
+			atlOffset=8.9168549e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -34194,7 +34196,7 @@ class Mission
 			a=0.89999998;
 			b=0.89999998;
 			id=512;
-			atlOffset=0.00047302246;
+			atlOffset=0.55976105;
 		};
 		class Item866
 		{
@@ -34207,7 +34209,7 @@ class Mission
 			a=0.89999998;
 			b=0.89999998;
 			id=420;
-			atlOffset=0.57531571;
+			atlOffset=0.00047326088;
 		};
 		class Item867
 		{
@@ -34507,7 +34509,7 @@ class Mission
 			position[]={11784.57,-2.6058862,2646.5601};
 			name="civ_boat_3";
 			type="Empty";
-			angle=359.20096;
+			angle=359.20093;
 			id=1733;
 		};
 		class Item880
@@ -35758,7 +35760,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""TPC"", ""General Market""], ""tpc_market"", ""playerSide isEqualTo west""] call FF_fnc_setupMarket; [this, [""TPC"", ""Clothing Store""], ""police_clothing"", ""playerSide isEqualTo west""] call FF_fnc_setupClothing;[this, [""TPC"", ""General Equipment""], ""tpc_general_store"", ""playerSide isEqualTo west""] call FF_fnc_setupShop; [this, [""TPC"", ""SFO Equipment""], ""tpc_sfo"", ""playerSide isEqualTo west && license_cop_sfo""] call FF_fnc_setupShop;";
+				init="[this, [""TPC"", ""General Market""], ""tpc_market"", ""playerSide isEqualTo west""] call FF_fnc_setupMarket; [this, [""TPC"", ""Clothing Store""], ""police_clothing"", ""playerSide isEqualTo west""] call FF_fnc_setupClothing;[this, [""TPC"", ""General Equipment""], ""tpc_general_store"", ""playerSide isEqualTo west""] call FF_fnc_setupShop; [this, [""TPC"", ""SFO Equipment""], ""tpc_sfo"", ""playerSide isEqualTo west && (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)""] call FF_fnc_setupShop;";
 				name="police_general_2";
 				disableSimulation=1;
 			};
@@ -36907,7 +36909,7 @@ class Mission
 			position[]={9523.9512,2.7263794,13570.986};
 			name="police_ground_2";
 			type="Empty";
-			angle=93.027245;
+			angle=93.027237;
 			id=1820;
 			atlOffset=3.6716461e-005;
 		};
@@ -39023,7 +39025,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""TPC"", ""General Market""], ""tpc_market"", ""playerSide isEqualTo west""] call FF_fnc_setupMarket; [this, [""TPC"", ""Clothing Store""], ""police_clothing"", ""playerSide isEqualTo west""] call FF_fnc_setupClothing;[this, [""TPC"", ""General Equipment""], ""tpc_general_store"", ""playerSide isEqualTo west""] call FF_fnc_setupShop; [this, [""TPC"", ""SFO Equipment""], ""tpc_sfo"", ""playerSide isEqualTo west && license_cop_sfo""] call FF_fnc_setupShop;";
+				init="[this, [""TPC"", ""General Market""], ""tpc_market"", ""playerSide isEqualTo west""] call FF_fnc_setupMarket; [this, [""TPC"", ""Clothing Store""], ""police_clothing"", ""playerSide isEqualTo west""] call FF_fnc_setupClothing;[this, [""TPC"", ""General Equipment""], ""tpc_general_store"", ""playerSide isEqualTo west""] call FF_fnc_setupShop; [this, [""TPC"", ""SFO Equipment""], ""tpc_sfo"", ""playerSide isEqualTo west && (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)""] call FF_fnc_setupShop;";
 				name="police_general_3";
 				disableSimulation=1;
 			};
@@ -40163,7 +40165,7 @@ class Mission
 			position[]={11674.829,9.0315475,2444.5142};
 			name="police_ground_3";
 			type="Empty";
-			angle=175.47603;
+			angle=175.47601;
 			id=2165;
 			atlOffset=0.9150095;
 		};
@@ -40391,6 +40393,7 @@ class Mission
 				angles[]={6.281754,3.2585123,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Fish Market""], ""fish_market"", """"] call FF_fnc_setupMarket;";
@@ -40399,7 +40402,7 @@ class Mission
 			};
 			id=2176;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.45399928;
+			atlOffset=0.14052105;
 			class CustomAttributes
 			{
 				class Attribute0

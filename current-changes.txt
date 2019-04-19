@@ -4,9 +4,10 @@ Added:
         - Cadet Uniform
         - Main Uniform (Insignia changes per rank)
         - High Visibility Uniform
-    Police Car Textures (Scarso)
+    Police Car Textures (Scarso & Lewis Mackinnon)
         - Police Offroad
         - Police SUV
+        - Armed Response Vehicles
     Tool kits to Stores (Scarso)
     Different Thirst Values for Drinks (Scarso)
     Professions (Scarso)
@@ -56,6 +57,7 @@ Updated:
     Faction Spawn Loadouts (Scarso & Lewis Mackinnon)
     Backend File Structure (Scarso)
     All Masked Clothing Items (Lewis Mackinnon)
+    All Faction Paychecks (Lewis Mackinnon)
     
 Removed:
     Welcome Notification Screen (Scarso)
@@ -68,3 +70,4 @@ Removed:
     Hunting Grounds (Scarso & Lewis Mackinnon)
     Public Slots (Scarso)
     House Based Spawning for Civilians (Scarso)
+    Various Run Types (Lewis Mackinnon)

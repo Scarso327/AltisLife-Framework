@@ -4,7 +4,7 @@ private _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 switch (true) do {
-    case (FETCH_CONST(life_medlevel) = 6): {
+    case (FETCH_CONST(life_mediclevel) = 6): {
         player addUniform "U_Rangemaster";
         player addHeadgear "H_Beret_gen_F";
         player addBackpack "B_TacticalPack_blk";

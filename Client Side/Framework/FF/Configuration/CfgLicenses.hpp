@@ -67,6 +67,22 @@ class CfgLicenses {
     };
 
     // Item Processing Sites
+    class fish {
+        variable = "fish";
+        displayName = "Fish Processing";
+        price = 0;
+        illegal = false;
+        side = "civ";
+    };
+
+    class lumber {
+        variable = "lumber";
+        displayName = "Lumber Processing";
+        price = 0;
+        illegal = false;
+        side = "civ";
+    };
+
     class schnapps {
         variable = "schnapps";
         displayName = "Schnapps Processing";

@@ -1099,8 +1099,8 @@ class CfgItems {
         conditions = "";
     };
 
-    class cococut_schnapps {
-        variable = "cococut_schnapps";
+    class coconut_schnapps {
+        variable = "coconut_schnapps";
         displayName = "Coconut Schnapps";
         weight = 0;
         buyPrice = 0;

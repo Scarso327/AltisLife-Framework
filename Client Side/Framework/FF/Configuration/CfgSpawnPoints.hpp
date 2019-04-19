@@ -47,7 +47,7 @@ class CfgSpawnPoints {
 
             class tpc_docks {
                 displayName = "Southern Docks";
-                spawnMarker = "cop_spawn_5";
+                spawnMarker = "cop_spawn_4";
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_ship.paa";
                 conditions = "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3";
             };

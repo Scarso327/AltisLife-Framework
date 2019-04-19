@@ -10,10 +10,15 @@ Added:
     Different Thirst Values for Drinks (Scarso)
     Professions (Scarso)
         - Gathering
+    Added 4 Police Station (Lewis Mackinnon)
+    Added Gang Hideout Stores (Lewis Mackinnon)
     Leveling System (Scarso)
         - Perks Included!
     License Shop UI (Scarso)
         - Easier purchasing of licenses
+    All Item Icons (Lewis Mackinnon)
+    Added Yellow Police Uniform (Lewis Mackinnon)
+    Added Police Helipads (Lewis Mackinnon)
 
 Changed:
     All Physical Stores (Lewis Mackinnon)
@@ -39,16 +44,18 @@ Changed:
     Weapon used as a taser (Lewis Mackinnon)
     Locations for Sending to Prison (Lewis Mackinnon)
     Distance for Sending to Prison (Lewis Mackinnon)
+    National Health Service > Tanoa Ambulance Service (Lewis Mackinnon)
+    Police Vehicle Siren Lights (Lewis Mackinnon)
     
 Updated:
     Overall Map Design (Lewis Mackinnon)
     Player Menu Design (Scarso)
     Player HUD (Scarso)
     Player Name Tags (Scarso)
-    Police Clothing Store Uniforms (Scarso)
-    Police Clothing Store Hats (Scarso)
-    Police Clothing Store Vests (Scarso)
-    Police Spawn Loadouts (Lewis Mackinnon)
+    Faction Clothing Store Uniforms (Lewis Mackinnon)
+    Faction Clothing Store Hats (Lewis Mackinnon)
+    Faction Clothing Store Vests (Lewis Mackinnon)
+    Faction Spawn Loadouts (Lewis Mackinnon)
     Backend File Structure (Scarso)
     All Masked Clothing Items (Lewis Mackinnon)
     

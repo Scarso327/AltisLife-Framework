@@ -17,7 +17,7 @@ class CfgItems {
             edible[] = {true, "Thirst"};
             value = 60;
         };
-        icon = "";
+        icon = "ico_waterBottle.paa";
         conditions = "";
     };
 
@@ -39,7 +39,7 @@ class CfgItems {
             edible[] = {true, "Thirst"};
             value = 50;
         };
-        icon = "";
+        icon = "ico_sodaBottle.paa";
         conditions = "";
     };
 
@@ -61,7 +61,7 @@ class CfgItems {
             edible[] = {true, "Thirst"};
             value = 20;
         };
-        icon = "";
+        icon = "ico_redgull.paa";
         conditions = "";
     };
 
@@ -83,7 +83,7 @@ class CfgItems {
             edible[] = {true, "Both"};
             value = 10;
         };
-        icon = "";
+        icon = "ico_apple.paa";
         conditions = "";
     };
 
@@ -105,7 +105,7 @@ class CfgItems {
             edible[] = {true, "Both"};
             value = 10;
         };
-        icon = "";
+        icon = "ico_mango.paa";
         conditions = "";
     };
 
@@ -171,7 +171,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 40;
         };
-        icon = "";
+        icon = "ico_croissant.paa";
         conditions = "";
     };
 
@@ -193,7 +193,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 20;
         };
-        icon = "";
+        icon = "ico_crepe.paa";
         conditions = "";
     };
 
@@ -215,7 +215,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 50;
         };
-        icon = "";
+        icon = "ico_energyBar";
         conditions = "";
     };
 
@@ -237,7 +237,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_lockpick.paa";
         conditions = "";
     };
 
@@ -259,7 +259,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_pickaxe.paa";
         conditions = "";
     };
 
@@ -281,7 +281,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_fuel.paa";
         conditions = "";
     };
 
@@ -303,7 +303,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_fuelempty.paa";
         conditions = "";
     };
 
@@ -347,7 +347,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_smallContainer.paa";
         conditions = "";
     };
 
@@ -369,7 +369,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_largeContainer.paa";
         conditions = "";
     };
 
@@ -479,7 +479,7 @@ class CfgItems {
             edible[] = {true, "Thirst"};
             value = 60;
         };
-        icon = "";
+        icon = "ico_coffee.paa";
         conditions = "";
     };
 
@@ -765,7 +765,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_muttonLegRaw.paa";
         conditions = "";
     };
 
@@ -787,7 +787,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_rabbitRaw.paa";
         conditions = "";
     };
 
@@ -809,7 +809,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_salemaRaw.paa";
         conditions = "";
     };
 
@@ -831,7 +831,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 40;
         };
-        icon = "";
+        icon = "ico_cookedFish.paa";
         conditions = "";
     };
 
@@ -853,7 +853,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_ornateRaw.paa";
         conditions = "";
     };
 
@@ -875,7 +875,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 40;
         };
-        icon = "";
+        icon = "ico_cookedFish.paa";
         conditions = "";
     };
 
@@ -897,7 +897,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_mackerelRaw.paa";
         conditions = "";
     };
 
@@ -919,7 +919,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 40;
         };
-        icon = "";
+        icon = "ico_cookedFish.paa";
         conditions = "";
     };
 
@@ -941,7 +941,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_tunaRaw.paa";
         conditions = "";
     };
 
@@ -963,7 +963,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 40;
         };
-        icon = "";
+        icon = "ico_cookedFish.paa";
         conditions = "";
     };
 
@@ -985,7 +985,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_mulletRaw.paa";
         conditions = "";
     };
 
@@ -1007,7 +1007,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 40;
         };
-        icon = "";
+        icon = "ico_cookedFish.paa";
         conditions = "";
     };
 
@@ -1029,7 +1029,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_catsharkRaw.paa";
         conditions = "";
     };
 
@@ -1051,7 +1051,7 @@ class CfgItems {
             edible[] = {true, "Hunger"};
             value = 40;
         };
-        icon = "";
+        icon = "ico_cookedFish.paa";
         conditions = "";
     };
 
@@ -1341,6 +1341,28 @@ class CfgItems {
         conditions = "";
     };
 
+    class ziptie {
+        variable = "ziptie";
+        displayName = "Ziptie";
+        weight = 0;
+        buyPrice = 0;
+        sellPrice = 0;
+        illegal = true;
+        save = true;
+        taxed = false;
+        marketDisplay = false;
+        class dynmarket {
+            dynmaic = false;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "ico_ziptie.paa";
+        conditions = "";
+    };
+
     class blindfold {
         variable = "blindfold";
         displayName = "Blindfold";
@@ -1447,7 +1469,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_boltCutter.paa";
         conditions = "";
     };
 
@@ -1469,7 +1491,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_blastingCharge.paa";
         conditions = "";
     };
 
@@ -1491,7 +1513,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_goldbar.paa";
         conditions = "";
     };
 
@@ -1513,7 +1535,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_goldbar.paa";
         conditions = "";
     };
 
@@ -1623,7 +1645,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_coal.paa";
         conditions = "";
     };
 
@@ -1667,7 +1689,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_timOre.paa";
         conditions = "";
     };
 
@@ -1689,7 +1711,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_timBar.paa";
         conditions = "";
     };
 
@@ -1711,7 +1733,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_copper.paa";
         conditions = "";
     };
 
@@ -1733,7 +1755,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_copperore.paa";
         conditions = "";
     };
 
@@ -1799,7 +1821,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_ironore.paa";
         conditions = "";
     };
 
@@ -1821,7 +1843,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_iron.paa";
         conditions = "";
     };
 
@@ -1887,7 +1909,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_rock.paa";
         conditions = "";
     };
 
@@ -1909,7 +1931,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_cement.paa";
         conditions = "";
     };
 
@@ -1931,7 +1953,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_oilUnprocessed.paa";
         conditions = "";
     };
 
@@ -1953,7 +1975,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_oilProcessed.paa";
         conditions = "";
     };
 
@@ -2195,7 +2217,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_diamondUncut.paa";
         conditions = "";
     };
 
@@ -2217,7 +2239,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_diamondCut.paa";
         conditions = "";
     };
 
@@ -2239,7 +2261,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_cannabis.paa";
         conditions = "";
     };
 
@@ -2261,7 +2283,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_marijuana.paa";
         conditions = "";
     };
 
@@ -2305,7 +2327,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_heroinUnprocessed.paa";
         conditions = "";
     };
 
@@ -2327,7 +2349,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_heroinProcessed.paa";
         conditions = "";
     };
 
@@ -2371,7 +2393,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_cocaineUnprocessed.paa";
         conditions = "";
     };
 
@@ -2393,7 +2415,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_cocaineProcessed.paa";
         conditions = "";
     };
 
@@ -2503,7 +2525,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_turtleRaw.paa";
         conditions = "";
     };
 
@@ -2525,7 +2547,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_turtleSoup.paa";
         conditions = "";
     };
 
@@ -2635,7 +2657,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_spikestrip.paa";
         conditions = "";
     };
 
@@ -2701,7 +2723,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "";
+        icon = "ico_defibrillator.paa";
         conditions = "";
     };
 };

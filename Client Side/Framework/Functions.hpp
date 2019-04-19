@@ -75,6 +75,12 @@ class FF_Core {
         class LicenseLBChanged {};
     };
 
+    class GUI_PRO_FUNCTIONS {
+        file = "FF\GUI\Processing\Functions";
+        class openProcessing {};
+        class ProcessingLBChanged {};
+    };
+
     class GUI_HUD_Functions {
         file = "FF\GUI\HUD\Functions";
         class hudUpdate {};

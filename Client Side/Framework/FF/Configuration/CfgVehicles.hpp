@@ -112,17 +112,6 @@ class CfgVehicleStores {
         };
     };
 
-    class tpc_arv_dealership {
-        side = "cop";
-        conditions = "playerSide isEqualTo west && (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)";
-        vehicles[] = {
-            { "C_SUV_01_F", "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
-            { "C_Offroad_01_F", "license_cop_sfo2 || license_cop_sfo3" },
-            { "C_Hatchback_01_sport_F", "license_cop_sfo3" },
-            { "C_Van_02_transport_F", "license_cop_sfo3" }
-        };
-    };
-
     class tpc_aso_dealership {
         side = "cop";
         conditions = "playerSide isEqualTo west && (license_cop_aso1 || license_cop_aso2 || license_cop_aso3)";

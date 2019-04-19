@@ -13,12 +13,12 @@ _reviveCost = LIFE_SETTINGS(getNumber,"revive_fee");
 
 _revivable = _target getVariable ["Revive",false];
 if (_revivable) exitWith {};
-if (_target getVariable ["Reviving",objNull] == player) exitWith {hint localize "STR_Medic_AlreadyReviving";};
+if (_target getVariable ["Reviving",objNull] == player) exitWith {hint "Someone else is already reviving this person.";};
 if (player distance _target > 5) exitWith {}; //Not close enough.
 
 //Fetch their name so we can shout it.
 _targetName = _target getVariable ["name","Unknown"];
-_title = format [localize "STR_Medic_Progress",_targetName];
+_title = format ["Assisting %1",_targetName];
 life_action_inUse = true; //Lockout the controls.
 
 _target setVariable ["Reviving",player,true];
@@ -57,13 +57,13 @@ for "_i" from 0 to 1 step 0 do {
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 
-if (_target getVariable ["Reviving",objNull] != player) exitWith {hint localize "STR_Medic_AlreadyReviving"; life_action_inUse = false;};
+if (_target getVariable ["Reviving",objNull] != player) exitWith {hint "Someone else is already reviving this person."; life_action_inUse = false;};
 _target setVariable ["Reviving",NIL,true];
 
 if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;};
-if (_target getVariable ["Revive",false]) exitWith {hint localize "STR_Medic_RevivedRespawned"; life_action_inUse = false;};
+if (_target getVariable ["Revive",false]) exitWith {hint "This person either bled out or was already revived."; life_action_inUse = false;};
 if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
-if (!isNil "_badDistance") exitWith {titleText[localize "STR_Medic_TooFar","PLAIN"]; life_action_inUse = false;};
+if (!isNil "_badDistance") exitWith {titleText["You got to far away from the body.","PLAIN"]; life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
 
 life_action_inUse = false;
@@ -71,7 +71,7 @@ _target setVariable ["Revive",true,true];
 [profileName] remoteExecCall ["life_fnc_revived",_target];
 
 if (playerSide isEqualTo independent) then {
-    titleText[format [localize "STR_Medic_RevivePayReceive",_targetName,[_reviveCost] call life_fnc_numberText],"PLAIN"];
+    titleText[format ["You have revived %1 and received $%2 for your services.",_targetName,[_reviveCost] call life_fnc_numberText],"PLAIN"];
     BANK = BANK + _reviveCost;
     [1] call SOCK_fnc_updatePartial;
 };

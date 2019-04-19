@@ -88,7 +88,7 @@ if (_newItemWeight > _oldItemWeight) then {
     };
 };
 
-if (_exit) exitWith {hint localize "STR_Process_Weight"; life_is_processing = false; life_action_inUse = false;};
+if (_exit) exitWith {hint "You have no inventory space to process your materials."; life_is_processing = false; life_action_inUse = false;};
 
 //Setup our progress bar.
 disableSerialization;
@@ -111,7 +111,7 @@ if (_hasLicense) then {
         if (_cP >= 1) exitWith {};
         if (player distance _vendor > 10) exitWith {};
     };
-    if (player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (player distance _vendor > 10) exitWith {hint "You need to stay within 10m to process."; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     {
         [false,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
@@ -122,12 +122,12 @@ if (_hasLicense) then {
     } count _newItem;
 
     "progressBar" cutText ["","PLAIN"];
-    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
+    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint "Only part of your materials could be processed due to reaching your maximum weight.";};
     life_is_processing = false; life_action_inUse = false;
 
     [(2 * _minimumConversions), "Processing"] spawn FF_fnc_handleXP; // 2 XP * Processed Items
 } else {
-    if (CASH < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (CASH < _cost) exitWith {hint format ["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     for "_i" from 0 to 1 step 0 do {
         uiSleep  0.9;
@@ -138,8 +138,8 @@ if (_hasLicense) then {
         if (player distance _vendor > 10) exitWith {};
     };
 
-    if (player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
-    if (CASH < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (player distance _vendor > 10) exitWith {hint "You need to stay within 10m to process."; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (CASH < _cost) exitWith {hint format ["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     {
         [false,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;
@@ -150,7 +150,7 @@ if (_hasLicense) then {
     } count _newItem;
 
     "progressBar" cutText ["","PLAIN"];
-    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
+    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint "Only part of your materials could be processed due to reaching your maximum weight.";};
     CASH = CASH - _cost;
     [0] call SOCK_fnc_updatePartial;
     life_is_processing = false;

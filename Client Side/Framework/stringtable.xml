@@ -1341,55 +1341,6 @@
         <Key ID="STR_ISTR_NotUsable">
             <Original>This item isn't usable.</Original>
         </Key>
-    </Package>
-        <Key ID="STR_Process_Stay">
-            <Original>You need to stay within 10m to process.</Original>
-        </Key>
-        <Key ID="STR_Process_Weight">
-            <Original>You have no inventory space to process your materials.</Original>
-        </Key>
-        <Key ID="STR_Process_Partial">
-            <Original>Only part of your materials could be processed due to reaching your maximum weight.</Original>
-        </Key>
-        <Key ID="STR_Process_License">
-            <Original>You need $%1 to process without a license!</Original>
-        </Key>
-        <Key ID="STR_Process_Processed">
-            <Original>You have processed %1 into %2</Original>
-        </Key>
-        <Key ID="STR_Process_Processed2">
-            <Original>You have processed %1 into %2 for $%3</Original>
-        </Key>
-    </Package>
-    <Package name="Medical_Strings">
-        <Key ID="STR_Medic_Request">
-            <Original>%1 is requesting EMS Revive.</Original>
-        </Key>
-        <Key ID="STR_Medic_Respawn">
-            <Original>Respawn Available in: %1</Original>
-        </Key>
-        <Key ID="STR_Medic_Respawn_2">
-            <Original>You can now respawn</Original>
-        </Key>
-        <Key ID="STR_Medic_RevivePay">
-            <Original>%1 has revived you and a fee of $%2 was taken from your bank account for their services.</Original>
-        </Key>
-        <Key ID="STR_Medic_AlreadyReviving">
-            <Original>Someone else is already reviving this person</Original>
-        </Key>
-        <Key ID="STR_Medic_Progress">
-            <Original>Reviving %1</Original>
-        </Key>
-        <Key ID="STR_Medic_RevivedRespawned">
-            <Original>This person either respawned or was already revived.</Original>
-        </Key>
-        <Key ID="STR_Medic_RevivePayReceive">
-            <Original>You have revived %1 and received $%2 for your services.</Original>
-        </Key>
-        <Key ID="STR_Medic_TooFar">
-            <Original>You got to far away from the body.</Original>
-        </Key>
-    </Package>
     <Package name="Federal_Reserve">
         <Key ID="STR_NOTF_FRRobbery_fail">
             <Original>The robbery has failed due to unknown reasons</Original>

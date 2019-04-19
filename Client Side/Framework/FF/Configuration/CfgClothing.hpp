@@ -360,42 +360,59 @@ class CfgClothing {
         uniforms[] = {
             { "NONE", "Remove Uniform", 0, "" },
             { "U_Rangemaster", "Police Uniform (Blue)", 0, "call life_coplevel >= 1" },
-            { "U_Competitor", "Police Uniform (Black)", 0, "call life_coplevel >= 2" }
+            { "U_Competitor", "Police Uniform (Black)", 0, "call life_coplevel >= 2" },
+            { "U_B_Wetsuit", "SFO Diving Suit", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
         headgear[] = {
             { "NONE", "Remove Headgear", 0, "" },
+            { "H_Bandanna_gry", "Black Bandana", 0, "call life_coplevel >= 1" },
+            { "H_Watchcap_blk", "Black Beanie", 0, "call life_coplevel >= 1" },
+            { "H_Cap_blk", "Black Cap", 0, "call life_coplevel >= 1" },
             { "H_Cap_police", "Police Cap", 0, "call life_coplevel >= 1" },
             { "H_Beret_blk", "Standard Beret", 0, "call life_coplevel >= 2" },
-            { "H_Beret_02", "Command Beret", 0, "call life_coplevel >= 9" },
+            { "H_Beret_Colonel", "Junior Command Beret", 0, "call life_coplevel >= 5" },
+            { "H_Beret_02", "Senior Command Beret", 0, "call life_coplevel >= 9" },
             { "H_Beret_gen_F", "Commander Beret", 0, "call life_coplevel >= 11" },
-            { "H_HelmetSpecB_blk", "SFO Operational Helmet", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
-            { "H_PilotHelmetHeli_B", "ASO Operational Helmet", 0, "license_cop_aso1 || license_cop_aso2 || license_cop_aso3" },
+            { "H_HelmetSpecB_blk", "SFO Helmet", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "H_PilotHelmetHeli_B", "ASO Helmet", 0, "license_cop_aso1 || license_cop_aso2 || license_cop_aso3" }
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, "" },
             { "G_Aviator", "", 0, "" },
-            { "G_Shades_Black", "", 0, "" },
-            { "G_Shades_Blue", "", 0, "" },
-            { "G_Shades_Green", "", 0, "" },
-            { "G_Shades_Red", "", 0, "" },
-            { "G_Spectacles", "", 0, "" },
-            { "G_Sport_Red", "", 0, "" },
-            { "G_Sport_Blackyellow", "", 0, "" },
-            { "G_Sport_BlackWhite", "", 0, "" },
-            { "G_Sport_Checkered", "", 0, "" },
-            { "G_Sport_Blackred", "", 0, "" },
-            { "G_Sport_Greenblack", "", 0, "" },
-            { "G_Squares_Tinted", "", 0, "" },
-            { "G_Squares", "", 0, "" },
-            { "G_Spectacles_Tinted", "", 0, "" },
-            { "H_WirelessEarpiece_F", "", 0, "" },
-            { "G_Balaclava_TI_G_blk_F", "SFO Operational Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
-            { "G_Balaclava_TI_G_blk_F", "ASO Operational Face Mask", 0, "license_cop_aso1 || license_cop_aso2 || license_cop_aso3" }
+            { "G_Shades_Black", "", 0, "call life_coplevel >= 1" },
+            { "G_Shades_Blue", "", 0, "call life_coplevel >= 1" },
+            { "G_Shades_Green", "", 0, "call life_coplevel >= 1" },
+            { "G_Shades_Red", "", 0, "call life_coplevel >= 1" },
+            { "G_Spectacles", "", 0, "call life_coplevel >= 1" },
+            { "G_Sport_Red", "", 0, "call life_coplevel >= 1" },
+            { "G_Sport_Blackyellow", "", 0, "call life_coplevel >= 1" },
+            { "G_Sport_BlackWhite", "", 0, "call life_coplevel >= 1" },
+            { "G_Sport_Checkered", "", 0, "call life_coplevel >= 1" },
+            { "G_Sport_Blackred", "", 0, "call life_coplevel >= 1" },
+            { "G_Sport_Greenblack", "", 0, "call life_coplevel >= 1" },
+            { "G_Squares_Tinted", "", 0, "call life_coplevel >= 1" },
+            { "G_Squares", "", 0, "call life_coplevel >= 1" },
+            { "G_Spectacles_Tinted", "", 0, "call life_coplevel >= 1" },
+            { "H_WirelessEarpiece_F", "", 0, "call life_coplevel >= 1" },
+            { "G_Diving", "SFO Diving Goggles", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "G_Bandanna_aviator", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "H_BandMask_beast", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "H_BandMask_blk", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "G_Bandanna_shades", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "G_Bandanna_sport", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "G_Balaclava_blk", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "G_Balaclava_combat", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "G_Balaclava_lowprofile", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
+            { "G_Balaclava_TI_G_blk_F", "SFO Face Mask", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
         vests[] = {
             { "NONE", "Remove Vest", 0, "" },
+            { "V_Rangemaster_belt", "Police Ammo Belt", 0, "call life_coplevel >= 1" },
+            { "V_BandollierB_blk", "Police Slash", 0, "call life_coplevel >= 1" },
+            { "V_TacVest_blk_POLICE", "Police Light Vest", 0, "call life_coplevel >= 1" },
             { "V_PlateCarrier1_blk", "Police Patrol Vest", 0, "call life_coplevel >= 1" },
-            { "V_PlateCarrier2_blk", "Police Operation Vest", 0, "call life_coplevel >= 2" }
+            { "V_PlateCarrier2_blk", "Police Operation Vest", 0, "call life_coplevel >= 2" },
+            { "V_RebreatherB", "SFO Rebreather", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
         backpacks[] = {
             { "NONE", "Remove Backpacks", 0, "" },

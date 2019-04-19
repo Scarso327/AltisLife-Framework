@@ -30,7 +30,7 @@ private _colour = switch true do {
 	case (_title select 0 isEqualTo "TPC"): {"#9fc5e8"};
 	case (_title select 0 isEqualTo "CIV"): {"#b4a7d6"};
 	case (_title select 0 isEqualTo "TAS"): {"#b6d7a8"};
-	default {"#9000ff"};
+	default {"#ffe599"};
 };
 
 _object addAction[

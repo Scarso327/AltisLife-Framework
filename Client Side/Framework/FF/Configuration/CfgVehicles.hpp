@@ -134,7 +134,7 @@ class CfgVehicleStores {
         };
     };
 
-    class nhs_general_dealership {
+    class tas_general_dealership {
         side = "med";
         conditions = "playerSide isEqualTo independent";
         vehicles[] = {
@@ -150,14 +150,6 @@ class CfgVehicleStores {
         vehicles[] = {
             { "I_Heli_light_03_unarmed_F", "" },
             { "O_Heli_Light_02_unarmed_F", "" }
-        };
-    };
-
-    class nhs_mru_dealership {
-        side = "med";
-        conditions = "playerSide isEqualTo independent && license_med_mru";
-        vehicles[] = {
-            { "B_G_Boat_Transport_02_F", "" }
         };
     };
 };

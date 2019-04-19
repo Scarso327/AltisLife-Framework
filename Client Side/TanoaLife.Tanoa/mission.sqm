@@ -753,9 +753,9 @@ class Mission
 		class Item25
 		{
 			dataType="Marker";
-			position[]={5795.3286,7.9299998,10430.076};
-			name="nhs_clinic_1";
-			text="NHS Clinic";
+			position[]={5795.3291,7.9299998,10430.076};
+			name="georgetown_clinic_1";
+			text="Georgetown Clinic";
 			type="loc_Hospital";
 			colorName="ColorRed";
 			id=57;
@@ -1749,7 +1749,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""NHS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""NHS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""NHS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
+				init="[this, [""TAS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""TAS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
 				name="medic_general_1";
 				disableSimulation=1;
 			};
@@ -2037,7 +2037,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""NHS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
+				init="[this, [""TAS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
 				name="medic_vehicles_1";
 				disableSimulation=1;
 			};
@@ -5415,12 +5415,13 @@ class Mission
 		class Item246
 		{
 			dataType="Marker";
-			position[]={11735.211,4.7452531,2996.4648};
-			name="nhs_airbase";
-			text="NHS Airbase";
+			position[]={11735.211,4.7449999,2996.4651};
+			name="taa_airbase";
+			text="TAA Airbase";
 			type="loc_Hospital";
 			colorName="ColorRed";
 			id=412;
+			atlOffset=0.054999828;
 		};
 		class Item247
 		{
@@ -42025,7 +42026,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""NHS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""NHS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""NHS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
+				init="[this, [""TAS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""TAS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
 				name="medic_general_2";
 				disableSimulation=1;
 			};
@@ -42061,14 +42062,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11728.969,5.3173246,3003.168};
+				position[]={11728.969,5.3173246,3003.1675};
 				angles[]={6.2824869,4.6934347,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""NHS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_2"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
+				init="[this, [""TAS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_2"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
 				name="medic_vehicles_2";
 				disableSimulation=1;
 			};
@@ -42169,7 +42170,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""NHS"", ""Air Vehicle Store""], [""nhs_taa_dealership"",independent,""medic_air_1"",""med"",""Air Vehicle Store""], ""playerSide isEqualTo west && license_med_taa""] call FF_fnc_setupVehicle;";
+				init="[this, [""TAS"", ""Air Vehicle Store""], [""nhs_taa_dealership"",independent,""medic_air_1"",""med"",""Air Vehicle Store""], ""playerSide isEqualTo west && license_med_taa""] call FF_fnc_setupVehicle;";
 				name="medic_air_vehicle_1";
 				disableSimulation=1;
 			};

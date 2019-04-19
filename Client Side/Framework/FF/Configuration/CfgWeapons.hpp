@@ -180,8 +180,8 @@ class CfgWeapons {
         };
     };
 
-    class nhs_general_store {
-        name = "NHS - General Store";
+    class tas_general_store {
+        name = "TAS - General Store";
         conditions = "playerSide isEqualTo independent";
         items[] = {
             { "ItemMap", "Map of Altis", 0, -1, "" },

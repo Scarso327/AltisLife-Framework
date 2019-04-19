@@ -61,7 +61,7 @@ class CfgSpawnPoints {
                 conditions = "";
             };
 
-            class nhs_airbase {
+            class taa_airbase {
                 displayName = "Southen Airbase";
                 spawnMarker = "medic_spawn_1";
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";

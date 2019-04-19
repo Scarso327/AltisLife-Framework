@@ -149,7 +149,7 @@ class CfgShops {
         items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "jaws_of_life", "breathalyzer", "stinger", "gps_tracker", "road_barrier", "road_cone" };
     };
 
-    class nhs_market {
+    class tas_market {
         name = "TAS Market";
         conditions = "playerSide isEqualTo indpendent";
         items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "empty_fuel_can", "jaws_of_life", "breathalyzer", "blood_bag", "stretcher", "defibrillator", "road_barrier", "road_cone" };

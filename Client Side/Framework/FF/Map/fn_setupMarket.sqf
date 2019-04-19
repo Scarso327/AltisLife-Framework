@@ -36,7 +36,7 @@ private _colour = switch true do {
 
 _object addAction[
 	format[
-		"<t color='#9000ff'>[%2]</t> %1", 
+		"<t color='%3'>[%2]</t> %1", 
 		_title select 1, 
 		_title select 0,
 		_colour

@@ -1,6 +1,6 @@
 class CfgLevels {
 
-    maxLevel = 5;
+    maxLevel = 30;
     maxLevelLoopReward = 100000;
 
     class level_1 {

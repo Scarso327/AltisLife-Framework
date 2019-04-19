@@ -32,7 +32,7 @@ if (isClass (missionConfigFile >> "CfgProcess" >> _type)) then {
 
 if (_filter) exitWith {life_action_inUse = false;};
 
-_itemInfo = [_materialsRequired, _materialsGiven, _noLicenseCost, (localize format ["%1",_text]), _requiredLicense];
+_itemInfo = [_materialsRequired, _materialsGiven, _noLicenseCost, _text, _requiredLicense];
 if (count _itemInfo isEqualTo 0) exitWith {life_action_inUse = false;};
 
 //Setup vars.

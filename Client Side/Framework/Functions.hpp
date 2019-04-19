@@ -97,6 +97,7 @@ class FF_Core {
         class setupShop {};
         class setupVehicle {};
         class setupClothing {};
+        class setupGarage {};
     };
 };
 

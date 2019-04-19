@@ -2617,8 +2617,8 @@ class CfgItems {
         conditions = "";
     };
 
-    class stinger {
-        variable = "stinger";
+    class spikeStrip {
+        variable = "spikeStrip";
         displayName = "Stinger";
         weight = 0;
         buyPrice = 0;

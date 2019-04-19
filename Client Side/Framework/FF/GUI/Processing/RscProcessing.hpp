@@ -107,7 +107,7 @@ class RscProcessing {
 			w = safeZoneW * 0.0721875;
 			h = safeZoneH * 0.022;
 			text = "PROCESS";
-			onButtonClick = "[] call life_fnc_processAction";
+			onButtonClick = "[] spawn life_fnc_processAction";
 			borderSize = 0;
 			colorBackground[] = {0.09,0.09,0.09,1};
 			colorText[] = {1,1,1,1};

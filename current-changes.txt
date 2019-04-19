@@ -16,6 +16,7 @@ Added:
     License Shop UI (Scarso)
         - Easier purchasing of licenses
     Custom Item Icons (Lewis Mackinnon)
+    Authomatic Medic Request (Lewis Mackinnon)
 
 Changed:
     All Physical Stores (Lewis Mackinnon)

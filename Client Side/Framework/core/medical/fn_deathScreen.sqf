@@ -8,6 +8,7 @@
 */
 private ["_medicsOnline","_medicsNear"];
 disableSerialization;
+[] call life_fnc_requestMedic;
 
 _medicsOnline = ((findDisplay 7300) displayCtrl 7304);
 _medicsNear = ((findDisplay 7300) displayCtrl 7305);

@@ -13,7 +13,7 @@ params [
 ];
 
 if (isNil "_vehicle" || {isNull _vehicle || {!(_vehicle getVariable "lights")}}) exitWith {};
-private _lightRed = [20, 0.1, 0.1];
+private _lightRed = [0.1, 0.1, 20];
 private _lightBlue = [0.1, 0.1, 20];
 
 private _lightLeft = "#lightpoint" createVehicleLocal getPos _vehicle;

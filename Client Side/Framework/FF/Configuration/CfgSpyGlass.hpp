@@ -354,7 +354,7 @@ class CfgSpyGlass {
         {"life_inv_copper_ore", "SCALAR"},
         {"life_inv_cocaine", "SCALAR"},
         {"life_inv_cooked_catshark", "SCALAR"},
-        {"life_inv_cococut_schnapps", "SCALAR"},
+        {"life_inv_coconut_schnapps", "SCALAR"},
         {"life_inv_ear_clots", "SCALAR"},
         {"life_inv_mango", "SCALAR"},
         {"life_inv_tea_cake", "SCALAR"},

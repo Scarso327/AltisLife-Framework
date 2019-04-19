@@ -38,7 +38,7 @@ class CfgShops {
     class local_pub {
         name = "Local Pub";
         conditions = "";
-        items[] = { "Apple Schnapps", "mango_schnapps", "cococut_schnapps", "cider", "beer", "whisky", "wine" };
+        items[] = { "Apple Schnapps", "mango_schnapps", "coconut_schnapps", "cider", "beer", "whisky", "wine" };
     };
 
     class casino_cashier {

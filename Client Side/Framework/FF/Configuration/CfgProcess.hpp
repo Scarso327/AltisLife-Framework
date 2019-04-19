@@ -13,9 +13,9 @@ class CfgProcess {
         NoLicenseCost = 0;
     };
 
-    class cococut {
-        MaterialsReq[] = {{"cococut",1}};
-        MaterialsGive[] = {{"cococut_schnapps",1}};
+    class coconut {
+        MaterialsReq[] = {{"coconut",1}};
+        MaterialsGive[] = {{"coconut_schnapps",1}};
         Text = "Processing Schnapps...";
         NoLicenseCost = 0;
     };
@@ -73,6 +73,13 @@ class CfgProcess {
         MaterialsReq[] = {{"raw_turtle",1}};
         MaterialsGive[] = {{"cooked_turtle",1}};
         Text = "Cooking Turtle...";
+        NoLicenseCost = 0;
+    };
+
+    class lumber {
+        MaterialsReq[] = {{"wood",1}};
+        MaterialsGive[] = {{"lumber",1}};
+        Text = "Processing Wood...";
         NoLicenseCost = 0;
     };
 

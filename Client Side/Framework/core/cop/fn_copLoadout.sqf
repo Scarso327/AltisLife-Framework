@@ -17,6 +17,9 @@ switch (true) do {
         player linkItem "ItemWatch";
         player linkItem "Binocular";
 
+        player addItem "FirstAidKit";
+        player addItem "FirstAidKit";
+        player addItem "FirstAidKit";
         player addItem "ToolKit";
     }; 
 
@@ -33,6 +36,9 @@ switch (true) do {
         player linkItem "ItemWatch";
         player linkItem "Binocular";
 
+        player addItem "FirstAidKit";
+        player addItem "FirstAidKit";
+        player addItem "FirstAidKit";
         player addItem "ToolKit";
     }; 
 
@@ -49,6 +55,9 @@ switch (true) do {
         player linkItem "ItemWatch";
         player linkItem "Binocular";
 
+        player addItem "FirstAidKit";
+        player addItem "FirstAidKit";
+        player addItem "FirstAidKit";
         player addItem "ToolKit";
     }; 
 };

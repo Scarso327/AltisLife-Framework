@@ -10,13 +10,13 @@
 */
 private ["_vendor","_type","_itemInfo","_oldItem","_newItemWeight","_newItem","_oldItemWeight","_cost","_upp","_hasLicense","_itemName","_oldVal","_ui","_progress","_pgText","_requiredLicense","_cP","_materialsRequired","_materialsGiven","_noLicenseCost","_text","_filter","_totalConversions","_minimumConversions"];
 
-if (isNull FF_ProcessingVendor) exitWith{};
+if (isNull FF_ProcessingVendor) exitWith{systemChat "Vendor?"};
 
 _vendor = FF_ProcessingVendor;
-_type = CONTROL_DATA(4001);
+_type = CONTROL_DATA(5001);
 
 //Error check
-if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10)) exitWith {};
+if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10)) exitWith {systemChat str [_vendor, _type, player distance _vendor]};
 life_action_inUse = true;//Lock out other actions during processing.
 closeDialog 0;
 FF_ProcessingVendor = objNull;

@@ -44,7 +44,7 @@ class RscProcessing {
 
         class PageTitle : Life_RscText {
             idc = -1;
-            text = "License Shop";
+            text = "Processing Menu";
             x = 0.407188 * safezoneW + safezoneX;
             y = 0.247 * safezoneH + safezoneY;
             w = 0.12375 * safezoneW;
@@ -88,12 +88,12 @@ class RscProcessing {
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			rowHeight = 0.1;
 			soundSelect[] = {"\A3\ui_f\data\sound\RscListbox\soundSelect",0.09,1.0};
-            onLBSelChanged = "";
+            onLBSelChanged = "_this call FF_fnc_ProcessingLBChanged";
         };
 
         class PriceText : Life_RscStructuredText {
             idc = 5002;
-            text = "Select a license above...";
+            text = "Select an item above...";
             x = 0.412343 * safezoneW + safezoneX;
             y = 0.687 * safezoneH + safezoneY;
             w = 0.175313 * safezoneW;
@@ -107,7 +107,7 @@ class RscProcessing {
 			w = safeZoneW * 0.0721875;
 			h = safeZoneH * 0.022;
 			text = "PROCESS";
-			onButtonClick = "";
+			onButtonClick = "[] call life_fnc_processAction";
 			borderSize = 0;
 			colorBackground[] = {0.09,0.09,0.09,1};
 			colorText[] = {1,1,1,1};

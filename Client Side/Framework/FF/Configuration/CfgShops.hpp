@@ -152,7 +152,7 @@ class CfgShops {
     class tpc_market {
         name = "TPC Market";
         conditions = "playerSide isEqualTo west";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "jaws_of_life", "breathalyzer", "stinger", "gps_tracker", "road_barrier", "road_cone" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "jaws_of_life", "breathalyzer", "spikeStrip", "gps_tracker", "road_barrier", "road_cone" };
     };
 
     class tas_market {

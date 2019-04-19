@@ -31,4 +31,11 @@ class CfgTextures {
         };
         invisBackpack[] = {3, ""};
     };
+    class U_B_CTRG_1 {
+        texture[] = {
+            0,
+            "Police\Uniforms\Yellow.paa"
+        };
+        invisBackpack[] = {3, ""};
+    };
 };

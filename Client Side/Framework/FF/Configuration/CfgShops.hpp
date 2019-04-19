@@ -2,7 +2,7 @@ class CfgShops {
     class general_market {
         name = "General Market";
         conditions = "";
-        items[] = { "water", "soda", "energy_drink", "apple", "mango", "coconut", "baguette", "croissant", "crepe", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "empty_barrel" };
+        items[] = { "water", "soda", "energy_drink", "apple", "mango", "coconut", "baguette", "croissant", "crepe", "energy_bar", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "empty_barrel" };
     };
 
     class property_agents {
@@ -26,7 +26,7 @@ class CfgShops {
     class fuel_station_market {
         name = "Fuel Station Market";
         conditions = "";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "fuel_can", "empty_fuel_can" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "empty_fuel_can" };
     };
 
     class fish_market {
@@ -50,7 +50,7 @@ class CfgShops {
     class syndikat_outpost {
         name = "Syndikat Outpost";
         conditions = "playerSide isEqualTo civilian && license_civ_syndikat";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "bolt_cutter" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "bolt_cutter" };
     };
 
     class gold_buyer {
@@ -134,24 +134,24 @@ class CfgShops {
     class hmp_makret {
         name = "HMP Market";
         conditions = "";
-        items[] = { "water", "baguette", "first_aid_kit", "pickaxe", "rock" };
+        items[] = { "water", "baguette", "pickaxe", "rock" };
     };
 
     class walkin_clinic {
         name = "Walk-In Clinic";
         conditions = "";
-        items[] = { "water", "baguette", "first_aid_kit", "blood_bag", "stretcher" };
+        items[] = { "water", "baguette", "blood_bag", "stretcher" };
     };
 
     class tpc_market {
         name = "TPC Market";
         conditions = "playerSide isEqualTo west";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "fuel_can", "empty_fuel_can", "jaws_of_life", "breathalyzer", "stinger", "gps_tracker", "road_barrier", "road_cone" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "jaws_of_life", "breathalyzer", "stinger", "gps_tracker", "road_barrier", "road_cone" };
     };
 
     class nhs_market {
         name = "TAS Market";
         conditions = "playerSide isEqualTo indpendent";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "first_aid_kit", "lockpick", "fuel_can", "empty_fuel_can", "jaws_of_life", "breathalyzer", "blood_bag", "stretcher", "defibrillator", "road_barrier", "road_cone" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "empty_fuel_can", "jaws_of_life", "breathalyzer", "blood_bag", "stretcher", "defibrillator", "road_barrier", "road_cone" };
     };
 };

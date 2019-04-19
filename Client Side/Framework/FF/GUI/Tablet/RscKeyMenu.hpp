@@ -44,7 +44,7 @@ class PlayersList: Life_RscCombo {
 class GiveKeyButton: Life_RscButtonMenu {
     idc = IDC_KEY_GIVE;
     text = "Give";
-    onButtonClick = "";
+    onButtonClick = "[] call life_fnc_keyGive";
     x = 0.618594 * safezoneW + safezoneX;
     y = 0.709 * safezoneH + safezoneY;
     w = 0.0515625 * safezoneW;
@@ -56,7 +56,7 @@ class GiveKeyButton: Life_RscButtonMenu {
 class DropKeyButton: Life_RscButtonMenu {
     idc = IDC_KEY_DROP;
     text = "Drop";
-    onButtonClick = "";
+    onButtonClick = "[] call life_fnc_keyDrop";
     x = 0.675313 * safezoneW + safezoneX;
     y = 0.709 * safezoneH + safezoneY;
     w = 0.0464063 * safezoneW;

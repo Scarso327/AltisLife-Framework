@@ -361,6 +361,7 @@ class CfgClothing {
             { "NONE", "Remove Uniform", 0, "" },
             { "U_Rangemaster", "Police Uniform (Blue)", 0, "call life_coplevel >= 1" },
             { "U_Competitor", "Police Uniform (Black)", 0, "call life_coplevel >= 2" },
+            { "U_B_CTRG_1", "Police Uniform (Yellow)", 0, "call life_coplevel >= 3" },
             { "U_B_Wetsuit", "SFO Diving Suit", 0, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
         headgear[] = {

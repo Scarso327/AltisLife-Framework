@@ -8,24 +8,31 @@
     Master handling for processing an item.
     NiiRoZz : Added multiprocess
 */
-private ["_vendor","_type","_itemInfo","_oldItem","_newItemWeight","_newItem","_oldItemWeight","_cost","_upp","_hasLicense","_itemName","_oldVal","_ui","_progress","_pgText","_cP","_materialsRequired","_materialsGiven","_noLicenseCost","_text","_filter","_totalConversions","_minimumConversions"];
-_vendor = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-_type = [_this,3,"",[""]] call BIS_fnc_param;
+private ["_vendor","_type","_itemInfo","_oldItem","_newItemWeight","_newItem","_oldItemWeight","_cost","_upp","_hasLicense","_itemName","_oldVal","_ui","_progress","_pgText","_requiredLicense","_cP","_materialsRequired","_materialsGiven","_noLicenseCost","_text","_filter","_totalConversions","_minimumConversions"];
+
+if (isNull FF_ProcessingVendor) exitWith{systemChat "Vendor?"};
+
+_vendor = FF_ProcessingVendor;
+_type = CONTROL_DATA(5001);
+
 //Error check
-if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10)) exitWith {};
+if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10)) exitWith {systemChat str [_vendor, _type, player distance _vendor]};
 life_action_inUse = true;//Lock out other actions during processing.
+closeDialog 0;
+FF_ProcessingVendor = objNull;
 
 if (isClass (missionConfigFile >> "CfgProcess" >> _type)) then {
     _filter = false;
     _materialsRequired = M_CONFIG(getArray,"CfgProcess",_type,"MaterialsReq");
     _materialsGiven = M_CONFIG(getArray,"CfgProcess",_type,"MaterialsGive");
+    _requiredLicense = M_CONFIG(getText,"CfgProcess",_type,"RequiredLicense");
     _noLicenseCost = M_CONFIG(getNumber,"CfgProcess",_type,"NoLicenseCost");
-    _text = M_CONFIG(getText,"ProceCfgProcessssAction",_type,"Text");
+    _text = M_CONFIG(getText,"CfgProcess",_type,"Text");
 } else {_filter = true;};
 
 if (_filter) exitWith {life_action_inUse = false;};
 
-_itemInfo = [_materialsRequired,_materialsGiven,_noLicenseCost,(localize format ["%1",_text])];
+_itemInfo = [_materialsRequired, _materialsGiven, _noLicenseCost, _text, _requiredLicense];
 if (count _itemInfo isEqualTo 0) exitWith {life_action_inUse = false;};
 
 //Setup vars.
@@ -33,6 +40,8 @@ _oldItem = _itemInfo select 0;
 _newItem = _itemInfo select 1;
 _cost = _itemInfo select 2;
 _upp = _itemInfo select 3;
+private _licenseRequired = _itemInfo select 4;
+
 _exit = false;
 if (count _oldItem isEqualTo 0) exitWith {life_action_inUse = false;};
 
@@ -46,10 +55,10 @@ _totalConversions = [];
 
 if (_exit) exitWith {life_is_processing = false; hint localize "STR_NOTF_NotEnoughItemProcess"; life_action_inUse = false;};
 
-if (_vendor in [mari_processor,coke_processor,heroin_processor]) then {
-    _hasLicense = true;
+if (_licenseRequired isEqualTo "") then {
+    _hasLicense = false;
 } else {
-    _hasLicense = LICENSE_VALUE(_type,"civ");
+    _hasLicense = LICENSE_VALUE(_licenseRequired,"civ");
 };
 
 _cost = _cost * (count _oldItem);

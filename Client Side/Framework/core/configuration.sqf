@@ -119,6 +119,8 @@ FF_originalList = [];
 
 FF_curApp = "Home";
 
+FF_ProcessingVendor = objNull;
+
 /*
     Master Array of items?
 */

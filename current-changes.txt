@@ -15,6 +15,8 @@ Added:
         - Perks Included!
     License Shop UI (Scarso)
         - Easier purchasing of licenses
+    Processing UI (Scarso)
+        - Easier than scrolling
     Custom Item Icons (Lewis Mackinnon)
 
 Changed:

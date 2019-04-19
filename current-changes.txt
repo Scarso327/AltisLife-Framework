@@ -16,7 +16,6 @@ Added:
     License Shop UI (Scarso)
         - Easier purchasing of licenses
     Custom Item Icons (Lewis Mackinnon)
-    Authomatic Medic Request (Lewis Mackinnon)
 
 Changed:
     All Physical Stores (Lewis Mackinnon)
@@ -42,6 +41,7 @@ Changed:
     Weapon used as a taser (Lewis Mackinnon)
     AMS > Tanoa Ambulance Service (Scarso & Lewis Mackinnon)
     Police Vehicle Siren Lights (Lewis Mackinnon)
+    Automatically Medic Request (Lewis Mackinnon)
     
 Updated:
     Overall Map Design (Lewis Mackinnon)

@@ -65,6 +65,46 @@ class CfgWeapons {
         accs[] = {};
     };
 
+    class gang_hideout {
+        name = "Gang Hideout";
+        conditions = "playerSide isEqualTo civilian";
+        items[] = {
+            { "ItemMap", "Map of Altis", 0, 0, "" },
+            { "ItemGPS", "Handheld GPS", 0, 0, "" },
+            { "ItemRadio", "Mobile Phone", 0, 0, "" },
+            { "ItemCompass", "Compass", 0, 0, "" },
+            { "ItemWatch", "Wrist Watch", 0, 0, "" },
+            { "Binocular", "Binoculars", 0, 0, "" },
+            { "NVGoggles", "Night Vision Goggles", 0, 0, "" },
+            { "G_Tactical_Black", "Night Vision Glasses", 0, 0, "" }, // Premium Membership
+            { "FirstAidKit", "First Aid Kit", 0, 0, "" },
+            { "ToolKit", "Toolkit", 0, 0, "" },
+            { "hgun_Pistol_01_F", "PM 9 mm", 0, 0, "" },
+            { "hgun_Rook40_F", "Rook-40 9 mm", 0, 0, "" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, 0, "" },
+            { "hgun_Pistol_heavy_02_F", "Zubr .45", 0, 0, "" },
+            { "hgun_PDW2000_F", "PDW2000 9mm", 0, 0, "" },
+            { "SMG_02_F", "Sting 9mm", 0, 0, "" },
+            { "arifle_AKS_F", "AKS-74U 5.45 mm", 0, 0, "" },
+            { "arifle_AKM_F", "AKM 7.62 mm", 0, 0, "" }
+        };
+        mags[] = {
+            { "10Rnd_9x21_Mag", "10Rnd 9mm Mag", 0, 0, "" },
+            { "16Rnd_9x21_Mag", "16Rnd 9mm Mag", 0, 0, "" },
+            { "30Rnd_9x21_Mag", "30Rnd 9mm Mag", 0, 0, "" },
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, 0, "" },
+            { "6Rnd_45ACP_Cylinder", "6Rnd .45mm Cylinder", 0, 0, "" },
+            { "30Rnd_545x39_Mag_F", "30Rnd 5.45mm Mag", 0, 0, "" },
+            { "30Rnd_762x39_Mag_F", "30Rnd 7.62mm Mag", 0, 0, "" }
+        };
+        accs[] = {
+            { "optic_ACO_grn", "ACO (Green)", 0, 0, "" },
+            { "optic_Aco", "ACO (Red)", 0, 0, "" },
+            { "optic_ACO_grn_smg", "ACO SMG (Green)", 0, 0, "" },
+            { "optic_Aco_smg", "ACO SMG (Red)", 0, 0, "" }
+        };
+    };
+
     class syndikat_outpost {
         name = "Syndikat Outpost";
         conditions = "playerSide isEqualTo civilian && license_civ_syndikat";

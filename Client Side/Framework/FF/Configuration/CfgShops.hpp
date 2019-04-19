@@ -47,10 +47,16 @@ class CfgShops {
         items[] = { "1k_chip", "5k_chip", "10k_chip", "25k_chipbeer", "50k_chip", "100k_chip" };
     };
 
+    class gang_hideout {
+        name = "Gang Hideout";
+        conditions = "playerSide isEqualTo civilian";
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "ziptie", "blindfold", "gag", "ear_clots", "bolt_cutter" };
+    };
+
     class syndikat_outpost {
         name = "Syndikat Outpost";
         conditions = "playerSide isEqualTo civilian && license_civ_syndikat";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "blindfold", "gag", "ear_clots", "bolt_cutter" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "pickaxe", "fuel_can", "empty_fuel_can", "ziptie", "blindfold", "gag", "ear_clots", "bolt_cutter", "explosive_charge" };
     };
 
     class gold_buyer {

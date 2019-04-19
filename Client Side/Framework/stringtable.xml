@@ -1362,12 +1362,6 @@
         </Key>
     </Package>
     <Package name="Medical_Strings">
-        <Key ID="STR_Medic_Online">
-            <Original>Medics Online: %1</Original>
-        </Key>
-        <Key ID="STR_Medic_Near">
-            <Original>Medics Nearby: %1</Original>
-        </Key>
         <Key ID="STR_Medic_Request">
             <Original>%1 is requesting EMS Revive.</Original>
         </Key>

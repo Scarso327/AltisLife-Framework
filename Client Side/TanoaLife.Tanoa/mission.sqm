@@ -283,6 +283,7 @@ class ScenarioData
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
+	respawnDelay=5;
 	class Header
 	{
 		gameType="RPG";
@@ -3991,7 +3992,7 @@ class Mission
 			type="mil_triangle";
 			colorName="ColorCIV";
 			id=257;
-			atlOffset=1.4418793;
+			atlOffset=1.4614563;
 		};
 		class Item124
 		{
@@ -4006,7 +4007,7 @@ class Mission
 			b=30;
 			drawBorder=1;
 			id=258;
-			atlOffset=4.7758789;
+			atlOffset=4.7954102;
 		};
 		class Item125
 		{
@@ -4804,6 +4805,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=349;
+			atlOffset=0.29922152;
 		};
 		class Item193
 		{
@@ -4815,6 +4817,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=350;
+			atlOffset=0.048114777;
 		};
 		class Item194
 		{
@@ -4942,7 +4945,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=361;
-			atlOffset=0.47232819;
+			atlOffset=1.0022659;
 		};
 		class Item205
 		{
@@ -4990,7 +4993,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=365;
-			atlOffset=0.47232914;
+			atlOffset=0.86726809;
 		};
 		class Item209
 		{
@@ -5014,7 +5017,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=367;
-			atlOffset=0.47232914;
+			atlOffset=0.94276953;
 		};
 		class Item211
 		{
@@ -5267,7 +5270,7 @@ class Mission
 			type="loc_Tree";
 			colorName="ColorYellow";
 			id=394;
-			atlOffset=26.575367;
+			atlOffset=30.15;
 		};
 		class Item233
 		{
@@ -5366,7 +5369,7 @@ class Mission
 			type="loc_Tree";
 			colorName="ColorYellow";
 			id=403;
-			atlOffset=25.139187;
+			atlOffset=27.55287;
 		};
 		class Item242
 		{
@@ -5723,6 +5726,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=440;
+			atlOffset=0.12024951;
 		};
 		class Item272
 		{
@@ -6063,7 +6067,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorCIV";
 			id=476;
-			atlOffset=2.2888184e-005;
+			atlOffset=0.1043396;
 		};
 		class Item300
 		{
@@ -6437,6 +6441,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorCIV";
 			id=514;
+			atlOffset=0.60919905;
 		};
 		class Item333
 		{
@@ -23346,7 +23351,7 @@ class Mission
 			};
 			id=1210;
 			type="Land_Sacks_goods_F";
-			atlOffset=0.00015687943;
+			atlOffset=0.12799931;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23672,8 +23677,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -23682,10 +23687,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Custom";
+									value=0;
 								};
 							};
 						};
@@ -23729,8 +23734,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -23739,10 +23744,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Custom";
 								};
 							};
 						};
@@ -23905,7 +23910,7 @@ class Mission
 			};
 			id=1256;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.47751427;
+			atlOffset=0.77366877;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23947,7 +23952,7 @@ class Mission
 			};
 			id=1258;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.47684479;
+			atlOffset=0.52499962;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24524,7 +24529,6 @@ class Mission
 				angles[]={0,5.4123464,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				createAsSimpleObject=1;
@@ -24532,6 +24536,7 @@ class Mission
 			};
 			id=1275;
 			type="Land_CashDesk_F";
+			atlOffset=0.52993774;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24573,7 +24578,7 @@ class Mission
 			};
 			id=1276;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.49596977;
+			atlOffset=1.0259075;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24823,7 +24828,7 @@ class Mission
 			};
 			id=1286;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.3480444;
+			atlOffset=0.81289577;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24940,7 +24945,6 @@ class Mission
 				angles[]={0,1.9420458,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				createAsSimpleObject=1;
@@ -24948,6 +24952,7 @@ class Mission
 			};
 			id=1289;
 			type="Land_CashDesk_F";
+			atlOffset=0.63711452;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24989,7 +24994,7 @@ class Mission
 			};
 			id=1290;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.50755787;
+			atlOffset=1.1003604;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32336,7 +32341,6 @@ class Mission
 				angles[]={0,2.9816995,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Market""], ""general_market"", """"] call FF_fnc_setupMarket;";
@@ -32345,7 +32349,7 @@ class Mission
 			};
 			id=1666;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.1170001;
+			atlOffset=0.25214815;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32562,7 +32566,6 @@ class Mission
 				angles[]={0,0.83772314,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Lumber Trader""], ""lumber_trader"", """"] call FF_fnc_setupMarket;";
@@ -32571,7 +32574,7 @@ class Mission
 			};
 			id=1676;
 			type="Land_InfoStand_V2_F";
-			atlOffset=8.9168549e-005;
+			atlOffset=0.6079421;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33187,7 +33190,6 @@ class Mission
 				angles[]={0,3.1589413,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="this addAction[""Licensing Store"",FF_fnc_openLicenses,[""drug_refining""],0,false,false,"""",' playerSide == civilian', 5]; this addAction[""Processing Store"",FF_fnc_openProcessing,[""refined_marijuana"",""refined_heroin"",""refined_cocaine"",""refined_methamphetamine""],0,false,false,"""",' playerSide == civilian', 5];";
@@ -33196,7 +33198,7 @@ class Mission
 			};
 			id=1696;
 			type="Land_Sink_F";
-			atlOffset=0.00038146973;
+			atlOffset=0.56798553;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -40371,7 +40373,6 @@ class Mission
 				angles[]={6.281754,3.2585123,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Fish Market""], ""fish_market"", """"] call FF_fnc_setupMarket;";
@@ -40380,7 +40381,7 @@ class Mission
 			};
 			id=2176;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.14052105;
+			atlOffset=0.45399928;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -40681,7 +40682,7 @@ class Mission
 			};
 			id=2185;
 			type="Land_Sacks_heap_F";
-			atlOffset=0.080001831;
+			atlOffset=0.20731354;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46610,7 +46611,7 @@ class Mission
 			position[]={12864.42,1.9204577,7293.9214};
 			name="civ_car_garage_3";
 			type="Empty";
-			angle=52.677727;
+			angle=52.677723;
 			id=2383;
 		};
 		class Item1191

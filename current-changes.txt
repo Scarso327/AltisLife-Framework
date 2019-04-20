@@ -46,8 +46,6 @@ Changed:
     AMS > Tanoa Ambulance Service (Scarso & Lewis Mackinnon)
     Police Vehicle Siren Lights (Lewis Mackinnon)
     Automatically Medic Request (Lewis Mackinnon)
-    
-Updated:
     Overall Map Design (Lewis Mackinnon)
     Player Menu Design (Scarso)
     Player HUD (Scarso)

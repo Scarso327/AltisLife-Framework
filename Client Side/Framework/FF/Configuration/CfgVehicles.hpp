@@ -146,10 +146,14 @@ class CfgVehicleStores {
 
     class nhs_taa_dealership {
         side = "med";
-        conditions = "playerSide isEqualTo independent && license_med_taa";
+        conditions = "playerSide isEqualTo independent && (license_med_taa1 || license_med_taa2 || license_med_taa3)";
         vehicles[] = {
-            { "I_Heli_light_03_unarmed_F", "" },
-            { "O_Heli_Light_02_unarmed_F", "" }
+            { "C_Heli_Light_01_civil_F", "license_med_taa1 || license_med_taa2 || license_med_taa3" },
+            { "B_Heli_Light_01_F", "license_med_taa1 || license_med_taa2 || license_med_taa3" },
+            { "I_Heli_light_03_unarmed_F", "license_med_taa2 || license_med_taa3" },
+            { "O_Heli_Light_02_unarmed_F", "license_med_taa2 || license_med_taa3" },
+            { "I_Heli_Transport_02_F", "license_med_taa3" },
+            { "O_Heli_Transport_04_medevac_F", "license_med_taa3" }
         };
     };
 };
@@ -607,8 +611,15 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
-    class B_Heli_Transport_03_unarmed_F { // CH-67 Huron (Unarmed)
+    class B_Heli_Transport_03_unarmed_F { // CH-67 Huron (Unarmed) 
         vItemSpace = 460;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class O_Heli_Transport_04_medevac_F { // Mi-290 Taru (Medical)
+        vItemSpace = 450;
         conditions = "";
         price = 0;
         textures[] = {};

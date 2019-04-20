@@ -379,8 +379,6 @@ class Life_Client_Core {
         class keyDrop {};
         class keyGive {};
         class keyMenu {};
-        class p_openMenu {};
-        class p_updateMenu {};
         class pardon {};
         class removeItem {};
         class s_onChar {};

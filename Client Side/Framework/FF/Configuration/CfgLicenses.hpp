@@ -261,18 +261,26 @@ class CfgLicenses {
         side = "cop";
     };
 
-    // NHS - Specialised Units
-    class taa {
-        variable = "taa";
-        displayName = "Tanoa Air Ambulance";
+    // TAS - Specialised Units
+    class taa1 {
+        variable = "taa1";
+        displayName = "Tanoa Air Ambulance L1";
         price = 0;
         illegal = false;
         side = "med";
     };
 
-    class mru {
-        variable = "mru";
-        displayName = "Marine Response Unit";
+    class taa2 {
+        variable = "taa2";
+        displayName = "Tanoa Air Ambulance L2";
+        price = 0;
+        illegal = false;
+        side = "med";
+    };
+
+    class taa3 {
+        variable = "taa3";
+        displayName = "Tanoa Air Ambulance L3";
         price = 0;
         illegal = false;
         side = "med";

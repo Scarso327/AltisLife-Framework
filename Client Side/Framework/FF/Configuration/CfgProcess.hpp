@@ -3,7 +3,7 @@ class CfgProcess {
         MaterialsReq[] = {{"apple",1}};
         MaterialsGive[] = {{"apple_schnapps",1}};
         Text = "Processing Schnapps...";
-        RequiredLicense = "";
+        RequiredLicense = "schnapps";
         NoLicenseCost = 0;
     };
 
@@ -11,7 +11,7 @@ class CfgProcess {
         MaterialsReq[] = {{"mango",1}};
         MaterialsGive[] = {{"mango_schnapps",1}};
         Text = "Processing Schnapps...";
-        RequiredLicense = "";
+        RequiredLicense = "schnapps";
         NoLicenseCost = 0;
     };
 
@@ -19,7 +19,7 @@ class CfgProcess {
         MaterialsReq[] = {{"coconut",1}};
         MaterialsGive[] = {{"coconut_schnapps",1}};
         Text = "Processing Schnapps...";
-        RequiredLicense = "";
+        RequiredLicense = "schnapps";
         NoLicenseCost = 0;
     };
 
@@ -27,7 +27,7 @@ class CfgProcess {
         MaterialsReq[] = {{"apple",1}};
         MaterialsGive[] = {{"cider",1}};
         Text = "Processing Cider...";
-        RequiredLicense = "";
+        RequiredLicense = "schnapps";
         NoLicenseCost = 0;
     };
 
@@ -35,7 +35,7 @@ class CfgProcess {
         MaterialsReq[] = {{"raw_salema",1}};
         MaterialsGive[] = {{"cooked_salema",1}};
         Text = "Cooking Salema...";
-        RequiredLicense = "";
+        RequiredLicense = "fish";
         NoLicenseCost = 0;
     };
 
@@ -43,7 +43,7 @@ class CfgProcess {
         MaterialsReq[] = {{"raw_ornate",1}};
         MaterialsGive[] = {{"cooked_ornate",1}};
         Text = "Cooking Ornate...";
-        RequiredLicense = "";
+        RequiredLicense = "fish";
         NoLicenseCost = 0;
     };
 
@@ -51,7 +51,7 @@ class CfgProcess {
         MaterialsReq[] = {{"raw_mackerel",1}};
         MaterialsGive[] = {{"cooked_mackerel",1}};
         Text = "Cooking Mackerel...";
-        RequiredLicense = "";
+        RequiredLicense = "fish";
         NoLicenseCost = 0;
     };
 
@@ -59,7 +59,7 @@ class CfgProcess {
         MaterialsReq[] = {{"raw_tuna",1}};
         MaterialsGive[] = {{"cooked_tuna",1}};
         Text = "Cooking Tuna...";
-        RequiredLicense = "";
+        RequiredLicense = "fish";
         NoLicenseCost = 0;
     };
 
@@ -67,7 +67,7 @@ class CfgProcess {
         MaterialsReq[] = {{"raw_mullet",1}};
         MaterialsGive[] = {{"raw_mullet",1}};
         Text = "Cooking Mullet...";
-        RequiredLicense = "";
+        RequiredLicense = "fish";
         NoLicenseCost = 0;
     };
 
@@ -75,7 +75,7 @@ class CfgProcess {
         MaterialsReq[] = {{"raw_catshark",1}};
         MaterialsGive[] = {{"cooked_catshark",1}};
         Text = "Cooking Catshark...";
-        RequiredLicense = "";
+        RequiredLicense = "fish";
         NoLicenseCost = 0;
     };
 
@@ -83,7 +83,7 @@ class CfgProcess {
         MaterialsReq[] = {{"raw_turtle",1}};
         MaterialsGive[] = {{"cooked_turtle",1}};
         Text = "Cooking Turtle...";
-        RequiredLicense = "";
+        RequiredLicense = "fish";
         NoLicenseCost = 0;
     };
 
@@ -91,7 +91,15 @@ class CfgProcess {
         MaterialsReq[] = {{"wood",1}};
         MaterialsGive[] = {{"lumber",1}};
         Text = "Processing Wood...";
-        RequiredLicense = "";
+        RequiredLicense = "lumber";
+        NoLicenseCost = 0;
+    };
+
+    class tin {
+        MaterialsReq[] = {{"tin_ore",1}};
+        MaterialsGive[] = {{"tin_bar",1}};
+        Text = "Processing Tin...";
+        RequiredLicense = "tin";
         NoLicenseCost = 0;
     };
 
@@ -99,7 +107,7 @@ class CfgProcess {
         MaterialsReq[] = {{"copper_ore",1}};
         MaterialsGive[] = {{"copper_bar",1}};
         Text = "Processing Copper...";
-        RequiredLicense = "";
+        RequiredLicense = "copper";
         NoLicenseCost = 0;
     };
 
@@ -107,7 +115,7 @@ class CfgProcess {
         MaterialsReq[] = {{"silver_ore",1}};
         MaterialsGive[] = {{"silver_bar",1}};
         Text = "Processing Silver...";
-        RequiredLicense = "";
+        RequiredLicense = "silver";
         NoLicenseCost = 0;
     };
 
@@ -115,7 +123,7 @@ class CfgProcess {
         MaterialsReq[] = {{"iron_ore",1}};
         MaterialsGive[] = {{"iron_bar",1}};
         Text = "Processing Iron...";
-        RequiredLicense = "";
+        RequiredLicense = "iron";
         NoLicenseCost = 0;
     };
 
@@ -123,7 +131,7 @@ class CfgProcess {
         MaterialsReq[] = {{"platinum_ore",1}};
         MaterialsGive[] = {{"platinum_bar",1}};
         Text = "Processing Platinum...";
-        RequiredLicense = "";
+        RequiredLicense = "platinum";
         NoLicenseCost = 0;
     };
 
@@ -131,7 +139,7 @@ class CfgProcess {
         MaterialsReq[] = {{"rock",1}};
         MaterialsGive[] = {{"cement",1}};
         Text = "Processing Cement...";
-        RequiredLicense = "";
+        RequiredLicense = "rock";
         NoLicenseCost = 0;
     };
 
@@ -139,7 +147,7 @@ class CfgProcess {
         MaterialsReq[] = {{"crude_oil",1}};
         MaterialsGive[] = {{"refined_oil",1}};
         Text = "Processing Oil...";
-        RequiredLicense = "";
+        RequiredLicense = "oil";
         NoLicenseCost = 0;
     };
 
@@ -147,7 +155,7 @@ class CfgProcess {
         MaterialsReq[] = {{"iridium_ore",1}};
         MaterialsGive[] = {{"iridium_bar",1}};
         Text = "Processing Iridium...";
-        RequiredLicense = "";
+        RequiredLicense = "iridium";
         NoLicenseCost = 0;
     };
 
@@ -155,7 +163,7 @@ class CfgProcess {
         MaterialsReq[] = {{"uncut_opal",1}};
         MaterialsGive[] = {{"uncut_opal",1}};
         Text = "Processing Opal...";
-        RequiredLicense = "";
+        RequiredLicense = "gem";
         NoLicenseCost = 0;
     };
 
@@ -163,7 +171,7 @@ class CfgProcess {
         MaterialsReq[] = {{"uncut_sapphire",1}};
         MaterialsGive[] = {{"uncut_sapphire",1}};
         Text = "Processing Sapphire...";
-        RequiredLicense = "";
+        RequiredLicense = "gem";
         NoLicenseCost = 0;
     };
 
@@ -171,7 +179,7 @@ class CfgProcess {
         MaterialsReq[] = {{"uncut_ruby",1}};
         MaterialsGive[] = {{"cut_ruby",1}};
         Text = "Processing Ruby...";
-        RequiredLicense = "";
+        RequiredLicense = "gem";
         NoLicenseCost = 0;
     };
 
@@ -179,7 +187,7 @@ class CfgProcess {
         MaterialsReq[] = {{"uncut_emerald",1}};
         MaterialsGive[] = {{"cut_emerald",1}};
         Text = "Processing Emerald...";
-        RequiredLicense = "";
+        RequiredLicense = "gem";
         NoLicenseCost = 0;
     };
 
@@ -187,7 +195,7 @@ class CfgProcess {
         MaterialsReq[] = {{"uncut_diamond",1}};
         MaterialsGive[] = {{"cut_diamond",1}};
         Text = "Processing Diamond...";
-        RequiredLicense = "";
+        RequiredLicense = "gem";
         NoLicenseCost = 0;
     };
 
@@ -195,7 +203,7 @@ class CfgProcess {
         MaterialsReq[] = {{"cannabis",1}};
         MaterialsGive[] = {{"marijuana",1}};
         Text = "Processing Marijuana...";
-        RequiredLicense = "";
+        RequiredLicense = "marijuana";
         NoLicenseCost = 0;
     };
 
@@ -203,7 +211,7 @@ class CfgProcess {
         MaterialsReq[] = {{"opium",1}};
         MaterialsGive[] = {{"heroin",1}};
         Text = "Processing Heroin...";
-        RequiredLicense = "";
+        RequiredLicense = "heroin";
         NoLicenseCost = 0;
     };
 
@@ -211,7 +219,7 @@ class CfgProcess {
         MaterialsReq[] = {{"coca",1}};
         MaterialsGive[] = {{"cocaine",1}};
         Text = "Processing Cocaine...";
-        RequiredLicense = "";
+        RequiredLicense = "cocaine";
         NoLicenseCost = 0;
     };
 
@@ -227,7 +235,7 @@ class CfgProcess {
         MaterialsReq[] = {{"ephedrine",1}};
         MaterialsGive[] = {{"methamphetamine",1}};
         Text = "Processing Methamphetamine...";
-        RequiredLicense = "";
+        RequiredLicense = "methamphetamine";
         NoLicenseCost = 0;
     };
 
@@ -235,7 +243,7 @@ class CfgProcess {
         MaterialsReq[] = {{"marijuana",1}};
         MaterialsGive[] = {{"refined_marijuana",1}};
         Text = "Refining Marijuana...";
-        RequiredLicense = "";
+        RequiredLicense = "drug_refining";
         NoLicenseCost = 0;
     };
 
@@ -243,7 +251,7 @@ class CfgProcess {
         MaterialsReq[] = {{"heroin",1}};
         MaterialsGive[] = {{"refined_heroin",1}};
         Text = "Refining Heroin...";
-        RequiredLicense = "";
+        RequiredLicense = "drug_refining";
         NoLicenseCost = 0;
     };
 
@@ -251,7 +259,7 @@ class CfgProcess {
         MaterialsReq[] = {{"cocaine",1}};
         MaterialsGive[] = {{"refined_cocaine",1}};
         Text = "Refining Cocaine...";
-        RequiredLicense = "";
+        RequiredLicense = "drug_refining";
         NoLicenseCost = 0;
     };
 
@@ -259,7 +267,7 @@ class CfgProcess {
         MaterialsReq[] = {{"methamphetamine",1}};
         MaterialsGive[] = {{"refined_methamphetamine",1}};
         Text = "Refining Methamphetamine...";
-        RequiredLicense = "";
+        RequiredLicense = "drug_refining";
         NoLicenseCost = 0;
     };
 

@@ -59,14 +59,14 @@ for "_i" from 0 to 1 step 0 do {
     _cP = _cP + _cpRate;
     _progressBar progressSetPosition _cP;
     _titleText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_title];
-    if (_cP >= 1 || !alive player) exitWith {};
+    if (_cP >= 1 || !alive player || isDowned(player)) exitWith {};
     if (life_interrupted) exitWith {};
 };
 
 //Kill the UI display and check for various states
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
-if (!alive player) exitWith {life_action_inUse = false;};
+if (!alive player || isDowned(player)) exitWith {life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
 life_action_inUse = false;
 

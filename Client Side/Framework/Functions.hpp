@@ -105,6 +105,19 @@ class FF_Core {
         class setupClothing {};
         class setupGarage {};
     };
+
+    class Events {
+        file = "FF\OnEvents";
+        class onDamaged {};
+        class onIncapacitated {};
+        class onKilled {};
+        class onRespawn {};
+    };
+
+    class Medical {
+        file = "FF\Medical";
+        class respawned {};   
+    };
 };
 
 class Life_Client_Core {
@@ -264,7 +277,6 @@ class Life_Client_Core {
         class fetchVehInfo {};
         class isDamaged {};
         class giveDiff {};
-        class handleDamage {};
         class handleInv {};
         class handleItem {};
         class hideObj {};
@@ -353,10 +365,7 @@ class Life_Client_Core {
         class medicRequest {};
         class medicSiren {};
         class medicSirenLights {};
-        class onPlayerKilled {};
-        class onPlayerRespawn {};
         class requestMedic {};
-        class respawned {};
         class revived {};
         class revivePlayer {};
     };

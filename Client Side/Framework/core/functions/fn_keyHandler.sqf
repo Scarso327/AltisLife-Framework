@@ -110,6 +110,8 @@ switch (_code) do {
 
     //Surrender (Shift + B)
     case 48: {
+        if (isDowned(player)) exitWith {};
+
         if (_shift) then {
             if (player getVariable ["playerSurrender",false]) then {
                 player setVariable ["playerSurrender",false,true];
@@ -122,6 +124,8 @@ switch (_code) do {
 
     //Holster / recall weapon. (Shift + H)
     case 35: {
+        if (isDowned(player)) exitWith {};
+
         if (_shift && !_ctrlKey && !(currentWeapon player isEqualTo "")) then {
             life_curWep_h = currentWeapon player;
             player action ["SwitchWeapon", player, player, 100];
@@ -148,16 +152,20 @@ switch (_code) do {
 
     //Restraining (Shift + R)
     case 19: {
+        if (isDowned(player)) exitWith {};
+
         if (_shift) then {_handled = true};
-        if (_shift && {!isNull cursorObject} && {cursorObject isKindOf "CAManBase"} && {(isPlayer cursorObject)} && {(side cursorObject in [civilian,independent])} && {alive cursorObject} && {cursorObject distance player < 3.5} && {!(cursorObject getVariable "Escorting")} && {!(cursorObject getVariable "restrained")} && {speed cursorObject < 1}) then {
+        if (_shift && {!isNull cursorObject} && {cursorObject isKindOf "CAManBase"} && {(isPlayer cursorObject)} && {(side cursorObject in [civilian,independent])} && {alive cursorObject} && { !(isDowned(cursorObject)) } && {cursorObject distance player < 3.5} && {!(cursorObject getVariable "Escorting")} && {!(cursorObject getVariable "restrained")} && {speed cursorObject < 1}) then {
             [] call life_fnc_restrainAction;
         };
     };
 
     //Knock out, this is experimental and yeah... (Shift + G)
     case 34: {
+        if (isDowned(player)) exitWith {};
+
         if (_shift) then {_handled = true};
-        if (_shift && !isNull cursorObject && cursorObject isKindOf "CAManBase" && isPlayer cursorObject && alive cursorObject && cursorObject distance player < 4 && speed cursorObject < 1) then {
+        if (_shift && !isNull cursorObject && cursorObject isKindOf "CAManBase" && isPlayer cursorObject && alive cursorObject && !(isDowned(cursorObject)) && cursorObject distance player < 4 && speed cursorObject < 1) then {
             if ((animationState cursorObject) != "Incapacitated" && (currentWeapon player == primaryWeapon player || currentWeapon player == handgunWeapon player) && currentWeapon player != "" && !life_knockout && !(player getVariable ["restrained",false]) && !life_istazed && !life_isknocked) then {
                 [cursorObject] spawn life_fnc_knockoutAction;
             };
@@ -167,6 +175,8 @@ switch (_code) do {
     //T Key (Trunk)
     case 20: {
         if (!_alt && {!_ctrlKey} && {!dialog} && {!life_action_inUse} && {!(player getVariable ["playerSurrender",false])} && {!(player getVariable ["restrained",false])} && {!life_isknocked} && {!life_istazed}) then {
+            if (isDowned(player)) exitWith {};
+            
             if (!(isNull objectParent player) && alive vehicle player) then {
                 if ((vehicle player) in life_vehicles) then {
                     [vehicle player] spawn life_fnc_openInventory;
@@ -197,6 +207,8 @@ switch (_code) do {
     case 38: {
         //If cop run checks for turning lights on.
         if (_shift && playerSide in [west,independent]) then {
+            if (isDowned(player)) exitWith {};
+
             if (!(isNull objectParent player) && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F","B_Heli_Light_01_F","B_Heli_Transport_01_F"]) then {
                 if (!isNil {vehicle player getVariable "lights"}) then {
                     if (playerSide isEqualTo west) then {
@@ -212,11 +224,13 @@ switch (_code) do {
         if (!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
     };
 
-    case 21: { if (!_alt && !_ctrlKey) then { [] call FF(openMenu) }; }; // Y Player Menu
+    case 21: { if (!_alt && !_ctrlKey && !(isDowned(player))) then { [] call FF(openMenu) }; }; // Y Player Menu
 
     //F Key
     case 33: {
         if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {
+            if (isDowned(player)) exitWith {};
+
             [] spawn {
                 life_siren_active = true;
                 sleep 4.7;
@@ -263,6 +277,7 @@ switch (_code) do {
     //U Key
     case 22: {
         if (!_alt && !_ctrlKey) then {
+            if (isDowned(player)) exitWith {};
             private _veh = if (isNull objectParent player) then {
                 cursorObject;
             } else {

@@ -56,7 +56,7 @@ if (_action) then {
         _progress progressSetPosition _cP;
         _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_title];
         if (_cP >= 1) exitWith {};
-        if (!alive player) exitWith {life_action_inUse = false;};
+        if (!alive player || isDowned(player)) exitWith {life_action_inUse = false;};
         if (life_interrupted) exitWith {life_interrupted = false; life_action_inUse = false;};
     };
 
@@ -64,7 +64,7 @@ if (_action) then {
     "progressBar" cutText ["","PLAIN"];
     player playActionNow "stop";
 
-    if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;};
+    if (!alive player || life_istazed || life_isknocked || isDowned(player)) exitWith {life_action_inUse = false;};
     if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
     if (!isNil "_badDistance") exitWith {titleText[localize "STR_ISTR_Lock_TooFar","PLAIN"]; life_action_inUse = false;};
     if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};

@@ -7,10 +7,7 @@
     if they want to take the request or not.
 */
 params [
-    ["_caller",objNull,[objNull]],
     ["_callerName","Unknown Player",[""]]
 ];
-
-if (isNull _caller) exitWith {}; //Bad data
 
 ["MedicalRequestEmerg",[format ["%1 is requesting medical assistance.",_callerName]]] call BIS_fnc_showNotification;

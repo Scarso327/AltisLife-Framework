@@ -43,7 +43,7 @@ for "_i" from 0 to 1 step 0 do {
     _cP = _cP + .01;
     _progressBar progressSetPosition _cP;
     _titleText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_title];
-    if (_cP >= 1 || !alive player) exitWith {};
+    if (_cP >= 1 || !alive player || isDowned(player)) exitWith {};
     if (life_istazed) exitWith {}; //Tazed
     if (life_isknocked) exitWith {}; //Knocked
     if (life_interrupted) exitWith {};
@@ -60,7 +60,7 @@ player playActionNow "stop";
 if (_target getVariable ["Reviving",objNull] != player) exitWith {hint "Someone else is already reviving this person."; life_action_inUse = false;};
 _target setVariable ["Reviving",NIL,true];
 
-if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;};
+if (!alive player || life_istazed || life_isknocked || isDowned(player)) exitWith {life_action_inUse = false;};
 if (_target getVariable ["Revive",false]) exitWith {hint "This person either bled out or was already revived."; life_action_inUse = false;};
 if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
 if (!isNil "_badDistance") exitWith {titleText["You got to far away from the body.","PLAIN"]; life_action_inUse = false;};

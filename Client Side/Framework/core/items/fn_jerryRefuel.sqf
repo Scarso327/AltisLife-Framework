@@ -48,13 +48,13 @@ for "_i" from 0 to 1 step 0 do {
     _progress progressSetPosition _cP;
     _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
     if (_cP >= 1) exitWith {};
-    if (!alive player) exitWith {};
+    if (!alive player || isDowned(player)) exitWith {};
     if (life_interrupted) exitWith {};
 };
 life_action_inUse = false;
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
-if (!alive player) exitWith {};
+if (!alive player || isDowned(player)) exitWith {};
 if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"];};
 
 

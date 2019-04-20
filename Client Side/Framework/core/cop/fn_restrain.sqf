@@ -43,7 +43,7 @@ while {player getVariable  "restrained"} do {
     _state = vehicle player;
     waitUntil {animationState player != "AmovPercMstpSnonWnonDnon_Ease" || !(player getVariable "restrained") || vehicle player != _state};
 
-    if (!alive player) exitWith {
+    if (!alive player || isDowned(player)) exitWith {
         player setVariable ["restrained",false,true];
         player setVariable ["Escorting",false,true];
         player setVariable ["transporting",false,true];

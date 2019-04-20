@@ -41,14 +41,14 @@ for "_i" from 0 to 1 step 0 do {
     _cP = _cP + _cpRate;
     _progressBar progressSetPosition _cP;
     _titleText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_title];
-    if (_cP >= 1 || !alive player) exitWith {};
+    if (_cP >= 1 || !alive player || isDowned(player)) exitWith {};
     if (player distance _house > 13) exitWith {};
 };
 
 //Kill the UI display and check for various states
 "progressBar" cutText ["","PLAIN"];
 if (player distance _house > 13) exitWith {life_action_inUse = false; titleText[localize "STR_House_Raid_TooFar","PLAIN"]};
-if (!alive player) exitWith {life_action_inUse = false;};
+if (!alive player || isDowned(player)) exitWith {life_action_inUse = false;};
 life_action_inUse = false;
 
 _houseInvData = (_houseInv select 0);

@@ -1,5 +1,6 @@
 Added:
     Intro Text (Scarso)
+    Incapacitation System (Scarso)
     Police Uniforms (Scarso & Lewis Mackinnon)
         - Cadet Uniform
         - Main Uniform (Insignia changes per rank)

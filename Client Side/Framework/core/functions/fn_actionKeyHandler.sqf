@@ -11,6 +11,8 @@ private ["_curObject","_isWater","_CrateModelNames","_crate","_fish","_animal","
 _curObject = cursorObject;
 if (life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 if (life_interrupted) exitWith {life_interrupted = false;};
+if (isDowned(player)) exitWith {}; // We can't preform these actions while incapacitated...
+
 _isWater = surfaceIsWater (visiblePositionASL player);
 
 if (playerSide isEqualTo west && {player getVariable ["isEscorting",false]}) exitWith {

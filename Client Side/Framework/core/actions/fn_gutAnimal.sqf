@@ -47,7 +47,7 @@ for "_i" from 0 to 1 step 0 do {
     _progress progressSetPosition _cP;
     _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
     if (_cP >= 1) exitWith {};
-    if (!alive player) exitWith {};
+    if (!alive player || isDowned(player)) exitWith {};
     if (isNull _animalCorpse) exitWith {};
     if !(isNull objectParent player) exitWith {};
     if (life_interrupted) exitWith {};
@@ -57,6 +57,7 @@ life_action_inUse = false;
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 if (isNull _animalCorpse) exitWith {life_action_inUse = false;};
+if (!alive player || isDowned(player)) exitWith {life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
 if !(isNull objectParent player) exitWith {titleText["You cannot do this while you are in a vehicle.","PLAIN"];};
 

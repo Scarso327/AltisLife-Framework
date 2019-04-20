@@ -17,7 +17,7 @@ disableSerialization;
 private _display = findDisplay IDD_TABLET_MAIN;
 
 if (_showIDC < 0) exitWith { systemChat "No IDC Passed..." };
-if (!(alive player) || {isNull _display}) exitWith { closeDialog 0; };
+if (!(alive player) || {isNull _display} || isDowned(player)) exitWith { closeDialog 0; };
 
 FF_curApp = _title; // Changes for "Escape" Handling...
 

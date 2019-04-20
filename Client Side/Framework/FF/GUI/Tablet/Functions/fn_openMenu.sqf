@@ -11,7 +11,7 @@
 // A Series of Checks!
 if (dialog) exitWith {}; // Dialog Already Active...
 if (player getVariable ["restrained", false]) exitWith {}; // We're restrained so NO ACCESS!
-if !(alive player) exitWith {}; // We're dead?
+if (!alive player || isDowned(player)) exitWith {}; // We're dead?
 if (life_action_inUse) exitWith {}; // We're preforming an action so please no...
 if !(isNull (findDisplay IDD_TABLET_MAIN)) exitWith {}; // We are already viewing the tablet?
 

@@ -23,6 +23,7 @@ class CfgSettings {
     save_playerStats = true;
     save_virtualItems = true;
     respawn_timer = 30;
+    bleedout_timer = 300; // Must always be in seconds...
     hm_required_number = 5;
     atm_cooldown = 10;
     premium_membership = false;

@@ -10,7 +10,7 @@
 if (!isNil "FF_fnc_nameTags_draw3d") then {removeMissionEventHandler ["Draw3D", FF_fnc_nameTags_loop]};
 
 FF_fnc_nameTags_draw3d = addMissionEventHandler ["Draw3D", {
-	if (life_settings_tagson) then {
+	if (life_settings_tagson && { !(isDowned(player)) }) then {
 		private _masks = LIFE_SETTINGS(getArray,"clothing_masks");
 		private _colorSub = [1,1,1,1];
 

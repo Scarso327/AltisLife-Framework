@@ -11,6 +11,15 @@
 #define SPY(func) SPY_fnc_##func // Spyglass Functions..
 #define FF(func) FF_fnc_##func // Custom "FreeFlight" Functions..
 
+// Incap Related..
+#define isDowned(unit) unit getVariable ["isIncapacitated", false]
+#define setDowned(unit) unit setVariable ["isIncapacitated", true, true]
+#define unsetDowned(unit) unit setVariable ["isIncapacitated", false, true]
+
+#define getKiller(unit) unit getVariable ["killer", objnull]
+#define setKiller(unit, killer) unit setVariable ["killer", killer, true]
+#define unsetKiller(unit) unit setVariable ["killer", objnull, true]
+
 //RemoteExec Macros
 #define RSERV 2 //Only server
 #define RCLIENT -2 //Except server

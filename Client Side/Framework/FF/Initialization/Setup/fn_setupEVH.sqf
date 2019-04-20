@@ -5,9 +5,13 @@
     Description:
     Master eventhandler file
 */
-player addEventHandler ["Killed", {_this call life_fnc_onPlayerKilled}];
-player addEventHandler ["HandleDamage", {_this call life_fnc_handleDamage}];
-player addEventHandler ["Respawn", {_this call life_fnc_onPlayerRespawn}];
+
+/* Incapacitation System */
+player addEventHandler ["Killed", {_this call FF_fnc_onKilled}];
+player addEventHandler ["HandleDamage", {_this call FF_fnc_onDamaged}];
+player addEventHandler ["Respawn", {_this call FF_fnc_onRespawn}];
+
+/* Other */
 player addEventHandler ["Take", {_this call life_fnc_onTakeItem}];
 player addEventHandler ["Fired", {_this call life_fnc_onFired}];
 player addEventHandler ["InventoryClosed", {_this call life_fnc_inventoryClosed}];

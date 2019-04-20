@@ -11,7 +11,7 @@
 private ["_ctrl","_num","_index","_data","_old","_value","_weight","_diff"];
 disableSerialization;
 if (isNull life_trunk_vehicle || !alive life_trunk_vehicle) exitWith {hint localize "STR_MISC_VehDoesntExist"};
-if (!alive player) exitWith {closeDialog 0;};
+if (!alive player || isDowned(player)) exitWith {closeDialog 0;};
 if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith {  closeDialog 0; hint localize "STR_MISC_VehInvUse"; };
 
 if ((lbCurSel 3502) isEqualTo -1) exitWith {hint "You did not select anything.";};

@@ -63,5 +63,12 @@ if (life_firstSpawn) then {
     life_firstSpawn = false;
     [] spawn FF(welcomeNotification);
 };
+
+// Double check the incapacitated stuff...
+if (isDowned(player)) then {
+    unsetDowned(player);
+    unsetKiller(player);
+};
+
 [] call FF(playerSkins);
 [] call FF_fnc_hudSetup;

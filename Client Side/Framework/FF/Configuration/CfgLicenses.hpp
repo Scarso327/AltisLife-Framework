@@ -3,7 +3,7 @@ class CfgLicenses {
     class driving {
         variable = "driving";
         displayName = "Driving Licence";
-        price = 0;
+        price = 900;
         illegal = false;
         side = "civ";
     };
@@ -11,7 +11,7 @@ class CfgLicenses {
     class trucking {
         variable = "trucking";
         displayName = "Trucking Licence";
-        price = 0;
+        price = 24000;
         illegal = false;
         side = "civ";
     };
@@ -19,7 +19,7 @@ class CfgLicenses {
     class piloting {
         variable = "piloting";
         displayName = "Piloting Licence";
-        price = 0;
+        price = 47500;
         illegal = false;
         side = "civ";
     };
@@ -27,7 +27,7 @@ class CfgLicenses {
     class boating {
         variable = "boating";
         displayName = "Boating Licence";
-        price = 0;
+        price = 6700;
         illegal = false;
         side = "civ";
     };
@@ -35,7 +35,7 @@ class CfgLicenses {
     class diving {
         variable = "diving";
         displayName = "Diving Licence";
-        price = 0;
+        price = 17000;
         illegal = false;
         side = "civ";
     };
@@ -43,7 +43,7 @@ class CfgLicenses {
     class go_karting {
         variable = "go_karting";
         displayName = "Go-Karting Licence";
-        price = 0;
+        price = 450;
         illegal = false;
         side = "civ";
     };
@@ -52,7 +52,7 @@ class CfgLicenses {
     class homeowners {
         variable = "homeowners";
         displayName = "Homeowner's Approval";
-        price = 0;
+        price = 500000;
         illegal = false;
         side = "civ";
     };
@@ -61,7 +61,7 @@ class CfgLicenses {
     class firearms {
         variable = "firearms";
         displayName = "Firearms Certification";
-        price = 0;
+        price = 32500;
         illegal = false;
         side = "civ";
     };
@@ -70,7 +70,7 @@ class CfgLicenses {
     class fish {
         variable = "fish";
         displayName = "Fish Processing";
-        price = 0;
+        price = 500;
         illegal = false;
         side = "civ";
     };
@@ -78,7 +78,7 @@ class CfgLicenses {
     class lumber {
         variable = "lumber";
         displayName = "Lumber Processing";
-        price = 0;
+        price = 1200;
         illegal = false;
         side = "civ";
     };
@@ -86,7 +86,7 @@ class CfgLicenses {
     class schnapps {
         variable = "schnapps";
         displayName = "Schnapps Processing";
-        price = 0;
+        price = 1700;
         illegal = false;
         side = "civ";
     };
@@ -94,7 +94,7 @@ class CfgLicenses {
     class tin {
         variable = "tin";
         displayName = "Tin Processing";
-        price = 0;
+        price = 4500;
         illegal = false;
         side = "civ";
     };
@@ -102,7 +102,7 @@ class CfgLicenses {
     class copper {
         variable = "copper";
         displayName = "Copper Processing";
-        price = 0;
+        price = 7500;
         illegal = false;
         side = "civ";
     };
@@ -110,7 +110,7 @@ class CfgLicenses {
     class silver {
         variable = "silver";
         displayName = "Silver Processing";
-        price = 0;
+        price = 11000;
         illegal = false;
         side = "civ";
     };
@@ -118,7 +118,7 @@ class CfgLicenses {
     class iron {
         variable = "iron";
         displayName = "Iron Processing";
-        price = 0;
+        price = 18000;
         illegal = false;
         side = "civ";
     };
@@ -126,7 +126,7 @@ class CfgLicenses {
     class rock {
         variable = "rock";
         displayName = "Rock Processing";
-        price = 0;
+        price = 15000;
         illegal = false;
         side = "civ";
     };
@@ -134,7 +134,7 @@ class CfgLicenses {
     class platinum {
         variable = "platinum";
         displayName = "Platinum Processing";
-        price = 0;
+        price = 30000;
         illegal = false;
         side = "civ";
     };
@@ -142,7 +142,7 @@ class CfgLicenses {
     class oil {
         variable = "oil";
         displayName = "Oil Processing";
-        price = 0;
+        price = 75000;
         illegal = false;
         side = "civ";
     };
@@ -150,7 +150,7 @@ class CfgLicenses {
     class iridium {
         variable = "iridium";
         displayName = "Iridium Processing";
-        price = 0;
+        price = 125000;
         illegal = false;
         side = "civ";
     };
@@ -158,7 +158,7 @@ class CfgLicenses {
     class gem {
         variable = "gem";
         displayName = "Gem Processing";
-        price = 0;
+        price = 350000;
         illegal = false;
         side = "civ";
     };
@@ -166,7 +166,7 @@ class CfgLicenses {
     class marijuana {
         variable = "marijuana";
         displayName = "Marijuana Processing";
-        price = 0;
+        price = 45000;
         illegal = true;
         side = "civ";
     };
@@ -174,7 +174,7 @@ class CfgLicenses {
     class heroin {
         variable = "heroin";
         displayName = "Heroin Processing";
-        price = 0;
+        price = 87500;
         illegal = true;
         side = "civ";
     };
@@ -182,7 +182,7 @@ class CfgLicenses {
     class cocaine {
         variable = "cocaine";
         displayName = "Cocaine Processing";
-        price = 0;
+        price = 11600;
         illegal = true;
         side = "civ";
     };
@@ -190,7 +190,7 @@ class CfgLicenses {
     class methamphetamine {
         variable = "methamphetamine";
         displayName = "Methamphetamine Processing";
-        price = 0;
+        price = 145000;
         illegal = true;
         side = "civ";
     };
@@ -198,7 +198,7 @@ class CfgLicenses {
     class drug_refining {
         variable = "drug_refining";
         displayName = "Drub Refining";
-        price = 0;
+        price = 600000;
         illegal = true;
         side = "civ";
     };
@@ -207,7 +207,7 @@ class CfgLicenses {
     class syndikat {
         variable = "syndikat";
         displayName = "Syndikat Training";
-        price = 0;
+        price = 1000000;
         illegal = true;
         side = "civ";
     };
@@ -215,7 +215,7 @@ class CfgLicenses {
     // TPC - Specialised Officers
     class sfo1 {
         variable = "sfo1";
-        displayName = "Specialised  Firearms Officer L1";
+        displayName = "Specialised Firearms Authorisation L1";
         price = 0;
         illegal = false;
         side = "cop";
@@ -223,7 +223,7 @@ class CfgLicenses {
 
     class sfo2 {
         variable = "sfo2";
-        displayName = "Specialised  Firearms Officer L2";
+        displayName = "Specialised Firearms Authorisation L2";
         price = 0;
         illegal = false;
         side = "cop";
@@ -231,7 +231,7 @@ class CfgLicenses {
 
     class sfo3 {
         variable = "sfo3";
-        displayName = "Specialised  Firearms Officer L3";
+        displayName = "Specialised Firearms Authorisation L3";
         price = 0;
         illegal = false;
         side = "cop";
@@ -239,7 +239,7 @@ class CfgLicenses {
 
     class aso1 {
         variable = "aso1";
-        displayName = "Air Support Officer L1";
+        displayName = "Air Support Authorisation L1";
         price = 0;
         illegal = false;
         side = "cop";
@@ -247,7 +247,7 @@ class CfgLicenses {
 
     class aso2 {
         variable = "aso2";
-        displayName = "Air Support Officer L2";
+        displayName = "Air Support Authorisation L2";
         price = 0;
         illegal = false;
         side = "cop";
@@ -255,7 +255,7 @@ class CfgLicenses {
 
     class aso3 {
         variable = "aso3";
-        displayName = "Air Support Officer L3";
+        displayName = "Air Support Authorisation L3";
         price = 0;
         illegal = false;
         side = "cop";
@@ -264,7 +264,7 @@ class CfgLicenses {
     // NHS - Specialised Units
     class taa {
         variable = "taa";
-        displayName = "Tanoan Air Ambulance";
+        displayName = "Tanoa Air Ambulance";
         price = 0;
         illegal = false;
         side = "med";

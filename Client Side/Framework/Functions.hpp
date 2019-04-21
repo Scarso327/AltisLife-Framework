@@ -372,8 +372,6 @@ class Life_Client_Core {
         class medicSiren {};
         class medicSirenLights {};
         class requestMedic {};
-        class revived {};
-        class revivePlayer {};
     };
 
     class Network {

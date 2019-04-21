@@ -1,0 +1,16 @@
+Land_shed_02_F
+Land_Shed_05_F
+Land_Slum_01_F
+Land_Slum_03_F
+Land_House_Small_02_F
+Land_House_Small_03_F
+Land_House_Small_04_F
+Land_House_Small_05_F
+Land_House_Small_06_F
+Land_House_Big_01_F
+Land_House_Big_02_F
+Land_House_Big_03_F
+Land_Hotel_03_F
+
+Land_School_01_F
+Land_SM_01_shed_F

@@ -39,7 +39,7 @@ if (isClass (CONFIG >> (uniform _object))) then {
         _texture = _textDir # 1;
     };
 
-    _object setObjectTextureGlobal [0, TEXTURE(_texture)];
+    if !(_texture isEqualTo "") then { _object setObjectTextureGlobal [0, TEXTURE(_texture)] };
     
     if(((getArray(CONFIG >> (uniform _object) >> "invisBackpack")) select 0) isEqualTo 3) then {
         _isInvisible = true;

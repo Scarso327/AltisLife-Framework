@@ -45,7 +45,7 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 1 || {(uiNamespace
             true
         } count _config;
         
-        ((findDisplay 38400) displayCtrl 38406) ctrlSetText "Weapons";
+        ((findDisplay 38400) displayCtrl 38406) ctrlSetText "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
         
         ctrlShow [38406,true];
         ctrlShow [38407,false];
@@ -69,7 +69,7 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 1 || {(uiNamespace
             true
         } count _config;
         
-        ((findDisplay 38400) displayCtrl 38407) ctrlSetText "Weapons";
+        ((findDisplay 38400) displayCtrl 38407) ctrlSetText "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
         
         ctrlShow [38406,false];
         ctrlShow [38407,true];
@@ -97,6 +97,8 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 1 || {(uiNamespace
             } count _config;
 
             ((findDisplay 38400) displayCtrl 38405) ctrlSetText "Buy";
+            ((findDisplay 38400) displayCtrl 38406) ctrlSetText "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMagAll_ca.paa";
+            ((findDisplay 38400) displayCtrl 38407) ctrlSetText "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemAcc_ca.paa";
             
             ctrlShow [38402,true];
             ctrlShow [38406,true];

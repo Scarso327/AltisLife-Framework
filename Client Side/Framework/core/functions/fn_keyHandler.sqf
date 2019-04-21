@@ -258,7 +258,7 @@ switch (_code) do {
             private _veh = vehicle player;
             if (isNil {_veh getVariable "siren"}) then {_veh setVariable ["siren",false,true];};
             if ((_veh getVariable "siren")) then {
-                titleText ["Your sirens are now on","PLAIN"];
+                titleText ["Your sirens are now off","PLAIN"];
                 _veh setVariable ["siren",false,true];
                 if !(isNil {(_veh getVariable "sirenJIP")}) then {
                     private _jip = _veh getVariable "sirenJIP";
@@ -266,7 +266,7 @@ switch (_code) do {
                     remoteExec ["",_jip]; //remove from JIP queue
                 };
             } else {
-                titleText ["Your sirens are now off","PLAIN"];
+                titleText ["Your sirens are now on","PLAIN"];
                 _veh setVariable ["siren",true,true];
                 private "_jip";
                 if (playerSide isEqualTo west) then {

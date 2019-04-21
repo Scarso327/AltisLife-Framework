@@ -80,13 +80,10 @@ life_action_inUse = true;
     life_action_inUse = false;
 };
 
-//Check if it's a dead body.
-if (_curObject isKindOf "CAManBase" && {!alive _curObject}) exitWith {
-    //Hotfix code by ins0
-    if ((playerSide isEqualTo west && {(LIFE_SETTINGS(getNumber,"revive_cops") isEqualTo 1)}) || {(playerSide isEqualTo civilian && {(LIFE_SETTINGS(getNumber,"revive_civ") isEqualTo 1)})} || {(playerSide isEqualTo east && {(LIFE_SETTINGS(getNumber,"revive_east") isEqualTo 1)})} || {playerSide isEqualTo independent}) then {
-        if (life_inv_defibrillator > 0) then {
-            [_curObject] call life_fnc_revivePlayer;
-        };
+// Check for incapacitated player...
+if (_curObject isKindOf "CAManBase" && {isDowned(_curObject)}) exitWith {
+    if (((independent countSide playableUnits) <= 0 && { (playerSide isEqualTo west && {(LIFE_SETTINGS(getNumber,"revive_cops") isEqualTo 1)}) }) || { playerSide isEqualTo independent }) then {
+        _curObject spawn FF(revive);
     };
 };
 

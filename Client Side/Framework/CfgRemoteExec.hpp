@@ -49,7 +49,6 @@ class CfgRemoteExec {
         F(life_fnc_receiveMoney,CLIENT)
         F(life_fnc_removeLicenses,CLIENT)
         F(life_fnc_restrain,CLIENT)
-        F(life_fnc_revived,CLIENT)
         F(life_fnc_robPerson,CLIENT)
         F(life_fnc_robReceive,CLIENT)
         F(life_fnc_searchClient,CLIENT)
@@ -73,6 +72,7 @@ class CfgRemoteExec {
         F(TON_fnc_clientMessage,CLIENT)
         F(TON_fnc_player_query,CLIENT)
         F(FF_fnc_onIncapacitated,CLIENT)
+        F(FF_fnc_onRevived,CLIENT)
         
         /* Server only functions */
         F(BIS_fnc_execVM,SERVER)

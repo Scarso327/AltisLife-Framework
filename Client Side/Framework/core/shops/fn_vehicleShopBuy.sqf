@@ -6,6 +6,7 @@
     Description:
     Does something with vehicle purchasing.
 */
+scopeName "Vehicle Buy";
 
 params [["_mode",true,[true]]];
 
@@ -44,7 +45,7 @@ private _colorIndex = lbValue[2304,(lbCurSel 2304)];
 if (_purchasePrice < 0) exitWith {closeDialog 0;}; //Bad price entry
 
 if (playerSide isEqualTo civilian) then {
-    if (CASH < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - CASH] call life_fnc_numberText];closeDialog 0;};
+    if (CASH < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - CASH] call life_fnc_numberText]; breakOut "Vehicle Buy"; closeDialog 0;};
     CASH = CASH - _purchasePrice;
     hint format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 } else {
@@ -70,12 +71,9 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
     };
 };
 
-
 if (_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block"; closeDialog 0;};
 
-
 //Spawn the vehicle and prep it.
-
 private "_vehicle";
 
 if ((life_veh_shop select 0) == "med_air_hs") then {

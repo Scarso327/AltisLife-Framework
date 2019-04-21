@@ -27,10 +27,10 @@ if (_shooter isKindOf "CAManBase" && (alive player && !(isDowned(player)))) then
 
         [0,"STR_NOTF_Tazed",true,[profileName, _shooter getVariable ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 
-        sleep 15;
+        sleep 10;
 
         life_istazed = false;
-        player allowDamage true;
+        player setUnconscious false;
         disableUserInput false;
 
         player playMoveNow "amovppnemstpsraswrfldnon";

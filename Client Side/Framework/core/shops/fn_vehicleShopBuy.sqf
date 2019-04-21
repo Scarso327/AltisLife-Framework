@@ -49,7 +49,7 @@ if (playerSide isEqualTo civilian) then {
     CASH = CASH - _purchasePrice;
     hint format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 } else {
-    hint "As a Public Servant, the Government has covered the costs of your equipment."
+    hint "As a public servant, the government has covered the costs of your equipment."
 };
 [0] call SOCK_fnc_updatePartial;
 

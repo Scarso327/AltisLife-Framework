@@ -69,7 +69,7 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
             hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
             CASH = CASH - _price;
         } else {
-            hint "As a Public Servant, the Government has covered the costs of your equipment."
+            hint "As a public servant, the government has covered the costs of your equipment."
         };
         [_item,true] call life_fnc_handleItem;
     };

@@ -97,6 +97,9 @@ FF_Perks = [];
 
 FF_originalList = [];
 
+FF_canRespawn = false;
+FF_effects = [];
+
 /* FF_Perks Structure
 [
     // Police

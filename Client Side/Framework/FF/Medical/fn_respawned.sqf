@@ -54,5 +54,9 @@ if (life_removeWanted) then {
     [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
 };
 
+// Show the HUD again...
+FF_hideHUD = false;
+[] call FF_fnc_hudUpdate;
+
 [] call DB(updateRequest);
 [] spawn LIFE(spawnMenu);

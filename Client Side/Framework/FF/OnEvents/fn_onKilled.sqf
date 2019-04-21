@@ -66,8 +66,4 @@ unsetDowned(_unit);
 
 	waitUntil {life_respawned};
 	"WaitToRespawn" cutText ["", "PLAIN"];
-	
-	// Show the HUD again...
-	FF_hideHUD = true;
-	[] call FF_fnc_hudUpdate;
 };

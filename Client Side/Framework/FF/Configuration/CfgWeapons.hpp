@@ -172,7 +172,7 @@ class CfgWeapons {
             { "FirstAidKit", "First Aid Kit", 0, 0, "call life_coplevel >= 1" },
             { "ToolKit", "Toolkit", 0, -1, "call life_coplevel >= 1" },
             { "HandGrenade_Stone", "Flashbang Grenade", 0, -1, "license_cop_sfo2 || license_cop_sfo3" },
-            { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, 0, "call life_coplevel >= 1" },
+            { "hgun_Pistol_heavy_01_F", "Taser Pistol", 0, 0, "call life_coplevel >= 1" },
             { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "call life_coplevel >= 2" },
             { "SMG_05_F", "Protector 9 mm", 0, -1, "call life_coplevel >= 2" },
             { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "call life_coplevel >= 4" },
@@ -205,7 +205,8 @@ class CfgWeapons {
             { "optic_DMS", "DMS", 0, -1, "license_cop_sfo3" },
             { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, "call life_coplevel >= 1 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
             { "acc_flashlight", "Flashlight", 0, -1, "call life_coplevel >= 4 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
-            { "acc_pointer_IR", "IR Laser Pointer", 0, -1, "license_cop_sfo3" }
+            { "acc_pointer_IR", "IR Laser Pointer", 0, -1, "license_cop_sfo3" },
+            { "muzzle_snds_acp", "Taser Suppressor", 0, -1, "call life_coplevel >= 1 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" }
         };
     };
 

@@ -40,7 +40,7 @@ if (!isNull _source && {_source != _unit}) then {
 				Taser
 				Credit: Tonic
 			*/
-			if (currentWeapon _source in ["hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_01_MRD_F"] && _projectile in ["B_45ACP_Ball"]) then {
+			if (currentWeapon _source in ["hgun_Pistol_heavy_01_F","hgun_Pistol_heavy_01_MRD_F","hgun_Pistol_heavy_01_snds_F"] && _projectile in ["B_45ACP_Ball"]) then {
 				if (alive _unit) then {
 					if !(life_istazed) then {
 						private _distance = 35;

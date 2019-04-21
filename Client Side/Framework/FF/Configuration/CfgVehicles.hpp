@@ -173,14 +173,14 @@ class LifeCfgVehicles {
     class C_Kart_01_F { // Kart
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 1000;
         textures[] = {};
     };
 
     class C_Quadbike_01_F { // Quad Bike
         vItemSpace = 25;
         conditions = "";
-        price = 0;
+        price = 1500;
         textures[] = {
             { "Black", "civ", {
                 "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_black_co.paa"
@@ -206,29 +206,21 @@ class LifeCfgVehicles {
     class O_Quadbike_01_F { // [Syndikat/Black Market] Quad Bike
         vItemSpace = 25;
         conditions = "";
-        price = 0;
-        textures[] = {
-            { "Hunter Camo", "civ", {
-                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
-            }, "" }
-        };
+        price = 1500;
+        textures[] = {};
     };
 
     class B_G_Quadbike_01_F { // [Chop Shop] Quad Bike
         vItemSpace = 25;
         conditions = "";
-        price = 0;
-        textures[] = {
-            { "Hunter Camo", "civ", {
-                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
-            }, "" }
-        };
+        price = 1500;
+        textures[] = {};
     };
 
     class C_Hatchback_01_F { // Hatchback
         vItemSpace = 35;
         conditions = "";
-        price = 0;
+        price = 12500;
         textures[] = {
             { "Beige", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa"
@@ -260,7 +252,7 @@ class LifeCfgVehicles {
     class C_Offroad_01_F { // Offroad
         vItemSpace = 65;
         conditions = "";
-        price = 0;
+        price = 16700;
         textures[] = {
             { "Red", "civ", {
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
@@ -300,21 +292,14 @@ class LifeCfgVehicles {
     class O_G_Offroad_01_F { // [Syndikat] Offroad
         vItemSpace = 65;
         conditions = "";
-        price = 0;
+        price = 16700;
         textures[] = {};
     };
 
     class C_Offroad_02_unarmed_F { // MB 4WD
         vItemSpace = 60;
         conditions = "";
-        price = 0;
-        textures[] = {};
-    };
-
-    class I_C_Offroad_02_unarmed_F { // [Syndikat] MB 4WD
-        vItemSpace = 60;
-        conditions = "";
-        price = 0;
+        price = 18450;
         textures[] = {
             { "Black", "civ", {
                 "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa"
@@ -337,17 +322,28 @@ class LifeCfgVehicles {
         };
     };
 
+    class I_C_Offroad_02_unarmed_F { // [Syndikat] MB 4WD
+        vItemSpace = 60;
+        conditions = "";
+        price = 18450;
+        textures[] = {
+            { "Green", "civ", {
+                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa"
+            }, "" }
+        };
+    };
+
     class I_C_Offroad_02_LMG_F { // [Syndika] MB 4WD (LMG)
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 350000;
         textures[] = {};
     };
 
     class C_SUV_01_F { // SUV
         vItemSpace = 45;
         conditions = "";
-        price = 0;
+        price = 31900;
         textures[] = {
             { "Dark Red", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
@@ -375,7 +371,7 @@ class LifeCfgVehicles {
     class C_Hatchback_01_sport_F { // Hatchback (Sport)
         vItemSpace = 35;
         conditions = "";
-        price = 0;
+        price = 57800;
         textures[] = {
             { "Red", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa"
@@ -406,7 +402,7 @@ class LifeCfgVehicles {
     class C_Van_02_transport_F { // Van Transport
         vItemSpace = 90;
         conditions = "";
-        price = 0;
+        price = 45000;
         textures[] = {
             { "ARV", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
@@ -419,21 +415,21 @@ class LifeCfgVehicles {
     class O_G_Van_02_transport_F { // [Syndikat] Van Transport
         vItemSpace = 90;
         conditions = "";
-        price = 0;
+        price = 45000;
         textures[] = {};
     };
 
     class C_Van_02_vehicle_F { // Van (Cargo)
         vItemSpace = 100;
         conditions = "";
-        price = 0;
+        price = 51200;
         textures[] = {};
     };
 
     class O_G_Van_02_vehicle_F { // [Syndikat] Van (Cargo)
         vItemSpace = 100;
         conditions = "";
-        price = 0;
+        price = 51200;
         textures[] = {};
     };
 
@@ -447,112 +443,112 @@ class LifeCfgVehicles {
     class C_Van_01_transport_F { // Truck
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 76000;
         textures[] = {};
     };
 
     class O_G_Van_01_transport_F { // [Syndikat] Truck
         vItemSpace = 125;
         conditions = "";
-        price = 0;
+        price = 76000;
         textures[] = {};
     };
 
     class C_Van_01_box_F { // Truck Boxer
         vItemSpace = 150;
         conditions = "";
-        price = 0;
+        price = 97000;
         textures[] = {};
     };
 
     class C_Truck_02_transport_F { // Zamak Transport
         vItemSpace = 190;
         conditions = "";
-        price = 0;
+        price = 130000;
         textures[] = {};
     };
 
     class C_Truck_02_covered_F { // Zamak Transport (Covered)
         vItemSpace = 230;
         conditions = "";
-        price = 0;
+        price = 164000;
         textures[] = {};
     };
 
     class B_Truck_01_mover_F { // HEMTT
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 105000;
         textures[] = {};
     };
 
     class B_Truck_01_transport_F { // HEMTT Transport
         vItemSpace = 250;
         conditions = "";
-        price = 0;
+        price = 210000;
         textures[] = {};
     };
 
     class B_Truck_01_covered_F { // HEMTT Transport (Covered)
         vItemSpace = 285;
         conditions = "";
-        price = 0;
+        price = 245000;
         textures[] = {};
     };
 
     class B_Truck_01_ammo_F { // HEMTT Ammo
         vItemSpace = 300;
         conditions = "";
-        price = 0;
+        price = 267800;
         textures[] = {};
     };
 
     class B_Truck_01_box_F { // HEMTT Box
         vItemSpace = 750;
         conditions = "";
-        price = 0;
+        price = 430000;
         textures[] = {};
     };
 
     class O_T_Truck_03_transport_ghex_F { // Tempest Transport
         vItemSpace = 370;
         conditions = "";
-        price = 0;
+        price = 298000;
         textures[] = {};
     };
 
     class O_T_Truck_03_covered_ghex_F { // Tempest Transport (Covered)
         vItemSpace = 395;
         conditions = "";
-        price = 0;
+        price = 313600;
         textures[] = {};
     };
 
     class O_T_Truck_03_ammo_ghex_F { // Tempest Ammo
         vItemSpace = 480;
         conditions = "";
-        price = 0;
+        price = 367900;
         textures[] = {};
     };
 
     class O_T_Truck_03_device_ghex_F { // Tempest (Device)
         vItemSpace = 500;
         conditions = "";
-        price = 0;
+        price = 500000;
         textures[] = {};
     };
 
     class C_Heli_Light_01_civil_F { // M-900
         vItemSpace = 60;
         conditions = "";
-        price = 0;
+        price = 234000;
         textures[] = {};
     };
 
     class B_Heli_Light_01_F { // MH-9 Hummingbird
         vItemSpace = 75;
         conditions = "";
-        price = 0;
+        price = 345000;
         textures[] = {
             { "Sheriff", "civ", {
                 "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa"
@@ -593,7 +589,7 @@ class LifeCfgVehicles {
     class O_Heli_Light_02_unarmed_F { // PO-30 Orca (Unarmed)
         vItemSpace = 190;
         conditions = "";
-        price = 0;
+        price = 879000;
         textures[] = {
             { "White / Blue", "civ", {
                 "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"
@@ -611,7 +607,7 @@ class LifeCfgVehicles {
     class I_Heli_Transport_02_F { // CH-49 Mohawk
         vItemSpace = 245;
         conditions = "";
-        price = 0;
+        price = 2675000;
         textures[] = {};
     };
 
@@ -632,7 +628,7 @@ class LifeCfgVehicles {
     class C_Plane_Civil_01_F { // Caesar BTT
         vItemSpace = 40;
         conditions = "";
-        price = 0;
+        price = 300000;
         textures[] = {
             { "Racing (Tan Interior)", "civ", {
                 "A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa",
@@ -688,7 +684,7 @@ class LifeCfgVehicles {
     class C_Scooter_Transport_01_F { // Water Scooter
         vItemSpace = 20;
         conditions = "";
-        price = 0;
+        price = 1300;
         textures[] = {
             { "Black", "civ", {
                 "\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Black_CO.paa",
@@ -724,21 +720,21 @@ class LifeCfgVehicles {
     class C_Rubberboat { // Rescue Boat
         vItemSpace = 35;
         conditions = "";
-        price = 0;
+        price = 8700;
         textures[] = {};
     };
 
     class C_Boat_Civil_01_F { // Motorboat
         vItemSpace = 50;
         conditions = "";
-        price = 0;
+        price = 14500;
         textures[] = {};
     };
 
     class C_Boat_Transport_02_F { // RHIB
         vItemSpace = 65;
         conditions = "";
-        price = 0;
+        price = 15600;
         textures[] = {};
     };
 

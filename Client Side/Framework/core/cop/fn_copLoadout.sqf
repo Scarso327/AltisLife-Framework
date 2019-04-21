@@ -5,7 +5,7 @@ waitUntil {scriptDone _handle};
 
 switch (true) do {
     case (FETCH_CONST(life_coplevel) isEqualTo 1): {
-        player addUniform "U_Rangemaster";
+        player addUniform "U_Competitor";
         player addHeadgear "H_Cap_police";
         player addVest "V_PlateCarrier1_blk";
         player addBackpack "B_TacticalPack_blk";

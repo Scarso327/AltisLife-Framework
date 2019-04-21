@@ -690,42 +690,42 @@ class LifeCfgVehicles {
     class I_Plane_Fighter_03_CAS_F { // A-143 Buzzard (CAS)
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 6780000;
         textures[] = {};
     };
 
     class B_Plane_CAS_01_F { // A-164 Wipeout 
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 7895000;
         textures[] = {};
     };
 
     class O_Plane_CAS_02_F { // To-199 Neophron 
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 8145000;
         textures[] = {};
     };
 
     class I_Plane_Fighter_04_F { // A-149 Gryphon
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 8670000;
         textures[] = {};
     };
 
     class B_Plane_Fighter_01_F { // F/A-181 Black Wasp II
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 9950000;
         textures[] = {};
     };
 
     class O_Plane_Fighter_02_F { // To-201 Shikra
         vItemSpace = 0;
         conditions = "";
-        price = 0;
+        price = 1320000;
         textures[] = {};
     };
 

@@ -54,7 +54,7 @@ class CfgVehicleStores {
         conditions = "license_civ_piloting";
         vehicles[] = {
             { "C_Plane_Civil_01_F", "" },
-            { "I_Plane_Fighter_03_CAS_F", "" }
+            { "I_Plane_Fighter_03_CAS_F", "" },
             { "B_Plane_CAS_01_F", "" },
             { "O_Plane_CAS_02_F", "" },
             { "I_Plane_Fighter_04_F", "" },

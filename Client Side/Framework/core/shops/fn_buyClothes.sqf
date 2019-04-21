@@ -16,8 +16,12 @@ _price = 0;
     };
 } forEach life_clothing_purchase;
 
-if (_price > CASH) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
-CASH = CASH - _price;
+if (playerSide isEqualTo civilian) then {
+    if (_price > CASH) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
+    CASH = CASH - _price;
+} else {
+    hint "As a Public Servant, the Government has covered the costs of your equipment."
+};
 [0] call SOCK_fnc_updatePartial;
 
 life_clothesPurchased = true;

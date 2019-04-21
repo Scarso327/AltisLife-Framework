@@ -68,7 +68,7 @@ Changed:
     All Masked Clothing Items (Lewis)
     All Faction Paychecks (Lewis)
     Getting tased no longer unloads current weapon (Scarso)
-    
+    Police & Medics are no longer charged for their items (Scarso)
     
 Removed:
     Welcome Notification Screen (Scarso)

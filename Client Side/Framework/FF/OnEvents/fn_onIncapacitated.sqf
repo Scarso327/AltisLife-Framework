@@ -57,6 +57,11 @@ switch (_type) do {
 		player switchCamera "Internal"; // Switch to first person...
 
 		// Create / Setup Incapacitated UI...
+
+		// Hide the actual HUD...
+		FF_hideHUD = true;
+		[] call FF_fnc_hudUpdate;
+
 		("FF_Incapacitated" call BIS_fnc_RscLayer) cutRsc ["RscIncapacitated", "PLAIN", 0];
 
 		private _display = uiNameSpace getVariable ["FF_Incapacitated", displayNull];

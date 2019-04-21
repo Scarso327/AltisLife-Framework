@@ -102,6 +102,8 @@ FF_effects = [];
 
 FF_seatbelt = false;
 
+FF_hideHUD = false;
+
 /* FF_Perks Structure
 [
     // Police

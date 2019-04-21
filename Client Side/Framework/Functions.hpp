@@ -307,7 +307,6 @@ class Life_Client_Core {
         class stripDownPlayer {};
         class teleport {};
         class whereAmI {};
-        class payChecks {};
     };
 
     class Gangs {

@@ -26,5 +26,3 @@ if (!life_is_arrested) then {
         life_is_arrested = false;
         [player,true] spawn life_fnc_jail;
 };
-
-[] call life_fnc_initPayChecks;

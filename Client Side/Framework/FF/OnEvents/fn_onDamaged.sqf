@@ -64,6 +64,14 @@ if (!isNull _source && {_source != _unit}) then {
 			if(_source getVariable ["restrained",false]) then { _damage = _orginalDamage };
 		};
 	};
+} else {
+	/* Seatbelt System */
+	if ((vehicle _unit) isKindOf "Car" && (_source isEqualTo _unit)) then {
+		_damage = [
+			_damage,
+			_damage / 2
+		] select (FF_seatbelt);
+	};
 };
 
 /* 

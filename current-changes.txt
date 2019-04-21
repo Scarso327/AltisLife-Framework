@@ -20,6 +20,8 @@ Added:
     Processing UI (Scarso)
         - Easier than scrolling
     Custom Item Icons (Lewis Mackinnon)
+    Vehicle Seatbelts (Scarso)
+        - Halves damage on vehicle collision
 
 Changed:
     All Physical Stores (Lewis Mackinnon)

@@ -100,6 +100,8 @@ FF_originalList = [];
 FF_canRespawn = false;
 FF_effects = [];
 
+FF_seatbelt = false;
+
 /* FF_Perks Structure
 [
     // Police

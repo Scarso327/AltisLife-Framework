@@ -122,6 +122,7 @@ player setVariable ["Escorting",false,true];
 player setVariable ["transporting",false,true];
 player setVariable ["playerSurrender",false,true];
 player setVariable ["seatbelt",false,true];
+player setVariable ["isKnckedOut", false, true];
 
 diag_log "Past Settings Init";
 [] execFSM "core\fsm\client.fsm";

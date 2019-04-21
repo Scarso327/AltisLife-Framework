@@ -138,7 +138,6 @@ class CfgClothing {
             { "NONE", "Remove Uniform", 0, "" },
             { "U_C_man_sport_1_F", "", 0, "" },
             { "U_C_man_sport_3_F", "", 0, "" },
-            { "U_B_Wetsuit", "", 0, "" },
             { "U_O_Wetsuit", "", 0, "" },
             { "U_I_Wetsuit", "", 0, "" }
         };
@@ -151,13 +150,11 @@ class CfgClothing {
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, "" },
-            { "G_B_Diving", "", 0, "" },
             { "G_O_Diving", "", 0, "" },
             { "G_I_Diving", "", 0, "" }
         };
         vests[] = {
             { "NONE", "Remove Vest", 0, "" },
-            { "V_RebreatherB", "", 0, "" },
             { "V_RebreatherIR", "", 0, "" },
             { "V_RebreatherIA", "", 0, "" }
         };

@@ -17,7 +17,7 @@ class CfgTextures {
                 "Medic\Uniforms\MedicLevel2.paa", // Level 4
                 "Medic\Uniforms\MedicLevel2.paa", // Level 5
                 "Medic\Uniforms\MedicLevel3.paa", // Level 6
-                "Medic\Uniforms\MedicLevel3.paa", // Level 7
+                "Medic\Uniforms\MedicLevel3.paa" // Level 7
             }
         };
         invisBackpack[] = {3, ""};

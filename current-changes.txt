@@ -22,6 +22,7 @@ Added:
     Custom Item Icons (Lewis Mackinnon)
     Vehicle Seatbelts (Scarso)
         - Halves damage on vehicle collision
+    3 Second Delay to Unflipping Vehicles (Scarso)
 
 Changed:
     All Physical Stores (Lewis Mackinnon)

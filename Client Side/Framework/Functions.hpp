@@ -29,6 +29,11 @@ class FF_Core {
         class welcomeNotification {};
     };
 
+    class Actions {
+        file = "FF\Actions";
+        class unflipVehicle {};
+    };
+
     class Initialization_Sides {
         file = "FF\Initialization\Sides";
         class initCivilian {};

@@ -152,12 +152,12 @@ class CfgShops {
     class tpc_market {
         name = "TPC Market";
         conditions = "playerSide isEqualTo west";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "jaws_of_life", "breathalyzer", "spikeStrip", "gps_tracker", "road_barrier", "road_cone" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "spikeStrip" };
     };
 
     class tas_market {
         name = "TAS Market";
         conditions = "playerSide isEqualTo indpendent";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "empty_fuel_can", "jaws_of_life", "breathalyzer", "blood_bag", "stretcher", "defibrillator", "road_barrier", "road_cone" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "blood_bag", "stretcher", "defibrillator" };
     };
 };

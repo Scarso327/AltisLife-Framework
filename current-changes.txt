@@ -69,6 +69,8 @@ Removed:
     House Based Spawning for Civilians (Scarso)
     Various Run Types (Lewis Mackinnon)
     Taser Sound (Scarso)
+    Tased Animation (Scarso)
+        - Now it just causes the player to fall over realistically.
 
 Fixed:
     People in restraints being able to shoot & kill (Scarso)

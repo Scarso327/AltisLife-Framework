@@ -1,41 +1,47 @@
 Added:
     Intro Text (Scarso)
-    Intro Sound (Lewis Mackinnon)
+    Intro Sound (Lewis)
     Incapacitation System (Scarso)
-    Police Uniforms (Scarso & Lewis Mackinnon)
+    Police Uniforms (Scarso & Lewis)
         - Cadet Uniform
         - Main Uniform (Insignia changes per rank)
         - High Visibility Uniform
-    Police Car Textures (Scarso & Lewis Mackinnon)
+    Police Car Textures (Scarso & Lewis)
         - Police Offroad
         - Police SUV
         - Armed Response Vehicles
-    Tool kits to Stores (Scarso)
-    Different Thirst Values for Drinks (Scarso)
-    Professions (Scarso)
+    Tool kits to Stores (Scarso & Lewis)
+    Different Thirst Values for Drinks (Scarso & Lewis)
+    Professions (Scarso & Lewis)
         - Gathering
-    Leveling System (Scarso)
+        - Mining
+        - Processing
+        - Cooking
+        - Crafting
+    Leveling System (Scarso & Lewis)
         - Perks Included!
     License Shop UI (Scarso)
         - Easier purchasing of licenses
     Processing UI (Scarso)
         - Easier than scrolling
-    Custom Item Icons (Lewis Mackinnon)
+    Custom Item Icons (Lewis)
     Vehicle Seatbelts (Scarso)
         - Halves damage on vehicle collision
     3 Second Delay to Unflipping Vehicles (Scarso)
 
 Changed:
-    All Physical Stores (Lewis Mackinnon)
-    All Virtual Stores (Lewis Mackinnon)
-    All Vehicle Stores (Lewis Mackinnon)
-    All Licnece Stores (Lewis Mackinnon)
-    All Gather Sites (Lewis Mackinnon)
-    All Processing Sites (Lewis Mackinnon)
-    All Spawn Points (Lewis Mackinnon)
+    All Physical Stores (Lewis)
+    All Virtual Stores (Lewis)
+    All Vehicle Stores (Lewis)
+    All Licnece Stores (Lewis)
+    All Gather Sites (Lewis)
+    All Processing Sites (Lewis)
+    All Spawn Points (Lewis)
+    Player Starting Money (Lewis)
     Virtual Tool Kit - > Physical (Scarso)
+    Player House Limit (Lewis)
     You can repair vehicles without tool kit but it's slower (Scarso)
-    Store Conditional Checks (Scarso)
+    Store Conditional Checks (Scarso & Lewis)
     Gathering is now Progress Bar based (Scarso)
     Default UI Header Colouring to Black (Scarso)
     Jump Key (Shift + Space - > Shift + "Vault Key") (Scarso)
@@ -45,20 +51,20 @@ Changed:
     Being Arrested Wipes ALL Illegal Items (Scarso)
     Fog is now limited to 10% (Scarso)
     Name Tags System (Scarso)
-    Tasers can be used by anyone AND on anyone (Scarso & Lewis Mackinnon)
-    Knockout function can be used by all factions (Lewis Mackinnon)
-    Weapon used as a taser (Lewis Mackinnon)
-    AMS > Tanoa Ambulance Service (Scarso & Lewis Mackinnon)
-    Police Vehicle Siren Lights (Lewis Mackinnon)
-    Automatically Medic Request (Lewis Mackinnon)
-    Overall Map Design (Lewis Mackinnon)
+    Tasers can be used by anyone AND on anyone (Scarso & Lewis)
+    Knockout function can be used by all factions (Lewis)
+    Weapon used as a taser (Lewis)
+    AMS > Tanoa Ambulance Service (Scarso & Lewis)
+    Police Vehicle Siren Lights (Lewis)
+    Automatically Medic Request upon Death (Lewis)
+    Overall Map Design (Lewis)
     Player Menu Design (Scarso)
     Player HUD (Scarso)
     Player Name Tags (Scarso)
-    Faction Spawn Loadouts (Scarso & Lewis Mackinnon)
+    Faction Spawn Loadouts (Scarso & Lewis)
     Backend File Structure (Scarso)
-    All Masked Clothing Items (Lewis Mackinnon)
-    All Faction Paychecks (Lewis Mackinnon)
+    All Masked Clothing Items (Lewis)
+    All Faction Paychecks (Lewis)
     Getting tased no longer unloads current weapon (Scarso)
     
     
@@ -77,6 +83,7 @@ Removed:
     Taser Sound (Scarso)
     Tased Animation (Scarso)
         - Now it just causes the player to fall over realistically.
+    Stringtable Connections (Lewis)
 
 Fixed:
     People in restraints being able to shoot & kill (Scarso)

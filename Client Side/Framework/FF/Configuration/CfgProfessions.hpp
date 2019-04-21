@@ -49,6 +49,20 @@ class CfgProfessions {
         };
     };
 
+    class Prof_Processing {
+        displayName = "Processing";
+        variable = "Prof_Processing";
+        description = "Processing is a profession that is defined around the processing of various raw materials into useable materials at various processing sites around the map..";
+        side = "Civ";
+        maxLevel = 500;
+        levels[] = {
+            {50, "Novice"},
+            {100, "Intermediate"},
+            {250, "Advanced"},
+            {500, "Expert"}
+        };
+    };
+
     class Prof_Cooking {
         displayName = "Cooking";
         variable = "Prof_Cooking";

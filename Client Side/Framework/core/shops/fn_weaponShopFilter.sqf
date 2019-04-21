@@ -97,8 +97,6 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 1 || {(uiNamespace
             } count _config;
 
             ((findDisplay 38400) displayCtrl 38405) ctrlSetText "Buy";
-            ((findDisplay 38400) displayCtrl 38406) ctrlSetText "Magazines";
-            ((findDisplay 38400) displayCtrl 38407) ctrlSetText "Accessories";
             
             ctrlShow [38402,true];
             ctrlShow [38406,true];

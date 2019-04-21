@@ -65,7 +65,7 @@ class RscPhyscialStore {
             onLBSelChanged = "_this call life_fnc_weaponShopFilter";
 			colorBackground[] = {0.09,0.09,0.09,1};
            	x = 0.412344 * safezoneW + safezoneX;
-            y = 0.654 * safezoneH + safezoneY;
+            y = 0.687 * safezoneH + safezoneY;
             w = 0.154687 * safezoneW;
             h = 0.022 * safezoneH;
         };
@@ -90,7 +90,7 @@ class RscPhyscialStore {
             x = safeZoneX + safeZoneW * 0.412344;
             y = safeZoneY + safeZoneH * 0.28;
             w = safeZoneW * 0.175313;
-            h = safeZoneH * 0.396;
+            h = safeZoneH * 0.363;
             color[] = {0.09,0.09,0.09,1};
 			colorBackground[] = {0.09,0.09,0.09,1};
 			colorText[] = {1,1,1,1};
@@ -112,7 +112,6 @@ class RscPhyscialStore {
 
 		class MagButton : Life_RscButtonMenuIcon {
 			idc = 38406;
-            text = "Magazines";
             onButtonClick = "_this call life_fnc_weaponShopMags; _this call life_fnc_weaponShopFilter";
 			x = 0.572187 * safezoneW + safezoneX;
             y = 0.654 * safezoneH + safezoneY;
@@ -120,12 +119,11 @@ class RscPhyscialStore {
             h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0};
-			text = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMagAll_ca.paa";
+			text = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMagAll_ca.paa";
 		};
 
 		class AccButton : Life_RscButtonMenuIcon {
 			idc = 38407;
-            text = "Accessories";
             onButtonClick = "_this call life_fnc_weaponShopAccs; _this call life_fnc_weaponShopFilter";
 			x = 0.572187 * safezoneW + safezoneX;
             y = 0.687 * safezoneH + safezoneY;
@@ -133,7 +131,7 @@ class RscPhyscialStore {
             h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0};
-			text = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemAcc_ca.paa";
+			text = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemAcc_ca.paa";
 		};
 
 		class BuySellButton : Life_RscButtonMenu {

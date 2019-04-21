@@ -169,7 +169,7 @@ class CfgWeapons {
             { "Binocular", "Binoculars", 0, -1, "call life_coplevel >= 1" },
             { "Rangefinder", "Rangefinder", 0, -1, "call life_coplevel >= 2" },
             { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "call life_coplevel >= 1" },
-            { "FirstAidKit", "First Aid Kit", 0, 0, "" },
+            { "FirstAidKit", "First Aid Kit", 0, 0, "call life_coplevel >= 1" },
             { "ToolKit", "Toolkit", 0, -1, "call life_coplevel >= 1" },
             { "HandGrenade_Stone", "Flashbang Grenade", 0, -1, "license_cop_sfo2 || license_cop_sfo3" },
             { "hgun_Pistol_heavy_01_MRD_F", "Taser Pistol", 0, 0, "call life_coplevel >= 1" },
@@ -220,9 +220,14 @@ class CfgWeapons {
             { "ItemWatch", "Wrist Watch", 0, -1, "call life_mediclevel >= 1" },
             { "Binocular", "Binoculars", 0, -1, "call life_mediclevel >= 1" },
             { "NVGoggles", "Night Vision Goggles", 0, -1, "call life_mediclevel >= 2" },
-            { "ToolKit", "Toolkit", 0, -1, "call life_mediclevel >= 1" }
+            { "FirstAidKit", "First Aid Kit", 0, 0, "call life_mediclevel >= 1" },
+            { "ToolKit", "Toolkit", 0, -1, "call life_mediclevel >= 1" },
+            { "hgun_Pistol_Signal_F", "Starter Pistol", 0, 0, "call life_mediclevel >= 4" }
         };
-        mags[] = {};
+        mags[] = {
+            { "6Rnd_GreenSignal_F", "6Rnd Green Single Mag", 0, 0, "call life_mediclevel >= 4" },
+            { "6Rnd_RedSignal_F", "6Rnd Red Single Mag", 0, 0, "call life_mediclevel >= 4" }
+        };
         accs[] = {};
     };
 };

@@ -138,8 +138,12 @@ class CfgVehicleStores {
         side = "med";
         conditions = "playerSide isEqualTo independent";
         vehicles[] = {
+            { "C_Quadbike_01_F", "call life_mediclevel >= 1" },
+            { "C_Hatchback_01_F", "call life_mediclevel >= 2" },
             { "C_Van_02_medevac_F", "call life_mediclevel >= 2" },
             { "C_SUV_01_F", "call life_mediclevel >= 3" },
+            { "C_Offroad_01_F", "call life_coplevel >= 3" },
+            { "C_Offroad_02_unarmed_F", "call life_coplevel >= 4" },
             { "C_Hatchback_01_sport_F", "call life_mediclevel >= 4" }
         };
     };

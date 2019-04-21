@@ -33,9 +33,9 @@ class CfgSettings {
     bank_transferTax = .02;
 
     /* Paycheck System Configurations */
-    paycheck_cop = 5000;
+    paycheck_cop = 0;
     paycheck_civ = 1250;
-    paycheck_med = 5000;
+    paycheck_med = 0;
     paycheck_period = 15;
 
     /* Medical System Configurations */

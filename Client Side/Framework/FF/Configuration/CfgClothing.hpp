@@ -447,21 +447,15 @@ class CfgClothing {
             { "H_Cap_blk", "", 0, "" },
             { "H_Cap_blu", "", 0, "" },
             { "H_Cap_grn", "", 0, "" },
-            { "H_Cap_oli_hs", "", 0, "" },
             { "H_Cap_red", "", 0, "" },
             { "H_Cap_tan", "", 0, "" },
-            { "H_Cap_khaki_specops_UK", "", 0, "" },
-            { "H_Cap_usblack", "", 0, "" },
             { "H_Hat_blue", "", 0, "" },
             { "H_Hat_brown", "", 0, "" },
             { "H_Hat_camo", "", 0, "" },
             { "H_Hat_grey", "", 0, "" },
             { "H_Hat_tan", "", 0, "" },
             { "H_StrawHat", "", 0, "" },
-            { "H_StrawHat_dark", "", 0, "" },
-            { "H_Hat_Safari_olive_F", "", 0, "" },
-            { "H_Hat_Safari_sand_F", "", 0, "" },
-            { "H_Helmet_Skate", "", 0, "" }
+            { "H_StrawHat_dark", "", 0, "" }
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, "" },

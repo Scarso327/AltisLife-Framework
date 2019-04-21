@@ -11,6 +11,7 @@ _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (!isNull(player getVariable ["escortingPlayer",objNull])) exitWith {};
 if (isNil "_unit" || isNull _unit || !isPlayer _unit) exitWith {};
 if (player distance _unit > 3) exitWith {};
+if (player getVariable "restrained") exitWith {};
 if (isDowned(player) || isDowned(_unit)) exitWith {};
 
 _unit attachTo [player,[0.1,1.1,0]];

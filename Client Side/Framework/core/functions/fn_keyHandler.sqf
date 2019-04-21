@@ -173,7 +173,7 @@ switch (_code) do {
         if (isDowned(player)) exitWith {};
 
         if (_shift) then {_handled = true};
-        if (_shift && {!isNull cursorObject} && {cursorObject isKindOf "CAManBase"} && {(isPlayer cursorObject)} && {(side cursorObject in [civilian,independent])} && {alive cursorObject} && { !(isDowned(cursorObject)) } && {cursorObject distance player < 3.5} && {!(cursorObject getVariable "Escorting")} && {!(cursorObject getVariable "restrained")} && {speed cursorObject < 1}) then {
+        if (_shift && {playerSide isEqualTo west} && {!isNull cursorObject} && {cursorObject isKindOf "CAManBase"} && {(isPlayer cursorObject)} && {alive cursorObject} && { !(isDowned(cursorObject)) } && {cursorObject distance player < 3.5} && {!(cursorObject getVariable "Escorting")} && {!(cursorObject getVariable "restrained")} && {speed cursorObject < 1}) then {
             [] call life_fnc_restrainAction;
         };
     };

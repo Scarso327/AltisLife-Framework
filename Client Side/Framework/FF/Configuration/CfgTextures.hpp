@@ -5,18 +5,22 @@
 */
 
 class CfgTextures {
+
+    // Main Medic Uniform...
     class U_Rangemaster {
         texture[] = {
             0,
-            "Police\Uniforms\Junior.paa"
+            ""
         };
         invisBackpack[] = {3, ""};
     };
+
+    // Main Police Uniform...
     class U_Competitor {
         texture[] = {
             1,
             {
-                "Police\Uniforms\PC.paa", // Level 1
+                "Police\Uniforms\Junior.paa", // Level 1
                 "Police\Uniforms\PC.paa", // Level 2
                 "Police\Uniforms\PC.paa", // Level 3
                 "Police\Uniforms\SGT.paa", // Level 4
@@ -31,6 +35,8 @@ class CfgTextures {
         };
         invisBackpack[] = {3, ""};
     };
+
+    // Police High Vis Uniform
     class U_B_CTRG_1 {
         texture[] = {
             0,

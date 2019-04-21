@@ -20,6 +20,9 @@ Added:
     Processing UI (Scarso)
         - Easier than scrolling
     Custom Item Icons (Lewis Mackinnon)
+    Vehicle Seatbelts (Scarso)
+        - Halves damage on vehicle collision
+    3 Second Delay to Unflipping Vehicles (Scarso)
 
 Changed:
     All Physical Stores (Lewis Mackinnon)
@@ -54,6 +57,7 @@ Changed:
     Backend File Structure (Scarso)
     All Masked Clothing Items (Lewis Mackinnon)
     All Faction Paychecks (Lewis Mackinnon)
+    Getting tased no longer unloads current weapon (Scarso)
     
 Removed:
     Welcome Notification Screen (Scarso)
@@ -67,3 +71,9 @@ Removed:
     Public Slots (Scarso)
     House Based Spawning for Civilians (Scarso)
     Various Run Types (Lewis Mackinnon)
+    Taser Sound (Scarso)
+    Tased Animation (Scarso)
+        - Now it just causes the player to fall over realistically.
+
+Fixed:
+    People in restraints being able to shoot & kill (Scarso)

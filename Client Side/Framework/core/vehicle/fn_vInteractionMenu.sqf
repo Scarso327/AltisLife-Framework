@@ -38,7 +38,7 @@ _id = getObjectDLC _curTarget;
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
 _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck; closeDialog 0;";
 
-if ((life_inv_toolkit >= 1) && {alive life_vInact_curTarget} && {([life_vInact_curTarget] call life_fnc_isDamaged)}) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
+if ("ToolKit" in (items player) && {alive life_vInact_curTarget} && {([life_vInact_curTarget] call life_fnc_isDamaged)}) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
 
 if (playerSide isEqualTo west) then {
     _Btn2 ctrlSetText localize "STR_vInAct_Registration";
@@ -67,7 +67,7 @@ if (playerSide isEqualTo west) then {
             };
         } else {
             _Btn6 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn6 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
+            _Btn6 buttonSetAction "life_vInact_curTarget spawn FF_fnc_unflipVehicle; closeDialog 0;";
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
         };
     };
@@ -87,7 +87,7 @@ if (playerSide isEqualTo west) then {
             };
         } else {
             _Btn2 ctrlSetText localize "STR_vInAct_Unflip";
-            _Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
+            _Btn2 buttonSetAction "life_vInact_curTarget spawn FF_fnc_unflipVehicle; closeDialog 0;";
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
         };
     };

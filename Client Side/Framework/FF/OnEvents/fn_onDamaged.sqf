@@ -56,13 +56,21 @@ if (!isNull _source && {_source != _unit}) then {
 						};
 					};
 
-					_damage = [
-						_unit getHit _part,
-						damage _unit
-					] select (_part isEqualTo "");
+					_damage = _orginalDamage;
 				};
 			};
+
+			/* Anti-Restrain Glitch */
+			if(_source getVariable ["restrained",false]) then { _damage = _orginalDamage };
 		};
+	};
+} else {
+	/* Seatbelt System */
+	if ((vehicle _unit) isKindOf "Car" && (_source isEqualTo _unit)) then {
+		_damage = [
+			_damage,
+			_damage / 2
+		] select (FF_seatbelt);
 	};
 };
 

@@ -50,7 +50,7 @@ disableSerialization;
 
 ctrlSetText [3103, _shopTitle];
 
-(findDisplay 3100) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {closeDialog 0; [] call FF_fnc_playerSkins);}"]; //Fix Custom Skin after ESC
+(findDisplay 3100) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {closeDialog 0; [] call FF_fnc_playerSkins;}"]; //Fix Custom Skin after ESC
 
 sliderSetRange [3107, 0, 360];
 

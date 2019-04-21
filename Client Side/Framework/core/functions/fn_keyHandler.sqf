@@ -127,6 +127,15 @@ switch (_code) do {
                 [] spawn life_fnc_surrender;
             };
             _handled = true;
+        } else {
+            // Seatbelt...
+            if (!_ctrlKey && { !_alt } && { !(isNull objectParent _unit) }) then {
+
+                FF_seatbelt != FF_seatbelt;
+                player setVariable ["seatbelt", FF_seatbelt, true];
+
+                [] call life_fnc_hudUpdate;
+            };
         };
     };
 

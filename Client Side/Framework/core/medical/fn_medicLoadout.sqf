@@ -5,7 +5,7 @@ waitUntil {scriptDone _handle};
 
 switch (true) do {
     case (FETCH_CONST(life_mediclevel) >= 6): {
-        player addUniform "U_Rangemaster";
+        player forceAddUniform "U_Rangemaster";
         player addHeadgear "H_Beret_gen_F";
         player addBackpack "B_TacticalPack_blk";
 
@@ -24,7 +24,7 @@ switch (true) do {
     }; 
 
     default {
-        player addUniform "U_Rangemaster";
+        player forceAddUniform "U_Rangemaster";
         player addHeadgear "H_Cap_blk";
         player addBackpack "B_TacticalPack_blk";
 

@@ -54,6 +54,7 @@ Changed:
     Backend File Structure (Scarso)
     All Masked Clothing Items (Lewis Mackinnon)
     All Faction Paychecks (Lewis Mackinnon)
+    Getting tased no longer unloads current weapon (Scarso)
     
 Removed:
     Welcome Notification Screen (Scarso)

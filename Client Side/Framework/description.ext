@@ -48,12 +48,6 @@ class CfgSounds {
         titles[] = {};
     };
 
-    class tazerSound {
-        name = "tazerSound";
-        sound[] = {"\data\sounds\tazer.ogg", 0.5, 1};
-        titles[] = {};
-    };
-
     class flashbang {
         name = "flashbang";
         sound[] = {"\data\sounds\flashbang.ogg", 1.0, 1};

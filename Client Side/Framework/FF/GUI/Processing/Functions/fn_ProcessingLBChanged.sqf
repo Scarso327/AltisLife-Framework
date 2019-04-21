@@ -16,5 +16,5 @@ private _text = switch (true) do {
 	default { format["<t size='1'>Cost: <t color='#b70000'>£%1</t></t>", [_price] call life_fnc_numberText] };
 };
 
-if (CASH >= _price then { ctrlEnable[5003, true] } else { ctrlEnable[5003, false] }; // Toggle "Process Button"...
+if (CASH >= _price) then { ctrlEnable[5003, true] } else { ctrlEnable[5003, false] }; // Toggle "Process Button"...
 (CONTROL(5000, 5002)) ctrlSetStructuredText parseText _text;

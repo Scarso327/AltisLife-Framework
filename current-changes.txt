@@ -1,5 +1,6 @@
 Added:
     Intro Text (Scarso)
+    Intro Sound (Lewis Mackinnon)
     Incapacitation System (Scarso)
     Police Uniforms (Scarso & Lewis Mackinnon)
         - Cadet Uniform
@@ -45,6 +46,7 @@ Changed:
     Fog is now limited to 10% (Scarso)
     Name Tags System (Scarso)
     Tasers can be used by anyone AND on anyone (Scarso & Lewis Mackinnon)
+    Knockout function can be used by all factions (Lewis Mackinnon)
     Weapon used as a taser (Lewis Mackinnon)
     AMS > Tanoa Ambulance Service (Scarso & Lewis Mackinnon)
     Police Vehicle Siren Lights (Lewis Mackinnon)
@@ -58,6 +60,7 @@ Changed:
     All Masked Clothing Items (Lewis Mackinnon)
     All Faction Paychecks (Lewis Mackinnon)
     Getting tased no longer unloads current weapon (Scarso)
+    
     
 Removed:
     Welcome Notification Screen (Scarso)

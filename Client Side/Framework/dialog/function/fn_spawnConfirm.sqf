@@ -29,7 +29,7 @@ if (life_spawn_point isEqualTo []) then {
     */
     player setPos (getMarkerPos (_sp select 0));
     
-    titleText[format ["%2 %1",_sp select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
+    titleText[format ["%2 %1",_sp select 1,"You have spawned at"],"BLACK IN"];
 } else {
     if (playerSide isEqualTo civilian) then {
         if (isNil {(call compile format ["%1",life_spawn_point select 0])}) then {
@@ -56,7 +56,7 @@ if (life_spawn_point isEqualTo []) then {
     } else {
         player setPos (getMarkerPos (life_spawn_point select 0));
     };
-    titleText[format ["%2 %1",life_spawn_point select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
+    titleText[format ["%2 %1",life_spawn_point select 1,"You have spawned at"],"BLACK IN"];
 };
 
 if (life_firstSpawn) then {

@@ -168,21 +168,21 @@ class SettingsMenu {
 
         class SideChatONOFF: PlayerTagsONOFF {
             idc = 2971;
-            tooltip = "$STR_GUI_SideSwitch";
+            tooltip = "Switch side-channel mode, turn this off if you don't want to talk with players from your side.";
             onCheckedChanged = "['sidechat',_this select 1] call life_fnc_s_onCheckedChange;";
             y = 0.48;
         };
 
         class RevealONOFF : PlayerTagsONOFF {
             idc = 2972;
-            tooltip = "$STR_GUI_PlayerReveal";
+            tooltip = "Automatically reveals nearest objects within 15m, turn this setting off if you are experiencing performance issues.";
             onCheckedChanged = "['objects',_this select 1] call life_fnc_s_onCheckedChange;";
             y = 0.53;
         };
 
         class BroadcastONOFF : PlayerTagsONOFF {
             idc = 2973;
-            tooltip = "$STR_GUI_BroadcastSwitch";
+            tooltip = "Switch player's broadcast mode, turn this off if you don't want to see any broadcast from other players.";
             onCheckedChanged = "['broadcast',_this select 1] call life_fnc_s_onCheckedChange;";
             y = 0.58;
         };

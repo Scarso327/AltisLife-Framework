@@ -29,7 +29,7 @@ class life_wanted_menu {
         class Title: Life_RscTitle {
             colorBackground[] = {0, 0, 0, 0};
             idc = -1;
-            text = "$STR_Wanted_Title";
+            text = "Wanted Database";
             x = 0.1;
             y = 0.2;
             w = 0.6;
@@ -105,7 +105,7 @@ class life_wanted_menu {
 
         class PardonButtonKey: Life_RscButtonMenu {
             idc = 2405;
-            text = "$STR_Wanted_Pardon";
+            text = "Remove";
             onButtonClick = "[] call life_fnc_pardon; closeDialog 0;";
             x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.8 - (1 / 25);
@@ -116,7 +116,7 @@ class life_wanted_menu {
         class ButtonWantedAdd: Life_RscButtonMenu {
             idc = 9800;
             //shortcuts[] = {0x00050000 + 2};
-            text = "$STR_Wanted_Add";
+            text = "Add";
             onButtonClick = "[] call life_fnc_wantedAddP;";
             x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.8 - (1 / 25);
@@ -126,7 +126,7 @@ class life_wanted_menu {
 
         class wantedText: Life_RscText {
             idc = 1000;
-            text = "$STR_Wanted_People";
+            text = "Wanted People";
             x = 0.12;
             y = 0.11;
             w = 0.2;
@@ -135,7 +135,7 @@ class life_wanted_menu {
 
         class citizensText: Life_RscText {
             idc = 1001;
-            text = "$STR_Wanted_Citizens";
+            text = "Citizens";
             x = 0.34;
             y = 0.11;
             w = 0.2;
@@ -144,7 +144,7 @@ class life_wanted_menu {
 
         class crimesText: Life_RscText {
             idc = 1002;
-            text = "$STR_Wanted_Crimes";
+            text = "Crimes";
             x = 0.542;
             y = 0.245;
             w = (8 / 52);

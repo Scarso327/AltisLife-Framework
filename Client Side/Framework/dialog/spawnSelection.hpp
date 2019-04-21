@@ -25,7 +25,7 @@ class life_spawn_selection {
         class Title: Life_RscTitle {
             colorBackground[] = {0,0,0,0};
             idc = -1;
-            text = "$STR_Spawn_Title";
+            text = "Spawn Selection";
             x = 0.1;
             y = 0.2;
             w = 0.8;
@@ -70,7 +70,7 @@ class life_spawn_selection {
         class spawnButton: Life_RscButtonMenu {
             idc = -1;
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-            text = "$STR_Spawn_Spawn";
+            text = "Spawn";
             onButtonClick = "[] call life_fnc_spawnConfirm";
             x = 0.11;
             y = 0.69;

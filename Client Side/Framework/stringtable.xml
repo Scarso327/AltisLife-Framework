@@ -274,88 +274,6 @@
             <Original>Sidechat ON</Original>
         </Key>
     </Package>
-    <Package name="Virt_Shop">
-        <Key ID="STR_VS_SI">
-            <Original>Shop Inventory</Original>
-        </Key>
-        <Key ID="STR_VS_PI">
-            <Original>Your Inventory</Original>
-        </Key>
-        <Key ID="STR_VS_BuyItem">
-            <Original>Buy Item</Original>
-        </Key>
-        <Key ID="STR_VS_SellItem">
-            <Original>Sell Item</Original>
-        </Key>
-    </Package>
-    <Package name="Spawn_Menu">
-        <Key ID="STR_Spawn_Title">
-            <Original>Spawn Selection</Original>
-        </Key>
-        <Key ID="STR_Spawn_Spawn">
-            <Original>Spawn</Original>
-        </Key>
-        <Key ID="STR_Spawn_CSP">
-            <Original>Current Spawn Point</Original>
-        </Key>
-        <Key ID="STR_Spawn_Spawned">
-            <Original>You have spawned at</Original>
-        </Key>
-    </Package>
-    <Package name="Ticket_Menu">
-        <Key ID="STR_Ticket_GiveTicket">
-            <Original>Give Ticket</Original>
-        </Key>
-        <Key ID="STR_Ticket_PayTicket">
-            <Original>Pay Ticket</Original>
-        </Key>
-        <Key ID="STR_Ticket_RefuseTicket">
-            <Original>Refuse Ticket</Original>
-        </Key>
-    </Package>
-    <Package name="Trunk_Menu">
-        <Key ID="STR_Trunk_TInventory">
-            <Original>Trunk Inventory</Original>
-        </Key>
-        <Key ID="STR_Trunk_PInventory">
-            <Original>Player Inventory</Original>
-        </Key>
-        <Key ID="STR_Trunk_Take">
-            <Original>Take</Original>
-        </Key>
-        <Key ID="STR_Trunk_Store">
-            <Original>Store</Original>
-        </Key>
-    </Package>
-    <Package name="Wanted_Menu">
-        <Key ID="STR_Wanted_Title">
-            <Original>APD Wanted List</Original>
-        </Key>
-        <Key ID="STR_Wanted_Pardon">
-            <Original>Pardon</Original>
-        </Key>
-        <Key ID="STR_Wanted_Add">
-            <Original>Add</Original>
-        </Key>
-        <Key ID="STR_Wanted_People">
-            <Original>Wanted People</Original>
-        </Key>
-        <Key ID="STR_Wanted_Citizens">
-            <Original>Citizens</Original>
-        </Key>
-        <Key ID="STR_Wanted_Crimes">
-            <Original>Crimes</Original>
-        </Key>
-        <Key ID="STR_Wanted_AddP">
-            <Original>%1 has been added to the wanted list.</Original>
-        </Key>
-        <Key ID="STR_Wanted_Count">
-            <Original>%1 count(s) of %2</Original>
-        </Key>
-        <Key ID="STR_Wanted_Bounty">
-            <Original>Current Bounty Price: $%1</Original>
-        </Key>
-    </Package>
     <Package name="Notifications">
         <Key ID="STR_NOTF_NE_1">
             <Original>You do not have $%1 for a %2</Original>
@@ -736,70 +654,6 @@
             <Original>An empty array was passed to fn_levelCheck.sqf</Original>
         </Key>
     </Package>
-    <Package name="News_Strings">
-        <Key ID="STR_News_AddAction">
-            <Original>News Station Broadcast</Original>
-        </Key>
-        <Key ID="STR_News_DialogTitle">
-            <Original>Channel 7 News Station</Original>
-        </Key>
-        <Key ID="STR_News_MsgHeader">
-            <Original>Message Heading:</Original>
-        </Key>
-        <Key ID="STR_News_MsgContent">
-            <Original>Message Content:</Original>
-        </Key>
-        <Key ID="STR_News_Broadcast">
-            <Original>Broadcast Message</Original>
-        </Key>
-        <Key ID="STR_News_StructuredText">
-            <Original>Broadcast Cost: %1&lt;br /&gt;Next Broadcast Available: %2</Original>
-        </Key>
-        <Key ID="STR_News_HeaderLength">
-            <Original>The header cannot be over %1 characters</Original>
-        </Key>
-        <Key ID="STR_News_UnsupportedCharacter">
-            <Original>You've entered an unsupported character!</Original>
-        </Key>
-        <Key ID="STR_News_Now">
-            <Original>Now</Original>
-        </Key>
-        <Key ID="STR_News_NotEnough">
-            <Original>You need $%1 to send a broadcast!</Original>
-        </Key>
-        <Key ID="STR_News_BroadcastedBy">
-            <Original>&lt;t size='2'&gt;%1&lt;/t&gt;&lt;br /&gt;Broadcasted by: %2</Original>
-        </Key>
-    </Package>
-    <Package name="Jail_Strings">
-        <Key ID="STR_Jail_Warn">
-            <Original>You have been arrested, wait your time out. If you attempt to respawn or reconnect your time will increase!</Original>
-        </Key>
-        <Key ID="STR_Jail_LicenseNOTF">
-            <Original>For being arrested you have lost the following licenses if you own them\n\nFirearms License\nRebel License</Original>
-        </Key>
-        <Key ID="STR_Jail_EscapeNOTF">
-            <Original>%1 has escaped from jail!</Original>
-        </Key>
-        <Key ID="STR_Jail_EscapeSelf">
-            <Original>You have escaped from jail, you still retain your previous crimes and now have a count of escaping jail.</Original>
-        </Key>
-        <Key ID="STR_Jail_Released">
-            <Original>You have served your time in jail and have been released.</Original>
-        </Key>
-        <Key ID="STR_Jail_Time">
-            <Original>Time Remaining:</Original>
-        </Key>
-        <Key ID="STR_Jail_Pay">
-            <Original>Can pay bail:</Original>
-        </Key>
-        <Key ID="STR_Jail_Price">
-            <Original>Bail Price:</Original>
-        </Key>
-        <Key ID="STR_Jail_Paid">
-            <Original>You have paid your bail and are now free.</Original>
-        </Key>
-    </Package>
     <Package name="Civ_Strings">
         <Key ID="STR_Civ_KnockedOut">
             <Original>%1 has knocked you out.</Original>
@@ -1029,12 +883,6 @@
         </Key>
         <Key ID="STR_MISC_VehLocal">
             <Original>This can only be done by the last driver of this vehicle.</Original>
-        </Key>
-        <Key ID="STR_MISC_SirensON">
-            <Original>Sirens On</Original>
-        </Key>
-        <Key ID="STR_MISC_SirensOFF">
-            <Original>Sirens Off</Original>
         </Key>
         <Key ID="STR_MISC_NoStorageWarn">
             <Original>You need to install storage containers to have storing capabilities!</Original>
@@ -1341,37 +1189,6 @@
         <Key ID="STR_ISTR_NotUsable">
             <Original>This item isn't usable.</Original>
         </Key>
-    <Package name="Federal_Reserve">
-        <Key ID="STR_NOTF_FRRobbery_fail">
-            <Original>The robbery has failed due to unknown reasons</Original>
-        </Key>
-        <Key ID="STR_NOTF_FRRobbery_Success">
-            <Original>$%1 was stolen from the robbery on the federal reserve</Original>
-        </Key>
-        <Key ID="STR_FEDR_VInUse">
-            <Original>This vault is already being robbed by someone else</Original>
-        </Key>
-        <Key ID="STR_FEDR_VRecently">
-            <Original>This vault was already robbed recently</Original>
-        </Key>
-    </Package>
-    <Package name="Other_GUI_Stuff">
-        <Key ID="STR_GUI_PlayerReveal">
-            <Original>Automatically reveals nearest objects within 15m, turn this setting off if you are experiencing performance issues.</Original>
-        </Key>
-        <Key ID="STR_GUI_SideSwitch">
-            <Original>Switch side-channel mode, turn this off if you don't want to talk with players from your side.</Original>
-        </Key>
-        <Key ID="STR_GUI_BroadcastSwitch">
-            <Original>Switch player's broadcast mode, turn this off if you don't want to see any broadcast from other players.</Original>
-        </Key>
-        <Key ID="STR_GUI_PlayTags">
-            <Original>Controls whether or not players will have name tags above their head.</Original>
-        </Key>
-        <Key ID="STR_GUI_ShopStock">
-            <Original>Shop Stock</Original>
-        </Key>
-    </Package>
     <Package name="Player_Interaction">
         <Key ID="STR_pInAct_Title">
             <Original>Player Interaction Menu</Original>

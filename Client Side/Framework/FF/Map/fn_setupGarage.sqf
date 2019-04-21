@@ -34,21 +34,6 @@ _object addAction[
 		_title select 1, 
 		_title select 0,
 		_colour
-	],
-	{
-		if (life_HC_isActive) then {
-			[getPlayerUID player,playerSide,_type,player] remoteExecCall ["HC_fnc_getVehicles",HC_Life]; 
-		} else {
-			[getPlayerUID player,playerSide,_type,player] remoteExecCall ["TON_fnc_getVehicles",2];
-		};
-
-		createDialog "Life_impound_menu";
-
-		disableSerialization;
-		ctrlSetText[2802,"Fetching Vehicles...."];
-
-		life_garage_sp = _spawmpoint;
-		life_garage_type = _type;
-	}, "", 1.5, true, true, "", _conditions,
+	], FF(getGarage), [_spawmpoint, _type], 1.5, true, true, "", _conditions,
 	5
 ];

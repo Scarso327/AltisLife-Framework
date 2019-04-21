@@ -51,6 +51,7 @@ class FF_Core {
         file = "FF\Functions";
         class playerSkins {};
         class notify {};
+        class getGarage {};
     };
 
     class Factions {

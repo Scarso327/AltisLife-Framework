@@ -124,7 +124,6 @@ class CfgClothing {
             { "B_Carryall_mcamo", "", 0, "" },
             { "B_Carryall_oli", "", 0, "" },
             { "B_Carryall_khk", "", 0, "" },
-            { "B_Carryall_cbr", "", 0, "" },
             { "B_Bergen_dgtl_F", "", 0, "" },
             { "B_Bergen_hex_F", "", 0, "" },
             { "B_Bergen_mcamo", "", 0, "" } 
@@ -344,7 +343,6 @@ class CfgClothing {
             { "B_Carryall_mcamo", "", 0, "" },
             { "B_Carryall_oli", "", 0, "" },
             { "B_Carryall_khk", "", 0, "" },
-            { "B_Carryall_cbr", "", 0, "" },
             { "B_Bergen_dgtl_F", "", 0, "" },
             { "B_Bergen_hex_F", "", 0, "" },
             { "B_Bergen_mcamo", "", 0, "" } 
@@ -414,7 +412,12 @@ class CfgClothing {
         };
         backpacks[] = {
             { "NONE", "Remove Backpacks", 0, "" },
-            { "B_TacticalPack_blk", "Invisible Backpack", 0, "" }
+            { "B_AssaultPack_blk", "Invisible Backpack", 0, "call life_coplevel >= 1" },
+            { "B_FieldPack_blk", "Invisible Backpack", 0, "call life_coplevel >= 2" },
+            { "B_Kitbag_cbr", "Invisible Backpack", 0, "call life_coplevel >= 3" },
+            { "B_TacticalPack_blk", "Invisible Backpack", 0, "call life_coplevel >= 4" },
+            { "B_Carryall_cbr", "Invisible Backpack", 0, "call life_coplevel >= 5" },
+            { "B_Bergen_mcamo", "Invisible Backpack", 0, "call life_coplevel >= 7" }
         };
     };
 
@@ -480,8 +483,13 @@ class CfgClothing {
             { "NONE", "Remove Vest", 0, "" }
         };
         backpacks[] = {
-            { "NONE", "Remove Backpacks", 0, "" },
-            { "B_TacticalPack_blk", "Invisible Backpack", 0, "" }
+            { "NONE", "Remove Backpacks", 0, "call life_mediclevel >= 1" },
+            { "B_AssaultPack_blk", "Invisible Backpack", 0, "call life_mediclevel >= 2" },
+            { "B_FieldPack_blk", "Invisible Backpack", 0, "call life_mediclevel >= 3" },
+            { "B_Kitbag_cbr", "Invisible Backpack", 0, "call life_mediclevel >= 4" },
+            { "B_TacticalPack_blk", "Invisible Backpack", 0, "call life_mediclevel >= 5" },
+            { "B_Carryall_cbr", "Invisible Backpack", 0, "call life_mediclevel >= 6" },
+            { "B_Bergen_mcamo", "Invisible Backpack", 0, "call life_mediclevel >= 7" }
         };
     };
 };

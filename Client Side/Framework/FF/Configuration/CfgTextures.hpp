@@ -38,4 +38,9 @@ class CfgTextures {
         };
         invisBackpack[] = {3, ""};
     };
+
+    class U_B_Wetsuit {
+        texture[] = {1, "" };
+        invisBackpack[] = {3, ""};
+    };
 };

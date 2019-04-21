@@ -21,6 +21,7 @@ private _isInvisible = false; // Backpack...
 if (isClass (CONFIG >> (uniform _object))) then {
     private _level = switch (side _object) do {
         case west: { (FETCH_CONST(life_coplevel)) };
+        case independent: { (FETCH_CONST(life_mediclevel)) };
     }; 
 
     private _texture = "";

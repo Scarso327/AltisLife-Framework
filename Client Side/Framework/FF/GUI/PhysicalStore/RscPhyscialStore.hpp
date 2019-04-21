@@ -55,6 +55,15 @@ class RscPhyscialStore {
             idc = -1;
             colorBackground[] = {0.09,0.09,0.09,1};
            	x = 0.412344 * safezoneW + safezoneX;
+            y = 0.654 * safezoneH + safezoneY;
+            w = 0.154687 * safezoneW;
+            h = 0.022 * safezoneH;
+        };
+
+        class FilterBackground : Life_RscBackground {
+            idc = -1;
+            colorBackground[] = {0.09,0.09,0.09,1};
+           	x = 0.412344 * safezoneW + safezoneX;
             y = 0.687 * safezoneH + safezoneY;
             w = 0.154687 * safezoneW;
             h = 0.022 * safezoneH;

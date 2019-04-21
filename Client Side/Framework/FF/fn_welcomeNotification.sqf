@@ -5,7 +5,6 @@
 
 	@Description: Displays text when first joining to introduce the server.
 */
-[] call life_fnc_welcomeNotification;
 playSound "welcome";
 
 _onScreenTime = 10;

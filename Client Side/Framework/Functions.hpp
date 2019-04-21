@@ -118,11 +118,13 @@ class FF_Core {
         class onIncapacitated {};
         class onKilled {};
         class onRespawn {};
+        class onRevived {};
     };
 
     class Medical {
         file = "FF\Medical";
-        class respawned {};   
+        class respawned {};
+        class revive {};
     };
 };
 

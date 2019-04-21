@@ -39,6 +39,12 @@ FF_fnc_nameTags_draw3d = addMissionEventHandler ["Draw3D", {
 					};
 
 					case (isDowned(_x) || { (_x getVariable ["isTazed", false]) } || { (_x getVariable ["isKnckedOut", false]) }): {
+						// If they're incapacitated we'll add an icon over their head...
+						_icon = [
+							"",
+							"\a3\ui_f\data\map\MapControl\hospital_ca.paa"
+						] select (isDowned(_x));
+
 						_subtitle = "Incapacitated Player";
 					};
 

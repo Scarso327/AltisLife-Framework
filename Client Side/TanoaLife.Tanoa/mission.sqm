@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=129;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2385;
+		nextID=2390;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11703.389,4.5416436,2766.3406};
-		dir[]={0.0088225454,-0.96707487,0.2543591};
-		up[]={0.033523172,0.25449666,0.96649349};
-		aside[]={0.99940389,-3.7460268e-008,-0.034664679};
+		pos[]={11831.029,106.79269,2993.5884};
+		dir[]={-0.72983187,-0.56602246,0.38340756};
+		up[]={-0.50108457,0.82438165,0.26323816};
+		aside[]={0.46507418,-7.2587864e-007,0.88529062};
 	};
 };
 binarizationWanted=0;
@@ -91,7 +91,8 @@ addons[]=
 	"A3_Structures_F_Exp_Walls_Net",
 	"A3_Structures_F_Ind_Transmitter_Tower",
 	"A3_Structures_F_Bootcamp_Ind_Cargo",
-	"A3_Structures_F_Heli_Ind_Cargo"
+	"A3_Structures_F_Heli_Ind_Cargo",
+	"A3_Structures_F_Mil_Barracks"
 };
 class AddonsMetaData
 {
@@ -400,7 +401,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1192;
+		items=1197;
 		class Item0
 		{
 			dataType="Marker";
@@ -1752,7 +1753,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""TAS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""TAS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
+				init="[this, [""TAS"", ""General Market""], ""tas_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""TAS"", ""General Equipment""], ""tas_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
 				name="medic_general_1";
 				disableSimulation=1;
 			};
@@ -2040,7 +2041,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[this, [""TAS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
+				init="[this, [""TAS"", ""Vehicle Store""], [""tas_general_dealership"",independent,""medic_ground_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
 				name="medic_vehicles_1";
 				disableSimulation=1;
 			};
@@ -3992,7 +3993,7 @@ class Mission
 			type="mil_triangle";
 			colorName="ColorCIV";
 			id=257;
-			atlOffset=1.4614563;
+			atlOffset=1.4418793;
 		};
 		class Item124
 		{
@@ -4007,7 +4008,7 @@ class Mission
 			b=30;
 			drawBorder=1;
 			id=258;
-			atlOffset=4.7954102;
+			atlOffset=4.7758789;
 		};
 		class Item125
 		{
@@ -4752,7 +4753,7 @@ class Mission
 		class Item188
 		{
 			dataType="Marker";
-			position[]={12223.173,2.0234349,2820.6353};
+			position[]={12227.092,2.142163,2819.2014};
 			name="mineral_exports_3";
 			text="Mineral Exports";
 			type="mil_dot";
@@ -4993,7 +4994,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=365;
-			atlOffset=0.86726809;
+			atlOffset=0.47232914;
 		};
 		class Item209
 		{
@@ -5270,7 +5271,7 @@ class Mission
 			type="loc_Tree";
 			colorName="ColorYellow";
 			id=394;
-			atlOffset=30.15;
+			atlOffset=26.575367;
 		};
 		class Item233
 		{
@@ -10514,13 +10515,13 @@ class Mission
 				angles[]={0,4.8646894,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=873;
 			type="Land_Sacks_goods_F";
+			atlOffset=0.99953938;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10554,13 +10555,13 @@ class Mission
 				angles[]={0,0.20082378,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=874;
 			type="Land_Sacks_goods_F";
+			atlOffset=0.43076968;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10594,13 +10595,13 @@ class Mission
 				angles[]={0,2.1988897,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=875;
 			type="Land_Sacks_heap_F";
+			atlOffset=0.42592096;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10634,7 +10635,6 @@ class Mission
 				angles[]={0,4.6447225,6.2826962};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Turtle Dealer""], ""turtle_dealer"", """"] call FF_fnc_setupMarket;";
@@ -10643,7 +10643,7 @@ class Mission
 			};
 			id=876;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.019273281;
+			atlOffset=0.35178137;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22692,7 +22692,7 @@ class Mission
 			};
 			id=1177;
 			type="Land_CampingTable_white_F";
-			atlOffset=0.22972107;
+			atlOffset=0.22718811;
 		};
 		class Item575
 		{
@@ -23351,7 +23351,7 @@ class Mission
 			};
 			id=1210;
 			type="Land_Sacks_goods_F";
-			atlOffset=0.12799931;
+			atlOffset=0.00015687943;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24828,7 +24828,7 @@ class Mission
 			};
 			id=1286;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.81289577;
+			atlOffset=0.35315847;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -30019,6 +30019,7 @@ class Mission
 			};
 			id=1575;
 			type="Land_InfoStand_V2_F";
+			atlOffset=7.1525574e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -31341,7 +31342,7 @@ class Mission
 			};
 			id=1642;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.48775721;
+			atlOffset=0.48775768;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32052,7 +32053,7 @@ class Mission
 			};
 			id=1659;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.1170001;
+			atlOffset=0.11700439;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -34190,7 +34191,7 @@ class Mission
 			a=0.89999998;
 			b=0.89999998;
 			id=420;
-			atlOffset=0.00047326088;
+			atlOffset=0.57531571;
 		};
 		class Item865
 		{
@@ -41538,7 +41539,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11735.045,5.9115434,2999.1023};
+				position[]={11734.046,5.9114661,2999.0305};
 				angles[]={6.282495,5.0581841,0};
 			};
 			side="Empty";
@@ -42038,7 +42039,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""TAS"", ""General Market""], ""nhs_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""TAS"", ""General Equipment""], ""nhs_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
+				init="[this, [""TAS"", ""General Market""], ""tas_market"", ""playerSide isEqualTo independent""] call FF_fnc_setupMarket; [this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing;[this, [""TAS"", ""General Equipment""], ""tas_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
 				name="medic_general_2";
 				disableSimulation=1;
 			};
@@ -42081,7 +42082,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""TAS"", ""Vehicle Store""], [""nhs_general_dealership"",independent,""medic_ground_2"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
+				init="[this, [""TAS"", ""Vehicle Store""], [""tas_general_dealership"",independent,""medic_ground_2"",""med"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;";
 				name="medic_vehicles_2";
 				disableSimulation=1;
 			};
@@ -42182,7 +42183,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, [""TAS"", ""Air Vehicle Store""], [""nhs_taa_dealership"",independent,""medic_air_1"",""med"",""Air Vehicle Store""], ""playerSide isEqualTo west && license_med_taa""] call FF_fnc_setupVehicle;";
+				init="[this, [""TAS"", ""Air Vehicle Store""], [""nhs_taa_dealership"",independent,""medic_air_1"",""med"",""Air Vehicle Store""], ""playerSide isEqualTo west && (license_med_taa1 || license_med_taa2 || license_med_taa3""] call FF_fnc_setupVehicle;";
 				name="medic_air_vehicle_1";
 				disableSimulation=1;
 			};
@@ -46611,7 +46612,7 @@ class Mission
 			position[]={12864.42,1.9204577,7293.9214};
 			name="civ_car_garage_3";
 			type="Empty";
-			angle=52.677723;
+			angle=52.677708;
 			id=2383;
 		};
 		class Item1191
@@ -46622,6 +46623,96 @@ class Mission
 			type="Empty";
 			angle=0.47653913;
 			id=2384;
+		};
+		class Item1192
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={8287.1602,221.664,11942.306};
+			};
+			title="Management House";
+			id=2385;
+			atlOffset=0.00015258789;
+		};
+		class Item1193
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={6109.1528,15.561,10168.482};
+			};
+			title="Developer House";
+			id=2386;
+			atlOffset=-7.6293945e-005;
+		};
+		class Item1194
+		{
+			dataType="Marker";
+			position[]={7423.9678,4.29,7152.626};
+			name="iridium_exports";
+			text="Iridium Exports";
+			type="mil_dot";
+			colorName="ColorCIV";
+			id=2387;
+		};
+		class Item1195
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7424.4312,4.8783245,7152.6348};
+				angles[]={0,1.652565,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""ALL"", ""Iridium Exports""], ""iridium_exports"", """"] call FF_fnc_setupMarket;";
+				name="iridium_exports";
+				disableSimulation=1;
+			};
+			id=2388;
+			type="Land_InfoStand_V2_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1196
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13277.814,2.4422193,11962.396};
+				angles[]={0,0.46204236,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2389;
+			type="Land_i_Barracks_V2_F";
 		};
 	};
 };

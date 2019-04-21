@@ -17,7 +17,7 @@ uiNamespace setVariable ["Weapon_Accessories",0];
 uiNamespace setVariable ["Magazine_Array",[]];
 uiNamespace setVariable ["Accessories_Array",[]];
 
-if !(createDialog "life_weapon_shop") exitWith {};
+if !(createDialog "RscPhyscialStore") exitWith {};
 if (!isClass(missionConfigFile >> "CfgWeapons" >> (_this select 3))) exitWith {systemChat (_this select 3); closeDialog 0}; //Bad config entry.
 
 disableSerialization;

@@ -63,6 +63,13 @@ if (!isNull _source && {_source != _unit}) then {
 			/* Anti-Restrain Glitch */
 			if(_source getVariable ["restrained",false]) then { _damage = _orginalDamage };
 		};
+
+		/* Anti-VDM */
+		if (isNull objectParent _unit && { (vehicle _source) isKindOf "Car" }) then {
+			if !((count (crew (vehicle _source))) isEqualTo 0) then {
+				_damage = _orginalDamage;
+			};
+		};
 	};
 } else {
 	/* Seatbelt System */

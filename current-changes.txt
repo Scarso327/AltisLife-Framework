@@ -6,6 +6,8 @@ Added:
         - Cadet Uniform
         - Main Uniform (Insignia changes per rank)
         - High Visibility Uniform
+    Medic Uniforms (Scarso)
+        - Main Uniform (Insignia changes per rank)
     Police Car Textures (Scarso & Lewis)
         - Police Offroad
         - Police SUV

@@ -10,7 +10,7 @@ private ["_ammoType","_projectile"];
 _ammoType = _this select 4;
 _projectile = _this select 6;
 
-if (_ammoType isEqualTo "GrenadeHand_stone") then {
+if (_ammoType isEqualTo "GrenadeHand_stone","UGL_FlareCIR_F") then {
     _projectile spawn {
         private "_position";
         while {!isNull _this} do {

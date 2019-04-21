@@ -9,8 +9,16 @@ class CfgTextures {
     // Main Medic Uniform...
     class U_Rangemaster {
         texture[] = {
-            0,
-            ""
+            1,
+            {
+                "Medic\Uniforms\MedicLevel1.paa", // Level 1
+                "Medic\Uniforms\MedicLevel2.paa", // Level 2
+                "Medic\Uniforms\MedicLevel1.paa", // Level 3
+                "Medic\Uniforms\MedicLevel2.paa", // Level 4
+                "Medic\Uniforms\MedicLevel2.paa", // Level 5
+                "Medic\Uniforms\MedicLevel3.paa", // Level 6
+                "Medic\Uniforms\MedicLevel3.paa", // Level 7
+            }
         };
         invisBackpack[] = {3, ""};
     };

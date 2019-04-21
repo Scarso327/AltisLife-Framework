@@ -427,7 +427,6 @@ class CfgClothing {
         uniforms[] = {
             { "NONE", "Remove Uniform", 0, "" },
             { "U_Rangemaster", "Standard Response Uniform", 0, "call life_mediclevel >= 1" },
-            { "U_Rangemaster", "Command Response Uniform", 0, "call life_mediclevel >= 5" },
             { "U_Rangemaster", "Air Ambulance Uniform", 0, "license_med_taa1 || license_med_taa2 || license_med_taa3" }
         };
         headgear[] = {

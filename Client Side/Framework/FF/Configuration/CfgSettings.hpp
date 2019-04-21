@@ -39,9 +39,7 @@ class CfgSettings {
     paycheck_period = 15;
 
     /* Medical System Configurations */
-    revive_cops = false;
-    revive_civ = false;
-    revive_east = false;
+    revive_cops = true; // Only allows them when no medics are online...
     revive_fee = 1500;
     hospital_heal_fee = 100;
 

@@ -58,4 +58,8 @@ lbClear _ctrl; //Purge the list
 {
     _ctrl lbAdd format ["%1",_x getVariable ["realname",name _x]];
     _ctrl lbSetData [(lbSize _ctrl)-1,str(_x)];
-} forEach _allUnits;
+} forEach (_allUnits select {
+    !(isDowned(_x)) && 
+    { !(_x getVariable ["isTazed", false]) } && 
+    { !(_x getVariable ["isKnckedOut", false]) }
+});

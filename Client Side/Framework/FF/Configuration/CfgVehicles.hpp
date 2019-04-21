@@ -53,7 +53,13 @@ class CfgVehicleStores {
         side = "civ";
         conditions = "license_civ_piloting";
         vehicles[] = {
-            { "C_Plane_Civil_01_F", "" }
+            { "C_Plane_Civil_01_F", "" },
+            { "I_Plane_Fighter_03_CAS_F", "" }
+            { "B_Plane_CAS_01_F", "" },
+            { "O_Plane_CAS_02_F", "" },
+            { "I_Plane_Fighter_04_F", "" },
+            { "B_Plane_Fighter_01_F", "" },
+            { "O_Plane_Fighter_02_F", "" }
         };
     };
 
@@ -679,6 +685,48 @@ class LifeCfgVehicles {
                 "A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"
             }, "" }
         };    
+    };
+
+    class I_Plane_Fighter_03_CAS_F { // A-143 Buzzard (CAS)
+        vItemSpace = 0;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class B_Plane_CAS_01_F { // A-164 Wipeout 
+        vItemSpace = 0;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class O_Plane_CAS_02_F { // To-199 Neophron 
+        vItemSpace = 0;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class I_Plane_Fighter_04_F { // A-149 Gryphon
+        vItemSpace = 0;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class B_Plane_Fighter_01_F { // F/A-181 Black Wasp II
+        vItemSpace = 0;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class O_Plane_Fighter_02_F { // To-201 Shikra
+        vItemSpace = 0;
+        conditions = "";
+        price = 0;
+        textures[] = {};
     };
 
     class C_Scooter_Transport_01_F { // Water Scooter

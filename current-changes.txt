@@ -71,6 +71,7 @@ Changed:
     Getting tased no longer unloads current weapon (Scarso)
     Police & Medics are no longer charged for their items (Scarso)
     Weapon / Physical Store UI (Scarso)
+    Clothing Store UI (Scarso)
     
 Removed:
     Welcome Notification Screen (Scarso)

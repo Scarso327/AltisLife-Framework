@@ -45,7 +45,7 @@ life_oldGlasses = goggles player;
 life_oldHat = headgear player;
 
 /* Open up the menu */
-createDialog "Life_Clothing";
+createDialog "RscClothingStore";
 disableSerialization;
 
 ctrlSetText [3103, _shopTitle];
@@ -168,17 +168,7 @@ life_cMenu_lock = false;
 if (isNull (findDisplay 3100)) exitWith {};
 
 private _list = (findDisplay 3100) displayCtrl 3101;
-private _filter = (findDisplay 3100) displayCtrl 3105;
-lbClear _filter;
-lbClear _list;
-
-_filter lbAdd localize "STR_Shop_UI_Clothing";
-_filter lbAdd localize "STR_Shop_UI_Hats";
-_filter lbAdd localize "STR_Shop_UI_Glasses";
-_filter lbAdd localize "STR_Shop_UI_Vests";
-_filter lbAdd localize "STR_Shop_UI_Backpack";
-
-_filter lbSetCurSel 0;
+[0,0] call life_fnc_clothingFilter;
 
 [] call FF(playerSkins);
 

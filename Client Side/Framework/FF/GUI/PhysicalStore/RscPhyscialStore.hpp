@@ -68,16 +68,6 @@ class RscPhyscialStore {
             w = 0.154687 * safezoneW;
             h = 0.022 * safezoneH;
         };
-
-		class FilterList: Life_RscCombo {
-            idc = 38402;
-            onLBSelChanged = "_this call life_fnc_weaponShopFilter";
-			colorBackground[] = {0.09,0.09,0.09,1};
-           	x = 0.412344 * safezoneW + safezoneX;
-            y = 0.687 * safezoneH + safezoneY;
-            w = 0.154687 * safezoneW;
-            h = 0.022 * safezoneH;
-        };
     };
 
     class Controls {
@@ -127,7 +117,7 @@ class RscPhyscialStore {
             w = 0.0154688 * safezoneW;
             h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0};
+			colorBackground[] = {-1,-1,-1,0.9};
 			text = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoMagAll_ca.paa";
 		};
 
@@ -139,7 +129,7 @@ class RscPhyscialStore {
             w = 0.0154688 * safezoneW;
             h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0};
+			colorBackground[] = {-1,-1,-1,0.9};
 			text = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemAcc_ca.paa";
 		};
 
@@ -161,5 +151,15 @@ class RscPhyscialStore {
 			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1.0};
 			soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1.0};
 		};
+
+		class FilterList: Life_RscCombo {
+            idc = 38402;
+            onLBSelChanged = "_this call life_fnc_weaponShopFilter";
+			colorBackground[] = {0.09,0.09,0.09,1};
+           	x = 0.412344 * safezoneW + safezoneX;
+            y = 0.687 * safezoneH + safezoneY;
+            w = 0.154687 * safezoneW;
+            h = 0.022 * safezoneH;
+        };
     };
 };

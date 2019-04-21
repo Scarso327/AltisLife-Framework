@@ -146,7 +146,7 @@ class CfgShops {
     class walkin_clinic {
         name = "Walk-In Clinic";
         conditions = "";
-        items[] = { "water", "baguette", "blood_bag", "stretcher" };
+        items[] = { "water", "baguette", "blood_bag" };
     };
 
     class tpc_market {
@@ -158,6 +158,6 @@ class CfgShops {
     class tas_market {
         name = "TAS Market";
         conditions = "playerSide isEqualTo indpendent";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "blood_bag", "stretcher", "defibrillator" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "blood_bag", "defibrillator" };
     };
 };

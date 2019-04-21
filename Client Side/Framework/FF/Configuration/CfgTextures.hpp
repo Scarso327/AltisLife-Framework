@@ -40,7 +40,7 @@ class CfgTextures {
     };
 
     class U_B_Wetsuit {
-        texture[] = {1, "" };
+        texture[] = {0, "" };
         invisBackpack[] = {3, ""};
     };
 };

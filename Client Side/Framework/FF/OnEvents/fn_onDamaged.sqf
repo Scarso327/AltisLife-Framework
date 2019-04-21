@@ -56,12 +56,12 @@ if (!isNull _source && {_source != _unit}) then {
 						};
 					};
 
-					_damage = [
-						_unit getHit _part,
-						damage _unit
-					] select (_part isEqualTo "");
+					_damage = _orginalDamage;
 				};
 			};
+
+			/* Anti-Restrain Glitch */
+			if(_source getVariable ["restrained",false]) then { _damage = _orginalDamage };
 		};
 	};
 };

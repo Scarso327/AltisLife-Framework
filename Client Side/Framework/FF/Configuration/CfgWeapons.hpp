@@ -89,7 +89,7 @@ class CfgWeapons {
             { "10Rnd_9x21_Mag", "10Rnd 9mm Mag", 180, 90, "" },
             { "16Rnd_9x21_Mag", "16Rnd 9mm Mag", 235, 118, "" },
             { "30Rnd_9x21_Mag", "30Rnd 9mm Mag", 400, 200, "" },
-            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 320, 160, "" }
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 320, 160, "" },
             { "6Rnd_45ACP_Cylinder", "6Rnd .45mm Cylinder", 410, 205, "" },
             { "30Rnd_545x39_Mag_F", "30Rnd 5.45mm Mag", 670, 335, "" },
             { "30Rnd_762x39_Mag_F", "30Rnd 7.62mm Mag", 1670, 835, "" }
@@ -133,7 +133,7 @@ class CfgWeapons {
             { "10Rnd_9x21_Mag", "10Rnd 9mm Mag", 180, 90, "" },
             { "16Rnd_9x21_Mag", "16Rnd 9mm Mag", 235, 118, "" },
             { "30Rnd_9x21_Mag", "30Rnd 9mm Mag", 400, 200, "" },
-            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 320, 160, "" }
+            { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 320, 160, "" },
             { "6Rnd_45ACP_Cylinder", "6Rnd .45mm Cylinder", 410, 205, "" },
             { "30Rnd_545x39_Mag_F", "30Rnd 5.45mm Mag", 670, 335, "" },
             { "20Rnd_556x45_UW_mag", "20Rnd 5.56mm UW Mag", 450, 225, "" },

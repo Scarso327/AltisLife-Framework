@@ -3,8 +3,8 @@ class CfgItems {
         variable = "water";
         displayName = "Bottle of Water";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 50;
+        sellPrice = 25;
         illegal = false;
         save = true;
         taxed = true;
@@ -25,8 +25,8 @@ class CfgItems {
         variable = "soda";
         displayName = "Bottle of Soda";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 80;
+        sellPrice = 40;
         illegal = false;
         save = true;
         taxed = true;
@@ -47,8 +47,8 @@ class CfgItems {
         variable = "energy_drink";
         displayName = "Energy Drink";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 600;
+        sellPrice = 300;
         illegal = false;
         save = true;
         taxed = true;
@@ -69,8 +69,8 @@ class CfgItems {
         variable = "apple";
         displayName = "Apple";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 320;
+        sellPrice = 160;
         illegal = false;
         save = true;
         taxed = true;
@@ -91,8 +91,8 @@ class CfgItems {
         variable = "mango";
         displayName = "Mango";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 220;
+        sellPrice = 110;
         illegal = false;
         save = true;
         taxed = true;
@@ -113,8 +113,8 @@ class CfgItems {
         variable = "coconut";
         displayName = "Coconut";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 245;
+        sellPrice = 123;
         illegal = false;
         save = true;
         taxed = true;
@@ -135,8 +135,8 @@ class CfgItems {
         variable = "baguette";
         displayName = "Baguette";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 120;
+        sellPrice = 60;
         illegal = false;
         save = true;
         taxed = true;
@@ -157,8 +157,8 @@ class CfgItems {
         variable = "croissant";
         displayName = "Croissant";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 110;
+        sellPrice = 55;
         illegal = false;
         save = true;
         taxed = true;
@@ -179,8 +179,8 @@ class CfgItems {
         variable = "crepe";
         displayName = "Crepe";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 105;
+        sellPrice = 53;
         illegal = false;
         save = true;
         taxed = true;
@@ -201,8 +201,8 @@ class CfgItems {
         variable = "energy_bar";
         displayName = "Energy Bar";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 450;
+        sellPrice = 225;
         illegal = false;
         save = true;
         taxed = true;
@@ -223,8 +223,8 @@ class CfgItems {
         variable = "lockpick";
         displayName = "Lockpick";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 150;
+        sellPrice = 75;
         illegal = false;
         save = true;
         taxed = true;
@@ -245,8 +245,8 @@ class CfgItems {
         variable = "pickaxe";
         displayName = "Pickaxe";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 360;
+        sellPrice = 180;
         illegal = false;
         save = true;
         taxed = true;
@@ -267,8 +267,8 @@ class CfgItems {
         variable = "fuel_can";
         displayName = "Fuel Can";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 750;
+        sellPrice = 375;
         illegal = false;
         save = true;
         taxed = true;
@@ -289,8 +289,8 @@ class CfgItems {
         variable = "empty_fuel_can";
         displayName = "Empty Fuel Can";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 45;
         illegal = false;
         save = true;
         taxed = false;
@@ -311,8 +311,8 @@ class CfgItems {
         variable = "empty_barrel";
         displayName = "Empty Barrel";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 1450;
+        sellPrice = 725;
         illegal = false;
         save = true;
         taxed = true;
@@ -333,8 +333,8 @@ class CfgItems {
         variable = "small_container";
         displayName = "Small Container";
         weight = 5;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 250000;
+        sellPrice = 125000;
         illegal = false;
         save = true;
         taxed = true;
@@ -355,8 +355,8 @@ class CfgItems {
         variable = "large_container";
         displayName = "Large Container";
         weight = 10;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 500000;
+        sellPrice = 250000;
         illegal = false;
         save = true;
         taxed = true;
@@ -377,8 +377,8 @@ class CfgItems {
         variable = "red_bush";
         displayName = "Red Bush Tea";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 60;
+        sellPrice = 30;
         illegal = false;
         save = true;
         taxed = true;
@@ -399,8 +399,8 @@ class CfgItems {
         variable = "pg_tips";
         displayName = "PG Tips";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 45;
+        sellPrice = 23;
         illegal = false;
         save = true;
         taxed = true;
@@ -421,8 +421,8 @@ class CfgItems {
         variable = "earl_grey";
         displayName = "Earl Grey Tea";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 80;
+        sellPrice = 40;
         illegal = false;
         save = true;
         taxed = true;
@@ -443,8 +443,8 @@ class CfgItems {
         variable = "green_tea";
         displayName = "Green Tea";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 65;
+        sellPrice = 33;
         illegal = false;
         save = true;
         taxed = true;
@@ -465,8 +465,8 @@ class CfgItems {
         variable = "coffee";
         displayName = "Coffee";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 55;
+        sellPrice = 28;
         illegal = false;
         save = true;
         taxed = true;
@@ -487,8 +487,8 @@ class CfgItems {
         variable = "english_breakfast";
         displayName = "English Breakfast";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 130;
+        sellPrice = 65;
         illegal = false;
         save = true;
         taxed = true;
@@ -509,8 +509,8 @@ class CfgItems {
         variable = "tea_cake";
         displayName = "Tea Cake";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 10;
+        sellPrice = 5;
         illegal = false;
         save = true;
         taxed = true;
@@ -531,8 +531,8 @@ class CfgItems {
         variable = "crumpet";
         displayName = "Crumpet";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 15;
+        sellPrice = 8;
         illegal = false;
         save = true;
         taxed = true;
@@ -553,8 +553,8 @@ class CfgItems {
         variable = "toast";
         displayName = "Toast";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 5;
+        sellPrice = 3;
         illegal = false;
         save = true;
         taxed = true;
@@ -575,8 +575,8 @@ class CfgItems {
         variable = "scone";
         displayName = "Scone";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 5;
+        sellPrice = 3;
         illegal = false;
         save = true;
         taxed = true;
@@ -597,8 +597,8 @@ class CfgItems {
         variable = "cheesy_chips";
         displayName = "Cheesy Chips";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 80;
+        sellPrice = 40;
         illegal = false;
         save = true;
         taxed = true;
@@ -619,8 +619,30 @@ class CfgItems {
         variable = "fish_chips";
         displayName = "Fish and Chips";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 90;
+        sellPrice = 45;
+        illegal = false;
+        save = true;
+        taxed = true;
+        marketDisplay = false;
+        class dynmarket {
+            dynmaic = false;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {true, "Hunger"};
+            value = 55;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class sausage_supper {
+        variable = "sausage_supper";
+        displayName = "Sausage Supper";
+        weight = 2;
+        buyPrice = 85;
+        sellPrice = 43;
         illegal = false;
         save = true;
         taxed = true;
@@ -641,8 +663,8 @@ class CfgItems {
         variable = "pasty_chips";
         displayName = "Pasty and Chips";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 95;
+        sellPrice = 48;
         illegal = false;
         save = true;
         taxed = true;
@@ -663,8 +685,8 @@ class CfgItems {
         variable = "burger";
         displayName = "Full Beef Burger";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 100;
+        sellPrice = 50;
         illegal = false;
         save = true;
         taxed = true;
@@ -795,8 +817,8 @@ class CfgItems {
         variable = "raw_salema";
         displayName = "Raw Salema";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -817,8 +839,8 @@ class CfgItems {
         variable = "cooked_salema";
         displayName = "Cooked Salema";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -839,8 +861,8 @@ class CfgItems {
         variable = "raw_ornate";
         displayName = "Raw Ornate";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -861,8 +883,8 @@ class CfgItems {
         variable = "cooked_ornate";
         displayName = "Cooked Ornate";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -883,8 +905,8 @@ class CfgItems {
         variable = "raw_mackerel";
         displayName = "Raw Mackerel";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -905,8 +927,8 @@ class CfgItems {
         variable = "cooked_mackerel";
         displayName = "Cooked Mackerel";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -927,8 +949,8 @@ class CfgItems {
         variable = "raw_tuna";
         displayName = "Raw Tuna";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -949,8 +971,8 @@ class CfgItems {
         variable = "cooked_tuna";
         displayName = "Cooked Tuna";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -971,8 +993,8 @@ class CfgItems {
         variable = "raw_mullet";
         displayName = "Raw Mullet";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -993,8 +1015,8 @@ class CfgItems {
         variable = "cooked_mullet";
         displayName = "Cooked Mullet";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -1015,8 +1037,8 @@ class CfgItems {
         variable = "raw_catshark";
         displayName = "Raw Catshark";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -1037,8 +1059,8 @@ class CfgItems {
         variable = "cooked_catshark";
         displayName = "Cooked Catshark";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = true;
@@ -1059,8 +1081,8 @@ class CfgItems {
         variable = "apple_schnapps";
         displayName = "Apple Schnapps";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 285;
+        sellPrice = 570;
         illegal = false;
         save = true;
         taxed = true;
@@ -1081,8 +1103,8 @@ class CfgItems {
         variable = "mango_schnapps";
         displayName = "Mango Schnapps";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 293;
+        sellPrice = 585;
         illegal = false;
         save = true;
         taxed = true;
@@ -1103,8 +1125,8 @@ class CfgItems {
         variable = "coconut_schnapps";
         displayName = "Coconut Schnapps";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 303;
+        sellPrice = 605;
         illegal = false;
         save = true;
         taxed = true;
@@ -1125,8 +1147,8 @@ class CfgItems {
         variable = "cider";
         displayName = "Bottle of Cider";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 320;
+        sellPrice = 640;
         illegal = false;
         save = true;
         taxed = true;
@@ -1147,8 +1169,8 @@ class CfgItems {
         variable = "beer";
         displayName = "Bottle of Beer";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 300;
+        sellPrice = 600;
         illegal = false;
         save = true;
         taxed = true;
@@ -1169,8 +1191,8 @@ class CfgItems {
         variable = "whisky";
         displayName = "Bottle of Whisky";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 490;
+        sellPrice = 980;
         illegal = false;
         save = true;
         taxed = true;
@@ -1191,8 +1213,8 @@ class CfgItems {
         variable = "wine";
         displayName = "Bottle of Wine";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 7500;
+        sellPrice = 15000;
         illegal = false;
         save = true;
         taxed = true;
@@ -1213,8 +1235,8 @@ class CfgItems {
         variable = "1k_chip";
         displayName = "1K Chip";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 1000;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = false;
@@ -1235,8 +1257,8 @@ class CfgItems {
         variable = "5k_chip";
         displayName = "5K Chip";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 5000;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = false;
@@ -1257,8 +1279,8 @@ class CfgItems {
         variable = "10k_chip";
         displayName = "10K Chip";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 10000;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = false;
@@ -1279,8 +1301,8 @@ class CfgItems {
         variable = "25k_chip";
         displayName = "25K Chip";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 25000;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = false;
@@ -1301,8 +1323,8 @@ class CfgItems {
         variable = "50k_chip";
         displayName = "50K Chip";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 50000;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = false;
@@ -1323,8 +1345,8 @@ class CfgItems {
         variable = "100k_chip";
         displayName = "100K Chip";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 100000;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = false;
@@ -1345,8 +1367,8 @@ class CfgItems {
         variable = "ziptie";
         displayName = "Ziptie";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 17500;
+        sellPrice = 8750;
         illegal = true;
         save = true;
         taxed = false;
@@ -1367,8 +1389,8 @@ class CfgItems {
         variable = "blindfold";
         displayName = "Blindfold";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 13000;
+        sellPrice = 6500;
         illegal = true;
         save = true;
         taxed = false;
@@ -1389,8 +1411,8 @@ class CfgItems {
         variable = "gag";
         displayName = "Gag";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 12500;
+        sellPrice = 6250;
         illegal = true;
         save = true;
         taxed = false;
@@ -1411,8 +1433,8 @@ class CfgItems {
         variable = "ear_clots";
         displayName = "Ear Clots";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 14000;
+        sellPrice = 7000;
         illegal = true;
         save = true;
         taxed = false;
@@ -1433,8 +1455,8 @@ class CfgItems {
         variable = "bolt_cutter";
         displayName = "Bolt Cutter";
         weight = 4;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 65000;
+        sellPrice = 32500;
         illegal = true;
         save = true;
         taxed = false;
@@ -1455,8 +1477,8 @@ class CfgItems {
         variable = "explosive_charge";
         displayName = "Explosive Charge";
         weight = 7;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 300000;
+        sellPrice = 150000;
         illegal = true;
         save = true;
         taxed = false;
@@ -1477,8 +1499,8 @@ class CfgItems {
         variable = "branded_gold_bar";
         displayName = "Branded Gold Bar";
         weight = 10;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 100000;
         illegal = true;
         save = false;
         taxed = false;
@@ -1499,8 +1521,8 @@ class CfgItems {
         variable = "unbranded_gold_bar";
         displayName = "Unbranded Gold Bar";
         weight = 9;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 250000;
         illegal = true;
         save = false;
         taxed = false;
@@ -1521,8 +1543,8 @@ class CfgItems {
         variable = "bannana";
         displayName = "Bannana";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 480;
+        sellPrice = 240;
         illegal = false;
         save = false;
         taxed = true;
@@ -1543,8 +1565,8 @@ class CfgItems {
         variable = "rice";
         displayName = "Rice";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 540;
+        sellPrice = 270;
         illegal = false;
         save = false;
         taxed = true;
@@ -1565,8 +1587,8 @@ class CfgItems {
         variable = "wood";
         displayName = "Wood";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = true;
@@ -1587,8 +1609,8 @@ class CfgItems {
         variable = "lumber";
         displayName = "Lumber";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 1960;
+        sellPrice = 980;
         illegal = false;
         save = false;
         taxed = true;
@@ -1609,8 +1631,8 @@ class CfgItems {
         variable = "coal";
         displayName = "Coal";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 620;
+        sellPrice = 310;
         illegal = false;
         save = false;
         taxed = false;
@@ -1631,8 +1653,8 @@ class CfgItems {
         variable = "coral";
         displayName = "Coral";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 1120;
+        sellPrice = 560;
         illegal = false;
         save = false;
         taxed = false;
@@ -1652,9 +1674,9 @@ class CfgItems {
     class tin_ore {
         variable = "tin_ore";
         displayName = "Tin Ore";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 4;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = false;
@@ -1674,9 +1696,9 @@ class CfgItems {
     class tin_bar {
         variable = "tin_bar";
         displayName = "Tin Bar";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 3;
+        buyPrice = 1990;
+        sellPrice = 995;
         illegal = false;
         save = false;
         taxed = true;
@@ -1696,9 +1718,9 @@ class CfgItems {
     class copper_ore {
         variable = "copper_ore";
         displayName = "Copper Ore";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 4;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = false;
@@ -1718,9 +1740,9 @@ class CfgItems {
     class copper_bar {
         variable = "copper_bar";
         displayName = "Copper Bar";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 3;
+        buyPrice = 2320;
+        sellPrice = 1160;
         illegal = false;
         save = false;
         taxed = true;
@@ -1740,9 +1762,9 @@ class CfgItems {
     class silver_ore {
         variable = "silver_ore";
         displayName = "Silver Ore";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 4;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = false;
@@ -1762,9 +1784,9 @@ class CfgItems {
     class silver_bar {
         variable = "silver_bar";
         displayName = "Silver Bar";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 3;
+        buyPrice = 2410;
+        sellPrice = 1205;
         illegal = false;
         save = false;
         taxed = true;
@@ -1784,9 +1806,9 @@ class CfgItems {
     class iron_ore {
         variable = "iron_ore";
         displayName = "Iron Ore";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 5;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = false;
@@ -1806,9 +1828,9 @@ class CfgItems {
     class iron_bar {
         variable = "iron_bar";
         displayName = "Iron Bar";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 4;
+        buyPrice = 4690;
+        sellPrice = 2345;
         illegal = false;
         save = false;
         taxed = true;
@@ -1828,9 +1850,9 @@ class CfgItems {
     class platinum_ore {
         variable = "platinum_ore";
         displayName = "Platinum Ore";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 5;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = false;
@@ -1850,9 +1872,9 @@ class CfgItems {
     class platinum_bar {
         variable = "platinum_bar";
         displayName = "Platinum Bar";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 4;
+        buyPrice = 11340;
+        sellPrice = 5670;
         illegal = false;
         save = false;
         taxed = true;
@@ -1872,9 +1894,9 @@ class CfgItems {
     class rock {
         variable = "rock";
         displayName = "Rock";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 6;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = false;
@@ -1894,9 +1916,9 @@ class CfgItems {
     class cement {
         variable = "cement";
         displayName = "Cement";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 5;
+        buyPrice = 3360;
+        sellPrice = 1680;
         illegal = false;
         save = false;
         taxed = true;
@@ -1916,9 +1938,9 @@ class CfgItems {
     class crude_oil {
         variable = "crude_oil";
         displayName = "Crude Oil";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 3;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = false;
@@ -1939,8 +1961,8 @@ class CfgItems {
         variable = "refined_oil";
         displayName = "Refined Oil";
         weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 8650;
+        sellPrice = 4325;
         illegal = false;
         save = false;
         taxed = true;
@@ -1960,9 +1982,9 @@ class CfgItems {
     class iridium_ore {
         variable = "iridium_ore";
         displayName = "Iridium Ore";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 4;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = false;
         save = false;
         taxed = false;
@@ -1982,9 +2004,9 @@ class CfgItems {
     class iridium_bar {
         variable = "iridium_bar";
         displayName = "Iridium Bar";
-        weight = 0;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 3;
+        buyPrice = 18640;
+        sellPrice = 9320;
         illegal = false;
         save = false;
         taxed = true;
@@ -2004,9 +2026,9 @@ class CfgItems {
     class uncut_opal {
         variable = "uncut_opal";
         displayName = "Uncut Opal";
-        weight =10;
-        buyPrice = 0;
-        sellPrice = 0;
+        weight = 1;
+        buyPrice = -1;
+        sellPrice = 1430;
         illegal = false;
         save = false;
         taxed = false;
@@ -2027,8 +2049,8 @@ class CfgItems {
         variable = "cut_opal";
         displayName = "Cut Opal";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 2860;
         illegal = false;
         save = false;
         taxed = false;
@@ -2049,8 +2071,8 @@ class CfgItems {
         variable = "uncut_sapphire";
         displayName = "Uncut Sapphire";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 3980;
         illegal = false;
         save = false;
         taxed = false;
@@ -2071,8 +2093,8 @@ class CfgItems {
         variable = "cut_shappire";
         displayName = "Cut Sapphire";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 7960;
         illegal = false;
         save = false;
         taxed = false;
@@ -2093,8 +2115,8 @@ class CfgItems {
         variable = "uncut_ruby";
         displayName = "Uncut Ruby";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 11340;
         illegal = false;
         save = false;
         taxed = false;
@@ -2115,8 +2137,8 @@ class CfgItems {
         variable = "cut_ruby";
         displayName = "Cut Ruby";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 22680;
         illegal = false;
         save = false;
         taxed = false;
@@ -2137,8 +2159,8 @@ class CfgItems {
         variable = "uncut_emerald";
         displayName = "Uncut Emerald";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 16800;
         illegal = false;
         save = false;
         taxed = false;
@@ -2159,8 +2181,8 @@ class CfgItems {
         variable = "cut_emerald";
         displayName = "Cut Emerald";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 33600;
         illegal = false;
         save = false;
         taxed = false;
@@ -2181,8 +2203,8 @@ class CfgItems {
         variable = "uncut_diamond";
         displayName = "Uncut Diamond";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 35400;
         illegal = false;
         save = false;
         taxed = false;
@@ -2203,8 +2225,8 @@ class CfgItems {
         variable = "cut_diamond";
         displayName = "Cut Diamond";
         weight = 1;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 70800;
         illegal = false;
         save = false;
         taxed = false;
@@ -2225,8 +2247,8 @@ class CfgItems {
         variable = "cannabis";
         displayName = "Cannabis Leaf";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = true;
         save = false;
         taxed = false;
@@ -2247,8 +2269,8 @@ class CfgItems {
         variable = "marijuana";
         displayName = "Marijuana";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 3280;
+        sellPrice = 1640;
         illegal = true;
         save = false;
         taxed = false;
@@ -2269,8 +2291,8 @@ class CfgItems {
         variable = "refined_marijuana";
         displayName = "Refined Marijuana";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 4920;
+        sellPrice = 2460;
         illegal = true;
         save = false;
         taxed = false;
@@ -2291,8 +2313,8 @@ class CfgItems {
         variable = "opium";
         displayName = "Opium Poppy";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = true;
         save = false;
         taxed = false;
@@ -2313,8 +2335,8 @@ class CfgItems {
         variable = "heroin";
         displayName = "Heroin";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 3920;
+        sellPrice = 1960;
         illegal = true;
         save = false;
         taxed = false;
@@ -2335,8 +2357,8 @@ class CfgItems {
         variable = "refined_heroin";
         displayName = "Refined Heroin";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 5880;
+        sellPrice = 2940;
         illegal = true;
         save = false;
         taxed = false;
@@ -2357,8 +2379,8 @@ class CfgItems {
         variable = "coca";
         displayName = "Coca Leaf";
         weight = 4;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = true;
         save = false;
         taxed = false;
@@ -2379,8 +2401,8 @@ class CfgItems {
         variable = "cocaine";
         displayName = "Cocaine";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 9860;
+        sellPrice = 4930;
         illegal = true;
         save = false;
         taxed = false;
@@ -2401,8 +2423,8 @@ class CfgItems {
         variable = "refined_cocaine";
         displayName = "Refined Cocaine";
         weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 14790;
+        sellPrice = 7395;
         illegal = true;
         save = false;
         taxed = false;
@@ -2423,8 +2445,8 @@ class CfgItems {
         variable = "ephedrine";
         displayName = "Ephedrine Barrel";
         weight = 5;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = -1;
         illegal = true;
         save = false;
         taxed = false;
@@ -2445,8 +2467,8 @@ class CfgItems {
         variable = "methamphetamine";
         displayName = "Methamphetamine";
         weight = 5;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 29360;
+        sellPrice = 14680;
         illegal = true;
         save = false;
         taxed = false;
@@ -2467,8 +2489,8 @@ class CfgItems {
         variable = "refined_methamphetamine";
         displayName = "Refined Methamphetamine";
         weight = 5;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 44040;
+        sellPrice = 22020;
         illegal = true;
         save = false;
         taxed = false;
@@ -2489,8 +2511,8 @@ class CfgItems {
         variable = "raw_turtle";
         displayName = "Raw Turtle";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = -1;
+        sellPrice = 90000;
         illegal = true;
         save = false;
         taxed = false;
@@ -2511,8 +2533,8 @@ class CfgItems {
         variable = "cooked_turtle";
         displayName = "Cooked Turtle";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 340000;
+        sellPrice = 170000;
         illegal = true;
         save = false;
         taxed = false;
@@ -2533,30 +2555,8 @@ class CfgItems {
         variable = "blood_bag";
         displayName = "Blood Bag";
         weight = 2;
-        buyPrice = 0;
-        sellPrice = 0;
-        illegal = false;
-        save = true;
-        taxed = false;
-        marketDisplay = false;
-        class dynmarket {
-            dynmaic = false;
-            driftPerc = 0.1;
-        };
-        class edibility {
-            edible[] = {false, ""};
-            value = -1;
-        };
-        icon = "";
-        conditions = "";
-    };
-
-    class stretcher {
-        variable = "stretcher";
-        displayName = "Stretcher";
-        weight = 3;
-        buyPrice = 0;
-        sellPrice = 0;
+        buyPrice = 1100;
+        sellPrice = 550;
         illegal = false;
         save = true;
         taxed = false;
@@ -2578,7 +2578,7 @@ class CfgItems {
         displayName = "Stinger";
         weight = 3;
         buyPrice = 0;
-        sellPrice = 0;
+        sellPrice = -1;
         illegal = false;
         save = true;
         taxed = false;
@@ -2600,7 +2600,7 @@ class CfgItems {
         displayName = "Defibrillator";
         weight = 4;
         buyPrice = 0;
-        sellPrice = 0;
+        sellPrice = -1;
         illegal = true;
         save = true;
         taxed = false;

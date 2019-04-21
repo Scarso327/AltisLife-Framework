@@ -33,7 +33,6 @@ if (_shooter isKindOf "CAManBase" && (alive player && !(isDowned(player)))) then
         if (!(count _curMags isEqualTo 0)) then {
             {player addMagazine _x;} forEach _curMags;
         };
-        [_unit,"tazerSound",100,1] remoteExecCall ["life_fnc_say3D",RCLIENT];
 
         _obj = "Land_ClutterCutter_small_F" createVehicle ASLTOATL(visiblePositionASL player);
         _obj setPosATL ASLTOATL(visiblePositionASL player);

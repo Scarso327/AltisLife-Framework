@@ -67,3 +67,4 @@ Removed:
     Public Slots (Scarso)
     House Based Spawning for Civilians (Scarso)
     Various Run Types (Lewis Mackinnon)
+    Taser Sound (Scarso)

@@ -38,6 +38,10 @@ FF_fnc_nameTags_draw3d = addMissionEventHandler ["Draw3D", {
 						_subtitle = "Masked Player";
 					};
 
+					case (isDowned(_x) || { (_x getVariable ["isTazed", false]) } || { (_x getVariable ["isKnckedOut", false]) }): {
+						_subtitle = "Incapacitated Player";
+					};
+
 					// Faction Information...
 					case ((side _x) in [west, independent]): {
 						private _rankDetails = _x call FF(getRank);

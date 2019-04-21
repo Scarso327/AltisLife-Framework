@@ -6,7 +6,6 @@
     Description:
     Starts the tazed animation and broadcasts out what it needs to.
 */
-private ["_curWep","_curMags","_attach"];
 params [
     ["_unit",objNull,[objNull]],
     ["_shooter",objNull,[objNull]]
@@ -24,6 +23,7 @@ if (_shooter isKindOf "CAManBase" && (alive player && !(isDowned(player)))) then
 
         disableUserInput true;
         player setUnconscious true;
+        player setVariable ["isTazed", life_istazed, true];
 
         [0,"STR_NOTF_Tazed",true,[profileName, _shooter getVariable ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 
@@ -31,6 +31,7 @@ if (_shooter isKindOf "CAManBase" && (alive player && !(isDowned(player)))) then
 
         life_istazed = false;
         player setUnconscious false;
+        player setVariable ["isTazed", life_istazed, true];
         disableUserInput false;
 
         player playMoveNow "amovppnemstpsraswrfldnon";

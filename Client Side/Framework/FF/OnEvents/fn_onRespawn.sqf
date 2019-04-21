@@ -29,6 +29,7 @@ _unit setVariable ["transporting",false,true];
 _unit setVariable ["playerSurrender",false,true];
 _unit setVariable ["steam64id",getPlayerUID player,true];
 _unit setVariable ["realname",profileName,true];
+_unit setVariable ["isTazed", false, true];
 _unit setVariable ["isKnckedOut", false, true];
 
 [_unit,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV]; // Reset Channels...

@@ -10,7 +10,7 @@ scopeName "Vehicle Buy";
 
 params [["_mode",true,[true]]];
 
-if ((lbCurSel 2302) isEqualTo -1) exitWith {hint localize "STR_Shop_Veh_DidntPick";closeDialog 0;};
+if ((lbCurSel 2302) isEqualTo -1) exitWith {hint "You did not pick a vehicle!";closeDialog 0;};
 if ((time - life_action_delay) < 0.2) exitWith {hint "You're doing it too fast!";};
 life_action_delay = time;
 
@@ -38,16 +38,16 @@ if (_mode) then {
 
 private _conditions = M_CONFIG(getText,"LifeCfgVehicles",_className,"conditions");
 
-if !([_conditions] call life_fnc_levelCheck) exitWith {hint localize "STR_Shop_Veh_NoLicense";};
+if !([_conditions] call life_fnc_levelCheck) exitWith {hint "You do not have the required license and/or level!";};
 
 private _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 if (_purchasePrice < 0) exitWith {closeDialog 0;}; //Bad price entry
 
 if (playerSide isEqualTo civilian) then {
-    if (CASH < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - CASH] call life_fnc_numberText]; breakOut "Vehicle Buy"; closeDialog 0;};
+    if (CASH < _purchasePrice) exitWith {hint format ["You do not have enough cash to purchase this vehicle.\n\nAmount Lacking: £%1",[_purchasePrice - CASH] call life_fnc_numberText]; breakOut "Vehicle Buy"; closeDialog 0;};
     CASH = CASH - _purchasePrice;
-    hint format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
+    hint format ["You bought a %1 for £%2",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 } else {
     hint "As a public servant, the government has covered the costs of your equipment."
 };
@@ -71,7 +71,7 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
     };
 };
 
-if (_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block"; closeDialog 0;};
+if (_spawnPoint isEqualTo "") exitWith {hint "There is a vehicle currently blocking the spawn point..."; closeDialog 0;};
 
 //Spawn the vehicle and prep it.
 private "_vehicle";

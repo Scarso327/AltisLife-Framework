@@ -15,11 +15,11 @@ private _tanoaArray = [11074.2,11501.5,0.00137329];
 private _pos = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
 
 if (isNull _building) exitWith {};
-if (!(_building isKindOf "House_F")) exitWith {hint localize "STR_ISTR_Bolt_NotNear";};
+if (!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door.";};
 if (((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"hm_required_number")))) exitWith {
     hint format ["There must be %1 or more police officers active to continue.",(LIFE_SETTINGS(getNumber,"hm_required_number"))];
 };
-if ((typeOf _building) == _vaultHouse && (nearestObject [_pos,"Land_Dome_Big_F"]) getVariable ["locked",true]) exitWith {hint localize "STR_ISTR_Bolt_Exploit"};
+if ((typeOf _building) == _vaultHouse && (nearestObject [_pos,"Land_Dome_Big_F"]) getVariable ["locked",true]) exitWith {hint "You must open the outside doors before opening it!"};
 if (isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 
 _doors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _building),"numberOfDoors");
@@ -31,18 +31,18 @@ for "_i" from 1 to _doors do {
         if (player distance _worldSpace < 2) exitWith {_door = _i;};
 };
 if (_door isEqualTo 0) exitWith {hint "You are not near a door!"}; //Not near a door to be broken into.
-if ((_building getVariable [format ["bis_disabled_Door_%1",_door],0]) isEqualTo 0) exitWith {hint localize "STR_House_Raid_DoorUnlocked"};
+if ((_building getVariable [format ["bis_disabled_Door_%1",_door],0]) isEqualTo 0) exitWith {hint "The door is already unlocked!"};
 
 if ((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) then {
-    [[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+    [[1,2],"!!! SOMEONE IS ATTEMPTING TO BREAKING INTO THE HM. TREASURY !!!!",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 } else {
-    [0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+    [0,"%1 was seen breaking into a house.",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 };
 
 life_action_inUse = true;
 //Setup the progress bar
 disableSerialization;
-_title = localize "STR_ISTR_Bolt_Process";
+_title = "Cutting lock on door..";
 "progressBar" cutRsc ["life_progress","PLAIN"];
 _ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;

@@ -10,14 +10,14 @@
 */
 private ["_ctrl","_num","_index","_data","_old","_value","_weight","_diff"];
 disableSerialization;
-if (isNull life_trunk_vehicle || !alive life_trunk_vehicle) exitWith {hint localize "STR_MISC_VehDoesntExist"};
+if (isNull life_trunk_vehicle || !alive life_trunk_vehicle) exitWith {hint "The vehicle either doesn't exist or is destroyed."};
 if (!alive player || isDowned(player)) exitWith {closeDialog 0;};
-if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith {  closeDialog 0; hint localize "STR_MISC_VehInvUse"; };
+if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith {  closeDialog 0; hint "This vehicle's trunk is in use, only one person can use it at a time."; };
 
 if ((lbCurSel 3502) isEqualTo -1) exitWith {hint "You did not select anything.";};
 _ctrl = ctrlSelData(3502);
 _num = ctrlText 3505;
-if (!([_num] call TON_fnc_isnumber)) exitWith {hint localize "STR_MISC_WrongNumFormat";};
+if (!([_num] call TON_fnc_isnumber)) exitWith {hint "Invalid number format";};
 _num = parseNumber(_num);
 if (_num < 1) exitWith {hint localize "STR_MISC_Under1";};
 
@@ -26,7 +26,7 @@ _data = (life_trunk_vehicle getVariable "Trunk") select 0;
 _old = life_trunk_vehicle getVariable "Trunk";
 if (_index isEqualTo -1) exitWith {};
 _value = _data select _index select 1;
-if (_num > _value) exitWith {hint localize "STR_MISC_NotEnough"};
+if (_num > _value) exitWith {hint "The vehicle doesn't have that many of that item."};
 _num = [_ctrl,_num,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if (_num isEqualTo 0) exitWith {hint "Your inventory space is full."};
 _weight = ([_ctrl] call life_fnc_itemWeight) * _num;

@@ -7,13 +7,13 @@
     Creates a spike strip and preps it.
 */
 private ["_spikeStrip"];
-if (!isNil "life_action_spikeStripPickup") exitWith {hint localize "STR_ISTR_SpikesDeployment"};    // avoid conflicts with addactions allowing duplication.
+if (!isNil "life_action_spikeStripPickup") exitWith {hint "You already have a stinger active in deployment"};    // avoid conflicts with addactions allowing duplication.
 _spikeStrip = "Land_Razorwire_F" createVehicle [0,0,0];
 _spikeStrip attachTo[player,[0,5.5,0]];
 _spikeStrip setDir 90;
 _spikeStrip setVariable ["item","spikeDeployed",true];
 
-life_action_spikeStripDeploy = player addAction[localize "STR_ISTR_Spike_Place",{if (!isNull life_spikestrip) then {detach life_spikeStrip; life_spikeStrip = objNull;}; player removeAction life_action_spikeStripDeploy; life_action_spikeStripDeploy = nil;},"",999,false,false,"",'!isNull life_spikestrip'];
+life_action_spikeStripDeploy = player addAction["Place stinger...",{if (!isNull life_spikestrip) then {detach life_spikeStrip; life_spikeStrip = objNull;}; player removeAction life_action_spikeStripDeploy; life_action_spikeStripDeploy = nil;},"",999,false,false,"",'!isNull life_spikestrip'];
 life_spikestrip = _spikeStrip;
 waitUntil {isNull life_spikeStrip};
 

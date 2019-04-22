@@ -205,7 +205,7 @@ switch (_code) do {
                 if (!(isNil "_list")) then {
                     _house = nearestObject [(ASLtoATL (getPosASL _list)), "House"];
                     if (_house getVariable ["locked", false]) then {
-                        hint localize "STR_House_ContainerDeny";
+                        hint "You are not allowed to access this storage container without the owner opening it.";
                     } else {
                         [_list] spawn life_fnc_openInventory;
                     };
@@ -284,10 +284,10 @@ switch (_code) do {
         if (_shift) then {
             if !(soundVolume isEqualTo 1) then {
                 1 fadeSound 1;
-                systemChat localize "STR_MISC_soundnormal";
+                systemChat "You remove your earplugs!";
             } else {
                 1 fadeSound 0.1;
-                systemChat localize "STR_MISC_soundfade";
+                systemChat "You put your earplugs in!";
             };
         };
     };
@@ -305,17 +305,17 @@ switch (_code) do {
             if (_veh isKindOf "House_F" && {playerSide isEqualTo civilian}) then {
                 if (_veh in life_vehicles && {player distance _veh < 20}) then {
                     private _door = [_veh] call life_fnc_nearestDoor;
-                    if (_door isEqualTo 0) exitWith {hint localize "STR_House_Door_NotNear"};
+                    if (_door isEqualTo 0) exitWith {hint "You are not near a door!"};
                     private _locked = _veh getVariable [format ["bis_disabled_Door_%1",_door],0];
 
                     if (_locked isEqualTo 0) then {
                         _veh setVariable [format ["bis_disabled_Door_%1",_door],1,true];
                         _veh animateSource [format ["Door_%1_source", _door], 0];
-                        systemChat localize "STR_House_Door_Lock";
+                        systemChat "You have locked the door.";
                     } else {
                         _veh setVariable [format ["bis_disabled_Door_%1",_door],0,true];
                         _veh animateSource [format ["Door_%1_source", _door], 1];
-                        systemChat localize "STR_House_Door_Unlock";
+                        systemChat "You have unlocked the door.";
                     };
                 };
             } else {
@@ -370,7 +370,7 @@ switch (_code) do {
                             _veh animateDoor ['DoorL_Back_Open',1];
                             _veh animateDoor ['DoorR_Back_Open ',1];
                         };
-                        systemChat localize "STR_MISC_VehUnlock";
+                        systemChat "You have unlocked the vehicle.";
                         [_veh,"unlockCarSound",50,1] remoteExec ["life_fnc_say3D",RANY];
                     } else {
                         if (local _veh) then {
@@ -420,7 +420,7 @@ switch (_code) do {
                             _veh animateDoor ['DoorL_Back_Open',0];
                             _veh animateDoor ['DoorR_Back_Open ',0];
                         };
-                        systemChat localize "STR_MISC_VehLock";
+                        systemChat "You have locked the vehicle.";
                         [_veh,"lockCarSound",50,1] remoteExec ["life_fnc_say3D",RANY];
                     };
                 };

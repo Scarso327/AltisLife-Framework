@@ -2579,7 +2579,7 @@ class CfgItems {
         weight = 3;
         buyPrice = 0;
         sellPrice = -1;
-        illegal = false;
+        illegal = true;
         save = true;
         taxed = false;
         marketDisplay = false;
@@ -2592,6 +2592,28 @@ class CfgItems {
             value = -1;
         };
         icon = "ico_spikestrip.paa";
+        conditions = "";
+    };
+
+    class defusekit {
+        variable = "defusekit";
+        displayName = "Defusal Kit";
+        weight = 5;
+        buyPrice = 0;
+        sellPrice = -1;
+        illegal = true;
+        save = true;
+        taxed = false;
+        marketDisplay = false;
+        class dynmarket {
+            dynmaic = false;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "ico_defusekit.paa";
         conditions = "";
     };
 

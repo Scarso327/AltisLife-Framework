@@ -17,10 +17,10 @@ _type = M_CONFIG(getText,"CfgItems",_item,"displayName");
 
 if (_bool) then {
     if ([true,_item,(parseNumber _val)] call life_fnc_handleInv) then {
-        hint format [localize "STR_MISC_TooMuch",_from getVariable ["realname",name _from],_val,(localize _type)];
+        hint format ["You tried to give %1 %2 %3 but they couldn't hold that so it was returned.",_from getVariable ["realname",name _from],_val,(localize _type)];
     };
 } else {
     if ([true,_item,(parseNumber _val)] call life_fnc_handleInv) then {
-        hint format [localize "STR_MISC_TooMuch_2",_from getVariable ["realname",name _from],_val,(localize _type)];
+        hint format ["%1 returned %2 %3 because they couldn't hold that amount.",_from getVariable ["realname",name _from],_val,(localize _type)];
     };
 };

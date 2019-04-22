@@ -12,7 +12,7 @@ params [
 
 closeDialog 0;
 if (_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText["Tanker is already in use.","PLAIN"]};
-if !(local _vehicle) exitWith {titleText[localize "STR_MISC_VehLocal","PLAIN"]};
+if !(local _vehicle) exitWith {titleText["This can only be done by the last driver of this vehicle.","PLAIN"]};
 
 life_action_inUse = true;
 
@@ -39,7 +39,7 @@ waitUntil {
     if (isEngineOn _vehicle) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
     if !(_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
     if (player distance _vehicle > 20) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
-    if !(local _vehicle) exitWith {titleText[localize "STR_MISC_VehLocal","PLAIN"]};
+    if !(local _vehicle) exitWith {titleText["This can only be done by the last driver of this vehicle.","PLAIN"]};
 
     _fuelState = _fuelState + 100;
     _vehicle setVariable ["fuelTank",[_fuelSpace,_fuelState],true];

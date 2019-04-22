@@ -1,5 +1,5 @@
 disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}};    // Disabled text and voice for global, side, and command channels. Syntax: disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>}};
-overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play.
+overviewText = "A roleplaying game-mode designed & developed by the LifePlus Development Team.";    // Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play.
 
 #include "FF\Configuration\CfgSpyGlass.hpp"
 #include "CfgRemoteExec.hpp"

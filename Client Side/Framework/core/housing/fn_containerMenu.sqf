@@ -41,7 +41,7 @@ if (playerSide isEqualTo west) then {
     _Btn1 buttonSetAction "[life_pInact_container] spawn life_fnc_containerInvSearch; closeDialog 0;";
     _Btn1 ctrlShow true;
 } else {
-    _Btn1 ctrlSetText localize "STR_pInAct_RemoveContainer";
+    _Btn1 ctrlSetText "Remove Container";
     _Btn1 buttonSetAction "[life_pInact_container] spawn life_fnc_removeContainer; closeDialog 0;";
     _Btn1 ctrlShow true;
 };

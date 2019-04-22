@@ -32,7 +32,7 @@ if !(_shopSide isEqualTo "") then {
 if (_exit) exitWith {};
 
 _exit = [_conditions] call life_fnc_levelCheck;
-if !(_exit) exitWith {hint localize "STR_Shop_Veh_NoLicense";};
+if !(_exit) exitWith {hint "You do not have the required license and/or level!";};
 
 //Save old inventory
 life_oldClothes = uniform player;
@@ -55,10 +55,10 @@ ctrlSetText [3103, _shopTitle];
 sliderSetRange [3107, 0, 360];
 
 //Cop / Civ Pre Check
-if (_shop in ["bruce","dive","reb","kart"] && {!(playerSide isEqualTo civilian)}) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
-if (_shop == "reb" && {!license_civ_rebel}) exitWith {hint localize "STR_Shop_NotaReb"; closeDialog 0;};
-if (_shop == "cop" && {!(playerSide isEqualTo west)}) exitWith {hint localize "STR_Shop_NotaCop"; closeDialog 0;};
-if (_shop == "dive" && {!license_civ_dive}) exitWith {hint localize "STR_Shop_NotaDive"; closeDialog 0;};
+if (_shop in ["bruce","dive","reb","kart"] && {!(playerSide isEqualTo civilian)}) exitWith {hint "You need to be a civilian to use this store!"; closeDialog 0;};
+if (_shop == "reb" && {!license_civ_rebel}) exitWith {hint "You don't have rebel training yet!"; closeDialog 0;};
+if (_shop == "cop" && {!(playerSide isEqualTo west)}) exitWith {hint "You need to be a police officer to use this store!"; closeDialog 0;};
+if (_shop == "dive" && {!license_civ_dive}) exitWith {hint localize "You need a Diving license to use this shop!"; closeDialog 0;};
 
 
 private ["_pos","_oldPos","_oldDir","_oldBev","_testLogic","_nearVeh","_light"];
@@ -149,7 +149,7 @@ if (isClass(missionConfigFile >> "CfgLicenses" >> life_clothing_store)) then {
     _flag = M_CONFIG(getText,"CfgLicenses",life_clothing_store,"side");
     _displayName = M_CONFIG(getText,"CfgLicenses",life_clothing_store,"displayName");
     if !(LICENSE_VALUE(life_clothing_store,_flag)) exitWith {
-        hint format [localize "STR_Shop_YouNeed",localize _displayName];
+        hint format ["You need a %1 to buy from this shop!",localize _displayName];
         closeDialog 0;
     };
 };

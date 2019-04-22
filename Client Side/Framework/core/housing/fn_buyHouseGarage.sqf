@@ -27,7 +27,7 @@ _action = [
 
 if (_action) then {
 
-    if (BANK < _price) exitWith {hint format [localize "STR_House_NotEnough"]};
+    if (BANK < _price) exitWith {hint format ["You do not have enough money!"]};
     BANK = BANK - _price;
     [1] call SOCK_fnc_updatePartial;
 

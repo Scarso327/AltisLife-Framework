@@ -12,23 +12,23 @@ _uid = getPlayerUID player;
 
 if (isNull _house) exitWith {};
 if (!(_house isKindOf "House_F")) exitWith {};
-if (_house getVariable ["house_owned",false]) exitWith {hint localize "STR_House_alreadyOwned";};
-if (!isNil {(_house getVariable "house_sold")}) exitWith {hint localize "STR_House_Sell_Process"};
-if (!license_civ_home) exitWith {hint localize "STR_House_License"};
-if (count life_houses >= (LIFE_SETTINGS(getNumber,"house_limit"))) exitWith {hint format [localize "STR_House_Max_House",LIFE_SETTINGS(getNumber,"house_limit")]};
+if (_house getVariable ["house_owned",false]) exitWith {hint "This house is already owned even though you shouldn't be seeing this hint...";};
+if (!isNil {(_house getVariable "house_sold")}) exitWith {hint "This house was recently sold and is still processing on the market..."};
+if (!license_civ_home) exitWith {hint "You do not have a homeowner's approval!"};
+if (count life_houses >= (LIFE_SETTINGS(getNumber,"house_limit"))) exitWith {hint format ["You can only own %1 houses at a time.",LIFE_SETTINGS(getNumber,"house_limit")]};
 closeDialog 0;
 
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;
 if (count _houseCfg isEqualTo 0) exitWith {};
 
 _action = [
-    format [localize "STR_House_BuyMSG",
+    format ["This house is available for &lt;t color='#8cff9b'&gt;£%1&lt;/t&gt;&lt;br/&gt;It supports up to %2 storage containers",
     [(_houseCfg select 0)] call life_fnc_numberText,
-    (_houseCfg select 1)],localize "STR_House_Purchase","Buy","Cancel"
+    (_houseCfg select 1)],"Purchase House","Buy","Cancel"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    if (BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
+    if (BANK < (_houseCfg select 0)) exitWith {hint format ["You do not have enough money!"]};
     BANK = BANK - (_houseCfg select 0);
     [1] call SOCK_fnc_updatePartial;
 

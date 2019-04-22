@@ -16,8 +16,8 @@ if (count _nearUnits > 1) exitWith {hint "You can't chop a vehicle while a playe
 
 life_chopShop = _this select 3;
 //Error check
-if (count _nearVehicles isEqualTo 0) exitWith {titleText[localize "STR_Shop_NoVehNear","PLAIN"];};
-if (!(createDialog "Chop_Shop")) exitWith {hint localize "STR_Shop_ChopShopError"};
+if (count _nearVehicles isEqualTo 0) exitWith {titleText["There are no vehicles near to sell.","PLAIN"];};
+if (!(createDialog "Chop_Shop")) exitWith {hint "STR_Shop_ChThere was a problem opening the chop shop menu.opShopError"};
 
 _control = CONTROL(39400,39402);
 {

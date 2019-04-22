@@ -32,7 +32,7 @@ ctrlEnable [38406,false];
 ctrlShow [38407,true];
 ctrlEnable [38407,false];
 
-_filters lbAdd localize "STR_Shop_Weapon_ShopInv";
-_filters lbAdd localize "STR_Shop_Weapon_YourInv";
+_filters lbAdd "Shop Inventory";
+_filters lbAdd "Your Inventory";
 
 _filters lbSetCurSel 0;

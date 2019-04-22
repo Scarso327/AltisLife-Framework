@@ -10,13 +10,13 @@
 */
 private ["_ctrl","_num","_totalWeight","_itemWeight","_veh_data","_inv","_index","_val"];
 disableSerialization;
-if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith { closeDialog 0; hint localize "STR_MISC_VehInvUse"; };
+if ((life_trunk_vehicle getVariable ["trunk_in_use_by",player]) != player) exitWith { closeDialog 0; hint "This vehicle's trunk is in use, only one person can use it at a time."; };
 
 _ctrl = ctrlSelData(3503);
 _num = ctrlText 3506;
-if (!([_num] call TON_fnc_isnumber)) exitWith {hint localize "STR_MISC_WrongNumFormat";};
+if (!([_num] call TON_fnc_isnumber)) exitWith {hint "Invalid number format";};
 _num = parseNumber(_num);
-if (_num < 1) exitWith {hint localize "STR_MISC_Under1";};
+if (_num < 1) exitWith {hint "You can't enter anything below 1!";};
 
 _totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
 

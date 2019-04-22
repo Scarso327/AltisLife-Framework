@@ -16,14 +16,14 @@ _distance = ((boundingBox _curTarget select 1) select 0) + 2;
 if (player distance _curTarget > _distance) exitWith {}; //Too far
 
 _isVehicle = if ((_curTarget isKindOf "LandVehicle") || (_curTarget isKindOf "Ship") || (_curTarget isKindOf "Air")) then {true} else {false};
-if (_isVehicle && _curTarget in life_vehicles) exitWith {hint localize "STR_ISTR_Lock_AlreadyHave"};
+if (_isVehicle && _curTarget in life_vehicles) exitWith {hint "This vehicle is already in your key-chain."};
 
 //More error checks
 if (!_isVehicle && !isPlayer _curTarget) exitWith {};
 if (!_isVehicle && !(_curTarget getVariable ["restrained",false])) exitWith {};
 if (_curTarget getVariable "NPC") exitWith {hint "This vehicle is NPC protected."};
 
-_title = format [localize "STR_ISTR_Lock_Process",if (!_isVehicle) then {"Handcuffs"} else {getText(configFile >> "CfgVehicles" >> (typeOf _curTarget) >> "displayName")}];
+_title = format ["Lock-picking %1",if (!_isVehicle) then {"Handcuffs"} else {getText(configFile >> "CfgVehicles" >> (typeOf _curTarget) >> "displayName")}];
 life_action_inUse = true; //Lock out other actions
 
 //Setup the progress bar
@@ -69,7 +69,7 @@ player playActionNow "stop";
 
 if (!alive player || life_istazed || life_isknocked || isDowned(player)) exitWith {life_action_inUse = false;};
 if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
-if (!isNil "_badDistance") exitWith {titleText[localize "STR_ISTR_Lock_TooFar","PLAIN"]; life_action_inUse = false;};
+if (!isNil "_badDistance") exitWith {titleText["You got to far away from the target.","PLAIN"]; life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
 if (!([false,"lockpick",1] call life_fnc_handleInv)) exitWith {life_action_inUse = false;};
 
@@ -82,7 +82,7 @@ if (!_isVehicle) then {
 } else {
     _dice = random(100);
     if (_dice < 30) then {
-        titleText[localize "STR_ISTR_Lock_Success","PLAIN"];
+        titleText["You now have keys to this vehicle.","PLAIN"];
         life_vehicles pushBack _curTarget;
 
         if (life_HC_isActive) then {
@@ -99,7 +99,7 @@ if (!_isVehicle) then {
             [getPlayerUID player,profileName,"215"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
 
-        [0,"STR_ISTR_Lock_FailedNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",west];
-        titleText[localize "STR_ISTR_Lock_Failed","PLAIN"];
+        [0,"%1 was seen trying to lockpick into a vehicle...",true,[profileName]] remoteExecCall ["life_fnc_broadcast",west];
+        titleText["The lockpick broke.","PLAIN"];
     };
 };

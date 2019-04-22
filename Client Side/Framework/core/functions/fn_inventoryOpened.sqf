@@ -21,21 +21,21 @@ private _list = ["LandVehicle", "Ship", "Air"];
     private _containerType = typeOf _x;
 
     if (FETCH_CONFIG2(getNumber, "CfgVehicles", _containerType, "isBackpack") isEqualTo 1) exitWith {
-        hint localize "STR_MISC_Backpack";
+        hint "Their backpack appears to have a lock on it...";
         true breakOut "main";
     };
 
     if (_containerType in ["Box_IND_Grenades_F", "B_supplyCrate_F"]) exitWith {
         private _house = nearestObject [player, "House"];
         if (!(_house in life_vehicles) && {_house getVariable ["locked",true]}) exitWith {
-            hint localize "STR_House_ContainerDeny";
+            hint "You are not allowed to access this storage container without the owner opening it.";
             true breakOut "main";
         };
     };
 
     if (KINDOF_ARRAY(_x, _list)) exitWith {
         if (!(_x in life_vehicles) && {locked _x isEqualTo 2}) exitWith {
-            hint localize "STR_MISC_VehInventory";
+            hint "The vehicle appears to be locked and not accessable.";
             true breakOut "main";
         };
     };

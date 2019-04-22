@@ -15,7 +15,7 @@ _num = ctrlText 3505;
 _safeInfo = life_safeObj getVariable ["safe",0];
 
 //Error checks
-if (!([_num] call TON_fnc_isnumber)) exitWith {hint localize "STR_MISC_WrongNumFormat";};
+if (!([_num] call TON_fnc_isnumber)) exitWith {hint "Invalid number format";};
 _num = parseNumber(_num);
 if (_num < 1) exitWith {hint "You can't enter anything below 1!";};
 if (!(_ctrl isEqualTo "branded_gold_bar")) exitWith {hint "You can't store anything but gold bars in the safe."};

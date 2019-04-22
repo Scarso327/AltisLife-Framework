@@ -10,7 +10,7 @@
 private ["_startPos","_badDistance","_title","_ui","_progress","_pgText","_cP","_action","_fuelCost"];
 life_interrupted = false;
 if (life_inv_empty_fuel_can isEqualTo 0) exitWith {};
-if (count(nearestObjects [player,["Land_FuelStation_Feed_F","Land_fs_feed_F"],3.5]) isEqualTo 0) exitWith { hint localize "STR_ISTR_Jerry_Distance";};
+if (count(nearestObjects [player,["Land_FuelStation_Feed_F","Land_fs_feed_F"],3.5]) isEqualTo 0) exitWith { hint "You must be closer to the fuel pump!";};
 if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
 if (player getVariable "restrained") exitWith {hint "You cannot do this while you are restrained.";};
@@ -19,8 +19,8 @@ _fuelCost = LIFE_SETTINGS(getNumber,"fuelCan_refuel");
 
 life_action_inUse = true;
 _action = [
-    format [localize "STR_ISTR_Jerry_PopUp",[_fuelCost] call life_fnc_numberText],
-    localize "STR_ISTR_Jerry_StationPump",
+    format ["Spend £%1 to refuel your empty fuel canister?",[_fuelCost] call life_fnc_numberText],
+    "Fuel Station Pump",
     "Yes",
     "No"
 ] call BIS_fnc_guiMessage;
@@ -31,7 +31,7 @@ if (_action) then {
     //Setup our progress bar.
     disableSerialization;
     "progressBar" cutRsc ["life_progress","PLAIN"];
-    _title = localize "STR_ISTR_Jerry_Refuel";
+    _title = "Refuelling Fuel Canister";
     _ui = uiNamespace getVariable "life_progress";
     _progress = _ui displayCtrl 38201;
     _pgText = _ui displayCtrl 38202;
@@ -66,13 +66,13 @@ if (_action) then {
 
     if (!alive player || life_istazed || life_isknocked || isDowned(player)) exitWith {life_action_inUse = false;};
     if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
-    if (!isNil "_badDistance") exitWith {titleText[localize "STR_ISTR_Lock_TooFar","PLAIN"]; life_action_inUse = false;};
+    if (!isNil "_badDistance") exitWith {titleText["You got to far away from the target.","PLAIN"]; life_action_inUse = false;};
     if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
     if (!([false,"empty_fuel_can",1] call life_fnc_handleInv)) exitWith {life_action_inUse = false;};
     life_action_inUse = false;
     CASH = CASH - _fuelCost;
     [true,"fuel_can",1] call life_fnc_handleInv;
-    hint localize "STR_ISTR_Jerry_Refueled";
+    hint "You have successfully refuelled the Fuel Canister!";
 } else {
     hint "Action Cancelled.";
     closeDialog 0;

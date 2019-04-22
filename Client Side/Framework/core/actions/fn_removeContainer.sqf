@@ -10,13 +10,13 @@ private ["_house","_action","_container","_containerType","_containers"];
 _container = param [0,objNull,[objNull]];
 _containerType = typeOf _container;
 _house = nearestObject [player, "House"];
-if (!(_house in life_vehicles)) exitWith {hint localize "STR_ISTR_Box_NotinHouse"};
+if (!(_house in life_vehicles)) exitWith {hint "You need to be inside your house to place this."};
 if (isNull _container) exitWith {};
 _containers = _house getVariable ["containers",[]];
 closeDialog 0;
 
 _action = [
-    format [localize "STR_House_DeleteContainerMSG"],localize "STR_pInAct_RemoveContainer","Remove","Cancel"
+    format ["Are you sure you want to remove it?"],"Remove Container","Remove","Cancel"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {

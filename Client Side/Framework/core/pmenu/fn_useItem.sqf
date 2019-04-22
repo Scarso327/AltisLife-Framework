@@ -8,7 +8,7 @@
 #include "..\..\script_macros.hpp"
 disableSerialization;
 
-if ((lbCurSel 23202) isEqualTo -1) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
+if ((lbCurSel 23202) isEqualTo -1) exitWith {hint "You need to select an item first!";};
 private _item = CONTROL_DATA(23202);
 
 switch (true) do {
@@ -43,9 +43,19 @@ switch (true) do {
                     if (_item isEqualTo "energy_drink" && {LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1}) then {
                         [] spawn {
                             life_redgull_effect = time;
-                            titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
+                            titleText["You can now run farther for 3 minutes!","PLAIN"];
                             player enableFatigue false;
                             waitUntil {!alive player || ((time - life_redgull_effect) > (3 * 60))};
+                            player enableFatigue true;
+                        };
+                    };
+
+                    if (_item isEqualTo "energy_bar" && {LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1}) then {
+                        [] spawn {
+                            life_redgull_effect = time;
+                            titleText["You can now run farther for 1 minute!","PLAIN"];
+                            player enableFatigue false;
+                            waitUntil {!alive player || ((time - life_redgull_effect) > (1 * 60))};
                             player enableFatigue true;
                         };
                     };
@@ -80,7 +90,7 @@ switch (true) do {
     };
 
     case (_item isEqualTo "spikeStrip"): {
-        if (!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"; closeDialog 0};
+        if (!isNull life_spikestrip) exitWith {hint "You already have a stinger active in deployment"; closeDialog 0};
         if ([false,_item,1] call life_fnc_handleInv) then {
             [] spawn life_fnc_spikeStrip;
             closeDialog 0;
@@ -88,7 +98,7 @@ switch (true) do {
     };
 
     case (_item isEqualTo "fuel_can"): {
-        if !(isNull objectParent player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
+        if !(isNull objectParent player) exitWith {hint "You can't refuel the vehicle while in it!"};
         [] spawn life_fnc_jerryRefuel;
         closeDialog 0;
     };
@@ -104,7 +114,7 @@ switch (true) do {
     };
 
     default {
-        hint localize "STR_ISTR_NotUsable";
+        hint "This item isn't usable.";
     };
 };
 

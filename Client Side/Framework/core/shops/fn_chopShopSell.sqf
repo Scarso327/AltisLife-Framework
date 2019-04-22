@@ -16,7 +16,7 @@ _nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car", "Air", "Ship"
 _vehicle = (_nearVehicles select _vehicle);
 if (isNull _vehicle) exitWith {};
 
-hint localize "STR_Shop_ChopShopSelling";
+hint "Selling vehicle please wait...";
 life_action_inUse = true;
 _price2 = CASH + _price;
 [0] call SOCK_fnc_updatePartial;

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2646;
+		nextID=2656;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9058.623,73.913025,13815.845};
-		dir[]={-0.64799929,-0.54257786,-0.53457952};
-		up[]={-0.41854748,0.83998817,-0.34528756};
-		aside[]={-0.63638842,3.0267984e-008,0.77141291};
+		pos[]={4804.0522,179.39893,9390.54};
+		dir[]={0.63606924,-0.32160583,0.70155376};
+		up[]={0.21603861,0.94684005,0.23827846};
+		aside[]={0.74089992,7.8151061e-007,-0.67174828};
 	};
 };
 binarizationWanted=0;
@@ -408,7 +408,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1374;
+		items=1376;
 		class Item0
 		{
 			dataType="Marker";
@@ -52682,11 +52682,12 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={8152.2793,214.52824,12010.322};
+				position[]={8152.2798,214.528,12010.322};
 				angles[]={6.2751846,0,6.2805333};
 			};
 			title="Archaeology";
 			id=2625;
+			atlOffset=-0.00025939941;
 		};
 		class Item1354
 		{
@@ -53371,6 +53372,29 @@ class Mission
 			type="Empty";
 			angle=72.863251;
 			id=2645;
+		};
+		class Item1374
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={12806.284,273.57724,9454.4434};
+				angles[]={0.15865706,0,0.23302592};
+			};
+			title="A-Site";
+			id=2646;
+		};
+		class Item1375
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5818.541,11.34866,13028.375};
+				angles[]={6.2192721,0,0.12205716};
+			};
+			title="A-Site";
+			id=2655;
+			atlOffset=1.335144e-005;
 		};
 	};
 };

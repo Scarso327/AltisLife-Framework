@@ -36,9 +36,9 @@ hint format ["You have withdrawn $%1 from your organisation's account.",[_value]
 
 if (LIFE_SETTINGS(getNumber,"player_moneyLog") isEqualTo 1) then {
     if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-        money_log = format [localize "STR_DL_ML_withdrewGang_BEF",_value,[_gFund] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+        money_log = format ["withdrew £%1 from their gang bank. Gang Bank Balance: £%2  Bank Balance: £%3  On Hand Balance: £%4",_value,[_gFund] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
     } else {
-        money_log = format [localize "STR_DL_ML_withdrewGang",profileName,(getPlayerUID player),_value,[_gFund] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+        money_log = format ["%1 - %2 withdrew £%3 from their gang bank. Gang Bank Balance: £%4  Bank Balance: £%5  On Hand Balance: £%6",profileName,(getPlayerUID player),_value,[_gFund] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
     };
     publicVariableServer "money_log";
 };

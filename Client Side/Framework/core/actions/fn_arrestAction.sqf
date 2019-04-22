@@ -30,7 +30,7 @@ if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
     if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
         advanced_log = format ["Arrested %1.",_unit getVariable ["realname",name _unit]];
     } else {
-        advanced_log = format [localize "STR_DL_AL_Arrested",profileName,(getPlayerUID player),_unit getVariable ["realname",name _unit]];
+        advanced_log = format ["%1 - %2 arrested %3",profileName,(getPlayerUID player),_unit getVariable ["realname",name _unit]];
     };
     publicVariableServer "advanced_log";
 };

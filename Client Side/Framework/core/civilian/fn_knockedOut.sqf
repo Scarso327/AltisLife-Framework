@@ -25,7 +25,7 @@ disableUserInput true;
 player setUnconscious true;
 player setVariable ["isKnckedOut", life_isknocked, true];
 
-titleText[format [localize "STR_Civ_KnockedOut",_who],"PLAIN"];
+titleText[format ["%1 has knocked you out.",_who],"PLAIN"];
 
 sleep 15;
 

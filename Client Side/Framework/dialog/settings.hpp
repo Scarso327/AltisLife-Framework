@@ -25,7 +25,7 @@ class SettingsMenu {
 
         class PlayerTagsHeader: Life_RscText {
             idc = -1;
-            text = "$STR_SM_PlayerTags";
+            text = "Player Tag";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.30;
             y = 0.43;
@@ -35,13 +35,13 @@ class SettingsMenu {
 
         class SideChatHeader : PlayerTagsHeader {
             idc = -1;
-            text = "$STR_SM_SC";
+            text = "Sidechat Switch";
             y = 0.48;
         };
 
         class RevealNearestHeader : PlayerTagsHeader {
             idc = -1;
-            text = "$STR_SM_RNObj";
+            text = "Reveal Nearest Objects";
             y = 0.53;
         };
 
@@ -54,7 +54,7 @@ class SettingsMenu {
         class Title: Life_RscTitle {
             idc = -1;
             colorBackground[] = {0,0,0,0};
-            text = "$STR_SM_Title";
+            text = "Settings Menu";
             x = 0.3;
             y = 0.2;
             w = 0.5;
@@ -65,7 +65,7 @@ class SettingsMenu {
     class controls {
         class VDonFoot: Life_RscText {
             idc = -1;
-            text = "$STR_SM_onFoot";
+            text = "On Foot:";
             x = 0.32;
             y = 0.258;
             w = 0.275;
@@ -74,7 +74,7 @@ class SettingsMenu {
 
         class VDinCar: Life_RscText {
             idc = -1;
-            text = "$STR_SM_inCar";
+            text = "In Car:";
             x = 0.32;
             y = 0.305;
             w = 0.275;
@@ -83,7 +83,7 @@ class SettingsMenu {
 
         class VDinAir: Life_RscText {
             idc = -1;
-            text = "$STR_SM_inAir";
+            text = "In Air:";
             x = 0.32;
             y = 0.355;
             w = 0.275;
@@ -94,7 +94,7 @@ class SettingsMenu {
             idc = 2901;
             text = "";
             onSliderPosChanged = "[0,_this select 1] call life_fnc_s_onSliderChange;";
-            tooltip = "$STR_SM_ToolTip1";
+            tooltip = "View distance while on foot.";
             x = 0.42;
             y = 0.30 - (1 / 25);
             w = "9 *(((safezoneW / safezoneH) min 1.2) / 40)";
@@ -116,7 +116,7 @@ class SettingsMenu {
             idc = 2911;
             text = "";
             onSliderPosChanged = "[1,_this select 1] call life_fnc_s_onSliderChange;";
-            tooltip = "$STR_SM_ToolTip2";
+            tooltip = "View distance while in a land vehicle/";
             x = 0.42;
             y = 0.35 - (1 / 25);
             w = "9 *(((safezoneW / safezoneH) min 1.2) / 40)";
@@ -138,7 +138,7 @@ class SettingsMenu {
             idc = 2921;
             text = "";
             onSliderPosChanged = "[2,_this select 1] call life_fnc_s_onSliderChange;";
-            tooltip = "$STR_SM_ToolTip3";
+            tooltip = "View distance while in a air vehicle.";
             x = 0.42;
             y = 0.40 - (1 / 25);
             w = "9 *(((safezoneW / safezoneH) min 1.2) / 40)";

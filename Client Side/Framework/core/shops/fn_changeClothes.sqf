@@ -35,7 +35,7 @@ if (_data isEqualTo "NONE") then {
 };
 
 life_cMenu_lock = false;
-_price ctrlSetStructuredText parseText format [(localize "STR_GNOTF_Price")+ " <t color='#8cff9b'>$%1</t>",[(_control lbValue _selection)] call life_fnc_numberText];
+_price ctrlSetStructuredText parseText format [("Price:")+ " <t color='#8cff9b'>$%1</t>",[(_control lbValue _selection)] call life_fnc_numberText];
 
 _totalPrice = 0;
 {

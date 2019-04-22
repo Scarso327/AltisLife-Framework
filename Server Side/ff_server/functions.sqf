@@ -57,7 +57,7 @@ compileFinal "
     if (player isEqualTo _unit && (group player) == _group) then {
         life_my_gang = objNull;
         [player] joinSilent (createGroup civilian);
-        hint localize ""STR_GNOTF_KickOutGang"";
+        hint localize ""You have been kicked out of your group."";
     };
 ";
 
@@ -89,7 +89,7 @@ compileFinal "
     if (player isEqualTo _unit && (group player) == _group) then {
         player setRank ""COLONEL"";
         _group selectLeader _unit;
-        hint localize ""STR_GNOTF_GaveTransfer"";
+        hint ""You have been made the new leader."";
     };
 ";
 
@@ -104,7 +104,7 @@ compileFinal "
     if (player isEqualTo _unit && (group player) == _group) then {
         life_my_gang = objNull;
         [player] joinSilent (createGroup civilian);
-        hint localize ""STR_GNOTF_LeaveGang"";
+        hint ""You have left the group."";
     };
 ";
 

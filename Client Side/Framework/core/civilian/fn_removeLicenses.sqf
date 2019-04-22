@@ -33,7 +33,6 @@ switch (_state) do {
             missionNamespace setVariable [LICENSE_VARNAME("driver","civ"),false];
             missionNamespace setVariable [LICENSE_VARNAME("trucking","civ"),false];
             missionNamespace setVariable [LICENSE_VARNAME("boat","civ"),false];
-            hint localize "STR_Civ_LicenseRemove_1";
         };
     };
 
@@ -41,7 +40,6 @@ switch (_state) do {
     case 3: {
         if (missionNamespace getVariable LICENSE_VARNAME("gun","civ")) then {
             missionNamespace setVariable [LICENSE_VARNAME("gun","civ"),false];
-            hint localize "STR_Civ_LicenseRemove_2";
         };
     };
 };

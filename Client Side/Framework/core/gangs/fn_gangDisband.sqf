@@ -16,7 +16,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    hint localize "STR_GNOTF_DisbandGangPro";
+    hint "Disbanding the group...";
 
     if (life_HC_isActive) then {
         [group player] remoteExec ["HC_fnc_removeGang",HC_Life];
@@ -25,5 +25,5 @@ if (_action) then {
     };
 
 } else {
-    hint localize "STR_GNOTF_DisbandGangCanc";
+    hint "Disbanding cancelled";
 };

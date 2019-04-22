@@ -40,7 +40,7 @@ switch (_mode) do {
     case 3: {
         _classname = lbData[20302,(lbCurSel 20302)];
         _index =  lbValue[20302,(lbCurSel 20302)];
-        if ((lbCurSel 20302) isEqualTo -1) exitWith {hint localize "STR_Select_Vehicle_Pump";};
+        if ((lbCurSel 20302) isEqualTo -1) exitWith {hint "Select a vehicle";};
         if (!isNil "_classname" || _classname =="") then {
             _car = (vehiclefuelList select _index) select 0;
             _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
@@ -52,7 +52,7 @@ switch (_mode) do {
             ctrlSetText[20324,format ["Fuel : %1 liters",round(_value) - (floor(_fuel * _fueltank))]];
             ctrlSetText [20323,format ["Total : $%1",round (life_fuelPrices * (round(_value) -(floor(_fuel * _fueltank)))) ]];
         } else {
-            hint localize "STR_Select_Vehicle_Pump";
+            hint "Select a vehicle";
         };
     };
 

@@ -8,7 +8,7 @@
     Setup data gets sent to life_server\Functions\MySQL\fn_insertRequest.sqf
 */
 if (life_session_completed) exitWith {}; //Why did this get executed when the client already initialized? Fucking arma...
-cutText[localize "STR_Session_QueryFail","BLACK FADED"];
+cutText["The server didn't find any player information matching your UID, attempting to add player to system.","BLACK FADED"];
 0 cutFadeOut 9999999;
 
 private _bank = LIFE_SETTINGS(getNumber,"starting_bank");

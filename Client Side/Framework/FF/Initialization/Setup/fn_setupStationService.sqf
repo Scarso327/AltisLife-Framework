@@ -155,6 +155,6 @@ private _stationPositions = [[["Altis", _altisPositions], ["Tanoa", _tanoaPositi
 {
     private _pump = nearestObjects [_x,["Land_fs_feed_F","Land_FuelStation_01_pump_F","Land_FuelStation_02_pump_F"],5] select 0;
     _pump setFuelCargo 0;
-    _pump addAction [localize "STR_Action_Pump", life_fnc_fuelStatOpen, 1, 3, true, true, "", '_this distance _target < 5 && cursorObject isEqualTo _target'];
+    _pump addAction ["Refuel Vehicle", life_fnc_fuelStatOpen, 1, 3, true, true, "", '_this distance _target < 5 && cursorObject isEqualTo _target'];
     false
 } count _stationPositions;

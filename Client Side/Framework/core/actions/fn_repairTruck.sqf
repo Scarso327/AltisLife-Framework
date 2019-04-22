@@ -62,5 +62,5 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
     player removeItem "ToolKit";
 
     _veh setDamage 0;
-    titleText[localize "STR_NOTF_RepairedVehicle","PLAIN"];
+    titleText["You have repaired that vehicle.","PLAIN"];
 };

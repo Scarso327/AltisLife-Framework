@@ -9,9 +9,9 @@ private ["_fish","_type","_typeName"];
 if (!(vehicle player isKindOf "Ship")) exitWith {};
 _fish = (nearestObjects[getPos vehicle player,["Fish_Base_F"],20]);
 life_net_dropped = true;
-titleText[localize "STR_NOTF_NetDrop","PLAIN"];
+titleText["Dropping fishing net...","PLAIN"];
 sleep 5;
-if (_fish isEqualTo []) exitWith {titleText[localize "STR_NOTF_NetDropFail","PLAIN"]; life_net_dropped = false;};
+if (_fish isEqualTo []) exitWith {titleText["Didn't catch any fish...","PLAIN"]; life_net_dropped = false;};
 {
     if (_x isKindOf "Fish_Base_F") then {
         switch (true) do {
@@ -28,11 +28,11 @@ if (_fish isEqualTo []) exitWith {titleText[localize "STR_NOTF_NetDropFail","PLA
 
         if ([true,_type,1] call life_fnc_handleInv) then {
             deleteVehicle _x;
-            titleText[format [(localize "STR_NOTF_Fishing"),_typeName],"PLAIN"];
+            titleText[format [("You caught a %1."),_typeName],"PLAIN"];
         };
     };
 } forEach (_fish);
 
 sleep 1.5;
-titleText[localize "STR_NOTF_NetUp","PLAIN"];
+titleText["Fishing net pulled up.","PLAIN"];
 life_net_dropped = false;

@@ -23,7 +23,7 @@ for "_i" from 1 to _doors do {
 };
 
 //-- if no door nearby, exitWith
-if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"};
+if (_door isEqualTo 0) exitWith {hint "You are not near a door!"};
 
 //-- if the door is currently open, set the target to 0 (close)
 private _target = [1, 0] select (

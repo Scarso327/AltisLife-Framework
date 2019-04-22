@@ -64,7 +64,7 @@ _checkFunction = {
                                     _varType = typeName (missionNamespace getVariable _x);
                                     _find = _allowedVariables find [_x, _varType];
                                     if (_find isEqualTo -1) then {
-                                        diag_log format [localize "STR_SpyDetect_Variable_MN", _x, _varType];
+                                        diag_log format ["Variable: %1 is not allowed TYPE: %2 NS: MN", _x, _varType];
                                         if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
                                     };
                                 };
@@ -84,7 +84,7 @@ _uiCheckFunction = {
                 _varType = typeName (uiNamespace getVariable _x);
                 _find = _allowedVariables_UI find [_x, _varType];
                 if (_find isEqualTo -1) then {
-                    diag_log format [localize "STR_SpyDetect_Variable_UI", _x, _varType];
+                    diag_log format ["Variable: %1 is not allowed TYPE: %2 NS: UI", _x, _varType];
                     if (SPY_SETTINGS(getNumber,"debug_mode") isEqualTo 0) then { failMission "SpyGlass" };
                 };
             };

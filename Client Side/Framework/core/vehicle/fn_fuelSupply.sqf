@@ -12,7 +12,7 @@ params [
 if (isNull _vehicle) exitWith {};
 
 closeDialog 0;
-if (_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText[localize "STR_FuelTank_InUse","PLAIN"]};
+if (_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText["Tanker is already in use.","PLAIN"]};
 if !(local _vehicle) exitWith {titleText[localize "STR_MISC_VehLocal","PLAIN"]};
 
 life_action_inUse = true;
@@ -21,7 +21,7 @@ private _vehTank = _vehicle getVariable ["fuelTank",[]];
 
 if (_vehTank isEqualTo []) exitWith {
     _vehicle setVariable ["fuelTank",[(getNumber(missionConfigFile >> "LifeCfgVehicles" >> (typeOf _vehicle) >> "vFuelSpace")),0],true];
-    titleText[localize "STR_FuelTank_Empty","PLAIN"];
+    titleText["Tanker is empty.","PLAIN"];
     life_action_inUse = false;
 };
 
@@ -30,12 +30,12 @@ _vehTank params [
     ["_fuelState",0,[0]]
 ];
 if (_fuelState isEqualTo 0) exitWith {
-    titleText[localize "STR_FuelTank_Empty","PLAIN"];
+    titleText["Tanker is empty.","PLAIN"];
     life_action_inUse = false;
 };
 
 private _trucks = (nearestObjects [_vehicle, ["C_Van_01_fuel_F","I_Truck_02_fuel_F","B_Truck_01_fuel_F"], 100]) findIf {_x getVariable ["fuelTankWork",false]};
-if !(_trucks isEqualTo -1) exitWith {titleText[localize "STR_FuelTank_AnotherInUse","PLAIN"]; life_action_inUse = false};
+if !(_trucks isEqualTo -1) exitWith {titleText["Gas station is in use.","PLAIN"]; life_action_inUse = false};
 
 private _fuelFeedState = 0;
 private _random = floor((random 11000) + 1500);
@@ -54,14 +54,14 @@ private _random = floor((random 11000) + 1500);
         };
     };   
 } forEach (nearestObjects [_vehicle, ["Land_FuelStation_Feed_F","Land_fs_feed_F"], 100]);
-if (_fuelFeedState isEqualTo 0) exitWith {titleText [localize "STR_FuelTank_FeedFull","PLAIN"]; life_action_inUse = false;};
+if (_fuelFeedState isEqualTo 0) exitWith {titleText ["Gas station has enough fuel.","PLAIN"]; life_action_inUse = false;};
 
 private _shortest = 100000;
 {
     private _distance = _vehicle distance (getMarkerPos _x);
     if (_distance < _shortest) then {_shortest = _distance};
 } forEach ["fuel_storage_1","fuel_storage_2"];
-if (_shortest < 1000) exitWith {titleText [localize "STR_FuelTank_PipeLine","PLAIN"]; life_action_inUse = false;};
+if (_shortest < 1000) exitWith {titleText ["This gas station is supplied through a pipeline.","PLAIN"]; life_action_inUse = false;};
 
 private _pricem = getNumber(missionConfigFile >> "CfgSettings" >> "fuelTank_winMultiplier");
 private _price = floor((((floor(_shortest / 100) * 100) / 1337) * _pricem) * 100) / 100;
@@ -82,9 +82,9 @@ _progress progressSetPosition _fuelLevel;
 
 waitUntil {
     if (!alive _vehicle || isNull _vehicle) exitWith {true};
-    if (isEngineOn _vehicle) exitWith {titleText[localize "STR_FuelTank_Stopped","PLAIN"]; true};
-    if !(_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText[localize "STR_FuelTank_Stopped","PLAIN"]; true};
-    if (player distance _vehicle > 20) exitWith {titleText[localize "STR_FuelTank_Stopped","PLAIN"]; true};
+    if (isEngineOn _vehicle) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
+    if !(_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
+    if (player distance _vehicle > 20) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
     if !(local _vehicle) exitWith {titleText[localize "STR_MISC_VehLocal","PLAIN"]; true};
 
     _fuelState = _fuelState - 100;
@@ -112,13 +112,13 @@ waitUntil {
     };
 } forEach (nearestObjects [_vehicle, ["Land_FuelStation_Feed_F","Land_fs_feed_F"], 100]);
 
-if (_fuelFeedState <= 0) then {titleText [localize "STR_FuelTank_FeedFull","PLAIN"]};
-if (_fuelState <= 0) then {titleText [localize "STR_FuelTank_Empty","PLAIN"]};
+if (_fuelFeedState <= 0) then {titleText ["Gas station has enough fuel.","PLAIN"]};
+if (_fuelState <= 0) then {titleText ["Tanker is empty.","PLAIN"]};
 sleep 2;
 
 CASH = CASH + _win;
 [0] call SOCK_fnc_updatePartial;
 
-titleText [format [localize "STR_FuelTank_Money", _win], "PLAIN"];
+titleText [format ["Your share is £%1.", _win], "PLAIN"];
 "progressBar" cutText ["","PLAIN"];
 _vehicle setVariable ["fuelTankWork",nil,true];

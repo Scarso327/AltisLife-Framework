@@ -11,7 +11,7 @@ params [
 ];
 
 closeDialog 0;
-if (_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText[localize "STR_FuelTank_InUse","PLAIN"]};
+if (_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText["Tanker is already in use.","PLAIN"]};
 if !(local _vehicle) exitWith {titleText[localize "STR_MISC_VehLocal","PLAIN"]};
 
 life_action_inUse = true;
@@ -36,9 +36,9 @@ _progress progressSetPosition _fuelLevel;
 
 waitUntil {
     if (!alive _vehicle || isNull _vehicle) exitWith {true};
-    if (isEngineOn _vehicle) exitWith {titleText[localize "STR_FuelTank_Stopped","PLAIN"]; true};
-    if !(_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText[localize "STR_FuelTank_Stopped","PLAIN"]; true};
-    if (player distance _vehicle > 20) exitWith {titleText[localize "STR_FuelTank_Stopped","PLAIN"]; true};
+    if (isEngineOn _vehicle) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
+    if !(_vehicle getVariable ["fuelTankWork",false]) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
+    if (player distance _vehicle > 20) exitWith {titleText["Discontinued operation.","PLAIN"]; true};
     if !(local _vehicle) exitWith {titleText[localize "STR_MISC_VehLocal","PLAIN"]};
 
     _fuelState = _fuelState + 100;
@@ -48,7 +48,7 @@ waitUntil {
     _progress progressSetPosition _fuelLevel;
     _pgText ctrlSetText format ["Tank  %1 Ltr / %2 Ltr",_fuelState,_fuelSpace];
 
-    if (_fuelState >= _fuelSpace) exitWith {titleText [localize "STR_FuelTank_Full","PLAIN"]; true};
+    if (_fuelState >= _fuelSpace) exitWith {titleText ["Tankers is full.","PLAIN"]; true};
     sleep 0.5;
     false
 };

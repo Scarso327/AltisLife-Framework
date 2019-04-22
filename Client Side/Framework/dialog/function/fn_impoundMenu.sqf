@@ -16,7 +16,7 @@ ctrlShow[2830,false];
 waitUntil {!isNull (findDisplay 2800)};
 
 if (count _vehicles isEqualTo 0) exitWith {
-    ctrlSetText[2811,localize "STR_Garage_NoVehicles"];
+    ctrlSetText[2811,"No vehicles found in garage."];
 };
 
 _control = CONTROL(2800,2802);

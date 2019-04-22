@@ -13,4 +13,4 @@ _pReason = [_this, 2, "", [""]] call BIS_fnc_param;
 
 if (_pName isEqualTo "" || _pUID isEqualTo "" || _pReason isEqualTo "") exitWith {}; //Bad params passed..
 
-diag_log format [localize "STR_SpyDetect_cookieJar", _pName, _pUID, _pReason]; //Outputs to RPT for external programs to parse, log, and react to.
+diag_log format ["SPYGLASS-FLAG: %1 : %2 : %3", _pName, _pUID, _pReason]; //Outputs to RPT for external programs to parse, log, and react to.

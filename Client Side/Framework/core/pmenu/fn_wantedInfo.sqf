@@ -12,9 +12,9 @@ private _display = findDisplay 2400;
 private _list = _display displayCtrl 2402;
 private _mylist = [];
 
-if (isNil "_data") exitWith {hint localize "STR_Cop_wantedList_FailedToFetch";};
-if !(_data isEqualType []) exitWith {hint localize "STR_Cop_wantedList_FailedToFetch";};
-if (_data isEqualTo []) exitWith {hint localize "STR_Cop_wantedList_FailedToFetch";};
+if (isNil "_data") exitWith {hint "Failed to fetch crimes.";};
+if !(_data isEqualType []) exitWith {hint "Failed to fetch crimes.";};
+if (_data isEqualTo []) exitWith {hint "Failed to fetch crimes.";};
 
 lbClear _list;
 

@@ -25,7 +25,7 @@ if (_shooter isKindOf "CAManBase" && (alive player && !(isDowned(player)))) then
         player setUnconscious true;
         player setVariable ["isTazed", life_istazed, true];
 
-        [0,"STR_NOTF_Tazed",true,[profileName, _shooter getVariable ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+        [0,"%1 was tased by %2.",true,[profileName, _shooter getVariable ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 
         sleep 10;
 

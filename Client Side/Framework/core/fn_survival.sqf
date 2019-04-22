@@ -8,17 +8,17 @@
 */
 private ["_fnc_food","_fnc_water","_foodTime","_waterTime","_bp","_walkDis","_lastPos","_curPos"];
 _fnc_food =  {
-    if (life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";}
+    if (life_hunger < 2) then {player setDamage 1; hint "You have starved to death.";}
     else
     {
         life_hunger = life_hunger - 10;
         [] call FF_fnc_hudUpdate;
-        if (life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";};
+        if (life_hunger < 2) then {player setDamage 1; hint "You have starved to death.";};
         switch (life_hunger) do {
-            case 30: {hint localize "STR_NOTF_EatMSG_1";};
-            case 20: {hint localize "STR_NOTF_EatMSG_2";};
+            case 30: {hint "You haven't eaten anything in awhile, You should find something to eat soon!";};
+            case 20: {hint "You are starting to starve, you need to find something to eat otherwise you will die.";};
             case 10: {
-                hint localize "STR_NOTF_EatMSG_3";
+                hint "You are now starving to death, you will die very soon if you don't eat something.";
                 if (LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1) then {player setFatigue 1;};
             };
         };
@@ -26,20 +26,20 @@ _fnc_food =  {
 };
 
 _fnc_water = {
-    if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
+    if (life_thirst < 2) then {player setDamage 1; hint "You have died from dehydration.";}
     else
     {
         life_thirst = life_thirst - 10;
         [] call FF_fnc_hudUpdate;
-        if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
+        if (life_thirst < 2) then {player setDamage 1; hint "You have died from dehydration.";};
         switch (life_thirst) do  {
-            case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
+            case 30: {hint "You haven't drank anything in awhile, You should find something to drink soon.";};
             case 20: {
-                hint localize "STR_NOTF_DrinkMSG_2";
+                hint "You haven't drank anything in along time, you should find something to drink soon or you'll start to die from dehydration.";
                 if (LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1) then {player setFatigue 1;};
             };
             case 10: {
-                hint localize "STR_NOTF_DrinkMSG_3";
+                hint "You are now suffering from severe dehydration find something to drink quickly!";
                 if (LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1) then {player setFatigue 1;};
             };
         };
@@ -81,7 +81,7 @@ for "_i" from 0 to 1 step 0 do {
     if (life_carryWeight > life_maxWeight && {!isForcedWalk player} && {!life_god}) then {
         player forceWalk true;
         if (LIFE_SETTINGS(getNumber,"player_fatigue") isEqualTo 1) then {player setFatigue 1;};
-        hint localize "STR_NOTF_MaxWeight";
+        hint "You are over carrying your max weight! You will not be able to run or move fast till you drop some items!";
     } else {
         if (isForcedWalk player) then {
             player forceWalk false;

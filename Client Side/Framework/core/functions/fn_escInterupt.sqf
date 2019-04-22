@@ -17,7 +17,7 @@ private _escSync = {
     private _timeStamp = time + _abortTime;
 
     waitUntil {
-        _abortButton ctrlSetText format [localize "STR_NOTF_AbortESC",[(_timeStamp - time),"SS.MS"] call BIS_fnc_secondsToString];
+        _abortButton ctrlSetText format ["Abort available in %1",[(_timeStamp - time),"SS.MS"] call BIS_fnc_secondsToString];
         _abortButton ctrlCommit 0;
         if (dialog && {isNull (findDisplay 7300)}) then {closeDialog 0};
 

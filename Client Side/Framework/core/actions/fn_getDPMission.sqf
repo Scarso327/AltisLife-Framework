@@ -28,11 +28,11 @@ life_dp_point = call compile format ["%1",_dp];
 _dp = toUpper((_dp splitString "_") joinString " ");
 
 life_cur_task = player createSimpleTask [format ["Delivery_%1",life_dp_point]];
-life_cur_task setSimpleTaskDescription [format [localize "STR_NOTF_DPStart",_dp],"Delivery Job",""];
+life_cur_task setSimpleTaskDescription [format ["You are to deliver this package to %1.",_dp],"Delivery Job",""];
 life_cur_task setTaskState "Assigned";
 player setCurrentTask life_cur_task;
 
-["DeliveryAssigned",[format [localize "STR_NOTF_DPTask",_dp]]] call bis_fnc_showNotification;
+["DeliveryAssigned",[format ["You failed to deliver the package because you died.",_dp]]] call bis_fnc_showNotification;
 
 [] spawn {
     waitUntil {!life_delivery_in_progress || !alive player};

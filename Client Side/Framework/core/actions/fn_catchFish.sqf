@@ -26,5 +26,5 @@ if (_type isEqualTo "") exitWith {}; //Couldn't get a type
 
 if ([true,_type,1] call life_fnc_handleInv) then {
     deleteVehicle _fish;
-    titleText[format [(localize "STR_NOTF_Fishing"),_typeName],"PLAIN"];
+    titleText[format [("You caught a %1."),_typeName],"PLAIN"];
 };

@@ -34,6 +34,6 @@ if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
     publicVariableServer "advanced_log";
 };
 
-hint localize "STR_NOTF_SendingData";
+hint "Sending information to server please wait...";
 closeDialog 0;
 life_action_gangInUse = true;

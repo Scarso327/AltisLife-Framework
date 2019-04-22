@@ -15,4 +15,4 @@ if (_target == player) exitWith {hint "You are unable to do this.";};
 
 if (!(vehicle _target isEqualTo _target)) exitWith {hint "You cannot teleport the player here as they are inside of a vehicle."};
 _target setPos (getPos player);
-hint format [localize "STR_NOTF_haveTPedToYou",_target getVariable ["realname",name _target]];
+hint format ["You have teleported %1 to your location.",_target getVariable ["realname",name _target]];

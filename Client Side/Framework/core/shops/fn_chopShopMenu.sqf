@@ -7,12 +7,12 @@
     Opens & initializes the chop shop menu.
 */
 private ["_control","_price","_nearVehicles","_chopMultiplier","_nearUnits"];
-if (life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
+if (life_action_inUse) exitWith {hint "An action is already being processed..."};
 if !(playerSide isEqualTo civilian) exitWith {hint "Your faction is not allowed to chop vehicles!"};
 disableSerialization;
 _nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car", "Air", "Ship"],25];
 _nearUnits = (nearestObjects[player,["CAManBase"],5]) arrayIntersect playableUnits;
-if (count _nearUnits > 1) exitWith {hint localize "STR_NOTF_PlayerNear"};
+if (count _nearUnits > 1) exitWith {hint "You can't chop a vehicle while a player is near!"};
 
 life_chopShop = _this select 3;
 //Error check

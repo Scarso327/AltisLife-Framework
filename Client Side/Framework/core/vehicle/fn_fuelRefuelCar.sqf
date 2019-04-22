@@ -77,7 +77,7 @@ if ((BANK - (_fueltoput * life_fuelPrices))> 0)then {
         [0] call SOCK_fnc_updatePartial;
     };
 } else {
-    hint localize "STR_NOTF_NotEnoughMoney";
+    hint "You don't have that much money!";
 };
 
 vehiclefuelList = [];

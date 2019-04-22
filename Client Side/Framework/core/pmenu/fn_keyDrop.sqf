@@ -13,11 +13,11 @@ private _list = _dialog displayCtrl 23402;
 private _sel = lbCurSel _list;
 
 if (_sel isEqualTo -1) exitWith {
-    hint localize "STR_NOTF_noDataSelected"
+    hint "No data selected."
 };
 
 if (_list lbData _sel isEqualTo "") exitWith {
-    hint localize "STR_NOTF_didNotSelectVehicle"
+    hint "You did not select a vehicle."
 };
 
 private _index = parseNumber (_list lbData _sel);
@@ -26,7 +26,7 @@ if isNull _vehicle exitWith {};
 
 // Do not let them drop the key to a house
 if (_vehicle isKindOf "House_F") exitWith {
-    hint localize "STR_NOTF_cannotRemoveHouseKeys"
+    hint "You cannot remove the keys to your house!"
 };
 
 // Solve stupidness

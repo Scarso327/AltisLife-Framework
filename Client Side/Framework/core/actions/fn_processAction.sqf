@@ -53,7 +53,7 @@ _totalConversions = [];
     _totalConversions pushBack (floor (_var/(_x select 1)));
 } forEach _oldItem;
 
-if (_exit) exitWith {life_is_processing = false; hint localize "STR_NOTF_NotEnoughItemProcess"; life_action_inUse = false;};
+if (_exit) exitWith {life_is_processing = false; hint "You don't have enough items!"; life_action_inUse = false;};
 
 if (_licenseRequired isEqualTo "") then {
     _hasLicense = false;
@@ -122,7 +122,7 @@ if (_hasLicense) then {
     } count _newItem;
 
     "progressBar" cutText ["","PLAIN"];
-    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint "Only part of your materials could be processed due to reaching your maximum weight.";};
+    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint "You have processed your items!";} else {hint "Only part of your materials could be processed due to reaching your maximum weight.";};
     life_is_processing = false; life_action_inUse = false;
 
     [(2 * _minimumConversions), "Processing"] spawn FF_fnc_handleXP; // 2 XP * Processed Items
@@ -150,7 +150,7 @@ if (_hasLicense) then {
     } count _newItem;
 
     "progressBar" cutText ["","PLAIN"];
-    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint "Only part of your materials could be processed due to reaching your maximum weight.";};
+    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint "You have processed your items!";} else {hint "Only part of your materials could be processed due to reaching your maximum weight.";};
     CASH = CASH - _cost;
     [0] call SOCK_fnc_updatePartial;
     life_is_processing = false;

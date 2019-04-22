@@ -12,7 +12,7 @@ _list = ["Air","Ship","LandVehicle"];
 if (isNull _vehicle || {!(KINDOF_ARRAY(_vehicle,_list))}) exitWith {};
 
 _vehicleInfo = _vehicle getVariable ["Trunk",[]];
-if (count _vehicleInfo isEqualTo 0) exitWith {hint localize "STR_Cop_VehEmpty"};
+if (count _vehicleInfo isEqualTo 0) exitWith {hint "This vehicle is empty."};
 
 _value = 0;
 _illegalValue = 0;
@@ -32,10 +32,10 @@ _illegalValue = 0;
 } forEach (_vehicleInfo select 0);
 _value = _illegalValue;
 if (_value > 0) then {
-    [0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+    [0,"A vehicle was searched and has £%1 worth of contraband.",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
     BANK = BANK + _value;
     [1] call SOCK_fnc_updatePartial;
     _vehicle setVariable ["Trunk",[[],0],true];
 } else {
-    hint localize "STR_Cop_NoIllegalVeh";
+    hint "Nothing illegal has been found in this this vehicle.";
 };

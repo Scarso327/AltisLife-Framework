@@ -8,7 +8,7 @@
     Master handling for picking up an item.
 */
 private ["_itemInfo","_itemName","_illegal","_diff"];
-if ((time - life_action_delay) < 2) exitWith {hint localize "STR_NOTF_ActionDelay"; INUSE(_this);};
+if ((time - life_action_delay) < 2) exitWith {hint "You're doing it too fast!"; INUSE(_this);};
 if (isNull _this || {player distance _this > 3}) exitWith {INUSE(_this);};
 
 _itemInfo = _this getVariable ["item",[]]; if (count _itemInfo isEqualTo 0) exitWith {deleteVehicle _this;};
@@ -19,7 +19,7 @@ if (isLocalized _itemName) then {
 };
 
 if (playerSide isEqualTo west && _illegal isEqualTo 1) exitWith {
-    titleText[format [localize "STR_NOTF_PickedEvidence",_itemName,[round(ITEM_SELLPRICE(_itemInfo select 0) / 2)] call life_fnc_numberText],"PLAIN"];
+    titleText[format [localize "%1 has been placed in evidence and you have received £%2.",_itemName,[round(ITEM_SELLPRICE(_itemInfo select 0) / 2)] call life_fnc_numberText],"PLAIN"];
     BANK = BANK + round(ITEM_SELLPRICE(_itemInfo select 0) / 2);
     deleteVehicle _this;
     [1] call SOCK_fnc_updatePartial;
@@ -35,7 +35,7 @@ if (!(_diff isEqualTo (_itemInfo select 1))) then {
         player playMove "AinvPknlMstpSlayWrflDnon";
 
         _this setVariable ["item",[(_itemInfo select 0),(_itemInfo select 1) - _diff],true];
-        titleText[format [localize "STR_NOTF_Picked",_diff,_itemName],"PLAIN"];
+        titleText[format ["You have picked %1 %2.",_diff,_itemName],"PLAIN"];
         INUSE(_this);
     } else {
         INUSE(_this);
@@ -46,7 +46,7 @@ if (!(_diff isEqualTo (_itemInfo select 1))) then {
         //waitUntil{isNull _this};
         player playMove "AinvPknlMstpSlayWrflDnon";
 
-        titleText[format [localize "STR_NOTF_Picked",_diff,_itemName],"PLAIN"];
+        titleText[format ["You have picked %1 %2.",_diff,_itemName],"PLAIN"];
     } else {
         INUSE(_this);
     };

@@ -17,7 +17,7 @@ _gear_list = CONTROL(2400,2402);
 lbClear _item_list;
 lbClear _gear_list;
 
-if (!isClass(missionConfigFile >> "CfgShops" >> life_shop_type)) exitWith {closeDialog 0; hint localize "STR_NOTF_ConfigDoesNotExist";}; //Make sure the entry exists..
+if (!isClass(missionConfigFile >> "CfgShops" >> life_shop_type)) exitWith {closeDialog 0; hint "Config does not exist?";}; //Make sure the entry exists..
 ctrlSetText[2403, (M_CONFIG(getText,"CfgShops",life_shop_type,"name"))];
 _shopItems = M_CONFIG(getArray,"CfgShops",life_shop_type,"items");
 

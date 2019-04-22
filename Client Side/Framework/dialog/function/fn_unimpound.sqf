@@ -15,8 +15,8 @@ _vehicleLife = _vehicle;
 _vid = lbValue[2802,(lbCurSel 2802)];
 _pid = getPlayerUID player;
 _unit = player;
-_spawntext = localize "STR_Garage_spawn_Success";
-if (isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
+_spawntext = "Your vehicle is ready!";
+if (isNil "_vehicle") exitWith {hint "The selection had an error..."};
 if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife)) then {
     _vehicleLife = "Default"; //Use Default class if it doesn't exist
     diag_log format ["%1: LifeCfgVehicles class doesn't exist",_vehicle];
@@ -28,7 +28,7 @@ _storageFee = LIFE_SETTINGS(getNumber,"vehicle_store_multiplier");
 _price = (_price * 1) * _storageFee;
 
 if (!(_price isEqualType 0) || _price < 1) then {_price = 500;};
-if (BANK < _price) exitWith {hint format [(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText];};
+if (BANK < _price) exitWith {hint format [("You don't have £%1 in your bank account."),[_price] call life_fnc_numberText];};
 
 if (life_garage_sp isEqualType []) then {
     if (life_HC_isActive) then {
@@ -52,7 +52,7 @@ if (life_garage_sp isEqualType []) then {
     };
 };
 
-hint localize "STR_Garage_SpawningVeh";
+hint "Spawning vehicle please wait...";
 BANK = BANK - _price;
 [1] call SOCK_fnc_updatePartial;
 closeDialog 0;

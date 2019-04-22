@@ -8,13 +8,13 @@
 */
 private "_vault";
 _vault = _this select 0;
-if (!(_vault getVariable ["safe_open",false])) exitWith {hint localize "STR_Cop_VaultLocked"};
+if (!(_vault getVariable ["safe_open",false])) exitWith {hint "The safe is already locked."};
 
 life_action_inUse = true;
 
 //Setup the progress bar
 disableSerialization;
-_title = localize "STR_Cop_RepairVault";
+_title = "Repairing safe...";
 "progressBar" cutRsc ["life_progress","PLAIN"];
 _ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
@@ -54,4 +54,4 @@ if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Canc
 life_action_inUse = false;
 
 _vault setVariable ["safe_open",false,true];
-hint localize "STR_Cop_VaultRepaired";
+hint "The safe is now fixed and re-secured.";

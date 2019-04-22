@@ -12,11 +12,11 @@ _isMineral = true;
 if (isNull _vehicle) exitWith {};
 
 if (!isNil {_vehicle getVariable "mining"}) exitWith {
-    hint localize "STR_NOTF_DeviceIsMining";
+    hint "This vehicle is already mining...";
 };
 
 if (fuel _vehicle isEqualTo 0) exitWith {
-    titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];
+    titleText["The device is out of fuel.","PLAIN"];
 };
 
 closeDialog 0; //Close the interaction menu.
@@ -24,7 +24,7 @@ life_action_inUse = true; //Lock out the interaction menu for a bit..
 
 _weight = [_vehicle] call life_fnc_vehicleWeight;
 if ((_weight select 1) >= (_weight select 0)) exitWith {
-    hint localize "STR_NOTF_DeviceFull";
+    hint "The device is full.";
     life_action_inUse = false;
 };
 
@@ -73,7 +73,7 @@ for "_i" from 0 to count(_resourceCfg)-1 do {
 };
 
 if (_zone isEqualTo "") exitWith {
-    hint localize "STR_NOTF_notNearResource";
+    hint "You are not near a resource area.";
     life_action_inUse = false;
 };
 
@@ -86,21 +86,21 @@ for "_i" from 0 to 1 step 0 do {
     if (!alive _vehicle || isNull _vehicle) exitWith {};
 
     if ((isEngineOn _vehicle) || ((speed _vehicle) > 5)) exitWith {
-        titleText[localize "STR_NOTF_MiningStopped","PLAIN"];
+        titleText["You cannot turn the vehicle on when mining.","PLAIN"];
     };
 
     if (fuel _vehicle isEqualTo 0) exitWith {
-        titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];
+        titleText["The device is out of fuel.","PLAIN"];
     };
 
-    titleText[localize "STR_NOTF_DeviceMining","PLAIN"];
+    titleText["The Device is mining...","PLAIN"];
     _time = time + 27;
 
     //Wait for 27 seconds with a 'delta-time' wait.
     waitUntil {
         if ((isEngineOn _vehicle) || ((speed _vehicle) > 5)) exitWith {
             _vehicle setVariable ["mining",nil,true];
-            titleText[localize "STR_NOTF_MiningStopped","PLAIN"];
+            titleText["You cannot turn the vehicle on when mining.","PLAIN"];
             true
         };
 
@@ -110,7 +110,7 @@ for "_i" from 0 to 1 step 0 do {
 
         if (fuel _vehicle < 0.1) exitWith {
             _vehicle setVariable ["mining",nil,true];
-            titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];
+            titleText["The device is out of fuel.","PLAIN"];
             true
         };
 
@@ -120,7 +120,7 @@ for "_i" from 0 to 1 step 0 do {
 
     if ((isEngineOn _vehicle) || ((speed _vehicle) > 5)) exitWith {
         _vehicle setVariable ["mining",nil,true];
-        titleText[localize "STR_NOTF_MiningStopped","PLAIN"];
+        titleText["You cannot turn the vehicle on when mining.","PLAIN"];
     };
 
     _vehicle_data = _vehicle getVariable ["Trunk",[[],0]];
@@ -132,7 +132,7 @@ for "_i" from 0 to 1 step 0 do {
     _sum = [_resource,_random,(_weight select 1),(_weight select 0)] call life_fnc_calWeightDiff; // Get a sum base of the remaining weight..
 
     if (_sum < 1) exitWith {
-        titleText[localize "STR_NOTF_DeviceFull","PLAIN"];
+        titleText["The device is full","PLAIN"];
         _vehicle setVariable ["mining",nil,true];
     };
 
@@ -145,7 +145,7 @@ for "_i" from 0 to 1 step 0 do {
 
     if (fuel _vehicle < 0.1) exitWith {
         _vehicle setVariable ["mining",nil,true];
-        titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];
+        titleText["The device is out of fuel.","PLAIN"];
     };
 
     //Locality checks...
@@ -156,12 +156,12 @@ for "_i" from 0 to 1 step 0 do {
     };
 
     if (fuel _vehicle < 0.1) exitWith {
-        titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];
+        titleText["The device is out of fuel.","PLAIN"];
         _vehicle setVariable ["mining",nil,true];
     };
 
     _itemName = M_CONFIG(getText,"CfgItems",_resource,"displayName");
-    titleText[format [localize "STR_NOTF_DeviceMined",_sum,(localize _itemName)],"PLAIN"];
+    titleText[format ["Completed cycle - The device has mined %1 %2.",_sum,(localize _itemName)],"PLAIN"];
     _itemWeight = ([_resource] call life_fnc_itemWeight) * _sum;
     _vehicle setVariable ["Trunk",[_inv,_space + _itemWeight],true];
     _weight = [_vehicle] call life_fnc_vehicleWeight;
@@ -169,7 +169,7 @@ for "_i" from 0 to 1 step 0 do {
 
     if (_sum < 1) exitWith {
         _vehicle setVariable ["mining",nil,true];
-        titleText[localize "STR_NOTF_DeviceFull","PLAIN"];
+        titleText["The device is full","PLAIN"];
     };
 
     sleep 2;

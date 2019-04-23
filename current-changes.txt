@@ -31,6 +31,7 @@ Added:
         - Halves damage on vehicle collision
     3 Second Delay to Unflipping Vehicles (Scarso)
     VDM Protection (Scarso)
+    ATMs Across the Map (Lewis)
 
 Changed:
     All Physical Stores (Lewis)
@@ -72,6 +73,7 @@ Changed:
     Police & Medics are no longer charged for their items (Scarso)
     Weapon / Physical Store UI (Scarso)
     Clothing Store UI (Scarso)
+    People in restraints being able to shoot & kill (Scarso)
     
 Removed:
     Welcome Notification Screen (Scarso)
@@ -89,6 +91,3 @@ Removed:
     Tased Animation (Scarso)
         - Now it just causes the player to fall over realistically.
     Stringtable Connections (Lewis)
-
-Fixed:
-    People in restraints being able to shoot & kill (Scarso)

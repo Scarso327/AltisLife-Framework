@@ -8,7 +8,7 @@
 #include "..\..\script_macros.hpp"
 if !(params [["_medic", objNull, [objNull]]]) exitWith {};
 
-hint format ["%1 has revived you and a fee of $%2 was taken from your bank account for their services.",
+hint format ["%1 has revived you and a fee of £%2 was taken from your bank account for their services.",
 	_medic getVariable ["realname", name _medic],
 	[_reviveCost] call life_fnc_numberText
 ];

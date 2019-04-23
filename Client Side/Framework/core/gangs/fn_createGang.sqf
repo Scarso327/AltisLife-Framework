@@ -17,7 +17,7 @@ if (_length > 32) exitWith {hint "You can't have an organisation name longer the
 _badChar = false;
 {if (!(_x in _allowed)) exitWith {_badChar = true;};} forEach _chrByte;
 if (_badChar) exitWith {hint "You have invalid characters in your organisation name. It can only consist of numbers and letters with an underscore.";};
-if (BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {hint format ["You do not have enough money in your bank account.\n\nYou lack: $%1",[((LIFE_SETTINGS(getNumber,"gang_price")) - BANK)] call life_fnc_numberText];};
+if (BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {hint format ["You do not have enough money in your bank account.\n\nYou lack: £%1",[((LIFE_SETTINGS(getNumber,"gang_price")) - BANK)] call life_fnc_numberText];};
 
 if (life_HC_isActive) then {
     [player,getPlayerUID player,_gangName] remoteExec ["HC_fnc_insertGang",HC_Life];

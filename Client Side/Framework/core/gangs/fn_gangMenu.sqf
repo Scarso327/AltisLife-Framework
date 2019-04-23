@@ -28,7 +28,7 @@ if !(_ownerID isEqualTo getPlayerUID player) then {
 };
 
 (CONTROL(2620,2629)) ctrlSetText _gangName;
-(CONTROL(2620,601)) ctrlSetText format [("Funds:")+ " $%1",[_gangBank] call life_fnc_numberText];
+(CONTROL(2620,601)) ctrlSetText format [("Funds:")+ " £%1",[_gangBank] call life_fnc_numberText];
 
 //Loop through the players.
 _members = CONTROL(2620,2621);

@@ -12,7 +12,7 @@ _unit = param [1,objNull,[objNull]];
 if (life_bail_paid) exitWith {};
 if (isNil "life_bail_amount") then {life_bail_amount = 3500;};
 if (!life_canpay_bail) exitWith {hint "You must wait at least 3 minutes before paying a bail."};
-if (BANK < life_bail_amount) exitWith {hint format ["You do not have $%1 in your bank account to pay bail.",life_bail_amount];};
+if (BANK < life_bail_amount) exitWith {hint format ["You do not have £%1 in your bank account to pay bail.",life_bail_amount];};
 
 BANK = BANK - life_bail_amount;
 life_bail_paid = true;

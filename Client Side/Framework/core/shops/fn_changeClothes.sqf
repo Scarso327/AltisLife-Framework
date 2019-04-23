@@ -35,7 +35,7 @@ if (_data isEqualTo "NONE") then {
 };
 
 life_cMenu_lock = false;
-_price ctrlSetStructuredText parseText format [("Price:")+ " <t color='#8cff9b'>$%1</t>",[(_control lbValue _selection)] call life_fnc_numberText];
+_price ctrlSetStructuredText parseText format [("Price:")+ " <t color='#8cff9b'>£%1</t>",[(_control lbValue _selection)] call life_fnc_numberText];
 
 _totalPrice = 0;
 {
@@ -44,6 +44,6 @@ _totalPrice = 0;
     };
 } forEach life_clothing_purchase;
 
-_total ctrlSetStructuredText parseText format [("Total:")+ " <t color='#8cff9b'>$%1</t>",[_totalPrice] call life_fnc_numberText];
+_total ctrlSetStructuredText parseText format [("Total:")+ " <t color='#8cff9b'>£%1</t>",[_totalPrice] call life_fnc_numberText];
 
 [] call FF(playerSkins);

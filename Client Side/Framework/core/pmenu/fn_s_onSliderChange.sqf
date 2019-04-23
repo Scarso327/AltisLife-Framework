@@ -50,7 +50,7 @@ switch (_mode) do {
                 _fueltank = 450;
             };
             ctrlSetText[20324,format ["Fuel : %1 liters",round(_value) - (floor(_fuel * _fueltank))]];
-            ctrlSetText [20323,format ["Total : $%1",round (life_fuelPrices * (round(_value) -(floor(_fuel * _fueltank)))) ]];
+            ctrlSetText [20323,format ["Total : £%1",round (life_fuelPrices * (round(_value) -(floor(_fuel * _fueltank)))) ]];
         } else {
             hint "Select a vehicle";
         };

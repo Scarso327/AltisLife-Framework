@@ -30,7 +30,7 @@ if (life_HC_isActive) then {
     [1,group player] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
 };
 
-hint format ["You have withdrawn $%1 from your organisation's account.",[_value] call life_fnc_numberText];
+hint format ["You have withdrawn £%1 from your organisation's account.",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
 

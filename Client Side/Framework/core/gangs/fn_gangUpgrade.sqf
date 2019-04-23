@@ -29,7 +29,7 @@ if (_action) then {
     BANK = BANK - _upgradePrice;
     [1] call SOCK_fnc_updatePartial;
     group player setVariable ["gang_maxMembers",_slotUpgrade,true];
-    hint parseText format ["You have upgraded from %1 to %2 maximum slots for &lt;t color='#8cff9b'&gt;$%3&lt;/t&gt;",_maxMembers,_slotUpgrade,[_upgradePrice] call life_fnc_numberText];
+    hint parseText format ["You have upgraded from %1 to %2 maximum slots for &lt;t color='#8cff9b'&gt;£%3&lt;/t&gt;",_maxMembers,_slotUpgrade,[_upgradePrice] call life_fnc_numberText];
 
     if (life_HC_isActive) then {
         [2,group player] remoteExec ["HC_fnc_updateGang",HC_Life];

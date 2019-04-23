@@ -39,7 +39,7 @@ _control = ((findDisplay 20300) displayCtrl 20302);
 lbClear _control; //Flush the list.
 
 ctrlSetText [20322,format ["Price per Liter: £%1",life_fuelPrices]];
-ctrlSetText [20323,format ["Total : %1$",life_fuelPrices * 0.1]];
+ctrlSetText [20323,format ["Total : %1£",life_fuelPrices * 0.1]];
 
 //Loop through
 {

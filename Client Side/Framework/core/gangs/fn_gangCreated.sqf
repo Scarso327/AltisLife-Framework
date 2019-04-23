@@ -17,4 +17,4 @@ if (BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
 BANK = BANK - LIFE_SETTINGS(getNumber,"gang_price");
 [1] call SOCK_fnc_updatePartial;
 
-hint format ["You have created the gang %1 for $%2",(group player) getVariable "gang_name",[(LIFE_SETTINGS(getNumber,"gang_price"))] call life_fnc_numberText];
+hint format ["You have created the gang %1 for £%2",(group player) getVariable "gang_name",[(LIFE_SETTINGS(getNumber,"gang_price"))] call life_fnc_numberText];

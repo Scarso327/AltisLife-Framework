@@ -95,7 +95,7 @@ waitUntil {
 
     _fuelLevel = (1 / _fuelSpace) * _fuelState;
     _progress progressSetPosition _fuelLevel;
-    _pgText ctrlSetText format ["Tank  %1 Ltr / %2 Ltr  ( $ %3 / Ltr )",_fuelState,_fuelSpace,_price];
+    _pgText ctrlSetText format ["Tank  %1 Ltr / %2 Ltr  ( £ %3 / Ltr )",_fuelState,_fuelSpace,_price];
 
     if (_fuelState isEqualTo 0 || _fuelFeedState <= 0) exitWith {true};
 

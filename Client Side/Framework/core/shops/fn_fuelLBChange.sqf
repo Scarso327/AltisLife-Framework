@@ -39,5 +39,5 @@ ctrlShow [20330,true];
     sliderSetPosition[_x ,(floor(_fuel * _fueltank))];
 } forEach [20901];
 
-ctrlSetText [20323,format ["Total : %1$",life_fuelPrices * ((SliderPosition 20901) -(floor(_fuel * _fueltank))) ]];
+ctrlSetText [20323,format ["Total : %1£",life_fuelPrices * ((SliderPosition 20901) -(floor(_fuel * _fueltank))) ]];
 true;

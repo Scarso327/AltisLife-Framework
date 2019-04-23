@@ -252,6 +252,9 @@ class LifeCfgVehicles {
             { "Black", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
             }, "" },
+            { "ARV", "cop", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa"
+            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };
 
@@ -360,9 +363,6 @@ class LifeCfgVehicles {
             { "Orange", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             }, "" },
-            { "Medic", "med", {
-                 "textures\medic_cars\Medic_SUV.paa"
-            }, "" },
             { "Police", "cop", {
                 "data\textures\Police\Cars\Police_SUV_White.paa"
             }, "" },
@@ -398,9 +398,7 @@ class LifeCfgVehicles {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             }, "" },
             { "ARV", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa"
             }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };

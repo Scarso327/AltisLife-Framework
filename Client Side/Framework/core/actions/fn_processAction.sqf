@@ -127,7 +127,7 @@ if (_hasLicense) then {
 
     [(2 * _minimumConversions), "Processing"] spawn FF_fnc_handleXP; // 2 XP * Processed Items
 } else {
-    if (CASH < _cost) exitWith {hint format ["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (CASH < _cost) exitWith {hint format ["You need £%1 to process without a license!",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     for "_i" from 0 to 1 step 0 do {
         uiSleep  0.9;
@@ -139,7 +139,7 @@ if (_hasLicense) then {
     };
 
     if (player distance _vendor > 10) exitWith {hint "You need to stay within 10m to process."; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
-    if (CASH < _cost) exitWith {hint format ["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
+    if (CASH < _cost) exitWith {hint format ["You need £%1 to process without a license!",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     {
         [false,(_x select 0),((_x select 1)*(_minimumConversions))] call life_fnc_handleInv;

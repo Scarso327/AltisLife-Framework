@@ -13,7 +13,7 @@ if (_value < 0) exitWith {};
 if (_value > 999999) exitWith {hint "A number above £999,999 is not valid."};
 
 _action = [
-    format ["You are about to give yourself $%1.",[_value] call life_fnc_numberText],
+    format ["You are about to compensate yourself £%1.",[_value] call life_fnc_numberText],
     "Compensate",
     "Yes",
     "No"
@@ -21,7 +21,7 @@ _action = [
 
 if (_action) then {
     CASH = CASH + _value;
-    hint format ["You have compensated $%1.",[_value] call life_fnc_numberText];
+    hint format ["You have compensated yourself £%1.",[_value] call life_fnc_numberText];
     closeDialog 0;
 } else {
     hint "Action Cancelled.";

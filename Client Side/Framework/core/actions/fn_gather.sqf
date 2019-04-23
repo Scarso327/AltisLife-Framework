@@ -112,7 +112,7 @@ if ([true,_resource,_diff] call life_fnc_handleInv) then {
 
     [_profZone,_profXP,_profChance] call FF_fnc_increaseProfession;
 
-    titleText[format ["You have gathered %2 %1(s).",(localize _itemName),_diff],"PLAIN"];
+    titleText[format ["You have gathered %2 %1(s).",(_itemName),_diff],"PLAIN"];
 };
 
 sleep 1;

@@ -98,7 +98,7 @@ class CfgShops {
     class mineral_exports {
         name = "Mineral Exports";
         conditions = "";
-        items[] = { "tin_ore", "tin_bar", "copper_ore", "copper_bar", "silver_ore", "silver_bar", "iron_ore", "iron_bar", "tin_ore", "tin_bar", "platinum_ore", "platinum_bar" };
+        items[] = { "tin_bar", "copper_bar", "silver_bar", "iron_bar", "platinum_bar" };
     };
 
     class cement_trader {
@@ -110,13 +110,13 @@ class CfgShops {
     class oil_exports {
         name = "Oil Exports";
         conditions = "";
-        items[] = { "crude_oil", "refined_oil" };
+        items[] = { "refined_oil" };
     };
 
     class iridium_exports {
         name = "Iridium Exports";
         conditions = "";
-        items[] = { "iridium_ore", "iridium_bar" };
+        items[] = { "iridium_bar" };
     };
 
     class gem_trader {
@@ -128,7 +128,7 @@ class CfgShops {
     class drug_dealer {
         name = "Drug Dealer";
         conditions = "";
-        items[] = { "cannabis", "marijuana", "refined_marijuana", "opium", "heroin", "refined_heroin", "coca", "cocaine", "refined_cocaine", "ephedrine", "methamphetamine", "refined_methamphetamine" };
+        items[] = { "marijuana", "refined_marijuana", "heroin", "refined_heroin", "cocaine", "refined_cocaine", "methamphetamine", "refined_methamphetamine" };
     };
 
     class turtle_dealer {

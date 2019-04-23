@@ -725,7 +725,7 @@ class LifeCfgVehicles {
     class O_Plane_Fighter_02_F { // To-201 Shikra
         vItemSpace = 0;
         conditions = "";
-        price = 1320000;
+        price = 13200000;
         textures[] = {};
     };
 

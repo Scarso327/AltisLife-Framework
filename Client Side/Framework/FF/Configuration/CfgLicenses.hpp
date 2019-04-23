@@ -69,7 +69,7 @@ class CfgLicenses {
     // Item Processing Sites
     class fish {
         variable = "fish";
-        displayName = "Fish Processing";
+        displayName = "Fish Processing Licence";
         price = 500;
         illegal = false;
         side = "civ";
@@ -77,7 +77,7 @@ class CfgLicenses {
 
     class lumber {
         variable = "lumber";
-        displayName = "Lumber Processing";
+        displayName = "Lumber Processing Licence";
         price = 1200;
         illegal = false;
         side = "civ";
@@ -85,7 +85,7 @@ class CfgLicenses {
 
     class schnapps {
         variable = "schnapps";
-        displayName = "Schnapps Processing";
+        displayName = "Schnapps Processing Licence";
         price = 1700;
         illegal = false;
         side = "civ";
@@ -93,7 +93,7 @@ class CfgLicenses {
 
     class tin {
         variable = "tin";
-        displayName = "Tin Processing";
+        displayName = "Tin Processing Licence";
         price = 4500;
         illegal = false;
         side = "civ";
@@ -101,7 +101,7 @@ class CfgLicenses {
 
     class copper {
         variable = "copper";
-        displayName = "Copper Processing";
+        displayName = "Copper Processing Licence";
         price = 7500;
         illegal = false;
         side = "civ";
@@ -109,7 +109,7 @@ class CfgLicenses {
 
     class silver {
         variable = "silver";
-        displayName = "Silver Processing";
+        displayName = "Silver Processing Licence";
         price = 11000;
         illegal = false;
         side = "civ";
@@ -117,7 +117,7 @@ class CfgLicenses {
 
     class iron {
         variable = "iron";
-        displayName = "Iron Processing";
+        displayName = "Iron Processing Licence";
         price = 18000;
         illegal = false;
         side = "civ";
@@ -125,7 +125,7 @@ class CfgLicenses {
 
     class rock {
         variable = "rock";
-        displayName = "Rock Processing";
+        displayName = "Rock Processing Licence";
         price = 15000;
         illegal = false;
         side = "civ";
@@ -133,7 +133,7 @@ class CfgLicenses {
 
     class platinum {
         variable = "platinum";
-        displayName = "Platinum Processing";
+        displayName = "Platinum Processing Licence";
         price = 30000;
         illegal = false;
         side = "civ";
@@ -141,7 +141,7 @@ class CfgLicenses {
 
     class oil {
         variable = "oil";
-        displayName = "Oil Processing";
+        displayName = "Oil Processing Licence";
         price = 75000;
         illegal = false;
         side = "civ";
@@ -149,7 +149,7 @@ class CfgLicenses {
 
     class iridium {
         variable = "iridium";
-        displayName = "Iridium Processing";
+        displayName = "Iridium Processing Licence";
         price = 125000;
         illegal = false;
         side = "civ";
@@ -157,7 +157,7 @@ class CfgLicenses {
 
     class gem {
         variable = "gem";
-        displayName = "Gem Processing";
+        displayName = "Gem Processing Licence";
         price = 350000;
         illegal = false;
         side = "civ";
@@ -165,7 +165,7 @@ class CfgLicenses {
 
     class marijuana {
         variable = "marijuana";
-        displayName = "Marijuana Processing";
+        displayName = "Marijuana Processing Licence";
         price = 45000;
         illegal = true;
         side = "civ";
@@ -173,7 +173,7 @@ class CfgLicenses {
 
     class heroin {
         variable = "heroin";
-        displayName = "Heroin Processing";
+        displayName = "Heroin Processing Licence";
         price = 87500;
         illegal = true;
         side = "civ";
@@ -181,7 +181,7 @@ class CfgLicenses {
 
     class cocaine {
         variable = "cocaine";
-        displayName = "Cocaine Processing";
+        displayName = "Cocaine Processing Licence";
         price = 11600;
         illegal = true;
         side = "civ";
@@ -189,7 +189,7 @@ class CfgLicenses {
 
     class methamphetamine {
         variable = "methamphetamine";
-        displayName = "Methamphetamine Processing";
+        displayName = "Methamphetamine Processing Licence";
         price = 145000;
         illegal = true;
         side = "civ";
@@ -197,7 +197,7 @@ class CfgLicenses {
 
     class drug_refining {
         variable = "drug_refining";
-        displayName = "Drub Refining";
+        displayName = "Drub Refining Licence";
         price = 600000;
         illegal = true;
         side = "civ";
@@ -206,7 +206,7 @@ class CfgLicenses {
     // Syndikat Outpost
     class syndikat {
         variable = "syndikat";
-        displayName = "Syndikat Training";
+        displayName = "Syndikat Membership";
         price = 1000000;
         illegal = true;
         side = "civ";

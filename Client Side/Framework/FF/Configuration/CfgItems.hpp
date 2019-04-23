@@ -1896,7 +1896,7 @@ class CfgItems {
         displayName = "Rock";
         weight = 6;
         buyPrice = -1;
-        sellPrice = -1;
+        sellPrice = 100;
         illegal = false;
         save = false;
         taxed = false;

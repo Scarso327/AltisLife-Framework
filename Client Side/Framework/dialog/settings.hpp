@@ -25,7 +25,7 @@ class SettingsMenu {
 
         class PlayerTagsHeader: Life_RscText {
             idc = -1;
-            text = "Player Tag";
+            text = "Player Tags";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.30;
             y = 0.43;
@@ -47,7 +47,7 @@ class SettingsMenu {
 
         class BroacastHeader : PlayerTagsHeader {
             idc = -1;
-            text = "$STR_SM_BCSW";
+            text = "Broadcast Enabled";
             y = 0.58;
         };
 

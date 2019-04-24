@@ -13,7 +13,7 @@ _total = [_this,1,"",["",0]] call BIS_fnc_param;
 if (_val == _total) then {
     titleText[format ["You have collected a bounty of £%1 for arresting a criminal.",[_val] call life_fnc_numberText],"PLAIN"];
 } else {
-    titleText[format [localize "You have collected a bounty of £%1 for killing a wanted criminal.",[_val] call life_fnc_numberText,[_total] call life_fnc_numberText],"PLAIN"];
+    titleText[format [localize "You have collected a bounty of £%1.",[_val] call life_fnc_numberText,[_total] call life_fnc_numberText],"PLAIN"];
 };
 
 BANK = BANK + _val;

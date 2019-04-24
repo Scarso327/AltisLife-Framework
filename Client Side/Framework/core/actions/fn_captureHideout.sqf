@@ -23,7 +23,7 @@ private "_cpRate";
 if (!isNull _group) then {
     _gangName = _group getVariable ["gang_name",""];
     _action = [
-        format ["This hideout is controlled by %1.&lt;br/&gt;&lt;br/&gt;Are you sure you want to take over their gang area?",_gangName],
+        format ["This hideout is currently controlled by %1.&lt;br/&gt;&lt;br/&gt;Are you sure you want to take over their area?",_gangName],
         "Hideout is currently under control...",
         "Yes",
         "No"
@@ -39,7 +39,7 @@ life_action_inUse = true;
 
 //Setup the progress bar
 disableSerialization;
-private _title = "Capturing Hideout";
+private _title = "Capturing Hideout...";
 "progressBar" cutRsc ["life_progress","PLAIN"];
 private _ui = uiNamespace getVariable "life_progress";
 private _progressBar = _ui displayCtrl 38201;
@@ -91,6 +91,6 @@ private _flagTexture = [
         "\A3\Data_F\Flags\flag_fd_orange_CO.paa"
     ] call BIS_fnc_selectRandom;
 _this select 0 setFlagTexture _flagTexture;
-[[0,1],"%1 and his gang: %2 - have taken control of a local hideout!",true,[name player,(group player) getVariable "gang_name"]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+[[0,1],"%2 have taken control of a local hideout!",true,[(group player) getVariable "gang_name"]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 _hideout setVariable ["inCapture",false,true];
 _hideout setVariable ["gangOwner",group player,true];

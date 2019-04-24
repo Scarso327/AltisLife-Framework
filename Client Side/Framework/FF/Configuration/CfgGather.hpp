@@ -129,7 +129,7 @@ Example 2:
             amount = 1;
             zones[] = { "coal_area" };
             item = "pickaxe";
-            mined[] = {"coal"};
+            mined[] = {{"coal",0,100},{"uncut_diamond",90,100}};
             zoneSize = 30;
         };
 
@@ -137,7 +137,7 @@ Example 2:
             amount = 2;
             zones[] = { "tin_area" };
             item = "pickaxe";
-            mined[] = {"tin_ore"};
+            mined[] = {{"tin_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
         };
 
@@ -145,7 +145,7 @@ Example 2:
             amount = 2;
             zones[] = { "copper_area" };
             item = "pickaxe";
-            mined[] = {"copper_ore"};
+            mined[] = {{"copper_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
         };
 
@@ -153,7 +153,7 @@ Example 2:
             amount = 2;
             zones[] = { "silver_area" };
             item = "pickaxe";
-            mined[] = {"silver_ore"};
+            mined[] = {{"silver_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
         };
 
@@ -161,7 +161,7 @@ Example 2:
             amount = 2;
             zones[] = { "iron_area" };
             item = "pickaxe";
-            mined[] = {"iron_ore"};
+            mined[] = {{"iron_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
         };
 
@@ -169,7 +169,7 @@ Example 2:
             amount = 2;
             zones[] = { "platinum_area" };
             item = "pickaxe";
-            mined[] = {"platinum_ore"};
+            mined[] = {{"platinum_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
         };
 
@@ -177,7 +177,7 @@ Example 2:
             amount = 1;
             zones[] = { "rock_area" };
             item = "pickaxe";
-            mined[] = {"rock"};
+            mined[] = {{"rock",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100}};
             zoneSize = 30;
         };
 
@@ -185,7 +185,7 @@ Example 2:
             amount = 3;
             zones[] = { "oil_rig" };
             item = "";
-            mined[] = { "crude_oil" };
+            mined[] = {{"crude_oil",{"uncut_opal",70,100},{"uncut_sapphire",75,100},{"uncut_ruby",78,100},{"uncut_emerald",83,100},{"uncut_diamond",87,100} };
             zoneSize = 30;
         };
 
@@ -193,7 +193,7 @@ Example 2:
             amount = 3;
             zones[] = { "iridium_area" };
             item = "";
-            mined[] = { "iridium_ore" };
+            mined[] = {"iridium_ore" };
             zoneSize = 30;
         };
     };

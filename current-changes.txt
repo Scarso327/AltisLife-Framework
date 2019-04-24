@@ -3,7 +3,6 @@ Added:
     Intro Sound (Lewis)
     Incapacitation System (Scarso)
     Police Uniforms (Scarso & Lewis)
-        - Cadet Uniform
         - Main Uniform (Insignia changes per rank)
         - High Visibility Uniform
     Medic Uniforms (Scarso)
@@ -30,8 +29,17 @@ Added:
     Vehicle Seatbelts (Scarso)
         - Halves damage on vehicle collision
     3 Second Delay to Unflipping Vehicles (Scarso)
+    Various Standard Run Types (Lewis)
     VDM Protection (Scarso)
     ATMs Across the Map (Lewis)
+    Specialised Units for Factions (Lewis)
+    The ability to process gold bars for more money (Lewis)
+    Methamphetamine Run (Lewis)
+        - Buy "Empty Barrels" > Fill with "Ephedrine" > Process into "Methamphetamine" > Sell
+    Drug Refining (Lewis)
+    Gem System (Lewis)
+        - Small chance of getting a range of gems when mining. Can process for more money.
+    Offshore Oil Rig (Lewis)
 
 Changed:
     All Physical Stores (Lewis)
@@ -74,6 +82,8 @@ Changed:
     Weapon / Physical Store UI (Scarso)
     Clothing Store UI (Scarso)
     People in restraints being able to shoot & kill (Scarso)
+    Federal Reserve > HM. Treaury (Lewis)
+        - If sucessful, you will steal branded gold
     
 Removed:
     Welcome Notification Screen (Scarso)
@@ -83,10 +93,10 @@ Removed:
     Clothing Store Localizations (Scarso)
     Framework Support for Location Saving (Scarso)
     AAN News Banner Support (Scarso)
-    Hunting Grounds (Scarso & Lewis Mackinnon)
+    Hunting Grounds (Scarso & Lewis)
     Public Slots (Scarso)
     House Based Spawning for Civilians (Scarso)
-    Various Run Types (Lewis Mackinnon)
+    Various Run Types (Lewis)
     Taser Sound (Scarso)
     Tased Animation (Scarso)
         - Now it just causes the player to fall over realistically.

@@ -21,7 +21,7 @@ private _varName = LICENSE_VARNAME(_type, _sideFlag);
 private _side = switch (_sideFlag) do {case "cop": {west}; case "med" : {independent}; case "civ" : {civilian};};
 if !(playerSide isEqualTo _side) exitWith { hint format["You must be a %1 to purchase this license!", _sideFlag] };
 
-if (CASH < _price) exitWith {hint format ["You do not have enough money...",];};
+if (CASH < _price) exitWith {hint format ["You do not have enough money..."]};
 CASH = CASH - _price;
 
 [0] call SOCK_fnc_updatePartial;

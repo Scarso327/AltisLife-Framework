@@ -75,7 +75,7 @@ class CfgApps {
     class Perks {
         title = "Perks";
         icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayMain\profile_player_ca.paa";
-        onButtonClick = "";
+        onButtonClick = "[23600, ""Perks""] call FF_fnc_switchApp";
         conditions = "";
         disableIF = "";
         tooltip = "Perk Management";

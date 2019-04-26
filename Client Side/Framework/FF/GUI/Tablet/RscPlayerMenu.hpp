@@ -27,5 +27,6 @@ class RscPlayerMenu {
         #include "RscLicenseMenu.hpp"
         #include "RscKeyMenu.hpp"
         #include "RscMarketMenu.hpp"
+        #include "RscPerkMenu.hpp"
     };
 };

@@ -14,6 +14,15 @@ params [
 disableSerialization;
 if (_title isEqualTo "AsYetUntitled") exitWith { systemChat "No Title..." };
 
+// Delete all previous to ensure we don't end up with doubles...
+{
+	if (_x isEqualType []) then {
+		for "_i" from 0 to (count (_x) - 1) do { ctrlDelete (_x select _i) };
+	} else {
+		ctrlDelete _x;
+	};
+} forEach FF_createdElements;
+
 switch (_title) do {
 	case "Inventory": {
 		private _list = CONTROL(IDD_TABLET_MAIN, IDC_INV_LIST);
@@ -126,5 +135,72 @@ switch (_title) do {
 		} foreach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
 		_itemList lnbSetCurSelRow -1; // Set current selection...
+	};
+
+	case "Perks": {
+		private _display = findDisplay IDD_TABLET_MAIN;
+		private _scrollView = CONTROL(IDD_TABLET_MAIN, IDC_PERK_SCROLL);
+
+		private _side = switch (playerSide) do {case west:{"Police"}; case civilian:{"Civilian"}; case independent:{"Medic"};};
+		
+		private _baseIDC = IDC_TABLET_BASE;
+		private _yValues = [0.236,0.258,0.302,0.236,0.258];
+		#define INC 0.099
+
+		{
+			private _thisElement = [];
+
+			// Create Perk Title...
+			private _title = _display ctrlCreate ["Life_RscText", _baseIDC, _scrollView];
+			_title ctrlSetText (getText(_x >> "displayName"));
+			_title ctrlSetPosition [0.345312 * safezoneW + safezoneX, (_yValues select 0) * safezoneH + safezoneY, 0.201094 * safezoneW, 0.022 * safezoneH];
+			_thisElement pushBack _title;
+			
+			// Create Perk Description...
+			private _description = _display ctrlCreate ["Life_RscStructuredText", (_baseIDC + 1), _scrollView];
+			_description ctrlSetStructuredText parseText (getText(_x >> "description"));
+			_description ctrlSetPosition [0.345312 * safezoneW + safezoneX, (_yValues select 1) * safezoneH + safezoneY, 0.37125 * safezoneW, 0.044 * safezoneH];
+			_thisElement pushBack _description;
+
+			// Create Select Button...
+			private _button = _display ctrlCreate ["Life_RscButtonMenu", (_baseIDC + 2), _scrollView];
+			_button ctrlSetStructuredText parseText "SELECT PERK";
+			_button ctrlSetPosition [0.345312 * safezoneW + safezoneX, (_yValues select 2) * safezoneH + safezoneY, 0.0721875 * safezoneW, 0.022 * safezoneH];
+			_thisElement pushBack _button;
+
+			if !(FF_Level >= (getNumber(_x >> "unlockLevel"))) then {
+				_button ctrlEnable false; // We can't unlock this perk...
+
+				// Create Cover...
+				private _cover = _display ctrlCreate ["Life_RscBackground", (_baseIDC + 4), _scrollView];
+				_cover ctrlSetPosition [0.283437 * safezoneW + safezoneX, (_yValues select 3) * safezoneH + safezoneY, 0.443438 * safezoneW, 0.088 * safezoneH];
+				_cover ctrlSetBackgroundColor [0,0,0,0.8];
+				_thisElement pushBack _cover;
+
+				// Create Text...
+				private _requiredText = _display ctrlCreate ["Life_RscStructuredText", (_baseIDC + 5), _scrollView];
+				_requiredText ctrlSetPosition [0.283437 * safezoneW + safezoneX, (_yValues select 4) * safezoneH + safezoneY, 0.443438 * safezoneW, 0.044 * safezoneH];
+				_requiredText ctrlSetStructuredText parseText format["<t align='center' size='2'>LEVEL <t color = '#7300e6'>%1</t> REQUIRED</t>", (getNumber(_x >> "unlockLevel"))];
+				_thisElement pushBack _requiredText;
+
+				_cover ctrlCommit 0;
+				_requiredText ctrlCommit 0;
+			};
+
+			// Work out different Y Values...
+			_yValues set[0, ((_yValues select 0) + INC)]; // Title...
+			_yValues set[1, ((_yValues select 1) + INC)]; // Description...
+			_yValues set[2, ((_yValues select 2) + INC)]; // Button...
+			_yValues set[3, ((_yValues select 3) + INC)]; // Cover...
+			_yValues set[4, ((_yValues select 4) + INC)]; // Required Text...
+
+			// Commit Changes...
+			_title ctrlCommit 0;
+			_description ctrlCommit 0;
+			_button ctrlCommit 0;
+
+			_baseIDC = _baseIDC + (count (_thisElement)); // Increment by count for next row...
+			FF_createdElements pushBack _thisElement; // Save it to be deleted later...
+		} foreach (format ["'%1' in (getArray(_x >> 'sides')) || { count ((getArray(_x >> 'sides'))) <= 0 }", _side] configClasses (missionConfigFile >> "CfgPerks"));
 	};
 };

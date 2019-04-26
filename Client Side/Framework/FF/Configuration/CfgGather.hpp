@@ -185,7 +185,7 @@ Example 2:
             amount = 3;
             zones[] = { "oil_rig" };
             item = "";
-            mined[] = {{"crude_oil",{"uncut_opal",70,100},{"uncut_sapphire",75,100},{"uncut_ruby",78,100},{"uncut_emerald",83,100},{"uncut_diamond",87,100} };
+            mined[] = {{"crude_oil",0,100},{"uncut_opal",70,100},{"uncut_sapphire",75,100},{"uncut_ruby",78,100},{"uncut_emerald",83,100},{"uncut_diamond",87,100} };
             zoneSize = 30;
         };
 

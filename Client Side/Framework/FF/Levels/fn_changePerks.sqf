@@ -40,10 +40,10 @@ if (_type) then {
 	// The type is false, this means we're going to add the perk...
 
 	private _perkLimit = switch true do {
-		case (FF_Level >= 30): {4};
-		case (FF_Level >= 20): {3};
-		case (FF_Level >= 10): {2};
-		default {1};
+		case (FF_Level >= 30): {5};
+		case (FF_Level >= 20): {4};
+		case (FF_Level >= 10): {3};
+		default {2};
 	};
 
 	// Checks...

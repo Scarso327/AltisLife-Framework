@@ -6,6 +6,7 @@
 	@Description: Updates the active perk ui....
 */
 #include "..\macros.hpp"
+disableSerialization;
 
 private _display = findDisplay IDD_TABLET_MAIN;
 

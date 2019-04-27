@@ -5,12 +5,47 @@ class CfgPerks {
         sides[] = {"Civilian"};
         unlockLevel = 1;
     };
+    
+    class expertAider {
+        displayName = "Expert Aider";
+        description = "Increase the speed on which you provide aid to those injured by <t color = '#7300e6'>25%</t>.";
+        sides[] = {"Medic"};
+        unlockLevel = 1;
+    };
 
     class muscleman {
         displayName = "Muscleman";
         description = "Get a gym membership and build your muscles to the point where you can carry <t color = '#7300e6'>30%</t> more items!";
         sides[] = {};
+        unlockLevel = 2;
+    };
+
+    class quickLearner {
+        displayName = "Quick Learner";
+        description = "Learn to master your pofessions at a much quicker rate!";
+        sides[] = {"Civilian"};
         unlockLevel = 3;
+    };
+
+    class dedicatedAthlete {
+        displayName = "Dedicated Athlete";
+        description = "Train and push yourself as far as you possibly can in order to gain <t color = '#7300e6'>30%</t> less fatigue over time.";
+        sides[] = {""};
+        unlockLevel = 4;
+    };
+
+    class mindfulPlanner {
+        displayName = "Mindful Planner";
+        description = "Plan your journey fully and spawn with a <t color = '#7300e6'>GPS</t> and <t color = '#7300e6'>NV Goggles</t>.";
+        sides[] = {"Civilian"};
+        unlockLevel = 4;
+    };
+
+    class ecoDriver {
+        displayName = "Eco Driver";
+        description = "Become an ecological driver and, as a result, spend <t color = '#7300e6'>75%</t> less on fuel at fuel stations.";
+        sides[] = {};
+        unlockLevel = 4;
     };
 
     class pettyThief {
@@ -67,6 +102,20 @@ class CfgPerks {
         description = "Pay no storage fees from the garages across Tanoa as a result of all your hard work.";
         sides[] = {"Civilian"};
         unlockLevel = 27;
+    };
+
+    class uncertainPersonality {
+        displayName = "Uncertain Personality";
+        description = "When chop shopping vehicles, you will have a <t color = '#7300e6'>10%</t> of being able to cancel the process and add the vehicle to your garage - obviously with some cost.";
+        sides[] = {};
+        unlockLevel = 28;
+    };
+
+    class propertyBroker {
+        displayName = "Property Broker";
+        description = "Master the art of being an estate agent and understand that the prices you see, may not be the price you pay. Reduce all property costs by <t color = '#7300e6'>15%</t>.";
+        sides[] = {"Civilian"};
+        unlockLevel = 29;
     };
 
     class highRoller {

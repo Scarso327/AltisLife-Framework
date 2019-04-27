@@ -141,6 +141,7 @@ switch (_title) do {
 	case "Perks": {
 		private _display = findDisplay IDD_TABLET_MAIN;
 		private _scrollView = CONTROL(IDD_TABLET_MAIN, IDC_PERK_SCROLL);
+		private _removalInfo = CONTROL(IDD_TABLET_MAIN, IDC_PERK_REMOVE_INFO);
 
 		private _side = switch (playerSide) do {case west:{"Police"}; case civilian:{"Civilian"}; case independent:{"Medic"};};
 		
@@ -148,6 +149,9 @@ switch (_title) do {
 		private _yValues = [0.236,0.258,0.302,0.236,0.258];
 		#define INC 0.099
 
+		_removalInfo ctrlSetStructuredText parseText format["<t align='center'>Removal Cost: <t color = '#7300e6'>£%1</t></t>", [LIFE_SETTINGS(getNumber, "removal_cost")] call LIFE(numberText)];
+
+		// This area works out and updates the inactive perks...
 		{
 			private _thisElement = [];
 
@@ -170,8 +174,11 @@ switch (_title) do {
 			_thisElement pushBack _button;
 
 			if !(FF_Level >= (getNumber(_x >> "unlockLevel"))) then {
-				_button ctrlEnable false; // We can't unlock this perk...
-
+				// Update Button....
+				_button ctrlSetBackgroundColor [0,0.6,0,0.8];
+				_button ctrlSetStructuredText parseText 'SELECTED';
+				_button ctrlRemoveAllEventHandlers "ButtonClick";
+				
 				// Create Cover...
 				private _cover = _display ctrlCreate ["Life_RscBackground", (_baseIDC + 4), _scrollView];
 				_cover ctrlSetPosition [0.283437 * safezoneW + safezoneX, (_yValues select 3) * safezoneH + safezoneY, 0.443438 * safezoneW, 0.088 * safezoneH];
@@ -184,8 +191,13 @@ switch (_title) do {
 				_requiredText ctrlSetStructuredText parseText format["<t align='center' size='2'>LEVEL <t color = '#7300e6'>%1</t> REQUIRED</t>", (getNumber(_x >> "unlockLevel"))];
 				_thisElement pushBack _requiredText;
 
+				// Commit Changes...
 				_cover ctrlCommit 0;
 				_requiredText ctrlCommit 0;
+			} else {
+				// Add button functionality...
+				private _function = format["['%1', false] call FF_fnc_changePerks; this ctrlSetBackgroundColor [0,0.6,0,0.8]; this ctrlSetStructuredText parseText ""SELECTED"";", configName _x];
+				_button ctrlSetEventHandler ["ButtonClick", _function];
 			};
 
 			// Work out different Y Values...
@@ -203,5 +215,7 @@ switch (_title) do {
 			_baseIDC = _baseIDC + (count (_thisElement)); // Increment by count for next row...
 			FF_createdElements pushBack _thisElement; // Save it to be deleted later...
 		} foreach (format ["'%1' in (getArray(_x >> 'sides')) || { count ((getArray(_x >> 'sides'))) <= 0 }", _side] configClasses (missionConfigFile >> "CfgPerks"));
+
+		[] call FF(updatePerks); // This will update our active perks...
 	};
 };

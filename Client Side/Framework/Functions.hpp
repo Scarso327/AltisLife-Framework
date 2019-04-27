@@ -67,6 +67,7 @@ class FF_Core {
     class Levels {
         file = "FF\Levels";
         class handleXP {};
+        class changePerks {};
     }; 
 
     class GUI_FUNCTIONS {
@@ -101,6 +102,7 @@ class FF_Core {
         class switchApp {};
         class escapeHandle {};
         class onLoad {};
+        class updatePerks {};
     };
 
     class Map {

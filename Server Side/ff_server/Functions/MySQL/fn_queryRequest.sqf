@@ -22,11 +22,11 @@ _ownerID = owner _ownerID;
 
 private _query = switch (_side) do {
     // West - 14 entries returned
-    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, cop_professions, level, xp, active_perks FROM players WHERE pid='%1'",_uid];};
+    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, cop_professions, level, xp, cop_perks FROM players WHERE pid='%1'",_uid];};
     // Civilian - 13 entries returned
-    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, playtime, civ_professions, level, xp, active_perks FROM players WHERE pid='%1'",_uid];};
+    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, playtime, civ_professions, level, xp, civ_perks FROM players WHERE pid='%1'",_uid];};
     // Independent - 13 entries returned
-    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, med_professions, level, xp, active_perks FROM players WHERE pid='%1'",_uid];};
+    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, med_professions, level, xp, med_perks FROM players WHERE pid='%1'",_uid];};
 };
 
 private _tickTime = diag_tickTime;

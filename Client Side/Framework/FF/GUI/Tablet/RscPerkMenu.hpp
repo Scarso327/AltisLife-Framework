@@ -80,7 +80,7 @@ class UnlockedPerksTitle : Life_RscText {
 
 class Perk_1_Box : Life_RscStructuredText {
     idc = IDC_PERK_ACTIVE_ONE;
-    text = "<t align='center'>Perk</t>";
+    text = "";
     x = 0.283437 * safezoneW + safezoneX;
     y = 0.621 * safezoneH + safezoneY;
     w = 0.0825 * safezoneW;
@@ -90,7 +90,7 @@ class Perk_1_Box : Life_RscStructuredText {
 
 class Perk_2_Box : Life_RscStructuredText {
     idc = IDC_PERK_ACTIVE_TWO;
-    text = "<t align='center'>Perk</t>";
+    text = "";
     x = 0.371094 * safezoneW + safezoneX;
     y = 0.621 * safezoneH + safezoneY;
     w = 0.0825 * safezoneW;
@@ -100,7 +100,7 @@ class Perk_2_Box : Life_RscStructuredText {
 
 class Perk_3_Box : Life_RscStructuredText {
     idc = IDC_PERK_ACTIVE_THREE;
-    text = "<t align='center'>Perk</t>";
+    text = "";
     x = 0.45875 * safezoneW + safezoneX;
     y = 0.621 * safezoneH + safezoneY;
     w = 0.0825 * safezoneW;
@@ -110,7 +110,7 @@ class Perk_3_Box : Life_RscStructuredText {
 
 class Perk_4_Box : Life_RscStructuredText {
     idc = IDC_PERK_ACTIVE_FOUR;
-    text = "<t align='center'>Perk</t>";
+    text = "";
     x = 0.546406 * safezoneW + safezoneX;
     y = 0.621 * safezoneH + safezoneY;
     w = 0.0825 * safezoneW;
@@ -120,7 +120,7 @@ class Perk_4_Box : Life_RscStructuredText {
 
 class Perk_5_Box : Life_RscStructuredText {
     idc = IDC_PERK_ACTIVE_FIVE;
-    text = "<t align='center'>Perk</t>";
+    text = "";
     x = 0.634062 * safezoneW + safezoneX;
     y = 0.621 * safezoneH + safezoneY;
     w = 0.0825 * safezoneW;

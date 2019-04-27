@@ -106,26 +106,6 @@ FF_hideHUD = false;
 
 FF_createdElements = [];
 
-/* FF_Perks Structure
-[
-    // Police
-    [
-        "perk_1",
-        "perk_2"
-    ],
-    // NHS
-    [
-        "perk_1",
-        "perk_2"
-    ],
-    // Civilian
-    [
-        "perk_1",
-        "perk_2"
-    ]
-]
-*/
-
 FF_curApp = "Home";
 
 FF_ProcessingVendor = objNull;

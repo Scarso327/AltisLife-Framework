@@ -11,6 +11,9 @@ class CfgSettings {
     player_moneyLog = false;
     player_deathLog = false;
 
+    /* Perk Settings */
+    removal_cost = 30000; // The cost to remove a perk...
+
     /* Escape Menu Configuration */
     escapeMenu_timer = 10;
     escapeMenu_displayExtras = true;

@@ -75,7 +75,11 @@ switch (_mode) do {
     case 8: {
         _value = [_this,2,[],[[]]] call BIS_fnc_param;
         _value = [_value] call DB_fnc_mresArray;
-        _query = format ["UPDATE players SET active_perks='%1' WHERE pid='%2'",_value,_uid];
+        switch (_side) do {
+            case west: {_query = format ["UPDATE players SET cop_perks='%1' WHERE pid='%2'",_value,_uid];};
+            case civilian: {_query = format ["UPDATE players SET civ_perks='%1' WHERE pid='%2'",_value,_uid];};
+            case independent: {_query = format ["UPDATE players SET med_perks='%1' WHERE pid='%2'",_value,_uid];};
+        };
     };
 };
 

@@ -11,7 +11,10 @@
 #define SPY(func) SPY_fnc_##func // Spyglass Functions..
 #define FF(func) FF_fnc_##func // Custom "FreeFlight" Functions..
 
-// Incap Related..
+// Perk Related...
+#define HAS_PERK(perk) (FF_Perks findIf { _x isEqualTo perk }) > -1
+
+// Incap Related...
 #define isDowned(unit) unit getVariable ["isIncapacitated", false]
 #define setDowned(unit) unit setVariable ["isIncapacitated", true, true]
 #define unsetDowned(unit) unit setVariable ["isIncapacitated", false, true]

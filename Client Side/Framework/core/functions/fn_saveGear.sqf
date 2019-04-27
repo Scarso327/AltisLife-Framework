@@ -8,9 +8,8 @@
     Description:
     Saves the players gear for syncing to the database for persistence..
 */
-private ["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled","_savedVirtualItems"];
+private ["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled"];
 _return = [];
-_savedVirtualItems = LIFE_SETTINGS(getArray,"saved_virtualItems");
 
 _return pushBack uniform player;
 _return pushBack vest player;
@@ -138,7 +137,7 @@ if (count (handgunItems player) > 0) then {
     if (_val > 0) then {
         _yItems pushBack [_x,_val];
     };
-} forEach _savedVirtualItems;
+} forEach FF_saveableItems;
 
 _return pushBack _uItems;
 _return pushBack _uMags;
@@ -148,10 +147,6 @@ _return pushBack _vItems;
 _return pushBack _vMags;
 _return pushBack _pItems;
 _return pushBack _hItems;
-if (LIFE_SETTINGS(getNumber,"save_virtualItems") isEqualTo 1) then {
-    _return pushBack _yItems;
-} else {
-    _return pushBack [];
-};
+_return pushBack _yItems;
 
 life_gear = _return;

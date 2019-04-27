@@ -90,6 +90,7 @@ life_nametags = [];
 FF_Drinks = [];
 FF_Food = [];
 FF_UseableItems = [];
+FF_saveableItems = []; // Array of items that save...
 
 FF_Level = 1;
 FF_XP = 0;
@@ -141,6 +142,8 @@ FF_ProcessingVendor = objNull;
 
         FF_UseableItems pushBack _item;
     };
+
+    if ((getNumber(_x >> "save")) isEqualTo 1) then { FF_saveableItems pushBack _item }; // Array of items to save...
 } forEach ("true" configClasses (missionConfigFile >> "CfgItems"));
 
 // Licenses

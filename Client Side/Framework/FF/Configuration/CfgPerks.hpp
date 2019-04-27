@@ -1,21 +1,21 @@
 class CfgPerks {
     class fisherman {
         displayName = "Fisherman";
-        description = "Become one with the sea and catch masses amounts of fish with your 50% increased chances of catching a fish.";
+        description = "Become one with the sea and catch masses amounts of fish with your <t color = '#7300e6'>50%</t> increased chances of catching a fish.";
         sides[] = {"Civilian"};
         unlockLevel = 1;
     };
 
     class muscleman {
         displayName = "Muscleman";
-        description = "Get a gym membership and build your muscles to the point where you can carry 30% more items!";
+        description = "Get a gym membership and build your muscles to the point where you can carry <t color = '#7300e6'>30%</t> more items!";
         sides[] = {};
         unlockLevel = 3;
     };
 
     class pettyThief {
         displayName = "Petty Thief";
-        description = "Become a great locksmith and increase your chances of scuess when lockpicking or boltcutting by 25%.";
+        description = "Become a great locksmith and increase your chances of scuess when lockpicking or boltcutting by <t color = '#7300e6'>25%</t>.";
         sides[] = {"Civilian"};
         unlockLevel = 6;
     };
@@ -29,7 +29,7 @@ class CfgPerks {
 
     class sweetTalker {
         displayName = "Sweet Talker";
-        description = "Learn how to talk-the-talk and increase the worth of all your sales by 10%.";
+        description = "Learn how to talk-the-talk and increase the worth of all your sales by <t color = '#7300e6'>10%</t>.";
         sides[] = {};
         unlockLevel = 12;
     };
@@ -43,7 +43,7 @@ class CfgPerks {
 
     class expertFinancer {
         displayName = "Expert Financer";
-        description = "Balance your finances like an expert and earn your 10% extra from your paychecks!";
+        description = "Balance your finances like an expert and earn your <t color = '#7300e6'>10%</t> extra from your paychecks!";
         sides[] = {};
         unlockLevel = 18;
     };
@@ -57,7 +57,7 @@ class CfgPerks {
 
     class experiencedProcessor {
         displayName = "Experienced Processor";
-        description = "Working the materials of Tanoa can be difficult - But not for you. Increase your processing speed by 50%.";
+        description = "Working the materials of Tanoa can be difficult - But not for you. Increase your processing speed by <t color = '#7300e6'>50%</t>.";
         sides[] = {"Civilian"};
         unlockLevel = 24;
     };
@@ -71,7 +71,7 @@ class CfgPerks {
 
     class highRoller {
         displayName = "High Roller";
-        description = "You win some you lose some... But you've learned how to win and win again with your 20% increased chances as the casino.";
+        description = "You win some you lose some... But you've learned how to win and win again with your <t color = '#7300e6'>20%</t> increased chances as the casino.";
         sides[] = {};
         unlockLevel = 30;
     };

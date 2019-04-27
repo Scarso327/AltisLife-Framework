@@ -44,7 +44,7 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
             "Your Cash"
         ] call BIS_fnc_guiMessage;
         if (_action) then {
-            hint parseText format ["You bought a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt; with your group funds.",_itemInfo select 1,[_price] call life_fnc_numberText];
+            hint parseText format ["You bought a %1 for <t color='#8cff9b'>£%2</t> with your group funds.",_itemInfo select 1,[_price] call life_fnc_numberText];
             _funds = group player getVariable "gang_bank";
             _funds = _funds - _price;
             group player setVariable ["gang_bank",_funds,true];
@@ -59,14 +59,14 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
 
         } else {
             if (_price > CASH) exitWith {hint "You don't have that much money!"};
-            hint parseText format ["You bought a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt;",_itemInfo select 1,[_price] call life_fnc_numberText];
+            hint parseText format ["You bought a %1 for <t color='#8cff9b'>£%2</t>",_itemInfo select 1,[_price] call life_fnc_numberText];
             CASH = CASH - _price;
             [_item,true] call life_fnc_handleItem;
         };
     } else {
         if (playerSide isEqualTo civilian) then {
             if (_price > CASH) exitWith {hint "You don't have that much money!"};
-            hint parseText format ["You bought a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt;",_itemInfo select 1,[_price] call life_fnc_numberText];
+            hint parseText format ["You bought a %1 for <t color='#8cff9b'>£%2</t>",_itemInfo select 1,[_price] call life_fnc_numberText];
             CASH = CASH - _price;
         } else {
             hint "As a public servant, the government has covered the costs of your equipment."

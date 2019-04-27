@@ -22,6 +22,7 @@ if (_title isEqualTo "AsYetUntitled") exitWith { systemChat "No Title..." };
 		ctrlDelete _x;
 	};
 } forEach FF_createdElements;
+FF_createdElements = []; // Wipe it...
 
 switch (_title) do {
 	case "Inventory": {

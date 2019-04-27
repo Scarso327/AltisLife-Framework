@@ -59,7 +59,9 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
     if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled.","PLAIN"]; life_action_inUse = false;};
     if !(isNull objectParent player) exitWith {titleText["You cannot do this while you are in a vehicle.","PLAIN"]; life_action_inUse = false;};
     
-    player removeItem "ToolKit";
+    if !(HAS_PERK("generalMechanic")) then {
+        player removeItem "ToolKit";
+    };
 
     _veh setDamage 0;
     titleText["You have repaired that vehicle.","PLAIN"];

@@ -1,0 +1,49 @@
+#3 Muscleman (Global)
+#3 Fisherman (Civilian)
+#3 NAME (Police)
+#3 Expert Aider (Medic)
+
+#6 Dedicated Athlete (Global)
+#6 Mindful Planner (Civilian)
+#6 NAME (Police)
+#6 NAME (Medic)
+
+#9 Eco Driver (Global)
+#9 Petty Thief (Civilian)
+#9 NAME (Police)
+#9 NAME (Medic)
+
+#12 General Mechanic (Global)
+#12 Quick Learner (Civilian)
+#12 NAME (Police)
+#12 NAME (Medic)
+
+#15 Expert Financer (Global)
+#15 Wide Traveller (Civilian)
+#15 NAME (Police)
+#15 NAME (Medic)
+
+#18 Sweet Talker (Global)
+#18 Hard Worker (Civilian)
+#18 NAME (Police)
+#18 NAME (Medic)
+
+#21 Improved Metabolism (Global)
+#21 Uncertain Personality (Civilian)
+#21 NAME (Police)
+#21 NAME (Medic)
+
+#24 Second Nature (Global)
+#24 Property Broker (Civilian)
+#24 NAME (Police)
+#24 NAME (Medic)
+
+#27 Slight of Hand (Global)
+#27 NAME (Civilian)
+#27 NAME (Police)
+#27 NAME (Medic)
+
+#30 High Roller (Global)
+#30 NAME (Civilian)
+#30 NAME (Police)
+#30 NAME (Medic)

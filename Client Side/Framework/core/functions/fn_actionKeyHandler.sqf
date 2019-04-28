@@ -15,9 +15,7 @@ if (isDowned(player)) exitWith {}; // We can't preform these actions while incap
 
 _isWater = surfaceIsWater (visiblePositionASL player);
 
-if (playerSide isEqualTo west && {player getVariable ["isEscorting",false]}) exitWith {
-    [] call life_fnc_copInteractionMenu;
-};
+if (playerSide isEqualTo west && {player getVariable ["isEscorting",false]}) exitWith { ["Police"] call FF(getButtons) };
 
 //Check if the player is near an ATM.
 if ((call life_fnc_nearATM) && {!dialog}) exitWith {
@@ -88,10 +86,11 @@ if (_curObject isKindOf "CAManBase" && {isDowned(_curObject)}) exitWith {
 };
 
 //If target is a player then check if we can use the cop menu.
-if (isPlayer _curObject && _curObject isKindOf "CAManBase") then {
-    if ((_curObject getVariable ["restrained",false]) && !dialog && playerSide isEqualTo west) then {
-        [_curObject] call life_fnc_copInteractionMenu;
-    };
+if (isPlayer _curObject && { _curObject isKindOf "CAManBase" } && { !dialog } && { player distance _curObject <= 5 }) then {
+    life_pInact_curTarget = _curObject; // Set the object for interaction...
+    
+    if (_curObject getVariable ["restrained",false] && { playerSide isEqualTo west}) exitWith { ["Police"] call FF(getButtons) }; // Restrained Menu for Police...
+    if !(isDowned(_curObject)) exitWith { ["General"] call FF(getButtons) }; // Interaction Menu for Everyone...
 } else {
     //OK, it wasn't a player so what is it?
     private ["_isVehicle","_miscItems","_money","_list"];

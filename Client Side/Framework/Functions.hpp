@@ -105,6 +105,12 @@ class FF_Core {
         class updatePerks {};
     };
 
+    class GUI_Interaction_Functions {
+        file = "FF\GUI\Interactions\Functions";
+        class createMenu {};
+        class getButtons {};
+    };
+
     class Map {
         file = "FF\Map";
         class setupMarket {};
@@ -220,7 +226,6 @@ class Life_Client_Core {
         file = "core\cop";
         class bountyReceive {};
         class containerInvSearch {};
-        class copInteractionMenu {};
         class copLights {};
         class copLoadout {};
         class copMarkers {};

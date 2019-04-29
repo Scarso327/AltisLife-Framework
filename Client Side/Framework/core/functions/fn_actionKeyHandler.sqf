@@ -103,7 +103,8 @@ if (isPlayer _curObject && { _curObject isKindOf "CAManBase" } && { !dialog } &&
     if (_isVehicle) then {
         if (!dialog) then {
             if (player distance _curObject < ((boundingBox _curObject select 1) select 0)+2 && (!(player getVariable ["restrained",false])) && (!(player getVariable ["playerSurrender",false])) && !life_isknocked && !life_istazed) then {
-                [_curObject] call life_fnc_vInteractionMenu;
+                life_vInact_curTarget = _curObject; // Set the object for interaction...
+                ["Vehicle"] call FF(getButtons);
             };
         };
     } else {

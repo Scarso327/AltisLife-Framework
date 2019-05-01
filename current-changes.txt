@@ -43,7 +43,7 @@ Added:
 
 Changed:
     Interaction Menu UI (Scarso)
-    Giving Money is done through an interaction menu and not the Y-Menu (Scarso)
+    Giving Money & Items is done through an interaction menu and not the Y-Menu (Scarso)
     All Physical Stores (Lewis)
     All Virtual Stores (Lewis)
     All Vehicle Stores (Lewis)

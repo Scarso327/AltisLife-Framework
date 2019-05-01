@@ -94,3 +94,18 @@ $[
 	[2400,"",[1,"Select Perk",["0.345312 * safezoneW + safezoneX","0.302 * safezoneH + safezoneY","0.0721875 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
 ]
 */
+
+/* #Xygoja
+$[
+	1.063,
+	["sd",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[2200,"background",[1,"",["0.407188 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.185625 * safezoneW","0.506 * safezoneH"],[-1,-1,-1,-1],[0.16,0.16,0.16,1],[-1,-1,-1,-1],"","-1"],[]],
+	[2201,"Header",[1,"",["0.407187 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.185625 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[0.09,0.09,0.09,1],[-1,-1,-1,-1],"","-1"],[]],
+	[2202,"footer",[1,"",["0.407188 * safezoneW + safezoneX","0.72 * safezoneH + safezoneY","0.185625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[0.102,0.102,0.102,1],[-1,-1,-1,-1],"","-1"],[]],
+	[2203,"line",[1,"",["0.407188 * safezoneW + safezoneX","0.72 * safezoneH + safezoneY","0.185625 * safezoneW","0.00133334 * safezoneH"],[-1,-1,-1,-1],[0,0,0,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1000,"",[1,"Select Vehicle",["0.407187 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.12375 * safezoneW","0.022 * safezoneH"],[1,1,1,1],[0,0,0,0],[-1,-1,-1,-1],"","-1"],[]],
+	[2204,"X",[1,"",["0.577344 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.0154688 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[0.09,0.09,0.09,1],[-1,-1,-1,-1],"","-1"],[]],
+	[2400,"",[1,"Select",["0.515469 * safezoneW + safezoneX","0.726 * safezoneH + safezoneY","0.0721875 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2205,"vehList",[1,"",["0.412344 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.175313 * safezoneW","0.429 * safezoneH"],[-1,-1,-1,-1],[1,1,1,1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/

@@ -10,6 +10,7 @@
 
 #include "Interactions\RscInteractionMenu.hpp"
 #include "Interactions\RscMoneyMenu.hpp"
+#include "Interactions\RscItemMenu.hpp"
 
 #include "Tablet\commons.hpp"
 #include "Tablet\RscPlayerMenu.hpp"

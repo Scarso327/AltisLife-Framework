@@ -11,6 +11,7 @@ if !(params [["_unit", objNull, [objNull]]]) exitWith {};
 if (isNull _unit) exitWith {};
 if !(isDowned(_unit)) exitWith { hint "You can only revive injured players..." };
 if (player distance _unit > 5) exitWith { hint "You are not close enough to the injured player..." };
+if (dialog) then { closeDialog 0 };
 
 life_interrupted = false;
 life_action_inUse = true;

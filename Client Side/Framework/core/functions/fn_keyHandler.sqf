@@ -135,7 +135,7 @@ switch (_code) do {
                 FF_seatbelt = !FF_seatbelt;
                 player setVariable ["seatbelt", FF_seatbelt, true];
 
-                [] call life_fnc_hudUpdate;
+                [] call FF(hudUpdate);
                 _handled = true;
             };
         };

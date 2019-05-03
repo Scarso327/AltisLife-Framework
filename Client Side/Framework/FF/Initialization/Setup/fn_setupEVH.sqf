@@ -15,13 +15,13 @@ player addEventHandler ["Respawn", {_this call FF_fnc_onRespawn}];
 player addEventHandler ["GetOutMan", {
     FF_seatbelt = false;
     player setVariable ["seatbelt",false,true];
-    [] call life_fnc_hudUpdate;
+    [] call FF_fnc_hudUpdate;
 }];
 
 player addEventHandler ["GetInMan", {
     FF_seatbelt = false;
     player setVariable ["seatbelt",false,true];
-    [] call life_fnc_hudUpdate;
+    [] call FF_fnc_hudUpdate;
 }];
 
 /* Other */

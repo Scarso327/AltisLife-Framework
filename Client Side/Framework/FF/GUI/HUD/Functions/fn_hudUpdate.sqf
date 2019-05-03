@@ -63,8 +63,9 @@ private _iconBackground = LIFEctrl(IDC_LIFE_ICON_BACKGROUND);
 } forEach FF_UI_Elements;
 FF_UI_Elements = []; // Wipe it...
 
-if (count(_icons) < 1) exitWith { ctrlShow[IDC_LIFE_ICON_BACKGROUND, false] }; // No Icons to display...
-ctrlShow[IDC_LIFE_ICON_BACKGROUND, true];
+// Get our active icons...
+if (FF_seatbelt) then { _icons pushBack "seatbelt.paa" }; // Seatbelt Icon...
+
 if (count(_icons) < 1) exitWith { _iconBackground ctrlShow false }; // No Icons to display...
 _iconBackground ctrlShow true;
 
@@ -78,7 +79,7 @@ private _wVal = 0.020625;
 
 // Create new icons...
 {
-    private _icon = LIFEdisplay ctrlCreate ["Life_RscPicture", _IDC];
+    private _icon = LIFEdisplay ctrlCreate ["Life_RscPictureKeepAspect", _IDC];
     _icon ctrlSetPosition [_xVal * safezoneW + safezoneX, 0.951 * safezoneH + safezoneY, 0.020625 * safezoneW, 0.022 * safezoneH];
     _icon ctrlsetText format["%1", ICON(_x)];
 

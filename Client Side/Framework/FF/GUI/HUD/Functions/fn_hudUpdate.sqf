@@ -2,7 +2,7 @@
     @File: fn_hudUpdate.sqf
 
     @Author: Daniel Stuart
-    @Editor: Jack "Scarso" Farhall (Toggle Display, XP System, Cash Text)
+    @Editor: Jack "Scarso" Farhall (Toggle Display, XP System, Cash Text + Icons System)
 
     @Description: Updates the HUD when it needs to.
 */
@@ -49,3 +49,48 @@ LIFEctrl(IDC_LIFE_HEALTH_TEXT) ctrlSetStructuredText parseText format["Health<t 
 
 // Update Cash!
 LIFEctrl(IDC_LIFE_CASH_TEXT) ctrlSetStructuredText parseText format["<t align='right'>£%1</t>", [CASH] call life_fnc_numberText];
+
+private _icons = [];
+private _iconBackground = LIFEctrl(IDC_LIFE_ICON_BACKGROUND);
+
+// Delete all previous icons...
+{
+	if (_x isEqualType []) then {
+		for "_i" from 0 to (count (_x) - 1) do { ctrlDelete (_x select _i) };
+	} else {
+		ctrlDelete _x;
+	};
+} forEach FF_UI_Elements;
+FF_UI_Elements = []; // Wipe it...
+
+if (count(_icons) < 1) exitWith { ctrlShow[IDC_LIFE_ICON_BACKGROUND, false] }; // No Icons to display...
+ctrlShow[IDC_LIFE_ICON_BACKGROUND, true];
+
+// Define the increase variables for the icons...
+#define X_INC 0.021625
+#define W_INC 0.020625
+
+private _IDC = IDC_LIFE_ICON_CREATION;
+private _xVal = 0.0153125;
+private _wVal = 0.020625;
+
+// Create new icons...
+{
+    private _icon = LIFEdisplay ctrlCreate ["Life_RscPicture", _IDC];
+    _icon ctrlSetPosition [_xVal * safezoneW + safezoneX, 0.951 * safezoneH + safezoneY, 0.020625 * safezoneW, 0.022 * safezoneH];
+    _icon ctrlsetText format["%1", ICON(_x)];
+
+    FF_UI_Elements pushBack _icon; // So we can delete it later if required...
+    _IDC = _IDC + 1; // Increase IDC...
+    _xVal = _xVal + X_INC; // Increase X Value...
+
+    // If it's not the first icon increase background width...
+    if (_forEachIndex > 0) then {
+        _wVal = _wVal + W_INC; // Increase the W value...
+
+        _iconBackground ctrlSetPosition [0.015312 * safezoneW + safezoneX, 0.951 * safezoneH + safezoneY, _wVal * safezoneW, 0.022 * safezoneH];
+        _iconBackground ctrlCommit 0; // Commit the background changes...
+    };
+
+    _icon ctrlCommit 0; // Commit the icon changes...
+} forEach _icons;

@@ -225,6 +225,7 @@ class life_RscPicture {
     tooltipColorText[] = {1,1,1,1};
     tooltipColorBox[] = {1,1,1,1};
     tooltipColorShade[] = {0,0,0,0.65};
+    text = "";
 };
 
 class Life_RscTextMulti: Life_RscText

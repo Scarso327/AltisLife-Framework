@@ -106,6 +106,7 @@ FF_seatbelt = false;
 FF_hideHUD = false;
 
 FF_createdElements = [];
+FF_UI_Elements = [];
 
 FF_curApp = "Home";
 

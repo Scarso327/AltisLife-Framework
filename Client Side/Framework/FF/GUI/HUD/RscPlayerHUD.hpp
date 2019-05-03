@@ -26,7 +26,8 @@ class RscPlayerHUD {
 		LIFE_CASH_TEXT,
 		LIFE_XP_TEXT,
 		LIFE_CURLVL_TEXT,
-		LIFE_NXTLVL_TEXT
+		LIFE_NXTLVL_TEXT,
+		LIFE_ICON_BACKGROUND
 	};
 
 	/* Background */
@@ -170,6 +171,16 @@ class RscPlayerHUD {
 	};
 
 	/* Icons */
+
+	class LIFE_ICON_BACKGROUND : Life_RscBackground {
+		idc = IDC_LIFE_ICON_BACKGROUND;
+		text = "";
+		x = 0.015312 * safezoneW + safezoneX;
+		y = 0.951 * safezoneH + safezoneY;
+		w = 0.020625 * safezoneW;
+		h = 0.022 * safezoneH;
+		colorBackground[] = {0, 0, 0, 0.5};
+	};
 
 	/* Other */
 

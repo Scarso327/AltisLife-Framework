@@ -130,12 +130,13 @@ switch (_code) do {
             _handled = true;
         } else {
             // Seatbelt...
-            if (!_ctrlKey && { !_alt } && { !(isNull objectParent _unit) }) then {
+            if ( !(isNull objectParent player) && ((vehicle player) isKindOf "Car")) then {
 
-                FF_seatbelt != FF_seatbelt;
+                FF_seatbelt = !FF_seatbelt;
                 player setVariable ["seatbelt", FF_seatbelt, true];
 
                 [] call life_fnc_hudUpdate;
+                _handled = true;
             };
         };
     };

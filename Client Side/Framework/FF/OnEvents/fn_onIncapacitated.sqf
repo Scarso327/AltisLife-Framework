@@ -71,6 +71,8 @@ switch (_type) do {
 			format["<t align='center' size='2'>%1 seriously injured you</t>", _killer getVariable ["realname", name _killer]]
 		] select (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }));
 
+		{ppEffectDestroy _x} forEach FF_effects; // Remove Effects that might already exist from before...
+
 		// Blurry effect...
 		_effectBlur = ppEffectCreate ["DynamicBlur", 300];
 		_effectBlur ppEffectEnable true;

@@ -21,6 +21,13 @@ if (!(player getVariable ["Escorting",false])) then {
     detach player;
 };
 
+// Blurry effect...
+_effectBlur = ppEffectCreate ["DynamicBlur", 300];
+_effectBlur ppEffectEnable true;
+_effectBlur ppEffectAdjust [2.5];
+_effectBlur ppEffectCommit 3;
+FF_effects pushBack [_effectBlur];
+
 disableUserInput true;
 player setUnconscious true;
 player setVariable ["isKnckedOut", life_isknocked, true];
@@ -35,5 +42,7 @@ player setVariable ["isKnckedOut", life_isknocked, true];
 disableUserInput false;
 
 player setVariable ["robbed",false,true];
+
+{ppEffectDestroy _x} forEach FF_effects; // Remove Effects...
 
 player playMoveNow "amovppnemstpsraswrfldnon";

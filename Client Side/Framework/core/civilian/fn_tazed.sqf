@@ -21,6 +21,13 @@ if (_shooter isKindOf "CAManBase" && (alive player && !(isDowned(player)))) then
             detach player;
         };
 
+        // Blurry effect...
+		_effectBlur = ppEffectCreate ["DynamicBlur", 300];
+		_effectBlur ppEffectEnable true;
+		_effectBlur ppEffectAdjust [2.5];
+		_effectBlur ppEffectCommit 3;
+		FF_effects pushBack [_effectBlur];
+
         disableUserInput true;
         player setUnconscious true;
         player setVariable ["isTazed", life_istazed, true];
@@ -28,11 +35,13 @@ if (_shooter isKindOf "CAManBase" && (alive player && !(isDowned(player)))) then
         [0,"%1 was tased by %2.",true,[profileName, _shooter getVariable ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 
         sleep 10;
-
+    
         life_istazed = false;
         player setUnconscious false;
         player setVariable ["isTazed", life_istazed, true];
         disableUserInput false;
+
+        {ppEffectDestroy _x} forEach FF_effects; // Remove Effects...
 
         player playMoveNow "amovppnemstpsraswrfldnon";
     };

@@ -37,4 +37,5 @@ if (LIFE_SETTINGS(getNumber, "save_vehicle_inventory") isEqualTo 1) exitWith {
     [3] call SOCK_fnc_updatePartial;
 };
 
+[] call FF(hudUpdate);
 [] call FF(playerSkins);

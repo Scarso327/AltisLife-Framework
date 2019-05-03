@@ -47,4 +47,5 @@ private _list = ["LandVehicle", "Ship", "Air"];
     };
 } count [_container, _secContainer];
 
+[] call FF(hudUpdate);
 [] call FF(playerSkins);

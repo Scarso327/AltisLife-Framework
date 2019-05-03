@@ -26,6 +26,7 @@ player addEventHandler ["GetInMan", {
 
 /* Other */
 player addEventHandler ["Take", {_this call life_fnc_onTakeItem}];
+player addEventHandler ["Put", {[] call FF_fnc_hudUpdate}];
 player addEventHandler ["Fired", {_this call life_fnc_onFired}];
 player addEventHandler ["InventoryClosed", {_this call life_fnc_inventoryClosed}];
 player addEventHandler ["InventoryOpened", {_this call life_fnc_inventoryOpened}];

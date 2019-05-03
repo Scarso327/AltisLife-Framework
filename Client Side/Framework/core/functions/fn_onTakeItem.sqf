@@ -12,4 +12,5 @@ private _item = [_this,2,"",[""]] call BIS_fnc_param;
 
 if (isNull _unit || _item isEqualTo "") exitWith {}; //Bad thingies?
 
+[] call FF(hudUpdate);
 [] call FF(playerSkins);

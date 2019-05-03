@@ -52,6 +52,7 @@ class FF_Core {
         class playerSkins {};
         class notify {};
         class getGarage {};
+        class hasItem {};
     };
 
     class Factions {

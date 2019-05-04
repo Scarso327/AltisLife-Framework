@@ -7,7 +7,7 @@ class CfgGather {
             item = "apple";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
+        }; // Gather Profession NONE
 
         class mango {
             text = "Gathering mangos...";
@@ -16,7 +16,7 @@ class CfgGather {
             item = "mango";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
+        }; // Gather Profession NONE
 
         class coconut {
             text = "Gathering coconuts...";
@@ -25,16 +25,7 @@ class CfgGather {
             item = "coconut";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
-
-        class coral {
-            text = "Gathering coral...";
-            amount = 5;
-            zones[] = { "coral_area" };
-            item = "coral";
-            profession[] = { "Prof_Gathering", 1, 50 };
-            zoneSize = 30;
-        };
+        }; // Gather Profession NONE
 
         class bannana {
             text = "Gathering bannanas...";
@@ -43,7 +34,7 @@ class CfgGather {
             item = "bannana";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
+        }; // Gather Profession Novice
 
         class rice {
             text = "Gathering rice...";
@@ -52,7 +43,7 @@ class CfgGather {
             item = "rice";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
+        }; // Gather Profession Novice
 
         class wood {
             text = "Gathering wood...";
@@ -61,7 +52,7 @@ class CfgGather {
             item = "wood";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
+        }; // Gather Profession Intermediate
 
         class cannabis {
             text = "Gathering cannabis...";
@@ -70,7 +61,7 @@ class CfgGather {
             item = "cannabis";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
+        }; // Gather Profession Novice
 
         class opium {
             text = "Gathering opium...";
@@ -79,7 +70,7 @@ class CfgGather {
             item = "opium";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
+        }; // Gather Profession Advanced
 
         class coca {
             text = "Gathering coca...";
@@ -88,7 +79,7 @@ class CfgGather {
             item = "coca";
             profession[] = { "Prof_Gathering", 1, 50 };
             zoneSize = 30;
-        };
+        }; // Gather Profession Expert
     };
 
 /*
@@ -131,7 +122,15 @@ Example 2:
             item = "pickaxe";
             mined[] = {{"coal",0,100},{"uncut_diamond",90,100}};
             zoneSize = 30;
-        };
+        }; // Mining Profession Novice
+
+        class coral {
+            text = "Gathering coral...";
+            amount = 5;
+            zones[] = { "coral_area" };
+            mined[] = {"coral"};
+            zoneSize = 30;
+        }; // Mining Profession Advanced
 
         class tin_ore {
             amount = 2;
@@ -139,7 +138,7 @@ Example 2:
             item = "pickaxe";
             mined[] = {{"tin_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
-        };
+        }; // Mining Profession NONE
 
         class copper_ore {
             amount = 2;
@@ -147,7 +146,7 @@ Example 2:
             item = "pickaxe";
             mined[] = {{"copper_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
-        };
+        }; // Mining Profession NONE
 
         class silver_ore {
             amount = 2;
@@ -155,7 +154,7 @@ Example 2:
             item = "pickaxe";
             mined[] = {{"silver_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
-        };
+        }; // Mining Profession Novice
 
         class iron_ore {
             amount = 2;
@@ -163,7 +162,7 @@ Example 2:
             item = "pickaxe";
             mined[] = {{"iron_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
-        };
+        }; // Mining Profession Novice
 
         class platinum_ore {
             amount = 2;
@@ -171,7 +170,7 @@ Example 2:
             item = "pickaxe";
             mined[] = {{"platinum_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
             zoneSize = 30;
-        };
+        }; // Mining Profession Intermediate
 
         class rock {
             amount = 1;
@@ -179,7 +178,7 @@ Example 2:
             item = "pickaxe";
             mined[] = {{"rock",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100}};
             zoneSize = 30;
-        };
+        }; // Mining Profession Intermediate
 
         class crude_oil {
             amount = 3;
@@ -187,7 +186,7 @@ Example 2:
             item = "";
             mined[] = {{"crude_oil",0,100},{"uncut_opal",70,100},{"uncut_sapphire",75,100},{"uncut_ruby",78,100},{"uncut_emerald",83,100},{"uncut_diamond",87,100} };
             zoneSize = 30;
-        };
+        }; // Mining Profession Advanced
 
         class iridium_ore {
             amount = 3;
@@ -195,6 +194,6 @@ Example 2:
             item = "";
             mined[] = {"iridium_ore" };
             zoneSize = 30;
-        };
+        }; // Mining Profession Expert
     };
 };

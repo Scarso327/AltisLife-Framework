@@ -73,6 +73,7 @@ class CfgRemoteExec {
         F(TON_fnc_player_query,CLIENT)
         F(FF_fnc_onIncapacitated,CLIENT)
         F(FF_fnc_onRevived,CLIENT)
+        F(FF_fnc_hudUpdate,CLIENT)
         
         /* Server only functions */
         F(BIS_fnc_execVM,SERVER)

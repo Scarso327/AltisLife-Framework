@@ -339,6 +339,9 @@ switch (_code) do {
                         systemChat "You have locked the vehicle.";
                         [_veh,"lockCarSound",50,1] remoteExec ["life_fnc_say3D",RANY];
                     };
+
+                    // Update Locked / Unlocked HUD Icons...
+                    [] RemoteExecCall ["FF_fnc_hudUpdate", (crew _veh)];
                 };
             };
         };

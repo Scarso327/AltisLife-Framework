@@ -64,7 +64,7 @@ life_action_inUse = false;
 
 // Payout...
 if (playerSide isEqualTo independent) then {
-    titleText[format ["You have revived %1 and received £%2 for your services.",_targetName,[_reviveCost] call life_fnc_numberText],"PLAIN"];
+    titleText[format ["You have revived %1 and received £%2 for your services.",(_unit getVariable["realname", name _unit]),[_reviveCost] call life_fnc_numberText],"PLAIN"];
     BANK = BANK + _reviveCost;
     [1] call SOCK_fnc_updatePartial;
 };

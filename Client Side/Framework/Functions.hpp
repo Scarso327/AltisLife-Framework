@@ -134,6 +134,8 @@ class FF_Core {
         file = "FF\Medical";
         class respawned {};
         class revive {};
+        class administerBlood {};
+        class bloodAdministered {};
     };
 };
 

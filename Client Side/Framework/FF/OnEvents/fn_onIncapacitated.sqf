@@ -110,7 +110,7 @@ switch (_type) do {
 		FF_fnc_bleedout_timer = [_unit] spawn {
 			private _unit = _this select 0;
 			private _startTime = time;
-			private _endTime = _startTime + (LIFE_SETTINGS(getNumber,"bleedout_timer")); // Current Time + Bleedout Time
+			FF_endTime = _startTime + (LIFE_SETTINGS(getNumber,"bleedout_timer")); // Current Time + Bleedout Time
 			private _display = uiNameSpace getVariable ["FF_Incapacitated", displayNull];
 
 			// "Bleed Loop"
@@ -118,7 +118,7 @@ switch (_type) do {
 				if (!alive _unit || !(isDowned(_unit))) exitWith {}; // Exit checks...
 				
 				// My time is up... Kill me...
-				if (time >= _endTime) exitWith {
+				if (time >= FF_endTime) exitWith {
 					_unit setDamage 1; // Kill me...
 				};
 

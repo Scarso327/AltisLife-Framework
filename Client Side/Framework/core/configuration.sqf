@@ -112,6 +112,8 @@ FF_curApp = "Home";
 
 FF_ProcessingVendor = objNull;
 
+FF_endTime = 0;
+
 /*
     Master Array of items?
 */

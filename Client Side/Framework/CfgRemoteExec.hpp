@@ -74,6 +74,7 @@ class CfgRemoteExec {
         F(FF_fnc_onIncapacitated,CLIENT)
         F(FF_fnc_onRevived,CLIENT)
         F(FF_fnc_hudUpdate,CLIENT)
+        F(FF_fnc_bloodAdministered,CLIENT)
         
         /* Server only functions */
         F(BIS_fnc_execVM,SERVER)

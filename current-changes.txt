@@ -40,6 +40,9 @@ Added:
     Gem System (Lewis)
         - Small chance of getting a range of gems when mining. Can process for more money.
     Offshore Oil Rig (Lewis)
+    Map Information Key (Lewis)
+    Information Centre in Georgetown (Lewis)
+    Phone Booths Across the Map (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)
@@ -86,6 +89,8 @@ Changed:
     People in restraints being able to shoot & kill (Scarso)
     Federal Reserve > HM. Treaury (Lewis)
         - If sucessful, you will steal branded gold
+    Diving Store Marker Colour (Lewis)
+        - Green > Orenge
     
 Removed:
     Welcome Notification Screen (Scarso)

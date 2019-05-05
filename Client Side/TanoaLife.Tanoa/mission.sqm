@@ -1,25 +1,25 @@
 version=53;
 class EditorData
 {
-	moveGridStep=1;
+	moveGridStep=2;
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=2877;
+		nextID=2910;
 	};
 	class MarkerIDProvider
 	{
-		nextID=37;
+		nextID=50;
 	};
 	class Camera
 	{
-		pos[]={5792.458,12.264533,10433.263};
-		dir[]={-0.69978303,-0.66302097,0.26594189};
-		up[]={-0.61977983,0.74859494,0.23553802};
-		aside[]={0.35524958,7.043127e-008,0.93478107};
+		pos[]={10594.153,163.60449,10497.763};
+		dir[]={-0.82797372,-0.33616787,0.44883263};
+		up[]={-0.29553825,0.94180214,0.16020603};
+		aside[]={0.47656766,8.1956387e-007,0.87913787};
 	};
 };
 binarizationWanted=0;
@@ -408,7 +408,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1570;
+		items=1596;
 		class Item0
 		{
 			dataType="Marker";
@@ -4792,6 +4792,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=349;
+			atlOffset=0.29922152;
 		};
 		class Item192
 		{
@@ -4803,6 +4804,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=350;
+			atlOffset=0.048114777;
 		};
 		class Item193
 		{
@@ -5002,7 +5004,7 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=367;
-			atlOffset=0.47232914;
+			atlOffset=0.94276953;
 		};
 		class Item210
 		{
@@ -5353,7 +5355,7 @@ class Mission
 			type="loc_Tree";
 			colorName="ColorYellow";
 			id=403;
-			atlOffset=25.139187;
+			atlOffset=27.55287;
 		};
 		class Item241
 		{
@@ -5480,7 +5482,6 @@ class Mission
 			a=0.80000001;
 			b=0.80000001;
 			id=418;
-			atlOffset=0.21165657;
 		};
 		class Item252
 		{
@@ -6095,7 +6096,7 @@ class Mission
 			fillName="FDiagonal";
 			a=500;
 			b=450;
-			angle=94.983978;
+			angle=94.983955;
 			id=482;
 			atlOffset=-7.5769997;
 		};
@@ -6415,6 +6416,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorCIV";
 			id=514;
+			atlOffset=0.60919905;
 		};
 		class Item331
 		{
@@ -8049,13 +8051,13 @@ class Mission
 		class Item396
 		{
 			dataType="Marker";
-			position[]={5597.5669,2.0319824,10248.316};
+			position[]={5597.5669,2.0320001,10248.316};
 			name="diving_store_1";
 			text="Diving Store";
 			type="c_unknown";
-			colorName="ColorGreen";
+			colorName="ColorOrange";
 			id=642;
-			atlOffset=-0.17801762;
+			atlOffset=-0.17799997;
 		};
 		class Item397
 		{
@@ -8064,7 +8066,7 @@ class Mission
 			name="diving_store_2";
 			text="Diving Store";
 			type="c_unknown";
-			colorName="ColorGreen";
+			colorName="ColorOrange";
 			id=643;
 			atlOffset=0.081212997;
 		};
@@ -8075,7 +8077,7 @@ class Mission
 			name="diving_store_3";
 			text="Diving Store";
 			type="c_unknown";
-			colorName="ColorGreen";
+			colorName="ColorOrange";
 			id=644;
 			atlOffset=0.049755096;
 		};
@@ -8086,7 +8088,7 @@ class Mission
 			name="diving_store_4";
 			text="Diving Store";
 			type="c_unknown";
-			colorName="ColorGreen";
+			colorName="ColorOrange";
 			id=645;
 			atlOffset=0.066747189;
 		};
@@ -23831,7 +23833,7 @@ class Mission
 			};
 			id=1256;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.47751427;
+			atlOffset=0.77366877;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23873,7 +23875,7 @@ class Mission
 			};
 			id=1258;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.47684479;
+			atlOffset=0.52499962;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24866,7 +24868,6 @@ class Mission
 				angles[]={0,1.9420458,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				createAsSimpleObject=1;
@@ -24874,6 +24875,7 @@ class Mission
 			};
 			id=1289;
 			type="Land_CashDesk_F";
+			atlOffset=0.63711452;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24915,7 +24917,7 @@ class Mission
 			};
 			id=1290;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.50755787;
+			atlOffset=1.1003604;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32188,6 +32190,7 @@ class Mission
 				angles[]={0,5.1242476,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Market""], ""general_market"", """"] call FF_fnc_setupMarket;";
@@ -32196,7 +32199,7 @@ class Mission
 			};
 			id=1664;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.3564415;
+			atlOffset=0.11700058;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32272,7 +32275,6 @@ class Mission
 				angles[]={0,2.9816995,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Market""], ""general_market"", """"] call FF_fnc_setupMarket;";
@@ -32281,7 +32283,7 @@ class Mission
 			};
 			id=1666;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.1170001;
+			atlOffset=0.25214815;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32498,7 +32500,6 @@ class Mission
 				angles[]={0,0.83772314,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Lumber Trader""], ""lumber_trader"", """"] call FF_fnc_setupMarket;";
@@ -32507,7 +32508,7 @@ class Mission
 			};
 			id=1676;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.00014162064;
+			atlOffset=0.6079421;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -40240,7 +40241,6 @@ class Mission
 				angles[]={6.281754,3.2585123,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[this, [""ALL"", ""Fish Market""], ""fish_market"", """"] call FF_fnc_setupMarket;";
@@ -40249,7 +40249,7 @@ class Mission
 			};
 			id=2176;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.14052176;
+			atlOffset=0.45399928;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -53977,6 +53977,7 @@ class Mission
 			type="loc_Tourism";
 			colorName="ColorGreen";
 			id=2682;
+			atlOffset=0.10159349;
 		};
 		class Item1399
 		{
@@ -53993,6 +53994,7 @@ class Mission
 			};
 			id=2683;
 			type="Land_ATM_02_malden_F";
+			atlOffset=0.10159349;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -59905,6 +59907,353 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1570
+		{
+			dataType="Marker";
+			position[]={7734.2661,0,17067.404};
+			name="info_area";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorWhite";
+			fillName="Border";
+			a=7500;
+			b=1500;
+			drawBorder=1;
+			id=2877;
+			atlOffset=65.906342;
+		};
+		class Item1571
+		{
+			dataType="Marker";
+			position[]={932,0,17886};
+			name="website";
+			text="Website: www.lifeplus.co.uk";
+			type="mil_marker";
+			colorName="ColorWhite";
+			a=0.75;
+			b=0.75;
+			angle=270;
+			id=2878;
+			atlOffset=54.312664;
+		};
+		class Item1572
+		{
+			dataType="Marker";
+			position[]={932.00024,-1.831,17360.061};
+			name="teamspeak";
+			text="TeamSpeak: ts3.lifeplus.co.uk";
+			type="mil_marker";
+			colorName="ColorWhite";
+			a=0.75;
+			b=0.75;
+			angle=270;
+			id=2879;
+			atlOffset=52.481647;
+		};
+		class Item1573
+		{
+			dataType="Marker";
+			position[]={932.00024,-3.562,16844.223};
+			name="discord";
+			text="Discord: https://discord.gg/EDzzh2C";
+			type="mil_marker";
+			colorName="ColorWhite";
+			a=0.75;
+			b=0.75;
+			angle=270;
+			id=2880;
+			atlOffset=50.750648;
+		};
+		class Item1574
+		{
+			dataType="Marker";
+			position[]={932.00024,-9.4809999,16078.361};
+			name="slogan";
+			text="LifePlus - Gaming Done Right.";
+			type="mil_triangle";
+			colorName="ColorWhite";
+			a=0.75;
+			b=0.75;
+			angle=90;
+			id=2881;
+			atlOffset=44.83165;
+		};
+		class Item1575
+		{
+			dataType="Marker";
+			position[]={10452,-8,17048};
+			name="map_key_area";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorWhite";
+			fillName="Border";
+			a=4500;
+			b=1250;
+			drawBorder=1;
+			id=2883;
+			atlOffset=58.510002;
+		};
+		class Item1576
+		{
+			dataType="Marker";
+			position[]={6414,0,17852};
+			name="greenzone";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorGUER";
+			fillName="FDiagonal";
+			a=250;
+			b=250;
+			id=2890;
+			atlOffset=58.419964;
+		};
+		class Item1577
+		{
+			dataType="Marker";
+			position[]={6414,2.757,17038};
+			name="redzone";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=250;
+			b=250;
+			id=2891;
+			atlOffset=61.176964;
+		};
+		class Item1578
+		{
+			dataType="Marker";
+			position[]={6414,-2.381,16218};
+			name="noflyzone";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorOrange";
+			fillName="FDiagonal";
+			a=250;
+			b=250;
+			id=2892;
+			atlOffset=56.038963;
+		};
+		class Item1579
+		{
+			dataType="Marker";
+			position[]={6788,0,17852};
+			name="greenzone_marker";
+			text="Greenzone";
+			type="mil_destroy";
+			colorName="ColorGUER";
+			a=0;
+			b=0;
+			angle=45;
+			id=2893;
+			atlOffset=60.238071;
+		};
+		class Item1580
+		{
+			dataType="Marker";
+			position[]={6788,-3.2260001,17038};
+			name="redzone_marker";
+			text="Redzone";
+			type="mil_destroy";
+			colorName="ColorRed";
+			a=0;
+			b=0;
+			angle=45;
+			id=2894;
+			atlOffset=57.01207;
+		};
+		class Item1581
+		{
+			dataType="Marker";
+			position[]={6788,-4.1030002,16218};
+			name="noflyzone_marker";
+			text="No-Fly Zone";
+			type="mil_destroy";
+			colorName="ColorOrange";
+			a=0;
+			b=0;
+			angle=45;
+			id=2895;
+			atlOffset=56.135071;
+		};
+		class Item1582
+		{
+			dataType="Marker";
+			position[]={8372,-2,17034};
+			name="separator_1";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorWhite";
+			a=25;
+			b=1000;
+			id=2896;
+			atlOffset=60.77005;
+		};
+		class Item1583
+		{
+			dataType="Marker";
+			position[]={8918,-0.24300003,17886};
+			name="standardstore";
+			text="Standard Store";
+			type="c_unknown";
+			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
+			id=2897;
+			atlOffset=63.240257;
+		};
+		class Item1584
+		{
+			dataType="Marker";
+			position[]={8918,-1.102,17372};
+			name="licensedstore";
+			text="Licensed Store";
+			type="c_unknown";
+			colorName="ColorOrange";
+			a=0.75;
+			b=0.75;
+			id=2898;
+			atlOffset=62.381256;
+		};
+		class Item1585
+		{
+			dataType="Marker";
+			position[]={8918,-1.927,16800};
+			name="governmentstore";
+			text="Government Store";
+			type="c_unknown";
+			colorName="ColorBlue";
+			a=0.75;
+			b=0.75;
+			id=2899;
+			atlOffset=61.556259;
+		};
+		class Item1586
+		{
+			dataType="Marker";
+			position[]={8918,-0.55200005,16250};
+			name="informationcentre";
+			text="Information Centre";
+			type="c_unknown";
+			colorName="ColorUNKNOWN";
+			a=0.75;
+			b=0.75;
+			id=2900;
+			atlOffset=62.931259;
+		};
+		class Item1587
+		{
+			dataType="Marker";
+			position[]={11114,0,17896};
+			name="mine/gather";
+			type="mil_triangle";
+			colorName="ColorCIV";
+			a=0.75;
+			b=0.75;
+			id=2901;
+			atlOffset=62.286034;
+		};
+		class Item1588
+		{
+			dataType="Marker";
+			position[]={11520.229,-0.80792618,17896.689};
+			name="processing";
+			type="mil_box";
+			colorName="ColorCIV";
+			a=0.75;
+			b=0.75;
+			id=2902;
+			atlOffset=59.708931;
+		};
+		class Item1589
+		{
+			dataType="Marker";
+			position[]={11878,-7.2810001,17896};
+			name="trader";
+			text="Mine/Processing/Trader";
+			type="mil_dot";
+			colorName="ColorCIV";
+			a=0.75;
+			b=0.75;
+			id=2903;
+			atlOffset=48.241753;
+		};
+		class Item1590
+		{
+			dataType="Marker";
+			position[]={11120,-6,17512};
+			name="mine/gather_1";
+			type="mil_triangle";
+			colorName="ColorEAST";
+			a=0.75;
+			b=0.75;
+			id=2904;
+			atlOffset=57.163422;
+		};
+		class Item1591
+		{
+			dataType="Marker";
+			position[]={11526.229,1.01,17512.689};
+			name="processing_1";
+			type="mil_box";
+			colorName="ColorEAST";
+			a=0.75;
+			b=0.75;
+			id=2905;
+			atlOffset=62.237511;
+		};
+		class Item1592
+		{
+			dataType="Marker";
+			position[]={11884,-18.931,17512};
+			name="trader_1";
+			text="Mine/Processing/Trader";
+			type="mil_dot";
+			colorName="ColorEAST";
+			a=0.75;
+			b=0.75;
+			id=2906;
+			atlOffset=37.738503;
+		};
+		class Item1593
+		{
+			dataType="Marker";
+			position[]={11508,0,16978};
+			name="oil_rig_1";
+			type="loc_Fountain";
+			colorName="ColorCIV";
+			a=1.5;
+			b=1.5;
+			id=2907;
+			atlOffset=60.787983;
+		};
+		class Item1594
+		{
+			dataType="Marker";
+			position[]={11910,0,16964};
+			name="coconut_field_4";
+			text="Special Gather Site";
+			type="loc_Tree";
+			colorName="ColorCIV";
+			a=1.5;
+			b=1.5;
+			id=2908;
+			atlOffset=55.210083;
+		};
+		class Item1595
+		{
+			dataType="Marker";
+			position[]={11914,-55.908001,16328};
+			name="majorcrime";
+			text="Major Crime";
+			type="o_mech_inf";
+			colorName="ColorRed";
+			a=0.75;
+			b=0.75;
+			id=2909;
+			atlOffset=-0.33525848;
 		};
 	};
 };

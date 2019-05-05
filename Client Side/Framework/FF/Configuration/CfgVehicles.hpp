@@ -253,7 +253,9 @@ class LifeCfgVehicles {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
             }, "" },
             { "ARV", "cop", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa"
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };
@@ -398,7 +400,9 @@ class LifeCfgVehicles {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             }, "" },
             { "ARV", "cop", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa"
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };

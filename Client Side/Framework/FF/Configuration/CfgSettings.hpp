@@ -47,7 +47,7 @@ class CfgSettings {
     hospital_heal_fee = 100;
 
     /* Vehicle Data Saving */
-    vehicleShop_rentalOnly[] = {};
+    vehicleShop_rentalOnly[] = {"B_G_Quadbike_01_F","C_IDAP_Offroad_02_unarmed_F","C_IDAP_Offroad_01_F","C_IDAP_Van_02_transport_F","C_IDAP_Van_02_vehicle_F","C_IDAP_Heli_Transport_02_F"};
     vehicleShop_3D = true;
     save_vehicle_virtualItems = true;
     save_vehicle_inventory = true;

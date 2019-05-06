@@ -21,6 +21,13 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\MapControl\fountain_CA.paa";
                 conditions = "";
             };
+
+            class civ_idap {
+                displayName = "IDAP Camp";
+                spawnMarker = "civ_spawn_idap";
+                icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
+                conditions = "license_civ_idap";
+            };
         };
 
         class Cop {

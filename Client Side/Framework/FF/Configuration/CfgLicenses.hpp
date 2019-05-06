@@ -212,6 +212,15 @@ class CfgLicenses {
         side = "civ";
     };
 
+    // Civilian Jobs
+    class idap {
+        variable = "idap";
+        displayName = "IDAP Membership";
+        price = 300000;
+        illegal = false;
+        side = "civ";
+    };
+
     // TPC - Specialised Officers
     class sfo1 {
         variable = "sfo1";

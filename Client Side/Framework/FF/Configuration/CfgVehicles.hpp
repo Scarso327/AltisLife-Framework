@@ -104,6 +104,33 @@ class CfgVehicleStores {
         };
     };
 
+    class idap_dealership {
+        side = "civ";
+        conditions = "license_civ_idap"; // Not Accessable
+        vehicles[] = {
+            { "C_IDAP_Offroad_02_unarmed_F", "" },
+            { "C_IDAP_Offroad_01_F", "" },
+            { "C_IDAP_Van_02_transport_F", "" },
+            { "C_IDAP_Van_02_vehicle_F", "" }
+        };
+    };
+
+    class idap_air_dealership {
+        side = "civ";
+        conditions = "license_civ_idap"; // Not Accessable
+        vehicles[] = {
+            { "C_IDAP_Heli_Transport_02_F", "" }
+        };
+    };
+
+    class gov_dealership {
+        side = "civ";
+        conditions = ""; // Not Accessable
+        vehicles[] = {
+            { "C_SUV_01_F", "" }
+        };
+    };
+
     class tpc_general_dealership {
         side = "cop";
         conditions = "playerSide isEqualTo west";
@@ -300,12 +327,19 @@ class LifeCfgVehicles {
         };
     };
 
+    class C_IDAP_Offroad_01_F { // [IDAP] Offroad
+        vItemSpace = 65;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    }; 
+
     class O_G_Offroad_01_F { // [Syndikat] Offroad
         vItemSpace = 65;
         conditions = "";
         price = 16700;
         textures[] = {};
-    };
+    }; 
 
     class C_Offroad_02_unarmed_F { // MB 4WD
         vItemSpace = 60;
@@ -331,6 +365,13 @@ class LifeCfgVehicles {
                 "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa"
             }, "" }
         };
+    };
+
+    class C_IDAP_Offroad_02_unarmed_F { // [IDAP] MB 4WD
+        vItemSpace = 60;
+        conditions = "";
+        price = 0;
+        textures[] = {};
     };
 
     class I_C_Offroad_02_unarmed_F { // [Syndikat] MB 4WD
@@ -420,6 +461,13 @@ class LifeCfgVehicles {
         };
     };
 
+    class C_IDAP_Van_02_transport_F { // [IDAP] Van Transport
+        vItemSpace = 90;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
     class O_G_Van_02_transport_F { // [Syndikat] Van Transport
         vItemSpace = 90;
         conditions = "";
@@ -438,6 +486,13 @@ class LifeCfgVehicles {
         vItemSpace = 100;
         conditions = "";
         price = 51200;
+        textures[] = {};
+    };
+
+    class C_IDAP_Van_02_vehicle_F { // [IDAP] Van (Cargo)
+        vItemSpace = 100;
+        conditions = "";
+        price = 0;
         textures[] = {};
     };
 
@@ -618,6 +673,14 @@ class LifeCfgVehicles {
         price = 2675000;
         textures[] = {};
     };
+
+    class C_IDAP_Heli_Transport_02_F { // [IDAP] CH-49 Mohawk
+        vItemSpace = 245;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
 
     class B_Heli_Transport_03_unarmed_F { // CH-67 Huron (Unarmed) 
         vItemSpace = 460;

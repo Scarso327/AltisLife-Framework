@@ -43,6 +43,7 @@ Added:
     Map Information Key (Lewis)
     Information Centre in Georgetown (Lewis)
     Phone Booths Across the Map (Lewis)
+    International Development and Aid Project (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

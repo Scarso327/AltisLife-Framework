@@ -167,3 +167,4 @@ class CfgSettings {
 #include "CfgLevels.hpp"
 #include "CfgPerks.hpp"
 #include "CfgPaychecks.hpp"
+#include "CfgGathering.hpp"

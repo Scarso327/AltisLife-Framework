@@ -32,6 +32,7 @@ class FF_Core {
     class Actions {
         file = "FF\Actions";
         class unflipVehicle {};
+        class gatherItem {};
     };
 
     class Initialization_Sides {
@@ -156,12 +157,10 @@ class Life_Client_Core {
         class dpFinish {};
         class dropFishingNet {};
         class escortAction {};
-        class gather {};
         class getDPMission {};
         class gutAnimal {};
         class healHospital {};
         class impoundAction {};
-        class mine {};
         class packupSpikes {};
         class pickupItem {};
         class pickupMoney {};

@@ -1,14 +1,5 @@
 class CfgGather {
     class Resources {
-        class apple {
-            text = "Gathering apples...";
-            amount = 5;
-            zones[] = { "apple_area_1" };
-            item = "apple";
-            profession[] = { "Prof_Gathering", 1, 50 };
-            zoneSize = 30;
-        }; // Gather Profession NONE
-
         class mango {
             text = "Gathering mangos...";
             amount = 5;
@@ -131,15 +122,7 @@ Example 2:
             mined[] = {"coral"};
             zoneSize = 30;
         }; // Mining Profession Advanced
-
-        class tin_ore {
-            amount = 2;
-            zones[] = { "tin_area" };
-            item = "pickaxe";
-            mined[] = {{"tin_ore",0,100},{"uncut_opal",80,100},{"uncut_sapphire",85,100},{"uncut_ruby",88,100},{"uncut_emerald",93,100},{"uncut_diamond",97,100}};
-            zoneSize = 30;
-        }; // Mining Profession NONE
-
+        
         class copper_ore {
             amount = 2;
             zones[] = { "copper_area" };

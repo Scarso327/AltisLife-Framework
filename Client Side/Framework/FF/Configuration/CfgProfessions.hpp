@@ -11,7 +11,7 @@ class CfgProfessions {
         displayName = "Fishing";
         variable = "Prof_Fishing";
         description = "Fishing is a profession that is defined around the catching and trade of various types of fish from the different fishing grounds marked on the map.";
-        side = "Civ";
+        side = "Civilian";
         maxLevel = 500;
         levels[] = {
             {50, "Novice"},
@@ -25,7 +25,7 @@ class CfgProfessions {
         displayName = "Gathering";
         variable = "Prof_Gathering";
         description = "Gathering is a profession that is defined around the recovery of resources from various fields / plantations that are marked on the map.";
-        side = "Civ";
+        side = "Civilian";
         maxLevel = 500;
         levels[] = {
             {50, "Novice"},
@@ -39,7 +39,7 @@ class CfgProfessions {
         displayName = "Mining";
         variable = "Prof_Mining";
         description = "Mining is a profession that is defined around the excavation of resources from various mines that are marked on the map.";
-        side = "Civ";
+        side = "Civilian";
         maxLevel = 500;
         levels[] = {
             {50, "Novice"},
@@ -53,7 +53,7 @@ class CfgProfessions {
         displayName = "Processing";
         variable = "Prof_Processing";
         description = "Processing is a profession that is defined around the processing of various raw materials into useable materials at various processing sites around the map..";
-        side = "Civ";
+        side = "Civilian";
         maxLevel = 500;
         levels[] = {
             {50, "Novice"},
@@ -67,7 +67,7 @@ class CfgProfessions {
         displayName = "Cooking";
         variable = "Prof_Cooking";
         description = "Cooking is a profession that is defined around the cooking of different types of food gathered from around the map in various different ways.";
-        side = "Civ";
+        side = "Civilian";
         maxLevel = 500;
         levels[] = {
             {50, "Novice"},
@@ -81,7 +81,7 @@ class CfgProfessions {
         displayName = "Crafting";
         variable = "Prof_Crafting";
         description = "Crafting is a profession that is defined around the crafting of various items using materials gathered and collected from around the map.";
-        side = "Civ";
+        side = "Civilian";
         maxLevel = 500;
         levels[] = {
             {50, "Novice"},

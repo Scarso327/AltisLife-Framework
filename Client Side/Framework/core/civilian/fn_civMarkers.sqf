@@ -15,13 +15,11 @@ for "_i" from 0 to 1 step 0 do {
     {
         _members = units (group player);
         {
-            if !(_x isEqualTo player) then {
-                _marker = createMarkerLocal [format ["%1_marker",_x],visiblePosition _x];
-                _marker setMarkerColorLocal "ColorCivilian";
-                _marker setMarkerTypeLocal "Mil_dot";
-                _marker setMarkerTextLocal format ["%1", _x getVariable ["realname",name _x]];
-                _markers pushBack [_marker,_x];
-            };
+            _marker = createMarkerLocal [format ["%1_marker",_x],visiblePosition _x];
+            _marker setMarkerColorLocal "ColorCivilian";
+            _marker setMarkerTypeLocal "Mil_dot";
+            _marker setMarkerTextLocal format ["%1", _x getVariable ["realname",name _x]];
+            _markers pushBack [_marker,_x];
         } forEach _members;
 
         while {visibleMap} do
@@ -29,7 +27,7 @@ for "_i" from 0 to 1 step 0 do {
             {
                 private ["_unit"];
                 _unit = _x select 1;
-                if (!isNil "_unit" && !isNull _unit) then {
+                if (!isNil "_unit" && { !isNull _unit } && { ([player, "gps"] call FF(hasItem)) }) then {
                       (_x select 0) setMarkerPosLocal (visiblePosition _unit);
                 };
             } forEach _markers;

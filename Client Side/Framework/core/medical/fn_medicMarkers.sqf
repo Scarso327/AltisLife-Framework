@@ -23,14 +23,12 @@ if (visibleMap) then {
     } forEach allDeadMen;
 
     {
-        if !(_x isEqualTo player) then {
-            _markerss = createMarkerLocal [format ["%1_marker",_x],visiblePosition _x];
-            _markerss setMarkerColorLocal "ColorIndependent";
-            _markerss setMarkerTypeLocal "Mil_dot";
-            _markerss setMarkerTextLocal format ["%1", _x getVariable ["realname",name _x]];
+        _markerss = createMarkerLocal [format ["%1_marker",_x],visiblePosition _x];
+        _markerss setMarkerColorLocal "ColorIndependent";
+        _markerss setMarkerTypeLocal "Mil_dot";
+        _markerss setMarkerTextLocal format ["%1", _x getVariable ["realname",name _x]];
 
-            _markersMedecin pushBack [_markerss,_x];
-        };
+        _markersMedecin pushBack [_markerss,_x];
     } forEach _medics;
 
     //Loop through and create markers.
@@ -46,7 +44,7 @@ if (visibleMap) then {
         {
             private ["_unit"];
             _unit = _x select 1;
-            if (!isNil "_unit" && !isNull _unit) then {
+            if (!isNil "_unit" && { !isNull _unit } && { ([player, "gps"] call FF(hasItem)) }) then {
                 (_x select 0) setMarkerPosLocal (visiblePosition _unit);
             };
         } forEach _markersMedecin;

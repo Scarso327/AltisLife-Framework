@@ -5,6 +5,7 @@
     Description:
     Marks downed players on the map when it's open.
 */
+#include "..\..\script_macros.hpp"
 private ["_markers","_units","_medics"];
 _markers = [];
 _markersMedecin = [];
@@ -44,8 +45,13 @@ if (visibleMap) then {
         {
             private ["_unit"];
             _unit = _x select 1;
-            if (!isNil "_unit" && { !isNull _unit } && { ([player, "gps"] call FF(hasItem)) }) then {
-                (_x select 0) setMarkerPosLocal (visiblePosition _unit);
+            if (!isNil "_unit" && { !isNull _unit }) then {
+                if ([player, "gps"] call FF(hasItem)) then {
+                    (_x select 0) setMarkerAlphaLocal 1;
+                    (_x select 0) setMarkerPosLocal (visiblePosition _unit);
+                } else {
+                    (_x select 0) setMarkerAlphaLocal 0;
+                };
             };
         } forEach _markersMedecin;
         if (!visibleMap) exitWith {};

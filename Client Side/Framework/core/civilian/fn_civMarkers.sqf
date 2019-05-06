@@ -5,6 +5,7 @@
     Description:
     Add markers for civilians in groups.
 */
+#include "..\..\script_macros.hpp"
 private ["_markers","_members"];
 _markers = [];
 _members = [];

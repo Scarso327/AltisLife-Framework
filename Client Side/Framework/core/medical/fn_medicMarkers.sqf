@@ -5,6 +5,7 @@
     Description:
     Marks downed players on the map when it's open.
 */
+#include "..\..\script_macros.hpp"
 private ["_markers","_units","_medics"];
 _markers = [];
 _markersMedecin = [];

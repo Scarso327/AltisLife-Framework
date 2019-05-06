@@ -5,6 +5,7 @@
     Description:
     Marks cops on the map for other cops. Only initializes when the actual map is open.
 */
+#include "..\..\script_macros.hpp"
 private ["_markers","_cops"];
 _markers = [];
 _cops = [];

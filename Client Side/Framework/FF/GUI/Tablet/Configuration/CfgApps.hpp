@@ -39,7 +39,7 @@ class CfgApps {
     class Mobile {
         title = "Mobile";
         icon = "\a3\3den\data\Cfg3DEN\Comment\texture_ca.paa";
-        onButtonClick = "createDialog ""Life_cell_phone"";";
+        onButtonClick = "if ([player, ""comms""] call FF_fnc_hasItem) then { createDialog ""Life_cell_phone"" } else { hint ""You require a Phone (Radio) to access the mobile"" };";
         conditions = "";
         disableIF = "";
         tooltip = "Mobile";

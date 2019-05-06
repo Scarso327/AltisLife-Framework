@@ -181,7 +181,7 @@ class CfgVehicleStores {
         };
     };
 
-    class nhs_taa_dealership {
+    class tas_taa_dealership {
         side = "med";
         conditions = "playerSide isEqualTo independent && (license_med_taa1 || license_med_taa2 || license_med_taa3)";
         vehicles[] = {
@@ -191,6 +191,15 @@ class CfgVehicleStores {
             { "O_Heli_Light_02_unarmed_F", "license_med_taa2 || license_med_taa3" },
             { "I_Heli_Transport_02_F", "license_med_taa3" },
             { "O_Heli_Transport_04_medevac_F", "license_med_taa3" }
+        };
+    };
+
+    class tas_msv_dealership {
+        side = "med";
+        conditions = "playerSide isEqualTo independent";
+        vehicles[] = {
+            { "B_G_Boat_Transport_02_F", "call life_mediclevel >= 2" },
+            { "B_SDV_01_F", "call life_mediclevel >= 3" }
         };
     };
 };
@@ -675,7 +684,7 @@ class LifeCfgVehicles {
     };
 
     class C_IDAP_Heli_Transport_02_F { // [IDAP] CH-49 Mohawk
-        vItemSpace = 245;
+        vItemSpace = 0;
         conditions = "";
         price = 0;
         textures[] = {};

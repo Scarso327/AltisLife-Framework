@@ -684,7 +684,7 @@ class LifeCfgVehicles {
     };
 
     class C_IDAP_Heli_Transport_02_F { // [IDAP] CH-49 Mohawk
-        vItemSpace = 245;
+        vItemSpace = 0;
         conditions = "";
         price = 0;
         textures[] = {};

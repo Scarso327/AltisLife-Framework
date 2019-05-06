@@ -44,7 +44,7 @@ if (visibleMap) then {
         {
             private ["_unit"];
             _unit = _x select 1;
-            if (!isNil "_unit" && !isNull _unit) then {
+            if (!isNil "_unit" && { !isNull _unit } && { ([player, "gps"] call FF(hasItem)) }) then {
                 (_x select 0) setMarkerPosLocal (visiblePosition _unit);
             };
         } forEach _markersMedecin;

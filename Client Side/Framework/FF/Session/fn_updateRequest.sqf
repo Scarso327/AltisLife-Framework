@@ -20,10 +20,10 @@ _flag = switch (playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case
 } forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_flag] configClasses (missionConfigFile >> "CfgLicenses"));
 
 {
-    private _side = switch (playerSide) do {case west: {"Police"}; case independent: {"TAS"}; case civilian : {"Civ"}; default {"Unknown"};};
+    private _side = switch (playerSide) do {case west:{"Police"}; case civilian:{"Civilian"}; case independent:{"Medic"};};
     if((getText(_x >> "side")) isEqualTo _side) then {
         _varName = PROF_VARNAME(configName _x);
-        _professions pushBack [_varName,PROF_VALUE(configName _x)];
+        _professions pushBack [_varName,PROF_LVL(configName _x)];
     };
 } foreach ("true" configClasses (missionConfigFile >> "CfgProfessions"));
 

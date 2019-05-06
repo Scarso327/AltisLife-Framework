@@ -84,7 +84,7 @@ class CfgApps {
     class Professions {
         title = "Professions";
         icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayMain\profile_player_ca.paa";
-        onButtonClick = "";
+        onButtonClick = "[23700, ""Professions""] call FF_fnc_switchApp";
         conditions = "";
         disableIF = "";
         tooltip = "View Professions...";

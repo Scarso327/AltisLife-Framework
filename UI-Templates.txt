@@ -109,3 +109,16 @@ $[
 	[2205,"vehList",[1,"",["0.412344 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.175313 * safezoneW","0.429 * safezoneH"],[-1,-1,-1,-1],[1,1,1,1],[-1,-1,-1,-1],"","-1"],[]]
 ]
 */
+
+/* #Nosyru
+$[
+	1.063,
+	["asdasd",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[2201,"",[1,"",["0.283437 * safezoneW + safezoneX","0.236 * safezoneH + safezoneY","0.433125 * safezoneW","0.11 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2203,"",[1,"",["0.288594 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.0515625 * safezoneW","0.088 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,1],[-1,-1,-1,-1],"","-1"],[]],
+	[1100,"",[1,"<t size='2'>Profession Name</t>",["0.340156 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.139219 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1101,"",[1,"<t size='1'>Title</t>",["0.340156 * safezoneW + safezoneX","0.291 * safezoneH + safezoneY","0.139219 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2204,"",[1,"",["0.345312 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.299062 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2400,"",[1,"View",["0.649531 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.061875 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/

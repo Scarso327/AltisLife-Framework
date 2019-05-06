@@ -201,12 +201,7 @@ switch (_title) do {
 				};
 			};
 
-			// Work out different Y Values...
-			_yValues set[0, ((_yValues select 0) + INC)]; // Title...
-			_yValues set[1, ((_yValues select 1) + INC)]; // Description...
-			_yValues set[2, ((_yValues select 2) + INC)]; // Button...
-			_yValues set[3, ((_yValues select 3) + INC)]; // Cover...
-			_yValues set[4, ((_yValues select 4) + INC)]; // Required Text...
+			{ _yValues set[_forEachIndex, ((_yValues select _forEachIndex) + INC)] } forEach _yValues; // Work out different Y Values...
 
 			// Commit Changes...
 			_title ctrlCommit 0;
@@ -218,5 +213,80 @@ switch (_title) do {
 		} foreach (format ["'%1' in (getArray(_x >> 'sides')) || { count ((getArray(_x >> 'sides'))) <= 0 }", _side] configClasses (missionConfigFile >> "CfgPerks"));
 
 		[] call FF(updatePerks); // This will update our active perks...
+	};
+
+	case "Professions": {
+		private _display = findDisplay IDD_TABLET_MAIN;
+		private _scrollView = CONTROL(IDD_TABLET_MAIN, IDC_PROF_VIEW);
+
+		private _side = switch (playerSide) do {case west:{"Police"}; case civilian:{"Civilian"}; case independent:{"Medic"};};
+
+		private _baseIDC = IDC_TABLET_BASE;
+		private _yValues = [0.225,0.236,0.269,0.275];
+		#define INC 0.094
+
+		{
+			private _thisElement = [];
+			
+			private _curLevel = PROF_LVL(configName _x);
+			private _maxLevel = getNumber(_x >> "maxLevel");
+
+			// Create Background...
+			private _background = _display ctrlCreate ["Life_RscBackground", (_baseIDC + 1), _scrollView];
+			_background ctrlSetPosition [0.298906 * safezoneW + safezoneX, (_yValues select 0) * safezoneH + safezoneY, 0.433125 * safezoneW, 0.088 * safezoneH];
+			_background ctrlSetBackgroundColor [0,0,0,0.2];
+			_thisElement pushBack _background;
+
+			// Create Icon...
+			private _icon = _display ctrlCreate ["Life_RscBackground", (_baseIDC + 2), _scrollView];
+			_icon ctrlSetPosition [0.304062 * safezoneW + safezoneX, (_yValues select 1) * safezoneH + safezoneY, 0.04125 * safezoneW, 0.066 * safezoneH];
+			_icon ctrlSetBackgroundColor [0,0,0,1];
+			_thisElement pushBack _icon;
+
+			// Create Progress Background...
+			private _progressBack = _display ctrlCreate ["Life_RscBackground", (_baseIDC + 3), _scrollView];
+			_progressBack ctrlSetPosition [0.347312 * safezoneW + safezoneX, (_yValues select 2) * safezoneH + safezoneY, 0.293906 * safezoneW, 0.033 * safezoneH];
+			_progressBack ctrlSetBackgroundColor [0.7,0.7,0.7,0.3];
+			_thisElement pushBack _progressBack;
+
+			// Create Progress Bar...
+			private _progressBar = _display ctrlCreate ["Life_RscProgress", (_baseIDC + 4), _scrollView];
+			_progressBar ctrlSetPosition [0.347312 * safezoneW + safezoneX, (_yValues select 2) * safezoneH + safezoneY, 0.293906 * safezoneW, 0.033 * safezoneH];
+			_progressBar ctrlSetBackgroundColor [0.09,0.09,0.09,1];
+			_progressBar progressSetPosition (_curLevel / _maxLevel);
+			_thisElement pushBack _progressBar;
+
+			// Create XP Text...
+			private _XPText = _display ctrlCreate ["Life_RscStructuredText", (_baseIDC + 5), _scrollView];
+			_XPText ctrlSetPosition [0.347312 * safezoneW + safezoneX, (_yValues select 3) * safezoneH + safezoneY, 0.293906 * safezoneW, 0.033 * safezoneH];
+			_XPText ctrlSetStructuredText parseText format["<t align='center' valign='middle' size='1.15'>%1 / %2</t>", _curLevel, _maxLevel];
+			_thisElement pushBack _XPText;
+
+			// Create View Button...
+			private _button = _display ctrlCreate ["Life_RscButtonMenu", (_baseIDC + 6), _scrollView];
+			_button ctrlSetStructuredText parseText "<t align='center' valign='middle'>VIEW MORE</t>";
+			_button ctrlSetPosition [0.644374 * safezoneW + safezoneX, (_yValues select 2) * safezoneH + safezoneY, 0.0825 * safezoneW, 0.033 * safezoneH];
+			_thisElement pushBack _button;
+
+			// Create Title Text...
+			private _titleText = _display ctrlCreate ["Life_RscStructuredText", (_baseIDC + 7), _scrollView];
+			_titleText ctrlSetPosition [0.347312 * safezoneW + safezoneX, (_yValues select 1) * safezoneH + safezoneY, 0.195937 * safezoneW, 0.033 * safezoneH];
+			_titleText ctrlSetStructuredText parseText format["<t size='1.5'>%1</t>", toUpper(getText(_x >> "displayName"))];
+			_thisElement pushBack _titleText;
+
+			{ _yValues set[_forEachIndex, ((_yValues select _forEachIndex) + INC)] } forEach _yValues; // Work out different Y Values...
+
+			// Commit Changes...
+			_background ctrlCommit 0;
+			_titleText ctrlCommit 0;
+			_icon ctrlCommit 0;
+			_progressBack ctrlCommit 0;
+			_button ctrlCommit 0;
+			_progressBar ctrlCommit 0;
+			_XPText ctrlCommit 0;
+
+			_baseIDC = _baseIDC + (count (_thisElement)); // Increment by count for next row...
+			FF_createdElements pushBack _thisElement; // Save it to be deleted later...
+		} foreach (format ["'%1' isEqualTo (getText(_x >> 'side'))", _side] configClasses (missionConfigFile >> "CfgProfessions"));
 	};
 };

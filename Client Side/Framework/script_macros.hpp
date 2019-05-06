@@ -23,6 +23,10 @@
 #define setKiller(unit, killer) unit setVariable ["killer", killer, true]
 #define unsetKiller(unit) unit setVariable ["killer", objnull, true]
 
+// Profession Related...
+#define PROF_VARNAME(varName) format["%1",M_CONFIG(getText,"CfgProfessions",varName,"variable")]
+#define PROF_LVL(varName) GVAR_MNS [PROF_VARNAME(varName),0]
+
 //RemoteExec Macros
 #define RSERV 2 //Only server
 #define RCLIENT -2 //Except server
@@ -54,8 +58,6 @@
 #define ITEM_SELLPRICE(varName) M_CONFIG(getNumber,"CfgItems",varName,"sellPrice")
 #define ITEM_BUYPRICE(varName) M_CONFIG(getNumber,"CfgItems",varName,"buyPrice")
 #define ITEM_NAME(varName) M_CONFIG(getText,"CfgItems",varName,"displayName")
-#define PROF_VARNAME(varName) format["%1",M_CONFIG(getText,"CfgProfessions",varName,"variable")]
-#define PROF_VALUE(varName) GVAR_MNS [PROF_VARNAME(varName),0]
 
 //Condition Macros
 #define KINDOF_ARRAY(a,b) [##a,##b] call {_veh = _this select 0;_types = _this select 1;_res = false; {if (_veh isKindOf _x) exitWith { _res = true };} forEach _types;_res}

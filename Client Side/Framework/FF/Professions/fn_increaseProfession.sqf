@@ -31,7 +31,7 @@ private _levelUp = false;
 private _displayName = M_CONFIG(getText,"CfgProfessions",_prof,"displayName");
 private _maxLevel = M_CONFIG(getNumber,"CfgProfessions",_prof,"maxLevel");
 private _varName = PROF_VARNAME(_prof);
-private _curLevel = PROF_VALUE(_prof);
+private _curLevel = PROF_LVL(_prof);
 
 if (_curLevel isEqualTo _maxLevel) exitWith { SVAR_MNS [_varName,_maxLevel]; }; // Don't increase our level if we're already maxed out!
 

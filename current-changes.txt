@@ -44,6 +44,8 @@ Added:
     Information Centre in Georgetown (Lewis)
     Phone Booths Across the Map (Lewis)
     International Development and Aid Project (Lewis)
+    TAS Marine Assets (Lewis)
+
 
 Changed:
     Interaction Menu UI (Scarso)
@@ -92,6 +94,9 @@ Changed:
         - If sucessful, you will steal branded gold
     Diving Store Marker Colour (Lewis)
         - Green > Orenge
+    Personal GPS Location will now Display (Scarso)
+    A "Mobile Phone" (Radio) is required to use the phone system (Scarso)
+    A "Handheld GPS" (GPS) is required to use group map markers (Scarso)
     
 Removed:
     Welcome Notification Screen (Scarso)

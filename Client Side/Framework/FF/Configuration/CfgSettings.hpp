@@ -156,7 +156,6 @@ class CfgSettings {
 #include "CfgVehicles.hpp"
 #include "CfgItems.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgGather.hpp"
 #include "CfgSpawnPoints.hpp"
 #include "CfgProcess.hpp"
 #include "CfgHouses.hpp"

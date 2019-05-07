@@ -12,13 +12,13 @@ if (isNull _fish) exitWith {}; //Object passed is null?
 if (player distance _fish > 3.5) exitWith {};
 
 switch (true) do {
-    case ((typeOf _fish) isEqualTo "Salema_F"): {_typeName = localize "STR_ANIM_Salema"; _type = "raw_salema";};
-    case ((typeOf _fish) isEqualTo "Ornate_random_F") : {_typeName = localize "STR_ANIM_Ornate"; _type = "raw_ornate";};
-    case ((typeOf _fish) isEqualTo "Mackerel_F") : {_typeName = localize "STR_ANIM_Mackerel"; _type = "raw_mackerel";};
-    case ((typeOf _fish) isEqualTo "Tuna_F") : {_typeName = localize "STR_ANIM_Tuna"; _type = "raw_tuna";};
-    case ((typeOf _fish) isEqualTo "Mullet_F") : {_typeName = localize "STR_ANIM_Mullet"; _type = "raw_mullet";};
-    case ((typeOf _fish) isEqualTo "CatShark_F") : {_typeName = localize "STR_ANIM_Catshark"; _type = "raw_catshark";};
-    case ((typeOf _fish) isEqualTo "Turtle_F") : {_typeName = localize "STR_ANIM_Turtle"; _type = "raw_turtle";};
+    case ((typeOf _fish) isEqualTo "Salema_F"): {_typeName = "Salema"; _type = "raw_salema";};
+    case ((typeOf _fish) isEqualTo "Ornate_random_F") : {_typeName = "Ornate"; _type = "raw_ornate";};
+    case ((typeOf _fish) isEqualTo "Mackerel_F") : {_typeName = "Mackerel"; _type = "raw_mackerel";};
+    case ((typeOf _fish) isEqualTo "Tuna_F") : {_typeName = "Tuna"; _type = "raw_tuna";};
+    case ((typeOf _fish) isEqualTo "Mullet_F") : {_typeName = "Mullet"; _type = "raw_mullet";};
+    case ((typeOf _fish) isEqualTo "CatShark_F") : {_typeName = "Catshark"; _type = "raw_catshark";};
+    case ((typeOf _fish) isEqualTo "Turtle_F") : {_typeName = "Turtle"; _type = "raw_turtle";};
     default {_type = ""};
 };
 

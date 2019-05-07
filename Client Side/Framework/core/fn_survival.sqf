@@ -60,14 +60,16 @@ for "_i" from 0 to 1 step 0 do {
     if ((time - _waterTime) > 600 && {!life_god}) then {[] call _fnc_water; _waterTime = time;};
     if ((time - _foodTime) > 850 && {!life_god}) then {[] call _fnc_food; _foodTime = time;};
 
+    private _increase = [1, 1.1] select (HAS_PERK("muscleman"));
+    
     /* Adjustment of carrying capacity based on backpack changes */
     if (backpack player isEqualTo "") then {
-        life_maxWeight = LIFE_SETTINGS(getNumber,"default_maxWeight");
+        life_maxWeight = floor((LIFE_SETTINGS(getNumber,"default_maxWeight")) * _increase);
         _bp = backpack player;
     } else {
         if (!(backpack player isEqualTo "") && {!(backpack player isEqualTo _bp)}) then {
             _bp = backpack player;
-            life_maxWeight = LIFE_SETTINGS(getNumber,"default_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",_bp,"maximumload") / 4);
+            life_maxWeight = floor((LIFE_SETTINGS(getNumber,"default_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",_bp,"maximumload") / 4)) * _increase);
         };
     };
 

@@ -64,7 +64,13 @@ if (!(_backpack isEqualTo "")) then {_handle = [_backpack,true,false,false,false
 {player addItemToBackpack _x;} forEach (_bItems);
 {(backpackContainer player) addItemCargoGlobal [_x,1];} forEach (_bMags);
 
-life_maxWeight = if (backpack player isEqualTo "") then {LIFE_SETTINGS(getNumber,"default_maxWeight")} else {LIFE_SETTINGS(getNumber,"default_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",(backpack player),"maximumload") / 4)};
+private _increase = [1, 1.1] select (HAS_PERK("muscleman"));
+
+life_maxWeight = [
+    floor((LIFE_SETTINGS(getNumber,"default_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",_bp,"maximumload") / 4)) * _increase),
+    floor((LIFE_SETTINGS(getNumber,"default_maxWeight")) * _increase)
+] select (backpack player isEqualTo "");
+
 {
     [true,(_x select 0),(_x select 1)] call life_fnc_handleInv;
 } forEach (_yItems);

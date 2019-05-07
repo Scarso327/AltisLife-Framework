@@ -1,7 +1,8 @@
 class CfgPerks { 
+    // Coded...
     class muscleman {
         displayName = "Muscleman";
-        description = "Get a gym membership and build your muscles to the point where you can carry <t color = '#7300e6'>30%</t> more items!";
+        description = "Get a gym membership and build your muscles to the point where you can carry <t color = '#7300e6'>10%</t> more items!";
         sides[] = {};
         unlockLevel = 3;
     };

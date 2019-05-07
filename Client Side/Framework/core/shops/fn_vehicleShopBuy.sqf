@@ -71,7 +71,7 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
     };
 };
 
-if (_spawnPoint isEqualTo "") exitWith {hint "There is a vehicle currently blocking the spawn point..."; closeDialog 0;};
+if (_spawnPoint isEqualTo "") exitWith {hint "There is a vehicle currently blocking the spawn point..."; CASH = CASH + _purchasePrice; closeDialog 0;};
 
 //Spawn the vehicle and prep it.
 private "_vehicle";

@@ -46,6 +46,7 @@ Added:
     International Development and Aid Project (Lewis)
     TAS Marine Assets (Lewis)
     Join TPC-TAS Marine HQ (Lewis)
+    Full Night Vision Glasses (Scarso & Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

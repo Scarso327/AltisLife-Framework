@@ -50,6 +50,7 @@ Added:
     AAN World News (Lewis)
     Governor's Residence & Offices (Lewis)
     SO1 Protection Group (Lewis)
+    Wood Axe Item (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

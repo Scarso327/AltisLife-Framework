@@ -1583,6 +1583,28 @@ class CfgItems {
         conditions = "";
     };
 
+    class sugarCane {
+        variable = "sugarCane";
+        displayName = "Sugar Cane";
+        weight = 1;
+        buyPrice = 530;
+        sellPrice = 265;
+        illegal = false;
+        save = false;
+        taxed = true;
+        marketDisplay = true;
+        class dynmarket {
+            dynmaic = true;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {true, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
     class rice {
         variable = "rice";
         displayName = "Rice";

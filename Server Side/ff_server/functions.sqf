@@ -56,11 +56,11 @@ compileFinal "
     if (isNil ""_unit"" || isNil ""_group"") exitWith {};
     if (player isEqualTo _unit && (group player) == _group) then {
         life_my_gang = objNull;
-        [player] joinSilent (createGroup civilian);
         hint localize ""You have been kicked out of your group."";
         FF_gangID = -1;
         [9] call SOCK_fnc_updatePartial;
         player setVariable [""gangID"", FF_gangID, true];
+        [player] joinSilent (createGroup civilian);
     };
 ";
 

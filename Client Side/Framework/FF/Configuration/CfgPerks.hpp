@@ -70,6 +70,7 @@ class CfgPerks {
         unlockLevel = 15;
     };
 
+    // Coded...
     class wideTraveller {
         displayName = "Wide Traveller";
         description = "Get around and meet people! Gain the ability to spawn in more areas across the map.";

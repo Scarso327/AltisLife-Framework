@@ -12,6 +12,7 @@ FF_ProcessingVendor = _this select 0;
 
 private _side = switch (playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
 
+if (life_is_processing || life_action_inUse) exitWith {}; // Already Processing or doing something...
 if !(createDialog "RscProcessing") exitWith { systemChat "Failed to create dialog..." };
 
 private _list = CONTROL(5000, 5001);

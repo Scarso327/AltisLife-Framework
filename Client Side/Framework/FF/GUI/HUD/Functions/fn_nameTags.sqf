@@ -38,7 +38,7 @@ FF_fnc_nameTags_draw3d = addMissionEventHandler ["Draw3D", {
 						_subtitle = "Masked Player";
 					};
 
-					case (isDowned(_x) || { (_x getVariable ["isTazed", false]) } || { (_x getVariable ["isKnckedOut", false]) }): {
+					case (isDowned(_x) || { (_x getVariable ["isTazed", false]) } || { (_x getVariable ["isKnockedOut", false]) }): {
 						// If they're incapacitated we'll add an icon over their head...
 						_icon = [
 							"",

@@ -30,7 +30,7 @@ FF_effects pushBack [_effectBlur];
 
 disableUserInput true;
 player setUnconscious true;
-player setVariable ["isKnckedOut", life_isknocked, true];
+player setVariable ["isKnockedOut", life_isknocked, true];
 
 titleText[format ["%1 has knocked you out.",_who],"PLAIN"];
 
@@ -38,7 +38,7 @@ sleep 15;
 
 life_isknocked = false;
 player setUnconscious false;
-player setVariable ["isKnckedOut", life_isknocked, true];
+player setVariable ["isKnockedOut", life_isknocked, true];
 disableUserInput false;
 
 player setVariable ["robbed",false,true];

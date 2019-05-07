@@ -71,6 +71,12 @@ class CfgShops {
         items[] = { "bannana" };
     };
 
+    class sugar_trader {
+        name = "Sugar Trader";
+        conditions = "";
+        items[] = { "sugarCane" };
+    };
+
     class rice_trader {
         name = "Rice Trader";
         conditions = "";

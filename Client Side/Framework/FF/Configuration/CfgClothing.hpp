@@ -202,7 +202,7 @@ class CfgClothing {
 
     class idap_store {
         title = "IDAP Store";
-        conditions = "license_civ_go_idap";
+        conditions = "license_civ_idap";
         side = "civ";
         uniforms[] = {
             { "NONE", "Remove Uniform", 0, "" },
@@ -245,6 +245,51 @@ class CfgClothing {
         backpacks[] = {
             { "NONE", "Remove Backpacks", 0, "" },
             { "B_Messenger_IDAP_F", "", 0, "" }
+        };
+    };
+
+    class aan_store {
+        title = "AAN Store";
+        conditions = "license_civ_aan";
+        side = "civ";
+        uniforms[] = {
+            { "NONE", "Remove Uniform", 0, "" },
+            { "U_C_Journalist", "", 0, "" }
+        };
+        headgear[] = {
+            { "NONE", "Remove Headgear", 0, "" },
+            { "H_Cap_press", "", 0, "" },
+            { "H_PASGT_basic_blue_press_F", "", 0, "" },
+            { "H_PASGT_neckprot_blue_press_F", "", 0, "" }
+        };
+        goggles[] = {
+            { "NONE", "Remove Glasses", 0, "" },
+            { "G_Aviator", "", 0, "" },
+            { "G_Shades_Black", "", 0, "" },
+            { "G_Shades_Blue", "", 0, "" },
+            { "G_Shades_Green", "", 0, "" },
+            { "G_Shades_Red", "", 0, "" },
+            { "G_Spectacles", "", 0, "" },
+            { "G_Sport_Red", "", 0, "" },
+            { "G_Sport_Blackyellow", "", 0, "" },
+            { "G_Sport_BlackWhite", "", 0, "" },
+            { "G_Sport_Checkered", "", 0, "" },
+            { "G_Sport_Blackred", "", 0, "" },
+            { "G_Sport_Greenblack", "", 0, "" },
+            { "G_Squares_Tinted", "", 0, "" },
+            { "G_Squares", "", 0, "" },
+            { "G_Spectacles_Tinted", "", 0, "" },
+            { "H_WirelessEarpiece_F", "", 0, "" }
+        };
+        vests[] = {
+            { "NONE", "Remove Vest", 0, "" },
+            { "V_Press_F", "", 0, "" }
+        };
+        backpacks[] = {
+            { "NONE", "Remove Backpacks", 0, "" },
+            { "B_Messenger_Black_F", "", 0, "" },
+            { "B_Messenger_Coyote_F", "", 0, "" },
+            { "B_Messenger_Gray_F", "", 0, "" }
         };
     };
 

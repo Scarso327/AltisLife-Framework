@@ -47,6 +47,7 @@ Added:
     TAS Marine Assets (Lewis)
     Join TPC-TAS Marine HQ (Lewis)
     Full Night Vision Glasses (Scarso & Lewis)
+    AAN World News (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

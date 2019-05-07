@@ -58,19 +58,33 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_ship.paa";
                 conditions = "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3";
             };
+
+            class tpc_combinded {
+                displayName = "Joint Marine HQ";
+                spawnMarker = "cop_spawn_5";
+                icon = "\a3\ui_f\data\map\Markers\NATO\c_ship.paa";
+                conditions = "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3";
+            };
         };
 
         class Medic {
-            class nhs_georgetown {
+            class tas_georgetown {
                 displayName = "Georgetown Clinic";
                 spawnMarker = "medic_spawn_1";
                 icon = "\a3\ui_f\data\map\VehicleIcons\pictureLogic_ca.paa";
                 conditions = "";
             };
 
-            class taa_airbase {
+            class tas_combinded {
+                displayName = "Joint Marine HQ";
+                spawnMarker = "medic_spawn_2";
+                icon = "\a3\ui_f\data\map\Markers\NATO\c_ship.paa";
+                conditions = "";
+            };
+
+            class tas_airbase {
                 displayName = "Southen Airbase";
-                spawnMarker = "medic_spawn_1";
+                spawnMarker = "medic_spawn_3";
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";
                 conditions = "license_med_taa";
             };

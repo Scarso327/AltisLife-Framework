@@ -58,6 +58,9 @@ compileFinal "
         life_my_gang = objNull;
         [player] joinSilent (createGroup civilian);
         hint localize ""You have been kicked out of your group."";
+        FF_gangID = -1;
+        [9] call SOCK_fnc_updatePartial;
+        player setVariable [""gangID"", FF_gangID, true];
     };
 ";
 

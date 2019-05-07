@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=9;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3160;
+		nextID=3166;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5557.6973,60.64584,10537.256};
-		dir[]={0.92062306,-0.38840094,-0.042259719};
-		up[]={0.38852912,0.92125964,-0.01783503};
-		aside[]={-0.045859937,2.8903014e-007,-0.99904287};
+		pos[]={5762.021,86.979904,10381.118};
+		dir[]={-0.69606179,-0.70553559,0.13325694};
+		up[]={-0.69294918,0.70867503,0.13266093};
+		aside[]={0.18803324,9.8269084e-008,0.98218226};
 	};
 };
 binarizationWanted=0;
@@ -441,7 +441,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1749;
+		items=1754;
 		class Item0
 		{
 			dataType="Marker";
@@ -2155,6 +2155,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=143;
 			type="Land_ATM_02_malden_F";
@@ -2194,6 +2195,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=145;
 			type="Land_ATM_02_malden_F";
@@ -2233,6 +2235,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=148;
 			type="Land_ATM_02_malden_F";
@@ -2273,6 +2276,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=149;
 			type="Land_ATM_02_malden_F";
@@ -2312,6 +2316,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=156;
 			type="Land_ATM_01_malden_F";
@@ -2351,6 +2356,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=157;
 			type="Land_ATM_01_malden_F";
@@ -2391,6 +2397,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=158;
 			type="Land_ATM_01_malden_F";
@@ -2430,6 +2437,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=159;
 			type="Land_ATM_01_malden_F";
@@ -8031,6 +8039,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=637;
 			type="Land_ATM_02_malden_F";
@@ -23633,8 +23642,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -23643,10 +23652,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Custom";
+									value=0;
 								};
 							};
 						};
@@ -23690,8 +23699,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -23700,10 +23709,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Custom";
 								};
 							};
 						};
@@ -23866,7 +23875,7 @@ class Mission
 			};
 			id=1256;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.47782707;
+			atlOffset=0.47751427;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24784,7 +24793,7 @@ class Mission
 			};
 			id=1286;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.35315847;
+			atlOffset=0.3480444;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32232,7 +32241,7 @@ class Mission
 			};
 			id=1664;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.11811066;
+			atlOffset=0.11700058;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -53432,6 +53441,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2659;
 			type="Land_ATM_02_malden_F";
@@ -53481,6 +53491,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2661;
 			type="Land_ATM_02_malden_F";
@@ -53530,6 +53541,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2663;
 			type="Land_ATM_02_malden_F";
@@ -53579,6 +53591,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2665;
 			type="Land_ATM_02_malden_F";
@@ -53628,6 +53641,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2667;
 			type="Land_ATM_02_malden_F";
@@ -53679,6 +53693,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2669;
 			type="Land_ATM_02_malden_F";
@@ -53728,6 +53743,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2671;
 			type="Land_ATM_02_malden_F";
@@ -53777,6 +53793,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2673;
 			type="Land_ATM_02_malden_F";
@@ -53826,6 +53843,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2675;
 			type="Land_ATM_02_malden_F";
@@ -53875,6 +53893,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2677;
 			type="Land_ATM_02_malden_F";
@@ -53924,6 +53943,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2679;
 			type="Land_ATM_02_malden_F";
@@ -53973,6 +53993,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2681;
 			type="Land_ATM_02_malden_F";
@@ -54024,6 +54045,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2683;
 			type="Land_ATM_02_malden_F";
@@ -54074,6 +54096,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2685;
 			type="Land_ATM_02_malden_F";
@@ -54123,6 +54146,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2687;
 			type="Land_ATM_02_malden_F";
@@ -54174,6 +54198,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2689;
 			type="Land_ATM_02_malden_F";
@@ -54224,6 +54249,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2691;
 			type="Land_ATM_02_malden_F";
@@ -54274,6 +54300,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2693;
 			type="Land_ATM_02_malden_F";
@@ -54323,6 +54350,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2695;
 			type="Land_ATM_02_malden_F";
@@ -54373,6 +54401,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2697;
 			type="Land_ATM_02_malden_F";
@@ -54422,6 +54451,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2699;
 			type="Land_ATM_02_malden_F";
@@ -54471,6 +54501,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2701;
 			type="Land_ATM_02_malden_F";
@@ -54521,6 +54552,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2703;
 			type="Land_ATM_02_malden_F";
@@ -54571,6 +54603,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2705;
 			type="Land_ATM_02_malden_F";
@@ -54621,6 +54654,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2707;
 			type="Land_ATM_02_malden_F";
@@ -54672,6 +54706,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2709;
 			type="Land_ATM_02_malden_F";
@@ -54721,6 +54756,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2711;
 			type="Land_ATM_02_malden_F";
@@ -54770,6 +54806,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2713;
 			type="Land_ATM_02_malden_F";
@@ -54821,6 +54858,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2715;
 			type="Land_ATM_02_malden_F";
@@ -54870,6 +54908,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2717;
 			type="Land_ATM_02_malden_F";
@@ -56008,6 +56047,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2754;
 			type="Land_ATM_01_malden_F";
@@ -56131,17 +56171,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5798.2554,9.0941219,10373.607};
-				angles[]={0,0.1749128,0};
+				position[]={5798.2549,9.094532,10373.607};
+				angles[]={0,0.17491691,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_1";
 				disableSimulation=1;
 			};
 			id=2758;
 			type="Land_PhoneBooth_01_malden_F";
+			atlOffset=0.00041007996;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56171,18 +56214,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5727.8237,4.0103693,11254.194};
-				angles[]={0,6.1132445,0};
+				position[]={5727.8242,4.0103588,11254.194};
+				angles[]={0,6.1132426,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_2";
 				disableSimulation=1;
 			};
 			id=2762;
 			type="Land_PhoneBooth_01_malden_F";
-			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56212,13 +56256,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5592.8745,5.9244528,12490.285};
-				angles[]={0,0.9165976,0};
+				position[]={5592.875,5.9244528,12490.285};
+				angles[]={0,0.91659451,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_3";
 				disableSimulation=1;
 			};
 			id=2763;
@@ -56252,17 +56298,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6308.3584,2.605581,12821.919};
-				angles[]={0,2.6856632,0};
+				position[]={6308.3579,2.6054571,12821.919};
+				angles[]={0,2.6856604,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_4";
 				disableSimulation=1;
 			};
 			id=2764;
 			type="Land_PhoneBooth_01_malden_F";
+			atlOffset=0.10899997;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56292,18 +56341,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8384.4316,9.5733261,13655.583};
-				angles[]={0,0.95807964,0};
+				position[]={8384.4316,9.572855,13655.583};
+				angles[]={0,0.95808107,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_5";
 				disableSimulation=1;
 			};
 			id=2765;
 			type="Land_PhoneBooth_01_malden_F";
-			atlOffset=0.23247147;
+			atlOffset=0.23200035;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56334,12 +56385,14 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9334.3438,5.0329099,13607.942};
-				angles[]={0,0.34450021,0};
+				angles[]={0,0.34449309,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_6";
 				disableSimulation=1;
 			};
 			id=2766;
@@ -56374,12 +56427,14 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11596.415,7.9964571,13127.584};
-				angles[]={0,1.9235131,0};
+				angles[]={0,1.9235098,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_7";
 				disableSimulation=1;
 			};
 			id=2767;
@@ -56414,12 +56469,14 @@ class Mission
 			class PositionInfo
 			{
 				position[]={13242.584,3.596457,12042.119};
-				angles[]={0,3.5823872,0};
+				angles[]={0,3.5823929,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_8";
 				disableSimulation=1;
 			};
 			id=2768;
@@ -56454,12 +56511,14 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14371.752,15.748093,8755.2715};
-				angles[]={0,1.4375782,0};
+				angles[]={0,1.4375752,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_9";
 				disableSimulation=1;
 			};
 			id=2769;
@@ -56493,17 +56552,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13911.76,10.230345,8332.0352};
-				angles[]={0,4.7950287,0};
+				position[]={13911.76,10.230346,8332.0352};
+				angles[]={0,4.7950301,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_10";
 				disableSimulation=1;
 			};
 			id=2770;
 			type="Land_PhoneBooth_01_malden_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56533,17 +56595,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12605.385,24.451483,7607.4199};
-				angles[]={0,0.56560314,0};
+				position[]={12605.385,24.451443,7607.4199};
+				angles[]={0,0.56560886,0};
 			};
 			side="Empty";
-			flags=5;
+			flags=1;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_11";
 				disableSimulation=1;
 			};
 			id=2771;
 			type="Land_PhoneBooth_01_malden_F";
+			atlOffset=0.41300201;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56573,18 +56638,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10822.011,4.9464569,6468.6284};
-				angles[]={0,2.675662,0};
+				position[]={10822.011,4.9464569,6468.6279};
+				angles[]={0,2.6756597,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_12";
 				disableSimulation=1;
 			};
 			id=2772;
 			type="Land_PhoneBooth_01_malden_F";
-			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56615,17 +56681,18 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7962.7769,5.3964567,7593.6519};
-				angles[]={0,1.1954683,0};
+				angles[]={0,1.1954633,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_13";
 				disableSimulation=1;
 			};
 			id=2773;
 			type="Land_PhoneBooth_01_malden_F";
-			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56655,13 +56722,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7375.5366,3.6400411,7986.9253};
-				angles[]={0,0.34318486,0};
+				position[]={7375.5371,3.6400509,7986.9248};
+				angles[]={0,0.34318408,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_14";
 				disableSimulation=1;
 			};
 			id=2774;
@@ -56695,13 +56764,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5088.1167,3.7164571,8707.6201};
-				angles[]={0,4.7184238,0};
+				position[]={5088.1172,3.7164571,8707.6201};
+				angles[]={0,4.7184281,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_15";
 				disableSimulation=1;
 			};
 			id=2775;
@@ -56735,13 +56806,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5259.8027,3.2564571,10028.37};
-				angles[]={0,3.1225367,0};
+				position[]={5259.8032,3.2564571,10028.37};
+				angles[]={0,3.1225338,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_16";
 				disableSimulation=1;
 			};
 			id=2776;
@@ -56775,17 +56848,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8871.6455,20.131746,10196.901};
-				angles[]={0,3.6134343,0};
+				position[]={8871.6465,20.132154,10196.901};
+				angles[]={0,3.6134424,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_17";
 				disableSimulation=1;
 			};
 			id=2777;
 			type="Land_PhoneBooth_01_malden_F";
+			atlOffset=0.00040245056;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56816,12 +56892,14 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11043.454,115.76289,9823.0957};
-				angles[]={0,5.0120206,0};
+				angles[]={0,5.0120273,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Phonebooth"",{ createDialog ""Life_cell_phone""; },"""",0,false,false,"""",'isNull objectParent player',5]";
+				name="phone_booth_18";
 				disableSimulation=1;
 			};
 			id=2778;
@@ -59815,6 +59893,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2872;
 			type="Land_ATM_02_malden_F";
@@ -59864,6 +59943,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2874;
 			type="Land_ATM_02_malden_F";
@@ -59913,6 +59993,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				init="this addAction[""Cash Point"",life_fnc_atmMenu,"""",0,false,false,"""",'isNull objectParent player',5]";
 			};
 			id=2876;
 			type="Land_ATM_02_malden_F";
@@ -60166,7 +60247,7 @@ class Mission
 		class Item1586
 		{
 			dataType="Marker";
-			position[]={8918,-0.55200005,16250};
+			position[]={8918,-0.55199999,16250};
 			name="informationcentre";
 			text="Information Centre";
 			type="c_unknown";
@@ -62789,7 +62870,7 @@ class Mission
 			position[]={13480.755,137.33,9581.2998};
 			name="idap_ground_spawn";
 			type="Empty";
-			angle=93.653969;
+			angle=93.653961;
 			id=3054;
 		};
 		class Item1687
@@ -63081,7 +63162,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5635.3066,-1.7888112,10570.121};
-				angles[]={0,4.7082386,-0};
+				angles[]={0,4.7082386,0};
 			};
 			side="Empty";
 			flags=1;
@@ -63163,7 +63244,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5619.3643,-1.7710891,10570.022};
-				angles[]={0,4.7082386,-0};
+				angles[]={0,4.7082386,0};
 			};
 			side="Empty";
 			flags=1;
@@ -63658,6 +63739,7 @@ class Mission
 			};
 			id=3105;
 			type="Land_Hedge_01_s_4m_F";
+			atlOffset=0.0050711632;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -63862,6 +63944,7 @@ class Mission
 			};
 			id=3114;
 			type="Land_Hedge_01_s_4m_F";
+			atlOffset=0.020999193;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -63892,7 +63975,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5665.6709,3.4300001,10585.192};
-				angles[]={-0,3.1833835,0};
+				angles[]={0,3.1833835,0};
 			};
 			side="Empty";
 			flags=4;
@@ -63908,7 +63991,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5647.7539,3.4300001,10585.921};
-				angles[]={-0,3.1833835,0};
+				angles[]={0,3.1833835,0};
 			};
 			side="Empty";
 			flags=4;
@@ -63924,7 +64007,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5656.3853,3.4269149,10585.417};
-				angles[]={-0,0.039915677,0};
+				angles[]={0,0.039915677,0};
 			};
 			side="Empty";
 			flags=4;
@@ -63940,7 +64023,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5669.6831,3.61373,10585.031};
-				angles[]={-0,3.1833758,0};
+				angles[]={0,3.1833758,0};
 			};
 			side="Empty";
 			flags=4;
@@ -63957,7 +64040,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5643.5176,3.51473,10586.056};
-				angles[]={-0,3.1833758,0};
+				angles[]={0,3.1833758,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64020,7 +64103,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5679.666,3.5014958,10571.057};
-				angles[]={-0,3.1796093,0};
+				angles[]={0,3.1796093,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64061,7 +64144,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5678.3003,3.8595912,10572.538};
-				angles[]={-0,4.7548838,0};
+				angles[]={0,4.7548838,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64102,7 +64185,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5679.9917,3.75351,10571.957};
-				angles[]={-0,0.18285185,0};
+				angles[]={0,0.18285185,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64143,7 +64226,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5682.001,4.0479736,10567.6};
-				angles[]={-0,2.4755676,0};
+				angles[]={0,2.4755676,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64154,6 +64237,7 @@ class Mission
 			};
 			id=3135;
 			type="MapBoard_Tanoa_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -64184,7 +64268,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5679.6216,3.3361342,10571.094};
-				angles[]={-0,3.1546032,0};
+				angles[]={0,3.1546032,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64225,7 +64309,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5679.9224,3.9318335,10571.231};
-				angles[]={-0,3.1724472,0};
+				angles[]={0,3.1724472,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64266,7 +64350,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5680.0244,4.1785793,10570.906};
-				angles[]={-0,2.8294291,0};
+				angles[]={0,2.8294291,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64277,6 +64361,7 @@ class Mission
 			};
 			id=3138;
 			type="Land_PCSet_01_screen_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -64307,7 +64392,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5679.5337,3.927532,10571.239};
-				angles[]={-0,3.302968,0};
+				angles[]={0,3.302968,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64348,7 +64433,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5679.5547,3.9563766,10571.26};
-				angles[]={-0,3.5468571,0};
+				angles[]={0,3.5468571,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64389,7 +64474,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5679.3335,3.9965086,10570.982};
-				angles[]={-0,0.34596726,0};
+				angles[]={0,0.34596726,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64521,7 +64606,7 @@ class Mission
 			};
 			id=3146;
 			type="Land_WoodenCounter_01_F";
-			atlOffset=10.601;
+			atlOffset=10.603634;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -64614,7 +64699,7 @@ class Mission
 			};
 			id=3149;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.14289451;
+			atlOffset=0.13984561;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -64953,7 +65038,7 @@ class Mission
 			};
 			id=3157;
 			type="Land_GH_Stairs_F";
-			atlOffset=-2.1037822;
+			atlOffset=-2.1037819;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -65017,6 +65102,119 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1749
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5682.4482,3.6673245,10572.523};
+				angles[]={0,0.56744146,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""TPC"", ""General Market""], ""tpc_market"", ""playerSide isEqualTo west""] call FF_fnc_setupMarket;  " \n "[this, [""TPC"", ""Clothing Store""], ""police_clothing"", ""playerSide isEqualTo west""] call FF_fnc_setupClothing; " \n "[this, [""TPC"", ""General Equipment""], ""tpc_general_store"", ""playerSide isEqualTo west""] call FF_fnc_setupShop; " \n " " \n "[this, [""TAS"", ""General Market""], ""tas_market"", ""playerSide isEqualTo indpendent""] call FF_fnc_setupMarket;  " \n "[this, [""TAS"", ""Clothing Store""], ""medic_clothing"", ""playerSide isEqualTo independent""] call FF_fnc_setupClothing; " \n "[this, [""TAS"", ""General Equipment""], ""tas_general_store"", ""playerSide isEqualTo independent""] call FF_fnc_setupShop;";
+				name="police_medic_general";
+				disableSimulation=1;
+			};
+			id=3160;
+			type="Land_InfoStand_V2_F";
+			atlOffset=0.098999977;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1750
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5669.6572,3.5683246,10576.176};
+				angles[]={0,1.6074308,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, [""TPC"", ""Vehicle Store""], [""tpc_general_dealership"",west,""police_medic_car_1"",""cop"",""Vehicle Store""], ""playerSide isEqualTo west""] call FF_fnc_setupVehicle;  " \n "[this, [""TAS"", ""Vehicle Store""], [""tas_general_dealership"",independent,""police_medic_car_1"",""med"",""Vehicle Store""], ""playerSide isEqualTo independent""] call FF_fnc_setupVehicle;";
+				name="police_medic_vehicles";
+				disableSimulation=1;
+			};
+			id=3161;
+			type="Land_InfoStand_V2_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1751
+		{
+			dataType="Marker";
+			position[]={5664.958,2.98,10576.577};
+			name="police_medic_car_1";
+			type="Empty";
+			angle=272.34296;
+			id=3162;
+		};
+		class Item1752
+		{
+			dataType="Marker";
+			position[]={5679.582,2.9805732,10561.03};
+			name="cop_spawn_5";
+			type="Empty";
+			angle=212.88425;
+			id=3163;
+			atlOffset=0.00057315826;
+		};
+		class Item1753
+		{
+			dataType="Marker";
+			position[]={5682.2603,2.98,10560.887};
+			name="medic_spawn_2";
+			type="Empty";
+			angle=183.57634;
+			id=3165;
 		};
 	};
 };

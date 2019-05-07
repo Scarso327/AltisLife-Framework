@@ -28,6 +28,13 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
                 conditions = "license_civ_idap";
             };
+
+            class civ_aan {
+                displayName = "AAN World News";
+                spawnMarker = "civ_spawn_aan";
+                icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
+                conditions = "license_civ_aan";
+            };
         };
 
         class Cop {
@@ -86,7 +93,7 @@ class CfgSpawnPoints {
                 displayName = "Southen Airbase";
                 spawnMarker = "medic_spawn_3";
                 icon = "\a3\ui_f\data\map\Markers\NATO\c_air.paa";
-                conditions = "license_med_taa";
+                conditions = "license_med_taa1 || license_med_taa2 || license_med_taa3";
             };
         };
     };

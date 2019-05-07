@@ -469,11 +469,21 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "ARV", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
-            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
+            { "Black", "civ", {
+                "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa"
+            }, "" },
+            { "White", "civ", {
+                "\a3\soft_f_orange\van_02\data\van_body_white_CO.paa"
+            }, "" },
+            { "Red", "civ", {
+                "\a3\soft_f_orange\van_02\data\van_body_Red_CO.paa"
+            }, "" },
+            { "Orange", "civ", {
+                "\a3\soft_f_orange\van_02\data\van_body_Orange_CO.paa"
+            }, "" },
+            { "AAN", "civ", {
+                "\a3\soft_f_orange\van_02\data\van_body_AAN_CO.paa"
+            }, "license_civ_aan" }
         };
     };
 

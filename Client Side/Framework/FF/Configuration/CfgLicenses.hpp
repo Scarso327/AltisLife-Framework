@@ -221,6 +221,14 @@ class CfgLicenses {
         side = "civ";
     };
 
+    class aan {
+        variable = "aan";
+        displayName = "AAN Membership";
+        price = 450000;
+        illegal = false;
+        side = "civ";
+    };
+
     // TPC - Specialised Officers
     class sfo1 {
         variable = "sfo1";

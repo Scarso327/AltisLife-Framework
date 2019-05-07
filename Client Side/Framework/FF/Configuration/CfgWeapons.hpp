@@ -10,6 +10,7 @@ class CfgWeapons {
             { "ItemWatch", "Wrist Watch", 60, 30, "" },
             { "Binocular", "Binoculars", 270, 135, "" },
             { "NVGoggles", "Night Vision Goggles", 5000, 0, "" },
+            { "G_Tactical_Clear", "Night Vision Classes", 20000, 0, "" },
             { "FirstAidKit", "First Aid Kit", 500, 250, "" },
             { "ToolKit", "Toolkit", 1500, 750, "" }
         };
@@ -74,6 +75,7 @@ class CfgWeapons {
             { "ItemWatch", "Wrist Watch", 60, 30, "" },
             { "Binocular", "Binoculars", 270, 135, "" },
             { "NVGoggles", "Night Vision Goggles", 5000, 0, "" },
+            { "G_Tactical_Clear", "Night Vision Classes", 20000, 0, "" },
             { "FirstAidKit", "First Aid Kit", 500, 250, "" },
             { "ToolKit", "Toolkit", 1500, 750, "" },
             { "hgun_Pistol_01_F", "PM 9 mm", 11000, 5500, "" },
@@ -113,6 +115,7 @@ class CfgWeapons {
             { "ItemWatch", "Wrist Watch", 60, 30, "" },
             { "Binocular", "Binoculars", 270, 135, "" },
             { "NVGoggles", "Night Vision Goggles", 5000, 0, "" },
+            { "G_Tactical_Clear", "Night Vision Classes", 20000, 0, "" },
             { "FirstAidKit", "First Aid Kit", 500, 250, "" },
             { "ToolKit", "Toolkit", 1500, 750, "" },
             { "hgun_Pistol_01_F", "PM 9 mm", 11000, 5500, "" },
@@ -169,10 +172,11 @@ class CfgWeapons {
             { "Binocular", "Binoculars", 0, -1, "call life_coplevel >= 1" },
             { "Rangefinder", "Rangefinder", 0, -1, "call life_coplevel >= 2" },
             { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "call life_coplevel >= 1" },
-            { "FirstAidKit", "First Aid Kit", 0, 0, "call life_coplevel >= 1" },
+            { "G_Tactical_Clear", "Night Vision Classes", 0, -1, "call life_coplevel >= 2" },
+            { "FirstAidKit", "First Aid Kit", 0, -1, "call life_coplevel >= 1" },
             { "ToolKit", "Toolkit", 0, -1, "call life_coplevel >= 1" },
             { "HandGrenade_Stone", "Flashbang Grenade", 0, -1, "license_cop_sfo2 || license_cop_sfo3" },
-            { "hgun_Pistol_heavy_01_F", "Taser Pistol", 0, 0, "call life_coplevel >= 1" },
+            { "hgun_Pistol_heavy_01_F", "Taser Pistol", 0, -1, "call life_coplevel >= 1" },
             { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "call life_coplevel >= 2" },
             { "SMG_05_F", "Protector 9 mm", 0, -1, "call life_coplevel >= 2" },
             { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "call life_coplevel >= 4" },
@@ -220,14 +224,15 @@ class CfgWeapons {
             { "ItemCompass", "Compass", 0, -1, "call life_mediclevel >= 1" },
             { "ItemWatch", "Wrist Watch", 0, -1, "call life_mediclevel >= 1" },
             { "Binocular", "Binoculars", 0, -1, "call life_mediclevel >= 1" },
-            { "NVGoggles", "Night Vision Goggles", 0, -1, "call life_mediclevel >= 2" },
-            { "FirstAidKit", "First Aid Kit", 0, 0, "call life_mediclevel >= 1" },
+            { "NVGoggles", "Night Vision Goggles", 0, -1, "call life_mediclevel >= 1" },
+            { "G_Tactical_Clear", "Night Vision Classes", 0, -1, "call life_mediclevel >= 2" },
+            { "FirstAidKit", "First Aid Kit", 0, -1, "call life_mediclevel >= 1" },
             { "ToolKit", "Toolkit", 0, -1, "call life_mediclevel >= 1" },
-            { "hgun_Pistol_Signal_F", "Starter Pistol", 0, 0, "call life_mediclevel >= 4" }
+            { "hgun_Pistol_Signal_F", "Starter Pistol", 0, -1, "call life_mediclevel >= 4" }
         };
         mags[] = {
-            { "6Rnd_GreenSignal_F", "6Rnd Green Single Mag", 0, 0, "call life_mediclevel >= 4" },
-            { "6Rnd_RedSignal_F", "6Rnd Red Single Mag", 0, 0, "call life_mediclevel >= 4" }
+            { "6Rnd_GreenSignal_F", "6Rnd Green Single Mag", 0, -1, "call life_mediclevel >= 4" },
+            { "6Rnd_RedSignal_F", "6Rnd Red Single Mag", 0, -1, "call life_mediclevel >= 4" }
         };
         accs[] = {};
     };

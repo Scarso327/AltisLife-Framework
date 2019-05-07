@@ -65,7 +65,7 @@ class CfgProcess {
 
     class mullet {
         MaterialsReq[] = {{"raw_mullet",1}};
-        MaterialsGive[] = {{"raw_mullet",1}};
+        MaterialsGive[] = {{"cooked_mullet",1}};
         Text = "Cooking Mullet...";
         RequiredLicense = "fish";
         NoLicenseCost = 300;

@@ -43,6 +43,17 @@ class CfgGathering {
 		zoneSize = 30;
 	};
 
+	class sugar {
+		text = "Gathering sugar...";
+		amount = 5; 
+		zones[] = { "sugar_area" };
+		profession[] = { "Prof_Gathering", 50, 1, 50 }; // PROFESSION, REQUIRED LEVEL, INCREASE AMOUNT, CHANCE OF INCREASE
+		gathered = "sugarCane";
+		gems[] = {};
+		item = "";
+		zoneSize = 30;
+	};
+
 	class rice {
 		text = "Gathering rice...";
 		amount = 5; 

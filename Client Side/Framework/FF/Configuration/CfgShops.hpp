@@ -32,7 +32,7 @@ class CfgShops {
     class fish_market {
         name = "Fish Market";
         conditions = "";
-        items[] = { "raw_salema", "cooked_salema", "raw_ornate", "cooked_ornate", "raw_macherel","cooked_mackerel","cooked_tuna", "raw_mullet", "cooked_mullet", "raw_catshark", "cooked_catshark" }; 
+        items[] = { "raw_salema", "cooked_salema", "raw_ornate", "cooked_ornate", "raw_mackerel", "cooked_mackerel", "raw_tuna", "cooked_tuna", "raw_mullet", "cooked_mullet", "raw_catshark", "cooked_catshark" }; 
     };
 
     class local_pub {

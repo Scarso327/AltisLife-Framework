@@ -227,29 +227,36 @@ class LifeCfgVehicles {
             { "Black", "civ", {
                 "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_black_co.paa"
             }, "" },
+            { "White", "civ", {
+                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_white_co.paa"
+            }, "" },
             { "Blue", "civ", {
                 "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_blue_co.paa"
             }, "" },
             { "Red", "civ", {
                 "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_red_co.paa"
-            }, "" },
-            { "White", "civ", {
-                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_white_co.paa"
-            }, "" },
-            { "Digi Green", "civ", {
-                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_indp_co.paa"
-            }, "" },
-            { "Hunter Camo", "civ", {
-                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
             }, "" }
         };
     };
 
-    class O_Quadbike_01_F { // [Syndikat/Black Market] Quad Bike
+    class O_Quadbike_01_F { // [Syndikat] Quad Bike
         vItemSpace = 25;
         conditions = "";
         price = 1500;
-        textures[] = {};
+        textures[] = {
+            { "Digi Green", "civ", {
+                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_indp_co.paa"
+            }, "license_civ_syndikat" },
+            { "Digi Sand", "civ", {
+                "\A3\Soft_F\Quadbike_01\Data\quadbike_01_opfor_co.paa"
+            }, "license_civ_syndikat" },
+            { "Hunter Camo", "civ", {
+                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
+            }, "license_civ_syndikat" },
+            { "Marsh Camo", "civ", {
+                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
+            }, "license_civ_syndikat" }
+        };
     };
 
     class B_G_Quadbike_01_F { // [Chop Shop] Quad Bike
@@ -264,20 +271,8 @@ class LifeCfgVehicles {
         conditions = "";
         price = 12500;
         textures[] = {
-            { "Beige", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa"
-            }, "" },
-            { "Green", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa"
-            }, "" },
-            { "Blue", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa"
-            }, "" },
-            { "Dark Blue", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa"
-            }, "" },
-            { "Yellow", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa"
+            { "Black", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
             }, "" },
             { "White", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa"
@@ -285,14 +280,21 @@ class LifeCfgVehicles {
             { "Grey", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa"
             }, "" },
-            { "Black", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
+            { "Light Blue", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa"
             }, "" },
-            { "ARV", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
-            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
+            { "Dark Blue", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa"
+            }, "" },
+            { "Green", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa"
+            }, "" },
+            { "Yellow", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa"
+            }, "" },
+            { "Beige", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa"
+            }, "" }
         };
     };
 
@@ -301,29 +303,29 @@ class LifeCfgVehicles {
         conditions = "";
         price = 16700;
         textures[] = {
-            { "Red", "civ", {
-                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
-                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa"
-            }, "" },
-            { "Yellow", "civ", {
-                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa",
-                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa"
-            }, "" },
             { "White", "civ", {
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa",
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa"
             }, "" },
-            { "Blue", "civ", {
-                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa",
-                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa"
+            { "Light Red", "civ", {
+                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
+                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa"
             }, "" },
             { "Dark Red", "civ", {
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa",
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa"
             }, "" },
-            { "Blue / White", "civ", {
+            { "Light Blue", "civ", {
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa",
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa"
+            }, "" },
+            { "Dark Blue", "civ", {
+                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa",
+                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa"
+            }, "" },
+            { "Yellow", "civ", {
+                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa",
+                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa"
             }, "" },
             { "Police", "cop", {
                 "data\textures\Police\Cars\Police_offroad.paa"
@@ -358,6 +360,12 @@ class LifeCfgVehicles {
             { "Black", "civ", {
                 "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa"
             }, "" },
+            { "White", "civ", {
+                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa"
+            }, "" },
+            { "Red", "civ", {
+                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa"
+            }, "" },
             { "Blue", "civ", {
                 "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa"
             }, "" },
@@ -367,12 +375,9 @@ class LifeCfgVehicles {
             { "Orange", "civ", {
                 "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa"
             }, "" },
-            { "Red", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa"
-            }, "" },
-            { "White", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa"
-            }, "" }
+            { "ARV", "cop", {
+                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa"
+            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };
 
@@ -390,11 +395,14 @@ class LifeCfgVehicles {
         textures[] = {
             { "Green", "civ", {
                 "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa"
+            }, "" },
+            { "Brown", "civ", {
+                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa"
             }, "" }
         };
     };
 
-    class I_C_Offroad_02_LMG_F { // [Syndika] MB 4WD (LMG)
+    class I_C_Offroad_02_LMG_F { // [Syndikat] MB 4WD (LMG)
         vItemSpace = 0;
         conditions = "";
         price = 350000;
@@ -406,22 +414,26 @@ class LifeCfgVehicles {
         conditions = "";
         price = 31900;
         textures[] = {
+            { "Black", "civ", {
+                "\A3\soft_f_Gamma\SUV_01\Data\SUV_01_ext_02_CO.paa"
+            }, "" },
+            { "White", "civ", {
+                "\A3\soft_f_Gamma\SUV_01\Data\SUV_01_ext_03_CO.paa"
+            }, "" },
             { "Dark Red", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
-            }, "" },
-            { "Silver", "civ", {
-                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa"
             }, "" },
             { "Orange", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             }, "" },
+            { "God Pink", "civ", {
+                "\A3\soft_f_Gamma\SUV_01\Data\SUV_01_ext_as.paa"
+            }, "call life_adminlevel isEqualTo 5" },
             { "Police", "cop", {
                 "data\textures\Police\Cars\Police_SUV_White.paa"
             }, "" },
             { "ARV", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+                "\A3\soft_f_Gamma\SUV_01\Data\SUV_01_ext_02_CO.paa"
             }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
         };
     };
@@ -431,29 +443,24 @@ class LifeCfgVehicles {
         conditions = "";
         price = 57800;
         textures[] = {
-            { "Red", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa"
-            }, "" },
-            { "Dark Blue", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa"
-            }, "" },
-            { "Orange", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa"
-            }, "" },
             { "Black / White", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa"
             }, "" },
-            { "Beige", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa"
+            { "Blue / Red", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa"
             }, "" },
-            { "Green", "civ", {
+            { "Rividing Red", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa"
+            }, "" },
+            { "Gorgeous Green", "civ", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             }, "" },
-            { "ARV", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
-            }, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" }
+            { "Orange / Black", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa"
+            }, "" },
+            { "Basic Beige", "civ", {
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa"
+            }, "" }
         };
     };
 

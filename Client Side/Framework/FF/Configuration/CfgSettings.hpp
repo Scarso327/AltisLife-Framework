@@ -93,6 +93,7 @@ class CfgSettings {
     clothing_noTP = false;
     clothing_box = true;
     clothing_masks[] = {"H_RacingHelmet_1_black_F", "H_RacingHelmet_1_blue_F", "H_RacingHelmet_1_green_F", "H_RacingHelmet_1_orange_F", "H_RacingHelmet_1_red_F", "H_RacingHelmet_1_white_F", "H_RacingHelmet_1_yellow_F", "G_Balaclava_blk", "G_Balaclava_combat", "G_Balaclava_lowprofile", "G_Balaclava_oli", "G_Bandanna_aviator", "H_BandMask_beast", "H_BandMask_blk", "H_BandMask_khk", "G_Bandanna_oli", "G_Bandanna_shades", "G_Bandanna_sport", "G_Bandanna_tan", "G_Balaclava_TI_G_blk_F", "G_Balaclava_TI_G_blk_F"};
+    fullnightvision[] = { "G_Tactical_Clear" };
 
     /* Player Job System Configurations */
     delivery_points[] = {};

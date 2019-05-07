@@ -169,6 +169,18 @@ switch (_code) do {
         };
     };
 
+    // Fullscreen Nightvision...
+    case ((actionKeys "NightVision") select 0): {
+        if (cameraView isEqualTo "GUNNER" || { !((goggles player) in (LIFE_SETTINGS(getArray,"fullnightvision"))) } ) exitWith {};
+
+        switch (currentVisionMode player) do {
+            case 0: { player action ["nvGoggles", player] };
+            case 1: { player action ["nvGogglesOff", player] };
+        };
+
+        _handled = true;
+    };
+
     //Restraining (Shift + R)
     case 19: {
         if (isDowned(player)) exitWith {};

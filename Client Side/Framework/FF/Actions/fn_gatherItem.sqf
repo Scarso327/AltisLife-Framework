@@ -90,7 +90,12 @@ for "_i" from 0 to 1 step 0 do {
 
     uiSleep 0.5;
 
-    _cP = _cP + 0.01;
+    private _increase = 0.01;
+    private _level = PROF_LVL(_profZone);
+    if (_level > 0) then { _increase = 0.01 + (_level / 2000) };
+
+    _cP = _cP + _increase;
+
     _progress progressSetPosition _cP;
     _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%", _title];
     if (_cP >= 1) exitWith {};

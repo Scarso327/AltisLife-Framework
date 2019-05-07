@@ -186,7 +186,6 @@ class Life_Client_Core {
     class Admin {
         file = "core\admin";
         class adminCompensate {};
-        class adminDebugCon {};
         class adminFreeze {};
         class admingetID {};
         class adminGodMode {};

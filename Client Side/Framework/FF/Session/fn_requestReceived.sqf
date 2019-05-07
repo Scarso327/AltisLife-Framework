@@ -124,4 +124,10 @@ if (count (_this select (_count - 1)) > 0) then {
     {life_vehicles pushBack _x;} forEach (_this select (_count - 1));
 };
 
+// Check Perks...
+{
+    if !(isClass (missionConfigFile >> "CfgPerks" >> _x)) then { FF_Perks deleteAt _forEachIndex }; // This perk does not exist...
+} forEach FF_Perks;
+[8] call SOCK_fnc_updatePartial; // Update our perks...
+
 life_session_completed = true;

@@ -24,9 +24,14 @@ if ((_itemInfo select 6) != "CfgVehicles") then {
 if (_bad != "") exitWith {hint _bad};
 
 if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
-    CASH = CASH + _price;
+    if (playerSide isEqualTo civilian) then {
+        CASH = CASH + _price;
+        hint parseText format ["You sold a %1 for <t color='#8cff9b'>£%2</t>",_itemInfo select 1,[_price] call life_fnc_numberText];
+    } else {
+        hint "As a public servant, the government has taken the profits from your sale.";
+    };
+
     [_item,false] call life_fnc_handleItem;
-    hint parseText format ["You sold a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt;",_itemInfo select 1,[_price] call life_fnc_numberText];
     [nil,(uiNamespace getVariable ["Weapon_Shop_Filter",0])] call life_fnc_weaponShopFilter; //Update the menu.
 } else {
     private _altisArray = ["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"];

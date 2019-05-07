@@ -102,10 +102,14 @@ _cP = 0.01;
 
 life_is_processing = true;
 
+private _increase = 0.01;
+private _level = PROF_LVL("Prof_Processing");
+if (_level > 0) then { _increase = 0.01 + (_level / 2000) };
+
 if (_hasLicense) then {
     for "_i" from 0 to 1 step 0 do {
         uiSleep  0.28;
-        _cP = _cP + 0.01;
+        _cP = _cP + _increase;
         _progress progressSetPosition _cP;
         _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
         if (_cP >= 1) exitWith {};
@@ -131,7 +135,7 @@ if (_hasLicense) then {
 
     for "_i" from 0 to 1 step 0 do {
         uiSleep  0.9;
-        _cP = _cP + 0.01;
+        _cP = _cP + _increase;
         _progress progressSetPosition _cP;
         _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
         if (_cP >= 1) exitWith {};

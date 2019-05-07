@@ -117,16 +117,6 @@ class life_admin_menu {
             h = 0.022 * safezoneH;
         };
 
-        class RscButtonMenu_2409: Life_RscButtonMenu {
-            idc = 2911;
-            text = "Debug";
-            onButtonClick = "[] call life_fnc_adminDebugCon;";
-            x = 0.613437 * safezoneW + safezoneX;
-            y = 0.676 * safezoneH + safezoneY;
-            w = 0.061875 * safezoneW;
-            h = 0.022 * safezoneH;
-        };
-
         class PlayerList_Admin: Life_RscListBox {
             idc = 2902;
             text = "";

@@ -39,7 +39,6 @@ life_save_gear = [];
 life_container_activeObj = objNull;
 life_disable_getIn = false;
 life_disable_getOut = false;
-life_admin_debug = false;
 life_markers = false;
 life_markers_active = false;
 life_canpay_bail = true;

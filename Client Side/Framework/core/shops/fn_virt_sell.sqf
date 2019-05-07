@@ -23,8 +23,12 @@ if (HAS_PERK("sweetTalker")) then { _price = _price * 1.1 }; // Increase sell pr
 _price = (_price * _amount);
 _name = M_CONFIG(getText,"CfgItems",_type,"displayName");
 if ([false,_type,_amount] call life_fnc_handleInv) then {
-    hint format ["You sold %1 %2 for £%3.",_amount,_name,[_price] call life_fnc_numberText];
-    CASH = CASH + _price;
+    if (playerSide isEqualTo civilian) then {
+        hint format ["You sold %1 %2 for £%3.",_amount,_name,[_price] call life_fnc_numberText];
+        CASH = CASH + _price;
+    } else {
+        hint "As a public servant, the government has taken the profits from your sale.";
+    };
     [0] call SOCK_fnc_updatePartial;
     [] call life_fnc_virt_update;
 };

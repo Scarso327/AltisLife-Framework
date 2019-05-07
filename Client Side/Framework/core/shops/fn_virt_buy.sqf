@@ -60,7 +60,7 @@ if ([true,_type,_amount] call life_fnc_handleInv) then {
             hint format ["You bought %1 %2 for £%3.",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
             CASH = CASH - _price * _amount;
         } else {
-            hint "As a public servant, the government has covered the costs of your equipment."
+            hint "As a public servant, the government has covered the costs of your equipment.";
         };
     };
     [] call life_fnc_virt_update;

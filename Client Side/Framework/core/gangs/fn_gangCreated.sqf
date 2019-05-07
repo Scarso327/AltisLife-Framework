@@ -6,7 +6,6 @@
     Description:
     Tells the player that the gang is created and throws him into it.
 */
-private "_group";
 life_action_gangInUse = nil;
 
 if (BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
@@ -18,3 +17,7 @@ BANK = BANK - LIFE_SETTINGS(getNumber,"gang_price");
 [1] call SOCK_fnc_updatePartial;
 
 hint format ["You have created the gang %1 for £%2",(group player) getVariable "gang_name",[(LIFE_SETTINGS(getNumber,"gang_price"))] call life_fnc_numberText];
+
+FF_gangID = (group player) getVariable "gang_id";
+[9] call SOCK_fnc_updatePartial;
+player setVariable ["gangID", FF_gangID, true];

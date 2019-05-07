@@ -81,6 +81,12 @@ switch (_mode) do {
             case independent: {_query = format ["UPDATE players SET med_perks='%1' WHERE pid='%2'",_value,_uid];};
         };
     };
+
+    case 9: {
+        _value = [_this,2,0,[0]] call BIS_fnc_param;
+        _value = [_value] call DB_fnc_numberSafe;
+        _query = format ["UPDATE players SET gangid='%1' WHERE pid='%2'",_value,_uid];
+    };
 };
 
 if (_query isEqualTo "") exitWith {};

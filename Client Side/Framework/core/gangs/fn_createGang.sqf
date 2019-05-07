@@ -20,9 +20,9 @@ if (_badChar) exitWith {hint "You have invalid characters in your organisation n
 if (BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {hint format ["You do not have enough money in your bank account.\n\nYou lack: £%1",[((LIFE_SETTINGS(getNumber,"gang_price")) - BANK)] call life_fnc_numberText];};
 
 if (life_HC_isActive) then {
-    [player,getPlayerUID player,_gangName] remoteExec ["HC_fnc_insertGang",HC_Life];
+    [player,getPlayerUID player,_gangName,FF_gangID] remoteExec ["HC_fnc_insertGang",HC_Life];
 } else {
-    [player,getPlayerUID player,_gangName] remoteExec ["TON_fnc_insertGang",RSERV];
+    [player,getPlayerUID player,_gangName,FF_gangID] remoteExec ["TON_fnc_insertGang",RSERV];
 };
 
 if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {

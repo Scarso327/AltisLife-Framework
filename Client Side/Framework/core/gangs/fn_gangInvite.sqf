@@ -26,21 +26,10 @@ _action = [
 if (_action) then {
     [player] join _group;
 
-    if (life_HC_isActive) then {
-        [4,_group] remoteExecCall ["HC_fnc_updateGang",HC_Life];
-    } else {
-        [4,_group] remoteExecCall ["TON_fnc_updateGang",RSERV];
-    };
-
+    FF_gangID = _group getVariable "gang_id";
+    [9] call SOCK_fnc_updatePartial;
+    player setVariable ["gangID", FF_gangID, true];
 } else {
-    _grpMembers = _group getVariable "gang_members";
-    _grpMembers = _grpMembers - [getPlayerUID player];
-    _group setVariable ["gang_members",_grpMembers,true];
-
-    if (life_HC_isActive) then {
-        [4,_group] remoteExecCall ["HC_fnc_updateGang",HC_Life];
-    } else {
-        [4,_group] remoteExecCall ["TON_fnc_updateGang",RSERV];
-    };
-
+    _members = _members - [[(player getVariable ["realname", name player]), (getPlayerUID player)]];
+    group player setVariable ["gang_members",_members,true];
 };

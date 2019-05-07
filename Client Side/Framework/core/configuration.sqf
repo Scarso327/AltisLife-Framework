@@ -113,6 +113,8 @@ FF_ProcessingVendor = objNull;
 
 FF_endTime = 0;
 
+FF_gangID = -1;
+
 /*
     Master Array of items?
 */

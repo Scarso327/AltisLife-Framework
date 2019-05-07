@@ -20,7 +20,7 @@ _members = group player getVariable "gang_members";
 if (isNil "_members") exitWith {};
 if (!(_members isEqualType [])) exitWith {};
 
-_members = _members - [_unitID];
+_members = _members - [[(player getVariable ["realname", name player]), (getPlayerUID player)]];
 group player setVariable ["gang_members",_members,true];
 
 [_unit,group player] remoteExec ["TON_fnc_clientGangKick",_unit]; //Boot that bitch!

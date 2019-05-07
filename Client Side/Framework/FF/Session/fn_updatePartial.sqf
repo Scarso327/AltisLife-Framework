@@ -55,6 +55,10 @@ switch (_mode) do {
     case 8: {
         _packet set[2,FF_Perks];
     };
+
+    case 9: {
+        _packet set[2,FF_gangID];
+    };
 };
 
 if (life_HC_isActive) then {

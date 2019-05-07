@@ -16,3 +16,7 @@ hint "The leader has disbanded the group.";
 if (units _group isEqualTo []) then {
     deleteGroup _group;
 };
+
+FF_gangID = -1;
+[9] call SOCK_fnc_updatePartial;
+player setVariable ["gangID", FF_gangID, true];

@@ -124,6 +124,7 @@ player setVariable ["playerSurrender",false,true];
 player setVariable ["seatbelt",false,true];
 player setVariable ["isTazed", false, true];
 player setVariable ["isKnockedOut", false, true];
+player setVariable ["gangID", -1, true];
 
 diag_log "Past Settings Init";
 [] execFSM "core\fsm\client.fsm";

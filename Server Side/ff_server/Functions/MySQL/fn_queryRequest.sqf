@@ -24,7 +24,7 @@ private _query = switch (_side) do {
     // West - 14 entries returned
     case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, cop_professions, level, xp, cop_perks FROM players WHERE pid='%1'",_uid];};
     // Civilian - 13 entries returned
-    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, playtime, civ_professions, level, xp, civ_perks FROM players WHERE pid='%1'",_uid];};
+    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, playtime, civ_professions, level, xp, civ_perks, gangid FROM players WHERE pid='%1'",_uid];};
     // Independent - 13 entries returned
     case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, med_professions, level, xp, med_perks FROM players WHERE pid='%1'",_uid];};
 };
@@ -146,9 +146,12 @@ switch (_side) do {
         _houseData = _uid spawn TON_fnc_fetchPlayerHouses;
         waitUntil {scriptDone _houseData};
         _queryResult pushBack (missionNamespace getVariable [format ["houses_%1",_uid],[]]);
-        _gangData = _uid spawn TON_fnc_queryPlayerGang;
-        waitUntil{scriptDone _gangData};
-        _queryResult pushBack (missionNamespace getVariable [format ["gang_%1",_uid],[]]);
+
+        life_gangLoaded = false;
+        private _gangData = [parseNumber(_queryResult select 15)] call TON_fnc_queryPlayerGang;
+        waitUntil {life_gangLoaded};
+
+        _queryResult pushBack _gangData;
     };
 
     case independent: {

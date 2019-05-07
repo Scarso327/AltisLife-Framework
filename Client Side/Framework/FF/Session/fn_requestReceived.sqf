@@ -85,8 +85,11 @@ switch (playerSide) do {
 
         life_gangData = _this select (_count - 2);
         if !(count life_gangData isEqualTo 0) then {
+            FF_gangID = life_gangData select 0;
             [] spawn life_fnc_initGang;
         };
+        player setVariable ["gangID", FF_gangID, true];
+
         [] spawn life_fnc_initHouses;
 
         // Professions

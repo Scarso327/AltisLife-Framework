@@ -20,7 +20,6 @@ switch (_mode) do {
     case 0: {
         _bank = [(_group getVariable ["gang_bank",0])] call DB_fnc_numberSafe;
         _maxMembers = _group getVariable ["gang_maxMembers",8];
-        _members = [(_group getVariable "gang_members")] call DB_fnc_mresArray;
         _owner = _group getVariable ["gang_owner",""];
         if (_owner isEqualTo "") exitWith {};
 
@@ -39,20 +38,6 @@ switch (_mode) do {
         _owner = _group getVariable ["gang_owner",""];
         if (_owner isEqualTo "") exitWith {};
         _query = format ["UPDATE gangs SET owner='%1' WHERE id='%2'",_owner,_groupID];
-    };
-
-    case 4: {
-        _members = _group getVariable "gang_members";
-        if (count _members > (_group getVariable ["gang_maxMembers",8])) then {
-            _membersFinal = [];
-            for "_i" from 0 to _maxMembers -1 do {
-                _membersFinal pushBack (_members select _i);
-            };
-        } else {
-            _membersFinal = _group getVariable "gang_members";
-        };
-        _membersFinal = [_membersFinal] call DB_fnc_mresArray;
-        _query = format ["UPDATE gangs SET members='%1' WHERE id='%2'",_membersFinal,_groupID];
     };
 };
 

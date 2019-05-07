@@ -61,5 +61,5 @@ lbClear _ctrl; //Purge the list
 } forEach (_allUnits select {
     !(isDowned(_x)) && 
     { !(_x getVariable ["isTazed", false]) } && 
-    { !(_x getVariable ["isKnckedOut", false]) }
+    { !(_x getVariable ["isKnockedOut", false]) }
 });

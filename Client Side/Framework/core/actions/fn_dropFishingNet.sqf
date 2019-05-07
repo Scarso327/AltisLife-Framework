@@ -15,12 +15,12 @@ if (_fish isEqualTo []) exitWith {titleText["Didn't catch any fish...","PLAIN"];
 {
     if (_x isKindOf "Fish_Base_F") then {
         switch (true) do {
-            case ((typeOf _x) isEqualTo "Salema_F"): {_typeName = localize "STR_ANIM_Salema"; _type = "raw_salema";};
-            case ((typeOf _x) isEqualTo "Ornate_random_F") : {_typeName = localize "STR_ANIM_Ornate"; _type = "raw_ornate";};
-            case ((typeOf _x) isEqualTo "Mackerel_F") : {_typeName = localize "STR_ANIM_Mackerel"; _type = "raw_mackerel";};
-            case ((typeOf _x) isEqualTo "Tuna_F") : {_typeName = localize "STR_ANIM_Tuna"; _type = "raw_tuna";};
-            case ((typeOf _x) isEqualTo "Mullet_F") : {_typeName = localize "STR_ANIM_Mullet"; _type = "raw_mullet";};
-            case ((typeOf _x) isEqualTo "CatShark_F") : {_typeName = localize "STR_ANIM_Catshark"; _type = "raw_catshark";};
+            case ((typeOf _x) isEqualTo "Salema_F"): {_typeName = "Salema"; _type = "raw_salema";};
+            case ((typeOf _x) isEqualTo "Ornate_random_F") : {_typeName = "Ornate"; _type = "raw_ornate";};
+            case ((typeOf _x) isEqualTo "Mackerel_F") : {_typeName = "Mackerel"; _type = "raw_mackerel";};
+            case ((typeOf _x) isEqualTo "Tuna_F") : {_typeName = "Tuna"; _type = "raw_tuna";};
+            case ((typeOf _x) isEqualTo "Mullet_F") : {_typeName = "Mullet"; _type = "raw_mullet";};
+            case ((typeOf _x) isEqualTo "CatShark_F") : {_typeName = "Catshark"; _type = "raw_catshark";};
             default {_type = "";};
         };
 

@@ -18,7 +18,7 @@ params [
 if !(canSuspend) exitWith { _this spawn FF(createMenu) };
 
 // Checks...
-if (_buttons isEqualTo []) exitWith { systemChat "This object has no interacitons..." };
+if (_buttons isEqualTo []) exitWith {};
 if (count(_buttons) > 22) then { _buttons deleteRange [23, (count(_buttons))]; systemChat "Buttons deleted due to overflow..."; }; // If it's over 22 buttons delete the overflow...
 
 if !(createDialog "RscInteractionMenu") exitWith { systemChat "Resource Creation Fail..." };

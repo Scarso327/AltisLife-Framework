@@ -16,12 +16,11 @@ sleep 0.25;
 if (visibleMap) then {
     {if (side _x isEqualTo independent) then {_medics pushBack _x;}} forEach playableUnits; //Fetch list of cops / blufor
     {
-        _name = _x getVariable "name";
-        _down = _x getVariable ["Revive",false];
-        if (!isNil "_name" && !_down) then {
+        _name = _x getVariable ["name", name _x];
+        if (isPlayer _x) then {
             _units pushBack _x;
         };
-    } forEach allDeadMen;
+    } forEach (playableUnits select { isDowned(_x) });
 
     {
         _markerss = createMarkerLocal [format ["%1_marker",_x],visiblePosition _x];

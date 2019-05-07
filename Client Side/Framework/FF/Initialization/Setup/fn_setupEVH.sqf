@@ -14,13 +14,13 @@ player addEventHandler ["Respawn", {_this call FF_fnc_onRespawn}];
 /* Seatbelt System */
 player addEventHandler ["GetOutMan", {
     FF_seatbelt = false;
-    player setVariable ["seatbelt",false,true];
+    player setVariable ["seatbelt",FF_seatbelt,true];
     [] call FF_fnc_hudUpdate;
 }];
 
 player addEventHandler ["GetInMan", {
-    FF_seatbelt = false;
-    player setVariable ["seatbelt",false,true];
+    FF_seatbelt = [false, true] select ((FF_Perks findIf { _x isEqualTo "secondNature" }) > -1);
+    player setVariable ["seatbelt",FF_seatbelt,true];
     [] call FF_fnc_hudUpdate;
 }];
 

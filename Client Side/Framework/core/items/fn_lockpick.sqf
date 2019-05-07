@@ -80,8 +80,11 @@ if (!_isVehicle) then {
     _curTarget setVariable ["Escorting",false,true];
     _curTarget setVariable ["transporting",false,true];
 } else {
-    _dice = random(100);
-    if (_dice < 30) then {
+    private _chance = 20; // 20% chance by default...
+
+    if (HAS_PERK("pettyThief")) then { _chance = _chance * 1.25 }; // Increase chances by 25%...
+
+    if ((floor (random 100)) <= _chance) then {
         titleText["You now have keys to this vehicle.","PLAIN"];
         life_vehicles pushBack _curTarget;
 

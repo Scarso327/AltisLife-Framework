@@ -53,6 +53,8 @@ _sellPrice = _purchasePrice * _sellMultiplier;
 if (!(_sellPrice isEqualType 0) || _sellPrice < 1) then {_sellPrice = 500;};
 if (!(_retrievePrice isEqualType 0) || _retrievePrice < 1) then {_retrievePrice = 500;};
 
+if (HAS_PERK("hardWorker")) then { _retrievePrice = _retrievePrice * 0.1 }; // 90% off...
+
 (CONTROL(2800,2803)) ctrlSetStructuredText parseText format [
     ("Retrieval Price:")+ " <t color='#8cff9b'>£%1</t><br/>
     " +("Sell Price:")+ " <t color='#8cff9b'>£%2</t><br/>

@@ -28,6 +28,7 @@ _storageFee = LIFE_SETTINGS(getNumber,"vehicle_store_multiplier");
 _price = (_price * 1) * _storageFee;
 
 if (!(_price isEqualType 0) || _price < 1) then {_price = 500;};
+if (HAS_PERK("hardWorker")) then { _price = _price * 0.1 }; // 90% off...
 if (BANK < _price) exitWith {hint format [("You don't have £%1 in your bank account."),[_price] call life_fnc_numberText];};
 
 if (life_garage_sp isEqualType []) then {

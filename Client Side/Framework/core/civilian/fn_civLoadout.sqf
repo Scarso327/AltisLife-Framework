@@ -18,5 +18,12 @@ player linkItem "ItemWatch";
 
 player addItem "FirstAidKit";
 
+if (HAS_PERK("mindfulPlanner")) then { 
+    player linkItem "ItemGPS";
+
+    player addItem "NVGoggles";
+    player assignItem "NVGoggles";
+}; 
+
 [] call FF(playerSkins);
 [] call life_fnc_saveGear; 

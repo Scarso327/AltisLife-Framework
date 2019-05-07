@@ -28,6 +28,10 @@ if (isNil "life_fuelPrices") then {
     life_fuelPrices = _fuelCost;
 };
 
+if (HAS_PERK("ecoDriver")) then {
+    life_fuelPrices = life_fuelPrices / 2; // 50% off...
+};
+
 //Fetch the shop config.
 vehicleFuelList =[];
 {

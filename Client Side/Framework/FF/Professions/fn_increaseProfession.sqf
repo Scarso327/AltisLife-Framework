@@ -36,7 +36,10 @@ private _curLevel = PROF_LVL(_prof);
 if (_curLevel isEqualTo _maxLevel) exitWith { SVAR_MNS [_varName,_maxLevel]; }; // Don't increase our level if we're already maxed out!
 
 // Is our chance good?
-if (_chance >= 100) then { _levelUp = true; } else {	
+if (_chance >= 100) then { _levelUp = true; } else {
+	if (HAS_PERK("quickLearner")) then { _chance = _chance + 10 }; // If they have the perk increase the chances by 10%
+	if (_chance > 100) then { _chance = 100 }; // Check to ensure it's not over 100% chance...
+
 	if ((floor (random 100)) <= _chance) then {	_levelUp = true; };
 };
 

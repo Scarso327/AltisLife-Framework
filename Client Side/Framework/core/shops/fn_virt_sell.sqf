@@ -20,6 +20,7 @@ if ((time - life_action_delay) < 0.2) exitWith {hint "You're doing it too fast!"
 life_action_delay = time;
 
 _price = (_price * _amount);
+if (HAS_PERK("sweetTalker")) then { _price = _price * 1.1 }; // Increase sell price by 10%...
 _name = M_CONFIG(getText,"CfgItems",_type,"displayName");
 if ([false,_type,_amount] call life_fnc_handleInv) then {
     hint format ["You sold %1 %2 for £%3.",_amount,_name,[_price] call life_fnc_numberText];

@@ -92,7 +92,7 @@ for "_i" from 0 to 1 step 0 do {
 
     private _increase = 0.01;
     private _level = PROF_LVL(_profZone);
-    if (_level > 0) then { _increase =  0.01 + ((_level / 100) * 2) };
+    if (_level > 0) then { _increase = 0.01 + (_level / 2000) };
 
     _cP = _cP + _increase;
 

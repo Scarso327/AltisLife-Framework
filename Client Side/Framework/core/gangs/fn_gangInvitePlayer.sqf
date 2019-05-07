@@ -20,7 +20,7 @@ if (!isNil {(group _unit) getVariable "gang_name"}) exitWith {hint "This person 
 if (count(group player getVariable ["gang_members",8]) == (group player getVariable ["gang_maxMembers",8])) exitWith {hint "Your group has reached its maximum allowed slots, please upgrade your group slot limit."};
 
 _action = [
-    format [localize "You are about to invite %1 to your group, if they accept the invite they will have access to the group's funds.",_unit getVariable ["realname",name _unit]],
+    format ["You are about to invite %1 to your group, if they accept the invite they will have access to the group's funds.",_unit getVariable ["realname",name _unit]],
     "Group Invitation",
     "Yes",
     "No"

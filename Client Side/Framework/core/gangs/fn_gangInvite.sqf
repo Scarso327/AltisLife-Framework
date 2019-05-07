@@ -17,7 +17,7 @@ if (!isNil {(group player) getVariable "gang_name"}) exitWith {hint "You are alr
 
 _gangName = _group getVariable "gang_name";
 _action = [
-    format [localize "%1 has invited you to a group called %2&lt;br/&gt;If you accept the invitation you will be a part of their gang and will have access to the group funds and controlled hideouts.",_name,_gangName],
+    format ["%1 has invited you to a group called %2<br/>If you accept the invitation you will be a part of their gang and will have access to the group funds and controlled hideouts.",_name,_gangName],
     "Group Invitation",
     "Yes",
     "No"

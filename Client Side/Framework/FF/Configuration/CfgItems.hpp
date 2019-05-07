@@ -1733,7 +1733,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_copper.paa";
+        icon = "ico_copperore.paa";
         conditions = "";
     };
 
@@ -1755,7 +1755,7 @@ class CfgItems {
             edible[] = {false, ""};
             value = -1;
         };
-        icon = "ico_copperore.paa";
+        icon = "ico_copper.paa";
         conditions = "";
     };
 

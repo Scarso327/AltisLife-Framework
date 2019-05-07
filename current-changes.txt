@@ -48,6 +48,8 @@ Added:
     Join TPC-TAS Marine HQ (Lewis)
     Full Night Vision Glasses (Scarso & Lewis)
     AAN World News (Lewis)
+    Governor's Residence & Offices (Lewis)
+    SO1 Protection Group (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

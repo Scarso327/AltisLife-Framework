@@ -11,16 +11,34 @@ class CfgSpawnPoints {
             class civ_la_rochelle {
                 displayName = "La Rochelle";
                 spawnMarker = "civ_spawn_2";
-                icon = "\a3\ui_f\data\map\MapControl\lighthouse_CA.paa";
+                icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
                 conditions = "";
             };
 
             class civ_lijnhaven {
                 displayName = "Lijnhaven";
                 spawnMarker = "civ_spawn_3";
-                icon = "\a3\ui_f\data\map\MapControl\fountain_CA.paa";
+                icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
                 conditions = "";
             };
+
+            /*
+            class civ_residence {
+                displayName = "Governor's Residence";
+                spawnMarker = "civ_spawn_residence";
+                icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
+                conditions = "";
+            };
+            */
+
+            /*
+            class civ_offices {
+                displayName = "Governor's Residence";
+                spawnMarker = "civ_spawn_offices";
+                icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
+                conditions = "license_civ_so1";
+            };
+            */
 
             class civ_idap {
                 displayName = "IDAP Camp";

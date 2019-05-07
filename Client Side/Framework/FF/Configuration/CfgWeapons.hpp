@@ -160,6 +160,34 @@ class CfgWeapons {
         };
     };
 
+    class so1_general {
+        name = "SO1 Protection Group";
+        conditions = "playerSide isEqualTo civilian && license_civ_so1";
+        items[] = {
+            { "ItemMap", "Map of Tanoa", 120, 120, "" },
+            { "ItemGPS", "Handheld GPS", 250, 125, "" },
+            { "ItemRadio", "Mobile Phone", 190, 190, "" },
+            { "ItemCompass", "Compass", 45, 23, "" },
+            { "ItemWatch", "Wrist Watch", 60, 30, "" },
+            { "Binocular", "Binoculars", 270, 135, "" },
+            { "NVGoggles", "Night Vision Goggles", 5000, 0, "" },
+            { "G_Tactical_Clear", "Night Vision Glasses", 20000, 0, "" },
+            { "FirstAidKit", "First Aid Kit", 500, 250, "" },
+            { "ToolKit", "Toolkit", 1500, 750, "" },
+            { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "" },
+            { "hgun_PDW2000_F", "PDW2000 9mm", 0, -1, "" }
+        };
+        mags[] = {
+            { "16Rnd_9x21_Mag", "16Rnd 9mm Mag", 235, 118, "" },
+            { "30Rnd_9x21_Mag", "30Rnd 9mm Mag", 400, 200, "" }
+        };
+        accs[] = {
+            { "optic_Aco_smg", "ACO SMG (Red)", 350, 175, "" },
+            { "acc_flashlight_pistol", "Pistol Flashlight", 50, 25, "" },
+            { "acc_flashlight", "Flashlight", 80, 40, "" }
+        };
+    };
+
     class tpc_general_Store {
         name = "TPC - General Store";
         conditions = "playerSide isEqualTo west";

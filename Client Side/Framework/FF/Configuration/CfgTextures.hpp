@@ -57,4 +57,9 @@ class CfgTextures {
         texture[] = {0, "" };
         invisBackpack[] = {3, ""};
     };
+
+    class U_Marshal {
+        texture[] = {0, "" };
+        invisBackpack[] = {3, ""};
+    };
 };

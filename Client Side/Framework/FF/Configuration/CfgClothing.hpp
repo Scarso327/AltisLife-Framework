@@ -28,8 +28,7 @@ class CfgClothing {
             { "U_IG_Guerilla2_2", "", 0, "" },
             { "U_IG_Guerilla3_1", "", 0, "" },
             { "U_C_HunterBody_grn", "", 0, "" },
-            { "U_OrestesBody", "Jacket and Shorts", 0, "" },
-            { "U_NikosBody", "Fine Shirt and Trousers", 0, "" }
+            { "U_OrestesBody", "Jacket and Shorts", 0, "" }
         };
         headgear[] = {
             { "NONE", "Remove Headgear", 0, "" },
@@ -197,6 +196,73 @@ class CfgClothing {
         };
         backpacks[] = {
             { "NONE", "Remove Backpacks", 0, "" }
+        };
+    };
+
+    /*
+    class gov_store {
+        title = "Governor's Wardrobe";
+        conditions = "";
+        side = "civ";
+        uniforms[] = {
+            { "NONE", "Remove Uniform", 0, "" },
+            { "U_NikosBody", "Fine Shirt and Trousers", 0, "" }
+        };
+        headgear[] = {
+            { "NONE", "Remove Headgear", 0, "" },
+            { "H_Hat_brown", "Fine Brown Hat", 0, "" }
+        };
+        goggles[] = {
+            { "NONE", "Remove Glasses", 0, "" },
+            { "G_Aviator", "Rich Shades", 0, "" }
+        };
+        vests[] = {
+            { "NONE", "Remove Vest", 0, "" }
+        };
+        backpacks[] = {
+            { "NONE", "Remove Backpacks", 0, "" }
+        };
+    };
+    */
+
+    class so1_store {
+        title = "SO1 Protection Group";
+        conditions = "license_civ_so1";
+        side = "civ";
+        uniforms[] = {
+            { "NONE", "Remove Uniform", 0, "" },
+            { "U_Marshal", "SO1 Uniform", 0, "" }
+        };
+        headgear[] = {
+            { "NONE", "Remove Headgear", 0, "" },
+            { "H_Cap_blk", "SO1 Cap", 0, "" }
+        };
+        goggles[] = {
+            { "NONE", "Remove Glasses", 0, "" },
+            { "G_Aviator", "", 0, "" },
+            { "G_Shades_Black", "", 0, "" },
+            { "G_Shades_Blue", "", 0, "" },
+            { "G_Shades_Green", "", 0, "" },
+            { "G_Shades_Red", "", 0, "" },
+            { "G_Spectacles", "", 0, "" },
+            { "G_Sport_Red", "", 0, "" },
+            { "G_Sport_Blackyellow", "", 0, "" },
+            { "G_Sport_BlackWhite", "", 0, "" },
+            { "G_Sport_Checkered", "", 0, "" },
+            { "G_Sport_Blackred", "", 0, "" },
+            { "G_Sport_Greenblack", "", 0, "" },
+            { "G_Squares_Tinted", "", 0, "" },
+            { "G_Squares", "", 0, "" },
+            { "G_Spectacles_Tinted", "", 0, "" },
+            { "H_WirelessEarpiece_F", "", 0, "" }
+        };
+        vests[] = {
+            { "NONE", "Remove Vest", 0, "" },
+            { "V_PlateCarrier1_blk", "SO1 Protection Vest", 0, "" }
+        };
+        backpacks[] = {
+            { "NONE", "Remove Backpacks", 0, "" },
+            { "B_AssaultPack_blk", "Invisible Backpack", 0, "" }
         };
     };
 

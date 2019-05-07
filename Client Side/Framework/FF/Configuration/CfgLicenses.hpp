@@ -213,6 +213,14 @@ class CfgLicenses {
     };
 
     // Civilian Jobs
+    class so1 {
+        variable = "so1";
+        displayName = "SO1 Protection Officer";
+        price = 0;
+        illegal = false;
+        side = "civ";
+    };
+
     class idap {
         variable = "idap";
         displayName = "IDAP Membership";

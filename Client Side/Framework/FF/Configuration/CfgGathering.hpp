@@ -61,7 +61,7 @@ class CfgGathering {
 		profession[] = { "Prof_Gathering", 100, 1, 50 }; // PROFESSION, REQUIRED LEVEL, INCREASE AMOUNT, CHANCE OF INCREASE
 		gathered = "wood";
 		gems[] = {};
-		item = "";
+		item = "axe";
 		zoneSize = 30;
 	};
 

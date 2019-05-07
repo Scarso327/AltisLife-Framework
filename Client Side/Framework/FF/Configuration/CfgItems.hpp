@@ -263,6 +263,28 @@ class CfgItems {
         conditions = "";
     };
 
+    class woodAxe {
+        variable = "woodAxe";
+        displayName = "Wood Axe";
+        weight = 3;
+        buyPrice = 340;
+        sellPrice = 170;
+        illegal = false;
+        save = true;
+        taxed = true;
+        marketDisplay = false;
+        class dynmarket {
+            dynmaic = false;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
     class fuel_can {
         variable = "fuel_can";
         displayName = "Fuel Can";

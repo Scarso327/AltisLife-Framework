@@ -21,12 +21,15 @@ life_action_inUse = true;//Lock out other actions during processing.
 closeDialog 0;
 FF_ProcessingVendor = objNull;
 
+private _profession = [];
+
 if (isClass (missionConfigFile >> "CfgProcess" >> _type)) then {
     _filter = false;
     _materialsRequired = M_CONFIG(getArray,"CfgProcess",_type,"MaterialsReq");
     _materialsGiven = M_CONFIG(getArray,"CfgProcess",_type,"MaterialsGive");
     _requiredLicense = M_CONFIG(getText,"CfgProcess",_type,"RequiredLicense");
     _noLicenseCost = M_CONFIG(getNumber,"CfgProcess",_type,"NoLicenseCost");
+    _profession = M_CONFIG(getArray,"CfgProcess",_type,"profession");
     _text = M_CONFIG(getText,"CfgProcess",_type,"Text");
 } else {_filter = true;};
 
@@ -41,6 +44,12 @@ _newItem = _itemInfo select 1;
 _cost = _itemInfo select 2;
 _upp = _itemInfo select 3;
 private _licenseRequired = _itemInfo select 4;
+
+// Split the profession array...
+private _profZone = _profession select 0;
+private _profRequirement = _profession select 1;
+private _profXP = _profession select 2;
+private _profChance = _profession select 3;
 
 _exit = false;
 if (count _oldItem isEqualTo 0) exitWith {life_action_inUse = false;};
@@ -103,7 +112,7 @@ _cP = 0.01;
 life_is_processing = true;
 
 private _increase = 0.01;
-private _level = PROF_LVL("Prof_Processing");
+private _level = PROF_LVL(_profZone);
 if (_level > 0) then { _increase = 0.01 + (_level / 2000) };
 
 if (_hasLicense) then {
@@ -129,7 +138,8 @@ if (_hasLicense) then {
     if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint "You have processed your items!";} else {hint "Only part of your materials could be processed due to reaching your maximum weight.";};
     life_is_processing = false; life_action_inUse = false;
 
-    [(2 * _minimumConversions), "Processing"] spawn FF_fnc_handleXP; // 2 XP * Processed Items
+    [_profZone,_profXP,_profChance] call FF(increaseProfession); // Increase the profession...
+    [(2 * _minimumConversions), "Processing"] spawn FF(handleXP); // 2 XP * Processed Items
 } else {
     if (CASH < _cost) exitWith {hint format ["You need £%1 to process without a license!",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 

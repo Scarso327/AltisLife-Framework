@@ -43,6 +43,7 @@ life_markers = false;
 life_markers_active = false;
 life_canpay_bail = true;
 life_storagePlacing = scriptNull;
+admin_duty = 0;
 
 // FF scripts...
 FF_activeEventFeedControls = [];

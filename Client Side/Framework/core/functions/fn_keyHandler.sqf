@@ -305,6 +305,13 @@ switch (_code) do {
         };
     };
 
+    //Shift + 0 - On/Off Duty
+    case 11: {
+        if(_shift) then {
+            [] spawn life_fnc_staffDuty;
+        };
+    };
+
     //U Key
     case 22: {
         if (!_alt && !_ctrlKey) then {

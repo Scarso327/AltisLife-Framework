@@ -14,6 +14,6 @@ if (_value <= 0 || _value > 999999) exitWith {hint "The value must be between <t
 
 else {
     CASH = CASH + _value;
-    hint format ["You have compensated yourself <t color = '#7300e6'>£%1</t>.",[_value] call life_fnc_numberText];
+    hint format ["You have compensated <t color = '#7300e6'>£%1</t> to <t color = '#7300e6'>%2</t>.",[_value] call life_fnc_numberText, _unit getVariable ["realname", name _unit]];
     closeDialog 0;
 };

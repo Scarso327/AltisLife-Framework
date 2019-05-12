@@ -1,17 +1,9 @@
 #include "..\..\script_macros.hpp"
 
-switch (true) do {
-	case (FETCH_CONST(life_adminlevel) isEqualTo 1): {
-		_suit = "U_I_Protagonist_VR";
-	};
-
-	case (FETCH_CONST(life_adminlevel) isEqualTo 2): {
-		_suit = "U_B_Protagonist_VR";
-	};
-
-	default {
-		_suit = "U_O_Protagonist_VR";
-	};
+private _suit = switch (FETCH_CONST(life_adminlevel)) do {
+    case 1: {"U_I_Protagonist_VR"};
+    case 2: {"U_B_Protagonist_VR"};
+    default {"U_O_Protagonist_VR"};
 };
 
 if(admin_duty == 1) then {

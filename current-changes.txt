@@ -53,6 +53,7 @@ Added:
     Wood Axe Item (Lewis)
     Staff On/Off Duty System (Lewis)
     vItems in Vehicle on Garage Selection (Lewis)
+    NLR Timer (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

@@ -37,3 +37,4 @@ FF_hideHUD = false;
 
 [] call FF(playerSkins);
 [] call SOCK_fnc_updateRequest;
+life_nlrtimer_stop = true;

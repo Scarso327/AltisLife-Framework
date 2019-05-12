@@ -383,6 +383,7 @@ class Life_Client_Core {
         class medicSiren {};
         class medicSirenLights {};
         class requestMedic {};
+        class newLifeTimer {};
     };
 
     class Network {

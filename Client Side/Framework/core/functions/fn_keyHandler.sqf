@@ -117,6 +117,42 @@ switch (_code) do {
         };
     };
 
+    case 3:
+	{
+		if(vehicle player isEqualTo player) then {
+			if(!life_action_inUse) then {
+				player playActionNow "gestureHi";
+			};
+		};
+	};
+
+	case 4:
+	{
+		if(vehicle player isEqualTo player) then {
+			if(!life_action_inUse) then {
+				player playActionNow "gestureHiC";
+			};
+		};
+	};
+
+	case 5:
+	{
+		if(vehicle player isEqualTo player) then {
+			if(!life_action_inUse) then {
+				player playActionNow "gestureHiB";
+			};
+		};
+	};
+
+	case 6:
+	{
+		if(vehicle player isEqualTo player) then {
+			if(!life_action_inUse) then {
+				player playActionNow "gesturenod";
+			};
+		};
+	};
+
     //Surrender (Shift + B)
     case 48: {
         if (isDowned(player)) exitWith {};

@@ -33,7 +33,6 @@ life_respawned = false;
 life_removeWanted = false;
 life_action_gathering = false;
 tawvd_addon_disable = true;
-life_god = false;
 life_frozen = false;
 life_save_gear = [];
 life_container_activeObj = objNull;

@@ -188,7 +188,6 @@ class Life_Client_Core {
         class adminCompensate {};
         class adminFreeze {};
         class admingetID {};
-        class adminGodMode {};
         class adminid {};
         class admininfo {};
         class adminMarkers {};

@@ -87,16 +87,6 @@ class life_admin_menu {
             h = 0.022 * safezoneH;
         };
 
-        class RscButtonMenu_2406: Life_RscButtonMenu {
-            idc = 2908;
-            text = "Godmode";
-            onButtonClick = "[] call life_fnc_adminGodMode;";
-            x = 0.396875 * safezoneW + safezoneX;
-            y = 0.676 * safezoneH + safezoneY;
-            w = 0.061875 * safezoneW;
-            h = 0.022 * safezoneH;
-        };
-
         class RscButtonMenu_2407: Life_RscButtonMenu {
             idc = 2909;
             text = "Freeze";

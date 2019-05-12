@@ -42,7 +42,7 @@ life_markers = false;
 life_markers_active = false;
 life_canpay_bail = true;
 life_storagePlacing = scriptNull;
-admin_duty = 0;
+admin_duty = false;
 life_nlrTimer_running = false;
 life_nlrTimer_stop = false;
 

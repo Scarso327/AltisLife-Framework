@@ -4,7 +4,7 @@
     Author: Lewis Mackinnon
 */
 
-if ((FETCH_CONST(life_adminlevel) < 2) && admin_duty == 0); exitWith {closeDialog 0; hint "You must be on-duty to use this.";};
+if ((FETCH_CONST(life_adminlevel) < 2) && admin_duty) exitWith {closeDialog 0; hint "You must be on-duty to use this."};
 
 private _unit = lbData[2902,lbCurSel (2902)];
 _unit = call compile format ["%1", _unit];

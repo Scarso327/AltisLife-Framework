@@ -18,7 +18,7 @@ _role2names = ["Website:", "lifeplusrp.co.uk"];
 _role3 = "Teamspeak!";
 _role3names = ["Teamspeak IP:", "ts3.lifeplusrp.co.uk!"];
 _role4 = "Dev Team!";
-_role4names = ["Development Team", "Scarso and Lewis"];
+_role4names = ["Development Team", "Jack and Lewis"];
 _role5 = "Version!";
 _role5names = ["Current Version: V1"];
   

@@ -55,6 +55,7 @@ Added:
     vItems in Vehicle on Garage Selection (Lewis)
     NLR Timer (Lewis)
     Hand Gestures (Lewis)
+    Taser Dely (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

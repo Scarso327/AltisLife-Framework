@@ -51,6 +51,8 @@ Added:
     Governor's Residence & Offices (Lewis)
     SO1 Protection Group (Lewis)
     Wood Axe Item (Lewis)
+    Staff On/Off Duty System (Lewis)
+    vItems in Vehicle on Garage Selection (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

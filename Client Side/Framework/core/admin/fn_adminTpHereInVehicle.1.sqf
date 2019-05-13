@@ -1,6 +1,6 @@
 #include "..\..\script_macros.hpp"
 /*
-    File: fn_adminTpInVehicle.sqf
+    File: fn_adminTpHereInVehicle.sqf
     Author: Lewis Mackinnon
 */
 
@@ -12,8 +12,7 @@ _target = call compile format ["%1", _target];
 if (isNil "_target" || isNull _target) exitWith {};
 if (_target == player) exitWith {hint "You are unable to do this.";};
 
-if (vehicle _target isEqualTo _target) exitWith {hint "You cannot teleport in this player's as they are not inside of a vehicle."};
+if (!(vehicle _target isEqualTo _target)) exitWith {hint "You cannot teleport the player here as they are inside of a vehicle."};
 
-_vehicle = vehicle _target;
-player moveInCargo _vehicle
-hint format ["You have teleported in the vehicle of <t color = '#7300e6'>%1</t>.",_target getVariable ["realname",name _target]];
+_target moveInCargo vehicle player
+hint format ["You have teleported <t color = '#7300e6'>%1</t> into your vehicle.",_target getVariable ["realname",name _target]];

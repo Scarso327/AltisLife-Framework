@@ -207,6 +207,7 @@ class Life_Client_Core {
         class admimESP {};
         class admimVehicleEject {};
         class adminTpHereInVehicle {};
+        class adminKill {};
         class adminDuty {};
     };
 

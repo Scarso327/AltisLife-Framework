@@ -401,6 +401,30 @@ switch (_code) do {
             };
         };
     };
+
+    // Repair Object - Instert
+    case 210: {
+        if ((admin_duty = !admin_duty) && {isNull cursorObject} && {cursorObject distance player > 10}) exitWith {};
+        if ((admin_duty) && {!isNull cursorObject} && {cursorObject distance player < 10}) then {
+            cursorTarget setDamage 0;
+        };
+    };
+
+    // Delete Vehicle - Delete
+    case 211: {
+        if (admin_duty) && {isNull cursorObject} && {cursorObject distance player > 10}) exitWith {};
+        if ((admin_duty) && {!isNull cursorObject} && {cursorObject distance player < 10}) then {
+            deleteVehicle cursorTarget;
+        };
+    };
+
+    // Revive Player - End
+    case 207: {
+        if (admin_duty) && {isNull cursorObject} && {cursorObject distance player > 10}) exitWith {};
+        if ((admin_duty) && {!isNull cursorObject} && {cursorObject distance player < 10}) then {
+            [[name player],"life_fnc_revived",cursorTarget,FALSE] spawn life_fnc_MP;
+        };
+    };
 };
 
 _handled;

@@ -57,6 +57,7 @@ Added:
     Hand Gestures (Lewis)
     Taser Dely (Lewis)
     Car Alarm on Lockpick Fail (Lewis)
+    Restrain & Repair Sounds (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

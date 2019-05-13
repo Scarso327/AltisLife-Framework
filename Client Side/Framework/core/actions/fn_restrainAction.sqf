@@ -19,4 +19,5 @@ if (!isPlayer _unit) exitWith {};
 _unit setVariable ["playerSurrender",false,true];
 _unit setVariable ["restrained",true,true];
 [player] remoteExec ["life_fnc_restrain",_unit];
+[_curTarget,"handCuff"] remoteExec ["life_fnc_say3D",RANY];
 [0,"%1 was restrained.",true,[_unit getVariable ["realname", name _unit], profileName]] remoteExecCall ["life_fnc_broadcast",west];

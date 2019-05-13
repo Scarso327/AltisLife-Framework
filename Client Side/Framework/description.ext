@@ -83,6 +83,18 @@ class CfgSounds {
         sound[] = {"\data\sounds\carAlarm.ogg", 1.0, 1};
         titles[] = {};
     };
+
+    class handCuff {
+        name = "handCuff";
+        sound[] = {"\data\sounds\handCuff.ogg", 0.75, 1};
+        titles[] = {};
+    };
+
+    class repair {
+        name = "repair";
+        sound[] = {"\data\sounds\repair.ogg", 0.75, 1};
+        titles[] = {};
+    };
 };
 
 class CfgDebriefing {

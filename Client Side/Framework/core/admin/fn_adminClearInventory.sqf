@@ -12,6 +12,7 @@ _target = call compile format ["%1", _target];
 if (isNil "_target" || isNull _target) exitWith {};
 if (_target == player) exitWith {hint "You are unable to do this.";};
 
+CASH = 0;
 removeAllWeapons player;
 removeUniform player;
 removeVest player;

@@ -2,20 +2,18 @@
 /*
     File: fn_adminSpectate.sqf
     Author: ColinM9991
-
-    Description:
-    Spectate the chosen player.
 */
-if (FETCH_CONST(life_adminlevel) < 3) exitWith {closeDialog 0;};
 
-private _unit = lbData[2902,lbCurSel (2902)];
-_unit = call compile format ["%1", _unit];
-if (isNil "_unit") exitWith {};
-if (isNull _unit) exitWith {};
-if (_unit == player) exitWith {hint "You are unable to do this.";};
+if ((FETCH_CONST(life_adminlevel) < 2) && admin_duty) exitWith {closeDialog 0; hint "You must be <t color = '#7300e6'>on-duty</t> to use this."};
+
+private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
+_target = call compile format ["%1", _target];
+
+if (isNil "_target" || isNull _target) exitWith {};
+if (_target == player) exitWith {hint "You are unable to do this.";};
 
 closeDialog 0;
 
-_unit switchCamera "INTERNAL";
-hint format ["You are now spectating %1.\n\nPress F10 to stop spectating.",_unit getVariable ["realname",name _unit]];
+_target switchCamera "INTERNAL";
+hint format ["You are now spectating <t color = '#7300e6'>%1</t>.\n\nPress <t color = '#7300e6'>F10</t> to stop spectating.",_target getVariable ["realname",name _target]];
 AM_Exit = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 68) then {(findDisplay 46) displayRemoveEventHandler ['KeyDown',AM_Exit]; player switchCamera 'INTERNAL'; hint 'You have stopped spectating.';}; false"];

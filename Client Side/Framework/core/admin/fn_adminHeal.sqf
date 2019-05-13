@@ -13,3 +13,5 @@ if (isNil "_target" || isNull _target) exitWith {};
 if (_target == player) exitWith {hint "You are unable to do this.";};
 
 player setDamage 0;
+life_thirst = 100;
+life_hunger = 100;

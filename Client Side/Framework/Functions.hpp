@@ -194,8 +194,15 @@ class Life_Client_Core {
         class adminMenu {};
         class adminQuery {};
         class adminSpectate {};
-        class adminTeleport {};
+        class adminTpSelect {};
         class adminTpHere {};
+        class adminTpTo {};
+        class adminTpInVehicle {};
+        class adminHeal {};
+        class adminClearInventory {};
+        class adminResetMoney {};
+        class adminRepairRefuel {};
+        class adminInvisibility {};
         class adminDuty {};
     };
 

@@ -1,6 +1,6 @@
 #include "..\..\script_macros.hpp"
 /*
-    File: fn_adminResetBank.sqf
+    File: fn_adminRepairRefuel.sqf
     Author: Lewis Mackinnon
 */
 

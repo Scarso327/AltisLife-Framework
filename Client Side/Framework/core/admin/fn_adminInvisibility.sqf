@@ -1,6 +1,6 @@
 #include "..\..\script_macros.hpp"
 /*
-    File: fn_adminHeal.sqf
+    File: fn_adminInvisibility.sqf
     Author: Lewis Mackinnon
 */
 
@@ -11,6 +11,10 @@ _target = call compile format ["%1", _target];
 
 if (isNil "_target" || isNull _target) exitWith {};
 
-_target setDamage 0;
-life_thirst = 100;
-life_hunger = 100;
+if (admin_invisibility) then {
+    _target hideObject false; 
+}
+
+else {
+    _target hideObject true; 
+}

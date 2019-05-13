@@ -93,6 +93,7 @@ if (!_isVehicle) then {
         } else {
             [getPlayerUID player,profileName,"487"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
+        [_curTarget,"unlockCarSound"] remoteExec ["life_fnc_say3D",RANY];
 
     } else {
 
@@ -101,6 +102,7 @@ if (!_isVehicle) then {
         } else {
             [getPlayerUID player,profileName,"215"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
+        [_curTarget,"carAlarm"] remoteExec ["life_fnc_say3D",RANY];
 
         [0,"%1 was seen trying to lockpick into a vehicle...",true,[profileName]] remoteExecCall ["life_fnc_broadcast",west];
         titleText["The lockpick broke.","PLAIN"];

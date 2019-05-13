@@ -208,6 +208,7 @@ class Life_Client_Core {
         class admimVehicleEject {};
         class adminTpHereInVehicle {};
         class adminKill {};
+        class adminRemoveFuel {};
         class adminDuty {};
     };
 

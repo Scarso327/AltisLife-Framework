@@ -14,5 +14,6 @@ if (_target == player) exitWith {hint "You are unable to do this.";};
 
 if (vehicle _target isEqualTo _target) exitWith {hint "You cannot teleport in this player's as they are not inside of a vehicle."};
 
-player setPos (getPos _target);
+_vehicle = vehicle _target;
+player moveInCargo _vehicle
 hint format ["You have teleported to the location of <t color = '#7300e6'>%1</t>.",_target getVariable ["realname",name _target]];

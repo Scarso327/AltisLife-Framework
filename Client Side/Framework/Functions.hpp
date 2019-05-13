@@ -205,6 +205,7 @@ class Life_Client_Core {
         class adminInvisibility {};
         class admimCamera {};
         class admimESP {};
+        class admimVehicleEject {};
         class adminDuty {};
     };
 

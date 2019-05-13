@@ -46,6 +46,7 @@ admin_duty = false;
 life_nlrTimer_running = false;
 life_nlrTimer_stop = false;
 admin_invisibility = false;
+admin_esp = false;
 
 // FF scripts...
 FF_activeEventFeedControls = [];

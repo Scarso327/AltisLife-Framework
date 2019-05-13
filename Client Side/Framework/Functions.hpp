@@ -203,6 +203,8 @@ class Life_Client_Core {
         class adminResetMoney {};
         class adminRepairRefuel {};
         class adminInvisibility {};
+        class admimCamera {};
+        class admimESP {};
         class adminDuty {};
     };
 

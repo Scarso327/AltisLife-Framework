@@ -10,8 +10,7 @@ private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],pla
 _target = call compile format ["%1", _target];
 
 if (isNil "_target" || isNull _target) exitWith {};
-if (_target == player) exitWith {hint "You are unable to do this.";};
 
-player setDamage 0;
+_target setDamage 0;
 life_thirst = 100;
 life_hunger = 100;

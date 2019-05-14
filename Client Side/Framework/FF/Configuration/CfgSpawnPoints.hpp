@@ -26,35 +26,35 @@ class CfgSpawnPoints {
                 displayName = "Nicolet";
                 spawnMarker = "civ_spawn_4";
                 icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
-                conditions = "(FF_Perks findIf { _x isEqualTo "wideTraveller" }) > -1";
+                conditions = "(FF_Perks findIf { _x isEqualTo ""wideTraveller"" }) > -1";
             };
 
             class civ_oumere {
                 displayName = "Ouméré";
                 spawnMarker = "civ_spawn_5";
                 icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
-                conditions = "(FF_Perks findIf { _x isEqualTo "wideTraveller" }) > -1";
+                conditions = "(FF_Perks findIf { _x isEqualTo ""wideTraveller"" }) > -1";
             };
 
             class civ_moddergat {
                 displayName = "Moddergat";
                 spawnMarker = "civ_spawn_6";
                 icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
-                conditions = "(FF_Perks findIf { _x isEqualTo "wideTraveller" }) > -1";
+                conditions = "(FF_Perks findIf { _x isEqualTo ""wideTraveller"" }) > -1";
             };
 
             class civ_katkoula {
                 displayName = "Katkoula";
                 spawnMarker = "civ_spawn_7";
                 icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
-                conditions = "(FF_Perks findIf { _x isEqualTo "wideTraveller" }) > -1";
+                conditions = "(FF_Perks findIf { _x isEqualTo ""wideTraveller"" }) > -1";
             };
 
             class civ_tuvanaka {
                 displayName = "Tuvanaka";
                 spawnMarker = "civ_spawn_8";
                 icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
-                conditions = "(FF_Perks findIf { _x isEqualTo "wideTraveller" }) > -1";
+                conditions = "(FF_Perks findIf { _x isEqualTo ""wideTraveller"" }) > -1";
             };
 
             /*

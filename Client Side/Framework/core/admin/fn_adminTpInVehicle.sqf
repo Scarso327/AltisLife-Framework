@@ -15,9 +15,8 @@ if (_target == player) exitWith {hint "You are unable to do this.";};
 if (vehicle _target isEqualTo _target) exitWith {hint "You cannot teleport in this player's as they are not inside of a vehicle."};
 
 _vehicle = vehicle _target;
-player moveInCargo _vehicle
+player moveInCargo _vehicle;
 
 if (FETCH_CONST(life_adminlevel) > 0) then {
     hint format ["<t color = '#7300e6'>%1</t> has teleported inside the vehicle of <t color = '#7300e6'>%2</t>.",player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
 };
-

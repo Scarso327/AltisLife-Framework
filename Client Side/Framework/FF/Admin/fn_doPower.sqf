@@ -78,9 +78,9 @@ switch (_power) do {
 
 	case "teleportSelect": {
 		fnc_teleport = {
-			_this params [ ["_xA", 0, [0]], ["_y", 0, [0]], ["_z", 0, [0]] ];
+			params [["_pos", [], [[]]]];
 
-			(vehicle player) setpos [_xA, _y, 0];
+			(vehicle player) setPos _pos;
 
 			onMapSingleClick "";
 			openMap [false, false];

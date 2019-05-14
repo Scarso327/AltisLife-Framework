@@ -70,7 +70,7 @@ class life_admin_menu {
         class RscButtonMenu_2405: Life_RscButtonMenu {
             idc = 2906;
             text = "Teleport";
-            onButtonClick = "[] call life_fnc_adminTpSelect; hint 'Select where you would like to teleport';";
+            onButtonClick = "[""Teleport""] call FF_fnc_doPower;";
             x = 0.613437 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;
             w = 0.061875 * safezoneW;

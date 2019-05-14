@@ -35,6 +35,12 @@ class FF_Core {
         class gatherItem {};
     };
 
+    class Admin {
+        file = "FF\Admin";
+        class doPower {};
+        class logUsage {};
+    };
+
     class Initialization_Sides {
         file = "FF\Initialization\Sides";
         class initCivilian {};
@@ -54,6 +60,7 @@ class FF_Core {
         class notify {};
         class getGarage {};
         class hasItem {};
+        class hint {};
     };
 
     class Factions {
@@ -194,7 +201,6 @@ class Life_Client_Core {
         class adminMenu {};
         class adminQuery {};
         class adminSpectate {};
-        class adminTpSelect {};
         class adminTpHere {};
         class adminTpTo {};
         class adminTpInVehicle {};
@@ -329,7 +335,6 @@ class Life_Client_Core {
         class saveGear {};
         class simDisable {};
         class stripDownPlayer {};
-        class teleport {};
         class whereAmI {};
         class atmRob {};
     };

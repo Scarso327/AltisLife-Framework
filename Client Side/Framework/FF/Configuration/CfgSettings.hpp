@@ -168,3 +168,4 @@ class CfgSettings {
 #include "CfgPerks.hpp"
 #include "CfgPaychecks.hpp"
 #include "CfgGathering.hpp"
+#include "..\Admin\Configuration\CfgPowers.hpp"

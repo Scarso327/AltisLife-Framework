@@ -12,11 +12,9 @@ _value = parseNumber(ctrlText 9922);
 
 if (_value <= 0 || _value > 999999) exitWith {hint "The value must be between <t color = '#7300e6'>£0</t> and <t color = '#7300e6'>£1,000,000</t>"};
 
-else {
-    life_atmcash = life_atmcash  + _value;
-    closeDialog 0;
+life_atmcash = life_atmcash  + _value;
+closeDialog 0;
 
-    if (FETCH_CONST(life_adminlevel) > 0) then {
-        hint format ["<t color = '#7300e6'>%1</t> has compensated <t color = '#7300e6'>%2</t> for a total of <t color = '#7300e6'>£%3</t>.",player getVariable ["realname", name player],_target getVariable ["realname", name _target],_value]];
-    };
+if (FETCH_CONST(life_adminlevel) > 0) then {
+    hint format ["<t color = '#7300e6'>%1</t> has compensated <t color = '#7300e6'>%2</t> for a total of <t color = '#7300e6'>£%3</t>.",player getVariable ["realname", name player],_target getVariable ["realname", name _target],_value]];
 };

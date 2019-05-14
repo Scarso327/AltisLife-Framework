@@ -73,7 +73,7 @@ switch (_power) do {
 	case "camera": {
 		[] spawn BIS_fnc_camera;
 
-		_msg = format[_msg, player getVariable ["realname", name player];
+		_msg = format[_msg, player getVariable ["realname", name player]];
 	};
 
 	case "teleportSelect": {
@@ -100,7 +100,7 @@ switch (_power) do {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 
 		if (isNil "_target" || isNull _target) exitWith {};
-		if (_target isEqualTo player || (!(vehicle _target isEqualTo _target )) exitWith {hint "You are unable to do this."};
+		if (_target isEqualTo player || { !(vehicle _target isEqualTo _target ) }) exitWith {hint "You are unable to do this."};
 
 		player setPos (getPos _target);
 
@@ -111,7 +111,7 @@ switch (_power) do {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 
 		if (isNil "_target" || isNull _target) exitWith {};
-		if (_target isEqualTo player || (!(vehicle _target isEqualTo _target )) exitWith {hint "You are unable to do this."};
+		if (_target isEqualTo player || { !(vehicle _target isEqualTo _target ) }) exitWith {hint "You are unable to do this."};
 
 		_target setPos (getPos player);
 
@@ -122,7 +122,7 @@ switch (_power) do {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 
 		if (isNil "_target" || isNull _target) exitWith {};
-		if (_target isEqualTo player || (vehicle _target isEqualTo _target )) exitWith {hint "You are unable to do this."};
+		if (_target isEqualTo player || { (vehicle _target isEqualTo _target ) }) exitWith {hint "You are unable to do this."};
 
 		player moveInCargo (vehicle _target);
 
@@ -133,7 +133,7 @@ switch (_power) do {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 
 		if (isNil "_target" || isNull _target) exitWith {};
-		if (_target isEqualTo player || (!(vehicle _target isEqualTo _target ))) exitWith {hint "You are unable to do this."};
+		if (_target isEqualTo player || { !(vehicle _target isEqualTo _target ) }) exitWith {hint "You are unable to do this."};
 
 		_target moveInCargo (vehicle player);
 
@@ -144,7 +144,7 @@ switch (_power) do {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 
 		if (isNil "_target" || isNull _target) exitWith {};
-		if (_target isEqualTo player || (vehicle _target isEqualTo _target )) exitWith {hint "You are unable to do this."};
+		if (_target isEqualTo player || { (vehicle _target isEqualTo _target ) }) exitWith {hint "You are unable to do this."};
 
 		doGetOut _target;
 		_target allowDamage false;
@@ -158,7 +158,7 @@ switch (_power) do {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 
 		if (isNil "_target" || isNull _target) exitWith {};
-		if (_target isEqualTo player || (vehicle _target isEqualTo _target )) exitWith {hint "You are unable to do this."};
+		if (_target isEqualTo player || { (vehicle _target isEqualTo _target ) }) exitWith {hint "You are unable to do this."};
 
 		(vehicle _target) setdamage 0;
 
@@ -169,7 +169,7 @@ switch (_power) do {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 
 		if (isNil "_target" || isNull _target) exitWith {};
-		if (_target isEqualTo player || (vehicle _target isEqualTo _target )) exitWith {hint "You are unable to do this."};
+		if (_target isEqualTo player || { (vehicle _target isEqualTo _target ) }) exitWith {hint "You are unable to do this."};
 
 		(vehicle _target) setfuel 1;
 

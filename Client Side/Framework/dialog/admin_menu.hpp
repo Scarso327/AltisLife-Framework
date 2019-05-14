@@ -39,8 +39,8 @@ class life_admin_menu {
 
         class RscButtonMenu_2402: Life_RscButtonMenu {
             idc = -1;
-            text = "Get ID";
-            onButtonClick = "[] call life_fnc_adminGetID;";
+            text = "Become Active";
+            onButtonClick = "admin_duty = !admin_duty";
             x = 0.396875 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;
             w = 0.061875 * safezoneW;

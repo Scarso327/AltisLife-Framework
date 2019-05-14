@@ -20,5 +20,5 @@ else {
 }
 
 if (FETCH_CONST(life_adminlevel) > 0) then {
-    hint format ["<t color = '#7300e6'>%1</t> has made <t color = '#7300e6'>%2</t> invisible.",player getVariable ["realname", name player],_target getVariable ["realname", name _target]]];
+    hint format ["<t color = '#7300e6'>%1</t> has made <t color = '#7300e6'>%2</t> invisible.",player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
 };

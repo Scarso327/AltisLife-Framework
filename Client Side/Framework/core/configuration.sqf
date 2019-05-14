@@ -45,8 +45,14 @@ life_storagePlacing = scriptNull;
 admin_duty = false;
 life_nlrTimer_running = false;
 life_nlrTimer_stop = false;
+
+// Staff Settings 
+staffDuty = false;
+
+
 admin_invisibility = false;
 admin_esp = false;
+admin_god = false;
 
 // FF scripts...
 FF_activeEventFeedControls = [];

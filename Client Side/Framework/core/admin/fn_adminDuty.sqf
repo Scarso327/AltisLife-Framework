@@ -6,8 +6,8 @@ private _suit = switch (FETCH_CONST(life_adminlevel)) do {
     default {"U_O_Protagonist_VR"};
 };
 
-if(admin_duty) then {
-	admin_duty = !admin_duty; 
+if(staffDuty) then {
+	staffDuty = !staffDuty; 
 	player setVariable["duty", 0, true];
 
 	removeUniform player;
@@ -60,7 +60,7 @@ if(admin_duty) then {
 } 
 
 else {
-	admin_duty = admin_duty;
+	staffDuty = staffDuty;
 	player setVariable["duty", 1, true];
 
 	life_oldUniformItems = uniformItems player;

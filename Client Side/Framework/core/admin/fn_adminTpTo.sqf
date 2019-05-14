@@ -1,7 +1,7 @@
 #include "..\..\script_macros.hpp"
 /*
     File: fn_adminTpTo.sqf
-    Author: Lewis Mackinnon
+    Author: Lewis Mackinnon 
 */
 
 if ((FETCH_CONST(life_adminlevel) < 2) && admin_duty) exitWith {closeDialog 0; hint "You must be <t color = '#7300e6'>on-duty</t> to use this."};

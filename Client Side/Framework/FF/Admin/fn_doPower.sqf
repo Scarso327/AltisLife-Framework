@@ -189,8 +189,8 @@ switch (_power) do {
 		if (isNil "_target" || isNull _target) exitWith {};
 		if (_target isEqualTo player || { (vehicle _target isEqualTo _target ) }) exitWith {hint "You are unable to do this."};
 
-		doGetOut _target;
 		_target allowDamage false;
+		doGetOut _target;
 		sleep 0.2;
 		_target allowDamage true;
 

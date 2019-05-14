@@ -8,7 +8,7 @@ class CfgPowers {
 		reqLevel = 2;
 		message = "<t color = '#7300e6'>%1</t> has teleported.";
 		conditions = "";
-        disableIF = "";
-        tooltip = "Teleport to a point on the map";
+		disableIF = "";
+		tooltip = "Teleport to a point on the map";
 	};
 };

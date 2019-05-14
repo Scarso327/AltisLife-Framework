@@ -2,7 +2,7 @@ class CfgShops {
     class general_market {
         name = "General Market";
         conditions = "";
-        items[] = { "water", "soda", "energy_drink", "apple", "mango", "coconut", "baguette", "croissant", "crepe", "energy_bar", "lockpick", "pickaxe", "woodAxe", "fuel_can", "empty_fuel_can", "empty_barrel" };
+        items[] = { "water", "soda", "energy_drink", "apple", "mango", "coconut", "baguette", "croissant", "crepe", "energy_bar", "earPlugs", "lockpick", "pickaxe", "woodAxe", "fuel_can", "empty_fuel_can", "empty_barrel" };
     };
 
     class property_agents {
@@ -50,13 +50,13 @@ class CfgShops {
     class gang_hideout {
         name = "Gang Hideout";
         conditions = "playerSide isEqualTo civilian";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "pickaxe", "woodAxe", "fuel_can", "empty_fuel_can", "ziptie", "blindfold", "gag", "ear_clots", "bolt_cutter" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "earPlugs", "lockpick", "pickaxe", "woodAxe", "fuel_can", "empty_fuel_can", "ziptie", "blindfold", "gag", "ear_clots", "rfidReader", "bolt_cutter" };
     };
 
     class syndikat_outpost {
         name = "Syndikat Outpost";
         conditions = "playerSide isEqualTo civilian && license_civ_syndikat";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "pickaxe", "woodAxe", "fuel_can", "empty_fuel_can", "ziptie", "blindfold", "gag", "ear_clots", "bolt_cutter", "explosive_charge" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "earPlugs", "lockpick", "pickaxe", "woodAxe", "fuel_can", "empty_fuel_can", "ziptie", "blindfold", "gag", "ear_clots", "rfidReader", "bolt_cutter", "explosive_charge" };
     };
 
     class gold_buyer {
@@ -158,12 +158,12 @@ class CfgShops {
     class tpc_market {
         name = "TPC Market";
         conditions = "playerSide isEqualTo west";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "spikeStrip","defusekit" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "earPlugs", "lockpick", "fuel_can", "spikeStrip","defusekit" };
     };
 
     class tas_market {
         name = "TAS Market";
         conditions = "playerSide isEqualTo indpendent";
-        items[] = { "water", "soda", "energy_drink", "energy_bar", "lockpick", "fuel_can", "blood_bag", "defibrillator" };
+        items[] = { "water", "soda", "energy_drink", "energy_bar", "earPlugs", "lockpick", "fuel_can", "blood_bag", "defibrillator" };
     };
 };

@@ -58,6 +58,7 @@ Added:
     Taser Dely (Lewis)
     Car Alarm on Lockpick Fail (Lewis)
     Restrain & Repair Sounds (Lewis)
+    ATM Robbery (Lewis)
 
 Changed:
     Interaction Menu UI (Scarso)

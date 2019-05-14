@@ -2682,4 +2682,48 @@ class CfgItems {
         icon = "ico_defibrillator.paa";
         conditions = "";
     };
+
+    class rfidReader {
+        variable = "rfidReader";
+        displayName = "RFID Reader";
+        weight = 1;
+        buyPrice = 20240;
+        sellPrice = 10120;
+        illegal = true;
+        save = true;
+        taxed = false;
+        marketDisplay = false;
+        class dynmarket {
+            dynmaic = false;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
+
+    class earPlugs {
+        variable = "earPlugs";
+        displayName = "Ear Plugs";
+        weight = 1;
+        buyPrice = 30;
+        sellPrice = 15;
+        illegal = false;
+        save = true;
+        taxed = false;
+        marketDisplay = false;
+        class dynmarket {
+            dynmaic = false;
+            driftPerc = 0.1;
+        };
+        class edibility {
+            edible[] = {false, ""};
+            value = -1;
+        };
+        icon = "";
+        conditions = "";
+    };
 };

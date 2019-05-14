@@ -331,6 +331,7 @@ class Life_Client_Core {
         class stripDownPlayer {};
         class teleport {};
         class whereAmI {};
+        class atmRob {};
     };
 
     class Gangs {

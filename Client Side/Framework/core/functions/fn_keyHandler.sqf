@@ -331,13 +331,17 @@ switch (_code) do {
     //O Key
     case 24: {
         if (_shift) then {
-            if !(soundVolume isEqualTo 1) then {
+            if(!([false,"earPlugs",1] call life_fnc_handleInv)) exitWith { hint "You require ear plugs if you wish to do this!" };
+            if(([false,"earPlugs",1] call life_fnc_handleInv)) then {
+                if !(soundVolume isEqualTo 1) then {
                 1 fadeSound 1;
                 systemChat "You remove your earplugs!";
-            } else {
-                1 fadeSound 0.1;
-                systemChat "You put your earplugs in!";
-            };
+                } else {
+                    1 fadeSound 0.1;
+                    systemChat "You put your earplugs in!";
+                };
+                [true,"earPlugs",1] call life_fnc_handleInv; 
+            }
         };
     };
 

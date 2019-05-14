@@ -209,9 +209,9 @@ class Life_Client_Core {
         class adminResetMoney {};
         class adminRepairRefuel {};
         class adminInvisibility {};
-        class admimCamera {};
-        class admimESP {};
-        class admimVehicleEject {};
+        class adminCamera {};
+        class adminESP {};
+        class adminVehicleEject {};
         class adminTpHereInVehicle {};
         class adminKill {};
         class adminRemoveFuel {};

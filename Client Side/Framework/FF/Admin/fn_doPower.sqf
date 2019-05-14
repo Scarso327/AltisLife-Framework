@@ -49,7 +49,7 @@ switch (_power) do {
 		life_thirst = 100;
 		life_hunger = 100;
 
-		_msg = format[_msg, player getVariable ["realname", name player],_target getVariable ["realname", name _target],_value];
+		_msg = format[_msg, player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
 	};
 
 	case "revive": {

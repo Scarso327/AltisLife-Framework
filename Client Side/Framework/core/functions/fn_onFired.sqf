@@ -20,13 +20,3 @@ if (_ammoType in ["GrenadeHand_stone","UGL_FlareCIR_F"]) then {
         [_position] remoteExec ["life_fnc_flashbang",RCLIENT];
     };
 };
-
-if (_weapon == ["hgun_Pistol_heavy_01_F", "hgun_Pistol_heavy_01_MRD_F", "hgun_Pistol_heavy_01_snds_F") then {_delayTime = 0.5;} else {_delayTime = 0.75;};
-if (_weapon == "hgun_Pistol_heavy_01_F" || _weapon == "hgun_Pistol_heavy_01_MRD_F" || _weapon == "hgun_Pistol_heavy_01_snds_F") then { 
-    [] spawn {
-        _time = time;
-        while {time - _time < 0.5} do {
-            player setWeaponReloadingTime [player, currentWeapon player, 0.25];
-        };
-    };
-};

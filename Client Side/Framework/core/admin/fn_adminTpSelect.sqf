@@ -10,3 +10,7 @@ closeDialog 0;
 
 openMap [true, false];
 onMapSingleClick "[_pos select 0, _pos select 1, _pos select 2] call life_fnc_teleport";
+
+if (FETCH_CONST(life_adminlevel) > 0) then {
+    hint format ["<t color = '#7300e6'>%1</t> has teleported.",player getVariable ["realname", name player]];
+};

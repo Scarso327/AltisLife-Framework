@@ -11,3 +11,7 @@ _target = call compile format ["%1", _target];
 
 if (isNil "_target" || isNull _target) exitWith {};
 doGetOut _target
+
+if (FETCH_CONST(life_adminlevel) > 0) then {
+    hint format ["<t color = '#7300e6'>%1</t> has ejected <t color = '#7300e6'>%2</t> from a vehicle.",player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
+};

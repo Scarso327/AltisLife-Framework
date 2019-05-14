@@ -14,3 +14,7 @@ if (_target == player) exitWith {hint "You are unable to do this.";};
 
 CASH = 0;
 life_atmcash = LIFE_SETTINGS(getNumber,"starting_bank");
+
+if (FETCH_CONST(life_adminlevel) > 0) then {
+    hint format ["<t color = '#7300e6'>%1</t> has reset the money of <t color = '#7300e6'>%2</t>.",player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
+};

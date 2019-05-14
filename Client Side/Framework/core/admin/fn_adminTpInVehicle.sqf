@@ -16,4 +16,8 @@ if (vehicle _target isEqualTo _target) exitWith {hint "You cannot teleport in th
 
 _vehicle = vehicle _target;
 player moveInCargo _vehicle
-hint format ["You have teleported in the vehicle of <t color = '#7300e6'>%1</t>.",_target getVariable ["realname",name _target]];
+
+if (FETCH_CONST(life_adminlevel) > 0) then {
+    hint format ["<t color = '#7300e6'>%1</t> has teleported inside the vehicle of <t color = '#7300e6'>%2</t>.",player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
+};
+

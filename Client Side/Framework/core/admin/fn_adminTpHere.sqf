@@ -15,4 +15,7 @@ if (_target == player) exitWith {hint "You are unable to do this.";};
 if (!(vehicle _target isEqualTo _target)) exitWith {hint "You cannot teleport the player here as they are inside of a vehicle."};
 
 _target setPos (getPos player);
-hint format ["You have teleported <t color = '#7300e6'>%1</t> to your location.",_target getVariable ["realname",name _target]];
+
+if (FETCH_CONST(life_adminlevel) > 0) then {
+    hint format ["<t color = '#7300e6'>%1</t> has teleported <t color = '#7300e6'>%2</t> to their location.",player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
+};

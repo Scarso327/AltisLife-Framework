@@ -14,3 +14,7 @@ if (isNil "_target" || isNull _target) exitWith {};
 _target setDamage 0;
 life_thirst = 100;
 life_hunger = 100;
+
+if (FETCH_CONST(life_adminlevel) > 0) then {
+    hint format ["<t color = '#7300e6'>%1</t> has healed <t color = '#7300e6'>%2</t>.",player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
+};

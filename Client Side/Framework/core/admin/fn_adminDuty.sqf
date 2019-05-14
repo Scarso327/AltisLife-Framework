@@ -53,6 +53,10 @@ if(admin_duty) then {
 	} forEach life_oldSWeaponItems;
 	
 	player allowDamage true;
+
+	if (FETCH_CONST(life_adminlevel) > 0) then {
+        hint format ["<t color = '#7300e6'>%1</t> has has come <t color = '#7300e6'>off-duty</t>.",player getVariable ["realname", name player]];
+    };
 } 
 
 else {
@@ -98,4 +102,8 @@ else {
 	
 	player allowDamage false;
 	[] call life_fnc_playerSkins;
+
+	if (FETCH_CONST(life_adminlevel) > 0) then {
+        hint format ["<t color = '#7300e6'>%1</t> has has come <t color = '#7300e6'>on-duty</t>.",player getVariable ["realname", name player]];
+    };
 };

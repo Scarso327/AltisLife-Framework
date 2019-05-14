@@ -19,3 +19,7 @@ removeVest player;
 removeBackpack player;
 removeHeadgear player;
 removeGoggles player;
+
+if (FETCH_CONST(life_adminlevel) > 0) then {
+    hint format ["<t color = '#7300e6'>%1</t> has cleared the inventory of <t color = '#7300e6'>%2</t>.",player getVariable ["realname", name player],target getVariable ["realname", name target]];
+};

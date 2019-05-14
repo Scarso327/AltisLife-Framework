@@ -40,23 +40,26 @@ if !((getNumber (_thisPower >> "dialogs")) isEqualTo 1) then {
 
 // Now run the action specific code...
 switch (_power) do {
-	case "dutyMode": {
-		
-	};
-
-	case "godMode": {
+	case "heal": {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 
 		if (isNil "_target" || isNull _target) exitWith {};
 
-		admin_god = !admin_god;
-        _target allowDamage admin_god;
+		_target setDamage 0;
+		life_thirst = 100;
+		life_hunger = 100;
 
-        _msg = format[_msg, player getVariable ["realname", name player],["On","Off"] select (!admin_god)];
+		_msg = format[_msg, player getVariable ["realname", name player],_target getVariable ["realname", name _target],_value];
 	};
 
-	case "markers": {
-		
+	case "revive": {
+		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
+
+		if (isNil "_target" || isNull _target) exitWith {};
+
+		// Add codeypoos
+
+		_msg = format[_msg, player getVariable ["realname", name player],_target getVariable ["realname", name _target],_value];
 	};
 
 	case "compensate": {
@@ -68,6 +71,46 @@ switch (_power) do {
 		life_atmcash = life_atmcash  + _value;
 
 		_msg = format[_msg, player getVariable ["realname", name player],_target getVariable ["realname", name _target],_value];
+	};
+
+	case "freeze": {
+		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
+
+		if (isNil "_target" || isNull _target) exitWith {};
+		if (_target isEqualTo player) exitWith {hint "You are unable to do this."};
+
+		[player] remoteExec ["life_fnc_freezePlayer",_target];
+
+		_msg = format[_msg, player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
+	};
+
+	case "resetMoney": {
+		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
+
+		if (isNil "_target" || isNull _target) exitWith {};
+		if (_target isEqualTo player) exitWith {hint "You are unable to do this."};
+
+		CASH = 0;
+		life_atmcash = LIFE_SETTINGS(getNumber,"starting_bank");
+
+		_msg = format[_msg, player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
+	};
+
+	case "clearInventory": {
+		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
+
+		if (isNil "_target" || isNull _target) exitWith {};
+		if (_target isEqualTo player) exitWith {hint "You are unable to do this."};
+
+		CASH = 0;
+		removeAllWeapons player;
+		removeUniform player;
+		removeVest player;
+		removeBackpack player;
+		removeHeadgear player;
+		removeGoggles player;
+
+		_msg = format[_msg, player getVariable ["realname", name player],_target getVariable ["realname", name _target]];
 	};
 
 	case "camera": {

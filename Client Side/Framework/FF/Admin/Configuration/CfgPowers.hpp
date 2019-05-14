@@ -1,40 +1,28 @@
-class CfgPowers {
-	class dutyMode {
-		title = "Duty Mode";
-		onDuty = false;
-		notify = true;
-		dialogs = true;
-		reqLevel = 2;
-		message = "<t color = '#7300e6'>%1</t> has turned duty status <t color = '#7300e6'>%2</t>.";
-		conditions = "";
-		disableIF = "";
-		tooltip = "Go on/off duty as a staff member..";
-	};
-
-	class godMode {
-		title = "Godmode";
+class CfgPowers {	
+	class heal {
+		title = "Heal";
 		onDuty = true;
 		notify = true;
 		dialogs = true;
 		reqLevel = 2;
-		message = "<t color = '#7300e6'>%1</t> has turned godmode <t color = '#7300e6'>%2</t>.";
+		message = "<t color = '#7300e6'>%1</t> has healed <t color = '#7300e6'>%2</t>.";
 		conditions = "";
 		disableIF = "";
-		tooltip = "Become immume to all damage types.";
+		tooltip = "Heal the selected player and fill their thirst and hunger levels."; 
 	};
 
-	class markers {
-		title = "Markers";
+	class revive {
+		title = "Revive";
 		onDuty = true;
 		notify = true;
 		dialogs = true;
 		reqLevel = 2;
-		message = "<t color = '#7300e6'>%1</t> has turned markers <t color = '#7300e6'>%2</t>.";
+		message = "<t color = '#7300e6'>%1</t> has revived <t color = '#7300e6'>%2</t>.";
 		conditions = "";
 		disableIF = "";
-		tooltip = "Display all players on the map.";
+		tooltip = "Revive the selected player."; 
 	};
-	
+
 	class compensate {
 		title = "Compensate";
 		onDuty = true;
@@ -45,6 +33,42 @@ class CfgPowers {
 		conditions = "";
 		disableIF = "";
 		tooltip = "Compensate a selected player for a specific amount."; 
+	};
+
+	class freeze {
+		title = "Freeze";
+		onDuty = true;
+		notify = true;
+		dialogs = false;
+		reqLevel = 2;
+		message = "<t color = '#7300e6'>%1</t> has frozen <t color = '#7300e6'>%2</t>.";
+		conditions = "";
+		disableIF = "";
+		tooltip = "Freeze the input of the selected player."; 
+	};
+
+	class resetMoney {
+		title = "Reset Money";
+		onDuty = true;
+		notify = true;
+		dialogs = false;
+		reqLevel = 2;
+		message = "<t color = '#7300e6'>%1</t> has reset the money of <t color = '#7300e6'>%2</t>.";
+		conditions = "";
+		disableIF = "";
+		tooltip = "Reset the money of the selected player."; 
+	};
+
+	class clearInventory {
+		title = "Clear Inventory";
+		onDuty = true;
+		notify = true;
+		dialogs = false;
+		reqLevel = 2;
+		message = "<t color = '#7300e6'>%1</t> has cleared the inventory of <t color = '#7300e6'>%2</t>.";
+		conditions = "";
+		disableIF = "";
+		tooltip = "Clear the inventory of the selected player."; 
 	};
 
 	class camera {

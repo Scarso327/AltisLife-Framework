@@ -40,6 +40,132 @@ if !((getNumber (_thisPower >> "dialogs")) isEqualTo 1) then {
 
 // Now run the action specific code...
 switch (_power) do {
+	case "dutyMode": {
+		private _suit = switch (FETCH_CONST(life_adminlevel)) do {
+			case 1: {"U_I_Protagonist_VR"};
+			case 2: {"U_B_Protagonist_VR"};
+			default {"U_O_Protagonist_VR"};
+		};
+
+		if(staffDuty) then {
+			staffDuty = !staffDuty;
+
+			// Remove staff clothing items.
+			removeUniform player;
+			removeVest player;
+			removeBackpack player;
+			removeHeadgear player;
+			removeGoggles player;
+
+			// Add previous clothing items.
+			player forceAddUniform life_oldUniform;
+			_count = (count life_oldUniformItems) - 1; 
+			for "_x" from 0 to _count do { 
+				_item = life_oldUniformItems select _x;
+				player addItemToUniform _item;
+			};
+			player addVest life_oldVest;
+			_count = (count life_oldVestItems) - 1; 
+			for "_x" from 0 to _count do { 
+				_item = life_oldVestItems select _x;
+				player addItemToVest _item;
+			};
+			player addBackpack life_oldBackpack;
+			_count = (count life_oldBackpackItems) - 1; 
+			for "_x" from 0 to _count do {
+				_item = life_oldBackpackItems select _x;
+				player addItemToBackpack _item;
+			};
+			player addHeadgear life_oldHeadgear;
+			player addGoggles life_oldGoggles;
+			[] call life_fnc_playerSkins;
+
+			// Add previous weapon(s) and ammunition.
+			player addWeapon life_oldPWeapon;
+			player addWeapon life_oldSWeapon;
+			player addMagazine life_oldPWeaponMag;
+			player addMagazine life_oldSWeaponMag;
+			{ player addPrimaryWeaponItem _x; } forEach life_oldPWeaponItems;
+			{ player addHandgunItem _x; } forEach life_oldSWeaponItems;
+
+			// Disable default staff powers.
+			staffGod = false; staffMarkers = false; staffESP = false;
+    	};
+
+		if(staffDuty isEqualto false) then {
+			staffDuty = !staffDuty;
+
+			// Remove current clothing items.
+			removeUniform player;
+			removeVest player;
+			removeBackpack player;
+			removeHeadgear player;
+			removeGoggles player;
+
+			// Save current stored items.
+			life_oldUniformItems = uniformItems player;
+			life_oldVestItems = vestItems player;
+			life_oldBackpackItems = backpackItems player;
+
+			// Save current clothing items.
+			life_oldUniform = uniform player;
+			life_oldVest = vest player;
+			life_oldBackpack = backpack player;
+			life_oldHeadgear = headgear player;
+			life_oldGoggles = goggles player;
+
+			// Save current weapons & ammunition.
+			life_oldPWeapon = primaryWeapon player;
+			life_oldSWeapon = handgunWeapon player;
+			life_oldPWeaponMag = (getarray (configFile >> "CFGWeapons" >> life_oldPWeapon >> "magazines") select 0);
+			life_oldSWeaponMag = (getarray (configFile >> "CFGWeapons" >> life_oldSWeapon >> "magazines") select 0);
+			life_oldPWeaponItems = primaryWeaponItems player;
+			life_oldSWeaponItems = handgunItems player;
+
+			// Add staff clothing.
+			player forceAddUniform _suit;
+			player addGoggles "G_Goggles_VR";
+			[] call life_fnc_playerSkins;
+
+			// Add staff equipment.
+			player addItem "ItemGPS";
+			player assignItem "ItemGPS";
+
+			// Enable default staff powers.
+			staffGod; staffMarkers; staffESP;
+    	};
+
+		_msg = format[_msg, player getVariable ["realname", name player],["On","Off"] select (!staffDuty)];
+	};
+
+	case "godmode": {
+		staffGod = !staffGod;
+        player allowDamage staffGod;
+
+		_msg = format[_msg, player getVariable ["realname", name player],["On","Off"] select (!staffGod)];
+	};
+
+	case "markers": {
+		staffMarkers = !staffMarkers;
+		// Add codeypoos
+
+		_msg = format[_msg, player getVariable ["realname", name player],["On","Off"] select (!staffMarkers)];
+	};
+
+	case "esp": {
+		staffESP = !staffESP;
+		// Add codeypoos
+
+		_msg = format[_msg, player getVariable ["realname", name player],["On","Off"] select (!staffESP)];
+	};
+
+	case "invisibility": {
+		staffInvisibilitiy = !staffInvisibilitiy;
+        player hideObject staffInvisibilitiy;
+
+		_msg = format[_msg, player getVariable ["realname", name player],["On","Off"] select (!staffInvisibilitiy)];
+	};
+
 	case "heal": {
 		private _target = [call compile format ["%1",(lbData[2902,lbCurSel (2902)])],player] select (lbCurSel (2902) isEqualTo -1);
 

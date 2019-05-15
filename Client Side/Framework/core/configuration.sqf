@@ -42,17 +42,15 @@ life_markers = false;
 life_markers_active = false;
 life_canpay_bail = true;
 life_storagePlacing = scriptNull;
-admin_duty = false;
 life_nlrTimer_running = false;
 life_nlrTimer_stop = false;
 
 // Staff Settings 
 staffDuty = false;
-
-
-admin_invisibility = false;
-admin_esp = false;
-admin_god = false;
+staffGod = false;
+staffMarkers = false;
+staffESP = false;
+staffInvisibilitiy = false;
 
 // FF scripts...
 FF_activeEventFeedControls = [];

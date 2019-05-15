@@ -1,4 +1,64 @@
-class CfgPowers {	
+class CfgPowers {
+	class dutyMode {
+		title = "Duty Mode";
+		onDuty = true;
+		notify = true;
+		dialogs = true;
+		reqLevel = 2;
+		message = "<t color = '#7300e6'>%1</t> has gone <t color = '#7300e6'>%2-duty</t>.";
+		conditions = "";
+		disableIF = "";
+		tooltip = "Go on/off duty as a staff member."; 
+	};
+
+	class godmode {
+		title = "Godmode";
+		onDuty = true;
+		notify = true;
+		dialogs = true;
+		reqLevel = 2;
+		message = "<t color = '#7300e6'>%1</t> has turned godmode <t color = '#7300e6'>%2</t>.";
+		conditions = "";
+		disableIF = "";
+		tooltip = "Make yourself immune to all damange."; 
+	};
+
+	class markers {
+		title = "Markers";
+		onDuty = true;
+		notify = true;
+		dialogs = true;
+		reqLevel = 2;
+		message = "<t color = '#7300e6'>%1</t> has turned markers <t color = '#7300e6'>%2</t>.";
+		conditions = "";
+		disableIF = "";
+		tooltip = "Make yourself immune to all damange."; 
+	};
+
+	class esp {
+		title = "ESP";
+		onDuty = true;
+		notify = true;
+		dialogs = true;
+		reqLevel = 2;
+		message = "<t color = '#7300e6'>%1</t> has turned ESP <t color = '#7300e6'>%2</t>.";
+		conditions = "";
+		disableIF = "";
+		tooltip = "Display an outline around all players through surfaces."; 
+	};
+
+	class invisibility {
+		title = "Invisibility";
+		onDuty = true;
+		notify = true;
+		dialogs = true;
+		reqLevel = 2;
+		message = "<t color = '#7300e6'>%1</t> has turned invisibility <t color = '#7300e6'>%2</t>.";
+		conditions = "";
+		disableIF = "";
+		tooltip = "Hide your player model to make yourself invisible."; 
+	};
+
 	class heal {
 		title = "Heal";
 		onDuty = true;

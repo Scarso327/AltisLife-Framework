@@ -4,7 +4,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = true;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has gone <t color = '#7300e6'>%2-duty</t>.";
 		conditions = "";
 		disableIF = "";
@@ -16,7 +16,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = true;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has turned godmode <t color = '#7300e6'>%2</t>.";
 		conditions = "";
 		disableIF = "";
@@ -64,7 +64,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = true;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has healed <t color = '#7300e6'>%2</t>.";
 		conditions = "";
 		disableIF = "";
@@ -76,7 +76,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = true;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has revived <t color = '#7300e6'>%2</t>.";
 		conditions = "";
 		disableIF = "";
@@ -88,7 +88,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = true;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has compensated <t color = '#7300e6'>%2</t> for <t color = '#7300e6'>%3</t>.";
 		conditions = "";
 		disableIF = "";
@@ -148,7 +148,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = false;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has open the teleport menu.";
 		conditions = "";
 		disableIF = "";
@@ -160,7 +160,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = false;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has teleported to <t color = '#7300e6'>%2</t>.";
 		conditions = "";
 		disableIF = "";
@@ -172,7 +172,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = false;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has teleported <t color = '#7300e6'>%2</t> to their location.";
 		conditions = "";
 		disableIF = "";
@@ -220,7 +220,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = true;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has repaired the vehicle of <t color = '#7300e6'>%2</t>.";
 		conditions = "";
 		disableIF = "";
@@ -232,7 +232,7 @@ class CfgPowers {
 		onDuty = true;
 		notify = true;
 		dialogs = true;
-		reqLevel = 2;
+		reqLevel = 1;
 		message = "<t color = '#7300e6'>%1</t> has refueled the vehicle of <t color = '#7300e6'>%2</t>.";
 		conditions = "";
 		disableIF = "";

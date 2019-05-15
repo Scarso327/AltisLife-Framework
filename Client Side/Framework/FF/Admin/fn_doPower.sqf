@@ -47,7 +47,7 @@ switch (_power) do {
 			default {"U_O_Protagonist_VR"};
 		};
 
-		if(staffDuty) then {
+		if (staffDuty) then {
 			staffDuty = !staffDuty;
 
 			// Remove staff clothing items.
@@ -92,7 +92,7 @@ switch (_power) do {
 			staffGod = false; staffMarkers = false; staffESP = false;
     	};
 
-		if(staffDuty isEqualto false) then {
+		if (staffDuty isEqualto false) then {
 			staffDuty = !staffDuty;
 
 			// Remove current clothing items.
@@ -132,7 +132,10 @@ switch (_power) do {
 			player assignItem "ItemGPS";
 
 			// Enable default staff powers.
-			staffGod; staffMarkers; staffESP;
+			switch (FETCH_CONST(life_adminlevel)) do {
+				case 1: {staffGod};
+				default {staffMarkers; staffESP};
+			};
     	};
 
 		_msg = format[_msg, player getVariable ["realname", name player],["On","Off"] select (!staffDuty)];

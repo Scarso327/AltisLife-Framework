@@ -1,7 +1,7 @@
 class CfgPowers {
 	class dutyMode {
 		title = "Duty Mode";
-		onDuty = true;
+		onDuty = false;
 		notify = true;
 		dialogs = true;
 		reqLevel = 1;

@@ -1,3 +1,8 @@
+/*
+	@File: CfgSettings.hpp
+	@Author: Jack "Scarso" Farhall & Lewis Mackinnon
+	@Description: Configures the overal server settings.
+*/
 #define true 1
 #define false 0
 
@@ -9,10 +14,7 @@ class CfgSettings {
     battlEye_friendlyLogging = false;
     player_advancedLog = false;
     player_moneyLog = false;
-    player_deathLog = false;
-
-    /* Perk Settings */
-    removal_cost = 30000; // The cost to remove a perk...
+    player_deathLog = false;    
 
     /* Escape Menu Configuration */
     escapeMenu_timer = 10;
@@ -25,10 +27,9 @@ class CfgSettings {
     default_maxWeight = 24;
     save_playerStats = true;
     save_virtualItems = true;
-    respawn_timer = 30;
-    bleedout_timer = 300; // Must always be in seconds...
     hm_required_number = 5;
     atm_cooldown = 10;
+    perk_removal = 30000;
     premium_membership = false;
 
     /* Bank System Configurations */
@@ -42,9 +43,11 @@ class CfgSettings {
     paycheck_period = 15;
 
     /* Medical System Configurations */
-    revive_cops = true; // Only allows them when no medics are online...
+    bleedout_timer = 300;
+    respawn_timer = 30;
     revive_fee = 1500;
     hospital_heal_fee = 100;
+    revive_cops = true;
 
     /* Vehicle Data Saving */
     vehicleShop_rentalOnly[] = {"B_G_Quadbike_01_F","C_IDAP_Offroad_02_unarmed_F","C_IDAP_Offroad_01_F","C_IDAP_Van_02_transport_F","C_IDAP_Van_02_vehicle_F","C_IDAP_Heli_Transport_02_F"};

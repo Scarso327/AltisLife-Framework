@@ -1,9 +1,7 @@
 /*
 	@File: fn_doPower.sqf
-  
-	@Author: Jack "Scarso" Farhall
-  
-	@Description: If you don't know then you shouldn't touch.
+	@Author: Jack "Scarso" Farhall & Lewis Mackinnon
+	@Description: Adds and controls all staff powers.
 */
 scopeName "fnc_adminPower";
 #include "..\..\script_macros.hpp"

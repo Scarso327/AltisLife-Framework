@@ -1,3 +1,8 @@
+/*
+	@File: CfgItems.hpp
+	@Author: Jack "Scarso" Farhall & Lewis Mackinnon
+	@Description: Configures the settings behind the virtual items.
+*/
 class CfgItems {
     class water {
         variable = "water";

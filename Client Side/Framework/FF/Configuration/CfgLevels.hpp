@@ -1,5 +1,9 @@
+/*
+	@File: CfgLevels.hpp
+	@Author: Jack "Scarso" Farhall & Lewis Mackinnon
+	@Description: Configures the settings behind the leveling system.
+*/
 class CfgLevels {
-
     maxLevel = 30;
     maxLevelLoopReward = 100000;
 

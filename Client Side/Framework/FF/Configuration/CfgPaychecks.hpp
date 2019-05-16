@@ -1,17 +1,14 @@
 /*
 	@File: CfgPaychecks.hpp
-  
-	@Author: Jack "Scarso" Farhall
-  
-	@Description: Paycheck settings...
+	@Author: Jack "Scarso" Farhall & Lewis Mackinnon
+	@Description: Configures the paycheck settings.
 */
-
 class CfgPaychecks {
 	class west {
 		class levels {
 			class life_coplevel {
 				paychecks[] = {
-					0, // Level 0
+					0, // Unwhitelisted
 					5000, // Police Cadet
 					6000, // Police Constable
 					7000, // Senior Police Constable

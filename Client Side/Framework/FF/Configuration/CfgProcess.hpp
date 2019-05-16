@@ -1,3 +1,8 @@
+/*
+	@File: CfgProcess.hpp
+	@Author: Lewis Mackinnon
+	@Description: Configures the processing settings.
+*/
 class CfgProcess {
     class apple {
         MaterialsReq[] = {{"apple",1}};

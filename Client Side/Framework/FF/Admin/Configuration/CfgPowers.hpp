@@ -1,3 +1,8 @@
+/*
+	@File: CfgPowers.hpp
+	@Author: Jack "Scarso" Farhall & Lewis Mackinnon
+	@Description: Defines further settings for staff powers.
+*/
 class CfgPowers {
 	class dutyMode {
 		title = "Duty Mode";

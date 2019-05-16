@@ -1,3 +1,8 @@
+/*
+	@File: CfgClothing.hpp
+	@Author: Lewis Mackinnon
+	@Description: Configures the contents of the clothing stores.
+*/
 class CfgClothing {
     class general_clothing {
         title = "General Clothing";

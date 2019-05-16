@@ -1,9 +1,7 @@
 /*
-	@File: CfgProfessions.hpp
-  
-	@Author: Jack "Scarso" Farhall
-  
-	@Description: Holds all settings for all professions...
+	@File: CfgPerks.hpp
+	@Author: Jack "Scarso" Farhall & Lewis Mackinnon
+	@Description: Configures the settings behind the professions system.
 */
 
 class CfgProfessions {
@@ -14,10 +12,7 @@ class CfgProfessions {
         side = "Civilian";
         maxLevel = 500;
         levels[] = {
-            {50, "Novice"},
-            {100, "Intermediate"},
-            {250, "Advanced"},
-            {500, "Expert"}
+            {50, "Novice"}, {100, "Intermediate"}, {250, "Advanced"}, {500, "Expert"}
         };
     };
 
@@ -28,10 +23,7 @@ class CfgProfessions {
         side = "Civilian";
         maxLevel = 500;
         levels[] = {
-            {50, "Novice"},
-            {100, "Intermediate"},
-            {250, "Advanced"},
-            {500, "Expert"}
+            {50, "Novice"}, {100, "Intermediate"}, {250, "Advanced"}, {500, "Expert"}
         };
     };
 
@@ -42,10 +34,7 @@ class CfgProfessions {
         side = "Civilian";
         maxLevel = 500;
         levels[] = {
-            {50, "Novice"},
-            {100, "Intermediate"},
-            {250, "Advanced"},
-            {500, "Expert"}
+            {50, "Novice"}, {100, "Intermediate"}, {250, "Advanced"}, {500, "Expert"}
         };
     };
 
@@ -56,10 +45,7 @@ class CfgProfessions {
         side = "Civilian";
         maxLevel = 500;
         levels[] = {
-            {50, "Novice"},
-            {100, "Intermediate"},
-            {250, "Advanced"},
-            {500, "Expert"}
+            {50, "Novice"}, {100, "Intermediate"}, {250, "Advanced"}, {500, "Expert"}
         };
     };
 
@@ -70,10 +56,7 @@ class CfgProfessions {
         side = "Civilian";
         maxLevel = 500;
         levels[] = {
-            {50, "Novice"},
-            {100, "Intermediate"},
-            {250, "Advanced"},
-            {500, "Expert"}
+            {50, "Novice"}, {100, "Intermediate"}, {250, "Advanced"}, {500, "Expert"}
         };
     };
 
@@ -84,10 +67,7 @@ class CfgProfessions {
         side = "Civilian";
         maxLevel = 500;
         levels[] = {
-            {50, "Novice"},
-            {100, "Intermediate"},
-            {250, "Advanced"},
-            {500, "Expert"}
+            {50, "Novice"}, {100, "Intermediate"}, {250, "Advanced"}, {500, "Expert"}
         };
     };
 };

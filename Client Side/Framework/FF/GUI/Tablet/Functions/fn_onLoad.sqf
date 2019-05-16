@@ -149,7 +149,7 @@ switch (_title) do {
 		private _yValues = [0.236,0.258,0.302,0.236,0.258];
 		#define INC 0.099
 
-		_removalInfo ctrlSetStructuredText parseText format["<t align='center'>Removal Cost: <t color = '#7300e6'>£%1</t></t>", [LIFE_SETTINGS(getNumber, "removal_cost")] call LIFE(numberText)];
+		_removalInfo ctrlSetStructuredText parseText format["<t align='center'>Removal Cost: <t color = '#7300e6'>£%1</t></t>", [LIFE_SETTINGS(getNumber, "perk_removal")] call LIFE(numberText)];
 
 		// This area works out and updates the inactive perks...
 		{

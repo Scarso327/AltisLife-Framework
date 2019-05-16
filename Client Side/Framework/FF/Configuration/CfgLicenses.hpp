@@ -1,3 +1,8 @@
+/*
+	@File: CfgLicenses.hpp
+	@Author: Lewis Mackinnon
+	@Description: Configures the settings behind the licenses.
+*/
 class CfgLicenses {
     // Driver and Vehicle Licensing Agency
     class driving {

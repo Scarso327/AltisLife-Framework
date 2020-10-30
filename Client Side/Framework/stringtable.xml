@@ -116,13 +116,13 @@
             <Original>Player no longer exists?</Original>
         </Key>
         <Key ID="STR_ANOTF_CompWarn">
-            <Original>You are about to give yourself $%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</Original>
+            <Original>You are about to give yourself £%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</Original>
         </Key>
         <Key ID="STR_ANOTF_Success">
-            <Original>You have added $%1 to your account.</Original>
+            <Original>You have added £%1 to your account.</Original>
         </Key>
         <Key ID="STR_ANOTF_Fail">
-            <Original>You can not go above $999,999</Original>
+            <Original>You can not go above £999,999</Original>
         </Key>
         <Key ID="STR_ANOTF_Amount">
             <Original>Please type in the amount to compensate.</Original>
@@ -211,7 +211,7 @@
             <Original>Transfer</Original>
         </Key>
         <Key ID="STR_ATM_GreaterThan">
-            <Original>You can't deposit more then $999,999 at a time</Original>
+            <Original>You can't deposit more then £999,999 at a time</Original>
         </Key>
         <Key ID="STR_ATM_notnumeric">
             <Original>The amount entered isn't a numeric value.</Original>
@@ -223,7 +223,7 @@
             <Original>The player selected doesn't seem to exist?</Original>
         </Key>
         <Key ID="STR_ATM_TransferMax">
-            <Original>You can't transfer more then $999,999</Original>
+            <Original>You can't transfer more then £999,999</Original>
         </Key>
         <Key ID="STR_ATM_NotEnoughFunds">
             <Original>You don't have that much in your bank account!</Original>
@@ -232,25 +232,25 @@
             <Original>You don't have that much in your gang bank account!</Original>
         </Key>
         <Key ID="STR_ATM_SentMoneyFail">
-            <Original>You do not have enough money in your bank account, to transfer $%1 you will need $%2 as a tax fee.</Original>
+            <Original>You do not have enough money in your bank account, to transfer £%1 you will need £%2 as a tax fee.</Original>
         </Key>
         <Key ID="STR_ATM_SentMoneySuccess">
-            <Original>You have transfered $%1 to %2.\n\nA tax fee of $%3 was taken for the wire transfer.</Original>
+            <Original>You have transfered £%1 to %2.\n\nA tax fee of £%3 was taken for the wire transfer.</Original>
         </Key>
         <Key ID="STR_ATM_WireTransfer">
-            <Original>%1 has wire transferred $%2 to you.</Original>
+            <Original>%1 has wire transferred £%2 to you.</Original>
         </Key>
         <Key ID="STR_ATM_WithdrawMax">
-            <Original>You can't withdraw more then $999,999</Original>
+            <Original>You can't withdraw more then £999,999</Original>
         </Key>
         <Key ID="STR_ATM_WithdrawMin">
-            <Original>You can't withdraw less then $100</Original>
+            <Original>You can't withdraw less then £100</Original>
         </Key>
         <Key ID="STR_ATM_WithdrawSuccess">
-            <Original>You have withdrawn $%1 from your bank account</Original>
+            <Original>You have withdrawn £%1 from your bank account</Original>
         </Key>
         <Key ID="STR_ATM_WithdrawSuccessG">
-            <Original>You have withdrawn $%1 from your gang.</Original>
+            <Original>You have withdrawn £%1 from your gang.</Original>
         </Key>
         <Key ID="STR_ATM_WithdrawInUseG">
             <Original>Someone is already trying to withdraw from your gang.</Original>
@@ -259,10 +259,10 @@
             <Original>You do not have that much cash on you.</Original>
         </Key>
         <Key ID="STR_ATM_DepositSuccess">
-            <Original>You have deposited $%1 into your bank account</Original>
+            <Original>You have deposited £%1 into your bank account</Original>
         </Key>
         <Key ID="STR_ATM_DepositSuccessG">
-            <Original>You have deposited $%1 into your gang's bank account.</Original>
+            <Original>You have deposited £%1 into your gang's bank account.</Original>
         </Key>
         <Key ID="STR_ATM_DepositInUseG">
             <Original>Someone is already trying to deposit into your gang's bank account.</Original>
@@ -351,7 +351,7 @@
             <Original>Set Leader</Original>
         </Key>
         <Key ID="STR_Gang_PriceTxt">
-            <Original>To create a gang it costs $%1</Original>
+            <Original>To create a gang it costs £%1</Original>
         </Key>
         <Key ID="STR_Gang_Create">
             <Original>Create</Original>
@@ -410,10 +410,10 @@
             <Original>You have invalid characters in your gang name. It can only consist of Numbers and letters with an underscore</Original>
         </Key>
         <Key ID="STR_GNOTF_NotEnoughMoney">
-            <Original>You do not have enough money in your bank account.\n\nYou lack: $%1</Original>
+            <Original>You do not have enough money in your bank account.\n\nYou lack: £%1</Original>
         </Key>
         <Key ID="STR_GNOTF_CreateSuccess">
-            <Original>You have created the gang %1 for $%2</Original>
+            <Original>You have created the gang %1 for £%2</Original>
         </Key>
         <Key ID="STR_GNOTF_DisbandWarn">
             <Original>You are about to disband the gang, by disbanding the gang it will be removed from the database and the group will be dropped. &lt;br/&gt;&lt;br/&gt;Are you sure you want to disband the group? You will not be refunded the price for creating it.</Original>
@@ -494,7 +494,7 @@
             <Original>Lacking:</Original>
         </Key>
         <Key ID="STR_GNOTF_UpgradeSuccess">
-            <Original>You have upgraded from %1 to %2 maximum slots for &lt;t color='#8cff9b'&gt;$%3&lt;/t&gt;</Original>
+            <Original>You have upgraded from %1 to %2 maximum slots for &lt;t color='#8cff9b'&gt;£%3&lt;/t&gt;</Original>
         </Key>
         <Key ID="STR_GNOTF_UpgradeCancel">
             <Original>Upgrade cancelled.</Original>
@@ -526,13 +526,13 @@
             <Original>You are not the owner of this house!</Original>
         </Key>
         <Key ID="STR_Garage_HouseBuyMSG">
-            <Original>This garage is available for &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;&lt;br/&gt;</Original>
+            <Original>This garage is available for &lt;t color='#8cff9b'&gt;£%1&lt;/t&gt;&lt;br/&gt;</Original>
         </Key>
         <Key ID="STR_House_Hideout">
             <Original>This building is a Gang Hideout!</Original>
         </Key>
         <Key ID="STR_House_SellGarageMSG">
-            <Original>Are you sure you want to sell your garage? It will sell for: &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;</Original>
+            <Original>Are you sure you want to sell your garage? It will sell for: &lt;t color='#8cff9b'&gt;£%1&lt;/t&gt;</Original>
         </Key>
         <Key ID="STR_House_GarageSell">
             <Original>Sell Garage</Original>
@@ -562,7 +562,7 @@
             <Original>No vehicles found in garage.</Original>
         </Key>
         <Key ID="STR_Garage_CashError">
-            <Original>You don't have $%1 in your bank account</Original>
+            <Original>You don't have £%1 in your bank account</Original>
         </Key>
         <Key ID="STR_Garage_SpawningVeh">
             <Original>Spawning vehicle please wait...</Original>
@@ -577,7 +577,7 @@
             <Original>There is already a vehicle on the spawn point. You will be refunded the cost of getting yours out.</Original>
         </Key>
         <Key ID="STR_Garage_SoldCar">
-            <Original>You sold that vehicle for $%1</Original>
+            <Original>You sold that vehicle for £%1</Original>
         </Key>
         <Key ID="STR_Garage_Store_NotPersistent">
             <Original>That vehicle is a rental and cannot be stored in your garage.</Original>
@@ -770,7 +770,7 @@
             <Original>%1 count(s) of %2</Original>
         </Key>
         <Key ID="STR_Wanted_Bounty">
-            <Original>Current Bounty Price: $%1</Original>
+            <Original>Current Bounty Price: £%1</Original>
         </Key>
     </Package>
     <Package name="Animals">
@@ -813,10 +813,10 @@
     </Package>
     <Package name="Notifications">
         <Key ID="STR_NOTF_NE_1">
-            <Original>You do not have $%1 for a %2</Original>
+            <Original>You do not have £%1 for a %2</Original>
         </Key>
         <Key ID="STR_NOTF_B_1">
-            <Original>You bought a %1 for $%2</Original>
+            <Original>You bought a %1 for £%2</Original>
         </Key>
         <Key ID="STR_NOTF_Arrested_1">
             <Original>%1 was arrested by %2</Original>
@@ -834,7 +834,7 @@
             <Original>You have taken some turtle meat</Original>
         </Key>
         <Key ID="STR_NOTF_Earned_1">
-            <Original>You have earned $%1</Original>
+            <Original>You have earned £%1</Original>
         </Key>
         <Key ID="STR_NOTF_NetDrop">
             <Original>Dropping fishing net...</Original>
@@ -852,7 +852,7 @@
             <Original>Gathering %1...</Original>
         </Key>
         <Key ID="STR_NOTF_ChopSoldCar">
-            <Original>You have sold a %1 for $%2</Original>
+            <Original>You have sold a %1 for £%2</Original>
         </Key>
         <Key ID="STR_NOTF_Picked">
             <Original>You have picked %1 %2</Original>
@@ -870,13 +870,13 @@
             <Original>You failed to deliver the package because you died.</Original>
         </Key>
         <Key ID="STR_NOTF_HS_NoCash">
-            <Original>You do not have $%1 to be healed</Original>
+            <Original>You do not have £%1 to be healed</Original>
         </Key>
         <Key ID="STR_NOTF_HS_FullHealth">
             <Original>You do not need to be healed!</Original>
         </Key>
         <Key ID="STR_NOTF_HS_PopUp">
-            <Original>Spend $%1 to be fully healed?</Original>
+            <Original>Spend £%1 to be fully healed?</Original>
         </Key>
         <Key ID="STR_NOTF_HS_TITLE">
             <Original>Doctor</Original>
@@ -900,13 +900,13 @@
             <Original>Impounding has been cancelled.</Original>
         </Key>
         <Key ID="STR_NOTF_Impounded">
-            <Original>You have impounded a %1\n\nYou have received $%2 for cleaning up the streets!</Original>
+            <Original>You have impounded a %1\n\nYou have received £%2 for cleaning up the streets!</Original>
         </Key>
         <Key ID="STR_NOTF_HasImpounded">
             <Original>%1 has impounded %2's %3</Original>
         </Key>
         <Key ID="STR_NOTF_OwnImpounded">
-            <Original>You paid $%1 for impounding your own %2.</Original>
+            <Original>You paid £%1 for impounding your own %2.</Original>
         </Key>
         <Key ID="STR_NOTF_AbortESC">
             <Original>Abort available in %1</Original>
@@ -936,16 +936,16 @@
             <Original>You have packed up the spike strip.</Original>
         </Key>
         <Key ID="STR_NOTF_PickedEvidence">
-            <Original>%1 has been placed in evidence, you have received $%2 as a reward.</Original>
+            <Original>%1 has been placed in evidence, you have received £%2 as a reward.</Original>
         </Key>
         <Key ID="STR_NOTF_PickedMoney">
-            <Original>You have picked up $%1</Original>
+            <Original>You have picked up £%1</Original>
         </Key>
         <Key ID="STR_NOTF_Bail_Post">
             <Original>You must wait at least 3 minutes in jail before paying a bail.</Original>
         </Key>
         <Key ID="STR_NOTF_Bail_NotEnough">
-            <Original>You do not have $%1 in your bank account to pay bail.</Original>
+            <Original>You do not have £%1 in your bank account to pay bail.</Original>
         </Key>
         <Key ID="STR_NOTF_Bail_Bailed">
             <Original>%1 has posted bail!</Original>
@@ -978,7 +978,7 @@
             <Original>%1 was unrestrained by %2</Original>
         </Key>
         <Key ID="STR_NOTF_Robbed">
-            <Original>%1 has robbed %2 for $%3</Original>
+            <Original>%1 has robbed %2 for £%3</Original>
         </Key>
         <Key ID="STR_NOTF_RobFail">
             <Original>%1 doesn't have any money.</Original>
@@ -987,10 +987,10 @@
             <Original>%1 was tazed by %2</Original>
         </Key>
         <Key ID="STR_NOTF_VehContraband">
-            <Original>A vehicle was searched and has $%1 worth of drugs / contraband.</Original>
+            <Original>A vehicle was searched and has £%1 worth of drugs / contraband.</Original>
         </Key>
         <Key ID="STR_NOTF_ContainerContraband">
-            <Original>A container of house was searched and has $%1 worth of drugs / contraband.</Original>
+            <Original>A container of house was searched and has £%1 worth of drugs / contraband.</Original>
         </Key>
         <Key ID="STR_NOTF_PulledOut">
             <Original>You have been pulled out of the vehicle.</Original>
@@ -999,7 +999,7 @@
             <Original>%1 has gave you %2 %3.</Original>
         </Key>
         <Key ID="STR_NOTF_GivenMoney">
-            <Original>%1 has given you $%2.</Original>
+            <Original>%1 has given you £%2.</Original>
         </Key>
         <Key ID="STR_NOTF_SendingData">
             <Original>Sending information to server please wait.....</Original>
@@ -1023,7 +1023,7 @@
             <Original>You don't have enough room for that item.</Original>
         </Key>
         <Key ID="STR_NOTF_ProcessWOLicense">
-            <Original>You need $%1 to process without a license!</Original>
+            <Original>You need £%1 to process without a license!</Original>
         </Key>
         <Key ID="STR_NOTF_NotEnoughItemProcess">
             <Original>You don't have enough items!</Original>
@@ -1134,7 +1134,7 @@
             <Original>You don't have that much to give!</Original>
         </Key>
         <Key ID="STR_NOTF_youGaveMoney">
-            <Original>You gave $%1 to %2.</Original>
+            <Original>You gave £%1 to %2.</Original>
         </Key>
         <Key ID="STR_NOTF_recentlyRobbedBank">
             <Original>You recently robbed the bank! You can't give money away just yet.</Original>
@@ -1241,7 +1241,7 @@
             <Original>Now</Original>
         </Key>
         <Key ID="STR_News_NotEnough">
-            <Original>You need $%1 to send a broadcast!</Original>
+            <Original>You need £%1 to send a broadcast!</Original>
         </Key>
         <Key ID="STR_News_BroadcastedBy">
             <Original>&lt;t size='2'&gt;%1&lt;/t&gt;&lt;br /&gt;Broadcasted by: %2</Original>
@@ -1290,7 +1290,7 @@
             <Original>They didn't have any cash...</Original>
         </Key>
         <Key ID="STR_Civ_Robbed">
-            <Original>You stole $%1</Original>
+            <Original>You stole £%1</Original>
         </Key>
         <Key ID="STR_Civ_VaultEmpty">
             <Original>The safe is empty!</Original>
@@ -1331,10 +1331,10 @@
             <Original>You didn't enter actual number.</Original>
         </Key>
         <Key ID="STR_Cop_TicketOver100">
-            <Original>Tickets can not be more than $200,000!</Original>
+            <Original>Tickets can not be more than £200,000!</Original>
         </Key>
         <Key ID="STR_Cop_TicketGive">
-            <Original>%1 gave a ticket of $%2 to %3</Original>
+            <Original>%1 gave a ticket of £%2 to %3</Original>
         </Key>
         <Key ID="STR_Cop_Ticket_NotEnough">
             <Original>You don't have enough money in your bank account or on you to pay the ticket.</Original>
@@ -1343,28 +1343,28 @@
             <Original>%1 couldn't pay the ticket due to not having enough money.</Original>
         </Key>
         <Key ID="STR_Cop_Ticket_Paid">
-            <Original>You have paid the ticket of $%1</Original>
+            <Original>You have paid the ticket of £%1</Original>
         </Key>
         <Key ID="STR_Cop_Ticket_PaidNOTF">
-            <Original>%1 paid the ticket of $%2</Original>
+            <Original>%1 paid the ticket of £%2</Original>
         </Key>
         <Key ID="STR_Cop_Ticket_PaidNOTF_2">
             <Original>%1 paid the ticket.</Original>
         </Key>
         <Key ID="STR_Cop_Ticket_GUI_Given">
-            <Original>%1 has given you a ticket for $%2</Original>
+            <Original>%1 has given you a ticket for £%2</Original>
         </Key>
         <Key ID="STR_Cop_Ticket_Refuse">
             <Original>%1 refused to pay the ticket.</Original>
         </Key>
         <Key ID="STR_Cop_BountyRecieve">
-            <Original>You have collected a bounty of $%1 for arresting a criminal.</Original>
+            <Original>You have collected a bounty of £%1 for arresting a criminal.</Original>
         </Key>
         <Key ID="STR_Cop_BountyKill">
-            <Original>You have collected a bounty of $%1 for killing a wanted criminal, if you had arrested him you would of received $%2.</Original>
+            <Original>You have collected a bounty of £%1 for killing a wanted criminal, if you had arrested him you would of received £%2.</Original>
         </Key>
         <Key ID="STR_Cop_Contraband">
-            <Original>%1 has $%2 worth of contraband on them.</Original>
+            <Original>%1 has £%2 worth of contraband on them.</Original>
         </Key>
         <Key ID="STR_Cop_IllegalItems">
             <Original>Illegal Items</Original>
@@ -1400,7 +1400,7 @@
             <Original>This container is empty</Original>
         </Key>
         <Key ID="STR_Cop_RobberDead">
-            <Original>$%1 from the Federal Reserve robbery was returned from the robber being killed.</Original>
+            <Original>£%1 from the Federal Reserve robbery was returned from the robber being killed.</Original>
         </Key>
         <Key ID="STR_Cop_RepairVault">
             <Original>Repairing vault...</Original>
@@ -1587,7 +1587,7 @@
             <Original>You do not have enough money!</Original>
         </Key>
         <Key ID="STR_House_BuyMSG">
-            <Original>This house is available for &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;&lt;br/&gt;It supports up to %2 storage containers</Original>
+            <Original>This house is available for &lt;t color='#8cff9b'&gt;£%1&lt;/t&gt;&lt;br/&gt;It supports up to %2 storage containers</Original>
         </Key>
         <Key ID="STR_House_Purchase">
             <Original>Purchase House</Original>
@@ -1623,7 +1623,7 @@
             <Original>You went too far away from the house!</Original>
         </Key>
         <Key ID="STR_House_Raid_Successful">
-            <Original>A house was raided and had $%1 worth of drugs / contraband.</Original>
+            <Original>A house was raided and had £%1 worth of drugs / contraband.</Original>
         </Key>
         <Key ID="STR_House_Raid_NoIllegal">
             <Original>Nothing illegal in this house.</Original>
@@ -1641,7 +1641,7 @@
             <Original>House has been locked up.</Original>
         </Key>
         <Key ID="STR_House_SellHouseMSG">
-            <Original>Are you sure you want to sell your house? It will sell for: &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;</Original>
+            <Original>Are you sure you want to sell your house? It will sell for: &lt;t color='#8cff9b'&gt;£%1&lt;/t&gt;</Original>
         </Key>
         <Key ID="STR_House_DeleteContainerMSG">
             <Original>Are you sure you want to remove it?</Original>
@@ -1669,7 +1669,7 @@
             <Original>There isn't a chopper on the helipad!</Original>
         </Key>
         <Key ID="STR_Serive_Chopper_NotEnough">
-            <Original>You need $1,000 to service your chopper</Original>
+            <Original>You need £1,000 to service your chopper</Original>
         </Key>
         <Key ID="STR_Service_Chopper_Servicing">
             <Original>Servicing Chopper [%1]...</Original>
@@ -1746,7 +1746,7 @@
             <Original>Fuel Station Pump</Original>
         </Key>
         <Key ID="STR_ISTR_Jerry_PopUp">
-            <Original>Spend $%1 to refuel your Empty Fuel Canister?</Original>
+            <Original>Spend £%1 to refuel your Empty Fuel Canister?</Original>
         </Key>
         <Key ID="STR_ISTR_Jerry_Distance">
             <Original>You must be closer to the fuel pump!</Original>
@@ -1835,7 +1835,7 @@
             <Original>You can now respawn</Original>
         </Key>
         <Key ID="STR_Medic_RevivePay">
-            <Original>%1 has revived you and a fee of $%2 was taken from your bank account for their services.</Original>
+            <Original>%1 has revived you and a fee of £%2 was taken from your bank account for their services.</Original>
         </Key>
         <Key ID="STR_Medic_AlreadyReviving">
             <Original>Someone else is already reviving this person</Original>
@@ -1847,7 +1847,7 @@
             <Original>This person either respawned or was already revived.</Original>
         </Key>
         <Key ID="STR_Medic_RevivePayReceive">
-            <Original>You have revived %1 and received $%2 for your services.</Original>
+            <Original>You have revived %1 and received £%2 for your services.</Original>
         </Key>
         <Key ID="STR_Medic_TooFar">
             <Original>You got to far away from the body.</Original>
@@ -1858,7 +1858,7 @@
             <Original>The robbery has failed due to unknown reasons</Original>
         </Key>
         <Key ID="STR_NOTF_FRRobbery_Success">
-            <Original>$%1 was stolen from the robbery on the federal reserve</Original>
+            <Original>£%1 was stolen from the robbery on the federal reserve</Original>
         </Key>
         <Key ID="STR_FEDR_VInUse">
             <Original>This vault is already being robbed by someone else</Original>
@@ -1937,7 +1937,7 @@
             <Original>Garage</Original>
         </Key>
         <Key ID="STR_pInAct_GarageExtNOTF">
-            <Original>You can buy a garage at this house for $%1. You must first purchase the house!</Original>
+            <Original>You can buy a garage at this house for £%1. You must first purchase the house!</Original>
         </Key>
         <Key ID="STR_pInAct_SearchHouse">
             <Original>Search house</Original>
@@ -2111,13 +2111,13 @@
             <Original>You do not have enough money on you or in your bank to get your car back.</Original>
         </Key>
         <Key ID="STR_Shop_Unimpound_Success">
-            <Original>You have unimpounded your %1 for $%3</Original>
+            <Original>You have unimpounded your %1 for £%3</Original>
         </Key>
         <Key ID="STR_Shop_Veh_DidntPick">
             <Original>You did not pick a vehicle!</Original>
         </Key>
         <Key ID="STR_Shop_Veh_NotEnough">
-            <Original>You do not have enough cash to purchase this vehicle.\n\nAmount Lacking: $%1</Original>
+            <Original>You do not have enough cash to purchase this vehicle.\n\nAmount Lacking: £%1</Original>
         </Key>
         <Key ID="STR_Shop_Veh_NoLicense">
             <Original>You do not have the required license and/or level!</Original>
@@ -2126,10 +2126,10 @@
             <Original>There is a vehicle currently blocking the spawn point</Original>
         </Key>
         <Key ID="STR_Shop_Veh_Bought">
-            <Original>You bought a %1 for $%2</Original>
+            <Original>You bought a %1 for £%2</Original>
         </Key>
 		<Key ID="STR_Shop_Veh_Rented">
-            <Original>You rented a %1 for $%2</Original>
+            <Original>You rented a %1 for £%2</Original>
         </Key>
         <Key ID="STR_Shop_Veh_UI_Rental">
             <Original>Rental Price:</Original>
@@ -2195,25 +2195,25 @@
             <Original>Your Cash</Original>
         </Key>
         <Key ID="STR_Shop_Virt_BoughtGang">
-            <Original>You bought %1 %2 for $%3 with the gangs funds</Original>
+            <Original>You bought %1 %2 for £%3 with the gangs funds</Original>
         </Key>
         <Key ID="STR_Shop_Virt_BoughtItem">
-            <Original>You bought %1 %2 for $%3</Original>
+            <Original>You bought %1 %2 for £%3</Original>
         </Key>
         <Key ID="STR_Shop_Virt_SellItem">
-            <Original>You sold %1 %2 for $%3</Original>
+            <Original>You sold %1 %2 for £%3</Original>
         </Key>
         <Key ID="STR_Shop_Weapon_NoSelect">
             <Original>You need to select an item to buy/sell.</Original>
         </Key>
         <Key ID="STR_Shop_Weapon_Sold">
-            <Original>You sold a %1 for &lt;t color='#8cff9b'&gt;$%2&lt;/t&gt;</Original>
+            <Original>You sold a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt;</Original>
         </Key>
         <Key ID="STR_Shop_Weapon_BoughtGang">
-            <Original>You bought a %1 for &lt;t color='#8cff9b'&gt;$%2&lt;/t&gt; with the gangs funds.</Original>
+            <Original>You bought a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt; with the gangs funds.</Original>
         </Key>
         <Key ID="STR_Shop_Weapon_BoughtItem">
-            <Original>You bought a %1 for &lt;t color='#8cff9b'&gt;$%2&lt;/t&gt;</Original>
+            <Original>You bought a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt;</Original>
         </Key>
         <Key ID="STR_Shop_Weapon_ShopInv">
             <Original>Shop Inventory</Original>
@@ -2230,7 +2230,7 @@
             <Original>You have missed a paycheck because you were dead.</Original>
         </Key>
         <Key ID="STR_FSM_ReceivedPay">
-            <Original>You have received a paycheck of $%1.</Original>
+            <Original>You have received a paycheck of £%1.</Original>
         </Key>
     </Package>
     <Package name="Fuel_Pump">
@@ -2241,7 +2241,7 @@
             <Original>Refuel Vehicle</Original>
         </Key>
         <Key ID="STR_Price_Fuel_Pump">
-            <Original>Price per Liter: $%1</Original>
+            <Original>Price per Liter: £%1</Original>
         </Key>
         <Key ID="STR_Fuel_Tank_Vehicle">
             <Original>Current Fuel Amount:</Original>
@@ -2522,7 +2522,7 @@
             <Original>Discontinued operation.</Original>
         </Key>
         <Key ID="STR_FuelTank_Money">
-            <Original>Your share is $%1.</Original>
+            <Original>Your share is £%1.</Original>
         </Key>
     </Package>
     <Package name="NotWhitelisted">
@@ -2648,82 +2648,82 @@
             <Original>%1 - %2 picked up %3 %4</Original>
         </Key>
         <Key ID="STR_DL_ML_pickedUpMoney_BEF">
-            <Original>picked up $%1 from the ground. Bank Balance: $%2  On Hand Balance: $%3</Original>
+            <Original>picked up £%1 from the ground. Bank Balance: £%2  On Hand Balance: £%3</Original>
         </Key>
         <Key ID="STR_DL_ML_pickedUpMoney">
-            <Original>%1 - %2 picked up $%3 from the ground. Bank Balance: $%4  On Hand Balance $%5</Original>
+            <Original>%1 - %2 picked up £%3 from the ground. Bank Balance: £%4  On Hand Balance £%5</Original>
         </Key>
         <Key ID="STR_DL_ML_Robbed_BEF">
-            <Original>robbed $%1 from %2. Bank Balance: $%3  On Hand Balance: $%4</Original>
+            <Original>robbed £%1 from %2. Bank Balance: £%3  On Hand Balance: £%4</Original>
         </Key>
         <Key ID="STR_DL_ML_Robbed">
-            <Original>%1 - %2 robbed $%3 from %4. Bank Balance: $%5  On Hand Balance: $%6</Original>
+            <Original>%1 - %2 robbed £%3 from %4. Bank Balance: £%5  On Hand Balance: £%6</Original>
         </Key>
         <Key ID="STR_DL_AL_createdGang_BEF">
-            <Original>created a gang named: %1 for $%2</Original>
+            <Original>created a gang named: %1 for £%2</Original>
         </Key>
         <Key ID="STR_DL_AL_createdGang">
-            <Original>%1 - %2 created a gang named: %3 for $%4</Original>
+            <Original>%1 - %2 created a gang named: %3 for £%4</Original>
         </Key>
         <Key ID="STR_DL_AL_boughtHouse_BEF">
-            <Original>bought a house for $%1. Bank Balance: $%2  On Hand Cash: $%3</Original>
+            <Original>bought a house for £%1. Bank Balance: £%2  On Hand Cash: £%3</Original>
         </Key>
         <Key ID="STR_DL_AL_boughtHouse">
-            <Original>%1 - %2 bought a house for $%3. Bank Balance: $%4  On Hand Cash: $%5</Original>
+            <Original>%1 - %2 bought a house for £%3. Bank Balance: £%4  On Hand Cash: £%5</Original>
         </Key>
         <Key ID="STR_DL_AL_soldHouse_BEF">
-            <Original>sold a house for $%1. Bank Balance: $%2</Original>
+            <Original>sold a house for £%1. Bank Balance: £%2</Original>
         </Key>
         <Key ID="STR_DL_AL_soldHouse">
-            <Original>%1 - %2 sold a house for $%3. Bank Balance: $%4</Original>
+            <Original>%1 - %2 sold a house for £%3. Bank Balance: £%4</Original>
         </Key>
         <Key ID="STR_DL_AL_choppedVehicle_BEF">
-            <Original>chopped vehicle %1 for $%2  On Hand Cash(pre-chop): $%3</Original>
+            <Original>chopped vehicle %1 for £%2  On Hand Cash(pre-chop): £%3</Original>
         </Key>
         <Key ID="STR_DL_AL_choppedVehicle">
-            <Original>%1 - %2 chopped vehicle %3 for $%4  On Hand Cash(pre-chop): $%5</Original>
+            <Original>%1 - %2 chopped vehicle %3 for £%4  On Hand Cash(pre-chop): £%5</Original>
         </Key>
         <Key ID="STR_DL_AL_boughtVehicle_BEF">
-            <Original>bought vehicle %1 for $%2. On Hand Cash: $%3  Bank Balance: $%4</Original>
+            <Original>bought vehicle %1 for £%2. On Hand Cash: £%3  Bank Balance: £%4</Original>
         </Key>
         <Key ID="STR_DL_AL_boughtVehicle">
-            <Original>%1 - %2 bought vehicle %3 for $%4. On Hand Cash: $%5  Bank Balance $%6</Original>
+            <Original>%1 - %2 bought vehicle %3 for £%4. On Hand Cash: £%5  Bank Balance £%6</Original>
         </Key>
         <Key ID="STR_DL_AL_soldVehicle_BEF">
-            <Original>sold vehicle %1 for $%2. Bank Balance: $%3  On Hand Balance: $%4</Original>
+            <Original>sold vehicle %1 for £%2. Bank Balance: £%3  On Hand Balance: £%4</Original>
         </Key>
         <Key ID="STR_DL_AL_soldVehicle">
-            <Original>%1 - %2 sold vehicle %3 for $%4. Bank Balance: $%5  On Hand Balance: $%6</Original>
+            <Original>%1 - %2 sold vehicle %3 for £%4. Bank Balance: £%5  On Hand Balance: £%6</Original>
         </Key>
         <Key ID="STR_DL_ML_withdrewGang_BEF">
-            <Original>withdrew $%1 from their gang bank. Gang Bank Balance: $%2  Bank Balance: $%3  On Hand Balance: $%4</Original>
+            <Original>withdrew £%1 from their gang bank. Gang Bank Balance: £%2  Bank Balance: £%3  On Hand Balance: £%4</Original>
         </Key>
         <Key ID="STR_DL_ML_withdrewGang">
-            <Original>%1 - %2 withdrew $%3 from their gang bank. Gang Bank Balance: $%4  Bank Balance: $%5  On Hand Balance: $%6</Original>
+            <Original>%1 - %2 withdrew £%3 from their gang bank. Gang Bank Balance: £%4  Bank Balance: £%5  On Hand Balance: £%6</Original>
         </Key>
         <Key ID="STR_DL_ML_depositeGang_BEF">
-            <Original>deposited $%1 into their gang bank. Gang Bank Balance: $%2  Bank Balance: $%3  On Hand Balance: $%4</Original>
+            <Original>deposited £%1 into their gang bank. Gang Bank Balance: £%2  Bank Balance: £%3  On Hand Balance: £%4</Original>
         </Key>
         <Key ID="STR_DL_ML_depositeGang">
-            <Original>%1 - %2 deposited $%3 into their gang bank. Gang Bank Balance: $%4  Bank Balance: $%5  On Hand Balance: $%6</Original>
+            <Original>%1 - %2 deposited £%3 into their gang bank. Gang Bank Balance: £%4  Bank Balance: £%5  On Hand Balance: £%6</Original>
         </Key>
         <Key ID="STR_DL_ML_withdrewBank_BEF">
-            <Original>withdrew $%1 from their bank. Bank Balance: $%2  On Hand Balance: $%3</Original>
+            <Original>withdrew £%1 from their bank. Bank Balance: £%2  On Hand Balance: £%3</Original>
         </Key>
         <Key ID="STR_DL_ML_withdrewBank">
-            <Original>%1 - %2 withdrew $%3 from their bank. Bank Balance: $%4  On Hand Balance: $%5</Original>
+            <Original>%1 - %2 withdrew £%3 from their bank. Bank Balance: £%4  On Hand Balance: £%5</Original>
         </Key>
         <Key ID="STR_DL_ML_transferredBank_BEF">
-            <Original>transferred $%1 to %2. Bank Balance: $%3  On Hand Balance: $%4</Original>
+            <Original>transferred £%1 to %2. Bank Balance: £%3  On Hand Balance: £%4</Original>
         </Key>
         <Key ID="STR_DL_ML_transferredBank">
-            <Original>%1 - %2 transferred $%3 to %4. Bank Balance: $%5  On Hand Balance: $%6</Original>
+            <Original>%1 - %2 transferred £%3 to %4. Bank Balance: £%5  On Hand Balance: £%6</Original>
         </Key>
         <Key ID="STR_DL_ML_depositedBank_BEF">
-            <Original>deposited $%1 into their bank. Bank Balance: $%2  On Hand Balance: $%3</Original>
+            <Original>deposited £%1 into their bank. Bank Balance: £%2  On Hand Balance: £%3</Original>
         </Key>
         <Key ID="STR_DL_ML_depositedBank">
-            <Original>%1 - %2 deposited $%3 into their bank. Bank Balance: $%4  On Hand Balance: $%5</Original>
+            <Original>%1 - %2 deposited £%3 into their bank. Bank Balance: £%4  On Hand Balance: £%5</Original>
         </Key>
     </Package>
 </Project>

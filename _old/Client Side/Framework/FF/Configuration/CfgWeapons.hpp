@@ -7,7 +7,7 @@ class CfgWeapons {
             { "ItemGPS", "Handheld GPS", 250, 125, "" },
             { "ItemRadio", "Mobile Phone", 190, 190, "" },
             { "ItemCompass", "Compass", 45, 23, "" },
-            { "ItemWatch", "Wrist Watch", 60, 30, "" },
+            { "ItemWatch", "Watch", 60, 30, "" },
             { "Binocular", "Binoculars", 270, 135, "" },
             { "NVGoggles", "Night Vision Goggles", 5000, 0, "" },
             { "G_Tactical_Clear", "Night Vision Glasses", 20000, 0, "" },
@@ -26,7 +26,7 @@ class CfgWeapons {
             { "ItemGPS", "Handheld GPS", 250, 125, "" },
             { "ItemRadio", "Mobile Phone", 190, 190, "" },
             { "ItemCompass", "Compass", 45, 23, "" },
-            { "ItemWatch", "Wrist Watch", 60, 30, "" },
+            { "ItemWatch", "Watch", 60, 30, "" },
             { "FirstAidKit", "First Aid Kit", 500, 250, "" },
             { "ToolKit", "Toolkit", 1500, 750, "" }
         };
@@ -38,12 +38,12 @@ class CfgWeapons {
         name = "Go-Karting Store";
         conditions = "playerSide isEqualTo civilian && license_civ_go_karting";
         items[] = {
-            { "ToolKit", "Toolkit", 1500, 750, "" }, // Premium Membership
-            { "hgun_Pistol_Signal_F", "Starter Pistol", 6000, 3000, "" } // Premium Membership
+            { "ToolKit", "Toolkit", 1500, 750, "" },
+            { "hgun_Pistol_Signal_F", "Starter Pistol", 6000, 3000, "" }
         };
         mags[] = {
-            { "6Rnd_GreenSignal_F", "6Rnd Green Single Mag", 70, 35, "" }, // Premium Membership
-            { "6Rnd_RedSignal_F", "6Rnd Red Single Mag", 70, 35, "" } // Premium Membership
+            { "6Rnd_GreenSignal_F", "6Rnd Green Single Mag", 70, 35, "" },
+            { "6Rnd_RedSignal_F", "6Rnd Red Single Mag", 70, 35, "" }
         };
         accs[] = {};
     };
@@ -72,12 +72,13 @@ class CfgWeapons {
             { "ItemGPS", "Handheld GPS", 250, 125, "" },
             { "ItemRadio", "Mobile Phone", 190, 190, "" },
             { "ItemCompass", "Compass", 45, 23, "" },
-            { "ItemWatch", "Wrist Watch", 60, 30, "" },
+            { "ItemWatch", "Watch", 60, 30, "" },
             { "Binocular", "Binoculars", 270, 135, "" },
             { "NVGoggles", "Night Vision Goggles", 5000, 0, "" },
             { "G_Tactical_Clear", "Night Vision Glasses", 20000, 0, "" },
             { "FirstAidKit", "First Aid Kit", 500, 250, "" },
             { "ToolKit", "Toolkit", 1500, 750, "" },
+
             { "hgun_Pistol_01_F", "PM 9 mm", 11000, 5500, "" },
             { "hgun_Rook40_F", "Rook-40 9 mm", 14500, 7250, "" },
             { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 19800, 9900, "" },
@@ -112,7 +113,7 @@ class CfgWeapons {
             { "ItemGPS", "Handheld GPS", 250, 125, "" },
             { "ItemRadio", "Mobile Phone", 190, 190, "" },
             { "ItemCompass", "Compass", 45, 23, "" },
-            { "ItemWatch", "Wrist Watch", 60, 30, "" },
+            { "ItemWatch", "Watch", 60, 30, "" },
             { "Binocular", "Binoculars", 270, 135, "" },
             { "NVGoggles", "Night Vision Goggles", 5000, 0, "" },
             { "G_Tactical_Clear", "Night Vision Glasses", 20000, 0, "" },
@@ -168,7 +169,7 @@ class CfgWeapons {
             { "ItemGPS", "Handheld GPS", 250, 125, "" },
             { "ItemRadio", "Mobile Phone", 190, 190, "" },
             { "ItemCompass", "Compass", 45, 23, "" },
-            { "ItemWatch", "Wrist Watch", 60, 30, "" },
+            { "ItemWatch", "Watch", 60, 30, "" },
             { "Binocular", "Binoculars", 270, 135, "" },
             { "NVGoggles", "Night Vision Goggles", 5000, 0, "" },
             { "G_Tactical_Clear", "Night Vision Glasses", 20000, 0, "" },
@@ -192,22 +193,24 @@ class CfgWeapons {
         name = "TPC - General Store";
         conditions = "playerSide isEqualTo west";
         items[] = {
-            { "ItemMap", "Map of Tanoa", 0, -1, "call life_coplevel >= 1" },
-            { "ItemGPS", "Handheld GPS", 0, -1, "call life_coplevel >= 1" },
-            { "ItemRadio", "Mobile Phone", 0, -1, "call life_coplevel >= 1" },
-            { "ItemCompass", "Compass", 0, -1, "call life_coplevel >= 1" },
-            { "ItemWatch", "Wrist Watch", 0, -1, "call life_coplevel >= 1" },
-            { "Binocular", "Binoculars", 0, -1, "call life_coplevel >= 1" },
+            { "ItemMap", "Map of Tanoa", 0, -1, "" },
+            { "ItemGPS", "Handheld GPS", 0, -1, "" },
+            { "ItemRadio", "Mobile Phone", 0, -1, "" },
+            { "ItemCompass", "Compass", 0, -1, "" },
+            { "ItemWatch", "Watch", 0, -1, "" },
+            { "Binocular", "Binoculars", 0, -1, "" },
             { "Rangefinder", "Rangefinder", 0, -1, "call life_coplevel >= 2" },
-            { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "call life_coplevel >= 1" },
+            { "NVGoggles_OPFOR", "Night Vision Goggles", 0, -1, "" },
             { "G_Tactical_Clear", "Night Vision Glasses", 0, -1, "call life_coplevel >= 2" },
-            { "FirstAidKit", "First Aid Kit", 0, -1, "call life_coplevel >= 1" },
-            { "ToolKit", "Toolkit", 0, -1, "call life_coplevel >= 1" },
+            { "FirstAidKit", "First Aid Kit", 0, -1, "" },
+            { "ToolKit", "Toolkit", 0, -1, "" },
+            { "SmokeShell", "Smoke Grenade", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "HandGrenade_Stone", "Flashbang Grenade", 0, -1, "license_cop_sfo2 || license_cop_sfo3" },
-            { "hgun_Pistol_heavy_01_F", "Taser Pistol", 0, -1, "call life_coplevel >= 1" },
+            { "hgun_Pistol_heavy_01_F", "Taser Pistol", 0, -1, "" },
             { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "call life_coplevel >= 2" },
             { "SMG_05_F", "Protector 9 mm", 0, -1, "call life_coplevel >= 2" },
-            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "call life_coplevel >= 4" },
+            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "call life_coplevel >= 4 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
+            { "arifle_SDAR_F", "SDAR 5.56 mm", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "SMG_03C_TR_black", "ADR-97C TR 5.7 mm", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "arifle_CTAR_blk_F", "CAR-95 5.8mm", 0, -1, "license_cop_sfo2 || license_cop_sfo3" },
             { "arifle_CTAR_GL_blk_F", "CAR-95 GL 5.8 mm", 0, -1, "license_cop_sfo2 || license_cop_sfo3" },
@@ -215,10 +218,11 @@ class CfgWeapons {
             { "arifle_SPAR_03_blk_F", "SPAR-17 7.62 mm", 0, -1, "license_cop_sfo3" }
         };
         mags[] = {
-            { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, -1, "call life_coplevel >= 1" },
+            { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, -1, "" },
             { "9Rnd_45ACP_Mag", "9Rnd .45mm Mag", 0, -1, "call life_coplevel >= 2" },
             { "30Rnd_9x21_Mag_SMG_02", "30Rnd 9mm Mag", 0, -1, "call life_coplevel >= 2" },
-            { "30Rnd_556x45_Stanag", "30Rnd 5.56mm Mag", 0, -1, "call life_coplevel >= 3" },
+            { "30Rnd_556x45_Stanag", "30Rnd 5.56mm Mag", 0, -1, "call life_coplevel >= 4 || ()license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
+            { "20Rnd_556x45_UW_mag", "30Rnd 5.56mm UW Mag", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "50Rnd_570x28_SMG_03", "50Rnd 5.7mm Mag", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "30Rnd_580x42_Mag_F", "30Rnd 5.8mm Mag", 0, -1, "license_cop_sfo2 || license_cop_sfo3" },
             { "30Rnd_65x39_caseless_green", "30Rnd 6.5mm Mag", 0, -1, "license_cop_sfo3" },
@@ -226,19 +230,20 @@ class CfgWeapons {
             { "UGL_FlareCIR_F", "Flashbang Round", 0, -1, "license_cop_sfo2 || license_cop_sfo3" }
         };
         accs[] = {
-            { "optic_MRD", "MRD", 0, -1, "call life_coplevel >= 1 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
-            { "optic_Aco", "ACO (Red)", 0, -1, "call life_coplevel >= 2 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
-            { "optic_Aco_smg", "ACO SMG (Red)", 0, -1, "call life_coplevel >= 2 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
-            { "optic_Holosight_blk_F", "Mk17 Holosight", 0, -1, "call life_coplevel >= 2 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
-            { "optic_Holosight_smg_blk_F", "Mk17 Holosight SMG", 0, -1, "call life_coplevel >= 2 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
+            { "optic_MRD", "MRD", 0, -1, "" },
+            { "optic_Aco", "ACO (Red)", 0, -1, "call life_coplevel >= 2" },
+            { "optic_Aco_smg", "ACO SMG (Red)", 0, -1, "call life_coplevel >= 2" },
+            { "optic_Holosight_blk_F", "Mk17 Holosight", 0, -1, "call life_coplevel >= 2" },
+            { "optic_Holosight_smg_blk_F", "Mk17 Holosight SMG", 0, -1, "call life_coplevel >= 2" },
             { "optic_Hamr", "RCO", 0, -1, "call life_coplevel >= 4 || (license_cop_sfo2 || license_cop_sfo3)" },
             { "optic_MRCO", "MRCO", 0, -1, "call life_coplevel >= 4 || (license_cop_sfo2 || license_cop_sfo3)" },
             { "optic_Arco_blk_F", "ARCO", 0, -1, "call life_coplevel >= 4 || (license_cop_sfo2 || license_cop_sfo3)" },
+            { "optic_NVS", "NVS", 0, -1, "license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3" },
             { "optic_DMS", "DMS", 0, -1, "license_cop_sfo3" },
-            { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, "call life_coplevel >= 1 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
-            { "acc_flashlight", "Flashlight", 0, -1, "call life_coplevel >= 4 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" },
+            { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, " " },
+            { "acc_flashlight", "Flashlight", 0, -1, "call life_coplevel >= 2" },
             { "acc_pointer_IR", "IR Laser Pointer", 0, -1, "license_cop_sfo3" },
-            { "muzzle_snds_acp", "Taser Suppressor", 0, -1, "call life_coplevel >= 1 || (license_cop_sfo1 || license_cop_sfo2 || license_cop_sfo3)" }
+            { "muzzle_snds_acp", "Taser Suppressor", 0, -1, "" }
         };
     };
 
@@ -246,22 +251,18 @@ class CfgWeapons {
         name = "TAS - General Store";
         conditions = "playerSide isEqualTo independent";
         items[] = {
-            { "ItemMap", "Map of Tanoa", 0, -1, "call life_mediclevel >= 1" },
-            { "ItemGPS", "Handheld GPS", 0, -1, "call life_mediclevel >= 1" },
-            { "ItemRadio", "Mobile Phone", 0, -1, "call life_mediclevel >= 1" },
-            { "ItemCompass", "Compass", 0, -1, "call life_mediclevel >= 1" },
-            { "ItemWatch", "Wrist Watch", 0, -1, "call life_mediclevel >= 1" },
-            { "Binocular", "Binoculars", 0, -1, "call life_mediclevel >= 1" },
-            { "NVGoggles", "Night Vision Goggles", 0, -1, "call life_mediclevel >= 1" },
-            { "G_Tactical_Clear", "Night Vision Glasses", 0, -1, "call life_mediclevel >= 2" },
-            { "FirstAidKit", "First Aid Kit", 0, -1, "call life_mediclevel >= 1" },
-            { "ToolKit", "Toolkit", 0, -1, "call life_mediclevel >= 1" },
-            { "hgun_Pistol_Signal_F", "Starter Pistol", 0, -1, "call life_mediclevel >= 4" }
+            { "ItemMap", "Map of Tanoa", 0, -1, "" },
+            { "ItemGPS", "Handheld GPS", 0, -1, "" },
+            { "ItemRadio", "Mobile Phone", 0, -1, "" },
+            { "ItemCompass", "Compass", 0, -1, "" },
+            { "ItemWatch", "Watch", 0, -1, "" },
+            { "Binocular", "Binoculars", 0, -1, "" },
+            { "NVGoggles", "Night Vision Goggles", 0, -1, "" },
+            { "G_Tactical_Clear", "Night Vision Glasses", 0, -1, "" },
+            { "FirstAidKit", "First Aid Kit", 0, -1, "" },
+            { "ToolKit", "Toolkit", 0, -1, "" },
         };
-        mags[] = {
-            { "6Rnd_GreenSignal_F", "6Rnd Green Single Mag", 0, -1, "call life_mediclevel >= 4" },
-            { "6Rnd_RedSignal_F", "6Rnd Red Single Mag", 0, -1, "call life_mediclevel >= 4" }
-        };
+        mags[] = {};
         accs[] = {};
     };
 };

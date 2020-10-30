@@ -67,7 +67,7 @@ class CfgVehicleStores {
         side = "civ";
         conditions = "license_civ_boating";
         vehicles[] = {
-            { "C_Scooter_Transport_01_F", "" }, // Premium Membership
+            { "C_Scooter_Transport_01_F", "" },
             { "C_Rubberboat", "" },
             { "C_Boat_Civil_01_F", "" },
             { "C_Boat_Transport_02_F", "" }
@@ -106,7 +106,7 @@ class CfgVehicleStores {
 
     class idap_dealership {
         side = "civ";
-        conditions = "license_civ_idap"; // Not Accessable
+        conditions = "license_civ_idap";
         vehicles[] = {
             { "C_IDAP_Offroad_02_unarmed_F", "" },
             { "C_IDAP_Offroad_01_F", "" },
@@ -117,7 +117,7 @@ class CfgVehicleStores {
 
     class idap_air_dealership {
         side = "civ";
-        conditions = "license_civ_idap"; // Not Accessable
+        conditions = "license_civ_idap";
         vehicles[] = {
             { "C_IDAP_Heli_Transport_02_F", "" }
         };
@@ -125,7 +125,7 @@ class CfgVehicleStores {
 
     class gov_dealership {
         side = "civ";
-        conditions = ""; // Not Accessable
+        conditions = "";
         vehicles[] = {
             { "C_SUV_01_F", "" }
         };

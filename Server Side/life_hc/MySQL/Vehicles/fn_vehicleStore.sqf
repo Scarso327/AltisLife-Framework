@@ -63,13 +63,13 @@ if (_impound) exitWith {
 
 // not persistent so just do this!
 if (_vInfo isEqualTo []) exitWith {
-        [1,"That vehicle is a rental and cannot be stored in your garage.",true] remoteExecCall ["life_fnc_broadcast",_ownerID];
+        [1,"STR_Garage_Store_NotPersistent",true] remoteExecCall ["life_fnc_broadcast",_ownerID];
     life_garage_store = false;
     _ownerID publicVariableClient "life_garage_store";
 };
 
 if !(_uid isEqualTo getPlayerUID _unit) exitWith {
-    [1,"That vehicle doesn't belong to you therefor you cannot store it in your garage.",true] remoteExecCall ["life_fnc_broadcast",_ownerID];
+    [1,"STR_Garage_Store_NoOwnership",true] remoteExecCall ["life_fnc_broadcast",_ownerID];
     life_garage_store = false;
     _ownerID publicVariableClient "life_garage_store";
 };
@@ -86,7 +86,7 @@ if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
         _profileName = [_profileQuery, 2] call HC_fnc_asyncCall;
         _profileName = _profileName select 0;
         {
-            _isIllegal = M_CONFIG(getNumber,"CfgItems",_x select 0,"illegal");
+            _isIllegal = M_CONFIG(getNumber,"VirtualItems",_x select 0,"illegal");
 
             _isIllegal = if (_isIllegal isEqualTo 1) then { true }    else { false };
 

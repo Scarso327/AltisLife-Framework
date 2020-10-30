@@ -14,8 +14,6 @@ params [
     ["_uid","",[""]],
     ["_gangName","",[""]]
 ];
-
-private _unit = _ownerID;
 _group = group _ownerID;
 
 if (isNull _ownerID || _uid isEqualTo "" || _gangName isEqualTo "") exitWith {}; //Fail
@@ -61,7 +59,7 @@ _group setVariable ["gang_name",_gangName,true];
 _group setVariable ["gang_owner",_uid,true];
 _group setVariable ["gang_bank",0,true];
 _group setVariable ["gang_maxMembers",8,true];
-_group setVariable ["gang_members",[[(_unit getVariable ["realname", name _unit]), _uid]],true];
+_group setVariable ["gang_members",[_uid],true];
 [_group] remoteExecCall ["life_fnc_gangCreated",_ownerID];
 
 sleep 0.35;

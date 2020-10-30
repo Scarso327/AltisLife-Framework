@@ -10,7 +10,7 @@ diag_log "--------------------------------- Starting Altis Life Client Init ----
 diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
 diag_log "----------------------------------------------------------------------------------------------------";
 
-0 cutText[localize "STR_Init_ClientSetup","BLACK FADED",99999999];
+0 cutText[localize "Setting up client, please wait...","BLACK FADED",99999999];
 _timeStamp = diag_tickTime;
 
 waitUntil {!isNull (findDisplay 46)};
@@ -33,16 +33,16 @@ diag_log "[Life Client] Waiting for the server to be ready...";
 waitUntil {!isNil "life_server_isReady" && {!isNil "life_server_extDB_notLoaded"}};
 
 if (life_server_extDB_notLoaded) exitWith {
-    0 cutText [localize "STR_Init_ExtdbFail","BLACK FADED",99999999];
+    0 cutText [localize "extDB failed to load, please contact an administrator.","BLACK FADED",99999999];
 };
 
 waitUntil {life_server_isReady};
 diag_log "[Life Client] Server loading completed ";
-0 cutText [localize "STR_Init_ServerReady","BLACK FADED",99999999];
+0 cutText [localize "Waiting for the server to be ready...","BLACK FADED",99999999];
 
 [] call SOCK_fnc_dataQuery;
 waitUntil {life_session_completed};
-0 cutText[localize "STR_Init_ClientFinish","BLACK FADED",99999999];
+0 cutText[localize "Finishing client setup procedure...","BLACK FADED",99999999];
 
 [] spawn life_fnc_escInterupt;
 

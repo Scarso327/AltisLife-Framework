@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Altis Life RPG">
-    <Package name="Init">
-        <Key ID="STR_Init_ClientSetup">
-            <Original>Setting up client, please wait...</Original>
-        </Key>
-        <Key ID="STR_Init_ServerReady">
-            <Original>Waiting for the server to be ready...</Original>
-        </Key>
-        <Key ID="STR_Init_ExtdbFail">
-            <Original>extDB failed to load, please contact an administrator.</Original>
-        </Key>
-        <Key ID="STR_Init_ClientFinish">
-            <Original>Finishing client setup procedure...</Original>
-        </Key>
-    </Package>
     <Package name="Global">
         <Key ID="STR_Global_Close">
             <Original>Close</Original>

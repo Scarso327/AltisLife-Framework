@@ -13,4 +13,3 @@ if (!hasInterface && !isServer) exitWith {
 CONST(BIS_fnc_endMission,BIS_fnc_endMission);
 
 [] execVM "Functions\init.sqf";
-[] execVM "briefing.sqf";

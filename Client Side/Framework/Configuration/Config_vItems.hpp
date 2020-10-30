@@ -155,7 +155,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_pickaxe.paa";
+        icon = "Data\Icons\ico_pickaxe.paa";
     };
 
     class defibrillator {
@@ -167,7 +167,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_defibrillator.paa";
+        icon = "Data\Icons\ico_defibrillator.paa";
     };
 
     class toolkit {
@@ -191,7 +191,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_fuelEmpty.paa";
+        icon = "Data\Icons\ico_fuelEmpty.paa";
     };
 
     class fuelFull {
@@ -203,7 +203,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_fuel.paa";
+        icon = "Data\Icons\ico_fuel.paa";
     };
 
     class spikeStrip {
@@ -215,7 +215,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_spikeStrip.paa";
+        icon = "Data\Icons\ico_spikeStrip.paa";
     };
 
     class lockpick {
@@ -227,7 +227,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_lockpick.paa";
+        icon = "Data\Icons\ico_lockpick.paa";
     };
 
     class goldbar {
@@ -239,7 +239,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_goldBar.paa";
+        icon = "Data\Icons\ico_goldBar.paa";
     };
 
     class blastingcharge {
@@ -251,7 +251,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_blastingCharge.paa";
+        icon = "Data\Icons\ico_blastingCharge.paa";
     };
 
     class boltcutter {
@@ -263,7 +263,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_boltCutter.paa";
+        icon = "Data\Icons\ico_boltCutter.paa";
     };
 
     class defusekit {
@@ -275,7 +275,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_defuseKit.paa";
+        icon = "Data\Icons\ico_defuseKit.paa";
     };
 
     class storagesmall {
@@ -287,7 +287,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_storageSmall.paa";
+        icon = "Data\Icons\ico_storageSmall.paa";
     };
 
     class storagebig {
@@ -299,7 +299,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_storageBig.paa";
+        icon = "Data\Icons\ico_storageBig.paa";
     };
 
     //Mined Items
@@ -312,7 +312,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_oilUnprocessed.paa";
+        icon = "Data\Icons\ico_oilUnprocessed.paa";
     };
 
     class oil_processed {
@@ -324,7 +324,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_oilProcessed.paa";
+        icon = "Data\Icons\ico_oilProcessed.paa";
     };
 
     class copper_unrefined {
@@ -336,7 +336,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_copperOre.paa";
+        icon = "Data\Icons\ico_copperOre.paa";
     };
 
     class copper_refined {
@@ -348,7 +348,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_copper.paa";
+        icon = "Data\Icons\ico_copper.paa";
     };
 
     class iron_unrefined {
@@ -360,7 +360,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_ironOre.paa";
+        icon = "Data\Icons\ico_ironOre.paa";
     };
 
     class iron_refined {
@@ -372,7 +372,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_iron.paa";
+        icon = "Data\Icons\ico_iron.paa";
     };
 
     class salt_unrefined {
@@ -384,7 +384,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_saltUnprocessed.paa";
+        icon = "Data\Icons\ico_saltUnprocessed.paa";
     };
 
     class salt_refined {
@@ -396,7 +396,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_saltProcessed.paa";
+        icon = "Data\Icons\ico_saltProcessed.paa";
     };
 
     class sand {
@@ -408,7 +408,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_sand.paa";
+        icon = "Data\Icons\ico_sand.paa";
     };
 
     class glass {
@@ -420,7 +420,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_glass.paa";
+        icon = "Data\Icons\ico_glass.paa";
     };
 
     class diamond_uncut {
@@ -432,7 +432,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_diamondUncut.paa";
+        icon = "Data\Icons\ico_diamondUncut.paa";
     };
 
     class diamond_cut {
@@ -444,7 +444,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_diamondCut.paa";
+        icon = "Data\Icons\ico_diamondCut.paa";
     };
 
     class rock {
@@ -456,7 +456,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_rock.paa";
+        icon = "Data\Icons\ico_rock.paa";
     };
 
     class cement {
@@ -468,7 +468,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_cement.paa";
+        icon = "Data\Icons\ico_cement.paa";
     };
 
     //Drugs
@@ -481,7 +481,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_heroinUnprocessed.paa";
+        icon = "Data\Icons\ico_heroinUnprocessed.paa";
         processedItem = "heroin_processed";
     };
 
@@ -494,7 +494,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_heroinProcessed.paa";
+        icon = "Data\Icons\ico_heroinProcessed.paa";
     };
 
     class cannabis {
@@ -506,7 +506,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_cannabis.paa";
+        icon = "Data\Icons\ico_cannabis.paa";
         processedItem = "marijuana";
     };
 
@@ -519,7 +519,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_marijuana.paa";
+        icon = "Data\Icons\ico_marijuana.paa";
     };
 
     class cocaine_unprocessed {
@@ -531,7 +531,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_cocaineUnprocessed.paa";
+        icon = "Data\Icons\ico_cocaineUnprocessed.paa";
         processedItem = "cocaine_processed";
     };
 
@@ -544,7 +544,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_cocaineProcessed.paa";
+        icon = "Data\Icons\ico_cocaineProcessed.paa";
     };
 
     //Drink
@@ -557,7 +557,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = 50;
-        icon = "icons\ico_redgull.paa";
+        icon = "Data\Icons\ico_redgull.paa";
     };
 
     class coffee {
@@ -569,7 +569,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = 100;
-        icon = "icons\ico_coffee.paa";
+        icon = "Data\Icons\ico_coffee.paa";
     };
 
     class waterBottle {
@@ -581,7 +581,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = 100;
-        icon = "icons\ico_waterBottle.paa";
+        icon = "Data\Icons\ico_waterBottle.paa";
     };
 
     //Food
@@ -594,7 +594,7 @@ class VirtualItems {
         illegal = false;
         edible = 10;
         drinkable = -1;
-        icon = "icons\ico_apple.paa";
+        icon = "Data\Icons\ico_apple.paa";
     };
 
     class peach {
@@ -606,7 +606,7 @@ class VirtualItems {
         illegal = false;
         edible = 10;
         drinkable = -1;
-        icon = "icons\ico_peach.paa";
+        icon = "Data\Icons\ico_peach.paa";
     };
 
     class tbacon {
@@ -618,7 +618,7 @@ class VirtualItems {
         illegal = false;
         edible = 40;
         drinkable = -1;
-        icon = "icons\ico_tBacon.paa";
+        icon = "Data\Icons\ico_tBacon.paa";
     };
 
     class donuts {
@@ -630,7 +630,7 @@ class VirtualItems {
         illegal = false;
         edible = 30;
         drinkable = -1;
-        icon = "icons\ico_donuts.paa";
+        icon = "Data\Icons\ico_donuts.paa";
     };
 
     class rabbit_raw {
@@ -642,7 +642,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_rabbitRaw.paa";
+        icon = "Data\Icons\ico_rabbitRaw.paa";
     };
 
     class rabbit {
@@ -654,7 +654,7 @@ class VirtualItems {
         illegal = false;
         edible = 20;
         drinkable = -1;
-        icon = "icons\ico_rabbit.paa";
+        icon = "Data\Icons\ico_rabbit.paa";
     };
 
     class salema_raw {
@@ -666,7 +666,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_salemaRaw.paa";
+        icon = "Data\Icons\ico_salemaRaw.paa";
     };
 
     class salema {
@@ -678,7 +678,7 @@ class VirtualItems {
         illegal = false;
         edible = 30;
         drinkable = -1;
-        icon = "icons\ico_cookedFish.paa";
+        icon = "Data\Icons\ico_cookedFish.paa";
     };
 
     class ornate_raw {
@@ -690,7 +690,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_ornateRaw.paa";
+        icon = "Data\Icons\ico_ornateRaw.paa";
     };
 
     class ornate {
@@ -702,7 +702,7 @@ class VirtualItems {
         illegal = false;
         edible = 25;
         drinkable = -1;
-        icon = "icons\ico_cookedFish.paa";
+        icon = "Data\Icons\ico_cookedFish.paa";
     };
 
     class mackerel_raw {
@@ -714,7 +714,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_mackerelRaw.paa";
+        icon = "Data\Icons\ico_mackerelRaw.paa";
     };
 
     class mackerel {
@@ -726,7 +726,7 @@ class VirtualItems {
         illegal = false;
         edible = 30;
         drinkable = -1;
-        icon = "icons\ico_cookedFish.paa";
+        icon = "Data\Icons\ico_cookedFish.paa";
     };
 
     class tuna_raw {
@@ -738,7 +738,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_tunaRaw.paa";
+        icon = "Data\Icons\ico_tunaRaw.paa";
     };
 
     class tuna {
@@ -750,7 +750,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         drinkable = -1;
-        icon = "icons\ico_cookedFish.paa";
+        icon = "Data\Icons\ico_cookedFish.paa";
     };
 
     class mullet_raw {
@@ -762,7 +762,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_mulletRaw.paa";
+        icon = "Data\Icons\ico_mulletRaw.paa";
     };
 
     class mullet {
@@ -774,7 +774,7 @@ class VirtualItems {
         illegal = false;
         edible = 80;
         drinkable = -1;
-        icon = "icons\ico_cookedFish.paa";
+        icon = "Data\Icons\ico_cookedFish.paa";
     };
 
     class catshark_raw {
@@ -786,7 +786,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_catsharkRaw.paa";
+        icon = "Data\Icons\ico_catsharkRaw.paa";
     };
 
     class catshark {
@@ -798,7 +798,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         drinkable = -1;
-        icon = "icons\ico_cookedFish.paa";
+        icon = "Data\Icons\ico_cookedFish.paa";
     };
 
     class turtle_raw {
@@ -810,7 +810,7 @@ class VirtualItems {
         illegal = true;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_turtleRaw.paa";
+        icon = "Data\Icons\ico_turtleRaw.paa";
     };
 
     class turtle_soup {
@@ -822,7 +822,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         drinkable = -1;
-        icon = "icons\ico_turtleSoup.paa";
+        icon = "Data\Icons\ico_turtleSoup.paa";
     };
 
     class hen_raw {
@@ -834,7 +834,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_wholeChickenRaw.paa";
+        icon = "Data\Icons\ico_wholeChickenRaw.paa";
     };
 
     class hen {
@@ -846,7 +846,7 @@ class VirtualItems {
         illegal = false;
         edible = 65;
         drinkable = -1;
-        icon = "icons\ico_wholeChicken.paa";
+        icon = "Data\Icons\ico_wholeChicken.paa";
     };
 
     class rooster_raw {
@@ -858,7 +858,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_chickenDrumstickRaw.paa";
+        icon = "Data\Icons\ico_chickenDrumstickRaw.paa";
     };
 
     class rooster {
@@ -870,7 +870,7 @@ class VirtualItems {
         illegal = false;
         edible = 45;
         drinkable = -1;
-        icon = "icons\ico_chickenDrumstick.paa";
+        icon = "Data\Icons\ico_chickenDrumstick.paa";
     };
 
     class sheep_raw {
@@ -882,7 +882,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_lambChopRaw.paa";
+        icon = "Data\Icons\ico_lambChopRaw.paa";
     };
 
     class sheep {
@@ -894,7 +894,7 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         drinkable = -1;
-        icon = "icons\ico_lambChop.paa";
+        icon = "Data\Icons\ico_lambChop.paa";
     };
 
     class goat_raw {
@@ -906,7 +906,7 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         drinkable = -1;
-        icon = "icons\ico_muttonLegRaw.paa";
+        icon = "Data\Icons\ico_muttonLegRaw.paa";
     };
 
     class goat {
@@ -918,6 +918,6 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         drinkable = -1;
-        icon = "icons\ico_muttonLeg.paa";
+        icon = "Data\Icons\ico_muttonLeg.paa";
     };
 };

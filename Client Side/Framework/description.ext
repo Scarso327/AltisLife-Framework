@@ -2,10 +2,9 @@ disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}};    // Disabled 
 overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play.
 unsafeCVL = 1; // Allows createVehicleLocal to be executed in Multiplayer
 
-#include "config\Config_SpyGlass.hpp"
 #include "CfgRemoteExec.hpp"
-#include "dialog\MasterHandler.hpp"
-#include "config\Config_Master.hpp"
+#include "UI\MasterHandler.hpp"
+#include "Configuration\Config_Master.hpp"
 
 class CfgServer {
     DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
@@ -18,9 +17,9 @@ class CfgServer {
 };
 
 class RscTitles {
-    #include "dialog\progress.hpp"
-    #include "dialog\hud_nameTags.hpp"
-    #include "dialog\hud_stats.hpp"
+    #include "UI\progress.hpp"
+    #include "UI\hud_nameTags.hpp"
+    #include "UI\hud_stats.hpp"
 };
 
 class CfgFunctions {
@@ -31,49 +30,49 @@ class CfgSounds {
     sounds[] = {};
     class sirenLong {
         name = "sirenLong";
-        sound[] = {"\sounds\sirenLong.ogg", 1.0, 1};
+        sound[] = {"\Data\Sounds\sirenLong.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class medicSiren {
         name = "medicSiren";
-        sound[] = {"\sounds\medicSiren.ogg", 1.0, 1};
+        sound[] = {"\Data\Sounds\medicSiren.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class tazerSound {
         name = "tazerSound";
-        sound[] = {"\sounds\tazer.ogg", 0.5, 1};
+        sound[] = {"\Data\Sounds\tazer.ogg", 0.5, 1};
         titles[] = {};
     };
 
     class flashbang {
         name = "flashbang";
-        sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
+        sound[] = {"\Data\Sounds\flashbang.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class mining {
         name = "mining";
-        sound[] = {"\sounds\mining.ogg", 1.0, 1};
+        sound[] = {"\Data\Sounds\mining.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class harvest {
         name = "harvest";
-        sound[] = {"\sounds\harvest.ogg", 1.0, 1};
+        sound[] = {"\Data\Sounds\harvest.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class lockCarSound {
         name = "lockCarSound";
-        sound[] = {"\sounds\carLock.ogg", 1.0, 1};
+        sound[] = {"\Data\Sounds\carLock.ogg", 1.0, 1};
         titles[] = {};
     };
 
     class unlockCarSound {
         name = "unlockCarSound";
-        sound[] = {"\sounds\carUnlock.ogg", 0.75, 1};
+        sound[] = {"\Data\Sounds\carUnlock.ogg", 0.75, 1};
         titles[] = {};
     };
 };
@@ -142,7 +141,7 @@ class CfgNotifications {
 
     class TextMessage {
         title = "$STR_TextMessage_Title";
-        iconPicture = "icons\ico_messageNew.paa";
+        iconPicture = "Data\Icons\ico_messageNew.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -150,7 +149,7 @@ class CfgNotifications {
 
     class PoliceDispatch {
         title = "$STR_PoliceDispatch_Title";
-        iconPicture = "icons\ico_messagePolice.paa";
+        iconPicture = "Data\Icons\ico_messagePolice.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -158,7 +157,7 @@ class CfgNotifications {
 
     class AdminDispatch {
         title = "$STR_AdminDispatch_Title";
-        iconPicture = "icons\ico_messageAdmin.paa";
+        iconPicture = "Data\Icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -166,7 +165,7 @@ class CfgNotifications {
 
     class AdminMessage {
         title = "$STR_AdminMessage_Title";
-        iconPicture = "icons\ico_messageAdmin.paa";
+        iconPicture = "Data\Icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
         priority = 5;

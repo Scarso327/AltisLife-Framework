@@ -14,11 +14,11 @@ diag_log "----------------------------------------------------------------------
 _timeStamp = diag_tickTime;
 
 waitUntil {!isNull (findDisplay 46)};
-[] call compile preprocessFileLineNumbers "core\clientValidator.sqf";
+[] call compile preprocessFileLineNumbers "Functions\clientValidator.sqf";
 enableSentences false;
 
 diag_log "[Life Client] Initialization Variables";
-[] call compile preprocessFileLineNumbers "core\configuration.sqf";
+[] call compile preprocessFileLineNumbers "Functions\configuration.sqf";
 diag_log "[Life Client] Variables initialized";
 
 diag_log "[Life Client] Setting up Eventhandlers";
@@ -69,7 +69,7 @@ player setVariable ["playerSurrender", false, true];
 player setVariable ["realname", profileName, true];
 
 diag_log "[Life Client] Past Settings Init";
-[] execFSM "core\fsm\client.fsm";
+[] execFSM "Functions\fsm\client.fsm";
 diag_log "[Life Client] Executing client.fsm";
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];
@@ -92,7 +92,7 @@ addMissionEventHandler ["EachFrame", life_fnc_revealObjects];
 
 if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 0) then {player enableFatigue false;};
 if (LIFE_SETTINGS(getNumber,"pump_service") isEqualTo 1) then {
-    [] execVM "core\fn_setupStationService.sqf";
+    [] execVM "Functions\fn_setupStationService.sqf";
 };
 
 life_fnc_RequestClientId = player;

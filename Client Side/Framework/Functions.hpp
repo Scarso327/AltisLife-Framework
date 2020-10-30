@@ -1,7 +1,7 @@
 class Socket_Reciever {
     tag = "SOCK";
     class SQL_Socket {
-        file = "core\session";
+        file = "Functions\session";
         class dataQuery {};
         class insertPlayerInfo {};
         class requestReceived {};
@@ -11,21 +11,11 @@ class Socket_Reciever {
     };
 };
 
-class SpyGlass {
-    tag = "SPY";
-    class Functions {
-        file = "SpyGlass";
-        class cookieJar{};
-        class notifyAdmins{};
-        class observe{};
-    };
-};
-
 class Life_Client_Core {
     tag = "life";
 
     class Master_Directory {
-        file = "core";
+        file = "Functions";
         class initCiv {};
         class initCop {};
         class initMedic {};
@@ -36,7 +26,7 @@ class Life_Client_Core {
     };
 
     class Actions {
-        file = "core\actions";
+        file = "Functions\Actions";
         class arrestAction {};
         class buyLicense {};
         class captureHideout {};
@@ -74,7 +64,7 @@ class Life_Client_Core {
     };
 
     class Admin {
-        file = "core\admin";
+        file = "Functions\Admin";
         class adminCompensate {};
         class adminDebugCon {};
         class adminFreeze {};
@@ -91,7 +81,7 @@ class Life_Client_Core {
     };
 
     class Civilian {
-        file = "core\civilian";
+        file = "Functions\Civilian";
         class civMarkers {};
         class demoChargeTimer {};
         class freezePlayer {};
@@ -106,7 +96,7 @@ class Life_Client_Core {
     };
 
     class Config {
-        file = "core\config";
+        file = "Functions\Config";
         class houseConfig {};
         class itemWeight {};
         class vehicleAnimate {};
@@ -114,7 +104,7 @@ class Life_Client_Core {
     };
 
     class Cop {
-        file = "core\cop";
+        file = "Functions\Cop";
         class bountyReceive {};
         class containerInvSearch {};
         class copInteractionMenu {};
@@ -143,7 +133,7 @@ class Life_Client_Core {
     };
 
     class Dialog_Controls {
-        file = "dialog\function";
+        file = "UI\Functions";
         class bankDeposit {};
         class bankTransfer {};
         class bankWithdraw {};
@@ -169,7 +159,7 @@ class Life_Client_Core {
     };
 
     class Functions {
-        file = "core\functions";
+        file = "Functions\Functions";
         class AAN {};
         class accType {};
         class actionKeyHandler {};
@@ -220,7 +210,7 @@ class Life_Client_Core {
     };
 
     class Gangs {
-        file = "core\gangs";
+        file = "Functions\Gangs";
         class createGang {};
         class gangCreated {};
         class gangDisband {};
@@ -236,7 +226,7 @@ class Life_Client_Core {
     };
 
     class Housing {
-        file = "core\housing";
+        file = "Functions\Housing";
         class buyHouse {};
         class buyHouseGarage {};
         class containerMenu {};
@@ -258,7 +248,7 @@ class Life_Client_Core {
     };
 
     class Items {
-        file = "core\items";
+        file = "Functions\Items";
         class blastingCharge {};
         class boltcutter {};
         class defuseKit {};
@@ -272,7 +262,7 @@ class Life_Client_Core {
     };
 
     class Medical_System {
-        file = "core\medical";
+        file = "Functions\Medical";
         class deathScreen {};
         class medicLights {};
         class medicMarkers {};
@@ -288,7 +278,7 @@ class Life_Client_Core {
     };
 
     class Network {
-        file = "core\functions\network";
+        file = "Functions\Functions\Network";
         class broadcast {};
         class corpse {};
         class jumpFnc {};
@@ -298,7 +288,7 @@ class Life_Client_Core {
     };
 
     class Player_Menu {
-        file = "core\pmenu";
+        file = "Functions\Pmenu";
         class cellphone {};
         class giveItem {};
         class giveMoney {};
@@ -322,7 +312,7 @@ class Life_Client_Core {
     };
 
     class Shops {
-        file = "core\shops";
+        file = "Functions\Shops";
         class 3dPreviewDisplay {};
         class 3dPreviewExit {};
         class 3dPreviewInit {};
@@ -354,7 +344,7 @@ class Life_Client_Core {
     };
 
     class Vehicle {
-        file = "core\vehicle";
+        file = "Functions\Vehicle";
         class addVehicle2Chain {};
         class colorVehicle {};
         class deviceMine {};

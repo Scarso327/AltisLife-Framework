@@ -46,7 +46,7 @@ class FSM
     class Split
     {
       name = "Split";
-      init = /*%FSM<STATEINIT""">*/"systemChat format [localize ""You will receive your next paycheck in %1 minutes."",(getNumber(missionConfigFile >> ""Life_Settings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
+      init = /*%FSM<STATEINIT""">*/"systemChat format [""You will receive your next paycheck in %1 minutes."",(getNumber(missionConfigFile >> ""Life_Settings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

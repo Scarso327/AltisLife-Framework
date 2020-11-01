@@ -11,7 +11,7 @@
 #include "..\..\script_macros.hpp"
 
 private _return = [];
-private _spawnCfg = missionConfigFile >> "CfgSpawnPoints" >> worldName >> [player] call ULP_fnc_getFaction;
+private _spawnCfg = missionConfigFile >> "CfgSpawns" >> worldName >> [player] call ULP_fnc_getFaction;
 
 for "_i" from 0 to count(_spawnCfg)-1 do {
 

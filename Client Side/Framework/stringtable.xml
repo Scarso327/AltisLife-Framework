@@ -169,32 +169,6 @@
             <Original>You are not in a Gang!</Original>
         </Key>
     </Package>
-    <Package name="Cell_Phone">
-        <Key ID="STR_CELL_Title">
-            <Original>Altis Mobile</Original>
-        </Key>
-        <Key ID="STR_CELL_TextToSend">
-            <Original>Message To Send:</Original>
-        </Key>
-        <Key ID="STR_CELL_TextMSGBtn">
-            <Original>Text Message:</Original>
-        </Key>
-        <Key ID="STR_CELL_TextPolice">
-            <Original>Text Police</Original>
-        </Key>
-        <Key ID="STR_CELL_TextAdmins">
-            <Original>Text Admins</Original>
-        </Key>
-        <Key ID="STR_CELL_AdminMsg">
-            <Original>Admin Message</Original>
-        </Key>
-        <Key ID="STR_CELL_AdminMSGAll">
-            <Original>Admin Msg All</Original>
-        </Key>
-        <Key ID="STR_CELL_EMSRequest">
-            <Original>Request EMS</Original>
-        </Key>
-    </Package>
     <Package name="CellPhone_Messages">
         <Key ID="STR_CELLMSG_EnterMSG">
             <Original>You must enter a message to send!</Original>

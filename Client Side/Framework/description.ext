@@ -80,27 +80,27 @@ class CfgSounds {
 
 class CfgDebriefing {
     class NotWhitelisted {
-        title = "$STR_NotWhitelisted_Title";
-        subtitle = "$STR_NotWhitelisted_SubTitle";
-        description = "$STR_NotWhitelisted_Descript";
+        title = "Unable to Join";
+        subtitle = "You are not currently whitelisted";
+        description = "Please contact a member of this faction's command for more information";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
     };
 
     class Blacklisted {
-        title = "$STR_Blacklisted_Title";
-        subtitle = "$STR_Blacklisted_SubTitle";
-        description = "$STR_Blacklisted_Descript";
+        title = "Unable to Join";
+        subtitle = "You are currently blacklisted";
+        description = "Please contact a member of this faction's command for more information";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
     };
 
     class SpyGlass {
-        title = "$STR_SpyDetect_Title";
-        subTitle = "$STR_SpyDetect_SubTitle";
-        description = "$STR_SpyDetect_Descript";
+        title = "The SpyGlass sees you!";
+        subTitle = "You were detected by the SpyGlass.";
+        description = "You have been reported to the server.";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
@@ -109,7 +109,7 @@ class CfgDebriefing {
 
 class CfgNotifications {
     class MedicalRequestEmerg {
-        title = "$STR_MedicalRequestEmerg_Title";
+        title = "TAS Requested";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
         description = "%1";
         duration = 5;
@@ -117,7 +117,7 @@ class CfgNotifications {
     };
 
     class DeliveryAssigned {
-        title = "$STR_DeliveryAssigned_Title";
+        title = "Delivery Job Accepted";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
         description = "%1";
         duration = 10;
@@ -125,7 +125,7 @@ class CfgNotifications {
     };
 
     class DeliveryFailed {
-        title = "$STR_DeliveryFailed_Title";
+        title = "Delivery Job Failed";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
         description = "%1";
         duration = 7;
@@ -133,7 +133,7 @@ class CfgNotifications {
     };
 
     class DeliverySucceeded {
-        title = "$STR_DeliverySucceeded_Title";
+        title = "Delivery Job Completed";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
         description = "%1";
         duration = 6;
@@ -141,7 +141,7 @@ class CfgNotifications {
     };
 
     class TextMessage {
-        title = "$STR_TextMessage_Title";
+        title = "Received A Text Message";
         iconPicture = "Data\Icons\ico_messageNew.paa";
         description = "%1";
         duration = 10;
@@ -149,7 +149,7 @@ class CfgNotifications {
     };
 
     class PoliceDispatch {
-        title = "$STR_PoliceDispatch_Title";
+        title = "Emergency Dispatch Center";
         iconPicture = "Data\Icons\ico_messagePolice.paa";
         description = "%1";
         duration = 10;
@@ -157,7 +157,7 @@ class CfgNotifications {
     };
 
     class AdminDispatch {
-        title = "$STR_AdminDispatch_Title";
+        title = "Staff Dispatch Center";
         iconPicture = "Data\Icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
@@ -165,7 +165,7 @@ class CfgNotifications {
     };
 
     class AdminMessage {
-        title = "$STR_AdminMessage_Title";
+        title = "Staff Message";
         iconPicture = "Data\Icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;

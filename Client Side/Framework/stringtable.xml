@@ -515,20 +515,6 @@
             <Original>Sidechat ON</Original>
         </Key>
     </Package>
-    <Package name="Spawn_Menu">
-        <Key ID="STR_Spawn_Title">
-            <Original>Spawn Selection</Original>
-        </Key>
-        <Key ID="STR_Spawn_Spawn">
-            <Original>Spawn</Original>
-        </Key>
-        <Key ID="STR_Spawn_CSP">
-            <Original>Current Spawn Point</Original>
-        </Key>
-        <Key ID="STR_Spawn_Spawned">
-            <Original>You have spawned at</Original>
-        </Key>
-    </Package>
     <Package name="Wanted_Menu">
         <Key ID="STR_Wanted_Title">
             <Original>APD Wanted List</Original>

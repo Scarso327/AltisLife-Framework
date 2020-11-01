@@ -529,17 +529,6 @@
             <Original>You have spawned at</Original>
         </Key>
     </Package>
-    <Package name="Ticket_Menu">
-        <Key ID="STR_Ticket_GiveTicket">
-            <Original>Give Ticket</Original>
-        </Key>
-        <Key ID="STR_Ticket_PayTicket">
-            <Original>Pay Ticket</Original>
-        </Key>
-        <Key ID="STR_Ticket_RefuseTicket">
-            <Original>Refuse Ticket</Original>
-        </Key>
-    </Package>
     <Package name="Wanted_Menu">
         <Key ID="STR_Wanted_Title">
             <Original>APD Wanted List</Original>

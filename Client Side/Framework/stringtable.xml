@@ -169,32 +169,6 @@
             <Original>You are not in a Gang!</Original>
         </Key>
     </Package>
-    <Package name="CellPhone_Messages">
-        <Key ID="STR_CELLMSG_EnterMSG">
-            <Original>You must enter a message to send!</Original>
-        </Key>
-        <Key ID="STR_CELLMSG_LIMITEXCEEDED">
-            <Original>Your message cannot exceed 400 characters!</Original>
-        </Key>
-        <Key ID="STR_CELLMSG_SelectPerson">
-            <Original>You must select a player you are sending the text to!</Original>
-        </Key>
-        <Key ID="STR_CELLMSG_ToEMS">
-            <Original>You have sent a message to all EMS Units.</Original>
-        </Key>
-        <Key ID="STR_CELLMSG_ToPerson">
-            <Original>You sent %1 a message: %2</Original>
-        </Key>
-        <Key ID="STR_CELLMSG_NoAdmin">
-            <Original>You are not an admin!</Original>
-        </Key>
-        <Key ID="STR_CELLMSG_AdminToPerson">
-            <Original>Admin Message Sent To: %1 - Message: %2</Original>
-        </Key>
-        <Key ID="STR_CELLMSG_AdminToAll">
-            <Original>Admin Message Sent To All: %1</Original>
-        </Key>
-    </Package>
     <Package name="Gang_Menu">
         <Key ID="STR_Gang_Title">
             <Original>Gang Management</Original>

@@ -126,13 +126,13 @@ private [""_msg"",""_to""];
     ctrlShow[3022,false];
     _msg = ctrlText 3003;
     _length = count (toArray(_msg));
-    if (_length > 400) exitWith {hint localize ""STR_CELLMSG_LIMITEXCEEDED"";ctrlShow[3022,true];};
+    if (_length > 400) exitWith {hint ""Your message cannot exceed 400 characters!"";ctrlShow[3022,true];};
     _to = ""EMS Units"";
-    if (_msg isEqualTo """") exitWith {hint localize ""STR_CELLMSG_EnterMSG"";ctrlShow[3022,true];};
+    if (_msg isEqualTo """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3022,true];};
 
     [_msg,name player,5,mapGridPosition player,player] remoteExecCall [""TON_fnc_clientMessage"",independent];
     [] call life_fnc_cellphone;
-    hint format [localize ""STR_CELLMSG_ToEMS"",_to,_msg];
+    hint format [""You have sent a message to all TAS Units."",_to,_msg];
     ctrlShow[3022,true];
 ";
 //To One Person
@@ -143,17 +143,17 @@ compileFinal "
     _msg = ctrlText 3003;
 
     _length = count (toArray(_msg));
-    if (_length > 400) exitWith {hint localize ""STR_CELLMSG_LIMITEXCEEDED"";ctrlShow[3015,true];};
-    if (lbCurSel 3004 isEqualTo -1) exitWith {hint localize ""STR_CELLMSG_SelectPerson""; ctrlShow[3015,true];};
+    if (_length > 400) exitWith {hint ""Your message cannot exceed 400 characters!"";ctrlShow[3015,true];};
+    if (lbCurSel 3004 isEqualTo -1) exitWith {hint ""You must select a player you are sending the text to!""; ctrlShow[3015,true];};
 
     _to = call compile format [""%1"",(lbData[3004,(lbCurSel 3004)])];
     if (isNull _to) exitWith {ctrlShow[3015,true];};
     if (isNil ""_to"") exitWith {ctrlShow[3015,true];};
-    if (_msg isEqualTo """") exitWith {hint localize ""STR_CELLMSG_EnterMSG"";ctrlShow[3015,true];};
+    if (_msg isEqualTo """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3015,true];};
 
     [_msg,name player,0] remoteExecCall [""TON_fnc_clientMessage"",_to];
     [] call life_fnc_cellphone;
-    hint format [localize ""STR_CELLMSG_ToPerson"",name _to,_msg];
+    hint format [""You sent %1 a message: %2"",name _to,_msg];
     ctrlShow[3015,true];
 ";
 //To All Cops
@@ -164,13 +164,13 @@ compileFinal "
     _msg = ctrlText 3003;
     _to = ""The Police"";
 
-    if (_msg isEqualTo """") exitWith {hint localize ""STR_CELLMSG_EnterMSG"";ctrlShow[3016,true];};
+    if (_msg isEqualTo """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3016,true];};
     _length = count (toArray(_msg));
-    if (_length > 400) exitWith {hint localize ""STR_CELLMSG_LIMITEXCEEDED"";ctrlShow[3016,true];};
+    if (_length > 400) exitWith {hint ""Your message cannot exceed 400 characters!"";ctrlShow[3016,true];};
 
     [_msg,name player,1,mapGridPosition player,player] remoteExecCall [""TON_fnc_clientMessage"",-2];
     [] call life_fnc_cellphone;
-    hint format [localize ""STR_CELLMSG_ToPerson"",_to,_msg];
+    hint format [""You sent %1 a message: %2"",_to,_msg];
     ctrlShow[3016,true];
 ";
 //To All Admins
@@ -181,46 +181,46 @@ compileFinal "
     _msg = ctrlText 3003;
     _to = ""The Admins"";
 
-    if (_msg isEqualTo """") exitWith {hint localize ""STR_CELLMSG_EnterMSG"";ctrlShow[3017,true];};
+    if (_msg isEqualTo """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3017,true];};
     _length = count (toArray(_msg));
-    if (_length > 400) exitWith {hint localize ""STR_CELLMSG_LIMITEXCEEDED"";ctrlShow[3017,true];};
+    if (_length > 400) exitWith {hint ""Your message cannot exceed 400 characters!"";ctrlShow[3017,true];};
 
     [_msg,name player,2,mapGridPosition player,player] remoteExecCall [""TON_fnc_clientMessage"",-2];
     [] call life_fnc_cellphone;
-    hint format [localize ""STR_CELLMSG_ToPerson"",_to,_msg];
+    hint format [""You sent %1 a message: %2"",_to,_msg];
     ctrlShow[3017,true];
 ";
 //Admin To One Person
 TON_fnc_cell_adminmsg =
 compileFinal "
     if (isServer) exitWith {};
-    if ((call life_adminlevel) < 1) exitWith {hint localize ""STR_CELLMSG_NoAdmin"";};
+    if ((call life_adminlevel) < 1) exitWith {hint ""You are not an staff!"";};
     private [""_msg"",""_to""];
     ctrlShow[3020,false];
     _msg = ctrlText 3003;
     _to = call compile format [""%1"",(lbData[3004,(lbCurSel 3004)])];
     if (isNull _to) exitWith {ctrlShow[3020,true];};
     if (isNil ""_to"") exitWith {ctrlShow[3020,true];};
-    if (_msg isEqualTo """") exitWith {hint localize ""STR_CELLMSG_EnterMSG"";ctrlShow[3020,true];};
+    if (_msg isEqualTo """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3020,true];};
 
     [_msg,name player,3] remoteExecCall [""TON_fnc_clientMessage"",_to];
     [] call life_fnc_cellphone;
-    hint format [localize ""STR_CELLMSG_AdminToPerson"",name _to,_msg];
+    hint format [""Staff Message Sent To: %1 - Message: %2"",name _to,_msg];
     ctrlShow[3020,true];
 ";
 
 TON_fnc_cell_adminmsgall =
 compileFinal "
     if (isServer) exitWith {};
-    if ((call life_adminlevel) < 1) exitWith {hint localize ""STR_CELLMSG_NoAdmin"";};
+    if ((call life_adminlevel) < 1) exitWith {hint ""You are not an staff!"";};
     private [""_msg"",""_from""];
     ctrlShow[3021,false];
     _msg = ctrlText 3003;
-    if (_msg isEqualTo """") exitWith {hint localize ""STR_CELLMSG_EnterMSG"";ctrlShow[3021,true];};
+    if (_msg isEqualTo """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3021,true];};
 
     [_msg,name player,4] remoteExecCall [""TON_fnc_clientMessage"",-2];
     [] call life_fnc_cellphone;
-    hint format [localize ""STR_CELLMSG_AdminToAll"",_msg];
+    hint format [""Staff Message Sent To All: %1"",_msg];
     ctrlShow[3021,true];
 ";
 

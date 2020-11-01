@@ -2,6 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
+#include "..\..\script_macros.hpp"
 scopeName "fn_initialisation";
 
 private _startTime = diag_tickTime;
@@ -36,8 +37,10 @@ if (isClass (_factionCfg >> "Whitelisting")) then {
 	} forEach ("isNumber(_x >> 'required')" configClasses (_factionCfg >> "Whitelisting"));
 };
 
-["Starting Client Loop"] call ULP_fnc_logIt;
-[] execFSM "Functions\FSM\client.fsm";
+["Starting Paycheck Loop"] call ULP_fnc_logIt;
+ULP_Paycheck = [] call ULP_fnc_calcPaycheck;
+CONSTVAR(ULP_Paycheck);
+[] execFSM "Functions\Paycheck\pay.fsm";
 
 waitUntil { !isNull (findDisplay 46) }; // Wasn't always set?? Arma??
 

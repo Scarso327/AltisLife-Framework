@@ -12,6 +12,7 @@ ULP_Loaded = false;
 ULP_Settings_EnableSide = false;
 
 /* Player Variables */
+ULP_Paycheck = {0};
 ULP_Gear = [];
 ULP_Liceneses = [];
 ULP_Houses = [];

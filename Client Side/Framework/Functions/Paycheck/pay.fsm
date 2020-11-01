@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "D:\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Life Client FSM">*/
+/*%FSM<COMPILE "D:\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Paycheck FSM">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Main_Init",0,250,-40.348839,-141.279068,49.651161,-91.279068,0.000000,"Main Init"};
@@ -14,7 +14,7 @@ window[] = {0,-1,-1,-1,-1,893,75,1515,75,1,1050};
 *//*%FSM</HEAD>*/
 class FSM
 {
-  fsmName = "Life Client FSM";
+  fsmName = "Paycheck FSM";
   class States
   {
     /*%FSM<STATE "Main_Init">*/
@@ -46,7 +46,7 @@ class FSM
     class Split
     {
       name = "Split";
-      init = /*%FSM<STATEINIT""">*/"systemChat format [""You will receive your next paycheck in %1 minutes."",(getNumber(missionConfigFile >> ""Life_Settings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
+      init = /*%FSM<STATEINIT""">*/"systemChat format [localize ""You will receive your next paycheck in %1 minutes."",(getNumber(missionConfigFile >> ""Life_Settings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -61,11 +61,11 @@ class FSM
            "    systemChat ""You have missed a paycheck because you were incapacitated."";" \n
            "} else {" \n
            "    if (player distance (getMarkerPos ""fed_reserve"") < 120 && playerSide isEqualTo west) then {" \n
-           "        systemChat format [""You have received a paycheck of £%1."",[(call life_paycheck) + 1500] call life_fnc_numberText];" \n
-           "        life_atmbank = life_atmbank + (call life_paycheck) + 1500;" \n
+           "        systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck) + 1500] call life_fnc_numberText];" \n
+           "        life_atmbank = life_atmbank + (call ULP_Paycheck) + 1500;" \n
            "    } else {" \n
-           "        life_atmbank = life_atmbank + (call life_paycheck);" \n
-           "        systemChat format [""You have received a paycheck of £%1."",[(call life_paycheck)] call life_fnc_numberText];" \n
+           "        life_atmbank = life_atmbank + (call ULP_Paycheck);" \n
+           "        systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck)] call life_fnc_numberText];" \n
            "    };" \n
            "};" \n
            "" \n

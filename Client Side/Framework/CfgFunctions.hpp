@@ -27,6 +27,11 @@ class ULP_Functions {
 		class saveGear {};
 	};
 
+	class Paycheck {
+		file = "Functions\Paycheck";
+		class calcPaycheck {};
+	};
+
 	class DatabasePlayer {
 		file = "Functions\Database\Player";
 		class getPlayerInfo {};

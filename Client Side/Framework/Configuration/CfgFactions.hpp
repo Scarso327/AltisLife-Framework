@@ -1,11 +1,14 @@
 class CfgFactions {
 	defaultFaction = "Civilian";
+	fallbackPay = 1000;
 
 	class Police {
 		displayName = "National Health Service";
+		pay = 2500;
 		class Whitelisting {
 			class Main {
 				queryIndex = 12;
+				payMulti = 0.1; // Pay increase per level...
 				required = 1;
 			};
 			class NPAS {
@@ -20,6 +23,7 @@ class CfgFactions {
 	};
 	class Medic {
 		displayName = "National Health Service";
+		pay = 2500;
 		class Whitelisting {
 			class Main {
 				queryIndex = 12;
@@ -33,6 +37,7 @@ class CfgFactions {
 	};
 	class Civilian {
 		displayName = "National Health Service";
+		pay = 2500;
 		class Groups {};
 		class Housing {};
 		class DatabaseInfo {

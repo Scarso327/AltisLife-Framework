@@ -13,11 +13,11 @@ params [
 ];
 
 if (_robber == _victim) exitWith {};
-if (_cash isEqualTo 0) exitWith {titleText[localize "STR_Civ_RobFail","PLAIN"]};
+if (_cash isEqualTo 0) exitWith {titleText["They didn't have any cash...","PLAIN"]};
 
 CASH = CASH + _cash;
 [0] call SOCK_fnc_updatePartial;
-titleText[format [localize "STR_Civ_Robbed",[_cash] call life_fnc_numberText],"PLAIN"];
+titleText[format ["You stole £%1",[_cash] call life_fnc_numberText],"PLAIN"];
 
 if (LIFE_SETTINGS(getNumber,"player_moneyLog") isEqualTo 1) then {
     if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {

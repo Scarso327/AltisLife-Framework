@@ -933,41 +933,6 @@
             <Original>You have paid your bail and are now free.</Original>
         </Key>
     </Package>
-    <Package name="Civ_Strings">
-        <Key ID="STR_Civ_KnockedOut">
-            <Original>%1 has knocked you out.</Original>
-        </Key>
-        <Key ID="STR_Civ_LicenseRemove_1">
-            <Original>You have lost all your motor vehicle licenses for vehicular manslaughter.</Original>
-        </Key>
-        <Key ID="STR_Civ_LicenseRemove_2">
-            <Original>You have lost your firearms license for manslaughter.</Original>
-        </Key>
-        <Key ID="STR_Civ_RobFail">
-            <Original>They didn't have any cash...</Original>
-        </Key>
-        <Key ID="STR_Civ_Robbed">
-            <Original>You stole £%1</Original>
-        </Key>
-        <Key ID="STR_Civ_VaultEmpty">
-            <Original>The safe is empty!</Original>
-        </Key>
-        <Key ID="STR_Civ_VaultInUse">
-            <Original>Someone is already accessing the safe..</Original>
-        </Key>
-        <Key ID="STR_Civ_NotEnoughCops">
-            <Original>There needs to be %1 or more cops online to continue.</Original>
-        </Key>
-        <Key ID="STR_Civ_SafeInv">
-            <Original>Safe Inventory</Original>
-        </Key>
-        <Key ID="STR_Civ_SelectItem">
-            <Original>You need to select an item!</Original>
-        </Key>
-        <Key ID="STR_Civ_IsntEnoughGold">
-            <Original>There isn't %1 gold bar(s) in the safe!</Original>
-        </Key>
-    </Package>
     <Package name="Cop_Strings">
         <Key ID="STR_Cop_TicketError">
             <Original>Couldn't open the ticketing interface</Original>

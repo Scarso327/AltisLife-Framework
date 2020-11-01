@@ -1,4 +1,3 @@
-#include "..\..\script_macros.hpp"
 /*
     File: fn_spawnPointCfg.sqf
     Author: Bryan "Tonic" Boardwine
@@ -9,18 +8,10 @@
     Return:
     [Spawn Marker,Spawn Name,Image Path]
 */
-
-params [["_side",civilian,[civilian]]];
-
-_side = switch (_side) do {
-    case west: {"Cop"};
-    case independent: {"Medic"};
-    default {"Civilian"};
-};
+#include "..\..\script_macros.hpp"
 
 private _return = [];
-
-private _spawnCfg = missionConfigFile >> "CfgSpawnPoints" >> worldName >> _side;
+private _spawnCfg = missionConfigFile >> "CfgSpawnPoints" >> worldName >> [player] call ULP_fnc_getFaction;
 
 for "_i" from 0 to count(_spawnCfg)-1 do {
 
@@ -51,4 +42,4 @@ if (playerSide isEqualTo civilian) then {
   };
 };
 
-_return;
+_return

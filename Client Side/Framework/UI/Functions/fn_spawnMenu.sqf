@@ -20,7 +20,7 @@ cutText["","BLACK FADED"];
 if (!(createDialog "life_spawn_selection")) exitWith {[] call life_fnc_spawnMenu;};
 (findDisplay 38500) displaySetEventHandler ["keyDown","_this call life_fnc_displayHandler"];
 
-_spCfg = [playerSide] call life_fnc_spawnPointCfg;
+_spCfg = [] call life_fnc_spawnPointCfg;
 
 _ctrl = ((findDisplay 38500) displayCtrl 38510);
 {

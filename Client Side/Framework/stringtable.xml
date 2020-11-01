@@ -2385,42 +2385,4 @@
             <Original>Killing of a soldier</Original>
         </Key>
     </Package>
-    <Package name="FuelTank_Mission">
-        <Key ID="STR_MAR_FuelTank_Storage">
-            <Original>Gas Storage</Original>
-        </Key>
-        <Key ID="STR_FuelTank_Supply">
-            <Original>Supply</Original>
-        </Key>
-        <Key ID="STR_FuelTank_Store">
-            <Original>Store</Original>
-        </Key>
-        <Key ID="STR_FuelTank_Stop">
-            <Original>Stop</Original>
-        </Key>
-        <Key ID="STR_FuelTank_InUse">
-            <Original>Tanker is already in use.</Original>
-        </Key>
-        <Key ID="STR_FuelTank_AnotherInUse">
-            <Original>Gas station is in use.</Original>
-        </Key>
-        <Key ID="STR_FuelTank_Empty">
-            <Original>Tanker is empty.</Original>
-        </Key>
-        <Key ID="STR_FuelTank_Full">
-            <Original>Tankers is full.</Original>
-        </Key>
-        <Key ID="STR_FuelTank_FeedFull">
-            <Original>Gas station has enough fuel.</Original>
-        </Key>
-        <Key ID="STR_FuelTank_PipeLine">
-            <Original>This gas station is supplied through a pipeline.</Original>
-        </Key>
-        <Key ID="STR_FuelTank_Stopped">
-            <Original>Discontinued operation.</Original>
-        </Key>
-        <Key ID="STR_FuelTank_Money">
-            <Original>Your share is £%1.</Original>
-        </Key>
-    </Package>
 </Project>

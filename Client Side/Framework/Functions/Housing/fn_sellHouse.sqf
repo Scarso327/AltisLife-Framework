@@ -25,7 +25,7 @@ if (count _houseCfg isEqualTo 0) exitWith {};
 _action = [
     format [localize "STR_House_SellHouseMSG",
     (round((_houseCfg select 0)/2)) call life_fnc_numberText,
-    (_houseCfg select 1)],localize "STR_pInAct_SellHouse",localize "STR_Global_Sell",localize "STR_Global_Cancel"
+    (_houseCfg select 1)],localize "STR_pInAct_SellHouse","Sell","Cancel"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {

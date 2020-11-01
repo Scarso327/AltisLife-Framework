@@ -65,7 +65,7 @@ class life_weapon_shop {
 
         class ButtonBuySell: Life_RscButtonMenu {
             idc = 38405;
-            text = "$STR_Global_Buy";
+            text = "Buy";
             onButtonClick = "[] spawn life_fnc_weaponShopBuySell; true";
             x = 0.1;
             y = 0.8 - (1 / 25);
@@ -75,7 +75,7 @@ class life_weapon_shop {
 
         class ButtonClose: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.8 - (1 / 25);
@@ -85,7 +85,7 @@ class life_weapon_shop {
 
         class ButtonMags: Life_RscButtonMenu {
             idc = 38406;
-            text = "$STR_Global_Mags";
+            text = "Magazines";
             onButtonClick = "_this call life_fnc_weaponShopMags; _this call life_fnc_weaponShopFilter";
             x = 0.1;
             y = 0.8 + (1 / 250 / (safezoneW / safezoneH));
@@ -95,7 +95,7 @@ class life_weapon_shop {
 
         class ButtonAccs: Life_RscButtonMenu {
             idc = 38407;
-            text = "$STR_Global_Accs";
+            text = "Accessories";
             onButtonClick = "_this call life_fnc_weaponShopAccs; _this call life_fnc_weaponShopFilter";
             x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.8 + (1 / 250 / (safezoneW / safezoneH));

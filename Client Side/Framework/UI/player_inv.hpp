@@ -114,7 +114,7 @@ class playerSettings {
 
         class moneyDrop: Life_RscButtonMenu {
             idc = 2001;
-            text = "$STR_Global_Give";
+            text = "Give";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_giveMoney";
             sizeEx = 0.025;
@@ -145,7 +145,7 @@ class playerSettings {
 
         class DropButton: Life_RscButtonMenu {
             idc = 2002;
-            text = "$STR_Global_Give";
+            text = "Give";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_giveItem;";
             x = 0.765;
@@ -155,7 +155,7 @@ class playerSettings {
         };
 
         class UseButton: Life_RscButtonMenu {
-            text = "$STR_Global_Use";
+            text = "Use";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_useItem;";
             x = 0.62;
@@ -165,7 +165,7 @@ class playerSettings {
         };
 
         class RemoveButton: Life_RscButtonMenu {
-            text = "$STR_Global_Remove";
+            text = "Remove";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
             onButtonClick = "[] call life_fnc_removeItem;";
             x = 0.475;
@@ -177,7 +177,7 @@ class playerSettings {
         class ButtonClose: Life_RscButtonMenu {
             idc = -1;
             //shortcuts[] = {0x00050000 + 2};
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = 0.1;
             y = 0.8 - (1 / 25);
@@ -187,7 +187,7 @@ class playerSettings {
 
         class ButtonSettings: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Settings";
+            text = "Settings";
             onButtonClick = "[] call life_fnc_settingsMenu;";
             x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.8 - (1 / 25);

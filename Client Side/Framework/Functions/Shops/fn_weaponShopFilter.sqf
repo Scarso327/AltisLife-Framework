@@ -45,7 +45,7 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 1 || {(uiNamespace
             true
         } count _config;
         
-        ((findDisplay 38400) displayCtrl 38406) ctrlSetText localize "STR_Global_Weapons";
+        ((findDisplay 38400) displayCtrl 38406) ctrlSetText "Weapons";
         
         ctrlShow [38406,true];
         ctrlShow [38407,false];
@@ -69,13 +69,13 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 1 || {(uiNamespace
             true
         } count _config;
         
-        ((findDisplay 38400) displayCtrl 38407) ctrlSetText localize "STR_Global_Weapons";
+        ((findDisplay 38400) displayCtrl 38407) ctrlSetText "Weapons";
         
         ctrlShow [38406,false];
         ctrlShow [38407,true];
     };
 
-    ((findDisplay 38400) displayCtrl 38405) ctrlSetText localize "STR_Global_Buy";
+    ((findDisplay 38400) displayCtrl 38405) ctrlSetText "Buy";
     ctrlShow [38402,false];
 
 } else {
@@ -96,9 +96,9 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 1 || {(uiNamespace
                 true
             } count _config;
 
-            ((findDisplay 38400) displayCtrl 38405) ctrlSetText localize "STR_Global_Buy";
-            ((findDisplay 38400) displayCtrl 38406) ctrlSetText localize "STR_Global_Mags";
-            ((findDisplay 38400) displayCtrl 38407) ctrlSetText localize "STR_Global_Accs";
+            ((findDisplay 38400) displayCtrl 38405) ctrlSetText "Buy";
+            ((findDisplay 38400) displayCtrl 38406) ctrlSetText "Magazines";
+            ((findDisplay 38400) displayCtrl 38407) ctrlSetText "Accessories";
             
             ctrlShow [38402,true];
             ctrlShow [38406,true];
@@ -120,7 +120,7 @@ if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 1 || {(uiNamespace
             _config = _config + (vestItems player);
             _config = _config + (backpackItems player);
 
-            ((findDisplay 38400) displayCtrl 38405) ctrlSetText localize "STR_Global_Sell";
+            ((findDisplay 38400) displayCtrl 38405) ctrlSetText "Sell";
             ctrlShow [38402,true];
             ctrlShow [38406,false];
             ctrlShow [38407,false];

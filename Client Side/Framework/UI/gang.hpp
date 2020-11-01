@@ -49,7 +49,7 @@ class Life_My_Gang_Diag {
 
         class CloseLoadMenu: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;[] call life_fnc_p_updateMenu";
             x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.8 - (1 / 25);
@@ -183,7 +183,7 @@ class Life_Create_Gang_Diag {
 
         class CloseLoadMenu: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;[] call life_fnc_p_updateMenu;";
             x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.5 - (1 / 25);

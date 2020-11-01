@@ -25,8 +25,8 @@ if (!isNull _group) then {
     _action = [
         format [localize "STR_GNOTF_AlreadyControlled",_gangName],
         localize "STR_GNOTF_CurrentCapture",
-        localize "STR_Global_Yes",
-        localize "STR_Global_No"
+        "Yes",
+        "No"
     ] call BIS_fnc_guiMessage;
 
     _cpRate = 0.0045;

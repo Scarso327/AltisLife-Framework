@@ -29,7 +29,7 @@ class life_admin_menu {
     class controls {
         class RscButtonMenu_2400: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = 0.324687 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;

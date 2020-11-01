@@ -19,8 +19,8 @@ _gangName = _group getVariable "gang_name";
 _action = [
     format [localize "STR_GNOTF_InviteMSG",_name,_gangName],
     localize "STR_Gang_Invitation",
-    localize "STR_Global_Yes",
-    localize "STR_Global_No"
+    "Yes",
+    "No"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {

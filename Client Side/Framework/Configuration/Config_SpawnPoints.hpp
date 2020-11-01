@@ -4,7 +4,7 @@
 *            String can contain any amount of conditions, aslong as the entire
 *            string returns a boolean. This allows you to check any levels, licenses etc,
 *            in any combination. For example:
-*                "call Police_Main"
+*                "[""Police_Main"", 1] call ULP_fnc_hasAccess;"
 *            This will also let you call any other function.
 *
 */
@@ -88,14 +88,14 @@ class CfgSpawnPoints {
                 displayName = $STR_MAR_Police_Air_HQ;
                 spawnMarker = "cop_spawn_4";
                 icon = "\a3\ui_f\data\map\Markers\NATO\b_air.paa";
-                conditions = "call Police_Main >= 2";
+                conditions = "[""Police_Main"", 2] call ULP_fnc_hasAccess;";
             };
 
             class HW {
                 displayName = $STR_MAR_Highway_Patrol;
                 spawnMarker = "cop_spawn_5";
                 icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
-                conditions = "call Police_Main >= 3";
+                conditions = "[""Police_Main"", 3] call ULP_fnc_hasAccess;";
             };
         };
 
@@ -202,14 +202,14 @@ class CfgSpawnPoints {
                 displayName = $STR_MAR_Police_Air_HQ;
                 spawnMarker = "cop_spawn_4";
                 icon = "\a3\ui_f\data\map\Markers\NATO\b_air.paa";
-                conditions = "call Police_Main >= 2";
+                conditions = "[""Police_Main"", 2] call ULP_fnc_hasAccess;";
             };
 
             class HW {
                 displayName = $STR_MAR_Highway_Patrol;
                 spawnMarker = "cop_spawn_5";
                 icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
-                conditions = "call Police_Main >= 3";
+                conditions = "[""Police_Main"", 3] call ULP_fnc_hasAccess;";
             };
         };
 

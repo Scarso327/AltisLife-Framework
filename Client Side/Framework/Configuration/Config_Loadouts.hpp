@@ -14,26 +14,26 @@ class Loadouts {
     // COP
     class WEST {
         uniform[] = {
-            {"U_Rangemaster", "call Police_Main >= 0"}
+            {"U_Rangemaster", "[""Police_Main"", 0] call ULP_fnc_hasAccess;"}
         };
         headgear[] = {
-            {"H_Cap_blk", "call Police_Main >= 0"}
+            {"H_Cap_blk", "[""Police_Main"", 0] call ULP_fnc_hasAccess;"}
         };
         vest[] = {
-            {"V_Rangemaster_belt", "call Police_Main >= 0"}
+            {"V_Rangemaster_belt", "[""Police_Main"", 0] call ULP_fnc_hasAccess;"}
         };
         backpack[] = {};
         weapon[] = {
-            {"hgun_P07_snds_F", "call Police_Main >= 0"}
+            {"hgun_P07_snds_F", "[""Police_Main"", 0] call ULP_fnc_hasAccess;"}
         };
         mags[] = {
-            {"16Rnd_9x21_Mag", 6, "call Police_Main >= 0"}
+            {"16Rnd_9x21_Mag", 6, "[""Police_Main"", 0] call ULP_fnc_hasAccess;"}
         };
         items[] = {};
         linkedItems[] = {
-            {"ItemMap", "call Police_Main >= 0"},
-            {"ItemCompass", "call Police_Main >= 0"},
-            {"ItemWatch", "call Police_Main >= 0"}
+            {"ItemMap", "[""Police_Main"", 0] call ULP_fnc_hasAccess;"},
+            {"ItemCompass", "[""Police_Main"", 0] call ULP_fnc_hasAccess;"},
+            {"ItemWatch", "[""Police_Main"", 0] call ULP_fnc_hasAccess;"}
         };
     };
 

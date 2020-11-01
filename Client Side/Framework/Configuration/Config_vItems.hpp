@@ -4,7 +4,7 @@
 *            String can contain any amount of conditions, aslong as the entire
 *            string returns a boolean. This allows you to check any levels, licenses etc,
 *            in any combination. For example:
-*                "call Police_Main && license_civ_someLicense"
+*                "[""Police_Main"", 1] call ULP_fnc_hasAccess && license_civ_someLicense"
 *            This will also let you call any other function.
 */
 class VirtualShops {

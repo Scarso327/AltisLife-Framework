@@ -18,6 +18,7 @@ class ULP_Functions {
 		class setFaction {};
 		class getFaction {};
 		class isFaction {};
+		class hasAccess {};
 	};
 
 	class Player {

@@ -468,38 +468,6 @@
             <Original>There isn't a vehicle near the NPC.</Original>
         </Key>
     </Package>
-    <Package name="Player_Menu">
-        <Key ID="STR_PM_Title">
-            <Original>Player Menu</Original>
-        </Key>
-        <Key ID="STR_PM_cItems">
-            <Original>Current Items</Original>
-        </Key>
-        <Key ID="STR_PM_Licenses">
-            <Original>Licenses</Original>
-        </Key>
-        <Key ID="STR_PM_MoneyStats">
-            <Original>Money Stats</Original>
-        </Key>
-        <Key ID="STR_PM_MyGang">
-            <Original>My Gang</Original>
-        </Key>
-        <Key ID="STR_PM_WantedList">
-            <Original>Wanted List</Original>
-        </Key>
-        <Key ID="STR_PM_CellPhone">
-            <Original>Cell Phone</Original>
-        </Key>
-        <Key ID="STR_PM_KeyChain">
-            <Original>Key Chain</Original>
-        </Key>
-        <Key ID="STR_PM_AdminMenu">
-            <Original>Admin Menu</Original>
-        </Key>
-        <Key ID="STR_PM_SyncData">
-            <Original>Sync Data</Original>
-        </Key>
-    </Package>
     <Package name="Settings_Menu">
         <Key ID="STR_SM_Title">
             <Original>Settings Menu</Original>

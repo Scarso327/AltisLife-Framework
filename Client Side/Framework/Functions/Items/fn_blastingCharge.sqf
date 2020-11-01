@@ -14,7 +14,7 @@ if (typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint localize "STR_ISTR_Bla
 if (_vault getVariable ["chargeplaced",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyPlaced"};
 if (_vault getVariable ["safe_open",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyOpen"};
 if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops"))) exitWith {
-     hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
+     hint format ["There needs to be %1 or more police officers online to continue.",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
 };
 
 private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;

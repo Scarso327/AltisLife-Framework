@@ -33,7 +33,7 @@ switch (_state) do {
             missionNamespace setVariable [LICENSE_VARNAME("driver","civ"),false];
             missionNamespace setVariable [LICENSE_VARNAME("trucking","civ"),false];
             missionNamespace setVariable [LICENSE_VARNAME("boat","civ"),false];
-            hint localize "STR_Civ_LicenseRemove_1";
+            hint localize "You have lost all your vehicle licenses for vehicular manslaughter.";
         };
     };
 

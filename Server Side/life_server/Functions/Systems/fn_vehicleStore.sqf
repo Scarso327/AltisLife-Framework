@@ -59,13 +59,13 @@ if (_impound) exitWith {
 
 // not persistent so just do this!
 if (count _vInfo isEqualTo 0) exitWith {
-    [1,"STR_Garage_Store_NotPersistent",true] remoteExecCall ["life_fnc_broadcast",(owner _unit)];
+    [1,"That vehicle is a rental and cannot be stored in your garage.",true] remoteExecCall ["life_fnc_broadcast",(owner _unit)];
     life_garage_store = false;
     (owner _unit) publicVariableClient "life_garage_store";
 };
 
 if !(_uid isEqualTo getPlayerUID _unit) exitWith {
-    [1,"STR_Garage_Store_NoOwnership",true] remoteExecCall ["life_fnc_broadcast",(owner _unit)];
+    [1,"That vehicle doesn't belong to you therefor you cannot store it in your garage.",true] remoteExecCall ["life_fnc_broadcast",(owner _unit)];
     life_garage_store = false;
     (owner _unit) publicVariableClient "life_garage_store";
 };

@@ -54,12 +54,12 @@ if (count _vInfo isEqualTo 0) exitWith {serv_sv_use deleteAt _servIndex;};
 
 if ((_vInfo select 5) isEqualTo 0) exitWith {
     serv_sv_use deleteAt _servIndex;
-    [1,"STR_Garage_SQLError_Destroyed",true,[_vInfo select 2]] remoteExecCall ["life_fnc_broadcast",_unit];
+    [1,"Sorry but %1 was classified as a destroyed vehicle and was sent to the scrap yard.",true,[_vInfo select 2]] remoteExecCall ["life_fnc_broadcast",_unit];
 };
 
 if ((_vInfo select 6) isEqualTo 1) exitWith {
     serv_sv_use deleteAt _servIndex;
-    [1,"STR_Garage_SQLError_Active",true,[_vInfo select 2]] remoteExecCall ["life_fnc_broadcast",_unit];
+    [1,"Sorry but %1 is already active somewhere in the world and cannot be spawned.",true,[_vInfo select 2]] remoteExecCall ["life_fnc_broadcast",_unit];
 };
 
 
@@ -73,7 +73,7 @@ if !(_sp isEqualType "") then {
 if (count _nearVehicles > 0) exitWith {
     serv_sv_use deleteAt _servIndex;
     [_price,_unit_return] remoteExecCall ["life_fnc_garageRefund",_unit];
-    [1,"STR_Garage_SpawnPointError",true] remoteExecCall ["life_fnc_broadcast",_unit];
+    [1,"There is already a vehicle on the spawn point. You will be refunded the cost of getting yours out.",true] remoteExecCall ["life_fnc_broadcast",_unit];
 };
 
 _query = format ["UPDATE vehicles SET active='1', damage='""[]""' WHERE pid='%1' AND id='%2'",_pid,_vid];

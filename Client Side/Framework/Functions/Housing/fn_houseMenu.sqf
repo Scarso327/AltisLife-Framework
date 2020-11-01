@@ -41,7 +41,7 @@ life_pInact_curTarget = _curTarget;
 
 if (_curTarget in life_hideoutBuildings) exitWith {
     closeDialog 0;
-    hint localize "STR_House_Hideout";
+    hint "This building is a hideout!";
 };
 
 if (_curTarget isKindOf "House_F" && playerSide isEqualTo west) exitWith {

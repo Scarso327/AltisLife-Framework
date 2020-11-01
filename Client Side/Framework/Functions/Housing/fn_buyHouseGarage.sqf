@@ -10,17 +10,17 @@ private _house = param [0,objNull,[objNull]];
 private _uid = getPlayerUID player;
 
 if (isNull _house) exitWith {};
-if (_house getVariable ["garageBought",false]) exitWith {hint localize "STR_Garage_alreadyOwned";};
-if ((_house getVariable "house_owner") select 0 != getPlayerUID player) exitWith {hint localize "STR_Garage_NotOwner";};
+if (_house getVariable ["garageBought",false]) exitWith {hint "This garage has already been bought!";};
+if ((_house getVariable "house_owner") select 0 != getPlayerUID player) exitWith {hint "You are not the owner of this house!";};
 if (_house getVariable ["blacklistedGarage",false]) exitWith {};
 closeDialog 0;
 
 private _price = LIFE_SETTINGS(getNumber,"houseGarage_buyPrice");
 
 _action = [
-    format [localize "STR_Garage_HouseBuyMSG",
+    format ["This garage is available for &lt;t color='#8cff9b'&gt;£%1&lt;/t&gt;&lt;br/&gt;",
     [_price] call life_fnc_numberText],
-    localize "STR_House_GaragePurchase",
+    "Purchase Garage",
     "Buy",
     "Cancel"
 ] call BIS_fnc_guiMessage;

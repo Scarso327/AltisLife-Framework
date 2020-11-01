@@ -25,11 +25,11 @@ if !(isNull objectParent player) then {
     };
 };
 
-if (isNil "_vehicle") exitWith {hint localize "STR_Garage_NoNPC"};
+if (isNil "_vehicle") exitWith {hint "There isn't a vehicle near the NPC."};
 if (isNull _vehicle) exitWith {};
-if (!alive _vehicle) exitWith {hint localize "STR_Garage_SQLError_Destroyed"};
+if (!alive _vehicle) exitWith {hint "Sorry but %1 was classified as a destroyed vehicle and was sent to the scrap yard."};
 
-_storetext = localize "STR_Garage_Store_Success";
+_storetext = "The vehicle has been stored in your garage.";
 
 if (life_HC_isActive) then {
     [_vehicle,false,(_this select 1),_storetext] remoteExec ["HC_fnc_vehicleStore",HC_Life];
@@ -37,5 +37,5 @@ if (life_HC_isActive) then {
     [_vehicle,false,(_this select 1),_storetext] remoteExec ["TON_fnc_vehicleStore",RSERV];
 };
 
-hint localize "STR_Garage_Store_Server";
+hint "The server is trying to store the vehicle...";
 life_garage_store = true;

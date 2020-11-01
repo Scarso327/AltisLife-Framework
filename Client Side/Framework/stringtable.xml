@@ -2154,14 +2154,6 @@
             <Original>The vehicle is full!</Original>
         </Key>
     </Package>
-    <Package name="Player_Actions">
-        <Key ID="STR_pAct_DropFishingNet">
-            <Original>Drop Fishing Net</Original>
-        </Key>
-        <Key ID="STR_pAct_RobPerson">
-            <Original>Rob Person</Original>
-        </Key>
-    </Package>
     <Package name="displayNames">
         <Key ID="STR_C_Remove_uniforms">
             <Original>Remove Uniform</Original>

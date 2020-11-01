@@ -96,15 +96,6 @@ class CfgDebriefing {
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
     };
-
-    class SpyGlass {
-        title = "The SpyGlass sees you!";
-        subTitle = "You were detected by the SpyGlass.";
-        description = "You have been reported to the server.";
-        pictureBackground = "";
-        picture = "";
-        pictureColor[] = {0,0.3,0.6,1};
-    };
 };
 
 class CfgNotifications {

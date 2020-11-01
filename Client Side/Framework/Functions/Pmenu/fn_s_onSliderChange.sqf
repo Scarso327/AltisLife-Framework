@@ -40,7 +40,7 @@ switch _mode do {
     case 3: {
         private _index = lbCurSel 20302;
         private _classname = lbData[20302,_index];
-        if (_index isEqualTo -1) exitWith {hint localize "STR_Select_Vehicle_Pump"};
+        if (_index isEqualTo -1) exitWith {hint "Select a vehicle"};
 
         if (!isNil "_classname" || _classname isEqualTo "") then {
 
@@ -56,7 +56,7 @@ switch _mode do {
             ctrlSetText [20324,format ["Fuel : %1 liters",_value - (floor(_fuel * _fueltank))]];
             ctrlSetText [20323,format ["Total : $%1",round ((uiNamespace getVariable ["fuel_cost",0]) * (_value -(floor(_fuel * _fueltank)))) ]];
         } else {
-            hint localize "STR_Select_Vehicle_Pump";
+            hint "Select a vehicle";
         };
     };
 

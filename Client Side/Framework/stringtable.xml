@@ -2131,29 +2131,6 @@
             <Original>You have received a paycheck of £%1.</Original>
         </Key>
     </Package>
-    <Package name="Fuel_Pump">
-        <Key ID="STR_Action_PumpJerry">
-            <Original>Refuel Fuel Canister</Original>
-        </Key>
-        <Key ID="STR_Action_Pump">
-            <Original>Refuel Vehicle</Original>
-        </Key>
-        <Key ID="STR_Price_Fuel_Pump">
-            <Original>Price per Liter: £%1</Original>
-        </Key>
-        <Key ID="STR_Fuel_Tank_Vehicle">
-            <Original>Current Fuel Amount:</Original>
-        </Key>
-        <Key ID="STR_Select_Vehicle_Pump">
-            <Original>Select a vehicle</Original>
-        </Key>
-        <Key ID="STR_Distance_Vehicle_Pump">
-            <Original>The vehicle is too far or you are in!</Original>
-        </Key>
-        <Key ID="STR_Vehicle_Ready_Pump">
-            <Original>The vehicle is full!</Original>
-        </Key>
-    </Package>
     <Package name="Crimes">
         <Key ID="STR_Crime_187V">
             <Original>Vehicular Manslaughter</Original>

@@ -34,7 +34,7 @@ uiNamespace setVariable ["fuel_list",_vehicleFuelList];
 private _control = (findDisplay 20300) displayCtrl 20302;
 lbClear _control;
 
-ctrlSetText [20322,format [localize "STR_Price_Fuel_Pump",_fuelCost]];
+ctrlSetText [20322,format ["Price per Liter: £%1",_fuelCost]];
 ctrlSetText [20323,format ["Total : %1$",_fuelCost * 0.1]];
 
 //Loop through

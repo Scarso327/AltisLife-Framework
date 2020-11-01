@@ -26,7 +26,7 @@ ctrlShow [20330,true];
 
 (CONTROL(20300,20303)) ctrlSetStructuredText parseText format [
     (localize "STR_Shop_Veh_UI_Fuel")+ " %1l<br/>" +
-    (localize "STR_Fuel_Tank_Vehicle")+ " %2l",
+    ("Current Fuel Amount:")+ " %2l",
     _fuelTank,
     round(_fuelTank * _fuel)
 ];

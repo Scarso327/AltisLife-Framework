@@ -26,7 +26,7 @@ private _fueltoput = ((parseNumber((sliderPosition 20901) toFixed 2))-(floor(_fu
 private _setfuel = _fuelnow + (_fueltoput/_fueltank);
 private _timer = ((_fueltoput * .25)/100);
 if (_car distance player > 10 && !(isNull objectParent player)) exitWith {
-    hint localize "STR_Distance_Vehicle_Pump";
+    hint "The vehicle is too far or you are in!";
     closeDialog 0;
 };
 
@@ -59,7 +59,7 @@ if ((BANK - (_fueltoput * _fuelCost)) > 0) then {
     [_car,_cP * _setfuel] remoteExecCall ["life_fnc_setFuel",_car]; //update the fuel
     "progressBar" cutText ["","PLAIN"];
     if (_car distance player > 10 || !(isNull objectParent player)) then {
-        hint localize "STR_Distance_Vehicle_Pump";
+        hint "The vehicle is too far or you are in!";
     };
     [0] call SOCK_fnc_updatePartial;
     life_is_processing = false;

@@ -2533,36 +2533,4 @@
             <Original>You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.</Original>
         </Key>
     </Package>
-    <Package name="SpyGlass">
-        <Key ID="STR_SpyDetect_Title">
-            <Original>The SpyGlass sees you!</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_SubTitle">
-            <Original>You were detected by the SpyGlass.</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_Descript">
-            <Original>You were detected for cheating and have been reported to the server. Enjoy your day.</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_cookieJar">
-            <Original>SPYGLASS-FLAG: %1 : %2 : %3</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_CheaterFlagged">
-            <Original>&lt;t align='center'&gt;&lt;t color='#FF0000'&gt;&lt;t size='3'&gt;SPY-GLASS&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;Cheater Flagged&lt;/t&gt;&lt;br/&lt;br/&gt;Name: %1&lt;br/&gt;Detection: %2</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_cmdMenuCheck">
-            <Original>%1 was observed by SPY-GLASS, he/she was trying to access commanding menu:\n\n %2\n\n and that commanding-menu is not known to the system. PLEASE NOTE he/she may not be cheating but the SPY-GLASS found it relevant to report in.</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_Variable_MN">
-            <Original>Variable: %1 is not allowed TYPE: %2 NS: MN</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_Variable_UI">
-            <Original>Variable: %1 is not allowed TYPE: %2 NS: UI</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_Observes">
-            <Original>||SPY-GLASS Observes|| Name: %1 | UID: %2 | Reason: %3</Original>
-        </Key>
-        <Key ID="STR_SpyDetect_VariableSetBeforeClientInitialized">
-            <Original>Variable set before client initialized: %1</Original>
-        </Key>
-    </Package>
 </Project>

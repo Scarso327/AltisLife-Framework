@@ -98,9 +98,9 @@ class CfgDebriefing {
     };
 
     class SpyGlass {
-        title = "$STR_SpyDetect_Title";
-        subTitle = "$STR_SpyDetect_SubTitle";
-        description = "$STR_SpyDetect_Descript";
+        title = "The SpyGlass sees you!";
+        subTitle = "You were detected by the SpyGlass.";
+        description = "You have been reported to the server.";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};

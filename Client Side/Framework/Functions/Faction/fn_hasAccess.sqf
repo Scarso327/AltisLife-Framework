@@ -9,4 +9,4 @@ _this params [
 	["_levelReq", 0, [0]]
 ];
 
-(missionNamespace getVariable [_varName, 0]) >= _levelReq
+call (missionNamespace getVariable [_varName, {0}]) >= _levelReq

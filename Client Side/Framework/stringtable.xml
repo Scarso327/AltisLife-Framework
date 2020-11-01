@@ -515,20 +515,6 @@
             <Original>Sidechat ON</Original>
         </Key>
     </Package>
-    <Package name="Virt_Shop">
-        <Key ID="STR_VS_SI">
-            <Original>Shop Inventory</Original>
-        </Key>
-        <Key ID="STR_VS_PI">
-            <Original>Your Inventory</Original>
-        </Key>
-        <Key ID="STR_VS_BuyItem">
-            <Original>Buy Item</Original>
-        </Key>
-        <Key ID="STR_VS_SellItem">
-            <Original>Sell Item</Original>
-        </Key>
-    </Package>
     <Package name="Spawn_Menu">
         <Key ID="STR_Spawn_Title">
             <Original>Spawn Selection</Original>

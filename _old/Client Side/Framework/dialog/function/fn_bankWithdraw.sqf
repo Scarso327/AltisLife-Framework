@@ -16,7 +16,7 @@ if (_value < 1 && BANK > 20000000) exitWith {hint "You can't withdraw less then 
 
 CASH = CASH + _value;
 BANK = BANK - _value;
-hint format [localize "STR_ATM_WithdrawSuccess",[_value] call life_fnc_numberText];
+hint format ["You have withdrawn £%1 from your bank account.",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
 

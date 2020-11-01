@@ -11,6 +11,6 @@ params [
 if (remoteExecutedOwner != ([2,HC_Life] select life_HC_isActive)) exitWith {};
 if (_value isEqualTo -1) exitWith {};
 
-hint format [localize "STR_ATM_WithdrawSuccessG",[_value] call life_fnc_numberText];
+hint format ["You have withdrawn £%1 from your group.",[_value] call life_fnc_numberText];
 CASH = CASH + _value;
 [] call life_fnc_atmMenu;

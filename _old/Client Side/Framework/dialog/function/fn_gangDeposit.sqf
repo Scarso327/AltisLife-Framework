@@ -12,7 +12,7 @@ group player setVariable ["gbank_in_use_by",player,true];
 
 //Series of stupid checks
 if (isNil {(group player) getVariable "gang_name"}) exitWith {hint localize "You are not in an organisation."}; // Checks if player isn't in a gang
-if (_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
+if (_value > 999999) exitWith {hint "You can't deposit more then £999,999 at a time";};
 if (_value < 0) exitWith {};
 if (!([str(_value)] call TON_fnc_isnumber)) exitWith {hint "The amount entered isn't a numeric value."};
 if (_value > CASH) exitWith {hint "You don't have that much cash on you."};

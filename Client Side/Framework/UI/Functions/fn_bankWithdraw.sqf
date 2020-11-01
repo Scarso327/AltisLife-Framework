@@ -8,15 +8,15 @@
 */
 private ["_value"];
 _value = parseNumber(ctrlText 2702);
-if (_value > 999999) exitWith {hint localize "STR_ATM_WithdrawMax";};
+if (_value > 999999) exitWith {hint "You can't withdraw more then £999,999.";};
 if (_value < 0) exitWith {};
-if (!([str(_value)] call TON_fnc_isnumber)) exitWith {hint localize "STR_ATM_notnumeric"};
-if (_value > BANK) exitWith {hint localize "STR_ATM_NotEnoughFunds"};
-if (_value < 100 && BANK > 20000000) exitWith {hint localize "STR_ATM_WithdrawMin"}; //Temp fix for something.
+if (!([str(_value)] call TON_fnc_isnumber)) exitWith {hint "The amount entered isn't a numeric value."};
+if (_value > BANK) exitWith {hint "You don't have that much in your bank account!"};
+if (_value < 1 && BANK > 20000000) exitWith {hint "You can't withdraw less then £1."};
 
 CASH = CASH + _value;
 BANK = BANK - _value;
-hint format [localize "STR_ATM_WithdrawSuccess",[_value] call life_fnc_numberText];
+hint format ["You have withdrawn £%1 from your bank account.",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
 

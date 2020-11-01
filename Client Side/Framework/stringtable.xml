@@ -515,35 +515,6 @@
             <Original>Sidechat ON</Original>
         </Key>
     </Package>
-    <Package name="Wanted_Menu">
-        <Key ID="STR_Wanted_Title">
-            <Original>APD Wanted List</Original>
-        </Key>
-        <Key ID="STR_Wanted_Pardon">
-            <Original>Pardon</Original>
-        </Key>
-        <Key ID="STR_Wanted_Add">
-            <Original>Add</Original>
-        </Key>
-        <Key ID="STR_Wanted_People">
-            <Original>Wanted People</Original>
-        </Key>
-        <Key ID="STR_Wanted_Citizens">
-            <Original>Citizens</Original>
-        </Key>
-        <Key ID="STR_Wanted_Crimes">
-            <Original>Crimes</Original>
-        </Key>
-        <Key ID="STR_Wanted_AddP">
-            <Original>%1 has been added to the wanted list.</Original>
-        </Key>
-        <Key ID="STR_Wanted_Count">
-            <Original>%1 count(s) of %2</Original>
-        </Key>
-        <Key ID="STR_Wanted_Bounty">
-            <Original>Current Bounty Price: £%1</Original>
-        </Key>
-    </Package>
     <Package name="Notifications">
         <Key ID="STR_NOTF_NE_1">
             <Original>You do not have £%1 for a %2</Original>

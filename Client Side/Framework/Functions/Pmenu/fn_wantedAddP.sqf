@@ -15,7 +15,7 @@ private _amount = lbData [2407,lbCurSel 2407];
 if (isNil "_unit") exitWith {};
 if (isNull _unit) exitWith {};
 
-[1,"STR_Wanted_AddP",true,[_unit getVariable ["realname",name _unit],_amount,getPlayerUID _unit]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+[1,"%1 has been added to the wanted list.",true,[_unit getVariable ["realname",name _unit],_amount,getPlayerUID _unit]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 
 if (life_HC_isActive) then {
     [getPlayerUID _unit,_unit getVariable ["realname",name _unit],_amount] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];

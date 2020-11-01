@@ -1,43 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Altis Life RPG">
-    <Package name="Admin_Menu">
-        <Key ID="STR_Admin_Title">
-            <Original>Admin Menu</Original>
-        </Key>
-        <Key ID="STR_Admin_Amount">
-            <Original>Put the amount you want to compensate:</Original>
-        </Key>
-        <Key ID="STR_Admin_GetID">
-            <Original>Get ID</Original>
-        </Key>
-        <Key ID="STR_Admin_Spectate">
-            <Original>Spectate</Original>
-        </Key>
-        <Key ID="STR_Admin_Teleport">
-            <Original>Teleport</Original>
-        </Key>
-        <Key ID="STR_Admin_TpHere">
-            <Original>TP Here</Original>
-        </Key>
-        <Key ID="STR_Admin_CannotTpHere">
-            <Original>You cannot teleport the player here because they are inside of a vehicle.</Original>
-        </Key>
-        <Key ID="STR_Admin_Debug">
-            <Original>Debug</Original>
-        </Key>
-        <Key ID="STR_Admin_Compensate">
-            <Original>Comp</Original>
-        </Key>
-        <Key ID="STR_Admin_God">
-            <Original>GodMode</Original>
-        </Key>
-        <Key ID="STR_Admin_Freeze">
-            <Original>Freeze</Original>
-        </Key>
-        <Key ID="STR_Admin_Markers">
-            <Original>Markers</Original>
-        </Key>
-    </Package>
     <Package name="Admin_Notifications">
         <Key ID="STR_ANOTF_Query">
             <Original>Querying...</Original>

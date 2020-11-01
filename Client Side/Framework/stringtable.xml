@@ -540,20 +540,6 @@
             <Original>Refuse Ticket</Original>
         </Key>
     </Package>
-    <Package name="Trunk_Menu">
-        <Key ID="STR_Trunk_TInventory">
-            <Original>Trunk Inventory</Original>
-        </Key>
-        <Key ID="STR_Trunk_PInventory">
-            <Original>Player Inventory</Original>
-        </Key>
-        <Key ID="STR_Trunk_Take">
-            <Original>Take</Original>
-        </Key>
-        <Key ID="STR_Trunk_Store">
-            <Original>Store</Original>
-        </Key>
-    </Package>
     <Package name="Wanted_Menu">
         <Key ID="STR_Wanted_Title">
             <Original>APD Wanted List</Original>

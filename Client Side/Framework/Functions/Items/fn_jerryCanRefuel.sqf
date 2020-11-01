@@ -21,8 +21,8 @@ life_action_inUse = true;
 _action = [
     format [localize "STR_ISTR_Jerry_PopUp",[_fuelCost] call life_fnc_numberText],
     localize "STR_ISTR_Jerry_StationPump",
-    localize "STR_Global_Yes",
-    localize "STR_Global_No"
+    "Yes",
+    "No"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {

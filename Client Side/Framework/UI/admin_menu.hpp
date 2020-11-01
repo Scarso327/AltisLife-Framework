@@ -18,7 +18,7 @@ class life_admin_menu {
         class Life_RscTitleBackground: Life_RscText {
             idc = -1;
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-            text = "$STR_Admin_Title";
+            text = "Staff Menu";
             x = 0.314375 * safezoneW + safezoneX;
             y = 0.291 * safezoneH + safezoneY;
             w = 0.37125 * safezoneW;
@@ -29,7 +29,7 @@ class life_admin_menu {
     class controls {
         class RscButtonMenu_2400: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = 0.324687 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;
@@ -39,7 +39,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2402: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Admin_GetID";
+            text = "Get ID";
             onButtonClick = "[] call life_fnc_adminGetID;";
             x = 0.396875 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;
@@ -49,7 +49,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2403: Life_RscButtonMenu {
             idc = 2904;
-            text = "$STR_Admin_Compensate";
+            text = "Compensate";
             onButtonClick = "createDialog ""Life_Admin_Compensate"";";
             x = 0.469062 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;
@@ -59,7 +59,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2404: Life_RscButtonMenu {
             idc = 2905;
-            text = "$STR_Admin_Spectate";
+            text = "Watch";
             onButtonClick = "[] call life_fnc_adminSpectate;";
             x = 0.54125 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;
@@ -69,7 +69,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2405: Life_RscButtonMenu {
             idc = 2906;
-            text = "$STR_Admin_Teleport";
+            text = "TP";
             onButtonClick = "[] call life_fnc_adminTeleport; hint 'Select where you would like to teleport';";
             x = 0.613437 * safezoneW + safezoneX;
             y = 0.643 * safezoneH + safezoneY;
@@ -79,7 +79,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2401: Life_RscButtonMenu {
             idc = 2907;
-            text = "$STR_Admin_TpHere";
+            text = "TP here";
             onButtonClick = "[] call life_fnc_adminTpHere;";
             x = 0.324687 * safezoneW + safezoneX;
             y = 0.676 * safezoneH + safezoneY;
@@ -89,7 +89,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2406: Life_RscButtonMenu {
             idc = 2908;
-            text = "$STR_Admin_God";
+            text = "Godmode";
             onButtonClick = "[] call life_fnc_adminGodMode;";
             x = 0.396875 * safezoneW + safezoneX;
             y = 0.676 * safezoneH + safezoneY;
@@ -99,7 +99,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2407: Life_RscButtonMenu {
             idc = 2909;
-            text = "$STR_Admin_Freeze";
+            text = "Freeze";
             onButtonClick = "[] call life_fnc_adminFreeze;";
             x = 0.469062 * safezoneW + safezoneX;
             y = 0.676 * safezoneH + safezoneY;
@@ -109,7 +109,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2408: Life_RscButtonMenu {
             idc = 2910;
-            text = "$STR_Admin_Markers";
+            text = "Markers";
             onButtonClick = "[] spawn life_fnc_adminMarkers;closeDialog 0;";
             x = 0.54125 * safezoneW + safezoneX;
             y = 0.676 * safezoneH + safezoneY;
@@ -119,7 +119,7 @@ class life_admin_menu {
 
         class RscButtonMenu_2409: Life_RscButtonMenu {
             idc = 2911;
-            text = "$STR_Admin_Debug";
+            text = "Debug";
             onButtonClick = "[] call life_fnc_adminDebugCon;";
             x = 0.613437 * safezoneW + safezoneX;
             y = 0.676 * safezoneH + safezoneY;

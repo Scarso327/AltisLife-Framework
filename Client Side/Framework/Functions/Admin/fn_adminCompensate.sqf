@@ -15,8 +15,8 @@ if (_value > 999999) exitWith {hint localize "STR_ANOTF_Fail"};
 _action = [
     format [localize "STR_ANOTF_CompWarn",[_value] call life_fnc_numberText],
     localize "STR_Admin_Compensate",
-    localize "STR_Global_Yes",
-    localize "STR_Global_No"
+    "Yes",
+    "No"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {

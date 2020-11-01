@@ -3,7 +3,7 @@ class Life_Admin_Compensate {
     name= "life_admin_compensate_give";
     movingEnable = 0;
     enableSimulation = 1;
-    onLoad = "[] spawn {waitUntil {!isNull (findDisplay 9920)}; ((findDisplay 9920) displayCtrl 9921) ctrlSetText localize ""STR_Admin_Amount""};";
+    onLoad = "[] spawn {waitUntil {!isNull (findDisplay 9920)}; ((findDisplay 9920) displayCtrl 9921) ctrlSetText ""Put the amount you want to compensate:""};";
 
     class controlsBackground {
         class Life_RscTitleBackground: Life_RscText {
@@ -48,7 +48,7 @@ class Life_Admin_Compensate {
 
         class AdminCloseComp: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.5 - (1 / 25);

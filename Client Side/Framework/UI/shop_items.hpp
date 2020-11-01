@@ -127,7 +127,7 @@ class shops_menu {
 
         class ButtonClose: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = 0.1;
             y = 0.8 - (1 / 25);

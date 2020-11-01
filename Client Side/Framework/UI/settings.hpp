@@ -190,7 +190,7 @@ class SettingsMenu {
         class ButtonClose: Life_RscButtonMenu {
             idc = -1;
             //shortcuts[] = {0x00050000 + 2};
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = 0.48;
             y = 0.68 - (1 / 25);

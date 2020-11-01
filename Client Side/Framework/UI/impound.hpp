@@ -55,7 +55,7 @@ class Life_impound_menu {
 
         class CloseBtn: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Close";
+            text = "Close";
             onButtonClick = "closeDialog 0;";
             x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);
@@ -65,7 +65,7 @@ class Life_impound_menu {
 
         class RetrieveCar: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Retrieve";
+            text = "Retrieve";
             onButtonClick = "[] call life_fnc_unimpound;";
             x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);
@@ -75,7 +75,7 @@ class Life_impound_menu {
 
         class SellCar: Life_RscButtonMenu {
             idc = -1;
-            text = "$STR_Global_Sell";
+            text = "Sell";
             onButtonClick = "[] call life_fnc_sellGarage; closeDialog 0;";
             x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.9 - (1 / 25);

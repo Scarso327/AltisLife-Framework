@@ -1924,26 +1924,6 @@
             <Original>This vehicle is NPC protected.</Original>
         </Key>
     </Package>
-    <Package name="Session_Strings">
-        <Key ID="STR_Session_Query">
-            <Original>Sending request to server for player information UID [%1]</Original>
-        </Key>
-        <Key ID="STR_Session_QueryFail">
-            <Original>The server didn't find any player information matching your UID, attempting to add player to system.</Original>
-        </Key>
-        <Key ID="STR_Session_Error">
-            <Original>There was an error in trying to setup your client.</Original>
-        </Key>
-        <Key ID="STR_Session_Received">
-            <Original>Received request from server... Validating...</Original>
-        </Key>
-        <Key ID="STR_Session_SyncdAlready">
-            <Original>You have already used the sync option, you can only use this feature once every 5 minutes.</Original>
-        </Key>
-        <Key ID="STR_Session_SyncData">
-            <Original>Syncing player information to the server.\n\nPlease wait up to 20 seconds before leaving.</Original>
-        </Key>
-    </Package>
     <Package name="Shop_Strings">
         <Key ID="STR_Shop_ATMRobbed">
             <Original>Because you robbed the bank you can't use the ATM for %1 minutes.</Original>
@@ -2118,17 +2098,6 @@
         </Key>
         <Key ID="STR_Shop_Weapon_YourInv">
             <Original>Your Inventory</Original>
-        </Key>
-    </Package>
-    <Package name="FSM_Strings">
-        <Key ID="STR_FSM_Paycheck">
-            <Original>You will receive your next paycheck in %1 minutes.</Original>
-        </Key>
-        <Key ID="STR_FSM_MissedPay">
-            <Original>You have missed a paycheck because you were dead.</Original>
-        </Key>
-        <Key ID="STR_FSM_ReceivedPay">
-            <Original>You have received a paycheck of £%1.</Original>
         </Key>
     </Package>
     <Package name="Crimes">

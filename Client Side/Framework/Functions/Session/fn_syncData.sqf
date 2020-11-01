@@ -8,10 +8,10 @@
 */
 _fnc_scriptName = "Player Synchronization";
 if (isNil "life_session_time") then {life_session_time = false;};
-if (life_session_time) exitWith {hint localize "STR_Session_SyncdAlready";};
+if (life_session_time) exitWith {hint "You have already used the sync option, you can only use this feature once every 5 minutes.";};
 
 [] call SOCK_fnc_updateRequest;
-hint localize "STR_Session_SyncData";
+hint "Syncing player information to the server.\n\nPlease wait up to 20 seconds before leaving.";
 [] spawn {
     life_session_time = true;
     sleep (5 * 60);

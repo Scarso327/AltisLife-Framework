@@ -195,11 +195,6 @@
             <Original>Admin Message Sent To All: %1</Original>
         </Key>
     </Package>
-    <Package name="Chop_Shop">
-        <Key ID="STR_ChopShop_Title">
-            <Original>Local Chop Shop</Original>
-        </Key>
-    </Package>
     <Package name="Gang_Menu">
         <Key ID="STR_Gang_Title">
             <Original>Gang Management</Original>

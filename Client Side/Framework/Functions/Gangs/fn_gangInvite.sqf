@@ -18,7 +18,7 @@ if (!isNil {(group player) getVariable "gang_name"}) exitWith {hint localize "ST
 _gangName = _group getVariable "gang_name";
 _action = [
     format [localize "STR_GNOTF_InviteMSG",_name,_gangName],
-    localize "STR_Gang_Invitation",
+    "Group Invitation",
     "Yes",
     "No"
 ] call BIS_fnc_guiMessage;

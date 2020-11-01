@@ -468,53 +468,6 @@
             <Original>There isn't a vehicle near the NPC.</Original>
         </Key>
     </Package>
-    <Package name="Settings_Menu">
-        <Key ID="STR_SM_Title">
-            <Original>Settings Menu</Original>
-        </Key>
-        <Key ID="STR_SM_onFoot">
-            <Original>On Foot:</Original>
-        </Key>
-        <Key ID="STR_SM_inCar">
-            <Original>In Car:</Original>
-        </Key>
-        <Key ID="STR_SM_inAir">
-            <Original>In Air:</Original>
-        </Key>
-        <Key ID="STR_SM_ToolTip1">
-            <Original>View distance while on foot</Original>
-        </Key>
-        <Key ID="STR_SM_ToolTip2">
-            <Original>View distance while in a land vehicle</Original>
-        </Key>
-        <Key ID="STR_SM_ToolTip3">
-            <Original>View distance while in a air vehicle</Original>
-        </Key>
-        <Key ID="STR_SM_PlayerTags">
-            <Original>Player Tags</Original>
-        </Key>
-        <Key ID="STR_SM_TagsON">
-            <Original>Tags ON</Original>
-        </Key>
-        <Key ID="STR_SM_TagsOFF">
-            <Original>Tags OFF</Original>
-        </Key>
-        <Key ID="STR_SM_SC">
-            <Original>Sidechat Switch</Original>
-        </Key>
-        <Key ID="STR_SM_RNObj">
-            <Original>Reveal Nearest Objects</Original>
-        </Key>
-        <Key ID="STR_SM_BCSW">
-            <Original>Broadcast Switch</Original>
-        </Key>
-        <Key ID="STR_SM_SCOFF">
-            <Original>Sidechat OFF</Original>
-        </Key>
-        <Key ID="STR_SM_SCON">
-            <Original>Sidechat ON</Original>
-        </Key>
-    </Package>
     <Package name="Notifications">
         <Key ID="STR_NOTF_NE_1">
             <Original>You do not have £%1 for a %2</Original>

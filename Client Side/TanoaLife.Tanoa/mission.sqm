@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9473.7168,515.73358,12028.104};
-		dir[]={0.97660011,-0.19916399,-0.082667314};
-		up[]={0.19863243,0.97988701,-0.01681602};
-		aside[]={-0.084358469,-3.1943637e-007,-0.99655032};
+		pos[]={1069.6458,511.76181,81.814133};
+		dir[]={0.3945885,-0.69995505,0.59529269};
+		up[]={0.38672072,0.71418667,0.58342373};
+		aside[]={0.83352172,-1.0966323e-007,-0.55249697};
 	};
 };
 binarizationWanted=0;
@@ -10333,19 +10333,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_1";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=885;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10413,7 +10414,7 @@ class Mission
 			{
 			};
 			id=884;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item435
 		{
@@ -10469,8 +10470,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
-						angles[]={0.0026744273,0,0.19226195};
+						position[]={1185.111,3.0683525,569.93597};
+						angles[]={0.0026703537,0,0.19226547};
 					};
 					side="Civilian";
 					flags=6;
@@ -10478,14 +10479,13 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="COLONEL";
-						init="this enableSimulation false; this allowDamage false; this hideObject true;";
 						name="master_group";
 						description="Master Group for NPC's";
 						disableSimulation=1;
 					};
 					id=894;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10572,7 +10572,7 @@ class Mission
 			{
 			};
 			id=893;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item437
 		{
@@ -10586,19 +10586,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_2";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=898;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10666,7 +10667,7 @@ class Mission
 			{
 			};
 			id=897;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item438
 		{
@@ -10680,19 +10681,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_3";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=900;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10760,7 +10762,7 @@ class Mission
 			{
 			};
 			id=899;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item439
 		{
@@ -10774,19 +10776,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_4";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=902;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10854,7 +10857,7 @@ class Mission
 			{
 			};
 			id=901;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item440
 		{
@@ -10868,19 +10871,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_5";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=904;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10948,7 +10952,7 @@ class Mission
 			{
 			};
 			id=903;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item441
 		{
@@ -10962,19 +10966,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_6";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=906;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11042,7 +11047,7 @@ class Mission
 			{
 			};
 			id=905;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item442
 		{
@@ -11056,19 +11061,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_7";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=908;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11136,7 +11142,7 @@ class Mission
 			{
 			};
 			id=907;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item443
 		{
@@ -11150,19 +11156,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_8";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=910;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11230,7 +11237,7 @@ class Mission
 			{
 			};
 			id=909;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item444
 		{
@@ -11244,19 +11251,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_9";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=912;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11324,7 +11332,7 @@ class Mission
 			{
 			};
 			id=911;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item445
 		{
@@ -11338,19 +11346,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_10";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=914;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11418,7 +11427,7 @@ class Mission
 			{
 			};
 			id=913;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item446
 		{
@@ -11432,19 +11441,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_11";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=916;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11512,7 +11522,7 @@ class Mission
 			{
 			};
 			id=915;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item447
 		{
@@ -11526,19 +11536,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_12";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=918;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11606,7 +11617,7 @@ class Mission
 			{
 			};
 			id=917;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item448
 		{
@@ -11620,19 +11631,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_13";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=920;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11700,7 +11712,7 @@ class Mission
 			{
 			};
 			id=919;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item449
 		{
@@ -11714,19 +11726,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_14";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=922;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11794,7 +11807,7 @@ class Mission
 			{
 			};
 			id=921;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item450
 		{
@@ -11808,19 +11821,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_15";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=924;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11888,7 +11902,7 @@ class Mission
 			{
 			};
 			id=923;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item451
 		{
@@ -11902,19 +11916,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_16";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=926;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11982,7 +11997,7 @@ class Mission
 			{
 			};
 			id=925;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item452
 		{
@@ -11996,19 +12011,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_17";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=928;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12076,7 +12092,7 @@ class Mission
 			{
 			};
 			id=927;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item453
 		{
@@ -12090,19 +12106,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_18";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=930;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12170,7 +12187,7 @@ class Mission
 			{
 			};
 			id=929;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item454
 		{
@@ -12184,19 +12201,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_19";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=932;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12264,7 +12282,7 @@ class Mission
 			{
 			};
 			id=931;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item455
 		{
@@ -12278,19 +12296,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_20";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=934;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12358,7 +12377,7 @@ class Mission
 			{
 			};
 			id=933;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item456
 		{
@@ -12372,19 +12391,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_21";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=936;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12452,7 +12472,7 @@ class Mission
 			{
 			};
 			id=935;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item457
 		{
@@ -12466,19 +12486,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_22";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=938;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12546,7 +12567,7 @@ class Mission
 			{
 			};
 			id=937;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item458
 		{
@@ -12560,19 +12581,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_23";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=940;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12640,7 +12662,7 @@ class Mission
 			{
 			};
 			id=939;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item459
 		{
@@ -12654,19 +12676,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_24";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=942;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12734,7 +12757,7 @@ class Mission
 			{
 			};
 			id=941;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item460
 		{
@@ -12748,19 +12771,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_25";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=944;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12828,7 +12852,7 @@ class Mission
 			{
 			};
 			id=943;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item461
 		{
@@ -12842,19 +12866,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_26";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=946;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12922,7 +12947,7 @@ class Mission
 			{
 			};
 			id=945;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item462
 		{
@@ -12936,19 +12961,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_27";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=948;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13016,7 +13042,7 @@ class Mission
 			{
 			};
 			id=947;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item463
 		{
@@ -13030,19 +13056,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_28";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=950;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13110,7 +13137,7 @@ class Mission
 			{
 			};
 			id=949;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item464
 		{
@@ -13124,19 +13151,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_29";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=952;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13204,7 +13232,7 @@ class Mission
 			{
 			};
 			id=951;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item465
 		{
@@ -13218,19 +13246,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_30";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=954;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13298,7 +13327,7 @@ class Mission
 			{
 			};
 			id=953;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item466
 		{
@@ -13312,19 +13341,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_31";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=956;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13392,7 +13422,7 @@ class Mission
 			{
 			};
 			id=955;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item467
 		{
@@ -13406,19 +13436,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_32";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=958;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13486,7 +13517,7 @@ class Mission
 			{
 			};
 			id=957;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item468
 		{
@@ -13500,19 +13531,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_33";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=960;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13580,7 +13612,7 @@ class Mission
 			{
 			};
 			id=959;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item469
 		{
@@ -13594,19 +13626,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_34";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=962;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13674,7 +13707,7 @@ class Mission
 			{
 			};
 			id=961;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item470
 		{
@@ -13688,19 +13721,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_35";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=964;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13768,7 +13802,7 @@ class Mission
 			{
 			};
 			id=963;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item471
 		{
@@ -13782,19 +13816,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_36";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=966;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13862,7 +13897,7 @@ class Mission
 			{
 			};
 			id=965;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item472
 		{
@@ -13876,19 +13911,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_37";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=968;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13956,7 +13992,7 @@ class Mission
 			{
 			};
 			id=967;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item473
 		{
@@ -13970,19 +14006,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_38";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=970;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14050,7 +14087,7 @@ class Mission
 			{
 			};
 			id=969;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item474
 		{
@@ -14064,19 +14101,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_39";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=972;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14144,7 +14182,7 @@ class Mission
 			{
 			};
 			id=971;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item475
 		{
@@ -14158,19 +14196,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_40";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=974;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14238,7 +14277,7 @@ class Mission
 			{
 			};
 			id=973;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item476
 		{
@@ -14252,19 +14291,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_41";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=976;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14332,7 +14372,7 @@ class Mission
 			{
 			};
 			id=975;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item477
 		{
@@ -14346,19 +14386,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_42";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=978;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14426,7 +14467,7 @@ class Mission
 			{
 			};
 			id=977;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item478
 		{
@@ -14440,19 +14481,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_43";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=980;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14520,7 +14562,7 @@ class Mission
 			{
 			};
 			id=979;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item479
 		{
@@ -14534,19 +14576,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_44";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=982;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14614,7 +14657,7 @@ class Mission
 			{
 			};
 			id=981;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item480
 		{
@@ -14628,19 +14671,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_45";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=984;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14708,7 +14752,7 @@ class Mission
 			{
 			};
 			id=983;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item481
 		{
@@ -14722,19 +14766,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_46";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=986;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14802,7 +14847,7 @@ class Mission
 			{
 			};
 			id=985;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item482
 		{
@@ -14816,19 +14861,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_47";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=988;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14896,7 +14942,7 @@ class Mission
 			{
 			};
 			id=987;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item483
 		{
@@ -14910,19 +14956,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_48";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=990;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14990,7 +15037,7 @@ class Mission
 			{
 			};
 			id=989;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item484
 		{
@@ -15004,19 +15051,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_49";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=992;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15084,7 +15132,7 @@ class Mission
 			{
 			};
 			id=991;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item485
 		{
@@ -15098,19 +15146,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_50";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=994;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15178,7 +15227,7 @@ class Mission
 			{
 			};
 			id=993;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item486
 		{
@@ -15192,19 +15241,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_51";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=996;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15272,7 +15322,7 @@ class Mission
 			{
 			};
 			id=995;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item487
 		{
@@ -15286,19 +15336,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_52";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=998;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15366,7 +15417,7 @@ class Mission
 			{
 			};
 			id=997;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item488
 		{
@@ -15380,19 +15431,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_53";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1000;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15460,7 +15512,7 @@ class Mission
 			{
 			};
 			id=999;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item489
 		{
@@ -15474,19 +15526,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_54";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1002;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15554,7 +15607,7 @@ class Mission
 			{
 			};
 			id=1001;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item490
 		{
@@ -15568,19 +15621,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_55";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1004;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15648,7 +15702,7 @@ class Mission
 			{
 			};
 			id=1003;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item491
 		{
@@ -15662,19 +15716,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_56";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1006;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15742,7 +15797,7 @@ class Mission
 			{
 			};
 			id=1005;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item492
 		{
@@ -15756,19 +15811,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_57";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1008;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15836,7 +15892,7 @@ class Mission
 			{
 			};
 			id=1007;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item493
 		{
@@ -15850,19 +15906,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_58";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1010;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15930,7 +15987,7 @@ class Mission
 			{
 			};
 			id=1009;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item494
 		{
@@ -15944,19 +16001,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_59";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1012;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16024,7 +16082,7 @@ class Mission
 			{
 			};
 			id=1011;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item495
 		{
@@ -16038,19 +16096,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_60";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1014;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16118,7 +16177,7 @@ class Mission
 			{
 			};
 			id=1013;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item496
 		{
@@ -16132,19 +16191,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_61";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1016;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16212,7 +16272,7 @@ class Mission
 			{
 			};
 			id=1015;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item497
 		{
@@ -16226,19 +16286,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_62";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1018;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16306,7 +16367,7 @@ class Mission
 			{
 			};
 			id=1017;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item498
 		{
@@ -16320,19 +16381,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_63";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1020;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16400,7 +16462,7 @@ class Mission
 			{
 			};
 			id=1019;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item499
 		{
@@ -16414,19 +16476,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_64";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1022;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16494,7 +16557,7 @@ class Mission
 			{
 			};
 			id=1021;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item500
 		{
@@ -16508,19 +16571,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_65";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1024;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16588,7 +16652,7 @@ class Mission
 			{
 			};
 			id=1023;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item501
 		{
@@ -16602,19 +16666,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_66";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1026;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16682,7 +16747,7 @@ class Mission
 			{
 			};
 			id=1025;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item502
 		{
@@ -16696,19 +16761,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_67";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1028;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16776,7 +16842,7 @@ class Mission
 			{
 			};
 			id=1027;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item503
 		{
@@ -16790,19 +16856,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_68";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1030;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16870,7 +16937,7 @@ class Mission
 			{
 			};
 			id=1029;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item504
 		{
@@ -16884,19 +16951,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_69";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1032;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16964,7 +17032,7 @@ class Mission
 			{
 			};
 			id=1031;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item505
 		{
@@ -16978,19 +17046,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_70";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1034;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17058,7 +17127,7 @@ class Mission
 			{
 			};
 			id=1033;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item506
 		{
@@ -17072,19 +17141,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_71";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1036;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17152,7 +17222,7 @@ class Mission
 			{
 			};
 			id=1035;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item507
 		{
@@ -17166,19 +17236,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_72";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1038;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17246,7 +17317,7 @@ class Mission
 			{
 			};
 			id=1037;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item508
 		{
@@ -17260,19 +17331,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_73";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1040;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17340,7 +17412,7 @@ class Mission
 			{
 			};
 			id=1039;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item509
 		{
@@ -17354,19 +17426,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_74";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1042;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17434,7 +17507,7 @@ class Mission
 			{
 			};
 			id=1041;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item510
 		{
@@ -17448,19 +17521,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_75";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1044;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17528,7 +17602,7 @@ class Mission
 			{
 			};
 			id=1043;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item511
 		{
@@ -17542,19 +17616,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_76";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1046;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17622,7 +17697,7 @@ class Mission
 			{
 			};
 			id=1045;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item512
 		{
@@ -17636,19 +17711,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_77";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1048;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17716,7 +17792,7 @@ class Mission
 			{
 			};
 			id=1047;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item513
 		{
@@ -17730,19 +17806,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_78";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1050;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17810,7 +17887,7 @@ class Mission
 			{
 			};
 			id=1049;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item514
 		{
@@ -17824,19 +17901,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_79";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1052;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17904,7 +17982,7 @@ class Mission
 			{
 			};
 			id=1051;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item515
 		{
@@ -17918,19 +17996,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_80";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1054;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17998,7 +18077,7 @@ class Mission
 			{
 			};
 			id=1053;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item516
 		{
@@ -18012,19 +18091,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_81";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1056;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18092,7 +18172,7 @@ class Mission
 			{
 			};
 			id=1055;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item517
 		{
@@ -18106,19 +18186,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_82";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1058;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18186,7 +18267,7 @@ class Mission
 			{
 			};
 			id=1057;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item518
 		{
@@ -18200,19 +18281,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_83";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1060;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18280,7 +18362,7 @@ class Mission
 			{
 			};
 			id=1059;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item519
 		{
@@ -18294,19 +18376,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_84";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1062;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18374,7 +18457,7 @@ class Mission
 			{
 			};
 			id=1061;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item520
 		{
@@ -18388,19 +18471,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_85";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1064;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18468,7 +18552,7 @@ class Mission
 			{
 			};
 			id=1063;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item521
 		{
@@ -18482,19 +18566,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_86";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1066;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18562,7 +18647,7 @@ class Mission
 			{
 			};
 			id=1065;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item522
 		{
@@ -18576,19 +18661,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_87";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1068;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18656,7 +18742,7 @@ class Mission
 			{
 			};
 			id=1067;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item523
 		{
@@ -18670,19 +18756,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_88";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1070;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18750,7 +18837,7 @@ class Mission
 			{
 			};
 			id=1069;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item524
 		{
@@ -18764,19 +18851,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_89";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1072;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18844,7 +18932,7 @@ class Mission
 			{
 			};
 			id=1071;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item525
 		{
@@ -18858,19 +18946,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_90";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1074;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18938,7 +19027,7 @@ class Mission
 			{
 			};
 			id=1073;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item526
 		{
@@ -18952,19 +19041,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_91";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1076;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19032,7 +19122,7 @@ class Mission
 			{
 			};
 			id=1075;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item527
 		{
@@ -19046,19 +19136,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_92";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1078;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19126,7 +19217,7 @@ class Mission
 			{
 			};
 			id=1077;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item528
 		{
@@ -19140,19 +19231,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_93";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1080;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19220,7 +19312,7 @@ class Mission
 			{
 			};
 			id=1079;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item529
 		{
@@ -19234,19 +19326,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_94";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1082;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19314,7 +19407,7 @@ class Mission
 			{
 			};
 			id=1081;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item530
 		{
@@ -19328,19 +19421,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_95";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1084;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19408,7 +19502,7 @@ class Mission
 			{
 			};
 			id=1083;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item531
 		{
@@ -19422,19 +19516,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_96";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1086;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19502,7 +19597,7 @@ class Mission
 			{
 			};
 			id=1085;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item532
 		{
@@ -19516,19 +19611,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_97";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1088;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19596,7 +19692,7 @@ class Mission
 			{
 			};
 			id=1087;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item533
 		{
@@ -19610,19 +19706,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_98";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1090;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19690,7 +19787,7 @@ class Mission
 			{
 			};
 			id=1089;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item534
 		{
@@ -19704,19 +19801,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_99";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1092;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19784,7 +19882,7 @@ class Mission
 			{
 			};
 			id=1091;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item535
 		{
@@ -19798,19 +19896,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1185.1115,3.0685241,569.93591};
+						position[]={1185.111,3.0683525,569.93597};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_100";
 						description="Civilian";
 						isPlayable=1;
 					};
 					id=1094;
 					type="C_man_1";
-					atlOffset=0.055082321;
+					atlOffset=0.055000067;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -19878,7 +19977,7 @@ class Mission
 			{
 			};
 			id=1093;
-			atlOffset=0.055082321;
+			atlOffset=0.055000067;
 		};
 		class Item536
 		{
@@ -19898,6 +19997,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_1";
 						description="TPC Officer";
 						isPlayable=1;
@@ -19972,6 +20072,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_2";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20046,6 +20147,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_3";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20120,6 +20222,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_4";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20194,6 +20297,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_5";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20268,6 +20372,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_6";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20342,6 +20447,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_7";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20416,6 +20522,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_8";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20490,6 +20597,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_9";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20564,6 +20672,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_10";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20638,6 +20747,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_11";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20712,6 +20822,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_12";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20786,6 +20897,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_13";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20860,6 +20972,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_14";
 						description="TPC Officer";
 						isPlayable=1;
@@ -20934,6 +21047,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_15";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21008,6 +21122,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_16";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21082,6 +21197,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_17";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21156,6 +21272,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_18";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21230,6 +21347,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_19";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21304,6 +21422,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_20";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21378,6 +21497,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_21";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21452,6 +21572,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_22";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21526,6 +21647,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_23";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21600,6 +21722,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_24";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21674,6 +21797,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_25";
 						description="TPC Officer";
 						isPlayable=1;
@@ -21762,6 +21886,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="medic_2";
 						description="NHS Officer";
 						isPlayable=1;
@@ -21855,6 +21980,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="medic_3";
 						description="NHS Officer";
 						isPlayable=1;
@@ -21948,6 +22074,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="medic_4";
 						description="NHS Officer";
 						isPlayable=1;
@@ -22041,6 +22168,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="medic_5";
 						description="NHS Officer";
 						isPlayable=1;
@@ -22134,6 +22262,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="medic_1";
 						description="NHS Officer";
 						isPlayable=1;
@@ -23311,8 +23440,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -23321,10 +23450,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Custom";
 								};
 							};
 						};
@@ -23368,8 +23497,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -23378,10 +23507,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Custom";
+									value=0;
 								};
 							};
 						};
@@ -61770,7 +61899,7 @@ class Mission
 			position[]={5624.6689,3.8,10143.565};
 			name="civ_spawn_aan";
 			type="Empty";
-			angle=203.15894;
+			angle=203.15892;
 			id=3216;
 			atlOffset=0.041111231;
 		};
@@ -63549,7 +63678,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8681.9229,10.69,13822.864};
-				angles[]={-0,0.49394563,0};
+				angles[]={0,0.49394563,0};
 			};
 			areaSize[]={35,0,10};
 			areaIsRectangle=1;
@@ -63714,7 +63843,7 @@ class Mission
 			};
 			id=3348;
 			type="Flag_UK_F";
-			atlOffset=0.010100365;
+			atlOffset=0.010101318;
 		};
 		class Item1727
 		{
@@ -63788,7 +63917,7 @@ class Mission
 			};
 			id=3354;
 			type="Land_GuardHouse_01_F";
-			atlOffset=0.20581532;
+			atlOffset=0.20581627;
 		};
 		class Item1729
 		{
@@ -63822,7 +63951,7 @@ class Mission
 			};
 			id=3357;
 			type="Land_BarGate_F";
-			atlOffset=6.6757202e-006;
+			atlOffset=5.531311e-005;
 		};
 		class Item1731
 		{
@@ -63862,7 +63991,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8676.3643,12.027513,13854.859};
-				angles[]={-0,3.6383507,0};
+				angles[]={0,3.6383507,0};
 			};
 			side="Empty";
 			flags=4;
@@ -63871,6 +64000,7 @@ class Mission
 			};
 			id=3362;
 			type="Land_Cargo40_light_blue_F";
+			atlOffset=-0.00079727173;
 		};
 		class Item1734
 		{
@@ -63878,7 +64008,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8675.0439,12.02431,13858.905};
-				angles[]={-0,0.48753652,0};
+				angles[]={0,0.48753652,0};
 			};
 			side="Empty";
 			flags=4;
@@ -63903,7 +64033,7 @@ class Mission
 			};
 			id=3364;
 			type="Land_Cargo20_orange_F";
-			atlOffset=-0.0033445358;
+			atlOffset=-0.0038108826;
 		};
 		class Item1736
 		{
@@ -63914,13 +64044,12 @@ class Mission
 				angles[]={6.2751918,1.8521365,0.034652505};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=3365;
 			type="Land_Cargo10_blue_F";
-			atlOffset=2.0027161e-005;
+			atlOffset=0.62205505;
 		};
 		class Item1737
 		{
@@ -63945,7 +64074,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8662.0898,11.897749,13862.775};
-				angles[]={-0,4.5110769,0.069222413};
+				angles[]={0,4.5110769,0.069222413};
 			};
 			side="Empty";
 			flags=4;
@@ -63971,7 +64100,7 @@ class Mission
 			};
 			id=3369;
 			type="Land_Cargo20_light_green_F";
-			atlOffset=8.2015991e-005;
+			atlOffset=-0.0040016174;
 		};
 		class Item1740
 		{
@@ -64005,7 +64134,7 @@ class Mission
 			};
 			id=3371;
 			type="Land_Cargo20_sand_F";
-			atlOffset=-1.7166138e-005;
+			atlOffset=-2.4795532e-005;
 		};
 		class Item1742
 		{
@@ -64013,7 +64142,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8694.668,11.069907,13827.552};
-				angles[]={-0,3.5956662,6.2805333};
+				angles[]={0,3.5956662,6.2805333};
 			};
 			side="Empty";
 			flags=4;
@@ -64030,7 +64159,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8698.7832,11.05892,13825.58};
-				angles[]={-0,3.5643203,6.2805333};
+				angles[]={0,3.5643203,6.2805333};
 			};
 			side="Empty";
 			flags=4;
@@ -64098,7 +64227,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8715.7549,10.967621,13817.45};
-				angles[]={-0,3.5645723,6.272521};
+				angles[]={0,3.5645723,6.272521};
 			};
 			side="Empty";
 			flags=4;
@@ -64115,7 +64244,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8720.2773,10.923471,13815.126};
-				angles[]={-0,3.6079688,6.2751918};
+				angles[]={0,3.6079688,6.2751918};
 			};
 			side="Empty";
 			flags=4;
@@ -64132,7 +64261,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8725.0391,10.865043,13812.449};
-				angles[]={-0,3.6953588,6.2671871};
+				angles[]={0,3.6953588,6.2671871};
 			};
 			side="Empty";
 			flags=4;
@@ -64149,7 +64278,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8725.6689,10.854977,13810.241};
-				angles[]={-0,5.2484956,6.2671871};
+				angles[]={0,5.2484956,6.2671871};
 			};
 			side="Empty";
 			flags=4;
@@ -64166,7 +64295,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8721.9609,10.785673,13829.716};
-				angles[]={-0,5.3556428,0};
+				angles[]={0,5.3556428,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64182,7 +64311,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8719.1904,10.785673,13827.608};
-				angles[]={-0,5.8808641,0};
+				angles[]={0,5.8808641,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64249,7 +64378,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8702.4336,11.138657,13834.5};
-				angles[]={-0,0.41671398,0.0053265258};
+				angles[]={0,0.41671398,0.0053265258};
 			};
 			side="Empty";
 			flags=4;
@@ -64265,7 +64394,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8698.2676,11.125673,13836.433};
-				angles[]={-0,0.42988658,0};
+				angles[]={0,0.42988658,0};
 			};
 			side="Empty";
 			flags=4;
@@ -64358,7 +64487,7 @@ class Mission
 			};
 			id=3392;
 			type="Land_CzechHedgehog_01_new_F";
-			atlOffset=9.1552734e-005;
+			atlOffset=0.00056552887;
 		};
 		class Item1763
 		{

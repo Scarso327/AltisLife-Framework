@@ -67,6 +67,6 @@ if (_houses isEqualType []) then {
 } forEach (_playerData select (_count - 2));
 
 ULP_Gear = _gear;
-[] call ULP_fnc_loadGear;
+[ULP_Gear] call ULP_fnc_loadGear;
 
 ULP_Loaded = true;

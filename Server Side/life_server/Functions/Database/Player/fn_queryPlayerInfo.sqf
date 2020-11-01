@@ -25,7 +25,6 @@ private _query = [
 ];
 
 _query = _query joinString " ";
-diag_Log _query;
 
 private _playerData = false;
 private _firstInsert = false;

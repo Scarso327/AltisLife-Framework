@@ -904,35 +904,6 @@
             <Original>&lt;t size='2'&gt;%1&lt;/t&gt;&lt;br /&gt;Broadcasted by: %2</Original>
         </Key>
     </Package>
-    <Package name="Jail_Strings">
-        <Key ID="STR_Jail_Warn">
-            <Original>You have been arrested, wait your time out. If you attempt to respawn or reconnect your time will increase!</Original>
-        </Key>
-        <Key ID="STR_Jail_LicenseNOTF">
-            <Original>For being arrested you have lost the following licenses if you own them\n\nFirearms License\nRebel License</Original>
-        </Key>
-        <Key ID="STR_Jail_EscapeNOTF">
-            <Original>%1 has escaped from jail!</Original>
-        </Key>
-        <Key ID="STR_Jail_EscapeSelf">
-            <Original>You have escaped from jail, you still retain your previous crimes and now have a count of escaping jail.</Original>
-        </Key>
-        <Key ID="STR_Jail_Released">
-            <Original>You have served your time in jail and have been released.</Original>
-        </Key>
-        <Key ID="STR_Jail_Time">
-            <Original>Time Remaining:</Original>
-        </Key>
-        <Key ID="STR_Jail_Pay">
-            <Original>Can pay bail:</Original>
-        </Key>
-        <Key ID="STR_Jail_Price">
-            <Original>Bail Price:</Original>
-        </Key>
-        <Key ID="STR_Jail_Paid">
-            <Original>You have paid your bail and are now free.</Original>
-        </Key>
-    </Package>
     <Package name="Cop_Strings">
         <Key ID="STR_Cop_TicketError">
             <Original>Couldn't open the ticketing interface</Original>

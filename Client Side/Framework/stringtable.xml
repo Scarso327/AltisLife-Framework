@@ -869,41 +869,6 @@
             <Original>An empty array was passed to fn_levelCheck.sqf</Original>
         </Key>
     </Package>
-    <Package name="News_Strings">
-        <Key ID="STR_News_AddAction">
-            <Original>News Station Broadcast</Original>
-        </Key>
-        <Key ID="STR_News_DialogTitle">
-            <Original>Channel 7 News Station</Original>
-        </Key>
-        <Key ID="STR_News_MsgHeader">
-            <Original>Message Heading:</Original>
-        </Key>
-        <Key ID="STR_News_MsgContent">
-            <Original>Message Content:</Original>
-        </Key>
-        <Key ID="STR_News_Broadcast">
-            <Original>Broadcast Message</Original>
-        </Key>
-        <Key ID="STR_News_StructuredText">
-            <Original>Broadcast Cost: %1&lt;br /&gt;Next Broadcast Available: %2</Original>
-        </Key>
-        <Key ID="STR_News_HeaderLength">
-            <Original>The header cannot be over %1 characters</Original>
-        </Key>
-        <Key ID="STR_News_UnsupportedCharacter">
-            <Original>You've entered an unsupported character!</Original>
-        </Key>
-        <Key ID="STR_News_Now">
-            <Original>Now</Original>
-        </Key>
-        <Key ID="STR_News_NotEnough">
-            <Original>You need £%1 to send a broadcast!</Original>
-        </Key>
-        <Key ID="STR_News_BroadcastedBy">
-            <Original>&lt;t size='2'&gt;%1&lt;/t&gt;&lt;br /&gt;Broadcasted by: %2</Original>
-        </Key>
-    </Package>
     <Package name="Cop_Strings">
         <Key ID="STR_Cop_TicketError">
             <Original>Couldn't open the ticketing interface</Original>

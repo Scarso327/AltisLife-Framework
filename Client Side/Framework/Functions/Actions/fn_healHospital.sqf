@@ -33,7 +33,7 @@ if (_action) then {
     CASH = CASH - _healCost;
     life_action_inUse = false;
 } else {
-    hint localize "STR_NOTF_ActionCancel";
+    hint "Action Cancelled";
     closeDialog 0;
     life_action_inUse = false;
 };

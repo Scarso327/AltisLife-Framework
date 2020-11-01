@@ -13,8 +13,8 @@ if (life_inv_fuelEmpty isEqualTo 0) exitWith {};
 if (count(nearestObjects [player,["Land_FuelStation_Feed_F","Land_fs_feed_F"],3.5]) isEqualTo 0) exitWith { hint localize "STR_ISTR_Jerry_Distance";};
 if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
-if (player getVariable "restrained") exitWith {hint localize "STR_NOTF_isrestrained";};
-if (player getVariable "playerSurrender") exitWith {hint localize "STR_NOTF_surrender";};
+if (player getVariable "restrained") exitWith {hint "You are restrained";};
+if (player getVariable "playerSurrender") exitWith {hint "You can't do this while you surrender";};
 _fuelCost = LIFE_SETTINGS(getNumber,"fuelCan_refuel");
 
 life_action_inUse = true;
@@ -67,14 +67,14 @@ if (_action) then {
     if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;};
     if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
     if (!isNil "_badDistance") exitWith {titleText[localize "STR_ISTR_Lock_TooFar","PLAIN"]; life_action_inUse = false;};
-    if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
+    if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled","PLAIN"]; life_action_inUse = false;};
     if (!([false,"fuelEmpty",1] call life_fnc_handleInv)) exitWith {life_action_inUse = false;};
     life_action_inUse = false;
     CASH = CASH - _fuelCost;
     [true,"fuelFull",1] call life_fnc_handleInv;
     hint localize "STR_ISTR_Jerry_Refueled";
 } else {
-    hint localize "STR_NOTF_ActionCancel";
+    hint "Action Cancelled";
     closeDialog 0;
     life_action_inUse = false;
 };

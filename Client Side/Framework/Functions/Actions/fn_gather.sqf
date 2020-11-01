@@ -9,8 +9,8 @@
 private ["_maxGather","_resource","_amount","_maxGather","_requiredItem"];
 if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
-if (player getVariable "restrained") exitWith {hint localize "STR_NOTF_isrestrained";};
-if (player getVariable "playerSurrender") exitWith {hint localize "STR_NOTF_surrender";};
+if (player getVariable "restrained") exitWith {hint "You are restrained";};
+if (player getVariable "playerSurrender") exitWith {hint "You can't do this while you surrender";};
 
 life_action_inUse = true;
 _zone = "";

@@ -7,13 +7,13 @@
     Figure it out.
 */
 private ["_value","_action"];
-if (FETCH_CONST(life_adminlevel) < 2) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
+if (FETCH_CONST(life_adminlevel) < 2) exitWith {closeDialog 0; hint "Your Staff Level is not high enough.";};
 _value = parseNumber(ctrlText 9922);
 if (_value < 0) exitWith {};
-if (_value > 999999) exitWith {hint localize "STR_ANOTF_Fail"};
+if (_value > 999999) exitWith {hint "You can not go above £999,999."};
 
 _action = [
-    format [localize "STR_ANOTF_CompWarn",[_value] call life_fnc_numberText],
+    format ["You are about to give yourself £%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.",[_value] call life_fnc_numberText],
     localize "STR_Admin_Compensate",
     "Yes",
     "No"
@@ -21,9 +21,9 @@ _action = [
 
 if (_action) then {
     CASH = CASH + _value;
-    hint format [localize "STR_ANOTF_Success",[_value] call life_fnc_numberText];
+    hint format ["You have added £%1 to your account.",[_value] call life_fnc_numberText];
     closeDialog 0;
 } else {
-    hint localize "STR_NOTF_ActionCancel";
+    hint "Action Cancelled";
     closeDialog 0;
 };

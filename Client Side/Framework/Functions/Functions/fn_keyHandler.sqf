@@ -82,7 +82,7 @@ if (life_container_active) exitwith {
         if (!isNull life_storagePlacing) exitWith {}; //already placing down a box
         if (!isNull life_container_activeObj) then {
             deleteVehicle life_container_activeObj;
-            titleText [localize "STR_NOTF_PlaceContainerAbort", "PLAIN"];
+            titleText ["Placement of container has been aborted.", "PLAIN"];
         };
         life_container_active = false;
     };
@@ -95,7 +95,7 @@ switch (_code) do {
         private _CommandMode = actionKeys "tacticalView";
 
         if (_code in _CommandMode) then {
-            hint localize "STR_NOTF_CommanderView";
+            hint "Commander/Tactical View Disabled";
             _handled = true;
         };
     };

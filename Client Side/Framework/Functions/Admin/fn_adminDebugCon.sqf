@@ -6,8 +6,8 @@
     Description:
     Opens the Debug Console.
 */
-if (FETCH_CONST(life_adminlevel) < 5) exitWith {closeDialog 0; hint localize "STR_NOTF_adminDebugCon";};
+if (FETCH_CONST(life_adminlevel) < 5) exitWith {closeDialog 0; hint "You have no business using this.";};
 life_admin_debug = true;
 
 createDialog "RscDisplayDebugPublic";
-[0,format [localize "STR_NOTF_adminHasOpenedDebug",profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+[0,format ["A Staff Member %1 has opened the debug console.",profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];

@@ -57,7 +57,7 @@ life_action_inUse = false;
 "progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
 if (isNull _animalCorpse) exitWith {life_action_inUse = false;};
-if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
+if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled","PLAIN"]; life_action_inUse = false;};
 if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"];};
 
 if ([true,_item,1] call life_fnc_handleInv) then {

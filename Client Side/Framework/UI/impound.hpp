@@ -118,7 +118,7 @@ class Life_impound_menu {
 
         class MainHideText: Life_RscText {
             idc = 2811;
-            text = "$STR_ANOTF_QueryGarage";
+            text = "Searching Database for vehicles...";
             sizeEx = 0.06;
             x = 0.24;
             y = 0.5;

@@ -468,17 +468,6 @@
             <Original>There isn't a vehicle near the NPC.</Original>
         </Key>
     </Package>
-    <Package name="Key_Chain">
-        <Key ID="STR_Keys_Title">
-            <Original>Key Chain - Current List of Keys</Original>
-        </Key>
-        <Key ID="STR_Keys_DropKey">
-            <Original>Drop Key</Original>
-        </Key>
-        <Key ID="STR_Keys_GiveKey">
-            <Original>Give Key</Original>
-        </Key>
-    </Package>
     <Package name="Player_Menu">
         <Key ID="STR_PM_Title">
             <Original>Player Menu</Original>

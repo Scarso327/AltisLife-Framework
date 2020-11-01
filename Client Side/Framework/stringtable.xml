@@ -2565,30 +2565,4 @@
             <Original>Variable set before client initialized: %1</Original>
         </Key>
     </Package>
-    <Package name="TextNotifications">
-        <Key ID="STR_MedicalRequestEmerg_Title">
-            <Original>EMS Requested</Original>
-        </Key>
-        <Key ID="STR_DeliveryAssigned_Title">
-            <Original>Delivery Job Accepted</Original>
-        </Key>
-        <Key ID="STR_DeliveryFailed_Title">
-            <Original>Delivery Job Failed</Original>
-        </Key>
-        <Key ID="STR_DeliverySucceeded_Title">
-            <Original>Delivery Job Completed</Original>
-        </Key>
-        <Key ID="STR_TextMessage_Title">
-            <Original>Received A Text Message</Original>
-        </Key>
-        <Key ID="STR_PoliceDispatch_Title">
-            <Original>911 Dispatch Center</Original>
-        </Key>
-        <Key ID="STR_AdminDispatch_Title">
-            <Original>Admin Dispatch Center</Original>
-        </Key>
-        <Key ID="STR_AdminMessage_Title">
-            <Original>Admin Message</Original>
-        </Key>
-    </Package>
 </Project>

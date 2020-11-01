@@ -3,7 +3,7 @@ class CfgFactions {
 	fallbackPay = 1000;
 
 	class Police {
-		displayName = "National Health Service";
+		displayName = "Tanoa Police Constabulary";
 		pay = 2500;
 		class Whitelisting {
 			class Main {
@@ -11,18 +11,21 @@ class CfgFactions {
 				payMulti = 0.1; // Pay increase per level...
 				required = 1;
 			};
-			class NPAS {
+			class ASO {
+				queryIndex = 13;
+			};
+			class SFO {
 				queryIndex = 13;
 			};
 		};
 		class DatabaseInfo {
 			queryPrefix = "cop_";
-			customQuery = ", cop_blacklisted, coplevel, npaslevel";
+			customQuery = ", cop_blacklisted, coplevel, asolevel, sfolevel";
 			timeIndex = 0;
 		};
 	};
 	class Medic {
-		displayName = "National Health Service";
+		displayName = "Tanoa Ambulance Service";
 		pay = 2500;
 		class Whitelisting {
 			class Main {
@@ -36,7 +39,7 @@ class CfgFactions {
 		};
 	};
 	class Civilian {
-		displayName = "National Health Service";
+		displayName = "Civilian Population";
 		pay = 2500;
 		class Groups {};
 		class Housing {};

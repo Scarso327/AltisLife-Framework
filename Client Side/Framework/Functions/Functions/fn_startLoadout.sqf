@@ -90,4 +90,4 @@ if !(_linkedItems isEqualTo []) then {
 };
 
 [] call life_fnc_playerSkins;
-[] call life_fnc_saveGear;
+[] call ULP_fnc_saveGear;

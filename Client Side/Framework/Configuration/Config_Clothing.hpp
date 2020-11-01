@@ -7,7 +7,7 @@
 *            String can contain any amount of conditions, aslong as the entire
 *            string returns a boolean. This allows you to check any levels, licenses etc,
 *            in any combination. For example:
-*                "call life_coplevel && license_civ_someLicense"
+*                "call Police_Main"
 *            This will also let you call any other function.
 *
 *   Clothing classnames can be found here: https://community.bistudio.com/wiki/Arma_3_CfgWeapons_Equipment
@@ -136,21 +136,21 @@ class Clothing {
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
             { "U_Rangemaster", $STR_C_Cop_uniforms, 25, "" },
-            { "U_B_CombatUniform_mcam_tshirt", "", 350, "call life_coplevel >= 1" },
-            { "U_B_CombatUniform_mcam_worn", "", 550, "call life_coplevel >= 2" },
-            { "U_B_survival_uniform", "", 1250, "call life_coplevel >= 1" }
+            { "U_B_CombatUniform_mcam_tshirt", "", 350, "call Police_Main >= 1" },
+            { "U_B_CombatUniform_mcam_worn", "", 550, "call Police_Main >= 2" },
+            { "U_B_survival_uniform", "", 1250, "call Police_Main >= 1" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
             { "H_Cap_police", "", 25, "" },
-            { "H_Booniehat_mcamo", "", 120, "call life_coplevel >= 1" },
-            { "H_HelmetB_plain_mcamo", "", 75, "call life_coplevel >= 1" },
-            { "H_HelmetB_Enh_tna_F", "", 80, "call life_coplevel >= 1" }, //Apex DLC
-            { "H_Beret_blk_POLICE", "", 50, "call life_coplevel >= 2" },
-            { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 2" },
-            { "H_MilCap_gen_F", "", 1200, "call life_coplevel >= 2" }, //Apex DLC
-            { "H_MilCap_tna_F", "", 1200, "call life_coplevel >= 2" }, //Apex DLC
-            { "H_MilCap_oucamo", "", 1200, "call life_coplevel >= 2" }
+            { "H_Booniehat_mcamo", "", 120, "call Police_Main >= 1" },
+            { "H_HelmetB_plain_mcamo", "", 75, "call Police_Main >= 1" },
+            { "H_HelmetB_Enh_tna_F", "", 80, "call Police_Main >= 1" }, //Apex DLC
+            { "H_Beret_blk_POLICE", "", 50, "call Police_Main >= 2" },
+            { "H_MilCap_mcamo", "", 100, "call Police_Main >= 2" },
+            { "H_MilCap_gen_F", "", 1200, "call Police_Main >= 2" }, //Apex DLC
+            { "H_MilCap_tna_F", "", 1200, "call Police_Main >= 2" }, //Apex DLC
+            { "H_MilCap_oucamo", "", 1200, "call Police_Main >= 2" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
@@ -171,9 +171,9 @@ class Clothing {
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
             { "V_Rangemaster_belt", "", 800, "" },
-            { "V_TacVest_blk_POLICE", "", 1000, "call life_coplevel >= 1" },
-            { "V_TacVest_gen_F", "", 1000, "call life_coplevel >= 1" }, //Apex DLC
-            { "V_PlateCarrier2_rgr", "", 1500, "call life_coplevel >= 2" }
+            { "V_TacVest_blk_POLICE", "", 1000, "call Police_Main >= 1" },
+            { "V_TacVest_gen_F", "", 1000, "call Police_Main >= 1" }, //Apex DLC
+            { "V_PlateCarrier2_rgr", "", 1500, "call Police_Main >= 2" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
@@ -187,7 +187,7 @@ class Clothing {
 
     class dive {
         title = "STR_Shops_C_Diving";
-        conditions = "license_civ_dive";
+        conditions = "";
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
@@ -211,7 +211,7 @@ class Clothing {
 
     class gun_clothing {
         title = "STR_Shops_C_Gun";
-        conditions = "license_civ_gun";
+        conditions = "";
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" }
@@ -280,7 +280,7 @@ class Clothing {
 
     class reb {
         title = "STR_Shops_C_Rebel";
-        conditions = "license_civ_rebel";
+        conditions = "";
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },

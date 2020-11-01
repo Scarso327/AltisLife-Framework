@@ -83,7 +83,7 @@ _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar; closeDial
 _Btn8 ctrlSetText localize "STR_pInAct_Seize";
 _Btn8 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_seizePlayerAction; closeDialog 0;";
 
-if (FETCH_CONST(life_coplevel) < _seizeRank) then {_Btn8 ctrlEnable false;};
+if (FETCH_CONST(Police_Main) < _seizeRank) then {_Btn8 ctrlEnable false;};
 
 {
     if ((player distance (getMarkerPos _x) <30)) exitWith { _Btn6 ctrlEnable true;};

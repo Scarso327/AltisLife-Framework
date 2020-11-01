@@ -14,26 +14,26 @@ class Loadouts {
     // COP
     class WEST {
         uniform[] = {
-            {"U_Rangemaster", "call life_copLevel >= 0"}
+            {"U_Rangemaster", "call Police_Main >= 0"}
         };
         headgear[] = {
-            {"H_Cap_blk", "call life_copLevel >= 0"}
+            {"H_Cap_blk", "call Police_Main >= 0"}
         };
         vest[] = {
-            {"V_Rangemaster_belt", "call life_copLevel >= 0"}
+            {"V_Rangemaster_belt", "call Police_Main >= 0"}
         };
         backpack[] = {};
         weapon[] = {
-            {"hgun_P07_snds_F", "call life_copLevel >= 0"}
+            {"hgun_P07_snds_F", "call Police_Main >= 0"}
         };
         mags[] = {
-            {"16Rnd_9x21_Mag", 6, "call life_copLevel >= 0"}
+            {"16Rnd_9x21_Mag", 6, "call Police_Main >= 0"}
         };
         items[] = {};
         linkedItems[] = {
-            {"ItemMap", "call life_copLevel >= 0"},
-            {"ItemCompass", "call life_copLevel >= 0"},
-            {"ItemWatch", "call life_copLevel >= 0"}
+            {"ItemMap", "call Police_Main >= 0"},
+            {"ItemCompass", "call Police_Main >= 0"},
+            {"ItemWatch", "call Police_Main >= 0"}
         };
     };
 

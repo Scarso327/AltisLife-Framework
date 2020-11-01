@@ -4,7 +4,7 @@
 *            String can contain any amount of conditions, aslong as the entire
 *            string returns a boolean. This allows you to check any levels, licenses etc,
 *            in any combination. For example:
-*                "call life_coplevel && license_civ_someLicense"
+*                "call Police_Main"
 *            This will also let you call any other function.
 *
 */
@@ -16,7 +16,7 @@ class CfgSpawnPoints {
                 displayName = "Kavala";
                 spawnMarker = "civ_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "!license_civ_rebel";
+                conditions = "";
             };
 
             class Athira {
@@ -44,21 +44,21 @@ class CfgSpawnPoints {
                 displayName = $STR_SP_Reb_N;
                 spawnMarker = "Rebelop";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "";
             };
 
             class RebelS {
                 displayName = $STR_SP_Reb_S;
                 spawnMarker = "Rebelop_1";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "";
             };
 
             class RebelE {
                 displayName = $STR_SP_Reb_E;
                 spawnMarker = "Rebelop_2";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "";
             };
         };
 
@@ -88,14 +88,14 @@ class CfgSpawnPoints {
                 displayName = $STR_MAR_Police_Air_HQ;
                 spawnMarker = "cop_spawn_4";
                 icon = "\a3\ui_f\data\map\Markers\NATO\b_air.paa";
-                conditions = "call life_coplevel >= 2 && {license_cop_cAir}";
+                conditions = "call Police_Main >= 2";
             };
 
             class HW {
                 displayName = $STR_MAR_Highway_Patrol;
                 spawnMarker = "cop_spawn_5";
                 icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
-                conditions = "call life_coplevel >= 3";
+                conditions = "call Police_Main >= 3";
             };
         };
 
@@ -130,7 +130,7 @@ class CfgSpawnPoints {
                 displayName = "Georgetown";
                 spawnMarker = "civ_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-                conditions = "!license_civ_rebel";
+                conditions = "";
             };
 
             class Balavu {
@@ -158,21 +158,21 @@ class CfgSpawnPoints {
                 displayName = $STR_SP_Reb_NW;
                 spawnMarker = "Rebelop";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "";
             };
 
             class RebelS {
                 displayName = $STR_SP_Reb_S;
                 spawnMarker = "Rebelop_1";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "";
             };
 
             class RebelNE {
                 displayName = $STR_SP_Reb_NE;
                 spawnMarker = "Rebelop_2";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
-                conditions = "license_civ_rebel";
+                conditions = "";
             };
         };
 
@@ -202,14 +202,14 @@ class CfgSpawnPoints {
                 displayName = $STR_MAR_Police_Air_HQ;
                 spawnMarker = "cop_spawn_4";
                 icon = "\a3\ui_f\data\map\Markers\NATO\b_air.paa";
-                conditions = "call life_coplevel >= 2 && {license_cop_cAir}";
+                conditions = "call Police_Main >= 2";
             };
 
             class HW {
                 displayName = $STR_MAR_Highway_Patrol;
                 spawnMarker = "cop_spawn_5";
                 icon = "\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa";
-                conditions = "call life_coplevel >= 3";
+                conditions = "call Police_Main >= 3";
             };
         };
 

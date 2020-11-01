@@ -10,6 +10,16 @@ class CfgPatches {
 };
 
 class CfgFunctions {
+
+    class Functions {
+        tag = "ULP_SRV";
+
+        class DatabasePlayer {
+            file = "\life_server\Functions\Database\Player";
+            class queryPlayerInfo {};
+        };
+    };
+
     class MySQL_Database {
         tag = "DB";
         class MySQL
@@ -17,9 +27,7 @@ class CfgFunctions {
             file = "\life_server\Functions\MySQL";
             class numberSafe {};
             class mresArray {};
-            class queryRequest{};
             class asyncCall{};
-            class insertRequest{};
             class updateRequest{};
             class mresToArray {};
             class insertVehicle {};

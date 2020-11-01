@@ -20,12 +20,12 @@ _flag = switch (playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case
 
 _packet pushBack _array;
 
-[] call life_fnc_saveGear;
-_packet pushBack life_gear;
+[] call ULP_fnc_saveGear;
+_packet pushBack ULP_Gear;
 
 _array = [];
-_array pushBack life_hunger;
-_array pushBack life_thirst;
+_array pushBack ULP_Survival_Hunger;
+_array pushBack ULP_Survival_Thirst;
 _array pushBack (damage player);
 _packet pushBack _array;
 

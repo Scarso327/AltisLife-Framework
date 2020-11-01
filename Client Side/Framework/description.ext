@@ -23,6 +23,7 @@ class RscTitles {
 };
 
 class CfgFunctions {
+    #include "CfgFunctions.hpp"
     #include "Functions.hpp"
 };
 

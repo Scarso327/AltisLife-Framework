@@ -138,8 +138,8 @@ if (!isNull _killer && {!(_killer isEqualTo _unit)}) then {
 [_unit] call life_fnc_dropItems;
 
 life_action_inUse = false;
-life_hunger = 100;
-life_thirst = 100;
+ULP_Survival_Hunger = 100;
+ULP_Survival_Thirst = 100;
 life_carryWeight = 0;
 CASH = 0;
 life_is_alive = false;

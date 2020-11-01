@@ -2,9 +2,6 @@ class Socket_Reciever {
     tag = "SOCK";
     class SQL_Socket {
         file = "Functions\session";
-        class dataQuery {};
-        class insertPlayerInfo {};
-        class requestReceived {};
         class syncData {};
         class updatePartial {};
         class updateRequest {};
@@ -17,8 +14,6 @@ class Life_Client_Core {
     class Master_Directory {
         file = "Functions";
         class initCiv {};
-        class initCop {};
-        class initMedic {};
         class setupActions {};
         class setupEVH {};
         class survival {};
@@ -185,7 +180,6 @@ class Life_Client_Core {
         class isUIDActive {};
         class keyHandler {};
         class loadDeadGear {};
-        class loadGear {};
         class nearATM {};
         class nearestDoor {};
         class nearUnits {};
@@ -200,7 +194,6 @@ class Life_Client_Core {
         class receiveItem {};
         class receiveMoney {};
         class revealObjects {};
-        class saveGear {};
         class simDisable {};
         class startLoadout {};
         class stripDownPlayer {};

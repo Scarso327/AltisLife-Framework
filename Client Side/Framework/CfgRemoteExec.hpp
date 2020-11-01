@@ -74,6 +74,7 @@ class CfgRemoteExec {
         F(TON_fnc_clientGetKey,CLIENT)
         F(TON_fnc_clientMessage,CLIENT)
         F(TON_fnc_player_query,CLIENT)
+        F(ULP_fnc_setPlayerInfo,CLIENT)
 
         /* Server only functions */
         F(DB_fnc_insertRequest,SERVER)
@@ -114,6 +115,7 @@ class CfgRemoteExec {
         F(TON_fnc_vehicleUpdate,SERVER)
         F(TON_fnc_handleBlastingCharge,SERVER)
         F(TON_fnc_houseGarage,SERVER)
+        F(ULP_SRV_fnc_queryPlayerInfo,SERVER)
 
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)

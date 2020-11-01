@@ -21,14 +21,14 @@ private _drinkable = M_CONFIG(getNumber, "VirtualItems", _item, "drinkable");
 if (_edible > -1 || _drinkable > -1) exitWith {
     if ([false, _item, 1] call life_fnc_handleInv) then {
         if (_edible > -1) then {
-            private _sum = life_hunger + _edible;
-            life_hunger = (_sum max 5) min 100; // never below 5 or above 100
+            private _sum = ULP_Survival_Hunger + _edible;
+            ULP_Survival_Hunger = (_sum max 5) min 100; // never below 5 or above 100
         };
 
         if (_drinkable > -1) then {
-            private _sum = life_thirst + _drinkable;
+            private _sum = lULP_Survival_Thirst + _drinkable;
 
-            life_thirst = (_sum max 5) min 100; // never below 5 or above 100
+            ULP_Survival_Thirst = (_sum max 5) min 100; // never below 5 or above 100
 
             if (LIFE_SETTINGS(getNumber, "enable_fatigue") isEqualTo 1) then {
                 player setFatigue 0;

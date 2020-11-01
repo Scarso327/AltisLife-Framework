@@ -33,8 +33,8 @@ switch (_mode) do {
     };
 
     case 3: {
-        [] call life_fnc_saveGear;
-        _packet set[2,life_gear];
+        [] call ULP_fnc_saveGear;
+        _packet set[2,ULP_Gear];
     };
 
     case 4: {

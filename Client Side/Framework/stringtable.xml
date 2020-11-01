@@ -583,44 +583,6 @@
             <Original>Current Bounty Price: £%1</Original>
         </Key>
     </Package>
-    <Package name="Animals">
-        <Key ID="STR_ANIM_Salema">
-            <Original>Salema</Original>
-        </Key>
-        <Key ID="STR_ANIM_Ornate">
-            <Original>Ornate</Original>
-        </Key>
-        <Key ID="STR_ANIM_Mackerel">
-            <Original>Mackerel</Original>
-        </Key>
-        <Key ID="STR_ANIM_Tuna">
-            <Original>Tuna</Original>
-        </Key>
-        <Key ID="STR_ANIM_Mullet">
-            <Original>Mullet</Original>
-        </Key>
-        <Key ID="STR_ANIM_Catshark">
-            <Original>Cat Shark</Original>
-        </Key>
-        <Key ID="STR_ANIM_Rabbit">
-            <Original>Rabbit</Original>
-        </Key>
-        <Key ID="STR_ANIM_chicken">
-            <Original>Chicken</Original>
-        </Key>
-        <Key ID="STR_ANIM_Rooster">
-            <Original>Rooster</Original>
-        </Key>
-        <Key ID="STR_ANIM_Goat">
-            <Original>Goat</Original>
-        </Key>
-        <Key ID="STR_ANIM_Sheep">
-            <Original>Sheep</Original>
-        </Key>
-        <Key ID="STR_ANIM_Turtle">
-            <Original>Turtle</Original>
-        </Key>
-    </Package>
     <Package name="Notifications">
         <Key ID="STR_NOTF_NE_1">
             <Original>You do not have £%1 for a %2</Original>

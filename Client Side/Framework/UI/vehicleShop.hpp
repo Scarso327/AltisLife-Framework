@@ -35,7 +35,7 @@ class Life_Vehicle_Shop_v2 {
 
         class VehicleTitleBox : Life_RscText {
             idc = -1;
-            text = "$STR_GUI_ShopStock";
+            text = "Shop Stock";
             colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.3843])", "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.7019])", "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.8862])", "(profileNamespace getVariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.11; y = 0.26;
             w = 0.3;
@@ -44,7 +44,7 @@ class Life_Vehicle_Shop_v2 {
 
         class VehicleInfoHeader : Life_RscText {
             idc = 2330;
-            text = "$STR_GUI_VehInfo";
+            text = "Vehicle Information";
             colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.3843])", "(profileNamespace getVariable ['GUI_BCG_RGB_G',0.7019])", "(profileNamespace getVariable ['GUI_BCG_RGB_B',0.8862])", "(profileNamespace getVariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.42; y = 0.26;
             w = 0.46;

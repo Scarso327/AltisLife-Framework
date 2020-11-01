@@ -1765,32 +1765,6 @@
             <Original>This vault was already robbed recently</Original>
         </Key>
     </Package>
-    <Package name="Other_GUI_Stuff">
-        <Key ID="STR_GUI_Garage">
-            <Original>Garage</Original>
-        </Key>
-        <Key ID="STR_GUI_YourVeh">
-            <Original>Your Vehicles</Original>
-        </Key>
-        <Key ID="STR_GUI_VehInfo">
-            <Original>Vehicle Information</Original>
-        </Key>
-        <Key ID="STR_GUI_PlayerReveal">
-            <Original>Automatically reveals nearest objects within 15m, turn this setting off if you are experiencing performance issues.</Original>
-        </Key>
-        <Key ID="STR_GUI_SideSwitch">
-            <Original>Switch side-channel mode, turn this off if you don't want to talk with players from your side.</Original>
-        </Key>
-        <Key ID="STR_GUI_BroadcastSwitch">
-            <Original>Switch player's broadcast mode, turn this off if you don't want to see any broadcast from other players.</Original>
-        </Key>
-        <Key ID="STR_GUI_PlayTags">
-            <Original>Controls whether or not players will have name tags above their head.</Original>
-        </Key>
-        <Key ID="STR_GUI_ShopStock">
-            <Original>Shop Stock</Original>
-        </Key>
-    </Package>
     <Package name="Player_Interaction">
         <Key ID="STR_pInAct_Title">
             <Original>Player Interaction Menu</Original>

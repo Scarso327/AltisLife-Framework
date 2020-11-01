@@ -157,7 +157,7 @@ class SettingsMenu {
         };
 
         class PlayerTagsONOFF: Life_Checkbox {
-            tooltip = "$STR_GUI_PlayTags";
+            tooltip = "Controls whether or not players will have name tags above their head.";
             idc = 2970;
             sizeEx = 0.04;
             onCheckedChanged = "['tags',_this select 1] call life_fnc_s_onCheckedChange;";

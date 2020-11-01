@@ -26,7 +26,7 @@ class Life_impound_menu {
 
         class Title: Life_RscTitle {
             idc = 2801;
-            text = "$STR_GUI_Garage";
+            text = "Garage";
             x = 0.1;
             y = 0.2;
             w = 0.8;
@@ -35,7 +35,7 @@ class Life_impound_menu {
 
         class VehicleTitleBox: Life_RscText {
             idc = -1;
-            text = "$STR_GUI_YourVeh";
+            text = "Your Vehicles";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.11;
             y = 0.26;
@@ -45,7 +45,7 @@ class Life_impound_menu {
 
         class VehicleInfoHeader: Life_RscText {
             idc = 2830;
-            text = "$STR_GUI_VehInfo";
+            text = "Vehicle Information";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
             x = 0.42;
             y = 0.26;

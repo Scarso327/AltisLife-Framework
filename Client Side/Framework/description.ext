@@ -80,18 +80,18 @@ class CfgSounds {
 
 class CfgDebriefing {
     class NotWhitelisted {
-        title = "$STR_NotWhitelisted_Title";
-        subtitle = "$STR_NotWhitelisted_SubTitle";
-        description = "$STR_NotWhitelisted_Descript";
+        title = "Unable to Join";
+        subtitle = "You are not currently whitelisted";
+        description = "Please contact a member of this faction's command for more information";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
     };
 
     class Blacklisted {
-        title = "$STR_Blacklisted_Title";
-        subtitle = "$STR_Blacklisted_SubTitle";
-        description = "$STR_Blacklisted_Descript";
+        title = "Unable to Join";
+        subtitle = "You are currently blacklisted";
+        description = "Please contact a member of this faction's command for more information";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};

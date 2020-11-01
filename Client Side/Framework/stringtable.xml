@@ -2511,26 +2511,4 @@
             <Original>Your share is £%1.</Original>
         </Key>
     </Package>
-    <Package name="NotWhitelisted">
-        <Key ID="STR_NotWhitelisted_Title">
-            <Original>Mission Failed</Original>
-        </Key>
-        <Key ID="STR_NotWhitelisted_SubTitle">
-            <Original>You are not white-listed to use this slot.</Original>
-        </Key>
-        <Key ID="STR_NotWhitelisted_Descript">
-            <Original>You are not allowed to use this slot because you do not have the appropriate permissions. Try another slot.</Original>
-        </Key>
-    </Package>
-    <Package name="Blacklisted">
-        <Key ID="STR_Blacklisted_Title">
-            <Original>Mission Failed</Original>
-        </Key>
-        <Key ID="STR_Blacklisted_SubTitle">
-            <Original>You are blacklisted from cops.</Original>
-        </Key>
-        <Key ID="STR_Blacklisted_Descript">
-            <Original>You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.</Original>
-        </Key>
-    </Package>
 </Project>

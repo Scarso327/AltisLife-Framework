@@ -26,6 +26,12 @@ class CfgFunctions {
 
 class CfgSounds {
     sounds[] = {};
+    class welcome {
+        name = "welcome";
+        sound[] = {"\Data\Sounds\welcome.ogg", 1.0, 1};
+        titles[] = {};
+    };
+
     class sirenLong {
         name = "sirenLong";
         sound[] = {"\Data\Sounds\sirenLong.ogg", 1.0, 1};

@@ -136,7 +136,7 @@ class CfgSpawns {
                 conditions = "";
             };
 
-            // SPecilised TAS Spawn Points
+            // Specilised TAS Spawn Points
             class tas_airbase {
                 displayName = "Southen Airbase";
                 spawnMarker = "medic_spawn_3";

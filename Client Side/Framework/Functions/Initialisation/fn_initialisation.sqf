@@ -37,6 +37,14 @@ if (isClass (_factionCfg >> "Whitelisting")) then {
 	} forEach ("isNumber(_x >> 'required')" configClasses (_factionCfg >> "Whitelisting"));
 };
 
+["Setting Textures"] call ULP_fnc_logIt;
+private "_container";
+
+{
+	_container = uniformContainer _x;
+	[_x, _container, _container getVariable ["texture", ""], false, false] call ULP_fnc_setTextures;
+} forEach allUnits;
+
 ["Starting Paycheck Loop"] call ULP_fnc_logIt;
 ULP_Paycheck = [] call ULP_fnc_calcPaycheck;
 CONSTVAR(ULP_Paycheck);

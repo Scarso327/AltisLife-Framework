@@ -1051,41 +1051,6 @@
             <Original>This item isn't usable.</Original>
         </Key>
     </Package>
-    <Package name="Medical_Strings">
-        <Key ID="STR_Medic_Online">
-            <Original>Medics Online: %1</Original>
-        </Key>
-        <Key ID="STR_Medic_Near">
-            <Original>Medics Nearby: %1</Original>
-        </Key>
-        <Key ID="STR_Medic_Request">
-            <Original>%1 is requesting EMS Revive.</Original>
-        </Key>
-        <Key ID="STR_Medic_Respawn">
-            <Original>Respawn Available in: %1</Original>
-        </Key>
-        <Key ID="STR_Medic_Respawn_2">
-            <Original>You can now respawn</Original>
-        </Key>
-        <Key ID="STR_Medic_RevivePay">
-            <Original>%1 has revived you and a fee of £%2 was taken from your bank account for their services.</Original>
-        </Key>
-        <Key ID="STR_Medic_AlreadyReviving">
-            <Original>Someone else is already reviving this person</Original>
-        </Key>
-        <Key ID="STR_Medic_Progress">
-            <Original>Reviving %1</Original>
-        </Key>
-        <Key ID="STR_Medic_RevivedRespawned">
-            <Original>This person either respawned or was already revived.</Original>
-        </Key>
-        <Key ID="STR_Medic_RevivePayReceive">
-            <Original>You have revived %1 and received £%2 for your services.</Original>
-        </Key>
-        <Key ID="STR_Medic_TooFar">
-            <Original>You got to far away from the body.</Original>
-        </Key>
-    </Package>
     <Package name="Shop_Strings">
         <Key ID="STR_Shop_ATMRobbed">
             <Original>Because you robbed the bank you can't use the ATM for %1 minutes.</Original>

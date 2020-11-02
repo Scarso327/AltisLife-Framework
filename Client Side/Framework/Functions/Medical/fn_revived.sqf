@@ -12,7 +12,7 @@ _reviveCost = LIFE_SETTINGS(getNumber,"revive_fee");
 
 [life_save_gear] spawn life_fnc_loadDeadGear;
 
-hint format [localize "STR_Medic_RevivePay",_medic,[_reviveCost] call life_fnc_numberText];
+hint format ["%1 has revived you and a fee of £%2 was taken from your bank account for their services.",_medic,[_reviveCost] call life_fnc_numberText];
 
 closeDialog 0;
 life_deathCamera cameraEffect ["TERMINATE","BACK"];

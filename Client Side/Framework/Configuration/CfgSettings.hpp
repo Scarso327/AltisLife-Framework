@@ -202,7 +202,7 @@ class Life_Settings {
 #include "Config_Weapons.hpp"
 #include "Config_Gather.hpp"
 #include "Config_Process.hpp"
-#include "Config_Housing.hpp"
+#include "CfgHousing.hpp"
 #include "Config_Garages.hpp"
 #include "Config_Loadouts.hpp"
 #include "CfgFactions.hpp"

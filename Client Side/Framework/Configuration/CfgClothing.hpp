@@ -56,19 +56,19 @@ class CfgClothing {
 
 			// Medic Skins
 			class CMO {
-				displayName = "CMO Uniform";
+				displayName = "CMO's Uniform";
 				textures[] = { "Data\Textures\Uniforms\Medic\MedicLevel3.paa" };
 				condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
 			};
 
 			class SMO {
-				displayName = "SMO Uniform";
+				displayName = "SMO's Uniform";
 				textures[] = { "Data\Textures\Uniforms\Medic\MedicLevel2.paa" };
 				condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 			};
 
 			class JMO {
-				displayName = "JMO Uniform";
+				displayName = "JMO's Uniform";
 				textures[] = { "Data\Textures\Uniforms\Medic\MedicLevel1.paa" };
 				condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 			};

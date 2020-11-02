@@ -15,7 +15,7 @@ class CfgFactions {
 				queryIndex = 13;
 			};
 			class SFO {
-				queryIndex = 13;
+				queryIndex = 14;
 			};
 		};
 		class DatabaseInfo {

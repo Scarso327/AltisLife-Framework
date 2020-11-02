@@ -45,7 +45,7 @@ if (life_is_arrested) exitWith {
     hint localize "STR_Jail_Suicide";
     life_is_arrested = false;
     [player,true] spawn life_fnc_jail;
-    [] call SOCK_fnc_updateRequest;
+    [] call ULP_fnc_syncPlayerInfo;
 };
 
 //Johnny law got me but didn't let the EMS revive me, reward them half the bounty.
@@ -71,5 +71,5 @@ if (life_removeWanted) then {
 
 };
 
-[] call SOCK_fnc_updateRequest;
+[] call ULP_fnc_syncPlayerInfo;
 [] call life_fnc_hudUpdate; //Request update of hud.

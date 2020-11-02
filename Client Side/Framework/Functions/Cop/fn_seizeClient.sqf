@@ -46,5 +46,5 @@ if (uniform player in _uniform) then {removeUniform player;};
 if (vest player in _vest) then {removeVest player;};
 if (headgear player in _headgear) then {removeHeadgear player;};
 
-[] call SOCK_fnc_updateRequest;
+[] call ULP_fnc_syncPlayerInfo;
 titleText["Your illegal items have been put into evidence.","PLAIN"];

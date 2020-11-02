@@ -48,7 +48,7 @@ if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
         waitUntil {isNull (findDisplay 3500)};
         _this setVariable ["trunk_in_use",false,true];
         if ((_this isKindOf "Car") || (_this isKindOf "Air") || (_this isKindOf "Ship")) then {
-            [] call SOCK_fnc_updateRequest;
+            [] call ULP_fnc_syncPlayerInfo;
 
             if (life_HC_isActive) then {
                 [_this,2] remoteExecCall ["HC_fnc_vehicleUpdate",HC_Life];

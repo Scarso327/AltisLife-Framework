@@ -35,4 +35,4 @@ player setVariable ["Reviving",nil,true];
 
 [player, uniformContainer player, ((uniformContainer player) getVariable ["texture", ""])] call ULP_fnc_setTextures;
 [] call life_fnc_hudUpdate; //Request update of hud.
-[] call SOCK_fnc_updateRequest;
+[] call ULP_fnc_syncPlayerInfo;

@@ -3,7 +3,6 @@ class Socket_Reciever {
     class SQL_Socket {
         file = "Functions\session";
         class updatePartial {};
-        class updateRequest {};
     };
 };
 

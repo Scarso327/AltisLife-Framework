@@ -71,7 +71,6 @@ HC_MPAllowedFuncs = [
     "hc_fnc_insertvehicle",
     "hc_fnc_queryrequest",
     "hc_fnc_updatepartial",
-    "hc_fnc_updaterequest",
     "hc_fnc_cleanup",
     "hc_fnc_huntingzone",
     "hc_fnc_setplaytime",

@@ -33,7 +33,6 @@ class CfgFunctions
             class numberSafe {};
             class queryRequest {};
             class updatePartial {};
-            class updateRequest {};
             class cleanup {};
             class huntingZone {};
             class receivekeyofServer {};

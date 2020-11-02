@@ -29,7 +29,6 @@ class CfgFunctions {
             class numberSafe {};
             class mresArray {};
             class asyncCall{};
-            class updateRequest{};
             class mresToArray {};
             class insertVehicle {};
             class bool {};

@@ -186,7 +186,6 @@ class Life_Client_Core {
         class numberText {};
         class onFired {};
         class onTakeItem {};
-        class playerSkins {};
         class playerTags {};
         class postNewsBroadcast {};
         class pullOutVeh {};

@@ -64,5 +64,5 @@ player enableFatigue false;
 player enableStamina false;
 player enableAimPrecision false;
 
-[] call life_fnc_playerSkins;
+[player, uniformContainer player, ((uniformContainer player) getVariable ["texture", ""])] call ULP_fnc_setTextures;
 [] call life_fnc_hudSetup;

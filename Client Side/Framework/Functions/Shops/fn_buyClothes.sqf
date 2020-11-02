@@ -21,5 +21,5 @@ CASH = CASH - _price;
 [0] call SOCK_fnc_updatePartial;
 
 life_clothesPurchased = true;
-[] call life_fnc_playerSkins;
+[player, uniformContainer player, ((uniformContainer player) getVariable ["texture", ""])] call ULP_fnc_setTextures;
 closeDialog 0;

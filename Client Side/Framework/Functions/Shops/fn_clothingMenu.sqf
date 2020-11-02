@@ -50,7 +50,7 @@ disableSerialization;
 
 ctrlSetText [3103,localize _shopTitle];
 
-(findDisplay 3100) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {closeDialog 0; [] call life_fnc_playerSkins;}"]; //Fix Custom Skin after ESC
+(findDisplay 3100) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {closeDialog 0; [player, uniformContainer player, ((uniformContainer player) getVariable [""texture"", """"])] call ULP_fnc_setTextures; }"]; //Fix Custom Skin after ESC
 
 sliderSetRange [3107, 0, 360];
 
@@ -180,7 +180,7 @@ _filter lbAdd localize "STR_Shop_UI_Backpack";
 
 _filter lbSetCurSel 0;
 
-[] call life_fnc_playerSkins;
+[player, uniformContainer player, ((uniformContainer player) getVariable ["texture", ""])] call ULP_fnc_setTextures;
 
 waitUntil {isNull (findDisplay 3100)};
 if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 0) then {
@@ -253,7 +253,7 @@ if (isNil "life_clothesPurchased") exitWith {
             };
         };
     };
-    [] call life_fnc_playerSkins;
+    [player, uniformContainer player, ((uniformContainer player) getVariable ["texture", ""])] call ULP_fnc_setTextures;
 };
 life_clothesPurchased = nil;
 

@@ -80,7 +80,7 @@ class Life_Clothing {
         class CloseButtonKey: Life_RscButtonMenu {
             idc = -1;
             text = "Close";
-            onButtonClick = "closeDialog 0; [] call life_fnc_playerSkins;";
+            onButtonClick = "closeDialog 0; [player, uniformContainer player, ((uniformContainer player) getVariable [""texture"", """"])] call ULP_fnc_setTextures;";
             x = 0.157 * safezoneW + safezoneX;
             y = 0.489992 * safezoneH + safezoneY;
             w = (6.25 / 40);

@@ -21,6 +21,11 @@ class ULP_Functions {
 		class hasAccess {};
 	};
 
+	class Clothing {
+		file = "Functions\Clothing";
+		class setTextures {};
+	};
+
 	class Player {
 		file = "Functions\Player";
 		class loadGear {};

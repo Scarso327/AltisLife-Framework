@@ -15,10 +15,14 @@ if (_itemArray isEqualTo []) exitWith { [] call life_fnc_startLoadout };
 
 _itemArray params [
     ["_pItems", []],
-    ["_yItems", []]
+    ["_yItems", []],
+    ["_textures", []]
 ];
 
 player setUnitLoadout _pItems;
+
+[player, uniformContainer player, _textures select 0] call ULP_fnc_setTextures;
+[unitBackpack player, backpackContainer player, _textures select 1, true] call ULP_fnc_setTextures;
 
 life_maxWeight = ([LIFE_SETTINGS(getNumber,"total_maxWeight"), LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",(backpack player),"maximumload") / 4)] select ((backpack player) isEqualTo ""));
 

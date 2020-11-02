@@ -5,12 +5,12 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_initialisation";
 
+waitUntil { !isNull player && { player isEqualTo player } && { !isNull (findDisplay 46) } };
+
 private _startTime = diag_tickTime;
 ["Initialisation Started"] call ULP_fnc_logIt;
 
 [] call ULP_fnc_initVars;
-
-waitUntil { !isNull player && { player isEqualTo player } };
 
 player allowDammage false;
 
@@ -41,8 +41,6 @@ if (isClass (_factionCfg >> "Whitelisting")) then {
 ULP_Paycheck = [] call ULP_fnc_calcPaycheck;
 CONSTVAR(ULP_Paycheck);
 [] execFSM "Functions\Paycheck\pay.fsm";
-
-waitUntil { !isNull (findDisplay 46) }; // Wasn't always set?? Arma??
 
 ["Starting Input Handler"] call ULP_fnc_logIt;
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];

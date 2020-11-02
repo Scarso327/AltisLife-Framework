@@ -228,3 +228,4 @@ class Life_Settings {
 #include "Config_Loadouts.hpp"
 #include "CfgFactions.hpp"
 #include "CfgSpawns.hpp"
+#include "CfgClothing.hpp"

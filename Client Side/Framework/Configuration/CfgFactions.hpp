@@ -31,10 +31,13 @@ class CfgFactions {
 			class Main {
 				queryIndex = 12;
 			};
+			class TAA {
+				queryIndex = 13;
+			};
 		};
 		class DatabaseInfo {
 			queryPrefix = "med_";
-			customQuery = ", med_blacklisted, mediclevel";
+			customQuery = ", med_blacklisted, mediclevel, taalevel";
 			timeIndex = 1;
 		};
 	};

@@ -29,7 +29,7 @@ class pInteraction_Menu {
         class Title: life_RscTitle    {
             colorBackground[] = {0,0,0,0};
             idc = 37401;
-            text = "$STR_pInAct_Title";
+            text = "Player Interaction Menu";
             x = BGX;
             y = BGY;
             w = BGW;

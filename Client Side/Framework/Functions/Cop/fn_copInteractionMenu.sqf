@@ -48,39 +48,39 @@ if (player getVariable ["isEscorting",false]) then {
 };
 
 //Set Unrestrain Button
-_Btn1 ctrlSetText localize "STR_pInAct_Unrestrain";
+_Btn1 ctrlSetText "Unrestrain";
 _Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
 
 //Set Check Licenses Button
-_Btn2 ctrlSetText localize "STR_pInAct_checkLicenses";
+_Btn2 ctrlSetText "Check Licenses";
 _Btn2 buttonSetAction "[player] remoteExecCall [""life_fnc_licenseCheck"",life_pInact_curTarget]; closeDialog 0;";
 
 //Set Search Button
-_Btn3 ctrlSetText localize "STR_pInAct_SearchPlayer";
+_Btn3 ctrlSetText "Search";
 _Btn3 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_searchAction; closeDialog 0;";
 
 //Set Escort Button
 if (player getVariable ["isEscorting",false]) then {
-    _Btn4 ctrlSetText localize "STR_pInAct_StopEscort";
+    _Btn4 ctrlSetText "Stop Escorting";
     _Btn4 buttonSetAction "[] call life_fnc_stopEscorting; closeDialog 0;";
 } else {
-    _Btn4 ctrlSetText localize "STR_pInAct_Escort";
+    _Btn4 ctrlSetText " Start Escort";
     _Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
 };
 
 //Set Ticket Button
-_Btn5 ctrlSetText localize "STR_pInAct_TicketBtn";
+_Btn5 ctrlSetText "Issue Ticket";
 _Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_ticketAction;";
 
-_Btn6 ctrlSetText localize "STR_pInAct_Arrest";
+_Btn6 ctrlSetText "Issue Arrest";
 _Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction; closeDialog 0;";
 _Btn6 ctrlEnable false;
 
-_Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
+_Btn7 ctrlSetText "Put In Vehicle";
 _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar; closeDialog 0;";
 
 //SeizeWeapons Button
-_Btn8 ctrlSetText localize "STR_pInAct_Seize";
+_Btn8 ctrlSetText "Seize Contraband";
 _Btn8 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_seizePlayerAction; closeDialog 0;";
 
 if (FETCH_CONST(Police_Main) < _seizeRank) then {_Btn8 ctrlEnable false;};

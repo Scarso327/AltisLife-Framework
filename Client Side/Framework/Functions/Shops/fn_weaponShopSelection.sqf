@@ -22,15 +22,15 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
     _itemArray append M_CONFIG(getArray,"WeaponShops",_shop,"accs");
     _item = [_item,_itemArray] call TON_fnc_index;
     _price = ((_itemArray select _item) select 3);
-    _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#8cff9b'>$%1</t></t>",[(_price)] call life_fnc_numberText];
+    _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#8cff9b'>£%1</t></t>",[(_price)] call life_fnc_numberText];
     _control lbSetValue[_index,_price];
 } else {
     _price = _control lbValue _index;
     _item = CONTROL_DATAI(_control,_index);
     if (_price > CASH) then {
-        _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#ff0000'>$%1</t><br/>You lack: <t color='#8cff9b'>$%2</t></t>",[(_price)] call life_fnc_numberText,[(_price - CASH)] call life_fnc_numberText];
+        _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#ff0000'>£%1</t><br/>You lack: <t color='#8cff9b'>£%2</t></t>",[(_price)] call life_fnc_numberText,[(_price - CASH)] call life_fnc_numberText];
     } else {
-        _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#8cff9b'>$%1</t></t>",[(_price)] call life_fnc_numberText];
+        _priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#8cff9b'>£%1</t></t>",[(_price)] call life_fnc_numberText];
     };
     if ((uiNamespace getVariable ["Weapon_Magazine",0]) isEqualTo 0 && (uiNamespace getVariable ["Weapon_Accessories",0]) isEqualTo 0) then {
             if (isClass (configFile >> "CfgWeapons" >> _item)) then {

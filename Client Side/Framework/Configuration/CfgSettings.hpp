@@ -199,7 +199,7 @@ class Life_Settings {
 #include "CfgLicenses.hpp"
 #include "Config_Vehicles.hpp"
 #include "Config_vItems.hpp"
-#include "Config_Weapons.hpp"
+#include "CfgWeapons.hpp"
 #include "Config_Gather.hpp"
 #include "Config_Process.hpp"
 #include "CfgProperty.hpp"

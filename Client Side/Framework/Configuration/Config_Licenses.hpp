@@ -1,190 +1,239 @@
-/*
-*    class:
-*        variable = Variable Name
-*        displayName = License Name
-*        price = License Price
-*        illegal = Illegal License
-*        side = side indicator
-*/
 class Licenses {
-    //Civilian Licenses
-    class driver {
-        variable = "driver";
-        displayName = "STR_License_Driver";
-        price = 500;
-        illegal = false;
-        side = "civ";
-    };
-
-    class boat {
-        variable = "boat";
-        displayName = "STR_License_Boat";
-        price = 1000;
-        illegal = false;
-        side = "civ";
-    };
-
-    class pilot {
-        variable = "pilot";
-        displayName = "STR_License_Pilot";
-        price = 25000;
+    // Driver and Vehicle Licensing Agency
+    class driving {
+        variable = "driving";
+        displayName = "Driving Licence";
+        price = 900;
         illegal = false;
         side = "civ";
     };
 
     class trucking {
         variable = "trucking";
-        displayName = "STR_License_Truck";
-        price = 20000;
+        displayName = "Trucking Licence";
+        price = 24000;
         illegal = false;
         side = "civ";
     };
 
-    class gun {
-        variable = "gun";
-        displayName = "STR_License_Firearm";
-        price = 10000;
+    class piloting {
+        variable = "piloting";
+        displayName = "Piloting Licence";
+        price = 47500;
         illegal = false;
         side = "civ";
     };
 
-    class dive {
-        variable = "dive";
-        displayName = "STR_License_Diving";
-        price = 2000;
+    class boating {
+        variable = "boating";
+        displayName = "Boating Licence";
+        price = 6700;
         illegal = false;
         side = "civ";
     };
 
-    class home {
-        variable = "home";
-        displayName = "STR_License_Home";
-        price = 75000;
+    class diving {
+        variable = "diving";
+        displayName = "Diving Licence";
+        price = 17000;
         illegal = false;
         side = "civ";
     };
 
-    //Processing Licenses
-    class oil {
-        variable = "oil";
-        displayName = "STR_License_Oil";
-        price = 10000;
+    class go_karting {
+        variable = "go_karting";
+        displayName = "Go-Karting Licence";
+        price = 450;
         illegal = false;
         side = "civ";
     };
 
-    class diamond {
-        variable = "diamond";
-        displayName = "STR_License_Diamond";
-        price = 35000;
+    // Property Agents
+    class homeowners {
+        variable = "homeowners";
+        displayName = "Homeowner's Approval";
+        price = 500000;
         illegal = false;
         side = "civ";
     };
 
-    class salt {
-        variable = "salt";
-        displayName = "STR_License_Salt";
-        price = 12000;
+    // Handgun Store
+    class firearms {
+        variable = "firearms";
+        displayName = "Firearms Certification";
+        price = 32500;
         illegal = false;
         side = "civ";
     };
 
-    class sand {
-        variable = "sand";
-        displayName = "STR_License_Sand";
-        price = 14500;
+    // Item Processing Sites
+    class fish {
+        variable = "fish";
+        displayName = "Fish Processing Licence";
+        price = 500;
         illegal = false;
         side = "civ";
     };
 
-    class iron {
-        variable = "iron";
-        displayName = "STR_License_Iron";
-        price = 9500;
+    class lumber {
+        variable = "lumber";
+        displayName = "Lumber Processing Licence";
+        price = 1200;
+        illegal = false;
+        side = "civ";
+    };
+
+    class schnapps {
+        variable = "schnapps";
+        displayName = "Schnapps Processing Licence";
+        price = 1700;
+        illegal = false;
+        side = "civ";
+    };
+
+    class tin {
+        variable = "tin";
+        displayName = "Tin Processing Licence";
+        price = 4500;
         illegal = false;
         side = "civ";
     };
 
     class copper {
         variable = "copper";
-        displayName = "STR_License_Copper";
-        price = 8000;
+        displayName = "Copper Processing Licence";
+        price = 7500;
         illegal = false;
         side = "civ";
     };
 
-    class cement {
-        variable = "cement";
-        displayName = "STR_License_Cement";
-        price = 6500;
+    class silver {
+        variable = "silver";
+        displayName = "Silver Processing Licence";
+        price = 11000;
         illegal = false;
         side = "civ";
     };
 
-    class medmarijuana {
-        variable = "medmarijuana";
-        displayName = "STR_License_Medmarijuana";
+    class iron {
+        variable = "iron";
+        displayName = "Iron Processing Licence";
+        price = 18000;
+        illegal = false;
+        side = "civ";
+    };
+
+    class rock {
+        variable = "rock";
+        displayName = "Rock Processing Licence";
         price = 15000;
         illegal = false;
         side = "civ";
     };
 
-    //Illegal Licenses
-    class cocaine {
-        variable = "cocaine";
-        displayName = "STR_License_Cocaine";
+    class platinum {
+        variable = "platinum";
+        displayName = "Platinum Processing Licence";
         price = 30000;
+        illegal = false;
+        side = "civ";
+    };
+
+    class oil {
+        variable = "oil";
+        displayName = "Oil Processing Licence";
+        price = 75000;
+        illegal = false;
+        side = "civ";
+    };
+
+    class iridium {
+        variable = "iridium";
+        displayName = "Iridium Processing Licence";
+        price = 125000;
+        illegal = false;
+        side = "civ";
+    };
+
+    class gem {
+        variable = "gem";
+        displayName = "Gem Processing Licence";
+        price = 350000;
+        illegal = false;
+        side = "civ";
+    };
+
+    class marijuana {
+        variable = "marijuana";
+        displayName = "Marijuana Processing Licence";
+        price = 45000;
         illegal = true;
         side = "civ";
     };
 
     class heroin {
         variable = "heroin";
-        displayName = "STR_License_Heroin";
-        price = 25000;
+        displayName = "Heroin Processing Licence";
+        price = 87500;
         illegal = true;
         side = "civ";
     };
 
-    class marijuana {
-        variable = "marijuana";
-        displayName = "STR_License_Marijuana";
-        price = 19500;
+    class cocaine {
+        variable = "cocaine";
+        displayName = "Cocaine Processing Licence";
+        price = 11600;
         illegal = true;
         side = "civ";
     };
 
-    class rebel {
-        variable = "rebel";
-        displayName = "STR_License_Rebel";
-        price = 75000;
+    class methamphetamine {
+        variable = "methamphetamine";
+        displayName = "Methamphetamine Processing Licence";
+        price = 145000;
         illegal = true;
         side = "civ";
     };
 
-    //Cop Licenses
-    class cAir {
-        variable = "cAir";
-        displayName = "STR_License_Pilot";
-        price = 15000;
-        illegal = false;
-        side = "cop";
+    class drug_refining {
+        variable = "drug_refining";
+        displayName = "Drub Refining Licence";
+        price = 600000;
+        illegal = true;
+        side = "civ";
     };
 
-    class cg {
-        variable = "cg";
-        displayName = "STR_License_CG";
-        price = 8000;
-        illegal = false;
-        side = "cop";
+    // Syndikat Outpost
+    class syndikat {
+        variable = "syndikat";
+        displayName = "Syndikat Membership";
+        price = 1000000;
+        illegal = true;
+        side = "civ";
     };
 
-    //Medic Licenses
-    class mAir {
-        variable = "mAir";
-        displayName = "STR_License_Pilot";
-        price = 15000;
+    // Civilian Jobs
+    class so1 {
+        variable = "so1";
+        displayName = "SO1 Protection Officer";
+        price = 0;
         illegal = false;
-        side = "med";
+        side = "civ";
+    };
+
+    class idap {
+        variable = "idap";
+        displayName = "IDAP Membership";
+        price = 300000;
+        illegal = false;
+        side = "civ";
+    };
+
+    class aan {
+        variable = "aan";
+        displayName = "AAN Membership";
+        price = 450000;
+        illegal = false;
+        side = "civ";
     };
 };

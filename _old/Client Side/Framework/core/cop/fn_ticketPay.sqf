@@ -41,7 +41,7 @@ if (life_HC_isActive) then {
     [getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
 };
 
-[0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
+[0,"%1 paid the ticket of £%2",true,[profileName,[life_ticket_val] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
 closeDialog 0;
 [1,"%1 paid the ticket.",true,[profileName]] remoteExecCall ["life_fnc_broadcast",life_ticket_cop];
 [life_ticket_val,player,life_ticket_cop] remoteExecCall ["life_fnc_ticketPaid",life_ticket_cop];

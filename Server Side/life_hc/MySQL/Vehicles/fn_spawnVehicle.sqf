@@ -138,7 +138,7 @@ if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
         } count ["NameCityCapital", "NameCity", "NameVillage"];
  
         _location = text _location;
-        [1,"STR_NOTF_BlackListedVehicle",true,[_location,_name]] remoteExecCall ["life_fnc_broadcast",west];
+        [1,"%2 got back a blacklisted vehicle near %1.",true,[_location,_name]] remoteExecCall ["life_fnc_broadcast",west];
 
         _query = format ["UPDATE vehicles SET blacklist='0' WHERE id='%1' AND pid='%2'",_vid,_pid];
         [_query,1] call HC_fnc_asyncCall; 

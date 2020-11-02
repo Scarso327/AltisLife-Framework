@@ -16,7 +16,7 @@ _uid = (_house getVariable "house_owner") select 0;
 if (!([_uid] call life_fnc_isUIDActive)) exitWith {hint "This person is not online there for you cannot raid their house!"};
 
 _door = [_house] call life_fnc_nearestDoor;
-if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"};
+if (_door isEqualTo 0) exitWith {hint "You are not near a door!"};
 if ((_house getVariable [format ["bis_disabled_Door_%1",_door],0]) isEqualTo 0) exitWith {hint "The door is already unlocked!"};
 
 life_action_inUse = true;

@@ -20,7 +20,7 @@ private _pos = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_t
 
 private _dome = nearestObject [_pos,"Land_Dome_Big_F"];
 
-if (!isPiPEnabled) exitWith {hint localize "STR_Cop_EnablePiP";};
+if (!isPiPEnabled) exitWith {hint "You need to enable Picture in Picture (PiP) through your video settings to use this!";};
 if (isNil "life_fed_scam") then {
     life_fed_scam = "camera" camCreate [0,0,0];
     life_fed_scam camSetFov 0.5;

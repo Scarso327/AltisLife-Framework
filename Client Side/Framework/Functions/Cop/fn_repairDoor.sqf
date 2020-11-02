@@ -21,7 +21,7 @@ for "_i" from 1 to _doors do {
         if (player distance _worldSpace < 5) exitWith {_door = _i;};
 };
 
-if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
+if (_door isEqualTo 0) exitWith {hint "You are not near a door!"}; //Not near a door to be broken into.
 _doorN = _building getVariable [format ["bis_disabled_Door_%1",_door],0];
 if (_doorN isEqualTo 1) exitWith {hint "The door is already locked!"};
 life_action_inUse = true;
@@ -29,7 +29,7 @@ life_action_inUse = true;
 closeDialog 0;
 //Setup the progress bar
 disableSerialization;
-_title = localize "STR_Cop_RepairingDoor";
+_title = "Repairing Door...";
 "progressBar" cutRsc ["life_progress","PLAIN"];
 _ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;

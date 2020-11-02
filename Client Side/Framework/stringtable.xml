@@ -1086,20 +1086,6 @@
             <Original>You got to far away from the body.</Original>
         </Key>
     </Package>
-    <Package name="Federal_Reserve">
-        <Key ID="STR_NOTF_FRRobbery_fail">
-            <Original>The robbery has failed due to unknown reasons</Original>
-        </Key>
-        <Key ID="STR_NOTF_FRRobbery_Success">
-            <Original>£%1 was stolen from the robbery on the federal reserve</Original>
-        </Key>
-        <Key ID="STR_FEDR_VInUse">
-            <Original>This vault is already being robbed by someone else</Original>
-        </Key>
-        <Key ID="STR_FEDR_VRecently">
-            <Original>This vault was already robbed recently</Original>
-        </Key>
-    </Package>
     <Package name="Shop_Strings">
         <Key ID="STR_Shop_ATMRobbed">
             <Original>Because you robbed the bank you can't use the ATM for %1 minutes.</Original>

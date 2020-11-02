@@ -28,7 +28,7 @@ private _list = ["LandVehicle", "Ship", "Air"];
     if (_containerType in ["Box_IND_Grenades_F", "B_supplyCrate_F"]) exitWith {
         private _house = nearestObject [player, "House"];
         if (!(_house in life_vehicles) && {_house getVariable ["locked",true]}) exitWith {
-            hint localize "STR_House_ContainerDeny";
+            hint "You are not allowed to access this storage container without the owner opening it.";
             true breakOut "main";
         };
     };

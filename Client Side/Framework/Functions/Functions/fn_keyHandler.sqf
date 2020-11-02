@@ -179,7 +179,7 @@ switch (_code) do {
                 if (!(isNil "_list")) then {
                     _house = nearestObject [(ASLtoATL (getPosASL _list)), "House"];
                     if (_house getVariable ["locked", false]) then {
-                        hint localize "STR_House_ContainerDeny";
+                        hint "You are not allowed to access this storage container without the owner opening it.";
                     } else {
                         [_list] spawn life_fnc_openInventory;
                     };
@@ -279,17 +279,17 @@ switch (_code) do {
             if (_veh isKindOf "House_F" && {playerSide isEqualTo civilian}) then {
                 if (_veh in life_vehicles && {player distance _veh < 20}) then {
                     private _door = [_veh] call life_fnc_nearestDoor;
-                    if (_door isEqualTo 0) exitWith {hint localize "STR_House_Door_NotNear"};
+                    if (_door isEqualTo 0) exitWith {hint "You are not near a door!"};
                     private _locked = _veh getVariable [format ["bis_disabled_Door_%1",_door],0];
 
                     if (_locked isEqualTo 0) then {
                         _veh setVariable [format ["bis_disabled_Door_%1",_door],1,true];
                         _veh animateSource [format ["Door_%1_source", _door], 0];
-                        systemChat localize "STR_House_Door_Lock";
+                        systemChat "You have locked the door.";
                     } else {
                         _veh setVariable [format ["bis_disabled_Door_%1",_door],0,true];
                         _veh animateSource [format ["Door_%1_source", _door], 1];
-                        systemChat localize "STR_House_Door_Unlock";
+                        systemChat "You have unlocked the door.";
                     };
                 };
             } else {

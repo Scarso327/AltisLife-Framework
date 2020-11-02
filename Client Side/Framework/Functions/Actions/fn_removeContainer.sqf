@@ -16,7 +16,7 @@ _containers = _house getVariable ["containers",[]];
 closeDialog 0;
 
 _action = [
-    format [localize "STR_House_DeleteContainerMSG"],"Remove Container","Remove","Cancel"
+    format ["Are you sure you want to remove it?"],"Remove Container","Remove","Cancel"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {

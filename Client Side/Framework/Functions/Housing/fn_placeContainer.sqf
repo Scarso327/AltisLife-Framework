@@ -59,13 +59,13 @@ deleteVehicle _container;
 [true,_type,1] call life_fnc_handleInv;
 
 if (_message isEqualTo 0 || _message isEqualTo 1) then {
-    hint localize "STR_House_Container_House_Near";
+    hint "There are no houses near you.";
 };
 if (_message isEqualTo 2) then {
-    hint localize "STR_House_Container_House_Near_Owner";
+    hint "You are not the owner of the house.";
 };
 if (_message isEqualTo 3) then {
-    hint localize "STR_House_Container_Floating";
+    hint "The storage box is over the stairs!";
 };
 if (_message isEqualTo 4) then {
     hint localize "STR_ISTR_Box_HouseFull";

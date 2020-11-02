@@ -10,19 +10,19 @@ private ["_house","_uid","_cpRate","_cP","_title","_titleText","_ui","_houseInv"
 _house = param [0,objNull,[objNull]];
 
 if (isNull _house || !(_house isKindOf "House_F")) exitWith {};
-if (isNil {(_house getVariable "house_owner")}) exitWith {hint localize "STR_House_Raid_NoOwner"};
+if (isNil {(_house getVariable "house_owner")}) exitWith {hint "This property doesn't belong to anyone."};
 
 _uid = ((_house getVariable "house_owner") select 0);
 
-if (!([_uid] call life_fnc_isUIDActive)) exitWith {hint localize "STR_House_Raid_OwnerOff"};
+if (!([_uid] call life_fnc_isUIDActive)) exitWith {hint "This person is not online there for you cannot raid their house!"};
 
 _houseInv = _house getVariable ["Trunk",[[],0]];
-if (_houseInv isEqualTo [[],0]) exitWith {hint localize "STR_House_Raid_Nothing"};
+if (_houseInv isEqualTo [[],0]) exitWith {hint "There is nothing in this property."};
 life_action_inUse = true;
 
 //Setup the progress bar
 disableSerialization;
-_title = localize "STR_House_Raid_Searching";
+_title = "Searching Property...";
 "progressBar" cutRsc ["life_progress","PLAIN"];
 _ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
@@ -47,7 +47,7 @@ for "_i" from 0 to 1 step 0 do {
 
 //Kill the UI display and check for various states
 "progressBar" cutText ["","PLAIN"];
-if (player distance _house > 13) exitWith {life_action_inUse = false; titleText[localize "STR_House_Raid_TooFar","PLAIN"]};
+if (player distance _house > 13) exitWith {life_action_inUse = false; titleText["You went too far away from the property!","PLAIN"]};
 if (!alive player) exitWith {life_action_inUse = false;};
 life_action_inUse = false;
 
@@ -68,7 +68,7 @@ _value = 0;
 } forEach (_houseInv select 0);
 
 if (_value > 0) then {
-    [0,"STR_House_Raid_Successful",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+    [0,"A property was raided and had £%1 worth of contraband.",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
     BANK = BANK + round(_value / 2);
     [1] call SOCK_fnc_updatePartial;
 
@@ -80,5 +80,5 @@ if (_value > 0) then {
         [_house] remoteExecCall ["TON_fnc_updateHouseTrunk",RSERV];
     };
 } else {
-    hint localize "STR_House_Raid_NoIllegal";
+    hint "Nothing illegal in this property.";
 };

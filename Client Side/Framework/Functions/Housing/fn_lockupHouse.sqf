@@ -14,7 +14,7 @@ _numberOfDoors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _house), "numberO
 
 if (_numberOfDoors isEqualTo -1 || _numberOfDoors isEqualTo 0) exitWith {}; //MEH
 
-titleText [localize "STR_House_LockingUp","PLAIN"];
+titleText ["Locking up house please wait...","PLAIN"];
 sleep 3;
 
 for "_i" from 1 to _numberOfDoors do {
@@ -23,4 +23,4 @@ for "_i" from 1 to _numberOfDoors do {
 };
 
 _house setVariable ["locked",true,true];
-titleText[localize "STR_House_LockedUp","PLAIN"];
+titleText["House has been locked up.","PLAIN"];

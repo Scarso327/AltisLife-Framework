@@ -16,14 +16,14 @@ _uid = getPlayerUID player;
 
 if (isNull _house) exitWith {};
 if (!(_house isKindOf "House_F")) exitWith {};
-if (isNil {_house getVariable "house_owner"}) exitWith {hint localize "STR_House_noOwner";};
+if (isNil {_house getVariable "house_owner"}) exitWith {hint "There is no owner for this property.";};
 closeDialog 0;
 
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;
 if (count _houseCfg isEqualTo 0) exitWith {};
 
 _action = [
-    format [localize "STR_House_SellHouseMSG",
+    format ["Are you sure you want to sell your property? It will sell for: &lt;t color='#8cff9b'&gt;£%1&lt;/t&gt;",
     (round((_houseCfg select 0)/2)) call life_fnc_numberText,
     (_houseCfg select 1)],"Sell Property","Sell","Cancel"
 ] call BIS_fnc_guiMessage;

@@ -23,7 +23,7 @@ for "_i" from 1 to _doors do {
 
 if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
 _doorN = _building getVariable [format ["bis_disabled_Door_%1",_door],0];
-if (_doorN isEqualTo 1) exitWith {hint localize "STR_House_FedDoor_Locked"};
+if (_doorN isEqualTo 1) exitWith {hint "The door is already locked!"};
 life_action_inUse = true;
 
 closeDialog 0;

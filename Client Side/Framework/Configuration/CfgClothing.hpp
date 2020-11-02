@@ -67,7 +67,7 @@ class CfgClothing {
 				condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 			};
 
-			class SMO {
+			class JMO {
 				displayName = "JMO Uniform";
 				textures[] = { "Data\Textures\Uniforms\Medic\MedicLevel1.paa" };
 				condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";

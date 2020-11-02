@@ -15,11 +15,11 @@ _list = _dialog displayCtrl 2701;
 _plist = _dialog displayCtrl 2702;
 
 _sel = lbCurSel _list;
-if ((_list lbData _sel) isEqualTo "") exitWith {hint localize "STR_NOTF_didNotSelectVehicle";};
+if ((_list lbData _sel) isEqualTo "") exitWith {hint "You did not select a vehicle.";};
 _vehicle = _list lbData _sel;
 _vehicle = life_vehicles select parseNumber(_vehicle);
 
-if ((lbCurSel 2702) isEqualTo -1) exitWith {hint localize "STR_NOTF_didNotSelectPlayer";};
+if ((lbCurSel 2702) isEqualTo -1) exitWith {hint "You did not select a player.";};
 _sel = lbCurSel _plist;
 _unit = _plist lbData _sel;
 _unit = call compile format ["%1", _unit];
@@ -34,5 +34,5 @@ if (_index isEqualTo -1) then  {
     _vehicle setVariable ["vehicle_info_owners",_owners,true];
 };
 
-hint format [localize "STR_NOTF_givenKeysTo",_unit getVariable ["realname",name _unit],typeOf _vehicle];
+hint format ["You have given %1 keys to your %2.",_unit getVariable ["realname",name _unit],typeOf _vehicle];
 [_vehicle,_unit,profileName] remoteExecCAll ["TON_fnc_clientGetKey",_unit];

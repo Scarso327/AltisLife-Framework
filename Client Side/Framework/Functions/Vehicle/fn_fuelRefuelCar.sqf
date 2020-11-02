@@ -64,7 +64,7 @@ if ((BANK - (_fueltoput * _fuelCost)) > 0) then {
     [0] call SOCK_fnc_updatePartial;
     life_is_processing = false;
 } else {
-    hint localize "STR_NOTF_NotEnoughMoney";
+    hint "You don't have that much money!";
 };
 
 closeDialog 0;

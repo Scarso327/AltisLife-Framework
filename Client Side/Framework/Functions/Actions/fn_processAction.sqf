@@ -44,7 +44,7 @@ _totalConversions = [];
     _totalConversions pushBack (floor (_var/(_x select 1)));
 } forEach _oldItem;
 
-if (_exit) exitWith {life_is_processing = false; hint localize "STR_NOTF_NotEnoughItemProcess"; life_action_inUse = false;};
+if (_exit) exitWith {life_is_processing = false; hint "You don't have enough items!"; life_action_inUse = false;};
 
 if (_vendor in [mari_processor,coke_processor,heroin_processor]) then {
     _hasLicense = true;
@@ -113,7 +113,7 @@ if (_hasLicense) then {
     } count _newItem;
 
     "progressBar" cutText ["","PLAIN"];
-    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
+    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint "You have processed your item(s)!";} else {hint localize "STR_Process_Partial";};
     life_is_processing = false; life_action_inUse = false;
 } else {
     if (CASH < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
@@ -139,7 +139,7 @@ if (_hasLicense) then {
     } count _newItem;
 
     "progressBar" cutText ["","PLAIN"];
-    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
+    if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint "You have processed your item(s)!";} else {hint localize "STR_Process_Partial";};
     CASH = CASH - _cost;
     [0] call SOCK_fnc_updatePartial;
     life_is_processing = false;

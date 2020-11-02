@@ -16,7 +16,7 @@ _vid = lbValue[2802,(lbCurSel 2802)];
 _pid = getPlayerUID player;
 
 if (isNil "_vehicle") exitWith {hint "The selection had a error..."};
-if ((time - life_action_delay) < 1.5) exitWith {hint localize "STR_NOTF_ActionDelay";};
+if ((time - life_action_delay) < 1.5) exitWith {hint "You're doing it too fast!";};
 if (!isClass (missionConfigFile >> "LifeCfgVehicles" >> _vehicleLife)) then {
     _vehicleLife = "Default"; //Use Default class if it doesn't exist
     diag_log format ["%1: LifeCfgVehicles class doesn't exist",_vehicle];

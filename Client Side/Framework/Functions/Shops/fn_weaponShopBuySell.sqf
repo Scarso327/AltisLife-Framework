@@ -17,7 +17,7 @@ _bad = "";
 
 if ((_itemInfo select 6) != "CfgVehicles") then {
     if ((_itemInfo select 4) in [4096,131072]) then {
-        if (!(player canAdd _item) && (uiNamespace getVariable ["Weapon_Shop_Filter",0]) != 1) exitWith {_bad = (localize "STR_NOTF_NoRoom")};
+        if (!(player canAdd _item) && (uiNamespace getVariable ["Weapon_Shop_Filter",0]) != 1) exitWith {_bad = ("You don't have enough room for that item.")};
     };
 };
 
@@ -58,13 +58,13 @@ if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
 
 
         } else {
-            if (_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+            if (_price > CASH) exitWith {hint "You don't have that much money!"};
             hint parseText format ["You bought a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt;",_itemInfo select 1,[_price] call life_fnc_numberText];
             CASH = CASH - _price;
             [_item,true] call life_fnc_handleItem;
         };
     } else {
-        if (_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+        if (_price > CASH) exitWith {hint "You don't have that much money!"};
         hint parseText format ["You bought a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt;",_itemInfo select 1,[_price] call life_fnc_numberText];
         CASH = CASH - _price;
         [_item,true] call life_fnc_handleItem;

@@ -10,7 +10,7 @@
 params [["_mode",true,[true]]];
 
 if ((lbCurSel 2302) isEqualTo -1) exitWith {hint "You did not pick a vehicle!";closeDialog 0;};
-if ((time - life_action_delay) < 0.2) exitWith {hint localize "STR_NOTF_ActionDelay";};
+if ((time - life_action_delay) < 0.2) exitWith {hint "You're doing it too fast!";};
 life_action_delay = time;
 
 private _className = lbData[2302,(lbCurSel 2302)];

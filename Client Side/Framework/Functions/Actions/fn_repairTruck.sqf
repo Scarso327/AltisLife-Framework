@@ -14,7 +14,7 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
     if (life_inv_toolkit > 0) then {
         life_action_inUse = true;
         _displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _veh),"displayName");
-        _upp = format [localize "STR_NOTF_Repairing",_displayName];
+        _upp = format ["Repairing %1",_displayName];
 
         //Setup our progress bar.
         disableSerialization;
@@ -47,7 +47,7 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
         "progressBar" cutText ["","PLAIN"];
         player playActionNow "stop";
         if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled","PLAIN"]; life_action_inUse = false;};
-        if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"];};
+        if !(isNull objectParent player) exitWith {titleText["You can't do that from inside the vehicle!","PLAIN"];};
 
         _sideRepairArray = LIFE_SETTINGS(getArray,"vehicle_infiniteRepair");
 
@@ -66,6 +66,6 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
         };
 
         _veh setDamage 0;
-        titleText[localize "STR_NOTF_RepairedVehicle","PLAIN"];
+        titleText["You have repaired that vehicle.","PLAIN"];
     };
 };

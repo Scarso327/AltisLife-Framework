@@ -70,19 +70,19 @@ class playerHUD {
 
     class Life_RscText_HUDFood: Life_RscText_HUDCommon {
         idc = 1200;
-        text = "$STR_HUD_Food";
+        text = "Food";
         x = 0.418981 * safezoneW + safezoneX;
     };
 
     class Life_RscText_HUDHealth: Life_RscText_HUDCommon {
         idc = 1201;
-        text = "$STR_HUD_Health";
+        text = "Health";
         x = 0.476852 * safezoneW + safezoneX;
     };
 
     class Life_RscText_HUDWater: Life_RscText_HUDCommon {
         idc = 1202;
-        text = "$STR_HUD_Water";
+        text = "Water";
         x = 0.534723 * safezoneW + safezoneX;
     };
 };

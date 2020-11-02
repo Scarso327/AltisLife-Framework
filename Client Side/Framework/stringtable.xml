@@ -886,17 +886,6 @@
             <Original>There is no owner for this house.</Original>
         </Key>
     </Package>
-    <Package name="HUD">
-        <Key ID="STR_HUD_Food">
-            <Original>Food</Original>
-        </Key>
-        <Key ID="STR_HUD_Health">
-            <Original>Health</Original>
-        </Key>
-        <Key ID="STR_HUD_Water">
-            <Original>Water</Original>
-        </Key>
-    </Package>
     <Package name="More_Item_Strings">
         <Key ID="STR_ISTR_Blast_VaultOnly">
             <Original>This can only be used on a vault.</Original>

@@ -2,6 +2,7 @@ class CfgClothing {
 	class U_Rangemaster {
 		price = 1200;
 		class Textures {
+			// Police Skins
 			class CMDR {
 				displayName = "Commander's Uniform";
 				textures[] = { "Data\Textures\Uniforms\Police\CMDR.paa" };
@@ -51,6 +52,25 @@ class CfgClothing {
 				displayName = "PCSO's Uniform";
 				textures[] = { "Data\Textures\Uniforms\Police\PCSO.paa" };
 				condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 1] call ULP_fnc_hasAccess }";
+			};
+
+			// Medic Skins
+			class CMO {
+				displayName = "CMO Uniform";
+				textures[] = { "Data\Textures\Uniforms\Medic\MedicLevel3.paa" };
+				condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
+			};
+
+			class SMO {
+				displayName = "SMO Uniform";
+				textures[] = { "Data\Textures\Uniforms\Medic\MedicLevel2.paa" };
+				condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
+			};
+
+			class SMO {
+				displayName = "JMO Uniform";
+				textures[] = { "Data\Textures\Uniforms\Medic\MedicLevel1.paa" };
+				condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 			};
 		};
 	};

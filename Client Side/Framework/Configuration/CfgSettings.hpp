@@ -23,7 +23,6 @@ class Life_Settings {
     /* Medical System Configurations */
     revive_cops = true;
     revive_fee = 1500;
-    hospital_heal_fee = 100;
     drop_weapons_onDeath = false;
 
     /* Player Data Saving */

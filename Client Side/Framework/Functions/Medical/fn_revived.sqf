@@ -8,22 +8,14 @@
 */
 private ["_medic","_dir","_reviveCost"];
 _medic = param [0,"Unknown Medic",[""]];
-_reviveCost = LIFE_SETTINGS(getNumber,"revive_fee");
 
 [life_save_gear] spawn life_fnc_loadDeadGear;
 
-hint format ["%1 has revived you and a fee of £%2 was taken from your bank account for their services.",_medic,[_reviveCost] call life_fnc_numberText];
+hint format ["%1 has provided medical assistance. The costs have been covered by the government.",_medic,[_reviveCost] call life_fnc_numberText];
 
 closeDialog 0;
 life_deathCamera cameraEffect ["TERMINATE","BACK"];
 camDestroy life_deathCamera;
-
-//Take fee for services.
-if (BANK > _reviveCost) then {
-    BANK = BANK - _reviveCost;
-} else {
-    BANK = 0;
-};
 
 //Bring me back to life.
 player setDir (getDir life_corpse);

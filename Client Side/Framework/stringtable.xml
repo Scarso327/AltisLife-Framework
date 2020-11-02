@@ -897,23 +897,6 @@
             <Original>Water</Original>
         </Key>
     </Package>
-    <Package name="Vehicle_Service">
-        <Key ID="STR_Service_Chopper_NoAir">
-            <Original>There isn't a chopper on the helipad!</Original>
-        </Key>
-        <Key ID="STR_Serive_Chopper_NotEnough">
-            <Original>You need £1,000 to service your chopper</Original>
-        </Key>
-        <Key ID="STR_Service_Chopper_Servicing">
-            <Original>Servicing Chopper [%1]...</Original>
-        </Key>
-        <Key ID="STR_Service_Chopper_Missing">
-            <Original>The vehicle is no longer alive or on the helipad!</Original>
-        </Key>
-        <Key ID="STR_Service_Chopper_Done">
-            <Original>Your chopper is now repaired and refuelled.</Original>
-        </Key>
-    </Package>
     <Package name="More_Item_Strings">
         <Key ID="STR_ISTR_Blast_VaultOnly">
             <Original>This can only be used on a vault.</Original>

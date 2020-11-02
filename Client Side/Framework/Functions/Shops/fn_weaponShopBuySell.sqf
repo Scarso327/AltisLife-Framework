@@ -24,7 +24,7 @@ if ((_itemInfo select 6) != "CfgVehicles") then {
 if (_bad != "") exitWith {hint _bad};
 
 if ((uiNamespace getVariable ["Weapon_Shop_Filter",0]) isEqualTo 1) then {
-    CASH = CASH + _price;
+    _price = _price / 2;
     [_item,false] call life_fnc_handleItem;
     hint parseText format ["You sold a %1 for &lt;t color='#8cff9b'&gt;£%2&lt;/t&gt;",_itemInfo select 1,[_price] call life_fnc_numberText];
     [nil,(uiNamespace getVariable ["Weapon_Shop_Filter",0])] call life_fnc_weaponShopFilter; //Update the menu.

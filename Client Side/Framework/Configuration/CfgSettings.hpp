@@ -98,7 +98,7 @@ class Life_Settings {
 
     /* Fuel System Configurations */
     pump_service = true;
-    fuel_cost = 80;.
+    fuel_cost = 80;
     service_aircraft = 1000;
     fuelCan_refuel = 250;
 

@@ -10,14 +10,14 @@ private ["_vault","_ui","_title","_progressBar","_cP","_titleText"];
 _vault = param [0,objNull,[objNull]];
 
 if (isNull _vault) exitWith {};
-if (typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint localize "STR_ISTR_defuseKit_NotNear"};
-if (!(_vault getVariable ["chargeplaced",false])) exitWith {hint localize "STR_ISTR_Defuse_Nothing"};
+if (typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint "You are not looking at a vault."};
+if (!(_vault getVariable ["chargeplaced",false])) exitWith {hint "There is no charge on the vault?"};
 
 life_action_inUse = true;
 //Setup the progress bar
 disableSerialization;
 
-_title = localize "STR_ISTR_Defuse_Process";
+_title = "Defusing charge...";
 "progressBar" cutRsc ["life_progress","PLAIN"];
 _ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
@@ -54,4 +54,4 @@ if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Canc
 
 life_action_inUse = false;
 _vault setVariable ["chargeplaced",false,true];
-[0,localize "STR_ISTR_Defuse_Success"] remoteExecCall ["life_fnc_broadcast",west];
+[0,"The charge has been defused"] remoteExecCall ["life_fnc_broadcast",west];

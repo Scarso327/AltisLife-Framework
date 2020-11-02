@@ -9,7 +9,7 @@
 private ["_building","_doors","_door","_cP","_cpRate","_ui","_title","_titleText","_locked"];
 _building = param [0,objNull,[objNull]];
 if (isNull _building) exitWith {};
-if (!(_building isKindOf "House_F")) exitWith {hint localize "STR_ISTR_Bolt_NotNear";};
+if (!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a property door.";};
 
 _doors = 1;
 _doors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _building),"NumberOfDoors");

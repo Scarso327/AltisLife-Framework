@@ -11,7 +11,7 @@
 disableSerialization;
 
 if ((lbCurSel 2005) isEqualTo -1) exitWith {
-    hint localize "STR_ISTR_SelectItemFirst";
+    hint "You need to select an item first!";
 };
 
 private _item = CONTROL_DATA(2005);
@@ -36,7 +36,7 @@ if (_edible > -1 || _drinkable > -1) exitWith {
             if (_item isEqualTo "redgull" && {LIFE_SETTINGS(getNumber, "enable_fatigue") isEqualTo 1}) then {
                 [] spawn {
                     life_redgull_effect = time;
-                    titleText [localize "STR_ISTR_RedGullEffect", "PLAIN"];
+                    titleText ["You can now run farther for 3-minutes", "PLAIN"];
                     player enableFatigue false;
                     waitUntil {!alive player || ((time - life_redgull_effect) > (3 * 60))};
                     player enableFatigue true;
@@ -76,7 +76,7 @@ switch (_item) do {
     };
 
     case "spikeStrip": {
-        if (!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"; closeDialog 0};
+        if (!isNull life_spikestrip) exitWith {hint "You already have a stinger active in deployment"; closeDialog 0};
         if ([false, _item, 1] call life_fnc_handleInv) then {
             [] spawn life_fnc_spikeStrip;
             closeDialog 0;
@@ -84,7 +84,7 @@ switch (_item) do {
     };
 
     case "fuelFull": {
-        if !(isNull objectParent player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
+        if !(isNull objectParent player) exitWith {hint "You can't refuel the vehicle while in it!"};
         [] spawn life_fnc_jerryRefuel;
         closeDialog 0;
     };
@@ -100,7 +100,7 @@ switch (_item) do {
     };
 
     default {
-        hint localize "STR_ISTR_NotUsable";
+        hint "This item isn't usable.";
     };
 };
 

@@ -10,16 +10,16 @@ private ["_vehicle","_displayName","_upp","_ui","_progress","_pgText","_cP","_pr
 _vehicle = cursorObject;
 life_interrupted = false;
 
-if (isNull _vehicle) exitWith {hint localize "STR_ISTR_Jerry_NotLooking"};
+if (isNull _vehicle) exitWith {hint "You need to look at the vehicle you want to refuel!"};
 if (!(_vehicle isKindOF "LandVehicle") && !(_vehicle isKindOf "Air") && !(_vehicle isKindOf "Ship")) exitWith {};
-if (player distance _vehicle > 7.5) exitWith {hint localize "STR_ISTR_Jerry_NotNear"};
+if (player distance _vehicle > 7.5) exitWith {hint "You need to be closer to the vehicle!"};
 
 if (!([false,"fuelFull",1] call life_fnc_handleInv)) exitWith {};
 life_action_inUse = true;
 
 _displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _vehicle),"displayName");
 
-_upp = format [localize "STR_ISTR_Jerry_Process",_displayName];
+_upp = format ["Refuelling %1",_displayName];
 
 //Setup our progress bar.
 disableSerialization;
@@ -83,5 +83,5 @@ switch (true) do {
         };
     };
 };
-titleText[format [localize "STR_ISTR_Jerry_Success",_displayName],"PLAIN"];
+titleText[format ["You have refuelled that %1",_displayName],"PLAIN"];
 [true,"fuelEmpty",1] call life_fnc_handleInv;

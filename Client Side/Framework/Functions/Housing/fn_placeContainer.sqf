@@ -68,5 +68,5 @@ if (_message isEqualTo 3) then {
     hint "The storage box is over the stairs!";
 };
 if (_message isEqualTo 4) then {
-    hint localize "STR_ISTR_Box_HouseFull";
+    hint "You cannot place any more storage containers in your property.";
 };

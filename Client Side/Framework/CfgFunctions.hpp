@@ -37,9 +37,15 @@ class ULP_Functions {
 		class calcPaycheck {};
 	};
 
+	class Database {
+		file = "Functions\Database";
+		class sync {};
+	};
+
 	class DatabasePlayer {
 		file = "Functions\Database\Player";
 		class getPlayerInfo {};
 		class setPlayerInfo {};
+		class syncPlayerInfo {};
 	};
 };

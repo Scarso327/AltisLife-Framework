@@ -2,7 +2,6 @@ class Socket_Reciever {
     tag = "SOCK";
     class SQL_Socket {
         file = "Functions\session";
-        class syncData {};
         class updatePartial {};
         class updateRequest {};
     };

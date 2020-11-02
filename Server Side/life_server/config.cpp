@@ -17,6 +17,7 @@ class CfgFunctions {
         class DatabasePlayer {
             file = "\life_server\Functions\Database\Player";
             class queryPlayerInfo {};
+            class savePlayerInfo {};
         };
     };
 

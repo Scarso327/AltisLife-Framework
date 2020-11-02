@@ -269,7 +269,7 @@ class playerSettings {
             idc = -1;
             //shortcuts[] = {0x00050000 + 2};
             text = "Sync Data";
-            onButtonClick = "[] call SOCK_fnc_syncData;";
+            onButtonClick = "[] call ULP_fnc_sync;";
             x = 0.1;
             y = 0.805;
             w = (6.25 / 40);

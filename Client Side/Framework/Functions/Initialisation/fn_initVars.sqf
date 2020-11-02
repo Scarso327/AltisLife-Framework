@@ -7,6 +7,7 @@ scopeName "fn_initVars";
 
 /* Session Variables */
 ULP_Loaded = false;
+ULP_Last_Sync = time;
 
 /* Setting Variables */
 ULP_Settings_EnableSide = false;

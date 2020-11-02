@@ -48,6 +48,6 @@ for "_i" from 0 to (count life_vehicles)-1 do {
 } forEach _near_units;
 
 if (((lbSize _vehicles)-1) isEqualTo -1) then {
-    _vehicles lbAdd localize "STR_NOTF_noVehOwned";
+    _vehicles lbAdd "You do not own any vehicles.";
     _vehicles lbSetData [(lbSize _vehicles)-1,""];
 };

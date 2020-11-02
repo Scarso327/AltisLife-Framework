@@ -26,7 +26,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    if (CASH < _fuelCost) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; life_action_inUse = false;};
+    if (CASH < _fuelCost) exitWith {hint "You don't have that much money!"; life_action_inUse = false;};
     _startPos = getPos player;
     //Setup our progress bar.
     disableSerialization;

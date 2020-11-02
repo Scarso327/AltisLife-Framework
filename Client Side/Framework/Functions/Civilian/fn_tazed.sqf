@@ -39,7 +39,7 @@ if (_shooter isKindOf "CAManBase" && alive player) then {
         _obj setPosATL ASLTOATL(visiblePositionASL player);
 
         [player,"AinjPfalMstpSnonWnonDf_carried_fallwc"] remoteExecCall ["life_fnc_animSync",RCLIENT];
-        [0,"STR_NOTF_Tazed",true,[profileName, _shooter getVariable ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+        [0,"%1 was tazed by %2",true,[profileName, _shooter getVariable ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
         _unit attachTo [_obj,[0,0,0]];
         disableUserInput true;
         sleep 15;

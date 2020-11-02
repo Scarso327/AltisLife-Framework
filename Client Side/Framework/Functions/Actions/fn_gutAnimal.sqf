@@ -25,7 +25,7 @@ switch (typeOf _animalCorpse) do {
 
 if (_displayName isEqualTo "") exitWith {life_action_inUse = false;};
 
-_upp = format [localize "STR_NOTF_Gutting",_displayName];
+_upp = format ["Gutting %1",_displayName];
 //Setup our progress bar.
 disableSerialization;
 "progressBar" cutRsc ["life_progress","PLAIN"];
@@ -58,11 +58,11 @@ life_action_inUse = false;
 player playActionNow "stop";
 if (isNull _animalCorpse) exitWith {life_action_inUse = false;};
 if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled","PLAIN"]; life_action_inUse = false;};
-if !(isNull objectParent player) exitWith {titleText[localize "STR_NOTF_ActionInVehicle","PLAIN"];};
+if !(isNull objectParent player) exitWith {titleText["You can't do that from inside the vehicle!","PLAIN"];};
 
 if ([true,_item,1] call life_fnc_handleInv) then {
     deleteVehicle _animalCorpse;
-    titleText[format [(localize "STR_NOTF_Guttingfinish"),_displayName],"PLAIN"];
+    titleText[format [("You have collected some raw %1 meat"),_displayName],"PLAIN"];
 } else {
-    titleText[(localize "STR_NOTF_InvFull"),"PLAIN"];
+    titleText[("Your inventory space is full."),"PLAIN"];
 };

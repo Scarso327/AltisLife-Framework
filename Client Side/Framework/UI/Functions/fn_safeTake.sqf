@@ -23,10 +23,10 @@ if (_num > _safeInfo) exitWith {hint format ["There isn't %1 gold bar(s) in the 
 
 //Secondary checks
 _num = [_ctrl,_num,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if (_num isEqualTo 0) exitWith {hint localize "STR_NOTF_InvFull"};
+if (_num isEqualTo 0) exitWith {hint "Your inventory space is full."};
 
 
 //Take it
-if (!([true,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint localize "STR_NOTF_CouldntAdd";};
+if (!([true,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint "Couldn't add it to your inventory.";};
 life_safeObj setVariable ["safe",_safeInfo - _num,true];
 [life_safeObj] call life_fnc_safeInventory;

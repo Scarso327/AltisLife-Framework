@@ -12,7 +12,7 @@ params [
 
 private _value = parseNumber(ctrlText 2702);
 private _gFund = GANG_FUNDS;
-if ((time - life_action_delay) < 0.5) exitWith {hint localize "STR_NOTF_ActionDelay"};
+if ((time - life_action_delay) < 0.5) exitWith {hint "You're doing it too fast!"};
 
 //Series of stupid checks
 if (isNil {(group player) getVariable "gang_name"}) exitWith {hint "You are not in a group."};

@@ -39,7 +39,7 @@ player setCurrentTask life_cur_task;
     if (!alive player) then {
         life_cur_task setTaskState "Failed";
         player removeSimpleTask life_cur_task;
-        ["DeliveryFailed",[localize "STR_NOTF_DPFailed"]] call BIS_fnc_showNotification;
+        ["DeliveryFailed",["STR_NOTF_DPFaYou failed to deliver the package because you died.iled"]] call BIS_fnc_showNotification;
         life_delivery_in_progress = false;
         life_dp_point = nil;
     };

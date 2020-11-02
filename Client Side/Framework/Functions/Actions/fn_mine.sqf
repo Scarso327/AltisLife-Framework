@@ -84,7 +84,7 @@ if (_exit) exitWith {
 _amount = round(random(_maxGather)) + 1;
 _diff = [_mined, _amount, life_carryWeight, life_maxWeight] call life_fnc_calWeightDiff;
 if (_diff isEqualTo 0) exitWith {
-    hint localize "STR_NOTF_InvFull";
+    hint "Your inventory space is full.";
     life_action_inUse = false;
 };
 
@@ -100,7 +100,7 @@ for "_i" from 0 to 4 do {
 
 if (([true, _mined, _diff] call life_fnc_handleInv)) then {
     _itemName = M_CONFIG(getText, "VirtualItems", _mined, "displayName");
-    titleText[format [localize "STR_NOTF_Mine_Success", (localize _itemName), _diff], "PLAIN"];
+    titleText[format ["You have mined %2 %1(s).", (localize _itemName), _diff], "PLAIN"];
 };
 
 sleep 2.5;

@@ -19,7 +19,6 @@ _fnc_food =  {
             case 20: {hint "You are starting to starve, you need to find something to eat otherwise you will die.";};
             case 10: {
                 hint "You are now starving to death, you will die very soon if you don't eat something.";
-                if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 1;};
             };
         };
     };
@@ -36,11 +35,9 @@ _fnc_water = {
             case 30: {hint "You haven't drank anything in awhile, You should find something to drink soon.";};
             case 20: {
                 hint "You haven't drank anything in along time, you should find something to drink soon or you'll start to die from dehydration.";
-                if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 1;};
             };
             case 10: {
                 hint "You are now suffering from severe dehydration find something to drink quickly!";
-                if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 1;};
             };
         };
     };
@@ -80,7 +77,6 @@ for "_i" from 0 to 1 step 0 do {
     /* Check if the weight has changed and the player is carrying to much */
     if (life_carryWeight > life_maxWeight && {!isForcedWalk player} && {!life_god}) then {
         player forceWalk true;
-        if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 1;};
         hint "You are over carrying your max weight! You will not be able to run or move fast till you drop some items!";
     } else {
         if (isForcedWalk player) then {

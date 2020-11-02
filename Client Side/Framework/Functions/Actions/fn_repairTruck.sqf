@@ -49,21 +49,7 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
         if (life_interrupted) exitWith {life_interrupted = false; titleText["Action Cancelled","PLAIN"]; life_action_inUse = false;};
         if !(isNull objectParent player) exitWith {titleText["You can't do that from inside the vehicle!","PLAIN"];};
 
-        _sideRepairArray = LIFE_SETTINGS(getArray,"vehicle_infiniteRepair");
-
-        //Check if playerSide has infinite repair enabled
-        if (playerSide isEqualTo civilian && (_sideRepairArray select 0) isEqualTo 0) then {
-            [false,"toolkit",1] call life_fnc_handleInv;
-        };
-        if (playerSide isEqualTo west && (_sideRepairArray select 1) isEqualTo 0) then {
-            [false,"toolkit",1] call life_fnc_handleInv;
-        };
-        if (playerSide isEqualTo independent && (_sideRepairArray select 2) isEqualTo 0) then {
-            [false,"toolkit",1] call life_fnc_handleInv;
-        };
-        if (playerSide isEqualTo east && (_sideRepairArray select 3) isEqualTo 0) then {
-            [false,"toolkit",1] call life_fnc_handleInv;
-        };
+        [false,"toolkit",1] call life_fnc_handleInv;
 
         _veh setDamage 0;
         titleText["You have repaired that vehicle.","PLAIN"];

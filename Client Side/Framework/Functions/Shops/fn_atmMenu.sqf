@@ -9,7 +9,7 @@
 private ["_units","_type"];
 
 if (!life_use_atm) exitWith {
-    hint format ["As you have been involved in the robbery of a bank bank you may not use an ATM for %1 minutes.",(LIFE_SETTINGS(getNumber,"noatm_timer"))];
+    hint format ["As you have been involved in the robbery of a bank bank you may not use an ATM for %1 minutes.",(LIFE_SETTINGS(getNumber,"atm_cooldown"))];
 };
 
 if (!dialog) then {

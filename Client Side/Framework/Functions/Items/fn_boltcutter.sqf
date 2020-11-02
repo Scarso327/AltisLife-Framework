@@ -16,8 +16,8 @@ private _pos = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_t
 
 if (isNull _building) exitWith {};
 if (!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a property door.";};
-if (((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops")))) exitWith {
-    hint format ["There needs to be %1 or more police officers online to continue.",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
+if (((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"hm_required_number")))) exitWith {
+    hint format ["There needs to be %1 or more police officers online to continue.",(LIFE_SETTINGS(getNumber,"hm_required_number"))];
 };
 if ((typeOf _building) == _vaultHouse && (nearestObject [_pos,"Land_Dome_Big_F"]) getVariable ["locked",true]) exitWith {hint "You must open the outside doors before opening it!"};
 if (isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};

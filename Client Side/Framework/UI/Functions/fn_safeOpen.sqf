@@ -12,8 +12,8 @@ if (isNull life_safeObj) exitWith {};
 if !(playerSide isEqualTo civilian) exitWith {};
 if ((life_safeObj getVariable ["safe",-1]) < 1) exitWith {hint "The safe is empty!";};
 if (life_safeObj getVariable ["inUse",false]) exitWith {hint "Someone is already accessing the safe..."};
-if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops"))) exitWith {
-    hint format ["There needs to be %1 or more police officers online to continue.",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
+if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"hm_required_number"))) exitWith {
+    hint format ["There needs to be %1 or more police officers online to continue.",(LIFE_SETTINGS(getNumber,"hm_required_number"))];
 };
 if (!createDialog "Federal_Safe") exitWith {"Failed Creating Dialog"};
 

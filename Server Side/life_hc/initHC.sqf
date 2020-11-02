@@ -11,8 +11,6 @@ if (EXTDB_SETTING(getNumber,"HeadlessSupport") isEqualTo 0) exitWith {};
 
 _extDBNotLoaded = "";
 
-life_save_civilian_position = if (LIFE_SETTINGS(getNumber,"save_civilian_position") isEqualTo 0) then {false} else {true};
-
 if (isNil {uiNamespace getVariable "life_sql_id"}) then {
     life_sql_id = round(random(9999));
     CONSTVAR(life_sql_id);

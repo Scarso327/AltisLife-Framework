@@ -13,8 +13,8 @@ if (isNull _vault) exitWith {}; //Bad object
 if (typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint "This can only be used on a vault."};
 if (_vault getVariable ["chargeplaced",false]) exitWith {hint "There is already a charge placed on this vault."};
 if (_vault getVariable ["safe_open",false]) exitWith {hint "The vault is already opened."};
-if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops"))) exitWith {
-     hint format ["There needs to be %1 or more police officers online to continue.",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
+if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"hm_required_number"))) exitWith {
+     hint format ["There needs to be %1 or more police officers online to continue.",(LIFE_SETTINGS(getNumber,"hm_required_number"))];
 };
 
 private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;

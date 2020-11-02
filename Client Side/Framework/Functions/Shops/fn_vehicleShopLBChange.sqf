@@ -20,20 +20,20 @@ _initalPrice = M_CONFIG(getNumber,"LifeCfgVehicles",_classNameLife,"price");
 
 switch (playerSide) do {
     case civilian: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_CIVILIAN");
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_CIVILIAN");
+        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier");
+        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier");
     };
     case west: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_COP");
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_COP");
+        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier");
+        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier");
     };
     case independent: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_MEDIC");
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_MEDIC");
+        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier");
+        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier");
     };
     case east: {
-        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_OPFOR");
-        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_OPFOR");
+        _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier");
+        _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier");
     };
 };
 

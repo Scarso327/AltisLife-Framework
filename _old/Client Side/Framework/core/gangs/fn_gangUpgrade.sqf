@@ -9,7 +9,7 @@
 private ["_maxMembers","_slotUpgrade","_upgradePrice"];
 _maxMembers = group player getVariable ["gang_maxMembers",8];
 _slotUpgrade = _maxMembers + 4;
-_upgradePrice = round(_slotUpgrade * ((LIFE_SETTINGS(getNumber,"gang_upgradeBase"))) / ((LIFE_SETTINGS(getNumber,"gang_upgradeMultiplier"))));
+_upgradePrice = round(_slotUpgrade * ((LIFE_SETTINGS(getNumber,"group_upgradeBase"))) / ((LIFE_SETTINGS(getNumber,"gang_upgradeMultiplier"))));
 
 _action = [
     format [("You are about to upgrade the maximum members allowed for your group.")+ "<br/><br/>" +("Current Max: %1")+ "<br/>" +("Upgraded Max: %2")+ "<br/>" +("Price:")+ " <t color='#8cff9b'>£%3</t>",_maxMembers,_slotUpgrade,[_upgradePrice] call life_fnc_numberText],

@@ -78,7 +78,7 @@ class CfgSettings {
 
     /* Organisation System Configurations */
     gang_price = 25000;
-    gang_upgradeBase = 10000;
+    group_upgradeBase = 10000;
     gang_upgradeMultiplier = 2.5;
 
     /* Prison System Configurations */

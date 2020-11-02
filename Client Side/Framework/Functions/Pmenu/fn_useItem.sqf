@@ -29,19 +29,6 @@ if (_edible > -1 || _drinkable > -1) exitWith {
             private _sum = lULP_Survival_Thirst + _drinkable;
 
             ULP_Survival_Thirst = (_sum max 5) min 100; // never below 5 or above 100
-
-            if (LIFE_SETTINGS(getNumber, "enable_fatigue") isEqualTo 1) then {
-                player setFatigue 0;
-            };
-            if (_item isEqualTo "redgull" && {LIFE_SETTINGS(getNumber, "enable_fatigue") isEqualTo 1}) then {
-                [] spawn {
-                    life_redgull_effect = time;
-                    titleText ["You can now run farther for 3-minutes", "PLAIN"];
-                    player enableFatigue false;
-                    waitUntil {!alive player || ((time - life_redgull_effect) > (3 * 60))};
-                    player enableFatigue true;
-                };
-            };
         };
     };
 

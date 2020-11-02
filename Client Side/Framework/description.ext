@@ -5,7 +5,7 @@ enableDebugConsole = 2;
 
 #include "CfgRemoteExec.hpp"
 #include "UI\MasterHandler.hpp"
-#include "Configuration\Config_Master.hpp"
+#include "Configuration\CfgSettings.hpp"
 
 class CfgServer {
     DatabaseName = "altislife";

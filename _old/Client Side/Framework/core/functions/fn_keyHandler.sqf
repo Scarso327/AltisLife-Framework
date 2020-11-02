@@ -108,14 +108,8 @@ if (_code in (actionKeys "GetOver")) then {
 };
 
 switch (_code) do {
-    // -- Disable commander/tactical view
-    if (LIFE_SETTINGS(getNumber,"disableCommanderView") isEqualTo 1) then {
-        private _CommandMode = actionKeys "tacticalView";
-
-        if (_code in _CommandMode) then {
-            _handled = true;
-        };
-    };
+    private _CommandMode = actionKeys "tacticalView";
+    if (_code in _CommandMode) then { _handled = true; };
 
     case 3:
 	{

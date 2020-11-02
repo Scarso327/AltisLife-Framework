@@ -33,20 +33,20 @@ _storageFee = LIFE_SETTINGS(getNumber,"vehicle_storage_fee_multiplier");
 
 switch (playerSide) do {
     case civilian: {
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_CIVILIAN");
-        _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_CIVILIAN");
+        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier");
+        _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier");
     };
     case west: {
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_COP");
-        _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_COP");
+        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier");
+        _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier");
     };
     case independent: {
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_MEDIC");
-        _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_MEDIC");
+        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier");
+        _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier");
     };
     case east: {
-        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_OPFOR");
-        _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier_OPFOR");
+        _purchasePrice = _price * LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier");
+        _sellMultiplier = LIFE_SETTINGS(getNumber,"vehicle_sell_multiplier");
     };
 };
 _retrievePrice = _purchasePrice * _storageFee;

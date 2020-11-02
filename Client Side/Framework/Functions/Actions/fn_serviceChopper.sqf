@@ -11,7 +11,7 @@ disableSerialization;
 private ["_search","_ui","_progress","_cP","_pgText"];
 if (life_action_inUse) exitWith {hint localize "You are already doing an action. Please wait for it to end."};
 
-_serviceCost = LIFE_SETTINGS(getNumber,"service_chopper");
+_serviceCost = LIFE_SETTINGS(getNumber,"service_aircraft");
 _search = nearestObjects[getPos air_sp, ["Air"],10];
 
 if (count _search isEqualTo 0) exitWith {hint "There isn't a helicopter on the service pad!"};

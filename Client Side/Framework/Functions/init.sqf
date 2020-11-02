@@ -90,7 +90,7 @@ diag_log "[Life Client] Executing client.fsm";
 addMissionEventHandler ["EachFrame", life_fnc_playerTags];
 addMissionEventHandler ["EachFrame", life_fnc_revealObjects];
 
-if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 0) then {player enableFatigue false;};
+player enableFatigue false;
 if (LIFE_SETTINGS(getNumber,"pump_service") isEqualTo 1) then {
     [] execVM "Functions\fn_setupStationService.sqf";
 };

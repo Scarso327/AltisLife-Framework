@@ -1186,53 +1186,6 @@
             <Original>Turn Lights On</Original>
         </Key>
     </Package>
-    <Package name="Vehicle_Interaction">
-        <Key ID="STR_vInAct_Title">
-            <Original>Vehicle Interaction Menu</Original>
-        </Key>
-        <Key ID="STR_vInAct_Unflip">
-            <Original>Unflip Vehicle</Original>
-        </Key>
-        <Key ID="STR_vInAct_GetInVehicle">
-            <Original>Get In Vehicle</Original>
-        </Key>
-        <Key ID="STR_vInAct_PushBoat">
-            <Original>Push Boat</Original>
-        </Key>
-        <Key ID="STR_vInAct_Repair">
-            <Original>Repair Vehicle</Original>
-        </Key>
-        <Key ID="STR_vInAct_Registration">
-            <Original>Registration</Original>
-        </Key>
-        <Key ID="STR_vInAct_SearchVehicle">
-            <Original>Search Vehicle</Original>
-        </Key>
-        <Key ID="STR_vInAct_SearchContainer">
-            <Original>Search Container</Original>
-        </Key>
-        <Key ID="STR_vInAct_PullOut">
-            <Original>Pullout Players</Original>
-        </Key>
-        <Key ID="STR_vInAct_Impound">
-            <Original>Impound Vehicle</Original>
-        </Key>
-        <Key ID="STR_vInAct_DeviceMine">
-            <Original>Mine from device</Original>
-        </Key>
-        <Key ID="STR_Vehicle_StoreVehicle">
-            <Original>Store your vehicle</Original>
-        </Key>
-        <Key ID="STR_Vehicle_Store">
-            <Original>Store</Original>
-        </Key>
-        <Key ID="STR_Vehicle_Clean">
-            <Original>Clean</Original>
-        </Key>
-        <Key ID="STR_NPC_Protected">
-            <Original>This vehicle is NPC protected.</Original>
-        </Key>
-    </Package>
     <Package name="Shop_Strings">
         <Key ID="STR_Shop_ATMRobbed">
             <Original>Because you robbed the bank you can't use the ATM for %1 minutes.</Original>

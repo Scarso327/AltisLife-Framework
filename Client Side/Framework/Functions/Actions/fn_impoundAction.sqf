@@ -11,7 +11,7 @@ _vehicle = param [0,objNull,[objNull]];
 _filters = ["Car","Air","Ship"];
 if (!((KINDOF_ARRAY(_vehicle,_filters)))) exitWith {};
 if (player distance cursorObject > 10) exitWith {};
-if (_vehicle getVariable "NPC") exitWith {hint localize "STR_NPC_Protected"};
+if (_vehicle getVariable "NPC") exitWith {hint "This vehicle is protected by the server"};
 
 _vehicleData = _vehicle getVariable ["vehicle_info_owners",[]];
 if (_vehicleData isEqualTo 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.

@@ -35,23 +35,23 @@ life_vInact_curTarget = _curTarget;
 _id = getObjectDLC _curTarget;
 
 //Set Repair Action
-_Btn1 ctrlSetText localize "STR_vInAct_Repair";
+_Btn1 ctrlSetText "Repair";
 _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck; closeDialog 0;";
 
 if ((life_inv_toolkit >= 1) && {alive life_vInact_curTarget} && {([life_vInact_curTarget] call life_fnc_isDamaged)}) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
 
 if (playerSide isEqualTo west) then {
-    _Btn2 ctrlSetText localize "STR_vInAct_Registration";
+    _Btn2 ctrlSetText "Registration";
     _Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction; closeDialog 0;";
 
-    _Btn3 ctrlSetText localize "STR_vInAct_SearchVehicle";
+    _Btn3 ctrlSetText "Search Storage";
     _Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vehInvSearch; closeDialog 0;";
 
-    _Btn4 ctrlSetText localize "STR_vInAct_PullOut";
+    _Btn4 ctrlSetText "Pull Out";
     _Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction; closeDialog 0;";
     if (crew _curTarget isEqualTo []) then {_Btn4 ctrlEnable false;};
 
-    _Btn5 ctrlSetText localize "STR_vInAct_Impound";
+    _Btn5 ctrlSetText "Impound";
     _Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction; closeDialog 0;";
 
     if (_curTarget isKindOf "Ship") then {
@@ -61,12 +61,12 @@ if (playerSide isEqualTo west) then {
     } else {
         if (!isNil "_id") then {
             if !(_id in getDLCs 1) then {
-                _Btn6 ctrlSetText localize "STR_vInAct_GetInVehicle";
+                _Btn6 ctrlSetText "Get In";
                 _Btn6 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
                 if (crew _curTarget isEqualTo [] && {canMove _curTarget} && {locked _curTarget isEqualTo 0}) then {_Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
             };
         } else {
-            _Btn6 ctrlSetText localize "STR_vInAct_Unflip";
+            _Btn6 ctrlSetText "Unflip";
             _Btn6 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
         };
@@ -75,24 +75,24 @@ if (playerSide isEqualTo west) then {
 } else {
 
     if (_curTarget isKindOf "Ship") then {
-        _Btn2 ctrlSetText localize "STR_vInAct_PushBoat";
+        _Btn2 ctrlSetText "Push";
         _Btn2 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
         if (alive _curTarget && {_curTarget isKindOf "Ship"} && {local _curTarget} && {crew _curTarget isEqualTo []}) then { _Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
     } else {
         if (!isNil "_id") then {
             if !(_id in getDLCs 1) then {
-                _Btn2 ctrlSetText localize "STR_vInAct_GetInVehicle";
+                _Btn2 ctrlSetText "Get In";
                 _Btn2 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
                 if (crew _curTarget isEqualTo [] && {canMove _curTarget} && {locked _curTarget isEqualTo 0}) then {_Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false};
             };
         } else {
-            _Btn2 ctrlSetText localize "STR_vInAct_Unflip";
+            _Btn2 ctrlSetText "Unflip";
             _Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
             if (alive _curTarget && {crew _curTarget isEqualTo []} && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
         };
     };
     if (typeOf _curTarget == "O_Truck_03_device_F") then {
-        _Btn3 ctrlSetText localize "STR_vInAct_DeviceMine";
+        _Btn3 ctrlSetText "Activate Device";
         _Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
         if (!isNil {(_curTarget getVariable "mining")} || !local _curTarget && {_curTarget in life_vehicles}) then {
             _Btn3 ctrlEnable false;

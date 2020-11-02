@@ -166,7 +166,7 @@ class vInteraction_Menu {
         class Title: life_RscTitle {
             colorBackground[] = {0,0,0,0};
             idc = 37401;
-            text = "$STR_vInAct_Title";
+            text = "Vehicle Interaction Menu";
             x = BGX;
             y = BGY;
             w = BGW;

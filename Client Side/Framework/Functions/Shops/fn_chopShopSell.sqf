@@ -13,7 +13,7 @@ private _price = _control lbValue (lbCurSel _control);
 private _vehicle = objectFromNetId (_control lbData (lbCurSel _control));
 if (isNull _vehicle) exitWith {};
 
-systemChat localize "STR_Shop_ChopShopSelling";
+systemChat "Selling vehicle please wait...";
 life_action_inUse = true;
 
 if (life_HC_isActive) then {

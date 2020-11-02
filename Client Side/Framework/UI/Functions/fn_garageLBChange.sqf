@@ -56,14 +56,14 @@ if (!(_sellPrice isEqualType 0) || _sellPrice < 1) then {_sellPrice = 500;};
 if (!(_retrievePrice isEqualType 0) || _retrievePrice < 1) then {_retrievePrice = 500;};
 
 (CONTROL(2800,2803)) ctrlSetStructuredText parseText format [
-    (localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>$%1</t><br/>
-    " +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>$%2</t><br/>
-    " +(localize "STR_Shop_Veh_UI_Color")+ " %8<br/>
-    " +(localize "STR_Shop_Veh_UI_MaxSpeed")+ " %3 km/h<br/>
-    " +(localize "STR_Shop_Veh_UI_HPower")+ " %4<br/>
-    " +(localize "STR_Shop_Veh_UI_PSeats")+ " %5<br/>
-    " +(localize "STR_Shop_Veh_UI_Trunk")+ " %6<br/>
-    " +(localize "STR_Shop_Veh_UI_Fuel")+ " %7
+    ("Retrieval Price:")+ " <t color='#8cff9b'>£%1</t><br/>
+    " +("Sell Price:")+ " <t color='#8cff9b'>£%2</t><br/>
+    " +("Color:")+ " %8<br/>
+    " +("Max Speed:")+ " %3 km/h<br/>
+    " +("Horse Power:")+ " %4<br/>
+    " +("Passengers:")+ " %5<br/>
+    " +("Storage Space:")+ " %6<br/>
+    " +("Fuel Tank:")+ " %7
     ",
 [_retrievePrice] call life_fnc_numberText,
 [_sellPrice] call life_fnc_numberText,

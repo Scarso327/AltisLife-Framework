@@ -7,7 +7,7 @@
     Buys the current set of clothes and closes out of the shop interface.
 */
 private ["_price"];
-if ((lbCurSel 3101) isEqualTo -1) exitWith {titleText[localize "STR_Shop_NoClothes","PLAIN"];};
+if ((lbCurSel 3101) isEqualTo -1) exitWith {titleText["You didn't choose the clothes you wanted to buy.","PLAIN"];};
 
 _price = 0;
 {
@@ -16,7 +16,7 @@ _price = 0;
     };
 } forEach life_clothing_purchase;
 
-if (_price > CASH) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
+if (_price > CASH) exitWith {titleText["Sorry, you don't have enough money to buy those clothes.","PLAIN"];};
 CASH = CASH - _price;
 [0] call SOCK_fnc_updatePartial;
 

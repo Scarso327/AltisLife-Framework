@@ -20,7 +20,7 @@ if !(_shopSide isEqualTo "") then {
 if (_exit) exitWith {};
 
 _exit = [_conditions] call life_fnc_levelCheck;
-if !(_exit) exitWith {hint localize "STR_Shop_Veh_NotAllowed";};
+if !(_exit) exitWith {hint "You are not allowed to use this shop!";};
 
 uiNamespace setVariable ["Weapon_Shop",(_this select 3)];
 uiNamespace setVariable ["Weapon_Magazine",0];
@@ -43,7 +43,7 @@ ctrlEnable [38406,false];
 ctrlShow [38407,true];
 ctrlEnable [38407,false];
 
-_filters lbAdd localize "STR_Shop_Weapon_ShopInv";
-_filters lbAdd localize "STR_Shop_Weapon_YourInv";
+_filters lbAdd "Shop Inventory";
+_filters lbAdd "Your Inventory";
 
 _filters lbSetCurSel 0;

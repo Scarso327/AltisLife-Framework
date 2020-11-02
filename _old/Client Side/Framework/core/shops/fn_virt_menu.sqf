@@ -20,7 +20,7 @@ life_shop_npc = _shopNPC;
 
 private _conditions = M_CONFIG(getText,"CfgShops",_shopType,"conditions");
 
-if !([_conditions] call life_fnc_levelCheck) exitWith {hint localize "STR_Shop_Veh_NotAllowed";};
+if !([_conditions] call life_fnc_levelCheck) exitWith {hint "You are not allowed to use this shop!";};
 
 createDialog "shops_menu";
 

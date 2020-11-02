@@ -9,7 +9,7 @@ private _shopTitle = M_CONFIG(getText,"CfgWeapons",(_this select 3),"name");
 private _conditions = M_CONFIG(getText,"CfgWeapons",(_this select 3),"conditions");
 
 _exit = [_conditions] call life_fnc_levelCheck;
-if !(_exit) exitWith {hint localize "STR_Shop_Veh_NotAllowed";};
+if !(_exit) exitWith {hint "You are not allowed to use this shop!";};
 
 uiNamespace setVariable ["Weapon_Shop",(_this select 3)];
 uiNamespace setVariable ["Weapon_Magazine",0];

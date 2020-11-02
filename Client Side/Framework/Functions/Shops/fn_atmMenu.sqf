@@ -9,7 +9,7 @@
 private ["_units","_type"];
 
 if (!life_use_atm) exitWith {
-    hint format [localize "STR_Shop_ATMRobbed",(LIFE_SETTINGS(getNumber,"noatm_timer"))];
+    hint format ["As you have been involved in the robbery of a bank bank you may not use an ATM for %1 minutes.",(LIFE_SETTINGS(getNumber,"noatm_timer"))];
 };
 
 if (!dialog) then {
@@ -20,7 +20,7 @@ disableSerialization;
 _units = CONTROL(2700,2703);
 
 lbClear _units;
-CONTROL(2700,2701) ctrlSetStructuredText parseText format ["<img size='1.7' image='Data\Icons\ico_bank.paa'/> $%1<br/><img size='1.6' image='Data\Icons\ico_money.paa'/> $%2",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+CONTROL(2700,2701) ctrlSetStructuredText parseText format ["<img size='1.7' image='Data\Icons\ico_bank.paa'/> £%1<br/><img size='1.6' image='Data\Icons\ico_money.paa'/> £%2",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
 
 {
     _name = _x getVariable ["realname",name _x];

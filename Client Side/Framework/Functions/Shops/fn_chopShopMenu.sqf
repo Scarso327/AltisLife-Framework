@@ -18,8 +18,8 @@ if (count _nearUnits > 1) exitWith {hint localize "STR_NOTF_PlayerNear"};
 
 life_chopShop = _this select 3;
 //Error check
-if (_nearVehicles isEqualTo []) exitWith {titleText[localize "STR_Shop_NoVehNear","PLAIN"];};
-if (!(createDialog "Chop_Shop")) exitWith {hint localize "STR_Shop_ChopShopError"};
+if (_nearVehicles isEqualTo []) exitWith {titleText["There are no vehicles near to sell.","PLAIN"];};
+if (!(createDialog "Chop_Shop")) exitWith {hint "There was a problem opening the chop shop menu."};
 
 private _control = CONTROL(39400,39402);
 private "_className";

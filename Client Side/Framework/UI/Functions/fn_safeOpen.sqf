@@ -15,7 +15,7 @@ if (life_safeObj getVariable ["inUse",false]) exitWith {hint "Someone is already
 if (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops"))) exitWith {
     hint format ["There needs to be %1 or more police officers online to continue.",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
 };
-if (!createDialog "Federal_Safe") exitWith {localize "STR_MISC_DialogError"};
+if (!createDialog "Federal_Safe") exitWith {"Failed Creating Dialog"};
 
 disableSerialization;
 ctrlSetText[3501,("Safe Inventory")];

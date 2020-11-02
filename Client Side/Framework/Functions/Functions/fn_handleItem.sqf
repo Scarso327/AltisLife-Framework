@@ -211,7 +211,7 @@ if (_bool) then {
                                     if (!((_wepItems select 2) isEqualTo "")) then {_slotTaken = true;};
 
                                     if (_slotTaken) then {
-                                        _action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
+                                        _action = ["Do you want to add this item to your weapon or inventory? If you add it to your weapon your current existing attachment will be lost!","Attachment slot taken!","Weapon","Inventory"] call BIS_fnc_guiMessage;
                                         if (_action) then {
                                             switch (_type) do {
                                                 case 1: {player addPrimaryWeaponItem _item;};
@@ -259,7 +259,7 @@ if (_bool) then {
                                     if (!((_wepItems select 1) isEqualTo "")) then {_slotTaken = true;};
 
                                     if (_slotTaken) then {
-                                        _action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
+                                        _action = ["Do you want to add this item to your weapon or inventory? If you add it to your weapon your current existing attachment will be lost!","Attachment slot taken!","Weapon","Inventory"] call BIS_fnc_guiMessage;
                                         if (_action) then {
                                             switch (_type) do {
                                                 case 1: {player addPrimaryWeaponItem _item;};
@@ -307,7 +307,7 @@ if (_bool) then {
                                     if (!((_wepItems select 0) isEqualTo "")) then {_slotTaken = true;};
 
                                     if (_slotTaken) then {
-                                        _action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
+                                        _action = ["Do you want to add this item to your weapon or inventory? If you add it to your weapon your current existing attachment will be lost!","Attachment slot taken!","Weapon","Inventory"] call BIS_fnc_guiMessage;
                                         if (_action) then {
                                             switch (_type) do {
                                                 case 1: {player addPrimaryWeaponItem _item;};

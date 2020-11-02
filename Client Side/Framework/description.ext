@@ -1,6 +1,6 @@
-disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}};    // Disabled text and voice for global, side, and command channels. Syntax: disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>}};
-overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play.
-unsafeCVL = 1; // Allows createVehicleLocal to be executed in Multiplayer
+disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}}; 
+overviewText = "An RPG game mode developed by Scarso & Lewis.";
+unsafeCVL = 1;
 enableDebugConsole = 2;
 
 #include "CfgRemoteExec.hpp"
@@ -8,13 +8,9 @@ enableDebugConsole = 2;
 #include "Configuration\Config_Master.hpp"
 
 class CfgServer {
-    DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
-    DebugMode = 0; //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled)
-    HeadlessSupport = 0; //Enable/Disable Headless client support. Default: 1 (1 = Enabled / 0 = Disabled)
-    /*
-    Enabled: When HeadlessSupport is set to 1 (enabled), the server will run without fault when no Headless Client is connected. However, it will support the Headless Client if you choose to connect one.
-    Disabled: If HeadlessSupport is set to 0 (disabled), the connection of a Headless Client will make no difference. This option will increase server performance a TINY but negligible amount.
-    */
+    DatabaseName = "altislife";
+    DebugMode = 0;
+    HeadlessSupport = 0;
 };
 
 class RscTitles {

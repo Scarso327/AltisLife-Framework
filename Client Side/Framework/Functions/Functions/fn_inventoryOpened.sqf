@@ -21,7 +21,7 @@ private _list = ["LandVehicle", "Ship", "Air"];
     private _containerType = typeOf _x;
 
     if (FETCH_CONFIG2(getNumber, "CfgVehicles", _containerType, "isBackpack") isEqualTo 1) exitWith {
-        hint localize "STR_MISC_Backpack";
+        hint "You are not allowed to look into someone's backpack!";
         true breakOut "main";
     };
 
@@ -35,7 +35,7 @@ private _list = ["LandVehicle", "Ship", "Air"];
 
     if (KINDOF_ARRAY(_x, _list)) exitWith {
         if (!(_x in life_vehicles) && {locked _x isEqualTo 2}) exitWith {
-            hint localize "STR_MISC_VehInventory";
+            hint "You are not allowed to access this vehicle while its locked.";
             true breakOut "main";
         };
     };

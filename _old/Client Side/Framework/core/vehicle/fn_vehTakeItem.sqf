@@ -19,7 +19,7 @@ _ctrl = ctrlSelData(3502);
 _num = ctrlText 3505;
 if (!([_num] call TON_fnc_isnumber)) exitWith {hint "Invalid number format";};
 _num = parseNumber(_num);
-if (_num < 1) exitWith {hint localize "STR_MISC_Under1";};
+if (_num < 1) exitWith {hint "You can't enter anything below 1!";};
 
 _index = [_ctrl,((life_trunk_vehicle getVariable "Trunk") select 0)] call TON_fnc_index;
 _data = (life_trunk_vehicle getVariable "Trunk") select 0;

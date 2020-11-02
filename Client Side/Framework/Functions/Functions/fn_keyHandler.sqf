@@ -233,7 +233,6 @@ switch (_code) do {
             private _veh = vehicle player;
             if (isNil {_veh getVariable "siren"}) then {_veh setVariable ["siren",false,true];};
             if ((_veh getVariable "siren")) then {
-                titleText [localize "STR_MISC_SirensOFF","PLAIN"];
                 _veh setVariable ["siren",false,true];
                 if !(isNil {(_veh getVariable "sirenJIP")}) then {
                     private _jip = _veh getVariable "sirenJIP";
@@ -241,7 +240,6 @@ switch (_code) do {
                     remoteExec ["",_jip]; //remove from JIP queue
                 };
             } else {
-                titleText [localize "STR_MISC_SirensON","PLAIN"];
                 _veh setVariable ["siren",true,true];
                 private "_jip";
                 if (playerSide isEqualTo west) then {
@@ -259,10 +257,10 @@ switch (_code) do {
         if (_shift) then {
             if !(soundVolume isEqualTo 1) then {
                 1 fadeSound 1;
-                systemChat localize "STR_MISC_soundnormal";
+                systemChat "Your sound was set to normal mode!";
             } else {
                 1 fadeSound 0.1;
-                systemChat localize "STR_MISC_soundfade";
+                systemChat "Your sound was set to fade mode!";
             };
         };
     };
@@ -344,7 +342,7 @@ switch (_code) do {
                             _veh animateDoor ['DoorL_Back_Open',1];
                             _veh animateDoor ['DoorR_Back_Open ',1];
                         };
-                        systemChat localize "STR_MISC_VehUnlock";
+                        systemChat "You have unlocked your vehicle.";
                         [_veh,"unlockCarSound",50,1] remoteExec ["life_fnc_say3D",RANY];
                     } else {
                         if (local _veh) then {
@@ -394,7 +392,7 @@ switch (_code) do {
                             _veh animateDoor ['DoorL_Back_Open',0];
                             _veh animateDoor ['DoorR_Back_Open ',0];
                         };
-                        systemChat localize "STR_MISC_VehLock";
+                        systemChat "You have locked your vehicle.";
                         [_veh,"lockCarSound",50,1] remoteExec ["life_fnc_say3D",RANY];
                     };
                 };

@@ -14,12 +14,12 @@ _num = ctrlText 3506;
 //Error checks
 if (!([_num] call TON_fnc_isnumber)) exitWith {hint "Invalid number format";};
 _num = parseNumber(_num);
-if (_num < 1) exitWith {hint localize "STR_Cop_VaultUnder1";};
-if (!(_ctrl isEqualTo "goldBar")) exitWith {hint localize "STR_Cop_OnlyGold"};
-if (_num > life_inv_goldbar) exitWith {hint format [localize "STR_Cop_NotEnoughGold",_num];};
+if (_num < 1) exitWith {hint "You can't enter anything below 1!";};
+if (!(_ctrl isEqualTo "goldBar")) exitWith {hint "You can't store anything but gold bars in the safe."};
+if (_num > life_inv_goldbar) exitWith {hint format ["You don't have %1 gold bar(s)",_num];};
 
 //Store it.
-if (!([false,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint localize "STR_Cop_CantRemove";};
+if (!([false,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint "Couldn't remove the item(s) from your inventory to put in the safe.";};
 _safeInfo = life_safeObj getVariable ["safe",0];
 life_safeObj getVariable ["safe",_safeInfo + _num,true];
 

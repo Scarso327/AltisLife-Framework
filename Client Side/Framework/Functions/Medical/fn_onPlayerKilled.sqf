@@ -126,7 +126,7 @@ if (side _killer isEqualTo west && !(playerSide isEqualTo west)) then {
     life_copRecieve = _killer;
     //Did I rob the federal reserve?
     if (!life_use_atm && {CASH > 0}) then {
-        [format [localize "STR_Cop_RobberDead",[CASH] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+        [format ["£%1 from the National Treasury robbery was returned from the robber being killed.",[CASH] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
         CASH = 0;
     };
 };

@@ -9,14 +9,14 @@
 */
 private "_action";
 _action = [
-    localize "STR_GNOTF_DisbandWarn",
+    "You are about to disband the group, by disbanding the group it will be removed from the database and the group will be dropped. &lt;br/&gt;&lt;br/&gt;Are you sure you want to disband the group? You will not be refunded the price for creating it.",
     localize "STR_Gang_Disband_Gang",
     "Yes",
     "No"
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
-    hint localize "STR_GNOTF_DisbandGangPro";
+    hint "Disbanding the group...";
 
     if (life_HC_isActive) then {
         [group player] remoteExec ["HC_fnc_removeGang",HC_Life];
@@ -25,5 +25,5 @@ if (_action) then {
     };
 
 } else {
-    hint localize "STR_GNOTF_DisbandGangCanc";
+    hint "Disbanding cancelled";
 };

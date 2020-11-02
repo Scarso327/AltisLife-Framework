@@ -13,11 +13,11 @@ params [
 ];
 
 if (_name isEqualTo "" || isNull _group) exitWith {}; //Fail horn anyone?
-if (!isNil {(group player) getVariable "gang_name"}) exitWith {hint localize "STR_GNOTF_AlreadyInGang";};
+if (!isNil {(group player) getVariable "gang_name"}) exitWith {hint "You are already in a group.";};
 
 _gangName = _group getVariable "gang_name";
 _action = [
-    format [localize "STR_GNOTF_InviteMSG",_name,_gangName],
+    format ["%1 has invited you to a group called %2&lt;br/&gt;If you accept the invitation you will be a part of their group and will have access to the group funds and controlled group hideouts.",_name,_gangName],
     "Group Invitation",
     "Yes",
     "No"

@@ -9,7 +9,7 @@
 life_action_gangInUse = nil;
 
 if (BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
-    hint format [localize "STR_GNOTF_NotEnoughMoney",[((LIFE_SETTINGS(getNumber,"gang_price"))-BANK)] call life_fnc_numberText];
+    hint format ["You do not have enough money in your bank account.\n\nYou lack: £%1",[((LIFE_SETTINGS(getNumber,"gang_price"))-BANK)] call life_fnc_numberText];
     {group player setVariable [_x,nil,true];} forEach ["gang_id","gang_owner","gang_name","gang_members","gang_maxmembers","gang_bank"];
 };
 

@@ -196,7 +196,7 @@ class Life_Settings {
 };
 
 #include "Config_Clothing.hpp"
-#include "Config_Licenses.hpp"
+#include "CfgLicenses.hpp"
 #include "Config_Vehicles.hpp"
 #include "Config_vItems.hpp"
 #include "Config_Weapons.hpp"

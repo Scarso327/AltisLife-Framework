@@ -82,7 +82,6 @@ class Life_Client_Core {
         class jailMe {};
         class knockedOut {};
         class knockoutAction {};
-        class removeLicenses {};
         class robPerson {};
         class robReceive {};
         class tazed {};

@@ -34,8 +34,6 @@ if (player distance (getMarkerPos "jail_marker") > 40) then {
     player setPos (getMarkerPos "jail_marker");
 };
 
-[1] call life_fnc_removeLicenses;
-
 {
     _amount = ITEM_VALUE(_x);
     if (_amount > 0) then {

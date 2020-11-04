@@ -12,7 +12,6 @@ _type = _this select 3;
 if (!isClass (missionConfigFile >> "Licenses" >> _type)) exitWith {}; //Bad entry?
 _displayName = M_CONFIG(getText,"Licenses",_type,"displayName");
 _price = M_CONFIG(getNumber,"Licenses",_type,"price");
-_sideFlag = M_CONFIG(getText,"Licenses",_type,"side");
 _varName = LICENSE_VARNAME(_type,_sideFlag);
 
 if (CASH < _price) exitWith {hint format ["You do not have £%1 for a %2",[_price] call life_fnc_numberText,localize _displayName];};

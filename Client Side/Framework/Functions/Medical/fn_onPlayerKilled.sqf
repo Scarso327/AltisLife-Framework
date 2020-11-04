@@ -95,20 +95,11 @@ if (!isNull _killer && {!(_killer isEqualTo _unit)} && {!(side _killer isEqualTo
         } else {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187V"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
         };
-
-        //Get rid of this if you don't want automatic vehicle license removal.
-        if (!local _killer) then {
-            [2] remoteExecCall ["life_fnc_removeLicenses",_killer];
-        };
     } else {
         if (life_HC_isActive) then {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
         } else {
             [getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
-        };
-
-        if (!local _killer) then {
-            [3] remoteExecCall ["life_fnc_removeLicenses",_killer];
         };
     };
 };

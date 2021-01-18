@@ -51,7 +51,7 @@ CONSTVAR(ULP_Paycheck);
 [] execFSM "Functions\Paycheck\pay.fsm";
 
 ["Starting Input Handler"] call ULP_fnc_logIt;
-(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];
+(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call ULP_fnc_inputs"];
 
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 

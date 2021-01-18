@@ -18,6 +18,12 @@ _disabledKeys append (actionKeys "tacticalView"); // Disable tactical view...
 
 if (_code in _disabledKeys) then { _handled = true };
 
+if (isDowned(player)) then { 
+    // Incapacitated Inputs...
+    switch (_code) do {
+        case ESC: { _handled = true };
+    };
+} else {
     switch (_code) do {
         case Y: {
             if (!_alt && { !_ctrlKey } && { !dialog } && { !(player call ULP_fnc_isRestrained) } && { !life_action_inUse }) then {
@@ -25,5 +31,6 @@ if (_code in _disabledKeys) then { _handled = true };
             };
         };
     };
+};
 
 _handled

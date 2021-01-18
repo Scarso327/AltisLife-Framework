@@ -18,12 +18,6 @@ class Life_Settings {
 
     /* Basic System Configurations */
     total_maxWeight = 24;
-    respawn_timer = 30;
-
-    /* Medical System Configurations */
-    revive_cops = true;
-    revive_fee = 1500;
-    drop_weapons_onDeath = false;
 
     /* Player Data Saving */
     save_virtualItems = true;
@@ -206,3 +200,4 @@ class Life_Settings {
 #include "CfgFactions.hpp"
 #include "CfgSpawns.hpp"
 #include "CfgClothing.hpp"
+#include "CfgMedical.hpp"

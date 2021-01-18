@@ -53,6 +53,7 @@ CONSTVAR(ULP_Paycheck);
 
 ["Starting Input Handler"] call ULP_fnc_logIt;
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call ULP_fnc_keyDown"];
+(findDisplay 46) displayAddEventHandler ["KeyUp", "_this call ULP_fnc_KeyUp"];
 
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 

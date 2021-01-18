@@ -31,6 +31,16 @@ class ULP_Functions {
 		class loadGear {};
 		class saveGear {};
 		class keyDown {};
+		class keyUp {};
+		class initPlayerEvents {};
+	};
+
+	class PlayerEvents {
+		file = "Functions\Player\Events";
+		class onIncapacitated {};
+		class onKilled {};
+		class onRespawn {};
+		class onDamaged {};
 	};
 
 	class Paycheck {

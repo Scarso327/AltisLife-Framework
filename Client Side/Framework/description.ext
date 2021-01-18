@@ -17,6 +17,7 @@ class RscTitles {
     #include "UI\progress.hpp"
     #include "UI\hud_nameTags.hpp"
     #include "UI\hud_stats.hpp"
+    #include "UI\RscIncapacitated\RscIncapacitated.hpp"
 };
 
 class CfgFunctions {

@@ -248,15 +248,10 @@ class Life_Client_Core {
 
     class Medical_System {
         file = "Functions\Medical";
-        class deathScreen {};
         class medicLights {};
         class medicMarkers {};
-        class medicRequest {};
         class medicSiren {};
         class medicSirenLights {};
-        class requestMedic {};
-        class revived {};
-        class revivePlayer {};
     };
 
     class Network {

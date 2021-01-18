@@ -5,7 +5,7 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_initialisation";
 
-waitUntil { !isNull player && { player isEqualTo player } && { !isNull (findDisplay 46) } };
+waitUntil { !isNull player && { !isNull (findDisplay 46) } };
 
 private _startTime = diag_tickTime;
 ["Initialisation Started"] call ULP_fnc_logIt;

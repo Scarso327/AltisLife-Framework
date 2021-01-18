@@ -60,6 +60,7 @@ if (life_firstSpawn) then {
     [] call life_fnc_welcomeNotification;
 };
 
+player allowDammage true;
 player enableFatigue false;
 player enableStamina false;
 player enableAimPrecision false;

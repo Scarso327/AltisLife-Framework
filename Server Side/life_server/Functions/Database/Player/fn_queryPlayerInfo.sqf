@@ -83,10 +83,11 @@ for "_i" from 0 to 1 step 0 do {
 		// Groups + Housing
 		_newResult pushBack ([false, (_uid call TON_fnc_queryPlayerGang)] select (isClass(_factionCfg >> "Groups")));
 		_newResult pushBack ([false, (_uid call TON_fnc_fetchPlayerHouses)] select (isClass(_factionCfg >> "Housing")));
-
+		
 		// Misc
 		_newResult pushBack (missionNamespace getVariable [format ["%1_KEYS_%2", _uid, (side _unit)], []]);
 		_newResult pushBack _firstInsert;
+		_newResult pushBack ULP_SRV_Date; // Include date from serer here...
 
 		_playerData = _newResult;
 	};

@@ -14,6 +14,11 @@ class CfgFunctions {
     class Functions {
         tag = "ULP_SRV";
 
+        class DatabaseMain {
+            file = "\life_server\Functions\Database";
+            class getLocalTime {};
+        };
+
         class DatabasePlayer {
             file = "\life_server\Functions\Database\Player";
             class queryPlayerInfo {};

@@ -71,6 +71,9 @@ publicVariable "life_server_extDB_notLoaded";
 ["CALL deleteOldHouses",1] call DB_fnc_asyncCall;
 ["CALL deleteOldGangs",1] call DB_fnc_asyncCall;
 
+ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
+ULP_SRV_Date resize 3; // We only need Year, Month, Day
+
 _timeStamp = diag_tickTime;
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log "---------------------------------- Starting Altis Life Server Init ---------------------------------";

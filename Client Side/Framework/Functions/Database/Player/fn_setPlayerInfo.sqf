@@ -75,6 +75,9 @@ if (_houses isEqualType []) then {
 	life_vehicles pushBack _x
 } forEach (_playerData select (_count - 3));
 
+ULP_New = (_playerData select (_count - 2)); // Tells us if this is a new database insert...
+ULP_Date = (_playerData select (_count - 1)); // Contains Year, Month and Day in that order...
+
 // Apply our saved gear...
 ULP_Gear = _gear;
 [ULP_Gear] call ULP_fnc_loadGear;

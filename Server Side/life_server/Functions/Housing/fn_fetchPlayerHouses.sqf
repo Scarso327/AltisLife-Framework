@@ -82,4 +82,4 @@ _return = [];
     _return pushBack [_x select 1];
 } forEach _houses;
 
-missionNamespace setVariable [format ["houses_%1",_uid],_return];
+_return

@@ -50,3 +50,14 @@ class ULP_Functions {
 		class syncPlayerInfo {};
 	};
 };
+
+class ULP_Functions_UI {
+	tag = "ULP";
+
+	class RscLayers {
+		file = "UI\RscLayers";
+		class createLayer {};
+		class destroyLayer {};
+		class getLayer {};
+	};
+};

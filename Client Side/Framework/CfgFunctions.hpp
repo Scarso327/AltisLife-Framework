@@ -61,6 +61,11 @@ class ULP_Functions {
 class ULP_Functions_UI {
 	tag = "ULP_UI";
 
+	class Functions {
+		file = "UI\Functions";
+		class closeDialogs {};
+	};
+
 	class RscLayers {
 		file = "UI\RscLayers";
 		class createLayer {};

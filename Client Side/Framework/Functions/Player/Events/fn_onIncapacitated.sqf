@@ -95,6 +95,8 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 				"<t align='left' size='1'>%1</t><t align='right' size='1'>Nearest Medic: 0m</t>",
 				_rspMsg
 			];
+
+			(_incapUi displayCtrl 9004) progressSetPosition ((time - _startTime) / (_endTime - _startTime));
 		};
 
 		uiNamespace setVariable ["_fnc_bleedout", nil];

@@ -65,7 +65,7 @@ class RscIncapacitated {
 
         class RequestMedic : Life_RscStructuredText {
             idc = 9005;
-            text = "<t align='center' size='1'>Press <t color='#8A2BE2'>Shift + E</t> to request a medic</t>";
+            text = "<t align='center' size='1'>Press <t color='#8A2BE2'>Space</t> to request a medic</t>";
             x = 0.29375 * safezoneW + safezoneX;
             y = 0.792 * safezoneH + safezoneY;
             w = 0.4125 * safezoneW;

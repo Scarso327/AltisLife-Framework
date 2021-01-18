@@ -9,10 +9,9 @@
     2. Fetches all the players containers and sets them up.
 */
 private ["_query","_containers","_containerss","_houses"];
-params [
-    ["_uid","",[""]]
-];
-if (_uid isEqualTo "") exitWith {};
+
+private _uid = _this;
+if (_uid isEqualTo "") exitWith { false };
 
 _query = format ["SELECT pid, pos, classname, inventory, gear, dir, id FROM containers WHERE pid='%1' AND owned='1'",_uid];
 _containers = [_query,2,true] call DB_fnc_asyncCall;

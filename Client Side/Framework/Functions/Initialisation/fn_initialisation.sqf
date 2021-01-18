@@ -15,6 +15,7 @@ private _startTime = diag_tickTime;
 player allowDammage false;
 
 ["Setting Eventhandlers"] call ULP_fnc_logIt;
+[] call ULP_fnc_initPlayerEvents;
 [] call ULP_fnc_initEventHandlers;
 
 ["Waiting For Server"] call ULP_fnc_logIt;

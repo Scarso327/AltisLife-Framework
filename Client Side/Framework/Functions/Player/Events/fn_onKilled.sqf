@@ -36,6 +36,12 @@ _unit removeWeapon (secondaryWeapon _unit);
 
 // TODO : Drop Money & Items and Default Death Related Variables...
 
+// Close bleedout script...
+if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
+	terminate (uiNamespace getVariable "_fnc_bleedout");
+	uiNamespace setVariable ["_fnc_bleedout", nil];
+};
+
 // Death Screen...
 [] spawn {
 	"WaitToRespawn" cutText ["<t color='#ffffff' font='PuristaLight' size='2px'>YOU HAVE DIED</t>", "BLACK", -1, false, true];

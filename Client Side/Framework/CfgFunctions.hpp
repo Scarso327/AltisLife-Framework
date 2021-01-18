@@ -59,7 +59,7 @@ class ULP_Functions {
 };
 
 class ULP_Functions_UI {
-	tag = "ULP";
+	tag = "ULP_UI";
 
 	class RscLayers {
 		file = "UI\RscLayers";

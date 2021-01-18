@@ -35,3 +35,4 @@
 #define B 48
 #define N 49
 #define M 50
+#define SPACE 57

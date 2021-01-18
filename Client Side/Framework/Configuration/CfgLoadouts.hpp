@@ -42,7 +42,7 @@ class Loadouts {
 
     class CIV {
         uniform[] = {
-            {"U_C_Poor_1", "!life_is_arrested"}
+            {"U_C_Poor_1", ""}
         };
         headgear[] = {};
         vest[] = {};

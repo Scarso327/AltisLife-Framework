@@ -28,3 +28,6 @@ ULP_Survival_Hunger = 100;
 
 CASH = 0;
 BANK = LIFE_SETTINGS(getNumber,"starting_bank");
+
+/* Default Altis Life Variables */
+life_action_inUse = false;

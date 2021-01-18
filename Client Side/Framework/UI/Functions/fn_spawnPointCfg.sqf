@@ -29,7 +29,7 @@ for "_i" from 0 to count(_spawnCfg)-1 do {
     };
 };
 
-if (playerSide isEqualTo civilian) then {
+/* if (playerSide isEqualTo civilian) then {
   if (count life_houses > 0) then {
     {
       _pos = call compile format ["%1",(_x select 0)];
@@ -40,6 +40,6 @@ if (playerSide isEqualTo civilian) then {
       true
     } count life_houses;
   };
-};
+}; */
 
 _return

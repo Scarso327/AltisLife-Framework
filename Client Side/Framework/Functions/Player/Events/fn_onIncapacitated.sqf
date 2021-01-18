@@ -96,6 +96,8 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 				_rspMsg
 			];
 		};
+
+		uiNamespace setVariable ["_fnc_bleedout", nil];
 	};
 
 	uiNamespace setVariable ["_fnc_bleedout", _bleedout];

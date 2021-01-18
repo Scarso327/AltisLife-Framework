@@ -11,9 +11,7 @@ class Life_Client_Core {
 
     class Master_Directory {
         file = "Functions";
-        class initCiv {};
         class setupActions {};
-        class setupEVH {};
         class survival {};
         class welcomeNotification {};
     };
@@ -43,7 +41,6 @@ class Life_Client_Core {
         class putInCar {};
         class removeContainer {};
         class repairTruck {};
-        class restrainAction {};
         class robAction {};
         class searchAction {};
         class searchVehAction {};
@@ -111,7 +108,6 @@ class Life_Client_Core {
         class questionDealer {};
         class radar {};
         class repairDoor {};
-        class restrain {};
         class searchClient {};
         class seizeClient {};
         class sirenLights {};
@@ -258,10 +254,7 @@ class Life_Client_Core {
         class medicRequest {};
         class medicSiren {};
         class medicSirenLights {};
-        class onPlayerKilled {};
-        class onPlayerRespawn {};
         class requestMedic {};
-        class respawned {};
         class revived {};
         class revivePlayer {};
     };

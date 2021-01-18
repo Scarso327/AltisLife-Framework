@@ -49,6 +49,13 @@ class ULP_Functions {
 		class setPlayerInfo {};
 		class syncPlayerInfo {};
 	};
+
+	class Effects {
+		file = "Functions\Effects";
+		class createEffect {};
+		class destroyEffect {};
+		class wipeEffects {};
+	};
 };
 
 class ULP_Functions_UI {

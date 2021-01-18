@@ -30,7 +30,7 @@ class ULP_Functions {
 		file = "Functions\Player";
 		class loadGear {};
 		class saveGear {};
-		class inputs {};
+		class keyDown {};
 	};
 
 	class Paycheck {

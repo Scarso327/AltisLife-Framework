@@ -4,7 +4,7 @@ unsafeCVL = 1;
 enableDebugConsole = 2;
 
 #include "CfgRemoteExec.hpp"
-#include "UI\MasterHandler.hpp"
+#include "UI\Includes.hpp"
 #include "Configuration\CfgSettings.hpp"
 
 class CfgServer {

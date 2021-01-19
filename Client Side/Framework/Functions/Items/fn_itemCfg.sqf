@@ -43,6 +43,7 @@ if (!(isNull _internalCfg) && { isClass (_internalCfg >> "Textures") }) then {
 	_armaCfg,
 	_internalCfg,
 	_item,
+	getText (([_armaCfg, _internalCfg] select (isText (_internalCfg >> "picture"))) >> "picture"),
 	getText (([_armaCfg, _internalCfg] select (isText (_internalCfg >> "displayName"))) >> "displayName"),
 	([-1, getNumber (_internalCfg >> "price")] select (isNumber (_internalCfg >> "price"))),
 	_textures

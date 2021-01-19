@@ -26,6 +26,11 @@ class ULP_Functions {
 		class setTextures {};
 	};
 
+	class Items {
+		file = "Functions\Items";
+		class itemCfg {};
+	};
+
 	class Player {
 		file = "Functions\Player";
 		class loadGear {};

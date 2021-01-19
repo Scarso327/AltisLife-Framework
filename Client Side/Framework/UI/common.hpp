@@ -572,7 +572,7 @@ class Life_RscListBox
     color[] = {0.7, 0.7, 0.7, 1};
     colorActive[] = {0,0,0,1};
     colorDisabled[] = {0,0,0,0.3};
-    sizeEx = 0.023;
+    sizeEx = 0.030;
     soundSelect[] = {"",0.1,1};
     soundExpand[] = {"",0.1,1};
     soundCollapse[] = {"",0.1,1};

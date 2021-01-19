@@ -14,6 +14,8 @@
 
 // Colours
 
+#define NO_COLOUR {0, 0, 0, 0}
+
 // Structure
 #define HEADER_COLOUR {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1}
 #define BODY_COLOUR {0.204, 0.2, 0.204, 1}

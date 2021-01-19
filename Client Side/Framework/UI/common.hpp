@@ -1152,6 +1152,9 @@ class Life_RscCombo {
 };
 
 class Life_RscToolbox {
+    type = 6;
+    rows = 1;
+    columns = 1;
     colorText[] = {0.95, 0.95, 0.95, 1};
     color[] = {0.95, 0.95, 0.95, 1};
     colorTextSelect[] = {0.95, 0.95, 0.95, 1};

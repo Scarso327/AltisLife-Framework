@@ -1,5 +1,5 @@
 disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}}; 
-overviewText = "An RPG game mode developed by Scarso & Lewis.";
+overviewText = "An RPG game mode developed by Scarso and Lewis.";
 unsafeCVL = 1;
 enableDebugConsole = 2;
 

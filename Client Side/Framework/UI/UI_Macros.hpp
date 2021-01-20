@@ -8,9 +8,14 @@
 #define MARGIN_X 0.00515625
 #define MARGIN_Y 0.011
 
+#define BUTTON_MARGIN_X (MARGIN_X / 2)
+#define BUTTON_MARGIN_Y (MARGIN_Y / 2)
+
 // Used for creating a line of equal width boxes.
 #define HORIZONTAL_GRID_X(x, width, itemNumber) (x + (width * (itemNumber - 1))) + (MARGIN_X * itemNumber)
 #define HORIZONTAL_GRID_W(width, items) ((width / items) - MARGIN_X)
+
+#define BUTTON_H 0.022
 
 // Colours
 

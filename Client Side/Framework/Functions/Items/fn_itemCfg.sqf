@@ -21,14 +21,24 @@ private _internalCfg = ([_class, _item] call {
 	scopeName "fn_getInternalCfg";
 
 	_this params ["_class", "_item"];
-
-	if (_class isEqualTo "CfgWeapons") exitWith {
-		if (getNumber(configFile >> "CfgWeapons" >> _item >> "type") in [4096, 131072]) then {
-			([
-				configNull,
-				missionConfigFile >> "CfgClothing" >> _item
-			] select (getNumber(configFile >> "CfgWeapons">> _item >> "ItemInfo" >> "type") in [701, 801, 605])) breakOut "fn_getInternalCfg";
-        };
+	
+	switch (_class) do {
+		case "CfgWeapons": {
+			// Vest, Headgear, Uniform
+			if (getNumber(configFile >> "CfgWeapons" >> _item >> "type") in [4096, 131072]
+				&& { getNumber(configFile >> "CfgWeapons">> _item >> "ItemInfo" >> "type") in [701, 801, 605] }) then {
+				(missionConfigFile >> "CfgClothing" >> _item) breakOut "fn_getInternalCfg";
+			};
+		};
+		case "CfgVehicles": {
+			// Backpack
+			if (getNumber (configFile >> "CfgVehicles" >> _item >> "isBackpack") isEqualTo 1) then {
+				(missionConfigFile >> "CfgClothing" >> _item) breakOut "fn_getInternalCfg";
+			};
+		};
+		case "CfgGlasses": {
+			(missionConfigFile >> "CfgClothing" >> _item) breakOut "fn_getInternalCfg";
+		};
 	};
 
 	configNull

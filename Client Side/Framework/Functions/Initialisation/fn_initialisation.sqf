@@ -44,7 +44,9 @@ private "_container";
 {
 	_container = uniformContainer _x;
 	[_x, _container, _container getVariable ["texture", ""], false, false] call ULP_fnc_setTextures;
-} forEach allUnits;
+} forEach allUnits select {
+	!(_x isEqualTo player)
+};
 
 ["Starting Paycheck Loop"] call ULP_fnc_logIt;
 ULP_Paycheck = [] call ULP_fnc_calcPaycheck;

@@ -34,6 +34,18 @@ if !(_clothing isEqualTo (configName (_cfgParents select ((count _cfgParents) - 
 
 if (isArray (_texture >> "textures")) then {
 	{
+		/*
+		 * Temp work around for comment by snov https://feedback.bistudio.com/T80668
+		*/
+		if (_x isEqualTo "") then {
+			if (!isServer) then {
+				_this remoteExecCall ["ULP_fnc_setTextures", RSERV];
+				breakOut "fn_setTextures";
+			} else {
+				_object hideObjectGlobal true;
+			};
+		};
+
 		if (_isGlobal) then {
 			_object setObjectTextureGlobal [_forEachIndex, _x];
 		} else {

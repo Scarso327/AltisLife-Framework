@@ -50,6 +50,7 @@ if (!(isNull _internalCfg) && { isClass (_internalCfg >> "Textures") }) then {
 };
 
 [
+	_class,
 	_armaCfg,
 	_internalCfg,
 	_item,

@@ -39,7 +39,7 @@ if (isArray (_texture >> "textures")) then {
 		*/
 		if (_x isEqualTo "") then {
 			if (!isServer) then {
-				_this remoteExecCall ["ULP_fnc_setTextures", RSERV];
+				[_object, _container, _texture, _isBackpack, true] remoteExecCall ["ULP_fnc_setTextures", RSERV];
 				breakOut "fn_setTextures";
 			} else {
 				_object hideObjectGlobal true;

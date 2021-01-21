@@ -38,6 +38,7 @@ class ULP_Functions {
 		class keyDown {};
 		class keyUp {};
 		class initPlayerEvents {};
+		class getInventory {};
 	};
 
 	class PlayerEvents {

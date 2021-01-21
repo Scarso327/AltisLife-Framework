@@ -18,7 +18,7 @@ if (isNull _object || { isNull _container }) exitWith {};
 
 private _clothing = ([
 	uniform _object,
-	backpack _object
+	(typeOf _object)
 ] select (_isBackpack));
 
 if (_texture isEqualType "") then {

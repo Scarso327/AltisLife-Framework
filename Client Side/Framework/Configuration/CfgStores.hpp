@@ -1,0 +1,3 @@
+class CfgStores {
+	sellPerc = 0.2; // % of original price returned when you sell an item...
+};

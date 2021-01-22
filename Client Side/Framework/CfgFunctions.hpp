@@ -72,6 +72,16 @@ class ULP_Functions {
 		class destroyEffect {};
 		class wipeEffects {};
 	};
+
+	class Stores {
+		file = "Functions\Stores";
+		class addCart {};
+		class removeCart {};
+		class itemInfo {};
+		class cartInfo {};
+		class switchInventory {};
+		class sellItem {};
+	};
 };
 
 class ULP_Functions_UI {

@@ -201,3 +201,4 @@ class Life_Settings {
 #include "CfgSpawns.hpp"
 #include "CfgClothing.hpp"
 #include "CfgMedical.hpp"
+#include "CfgStores.hpp"

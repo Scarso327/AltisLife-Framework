@@ -199,6 +199,7 @@ class Life_Settings {
 #include "CfgLoadouts.hpp"
 #include "CfgFactions.hpp"
 #include "CfgSpawns.hpp"
+#include "CfgClothesStore.hpp"
 #include "CfgClothing.hpp"
 #include "CfgMedical.hpp"
 #include "CfgStores.hpp"

@@ -29,6 +29,7 @@ class ULP_Functions {
 	class Items {
 		file = "Functions\Items";
 		class itemCfg {};
+		class addItems {};
 	};
 
 	class Player {
@@ -81,6 +82,15 @@ class ULP_Functions {
 		class cartInfo {};
 		class switchInventory {};
 		class sellItem {};
+	};
+
+	class StoresClothing {
+		file = "Functions\Stores\Clothing";
+		class openClothing {};
+		class switchCategory {};
+		class onItemClick {};
+		class onTextureSwitch {};
+		class buyClothes {};
 	};
 };
 

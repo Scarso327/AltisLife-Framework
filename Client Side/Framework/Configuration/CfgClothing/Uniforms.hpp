@@ -2,38 +2,22 @@ class U_Rangemaster {
 	price = 1200;
 	class Textures {
 		// Police Skins
-		class CMDR {
-			displayName = "Commander";
-			textures[] = { "Data\Textures\Uniforms\Police\CMDR.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
-		};
-		class CC {
-			displayName = "Chief Constable";
-			textures[] = { "Data\Textures\Uniforms\Police\CC.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 9] call ULP_fnc_hasAccess }";
-		};
-		class DCC {
-			displayName = "Deputy Chief Constable";
-			textures[] = { "Data\Textures\Uniforms\Police\DCC.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
-		};
-		class CSUPT {
+		class CSI {
 			displayName = "Chief Superindendent";
-			price = 5000;
 			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 7] call ULP_fnc_hasAccess }";
 		};
-		class SUPT {
+		class SI {
 			displayName = "Superindendent";
 			textures[] = { "Data\Textures\Uniforms\Police\SUPT.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 6] call ULP_fnc_hasAccess }";
 		};
-		class CINSP {
+		class CI {
 			displayName = "Chief Inspector";
 			textures[] = { "Data\Textures\Uniforms\Police\CINSP.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
-		class INSP {
+		class INS {
 			displayName = "Inspector";
 			textures[] = { "Data\Textures\Uniforms\Police\INSP.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 4] call ULP_fnc_hasAccess }";
@@ -46,11 +30,6 @@ class U_Rangemaster {
 		class PC {
 			displayName = "Contable";
 			textures[] = { "Data\Textures\Uniforms\Police\PC.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
-		};
-		class PCSO {
-			displayName = "PCSO";
-			textures[] = { "Data\Textures\Uniforms\Police\PCSO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 

@@ -36,14 +36,22 @@ class ULP_Functions {
 		file = "Functions\Player";
 		class loadGear {};
 		class saveGear {};
+		class isRestrained {};
 		class keyDown {};
 		class keyUp {};
 		class initPlayerEvents {};
 		class getInventory {};
 	};
 
+	class PlayerActions {
+		file = "Functions\Player\Actions";
+		class restrainTarget {};
+	};
+
 	class PlayerEvents {
 		file = "Functions\Player\Events";
+		class onRestrained {};
+		class onUnrestrained {};
 		class onIncapacitated {};
 		class onKilled {};
 		class onRespawn {};

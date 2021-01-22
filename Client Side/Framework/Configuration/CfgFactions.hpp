@@ -3,7 +3,7 @@ class CfgFactions {
 	fallbackPay = 1000;
 
 	class Police {
-		displayName = "Tanoa Police Constabulary";
+		displayName = "Malden Police Constabulary";
 		pay = 2500;
 		class Whitelisting {
 			class Main {
@@ -29,7 +29,7 @@ class CfgFactions {
 	};
 
 	class Medic {
-		displayName = "Tanoa Ambulance Service";
+		displayName = "Malden Ambulance Service";
 		pay = 2500;
 		class Whitelisting {
 			class Main {

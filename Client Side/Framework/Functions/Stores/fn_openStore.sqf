@@ -2,14 +2,16 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-#include "..\..\..\script_macros.hpp"
-scopeName "fn_clothingStore";
+#include "..\..\script_macros.hpp"
+scopeName "fn_openStore";
 
 _this params [
-	["_store", "", [""]]
+	["_store", "", [""]],
+	["_storeCfg", "CfgClothesStore", [""]]
 ];
 
-private _storeCfg = missionConfigFile >> "CfgClothesStore" >> _store;
+private _cfg = missionConfigFile >> _storeCfg;
+_storeCfg = _cfg >> _store;
 if !(isClass (_storeCfg)) exitWith {};
 
 if (createDialog "RscGenericStore") then {
@@ -23,15 +25,10 @@ if (createDialog "RscGenericStore") then {
 
 	uiNamespace setVariable ["cartValue", 0];
 
-	private _toolBox = _display displayCtrl 3102;
-	[_toolBox, 0] call ULP_fnc_switchCategory;
-	_toolBox ctrlSetEventHandler ["ToolboxSelChanged", "_this call ULP_fnc_switchCategory"];
-
-	(_display displayCtrl 3105) ctrlSetStructuredText parseText "<t size='0.8'>Select and start adding items to your cart to begin...</t>";
-
-	// Item Actions...
-	(_display displayCtrl 3103) ctrlSetEventHandler ["LBSelChanged", "_this call ULP_fnc_onItemClick"];
-	(_display displayCtrl 3106) ctrlSetEventHandler ["LBSelChanged", "_this call ULP_fnc_onTextureSwitch"];
+	private _onLoad = _cfg >> "onLoad";
+	if (isText(_onLoad)) then {
+		[_display] call compile (getText(_onLoad));
+	};
 
 	// Cart Actions..
 	(_display displayCtrl 3108) ctrlSetEventHandler ["ButtonClick", "[] call ULP_fnc_addCart"];

@@ -84,6 +84,7 @@ class ULP_Functions {
 
 	class Stores {
 		file = "Functions\Stores";
+		class openStore {};
 		class addCart {};
 		class removeCart {};
 		class itemInfo {};
@@ -94,7 +95,7 @@ class ULP_Functions {
 
 	class StoresClothing {
 		file = "Functions\Stores\Clothing";
-		class openClothing {};
+		class onLoadClothing {};
 		class switchCategory {};
 		class onItemClick {};
 		class onTextureSwitch {};

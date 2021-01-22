@@ -1,4 +1,6 @@
 class CfgClothesStore {
+	onLoad = "_this call ULP_fnc_onLoadClothing";
+
 	class Police {
 		storeName = "Police Clothing Store";
 		class Uniforms {

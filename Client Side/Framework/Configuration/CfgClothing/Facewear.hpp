@@ -30,7 +30,7 @@ class G_Spectacles {
 	isGas = false;
 	class Textures {};
 };
-class G_Squares_Tinted : G_Spectacles{};
+// class G_Squares_Tinted : G_Spectacles{};
 
 class G_Shades_Black {
 	price = 0;

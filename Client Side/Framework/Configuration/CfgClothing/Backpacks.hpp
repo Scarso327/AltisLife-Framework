@@ -48,9 +48,6 @@ class B_Kitbag_cbr {
 	class Textures {};
 };
 class B_Kitbag_tan : B_Kitbag_cbr{};
-class B_FieldPack_khk : B_Kitbag_cbr{};
-class B_FieldPack_oli : B_Kitbag_cbr{};
-class B_FieldPack_green_F : B_Kitbag_cbr{};
 
 class B_TacticalPack_blk {
 	price = 0;
@@ -59,16 +56,6 @@ class B_TacticalPack_blk {
 };
 class B_TacticalPack_oli : B_TacticalPack_blk{};
 class B_TacticalPack_rgr : B_TacticalPack_blk{};
-
-class B_FieldPack_blk {
-	price = 0;
-	virtualSpace = 0;
-	class Textures {};
-};
-class B_FieldPack_cbr : B_FieldPack_blk{};
-class B_FieldPack_khk : B_FieldPack_blk{};
-class B_FieldPack_oli : B_FieldPack_blk{};
-class B_FieldPack_green_F : B_FieldPack_blk{};
 
 class B_Carryall_cbr {
 	price = 0;

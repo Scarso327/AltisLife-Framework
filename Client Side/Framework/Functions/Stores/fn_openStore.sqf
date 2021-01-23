@@ -21,6 +21,14 @@ if (createDialog "RscGenericStore") then {
 
 	if (isNull _display) exitWith {};
 
+	private _idc = getNumber(_cfg >> "toolBoxIDC");
+
+	// Hide toolboxes that aren't used by this store...
+	// I use thius method as I couldn't get the pictures to update.
+	{
+		ctrlShow [_x, false];
+	} forEach ([3102, 3113] select { !(_x isEqualTo _idc) });
+
 	ctrlSetText [3101, getText(_storeCfg >> "storeName")];
 
 	uiNamespace setVariable ["cartValue", 0];

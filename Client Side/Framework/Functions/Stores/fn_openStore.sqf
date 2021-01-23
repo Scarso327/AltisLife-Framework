@@ -38,17 +38,16 @@ if (createDialog "RscGenericStore") then {
 	[_toolBox, 0] call ULP_fnc_switchCategory;
 	_toolBox ctrlSetEventHandler ["ToolboxSelChanged", "_this call ULP_fnc_switchCategory"];
 
-	private _onLoad = _cfg >> "onLoad";
-	if (isText(_onLoad)) then {
-		[_display] call compile (getText(_onLoad));
-	};
+	(_display displayCtrl 3105) ctrlSetStructuredText parseText "<t size='0.8'>Select and start adding items to your cart to begin...</t>";
 
+	// Item Actions...
+	(_display displayCtrl 3106) ctrlSetEventHandler ["LBSelChanged", "_this call ULP_fnc_onTextureSwitch"];
 	(_display displayCtrl 3103) ctrlSetEventHandler ["LBSelChanged", "_this call ULP_fnc_onItemClick"];
 
 	// Cart Actions..
 	(_display displayCtrl 3108) ctrlSetEventHandler ["ButtonClick", "[] call ULP_fnc_addCart"];
 	(_display displayCtrl 3107) ctrlSetEventHandler ["LBDblClick", "_this call ULP_fnc_removeCart"];
-	(_display displayCtrl 3110) ctrlSetEventHandler ["ButtonClick", "_this spawn ULP_fnc_buyClothes"];
+	(_display displayCtrl 3110) ctrlSetEventHandler ["ButtonClick", "_this spawn ULP_fnc_buyItems"];
 
 	private _invToolBox = _display displayCtrl 3111;
 	[_invToolBox, 0] call ULP_fnc_switchInventory;

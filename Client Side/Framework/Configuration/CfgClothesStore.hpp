@@ -1,5 +1,5 @@
 class CfgClothesStore {
-	onLoad = "_this call ULP_fnc_onLoadClothing";
+	onItemBuy = "_this call ULP_fnc_onBuyClothes";
 	toolBoxIDC = 3102;
 	itemCfg = "CfgClothing";
 

@@ -91,6 +91,7 @@ class ULP_Functions {
 		class removeCart {};
 		class itemInfo {};
 		class cartInfo {};
+		class buyItems {};
 		class sellItem {};
 		class onItemClick {};
 		class onTextureSwitch {};
@@ -98,8 +99,7 @@ class ULP_Functions {
 
 	class StoresClothing {
 		file = "Functions\Stores\Clothing";
-		class onLoadClothing {};
-		class buyClothes {};
+		class onBuyClothes {};
 	};
 };
 

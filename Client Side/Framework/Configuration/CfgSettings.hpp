@@ -203,3 +203,5 @@ class Life_Settings {
 #include "CfgClothing.hpp"
 #include "CfgMedical.hpp"
 #include "CfgStores.hpp"
+#include "CfgItems.hpp"
+#include "CfgItemsStore.hpp"

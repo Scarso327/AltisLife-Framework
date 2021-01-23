@@ -97,6 +97,11 @@ class ULP_Functions {
 		class onTextureSwitch {};
 	};
 
+	class StoresItem {
+		file = "Functions\Stores\Item";
+		class onBuyItems {};
+	};
+
 	class StoresClothing {
 		file = "Functions\Stores\Clothing";
 		class onBuyClothes {};

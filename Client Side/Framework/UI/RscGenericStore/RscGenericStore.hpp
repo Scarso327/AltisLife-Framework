@@ -79,6 +79,32 @@ class RscGenericStore {
             };
         };
 
+        class ItemTypeTools : Life_RscToolbox {
+            idc = 3113;
+            style = 2 + 48 + 2048;
+            colorBackground[] = NO_COLOUR;
+            colorSelectedBg[] = INNER_BODY_COLOUR;
+            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, CONTENT_W, 1));
+            SAFEZONE_Y(0.291 + MARGIN_Y);
+			SAFEZONE_W(CONTENT_W);
+			SAFEZONE_H(MARGIN_Y * 2);
+            columns = 5;
+            strings[] = {
+                "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\primaryweapon_ca.paa",
+                "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\handgun_ca.paa",
+                "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\itemacc_ca.paa",
+                "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\cargomagall_ca.paa",
+                "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\nvgs_ca.paa"
+            };
+            tooltips[] = {
+                "Primary Weapons",
+                "Secondary Weapons",
+                "Attachments",
+                "Magazines",
+                "Items"
+            };
+        };
+
 		class ItemsList : Life_RscListBox {
             idc = 3103;
             colorBackground[] = INNER_BODY_COLOUR;

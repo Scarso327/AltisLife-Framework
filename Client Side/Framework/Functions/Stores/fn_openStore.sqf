@@ -15,6 +15,7 @@ _storeCfg = _cfg >> _store;
 if !(isClass (_storeCfg)) exitWith {};
 
 if (createDialog "RscGenericStore") then {
+	uiNamespace setVariable ["storeCfg", _cfg];
 	uiNamespace setVariable ["curStore", _storeCfg];
 
 	private _display = findDisplay 3100;
@@ -41,6 +42,8 @@ if (createDialog "RscGenericStore") then {
 	if (isText(_onLoad)) then {
 		[_display] call compile (getText(_onLoad));
 	};
+
+	(_display displayCtrl 3103) ctrlSetEventHandler ["LBSelChanged", "_this call ULP_fnc_onItemClick"];
 
 	// Cart Actions..
 	(_display displayCtrl 3108) ctrlSetEventHandler ["ButtonClick", "[] call ULP_fnc_addCart"];

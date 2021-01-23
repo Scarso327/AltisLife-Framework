@@ -40,8 +40,12 @@ private _texData = _textList lbData _texSel;
 _texData = parseSimpleArray _texData;
 
 _texData params [
-	"_texClass", "_texName"
+	"_texClass", "_texName", "_texPic"
 ];
+
+if !(_texPic isEqualTo "") then {
+	_picture = _texPic;
+};
 
 private _itemValue = (_itemList lbValue _curItem) + (_textList lbValue _texSel);
 

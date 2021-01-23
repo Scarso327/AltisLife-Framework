@@ -2,7 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-#include "..\..\..\script_macros.hpp"
+#include "..\..\script_macros.hpp"
 scopeName "fn_onItemClick";
 
 _this params [
@@ -26,11 +26,13 @@ uiNamespace setVariable ["itemData", [_displayName, (_ctrl lbValue _index)]];
 
 (_display displayCtrl 3104) ctrlSetText _picture;
 
+private _storeItemCfg = getText((uiNamespace getVariable "storeCfg") >> "itemCfg");
+
 _textures = (_textures select {
-	isClass (missionConfigFile >> "CfgClothing" >> _className >> "Textures" >> _x) && 
-	{ call compile (getText (missionConfigFile >> "CfgClothing" >> _className >> "Textures" >> _x >> "condition")) }
+	isClass (missionConfigFile >> _storeItemCfg >> _className >> "Textures" >> _x) && 
+	{ call compile (getText (missionConfigFile >> _storeItemCfg >> _className >> "Textures" >> _x >> "condition")) }
 }) apply {
-	missionConfigFile >> "CfgClothing" >> _className >> "Textures" >> _x
+	missionConfigFile >> _storeItemCfg >> _className >> "Textures" >> _x
 };
 
 private _textList = _display displayCtrl 3106;
@@ -43,8 +45,16 @@ if ((count _textures) isEqualTo 0 || { _allowDefault }) then {
 };
 
 {
-	private _item = _textList lbAdd (getText(_x >> "displayName"));
-	_textList lbSetData [_item, (str [(configName _x), (getText(_x >> "displayName"))])];
+	private _displayName = getText(_x >> "displayName");
+	private _picture = "";
+
+	// Store specific code...
+	if (_storeItemCfg isEqualTo "CfgItems") then {
+		_picture = ([(configName _x)] call ULP_fnc_itemCfg select 4);
+	};
+
+	private _item = _textList lbAdd _displayName;
+	_textList lbSetData [_item, (str [(configName _x), _displayName, _picture])];
 	_textList lbSetValue [_item, ([0, getNumber(_x >> "price")] select (isNumber (_x >> "price")))];
 } forEach _textures;
 

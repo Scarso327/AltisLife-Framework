@@ -28,6 +28,8 @@ private _internalCfg = ([_class, _item] call {
 			if (getNumber(configFile >> "CfgWeapons" >> _item >> "type") in [4096, 131072]
 				&& { getNumber(configFile >> "CfgWeapons">> _item >> "ItemInfo" >> "type") in [701, 801, 605] }) then {
 				(missionConfigFile >> "CfgClothing" >> _item) breakOut "fn_getInternalCfg";
+			} else {
+				(missionConfigFile >> "CfgItems" >> _item) breakOut "fn_getInternalCfg";
 			};
 		};
 		case "CfgVehicles": {

@@ -92,13 +92,13 @@ class ULP_Functions {
 		class itemInfo {};
 		class cartInfo {};
 		class sellItem {};
+		class onItemClick {};
+		class onTextureSwitch {};
 	};
 
 	class StoresClothing {
 		file = "Functions\Stores\Clothing";
 		class onLoadClothing {};
-		class onItemClick {};
-		class onTextureSwitch {};
 		class buyClothes {};
 	};
 };

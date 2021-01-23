@@ -25,6 +25,10 @@ if (createDialog "RscGenericStore") then {
 
 	uiNamespace setVariable ["cartValue", 0];
 
+	private _toolBox = _display displayCtrl _idc;
+	[_toolBox, 0] call ULP_fnc_switchCategory;
+	_toolBox ctrlSetEventHandler ["ToolboxSelChanged", "_this call ULP_fnc_switchCategory"];
+
 	private _onLoad = _cfg >> "onLoad";
 	if (isText(_onLoad)) then {
 		[_display] call compile (getText(_onLoad));

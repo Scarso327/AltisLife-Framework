@@ -53,7 +53,7 @@ class RscGenericStore {
 
 	class Controls {
 
-        class TypeTools : Life_RscToolbox {
+        class ClothesTypeTools : Life_RscToolbox {
             idc = 3102;
             style = 2 + 48 + 2048;
             colorBackground[] = NO_COLOUR;

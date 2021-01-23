@@ -2,7 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-#include "..\..\..\script_macros.hpp"
+#include "..\..\script_macros.hpp"
 scopeName "fn_switchCategory";
 
 _this params [
@@ -26,15 +26,7 @@ _textList lbSetCurSel -1;
 (_display displayCtrl 3104) ctrlSetText "";
 (_display displayCtrl 3105) ctrlSetStructuredText parseText ([] call ULP_fnc_cartInfo);
 
-private _items = _storeCfg >> (_index call {
-	if (_this isEqualTo 0) exitWith { "Uniforms" };
-	if (_this isEqualTo 1) exitWith { "Headgear" };
-	if (_this isEqualTo 2) exitWith { "Facewear" };
-	if (_this isEqualTo 3) exitWith { "Vests" };
-	"Backpacks"
-});
-
-_items = ("isClass _x" configClasses (_items));
+private _items = ("isClass _x" configClasses (_storeCfg >> ((_storeCfg call BIS_fnc_getCfgSubClasses) select _index)));
 
 if ((count _items) isEqualTo 0) exitWith {
 	_itemList lbAdd "No Items";

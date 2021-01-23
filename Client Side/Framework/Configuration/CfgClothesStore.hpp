@@ -1,5 +1,6 @@
 class CfgClothesStore {
 	onLoad = "_this call ULP_fnc_onLoadClothing";
+	toolBoxIDC = 3102;
 
 	class Police {
 		storeName = "Police Clothing Store";

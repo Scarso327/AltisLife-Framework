@@ -294,8 +294,6 @@ class Life_Client_Core {
         class 3dPreviewExit {};
         class 3dPreviewInit {};
         class atmMenu {};
-        class buyClothes {};
-        class changeClothes {};
         class chopShopMenu {};
         class chopShopSelection {};
         class chopShopSell {};
@@ -312,12 +310,6 @@ class Life_Client_Core {
         class virt_menu {};
         class virt_sell {};
         class virt_update {};
-        class weaponShopAccs {};
-        class weaponShopBuySell {};
-        class weaponShopFilter {};
-        class weaponShopMags {};
-        class weaponShopMenu {};
-        class weaponShopSelection {};
     };
 
     class Vehicle {

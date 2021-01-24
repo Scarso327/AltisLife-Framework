@@ -25,6 +25,22 @@ if (isDowned(player)) then {
     };
 } else {
     switch (_code) do {
+        case B: {
+            if (_shift && { !_ctrlKey }) then {
+                if (ULP_Ability_Cooldown < time) then {
+                    if !([player] call ULP_fnc_isSurrendered) then {
+                        [] call ULP_fnc_onSurrender;
+                    } else {
+                        player setVariable ["surrender", nil];
+                    };
+
+                    ULP_Ability_Cooldown = time + 1;
+                };
+
+                _handled = true;
+            };
+        };
+
         case H: {
             if (_shift && { !_ctrlKey }) then {
                 if (ULP_Holsted isEqualTo "" && { !((currentWeapon player) isEqualTo "") }) then {

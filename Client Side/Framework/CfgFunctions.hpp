@@ -37,6 +37,7 @@ class ULP_Functions {
 		class loadGear {};
 		class saveGear {};
 		class isRestrained {};
+		class isSurrendered {};
 		class keyDown {};
 		class keyUp {};
 		class initPlayerEvents {};
@@ -56,6 +57,7 @@ class ULP_Functions {
 		class onKilled {};
 		class onRespawn {};
 		class onDamaged {};
+		class onSurrender {};
 	};
 
 	class Paycheck {

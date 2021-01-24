@@ -66,7 +66,7 @@ class CfgClothesStore {
 			class V_RebreatherB { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;"; };
 		};
 		class Backpacks {
-			class B_Carryall_cbr { displayName = "Invisible Backpack" };
+			class B_Carryall_cbr { displayName = "Invisible Backpack"; };
 		};
 	};
 
@@ -124,7 +124,7 @@ class CfgClothesStore {
 			class V_RebreatherB { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 		class Backpacks {
-			class B_Carryall_cbr { displayName = "Invisible Backpack" };
+			class B_Carryall_cbr { displayName = "Invisible Backpack"; };
 		};
 	};
 

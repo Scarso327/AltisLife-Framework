@@ -93,7 +93,6 @@ class H_Booniehat_khk {
 	class Textures {};
 };
 class H_Booniehat_khk_hs : H_Booniehat_khk{};
-class H_Hat_brown : H_Booniehat_khk{};
 class H_Booniehat_grn : H_Booniehat_khk{};
 class H_Booniehat_oli : H_Booniehat_khk{};
 class H_Booniehat_tan : H_Booniehat_khk{};

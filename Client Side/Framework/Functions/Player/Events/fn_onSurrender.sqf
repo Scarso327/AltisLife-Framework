@@ -6,7 +6,7 @@
 scopeName "fn_onSurrender";
 
 // Already Surrendered...
-if ([player] call ULP_fnc_isSurrendered) exitWith {};
+if ([player] call ULP_fnc_isSurrendered || { isDowned(player) }) exitWith {};
 
 player setVariable ["surrender", true, true];
 

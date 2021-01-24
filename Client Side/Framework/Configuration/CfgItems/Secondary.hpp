@@ -19,6 +19,7 @@ class hgun_P07_F {
 	class Textures {
 		class hgun_P07_F {
 			displayName = "Khaki";
+			condition = "true";
 		};
 		class hgun_P07_blk_F : hgun_P07_F {
 			displayName = "Black";
@@ -36,6 +37,7 @@ class hgun_Pistol_heavy_01_F {
 	class Textures {
 		class hgun_Pistol_heavy_01_F {
 			displayName = "Tan";
+			condition = "true";
 		};
 		class hgun_Pistol_heavy_01_green_F : hgun_Pistol_heavy_01_F {
 			displayName = "Green";

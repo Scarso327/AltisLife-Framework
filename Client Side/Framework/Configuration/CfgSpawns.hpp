@@ -5,10 +5,11 @@ class CfgSpawns {
         class Civilian {};
     };
 
-     class Tanoa {
+    class Tanoa {
         class Police {};
         class Medic {};
         class Civilian {};
+    };
 
     class Malden {
         class Police {

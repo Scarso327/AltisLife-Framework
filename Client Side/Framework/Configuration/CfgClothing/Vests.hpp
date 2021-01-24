@@ -102,6 +102,8 @@ class V_PlateCarrier1_blk {
 };
 class V_PlateCarrier1_rgr : V_PlateCarrier1_blk{};
 class V_PlateCarrier1_rgr_noflag_F : V_TacChestrig_cbr_F{};
+class V_PlateCarrier1_wdl : V_TacChestrig_cbr_F{};
+class V_PlateCarrierL_CTRG : V_TacChestrig_cbr_F{};
 
 class V_PlateCarrier2_blk {
 	price = 0;
@@ -110,3 +112,5 @@ class V_PlateCarrier2_blk {
 };
 class V_PlateCarrier2_rgr : V_PlateCarrier2_blk{};
 class V_PlateCarrier2_rgr_noflag_F : V_PlateCarrier2_blk{};
+class V_PlateCarrier2_wdl : V_PlateCarrier2_blk{};
+class V_PlateCarrierH_CTRG : V_PlateCarrier2_blk{};

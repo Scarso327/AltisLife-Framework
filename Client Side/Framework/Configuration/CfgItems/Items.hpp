@@ -20,10 +20,18 @@ class Rangefinder : Binocular{};
 
 class NVGoggles {
 	price = 0;
-	class Textures {};	
+	class Textures {
+        class NVGoggles {
+			displayName = "Brown";
+		};
+		class NVGoggles_OPFOR : NVGoggles {
+			displayName = "Black";
+		};
+        class NVGoggles_INDEP : NVGoggles {
+			displayName = "Green";
+		};
+    };	
 };
-class NVGoggles_OPFOR : NVGoggles{};
-class NVGoggles_INDEP : NVGoggles{};
 
 class FirstAidKit {
 	price = 0;
@@ -43,11 +51,27 @@ class HandGrenade_Stone {
 
 class SmokeShell {
 	price = 0;
-	class Textures {};	
+	class Textures {
+        class SmokeShell {
+			displayName = "White";
+		};
+		class SmokeShellRed : NVGoggles {
+			displayName = "Red";
+		};
+        class SmokeShellGreen : NVGoggles {
+			displayName = "Green";
+		};
+        class SmokeShellBlue {
+			displayName = "Blue";
+		};
+		class SmokeShellOrange : NVGoggles {
+			displayName = "Orange";
+		};
+        class SmokeShellYellow : NVGoggles {
+			displayName = "Yellow";
+		};
+        class SmokeShellPurple : NVGoggles {
+			displayName = "Purple";
+		};
+    };	
 };
-class SmokeShellRed : SmokeShell{};
-class SmokeShellGreen : SmokeShell{};
-class SmokeShellBlue : SmokeShell{};
-class SmokeShellOrange : SmokeShell{};
-class SmokeShellYellow : SmokeShell{};
-class SmokeShellPurple : SmokeShell{};

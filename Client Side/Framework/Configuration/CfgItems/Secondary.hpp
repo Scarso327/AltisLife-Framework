@@ -19,10 +19,10 @@ class hgun_P07_F {
 	class Textures {
 		class hgun_P07_F {
 			displayName = "Khaki";
-			condition = "true";
 		};
 		class hgun_P07_blk_F : hgun_P07_F {
 			displayName = "Black";
+			condition = "true";
 		};
 	};	
 };

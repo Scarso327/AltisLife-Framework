@@ -46,6 +46,7 @@ class Medikit {
 class ToolKit : Medikit{};
 
 class HandGrenade_Stone {
+	displayName = "Flash Grenade";
 	price = 0;
 	class Textures {};	
 };
@@ -69,11 +70,14 @@ class SmokeShell {
 		class SmokeShellOrange : SmokeShell {
 			displayName = "Orange";
 		};
-        class SmokeShellYellow : SmokeShell {
-			displayName = "Yellow";
-		};
         class SmokeShellPurple : SmokeShell {
 			displayName = "Purple";
 		};
     };	
+};
+
+class SmokeShellYellow {
+	displayName = "Tear Gas";
+	price = 0;
+	class Textures {};	
 };

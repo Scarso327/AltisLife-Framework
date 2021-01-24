@@ -28,6 +28,7 @@ ULP_Gang_ID = -1;
 ULP_Survival_Thirst = 100;
 ULP_Survival_Hunger = 100;
 ULP_Ability_Cooldown = time;
+ULP_Effects = [];
 
 CASH = 0;
 BANK = LIFE_SETTINGS(getNumber,"starting_bank");

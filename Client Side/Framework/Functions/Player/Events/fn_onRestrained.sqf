@@ -19,10 +19,10 @@ player setVariable ["restrained", ([_detainer] call ULP_fnc_getFaction), true]; 
 	for "_i" from 0 to 1 step 0 do {
 		if !([player] call ULP_fnc_isRestrained) exitWith {};
 
-		if (isNull objectParent player) then {
+		if (isNull (objectParent player)) then {
 			player playMove "AmovPercMstpSnonWnonDnon_Ease";
 		};
 
-		waitUntil { !(animationState player isEqualTo "AmovPercMstpSnonWnonDnon_Ease") || { !([player] call ULP_fnc_isRestrained) } };
+		waitUntil { !((animationState player) isEqualTo "AmovPercMstpSnonWnonDnon_Ease") || { !([player] call ULP_fnc_isRestrained) } };
 	};
 };

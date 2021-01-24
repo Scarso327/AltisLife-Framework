@@ -31,6 +31,7 @@ class V_RebreatherIR : V_RebreatherB{};
 class V_RebreatherIA : V_RebreatherB{};
 
 class V_Rangemaster_vest {
+	displayName = "Ammo Belt";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {};

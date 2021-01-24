@@ -49,6 +49,9 @@ class B_Kitbag_cbr {
 	class Textures {};
 };
 class B_Kitbag_tan : B_Kitbag_cbr{};
+class B_Kitbag_rgr : B_Kitbag_cbr{};
+class B_Kitbag_sgg : B_Kitbag_cbr{};
+class B_Kitbag_mcamo : B_Kitbag_cbr{};
 
 class B_TacticalPack_blk {
 	price = 0;

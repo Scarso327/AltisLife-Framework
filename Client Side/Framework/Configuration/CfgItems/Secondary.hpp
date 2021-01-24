@@ -1,3 +1,8 @@
+class hgun_Pistol_Signal_F {
+	price = 0;
+	class Textures {};	
+};
+
 class hgun_Pistol_01_F {
 	price = 0;
 	class Textures {};	

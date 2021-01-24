@@ -135,19 +135,19 @@ class G_Blindfold_01_black__F {
 };
 class G_Blindfold_01_white__F : G_Blindfold_01_black__F{};
 
-class G_Bandana_aviator {
+class G_Bandanna_aviator {
 	price = 0;
 	isMask = true;
 	isNV = false;
 	isGas = false;
 	class Textures {};
 };
-class G_Bandana_shades : G_Bandana_aviator{};
-class G_Respirator_sport : G_Bandana_aviator{};
-class G_Bandana_beast : G_Bandana_aviator{};
-class G_Respirator_blk : G_Bandana_aviator{};
-class G_Bandana_khk : G_Bandana_aviator{};
-class G_Respirator_oli : G_Bandana_aviator{};
+class G_Bandanna_shades : G_Bandanna_aviator{};
+class G_Bandanna_sport : G_Bandanna_aviator{};
+class G_Bandanna_beast : G_Bandanna_aviator{};
+class G_Bandanna_blk : G_Bandanna_aviator{};
+class G_Bandanna_khk : G_Bandanna_aviator{};
+class G_Bandanna_oli : G_Bandanna_aviator{};
 
 class G_Balaclava_blk {
 	price = 0;

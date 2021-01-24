@@ -46,10 +46,10 @@ if ((count _items) isEqualTo 0) exitWith {
 			(_itemCfg select 4),
 			getText (_x >> "picture")
 		] select (isText (_x >> "picture"))),
-		(([
-			(_itemCfg select 7), 
+		([
+			((_itemCfg select 7) apply { configName _x }), 
 			((_x >> "Textures") call BIS_fnc_getCfgSubClasses)
-		] select (isClass (_x >> "Textures"))) apply { configName _x }),
+		] select (isClass (_x >> "Textures"))),
 		isNumber(_x >> "allowDefaultTexture")
 	];
 

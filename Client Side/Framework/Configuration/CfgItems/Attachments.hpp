@@ -1,0 +1,17 @@
+/*
+Pistol Attachments
+Flashlight
+IR Laser Pointer
+ACO
+Holo
+RCO
+MRCO
+ARCO
+ERCO
+DMS
+NVS
+MOS
+KHS
+Suppressors
+Bipods
+*/

@@ -64,7 +64,7 @@ if (_houses isEqualType []) then {
 
 	{
 		_house = nearestObject [(parseSimpleArray (_x select 0)), "House"];
-		life_vehicles pushBack (_house);
+		ULP_Keys pushBack (_house);
 	} forEach ULP_Houses;
 };
 
@@ -72,7 +72,7 @@ if (_houses isEqualType []) then {
 
 // Get vehicle keys we've had this restart...
 {
-	life_vehicles pushBack _x
+	ULP_Keys pushBack _x
 } forEach (_playerData select (_count - 3));
 
 ULP_New = (_playerData select (_count - 2)); // Tells us if this is a new database insert...

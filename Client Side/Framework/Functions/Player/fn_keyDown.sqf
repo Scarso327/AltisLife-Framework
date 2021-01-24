@@ -45,6 +45,32 @@ if (isDowned(player)) then {
                 [] call life_fnc_p_openMenu;
             };
         };
+
+        case U: {
+            if (!_ctrlKey && { !_alt }) then {
+                private _veh = ([cursorObject, (vehicle player)] select !(isNull (objectParent player)));
+
+                if (ULP_Ability_Cooldown > time) exitWith {};
+
+                if (_veh in ULP_Keys && { (player distance _veh) <= 10 }) then {
+                    if (_veh isKindOf "House_F") then {
+                        // TODO : Door Unlocking...
+                    } else {
+                        if ((locked _veh) isEqualTo 2) then {
+                            _veh lock 0;
+                            systemChat "You've unlocked this vehicle.";
+                            [_veh, "unlockCarSound", 50, 1] remoteExec ["life_fnc_say3D", RANY];
+                        } else {
+                            _veh lock 2;
+                            systemChat "You've locked this vehicle.";
+                            [_veh, "lockCarSound", 50, 1] remoteExec ["life_fnc_say3D", RANY];
+                        };
+                    };
+
+                    ULP_Ability_Cooldown = time + 1;
+                };
+            };
+        };
     };
 };
 

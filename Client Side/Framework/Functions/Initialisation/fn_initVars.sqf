@@ -20,12 +20,14 @@ ULP_Gear = [];
 ULP_Holsted = "";
 ULP_Liceneses = [];
 ULP_Houses = [];
+ULP_Keys = [];
 
 ULP_Gang_ID = -1;
 
 /* Player State Variables */
 ULP_Survival_Thirst = 100;
 ULP_Survival_Hunger = 100;
+ULP_Ability_Cooldown = time;
 
 CASH = 0;
 BANK = LIFE_SETTINGS(getNumber,"starting_bank");

@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=569;
+		nextID=673;
 	};
 	class Camera
 	{
 		pos[]={16024.292,26.13501,16885.449};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -316,6 +316,7 @@ class ScenarioData
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
+	respawnDelay=5;
 	class Header
 	{
 		gameType="RPG";
@@ -340,24 +341,6 @@ class CustomAttributes
 						type[]=
 						{
 							"ARRAY"
-						};
-					};
-					class value
-					{
-						items=1;
-						class Item0
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Counter";
-							};
 						};
 					};
 				};
@@ -9013,7 +8996,6 @@ class Mission
 				angles[]={0,0.1778665,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="this addAction[""Turtle Dealer"",life_fnc_virt_menu,""wongs""];";
@@ -9022,7 +9004,7 @@ class Mission
 			};
 			id=912;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.10660172;
+			atlOffset=7.9887109;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9730,7 +9712,7 @@ class Mission
 			};
 			id=938;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.46451569;
+			atlOffset=0.46450806;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9892,7 +9874,7 @@ class Mission
 			};
 			id=942;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.42744064;
+			atlOffset=0.42706299;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16698,6 +16680,7 @@ class Mission
 				angles[]={0,2.8242567,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="this addAction[""Basic Rebel Vehicles"",life_fnc_vehicleShopMenu,[""basic_rebel_vehicles"",civilian,""rebel_vehicle_spawn"",""brebel"",""Basic Rebel Vehicles""],0,false,false,"""",'license_civ_brebel'];   " \n "this addAction[""Advanced Rebel Vehicles"",life_fnc_vehicleShopMenu,[""advanced_rebel_vehicles"",civilian,""rebel_vehicle_spawn"",""arebel"",""Advanced Rebel Vehicles""],0,false,false,"""",'license_civ_arebel'];   " \n "this addAction[""Car Garage"",  {   if (life_HC_isActive) then {     [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; }     " \n "else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; " \n "createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];       " \n "life_garage_sp = ""rebel_vehicle_spawn"";  }];    " \n "this addAction[""Air Garage"",  {      " \n "if (life_HC_isActive)     " \n "then { [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; }     " \n "else { [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];};      " \n "life_garage_type = ""Air""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];     " \n "life_garage_sp = ""rebel_vehicle_spawn"";  }];     " \n "this addAction[""Store Vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
@@ -16706,7 +16689,7 @@ class Mission
 			};
 			id=1951;
 			type="Land_InfoStand_V2_F";
-			atlOffset=0.8658905;
+			atlOffset=0.092437744;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16915,7 +16898,7 @@ class Mission
 			};
 			id=2040;
 			type="Land_ATM_01_malden_F";
-			atlOffset=0.17250824;
+			atlOffset=0.0027542114;
 		};
 		class Item382
 		{
@@ -26674,7 +26657,7 @@ class Mission
 					a=0.69999999;
 					b=0.69999999;
 					id=2041;
-					atlOffset=0.18600082;
+					atlOffset=0.015365601;
 				};
 				class Item19
 				{
@@ -26731,7 +26714,7 @@ class Mission
 									};
 									id=1235;
 									type="Land_Sink_F";
-									atlOffset=0.00013065338;
+									atlOffset=0.00012779236;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -26772,7 +26755,6 @@ class Mission
 									};
 									id=1236;
 									type="Land_CampingTable_small_white_F";
-									atlOffset=6.6757202e-006;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27302,7 +27284,7 @@ class Mission
 									};
 									id=1252;
 									type="Land_Sink_F";
-									atlOffset=0.76939297;
+									atlOffset=0.77299976;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27383,7 +27365,7 @@ class Mission
 									};
 									id=1255;
 									type="Land_Portable_generator_F";
-									atlOffset=0.84282923;
+									atlOffset=0.84489918;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27544,11 +27526,11 @@ class Mission
 								};
 							};
 							id=6775;
-							atlOffset=0.42703009;
+							atlOffset=0.4271493;
 						};
 					};
 					id=6560;
-					atlOffset=17.506493;
+					atlOffset=17.506554;
 				};
 				class Item1
 				{
@@ -28202,7 +28184,7 @@ class Mission
 				};
 			};
 			id=6559;
-			atlOffset=-89.967438;
+			atlOffset=-89.9673;
 		};
 		class Item617
 		{

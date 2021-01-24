@@ -2,41 +2,21 @@ class ItemMap {
 	price = 0;
 	class Textures {};	
 };
+class ItemCompass : ItemMap{};
+class ItemWatch : ItemMap{};
 
 class ItemGPS {
 	price = 0;
 	class Textures {};	
 };
-
-class B_UavTerminal {
-	price = 0;
-	class Textures {};	
-};
-
-class ItemRadio {
-	price = 0;
-	class Textures {};	
-};
-
-class ItemCompass {
-	price = 0;
-	class Textures {};	
-};
-
-class ItemWatch {
-	price = 0;
-	class Textures {};	
-};
+class B_UavTerminal : ItemGPS{};
+class ItemRadio : ItemGPS{};
 
 class Binocular {
 	price = 0;
 	class Textures {};	
 };
-
-class Rangefinder {
-	price = 0;
-	class Textures {};	
-};
+class Rangefinder : Binocular{};
 
 class NVGoggles {
 	price = 0;
@@ -54,11 +34,7 @@ class Medikit {
 	price = 0;
 	class Textures {};	
 };
-
-class ToolKit {
-	price = 0;
-	class Textures {};	
-};
+class ToolKit : Medikit{};
 
 class HandGrenade_Stone {
 	price = 0;

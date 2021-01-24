@@ -11,7 +11,7 @@ _this params [
 
 [] call life_fnc_stripDownPlayer;
 
-if (_itemArray isEqualTo []) exitWith { [] call life_fnc_startLoadout };
+if (_itemArray isEqualTo []) exitWith { [] call ULP_fnc_setLoadout };
 
 _itemArray params [
     ["_pItems", []],

@@ -196,7 +196,6 @@ class Life_Settings {
 #include "Config_Gather.hpp"
 #include "Config_Process.hpp"
 #include "CfgProperty.hpp"
-#include "CfgLoadouts.hpp"
 #include "CfgFactions.hpp"
 #include "CfgSpawns.hpp"
 #include "CfgClothesStore.hpp"

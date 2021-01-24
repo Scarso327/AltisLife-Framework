@@ -26,6 +26,19 @@ class CfgFactions {
 			customQuery = ", cop_blacklisted, coplevel, asolevel, sfolevel";
 			timeIndex = 0;
 		};
+
+		class Loadout {
+			class Uniforms {
+				class U_Rangemaster {};
+			};
+			class LinkedItems {
+				hasMap = true;
+				hasGPS = true;
+				hasCompass = true;
+				hasWatch = true;
+				hasRadio = true;
+			};
+		};
 	};
 
 	class Medic {
@@ -46,6 +59,19 @@ class CfgFactions {
 			customQuery = ", med_blacklisted, mediclevel, taalevel";
 			timeIndex = 1;
 		};
+
+		class Loadout {
+			class Uniforms {
+				class U_Rangemaster {};
+			};
+			class LinkedItems {
+				hasMap = true;
+				hasGPS = true;
+				hasCompass = true;
+				hasWatch = true;
+				hasRadio = true;
+			};
+		};
 	};
 
 	class Civilian {
@@ -57,6 +83,19 @@ class CfgFactions {
 			queryPrefix = "civ_";
 			customQuery = ", arrested";
 			timeIndex = 2;
+		};
+		
+		class Loadout {
+			class Uniforms {
+				class U_Rangemaster {};
+			};
+			class LinkedItems {
+				hasMap = true;
+				hasGPS = false;
+				hasCompass = true;
+				hasWatch = true;
+				hasRadio = false;
+			};
 		};
 	};
 };

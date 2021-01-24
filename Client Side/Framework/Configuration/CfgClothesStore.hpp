@@ -58,7 +58,7 @@ class CfgClothesStore {
 		};
 		class Vests {
 			class V_LegStrapBag_black_F {};
-			class V_Rangemaster_vest {};
+			class V_Rangemaster_belt {};
 			class V_BandollierB_blk {};
 			class V_TacVest_blk_POLICE {};
 			class V_PlateCarrier1_blk {};
@@ -490,7 +490,7 @@ class CfgClothesStore {
 			class V_Pocketed_black_F {};
 			class V_Pocketed_coyote_F {};
 			class V_Pocketed_olive_F {};
-			class V_Rangemaster_vest {};
+			class V_Rangemaster_belt {};
 			class V_BandollierB_cbr {};
 			class V_BandollierB_khk {};
 			class V_BandollierB_oli {};

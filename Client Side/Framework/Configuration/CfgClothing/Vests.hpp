@@ -30,7 +30,7 @@ class V_RebreatherB {
 class V_RebreatherIR : V_RebreatherB{};
 class V_RebreatherIA : V_RebreatherB{};
 
-class V_Rangemaster_vest {
+class V_Rangemaster_belt {
 	displayName = "Ammo Belt";
 	price = 0;
 	virtualSpace = 0;

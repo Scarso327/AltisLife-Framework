@@ -53,3 +53,34 @@ class U_Rangemaster {
 		};
 	};
 };
+
+
+/*
+poor
+farmer
+mechanic
+common
+construction
+casual
+summer
+sport
+scientist
+bandit
+cuerilla
+looter
+tracksuits
+paramilitary
+diving
+driver
+IDAP
+press
+rangemaster
+competitor
+marshal
+jecket and shorts
+fine shirt
+suit
+combat
+ghillie
+CBRN
+*/

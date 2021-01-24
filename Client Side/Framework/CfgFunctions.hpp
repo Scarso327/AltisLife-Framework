@@ -19,6 +19,7 @@ class ULP_Functions {
 		class getFaction {};
 		class isFaction {};
 		class hasAccess {};
+		class setLoadout {};
 	};
 
 	class Clothing {

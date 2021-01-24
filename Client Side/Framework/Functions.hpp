@@ -186,7 +186,6 @@ class Life_Client_Core {
         class receiveMoney {};
         class revealObjects {};
         class simDisable {};
-        class startLoadout {};
         class stripDownPlayer {};
         class teleport {};
         class whereAmI {};

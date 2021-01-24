@@ -241,9 +241,6 @@ class H_HelmetSpecB_paint2 : H_HelmetSpecB{};
 class H_HelmetSpecB_sand : H_HelmetSpecB{};
 class H_HelmetSpecB_snakeskin : H_HelmetSpecB{};
 class H_HelmetSpecB_paint1 : H_HelmetSpecB{};
-class H_HelmetB_camo : H_HelmetSpecB{};
-class H_HelmetB_paint : H_HelmetSpecB{};
-class H_HelmetSpecB_wdl : H_HelmetSpecB{};
 
 class H_HelmetB_TI_arid_F {
 	price = 0;

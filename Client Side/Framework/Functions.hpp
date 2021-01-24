@@ -50,7 +50,6 @@ class Life_Client_Core {
         class storeVehicle {};
         class surrender {};
         class ticketAction {};
-        class unrestrain {};
     };
 
     class Admin {

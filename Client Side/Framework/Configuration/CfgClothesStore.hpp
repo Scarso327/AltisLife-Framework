@@ -161,7 +161,7 @@ class CfgClothesStore {
 		};
 
 		class Backpacks {
-			class B_Carryall_cbr { displayName = "Invisible Backpack" };
+			class B_Carryall_cbr { displayName = "Invisible Backpack"; };
 		};
 	};
 
@@ -287,7 +287,7 @@ class CfgClothesStore {
 		};
 
 		class Backpacks {
-			class B_Carryall_cbr { displayName = "Invisible Backpack" };
+			class B_Carryall_cbr { displayName = "Invisible Backpack"; };
 		};
 	};
 
@@ -299,7 +299,7 @@ class CfgClothesStore {
 		class Headgear {
 			class H_WirelessEarpiece_F {};
 			class H_Bandanna_gry {
-				displayName = "Bandanna"
+				displayName = "Bandanna";
 				class Textures {
 					class H_Bandanna_gry {
 						displayName = "Gray";
@@ -315,7 +315,7 @@ class CfgClothesStore {
 				};
 			};
 			class H_Cap_blk {
-				displayName = "Cap"
+				displayName = "Cap";
 				class Textures {
 					class H_Cap_blk {
 						displayName = "Black";
@@ -336,7 +336,7 @@ class CfgClothesStore {
 				};
 			};
 			class H_Hat_grey {
-				displayName = "Hat"
+				displayName = "Hat";
 				class Textures {
 					class H_Hat_grey {
 						displayName = "Grey";
@@ -352,7 +352,7 @@ class CfgClothesStore {
 				};
 			};
 			class H_Hat_Safari_sand_F {
-				displayName = "Safari"
+				displayName = "Safari";
 				class Textures {
 					class H_Hat_Safari_sand_F {
 						displayName = "Sand";
@@ -362,7 +362,7 @@ class CfgClothesStore {
 				};
 			};
 			class H_Watchcap_blk {
-				displayName = "Beanie"
+				displayName = "Beanie";
 				class Textures {
 					class H_Watchcap_blk {
 						displayName = "Black";
@@ -374,7 +374,7 @@ class CfgClothesStore {
 				};
 			};
 			class H_Booniehat_khk {
-				displayName = "Booniehat"
+				displayName = "Booniehat";
 				class Textures {
 					class H_Booniehat_khk {
 						displayName = "Khaki";
@@ -389,9 +389,9 @@ class CfgClothesStore {
 				};
 			};
 			class H_EarProtectors_black_F {
-				displayName = "Ear Protectors"
+				displayName = "Ear Protectors";
 				class Textures {
-					class H_HeadSet_black_F {
+					class H_EarProtectors_black_F {
 						displayName = "Black";
 						condition = "true";
 					};
@@ -407,23 +407,23 @@ class CfgClothesStore {
 				};
 			};
 			class H_Construction_basic_black_F {
-				displayName = "Hard Hat"
+				displayName = "Hard Hat";
 				class Textures {
 					class H_Construction_basic_black_F {
 						displayName = "Black";
 						condition = "true";
 					};
-					class H_Construction_headset_black_F : H_EarProtectors_black_F { displayName = "Black (Headset)"; };
-					class H_Construction_basic_white_F : H_EarProtectors_black_F { displayName = "White"; };
-					class H_Construction_headset_white_F : H_EarProtectors_black_F { displayName = "White (Headset)"; };
-					class H_Construction_basic_red_F : H_EarProtectors_black_F { displayName = "Red"; };
-					class H_Construction_headset_red_F : H_EarProtectors_black_F { displayName = "Red (Headset)"; };
-					class H_Construction_basic_orange_F : H_EarProtectors_black_F { displayName = "Orange"; };
-					class H_Construction_headset_orange_F : H_EarProtectors_black_F { displayName = "Orange (Headset)"; };
-					class H_Construction_basic_yellow_F : H_EarProtectors_black_F { displayName = "Yellow"; };
-					class H_Construction_headset_yellow_F : H_EarProtectors_black_F { displayName = "Yellow (Headset)"; };
-					class H_Construction_basic_vrana_F : H_EarProtectors_black_F { displayName = "Virana"; };
-					class H_Construction_headset_vrana_F : H_EarProtectors_black_F { displayName = "Virana (Headset)"; };
+					class H_Construction_headset_black_F : H_Construction_basic_black_F { displayName = "Black (Headset)"; };
+					class H_Construction_basic_white_F : H_Construction_basic_black_F { displayName = "White"; };
+					class H_Construction_headset_white_F : H_Construction_basic_black_F { displayName = "White (Headset)"; };
+					class H_Construction_basic_red_F : H_Construction_basic_black_F { displayName = "Red"; };
+					class H_Construction_headset_red_F : H_Construction_basic_black_F { displayName = "Red (Headset)"; };
+					class H_Construction_basic_orange_F : H_Construction_basic_black_F { displayName = "Orange"; };
+					class H_Construction_headset_orange_F : H_Construction_basic_black_F { displayName = "Orange (Headset)"; };
+					class H_Construction_basic_yellow_F : H_Construction_basic_black_F { displayName = "Yellow"; };
+					class H_Construction_headset_yellow_F : H_Construction_basic_black_F { displayName = "Yellow (Headset)"; };
+					class H_Construction_basic_vrana_F : H_Construction_basic_black_F { displayName = "Virana"; };
+					class H_Construction_headset_vrana_F : H_Construction_basic_black_F { displayName = "Virana (Headset)"; };
 				};
 			};
 			class H_Helmet_Skate {};

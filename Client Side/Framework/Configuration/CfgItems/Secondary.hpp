@@ -14,7 +14,7 @@ class hgun_Rook40_F {
 };
 
 class hgun_P07_F {
-	displayName = "Taser x26e"
+	displayName = "Taser x26e";
 	price = 0;
 	class Textures {
 		class hgun_P07_F {

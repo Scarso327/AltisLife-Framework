@@ -23,6 +23,7 @@ class NVGoggles {
 	class Textures {
         class NVGoggles {
 			displayName = "Brown";
+            condition = "true";
 		};
 		class NVGoggles_OPFOR : NVGoggles {
 			displayName = "Black";
@@ -54,23 +55,24 @@ class SmokeShell {
 	class Textures {
         class SmokeShell {
 			displayName = "White";
+            condition = "true";
 		};
-		class SmokeShellRed : NVGoggles {
+		class SmokeShellRed : SmokeShell {
 			displayName = "Red";
 		};
-        class SmokeShellGreen : NVGoggles {
+        class SmokeShellGreen : SmokeShell {
 			displayName = "Green";
 		};
-        class SmokeShellBlue {
+        class SmokeShellBlue : SmokeShell {
 			displayName = "Blue";
 		};
-		class SmokeShellOrange : NVGoggles {
+		class SmokeShellOrange : SmokeShell {
 			displayName = "Orange";
 		};
-        class SmokeShellYellow : NVGoggles {
+        class SmokeShellYellow : SmokeShell {
 			displayName = "Yellow";
 		};
-        class SmokeShellPurple : NVGoggles {
+        class SmokeShellPurple : SmokeShell {
 			displayName = "Purple";
 		};
     };	

@@ -46,7 +46,7 @@ class ULP_Functions {
 
 	class PlayerActions {
 		file = "Functions\Player\Actions";
-		class restrainTarget {};
+		class toggleRestraint {};
 	};
 
 	class PlayerEvents {

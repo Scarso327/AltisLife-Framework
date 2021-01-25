@@ -8,13 +8,13 @@ class CfgClothesStore {
 		class Uniforms {
 			class U_Rangemaster {};
 			class U_B_HeliPilotCoveralls {
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess;";
+				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures {
 					class U_B_HeliPilotCoveralls {};
 				};
 			};
 			class U_C_CBRN_Suit_01_White_F {
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess;";
+				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures {
 					class U_C_CBRN_Suit_01_Blue_F {};
 				};
@@ -35,10 +35,10 @@ class CfgClothesStore {
 			};
 			class H_Beret_blk {};
 			class H_Watchcap_blk { condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess"; };
-			class H_PilotHelmetHeli_B { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess;"; };
+			class H_PilotHelmetHeli_B { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class H_HelmetSpecB_blk { 
 				displayName = "Operation Helmet";
-				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;"; 
+				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; 
 			};
 		};
 
@@ -56,11 +56,11 @@ class CfgClothesStore {
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
 			class G_Tactical_Clear {};
-			class G_B_Diving { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;"; };
+			class G_B_Diving { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F {};
-			class G_RegulatorMask_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess;"; };
+			class G_RegulatorMask_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class G_Bandanna_aviator { 
-				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;"; 
+				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; 
 				class Textures {
 					class G_Bandanna_aviator {};
 					class G_Bandanna_sport : G_Bandanna_aviator {};
@@ -68,7 +68,7 @@ class CfgClothesStore {
 					class G_Bandanna_blk : G_Bandanna_aviator {};
 				};
 			};
-			class G_Balaclava_TI_blk_F { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;"; };
+			class G_Balaclava_TI_blk_F { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; };
 		};
 
 		class Vests {
@@ -97,7 +97,7 @@ class CfgClothesStore {
 				 };
 			};
 			class V_RebreatherB {
-				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;"; 
+				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; 
 				class Textures { 
 					class V_RebreatherB {}; 
 				};
@@ -119,13 +119,13 @@ class CfgClothesStore {
 		class Uniforms {
 			class U_Competitor {};
 			class U_B_HeliPilotCoveralls {
-				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess;";
+				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class textures {
 					class U_B_HeliPilotCoveralls {};
 				};
 			};
 			class U_C_CBRN_Suit_01_White_F {
-				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess;";
+				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures {
 					class U_C_CBRN_Suit_01_White_F {};
 				};
@@ -147,7 +147,7 @@ class CfgClothesStore {
 			};
 			class H_Watchcap_blk {};
 			class H_Beret_CSAT_01_F { condition = "[""Medic_Main"", 5] call ULP_fnc_hasAccess"; };
-			class H_PilotHelmetHeli_B { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess;"; };
+			class H_PilotHelmetHeli_B { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 
 		class Facewear {
@@ -159,9 +159,9 @@ class CfgClothesStore {
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
 			class G_Tactical_Clear {};
-			class G_B_Diving { condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess;"; };
+			class G_B_Diving { condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F {};
-			class G_RegulatorMask_F { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess;"; };
+			class G_RegulatorMask_F { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 
 		class Vests {

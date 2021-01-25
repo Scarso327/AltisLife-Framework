@@ -10,6 +10,8 @@ _this params [
 	["_storeCfg", "CfgClothesStore", [""]]
 ];
 
+if (dialog) exitWith {};
+
 private _cfg = missionConfigFile >> _storeCfg;
 _storeCfg = _cfg >> _store;
 if !(isClass (_storeCfg)) exitWith {};

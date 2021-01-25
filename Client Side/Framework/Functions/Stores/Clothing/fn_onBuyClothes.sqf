@@ -9,6 +9,11 @@ _this params [
 	"_cartValue", "_cartList", "_className", "_texClass", "_cfgName", "_itemCfg", "_i"
 ];
 
+// If the texture is it's own entity in CfgClothing, it's an item...
+if (isClass (missionConfigFile >> "CfgClothing" >> _texClass)) then {
+	_className = _texClass;
+};
+
 if (player canAdd _className && { (_texClass isEqualTo "") }) then {
 	player addItem _className;
 	true breakOut "fn_onBuyClothes";
@@ -30,8 +35,9 @@ if (player canAdd _className && { (_texClass isEqualTo "") }) then {
 					player addBackpack _className;
 					[_bpItems] call ULP_fnc_addItems;
 
-					// Texture
-					[unitBackpack player, backpackContainer player, _texClass, true, false] call ULP_fnc_setTextures;
+					if !(_className isEqualTo _texClass) then {
+						[unitBackpack player, backpackContainer player, _texClass, true, false] call ULP_fnc_setTextures;
+					};
 				};	
 			};
 			case "CfgGlasses": {
@@ -53,8 +59,9 @@ if (player canAdd _className && { (_texClass isEqualTo "") }) then {
 							player forceAddUniform _className;
 							[_uItems] call ULP_fnc_addItems;
 
-							// Texture
-							[player, uniformContainer player, _texClass] call ULP_fnc_setTextures;
+							if !(_className isEqualTo _texClass) then {
+								[player, uniformContainer player, _texClass] call ULP_fnc_setTextures;
+							};
 						};
 					};
 				};

@@ -15,3 +15,5 @@ class arifle_MX_F {
 		};
 	};
 };
+class arifle_MX_Black_F : arifle_MX_F {};
+class arifle_MX_khk_F : arifle_MX_F {};

@@ -45,16 +45,17 @@ if ((count _textures) isEqualTo 0 || { _allowDefault }) then {
 };
 
 {
+	private _configName = (configName _x);
 	private _displayName = getText(_x >> "displayName");
 	private _picture = "";
 
 	// Store specific code...
-	if (_storeItemCfg isEqualTo "CfgItems") then {
-		_picture = ([(configName _x)] call ULP_fnc_itemCfg select 4);
+	if (isClass (missionConfigFile >> _storeItemCfg >> _configName)) then {
+		_picture = ([_configName] call ULP_fnc_itemCfg select 4);
 	};
-
+	
 	private _item = _textList lbAdd _displayName;
-	_textList lbSetData [_item, (str [(configName _x), _displayName, _picture])];
+	_textList lbSetData [_item, (str [_configName, _displayName, _picture])];
 	_textList lbSetValue [_item, ([0, getNumber(_x >> "price")] select (isNumber (_x >> "price")))];
 } forEach _textures;
 

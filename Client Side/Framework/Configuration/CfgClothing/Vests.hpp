@@ -1,4 +1,5 @@
 class V_LegStrapBag_black_F {
+	displayName = "Leg Strap";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -14,6 +15,7 @@ class V_LegStrapBag_coyote_F : V_LegStrapBag_black_F{};
 class V_LegStrapBag_olive_F : V_LegStrapBag_black_F{};
 
 class V_Pocketed_black_F {
+	displayName = "Pocketed Vest";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -29,6 +31,7 @@ class V_Pocketed_coyote_F : V_Pocketed_black_F{};
 class V_Pocketed_olive_F : V_Pocketed_black_F{};
 
 class V_Safety_yellow_F {
+	displayName = "Safety Vest";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -44,6 +47,7 @@ class V_Safety_orange_F : V_Safety_yellow_F{};
 class V_Safety_blue_F : V_Safety_yellow_F{};
 
 class V_RebreatherB {
+	displayName = "Rebreather";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -66,6 +70,7 @@ class V_Rangemaster_belt {
 };
 
 class V_BandollierB_blk {
+	displayName = "Bandollier";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -85,6 +90,7 @@ class V_BandollierB_oli : V_BandollierB_blk{};
 class V_BandollierB_rgr : V_BandollierB_blk{};
 
 class V_HarnessO_brn {
+	displayName = "Combat Harness";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {};
@@ -100,6 +106,7 @@ class V_TacVestIR_blk {
 };
 
 class V_Chestrig_blk {
+	displayName = "Chest Rig";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {};
@@ -109,6 +116,7 @@ class V_Chestrig_oli : V_Chestrig_blk{};
 class V_Chestrig_rgr : V_Chestrig_blk{};
 
 class V_TacChestrig_cbr_F {
+	displayName = "Tactical Rig";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {};
@@ -123,6 +131,7 @@ class V_Press_F {
 };
 
 class V_TacVest_blk {
+	displayName = "Tactical Vest";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {};
@@ -134,6 +143,7 @@ class V_TacVest_khk : V_TacVest_blk{};
 class V_TacVest_oli : V_TacVest_blk{};
 
 class V_PlateCarrier1_blk {
+	displayName = "Carrier Lite";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {};
@@ -144,6 +154,7 @@ class V_PlateCarrier1_wdl : V_TacChestrig_cbr_F{};
 class V_PlateCarrierL_CTRG : V_TacChestrig_cbr_F{};
 
 class V_PlateCarrier2_blk {
+	displayName = "Carrier Rig";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {};

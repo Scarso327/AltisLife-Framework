@@ -1,4 +1,5 @@
 class B_LegStrapBag_black_F {
+	displayName = "Leg Strap";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -14,6 +15,7 @@ class B_LegStrapBag_coyote_F : B_LegStrapBag_black_F{};
 class B_LegStrapBag_olive_F : B_LegStrapBag_black_F{};
 
 class B_Messenger_Black_F {
+	displayName = "Messenger Bag";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -38,6 +40,7 @@ class B_SCBA_01_F {
 };
 
 class B_AssaultPack_blk {
+	displayName = "Assault Pack";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -59,6 +62,7 @@ class B_AssaultPack_sgg : B_AssaultPack_blk{};
 class B_AssaultPack_wdl_F : B_AssaultPack_blk{};
 
 class B_FieldPack_blk {
+	displayName = "Field Pack";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -78,6 +82,7 @@ class B_FieldPack_oli : B_FieldPack_blk{};
 class B_FieldPack_green_F : B_FieldPack_blk{};
 
 class B_Kitbag_cbr {
+	displayName = "Kitbag";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -99,6 +104,7 @@ class B_Kitbag_sgg : B_Kitbag_cbr{};
 class B_Kitbag_mcamo : B_Kitbag_cbr{};
 
 class B_TacticalPack_blk {
+	displayName = "Tactical Pack";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -114,6 +120,7 @@ class B_TacticalPack_oli : B_TacticalPack_blk{};
 class B_TacticalPack_rgr : B_TacticalPack_blk{};
 
 class B_Carryall_cbr {
+	displayName = "Carryall";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -138,6 +145,7 @@ class B_Carryall_green_F : B_Carryall_cbr{};
 class B_Carryall_wdl_F : B_Carryall_cbr{};
 
 class B_ViperLightHarness_blk_F {
+	displayName = "Light Viper Harness";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -153,6 +161,7 @@ class B_ViperLightHarness_khk_F : B_ViperLightHarness_blk_F{};
 class B_ViperLightHarness_oli_F : B_ViperLightHarness_blk_F{};
 
 class B_ViperHarness_blk_F {
+	displayName = "Viper Harness";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
@@ -168,6 +177,7 @@ class B_ViperHarness_khk_F : B_ViperHarness_blk_F{};
 class B_ViperHarness_oli_F : B_ViperHarness_blk_F{};
 
 class B_Bergen_mcamo_F {
+	displayName = "Bergen";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {

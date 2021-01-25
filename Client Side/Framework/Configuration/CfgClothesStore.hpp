@@ -16,7 +16,7 @@ class CfgClothesStore {
 			class U_C_CBRN_Suit_01_White_F {
 				class Textures {
 					condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess;";
-					class U_C_CBRN_Suit_01_Blue_F : U_C_CBRN_Suit_01_White_F {};
+					class U_C_CBRN_Suit_01_Blue_F {};
 				};
 			};
 		};
@@ -103,7 +103,7 @@ class CfgClothesStore {
 			class B_Carryall_cbr { 
 				displayName = "Invisible Backpack"; 
 				class Textures { 
-					class INVIS : B_Carryall_cbr {}; 
+					class INVIS {}; 
 				};
 			};
 		};
@@ -190,7 +190,7 @@ class CfgClothesStore {
 			class B_Carryall_cbr { 
 				displayName = "Invisible Backpack"; 
 				class Textures { 
-					class INVIS : B_Carryall_cbr {}; 
+					class INVIS {}; 
 				};
 			};
 		};
@@ -420,9 +420,9 @@ class CfgClothesStore {
 			class U_B_FullGhillie_ard {};
 			class U_C_CBRN_Suit_01_White_F {
 				class Textures {
-					class U_B_CBRN_Suit_01_MTP_F : U_C_CBRN_Suit_01_White_F {};
-					class U_B_CBRN_Suit_01_Wdl_F : U_C_CBRN_Suit_01_White_F {};
-					class U_I_CBRN_Suit_01_AAF_F : U_C_CBRN_Suit_01_White_F {};
+					class U_B_CBRN_Suit_01_MTP_F {};
+					class U_B_CBRN_Suit_01_Wdl_F {};
+					class U_I_CBRN_Suit_01_AAF_F {};
 				};
 			};
 		};
@@ -462,41 +462,41 @@ class CfgClothesStore {
 			class V_BandollierB_cbr {};
 			class V_BandollierB_blk {
 				class Textures {
-					class V_BandollierB_cbr : V_BandollierB_blk {};
-					class V_BandollierB_rgr : V_BandollierB_blk {};
+					class V_BandollierB_cbr {};
+					class V_BandollierB_rgr {};
 				};
 			};
 			class V_HarnessO_brn {};
 			class V_Chestrig_blk {
 				class Textures {
-					class V_Chestrig_khk : V_Chestrig_blk {};
-					class V_Chestrig_oli : V_Chestrig_blk {};
-					class V_Chestrig_rgr : V_Chestrig_blk {};
+					class V_Chestrig_khk {};
+					class V_Chestrig_oli {};
+					class V_Chestrig_rgr {};
 				};
 			};
 			class V_TacChestrig_cbr_F {};
 			class V_TacVest_blk {
 				class Textures {
-					class V_TacVest_camo : V_TacVest_blk {};
-					class V_TacVest_brn : V_TacVest_blk {};
-					class V_TacVest_khk : V_TacVest_blk {};
-					class V_TacVest_oli : V_TacVest_blk {};
+					class V_TacVest_camo {};
+					class V_TacVest_brn {};
+					class V_TacVest_khk {};
+					class V_TacVest_oli {};
 				};
 			};
 			class V_PlateCarrier1_blk {
 				class Textures {
-					class V_PlateCarrier1_rgr : V_PlateCarrier1_blk {};
-					class V_PlateCarrier1_rgr_noflag_F : V_PlateCarrier1_blk {};
-					class V_PlateCarrier1_wdl : V_PlateCarrier1_blk {};
-					class V_PlateCarrierL_CTRG : V_PlateCarrier1_blk {};
+					class V_PlateCarrier1_rgr {};
+					class V_PlateCarrier1_rgr_noflag_F {};
+					class V_PlateCarrier1_wdl {};
+					class V_PlateCarrierL_CTRG {};
 				};
 			};
 			class V_PlateCarrier2_blk {
 				class Textures {
-					class V_PlateCarrier2_rgr : V_PlateCarrier2_blk {};
-					class V_PlateCarrier2_rgr_noflag_F : V_PlateCarrier2_blk {};
-					class V_PlateCarrier2_wdl : V_PlateCarrier2_blk {};
-					class V_PlateCarrier2_CTRG : V_PlateCarrier2_blk {};
+					class V_PlateCarrier2_rgr {};
+					class V_PlateCarrier2_rgr_noflag_F {};
+					class V_PlateCarrier2_wdl {};
+					class V_PlateCarrier2_CTRG {};
 				};
 			};
 		};

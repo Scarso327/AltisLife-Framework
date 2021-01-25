@@ -4,7 +4,7 @@
 */
 scopeName "fn_sync";
 
-if ((time - ULP_Last_Sync) <= (5 * 60)) exitWith { hint "You have already used the sync option, you can only use this feature once every 5 minutes." };
+if ((time - ULP_Last_Sync) <= (5 * 60)) exitWith { hint "Your data has been synced recently, you must wait 5 minutes between automatic as well as manual syncs." };
 
 [] call ULP_fnc_syncPlayerInfo;
 ULP_Last_Sync = time;

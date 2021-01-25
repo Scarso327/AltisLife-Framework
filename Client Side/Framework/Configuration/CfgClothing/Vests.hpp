@@ -1,7 +1,14 @@
 class V_LegStrapBag_black_F {
 	price = 0;
 	virtualSpace = 0;
-	class Textures {};
+	class Textures {
+		class V_LegStrapBag_black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class V_LegStrapBag_coyote_F : V_LegStrapBag_black_F { displayName = "Coyote"; };
+		class V_LegStrapBag_olive_F : V_LegStrapBag_black_F { displayName = "Olive"; };
+	};
 };
 class V_LegStrapBag_coyote_F : V_LegStrapBag_black_F{};
 class V_LegStrapBag_olive_F : V_LegStrapBag_black_F{};
@@ -9,7 +16,14 @@ class V_LegStrapBag_olive_F : V_LegStrapBag_black_F{};
 class V_Pocketed_black_F {
 	price = 0;
 	virtualSpace = 0;
-	class Textures {};
+	class Textures {
+		class V_Pocketed_black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class V_Pocketed_coyote_F : V_Pocketed_black_F { displayName = "Coyote"; };
+		class V_Safety_yellow_F : V_Pocketed_black_F { displayName = "Olive"; };
+	};
 };
 class V_Pocketed_coyote_F : V_Pocketed_black_F{};
 class V_Pocketed_olive_F : V_Pocketed_black_F{};
@@ -17,7 +31,14 @@ class V_Pocketed_olive_F : V_Pocketed_black_F{};
 class V_Safety_yellow_F {
 	price = 0;
 	virtualSpace = 0;
-	class Textures {};
+	class Textures {
+		class V_Safety_yellow_F {
+			displayName = "Yellow";
+			condition = "true";
+		};
+		class V_Safety_orange_F : V_Safety_yellow_F { displayName = "Orange"; };
+		class V_Safety_blue_F : V_Safety_yellow_F { displayName = "Blue"; };
+	};
 };
 class V_Safety_orange_F : V_Safety_yellow_F{};
 class V_Safety_blue_F : V_Safety_yellow_F{};
@@ -25,7 +46,14 @@ class V_Safety_blue_F : V_Safety_yellow_F{};
 class V_RebreatherB {
 	price = 0;
 	virtualSpace = 0;
-	class Textures {};
+	class Textures {
+		class V_RebreatherB {
+			displayName = "Black";
+			condition = "true";
+		};
+		class V_RebreatherIR : V_RebreatherB { displayName = "Brown"; };
+		class V_RebreatherIA : V_RebreatherB { displayName = "Green"; };
+	};
 };
 class V_RebreatherIR : V_RebreatherB{};
 class V_RebreatherIA : V_RebreatherB{};

@@ -16,7 +16,19 @@ class H_WirelessEarpiece_F {
 
 class H_Bandanna_gry {
 	price = 0;
-	class Textures {};
+	class Textures {
+		class H_Bandanna_gry {
+			displayName = "Gray";
+			condition = "true";
+		};
+		class H_Bandanna_blu : H_Bandanna_gry { displayName = "Blue"; };
+		class H_Bandanna_khk : H_Bandanna_gry { displayName = "Khaki"; };
+		class H_Bandanna_cbr : H_Bandanna_gry { displayName = "Coyote"; };
+		class H_Bandanna_sand : H_Bandanna_gry { displayName = "Sand"; };
+		class H_Bandanna_sgg : H_Bandanna_gry { displayName = "Sage"; };
+		class H_Bandanna_camo : H_Bandanna_gry { displayName = "Camo"; };
+		class H_Bandanna_mcamo : H_Bandanna_gry { displayName = "MTP"; };
+	};
 };
 class H_Bandanna_blu : H_Bandanna_gry{};
 class H_Bandanna_khk : H_Bandanna_gry{};
@@ -34,7 +46,29 @@ class H_Cap_blk {
 	price = 0;
 	isMask = false;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_Cap_blk {
+			displayName = "Black";
+			condition = "true";
+		};
+		class H_Cap_usblack : H_Cap_blk { displayName = "US (Black)"; };
+		class H_Cap_tan_specops_US : H_Cap_blk { displayName = "US (MTP)"; };
+		class H_Cap_khaki_specops_UK : H_Cap_blk { displayName = "UK"; };
+		class H_Cap_brn_SPECOPS : H_Cap_blk { displayName = "OPFOR"; };
+		class H_Cap_blk_Raven : H_Cap_blk { displayName = "AAF"; };
+		class H_Cap_grn_BI : H_Cap_blk { displayName = "BI"; };
+		class H_Cap_blk_ION : H_Cap_blk { displayName = "ION"; };
+		class H_Cap_blk_CMMG : H_Cap_blk { displayName = "CMMG"; };
+		class H_Cap_red : H_Cap_blk { displayName = "Red"; };
+		class H_Cap_blu : H_Cap_blk { displayName = "Blue"; };
+		class H_Cap_tan : H_Cap_blk { displayName = "Tan"; };
+		class H_Cap_oli : H_Cap_blk { displayName = "Olive"; };
+		class H_Cap_surfer : H_Cap_blk { displayName = "Surfer"; };
+		class H_Cap_police {
+			displayName = "Police";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+		};
+	};
 };
 class H_Cap_usblack : H_Cap_blk{};
 class H_Cap_tan_specops_US : H_Cap_blk{};
@@ -66,7 +100,19 @@ class H_MilCap_wdl : H_MilCap_gry{};
 
 class H_Hat_grey {
 	price = 0;
-	class Textures {};
+	class Textures {
+		class H_Hat_grey {
+			displayName = "Grey";
+			condition = "true";
+		};
+		class H_Hat_blue : H_Hat_grey { displayName = "Blue"; };
+		class H_Hat_brown : H_Hat_grey { displayName = "Brown"; };
+		class H_Hat_tan : H_Hat_grey { displayName = "Tan"; };
+		class H_Hat_checker : H_Hat_grey { displayName = "Checker"; };
+		class H_Hat_camo : H_Hat_grey { displayName = "Camo"; };
+		class H_StrawHat : H_Hat_grey { displayName = "Straw (Light)"; };
+		class H_StrawHat_dark : H_Hat_grey { displayName = "Straw (Dark)"; };
+	};
 };
 class H_Hat_blue : H_Hat_grey{};
 class H_Hat_brown : H_Hat_grey{};
@@ -75,14 +121,31 @@ class H_Hat_checker : H_Hat_grey{};
 class H_Hat_camo : H_Hat_grey{};
 class H_StrawHat : H_Hat_grey{};
 class H_StrawHat_dark : H_Hat_grey{};
-class H_Hat_Safari_sand_F : H_Hat_grey{};
-class H_Hat_Safari_olive_F : H_Hat_grey{};
+
+class H_Hat_Safari_sand_F : H_Hat_grey {
+	class Textures {
+		class H_Hat_Safari_sand_F {
+			displayName = "Sand";
+			condition = "true";
+		};
+		class H_Hat_Safari_olive_F : H_Hat_Safari_sand_F { displayName = "Olive"; };
+	};
+};
+class H_Hat_Safari_olive_F : H_Hat_Safari_sand_F{};
 
 class H_Watchcap_blk {
 	price = 0;
 	isMask = false;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_Watchcap_blk {
+			displayName = "Black";
+			condition = "true";
+		};
+		class H_Watchcap_cbr : H_Watchcap_blk { displayName = "Brown"; };
+		class H_Watchcap_khk : H_Watchcap_blk { displayName = "Khaki"; };
+		class H_Watchcap_camo : H_Watchcap_blk { displayName = "Green"; };
+	};
 };
 class H_Watchcap_cbr : H_Watchcap_blk{};
 class H_Watchcap_khk : H_Watchcap_blk{};
@@ -90,7 +153,18 @@ class H_Watchcap_camo : H_Watchcap_blk{};
 
 class H_Booniehat_khk {
 	price = 0;
-	class Textures {};
+	class Textures {
+		class H_Booniehat_khk {
+			displayName = "Khaki";
+			condition = "true";
+		};
+		class H_Booniehat_grn : H_Booniehat_khk { displayName = "Green"; };
+		class H_Booniehat_oli : H_Booniehat_khk { displayName = "Olive"; };
+		class H_Booniehat_tan : H_Booniehat_khk { displayName = "Tan"; };
+		class H_Booniehat_mcamo : H_Booniehat_khk { displayName = "MTP"; };
+		class H_Booniehat_dgtl : H_Booniehat_khk { displayName = "Digital"; };
+		class H_Booniehat_wdl : H_Booniehat_khk { displayName = "Woodland"; };
+	};
 };
 class H_Booniehat_khk_hs : H_Booniehat_khk{};
 class H_Booniehat_grn : H_Booniehat_khk{};
@@ -105,7 +179,20 @@ class H_Beret_blk {
 	price = 0;
 	isMask = false;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_Beret_blk {
+			displayName = "Police";
+			condition = "true";
+		};
+		class H_Beret_EAF_01_F : H_Beret_blk {
+			displayName = "SFO";
+			condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;";
+		};
+		class H_Beret_gen_F : H_Beret_blk {
+			displayName = "Command";
+			condition = "[""Police_Main"", 7] call ULP_fnc_hasAccess";
+		};
+	};
 };
 class H_Beret_EAF_01_F : H_Beret_blk{
 	displayName = "MPS SFO Beret";
@@ -130,7 +217,21 @@ class H_EarProtectors_black_F {
 	price = 0;
 	isMask = false;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_EarProtectors_black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class H_HeadSet_black_F : H_EarProtectors_black_F { displayName = "Black (Headset)"; };
+		class H_EarProtectors_white_F : H_EarProtectors_black_F { displayName = "White"; };
+		class H_HeadSet_white_F : H_EarProtectors_black_F { displayName = "White (Headset)"; };
+		class H_EarProtectors_red_F : H_EarProtectors_black_F { displayName = "Red"; };
+		class H_HeadSet_red_F : H_EarProtectors_black_F { displayName = "Red (Headset)"; };
+		class H_EarProtectors_orange_F : H_EarProtectors_black_F { displayName = "Orange"; };
+		class H_HeadSet_orange_F : H_EarProtectors_black_F { displayName = "Orange (Headset)"; };
+		class H_EarProtectors_yellow_F : H_EarProtectors_black_F { displayName = "Yellow"; };
+		class H_HeadSet_yellow_F : H_EarProtectors_black_F { displayName = "Yellow (Headset)"; };
+	};
 };
 class H_EarProtectors_white_F : H_EarProtectors_black_F{};
 class H_EarProtectors_red_F : H_EarProtectors_black_F{};
@@ -146,7 +247,23 @@ class H_Construction_basic_black_F {
 	price = 0;
 	isMask = false;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_Construction_basic_black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class H_Construction_headset_black_F : H_Construction_basic_black_F { displayName = "Black (Headset)"; };
+		class H_Construction_basic_white_F : H_Construction_basic_black_F { displayName = "White"; };
+		class H_Construction_headset_white_F : H_Construction_basic_black_F { displayName = "White (Headset)"; };
+		class H_Construction_basic_red_F : H_Construction_basic_black_F { displayName = "Red"; };
+		class H_Construction_headset_red_F : H_Construction_basic_black_F { displayName = "Red (Headset)"; };
+		class H_Construction_basic_orange_F : H_Construction_basic_black_F { displayName = "Orange"; };
+		class H_Construction_headset_orange_F : H_Construction_basic_black_F { displayName = "Orange (Headset)"; };
+		class H_Construction_basic_yellow_F : H_Construction_basic_black_F { displayName = "Yellow"; };
+		class H_Construction_headset_yellow_F : H_Construction_basic_black_F { displayName = "Yellow (Headset)"; };
+		class H_Construction_basic_vrana_F : H_Construction_basic_black_F { displayName = "Virana"; };
+		class H_Construction_headset_vrana_F : H_Construction_basic_black_F { displayName = "Virana (Headset)"; };
+	};
 };
 class H_Construction_headset_black_F : H_Construction_basic_black_F{};
 class H_Construction_basic_white_F : H_Construction_basic_black_F{};
@@ -171,7 +288,22 @@ class H_RacingHelmet_1_black_F {
 	price = 0;
 	isMask = true;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_RacingHelmet_1_black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class H_RacingHelmet_1_white_F : H_RacingHelmet_1_black_F { displayName = "Black"; };
+		class H_RacingHelmet_1_red_F : H_RacingHelmet_1_black_F { displayName = "Red"; };
+		class H_RacingHelmet_1_blue_F : H_RacingHelmet_1_black_F { displayName = "Blue"; };
+		class H_RacingHelmet_1_green_F : H_RacingHelmet_1_black_F { displayName = "Green"; };
+		class H_RacingHelmet_1_orange_F : H_RacingHelmet_1_black_F { displayName = "Orange"; };
+		class H_RacingHelmet_1_yellow_F : H_RacingHelmet_1_black_F { displayName = "Yellow"; };
+		class H_RacingHelmet_4_F : H_RacingHelmet_1_black_F { displayName = "Vrana"; };
+		class H_RacingHelmet_3_F : H_RacingHelmet_1_black_F { displayName = "Redstone"; };
+		class H_RacingHelmet_2_F : H_RacingHelmet_1_black_F { displayName = "Bluking"; };
+		class H_RacingHelmet_1_F : H_RacingHelmet_1_black_F { displayName = "Fuel"; };
+	};
 };
 class H_RacingHelmet_1_white_F : H_RacingHelmet_1_black_F{};
 class H_RacingHelmet_1_red_F : H_RacingHelmet_1_black_F{};
@@ -188,7 +320,13 @@ class H_PASGT_basic_blue_press_F {
 	price = 0;
 	isMask = false;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_PASGT_basic_blue_press_F {
+			displayName = "Basic";
+			condition = "true";
+		};
+		class H_PASGT_neckprot_blue_press_F : H_PASGT_basic_blue_press_F { displayName = "Neck Protection"; };
+	};
 };
 class H_PASGT_neckprot_blue_press_F : H_PASGT_basic_blue_press_F{};
 class H_PASGT_basic_black_F : H_PASGT_basic_blue_press_F{};
@@ -200,7 +338,13 @@ class H_PilotHelmetHeli_B {
 	price = 0;
 	isMask = true;
 	isNV = true;
-	class Textures {};
+	class Textures {
+		class H_PilotHelmetHeli_B {
+			displayName = "Pilot";
+			condition = "true";
+		};
+		class H_CrewHelmetHeli_B : H_PilotHelmetHeli_B { displayName = "Crew"; };
+	};
 };
 class H_CrewHelmetHeli_B : H_PilotHelmetHeli_B{};
 

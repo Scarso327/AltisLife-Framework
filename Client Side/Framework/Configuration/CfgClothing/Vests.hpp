@@ -68,7 +68,16 @@ class V_Rangemaster_belt {
 class V_BandollierB_blk {
 	price = 0;
 	virtualSpace = 0;
-	class Textures {};
+	class Textures {
+		class V_BandollierB_blk {
+			displayName = "Black";
+			condition = "true";
+		};
+		class V_BandollierB_cbr : V_BandollierB_blk { displayName = "Coyote"; };
+		class V_BandollierB_khk : V_BandollierB_blk { displayName = "Khaki"; };
+		class V_BandollierB_oli : V_BandollierB_blk { displayName = "Olive"; };
+		class V_BandollierB_rgr : V_BandollierB_blk { displayName = "Green"; };
+	};
 };
 class V_BandollierB_cbr : V_BandollierB_blk{};
 class V_BandollierB_khk : V_BandollierB_blk{};

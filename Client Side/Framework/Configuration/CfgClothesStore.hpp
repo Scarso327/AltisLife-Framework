@@ -96,13 +96,17 @@ class CfgClothesStore {
 		};
 
 		class Vests {
-			class V_LegStrapBag_black_F {};
+			class V_LegStrapBag_black_F { class Textures {}; };
 			class V_Rangemaster_belt {};
-			class V_BandollierB_blk {};
+			class V_BandollierB_blk { class Textures {}; };
 			class V_TacVest_blk_POLICE {};
 			class V_PlateCarrier1_blk {};
 			class V_PlateCarrier2_blk {};
-			class V_RebreatherB { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;"; };
+			class V_RebreatherB {
+				displayName = "Rebreather";
+				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;";
+				class Textures {};
+			};
 		};
 
 		class Backpacks {

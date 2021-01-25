@@ -30,6 +30,9 @@ class H_Bandanna_gry {
 		class H_Bandanna_sgg : H_Bandanna_gry { displayName = "Sage"; };
 		class H_Bandanna_camo : H_Bandanna_gry { displayName = "Camo"; };
 		class H_Bandanna_mcamo : H_Bandanna_gry { displayName = "MTP"; };
+		class H_Bandanna_surfer : H_Bandanna_gry{ displayName = "Surfer"; };
+		class H_Bandanna_surfer_blk : H_Bandanna_gry{ displayName = "Surfer, Black"; };
+		class H_Bandanna_surfer_grn : H_Bandanna_gry{ displayName = "Surfer, Green"; };
 	};
 };
 class H_Bandanna_blu : H_Bandanna_gry{};
@@ -90,6 +93,9 @@ class H_Cap_oli : H_Cap_blk{};
 class H_Cap_oli_hs : H_Cap_blk{};
 class H_Cap_surfer : H_Cap_blk{};
 class H_Cap_headphones : H_Cap_blk{};
+class H_Cap_Black_IDAP_F : H_Cap_blk{};
+class H_Cap_White_IDAP_F : H_Cap_blk{};
+class H_Cap_Orange_IDAP_F : H_Cap_blk{};
 
 class H_MilCap_gry {
 	displayName = "Military Cap";
@@ -193,7 +199,7 @@ class H_Beret_blk {
 			condition = "true";
 		};
 		class H_Beret_EAF_01_F : H_Beret_blk {
-			displayName = "SFO";
+			displayName = "Firearms";
 			condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;";
 		};
 		class H_Beret_gen_F : H_Beret_blk {
@@ -361,7 +367,18 @@ class H_CrewHelmetHeli_B : H_PilotHelmetHeli_B{};
 class H_HelmetB_light {
 	displayName = "Light Combat Helment";
 	price = 0;
-	class Textures {};
+	class Textures {
+		class H_HelmetB_light {
+			displayName = "Green";
+			condition = "true";
+		};
+		class H_HelmetB_light_black : H_HelmetB_light{ displayName = "Black"; };
+		class H_HelmetB_light_desert : H_HelmetB_light{ displayName = "Desert"; };
+		class H_HelmetB_light_sand : H_HelmetB_light{ displayName = "Sand"; };
+		class H_HelmetB_light_snakeskin : H_HelmetB_light{ displayName = "Snakeskin"; };
+		class H_HelmetB_light_grass : H_HelmetB_light{ displayName = "Grass"; };
+		class H_HelmetB_light_wdl : H_HelmetB_light{ displayName = "Woodland"; };
+	};
 };
 class H_HelmetB_light_black : H_HelmetB_light{};
 class H_HelmetB_light_desert : H_HelmetB_light{};
@@ -375,7 +392,20 @@ class H_HelmetB {
 	price = 0;
 	isMask = false;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_HelmetB {
+			displayName = "Green";
+			condition = "true";
+		};
+		class H_HelmetB_plain_blk : H_HelmetB{ displayName = "Black"; };
+		class H_HelmetB_desert : H_HelmetB{ displayName = "Desert"; };
+		class H_HelmetB_sand : H_HelmetB{ displayName = "Sand"; };
+		class H_HelmetB_snakeskin : H_HelmetB{ displayName = "Snakeskin"; };
+		class H_HelmetB_grass : H_HelmetB{ displayName = "Grass"; };
+		class H_HelmetB_camo : H_HelmetB{ displayName = "Camo"; };
+		class H_HelmetB_paint : H_HelmetB{ displayName = "Spraypaint"; };
+		class H_HelmetB_plain_wdl : H_HelmetB{ displayName = "Woodland"; };
+	};
 };
 class H_HelmetB_plain_blk : H_HelmetB{};
 class H_HelmetB_desert : H_HelmetB{};
@@ -391,13 +421,25 @@ class H_HelmetSpecB {
 	price = 0;
 	isMask = false;
 	isNV = false;
-	class Textures {};
+	class Textures {
+		class H_HelmetSpecB {
+			displayName = "Green";
+			condition = "true";
+		};
+		class H_HelmetSpecB_blk : H_HelmetSpecB{ displayName = "Black"; };
+		class H_HelmetSpecB_paint2 : H_HelmetSpecB{ displayName = "Desert"; };
+		class H_HelmetSpecB_sand : H_HelmetSpecB{ displayName = "Sand"; };
+		class H_HelmetSpecB_snakeskin : H_HelmetSpecB{ displayName = "Snakeskin"; };
+		class H_HelmetSpecB_paint1 : H_HelmetSpecB{ displayName = "Grass"; };
+		class H_HelmetSpecB_wdl : H_HelmetSpecB{ displayName = "Woodland"; };
+	};
 };
 class H_HelmetSpecB_blk : H_HelmetSpecB{};
 class H_HelmetSpecB_paint2 : H_HelmetSpecB{};
 class H_HelmetSpecB_sand : H_HelmetSpecB{};
 class H_HelmetSpecB_snakeskin : H_HelmetSpecB{};
 class H_HelmetSpecB_paint1 : H_HelmetSpecB{};
+class H_HelmetSpecB_wdl : H_HelmetSpecB{};
 
 class H_HelmetB_TI_arid_F {
 	displayName = "Stealth Combat Helment";

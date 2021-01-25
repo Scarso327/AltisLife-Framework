@@ -288,7 +288,6 @@ class U_Rangemaster {
 	displayName = "Patrol Uniform";
 	price = 0;
 	class Textures {
-		// Police Skins
 		class CSI {
 			displayName = "Chief Superindendent";
 			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
@@ -318,6 +317,38 @@ class U_Rangemaster {
 			displayName = "Contable";
 			textures[] = { "Data\Textures\Uniforms\Police\PC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 1] call ULP_fnc_hasAccess }";
+		};
+	};
+};
+
+class U_Competitor {
+	displayName = "Response Uniform";
+	price = 0;
+	class Textures {
+		class DIR {
+			displayName = "Director of Ambulance Services";
+			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
+		};
+		class SUR {
+			displayName = "Surgeon";
+			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
+		};
+		class DR {
+			displayName = "Doctor";
+			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
+		};
+		class PAR {
+			displayName = "Paramedic";
+			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
+		};
+		class STU {
+			displayName = "Student";
+			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
 };

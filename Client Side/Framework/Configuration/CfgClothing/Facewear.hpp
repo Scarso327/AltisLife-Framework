@@ -56,13 +56,13 @@ class G_Shades_Black {
 			condition = "true";
 		};
 		class G_Shades_Red : G_Shades_Black { displayName = "Red"; };
-		class G_Squares_Green : G_Shades_Black { displayName = "Green"; };
-		class G_Squares_Blue : G_Shades_Black { displayName = "Blue"; };
+		class G_Shades_Green : G_Shades_Black { displayName = "Green"; };
+		class G_Shades_Blue : G_Shades_Black { displayName = "Blue"; };
 	};
 };
 class G_Shades_Red : G_Shades_Black{};
-class G_Squares_Green : G_Shades_Black{};
-class G_Squares_Blue : G_Shades_Black{};
+class G_Shades_Green : G_Shades_Black{};
+class G_Shades_Blue : G_Shades_Black{};
 
 class G_Sport_Red {
 	displayName = "Sport Shades";
@@ -75,18 +75,18 @@ class G_Sport_Red {
 			displayName = "Red";
 			condition = "true";
 		};
-		class G_Shades_BlackWhite : G_Sport_Red { displayName = "Black-White"; };
-		class G_Shades_Blackred : G_Sport_Red { displayName = "Black-Red"; };
-		class G_Shades_Blackyellow : G_Sport_Red { displayName = "Black-Yellow"; };
-		class G_Shades_Greenblack : G_Sport_Red { displayName = "Green-Black"; };
-		class G_Shades_checkered : G_Sport_Red { displayName = "Checkered"; };
+		class G_Sport_BlackWhite : G_Sport_Red { displayName = "Black-White"; };
+		class G_Sport_Blackred : G_Sport_Red { displayName = "Black-Red"; };
+		class G_Sport_Blackyellow : G_Sport_Red { displayName = "Black-Yellow"; };
+		class G_Sport_Greenblack : G_Sport_Red { displayName = "Green-Black"; };
+		class G_Sport_checkered : G_Sport_Red { displayName = "Checkered"; };
 	};
 };
-class G_Shades_BlackWhite : G_Sport_Red{};
-class G_Shades_Blackred : G_Sport_Red{};
-class G_Shades_Blackyellow : G_Sport_Red{};
-class G_Shades_Greenblack : G_Sport_Red{};
-class G_Shades_checkered : G_Sport_Red{};
+class G_Sport_BlackWhite : G_Sport_Red{};
+class G_Sport_Blackred : G_Sport_Red{};
+class G_Sport_Blackyellow : G_Sport_Red{};
+class G_Sport_Greenblack : G_Sport_Red{};
+class G_Sport_checkered : G_Sport_Red{};
 
 class G_Lady_Blue {
 	price = 0;
@@ -180,15 +180,21 @@ class G_RegulatorMask_F {
 	class Textures {};
 };
 
-class G_Blindfold_01_black__F {
+class G_Blindfold_01_black_F {
 	displayName = "Blindfold";
 	price = 0;
 	isMask = false;
 	isNV = false;
 	isGas = false;
-	class Textures {};
+	class Textures {
+		class G_Blindfold_01_black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class G_Blindfold_01_white__F : G_Blindfold_01_black_F{ displayName = "Black"; };
+	};
 };
-class G_Blindfold_01_white__F : G_Blindfold_01_black__F{};
+class G_Blindfold_01_white__F : G_Blindfold_01_black_F{};
 
 class G_Bandanna_aviator {
 	displayName = "Bandanna";
@@ -205,6 +211,8 @@ class G_Bandanna_aviator {
 		class G_Bandanna_sport : G_Bandanna_aviator { displayName = "Black + Sport"; };
 		class G_Bandanna_beast : G_Bandanna_aviator { displayName = "Beast"; };
 		class G_Bandanna_blk : G_Bandanna_aviator { displayName = "Black"; };
+		class G_Bandanna_khk : G_Bandanna_aviator{ displayName = "Khaki"; };
+		class G_Bandanna_oli : G_Bandanna_aviator{ displayName = "Olive"; };
 	};
 };
 class G_Bandanna_shades : G_Bandanna_aviator{};
@@ -220,7 +228,15 @@ class G_Balaclava_blk {
 	isMask = true;
 	isNV = false;
 	isGas = false;
-	class Textures {};
+	class Textures {
+		class G_Balaclava_blk {
+			displayName = "Black";
+			condition = "true";
+		};
+		class G_Balaclava_lowprofile : G_Balaclava_blk{ displayName = "Black + Lowprofile Goggles"; };
+		class G_Balaclava_combat : G_Balaclava_blk{ displayName = "Black + Combat Goggles"; };
+		class G_Balaclava_oli : G_Balaclava_blk{ displayName = "Olive"; };
+	};
 };
 class G_Balaclava_lowprofile : G_Balaclava_blk{};
 class G_Balaclava_combat : G_Balaclava_blk{};

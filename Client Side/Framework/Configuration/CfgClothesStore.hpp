@@ -83,7 +83,9 @@ class CfgClothesStore {
 					class V_BandollierB_blk {}; 
 				};
 			};
-			class V_TacVest_blk_POLICE {};
+			class V_TacVest_blk_POLICE {
+				class Textures {};
+			};
 			class V_PlateCarrier1_blk {
 				class Textures { 
 					class V_PlateCarrier1_blk {}; 

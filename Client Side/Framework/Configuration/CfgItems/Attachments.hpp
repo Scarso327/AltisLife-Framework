@@ -20,6 +20,7 @@ class optic_MRD_black : optic_MRD {};
 class optic_Yorris : optic_MRD {};
 
 class optic_Aco {
+    displayName = "ACO";
 	price = 0;
 	class Textures {
 		class optic_Aco {
@@ -36,6 +37,7 @@ class optic_ACO_grn : optic_Aco {};
 class optic_ACO_grn_smg : optic_Aco {};
 
 class optic_Holosight {
+    displayName = "Holosight";
 	price = 0;
 	class Textures {
 		class optic_Holosight {
@@ -60,6 +62,7 @@ class optic_Holosight_lush_F : optic_Holosight {};
 class optic_Holosight_arid_F : optic_Holosight {};
 
 class optic_Hamr {
+    displayName = "RCO";
 	price = 0;
 	class Textures {
 		class optic_Hamr {
@@ -77,6 +80,7 @@ class optic_MRCO {
 };
 
 class optic_Arco {
+    displayName = "ARCO";
 	price = 0;
 	class Textures {
 		class optic_Arco {
@@ -95,6 +99,7 @@ class optic_Arco_lush_F : optic_Arco {};
 class optic_Arco_arid_F : optic_Arco {};
 
 class optic_ERCO_blk_F {
+    displayName = "ERCO";
 	price = 0;
 	class Textures {
 		class optic_ERCO_blk_F {
@@ -109,6 +114,7 @@ class optic_ERCO_khk_F : optic_ERCO_blk_F {};
 class optic_ERCO_snd_F : optic_ERCO_blk_F {};
 
 class optic_DMS {
+    displayName = "DMS";
 	price = 0;
 	class Textures {
 		class optic_DMS {
@@ -128,6 +134,7 @@ class optic_NVS {
 };
 
 class optic_SOS {
+    displayName = "SOS";
 	price = 0;
 	class Textures {
 		class optic_SOS {
@@ -140,6 +147,7 @@ class optic_SOS {
 class optic_SOS_khk_F : optic_SOS {};
 
 class optic_KHS_blk {
+    displayName = "KHS";
 	price = 0;
 	class Textures {
 		class optic_KHS_blk {
@@ -156,17 +164,20 @@ class optic_KHS_tan : optic_KHS_blk {};
 class optic_KHS_old : optic_KHS_blk {};
 
 class muzzle_snds_L { // 9mm
+    displayName = "9mm Suppressor";
 	price = 0;
 	class Textures {};
 };
 
 class muzzle_snds_acp { // .45
+    displayName = ".45mm Suppressor";
 	price = 0;
 	class Textures {};
 };
 
 class muzzle_snds_M { // 5.56
-	price = 0;
+	displayName = "5.56mm Suppressor";
+    price = 0;
 	class Textures {
         class muzzle_snds_M {
 			displayName = "Black";
@@ -180,11 +191,13 @@ class muzzle_snds_m_khk_F : muzzle_snds_M {};
 class muzzle_snds_m_snd_F : muzzle_snds_M {};
 
 class muzzle_snds_570 { // 5.7
+    displayName = "5.7mm Suppressor";
 	price = 0;
 	class Textures {};
 };
 
 class muzzle_snds_58_blk_F { // 5.8
+    displayName = "5.8mm Stealth Suppressor";
 	price = 0;
 	class Textures {
         class muzzle_snds_58_blk_F {
@@ -199,6 +212,7 @@ class muzzle_snds_58_ghex_F : muzzle_snds_58_blk_F {};
 class muzzle_snds_58_hex_F : muzzle_snds_58_blk_F {};
 
 class muzzle_snds_H { // 6.5
+    displayName = "6.5mm Suppressor";
 	price = 0;
 	class Textures {
         class muzzle_snds_H {
@@ -213,6 +227,7 @@ class muzzle_snds_H_khk_F : muzzle_snds_H {};
 class muzzle_snds_H_snd_F : muzzle_snds_H {};
 
 class muzzle_snds_65_TI_blk_F { // 6.5 (Stealth)
+    displayName = "6.5mm Stealth Suppressor";
 	price = 0;
 	class Textures {
         class muzzle_snds_65_TI_blk_F {
@@ -227,6 +242,7 @@ class muzzle_snds_65_TI_ghex_F : muzzle_snds_65_TI_blk_F {};
 class muzzle_snds_65_TI_hex_F : muzzle_snds_65_TI_blk_F {};
 
 class muzzle_snds_B { // 7.62
+    displayName = "7.62mm Suppressor";
 	price = 0;
 	class Textures {
         class muzzle_snds_B {
@@ -245,6 +261,7 @@ class muzzle_snds_B_lush_F : muzzle_snds_B {};
 class muzzle_snds_B_arid_F : muzzle_snds_B {};
 
 class bipod_01_F_blk {
+    displayName = "Bipod";
 	price = 0;
 	class Textures {
         class bipod_01_F_blk {

@@ -19,6 +19,7 @@ class Binocular {
 class Rangefinder : Binocular{};
 
 class NVGoggles {
+	displayName = "Night Vision Goggles";
 	price = 0;
 	class Textures {
         class NVGoggles {
@@ -54,6 +55,7 @@ class HandGrenade_Stone {
 };
 
 class SmokeShell {
+	displayName = "Smoke Grenade";
 	price = 0;
 	class Textures {
         class SmokeShell {

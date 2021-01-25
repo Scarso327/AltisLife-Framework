@@ -359,14 +359,14 @@ class U_B_CombatUniform_mcam {
 		};
 		class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam { displayName = "MTP (Rolled)"; };
 		class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam { displayName = "MTP (Tee)"; };
-		class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL (Base)"; };
+		class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL (Base)"; };
 		class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL (Rolled)"; };
 		class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam { displayName = "WDL (Tee)"; };
 	};
 };
 class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam{};
 class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam{};
-class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam{};
+class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam{};
 class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam{};
 class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam{};
 

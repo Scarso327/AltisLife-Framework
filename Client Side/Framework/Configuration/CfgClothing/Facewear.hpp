@@ -45,6 +45,7 @@ class G_Spectacles {
 class G_Spectacles_Tinted : G_Spectacles{};
 
 class G_Shades_Black {
+	displayName = "Shades";
 	price = 0;
 	isMask = false;
 	isNV = false;
@@ -64,6 +65,7 @@ class G_Squares_Green : G_Shades_Black{};
 class G_Squares_Blue : G_Shades_Black{};
 
 class G_Sport_Red {
+	displayName = "Sport Shades";
 	price = 0;
 	isMask = false;
 	isNV = false;
@@ -135,6 +137,7 @@ class G_EyeProtectors_F {
 class G_EyeProtectors_Earpiece_F : G_EyeProtectors_F{};
 
 class G_B_Diving {
+	displayName = "Diving Goggles";
 	price = 0;
 	isMask = false;
 	isNV = false;
@@ -152,6 +155,7 @@ class G_O_Diving : G_B_Diving{};
 class G_I_Diving : G_B_Diving{};
 
 class G_Respirator_white_F {
+	displayName = "Respirator";
 	price = 0;
 	isMask = false;
 	isNV = false;
@@ -177,6 +181,7 @@ class G_RegulatorMask_F {
 };
 
 class G_Blindfold_01_black__F {
+	displayName = "Blindfold";
 	price = 0;
 	isMask = false;
 	isNV = false;
@@ -186,6 +191,7 @@ class G_Blindfold_01_black__F {
 class G_Blindfold_01_white__F : G_Blindfold_01_black__F{};
 
 class G_Bandanna_aviator {
+	displayName = "Bandanna";
 	price = 0;
 	isMask = true;
 	isNV = false;
@@ -209,6 +215,7 @@ class G_Bandanna_khk : G_Bandanna_aviator{};
 class G_Bandanna_oli : G_Bandanna_aviator{};
 
 class G_Balaclava_blk {
+	displayName = "Balaclava";
 	price = 0;
 	isMask = true;
 	isNV = false;
@@ -220,6 +227,7 @@ class G_Balaclava_combat : G_Balaclava_blk{};
 class G_Balaclava_oli : G_Balaclava_blk{};
 
 class G_Balaclava_TI_blk_F {
+	displayName = "Stealth Balaclava";
 	price = 0;
 	isMask = true;
 	isNV = false;

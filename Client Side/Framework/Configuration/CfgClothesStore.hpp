@@ -211,7 +211,15 @@ class CfgClothesStore {
 			class U_C_Man_casual_6_F {};
 			class U_C_Scientist {};
 			class U_I_C_Soldier_Bandit_1_F {};
-			class U_IG_Guerilla1_1 {};
+			class U_IG_Guerilla2_1 {
+				class Textures {
+					class U_IG_Guerilla2_1 {};
+					class U_IG_Guerilla2_2 {};
+					class U_IG_Guerilla2_3 {};
+					class U_IG_Guerilla3_1 {};
+					class U_IG_Guerilla3_2 {};
+				};
+			};
 			class U_C_E_LooterJacket_01_F {};
 			class U_O_R_Gorka_01_black_F {};
 			class U_OrestesBody {};

@@ -17,3 +17,4 @@ class 30Rnd_65x39_caseless_mag {
 };
 
 class 30Rnd_65x39_caseless_black_mag : 30Rnd_65x39_caseless_mag {};
+class 30Rnd_65x39_caseless_khaki_mag : 30Rnd_65x39_caseless_mag {};

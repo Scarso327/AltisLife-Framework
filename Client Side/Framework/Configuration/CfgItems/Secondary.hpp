@@ -26,6 +26,7 @@ class hgun_P07_F {
 		};
 	};	
 };
+class hgun_P07_blk_F : hgun_P07_F {};
 
 class hgun_ACPC2_F {
 	price = 0;
@@ -44,6 +45,7 @@ class hgun_Pistol_heavy_01_F {
 		};
 	};	
 };
+class hgun_Pistol_heavy_01_green_F : hgun_Pistol_heavy_01_F {};
 
 class hgun_Pistol_heavy_02_F {
 	price = 0;

@@ -33,6 +33,8 @@ class NVGoggles {
 		};
     };	
 };
+class NVGoggles_OPFOR : NVGoggles {};
+class NVGoggles_INDEP : NVGoggles {};
 
 class FirstAidKit {
 	price = 0;
@@ -75,6 +77,11 @@ class SmokeShell {
 		};
     };	
 };
+class SmokeShellRed : SmokeShell {};
+class SmokeShellGreen : SmokeShell {};
+class SmokeShellBlue : SmokeShell {};
+class SmokeShellOrange : SmokeShell {};
+class SmokeShellPurple : SmokeShell {};
 
 class SmokeShellYellow {
 	displayName = "Tear Gas";

@@ -163,19 +163,19 @@ class optic_KHS_hex : optic_KHS_blk {};
 class optic_KHS_tan : optic_KHS_blk {};
 class optic_KHS_old : optic_KHS_blk {};
 
-class muzzle_snds_L { // 9mm
+class muzzle_snds_L {
     displayName = "9mm Suppressor";
 	price = 0;
 	class Textures {};
 };
 
-class muzzle_snds_acp { // .45
+class muzzle_snds_acp {
     displayName = ".45mm Suppressor";
 	price = 0;
 	class Textures {};
 };
 
-class muzzle_snds_M { // 5.56
+class muzzle_snds_M {
 	displayName = "5.56mm Suppressor";
     price = 0;
 	class Textures {
@@ -190,13 +190,13 @@ class muzzle_snds_M { // 5.56
 class muzzle_snds_m_khk_F : muzzle_snds_M {};
 class muzzle_snds_m_snd_F : muzzle_snds_M {};
 
-class muzzle_snds_570 { // 5.7
+class muzzle_snds_570 {
     displayName = "5.7mm Suppressor";
 	price = 0;
 	class Textures {};
 };
 
-class muzzle_snds_58_blk_F { // 5.8
+class muzzle_snds_58_blk_F {
     displayName = "5.8mm Stealth Suppressor";
 	price = 0;
 	class Textures {
@@ -211,7 +211,7 @@ class muzzle_snds_58_blk_F { // 5.8
 class muzzle_snds_58_ghex_F : muzzle_snds_58_blk_F {};
 class muzzle_snds_58_hex_F : muzzle_snds_58_blk_F {};
 
-class muzzle_snds_H { // 6.5
+class muzzle_snds_H {
     displayName = "6.5mm Suppressor";
 	price = 0;
 	class Textures {
@@ -226,7 +226,7 @@ class muzzle_snds_H { // 6.5
 class muzzle_snds_H_khk_F : muzzle_snds_H {};
 class muzzle_snds_H_snd_F : muzzle_snds_H {};
 
-class muzzle_snds_65_TI_blk_F { // 6.5 (Stealth)
+class muzzle_snds_65_TI_blk_F {
     displayName = "6.5mm Stealth Suppressor";
 	price = 0;
 	class Textures {
@@ -241,7 +241,7 @@ class muzzle_snds_65_TI_blk_F { // 6.5 (Stealth)
 class muzzle_snds_65_TI_ghex_F : muzzle_snds_65_TI_blk_F {};
 class muzzle_snds_65_TI_hex_F : muzzle_snds_65_TI_blk_F {};
 
-class muzzle_snds_B { // 7.62
+class muzzle_snds_B {
     displayName = "7.62mm Suppressor";
 	price = 0;
 	class Textures {

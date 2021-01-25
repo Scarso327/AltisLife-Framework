@@ -187,27 +187,27 @@ class V_PlateCarrier1_blk {
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
-		class V_TacVest_blk {
+		class V_PlateCarrier1_blk {
 			displayName = "Black";
 			condition = "true";
 		};
-		class V_PlateCarrier1_rgr : V_PlateCarrier1_blk{ displayName = "Green"; };
-		class V_PlateCarrier1_rgr_noflag_F : V_TacChestrig_cbr_F{ displayName = "Green (No Flag)"; };
-		class V_PlateCarrier1_wdl : V_TacChestrig_cbr_F{ displayName = "Woodland"; };
-		class V_PlateCarrierL_CTRG : V_TacChestrig_cbr_F{ displayName = "CTRG"; };
+		class V_PlateCarrier1_rgr : V_PlateCarrier1_blk { displayName = "Green"; };
+		class V_PlateCarrier1_rgr_noflag_F : V_PlateCarrier1_blk { displayName = "Green (No Flag)"; };
+		class V_PlateCarrier1_wdl : V_PlateCarrier1_blk{ displayName = "Woodland"; };
+		class V_PlateCarrierL_CTRG : V_PlateCarrier1_blk{ displayName = "CTRG"; };
 	};
 };
 class V_PlateCarrier1_rgr : V_PlateCarrier1_blk{};
-class V_PlateCarrier1_rgr_noflag_F : V_TacChestrig_cbr_F{};
-class V_PlateCarrier1_wdl : V_TacChestrig_cbr_F{};
-class V_PlateCarrierL_CTRG : V_TacChestrig_cbr_F{};
+class V_PlateCarrier1_rgr_noflag_F : V_PlateCarrier1_blk{};
+class V_PlateCarrier1_wdl : V_PlateCarrier1_blk{};
+class V_PlateCarrierL_CTRG : V_PlateCarrier1_blk{};
 
 class V_PlateCarrier2_blk {
 	displayName = "Carrier Rig";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
-		class V_TacVest_blk {
+		class V_PlateCarrier2_blk {
 			displayName = "Black";
 			condition = "true";
 		};

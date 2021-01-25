@@ -14,8 +14,8 @@ class CfgClothesStore {
 				};
 			};
 			class U_C_CBRN_Suit_01_White_F {
+				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess;";
 				class Textures {
-					condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess;";
 					class U_C_CBRN_Suit_01_Blue_F {};
 				};
 			};
@@ -120,8 +120,8 @@ class CfgClothesStore {
 				};
 			};
 			class U_C_CBRN_Suit_01_White_F {
+				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess;";
 				class Textures {
-					condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess;";
 					class U_C_CBRN_Suit_01_White_F {};
 				};
 			};

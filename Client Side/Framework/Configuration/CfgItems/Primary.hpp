@@ -43,9 +43,8 @@ class SMG_03C_black {
 			condition = "true";
 		};
 		class SMG_03C_TR_black : SMG_03C_black { displayName = "Black TR"; };
-		class SMG_03C_TR_khaki : SMG_03C_black { displayName = "Black TR"; };
+		class SMG_03C_TR_khaki : SMG_03C_black { displayName = "Khaki TR"; };
 		class SMG_03C_khaki : SMG_03C_black { displayName = "Khaki"; };
-		class SMG_03C_TR_black : SMG_03C_black { displayName = "Khaki TR"; };
 		class SMG_03C_hex : SMG_03C_black { displayName = "Hex"; };
 		class SMG_03C_TR_hex : SMG_03C_black { displayName = "Hex TR"; };
 		class SMG_03C_camo : SMG_03C_black { displayName = "Camo"; };
@@ -53,9 +52,8 @@ class SMG_03C_black {
 	};
 };
 class SMG_03C_TR_black : SMG_03C_black {};
-class SMG_03C_TR_khaki : SMG_03C_black {};
 class SMG_03C_khaki : SMG_03C_black {};
-class SMG_03C_TR_black : SMG_03C_black {};
+class SMG_03C_TR_khaki : SMG_03C_black {};
 class SMG_03C_hex : SMG_03C_black {};
 class SMG_03C_TR_hex : SMG_03C_black {};
 class SMG_03C_camo : SMG_03C_black {};
@@ -70,9 +68,8 @@ class SMG_03_black {
 			condition = "true";
 		};
 		class SMG_03_TR_black : SMG_03_black { displayName = "Black TR"; };
-		class SMG_03_TR_khaki : SMG_03_black { displayName = "Black TR"; };
 		class SMG_03_khaki : SMG_03_black { displayName = "Khaki"; };
-		class SMG_03_TR_black : SMG_03_black { displayName = "Khaki TR"; };
+		class SMG_03_TR_khaki : SMG_03_black { displayName = "Black TR"; };
 		class SMG_03_hex : SMG_03_black { displayName = "Hex"; };
 		class SMG_03_TR_hex : SMG_03_black { displayName = "Hex TR"; };
 		class SMG_03_camo : SMG_03_black { displayName = "Camo"; };
@@ -80,9 +77,8 @@ class SMG_03_black {
 	};
 };
 class SMG_03_TR_black : SMG_03_black {};
-class SMG_03_TR_khaki : SMG_03_black {};
 class SMG_03_khaki : SMG_03_black {};
-class SMG_03_TR_black : SMG_03_black {};
+class SMG_03_TR_khaki : SMG_03_black {};
 class SMG_03_hex : SMG_03_black {};
 class SMG_03_TR_hex : SMG_03_black {};
 class SMG_03_camo : SMG_03_black {};
@@ -269,23 +265,6 @@ class arifle_MSBS65_UBS_black_F {
 class arifle_MSBS65_UBS_F : arifle_MSBS65_UBS_black_F {};
 class arifle_MSBS65_UBS_sand_F : arifle_MSBS65_UBS_black_F {};
 class arifle_MSBS65_UBS_camo_F : arifle_MSBS65_UBS_black_F {};
-
-class arifle_MSBS65_Mark_black_F {
-	displayName = "Promet MR 6.5 mm";
-	price = 0;
-	class Textures {
-		class arifle_MSBS65_Mark_black_F {
-			displayName = "Black";
-			condition = "true";
-		};
-		class arifle_MSBS65_Mark_F : arifle_MSBS65_Mark_black_F { displayName = "Green"; };
-		class arifle_MSBS65_Mark_sand_F : arifle_MSBS65_Mark_black_F { displayName = "Sand"; };
-		class arifle_MSBS65_Mark_camo_F : arifle_MSBS65_Mark_black_F { displayName = "Camo"; };
-	};
-};
-class arifle_MSBS65_Mark_F : arifle_MSBS65_Mark_black_F {};
-class arifle_MSBS65_Mark_sand_F : arifle_MSBS65_Mark_black_F {};
-class arifle_MSBS65_Mark_camo_F : arifle_MSBS65_Mark_black_F {};
 
 class arifle_MSBS65_Mark_black_F {
 	displayName = "Promet MR 6.5 mm";

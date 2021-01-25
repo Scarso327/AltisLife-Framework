@@ -86,16 +86,14 @@ class B_Kitbag_cbr {
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
-		class Textures {
-			class B_Kitbag_cbr {
-				displayName = "Coyote";
-				condition = "true";
-			};
-			class B_Kitbag_tan : B_Kitbag_cbr { displayName = "Tan"; };
-			class B_Kitbag_rgr : B_Kitbag_cbr { displayName = "Green"; };
-			class B_Kitbag_sgg : B_Kitbag_cbr { displayName = "Sage"; };
-			class B_Kitbag_mcamo : B_Kitbag_cbr { displayName = "MTP"; };
+		class B_Kitbag_cbr {
+			displayName = "Coyote";
+			condition = "true";
 		};
+		class B_Kitbag_tan : B_Kitbag_cbr { displayName = "Tan"; };
+		class B_Kitbag_rgr : B_Kitbag_cbr { displayName = "Green"; };
+		class B_Kitbag_sgg : B_Kitbag_cbr { displayName = "Sage"; };
+		class B_Kitbag_mcamo : B_Kitbag_cbr { displayName = "MTP"; };
 	};
 };
 class B_Kitbag_tan : B_Kitbag_cbr{};

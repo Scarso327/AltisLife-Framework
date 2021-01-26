@@ -58,6 +58,7 @@ if (life_spawn_point isEqualTo []) then {
 if (life_firstSpawn) then {
     life_firstSpawn = false;
     [] call life_fnc_welcomeNotification;
+    player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
 };
 
 player allowDammage true;

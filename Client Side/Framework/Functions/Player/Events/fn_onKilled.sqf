@@ -43,18 +43,16 @@ if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
 };
 
 // Death Screen...
-[] spawn {
-	["RscIncapacitated"] call ULP_UI_fnc_destroyLayer;
-	"WaitToRespawn" cutText ["<t color='#ffffff' font='PuristaLight' size='2px'>YOU HAVE DIED</t>", "BLACK", -1, false, true];
+["RscIncapacitated"] call ULP_UI_fnc_destroyLayer;
+"WaitToRespawn" cutText ["<t color='#ffffff' font='PuristaLight' size='2px'>YOU HAVE DIED</t>", "BLACK", -1, false, true];
 
-	ULP_Respawned = false;
-	ULP_CanRespawn = nil;
+ULP_Respawned = false;
+ULP_CanRespawn = nil;
 
-	waitUntil { ULP_Respawned };
-
+[ { ULP_Respawned }, [], {
 	uiNamespace setVariable ["IncapacitatedEffect", nil];
 	[] call ULP_fnc_wipeEffects;
 
 	"WaitToRespawn" cutText ["", "PLAIN"];
 	[] call life_fnc_spawnMenu;
-};
+} ] call ULP_fnc_waitUntilExecute;

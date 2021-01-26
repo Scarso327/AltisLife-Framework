@@ -3,160 +3,144 @@ class Licenses {
     class driving {
         variable = "driving";
         displayName = "Driving Licence";
-        price = 900;
+        price = 0;
+        removable = true;
     };
 
     class trucking {
         variable = "trucking";
         displayName = "Trucking Licence";
-        price = 24000;
+        price = 0;
+        removable = true;
     };
 
     class piloting {
         variable = "piloting";
         displayName = "Piloting Licence";
-        price = 47500;
+        price = 0;
+        removable = true;
     };
 
     class boating {
         variable = "boating";
         displayName = "Boating Licence";
-        price = 6700;
-    };
-
-    class diving {
-        variable = "diving";
-        displayName = "Diving Licence";
-        price = 17000;
-    };
-
-    class go_karting {
-        variable = "go_karting";
-        displayName = "Go-Karting Licence";
-        price = 450;
+        price = 0;
+        removable = true;
     };
 
     // Property Agents
     class homeowners {
         variable = "homeowners";
         displayName = "Homeowner's Approval";
-        price = 500000;
+        price = 0;
+        removable = true;
     };
 
     // Handgun Store
     class firearms {
         variable = "firearms";
         displayName = "Firearms Certification";
-        price = 32500;
+        price = 0;
+        removable = true;
     };
 
     // Item Processing Sites
-    class fish {
-        variable = "fish";
-        displayName = "Fish Processing Licence";
-        price = 500;
-    };
-
     class lumber {
         variable = "lumber";
         displayName = "Lumber Processing Licence";
-        price = 1200;
+        price = 0;
+        removable = false;
     };
 
     class schnapps {
         variable = "schnapps";
         displayName = "Schnapps Processing Licence";
-        price = 1700;
+        price = 0;
+        removable = false;
     };
 
     class tin {
         variable = "tin";
         displayName = "Tin Processing Licence";
-        price = 4500;
+        price = 0;
+        removable = false;
     };
 
     class copper {
         variable = "copper";
         displayName = "Copper Processing Licence";
-        price = 7500;
-    };
-
-    class silver {
-        variable = "silver";
-        displayName = "Silver Processing Licence";
-        price = 11000;
+        price = 0;
+        removable = false;
     };
 
     class iron {
         variable = "iron";
         displayName = "Iron Processing Licence";
-        price = 18000;
+        price = 0;
+        removable = false;
     };
 
-    class rock {
-        variable = "rock";
-        displayName = "Rock Processing Licence";
-        price = 15000;
-    };
-
-    class platinum {
-        variable = "platinum";
-        displayName = "Platinum Processing Licence";
-        price = 30000;
+    class silver {
+        variable = "silver";
+        displayName = "Silver Processing Licence";
+        price = 0;
+        removable = false;
     };
 
     class oil {
         variable = "oil";
         displayName = "Oil Processing Licence";
-        price = 75000;
-    };
-
-    class iridium {
-        variable = "iridium";
-        displayName = "Iridium Processing Licence";
-        price = 125000;
+        price = 0;
+        removable = false;
     };
 
     class gem {
         variable = "gem";
         displayName = "Gem Processing Licence";
-        price = 350000;
+        price = 0;
+        removable = false;
     };
 
     class marijuana {
         variable = "marijuana";
         displayName = "Marijuana Processing Licence";
-        price = 45000;
+        price = 0;
+        removable = false;
     };
 
     class heroin {
         variable = "heroin";
         displayName = "Heroin Processing Licence";
-        price = 87500;
+        price = 0;
+        removable = false;
     };
 
     class cocaine {
         variable = "cocaine";
         displayName = "Cocaine Processing Licence";
-        price = 11600;
+        price = 0;
+        removable = false;
     };
 
     class methamphetamine {
         variable = "methamphetamine";
         displayName = "Methamphetamine Processing Licence";
-        price = 145000;
+        price = 0;
+        removable = false;
     };
 
     class drug_refining {
         variable = "drug_refining";
         displayName = "Drub Refining Licence";
-        price = 600000;
+        price = 0;
+        removable = false;
     };
 
     // Syndikat Outpost
     class syndikat {
         variable = "syndikat";
         displayName = "Syndikat Membership";
-        price = 1000000;
+        price = 0;
+        removable = false;
     };
 };

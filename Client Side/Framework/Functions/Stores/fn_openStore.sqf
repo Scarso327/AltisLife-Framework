@@ -12,7 +12,7 @@ _this params [
 
 if (dialog) exitWith {};
 
-private _cfg = missionConfigFile >> _storeCfg;
+private _cfg = missionConfigFile >> "CfgStores" >> _storeCfg;
 _storeCfg = _cfg >> _store;
 if !(isClass (_storeCfg)) exitWith {};
 

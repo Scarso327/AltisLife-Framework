@@ -11,6 +11,19 @@ class ULP_Functions {
 		class initialisation {};
 		class initEventHandlers {};
 		class initVars {};
+		class preInitVars { preInit=1; }
+		class preInitEvents { preInit=1; };
+	};
+
+	class Events {
+		file = "Functions\Events";
+		class onEachFrame {};
+	};
+
+	class Utility {
+		file = "Functions\Utility";
+		class waitExecute {};
+		class waitUntilExecute {};
 	};
 
 	class Faction {

@@ -92,8 +92,8 @@ class CfgItemsStore {
 			class optic_Aco {};
 			class optic_Holosight {
 				class textures {
-					class optic_Holosight_blk_F : optic_Holosight {};
-					class optic_Holosight_smg_blk_F : optic_Holosight {};
+					class optic_Holosight_blk_F {};
+					class optic_Holosight_smg_blk_F {};
 				};
 			};
 			class optic_Hamr {
@@ -106,7 +106,7 @@ class CfgItemsStore {
 			class optic_Arco {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures {
-					class optic_Arco_blk_F : optic_Arco {};
+					class optic_Arco_blk_F {};
 				};
 			};
 			class optic_ERCO_blk_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };

@@ -27,6 +27,7 @@ ULP_Respawned = true;
 
 player playMove "AmovPercMstpSnonWnonDnon";
 
-// TODO : Reset Loadout, Check if arrested and rearrest if so, if not arrested reset record and reset hud...
+// TODO : Check if arrested and rearrest if so, if not arrested reset record and reset hud...
 
+[] call ULP_fnc_setLoadout;
 [] call ULP_fnc_syncPlayerInfo;

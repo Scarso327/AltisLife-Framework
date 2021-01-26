@@ -202,3 +202,4 @@ class Life_Settings {
 #include "CfgMedical.hpp"
 #include "CfgStores.hpp"
 #include "CfgItems.hpp"
+#include "CfgVirtualItems.hpp"

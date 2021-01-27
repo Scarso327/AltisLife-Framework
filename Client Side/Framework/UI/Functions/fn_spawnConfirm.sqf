@@ -55,8 +55,8 @@ if (life_spawn_point isEqualTo []) then {
     titleText[format ["%2 %1",life_spawn_point select 1,"You have spawned at"],"BLACK IN"];
 };
 
-if (life_firstSpawn) then {
-    life_firstSpawn = false;
+if (ULP_FirstSpawn) then {
+    ULP_FirstSpawn = false;
     [] call life_fnc_welcomeNotification;
     player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
 };

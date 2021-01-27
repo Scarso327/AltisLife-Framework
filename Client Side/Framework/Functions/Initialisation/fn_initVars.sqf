@@ -7,6 +7,7 @@ scopeName "fn_initVars";
 
 /* Session Variables */
 ULP_Date = [2021, 1, 1];
+ULP_FirstSpawn = true;
 ULP_New = true;
 ULP_Loaded = false;
 ULP_Last_Sync = time;

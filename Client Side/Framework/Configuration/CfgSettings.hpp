@@ -203,3 +203,4 @@ class Life_Settings {
 #include "CfgStores.hpp"
 #include "CfgItems.hpp"
 #include "CfgVirtualItems.hpp"
+#include "CfgSurvival.hpp"

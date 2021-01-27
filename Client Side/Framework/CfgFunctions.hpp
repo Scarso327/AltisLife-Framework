@@ -54,8 +54,10 @@ class ULP_Functions {
 		class isSurrendered {};
 		class keyDown {};
 		class keyUp {};
+		class initSurvival {};
 		class initPlayerEvents {};
 		class getInventory {};
+		class resetSurvival {};
 	};
 
 	class PlayerActions {
@@ -72,6 +74,7 @@ class ULP_Functions {
 		class onRespawn {};
 		class onDamaged {};
 		class onSurrender {};
+		class onSurvival {};
 	};
 
 	class Paycheck {

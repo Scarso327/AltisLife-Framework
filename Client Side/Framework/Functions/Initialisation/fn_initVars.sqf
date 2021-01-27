@@ -26,8 +26,6 @@ ULP_Keys = [];
 ULP_Gang_ID = -1;
 
 /* Player State Variables */
-ULP_Survival_Thirst = 100;
-ULP_Survival_Hunger = 100;
 ULP_Ability_Cooldown = time;
 ULP_Effects = [];
 

@@ -12,4 +12,4 @@ _this params [
 ];
 
 ULP_waitExecute pushBack [diag_tickTime + _delay, _params, _function];
-ULP_waitExecute sort false;
+ULP_waitExecute sort true;

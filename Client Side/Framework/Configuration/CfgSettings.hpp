@@ -204,3 +204,4 @@ class Life_Settings {
 #include "CfgItems.hpp"
 #include "CfgVirtualItems.hpp"
 #include "CfgSurvival.hpp"
+#include "CfgCredits.hpp"

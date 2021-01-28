@@ -57,8 +57,12 @@ if (life_spawn_point isEqualTo []) then {
 
 if (ULP_FirstSpawn) then {
     ULP_FirstSpawn = false;
-    [] call life_fnc_welcomeNotification;
     player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
+
+    [
+        3, [],
+        { [] call ULP_UI_fnc_screenCredits; }
+    ] call ULP_fnc_waitExecute;
 };
 
 player allowDammage true;

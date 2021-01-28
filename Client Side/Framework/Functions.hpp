@@ -12,7 +12,6 @@ class Life_Client_Core {
     class Master_Directory {
         file = "Functions";
         class setupActions {};
-        class welcomeNotification {};
     };
 
     class Actions {

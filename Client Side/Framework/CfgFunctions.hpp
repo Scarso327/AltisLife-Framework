@@ -132,6 +132,7 @@ class ULP_Functions_UI {
 
 	class Functions {
 		file = "UI\Functions";
+		class screenCredits {};
 		class closeDialogs {};
 	};
 

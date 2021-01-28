@@ -72,8 +72,7 @@ class CfgRemoteExec {
         F(TON_fnc_clientMessage,CLIENT)
         F(TON_fnc_player_query,CLIENT)
         F(ULP_fnc_setPlayerInfo,CLIENT)
-        F(ULP_fnc_onRestrained,CLIENT)
-        F(ULP_fnc_onUnrestrained,CLIENT)
+        F(ULP_fnc_onRestrain,CLIENT)
 
         /* Server only functions */
         F(DB_fnc_insertRequest,SERVER)

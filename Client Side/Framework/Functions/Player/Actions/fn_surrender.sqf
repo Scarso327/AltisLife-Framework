@@ -15,7 +15,7 @@ player setVariable["surrender", _surrender, true];
 
 if (_surrender) then {
 	[[], {
-        if (alive player && { !(isDowned(player)) } && { [player] call ULP_fnc_isSurrendered }) then {
+        if (alive player && { !(isDowned(player)) } && { [player] call ULP_fnc_isSurrendered } && { !([player] call ULP_fnc_isRestrained) }) then {
             player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
         } else {
             player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";

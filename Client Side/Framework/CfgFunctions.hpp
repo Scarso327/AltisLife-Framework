@@ -65,13 +65,12 @@ class ULP_Functions {
 	class PlayerActions {
 		file = "Functions\Player\Actions";
 		class surrender {};
-		class toggleRestraint {};
+		class restrain {};
 	};
 
 	class PlayerEvents {
 		file = "Functions\Player\Events";
-		class onRestrained {};
-		class onUnrestrained {};
+		class onRestrain {};
 		class onIncapacitated {};
 		class onKilled {};
 		class onRespawn {};

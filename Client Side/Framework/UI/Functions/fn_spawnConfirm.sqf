@@ -57,7 +57,6 @@ if (life_spawn_point isEqualTo []) then {
 
 if (ULP_FirstSpawn) then {
     ULP_FirstSpawn = false;
-    player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
 
     [
         3, [],

@@ -4,6 +4,12 @@
 */
 scopeName "fn_onEachFrame";
 
+{
+	_x params ["_params", "_function"];
+	private _thisEventHandler = _forEachIndex;
+	_params call _function;
+} forEach ULP_eachFrameEvents;
+
 // Credit: Ace Mod Team (https://ace3mod.com/wiki/development/arma-3-scheduler-and-our-practices.html)
 
 for "_i" from 0 to 1 step 0 do {

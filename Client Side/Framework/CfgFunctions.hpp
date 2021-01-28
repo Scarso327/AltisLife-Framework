@@ -17,7 +17,9 @@ class ULP_Functions {
 
 	class Events {
 		file = "Functions\Events";
+		class addEachFrame {};
 		class onEachFrame {};
+		class removeEachFrame {};
 	};
 
 	class Utility {

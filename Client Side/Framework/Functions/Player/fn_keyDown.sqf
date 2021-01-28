@@ -28,12 +28,7 @@ if (isDowned(player)) then {
         case B: {
             if (_shift && { !_ctrlKey }) then {
                 if (ULP_Ability_Cooldown < time) then {
-                    if !([player] call ULP_fnc_isSurrendered) then {
-                        [] call ULP_fnc_onSurrender;
-                    } else {
-                        player setVariable ["surrender", nil];
-                    };
-
+                    [!([player] call ULP_fnc_isSurrendered)] call ULP_fnc_surrender;
                     ULP_Ability_Cooldown = time + 1;
                 };
 

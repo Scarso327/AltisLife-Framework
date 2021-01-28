@@ -9,4 +9,4 @@ if !(_this params [
 	["_object", player, [objNull]]
 ]) exitWith { false };
 
-!(isNil { _object getVariable "surrender"})
+(_object getVariable ["surrender", false])

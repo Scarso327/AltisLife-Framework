@@ -64,6 +64,7 @@ class ULP_Functions {
 
 	class PlayerActions {
 		file = "Functions\Player\Actions";
+		class surrender {};
 		class toggleRestraint {};
 	};
 
@@ -75,7 +76,6 @@ class ULP_Functions {
 		class onKilled {};
 		class onRespawn {};
 		class onDamaged {};
-		class onSurrender {};
 		class onSurvival {};
 	};
 

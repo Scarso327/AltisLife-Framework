@@ -19,4 +19,6 @@ _this params [
 } &&  { alive player
 } && { !(isDowned(player))
 } && { !([player] call ULP_fnc_isRestrained)
+} && { !([player] call ULP_fnc_isSurrendered)
+} && { !([player] call ULP_fnc_isKnocked)
 } && { [player] call ULP_fnc_getFaction in ["Police"] }

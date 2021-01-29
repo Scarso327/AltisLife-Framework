@@ -40,6 +40,7 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 player setVariable ["surrender", nil];
 
 [] spawn ULP_UI_fnc_closeDialogs; // Makes sure all dialogs are closed...
+[] call ULP_fnc_wipeEffects;
 
 // Create Incapaciated screen effect...
 private _effectBlur = ppEffectCreate ["DynamicBlur", 300];

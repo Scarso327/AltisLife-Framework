@@ -54,6 +54,7 @@ class ULP_Functions {
 		class saveGear {};
 		class isRestrained {};
 		class isSurrendered {};
+		class isKnocked {};
 		class keyDown {};
 		class keyUp {};
 		class initSurvival {};
@@ -65,6 +66,7 @@ class ULP_Functions {
 
 	class PlayerActions {
 		file = "Functions\Player\Actions";
+		class knockOut {};
 		class surrender {};
 		class restrain {};
 	};
@@ -77,6 +79,7 @@ class ULP_Functions {
 		class onRespawn {};
 		class onDamaged {};
 		class onSurvival {};
+		class onKnocked {};
 	};
 
 	class Paycheck {

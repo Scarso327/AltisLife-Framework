@@ -61,6 +61,13 @@ if (isDowned(player)) then {
             };
         };
 
+        case G: {
+            if (_shift) then {
+                [cursorObject] call ULP_fnc_knockOut; // Script does checks...
+                _handled = true;
+            };
+        };
+
         case R: {
             private _object = cursorObject;
 

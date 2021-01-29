@@ -15,7 +15,7 @@ _this params [
 } && { isNull (objectParent _target)
 } && { (_target distance player) < 3
 } && { !([_target] call ULP_fnc_isRestrained)
-} && { [_target] call ULP_fnc_isSurrendered
+} && { [_target] call ULP_fnc_isSurrendered || [_target] call ULP_fnc_isKnocked
 } &&  { alive player
 } && { !(isDowned(player))
 } && { !([player] call ULP_fnc_isRestrained)

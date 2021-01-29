@@ -16,6 +16,16 @@ private _interruptKeys = [W, A, S, D];
 
 _disabledKeys append (actionKeys "tacticalView"); // Disable tactical view...
 
+if ([player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isSurrended }) then {
+    _disabledKeys append (actionKeys "GetOver");
+    _disabledKeys append (actionKeys "GetIn");
+    _disabledKeys append (actionKeys "ReloadMagazine");
+    _disabledKeys append (actionKeys "Fire");
+    _disabledKeys append (actionKeys "SitDown");
+    _disabledKeys append (actionKeys "Throw");
+    _disabledKeys append [Q, E];
+};
+
 if (_code in _disabledKeys) then { _handled = true };
 
 if (isDowned(player)) then { 

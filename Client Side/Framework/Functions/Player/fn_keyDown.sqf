@@ -71,8 +71,10 @@ if (isDowned(player)) then {
         case R: {
             private _object = cursorObject;
 
-            if (_shift && { [_object] call ULP_fnc_canRestrain }) then {
-                [_object, !([_object] call ULP_fnc_isRestrained)] call ULP_fnc_restrain;
+            if (_shift) then {
+                if ([_object] call ULP_fnc_canRestrain) then {
+                    [_object, !([_object] call ULP_fnc_isRestrained)] call ULP_fnc_restrain;
+                };
                 _handled = true;
             };
         };

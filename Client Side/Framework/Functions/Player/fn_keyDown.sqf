@@ -61,6 +61,15 @@ if (isDowned(player)) then {
             };
         };
 
+        case R: {
+            private _object = cursorObject;
+
+            if (_shift && { [_object] call ULP_fnc_canRestrain }) then {
+                [_object, !([_object] call ULP_fnc_isRestrained)] call ULP_fnc_restrain;
+                _handled = true;
+            };
+        };
+
         case Y: {
             if (!_alt && { !_ctrlKey } && { !dialog } && { !(player call ULP_fnc_isRestrained) } && { !life_action_inUse }) then {
                 [] call life_fnc_p_openMenu;

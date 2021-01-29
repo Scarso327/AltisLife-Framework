@@ -60,6 +60,7 @@ class ULP_Functions {
 		class initPlayerEvents {};
 		class getInventory {};
 		class resetSurvival {};
+		class canRestrain {};
 	};
 
 	class PlayerActions {

@@ -75,7 +75,7 @@ class CfgFactions {
 	};
 
 	class Civilian {
-		displayName = "Civilian Population";
+		displayName = "Civilian";
 		pay = 2500;
 		class Groups {};
 		class Housing {};

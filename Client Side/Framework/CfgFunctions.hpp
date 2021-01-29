@@ -62,6 +62,7 @@ class ULP_Functions {
 		class getInventory {};
 		class resetSurvival {};
 		class canRestrain {};
+		class getName {};
 	};
 
 	class PlayerActions {
@@ -129,6 +130,13 @@ class ULP_Functions {
 	class StoresClothing {
 		file = "Functions\Stores\Clothing";
 		class onBuyClothes {};
+	};
+
+	class Tags {
+		file = "Functions\PlayerTags";
+		class playerTags {};
+		class setTags {};
+		class getTagColour {};
 	};
 };
 

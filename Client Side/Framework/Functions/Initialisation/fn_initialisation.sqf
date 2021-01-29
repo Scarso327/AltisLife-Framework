@@ -58,6 +58,10 @@ CONSTVAR(ULP_Paycheck);
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call ULP_fnc_keyDown"];
 (findDisplay 46) displayAddEventHandler ["KeyUp", "_this call ULP_fnc_KeyUp"];
 
+["Setting Player Tags"] call ULP_fnc_logIt;
+[] call ULP_fnc_setTags;
+[true] call ULP_fnc_playerTags;
+
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 
 [] call life_fnc_spawnMenu;

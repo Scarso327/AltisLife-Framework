@@ -63,7 +63,9 @@ if (isDowned(player)) then {
 
         case G: {
             if (_shift) then {
-                [cursorObject] call ULP_fnc_knockOut; // Script does checks...
+                if !((currentWeapon player) in getArray(missionConfigFile >> "CfgSettings" >> "doesntThreaten")) then {
+                    [cursorObject] call ULP_fnc_knockOut; // Script does checks...
+                };
                 _handled = true;
             };
         };

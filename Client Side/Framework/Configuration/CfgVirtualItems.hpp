@@ -4,9 +4,10 @@ class CfgVirtualItems {
 		picture = "";
 		buyPrice = 0;
 		sellPrice = 0;
+		weight = 1;
 		class Settings {
 			isIllegal = false;
-			isSavable = false;
+			isSavable = true;
 		};
 		conditions = "true";
 	};

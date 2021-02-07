@@ -37,8 +37,10 @@ _near_units = [];
     };
 } forEach _near_units;
 
+ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
+
 _mstatus ctrlSetStructuredText parseText format ["<img size='1.3' image='Data\Icons\ico_bank.paa'/> <t size='0.8px'>$%1</t><br/><img size='1.2' image='Data\Icons\ico_money.paa'/> <t size='0.8'>$%2</t>",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
-ctrlSetText[2009,format ["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
+ctrlSetText[2009,format ["Weight: %1 / %2", _carryWeight, _maxWeight]];
 
 {
     if (ITEM_VALUE(configName _x) > 0) then {

@@ -22,6 +22,8 @@ ULP_Holsted = "";
 ULP_Liceneses = [];
 ULP_Houses = [];
 ULP_Keys = [];
+ULP_Inventory = createHashMap;
+ULP_CarryInfo = [0, (LIFE_SETTINGS(getNumber, "total_maxWeight"))];
 
 ULP_Gang_ID = -1;
 

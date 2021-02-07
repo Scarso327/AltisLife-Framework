@@ -144,6 +144,12 @@ class ULP_Functions {
 		class addLicense {};
 		class hasLicense {};
 	};
+
+	class Inventory {
+		file = "Functions\Inventory";
+		class handleItem {};
+		class hasItem {};	
+	};
 };
 
 class ULP_Functions_UI {

@@ -24,8 +24,6 @@ player setUnitLoadout _pItems;
 [player, uniformContainer player, _textures select 0] call ULP_fnc_setTextures;
 [unitBackpack player, backpackContainer player, _textures select 1, true] call ULP_fnc_setTextures;
 
-life_maxWeight = ([LIFE_SETTINGS(getNumber,"total_maxWeight"), LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",(backpack player),"maximumload") / 4)] select ((backpack player) isEqualTo ""));
+ULP_CarryInfo set [1, ([LIFE_SETTINGS(getNumber,"total_maxWeight"), LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",(backpack player),"maximumload") / 4)] select ((backpack player) isEqualTo ""))];
 
-{
-    [true, (_x select 0), (_x select 1)] call life_fnc_handleInv;
-} forEach _yItems;
+{ [(_x select 0), (_x select 1), false, true] call ULP_fnc_handleItem } count _yItems;

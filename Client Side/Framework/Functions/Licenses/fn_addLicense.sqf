@@ -21,6 +21,7 @@ if !(_price isEqualTo -1) then {
 	};
 
 	CASH = CASH - _price;
+	[player, 1, CASH] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 };
 
 ULP_Liceneses pushBackUnique _license;

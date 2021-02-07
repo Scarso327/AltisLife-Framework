@@ -23,6 +23,7 @@ class CfgFunctions {
             file = "\life_server\Functions\Database\Player";
             class queryPlayerInfo {};
             class savePlayerInfo {};
+            class savePlayerState {};
         };
     };
 

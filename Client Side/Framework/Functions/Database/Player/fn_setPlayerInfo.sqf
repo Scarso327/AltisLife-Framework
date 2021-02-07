@@ -30,11 +30,8 @@ BANK = _bank;
 CONST(life_adminlevel, _adminlevel);
 CONST(life_donorlevel, _donorlevel);
 
-// Add any licenses we have to our variable so we can check for them later...
-{
-	ULP_Liceneses pushBackUnique (_x select 0);
-} forEach (_licenses select {
-	(_x select 1) isEqualTo 1
+ULP_Liceneses = (_licenses select {
+	isClass (missionConfigFile >> "Licenses" >> _x)
 });
 
 // Set saved survival statistics....

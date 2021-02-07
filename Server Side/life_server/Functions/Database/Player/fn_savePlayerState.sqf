@@ -18,6 +18,7 @@ _faction = missionConfigFile >> "CfgFactions" >> _faction;
 if (_steamid isEqualTo "" || { !(isClass (_faction)) }) exitWith {};
 
 private _query = switch (_state) do {
+	case 0: { format["%1licenses='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
 	default { "" };
 };
 

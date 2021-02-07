@@ -138,6 +138,12 @@ class ULP_Functions {
 		class setTags {};
 		class getTagColour {};
 	};
+
+	class Licenses {
+		file = "Functions\Licenses";
+		class addLicense {};
+		class hasLicense {};
+	};
 };
 
 class ULP_Functions_UI {

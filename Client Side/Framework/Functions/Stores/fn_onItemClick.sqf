@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _display = ctrlParent _ctrl;
-private _storeCfg = uiNamespace getVariable ["curStore", configNull];
+private _storeCfg = _display getVariable ["curStore", configNull];
 
 if (!(isClass (_storeCfg)) || { isNull _display }) exitWith { systemChat "Item Failure" };
 
@@ -22,11 +22,11 @@ _data params [
 	"_className", "_displayName", "_picture", "_textures", "_allowDefault"
 ];
 
-uiNamespace setVariable ["itemData", [_displayName, (_ctrl lbValue _index)]];
+_display setVariable ["itemData", [_displayName, (_ctrl lbValue _index)]];
 
 (_display displayCtrl 3104) ctrlSetText _picture;
 
-private _storeItemCfg = getText((uiNamespace getVariable "storeCfg") >> "itemCfg");
+private _storeItemCfg = getText((_display getVariable "storeCfg") >> "itemCfg");
 
 _textures = (_textures select {
 	isClass (missionConfigFile >> _storeItemCfg >> _className >> "Textures" >> _x) && 

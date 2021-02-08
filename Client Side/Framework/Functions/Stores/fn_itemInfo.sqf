@@ -5,7 +5,7 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_itemInfo";
 
-private _item = uiNamespace getVariable ["itemData", []];
+private _item = _display getVariable ["itemData", []];
 if (_item isEqualTo []) exitWith { "" };
 
 _item params [

@@ -22,7 +22,7 @@ private _itemValue = _ctrl lbValue _index;
 _ctrl lbDelete _index;
 
 // Update value...
-uiNamespace setVariable ["cartValue", ((uiNamespace getVariable ["cartValue", _itemValue]) - _itemValue)];
+_display setVariable ["cartValue", ((_display getVariable ["cartValue", _itemValue]) - _itemValue)];
 
 private _texList = _display displayCtrl 3106;
 [_texList, (lbCurSel _texList)] call ULP_fnc_onTextureSwitch;

@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _display = ctrlParent _ctrl;
-private _storeCfg = uiNamespace getVariable ["curStore", configNull];
+private _storeCfg = _display getVariable ["curStore", configNull];
 
 if (!(isClass (_storeCfg)) || { isNull _display }) exitWith { systemChat "Texture Failure" };
 

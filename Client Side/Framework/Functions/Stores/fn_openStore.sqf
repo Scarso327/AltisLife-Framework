@@ -17,12 +17,12 @@ _storeCfg = _cfg >> _store;
 if !(isClass (_storeCfg)) exitWith {};
 
 if (createDialog "RscGenericStore") then {
-	uiNamespace setVariable ["storeCfg", _cfg];
-	uiNamespace setVariable ["curStore", _storeCfg];
-
 	private _display = findDisplay 3100;
 
 	if (isNull _display) exitWith {};
+
+	_display setVariable ["storeCfg", _cfg];
+	_display setVariable ["curStore", _storeCfg];
 
 	private _idc = getNumber(_cfg >> "toolBoxIDC");
 
@@ -34,7 +34,7 @@ if (createDialog "RscGenericStore") then {
 
 	ctrlSetText [3101, getText(_storeCfg >> "storeName")];
 
-	uiNamespace setVariable ["cartValue", 0];
+	_display setVariable ["cartValue", 0];
 
 	private _toolBox = _display displayCtrl _idc;
 	[_toolBox, 0] call ULP_fnc_switchCategory;

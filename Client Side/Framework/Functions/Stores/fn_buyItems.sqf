@@ -14,7 +14,7 @@ if !(canSuspend) exitWith { _this spawn ULP_fnc_buyItems; };
 private _display = ctrlParent _ctrl;
 if (isNull _display) exitWith {};
 
-private _onItemBuy = getText((uiNamespace getVariable "storeCfg") >> "onItemBuy");
+private _onItemBuy = getText((_display getVariable "storeCfg") >> "onItemBuy");
 if (_onItemBuy isEqualTo "") exitWith {};
 
 private _cartList = _display displayCtrl 3107;
@@ -24,7 +24,7 @@ if ((lbSize _cartList) isEqualTo 0) exitWith {
 
 _ctrl ctrlEnable false;
 
-private _cartValue = uiNamespace getVariable "cartValue";
+private _cartValue = _display getVariable "cartValue";
 
 if (CASH < _cartValue) then {
 	hint "You can't afford these items...";
@@ -55,7 +55,7 @@ if (CASH < _cartValue) then {
 	if !(_itemsBought isEqualTo 0) then {
 		// Pay for it and wipe total value...
 		CASH = CASH - _cartValue;
-		uiNamespace setVariable ["cartValue", 0];
+		_display setVariable ["cartValue", 0];
 		[] call ULP_fnc_syncPlayerInfo;
 
 		// Update inventory view if it's visible...

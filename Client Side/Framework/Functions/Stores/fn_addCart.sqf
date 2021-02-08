@@ -56,5 +56,5 @@ _cartList lbSetPicture [_item, _picture];
 _cartList lbSetValue [_item, _itemValue];
 _cartList lbSetData [_item, (str [_className, _texClass])];
 
-uiNamespace setVariable ["cartValue", ((uiNamespace getVariable ["cartValue", 0]) + _itemValue)];
+_display setVariable ["cartValue", ((_display getVariable ["cartValue", 0]) + _itemValue)];
 [_textList, _texSel] call ULP_fnc_onTextureSwitch;

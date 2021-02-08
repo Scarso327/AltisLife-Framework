@@ -150,6 +150,11 @@ class ULP_Functions {
 		class handleItem {};
 		class hasItem {};	
 	};
+	
+	class Gathering {
+		file = "Functions\Gathering";
+		class getGatherZone {};
+	};
 };
 
 class ULP_Functions_UI {

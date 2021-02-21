@@ -158,6 +158,7 @@ class ULP_Functions {
 	
 	class Gathering {
 		file = "Functions\Gathering";
+		class gather {};
 		class getGatherZone {};
 	};
 };

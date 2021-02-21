@@ -12,7 +12,6 @@ _this params [
 
 private _handled = false;
 private _disabledKeys = [];
-private _interruptKeys = [W, A, S, D];
 
 _disabledKeys append (actionKeys "tacticalView"); // Disable tactical view...
 
@@ -27,6 +26,14 @@ if ([player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isSurrended })
 };
 
 if (_code in _disabledKeys) then { _handled = true };
+
+if ([] call ULP_UI_fnc_isProgress) exitWith {
+    if (_code isEqualTo ESC) then {
+        [(["RscProgress"] call ULP_UI_fnc_getLayer), false] call ULP_UI_fnc_endProgress;
+    };
+
+    true
+};
 
 if (isDowned(player)) then { 
     // Incapacitated Inputs...

@@ -37,6 +37,11 @@ class ULP_Functions {
 		class setLoadout {};
 	};
 
+	class Functions {
+		file = "Functions\Functions";
+		class getAnim {};
+	};
+
 	class Clothing {
 		file = "Functions\Clothing";
 		class setTextures {};
@@ -171,5 +176,13 @@ class ULP_Functions_UI {
 		class createLayer {};
 		class destroyLayer {};
 		class getLayer {};
+	};
+	
+	class RscProgress {
+		file = "Functions\Progress";
+		class isProgress {};
+		class startProgress {};
+		class eachFrameProgress {};
+		class endProgress {};
 	};
 };

@@ -87,7 +87,10 @@ class CfgFactions {
 		
 		class Loadout {
 			class Uniforms {
-				class U_Rangemaster {};
+				class U_C_Poor_1 {};
+				class U_C_Poloshirt_blue {};
+				class U_C_Man_casual_1_F {};
+				class U_C_Man_casual_6_F {};
 			};
 			class LinkedItems {
 				hasMap = true;

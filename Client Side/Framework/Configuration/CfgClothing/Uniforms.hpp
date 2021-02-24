@@ -64,6 +64,28 @@ class U_C_Man_casual_1_F {
 class U_C_Man_casual_2_F : U_C_Man_casual_1_F{};
 class U_C_Man_casual_3_F : U_C_Man_casual_1_F{};
 
+class U_C_ArtTShirt_01_v1_F {
+	displayName = "Casual T-Shirts";
+	price = 0;
+	virtualSpace = 0;
+	class Textures {
+		class U_C_ArtTShirt_01_v1_F { 
+			displayName = "Art of War"; 
+			condition = "true";
+		};
+		class U_C_ArtTShirt_02_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Drones"; };
+		class U_C_ArtTShirt_03_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Waltham Robotics"; };
+		class U_C_ArtTShirt_04_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Exhibition"; };
+		class U_C_ArtTShirt_05_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Robogeddon"; };
+		class U_C_ArtTShirt_06_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Abstract"; };
+	};
+};
+class U_C_ArtTShirt_02_v1_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_03_v1_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_04_v1_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_05_v1_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_06_v1_F : U_C_ArtTShirt_01_v1_F{};
+
 class U_C_Man_casual_6_F {
 	displayName = "Summer Clothes";
 	price = 0;
@@ -372,6 +394,52 @@ class U_NikosAgedBody {
 	virtualSpace = 0;
 	class Textures {};
 };
+
+class U_C_FormalSuit_01_tshirt_black_F {
+	displayName = "Formal Suit, T-Shirt";
+	price = 0;
+	virtualSpace = 0;
+	class Textures {
+		class U_C_FormalSuit_01_tshirt_black_F { 
+			displayName = "Black"; 
+			condition = "true";
+		};
+		class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F { displayName = "Gray"; };
+	};
+};
+class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_tshirt_black_F{};
+
+class U_C_FormalSuit_01_black_F {
+	displayName = "Formal Suit";
+	price = 0;
+	virtualSpace = 0;
+	class Textures {
+		class U_C_FormalSuit_01_black_F { 
+			displayName = "Black"; 
+			condition = "true";
+		};
+		class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F { displayName = "Gray"; };
+		class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F { displayName = "Blue"; };
+		class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F { displayName = "Khaki"; };
+	};
+};
+class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F{};
+class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F{};
+class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F{};
+
+class I_ParadeUniform_01_AAF_decorated_F {
+	displayName = "Parade Uniform";
+	price = 0;
+	virtualSpace = 0;
+	class Textures {
+		class I_ParadeUniform_01_AAF_decorated_F { 
+			displayName = "CSI Uniform"; 
+			condition = "true";
+		};
+		class I_ParadeUniform_01_AAF_F : I_ParadeUniform_01_AAF_decorated_F { displayName = "SI Uniform"; };
+	};
+};
+class I_ParadeUniform_01_AAF_F : I_ParadeUniform_01_AAF_decorated_F{};
 
 class U_B_survival_uniform {
 	price = 0;

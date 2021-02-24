@@ -117,6 +117,28 @@ class B_TacticalPack_blk {
 class B_TacticalPack_oli : B_TacticalPack_blk{};
 class B_TacticalPack_rgr : B_TacticalPack_blk{};
 
+class B_CivilianBackpack_01_Everyday_Black_F {
+	displayName = "Civilian Pack";
+	price = 0;
+	virtualSpace = 0;
+	class Textures {
+		class B_CivilianBackpack_01_Everyday_Black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class B_CivilianBackpack_01_Everyday_Astra_F : B_CivilianBackpack_01_Everyday_Black_F { displayName = "Astra"; };
+		class B_CivilianBackpack_01_Everyday_Vrana_F : B_CivilianBackpack_01_Everyday_Black_F { displayName = "Vrana"; };
+		class B_CivilianBackpack_01_Sport_Blue_F : B_CivilianBackpack_01_Everyday_Black_F { displayName = "Blue"; };
+		class B_CivilianBackpack_01_Sport_Green_F : B_CivilianBackpack_01_Everyday_Black_F { displayName = "Green"; };
+		class B_CivilianBackpack_01_Sport_Red_F : B_CivilianBackpack_01_Everyday_Black_F { displayName = "Red"; };
+	};
+};
+class B_CivilianBackpack_01_Everyday_Astra_F : B_CivilianBackpack_01_Everyday_Black_F{};
+class B_CivilianBackpack_01_Everyday_Vrana_F : B_CivilianBackpack_01_Everyday_Black_F{};
+class B_CivilianBackpack_01_Sport_Blue_F : B_CivilianBackpack_01_Everyday_Black_F{};
+class B_CivilianBackpack_01_Sport_Green_F : B_CivilianBackpack_01_Everyday_Black_F{};
+class B_CivilianBackpack_01_Sport_Red_F : B_CivilianBackpack_01_Everyday_Black_F{};
+
 class B_Carryall_cbr {
 	displayName = "Carryall";
 	price = 0;

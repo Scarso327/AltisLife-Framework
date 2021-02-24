@@ -43,8 +43,8 @@ class SMG_03C_black {
 			condition = "true";
 		};
 		class SMG_03C_TR_black : SMG_03C_black { displayName = "Black TR"; };
-		class SMG_03C_TR_khaki : SMG_03C_black { displayName = "Khaki TR"; };
 		class SMG_03C_khaki : SMG_03C_black { displayName = "Khaki"; };
+		class SMG_03C_TR_khaki : SMG_03C_black { displayName = "Khaki TR"; };
 		class SMG_03C_hex : SMG_03C_black { displayName = "Hex"; };
 		class SMG_03C_TR_hex : SMG_03C_black { displayName = "Hex TR"; };
 		class SMG_03C_camo : SMG_03C_black { displayName = "Camo"; };
@@ -451,3 +451,22 @@ class srifle_DMR_03_khaki_F : srifle_DMR_03_F {};
 class srifle_DMR_03_tan_F : srifle_DMR_03_F {};
 class srifle_DMR_03_multicam_F : srifle_DMR_03_F {};
 class srifle_DMR_03_woodland_F : srifle_DMR_03_F {};
+
+class srifle_DMR_02_F {
+	displayName = "MAR-10 .338 mm";
+	price = 0;
+	class Textures {};
+};
+
+class srifle_DMR_04_DMS_weathered_Kir_F_F {
+	displayName = "ASP-1 Kir 12.7 mm";
+	price = 0;
+	class Textures {
+		class srifle_DMR_04_DMS_weathered_Kir_F_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class srifle_DMR_04_Tan_F : srifle_DMR_04_DMS_weathered_Kir_F_F { displayName = "Tan"; };
+	};
+};
+class srifle_DMR_04_Tan_F : srifle_DMR_04_DMS_weathered_Kir_F_F {};

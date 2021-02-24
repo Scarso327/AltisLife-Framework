@@ -2,7 +2,6 @@ class acc_flashlight {
 	price = 0;
 	class Textures {};
 };
-
 class acc_flashlight_pistol : acc_flashlight {};
 class acc_pointer_IR : acc_flashlight {};
 

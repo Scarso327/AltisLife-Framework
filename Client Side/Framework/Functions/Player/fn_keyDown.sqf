@@ -27,12 +27,11 @@ if ([player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isSurrended })
 
 if (_code in _disabledKeys) then { _handled = true };
 
-if ([] call ULP_UI_fnc_isProgress) exitWith {
-    if (_code isEqualTo ESC) then {
+if ([] call ULP_UI_fnc_isProgress) then {
+    if (_code isEqualTo ESC) exitWith {
         [(["RscProgress"] call ULP_UI_fnc_getLayer), false] call ULP_UI_fnc_endProgress;
+        true breakOut "fn_keyDown";
     };
-
-    true
 };
 
 if (isDowned(player)) then { 
@@ -89,7 +88,7 @@ if (isDowned(player)) then {
         };
 
         case Y: {
-            if (!_alt && { !_ctrlKey } && { !dialog } && { !(player call ULP_fnc_isRestrained) } && { !life_action_inUse }) then {
+            if (!_alt && { !_ctrlKey } && { !dialog } && { !(player call ULP_fnc_isRestrained) } && { !([] call ULP_UI_fnc_isProgress) }) then {
                 [] call life_fnc_p_openMenu;
             };
         };

@@ -41,7 +41,11 @@ if (["RscProgress", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 
 	(_ui displayCtrl 38202) ctrlSetText format ["%1", _title];
 
-	player playMoveNow (_ui getVariable "anim");
+	private _anim = _ui getVariable "anim";
+
+	if !(_anim isEqualTo "") then {
+		player playMoveNow _anim;
+	};
 
 	[[_ui, _progress, _progressText], { _this call ULP_UI_fnc_eachFrameProgress }] call ULP_fnc_addEachFrame;
 

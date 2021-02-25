@@ -16,6 +16,10 @@ if !(isNull objectParent _unit) then { moveOut _unit }; // Move them out of any 
 
 [] spawn ULP_UI_fnc_closeDialogs; // Makes sure all dialogs are closed...
 
+if ([] call ULP_UI_fnc_isProgress) then {
+	[(["RscProgress"] call ULP_UI_fnc_getLayer), false] call ULP_UI_endProgress;
+};
+
 // Notify the server...
 if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {
 	[0, format ["%1 was executed by %2", 

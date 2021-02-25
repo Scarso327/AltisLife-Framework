@@ -20,6 +20,10 @@ _unit setUnconscious true;
 setKiller(_unit, _killer);
 setDowned(_unit);
 
+if ([] call ULP_UI_fnc_isProgress) then {
+	[(["RscProgress"] call ULP_UI_fnc_getLayer), false] call ULP_UI_endProgress;
+};
+
 private _deathMessage = format["<t align='center' size='2'>You killed yourself</t>"];
 
 // Notify the server...

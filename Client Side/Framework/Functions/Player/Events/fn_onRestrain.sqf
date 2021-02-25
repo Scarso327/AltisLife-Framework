@@ -14,6 +14,10 @@ _detainer = [[_detainer] call ULP_fnc_getFaction, nil] select (isNull _detainer)
 player setVariable ["restrained", _detainer, true]; // Set restrain state...
 
 if ([player] call ULP_fnc_isRestrained) then {
+    if ([] call ULP_UI_fnc_isProgress) then {
+        [(["RscProgress"] call ULP_UI_fnc_getLayer), false] call ULP_UI_endProgress;
+    };
+
 	[[], {
         if (alive player && { !(isDowned(player)) } && { [player] call ULP_fnc_isRestrained }) then {
             player playMove "AmovPercMstpSnonWnonDnon_Ease";

@@ -21,7 +21,7 @@ private _reqItems = getArray (_zone >> "reqItems");
 	nil
 } count _reqItems;
 
-private _reqLicenses = getArray (_zone >> "reqItems");
+private _reqLicenses = getArray (_zone >> "reqLicenses");
 {
 	if !([_x] call ULP_fnc_hasLicense) exitWith {
 		hint format["You need these licenses to gather here: %1...", _reqLicenses];

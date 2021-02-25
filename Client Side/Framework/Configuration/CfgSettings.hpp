@@ -209,3 +209,4 @@ class Life_Settings {
 #include "CfgCredits.hpp"
 #include "CfgTags.hpp"
 #include "CfgGathering.hpp"
+#include "CfgProcessing.hpp"

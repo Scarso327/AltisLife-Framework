@@ -93,6 +93,11 @@ class ULP_Functions {
 		class calcPaycheck {};
 	};
 
+	class Processing {
+		file = "Functions\Processing";
+		class process {};		
+	};
+
 	class Database {
 		file = "Functions\Database";
 		class sync {};

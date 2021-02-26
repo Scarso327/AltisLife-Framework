@@ -214,6 +214,14 @@ class H_Beret_CSAT_01_F : H_Beret_blk{
 	displayName = "MAS Command Beret";
 };
 
+class H_ParadeDressCap_01_LDF_F {
+	displayName = "Parade Cap";
+	price = 0;
+	isMask = false;
+	isNV = false;
+	class Textures {};
+};
+
 class H_ShemagOpen_khk {
 	displayName = "Shemag";
 	price = 0;

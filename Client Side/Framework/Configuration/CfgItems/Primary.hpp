@@ -452,12 +452,6 @@ class srifle_DMR_03_tan_F : srifle_DMR_03_F {};
 class srifle_DMR_03_multicam_F : srifle_DMR_03_F {};
 class srifle_DMR_03_woodland_F : srifle_DMR_03_F {};
 
-class srifle_DMR_02_F {
-	displayName = "MAR-10 .338 mm";
-	price = 0;
-	class Textures {};
-};
-
 class srifle_DMR_04_DMS_weathered_Kir_F_F {
 	displayName = "ASP-1 Kir 12.7 mm";
 	price = 0;

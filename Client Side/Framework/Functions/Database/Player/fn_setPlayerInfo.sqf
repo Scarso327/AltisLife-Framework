@@ -30,7 +30,7 @@ BANK = _bank;
 CONST(life_adminlevel, _adminlevel);
 CONST(life_donorlevel, _donorlevel);
 
-ULP_Liceneses = (_licenses select {
+ULP_Licenses = (_licenses select {
 	isClass (missionConfigFile >> "Licenses" >> _x)
 });
 

@@ -9,7 +9,7 @@ private _packet = [profileName, getPlayerUID player, [player] call ULP_fnc_getFa
 
 [] call ULP_fnc_saveGear;
 _packet pushBack ULP_Gear;
-_packet pushBack ULP_Liceneses;
+_packet pushBack ULP_Licenses;
 
 _packet pushBack [
 	ULP_Survival_Hunger,

@@ -9,4 +9,4 @@ if !(_this params [
 	["_license", "", [""]]
 ]) exitWith {};
 
-_license in ULP_Liceneses
+_license in ULP_Licenses

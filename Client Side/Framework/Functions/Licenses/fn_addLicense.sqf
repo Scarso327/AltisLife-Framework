@@ -24,10 +24,10 @@ if !(_price isEqualTo -1) then {
 	[player, 1, CASH] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 };
 
-ULP_Liceneses pushBackUnique _license;
+ULP_Licenses pushBackUnique _license;
 
 if (_save) then {
-	[player, 0, ULP_Liceneses] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	[player, 0, ULP_Licenses] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 };
 
 true

@@ -73,18 +73,18 @@ class U_C_ArtTShirt_01_v1_F {
 			displayName = "Art of War"; 
 			condition = "true";
 		};
-		class U_C_ArtTShirt_02_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Drones"; };
-		class U_C_ArtTShirt_03_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Waltham Robotics"; };
-		class U_C_ArtTShirt_04_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Exhibition"; };
-		class U_C_ArtTShirt_05_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Robogeddon"; };
-		class U_C_ArtTShirt_06_v1_F : U_C_ArtTShirt_01_v1_F { displayName = "Abstract"; };
+		class U_C_ArtTShirt_01_v2_F : U_C_ArtTShirt_01_v1_F { displayName = "Drones"; };
+		class U_C_ArtTShirt_01_v3_F : U_C_ArtTShirt_01_v1_F { displayName = "Waltham Robotics"; };
+		class U_C_ArtTShirt_01_v4_F : U_C_ArtTShirt_01_v1_F { displayName = "Exhibition"; };
+		class U_C_ArtTShirt_01_v5_F : U_C_ArtTShirt_01_v1_F { displayName = "Robogeddon"; };
+		class U_C_ArtTShirt_01_v6_F : U_C_ArtTShirt_01_v1_F { displayName = "Abstract"; };
 	};
 };
-class U_C_ArtTShirt_02_v1_F : U_C_ArtTShirt_01_v1_F{};
-class U_C_ArtTShirt_03_v1_F : U_C_ArtTShirt_01_v1_F{};
-class U_C_ArtTShirt_04_v1_F : U_C_ArtTShirt_01_v1_F{};
-class U_C_ArtTShirt_05_v1_F : U_C_ArtTShirt_01_v1_F{};
-class U_C_ArtTShirt_06_v1_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_01_v2_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_01_v3_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_01_v4_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_01_v5_F : U_C_ArtTShirt_01_v1_F{};
+class U_C_ArtTShirt_01_v6_F : U_C_ArtTShirt_01_v1_F{};
 
 class U_C_Man_casual_6_F {
 	displayName = "Summer Clothes";

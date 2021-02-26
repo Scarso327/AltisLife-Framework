@@ -37,16 +37,10 @@ class NVGoggles {
 class NVGoggles_OPFOR : NVGoggles {};
 class NVGoggles_INDEP : NVGoggles {};
 
-class FirstAidKit {
+class ToolKit {
 	price = 0;
 	class Textures {};	
 };
-
-class Medikit {
-	price = 0;
-	class Textures {};	
-};
-class ToolKit : Medikit{};
 
 class HandGrenade_Stone {
 	displayName = "Flash Grenade";

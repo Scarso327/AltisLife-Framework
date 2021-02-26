@@ -432,10 +432,10 @@ class I_ParadeUniform_01_AAF_decorated_F {
 	virtualSpace = 0;
 	class Textures {
 		class I_ParadeUniform_01_AAF_decorated_F { 
-			displayName = "CSI Uniform"; 
+			displayName = "Gold Command"; 
 			condition = "true";
 		};
-		class I_ParadeUniform_01_AAF_F : I_ParadeUniform_01_AAF_decorated_F { displayName = "SI Uniform"; };
+		class I_ParadeUniform_01_AAF_F : I_ParadeUniform_01_AAF_decorated_F { displayName = "Silver Command"; };
 	};
 };
 class I_ParadeUniform_01_AAF_F : I_ParadeUniform_01_AAF_decorated_F{};

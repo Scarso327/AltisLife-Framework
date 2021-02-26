@@ -166,6 +166,13 @@ class ULP_Functions {
 		class gather {};
 		class getGatherZone {};
 	};
+
+	class Tablet {
+		file = "Functions\Tablet";
+		class openTablet {};
+		class setScreen {};
+		class rebindEsc {};
+	};
 };
 
 class ULP_Functions_UI {

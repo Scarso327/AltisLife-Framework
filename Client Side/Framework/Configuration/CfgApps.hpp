@@ -1,0 +1,84 @@
+class CfgApps {
+	globalIdcs[] = {
+		23001, 23012, 23013
+	};
+
+	class BaseScreen {
+		idc = -1;
+		pageTitle = "";
+		pageIdcs[] = {};
+		onload = "";
+		onunload = "";
+		rebindEsc = "";
+	};
+
+	class Home : BaseScreen {
+		idc = -1;
+		pageTitle = "";
+		pageIdcs[] = {
+			23002, 23003, 23004, 23005, 23006, 23007, 23008, 23009, 23010, 23011
+		};
+		onload = "(_this displayCtrl 23001) ctrlSetStructuredText parseText format["" <t align='left'>%1</t><t align='right'>£%2</t>"", name player, [life_atmbank] call life_fnc_numberText]";
+	};
+
+	class Profile : BaseScreen {
+		idc = 23002;
+		pageTitle = "Profile";
+		pageIdcs[] = {};
+		rebindEsc = "";
+	};
+
+	class Inventory : BaseScreen {
+		idc= 23003;
+		pageTitle = "Inventory";
+		pageIdcs[] = {};
+	};
+
+	class Messaging : BaseScreen {
+		idc= 23004;
+		pageTitle = "Messaging";
+		pageIdcs[] = {};
+	};
+
+	class Group : BaseScreen {
+		idc= 23005;
+		pageTitle = "Group";
+		pageIdcs[] = {};
+	};
+
+	class Keys : BaseScreen {
+		idc= 23006;
+		pageTitle = "Keys";
+		pageIdcs[] = {};
+	};
+
+	class Dispute : BaseScreen {
+		idc= 23007;
+		pageTitle = "Dispute";
+		pageIdcs[] = {};
+	};
+
+	class Market : BaseScreen {
+		idc= 23008;
+		pageTitle = "Market";
+		pageIdcs[] = {};
+	};
+
+	class Goals : BaseScreen {
+		idc= 23009;
+		pageTitle = "Goals";
+		pageIdcs[] = {};
+	};
+
+	class Perks : BaseScreen {
+		idc= 23010;
+		pageTitle = "Perks";
+		pageIdcs[] = {};
+	};
+
+	class Settings {
+		idc= 23011;
+		pageTitle = "Settings";
+		pageIdcs[] = {};
+	};
+};

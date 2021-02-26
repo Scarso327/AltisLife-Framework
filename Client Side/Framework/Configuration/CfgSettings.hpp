@@ -210,3 +210,4 @@ class Life_Settings {
 #include "CfgTags.hpp"
 #include "CfgGathering.hpp"
 #include "CfgProcessing.hpp"
+#include "CfgApps.hpp"

@@ -14,7 +14,7 @@ class CfgItemsStore {
 			};
 			class arifle_SDAR_F { 
 				price = 0;
-				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess"; 
+				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; 
 			};
 
 			// SUB-MACHINE GUNS

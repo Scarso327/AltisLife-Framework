@@ -162,6 +162,37 @@ class optic_KHS_hex : optic_KHS_blk {};
 class optic_KHS_tan : optic_KHS_blk {};
 class optic_KHS_old : optic_KHS_blk {};
 
+class optic_AMS {
+    displayName = "AMS";
+	price = 0;
+	class Textures {
+		class optic_AMS {
+			displayName = "Black";
+			condition = "true";
+		};
+        class optic_AMS_khk : optic_AMS { displayName = "Khaki"; };
+		class optic_AMS_snd : optic_AMS { displayName = "Sand"; };
+	};
+};
+class optic_AMS_khk : optic_AMS {};
+class optic_KHS_tan : optic_AMS {};
+class optic_AMS_snd : optic_AMS {};
+
+class optic_LRPS {
+    displayName = "LRPS";
+	price = 0;
+	class Textures {
+		class optic_LRPS {
+			displayName = "Black";
+			condition = "true";
+		};
+        class optic_LRPS_tna_F : optic_LRPS { displayName = "Tropic"; };
+		class optic_LRPS_ghex_F : optic_LRPS { displayName = "Green Hex"; };
+	};
+};
+class optic_AMS_khk : optic_LRPS {};
+class optic_KHS_tan : optic_LRPS {};
+
 class muzzle_snds_L {
     displayName = "9mm Suppressor";
 	price = 0;

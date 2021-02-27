@@ -13,32 +13,14 @@ with missionNamespace do {
 	private _abortButton = _display displayCtrl 104;
 	private _fieldButton = _display displayCtrl 122;
 
-	private _syncDelay = getNumber(missionConfigFile >> "Life_Settings" >> "sync_delay");
-	private _abortDelay = time + getNumber(missionConfigFile >> "Life_Settings" >> "abort_delay");
-
-	_saveButton ctrlEnable false;
-	_saveButton ctrlSetEventHandler["ButtonClick", "with missionNamespace do { [] call ULP_fnc_syncPlayerInfo; }; true"];
-
-	_syncDelay = ULP_Last_Sync + _syncDelay;
-
-	[[_saveButton, _syncDelay], {
-		_this params ["_abortButton", "_syncDelay"];
-		
-		if (isNull _abortButton) exitWith { [_thisEventHandler] call ULP_fnc_removeEachFrame; };
-
-		if (time < _syncDelay) then {
-			_abortButton ctrlSetText format["SYNC DATA (%1)", [_syncDelay - time, "MM:SS"] call BIS_fnc_secondsToString];
-		} else {
-			_abortButton ctrlSetText "SYNC DATA";
-			_abortButton ctrlEnable true;
-            [_thisEventHandler] call GTA_fnc_removeEachFrameHandler;
-		};
-    }] call ULP_fnc_addEachFrame;
+	[_saveButton] call ULP_UI_fnc_setSyncButton;
 
 	_fieldButton ctrlEnable false;
 	_fieldButton ctrlSetText "https://ascensionroleplay.co.uk/";
 	_fieldButton ctrlSetTooltip "";
 
+	private _abortDelay = time + getNumber(missionConfigFile >> "Life_Settings" >> "abort_delay");
+	
 	_abortButton ctrlEnable false;
 	_abortButton ctrlSetEventHandler["ButtonClick", "with missionNamespace do { [] call ULP_fnc_syncPlayerInfo; [""Abort"", true, false] call BIS_fnc_endMission; }; true"];
 

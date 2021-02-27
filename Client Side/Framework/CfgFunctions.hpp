@@ -196,6 +196,7 @@ class ULP_Functions_UI {
 		class screenCredits {};
 		class closeDialogs {};
 		class setVAlignText {};
+		class setSyncButton {};
 	};
 
 	class RscLayers {

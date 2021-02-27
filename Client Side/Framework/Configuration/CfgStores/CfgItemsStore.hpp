@@ -86,11 +86,6 @@ class CfgItemsStore {
 				condition = "[""Police_Main"", 7] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_ARX_blk_F {}; };
 			};
-			class arifle_ARX_blk_F {
-				price = 0;
-				condition = "[""Police_Main"", 7] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
-				class textures { class arifle_ARX_blk_F {}; };
-			};
 			class arifle_SPAR_03_blk_F {
 				price = 0;
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";

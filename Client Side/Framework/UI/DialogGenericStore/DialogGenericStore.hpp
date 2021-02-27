@@ -6,9 +6,9 @@
 #define BODY_HEIGHT 0.407
 #define CONTENT_W HORIZONTAL_GRID_W(INNER_UI_WIDTH, 3)
 
-class RscGenericStore {
+class DialogGenericStore {
     idd = 3100;
-    name= "RscGenericStore";
+    name= "DialogGenericStore";
     movingEnable = 1;
     enableSimulation = 1;
 

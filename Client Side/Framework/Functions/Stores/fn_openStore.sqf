@@ -16,7 +16,7 @@ private _cfg = missionConfigFile >> "CfgStores" >> _storeCfg;
 _storeCfg = _cfg >> _store;
 if !(isClass (_storeCfg)) exitWith {};
 
-if (createDialog "RscGenericStore") then {
+if (createDialog "DialogGenericStore") then {
 	private _display = findDisplay 3100;
 
 	if (isNull _display) exitWith {};

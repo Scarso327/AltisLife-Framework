@@ -31,7 +31,10 @@ class CfgApps {
 	class Inventory : BaseScreen {
 		idc= 23003;
 		pageTitle = "Inventory";
-		pageIdcs[] = {};
+		pageIdcs[] = {
+			23014, 23015, 23016, 23017, 23018, 23019
+		};
+		onload = "_this call ULP_fnc_inventory";
 	};
 
 	class Messaging : BaseScreen {

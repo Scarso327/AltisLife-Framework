@@ -148,7 +148,6 @@ class CfgClothesStore {
 			};
 			class G_B_Diving { 
 				price = 0;
-				condition = "true";
 				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; 
 			};
 			class G_Respirator_white_F {
@@ -157,12 +156,10 @@ class CfgClothesStore {
 			};
 			class G_RegulatorMask_F { 
 				price = 0;
-				condition = "true";
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 			};
 			class G_Bandanna_aviator { 
 				price = 0;
-				condition = "true";
 				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; 
 				class Textures {
 					class G_Bandanna_aviator {};
@@ -173,7 +170,6 @@ class CfgClothesStore {
 			};
 			class G_Balaclava_TI_blk_F { 
 				price = 0;
-				condition = "true";
 				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; 
 			};
 		};

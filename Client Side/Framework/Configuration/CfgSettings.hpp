@@ -19,6 +19,9 @@ class Life_Settings {
     /* Basic System Configurations */
     total_maxWeight = 24;
 
+    sync_delay = 5 * 60;
+    abort_delay = 10;
+
     /* Player Data Saving */
     save_virtualItems = true;
     saved_virtualItems[] = { 

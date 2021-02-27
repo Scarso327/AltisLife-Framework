@@ -77,5 +77,4 @@ if ((lbSize _list) > 0) then {
 
 _display setVariable ["cfg", _cfgRoot];
 
-
 [_list, 0] call ULP_fnc_invLbChange;

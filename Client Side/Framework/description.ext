@@ -3,6 +3,8 @@ overviewText = "An RPG game mode developed by Scarso and Lewis.";
 unsafeCVL = 1;
 enableDebugConsole = 2;
 
+onPauseScript[]={ "ULP_fnc_onPause" };
+
 #include "CfgRemoteExec.hpp"
 #include "UI\Includes.hpp"
 #include "Configuration\CfgSettings.hpp"
@@ -83,6 +85,15 @@ class CfgSounds {
 };
 
 class CfgDebriefing {
+    class Abort {
+        title = "Aborted";
+        subtitle = "Thansk For Playing!";
+        description = "Your data has been synced and you've returned to the lobby.";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0,0.3,0.6,1};
+    };
+
     class NotWhitelisted {
         title = "Unable to Join";
         subtitle = "You are not currently whitelisted";

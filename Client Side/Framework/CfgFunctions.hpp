@@ -20,6 +20,7 @@ class ULP_Functions {
 		class addEachFrame {};
 		class onEachFrame {};
 		class removeEachFrame {};
+		class onPause {};
 	};
 
 	class Utility {

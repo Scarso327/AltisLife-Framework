@@ -22,11 +22,9 @@ class TabletApp : Life_RscButtonMenu {
 	colorBackground2[] = {0.2, 0.2, 0.2, 0.8};
 };
 
-class RscTablet {
+class DialogTablet {
     idd = 23000;
-	movingEnable = false;
-    enableSimulation = true;
-    onload = "uiNamespace setVariable ['RscTablet', _this select 0]";
+    onload = "uiNamespace setVariable ['DialogTablet', _this select 0]";
 	onunload = "[((_this select 0) getVariable [""blur"", -1])] call ULP_fnc_destroyEffect;";
 
     // Main Body...
@@ -161,7 +159,8 @@ class RscTablet {
 			SAFEZONE_W(BUTTON_W);
 			SAFEZONE_H(BUTTON_H);
 		};
+
 	};
 };
 
-// ["0.29375 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.4125 * safezoneW","0.495 * safezoneH"]
+// ["0.29375 * safezoneW + safezoneX","0.243 * safezoneH + safezoneY","0.4150 * safezoneW","0.505 * safezoneH"]

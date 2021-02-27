@@ -12,7 +12,7 @@ _effectBlur ppEffectCommit 1.5;
  
 private _id = [[_effectBlur, {}]] call ULP_fnc_createEffect;
 
-if (createDialog "RscTablet") then {
+if (createDialog "DialogTablet") then {
 	private _display = findDisplay 23000;
 	if (isNull _display) exitWith {};
 

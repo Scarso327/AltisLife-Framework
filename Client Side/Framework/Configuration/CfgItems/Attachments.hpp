@@ -175,7 +175,6 @@ class optic_AMS {
 	};
 };
 class optic_AMS_khk : optic_AMS {};
-class optic_KHS_tan : optic_AMS {};
 class optic_AMS_snd : optic_AMS {};
 
 class optic_LRPS {
@@ -190,8 +189,8 @@ class optic_LRPS {
 		class optic_LRPS_ghex_F : optic_LRPS { displayName = "Green Hex"; };
 	};
 };
-class optic_AMS_khk : optic_LRPS {};
-class optic_KHS_tan : optic_LRPS {};
+class optic_LRPS_tna_F : optic_LRPS {};
+class optic_LRPS_ghex_F : optic_LRPS {};
 
 class muzzle_snds_L {
     displayName = "9mm Suppressor";

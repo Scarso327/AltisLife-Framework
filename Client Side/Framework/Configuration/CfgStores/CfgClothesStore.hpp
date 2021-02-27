@@ -112,15 +112,15 @@ class CfgClothesStore {
 		class Facewear {
 			class G_WirelessEarpiece_F {
 				price = 0;
-				condition = "true"
+				condition = "true";
 			};
 			class G_Aviator {
 				price = 0;
-				condition = "true"
+				condition = "true";
 			};
 			class G_Squares {
 				price = 0;
-				condition = "true"
+				condition = "true";
 				class Textures {
 					class G_Squares {};
 					class G_Squares_Tinted : G_Squares {};
@@ -128,41 +128,41 @@ class CfgClothesStore {
 			};
 			class G_Spectacles {
 				price = 0;
-				condition = "true"
+				condition = "true";
 			};
 			class G_Shades_Black {
 				price = 0;
-				condition = "true"
+				condition = "true";
 			};
 			class G_Sport_Red {
 				price = 0;
-				condition = "true"
+				condition = "true";
 			};
 			class G_Lady_Blue {
 				price = 0;
-				condition = "true"
+				condition = "true";
 			};
 			class G_Tactical_Clear {
 				price = 0;
-				condition = "true"
+				condition = "true";
 			};
 			class G_B_Diving { 
 				price = 0;
-				condition = "true"
+				condition = "true";
 				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; 
 			};
 			class G_Respirator_white_F {
 				price = 0;
-				condition = "true"
+				condition = "true";
 			};
 			class G_RegulatorMask_F { 
 				price = 0;
-				condition = "true"
+				condition = "true";
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 			};
 			class G_Bandanna_aviator { 
 				price = 0;
-				condition = "true"
+				condition = "true";
 				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; 
 				class Textures {
 					class G_Bandanna_aviator {};
@@ -173,7 +173,7 @@ class CfgClothesStore {
 			};
 			class G_Balaclava_TI_blk_F { 
 				price = 0;
-				condition = "true"
+				condition = "true";
 				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; 
 			};
 		};

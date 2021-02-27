@@ -1165,3 +1165,7 @@ class Life_RscToolbox {
     font = "RobotoCondensed";
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 };
+
+class Life_RscButtonCenter : Life_RscButtonMenu {
+    style = 2;
+};

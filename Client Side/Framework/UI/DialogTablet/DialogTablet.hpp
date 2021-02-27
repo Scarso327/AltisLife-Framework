@@ -8,9 +8,8 @@
 #define BUTTON_W HORIZONTAL_GRID_W(UI_WIDTH, 5)
 #define BUTTON_H VERTICAL_GRID_H(UI_HEIGHT, 3)
 
-class TabletApp : Life_RscButtonMenu {
+class TabletApp : Life_RscButtonCenter {
     fade = 0;
-    style = 2;
 	animTextureOver = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
     animTextureFocused = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
     animTexturePressed = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
@@ -160,6 +159,7 @@ class DialogTablet {
 			SAFEZONE_H(BUTTON_H);
 		};
 
+		#include "Screens\Inventory.hpp"
 	};
 };
 

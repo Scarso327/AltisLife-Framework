@@ -173,6 +173,18 @@ class ULP_Functions {
 		class setScreen {};
 		class rebindEsc {};
 	};
+
+	class TabletInventory {
+		file = "Functions\Tablet\Inventory";
+		class inventory {};
+		class invLbChange {};
+		class removeItem {};
+	};
+
+	class Selects {
+		file = "Functions\Selects";
+		class selectNumber {};
+	};
 };
 
 class ULP_Functions_UI {
@@ -182,6 +194,7 @@ class ULP_Functions_UI {
 		file = "UI\Functions";
 		class screenCredits {};
 		class closeDialogs {};
+		class setVAlignText {};
 	};
 
 	class RscLayers {

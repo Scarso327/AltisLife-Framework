@@ -14,42 +14,6 @@ class Life_Client_Core {
         class setupActions {};
     };
 
-    class Actions {
-        file = "Functions\Actions";
-        class arrestAction {};
-        class buyLicense {};
-        class captureHideout {};
-        class catchFish {};
-        class dpFinish {};
-        class dropFishingNet {};
-        class escortAction {};
-        class gather {};
-        class getDPMission {};
-        class gutAnimal {};
-        class healHospital {};
-        class impoundAction {};
-        class mine {};
-        class newsBroadcast {};
-        class packupSpikes {};
-        class pickupItem {};
-        class pickupMoney {};
-        class postBail {};
-        class processAction {};
-        class pulloutAction {};
-        class putInCar {};
-        class removeContainer {};
-        class repairTruck {};
-        class robAction {};
-        class searchAction {};
-        class searchVehAction {};
-        class seizePlayerAction {};
-        class serviceChopper {};
-        class stopEscorting {};
-        class storeVehicle {};
-        class surrender {};
-        class ticketAction {};
-    };
-
     class Admin {
         file = "Functions\Admin";
         class adminCompensate {};

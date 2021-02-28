@@ -3,22 +3,16 @@ class CfgFactions {
 	fallbackPay = 1000;
 
 	class Police {
-		displayName = "Malden Police Constabulary";
-		pay = 2500;
+		displayName = "Altis Police Constabulary";
+		pay = 15000;
 		class Whitelisting {
 			class Main {
 				queryIndex = 12;
-				payMulti = 0.1; // Pay increase per level...
+				payMulti = 0.1;
 				required = 1;
 			};
-
-			class ASO {
-				queryIndex = 13;
-			};
-
-			class SFO {
-				queryIndex = 14;
-			};
+			class ASO { queryIndex = 13; };
+			class SFO { queryIndex = 14; };
 		};
 
 		class DatabaseInfo {
@@ -42,16 +36,15 @@ class CfgFactions {
 	};
 
 	class Medic {
-		displayName = "Malden Ambulance Service";
-		pay = 2500;
+		displayName = "National Health Service";
+		pay = 16000;
 		class Whitelisting {
 			class Main {
 				queryIndex = 12;
+				payMulti = 0.1;
+				required = 1;
 			};
-			
-			class TAA {
-				queryIndex = 13;
-			};
+			class TAA { queryIndex = 13; };
 		};
 
 		class DatabaseInfo {
@@ -76,7 +69,7 @@ class CfgFactions {
 
 	class Civilian {
 		displayName = "Civilian";
-		pay = 2500;
+		pay = 7500;
 		class Groups {};
 		class Housing {};
 		class DatabaseInfo {

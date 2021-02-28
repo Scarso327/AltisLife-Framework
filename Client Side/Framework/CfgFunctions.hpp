@@ -58,7 +58,6 @@ class ULP_Functions {
 	class Items {
 		file = "Functions\Items";
 		class itemCfg {};
-		class addItems {};
 	};
 
 	class Input {
@@ -162,6 +161,11 @@ class ULP_Functions {
 		class handleItem {};
 		class hasItem {};	
 		class getMaxQuantity {};
+		class handleGear {};
+		class canFitGear {};
+		class addContainer {};
+		class setGear {};
+		class addItems {};
 	};
 	
 	class Gathering {

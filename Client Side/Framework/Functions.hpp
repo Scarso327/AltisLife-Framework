@@ -3,8 +3,6 @@ class Life_Client_Core {
 
     class Functions {
         file = "Functions\Functions";
-        class fetchCfgDetails {};
-        class handleItem {};
         class numberText {};
     };
 

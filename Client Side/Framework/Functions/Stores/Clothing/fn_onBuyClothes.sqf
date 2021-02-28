@@ -6,7 +6,7 @@
 scopeName "fn_onBuyClothes";
 
 _this params [
-	"_cartValue", "_cartList", "_className", "_texClass", "_cfgName", "_itemCfg", "_i"
+	"_cartValue", "_cartList", "_className", "_texClass", "_cfgName", "_itemCfg", "_i", "_override"
 ];
 
 // If the texture is it's own entity in CfgClothing, it's an item...
@@ -14,7 +14,9 @@ if (isClass (missionConfigFile >> "CfgClothing" >> _texClass)) then {
 	_className = _texClass;
 };
 
-if (player canAdd _className && { (_texClass isEqualTo "") }) then {
+(_className call BIS_fnc_itemType) params ["_itemType", "_itemCategory"];
+
+if (([_className, _itemType, _itemCategory, _override] call ULP_fnc_canFitGear) && { (_texClass isEqualTo "") }) then {
 	player addItem _className;
 	true breakOut "fn_onBuyClothes";
 } else {
@@ -26,49 +28,7 @@ if (player canAdd _className && { (_texClass isEqualTo "") }) then {
 	] call BIS_fnc_guiMessage;
 
 	if (_action) then {
-		switch (_cfgName) do {
-			case "CfgVehicles": {
-				if (getNumber(_itemCfg >> "isBackpack") isEqualTo 1) then {
-					// Backpack
-					private _bpItems = backpackItems player;
-					removeBackpack player;
-					player addBackpack _className;
-					[_bpItems] call ULP_fnc_addItems;
-
-					if !(_className isEqualTo _texClass) then {
-						[unitBackpack player, backpackContainer player, _texClass, true, false] call ULP_fnc_setTextures;
-					};
-				};	
-			};
-			case "CfgGlasses": {
-				player addGoggles _className;
-			};
-			default {
-				if (getNumber(_itemCfg >> "type") in [4096, 131072]) then {
-					switch (getNumber(_itemCfg >> "ItemInfo" >> "type")) do {
-						case 605: { player addHeadgear _className }; // Headgear
-						case 701: {
-							// Vest
-							private _vItems = vestItems player;
-							player addVest _className;
-							[_vItems] call ULP_fnc_addItems;
-						};
-						case 801: {
-							// Uniform
-							private _uItems = uniformItems player;
-							player forceAddUniform _className;
-							[_uItems] call ULP_fnc_addItems;
-
-							if !(_className isEqualTo _texClass) then {
-								[player, uniformContainer player, _texClass] call ULP_fnc_setTextures;
-							};
-						};
-					};
-				};
-			};
-		};
-
-		true breakOut "fn_onBuyClothes";
+		([_className, true, _texClass] call ULP_fnc_handleGear) breakOut "fn_onBuyClothes";
 	} else {
 		_cartValue = _cartValue - (_cartList lbValue _i); // Remove it from the total cost...
 	};

@@ -24,6 +24,7 @@ if ((lbSize _cartList) isEqualTo 0) exitWith {
 
 _ctrl ctrlEnable false;
 
+private _override = cbChecked (_display displayCtrl 3114);
 private _cartValue = _display getVariable "cartValue";
 
 if (CASH < _cartValue) then {
@@ -43,7 +44,7 @@ if (CASH < _cartValue) then {
 			"_itemCfg" 
 		];
 		
-		if ([_cartValue, _cartList, _className, _texClass, _cfgName, _itemCfg, _i] call compile _onItemBuy) then {
+		if ([_cartValue, _cartList, _className, _texClass, _cfgName, _itemCfg, _i, _override] call compile _onItemBuy) then {
 			_itemsBought = _itemsBought + 1;
 		};
 	};

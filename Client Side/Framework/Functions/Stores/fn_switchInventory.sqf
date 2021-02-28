@@ -26,7 +26,7 @@ if (_index isEqualTo 0) then {
 	_invList ctrlShow false;
 
 	_removeButton ctrlSetEventHandler ["ButtonClick", "[(_this select 0), -1] call ULP_fnc_removeCart"];
-	_removeButton ctrlSetText "Remove From Cart";
+	_removeButton ctrlSetStructuredText parseText "<t align = 'center'>Remove From Cart</t>";
 
 } else {
 	// Player Inventory
@@ -35,7 +35,7 @@ if (_index isEqualTo 0) then {
 	_cartList ctrlShow false;
 
 	_removeButton ctrlSetEventHandler ["ButtonClick", "_this call ULP_fnc_sellItem"];
-	_removeButton ctrlSetText "Sell Item";
+	_removeButton ctrlSetStructuredText parseText "<t align = 'center'>Sell Item</t>";
 
 	private _inv = [player] call ULP_fnc_getInventory;
 

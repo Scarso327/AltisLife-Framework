@@ -6,12 +6,11 @@
 scopeName "fn_onBuyItems";
 
 _this params [
-	"_cartValue", "_cartList", "_className", "_texClass", "_cfgName", "_itemCfg", "_i"
+	"_cartValue", "_cartList", "_className", "_texClass", "_cfgName", "_itemCfg", "_i", "_override"
 ];
 
 if !(_texClass isEqualTo "") then {
 	_className = _texClass;
 };
 
-[_className, true] call life_fnc_handleItem;
-true
+[_className, _override] call ULP_fnc_handleGear

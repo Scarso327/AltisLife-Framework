@@ -4,6 +4,7 @@
 */
 #include "..\..\script_macros.hpp"
 #include "..\..\dikCodes.hpp"
+#define ACT_KEY(name, default) [(actionKeys name) select 0, default] select (actionKeys name isEqualTo [])
 scopeName "fn_keyDown";
 
 _this params [
@@ -12,6 +13,8 @@ _this params [
 
 private _handled = false;
 private _disabledKeys = [];
+
+private _interactionKey = ACT_KEY("User10", 219);
 
 _disabledKeys append (actionKeys "tacticalView"); // Disable tactical view...
 
@@ -41,6 +44,13 @@ if (isDowned(player)) then {
     };
 } else {
     switch (_code) do {
+        case _interactionKey: {
+            if !([] call ULP_UI_fnc_isProgress) then {
+                _this call ULP_fnc_actionKeyDown;
+                _handled = true;
+            };
+        };
+
         case B: {
             if (_shift && { !_ctrlKey }) then {
                 if (ULP_Ability_Cooldown < time) then {

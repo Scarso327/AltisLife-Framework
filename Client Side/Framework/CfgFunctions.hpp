@@ -54,6 +54,13 @@ class ULP_Functions {
 		class addItems {};
 	};
 
+	class Input {
+		file = "Functions\Input";
+		class keyDown {};
+		class keyUp {};
+		class actionKeyDown {};
+	};
+
 	class Player {
 		file = "Functions\Player";
 		class loadGear {};

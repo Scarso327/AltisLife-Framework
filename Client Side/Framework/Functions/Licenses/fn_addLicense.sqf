@@ -12,8 +12,8 @@ _this params [
 ];
 
 _license = missionConfigFile >> "License" >> _license;
-if !(isClass _license || 
-	{ [_license] call ULP_fnc_hasLicense } || 
+if (!isClass _license || 
+	{ !([_license] call ULP_fnc_hasLicense) } || 
 	{ !([player] call ULP_fnc_getFaction in getArray (_license >> "factions")) } || 
 	{ !([] call compile getText(_license >> "conditions")) }
 ) exitWith { false };

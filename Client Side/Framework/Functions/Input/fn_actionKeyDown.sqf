@@ -33,7 +33,7 @@ if (isNull _object) then {
 		};
 	};
 } else {
-
+	
 };
 
 true

@@ -17,7 +17,7 @@ private _params = _ui getVariable ["params", []];
 private _condition = _ui getVariable ["condition", { true }];
 private _anim = _ui getVariable ["anim", ""];
 
-if !(_params call _condition) exitWith {
+if (!(_params call _condition) || { !alive player } || { isDowned(player) }) exitWith {
 	[_ui, false] call ULP_UI_fnc_endProgress;
 };
 

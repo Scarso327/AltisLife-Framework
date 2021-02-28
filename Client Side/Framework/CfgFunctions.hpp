@@ -68,8 +68,6 @@ class ULP_Functions {
 		class isRestrained {};
 		class isSurrendered {};
 		class isKnocked {};
-		class keyDown {};
-		class keyUp {};
 		class initSurvival {};
 		class initPlayerEvents {};
 		class getInventory {};

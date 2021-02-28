@@ -4,6 +4,8 @@ class CfgVirtualStores {
 		conditions = "true";
 		class Items {
 			class Bottle {};
+			class RedApple {};
+			class GreenApple {};
 		};
 	};
 };

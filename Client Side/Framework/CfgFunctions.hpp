@@ -160,6 +160,7 @@ class ULP_Functions {
 		file = "Functions\Inventory";
 		class handleItem {};
 		class hasItem {};	
+		class getMaxQuantity {};
 	};
 	
 	class Gathering {
@@ -185,6 +186,14 @@ class ULP_Functions {
 	class Selects {
 		file = "Functions\Selects";
 		class selectNumber {};
+	};
+
+	class VirutalStores {
+		file = "Functions\VirtualStore";
+		class openVStore {};
+		class updateVStore {};
+		class vStoreChange {};
+		class handleVItems {};
 	};
 };
 

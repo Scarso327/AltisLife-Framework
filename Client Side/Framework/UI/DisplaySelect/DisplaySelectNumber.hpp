@@ -11,12 +11,22 @@ class DisplaySelectNumber {
 	onunload = "_this call { private _params = ((_this select 0) getVariable ""params""); _params append [(_this select 0), (sliderPosition ((_this select 0) displayCtrl 3205))]; if ((_this select 1) isEqualTo 1) then { ((_this select 0) getVariable ""params"") call ((_this select 0) getVariable ""onSelect""); }; };";
 
     class ControlsBackground {
-		class Background : Life_RscBackground {
+		class TabletBackground : Life_RscBackground {
+			idc = 3207;
 			colorBackground[] = { 0, 0, 0, 0.6 };
 			SAFEZONE_X(0.29375);
 			SAFEZONE_Y(0.243);
 			SAFEZONE_W(0.4150);
 			SAFEZONE_H(0.505);
+		};
+
+		class FullBackground : Life_RscBackground {
+			idc = 3208;
+			colorBackground[] = { 0, 0, 0, 0.6 };
+			SAFEZONE_X(0);
+			SAFEZONE_Y(0);
+			SAFEZONE_W(1);
+			SAFEZONE_H(1);
 		};
 
 		class Header : Life_RscText {

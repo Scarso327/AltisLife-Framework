@@ -9,12 +9,16 @@ _this params [
 	["_parent", displayNull, [displayNull]],
 	["_boundaries", [0, 1], [[]]],
 	["_params", [], [[]]],
-	["_onSelect", {}, [{}]]
+	["_onSelect", {}, [{}]],
+	["_tablet", true, [false]]
 ];
 
 if (isNull _parent) exitWith {};
 
 private _display = _parent createDisplay "DisplaySelectNumber";
+
+(_display displayCtrl 3207) ctrlShow _tablet;
+(_display displayCtrl 3208) ctrlShow !_tablet;
 
 private _minMaxText = _display displayCtrl 3204;
 private _slider = _display displayCtrl 3205;

@@ -86,13 +86,6 @@ class CfgProcessing {
 		reqLicenses[] = {};
 	};
 
-	class Iron : BaseProcess {
-		processTitle = "Smelting";
-		materials[] = { { "ironOre", 1 } };
-		items[] = { { "ironBar", 1 } };
-		reqLicenses[] = {};
-	};
-
 	class Sand : BaseProcess {
 		processTitle = "Smelting";
 		materials[] = { { "sand", 1 } };

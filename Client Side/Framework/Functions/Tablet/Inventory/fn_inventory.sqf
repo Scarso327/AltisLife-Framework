@@ -31,13 +31,13 @@ private _item = -1;
 
 switch (lbCurSel _toolbox) do {
 	case 1: {
-		_cfgRoot = "Licenses";
+		_cfgRoot = "CfgLicenses";
 
 		_useButton ctrlShow false;
 		_removeButton ctrlShow false;
 
 		{
-			_cfg = missionConfigFile >> "Licenses" >> _x;
+			_cfg = missionConfigFile >> "CfgLicenses" >> _x;
 
 			if (isClass _cfg) then {
 				_item = _list lbAdd format ["%1", getText(_cfg >> "displayName")];

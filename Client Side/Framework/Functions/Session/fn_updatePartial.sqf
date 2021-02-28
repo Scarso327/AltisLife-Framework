@@ -24,12 +24,6 @@ switch (_mode) do {
     };
 
     case 2: {
-        {
-            _varName = LICENSE_VARNAME(configName _x,_flag);
-            _array pushBack [_varName,LICENSE_VALUE(configName _x,_flag)];
-        } forEach (format ["getText(_x >> 'side') isEqualTo '%1'",_flag] configClasses (missionConfigFile >> "Licenses"));
-
-        _packet set[2,_array];
     };
 
     case 3: {

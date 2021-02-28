@@ -30,7 +30,7 @@
 #define CONTROL_DATAI(ctrl,index) ctrl lbData index
 
 //System Macros
-#define LICENSE_VARNAME(varName,flag) format ["license_%1_%2",flag,M_CONFIG(getText,"Licenses",varName,"variable")]
+#define LICENSE_VARNAME(varName,flag) format ["license_%1_%2",flag,M_CONFIG(getText,"CfgLicenses",varName,"variable")]
 #define LICENSE_VALUE(varName,flag) missionNamespace getVariable [LICENSE_VARNAME(varName,flag),false]
 #define ITEM_VARNAME(varName) format ["life_inv_%1",M_CONFIG(getText,"VirtualItems",varName,"variable")]
 #define ITEM_VALUE(varName) missionNamespace getVariable [ITEM_VARNAME(varName),0]

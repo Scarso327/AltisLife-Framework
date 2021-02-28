@@ -7,6 +7,9 @@ scopeName "fn_initialisation";
 
 waitUntil { !isNull player && { !isNull (findDisplay 46) } };
 
+cutText["","BLACK FADED"];
+0 cutFadeOut 9999999;
+
 private _startTime = diag_tickTime;
 ["Initialisation Started"] call ULP_fnc_logIt;
 
@@ -64,6 +67,6 @@ CONSTVAR(ULP_Paycheck);
 
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 
-[] call life_fnc_spawnMenu;
+[] call ULP_fnc_spawnMenu;
 
 [format["Initialisation Lasted %1s", diag_tickTime - _startTime]] call ULP_fnc_logIt;

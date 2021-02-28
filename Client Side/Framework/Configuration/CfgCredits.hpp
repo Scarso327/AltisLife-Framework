@@ -3,11 +3,11 @@ class CfgCredits {
 	
 	class Hello {
 		title = "Hello there!";
-		items[] = {"Welcome to", "LifePlus' Tanoa Life!"};
+		items[] = {"Welcome to", "AscensionRP' Altis Life!"};
 	};
-	class Teamspeak {
-		title = "Teamspeak!";
-		items[] = {"Teamspeak IP:", "ts3.lifeplusrp.co.uk!"};
+	class Forums {
+		title = "Forums & Teamspeak!";
+		items[] = {"Teamspeak IP:", "ascensionroleplay.co.uk"};
 	};
 	class Development {
 		title = "Development Team!";

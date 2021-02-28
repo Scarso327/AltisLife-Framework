@@ -196,6 +196,13 @@ class ULP_Functions {
 		class vStoreChange {};
 		class handleVItems {};
 	};
+
+	class Spawn {
+		file = "Functions\Spawn";
+		class spawnMenu {};
+		class spawn {};
+		class changeSpawn {};
+	};
 };
 
 class ULP_Functions_UI {
@@ -207,6 +214,8 @@ class ULP_Functions_UI {
 		class closeDialogs {};
 		class setVAlignText {};
 		class setSyncButton {};
+		class blockEsc {};
+		class setMapPosition {};
 	};
 
 	class RscLayers {

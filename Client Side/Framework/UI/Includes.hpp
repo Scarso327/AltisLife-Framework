@@ -3,5 +3,4 @@
 #include "DialogVirtualStore\DialogVirtualStore.hpp"
 #include "DialogTablet\DialogTablet.hpp"
 #include "DisplaySelect\DisplaySelectNumber.hpp"
-
-#include "MasterHandler.hpp"
+#include "DialogSpawn\DialogSpawn.hpp"

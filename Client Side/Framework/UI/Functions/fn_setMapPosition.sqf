@@ -1,18 +1,20 @@
 /*
-    File: fn_setMapPosition.sqf
-    Author: Bryan "Tonic" Boardwine
-
-    Description:
-    Sets the given control / maps focus position
+** Author: Jack "Scarso" Farhall
+** Description: 
 */
-disableSerialization;
-private ["_control","_time","_zoom","_position"];
-_control = [_this,0,controlNull,[controlNull]] call BIS_fnc_param;
-_time = [_this,1,1,[0]] call BIS_fnc_param;
-_zoom = [_this,2,0.1,[0]] call BIS_fnc_param;
-_position = [_this,3,[],[[]]] call BIS_fnc_param;
+#include "..\..\script_macros.hpp"
+scopeName "fn_setMapPosition";
 
-if (isNull _control || _position isEqualTo []) exitWith {};
+_this params [
+    ["_map", controlNull, [controlNull]],
+    ["_anim", [], [[]]]
+];
 
-_control ctrlMapAnimAdd[_time,_zoom,_position];
-ctrlMapAnimCommit _control;
+_anim params [
+    "_time", "_zoom", "_pos"
+];
+
+if (isNull _map || { _pos isEqualTo [] }) exitWith {};
+
+_map ctrlMapAnimAdd [_time, _zoom, _pos];
+ctrlMapAnimCommit _map;

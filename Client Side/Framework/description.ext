@@ -16,8 +16,6 @@ class CfgServer {
 };
 
 class RscTitles {
-    #include "UI\hud_nameTags.hpp"
-    #include "UI\hud_stats.hpp"
     #include "UI\RscIncapacitated\RscIncapacitated.hpp"
     #include "UI\RscProgress\RscProgress.hpp"
 };

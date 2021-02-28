@@ -61,5 +61,5 @@ ULP_CanRespawn = nil;
 
 	"WaitToRespawn" cutText ["", "PLAIN"];
 	[] call ULP_fnc_resetSurvival;
-	[] call life_fnc_spawnMenu;
+	[] call ULP_fnc_spawnMenu;
 } ] call ULP_fnc_waitUntilExecute;

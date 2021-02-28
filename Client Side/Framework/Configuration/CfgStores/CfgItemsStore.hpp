@@ -358,13 +358,7 @@ class CfgItemsStore {
 			};
 			class srifle_DMR_06_hunter_F {};
 		};
-		class Pistols {
-			class hgun_Pistol_01_F {};
-			class hgun_Rook40_F {};
-			class hgun_ACPC2_F {};
-			class hgun_Pistol_heavy_01_F {};
-			class hgun_Pistol_heavy_02_F {};
-		};
+		class Pistols {};
 		class Attachments {};
 		class Magazines {};
 		class Items {};

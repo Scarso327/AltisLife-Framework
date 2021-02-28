@@ -12,7 +12,6 @@ class CfgProcessing {
 		processTime = 40;
 		materials[] = { { "rawRabbit", 1 } };
 		items[] = { { "skinnedRabbit", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Goat : BaseProcess {
@@ -20,7 +19,6 @@ class CfgProcessing {
 		processTime = 40;
 		materials[] = { { "rawLamb", 1 } };
 		items[] = { { "skinnedLamb", 1 } };
-		reqLicenses[] = {};
 	};
 
 	// Cooking
@@ -29,7 +27,6 @@ class CfgProcessing {
 		processTime = 30;
 		materials[] = { { "rawSalema", 1 } };
 		items[] = { { "cookedSalema", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Ornate : BaseProcess {
@@ -37,7 +34,6 @@ class CfgProcessing {
 		processTime = 30;
 		materials[] = { { "rawOrnate", 1 } };
 		items[] = { { "cookedOrnate", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Tuna : BaseProcess {
@@ -45,7 +41,6 @@ class CfgProcessing {
 		processTime = 35;
 		materials[] = { { "rawTuna", 1 } };
 		items[] = { { "cookedTuna", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Mullet : BaseProcess {
@@ -53,7 +48,6 @@ class CfgProcessing {
 		processTime = 35;
 		materials[] = { { "rawMullet", 1 } };
 		items[] = { { "cookedMullet", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Catshark : BaseProcess {
@@ -61,14 +55,12 @@ class CfgProcessing {
 		processTitle = "Cooking";
 		materials[] = { { "rawCatshark", 1 } };
 		items[] = { { "cookedCatshark", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Turtle : BaseProcess {
 		processTitle = "Cooking";
 		materials[] = { { "rawTurtle", 1 } };
 		items[] = { { "cookedTurtle", 1 } };
-		reqLicenses[] = {};
 	};
 
 	// Smelting
@@ -122,12 +114,14 @@ class CfgProcessing {
 		processTime = 40;
 		materials[] = { { "peach", 2 } };
 		items[] = { { "schnaps", 1 } };
+		reqLicenses[] = {};
 	};
 
 	class Cigarette : BaseProcess {
 		processTitle = "Processing";
 		materials[] = { { "tobacco", 2 } };
 		items[] = { { "cigarette", 1 } };
+		reqLicenses[] = {};
 	};
 
 	class Cigar : BaseProcess {
@@ -135,12 +129,14 @@ class CfgProcessing {
 		processTime = 70;
 		materials[] = { { "tobacco", 2 } };
 		items[] = { { "cigar", 1 } };
+		reqLicenses[] = {};
 	};
 
 	class Weed : BaseProcess {
 		processTitle = "Processing";
 		materials[] = { { "unprocessedWeed", 1 } };
 		items[] = { { "processedWeed", 1 } };
+		reqLicenses[] = {};
 	};
 
 	class Heroin : BaseProcess {
@@ -148,6 +144,7 @@ class CfgProcessing {
 		processTime = 70;
 		materials[] = { { "unprocessedHeroin", 1 } };
 		items[] = { { "processedHeroin", 1 } };
+		reqLicenses[] = {};
 	};
 
 	class Cocaine : BaseProcess {
@@ -155,6 +152,7 @@ class CfgProcessing {
 		processTime = 80;
 		materials[] = { { "unprocessedCocaine", 1 } };
 		items[] = { { "processedCocaine", 1 } };
+		reqLicenses[] = {};
 	};
 
 	class Methamphetamine : BaseProcess {
@@ -162,6 +160,7 @@ class CfgProcessing {
 		processTime = 90;
 		materials[] = { { "unprocessedMeth", 1 } };
 		items[] = { { "processedMeth", 1 } };
+		reqLicenses[] = {};
 	};
 
 	class Uranium : BaseProcess {

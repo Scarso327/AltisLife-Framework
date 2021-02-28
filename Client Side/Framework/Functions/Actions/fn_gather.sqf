@@ -56,11 +56,6 @@ if (_diff isEqualTo 0) exitWith {
     life_action_inUse = false;
 };
 
-switch (_requiredItem) do {
-    case "pickaxe": {[player,"mining",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
-    default {[player,"harvest",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
-};
-
 for "_i" from 0 to 4 do {
     player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
     waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};

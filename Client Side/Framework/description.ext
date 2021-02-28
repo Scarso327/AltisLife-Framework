@@ -41,33 +41,9 @@ class CfgSounds {
         titles[] = {};
     };
 
-    class medicSiren {
-        name = "medicSiren";
-        sound[] = {"\Data\Sounds\medicSiren.ogg", 1.0, 1};
-        titles[] = {};
-    };
-
-    class tazerSound {
-        name = "tazerSound";
-        sound[] = {"\Data\Sounds\tazer.ogg", 0.5, 1};
-        titles[] = {};
-    };
-
-    class flashbang {
-        name = "flashbang";
-        sound[] = {"\Data\Sounds\flashbang.ogg", 1.0, 1};
-        titles[] = {};
-    };
-
-    class mining {
-        name = "mining";
-        sound[] = {"\Data\Sounds\mining.ogg", 1.0, 1};
-        titles[] = {};
-    };
-
-    class harvest {
-        name = "harvest";
-        sound[] = {"\Data\Sounds\harvest.ogg", 1.0, 1};
+    class taserSound {
+        name = "taserSound";
+        sound[] = {"\Data\Sounds\taser.ogg", 0.5, 1};
         titles[] = {};
     };
 
@@ -115,7 +91,7 @@ class CfgDebriefing {
 
 class CfgNotifications {
     class MedicalRequestEmerg {
-        title = "TAS Requested";
+        title = "NHS Requested";
         iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
         description = "%1";
         duration = 5;

@@ -19,7 +19,6 @@ _impactPos = [(_pos select 0)-(_pPos select 0),(_pos select 1)-(_pPos select 1),
 _norm = sqrt((_impactPos select 0)^2+(_impactPos select 1)^2+(_impactPos select 2)^2);
 _angle = aCos ((_eyeDir select 0)*((_impactPos select 0) / _norm)+((_impactPos select 1) / _norm)*(_eyeDir select 1)+((_impactPos select 2) / _norm)*(_eyeDir select 2));
 
-playSound "flashbang";
 _blurEffect = ppEffectCreate ["DynamicBlur",500];
 _blurEffect ppEffectForceInNVG true;
 _blurEffect ppEffectEnable true;

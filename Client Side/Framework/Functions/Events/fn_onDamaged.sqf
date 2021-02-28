@@ -2,7 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-#include "..\..\..\script_macros.hpp"
+#include "..\..\script_macros.hpp"
 scopeName "fn_onDamaged";
 
 _this params [

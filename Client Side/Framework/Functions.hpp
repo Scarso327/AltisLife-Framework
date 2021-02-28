@@ -72,12 +72,6 @@ class Life_Client_Core {
         class civMarkers {};
         class demoChargeTimer {};
         class freezePlayer {};
-        class jail {};
-        class jailMe {};
-        class knockedOut {};
-        class knockoutAction {};
-        class robPerson {};
-        class robReceive {};
         class tazed {};
     };
 
@@ -186,46 +180,7 @@ class Life_Client_Core {
         class simDisable {};
         class stripDownPlayer {};
         class teleport {};
-        class whereAmI {};
         class moveIn {};
-    };
-
-    class Gangs {
-        file = "Functions\Gangs";
-        class createGang {};
-        class gangCreated {};
-        class gangDisband {};
-        class gangDisbanded {};
-        class gangInvite {};
-        class gangInvitePlayer {};
-        class gangKick {};
-        class gangLeave {};
-        class gangMenu {};
-        class gangNewLeader {};
-        class gangUpgrade {};
-        class initGang {};
-    };
-
-    class Housing {
-        file = "Functions\Housing";
-        class buyHouse {};
-        class buyHouseGarage {};
-        class containerMenu {};
-        class copBreakDoor {};
-        class copHouseOwner {};
-        class garageRefund {};
-        class getBuildingPositions {};
-        class houseMenu {};
-        class initHouses {};
-        class lightHouse {};
-        class lightHouseAction {};
-        class lockHouse {};
-        class lockupHouse {};
-        class placeContainer {};
-        class PlayerInBuilding {};
-        class raidHouse {};
-        class sellHouse {};
-        class sellHouseGarage {};
     };
 
     class Items {
@@ -260,30 +215,6 @@ class Life_Client_Core {
         class soundDevice {};
     };
 
-    class Player_Menu {
-        file = "Functions\Pmenu";
-        class cellphone {};
-        class giveItem {};
-        class giveMoney {};
-        class keyDrop {};
-        class keyGive {};
-        class keyMenu {};
-        class p_openMenu {};
-        class p_updateMenu {};
-        class pardon {};
-        class removeItem {};
-        class s_onChar {};
-        class s_onCheckedChange {};
-        class s_onSliderChange {};
-        class settingsMenu {};
-        class updateViewDistance {};
-        class useItem {};
-        class wantedAddP {};
-        class wantedInfo {};
-        class wantedList {};
-        class wantedMenu {};
-    };
-
     class Shops {
         file = "Functions\Shops";
         class 3dPreviewDisplay {};
@@ -294,18 +225,12 @@ class Life_Client_Core {
         class chopShopSelection {};
         class chopShopSell {};
         class chopShopSold {};
-        class clothingFilter {};
-        class clothingMenu {};
         class fuelLBchange {};
         class fuelStatOpen {};
         class levelCheck {};
         class vehicleShopBuy {};
         class vehicleShopLBChange {};
         class vehicleShopMenu {};
-        class virt_buy {};
-        class virt_menu {};
-        class virt_sell {};
-        class virt_update {};
     };
 
     class Vehicle {

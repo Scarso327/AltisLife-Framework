@@ -21,6 +21,13 @@ class ULP_Functions {
 		class onEachFrame {};
 		class removeEachFrame {};
 		class onPause {};
+		class onRestrain {};
+		class onIncapacitated {};
+		class onKilled {};
+		class onRespawn {};
+		class onDamaged {};
+		class onSurvival {};
+		class onKnocked {};
 	};
 
 	class Utility {
@@ -81,17 +88,6 @@ class ULP_Functions {
 		class knockOut {};
 		class surrender {};
 		class restrain {};
-	};
-
-	class PlayerEvents {
-		file = "Functions\Player\Events";
-		class onRestrain {};
-		class onIncapacitated {};
-		class onKilled {};
-		class onRespawn {};
-		class onDamaged {};
-		class onSurvival {};
-		class onKnocked {};
 	};
 
 	class Paycheck {

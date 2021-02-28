@@ -12,7 +12,6 @@ class CfgProcessing {
 		processTime = 40;
 		materials[] = { { "rawRabbit", 1 } };
 		items[] = { { "skinnedRabbit", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Goat : BaseProcess {
@@ -20,7 +19,6 @@ class CfgProcessing {
 		processTime = 40;
 		materials[] = { { "rawLamb", 1 } };
 		items[] = { { "skinnedLamb", 1 } };
-		reqLicenses[] = {};
 	};
 
 	// Cooking
@@ -29,7 +27,6 @@ class CfgProcessing {
 		processTime = 30;
 		materials[] = { { "rawSalema", 1 } };
 		items[] = { { "cookedSalema", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Ornate : BaseProcess {
@@ -37,7 +34,6 @@ class CfgProcessing {
 		processTime = 30;
 		materials[] = { { "rawOrnate", 1 } };
 		items[] = { { "cookedOrnate", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Tuna : BaseProcess {
@@ -45,7 +41,6 @@ class CfgProcessing {
 		processTime = 35;
 		materials[] = { { "rawTuna", 1 } };
 		items[] = { { "cookedTuna", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Mullet : BaseProcess {
@@ -53,7 +48,6 @@ class CfgProcessing {
 		processTime = 35;
 		materials[] = { { "rawMullet", 1 } };
 		items[] = { { "cookedMullet", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Catshark : BaseProcess {
@@ -61,14 +55,12 @@ class CfgProcessing {
 		processTitle = "Cooking";
 		materials[] = { { "rawCatshark", 1 } };
 		items[] = { { "cookedCatshark", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Turtle : BaseProcess {
 		processTitle = "Cooking";
 		materials[] = { { "rawTurtle", 1 } };
 		items[] = { { "cookedTurtle", 1 } };
-		reqLicenses[] = {};
 	};
 
 	// Smelting
@@ -76,21 +68,18 @@ class CfgProcessing {
 		processTitle = "Smelting";
 		materials[] = { { "copperOre", 1 } };
 		items[] = { { "copperBar", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Iron : BaseProcess {
 		processTitle = "Smelting";
 		materials[] = { { "ironOre", 1 } };
 		items[] = { { "ironBar", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Sand : BaseProcess {
 		processTitle = "Smelting";
 		materials[] = { { "sand", 1 } };
 		items[] = { { "glass", 1 } };
-		reqLicenses[] = {};
 	};
 
 	// Refining
@@ -98,7 +87,6 @@ class CfgProcessing {
 		processTitle = "Refining";
 		materials[] = { { "unrefinedSalt", 1 } };
 		items[] = { { "refindedSalt", 1 } };
-		reqLicenses[] = {};
 	};
 
 	// Cutting
@@ -106,14 +94,12 @@ class CfgProcessing {
 		processTitle = "Cutting";
 		materials[] = { { "uncutDiamond", 1 } };
 		items[] = { { "cutDiamond", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Emerald : BaseProcess {
 		processTitle = "Cutting";
 		materials[] = { { "uncutEmerald", 1 } };
 		items[] = { { "cutDiamond", 1 } };
-		reqLicenses[] = {};
 	};
 
 	// Processing
@@ -169,7 +155,6 @@ class CfgProcessing {
 		processTime = 90;
 		materials[] = { { "uraniumOre", 1 } };
 		items[] = { { "uraniumBar", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Gold : BaseProcess {

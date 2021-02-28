@@ -95,7 +95,7 @@ life_vehicles = [];
     _sideFlag = getText(_x >> "side");
 
     missionNamespace setVariable [LICENSE_VARNAME(_varName,_sideFlag), false];
-} forEach ("true" configClasses (missionConfigFile >> "Licenses"));
+} forEach ("true" configClasses (missionConfigFile >> "CfgLicenses"));
 
 /* Setup life_hideoutBuildings */
 {

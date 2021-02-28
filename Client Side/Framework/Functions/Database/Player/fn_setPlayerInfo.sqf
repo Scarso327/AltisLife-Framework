@@ -31,7 +31,7 @@ CONST(life_adminlevel, _adminlevel);
 CONST(life_donorlevel, _donorlevel);
 
 ULP_Licenses = (_licenses select {
-	isClass (missionConfigFile >> "Licenses" >> _x)
+	isClass (missionConfigFile >> "CfgLicenses" >> _x)
 });
 
 // Set saved survival statistics....

@@ -1,4 +1,4 @@
-class Licenses {
+class CfgLicenses {
     // Driver and Vehicle Licensing Agency
     class driving {
         variable = "driving";

@@ -66,12 +66,14 @@ if (_remove) then {
 		if ([configName _cfg, _value, _remove] call ULP_fnc_handleItem) then {
 			if (_remove) then {
 				hint format["You have sold %1 %2(s) for £%3...", _value, _name, [_sellPrice] call life_fnc_numberText];
+				CASH = CASH + _sellPrice;
 			} else {
 				if (_buyPrice > CASH) exitWith {
 					hint format["You can't afford £%1 for %2 %3(s)...", [_buyPrice] call life_fnc_numberText, _value, _name]
 				};
 
 				hint format["You have bought %1 %2(s) for £%3...", _value, _name, [_buyPrice] call life_fnc_numberText];
+				CASH = CASH - _sellPrice;
 			};
 
 			[_display] call ULP_fnc_updateVStore;

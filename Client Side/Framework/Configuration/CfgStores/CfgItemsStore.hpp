@@ -356,6 +356,7 @@ class CfgItemsStore {
 					class sgun_HunterShotgun_01_F {};
 				};
 			};
+			class srifle_DMR_06_hunter_F {};
 		};
 		class Pistols {
 			class hgun_Pistol_01_F {};
@@ -461,7 +462,6 @@ class CfgItemsStore {
 			class arifle_AK12_F {};
 			class srifle_DMR_01_F {};
 			class arifle_SPAR_03_blk_F {};
-			class srifle_DMR_06_hunter_F {};
 			class srifle_EBR_F {};
 			class srifle_DMR_03_F {};
 		};

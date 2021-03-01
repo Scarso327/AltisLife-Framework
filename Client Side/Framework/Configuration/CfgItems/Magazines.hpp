@@ -15,7 +15,7 @@ class 6Rnd_GreenSignal_F : 6Rnd_RedSignal_F {};
 
 // 9mm
 class 10Rnd_9x21_Mag : BaseMagazine { price = 0; };
-class 16Rnd_9x21_Mag : BaseMagazine { price = 0; ;
+class 16Rnd_9x21_Mag : BaseMagazine { price = 0; };
 class 30Rnd_9x21_Mag : BaseMagazine { price = 0; };
 class 30Rnd_9x21_Mag_SMG_02 : BaseMagazine { price = 0; };
 

@@ -1,4 +1,5 @@
 class CfgVehicles {
+	rentPerc = 0.4; // 40%;
 	sellPerc = 0.3; // 30%
 	retrievalPerc = 0.15; // 15%
 

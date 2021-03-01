@@ -24,6 +24,7 @@ _cfg params [
 ];
 
 private _buyPrice = getNumber(_missionCfg >> "buyPrice");
+private _rentPrice = round (_buyPrice * getNumber(missionConfigFile >> "CfgVehicles" >> "rentPerc"));
 private _retrievalPrice = round (_buyPrice * getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc"));
 private _sellPrice = round (_buyPrice * getNumber(missionConfigFile >> "CfgVehicles" >> "sellPerc"));
 
@@ -35,14 +36,18 @@ _settings ctrlSetStructuredText parseText format ["
 
 _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Buy Price <t align='right'>%1</t></t>
 <t align = 'left' size = '1'><br/>Sell Price <t align='right'>%2</t></t>
-<t align = 'left' size = '1'><br/>Retrieval Price <t align='right'>%3</t></t>
-<t align = 'left' size = '1'><br/>Virtual Item Space <t align='right'>%4</t></t>
-<t align = 'left' size = '1'><br/>Top Speed <t align='right'>%5 km/h</t></t>
-<t align = 'left' size = '1'><br/>Armor Level <t align='right'>%6</t></t>
-<t align = 'left' size = '1'><br/>Seats <t align='right'>%7</t></t>
-<t align = 'left' size = '1'><br/>Horse Power <t align='right'>%8 bhp</t></t>
-<t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%9</t></t>", 
+<t align = 'left' size = '1'><br/>Sell Price <t align='right'>%3</t></t>
+<t align = 'left' size = '1'><br/>Retrieval Price <t align='right'>%4</t></t>
+<t align = 'left' size = '1'><br/>Virtual Item Space <t align='right'>%5</t></t>
+<t align = 'left' size = '1'><br/>Top Speed <t align='right'>%6 km/h</t></t>
+<t align = 'left' size = '1'><br/>Armor Level <t align='right'>%7</t></t>
+<t align = 'left' size = '1'><br/>Seats <t align='right'>%8</t></t>
+<t align = 'left' size = '1'><br/>Horse Power <t align='right'>%9 bhp</t></t>
+<t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%10</t></t>", 
 ([format["£%1", [_buyPrice] call life_fnc_numberText], "-"] select (_buyPrice < 1)),
+([format["£%1", [_rentPrice] call life_fnc_numberText], "-"] select (_rentPrice < 1)), 
 ([format["£%1", [_sellPrice] call life_fnc_numberText], "-"] select (_sellPrice < 1)), 
 ([format["£%1", [_retrievalPrice] call life_fnc_numberText], "-"] select (_retrievalPrice < 1)), getNumber(_missionCfg >> "virtualSpace"),
 _topSpeed, _armor, _seats, _power, _fuel];
+
+_display setVariable ["selected", _cfg];

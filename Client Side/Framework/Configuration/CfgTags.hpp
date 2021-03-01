@@ -6,30 +6,29 @@ class CfgTags {
 		class Whitelisting {
 			class Police {
 				class Main {
-					class PoliceCC {};
-					class PoliceDCC {};
-					class PoliceCSI {};
-					class PoliceSI {};
-					class PoliceCI {};
-					class PoliceINS {};
-					class PoliceSGT {};
-					class PolicePC {};
-					class PoliceSC {};
-					class PolicePPC {};
 					class PolicePCSO {};
+					class PolicePPC {};
+					class PolicePC {};
+					class PoliceSGT {};
+					class PoliceINS {};
+					class PoliceCI {};
+					class PoliceSI {};
+					class PoliceCSI {};
+					class PoliceDCC {};
+					class PoliceCC {};
 				};
 			};
 
 			class Medic {
 				class Main {
-					class MedicCMO {};
-					class MedicCST {};
-					class MedicSTU {};
-					class MedicGP {};
-					class PoliceDR {};
-					class PolicePAR {};
-					class PoliceFA {};
 					class PoliceSTU {};
+					class PoliceFA {};
+					class PolicePAR {};
+					class PoliceDR {};
+					class MedicGP {};
+					class MedicSUR {};
+					class MedicCST {};
+					class MedicCMO {};
 				};
 			};
 		};

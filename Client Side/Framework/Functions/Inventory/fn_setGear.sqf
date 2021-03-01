@@ -62,7 +62,7 @@ if (_itemType isEqualTo "Magazine") then {
 
 			if !(_items isEqualTo []) then { [_items] call ULP_fnc_addItems; };
 
-			if !(_items isEqualTo _texture) then {
+			if !(_item isEqualTo _texture) then {
 				[unitBackpack player, backpackContainer player, _texture] call ULP_fnc_setTextures;
 			};
 
@@ -80,7 +80,7 @@ if (_itemType isEqualTo "Magazine") then {
 
 			if !(_items isEqualTo []) then { [_items] call ULP_fnc_addItems; };
 
-			if !(_items isEqualTo _texture) then {
+			if !(_item isEqualTo _texture) then {
 				[player, uniformContainer player, _texture] call ULP_fnc_setTextures;
 			};
 

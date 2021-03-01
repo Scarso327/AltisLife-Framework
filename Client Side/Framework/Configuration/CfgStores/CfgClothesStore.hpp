@@ -17,9 +17,7 @@ class CfgClothesStore {
 			class U_B_HeliPilotCoveralls {
 				price = 0;
 				condition = "[""Police_ASO"", 1] call ULP_fnc_hasAccess";
-				class textures {
-					class U_B_HeliPilotCoveralls {};
-				};
+				class textures { class U_B_HeliPilotCoveralls {}; };
 			};
 			class U_B_CombatUniform_mcam_worn {
 				price = 0;
@@ -28,37 +26,27 @@ class CfgClothesStore {
 			class U_B_CTRG_Soldier_F {
 				price = 0;
 				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
-				class textures {
-					class SCO19 {};
-				};
+				class textures { class SCO19 {}; };
 			};
 			class U_B_GhillieSuit {
 				price = 0;
 				condition = "[""Police_SFO"", 2] call ULP_fnc_hasAccess";
-				class textures {
-					class SCO19 {};
-				};
+				class textures { class SCO19 {}; };
 			};
 			class U_B_CTRG_Soldier_2_Arid_F {
 				price = 0;
 				condition = "[""Police_SFO"", 3] call ULP_fnc_hasAccess";
-				class textures {
-					class SCO19 {};
-				};
+				class textures { class SCO19 {}; };
 			};
 			class U_B_Wetsuit {
 				prince = 0;
 				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
-				class Textures {
-					class U_B_Wetsuit {};
-				};
+				class Textures { class U_B_Wetsuit {}; };
 			};
 			class U_C_CBRN_Suit_01_White_F {
 				prince = 0;
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
-				class Textures {
-					class U_C_CBRN_Suit_01_Blue_F {};
-				};
+				class Textures { class U_C_CBRN_Suit_01_Blue_F {}; };
 			};
 		};
 
@@ -87,16 +75,12 @@ class CfgClothesStore {
 			class H_Watchcap_blk { 
 				prince = 0;
 				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; 
-				class Textures {
-					class H_Watchcap_blk {};
-				};
+				class Textures { class H_Watchcap_blk {}; };
 			};
 			class H_Booniehat_khk { 
 				prince = 0;
 				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_MPU"", 1] call ULP_fnc_hasAccess }"; 
-				class Textures {
-					class H_Booniehat_khk {};
-				};
+				class Textures { class H_Booniehat_khk {}; };
 			};
 			class H_PilotHelmetHeli_B { 
 				price = 0;
@@ -178,9 +162,7 @@ class CfgClothesStore {
 			class V_LegStrapBag_black_F {
 				price = 0;
 				condition = "true";
-				class Textures { 
-					class V_LegStrapBag_black_F {}; 
-				};
+				class Textures { class V_LegStrapBag_black_F {}; };
 			};
 			class V_Rangemaster_belt {
 				price = 0;
@@ -189,9 +171,7 @@ class CfgClothesStore {
 			class V_BandollierB_blk {
 				price = 0;
 				condition = "true";
-				class Textures { 
-					class V_BandollierB_blk {}; 
-				};
+				class Textures { class V_BandollierB_blk {}; };
 			};
 			class V_TacVest_blk_POLICE {
 				price = 0;
@@ -201,23 +181,17 @@ class CfgClothesStore {
 			class V_PlateCarrier1_blk {
 				price = 0;
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
-				class Textures { 
-					class V_PlateCarrier1_blk {}; 
-				};
+				class Textures { class V_PlateCarrier1_blk {}; };
 			};
 			class V_PlateCarrier2_blk {
 				price = 0;
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_ASO"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
-				class Textures { 
-					class V_PlateCarrier2_blk {};
-				 };
+				class Textures { class V_PlateCarrier2_blk {}; };
 			};
 			class V_RebreatherB {
 				price = 0;
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
-				class Textures { 
-					class V_RebreatherB {}; 
-				};
+				class Textures { class V_RebreatherB {}; };
 			};
 		};
 
@@ -226,9 +200,7 @@ class CfgClothesStore {
 				displayName = "Invisible Backpack"; 
 				price = 0;
 				condition = "true";
-				class Textures { 
-					class INVIS {}; 
-				};
+				class Textures { class INVIS {}; };
 			};
 		};
 	};
@@ -239,15 +211,11 @@ class CfgClothesStore {
 			class U_Competitor {};
 			class U_B_HeliPilotCoveralls {
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
-				class textures {
-					class U_B_HeliPilotCoveralls {};
-				};
+				class textures { class U_B_HeliPilotCoveralls {}; };
 			};
 			class U_C_CBRN_Suit_01_White_F {
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
-				class Textures {
-					class U_C_CBRN_Suit_01_White_F {};
-				};
+				class Textures { class U_C_CBRN_Suit_01_White_F {}; };
 			};
 		};
 		
@@ -285,37 +253,27 @@ class CfgClothesStore {
 
 		class Vests {
 			class V_LegStrapBag_black_F {
-				class Textures { 
-					class V_LegStrapBag_black_F {}; 
-				};
+				class Textures { class V_LegStrapBag_black_F {}; };
 			};
 			class V_Safety_yellow_F {
-				class Textures { 
-					class V_Safety_yellow_F {}; 
-				};
+				class Textures { class V_Safety_yellow_F {}; };
 			};
 			class V_BandollierB_blk {
-				class Textures { 
-					class V_BandollierB_blk {}; 
-				};
+				class Textures { class V_BandollierB_blk {}; };
 			};
 			class V_TacVestIR_blk {
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; 
 			};
 			class V_RebreatherB { 
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; 
-				class Textures { 
-					class V_RebreatherB {}; 
-				};
+				class Textures { class V_RebreatherB {}; };
 			};
 		};
 
 		class Backpacks {
 			class B_Carryall_cbr { 
 				displayName = "Invisible Backpack"; 
-				class Textures { 
-					class INVIS {}; 
-				};
+				class Textures { class INVIS {}; };
 			};
 		};
 	};
@@ -346,6 +304,7 @@ class CfgClothesStore {
 			class U_OrestesBody {};
 			class U_NikosBody {};
 			class U_NikosAgedBody {};
+			class U_C_FormalSuit_01_black_F {};
 		};
 		class Headgear {
 			class H_WirelessEarpiece_F {};

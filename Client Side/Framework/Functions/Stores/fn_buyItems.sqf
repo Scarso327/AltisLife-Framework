@@ -46,14 +46,16 @@ if (CASH < _cartValue) then {
 		
 		if ([_cartValue, _cartList, _className, _texClass, _cfgName, _itemCfg, _i, _override] call compile _onItemBuy) then {
 			_itemsBought = _itemsBought + 1;
+		} else {
+			_cartValue = _cartValue - (_cartList lbValue _i);
 		};
 	};
 
-	// Wipe Cart...
-	lbClear _cartList;
-	_cartList lbSetCurSel -1;
-
 	if !(_itemsBought isEqualTo 0) then {
+		// Wipe Cart...
+		lbClear _cartList;
+		_cartList lbSetCurSel -1;
+
 		// Pay for it and wipe total value...
 		CASH = CASH - _cartValue;
 		_display setVariable ["cartValue", 0];
@@ -65,6 +67,8 @@ if (CASH < _cartValue) then {
 		};
 
 		hint format["You've bought these items for £%1", [_cartValue] call life_fnc_numberText];
+	} else {
+		hint "You don't have enough space for these items...";
 	};
 };
 

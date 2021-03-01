@@ -21,17 +21,17 @@ if ([] call ULP_UI_fnc_isProgress) then {
 };
 
 // Notify the server...
-if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {
-	[0, format ["%1 was executed by %2", 
+if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {	
+	[format ["%1 was executed by %2", 
 		_unit getVariable ["realname", name _unit], 
 		_killer getVariable ["realname", name _killer]
-	]] remoteExecCall ["life_fnc_broadcast", RCLIENT];
+	]] remoteExecCall ["systemChat", RCLIENT];
 
 	// TODO : Add crime to killer...
 } else {
-	[0, format ["%1 bled out...", 
+	[format ["%1 bled out...", 
 		_unit getVariable ["realname", name _unit]
-	]] remoteExecCall ["life_fnc_broadcast", RCLIENT];
+	]] remoteExecCall ["systemChat", RCLIENT];
 };
 
 // Weapon Removal...

@@ -114,14 +114,18 @@ if (isDowned(player)) then {
                         // TODO : Door Unlocking...
                     } else {
                         if ((locked _veh) isEqualTo 2) then {
-                            _veh lock 0;
+                            [_veh, 0] remoteExec ["lock", _veh];
+                            [_veh, ["unlockCarSound", 50, 1]] remoteExec ["say3D"];
+
                             systemChat "You've unlocked this vehicle.";
-                            [_veh, "unlockCarSound", 50, 1] remoteExec ["life_fnc_say3D", RANY];
                         } else {
-                            _veh lock 2;
+                            [_veh, 2] remoteExec ["lock", _veh];
+                            [_veh, ["lockCarSound", 50, 1]] remoteExec ["say3D"];
+
                             systemChat "You've locked this vehicle.";
-                            [_veh, "lockCarSound", 50, 1] remoteExec ["life_fnc_say3D", RANY];
                         };
+
+                        _handled = true;
                     };
 
                     ULP_Ability_Cooldown = time + 1;

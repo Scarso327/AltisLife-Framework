@@ -36,7 +36,6 @@ class CfgFunctions {
             class mresArray {};
             class asyncCall{};
             class mresToArray {};
-            class insertVehicle {};
             class bool {};
             class mresString {};
             class updatePartial {};
@@ -55,15 +54,6 @@ class CfgFunctions {
             class wantedCrimes {};
             class wantedProfUpdate {};
         };
-
-        class Jail_Sys {
-            file = "\life_server\Functions\Jail";
-            class jailSys {};
-        };
-
-        class Client_Code {
-            file = "\life_server\Functions\Client";
-        };
     };
 
     class TON_System {
@@ -72,53 +62,9 @@ class CfgFunctions {
             file = "\life_server\Functions\Systems";
             class managesc {};
             class cleanup {};
-            class huntingZone {};
-            class getID {};
-            class vehicleCreate {};
-            class spawnVehicle {};
-            class getVehicles {};
-            class vehicleStore {};
-            class vehicleDelete {};
-            class spikeStrip {};
-            class transferOwnership {};
-            class federalUpdate {};
-            class chopShopSell {};
             class clientDisconnect {};
             class entityRespawned {};
             class cleanupRequest {};
-            class keyManagement {};
-            class vehicleUpdate {};
-            class recupkeyforHC {};
-            class handleBlastingCharge {};
-            class terrainSort {};
-        };
-
-        class Housing {
-            file = "\life_server\Functions\Housing";
-            class addHouse {};
-            class addContainer {};
-            class deleteDBContainer {};
-            class fetchPlayerHouses {};
-            class initHouses {};
-            class sellHouse {};
-            class sellHouseContainer {};
-            class updateHouseContainers {};
-            class updateHouseTrunk {};
-            class houseCleanup {};
-            class houseGarage {};
-        };
-
-        class Gangs {
-            file = "\life_server\Functions\Gangs";
-            class insertGang {};
-            class queryPlayerGang {};
-            class removeGang {};
-            class updateGang {};
-        };
-
-        class Actions {
-            file = "\life_server\Functions\Actions";
-            class pickupAction {};
         };
 
         class PlayTime {

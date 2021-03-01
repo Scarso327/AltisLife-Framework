@@ -16,19 +16,6 @@ life_server_isReady = false;
 _extDBNotLoaded = "";
 serv_sv_use = [];
 publicVariable "life_server_isReady";
-fn_whoDoneIt = compile preprocessFileLineNumbers "\life_server\Functions\Systems\fn_whoDoneIt.sqf";
-
-/*
-    Prepare the headless client.
-*/
-life_HC_isActive = false;
-publicVariable "life_HC_isActive";
-HC_Life = false;
-publicVariable "HC_Life";
-
-if (EXTDB_SETTING(getNumber,"HeadlessSupport") isEqualTo 1) then {
-    [] execVM "\life_server\initHC.sqf";
-};
 
 /*
     Prepare extDB before starting the initialization process
@@ -96,9 +83,6 @@ master_group attachTo[bank_obj,[0,0,0]];
 
 [8,true,12] execFSM "\life_server\FSM\timeModule.fsm";
 
-life_adminLevel = 0;
-life_medicLevel = 0;
-life_copLevel = 0;
 CONST(JxMxE_PublishVehicle,"false");
 
 /* Setup radio channels for west/independent/civilian */
@@ -121,10 +105,6 @@ TON_fnc_requestClientID =
 };
 "life_fnc_RequestClientId" addPublicVariableEventHandler TON_fnc_requestClientID;
 
-/* Event handler for logs */
-"money_log" addPublicVariableEventHandler {diag_log (_this select 1)};
-"advanced_log" addPublicVariableEventHandler {diag_log (_this select 1)};
-
 /* Miscellaneous mission-required stuff */
 life_wanted_list = [];
 
@@ -139,7 +119,6 @@ cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
     };
 };
 
-[] spawn TON_fnc_initHouses;
 cleanup = [] spawn TON_fnc_cleanup;
 
 TON_fnc_playtime_values = [];
@@ -148,7 +127,6 @@ TON_fnc_playtime_values_request = [];
 //Just incase the Headless Client connects before anyone else
 publicVariable "TON_fnc_playtime_values";
 publicVariable "TON_fnc_playtime_values_request";
-
 
 /* Setup the federal reserve building(s) */
 //private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;
@@ -169,9 +147,6 @@ publicVariable "TON_fnc_playtime_values_request";
 /* Tell clients that the server is ready and is accepting queries */
 life_server_isReady = true;
 publicVariable "life_server_isReady";
-
-/* Initialize hunting zone(s) */
-aiSpawn = ["hunting_zone",30] spawn TON_fnc_huntingZone;
 
 server_corpses = [];
 addMissionEventHandler ["EntityRespawned", {_this call TON_fnc_entityRespawned}];

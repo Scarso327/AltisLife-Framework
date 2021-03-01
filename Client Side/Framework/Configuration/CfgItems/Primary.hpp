@@ -202,7 +202,7 @@ class arifle_CTARS_ghex_F : arifle_CTARS_blk_F {};
 class arifle_CTARS_hex_F : arifle_CTARS_blk_F {};
 
 class srifle_DMR_07_blk_F {
-	displayName = "CMR-76 5.8 mm";
+	displayName = "CMR-76 6.5 mm";
 	price = 0;
 	class Textures {
 		class srifle_DMR_07_blk_F {
@@ -358,6 +358,19 @@ class arifle_ARX_blk_F {
 class arifle_ARX_ghex_F : arifle_ARX_blk_F {};
 class arifle_ARX_hex_F : arifle_ARX_blk_F {};
 
+class LMG_Mk200_F {
+	displayName = "Mk200 6.5 mm";
+	price = 0;
+	class Textures {
+		class LMG_Mk200_F {
+			displayName = "Tan";
+			condition = "true";
+		};
+		class LMG_Mk200_black_F : LMG_Mk200_F { displayName = "Black"; };
+	};
+};
+class LMG_Mk200_black_F : LMG_Mk200_F {};
+
 class arifle_AKM_F {
 	price = 0;
 	class Textures {};
@@ -452,6 +465,11 @@ class srifle_DMR_03_tan_F : srifle_DMR_03_F {};
 class srifle_DMR_03_multicam_F : srifle_DMR_03_F {};
 class srifle_DMR_03_woodland_F : srifle_DMR_03_F {};
 
+class LMG_Zafir_F {
+	price = 0;
+	class Textures {};
+};
+
 class srifle_DMR_04_DMS_weathered_Kir_F_F {
 	displayName = "ASP-1 Kir 12.7 mm";
 	price = 0;
@@ -464,3 +482,46 @@ class srifle_DMR_04_DMS_weathered_Kir_F_F {
 	};
 };
 class srifle_DMR_04_Tan_F : srifle_DMR_04_DMS_weathered_Kir_F_F {};
+
+class srifle_DMR_02_F {
+	displayName = "MAR-10 .338";
+	price = 0;
+	class Textures {
+		class srifle_DMR_02_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class srifle_DMR_02_sniper_F : srifle_DMR_02_F { displayName = "Sand"; };
+		class srifle_DMR_02_camo_F : srifle_DMR_02_F { displayName = "Camo"; };
+	};
+};
+class srifle_DMR_02_sniper_F : srifle_DMR_02_F {};
+class srifle_DMR_02_camo_F : srifle_DMR_02_F {};
+
+class srifle_DMR_05_blk_F {
+	displayName = "Cyrus 9.3 mm";
+	price = 0;
+	class Textures {
+		class srifle_DMR_02_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class srifle_DMR_05_tan_f : srifle_DMR_05_blk_F { displayName = "Tan"; };
+		class srifle_DMR_05_hex_F : srifle_DMR_05_blk_F { displayName = "Hex"; };
+	};
+};
+class srifle_DMR_05_tan_f : srifle_DMR_05_blk_F {};
+class srifle_DMR_05_hex_F : srifle_DMR_05_blk_F {};
+
+class srifle_LRR_F {
+	displayName = "M320 LRR .408";
+	price = 0;
+	class Textures {
+		class srifle_LRR_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class srifle_LRR_tna_F : srifle_LRR_F { displayName = "Tropic"; };
+	};
+};
+class srifle_LRR_tna_F : srifle_LRR_F {};

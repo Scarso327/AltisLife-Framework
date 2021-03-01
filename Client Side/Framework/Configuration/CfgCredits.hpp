@@ -7,7 +7,7 @@ class CfgCredits {
 	};
 	class Forums {
 		title = "Forums & Teamspeak!";
-		items[] = {"URL & IP:", "ascensionroleplay.co.uk"};
+		items[] = {"URL:", "ascensionroleplay.co.uk"};
 	};
 	class Development {
 		title = "Development Team!";

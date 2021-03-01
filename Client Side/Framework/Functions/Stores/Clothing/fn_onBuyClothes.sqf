@@ -12,9 +12,11 @@ _this params [
 // If the texture is it's own entity in CfgClothing, it's an item...
 if (isClass (missionConfigFile >> "CfgClothing" >> _texClass)) then {
 	_className = _texClass;
-
-	// If it's a textured item, always override...
-	_override = true;
+} else {
+	if (isClass (missionConfigFile >> "CfgClothing" >> _className >> "Textures" >> _texClass)) then {
+		// If it's a textured item, always override...
+		_override = true;
+	};
 };
 
 [_className, _override, _texClass] call ULP_fnc_handleGear

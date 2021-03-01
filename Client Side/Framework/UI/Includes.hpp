@@ -4,3 +4,4 @@
 #include "DialogTablet\DialogTablet.hpp"
 #include "DisplaySelect\DisplaySelectNumber.hpp"
 #include "DialogSpawn\DialogSpawn.hpp"
+#include "DialogVehicleStore\DialogVehicleStore.hpp"

@@ -208,6 +208,17 @@ class ULP_Functions {
 		class spawn {};
 		class changeSpawn {};
 	};
+
+	class Vehicle {
+		file = "Functions\Vehicle";
+		class vehicleCfg {};
+	};
+
+	class VehicleStore {
+		file = "Functions\VehicleStore";
+		class vehicleStore {};
+		class vehicleChange {};
+	};
 };
 
 class ULP_Functions_UI {

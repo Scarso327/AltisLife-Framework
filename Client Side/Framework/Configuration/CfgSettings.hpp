@@ -193,13 +193,8 @@ class Life_Settings {
     doesntThreaten[] = { "", "Binocular", "Rangefinder" };
 };
 
-#include "Config_Clothing.hpp"
 #include "CfgLicenses.hpp"
-#include "Config_Vehicles.hpp"
-#include "Config_vItems.hpp"
 #include "CfgWeapons.hpp"
-#include "Config_Gather.hpp"
-#include "Config_Process.hpp"
 #include "CfgProperty.hpp"
 #include "CfgFactions.hpp"
 #include "CfgSpawns.hpp"
@@ -214,3 +209,5 @@ class Life_Settings {
 #include "CfgGathering.hpp"
 #include "CfgProcessing.hpp"
 #include "CfgApps.hpp"
+#include "CfgVehicles\CfgVehicles.hpp"
+#include "CfgVehicles\CfgVehicleStores.hpp"

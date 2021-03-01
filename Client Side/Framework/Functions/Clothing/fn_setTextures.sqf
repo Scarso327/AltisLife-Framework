@@ -10,7 +10,6 @@ _this params [
 	["_object", player, [objNull]],
 	["_container", uniformContainer player, [objNull]],
 	["_texture", configNull, [configNull, ""]],
-	["_isBackpack", false, [true]],
     ["_isGlobal", true, [false]]
 ];
 
@@ -19,7 +18,7 @@ if (isNull _object || { isNull _container }) exitWith {};
 private _clothing = ([
 	uniform _object,
 	(typeOf _object)
-] select (_isBackpack));
+] select !(isPlayer _object));
 
 if (_texture isEqualType "") then {
 	_texture = CFG >> _clothing >> "Textures" >> _texture;

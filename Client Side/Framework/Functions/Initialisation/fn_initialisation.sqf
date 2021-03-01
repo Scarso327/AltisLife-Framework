@@ -47,7 +47,7 @@ private "_container";
 
 {
 	_container = uniformContainer _x;
-	[_x, _container, _container getVariable ["texture", ""], false, false] call ULP_fnc_setTextures;
+	[_x, _container, _container getVariable ["texture", ""], false] call ULP_fnc_setTextures;
 } forEach allUnits select {
 	!(_x isEqualTo player)
 };

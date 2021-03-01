@@ -343,7 +343,13 @@ class CfgItemsStore {
 			class hgun_Pistol_heavy_02_F {};
 		};
 		class Attachments {};
-		class Magazines {};
+		class Magazines {
+			class 10Rnd_9x21_Mag {};
+			class 16Rnd_9x21_Mag {};
+			class 9Rnd_45ACP_Mag {};
+			class 11Rnd_45ACP_Mag {};
+			class 6Rnd_45ACP_Cylinder {};
+		};
 		class Items {};
 	};
 
@@ -360,8 +366,19 @@ class CfgItemsStore {
 		};
 		class Pistols {};
 		class Attachments {};
-		class Magazines {};
-		class Items {};
+		class Magazines {
+			class 2Rnd_12Gauge_Slug {};
+			class 10Rnd_Mk14_762x51_Mag {};
+		};
+		class Items {
+			class ItemMap {};
+			class ItemCompass {};
+			class ItemWatch {};
+			class ItemGPS {};
+			class ItemRadio {};
+			class Binocular {};
+			class ToolKit {};
+		};
 	};
 
 	class Basic_Rebel {

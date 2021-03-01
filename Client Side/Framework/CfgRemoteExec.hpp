@@ -16,6 +16,9 @@ class CfgRemoteExec {
         mode = 1;
         jip = 0;
 
+        // REMOVE IN PRODUCTION
+        class bis_fnc_debugconsoleexec {};
+
         class ULP_fnc_setPlayerInfo {};
 
         class ULP_SRV_fnc_queryPlayerInfo {

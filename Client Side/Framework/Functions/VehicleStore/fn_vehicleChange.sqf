@@ -35,7 +35,7 @@ _settings ctrlSetStructuredText parseText format ["
 <t align = 'left' size = '1'><br/>%3</t>", _picture, _name, "DESCRIPTION TODO"];
 
 _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Buy Price <t align='right'>%1</t></t>
-<t align = 'left' size = '1'><br/>Sell Price <t align='right'>%2</t></t>
+<t align = 'left' size = '1'><br/>Rent Price <t align='right'>%2</t></t>
 <t align = 'left' size = '1'><br/>Sell Price <t align='right'>%3</t></t>
 <t align = 'left' size = '1'><br/>Retrieval Price <t align='right'>%4</t></t>
 <t align = 'left' size = '1'><br/>Virtual Item Space <t align='right'>%5</t></t>

@@ -50,11 +50,12 @@ if (createDialog "DialogVehicleStore") then {
 
 		if ((count _vehicleCfg) > 0 && { call compile getText((_vehicleCfg select 1) >> "conditions") }) then {
 			_vehicleCfg params [
-				"", "", "_picture", "_name"
+				"", "_missionCfg", "_picture", "_name"
 			];
 
 			_index = _list lbAdd _name;
 			_list lbSetPicture[_index, _picture];
+			_list lbSetValue[_index, ([getNumber (_missionCfg >> "buyPrice"), getNumber (_x >> "buyPrice")] select (isNumber (_x >> "buyPrice")))];
 			_list lbSetData[_index, configName _x];
 		};
 	} forEach ("isClass _x" configClasses (_cfg >> "Vehicles"));

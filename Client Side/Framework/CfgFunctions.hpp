@@ -166,6 +166,7 @@ class ULP_Functions {
 		class addContainer {};
 		class setGear {};
 		class addItems {};
+		class stripGear {};
 	};
 	
 	class Gathering {

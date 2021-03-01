@@ -9,7 +9,7 @@ _this params [
     ["_itemArray", ULP_Gear, [[]]]
 ];
 
-[] call life_fnc_stripDownPlayer;
+[] call ULP_fnc_stripGear;
 
 if (_itemArray isEqualTo []) exitWith { [] call ULP_fnc_setLoadout };
 

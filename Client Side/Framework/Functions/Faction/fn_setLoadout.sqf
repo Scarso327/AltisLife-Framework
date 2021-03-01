@@ -5,7 +5,7 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_setLoadout";
 
-[] call life_fnc_stripDownPlayer;
+[] call ULP_fnc_stripGear;
 
 private _faction = missionConfigFile >> "CfgFactions" >> ([player] call ULP_fnc_getFaction) >> "Loadout";
 

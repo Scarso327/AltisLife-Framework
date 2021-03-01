@@ -10,7 +10,7 @@ class CfgClothesStore {
 				price = 0;
 				condition = "true";
 			};
-			class I_ParadeUniform_01_AAF_decorated_F {
+			class U_I_ParadeUniform_01_AAF_decorated_F {
 				price = 0;
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess";
 			};

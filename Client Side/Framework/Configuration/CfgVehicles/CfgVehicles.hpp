@@ -10,6 +10,7 @@ class CfgVehicles {
 	class BaseTexture {
 		displayName = "Default";
 		buyPrice = 0;
+		factions[] = { "Civilian" };
 		textures[] = {};
 		conditions = "true";
 	};
@@ -121,20 +122,21 @@ class CfgVehicles {
 			class PoliceWhite : BaseTexture { 
 				displayName = "General Response";
 				conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
-				textures[] = { "data\textures\vehicles\land\police\police_hatchback_white.paa }; 
+				textures[] = { "data\textures\vehicles\land\police\police_hatchback_white.paa" }; 
 			};
 			class PoliceBlack : BaseTexture { 
 				displayName = "Armed Response";
 				conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
-				textures[] = { "data\textures\vehicles\land\police\police_hatchback_black.paa }; 
+				textures[] = { "data\textures\vehicles\land\police\police_hatchback_black.paa" }; 
 			};
 			class Medic : BaseTexture { 
 				displayName = "Incident Response";
 				conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
-				textures[] = { "data\textures\vehicles\land\medic\medic_hatchback.paa }; 
+				textures[] = { "data\textures\vehicles\land\medic\medic_hatchback.paa" }; 
 			};
 		};
 	};
+
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 0; };
 
 	class C_Offroad_01_F : Base {
@@ -269,23 +271,23 @@ class CfgVehicles {
 			};
 			class PoliceWhite : BaseTexture { 
 				displayName = "General Response";
-				conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
-				textures[] = { "data\textures\vehicles\land\police\police_suv_white.paa }; 
+				factions[] = { "Police" };
+				textures[] = { "data\textures\vehicles\land\police\police_suv_white.paa" }; 
 			};
-			class PoliceBlack : BaseTexture { 
+			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
-				textures[] = { "data\textures\vehicles\land\police\police_suv_black.paa }; 
+				conditions = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
+				textures[] = { "data\textures\vehicles\land\police\police_suv_black.paa" }; 
 			};
-			class PoliceUnmarked : BaseTexture {
+			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 
-				conditions = "[player, [""Police""]] call ULP_fnc_isFaction && ({ [""Police_Main"", 10] call ULP_fnc_hasAccess } || { [""Police_SFO"", 3] call ULP_fnc_hasAccess })";
+				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SFO"", 3] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 			};
 			class Medic : BaseTexture { 
 				displayName = "General Response";
 				conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
-				textures[] = { "data\textures\vehicles\land\medic\medic_suv.paa }; 
+				textures[] = { "data\textures\vehicles\land\medic\medic_suv.paa" }; 
 			};
 		};
 	};
@@ -317,17 +319,17 @@ class CfgVehicles {
 			class Police : BaseTexture { 
 				displayName = "Public Order";
 				conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
-				textures[] = { "data\textures\vehicles\land\police\police_van.paa }; 
+				textures[] = { "data\textures\vehicles\land\police\police_van.paa" }; 
 			};
 			class PoliceUnmarked : BaseTexture {
 				displayName = "Unmarked"; 
-				conditions = "[player, [""Police""]] call ULP_fnc_isFaction && ({ [""Police_Main"", 10] call ULP_fnc_hasAccess } || { [""Police_SFO"", 3] call ULP_fnc_hasAccess })";
+				conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess } || { [""Police_SFO"", 3] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
 			};
 			class Medic : BaseTexture { 
 				displayName = "Ambulance";
 				conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
-				textures[] = { "data\textures\vehicles\land\medic\medic_van.paa }; 
+				textures[] = { "data\textures\vehicles\land\medic\medic_van.paa" }; 
 			};
 		};
 	};

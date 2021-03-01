@@ -218,6 +218,7 @@ class ULP_Functions {
 		file = "Functions\VehicleStore";
 		class vehicleStore {};
 		class vehicleChange {};
+		class switchTexture {};
 	};
 };
 

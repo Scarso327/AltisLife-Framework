@@ -62,7 +62,7 @@ class DialogVehicleStore {
 			SAFEZONE_X(0.451875);
 			SAFEZONE_Y(0.291 + MARGIN_Y);
 			SAFEZONE_W(0.12203125);
-			SAFEZONE_H(0.385);
+			SAFEZONE_H(0.352);
 		};
 
 		class VehicleInformation : Life_RscStructuredText {
@@ -75,8 +75,18 @@ class DialogVehicleStore {
 			SAFEZONE_H(0.385);
 		};
 
+		class SalePrice : Life_RscStructuredText {
+			idc = 3405;
+			text = "";
+			colorBackground[] = INNER_BODY_COLOUR;
+			SAFEZONE_X(0.5790625);
+			SAFEZONE_Y(0.643);
+			SAFEZONE_W(0.12203125);
+			SAFEZONE_H(BUTTON_H * 2);
+		};
+
 		class RentButton : Life_RscButtonCenter {
-            idc = 3405;
+            idc = 3406;
             text = "<t align = 'center'>Rent</t>";
 			onButtonClick = "";
             SAFEZONE_X(0.5790625);
@@ -86,12 +96,21 @@ class DialogVehicleStore {
         };
 
 		class BuyButton : Life_RscButtonCenter {
-            idc = 3406;
+            idc = 3407;
             text = "<t align = 'center'>Buy</t>";
 			onButtonClick = "";
             SAFEZONE_X(0.64265625);
             SAFEZONE_Y(0.698 + BUTTON_MARGIN_Y);
 			SAFEZONE_W(0.0584375);
+			SAFEZONE_H(BUTTON_H);
+        };
+
+		class TextureList : Life_RscCombo {
+            idc = 3408;
+			onLBSelChanged = "_this call ULP_fnc_switchTexture;";
+            SAFEZONE_X(0.451875);
+			SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - (MARGIN_Y * 2)) - BUTTON_H);
+			SAFEZONE_W(0.12203125);
 			SAFEZONE_H(BUTTON_H);
         };
 	};

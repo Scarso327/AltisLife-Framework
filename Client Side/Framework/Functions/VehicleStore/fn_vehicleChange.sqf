@@ -23,10 +23,40 @@ _cfg params [
 	"", "_missionCfg", "_picture", "_name", "_topSpeed", "_armor", "_seats", "_power", "_fuel"
 ];
 
+private _storeCfg = (_display getVariable ["store", configNull]) >> "Vehicles" >> (configName _missionCfg);
+if !(isClass _storeCfg) exitWith {};
+
+private _textures = (("isClass _x" configClasses (_storeCfg >> "Textures")) apply {
+	configName _x
+});
+
+private _textureList = _display displayCtrl 3408;
+lbClear _textureList;
+
+private _texCfg = configNull;
+private _index = -1;
+
+{
+	_texCfg = missionConfigFile >> "CfgVehicles" >> (configName _missionCfg) >> "Textures" >> (configName _x);
+
+	if (isClass _texCfg && { [player, getArray(_texCfg >> "factions")] call ULP_fnc_isFaction } && { _textures isEqualTo [] || { (configName _texCfg) in _textures } } ) then {
+		_item = _textureList lbAdd (getText (_texCfg >> "displayName"));
+		_textureList lbSetValue [_item, getNumber (_texCfg >> "buyPrice")];
+		_textureList lbSetData [_item, configName _texCfg];
+	};
+} forEach ("isText (_x >> ""conditions"") && { call compile getText (_x >> ""conditions"") }" configClasses (_missionCfg >> "Textures"));
+
+
+if ((lbSize _textureList) isEqualTo 0) then {
+	_item = _textureList lbAdd "Default";
+	_textureList lbSetValue [_item, getNumber (_texCfg >> "buyPrice")];
+	_textureList lbSetData [_item, configName _texCfg];
+} else {
+	_textureList lbSetCurSel 0;
+};
+
 private _buyPrice = getNumber(_missionCfg >> "buyPrice");
-private _rentPrice = round (_buyPrice * getNumber(missionConfigFile >> "CfgVehicles" >> "rentPerc"));
 private _retrievalPrice = round (_buyPrice * getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc"));
-private _sellPrice = round (_buyPrice * getNumber(missionConfigFile >> "CfgVehicles" >> "sellPerc"));
 
 _settings ctrlSetStructuredText parseText format ["
 <br/><br/><br/>
@@ -35,19 +65,15 @@ _settings ctrlSetStructuredText parseText format ["
 <t align = 'left' size = '1'><br/>%3</t>", _picture, _name, "DESCRIPTION TODO"];
 
 _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Buy Price <t align='right'>%1</t></t>
-<t align = 'left' size = '1'><br/>Rent Price <t align='right'>%2</t></t>
-<t align = 'left' size = '1'><br/>Sell Price <t align='right'>%3</t></t>
-<t align = 'left' size = '1'><br/>Retrieval Price <t align='right'>%4</t></t>
-<t align = 'left' size = '1'><br/>Virtual Item Space <t align='right'>%5</t></t>
-<t align = 'left' size = '1'><br/>Top Speed <t align='right'>%6 km/h</t></t>
-<t align = 'left' size = '1'><br/>Armor Level <t align='right'>%7</t></t>
-<t align = 'left' size = '1'><br/>Seats <t align='right'>%8</t></t>
-<t align = 'left' size = '1'><br/>Horse Power <t align='right'>%9 bhp</t></t>
-<t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%10</t></t>", 
+<t align = 'left' size = '1'><br/>Retrieval Price <t align='right'>%2</t></t>
+<t align = 'left' size = '1'><br/>Virtual Item Space <t align='right'>%3</t></t>
+<t align = 'left' size = '1'><br/>Top Speed <t align='right'>%4 km/h</t></t>
+<t align = 'left' size = '1'><br/>Armor Level <t align='right'>%5</t></t>
+<t align = 'left' size = '1'><br/>Seats <t align='right'>%6</t></t>
+<t align = 'left' size = '1'><br/>Horse Power <t align='right'>%7 bhp</t></t>
+<t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%8</t></t>", 
 ([format["£%1", [_buyPrice] call life_fnc_numberText], "-"] select (_buyPrice < 1)),
-([format["£%1", [_rentPrice] call life_fnc_numberText], "-"] select (_rentPrice < 1)), 
-([format["£%1", [_sellPrice] call life_fnc_numberText], "-"] select (_sellPrice < 1)), 
-([format["£%1", [_retrievalPrice] call life_fnc_numberText], "-"] select (_retrievalPrice < 1)), getNumber(_missionCfg >> "virtualSpace"),
-_topSpeed, _armor, _seats, _power, _fuel];
+([format["£%1", [_retrievalPrice] call life_fnc_numberText], "-"] select (_retrievalPrice < 1)), 
+getNumber(_missionCfg >> "virtualSpace"), _topSpeed, _armor, _seats, _power, _fuel];
 
 _display setVariable ["selected", _cfg];

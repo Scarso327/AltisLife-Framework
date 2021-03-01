@@ -19,6 +19,8 @@ class CfgVehicleStores {
 			class C_SUV_01_F {
 				class Textures {
 					class PoliceWhite {};
+					class PoliceBlack {};
+					class PoliceUnmarked {};
 				};
 			};
 		};

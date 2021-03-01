@@ -99,7 +99,7 @@ class CfgSpawns {
             icon = "\a3\ui_f\data\map\LocationTypes\vegetationBroadleaf_CA.paa";
         };
 
-        class LaTriniteHospital : NHS {
+        class LaTriniteHospital : Medic {
             displayName = "La Trinité HQ";
             marker = "medic_spawn";
             icon = "\a3\ui_f\data\map\VehicleIcons\pictureLogic_ca.paa";

@@ -17,7 +17,6 @@ HC_UID = nil;
         HC_Life publicVariableClient "serv_sv_use";
         cleanupFSM setFSMVariable ["stopfsm",true];
         terminate cleanup;
-        terminate aiSpawn;
         [true] call TON_fnc_transferOwnership;
         HC_Life publicVariableClient "animals";
         diag_log "Headless client is connected and ready to work!";
@@ -34,7 +33,6 @@ HC_DC = addMissionEventHandler ["PlayerDisconnected",
             cleanup = [] spawn TON_fnc_cleanup;
             cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
             [false] call TON_fnc_transferOwnership;
-            aiSpawn = ["hunting_zone",30] spawn TON_fnc_huntingZone;
             diag_log "Headless client disconnected! Broadcasted the vars!";
             diag_log "Ready for receiving queries on the server machine.";
         };

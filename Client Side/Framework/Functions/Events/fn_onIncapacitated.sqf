@@ -30,14 +30,14 @@ private _deathMessage = format["<t align='center' size='2'>You killed yourself</
 if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {
 	_deathMessage = format["<t align='center' size='2'>%1 seriously injured you</t>", name _killer];
 
-	[0, format ["%1 was seriously injured by %2", 
+	[format ["%1 was seriously injured by %2", 
 		_unit getVariable ["realname", name _unit], 
 		_killer getVariable ["realname", name _killer]
-	]] remoteExecCall ["life_fnc_broadcast", RCLIENT];
+	]] remoteExecCall ["systemChat", RCLIENT];
 } else {
-	[0, format ["%1 was seriously injured", 
+	[format ["%1 was seriously injured", 
 		_unit getVariable ["realname", name _unit]
-	]] remoteExecCall ["life_fnc_broadcast", RCLIENT];
+	]] remoteExecCall ["systemChat", RCLIENT];
 };
 
 [] call ULP_fnc_onUnrestrained;

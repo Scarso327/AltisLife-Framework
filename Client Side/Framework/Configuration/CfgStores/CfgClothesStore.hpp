@@ -306,6 +306,7 @@ class CfgClothesStore {
 			class U_NikosAgedBody {};
 			class U_C_FormalSuit_01_black_F {};
 		};
+
 		class Headgear {
 			class H_WirelessEarpiece_F {};
 			class H_Bandanna_gry {};
@@ -423,6 +424,34 @@ class CfgClothesStore {
 				};
 			};
 		};
+	};
+
+	class Solicitor {
+		storeName = "Solicitor Clothing Store";
+		class Uniforms {
+			class U_NikosAgedBody {};
+			class U_C_FormalSuit_01_black_F {};
+		};
+
+		class Headgear {
+			class H_Hat_grey {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F {};
+			class G_Aviator {};
+			class G_Squares {};
+			class G_Spectacles {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+			class G_Lady_Blue {};
+			class G_Tactical_Clear {};
+			class G_Respirator_white_F {};
+			class G_EyeProtectors_F {};
+		};
+
+		class Vests {};
+		class Backpacks {};
 	};
 
 	class Press {
@@ -591,7 +620,7 @@ class CfgClothesStore {
 				};
 			};
 		};
-
+		
 		class Backpacks {
 			class B_LegStrapBag_black_F {};
 			class B_Messenger_Black_F {};

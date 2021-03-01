@@ -442,12 +442,12 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 	virtualSpace = 0;
 	class Textures {
 		class U_I_ParadeUniform_01_AAF_decorated_F { 
-			displayName = "Gold Command"; 
+			displayName = "Command Parade"; 
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
 		class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F { 
-			displayName = "Silver Command"; 
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
+			displayName = "Constable Parade"; 
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 	};
 };

@@ -506,8 +506,8 @@ class srifle_DMR_05_blk_F {
 			displayName = "Black";
 			condition = "true";
 		};
-		class srifle_DMR_05_tan_f : srifle_DMR_05_blk_F { displayName = "Tan"; };
-		class srifle_DMR_05_hex_F : srifle_DMR_05_blk_F { displayName = "Hex"; };
+		class srifle_DMR_05_tan_f : srifle_DMR_02_F { displayName = "Tan"; };
+		class srifle_DMR_05_hex_F : srifle_DMR_02_F { displayName = "Hex"; };
 	};
 };
 class srifle_DMR_05_tan_f : srifle_DMR_05_blk_F {};

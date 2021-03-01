@@ -436,22 +436,22 @@ class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F{};
 class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F{};
 class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F{};
 
-class I_ParadeUniform_01_AAF_decorated_F {
+class U_I_ParadeUniform_01_AAF_decorated_F {
 	displayName = "Parade Uniform";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
-		class I_ParadeUniform_01_AAF_decorated_F { 
+		class U_I_ParadeUniform_01_AAF_decorated_F { 
 			displayName = "Gold Command"; 
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
-		class I_ParadeUniform_01_AAF_F : I_ParadeUniform_01_AAF_decorated_F { 
+		class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F { 
 			displayName = "Silver Command"; 
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
 		};
 	};
 };
-class I_ParadeUniform_01_AAF_F : I_ParadeUniform_01_AAF_decorated_F{};
+class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F{};
 
 class U_B_survival_uniform {
 	price = 0;

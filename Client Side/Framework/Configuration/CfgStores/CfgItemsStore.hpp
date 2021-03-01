@@ -102,6 +102,7 @@ class CfgItemsStore {
 				class textures { class srifle_DMR_03_F {}; };
 			};
 		};
+
 		class Pistols {
 			class hgun_P07_F {
 				price = 0;
@@ -112,6 +113,7 @@ class CfgItemsStore {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SFO"", 4] call ULP_fnc_hasAccess }"; 
 			};
 		};
+
 		class Attachments {
 			class bipod_01_F_blk { 
 				price = 0;
@@ -222,7 +224,9 @@ class CfgItemsStore {
 				class textures { class muzzle_snds_B {}; };
 			};
 		};
+
 		class Magazines {};
+
 		class Items {
 			class ItemMap {
 				price = 0;
@@ -304,6 +308,7 @@ class CfgItemsStore {
 		storeName = "Handgun Store";
 		condition = "true";
 		class Rifles {};
+
 		class Pistols {
 			class hgun_Pistol_01_F {};
 			class hgun_Rook40_F {};
@@ -311,7 +316,9 @@ class CfgItemsStore {
 			class hgun_Pistol_heavy_01_F {};
 			class hgun_Pistol_heavy_02_F {};
 		};
+
 		class Attachments {};
+
 		class Magazines {
 			class 10Rnd_9x21_Mag {};
 			class 16Rnd_9x21_Mag {};
@@ -319,6 +326,7 @@ class CfgItemsStore {
 			class 11Rnd_45ACP_Mag {};
 			class 6Rnd_45ACP_Cylinder {};
 		};
+
 		class Items {};
 	};
 
@@ -331,12 +339,15 @@ class CfgItemsStore {
 			};
 			class srifle_DMR_06_hunter_F {};
 		};
+
 		class Pistols {};
 		class Attachments {};
+
 		class Magazines {
 			class 2Rnd_12Gauge_Slug {};
 			class 10Rnd_Mk14_762x51_Mag {};
 		};
+
 		class Items {
 			class ItemMap {};
 			class ItemCompass {};
@@ -373,6 +384,7 @@ class CfgItemsStore {
 			class arifle_MXM_Black_F {};
 			class arifle_AKM_F {};
 		};
+
 		class Pistols {
 			class hgun_Pistol_01_F {};
 			class hgun_Rook40_F {};
@@ -380,6 +392,7 @@ class CfgItemsStore {
 			class hgun_Pistol_heavy_01_F {};
 			class hgun_Pistol_heavy_02_F {};
 		};
+
 		class Attachments {
 			class bipod_01_F_blk {};
 			class acc_flashlight {};
@@ -393,6 +406,7 @@ class CfgItemsStore {
 			class optic_Arco {};
 			class optic_ERCO_blk_F {};
 		};
+
 		class Magazines {
 			class 10Rnd_9x21_Mag {};
 			class 16Rnd_9x21_Mag {};
@@ -415,6 +429,7 @@ class CfgItemsStore {
 			class 30Rnd_65x39_caseless_black_mag {};
 			class 30Rnd_762x39_Mag_F {};
 		};
+
 		class Items {
 			class ItemMap {};
 			class ItemCompass {};
@@ -463,6 +478,7 @@ class CfgItemsStore {
 			class srifle_EBR_F {};
 			class srifle_DMR_03_F {};
 		};
+
 		class Pistols {
 			class hgun_Pistol_01_F {};
 			class hgun_Rook40_F {};
@@ -470,6 +486,7 @@ class CfgItemsStore {
 			class hgun_Pistol_heavy_01_F {};
 			class hgun_Pistol_heavy_02_F {};
 		};
+
 		class Attachments {
 			class bipod_01_F_blk {};
 			class acc_flashlight {};
@@ -485,6 +502,7 @@ class CfgItemsStore {
 			class optic_DMS {};
 			class optic_SOS {};
 		};
+
 		class Magazines {
 			class 10Rnd_9x21_Mag {};
 			class 16Rnd_9x21_Mag {};
@@ -513,6 +531,7 @@ class CfgItemsStore {
 			class 20Rnd_762x51_Mag {};
 			class 30Rnd_762x39_Mag_F {};
 		};
+		
 		class Items {
 			class ItemMap {};
 			class ItemCompass {};

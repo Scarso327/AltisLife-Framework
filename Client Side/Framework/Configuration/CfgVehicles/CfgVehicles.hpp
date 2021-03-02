@@ -274,13 +274,19 @@ class CfgVehicles {
 			class PoliceWhite : BaseTexture { 
 				displayName = "General Response";
 				factions[] = { "Police" };
-				textures[] = { "data\textures\vehicles\land\police\police_suv_white.paa" }; 
+				textures[] = { "data\textures\vehicles\land\police\whitesuv.paa" }; 
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
 				factions[] = { "Police" };
 				conditions = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
-				textures[] = { "data\textures\vehicles\land\police\police_suv_black.paa" }; 
+				textures[] = { "data\textures\vehicles\land\police\blacksuv.paa" }; 
+			};
+			class PoliceANPR : PoliceWhite { 
+				displayName = "Interceptor";
+				factions[] = { "Police" };
+				conditions = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
+				textures[] = { "data\textures\vehicles\land\police\anprsuv.paa" }; 
 			};
 			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 

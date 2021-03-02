@@ -935,10 +935,6 @@ class CfgVehicles {
 			};
 		};
 	};
-	class C_Heli_Light_01_civil_F : C_Heli_Light_01_civil_F {
-		buyPrice = 0;
-		virtualSpace = 0;
-	};
 
 	class O_Heli_Light_02_unarmed_F {
 		buyPrice = 0;

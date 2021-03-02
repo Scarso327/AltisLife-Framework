@@ -15,6 +15,13 @@ class CfgVehicles {
 		conditions = "true";
 	};
 
+	class Police : BaseTexture {
+		factions[] = { "Police" };
+		class Siren {
+			SFX[] = { "Police_One" };
+		};
+	};
+
 	// CARS --------------------------------------------------------------------------------------
 	class C_Kart_01_Blu_F : Base {
 		buyPrice = 0;
@@ -271,10 +278,10 @@ class CfgVehicles {
 				displayName = "Orange";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" }; 
 			};
-			class PoliceWhite : BaseTexture { 
+			class PoliceWhite : Police { 
 				displayName = "General Response";
 				factions[] = { "Police" };
-				textures[] = { "data\textures\vehicles\land\police\whitesuv.paa" }; 
+				textures[] = { "data\textures\vehicles\land\police\whitesuv.paa" };
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
@@ -1132,4 +1139,10 @@ class CfgVehicles {
 	class O_Plane_CAS_02_F { buyPrice = 0; };
 	class O_Plane_Fighter_02_F { buyPrice = 0; };
 	class O_Plane_Fighter_02_Stealth_F { buyPrice = 0; };
+
+	// Sounds...
+	
+	class Police_One {
+		sound = "Police_One";
+	};
 };

@@ -6,6 +6,7 @@ enableDebugConsole = 2;
 onPauseScript[]={ "ULP_fnc_onPause" };
 
 #include "CfgRemoteExec.hpp"
+#include "CfgSFX.hpp"
 #include "UI\Includes.hpp"
 #include "Configuration\CfgSettings.hpp"
 

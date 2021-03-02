@@ -6,7 +6,7 @@
 scopeName "fn_buyVehicle";
 
 if (canSuspend) exitWith {
-	_this call ULP_fnc_buyVehicle;
+    [ULP_fnc_buyVehicle, _this] call ULP_fnc_directCall;
 };
 
 _this params [

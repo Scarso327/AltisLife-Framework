@@ -32,6 +32,7 @@ class ULP_Functions {
 
 	class Utility {
 		file = "Functions\Utility";
+		class directCall {};
 		class waitExecute {};
 		class waitUntilExecute {};
 	};

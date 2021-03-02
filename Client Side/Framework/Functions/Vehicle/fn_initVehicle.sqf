@@ -6,7 +6,7 @@
 scopeName "fn_initVehicle";
 
 if (canSuspend) exitWith {
-	_this call ULP_fnc_initVehicle;
+    [ULP_fnc_initVehicle, _this] call ULP_fnc_directCall;
 };
 
 _this params [

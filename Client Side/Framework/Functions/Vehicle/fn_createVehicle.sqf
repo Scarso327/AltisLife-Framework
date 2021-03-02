@@ -1,0 +1,46 @@
+/*
+** Author: Jack "Scarso" Farhall
+** Description: 
+*/
+#include "..\..\script_macros.hpp"
+scopeName "fn_createVehicle";
+
+if (canSuspend) exitWith {
+	_this call ULP_fnc_createVehicle;
+};
+
+_this params [
+	["_class", "", [""]],
+	["_point", [[0, 0, 0], 0], [[]]],
+	["_texture", "", [""]],
+	["_id", -1, [0]],
+	["_owner", [getPlayerUID player, profileName], [[]]],
+	["_hint", hasInterface, [true]]
+];
+
+_point params [
+	"_pos", "_dir"
+];
+
+private _vehicle = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
+_vehicle allowDammage false;
+_vehicle setDir _dir;
+_vehicle lock 2;
+
+if (_id >= 0) then {
+	_vehicle setVariable ["vehicle_id", _id, true];
+};
+
+if (_owner isEqualType ["", ""]) then {
+	_vehicle setVariable ["vehicle_owners", createHashMapFromArray [_owner], true];
+};
+
+[_vehicle, _texture] call ULP_fnc_skinVehicle;
+[_vehicle] call ULP_fnc_initVehicle;
+
+_vehicle allowDammage true;
+ULP_Keys pushBackUnique _vehicle;
+
+if (_hint) then {
+	hint "Your vehicle is now ready...";
+};

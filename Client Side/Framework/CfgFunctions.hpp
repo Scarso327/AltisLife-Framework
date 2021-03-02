@@ -43,6 +43,7 @@ class ULP_Functions {
 		class isFaction {};
 		class hasAccess {};
 		class setLoadout {};
+		class factionPresistant {};
 	};
 
 	class Functions {
@@ -211,11 +212,15 @@ class ULP_Functions {
 
 	class Vehicle {
 		file = "Functions\Vehicle";
+		class createVehicle {};
+		class initVehicle {};
+		class skinVehicle {};
 		class vehicleCfg {};
 	};
 
 	class VehicleStore {
 		file = "Functions\VehicleStore";
+		class buyVehicle {};
 		class vehicleStore {};
 		class vehicleChange {};
 		class switchTexture {};

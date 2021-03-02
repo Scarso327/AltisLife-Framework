@@ -20,6 +20,10 @@ class CfgRemoteExec {
         class bis_fnc_debugconsoleexec {};
 
         class ULP_fnc_setPlayerInfo {};
+        class ULP_fnc_initVehicle {};
+        class ULP_fnc_createVehicle {
+            allowedTargets = CLIENT;
+        };
 
         class ULP_SRV_fnc_queryPlayerInfo {
             allowedTargets = SERVER;
@@ -28,6 +32,9 @@ class CfgRemoteExec {
             allowedTargets = SERVER;
         };
         class ULP_SRV_fnc_savePlayerState {
+            allowedTargets = SERVER;
+        };
+        class ULP_SRV_fnc_createVehicle {
             allowedTargets = SERVER;
         };
     };

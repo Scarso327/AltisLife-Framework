@@ -5,6 +5,7 @@ class CfgFactions {
 	class Police {
 		displayName = "Altis Police Constabulary";
 		pay = 15000;
+
 		class Whitelisting {
 			class Main {
 				queryIndex = 12;
@@ -19,6 +20,10 @@ class CfgFactions {
 			queryPrefix = "cop_";
 			customQuery = ", cop_blacklisted, coplevel, asolevel, sfolevel";
 			timeIndex = 0;
+		};
+
+		class Persistance {
+			vehicles = false;
 		};
 
 		class Loadout {
@@ -53,6 +58,10 @@ class CfgFactions {
 			timeIndex = 1;
 		};
 
+		class Persistance {
+			vehicles = false;
+		};
+
 		class Loadout {
 			class Uniforms {
 				class U_Rangemaster {};
@@ -76,6 +85,10 @@ class CfgFactions {
 			queryPrefix = "civ_";
 			customQuery = ", arrested";
 			timeIndex = 2;
+		};
+
+		class Persistance {
+			vehicles = true;
 		};
 		
 		class Loadout {

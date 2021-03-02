@@ -25,6 +25,11 @@ class CfgFunctions {
             class savePlayerInfo {};
             class savePlayerState {};
         };
+
+        class DatabaseVehicle {
+            file = "\life_server\Functions\Database\Vehicle";
+            class createVehicle {};
+        };
     };
 
     class MySQL_Database {

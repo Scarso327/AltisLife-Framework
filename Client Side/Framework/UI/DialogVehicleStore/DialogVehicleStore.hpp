@@ -85,7 +85,7 @@ class DialogVehicleStore {
 			SAFEZONE_H(BUTTON_H * 2);
 		};
 
-		class RentButton : Life_RscButtonCenter {
+		/*class RentButton : Life_RscButtonCenter {
             idc = 3406;
             text = "<t align = 'center'>Rent</t>";
 			onButtonClick = "";
@@ -93,12 +93,12 @@ class DialogVehicleStore {
             SAFEZONE_Y(0.698 + BUTTON_MARGIN_Y);
 			SAFEZONE_W(0.0584375);
 			SAFEZONE_H(BUTTON_H);
-        };
+        };*/
 
 		class BuyButton : Life_RscButtonCenter {
             idc = 3407;
             text = "<t align = 'center'>Buy</t>";
-			onButtonClick = "";
+			onButtonClick = "_this call ULP_fnc_buyVehicle;";
             SAFEZONE_X(0.64265625);
             SAFEZONE_Y(0.698 + BUTTON_MARGIN_Y);
 			SAFEZONE_W(0.0584375);

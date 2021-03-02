@@ -70972,7 +70972,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\phoenixrp.paa";
+							value="";
 						};
 					};
 				};
@@ -71032,7 +71032,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\phoenixrp.paa";
+							value="";
 						};
 					};
 				};
@@ -71092,7 +71092,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\phoenixrp.paa";
+							value="";
 						};
 					};
 				};
@@ -71212,7 +71212,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\phoenixrp.paa";
+							value="";
 						};
 					};
 				};
@@ -71272,7 +71272,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\phoenixrp.paa";
+							value="";
 						};
 					};
 				};
@@ -71333,7 +71333,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\phoenixrp.paa";
+							value="";
 						};
 					};
 				};
@@ -74432,7 +74432,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\Signs\parking.paa";
+							value="";
 						};
 					};
 				};
@@ -74492,7 +74492,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\Signs\parking.paa";
+							value="";
 						};
 					};
 				};
@@ -74552,7 +74552,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\Signs\parking.paa";
+							value="";
 						};
 					};
 				};
@@ -74612,7 +74612,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\Signs\parking.paa";
+							value="";
 						};
 					};
 				};
@@ -74672,7 +74672,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="data\textures\Map\Signs\parking.paa";
+							value="";
 						};
 					};
 				};

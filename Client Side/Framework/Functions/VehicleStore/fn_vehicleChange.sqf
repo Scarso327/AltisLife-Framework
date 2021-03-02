@@ -26,6 +26,8 @@ _cfg params [
 private _storeCfg = (_display getVariable ["store", configNull]) >> "Vehicles" >> (configName _missionCfg);
 if !(isClass _storeCfg) exitWith {};
 
+_display setVariable ["selected", _cfg];
+
 private _textures = (("isClass _x" configClasses (_storeCfg >> "Textures")) apply {
 	configName _x
 });
@@ -46,14 +48,14 @@ private _index = -1;
 	};
 } forEach ("isText (_x >> ""conditions"") && { call compile getText (_x >> ""conditions"") }" configClasses (_missionCfg >> "Textures"));
 
-
 if ((lbSize _textureList) isEqualTo 0) then {
 	_item = _textureList lbAdd "Default";
 	_textureList lbSetValue [_item, getNumber (_texCfg >> "buyPrice")];
 	_textureList lbSetData [_item, configName _texCfg];
-} else {
-	_textureList lbSetCurSel 0;
 };
+
+_textureList lbSetCurSel 0;
+[_textureList, 0] call ULP_fnc_switchTexture;
 
 private _buyPrice = getNumber(_missionCfg >> "buyPrice");
 private _retrievalPrice = round (_buyPrice * getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc"));
@@ -75,5 +77,3 @@ _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Buy 
 ([format["£%1", [_buyPrice] call life_fnc_numberText], "-"] select (_buyPrice < 1)),
 ([format["£%1", [_retrievalPrice] call life_fnc_numberText], "-"] select (_retrievalPrice < 1)), 
 getNumber(_missionCfg >> "virtualSpace"), _topSpeed, _armor, _seats, _power, _fuel];
-
-_display setVariable ["selected", _cfg];

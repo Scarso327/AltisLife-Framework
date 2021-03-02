@@ -34,7 +34,6 @@ if !(_query isEqualTo "" && { _query isEqualTo [] }) then {
 	_steamid, _faction, _class, _type, _texture
 ], 1] call DB_fnc_asyncCall;
 
-
 _id = _id + 1;
 
 [_class, _spawn, _texture, _id] remoteExecCall ["ULP_fnc_createVehicle", remoteExecutedOwner];

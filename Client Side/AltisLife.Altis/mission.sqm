@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.08726646;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=2;
 	class ItemIDProvider
 	{
-		nextID=7136;
+		nextID=7137;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3642.0984,40.435177,13144.617};
-		dir[]={-0.65717286,-0.68983233,0.30383557};
-		up[]={-0.62614578,0.72398037,0.2894899};
-		aside[]={0.41966879,-2.712477e-007,0.90771651};
+		pos[]={8582.9355,151.42499,25075.113};
+		dir[]={-0.27611768,-0.63067693,0.72527164};
+		up[]={-0.22439355,0.77604342,0.58940881};
+		aside[]={0.93456769,-1.0454096e-007,0.35579935};
 	};
 };
 binarizationWanted=0;
@@ -395,6 +395,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_1";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -471,6 +472,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_2";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -547,6 +549,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_3";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -623,6 +626,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_4";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -699,6 +703,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_5";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -775,6 +780,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_6";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -851,6 +857,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_7";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -927,6 +934,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_8";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1003,6 +1011,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_9";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1079,6 +1088,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_10";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1155,6 +1165,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_11";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1231,6 +1242,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_12";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1307,6 +1319,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_13";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1383,6 +1396,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_14";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1459,6 +1473,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_15";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1535,6 +1550,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_16";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1611,6 +1627,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_17";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1687,6 +1704,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_18";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1763,6 +1781,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_19";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1839,6 +1858,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_20";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1915,6 +1935,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_21";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -1991,6 +2012,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_22";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2067,6 +2089,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_23";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2143,6 +2166,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_24";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2219,6 +2243,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_25";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2295,6 +2320,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_26";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2371,6 +2397,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_27";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2447,6 +2474,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_28";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2523,6 +2551,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_29";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2599,6 +2628,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_30";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2675,6 +2705,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_31";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2751,6 +2782,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_32";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2827,6 +2859,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_33";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2903,6 +2936,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_34";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -2979,6 +3013,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_35";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3055,6 +3090,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_36";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3131,6 +3167,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_37";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3207,6 +3244,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_38";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3283,6 +3321,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_39";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3359,6 +3398,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_40";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3435,6 +3475,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_41";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3511,6 +3552,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_42";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3587,6 +3629,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_43";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3663,6 +3706,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_44";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3739,6 +3783,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_45";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3815,6 +3860,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_46";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3891,6 +3937,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_47";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -3967,6 +4014,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_48";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4043,6 +4091,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_49";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4119,6 +4168,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_50";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4195,6 +4245,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_51";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4271,6 +4322,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_52";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4347,6 +4399,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_53";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4423,6 +4476,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_54";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4499,6 +4553,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_55";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4575,6 +4630,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_56";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4651,6 +4707,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_57";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4727,6 +4784,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_58";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4803,6 +4861,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_59";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4879,6 +4938,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_60";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -4955,6 +5015,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_61";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5031,6 +5092,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_62";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5107,6 +5169,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_63";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5183,6 +5246,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_64";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5259,6 +5323,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_65";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5335,6 +5400,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_66";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5411,6 +5477,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_67";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5487,6 +5554,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_68";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5563,6 +5631,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_69";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5639,6 +5708,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_70";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5715,6 +5785,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_71";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5791,6 +5862,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_72";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5867,6 +5939,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_73";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -5943,6 +6016,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_74";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6019,6 +6093,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_75";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6095,6 +6170,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_76";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6171,6 +6247,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_77";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6247,6 +6324,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_78";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6323,6 +6401,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_79";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6399,6 +6478,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_80";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6475,6 +6555,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_81";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6551,6 +6632,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_82";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6627,6 +6709,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_83";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6703,6 +6786,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_84";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6779,6 +6863,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_85";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6855,6 +6940,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_86";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -6931,6 +7017,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_87";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7007,6 +7094,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_88";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7083,6 +7171,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_89";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7159,6 +7248,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_90";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7235,6 +7325,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_91";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7311,6 +7402,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_92";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7387,6 +7479,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_93";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7463,6 +7556,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_94";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7539,6 +7633,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_95";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7615,6 +7710,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_96";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7691,6 +7787,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_97";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7767,6 +7864,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_98";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7843,6 +7941,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_99";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7919,6 +8018,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_100";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -7995,6 +8095,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_101";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8071,6 +8172,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_102";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8147,6 +8249,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_103";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8223,6 +8326,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_104";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8299,6 +8403,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_105";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8375,6 +8480,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_106";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8451,6 +8557,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_107";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8527,6 +8634,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_108";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8603,6 +8711,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_109";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8679,6 +8788,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_110";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -8748,20 +8858,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36218715,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026734,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_1";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=221;
 					type="B_Survivor_F";
-					atlOffset=-0.20736939;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8810,20 +8920,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36218715,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026734,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_2";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=222;
 					type="B_Survivor_F";
-					atlOffset=-0.20736939;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8872,20 +8982,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_3";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=223;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8934,20 +9044,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_4";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=224;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8996,20 +9106,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_5";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=225;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9058,20 +9168,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_6";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=226;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9120,20 +9230,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_7";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=227;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9182,20 +9292,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_8";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=228;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9244,20 +9354,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_9";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=229;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9306,20 +9416,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_10";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=230;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9368,20 +9478,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_11";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=231;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9430,20 +9540,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_12";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=232;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9492,20 +9602,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_13";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=233;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9554,20 +9664,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_14";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=234;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9616,20 +9726,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_15";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=235;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9678,20 +9788,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_16";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=236;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9740,20 +9850,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_17";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=237;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9802,20 +9912,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_18";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=238;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9864,20 +9974,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_19";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=239;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9926,20 +10036,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_20";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=240;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9988,20 +10098,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_21";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=241;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10050,20 +10160,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_22";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=242;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10112,20 +10222,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_23";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=243;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10174,20 +10284,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_24";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=244;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10236,20 +10346,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8819.375,0.36219001,24870.355};
+						position[]={8553.8848,102.73098,25135.805};
 						angles[]={0,1.7026794,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Police"", true] call ULP_fnc_setFaction;";
 						name="cop_25";
 						description="APC - Whitelisted";
 						isPlayable=1;
 					};
 					id=245;
 					type="B_Survivor_F";
-					atlOffset=-0.20736653;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10298,7 +10408,6 @@ class Mission
 			{
 			};
 			id=220;
-			atlOffset=-0.20736939;
 		};
 		class Item112
 		{
@@ -10319,6 +10428,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_1";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10381,6 +10491,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_2";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10443,6 +10554,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_3";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10505,6 +10617,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_4";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10567,6 +10680,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_5";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10629,6 +10743,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_6";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10691,6 +10806,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_7";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10753,6 +10869,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_8";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10815,6 +10932,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_9";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10877,6 +10995,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, ""Medic"", true] call ULP_fnc_setFaction;";
 						name="med_10";
 						description="NHS - Whitelisted";
 						isPlayable=1;
@@ -10993,6 +11112,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_111";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11069,6 +11189,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_112";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11145,6 +11266,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_113";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11221,6 +11343,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_114";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11297,6 +11420,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_115";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11373,6 +11497,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_116";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11449,6 +11574,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_117";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11525,6 +11651,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_118";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11601,6 +11728,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_119";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11677,6 +11805,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_120";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11753,6 +11882,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_121";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11829,6 +11959,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_122";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11905,6 +12036,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_123";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -11981,6 +12113,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_124";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -12057,6 +12190,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_125";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -12133,6 +12267,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_126";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -12209,6 +12344,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_127";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -12285,6 +12421,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_128";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -12361,6 +12498,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_129";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -12437,6 +12575,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="[this, ""Civilian"", true] call ULP_fnc_setFaction;";
 						name="civ_130";
 						description="Civilian Slot";
 						isPlayable=1;
@@ -24078,8 +24217,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				disableSimulation=1;
-				dynamicSimulation=1;
 			};
 			id=6823;
 			type="Land_LampDecor_F";
@@ -24447,8 +24584,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
-				dynamicSimulation=1;
 			};
 			id=6850;
 			type="Land_LampDecor_F";
@@ -30749,8 +30884,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
-				dynamicSimulation=1;
 			};
 			id=7038;
 			type="Land_LampDecor_F";
@@ -33088,8 +33221,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
-				dynamicSimulation=1;
 			};
 			id=7124;
 			type="Land_LampDecor_F";
@@ -33130,8 +33261,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
-				dynamicSimulation=1;
 			};
 			id=7125;
 			type="Land_LampDecor_F";

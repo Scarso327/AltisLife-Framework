@@ -52,10 +52,12 @@ private _container = objNull;
 	!(_x isEqualTo player)
 };
 
-{
-	if (_x getVariable["jipReady", false]) then { [_x, true] call ULP_fnc_initVehicle; };
-	if ((getPlayerUID player) in (_x getVariable ["vehicle_owners", createHashMap])) then { ULP_Keys pushBackUnique _x; };
-} forEach vehicles;
+[{
+	{
+		if (_x getVariable["jipReady", false]) then { [_x, true] call ULP_fnc_initVehicle; };
+		if ((getPlayerUID player) in (_x getVariable ["vehicle_owners", createHashMap])) then { ULP_Keys pushBackUnique _x; };
+	} forEach vehicles;
+}] call ULP_fnc_directCall;
 
 ["Starting Paycheck Loop"] call ULP_fnc_logIt;
 ULP_Paycheck = [] call ULP_fnc_calcPaycheck;

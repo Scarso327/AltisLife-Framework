@@ -120,6 +120,36 @@ if (isDowned(player)) then {
                         titleText["Sirens Off", "PLAIN"];
                         [_veh, "", false] call ULP_fnc_vehicleSiren;
                     };
+
+                    _handled = true;
+                };
+            };
+        };
+
+        case L: {
+            if (_shift && { !_alt } && { !_ctrlKey } && { !(isNull (objectParent player)) }) then {
+                private _veh = vehicle player;
+                private _vehLights = missionConfigFile >> "CfgVehicles" >> (typeOf _veh) >> "Textures" >> (_veh getVariable ["texture", ""]) >> "Lights";
+
+                if (isClass _vehLights && { (driver _veh) isEqualTo player }) then {
+                    if (isNull (_veh getVariable ["lightLoop", scriptNull])) then {
+                        private _timeout = ULP_lightDelay;
+
+                        if (isNil "_timeout" || { time > _timeout }) then {
+                            titleText["Lights On", "PLAIN"];
+                            [_veh, 
+                                [getArray(_vehLights >> "leftPos"), getArray(_vehLights >> "leftColour")],
+                                [getArray(_vehLights >> "rightPos"), getArray(_vehLights >> "rightColour")]
+                            ] remoteExecCall ["ULP_fnc_vehicleLights"];
+                        };
+                    } else {
+                        ULP_lightDelay = time + 2;
+
+                        titleText["Lights Off", "PLAIN"];
+                        [_veh, [], [], false] remoteExecCall ["ULP_fnc_vehicleLights"];
+                    };
+
+                    _handled = true;
                 };
             };
         };

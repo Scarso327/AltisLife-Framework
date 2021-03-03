@@ -218,6 +218,7 @@ class ULP_Functions {
 		class skinVehicle {};
 		class vehicleCfg {};
 		class vehicleSiren {};
+		class vehicleLights {};
 	};
 
 	class VehicleStore {

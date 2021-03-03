@@ -870,7 +870,7 @@ class CfgVehicles {
 		virtualSpace = 0;
 	};
 
-	class C_Boat_Civil_01_F : PoliceBase {
+	class C_Boat_Civil_01_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {

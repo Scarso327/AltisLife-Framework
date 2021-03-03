@@ -16,7 +16,6 @@ if (isNull _vehicle) exitWith {};
 deleteVehicle (_vehicle getVariable ["siren", objNull]);
 
 if (_on) then {
-	diag_log _siren;
 	private _source = createSoundSource [_siren, getPosATL _vehicle, [], 0];
 	_source attachTo [_vehicle, [0, 0, 0]];
 	_vehicle setVariable ["siren", _source, true];

@@ -24,6 +24,7 @@ class CfgRemoteExec {
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;
         };
+        class ULP_fnc_vehicleLights {};
 
         class ULP_SRV_fnc_queryPlayerInfo {
             allowedTargets = SERVER;

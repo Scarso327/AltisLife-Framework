@@ -15,11 +15,19 @@ class CfgVehicles {
 		conditions = "true";
 	};
 
+	class PoliceLights {
+		leftPos[] = {0, 0, 0};
+		leftColour[] = {0.1, 0.1, 20};
+		rightPos[] = {0, 0, 0};
+		rightColour[] = {0.1, 0.1, 20};
+	};
+
 	class Police : BaseTexture {
 		factions[] = { "Police" };
 		class Siren {
 			SFX[] = { "Police_One" };
 		};
+		class Lights : PoliceLights {};
 	};
 
 	// CARS --------------------------------------------------------------------------------------
@@ -286,6 +294,10 @@ class CfgVehicles {
 				displayName = "General Response";
 				factions[] = { "Police" };
 				textures[] = { "data\textures\vehicles\land\police\whitesuv.paa" };
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";

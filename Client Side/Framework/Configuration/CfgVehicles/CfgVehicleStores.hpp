@@ -28,12 +28,6 @@ class CfgVehicleStores {
 					class PoliceBlack {};
 				};
 			};
-			class C_Hatchback_01_sport_F {
-				class Textures {
-					class PoliceWhite {};
-					class PoliceBlack {};
-				};
-			};
 			class B_GEN_Van_02_transport_F {
 				class Textures {
 					class Police {};

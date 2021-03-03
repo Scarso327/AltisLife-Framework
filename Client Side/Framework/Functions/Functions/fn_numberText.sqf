@@ -1,28 +1,28 @@
 /*
-    File: fn_numberText.sqf
-    Author: Karel Moricky
-
-    Description:
-    Convert a number into string (avoiding scientific notation)
-
-    Parameter(s):
-    _this: NUMBER
-
-    Returns:
-    STRING
+** Author: Jack "Scarso" Farhall
+** Description: 
 */
-private ["_number","_mod","_digots","_digitsCount","_modBase","_numberText"];
+#include "..\..\script_macros.hpp"
+scopeName "fn_numberText";
 
-_number = [_this,0,0,[0]] call bis_fnc_param;
-_mod = [_this,1,3,[0]] call bis_fnc_param;
+_this params [
+    ["_number", 0, [0]]
+];
 
-_digits = _number call bis_fnc_numberDigits;
-_digitsCount = count _digits - 1;
+private _str = _number toFixed 0; // We never format decimals so this works just fine...
 
-_modBase = _digitsCount % _mod;
-_numberText = "";
-{
-    _numberText = _numberText + str _x;
-    if ((_foreachindex - _modBase) % (_mod) isEqualTo 0 && !(_foreachindex isEqualTo _digitsCount)) then {_numberText = _numberText + ",";};
-} forEach _digits;
-_numberText
+if (_number >= 1000) then {
+    private _commas = floor (( ( count _str ) - 1 ) / 3);
+
+    _str = _str splitString "";
+    reverse _str;
+
+    for "_i" from 3 to (4 * _commas) step 4 do {
+        _str = (_str select[0, _i]) + [","] + (_str select [_i, (count _str) - 1]);
+    }; 
+    
+    reverse _str;
+    _str = _str joinString "";
+};
+
+_str

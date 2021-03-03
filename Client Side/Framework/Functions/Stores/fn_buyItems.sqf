@@ -66,7 +66,7 @@ if (CASH < _cartValue) then {
 			[_ctrl, 1] call ULP_fnc_switchInventory;
 		};
 
-		hint format["You've bought these items for £%1", [_cartValue] call life_fnc_numberText];
+		hint format["You've bought these items for £%1", [_cartValue] call ULP_fnc_numberText];
 	} else {
 		hint "You don't have enough space for these items...";
 	};

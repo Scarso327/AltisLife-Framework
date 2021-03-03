@@ -39,9 +39,9 @@ private _sellPrice = -1;
 
 		private _row = _list lnbAddRow [
 			_itemName, 
-			([format["£%1", [_buyPrice] call life_fnc_numberText], "-"] select (_buyPrice isEqualTo -1)),
-			([format["£%1", [_sellPrice] call life_fnc_numberText], "-"] select (_sellPrice isEqualTo -1)), 
-			[_itemCount] call life_fnc_numberText
+			([format["£%1", [_buyPrice] call ULP_fnc_numberText], "-"] select (_buyPrice isEqualTo -1)),
+			([format["£%1", [_sellPrice] call ULP_fnc_numberText], "-"] select (_sellPrice isEqualTo -1)), 
+			[_itemCount] call ULP_fnc_numberText
 		];
 
 		if !(_itemIcon isEqualTo "") then {

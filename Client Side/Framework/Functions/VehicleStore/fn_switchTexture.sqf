@@ -32,5 +32,5 @@ _texPrice = getNumber (_texture >> "buyPrice");
 
 _total ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Texture Price <t align='right'>%1</t></t>
 <t align = 'left' size = '1'><br/>Total Price <t font='PuristaBold' align='right'>%2</t></t>",
-([format["£%1", [_texPrice] call life_fnc_numberText], "-"] select (_texPrice < 1)),
-([format["£%1", [_buyPrice] call life_fnc_numberText], "-"] select (_buyPrice < 1))];
+([format["£%1", [_texPrice] call ULP_fnc_numberText], "-"] select (_texPrice < 1)),
+([format["£%1", [_buyPrice] call ULP_fnc_numberText], "-"] select (_buyPrice < 1))];

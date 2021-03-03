@@ -56,4 +56,4 @@ if (CASH >= _buyPrice) exitWith {
 	closeDialog 0;
 };
 
-hint format["You can't afford to pay for this vehicle. You need £%1.", [_buyPrice] call life_fnc_numberText];
+hint format["You can't afford to pay for this vehicle. You need £%1.", [_buyPrice] call ULP_fnc_numberText];

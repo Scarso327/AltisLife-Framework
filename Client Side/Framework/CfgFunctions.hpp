@@ -50,6 +50,7 @@ class ULP_Functions {
 	class Functions {
 		file = "Functions\Functions";
 		class getAnim {};
+		class numberText {};
 	};
 
 	class Clothing {

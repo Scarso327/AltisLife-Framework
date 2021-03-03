@@ -61,11 +61,11 @@ class FSM
            "    systemChat ""You have missed a paycheck because you were incapacitated."";" \n
            "} else {" \n
            "    if (player distance (getMarkerPos ""fed_reserve"") < 120 && playerSide isEqualTo west) then {" \n
-           "        systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck) + 1500] call life_fnc_numberText];" \n
+           "        systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck) + 1500] call ULP_fnc_numberText];" \n
            "        life_atmbank = life_atmbank + (call ULP_Paycheck) + 1500;" \n
            "    } else {" \n
            "        life_atmbank = life_atmbank + (call ULP_Paycheck);" \n
-           "        systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck)] call life_fnc_numberText];" \n
+           "        systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck)] call ULP_fnc_numberText];" \n
            "    };" \n
            "};" \n
            "" \n

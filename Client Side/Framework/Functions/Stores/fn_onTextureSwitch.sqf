@@ -28,5 +28,5 @@ if !(_texture isEqualTo "") then {
 	"<t size='0.8'>%1Texture: <t color='#8cff9b'>£%3</t><br/>%2<br/></t>",
 	[] call ULP_fnc_itemInfo,
 	[] call ULP_fnc_cartInfo,
-	[(_ctrl lbValue _index)] call life_fnc_numberText
+	[(_ctrl lbValue _index)] call ULP_fnc_numberText
 ];

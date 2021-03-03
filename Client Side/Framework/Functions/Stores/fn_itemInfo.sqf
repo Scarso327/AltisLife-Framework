@@ -14,5 +14,5 @@ _item params [
 
 format[
 	"<t size='0.8'><br/>Item Information<br/>Name: %1<br/>Cost: <t color='#8cff9b'>£%2</t><br/></t>",
-	_name, [_price] call life_fnc_numberText
+	_name, [_price] call ULP_fnc_numberText
 ]

@@ -39,6 +39,6 @@ _invList lbSetCurSel -1;
 CASH = CASH + _itemValue;
 [] call ULP_fnc_syncPlayerInfo;
 
-hint format["You sold %1 for £%2", (_itemCfg select 5), [_itemValue] call life_fnc_numberText];
+hint format["You sold %1 for £%2", (_itemCfg select 5), [_itemValue] call ULP_fnc_numberText];
 
 _ctrl ctrlEnable true;

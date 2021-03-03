@@ -74,6 +74,6 @@ _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Buy 
 <t align = 'left' size = '1'><br/>Seats <t align='right'>%6</t></t>
 <t align = 'left' size = '1'><br/>Horse Power <t align='right'>%7 bhp</t></t>
 <t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%8</t></t>", 
-([format["£%1", [_buyPrice] call life_fnc_numberText], "-"] select (_buyPrice < 1)),
-([format["£%1", [_retrievalPrice] call life_fnc_numberText], "-"] select (_retrievalPrice < 1)), 
+([format["£%1", [_buyPrice] call ULP_fnc_numberText], "-"] select (_buyPrice < 1)),
+([format["£%1", [_retrievalPrice] call ULP_fnc_numberText], "-"] select (_retrievalPrice < 1)), 
 getNumber(_missionCfg >> "virtualSpace"), _topSpeed, _armor, _seats, _power, _fuel];

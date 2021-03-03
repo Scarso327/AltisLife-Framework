@@ -2,11 +2,27 @@ class CfgVehicles {
 	sellPerc = 0.3;
 	retrievalPerc = 0.15;
 
+	// LIGHTS --------------------------------------------------------------------------------------
+	class PoliceLights {
+		leftPos[] = {0, 0, 0};
+		leftColour[] = {0.1, 0.1, 20};
+		rightPos[] = {0, 0, 0};
+		rightColour[] = {0.1, 0.1, 20};
+	};
+
+	class MedicLights {
+		leftPos[] = {0, 0, 0};
+		leftColour[] = {0.1, 0.1, 20};
+		rightPos[] = {0, 0, 0};
+		rightColour[] = {0.1, 0.1, 20};
+	};
+
 	class Base {
 		conditions = "true";
 		class Textures {};
 	};
 
+	// BASE --------------------------------------------------------------------------------------
 	class BaseTexture {
 		displayName = "Default";
 		buyPrice = 0;
@@ -15,19 +31,20 @@ class CfgVehicles {
 		conditions = "true";
 	};
 
-	class PoliceLights {
-		leftPos[] = {0, 0, 0};
-		leftColour[] = {0.1, 0.1, 20};
-		rightPos[] = {0, 0, 0};
-		rightColour[] = {0.1, 0.1, 20};
-	};
-
-	class Police : BaseTexture {
+	class PoliceTexture : BaseTexture {
 		factions[] = { "Police" };
 		class Siren {
 			SFX[] = { "Police_One" };
 		};
 		class Lights : PoliceLights {};
+	};
+	
+	class MedicTexture : BaseTexture {
+		factions[] = { "Medic" };
+		class Siren {
+			SFX[] = { "Police_One" };
+		};
+		class Lights : MedicLights {};
 	};
 
 	// CARS --------------------------------------------------------------------------------------
@@ -135,21 +152,25 @@ class CfgVehicles {
 				displayName = "Orange Sport";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 			};
-			class PoliceWhite : BaseTexture { 
+			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";
-				factions[] = { "Police" };
 				textures[] = { "data\textures\vehicles\land\police\police_hatchback_white.paa" }; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
-			class PoliceBlack : BaseTexture { 
+			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				factions[] = { "Police" };
 				conditions = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "data\textures\vehicles\land\police\police_hatchback_black.paa" }; 
 			};
-			class Medic : BaseTexture { 
-				displayName = "Incident Response";
-				factions[] = { "Medic" };
+			class Medic : MedicTexture { 
 				textures[] = { "data\textures\vehicles\land\medic\medic_hatchback.paa" }; 
+				class Lights : MedicLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -192,15 +213,6 @@ class CfgVehicles {
 				textures[] = { 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa", 
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa" 
-				}; 
-			};
-			class PoliceWhite : BaseTexture { 
-				displayName = "General Response";
-				factions[] = { "Police" };
-				textures[] = { 
-					"data\textures\Police\Vehicles\police_offroad_white.paa",
-					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
-					"#(rgb,8,8,3)color(0.97,0.97,0.97,1)" 
 				}; 
 			};
 		};
@@ -261,10 +273,12 @@ class CfgVehicles {
 				displayName = "Orange";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa" }; 
 			};
-			class Medic : BaseTexture { 
-				displayName = "General Response";
-				factions[] = { "Medic" };
+			class Medic : MedicTexture { 
 				textures[] = { "data\textures\vehicles\land\medic\medic_jeep.paa" }; 
+				class Lights : MedicLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -290,9 +304,8 @@ class CfgVehicles {
 				displayName = "Orange";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" }; 
 			};
-			class PoliceWhite : Police { 
+			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";
-				factions[] = { "Police" };
 				textures[] = { "data\textures\vehicles\land\police\whitesuv.paa" };
 				class Lights : PoliceLights {
 					leftPos[] = {-0.402344, 2.2793, -0.531359};
@@ -301,26 +314,25 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				factions[] = { "Police" };
 				conditions = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "data\textures\vehicles\land\police\blacksuv.paa" }; 
 			};
 			class PoliceANPR : PoliceWhite { 
 				displayName = "Interceptor";
-				factions[] = { "Police" };
-				conditions = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
+				conditions = "[""Police_ROAD"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "data\textures\vehicles\land\police\anprsuv.paa" }; 
 			};
 			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 
-				factions[] = { "Police" };
-				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SFO"", 3] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SFO"", 3] call ULP_fnc_hasAccess } || { [""Police_ROAD"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 			};
-			class Medic : BaseTexture { 
-				displayName = "General Response";
-				factions[] = { "Medic" };
+			class Medic : MedicTexture { 
 				textures[] = { "data\textures\vehicles\land\medic\medic_suv.paa" }; 
+				class Lights : MedicLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -349,21 +361,29 @@ class CfgVehicles {
 				displayName = "Press";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_AAN_CO.paa" }; 
 			};
-			class Police : BaseTexture { 
+			class PoliceWhite : PoliceTexture { 
 				displayName = "Public Order";
-				factions[] = { "Police" };
 				textures[] = { "data\textures\vehicles\land\police\police_van.paa" }; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
-			class PoliceUnmarked : BaseTexture {
+			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 
-				factions[] = { "Police" };
 				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SFO"", 3] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
-			class Medic : BaseTexture { 
-				displayName = "Ambulance";
-				factions[] = { "Medic" };
+			class Medic : MedicTexture { 
 				textures[] = { "data\textures\vehicles\land\medic\medic_van.paa" }; 
+				class Lights : MedicLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -415,10 +435,12 @@ class CfgVehicles {
 				displayName = "Orange";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa" }; 
 			};
-			class Police : BaseTexture { 
-				displayName = "Police";
-				factions[] = { "Police" };
+			class PoliceBlack : PoliceTexture { 
 				textures[] = { "data\textures\vehicles\land\police\police_prowler.paa" }; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -484,10 +506,12 @@ class CfgVehicles {
 					"\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa"
 				}; 
 			};
-			class Police : BaseTexture { 
-				displayName = "Police";
-				factions[] = { "Police" };
+			class PoliceBlack : PoliceTexture { 
 				textures[] = { "data\textures\vehicles\land\police\police_qilin.paa" }; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -496,13 +520,15 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
-			class Police : BaseTexture {
-				displayName = "Police"; 
-				factions[] = { "Police" };
+			class PoliceBlack : PoliceTexture {
 				textures[] = {
 					"data\textures\vehicles\land\police\police_hunter1.paa",
 					"data\textures\vehicles\land\police\police_hunter2.paa"
 				}; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -844,14 +870,16 @@ class CfgVehicles {
 		virtualSpace = 0;
 	};
 
-	class C_Boat_Civil_01_F : Base {
+	class C_Boat_Civil_01_F : PoliceBase {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
-			class Police : BaseTexture {
-				displayName = "Police"; 
-				factions[] = { "Police" };
+			class Police : PoliceTexture {
 				textures[] = { "data\textures\vehicles\sea\police\police_motorboat.paa" }; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -861,10 +889,12 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
-			class Police : BaseTexture {
-				displayName = "Police"; 
-				factions[] = { "Police" };
+			class Police : PoliceTexture {
 				textures[] = { "data\textures\vehicles\sea\police\police_rhib.paa" }; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -873,10 +903,12 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
-			class Police : BaseTexture {
-				displayName = "Police"; 
-				factions[] = { "Police" };
+			class Police : PoliceTexture {
 				textures[] = { "data\textures\vehicles\sea\police\police_speedboat.paa" }; 
+				class Lights : PoliceLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
 			};
 		};
 	};
@@ -952,16 +984,8 @@ class CfgVehicles {
 				displayName = "Wasp";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa" };
 			}; 
-			class Police : BaseTexture {
-				displayName = "Police"; 
-				factions[] = { "Police" };
-				textures[] = { "data\textures\vehicles\air\police\police_littlebird.paa" }; 
-			};
-			class Medic : BaseTexture {
-				displayName = "Medic"; 
-				factions[] = { "Medic" };
-				textures[] = { "data\textures\vehicles\air\medic\medic_littlebird.paa" }; 
-			};
+			class Police : PoliceTexture { textures[] = { "data\textures\vehicles\air\police\police_littlebird.paa" }; };
+			class Medic : MedicTexture { textures[] = { "data\textures\vehicles\air\medic\medic_littlebird.paa" }; };
 		};
 	};
 	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 0; };
@@ -982,16 +1006,8 @@ class CfgVehicles {
 				displayName = "White / Blue";
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa" };
 			}; 
-			class Police : BaseTexture {
-				displayName = "Police"; 
-				factions[] = { "Police" };
-				textures[] = { "data\textures\vehicles\air\police\police_orca.paa" }; 
-			};
-			class Medic : BaseTexture {
-				displayName = "Medic"; 
-				factions[] = { "Medic" };
-				textures[] = { "data\textures\vehicles\air\medic\medic_orca.paa" }; 
-			};
+			class Police : PoliceTexture { textures[] = { "data\textures\vehicles\air\police\police_orca.paa" }; };
+			class Medic : MedicTexture { textures[] = { "data\textures\vehicles\air\medic\medic_orca.paa" }; };
 		};
 	};
 
@@ -1007,11 +1023,7 @@ class CfgVehicles {
 				displayName = "Green"; 
 				textures[] = { "\a3\air_f_epb\Heli_Light_03\data\Heli_Light_03_base_CO.paa" }; 
 			};
-			class Police : BaseTexture {
-				displayName = "Police"; 
-				factions[] = { "Police" };
-				textures[] = { "data\textures\vehicles\air\police\police_hellcat.paa" }; 
-			};
+			class Police : PoliceTexture { textures[] = { "data\textures\vehicles\air\police\police_hellcat.paa" }; };
 		};
 	};
 	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {};
@@ -1074,9 +1086,7 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
-			class Medic : BaseTexture {
-				displayName = "Medic"; 
-				factions[] = { "Medic" };
+			class Medic : MedicTexture {
 				textures[] = { 
 					"data\textures\vehicles\air\medic\medic_taru1.paa", 
 					"data\textures\vehicles\air\medic\medic_taru2.paa", 
@@ -1105,9 +1115,7 @@ class CfgVehicles {
 					"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"
 				}; 
 			};
-			class Medic : BaseTexture {
-				displayName = "Medic"; 
-				factions[] = { "Medic" };
+			class Medic : MedicTexture {
 				textures[] = { 
 					"data\textures\vehicles\air\medic\medic_huron1.paa", 
 					"data\textures\vehicles\air\medic\medic_huron2.paa"
@@ -1153,8 +1161,7 @@ class CfgVehicles {
 	class O_Plane_Fighter_02_F { buyPrice = 0; };
 	class O_Plane_Fighter_02_Stealth_F { buyPrice = 0; };
 
-	// Sounds...
-	
+	// SOUNDS --------------------------------------------------------------------------------------
 	class Police_One {
 		sound = "Police_One";
 	};

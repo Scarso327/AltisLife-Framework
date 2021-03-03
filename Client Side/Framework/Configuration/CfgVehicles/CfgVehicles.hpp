@@ -145,7 +145,6 @@ class CfgVehicles {
 			};
 		};
 	};
-
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 0; };
 
 	class C_Offroad_01_F : Base {
@@ -253,6 +252,11 @@ class CfgVehicles {
 			class Orange : BaseTexture { 
 				displayName = "Orange";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa" }; 
+			};
+			class Medic : BaseTexture { 
+				displayName = "General Response";
+				factions[] = { "Medic" };
+				textures[] = { "data\textures\vehicles\land\medic\medic_jeep.paa" }; 
 			};
 		};
 	};
@@ -948,6 +952,7 @@ class CfgVehicles {
 			};
 		};
 	};
+	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 0; };
 
 	class O_Heli_Light_02_unarmed_F {
 		buyPrice = 0;
@@ -990,10 +995,6 @@ class CfgVehicles {
 				displayName = "Green"; 
 				textures[] = { "\a3\air_f_epb\Heli_Light_03\data\Heli_Light_03_base_CO.paa" }; 
 			};
-			class WhiteBlue : BaseTexture { 
-				displayName = "White / Blue";
-				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa" };
-			}; 
 			class Police : BaseTexture {
 				displayName = "Police"; 
 				factions[] = { "Police" };

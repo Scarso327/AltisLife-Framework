@@ -17,11 +17,6 @@ class CfgVehicleStores {
 					class PoliceUnmarked {};
 				};
 			};
-			class B_GEN_Offroad_01_gen_F {
-				class Textures {
-					class PoliceWhite {};
-				};
-			};
 			class C_Hatchback_01_sport_F {
 				class Textures {
 					class PoliceWhite {};
@@ -30,29 +25,29 @@ class CfgVehicleStores {
 			};
 			class B_GEN_Van_02_transport_F {
 				class Textures {
-					class Police {};
+					class PoliceWhite {};
 					class PoliceUnmarked {};
 				};
 			};
 			class B_GEN_Van_02_vehicle_F {
 				class Textures {
-					class Police {};
+					class PoliceWhite {};
 					class PoliceUnmarked {};
 				};
 			};
 			class B_T_LSV_01_unarmed_black_F {
 				class Textures {
-					class Police {};
+					class PoliceBlack {};
 				};
 			};
 			class O_LSV_02_unarmed_F {
 				class Textures {
-					class Police {};
+					class PoliceBlack {};
 				};
 			};
 			class B_MRAP_01_F {
 				class Textures {
-					class Police {};
+					class PoliceBlack {};
 				};
 			};
 		};

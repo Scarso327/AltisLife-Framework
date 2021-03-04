@@ -5,7 +5,7 @@ class CfgVehicleStores {
 		conditions = "true";
 	};
 
-	class Police : Base {
+	class PoliceCar : Base {
 		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
@@ -53,7 +53,64 @@ class CfgVehicleStores {
 		};
 	};
 
-	class Medic : Base {
+	class PoliceAir : Base {
+		storeName = "Police Vehicle Store";
+		factions[] = { "Police" };
+		class Vehicles {
+			class B_UAV_01_F {};
+			class C_Heli_Light_01_civil_F {
+				class Textures {
+					class Police {};
+				};
+			};
+			class B_Heli_Light_01_F {
+				class Textures {
+					class Police {};
+				};
+			};
+			class O_Heli_Light_02_unarmed_F {
+				class Textures {
+					class Police {};
+				};
+			};
+			class I_Heli_light_03_unarmed_F {
+				class Textures {
+					class Police {};
+				};
+			};
+			class B_Heli_Transport_03_unarmed_F {};
+			class B_Heli_Transport_01_F {};
+			class I_Heli_light_03_F {
+				class Textures {
+					class Police {};
+				};
+			};
+		};
+	};
+
+	class PoliceBoat : Base {
+		storeName = "Police Vehicle Store";
+		factions[] = { "Police" };
+		class Vehicles {
+			class C_Boat_Civil_01_F {
+				class Textures {
+					class Police {};
+				};
+			};
+			class C_Boat_Transport_02_F {
+				class Textures {
+					class Police {};
+				};
+			};
+			class B_Boat_Armed_01_minigun_F {
+				class Textures {
+					class Police {};
+				};
+			};
+		};
+	};
+
+	class MedicCar : Base {
 		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
@@ -73,6 +130,38 @@ class CfgVehicleStores {
 				};
 			};
 			class C_Van_02_medevac_F {
+				class Textures {
+					class Medic {};
+				};
+			};
+		};
+	};
+
+	class MedicAir : Base {
+		storeName = "Medic Vehicle Store";
+		factions[] = { "Medic" };
+		class Vehicles {
+			class C_Heli_Light_01_civil_F {
+				class Textures {
+					class Medic {};
+				};
+			};
+			class B_Heli_Light_01_F {
+				class Textures {
+					class Medic {};
+				};
+			};
+			class O_Heli_Light_02_unarmed_F {
+				class Textures {
+					class Medic {};
+				};
+			};
+			class O_Heli_Transport_04_medevac_black_F {
+				class Textures {
+					class Medic {};
+				};
+			};
+			class B_Heli_Transport_03_unarmed_F {
 				class Textures {
 					class Medic {};
 				};

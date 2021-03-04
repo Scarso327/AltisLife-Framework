@@ -212,7 +212,7 @@ class DialogGenericStore {
             SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, CONTENT_W, 3));
             SAFEZONE_Y(0.291 + (MARGIN_Y * 3));
 			SAFEZONE_W(CONTENT_W);
-			SAFEZONE_H((BODY_HEIGHT - (MARGIN_Y * 4)) - (BUTTON_H + BUTTON_MARGIN_Y));
+			SAFEZONE_H((BODY_HEIGHT - (MARGIN_Y * 4)) - ((BUTTON_H * 2) + (BUTTON_MARGIN_Y * 2)));
         };
 
         class BuyButton : Life_RscButtonCenter {

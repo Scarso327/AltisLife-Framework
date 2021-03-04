@@ -76,6 +76,41 @@ class CfgFactions {
 		};
 	};
 
+	class Hato {
+		displayName = "Highways Traffic Agency";
+		pay = 15500;
+		class Whitelisting {
+			class Main {
+				queryIndex = 12;
+				payMulti = 0.1;
+				required = 1;
+			};
+		};
+
+		class DatabaseInfo {
+			queryPrefix = "hato_";
+			customQuery = ", hato_blacklisted, hatolevel";
+			timeIndex = 1;
+		};
+
+		class Persistance {
+			vehicles = false;
+		};
+
+		class Loadout {
+			class Uniforms {
+				class U_Rangemaster {};
+			};
+			class LinkedItems {
+				hasMap = true;
+				hasGPS = true;
+				hasCompass = true;
+				hasWatch = true;
+				hasRadio = true;
+			};
+		};
+	};
+
 	class Civilian {
 		displayName = "Civilian";
 		pay = 7500;

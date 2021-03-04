@@ -200,18 +200,18 @@ class WeaponShops {
             { "G_Tactical_Clear", "Night Vision Glasses", 0, -1, "" },
             { "FirstAidKit", "First Aid Kit", 0, -1, "" },
             { "ToolKit", "Toolkit", 0, -1, "" },
-            { "SmokeShell", "Smoke Grenade", 0, -1, "[""Police_SFO"", 1] call ULP_fnc_hasAccess;" },
-            { "HandGrenade_Stone", "Flashbang Grenade", 0, -1, "[""Police_SFO"", 2] call ULP_fnc_hasAccess;" },
+            { "SmokeShell", "Smoke Grenade", 0, -1, "[""Police_SCO19"", 1] call ULP_fnc_hasAccess;" },
+            { "HandGrenade_Stone", "Flashbang Grenade", 0, -1, "[""Police_SCO19"", 2] call ULP_fnc_hasAccess;" },
             { "hgun_Pistol_heavy_01_F", "Taser Pistol", 0, -1, "" },
             { "hgun_ACPC2_F", "ACP-C2 .45 ACP", 0, -1, "[""Police_Main"", 2] call ULP_fnc_hasAccess;" },
             { "SMG_05_F", "Protector 9 mm", 0, -1, "[""Police_Main"", 2] call ULP_fnc_hasAccess;" },
-            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "[""Police_Main"", 3] call ULP_fnc_hasAccess; || [""Police_SFO"", 1] call ULP_fnc_hasAccess;" },
-            { "arifle_SDAR_F", "SDAR 5.56 mm", 0, -1, "[""Police_SFO"", 1] call ULP_fnc_hasAccess;" },
-            { "SMG_03C_TR_black", "ADR-97C TR 5.7 mm", 0, -1, "[""Police_SFO"", 1] call ULP_fnc_hasAccess;" },
-            { "arifle_CTAR_blk_F", "CAR-95 5.8mm", 0, -1, "[""Police_SFO"", 2] call ULP_fnc_hasAccess;" },
-            { "arifle_CTAR_GL_blk_F", "CAR-95 GL 5.8 mm", 0, -1, "[""Police_SFO"", 2] call ULP_fnc_hasAccess;" },
-            { "arifle_ARX_blk_F", "Type 115 6.5 mm", 0, -1, "[""Police_SFO"", 3] call ULP_fnc_hasAccess;" },
-            { "arifle_SPAR_03_blk_F", "SPAR-17 7.62 mm", 0, -1, "[""Police_SFO"", 3] call ULP_fnc_hasAccess;" }
+            { "arifle_SPAR_01_blk_F", "SPAR-16 5.56 mm", 0, -1, "[""Police_Main"", 3] call ULP_fnc_hasAccess; || [""Police_SCO19"", 1] call ULP_fnc_hasAccess;" },
+            { "arifle_SDAR_F", "SDAR 5.56 mm", 0, -1, "[""Police_SCO19"", 1] call ULP_fnc_hasAccess;" },
+            { "SMG_03C_TR_black", "ADR-97C TR 5.7 mm", 0, -1, "[""Police_SCO19"", 1] call ULP_fnc_hasAccess;" },
+            { "arifle_CTAR_blk_F", "CAR-95 5.8mm", 0, -1, "[""Police_SCO19"", 2] call ULP_fnc_hasAccess;" },
+            { "arifle_CTAR_GL_blk_F", "CAR-95 GL 5.8 mm", 0, -1, "[""Police_SCO19"", 2] call ULP_fnc_hasAccess;" },
+            { "arifle_ARX_blk_F", "Type 115 6.5 mm", 0, -1, "[""Police_SCO19"", 3] call ULP_fnc_hasAccess;" },
+            { "arifle_SPAR_03_blk_F", "SPAR-17 7.62 mm", 0, -1, "[""Police_SCO19"", 3] call ULP_fnc_hasAccess;" }
         };
         mags[] = {
             { "11Rnd_45ACP_Mag", "Taser Cartridge", 0, -1, "" },
@@ -231,14 +231,14 @@ class WeaponShops {
             { "optic_Aco_smg", "ACO SMG (Red)", 0, -1, "" },
             { "optic_Holosight_blk_F", "Mk17 Holosight", 0, -1,  },
             { "optic_Holosight_smg_blk_F", "Mk17 Holosight SMG", 0, -1, "" },
-            { "optic_Hamr", "RCO", 0, -1, "[""Police_Main"", 3] call ULP_fnc_hasAccess; || [""Police_SFO"", 2] call ULP_fnc_hasAccess;" },
-            { "optic_MRCO", "MRCO", 0, -1, "[""Police_Main"", 3] call ULP_fnc_hasAccess; || [""Police_SFO"", 2] call ULP_fnc_hasAccess;" },
-            { "optic_Arco_blk_F", "ARCO", 0, -1, "[""Police_Main"", 3] call ULP_fnc_hasAccess; || [""Police_SFO"", 2] call ULP_fnc_hasAccess;" },
-            { "optic_NVS", "NVS", 0, -1, "[""Police_SFO"", 1] call ULP_fnc_hasAccess;" },
-            { "optic_DMS", "DMS", 0, -1, "[""Police_SFO"", 3] call ULP_fnc_hasAccess;" },
+            { "optic_Hamr", "RCO", 0, -1, "[""Police_Main"", 3] call ULP_fnc_hasAccess; || [""Police_SCO19"", 2] call ULP_fnc_hasAccess;" },
+            { "optic_MRCO", "MRCO", 0, -1, "[""Police_Main"", 3] call ULP_fnc_hasAccess; || [""Police_SCO19"", 2] call ULP_fnc_hasAccess;" },
+            { "optic_Arco_blk_F", "ARCO", 0, -1, "[""Police_Main"", 3] call ULP_fnc_hasAccess; || [""Police_SCO19"", 2] call ULP_fnc_hasAccess;" },
+            { "optic_NVS", "NVS", 0, -1, "[""Police_SCO19"", 1] call ULP_fnc_hasAccess;" },
+            { "optic_DMS", "DMS", 0, -1, "[""Police_SCO19"", 3] call ULP_fnc_hasAccess;" },
             { "acc_flashlight_pistol", "Pistol Flashlight", 0, -1, " " },
             { "acc_flashlight", "Flashlight", 0, -1, "" },
-            { "acc_pointer_IR", "IR Laser Pointer", 0, -1, "[""Police_SFO"", 3] call ULP_fnc_hasAccess;" }
+            { "acc_pointer_IR", "IR Laser Pointer", 0, -1, "[""Police_SCO19"", 3] call ULP_fnc_hasAccess;" }
         };
     };
 

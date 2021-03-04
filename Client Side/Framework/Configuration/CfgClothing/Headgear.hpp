@@ -200,7 +200,7 @@ class H_Beret_blk {
 		};
 		class H_Beret_EAF_01_F : H_Beret_blk {
 			displayName = "Firearms";
-			condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess;";
+			condition = "[""Police_SCO19"", 1] call ULP_fnc_hasAccess;";
 		};
 		class H_Beret_gen_F : H_Beret_blk {
 			displayName = "Command";

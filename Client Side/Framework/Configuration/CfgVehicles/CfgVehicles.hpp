@@ -162,7 +162,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
+				conditions = "[""Police_SCO19"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "data\textures\vehicles\land\police\police_hatchback_black.paa" }; 
 			};
 			class Medic : MedicTexture { 
@@ -314,7 +314,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
+				conditions = "[""Police_SCO19"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "data\textures\vehicles\land\police\blacksuv.paa" }; 
 			};
 			class PoliceANPR : PoliceWhite { 
@@ -324,7 +324,7 @@ class CfgVehicles {
 			};
 			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 
-				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SFO"", 3] call ULP_fnc_hasAccess } || { [""Police_ROAD"", 1] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess } || { [""Police_ROAD"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 			};
 			class Medic : MedicTexture { 
@@ -371,7 +371,7 @@ class CfgVehicles {
 			};
 			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 
-				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SFO"", 3] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
 				class Lights : PoliceLights {
 					leftPos[] = {-0.402344, 2.2793, -0.531359};

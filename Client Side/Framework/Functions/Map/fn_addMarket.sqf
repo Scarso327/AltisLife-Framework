@@ -5,7 +5,7 @@
 ** 	[this, "<t color='#073763'>[APC]</t> Market", "Police"] call ULP_fnc_addStore;
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_addStore";
+scopeName "fn_addMarket";
 
 _this params [
 	["_trader", objNull, [objNull]],

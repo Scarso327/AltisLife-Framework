@@ -258,4 +258,12 @@ class ULP_Functions_UI {
 		class eachFrameProgress {};
 		class endProgress {};
 	};
+
+	class RscHUD {
+		file = "Functions\HUD";
+		class openHUD {};
+		class closeHUD {};
+		class eachFrameHUD {};
+		class isHudShown {};
+	};
 };

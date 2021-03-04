@@ -47,3 +47,5 @@ player allowDammage true;
 player enableFatigue false;
 player enableStamina false;
 player enableAimPrecision false;
+
+[] call ULP_UI_fnc_openHUD;

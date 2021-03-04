@@ -19,6 +19,7 @@ class CfgServer {
 class RscTitles {
     #include "UI\RscIncapacitated\RscIncapacitated.hpp"
     #include "UI\RscProgress\RscProgress.hpp"
+    #include "UI\RscHUD\RscHUD.hpp"
 };
 
 class CfgFunctions {

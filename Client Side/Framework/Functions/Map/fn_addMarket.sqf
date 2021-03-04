@@ -2,7 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 ** Usage:
-** 	[this, "<t color='#073763'>[APC]</t> Market", "Police"] call ULP_fnc_addStore;
+** 	[this, "<t color='#073763'>[APC]</t> Market", "Police"] call ULP_fnc_addMarket;
 */
 #include "..\..\script_macros.hpp"
 scopeName "fn_addMarket";
@@ -13,7 +13,7 @@ _this params [
 	["_store", "", [""]]
 ];
 
-private _cfgCondition = missionConfigFile >> "CfgVirtualStores" >> _store;
+private _cfgCondition = missionConfigFile >> "CfgStores" >> "CfgVirtualStores" >> _store;
 if (isNull _trader || { _title isEqualTo "" } || { !(isClass _cfgCondition) }) exitWith {};
 _cfgCondition = getText(_cfgCondition >> "conditions");
 

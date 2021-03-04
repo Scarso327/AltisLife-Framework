@@ -15,7 +15,7 @@ _this params [
 	["_cfg", "", [""]]
 ];
 
-private _cfgCondition = missionConfigFile >> _cfg >> _store;
+private _cfgCondition = missionConfigFile >> "CfgStores" >> _cfg >> _store;
 if (isNull _trader || { _title isEqualTo "" } || { !(isClass _cfgCondition) }) exitWith {};
 _cfgCondition = getText(_cfgCondition >> "condition");
 

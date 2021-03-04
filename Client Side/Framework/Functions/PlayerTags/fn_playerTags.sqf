@@ -33,7 +33,7 @@ if (_enable) then {
 		}) apply {
 			private _headPos = (_x selectionPosition "head");
 			[
-				_x, [(_headPos select 0), (_headPos select 1), (_headPos select 2) + 0.5], (player distance _x), 
+				_x, [(_headPos select 0) - 0.03, (_headPos select 1), (_headPos select 2) + 0.5], (player distance _x), 
 				(_x getVariable ["icon", ""]), [_x] call ULP_fnc_getName, (_x getVariable ["subtitle", ""])
 			]
 		});

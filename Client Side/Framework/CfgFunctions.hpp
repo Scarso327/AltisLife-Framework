@@ -229,6 +229,12 @@ class ULP_Functions {
 		class vehicleChange {};
 		class switchTexture {};
 	};
+
+	class Map {
+		file = "Functions\Map";
+		class addMarket {};
+		class addStore {};
+	};
 };
 
 class ULP_Functions_UI {

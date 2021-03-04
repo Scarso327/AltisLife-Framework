@@ -103,7 +103,7 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 				_rspMsg
 			];
 
-			(_incapUi displayCtrl 9004) progressSetPosition ((time - _startTime) / (_endTime - _startTime));
+			(_incapUi displayCtrl 9004) progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
 		};
 
 		uiNamespace setVariable ["_fnc_bleedout", nil];

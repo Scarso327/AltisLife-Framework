@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3591.2661,59.892723,13427.854};
-		dir[]={0.079546861,-0.43137217,-0.89866543};
-		up[]={0.038034819,0.90217394,-0.42969471};
-		aside[]={-0.99611115,8.4430212e-008,-0.088171974};
+		pos[]={3628.1365,22.673105,13399.67};
+		dir[]={0.84892142,-0.5082773,-0.1449575};
+		up[]={0.5010317,0.86119044,-0.085554346};
+		aside[]={-0.16832264,5.7491707e-007,-0.98574716};
 	};
 };
 binarizationWanted=0;
@@ -57516,8 +57516,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3642.1714,21.671986,13352.947};
-				angles[]={0,2.2840755,0};
+				position[]={3642.1709,21.671755,13352.947};
+				angles[]={0,2.2840774,0};
 			};
 			side="Empty";
 			flags=1;
@@ -57526,7 +57526,7 @@ class Mission
 			};
 			id=7670;
 			type="Banner_01_F";
-			atlOffset=1.3085899;
+			atlOffset=1.3083591;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -113092,17 +113092,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3640.9211,12.136187,13365.229};
-				angles[]={0,3.8461552,0};
+				position[]={3640.9209,12.136452,13365.229};
+				angles[]={0,3.8461471,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="this setFlagTexture 'data\policeSign.paa';";
 			};
 			id=9242;
 			type="Flag_White_F";
+			atlOffset=0.00026512146;
 			class CustomAttributes
 			{
 				class Attribute0

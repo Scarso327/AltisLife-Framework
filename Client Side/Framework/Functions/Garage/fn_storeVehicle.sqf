@@ -5,6 +5,10 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_storeVehicle";
 
+if (canSuspend) exitWith {
+    [ULP_fnc_storeVehicle, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_location", objNull, [objNull]],
 	["_types", ["Car", "Air", "Ship"], [[]]]

@@ -170,13 +170,13 @@ class CfgItemsStore {
 		class Attachments {};
 		class Magazines {};
 		class Items {
-			class ItemMap : Base {};
-			class ItemCompass : Base {};
-			class ItemWatch : Base {};
-			class ItemGPS : Base {};
-			class ItemRadio : Base {};
-			class Rangefinder : Base {};
-			class ToolKit : Base {};
+			class ItemMap : ItemBase {};
+			class ItemCompass : ItemBase {};
+			class ItemWatch : ItemBase {};
+			class ItemGPS : ItemBase {};
+			class ItemRadio : ItemBase {};
+			class Rangefinder : ItemBase {};
+			class ToolKit : ItemBase {};
 		};
 	};
 
@@ -188,13 +188,13 @@ class CfgItemsStore {
 		class Attachments {};
 		class Magazines {};
 		class Items {
-			class ItemMap : Base {};
-			class ItemCompass : Base {};
-			class ItemWatch : Base {};
-			class ItemGPS : Base {};
-			class ItemRadio : Base {};
-			class Binocular : Base {};
-			class ToolKit : Base {};
+			class ItemMap : ItemBase {};
+			class ItemCompass : ItemBase {};
+			class ItemWatch : ItemBase {};
+			class ItemGPS : ItemBase {};
+			class ItemRadio : ItemBase {};
+			class Binocular : ItemBase {};
+			class ToolKit : ItemBase {};
 		};
 	};
 
@@ -203,19 +203,19 @@ class CfgItemsStore {
 		condition = "true";
 		class Rifles {};
 		class Pistols {
-			class hgun_Pistol_01_F : Base {};
-			class hgun_Rook40_F : Base {};
-			class hgun_ACPC2_F : Base {};
-			class hgun_Pistol_heavy_01_F : Base {};
-			class hgun_Pistol_heavy_02_F : Base {};
+			class hgun_Pistol_01_F : ItemBase {};
+			class hgun_Rook40_F : ItemBase {};
+			class hgun_ACPC2_F : ItemBase {};
+			class hgun_Pistol_heavy_01_F : ItemBase {};
+			class hgun_Pistol_heavy_02_F : ItemBase {};
 		};
 		class Attachments {};
 		class Magazines {
-			class 10Rnd_9x21_Mag : Base {};
-			class 16Rnd_9x21_Mag : Base {};
-			class 9Rnd_45ACP_Mag : Base {};
-			class 11Rnd_45ACP_Mag : Base {};
-			class 6Rnd_45ACP_Cylinder : Base {};
+			class 10Rnd_9x21_Mag : ItemBase {};
+			class 16Rnd_9x21_Mag : ItemBase {};
+			class 9Rnd_45ACP_Mag : ItemBase {};
+			class 11Rnd_45ACP_Mag : ItemBase {};
+			class 6Rnd_45ACP_Cylinder : ItemBase {};
 		};
 		class Items {};
 	};

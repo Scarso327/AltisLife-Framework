@@ -13,76 +13,76 @@ class CfgSpawns {
         class KavalaStation : Police {
             displayName = "Kavala Headquarters";
             marker = "apc_spawn_kavala";
-            icon = "data\icons\ico_Kavala.paa";
+            icon = "";
         };
         class AthiraStation : Police {
             displayName = "Athira Station";
             marker = "apc_spawn_athira";
-            icon = "data\icons\ico_Athira.paa";
+            icon = "";
         };
         class PyrgosStation : Police {
             displayName = "Pyrgos Station";
             marker = "apc_spawn_pyrgos";
-            icon = "data\icons\ico_Pyrgos.paa";
+            icon = "";
         };
         class AgiosStation : Police {
             displayName = "Agios Station";
             marker = "apc_spawn_agios";
-            icon = "data\icons\ico_Agios.paa";
+            icon = "";
         };
         class MarineStation : Police {
             displayName = "Marine Base";
             marker = "apc_spawn_marine";
-            icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
+            icon = "";
         };
 
         // National Health Service
         class KavalaHospital : Medic {
             displayName = "Kavala Hospital";
             marker = "nhs_spawn_kavala";
-            icon = "data\icons\ico_Kavala.paa";
+            icon = "";
         };
         class AthiraHospital : Medic {
             displayName = "Athira Hospital";
             marker = "nhs_spawn_athira";
-            icon = "data\icons\ico_Athira.paa";
+            icon = "";
         };
         class PyrgosHospital : Medic {
             displayName = "Pyrgos Hospital";
             marker = "nhs_spawn_pyrgos";
-            icon = "data\icons\ico_Pyrgos.paa";
+            icon = "";
         };
 
         // Civilian
         class Kavala : BaseSpawn {
             displayName = "Kavala";
             marker = "civ_spawn_kavala";
-            icon = "data\icons\ico_Kavala.paa";
+            icon = "";
         };
         class Athira : BaseSpawn {
             displayName = "Athira";
             marker = "civ_spawn_athira";
-            icon = "data\icons\ico_Athira.paa";
+            icon = "";
         };
         class Pyrgos : BaseSpawn {
             displayName = "Pyrgos";
             marker = "civ_spawn_pyrgos";
-            icon = "data\icons\ico_Pyrgos.paa";
+            icon = "";
         };
         class Sofia : BaseSpawn {
             displayName = "Sofia";
             marker = "civ_spawn_sofia";
-            icon = "data\icons\ico_Agios.paa"; // CHANGE
+            icon = "";
         };
         class Agios : BaseSpawn {
             displayName = "Agios";
             marker = "civ_spawn_agios";
-            icon = "data\icons\ico_Agios.paa"; // CHANGE
+            icon = "";
         };
         class Neochori : BaseSpawn {
             displayName = "Neochori";
             marker = "civ_spawn_neochori";
-            icon = "data\icons\ico_Agios.paa"; // CHANGE
+            icon = "";
         };
     };
 

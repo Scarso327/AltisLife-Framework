@@ -52,11 +52,9 @@ if (_extDBNotLoaded isEqualType []) exitWith {
 life_server_extDB_notLoaded = false;
 publicVariable "life_server_extDB_notLoaded";
 
-/* Run stored procedures for SQL side cleanup */
-["CALL resetLifeVehicles",1] call DB_fnc_asyncCall;
-["CALL deleteDeadVehicles",1] call DB_fnc_asyncCall;
-["CALL deleteOldHouses",1] call DB_fnc_asyncCall;
-["CALL deleteOldGangs",1] call DB_fnc_asyncCall;
+{
+    [format["CALL %1", _x], 1] call DB_fnc_asyncCall;
+} forEach ["resetVehicles"];
 
 ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
 ULP_SRV_Date resize 3; // We only need Year, Month, Day

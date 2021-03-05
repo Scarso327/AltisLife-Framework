@@ -241,7 +241,11 @@ class ULP_Functions {
 	
 	class Garage {
 		file = "Functions\Garage";
+		class openGarage {};
 		class storeVehicle {};
+		class populateGarage {};
+		class onGarageSwitch {};
+		class retrieveGarage {};
 	};
 };
 

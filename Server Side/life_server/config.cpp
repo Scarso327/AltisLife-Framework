@@ -30,6 +30,8 @@ class CfgFunctions {
             file = "\life_server\Functions\Database\Vehicle";
             class createVehicle {};
             class storeVehicle {};
+            class getGarage {};
+            class retrieveVehicle {};
         };
     };
 

@@ -5,3 +5,4 @@
 #include "DisplaySelect\DisplaySelectNumber.hpp"
 #include "DialogSpawn\DialogSpawn.hpp"
 #include "DialogVehicleStore\DialogVehicleStore.hpp"
+#include "DialogGarage\DialogGarage.hpp"

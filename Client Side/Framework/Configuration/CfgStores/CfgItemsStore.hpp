@@ -3,120 +3,86 @@ class CfgItemsStore {
 	toolBoxIDC = 3113;
 	itemCfg = "CfgItems";
 
+	class ItemBase { condition = "true"; };
+	class FactionBase : ItemBase { price = 0; };
+
 	class Police {
 		storeName = "Police Equipment Store";
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Rifles {
 			// SPECIAL
-			class arifle_Mk20C_plain_F {
+			class arifle_Mk20C_plain_F : FactionBase {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 				class textures { class arifle_Mk20C_plain_F {}; };
 			};
-			class arifle_SDAR_F { 
-				price = 0;
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; 
-			};
+			class arifle_SDAR_F : FactionBase { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; };
 
 			// SUB-MACHINE GUNS
-			class SMG_05_F { 
-				price = 0;
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
-			}; 
-			class SMG_01_F { 
-				price = 0;
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
-			};
-			class SMG_03C_black { 
-				price = 0;
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
-			};
-			class SMG_03_black { 
-				price = 0;
-				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
-			};
+			class SMG_05_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; }; 
+			class SMG_01_F : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class SMG_03C_black : FactionBase { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class SMG_03_black : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
 
 			// ASSAULT RIFLES
-			class arifle_SPAR_01_blk_F {
-				price = 0;
+			class arifle_SPAR_01_blk_F : FactionBase {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures { class arifle_SPAR_01_blk_F {}; };
 			};
-			class arifle_SPAR_02_blk_F {
-				price = 0;
+			class arifle_SPAR_02_blk_F : FactionBase {
 				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
 				class textures { class arifle_SPAR_02_blk_F {}; };
 			};
-			class arifle_CTAR_blk_F {
-				price = 0;
+			class arifle_CTAR_blk_F : FactionBase {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures { class arifle_CTAR_blk_F {}; };
 			};
-			class arifle_CTARS_blk_F {
-				price = 0;
+			class arifle_CTARS_blk_F : FactionBase {
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_CTARS_blk_F {}; };
 			};
-			class arifle_MX_Black_F {
-				price = 0;
+			class arifle_MX_Black_F : FactionBase {
 				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MX_Black_F {}; };
 			};
-			class arifle_MXM_Black_F {
-				price = 0;
+			class arifle_MXM_Black_F : FactionBase {
 				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MXM_Black_F {}; };
 			}; 
-			class arifle_MX_SW_Black_F {
-				price = 0;
+			class arifle_MX_SW_Black_F : FactionBase {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MX_SW_Black_F {}; };
 			};
-			class arifle_MSBS65_black_F {
-				price = 0;
+			class arifle_MSBS65_black_F : FactionBase {
 				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MSBS65_black_F {}; };
 			};
-			class arifle_Katiba_C_F {
-				price = 0;
+			class arifle_Katiba_C_F : FactionBase {
 				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_Katiba_C_F {}; };
 			};
-			class arifle_ARX_blk_F {
-				price = 0;
+			class arifle_ARX_blk_F : FactionBase {
 				condition = "[""Police_Main"", 7] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_ARX_blk_F {}; };
 			};
-			class arifle_SPAR_03_blk_F {
-				price = 0;
+			class arifle_SPAR_03_blk_F : FactionBase {
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_SPAR_03_blk_F {}; };
 			};
-			class srifle_EBR_F {
-				price = 0;
+			class srifle_EBR_F : FactionBase {
 				condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 				class textures { class srifle_EBR_F {}; };
 			};
-			class srifle_DMR_03_F {
-				price = 0;
+			class srifle_DMR_03_F : FactionBase {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }";
 				class textures { class srifle_DMR_03_F {}; };
 			};
 		};
-
 		class Pistols {
-			class hgun_P07_F {
-				price = 0;
-				condition = "true";
-			};
-			class hgun_ACPC2_F { 
-				price = 0;
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 4] call ULP_fnc_hasAccess }"; 
-			};
+			class hgun_P07_F : FactionBase {};
+			class hgun_ACPC2_F : FactionBase {  condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 4] call ULP_fnc_hasAccess }"; };
 		};
-
 		class Attachments {
-			class bipod_01_F_blk { 
-				price = 0;
+			class bipod_01_F_blk : FactionBase { 
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 				class textures {
 					class bipod_01_F_blk {};
@@ -124,147 +90,75 @@ class CfgItemsStore {
 					class bipod_03_F_blk {};
 				};
 			};
-
-			class acc_flashlight {
-				price = 0;
-				condition = "true";
-			};
-			class acc_pointer_IR {
-				price = 0;
-				condition = "true";
-			};
+			class acc_flashlight : FactionBase {};
+			class acc_pointer_IR : FactionBase {};
 
 			// SIGHTS
-			class optic_Aco {
-				price = 0;
-				condition = "true";
-			};
-			class optic_Holosight {
-				price = 0;
-				condition = "true";
+			class optic_Aco : FactionBase {};
+			class optic_Holosight : FactionBase {
 				class textures {
 					class optic_Holosight_blk_F {};
 					class optic_Holosight_smg_blk_F {};
 				};
 			};
-			class optic_Hamr {
-				price = 0;
+			class optic_Hamr : FactionBase {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures { class optic_Hamr {}; };
 			};
-			class optic_MRCO { 
-				price = 0;
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
-			};
-			class optic_Arco {
-				price = 0;
+			class optic_MRCO : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
+			class optic_Arco : FactionBase {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures { class optic_Arco_blk_F {}; };
 			};
-			class optic_ERCO_blk_F { 
-				price = 0;
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
-			};
-			class optic_DMS {
-				price = 0;
+			class optic_ERCO_blk_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
+			class optic_DMS : FactionBase {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }";
 				class textures { class optic_DMS {}; };
 			};
-			class optic_SOS {
-				price = 0;
+			class optic_SOS : FactionBase {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }";
 				class textures { class optic_SOS {}; };
 			};
-			class optic_AMS {
-				price = 0;
+			class optic_AMS : FactionBase {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess }";
 				class textures { class optic_AMS {}; };
 			};
-			class optic_NVS { 
-				price = 0;
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }" ;
-			};
+			class optic_NVS : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
 
 			// SUPPRESSORS
-			class muzzle_snds_L {
-				price = 0;
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
-			};
-			class muzzle_snds_acp { 
-				price = 0;
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
-			};
-			class muzzle_snds_M { 
-				price = 0;
+			class muzzle_snds_L : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class muzzle_snds_acp : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class muzzle_snds_M : FactionBase { 
 				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
 				class textures { class muzzle_snds_M {}; };
 			};
-			class muzzle_snds_570 { 
-				price = 0;
+			class muzzle_snds_570 : FactionBase { 
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
 			};
-			class muzzle_snds_58_blk_F { 
-				price = 0;
+			class muzzle_snds_58_blk_F : FactionBase { 
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
 				class textures { class muzzle_snds_58_blk_F {}; };
 			};
-			class muzzle_snds_H { 
-				price = 0;
+			class muzzle_snds_H : FactionBase { 
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
 				class textures { class muzzle_snds_H {}; };
 			};
-			class muzzle_snds_65_TI_blk_F { 
-				price = 0;
+			class muzzle_snds_65_TI_blk_F : FactionBase { 
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
 				class textures { class muzzle_snds_65_TI_blk_F {}; };
 			};
-			class muzzle_snds_B { 
-				price = 0;
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }"; 
-				class textures { class muzzle_snds_B {}; };
-			};
 		};
-
 		class Magazines {};
-
 		class Items {
-			class ItemMap {
-				price = 0;
-				condition = "true";
-			};
-			class ItemCompass {
-				price = 0;
-				condition = "true";
-			};
-			class ItemWatch {
-				price = 0;
-				condition = "true";
-			};
-			class ItemGPS {
-				price = 0;
-				condition = "true";
-			};
-			class B_UavTerminal { 
-				price = 0;
-				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
-			};
-			class ItemRadio {
-				price = 0;
-				condition = "true";
-			};
-			class Rangefinder {
-				price = 0;
-				condition = "true";
-			};
-			class ToolKit {
-				price = 0;
-				condition = "true";
-			};
-			class SmokeShell { 
-				price = 0;
-				condition = "true"; 
-				class textures { class SmokeShell {}; };
-			};
+			class ItemMap : FactionBase {};
+			class ItemCompass : FactionBase {};
+			class ItemWatch : FactionBase {};
+			class ItemGPS : FactionBase {};
+			class B_UavTerminal : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class ItemRadio : FactionBase {};
+			class Rangefinder : FactionBase {};
+			class ToolKit : FactionBase {};
+			class SmokeShell : FactionBase { class textures { class SmokeShell {}; }; };
 		};
 	};
 
@@ -276,13 +170,13 @@ class CfgItemsStore {
 		class Attachments {};
 		class Magazines {};
 		class Items {
-			class ItemMap {};
-			class ItemCompass {};
-			class ItemWatch {};
-			class ItemGPS {};
-			class ItemRadio {};
-			class Rangefinder {};
-			class ToolKit {};
+			class ItemMap : Base {};
+			class ItemCompass : Base {};
+			class ItemWatch : Base {};
+			class ItemGPS : Base {};
+			class ItemRadio : Base {};
+			class Rangefinder : Base {};
+			class ToolKit : Base {};
 		};
 	};
 
@@ -294,13 +188,13 @@ class CfgItemsStore {
 		class Attachments {};
 		class Magazines {};
 		class Items {
-			class ItemMap {};
-			class ItemCompass {};
-			class ItemWatch {};
-			class ItemGPS {};
-			class ItemRadio {};
-			class Binocular {};
-			class ToolKit {};
+			class ItemMap : Base {};
+			class ItemCompass : Base {};
+			class ItemWatch : Base {};
+			class ItemGPS : Base {};
+			class ItemRadio : Base {};
+			class Binocular : Base {};
+			class ToolKit : Base {};
 		};
 	};
 
@@ -308,25 +202,21 @@ class CfgItemsStore {
 		storeName = "Handgun Store";
 		condition = "true";
 		class Rifles {};
-
 		class Pistols {
-			class hgun_Pistol_01_F {};
-			class hgun_Rook40_F {};
-			class hgun_ACPC2_F {};
-			class hgun_Pistol_heavy_01_F {};
-			class hgun_Pistol_heavy_02_F {};
+			class hgun_Pistol_01_F : Base {};
+			class hgun_Rook40_F : Base {};
+			class hgun_ACPC2_F : Base {};
+			class hgun_Pistol_heavy_01_F : Base {};
+			class hgun_Pistol_heavy_02_F : Base {};
 		};
-
 		class Attachments {};
-
 		class Magazines {
-			class 10Rnd_9x21_Mag {};
-			class 16Rnd_9x21_Mag {};
-			class 9Rnd_45ACP_Mag {};
-			class 11Rnd_45ACP_Mag {};
-			class 6Rnd_45ACP_Cylinder {};
+			class 10Rnd_9x21_Mag : Base {};
+			class 16Rnd_9x21_Mag : Base {};
+			class 9Rnd_45ACP_Mag : Base {};
+			class 11Rnd_45ACP_Mag : Base {};
+			class 6Rnd_45ACP_Cylinder : Base {};
 		};
-
 		class Items {};
 	};
 
@@ -339,15 +229,12 @@ class CfgItemsStore {
 			};
 			class srifle_DMR_06_hunter_F {};
 		};
-
 		class Pistols {};
 		class Attachments {};
-
 		class Magazines {
 			class 2Rnd_12Gauge_Slug {};
 			class 10Rnd_Mk14_762x51_Mag {};
 		};
-
 		class Items {
 			class ItemMap {};
 			class ItemCompass {};

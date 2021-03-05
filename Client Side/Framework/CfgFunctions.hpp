@@ -79,7 +79,6 @@ class ULP_Functions {
 		class isKnocked {};
 		class initSurvival {};
 		class initPlayerEvents {};
-		class getInventory {};
 		class resetSurvival {};
 		class canRestrain {};
 		class getName {};
@@ -170,6 +169,7 @@ class ULP_Functions {
 		class setGear {};
 		class addItems {};
 		class stripGear {};
+		class getInventory {};
 	};
 	
 	class Gathering {
@@ -234,6 +234,11 @@ class ULP_Functions {
 		file = "Functions\Map";
 		class addMarket {};
 		class addStore {};
+	};
+	
+	class Garage {
+		file = "Functions\Garage";
+		class storeVehicle {};
 	};
 };
 

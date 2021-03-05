@@ -19,18 +19,15 @@ if (_steamid isEqualTo "" || { _name isEqualTo "" } || { !(isClass (missionConfi
 (_class call BIS_fnc_objectType) params ["", "_type"];
 
 // Get ID...
-private _id = 1;
 private _query = [format["SELECT MAX(id) FROM vehicles"], 2] call DB_fnc_asyncCall;
 
-if !(_query isEqualTo "" && { _query isEqualTo [] }) then {
-	_query params [
-		"_id"
-	];
-};
+_query params [
+	["_id", 1, [0]]
+];
 
 // Insert...
 [format[
-	"INSERT INTO vehicles (pid, faction, classname, type, texture) VALUES ('%1', '%2', '%3', '%4', '%5');", 
+	"INSERT INTO vehicles (pid, faction, classname, type, texture, active) VALUES ('%1', '%2', '%3', '%4', '%5', '1');", 
 	_steamid, _faction, _class, _type, _texture
 ], 1] call DB_fnc_asyncCall;
 

@@ -235,6 +235,11 @@ class ULP_Functions {
 		class addMarket {};
 		class addStore {};
 	};
+	
+	class Garage {
+		file = "Functions\Garage";
+		class storeVehicle {};
+	};
 };
 
 class ULP_Functions_UI {

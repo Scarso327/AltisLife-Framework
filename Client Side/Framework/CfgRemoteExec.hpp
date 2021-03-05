@@ -38,5 +38,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_createVehicle {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_storeVehicle {
+            allowedTargets = SERVER;
+        };
     };
 };

@@ -25,6 +25,7 @@ class CfgRemoteExec {
             allowedTargets = CLIENT;
         };
         class ULP_fnc_vehicleLights {};
+        class ULP_fnc_invokeEvent {};
 
         class ULP_SRV_fnc_queryPlayerInfo {
             allowedTargets = SERVER;

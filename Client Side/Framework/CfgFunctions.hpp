@@ -17,9 +17,12 @@ class ULP_Functions {
 
 	class Events {
 		file = "Functions\Events";
+		class addEventHandler {};
+		class invokeEvent {};
 		class addEachFrame {};
 		class onEachFrame {};
 		class removeEachFrame {};
+		class removeEventHandler {};
 		class onPause {};
 		class onRestrain {};
 		class onIncapacitated {};

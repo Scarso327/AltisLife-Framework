@@ -11,7 +11,7 @@ class CfgSpawns {
     class Altis {
         // Altis Police Constabulary
         class KavalaStation : Police {
-            displayName = "Kavala Station";
+            displayName = "Kavala Headquarters";
             marker = "apc_spawn_kavala";
             icon = "data\icons\ico_Kavala.paa";
         };

@@ -26,7 +26,9 @@ if (isNil "_vehicle" || { isNull _vehicle } || { !(alive _vehicle) }) exitWith {
 };
 
 if ([[player] call ULP_fnc_getFaction, "vehicles"] call ULP_fnc_factionPresistant && { (_vehicle getVariable ["vehicle_id", -1]) >= 0  }) exitWith {
+	["VehicleStored", { hint "Vehicle has been stored."; }, true] call ULP_fnc_addEventHandler;
 	[_vehicle] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
 };
 
 deleteVehicle _vehicle;
+hint "Vehicle has been stored.";

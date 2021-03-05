@@ -22,3 +22,5 @@ _id = [_id] call DB_fnc_numberSafe;
 ], 1] call DB_fnc_asyncCall;
 
 deleteVehicle _vehicle;
+
+["VehicleStored"] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

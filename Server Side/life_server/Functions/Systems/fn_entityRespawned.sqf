@@ -1,20 +1,13 @@
 /*
-    File: fn_entityRespawned.sqf
-    Author: DomT602
-    Description:
-    Called when a player respawns (A3 respawn)
+** Author: Jack "Scarso" Farhall
+** Description: 
 */
 
-params [
-    ["_entity",objNull,[objNull]],
-    ["_corpse",objNull,[objNull]]
+_this params [
+    ["_entity", objNull, [objNull]],
+    ["_corpse", objNull, [objNull]]
 ];
 
-private _uid = getPlayerUID _entity;
-private _index = server_corpses findIf {(_x select 0) isEqualTo _uid};
+if (isNull _corpse) exitWith {};
 
-if (_index isEqualTo -1) then {
-    server_corpses pushBack [_uid,_corpse];
-} else {
-    server_corpses set [_index,[_uid,_corpse]];
-};
+deleteVehicle _corpse;

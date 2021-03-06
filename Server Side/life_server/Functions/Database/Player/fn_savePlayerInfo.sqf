@@ -21,8 +21,8 @@ _faction = missionConfigFile >> "CfgFactions" >> _faction;
 if (_name isEqualTo "" || { _steamid isEqualTo "" } || { !(isClass (_faction)) }) exitWith {};
 
 _name = [_name] call DB_fnc_mresString;
-_cash = [_cash] call DB_fnc_numberSafe;
-_bank = [_bank] call DB_fnc_numberSafe;
+_cash = [_cash, ""] call ULP_fnc_numberText;
+_bank = [_bank, ""] call ULP_fnc_numberText;
 _gear = [_gear] call DB_fnc_mresArray;
 _licenses = [_licenses] call DB_fnc_mresArray;
 _stats = [_stats] call DB_fnc_mresArray;

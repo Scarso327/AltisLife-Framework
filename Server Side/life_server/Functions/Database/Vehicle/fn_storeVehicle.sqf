@@ -14,7 +14,7 @@ if (isNull _vehicle) exitWith {};
 private _id = _vehicle getVariable ["vehicle_id", -1];
 if (_id < 0) exitWith {};
 
-_id = [_id] call DB_fnc_numberSafe;
+_id = [_id, ""] call ULP_fnc_numberText;
 
 [format[
 	"UPDATE vehicles SET active='0' WHERE id='%1'", 

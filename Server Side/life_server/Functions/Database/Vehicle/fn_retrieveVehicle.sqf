@@ -11,7 +11,7 @@ _this params [
 
 if (_id < 0) exitWith {};
 
-_id = [_id] call DB_fnc_numberSafe;
+_id = [_id, ""] call ULP_fnc_numberText;
 
 [format[
 	"UPDATE vehicles SET active='1' WHERE id='%1'", 

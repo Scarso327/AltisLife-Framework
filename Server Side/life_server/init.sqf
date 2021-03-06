@@ -94,7 +94,6 @@ life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT
 
 /* Event handler for disconnecting players */
 addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect; false;}];
-[] call compile preprocessFileLineNumbers "\life_server\functions.sqf";
 
 /* Set OwnerID players for Headless Client */
 TON_fnc_requestClientID =

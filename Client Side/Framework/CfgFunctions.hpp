@@ -54,6 +54,7 @@ class ULP_Functions {
 		file = "Functions\Functions";
 		class getAnim {};
 		class numberText {};
+		class bool {};
 	};
 
 	class Clothing {

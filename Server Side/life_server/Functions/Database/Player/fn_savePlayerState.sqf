@@ -19,8 +19,8 @@ if (_steamid isEqualTo "" || { !(isClass (_faction)) }) exitWith {};
 
 private _query = switch (_state) do {
 	case 0: { format["%1licenses='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
-	case 1: { format["cash='%1'", [_data] call DB_fnc_numberSafe] };
-	case 2: { format["bankacc='%1'", [_data] call DB_fnc_numberSafe] };
+	case 1: { format["cash='%1'", [_data, ""] call ULP_fnc_numberText] };
+	case 2: { format["bankacc='%1'", [_data, ""] call ULP_fnc_numberText] };
 	default { "" };
 };
 

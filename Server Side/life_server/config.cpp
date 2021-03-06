@@ -40,27 +40,10 @@ class CfgFunctions {
         class MySQL
         {
             file = "\life_server\Functions\MySQL";
-            class numberSafe {};
             class mresArray {};
-            class asyncCall{};
+            class asyncCall {};
             class mresToArray {};
-            class bool {};
             class mresString {};
-            class updatePartial {};
-        };
-    };
-
-    class Life_System {
-        tag = "life";
-        class Wanted_Sys {
-            file = "\life_server\Functions\WantedSystem";
-            class wantedFetch {};
-            class wantedPerson {};
-            class wantedBounty {};
-            class wantedRemove {};
-            class wantedAdd {};
-            class wantedCrimes {};
-            class wantedProfUpdate {};
         };
     };
 
@@ -68,7 +51,6 @@ class CfgFunctions {
         tag = "TON";
         class Systems {
             file = "\life_server\Functions\Systems";
-            class managesc {};
             class cleanup {};
             class clientDisconnect {};
             class entityRespawned {};
@@ -92,8 +74,6 @@ class CfgVehicles {
     };
 
     class C_man_1 : Civilian_F {
-        class EventHandlers: EventHandlers {
-            init = "(_this select 0) execVM ""\life_server\fix_headgear.sqf""";
-        };
+        class EventHandlers: EventHandlers {};
     };
 };

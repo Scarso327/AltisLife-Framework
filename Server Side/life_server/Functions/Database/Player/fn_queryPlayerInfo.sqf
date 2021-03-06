@@ -44,7 +44,7 @@ for "_i" from 0 to 1 step 0 do {
 			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
 				_uid,
 				[_name] call DB_fnc_mresString,
-				[LIFE_SETTINGS(getNumber,"starting_bank")] call DB_fnc_numberSafe,
+				[LIFE_SETTINGS(getNumber,"starting_bank"), ""] call ULP_fnc_numberText,
 				[[_name]] call DB_fnc_mresArray
 			], 1
 		] call DB_fnc_asyncCall;
@@ -64,7 +64,7 @@ for "_i" from 0 to 1 step 0 do {
 
 		// Coverts data types to something arma can understand...
 		{ _newResult set [_x, [(_result select _x)] call DB_fnc_mresToArray] } forEach _arraysToConvert;
-		{ _newResult set [_x, [(_result select _x), 1] call DB_fnc_bool] } forEach _boolsToConvert;
+		{ _newResult set [_x, [(_result select _x), 1] call ULP_fnc_bool] } forEach _boolsToConvert;
 
 		// Setup playtime tracking...
 		private _playtime = _newResult select 4;

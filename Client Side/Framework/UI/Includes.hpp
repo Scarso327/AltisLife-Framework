@@ -6,3 +6,4 @@
 #include "DialogSpawn\DialogSpawn.hpp"
 #include "DialogVehicleStore\DialogVehicleStore.hpp"
 #include "DialogGarage\DialogGarage.hpp"
+#include "DialogInteractions\DialogInteractions.hpp"

@@ -247,6 +247,12 @@ class ULP_Functions {
 		class onGarageSwitch {};
 		class retrieveGarage {};
 	};
+
+	class Interactions {
+		file = "Functions\Interactions";
+		class openInteractions {};
+		class getInteractions {};
+	};
 };
 
 class ULP_Functions_UI {

@@ -6,6 +6,10 @@
 #include "..\..\dikCodes.hpp"
 scopeName "fn_actionKeyDown";
 
+if (canSuspend) exitWith {
+    [ULP_fnc_actionKeyDown, _this] call ULP_fnc_directCall;
+};
+
 _this params [
     "_ctrl", "_code", "_shift", "_ctrlKey", "_alt"
 ];
@@ -33,7 +37,11 @@ if (isNull _object) then {
 		};
 	};
 } else {
-	
+	private _interactions = [_object] call ULP_fnc_getInteractions;
+
+	if !(_interactions isEqualTo []) exitWith {
+		_interactions call ULP_fnc_openInteractions;
+	};
 };
 
 true

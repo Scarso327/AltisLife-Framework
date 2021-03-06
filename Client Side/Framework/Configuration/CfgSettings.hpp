@@ -211,3 +211,4 @@ class Life_Settings {
 #include "CfgApps.hpp"
 #include "CfgVehicles\CfgVehicles.hpp"
 #include "CfgVehicles\CfgVehicleStores.hpp"
+#include "CfgInteractions.hpp"

@@ -7,13 +7,18 @@
 #define BUTTON_Y_CHANGE (0.022 * safezoneH)
 scopeName "fn_openInteractions";
 
-private _interactions = _this;
+_this params [
+	["_object", objNull, [objNull]],
+	["_interactions", [], [[]]]
+];
 
-if (dialog || { _interactions isEqualTo [] }) exitWith { false };
+if (dialog || { isNull _vehicle } || { _interactions isEqualTo [] }) exitWith { false };
 
 if (createDialog "DialogInteractions") exitWith {
 	private _display = findDisplay 3600;
 	if (isNull _display) exitWith { false };
+
+	_display setVariable ["object", _object];
 
 	private _header = _display displayCtrl 3601;
 	private _headerPos = ctrlPosition _header;
@@ -36,7 +41,11 @@ if (createDialog "DialogInteractions") exitWith {
 		_button = _display ctrlCreate ["Life_RscButtonCenter", 3603 + _forEachIndex];
 		_button ctrlSetStructuredText parseText format["<t align = 'center'>%1</t>", _title];
 		_button ctrlSetPosition [_headerPos select 0, (_headerPos select 1) + (BUTTON_Y_CHANGE * (_forEachIndex + 1)), _headerPos select 2, _headerPos select 3];
-		_button ctrlSetEventHandler ["ButtonClick", _action];
+		_button setVariable ["action", _action];
+		_button ctrlAddEventHandler ["ButtonClick", {
+			_this params [ "_button" ];
+			[(ctrlParent _button) getVariable ["object", _object], _button] call compile (_button getVariable ["action", "closeDialog 0;"]);
+		}];
 		_button ctrlCommit 0;
 	} forEach _interactions;
 

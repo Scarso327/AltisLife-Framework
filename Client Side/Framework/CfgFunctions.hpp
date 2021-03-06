@@ -223,6 +223,7 @@ class ULP_Functions {
 		class vehicleCfg {};
 		class vehicleSiren {};
 		class vehicleLights {};
+		class repairVehicle {};
 	};
 
 	class VehicleStore {

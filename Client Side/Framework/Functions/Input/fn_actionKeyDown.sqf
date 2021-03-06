@@ -40,7 +40,7 @@ if (isNull _object) then {
 	private _interactions = [_object] call ULP_fnc_getInteractions;
 
 	if !(_interactions isEqualTo []) exitWith {
-		_interactions call ULP_fnc_openInteractions;
+		[_object, _interactions] call ULP_fnc_openInteractions;
 	};
 };
 

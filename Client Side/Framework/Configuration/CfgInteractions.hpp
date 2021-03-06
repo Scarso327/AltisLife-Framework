@@ -2,7 +2,7 @@ class CfgInteractions {
 	class Vehicle {
 		class Repair {
 			title = "Repair";
-			onClick = "hint ""Hello"";";
+			onClick = "_this call ULP_fnc_repairVehicle";
 			factions[] = { "Police", "Medic", "Civilian" };
 			condition = "true";
 		};

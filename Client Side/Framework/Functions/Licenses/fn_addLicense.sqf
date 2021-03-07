@@ -11,9 +11,9 @@ _this params [
 	["_save", true, [false]]
 ];
 
-_license = missionConfigFile >> "License" >> _license;
+_license = missionConfigFile >> "CfgLicenses" >> _license;
 if (!isClass _license || 
-	{ !([_license] call ULP_fnc_hasLicense) } || 
+	{ [_license] call ULP_fnc_hasLicense } || 
 	{ !([player] call ULP_fnc_getFaction in getArray (_license >> "factions")) } || 
 	{ !([] call compile getText(_license >> "conditions")) }
 ) exitWith { false };
@@ -28,7 +28,7 @@ if !(_price isEqualTo -1) then {
 	[player, 1, CASH] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 };
 
-ULP_Licenses pushBackUnique _license;
+ULP_Licenses pushBackUnique (configName _license);
 
 if (_save) then {
 	[player, 0, ULP_Licenses] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];

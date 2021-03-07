@@ -66,7 +66,6 @@ diag_log format["------------------------------------------ Version %1 ---------
 diag_log "----------------------------------------------------------------------------------------------------";
 
 /* Map-based server side initialization. */
-master_group attachTo[bank_obj,[0,0,0]];
 
 {
     removeAllWeapons _x;

@@ -2,6 +2,11 @@ class CfgVehicles {
 	sellPerc = 0.3;
 	retrievalPerc = 0.15;
 
+	class Base {
+		conditions = "true";
+		class Textures {};
+	};
+
 	// LIGHTS --------------------------------------------------------------------------------------
 	class PoliceLights {
 		leftPos[] = {0, 0, 0};
@@ -17,12 +22,7 @@ class CfgVehicles {
 		rightColour[] = {0.1, 0.1, 20};
 	};
 
-	class Base {
-		conditions = "true";
-		class Textures {};
-	};
-
-	// BASE --------------------------------------------------------------------------------------
+	// TEXTURES --------------------------------------------------------------------------------------
 	class BaseTexture {
 		displayName = "Default";
 		buyPrice = 0;
@@ -774,7 +774,7 @@ class CfgVehicles {
 		virtualSpace = 0;
 	};
 
-	class B_Truck_01_box_F {
+	class B_Truck_01_box_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
@@ -809,7 +809,7 @@ class CfgVehicles {
 	};
 
 	// BOATS --------------------------------------------------------------------------------------
-	class C_Scooter_Transport_01_F {
+	class C_Scooter_Transport_01_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
@@ -990,7 +990,7 @@ class CfgVehicles {
 	};
 	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 0; };
 
-	class O_Heli_Light_02_unarmed_F {
+	class O_Heli_Light_02_unarmed_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
@@ -1011,7 +1011,7 @@ class CfgVehicles {
 		};
 	};
 
-	class I_Heli_light_03_unarmed_F {
+	class I_Heli_light_03_unarmed_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
@@ -1028,7 +1028,7 @@ class CfgVehicles {
 	};
 	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {};
 
-	class B_Heli_Transport_01_F {
+	class B_Heli_Transport_01_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
@@ -1058,31 +1058,31 @@ class CfgVehicles {
 		};
 	};
 
-	class O_Heli_Transport_04_black_F {
+	class O_Heli_Transport_04_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-	class O_Heli_Transport_04_bench_black_F {
+	class O_Heli_Transport_04_bench_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-	class O_Heli_Transport_04_covered_black_F {
+	class O_Heli_Transport_04_covered_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-	class O_Heli_Transport_04_box_black_F {
+	class O_Heli_Transport_04_box_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-	class O_Heli_Transport_04_ammo_black_F {
+	class O_Heli_Transport_04_ammo_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-	class O_Heli_Transport_04_fuel_black_F {
+	class O_Heli_Transport_04_fuel_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-	class O_Heli_Transport_04_medevac_black_F {
+	class O_Heli_Transport_04_medevac_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
@@ -1097,7 +1097,7 @@ class CfgVehicles {
 		};
 	};
 
-	class B_Heli_Transport_03_unarmed_F {
+	class B_Heli_Transport_03_unarmed_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
@@ -1125,41 +1125,60 @@ class CfgVehicles {
 	};
 
 	// PLANES --------------------------------------------------------------------------------------
-	class C_Plane_Civil_01_F {
+	class C_Plane_Civil_01_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
-	class B_T_VTOL_01_infantry_F {
+	class B_T_VTOL_01_infantry_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-	class B_T_VTOL_01_vehicle_F {
-		buyPrice = 0;
-		virtualSpace = 0;
-	};
-
-	class O_T_VTOL_02_infantry_F {
-		buyPrice = 0;
-		virtualSpace = 0;
-	};
-	class O_T_VTOL_02_vehicle_F {
+	class B_T_VTOL_01_vehicle_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
 
-	class I_Plane_Fighter_03_CAS_F {
+	class O_T_VTOL_02_infantry_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-	class I_Plane_Fighter_04_F { buyPrice = 0; };
-	class B_Plane_CAS_01_F { buyPrice = 0; };
-	class B_Plane_Fighter_01_F { buyPrice = 0; };
-	class B_Plane_Fighter_01_Stealth_F { buyPrice = 0; };
-	class O_Plane_CAS_02_F { buyPrice = 0; };
-	class O_Plane_Fighter_02_F { buyPrice = 0; };
-	class O_Plane_Fighter_02_Stealth_F { buyPrice = 0; };
+	class O_T_VTOL_02_vehicle_F : Base {
+		buyPrice = 0;
+		virtualSpace = 0;
+	};
+
+	class I_Plane_Fighter_03_CAS_F : Base {
+		buyPrice = 0;
+		virtualSpace = 0;
+	};
+	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
+	class B_Plane_CAS_01_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
+	class B_Plane_Fighter_01_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
+	class B_Plane_Fighter_01_Stealth_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
+	class O_Plane_CAS_02_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
+	class O_Plane_Fighter_02_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
+	class O_Plane_Fighter_02_Stealth_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
+
+	// CONTAINERS --------------------------------------------------------------------------------------
+	class B_Slingload_01_Cargo_F : Base {
+		buyPrice = 0;
+		virtualSpace = 0;
+	};
+	class B_Slingload_01_Fuel_F : Base {
+		buyPrice = 0;
+		virtualSpace = 0;
+	};
+
+	class Land_Pod_Heli_Transport_04_box_black_F : Base {
+		buyPrice = 0;
+		virtualSpace = 0;
+	};
+	class Land_Pod_Heli_Transport_04_fuel_black_F : Base {
+		buyPrice = 0;
+		virtualSpace = 0;
+	};
 
 	// SOUNDS --------------------------------------------------------------------------------------
 	class Police_One {

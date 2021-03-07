@@ -31,6 +31,8 @@ class ULP_Functions {
 		class onDamaged {};
 		class onSurvival {};
 		class onKnocked {};
+		class onGetIn {};
+		class onGetOut {};
 	};
 
 	class Utility {

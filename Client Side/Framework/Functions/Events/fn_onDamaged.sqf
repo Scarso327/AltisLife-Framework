@@ -20,6 +20,18 @@ private _originalDamage = [
 	damage _unit
 ] select (_part isEqualTo "");
 
+if (!(isNull (objectParent _unit)) && { (vehicle _unit) isKindOf "LandVehicle" }) then {
+	private _multiplier = [
+		1.25,
+		1
+	] select (_unit getVariable["seatBelt", false]);
+
+	_damage = (_originalDamage + ((_damage - _originalDamage) * _multiplier)) * ([
+		1.1,
+		0.9
+	] select ((speed (vehicle _unit)) <= 80));
+};
+
 // TODO : Exit with original damage if knocked or tased...
 
 // TODO : Handle Taser, Anti-VDM & Seatbelts...

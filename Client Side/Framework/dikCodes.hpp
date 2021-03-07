@@ -36,3 +36,4 @@
 #define N 49
 #define M 50
 #define SPACE 57
+#define LWINDOWS 219

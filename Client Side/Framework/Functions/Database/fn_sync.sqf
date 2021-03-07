@@ -4,7 +4,7 @@
 */
 scopeName "fn_sync";
 
-if (time <= (ULP_Last_Sync + getNumber(missionConfigFile >> "Life_Settings" >> "sync_delay"))) exitWith {
+if (time <= (ULP_Last_Sync + getNumber(missionConfigFile >> "CfgSettings" >> "sync_delay"))) exitWith {
 	hint "Your data has been synced recently, you must wait 5 minutes between automatic as well as manual syncs.";
 };
 

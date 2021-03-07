@@ -9,7 +9,7 @@ _this params [
 	["_saveButton", controlNull, [controlNull]]
 ];
 
-private _syncDelay = getNumber(missionConfigFile >> "Life_Settings" >> "sync_delay");
+private _syncDelay = getNumber(missionConfigFile >> "CfgSettings" >> "sync_delay");
 
 // Force wipes the control when clicked...
 _saveButton ctrlEnable false;

@@ -19,7 +19,7 @@ with missionNamespace do {
 	_fieldButton ctrlSetText "https://ascensionroleplay.co.uk/";
 	_fieldButton ctrlSetTooltip "";
 
-	private _abortDelay = time + getNumber(missionConfigFile >> "Life_Settings" >> "abort_delay");
+	private _abortDelay = time + getNumber(missionConfigFile >> "CfgSettings" >> "abort_delay");
 	
 	_abortButton ctrlEnable false;
 	_abortButton ctrlSetEventHandler["ButtonClick", "with missionNamespace do { [] call ULP_fnc_syncPlayerInfo; [""Abort"", true, false] call BIS_fnc_endMission; }; true"];

@@ -7,6 +7,9 @@ class CfgSpawns {
     };
     class Police : BaseSpawn { factions[] = { "Police" }; };
     class Medic : BaseSpawn { factions[] = { "Medic" }; };
+    class Civilian : BaseSpawn {
+        buildings[] = {};
+    };
 
     class Altis {
         // Altis Police Constabulary
@@ -54,32 +57,32 @@ class CfgSpawns {
         };
 
         // Civilian
-        class Kavala : BaseSpawn {
+        class Kavala : Civilian {
             displayName = "Kavala";
             marker = "civ_spawn_kavala";
             icon = "";
         };
-        class Athira : BaseSpawn {
+        class Athira : Civilian {
             displayName = "Athira";
             marker = "civ_spawn_athira";
             icon = "";
         };
-        class Pyrgos : BaseSpawn {
+        class Pyrgos : Civilian {
             displayName = "Pyrgos";
             marker = "civ_spawn_pyrgos";
             icon = "";
         };
-        class Sofia : BaseSpawn {
+        class Sofia : Civilian {
             displayName = "Sofia";
             marker = "civ_spawn_sofia";
             icon = "";
         };
-        class Agios : BaseSpawn {
+        class Agios : Civilian {
             displayName = "Agios";
             marker = "civ_spawn_agios";
             icon = "";
         };
-        class Neochori : BaseSpawn {
+        class Neochori : Civilian {
             displayName = "Neochori";
             marker = "civ_spawn_neochori";
             icon = "";

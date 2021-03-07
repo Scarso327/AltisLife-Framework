@@ -6,6 +6,6 @@ class CfgStatusIcons {
 
 	class Seatbelt : Base {
 		icon = "Data\UI\seatbelt.paa";
-		condition = "isNull (objectParent player) && { !(player getVariable[""seatBelt"", false]) }";
+		condition = "!isNull (objectParent player) && { !(player getVariable[""seatBelt"", false]) }";
 	};
 };

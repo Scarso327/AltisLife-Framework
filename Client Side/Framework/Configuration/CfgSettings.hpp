@@ -191,6 +191,7 @@ class CfgSettings {
     };
 
     doesntThreaten[] = { "", "Binocular", "Rangefinder" };
+    taserWeapons[] = { "hgun_P07_F", "hgun_P07_blk_F" };
 };
 
 #include "CfgLicenses.hpp"

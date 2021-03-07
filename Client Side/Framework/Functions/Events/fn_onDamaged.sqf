@@ -32,6 +32,16 @@ if (!(isNull (objectParent _unit)) && { (vehicle _unit) isKindOf "LandVehicle" }
 	] select ((speed (vehicle _unit)) <= 80));
 };
 
+if (!isNull _source) then {
+	if ((currentWeapon _source) in getArray(missionConfigFile >> "CfgSettings" >> "taserWeapons")) exitWith {
+		if ((_unit distance _source) <= 50) then {
+			[_source, true] call ULP_fnc_onKnocked;
+		};
+
+		_originalDamage breakOut "fn_onDamaged";
+	};
+};
+
 // TODO : Exit with original damage if knocked or tased...
 
 // TODO : Handle Taser, Anti-VDM & Seatbelts...

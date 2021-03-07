@@ -33,6 +33,8 @@ class ULP_Functions {
 		class onKnocked {};
 		class onGetIn {};
 		class onGetOut {};
+		class onFired {};
+		class onReloaded {};
 	};
 
 	class Utility {

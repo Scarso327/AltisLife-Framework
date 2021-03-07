@@ -6,10 +6,11 @@
 scopeName "fn_onKnocked";
 
 _this params [
-	["_attacker", objNull, [objNull]]
+	["_attacker", objNull, [objNull]],
+	["_taser", false, [true]]
 ];
 
-if (isNull _attacker || { _attacker isEqualTo player } || { isDowned(player) }) exitWith {};
+if (isDowned(player)) exitWith { false };
 
 [] spawn ULP_UI_fnc_closeDialogs;
 
@@ -24,7 +25,13 @@ _effectBlur ppEffectCommit 3;
 
 private _effectId = [[_effectBlur, {}]] call ULP_fnc_createEffect;
 
-hint format["%1 has knocked you out...", name _attacker];
+if (_taser) then {
+	[player, ["taserSound", 50, 1]] remoteExec ["say3D"];
+} else {
+	if !(isNull _attacker) then {
+		hint format["%1 has knocked you out...", name _attacker];
+	};
+};
 
 [
 	10, [_effectId],
@@ -40,3 +47,5 @@ hint format["%1 has knocked you out...", name _attacker];
 		player playMoveNow "amovppnemstpsraswrfldnon";
 	}
 ] call ULP_fnc_waitExecute;
+
+true

@@ -54,7 +54,6 @@ class CfgFunctions {
             class cleanup {};
             class clientDisconnect {};
             class entityRespawned {};
-            class cleanupRequest {};
         };
 
         class PlayTime {

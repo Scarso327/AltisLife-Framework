@@ -60,10 +60,7 @@ ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
 ULP_SRV_Date resize 3; // We only need Year, Month, Day
 
 private _timeStamp = diag_tickTime;
-diag_log "----------------------------------------------------------------------------------------------------";
-diag_log "---------------------------------- Starting Altis Life Server Init ---------------------------------";
-diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
-diag_log "----------------------------------------------------------------------------------------------------";
+["Initialisation Started"] call ULP_fnc_logIt;
 
 /* Map-based server side initialization. */
 
@@ -96,6 +93,4 @@ publicVariable "life_server_isReady";
 
 addMissionEventHandler ["EntityRespawned", {_this call TON_fnc_entityRespawned}];
 
-diag_log "----------------------------------------------------------------------------------------------------";
-diag_log format ["               End of Altis Life Server Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
-diag_log "----------------------------------------------------------------------------------------------------";
+[format["Initialisation Lasted %1s", diag_tickTime - _timeStamp]] call ULP_fnc_logIt;

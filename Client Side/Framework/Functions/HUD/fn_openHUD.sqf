@@ -17,6 +17,7 @@ if (["RscHUD", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	_ui setVariable ["food", 100];
 	_ui setVariable ["water", 100];
 	_ui setVariable ["health", 100];
+	_ui setVariable ["icons", []];
 
 	disableSerialization;
 

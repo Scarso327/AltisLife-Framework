@@ -31,3 +31,29 @@ private _lastVal = 0;
 	[_waterText, "water", missionNamespace getVariable ["ULP_Survival_Thirst", 1]],
 	[_healthText, "health", round ((1 - (damage player)) * 100)]
 ];
+
+private _uiIcons = _ui getVariable ["icons", []];
+private _icons = (("isText (_x >> ""condition"") && { isText (_x >> ""icon"") } && { call compile getText(_x >> ""condition"") }" 
+configClasses (missionConfigFile >> "CfgStatusIcons")) select {
+	[player] call ULP_fnc_getFaction in getArray (_x >> "factions")
+});
+
+if !(_icons isEqualTo _uiIcons) then {
+	{
+		ctrlDelete _x;
+	} forEach (_ui getVariable ["iconCtrls", []]);
+	
+	private _iconCtrls = [];
+
+	{
+		private _icon = _ui ctrlCreate ["Life_RscPictureKeepAspect", 507 + _forEachIndex];
+		_icon ctrlSetPosition [(0.0153125 + (0.021625 * _forEachIndex)) * safezoneW + safezoneX, 0.951 * safezoneH + safezoneY, 0.020625 * safezoneW, 0.033 * safezoneH];
+		_icon ctrlSetText (getMissionPath getText (_x >> "icon"));
+
+		_iconCtrls pushBack _icon;
+		_icon ctrlCommit 0;
+	} forEach _icons;
+
+	_ui setVariable ["iconCtrls", _iconCtrls];
+	_ui setVariable ["icons", _icons];
+};

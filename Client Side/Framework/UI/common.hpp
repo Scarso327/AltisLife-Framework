@@ -216,6 +216,7 @@ class life_RscPicture {
     style = 48;
     sizeEx = 0.023;
     font = "RobotoCondensed";
+    text = ""; // Stop error message...
     colorBackground[] = {};
     colorText[] = {};
     x = 0;

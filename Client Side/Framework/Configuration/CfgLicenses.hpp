@@ -117,6 +117,12 @@ class CfgLicenses {
         class Settings {};
     };
 
+    class Tobacco : BaseLicense {
+        displayName = "Tobacco Processing";
+        buyPrice = 0;
+        class Settings {};
+    };
+
     class Copper : BaseLicense {
         displayName = "Copper Processing";
         buyPrice = 0;

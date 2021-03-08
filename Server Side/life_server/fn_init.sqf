@@ -1,6 +1,5 @@
-#include "script_macros.hpp"
 /*
-    File: init.sqf
+    File: fn_init.sqf
     Author: Bryan "Tonic" Boardwine
 
     Edit: Nanou for HeadlessClient optimization.
@@ -9,6 +8,7 @@
     Description:
     Initialize the server and required systems.
 */
+#include "script_macros.hpp"
 DB_Async_Active = false;
 DB_Async_ExtraLock = false;
 

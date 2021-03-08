@@ -18,6 +18,7 @@ player addEventHandler ["GetOutMan", { _this call ULP_fnc_onGetOut }];
 	hint "Your group has been created...";
 	ULP_Group_Creating = false;
 
+	[] call ULP_fnc_setTags; // Update my tags...
 	[format["Created Group (%1)", _groupId]] call ULP_fnc_logIt;
 }] call ULP_fnc_addEventHandler;
 ["GroupCreationFailed", {

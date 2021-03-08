@@ -1,7 +1,7 @@
 class CfgProcessing {
 	class BaseProcess {
 		processTime = 60;
-		factions[] = { "Civilian", "Police" };
+		factions[] = { "Civilian", "Police", "Medic", "Hato" };
 		reqItems[] = {};
 		reqLicenses[] = {};
 	};
@@ -68,6 +68,12 @@ class CfgProcessing {
 		reqLicenses[] = {};
 	};
 
+	class Silver : Smelting {
+		materials[] = { { "silverOre", 1 } };
+		items[] = { { "silverBar", 1 } };
+		reqLicenses[] = {};
+	};
+
 	class Iron : Smelting {
 		materials[] = { { "ironOre", 1 } };
 		items[] = { { "ironBar", 1 } };
@@ -92,13 +98,6 @@ class CfgProcessing {
 	class Diamond : BaseProcess {
 		processTitle = "Cutting";
 		materials[] = { { "uncutDiamond", 1 } };
-		items[] = { { "cutDiamond", 1 } };
-		reqLicenses[] = {};
-	};
-
-	class Emerald : BaseProcess {
-		processTitle = "Cutting";
-		materials[] = { { "uncutEmerald", 1 } };
 		items[] = { { "cutDiamond", 1 } };
 		reqLicenses[] = {};
 	};

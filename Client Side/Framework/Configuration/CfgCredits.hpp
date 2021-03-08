@@ -6,11 +6,11 @@ class CfgCredits {
 		items[] = {"Welcome to", "AscensionRP's Altis Life!"};
 	};
 	class Forums {
-		title = "Forums & Teamspeak!";
-		items[] = {"Connection:", "ascensionroleplay.co.uk"};
+		title = "Forums and Teamspeak!";
+		items[] = {"URL:", "ascensionroleplay.co.uk"};
 	};
 	class Development {
 		title = "Development Team!";
-		items[] = {"Development Team", "Jack and Lewis"};
+		items[] = {"Development Team", "Scarso and Lewis"};
 	};
 };

@@ -11,6 +11,10 @@ private _subtitle = "";
 private _faction = [player] call ULP_fnc_getFaction;
 private _tagCfg = missionConfigFile >> "CfgTags" >> "Tags" >> "Whitelisting" >> _faction;
 
+if (isClass(missionConfigFile >> "CfgFactions" >> _faction >> "Groups") && { [] call ULP_fnc_isGroup }) then {
+	_subtitle = [] call ULP_fnc_getGroupName;
+};
+
 if (isClass _tagCfg) then {
 	{
 		scopeName "fn_setTags_Loop";

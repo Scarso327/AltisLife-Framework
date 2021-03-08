@@ -11,7 +11,7 @@ class ULP_Functions {
 		class initialisation {};
 		class initEventHandlers {};
 		class initVars {};
-		class preInitVars { preInit=1; }
+		class preInitVars { preInit=1; };
 		class preInitEvents { preInit=1; };
 	};
 
@@ -200,6 +200,11 @@ class ULP_Functions {
 		class removeItem {};
 	};
 
+	class TabletGroup {
+		file = "Functions\Tablet\Group";
+		class openGroup {};
+	};
+
 	class Selects {
 		file = "Functions\Selects";
 		class selectNumber {};
@@ -258,6 +263,15 @@ class ULP_Functions {
 		file = "Functions\Interactions";
 		class openInteractions {};
 		class getInteractions {};
+	};
+
+	class Group {
+		file = "Functions\Group";
+		class joinGroup {};
+		class inGroup {};
+		class isGroup {};
+		class getGroupById {};
+		class getGroupName {};
 	};
 };
 

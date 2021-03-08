@@ -19,7 +19,7 @@ private _factionCfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc
 private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex");
 
 private _query = [
-	format["SELECT uid, pid, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
+	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
 	format["FROM players WHERE pid='%1'", _uid]
 ];
@@ -57,17 +57,17 @@ for "_i" from 0 to 1 step 0 do {
 		private _newResult = _result;
 
 		// Playtime, Licenses, Gear, Stats
-		private _arraysToConvert = [4, 8, 9, 10];
+		private _arraysToConvert = [5, 9, 10, 11];
 
 		// (Blacklist / Arrest Status)
-		private _boolsToConvert = [11];
+		private _boolsToConvert = [12];
 
 		// Coverts data types to something arma can understand...
 		{ _newResult set [_x, [(_result select _x)] call DB_fnc_mresToArray] } forEach _arraysToConvert;
 		{ _newResult set [_x, [(_result select _x), 1] call ULP_fnc_bool] } forEach _boolsToConvert;
 
 		// Setup playtime tracking...
-		private _playtime = _newResult select 4;
+		private _playtime = _newResult select 5;
         private _index = TON_fnc_playtime_values_request find [_uid, _playtime];
 
         if !(_index isEqualTo -1) then {
@@ -81,7 +81,7 @@ for "_i" from 0 to 1 step 0 do {
         [_uid, (_playtime select _playTimeIndex)] call TON_fnc_setPlayTime;
 
 		// Groups + Housing
-		_newResult pushBack false; // ([false, (_uid call TON_fnc_queryPlayerGang)] select (isClass(_factionCfg >> "Groups"))); TODO
+		_newResult pushBack ([false, [_unit, _result select 2] call ULP_SRV_fnc_queryGroupInfo] select (isClass(_factionCfg >> "Groups")));
 		_newResult pushBack false; // ([false, (_uid call TON_fnc_fetchPlayerHouses)] select (isClass(_factionCfg >> "Housing"))); TODO
 		
 		// Misc

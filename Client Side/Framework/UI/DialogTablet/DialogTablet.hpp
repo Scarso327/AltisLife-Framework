@@ -92,7 +92,7 @@ class DialogTablet {
 		class Group : TabletApp {
 			idc = 23005;
 			text = "<br/><img image='\a3\ui_f\data\GUI\Rsc\RscDisplayMain\menu_multiplayer_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Group</t>";
-			onButtonClick = "[""Group""] call ULP_fnc_setScreen;";
+			onButtonClick = "[] call ULP_fnc_openGroup;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, BUTTON_W, 1));
 			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, BUTTON_H, 1));
 			SAFEZONE_W(BUTTON_W);

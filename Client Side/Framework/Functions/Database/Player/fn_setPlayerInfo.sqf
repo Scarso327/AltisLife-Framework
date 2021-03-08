@@ -15,7 +15,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -49,9 +49,13 @@ if (isClass (_factionCfg >> "Whitelisting")) then {
 };
 
 // Add us into a gang if we're apart of one...
-private _gang = _playerData select (_count - 5);
-if (_gang isEqualType []) then {
-	// TODO
+private _group = _playerData select (_count - 5);
+if (_group isEqualType 0) then {
+	if !(_groupid isEqualTo _group) exitWith {
+		[format["Server didn't catch group id mismatch (%1, %2)", _groupid, _group]] call ULP_fnc_logIt;
+	};
+
+	[format["Joined Group (%1)", _group]] call ULP_fnc_logIt;
 };
 
 // Retrieve any houses returned to us from the sever and set them up...

@@ -33,6 +33,11 @@ class CfgFunctions {
             class getGarage {};
             class retrieveVehicle {};
         };
+
+        class DatabaseGroup {
+            file = "\life_server\Functions\Database\Group";
+            class queryGroupInfo {};
+        };
     };
 
     class MySQL_Database {

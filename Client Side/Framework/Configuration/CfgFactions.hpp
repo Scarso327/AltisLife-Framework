@@ -8,21 +8,21 @@ class CfgFactions {
 
 		class Whitelisting {
 			class Main {
-				queryIndex = 12;
+				queryIndex = 13;
 				payMulti = 0.1;
 				required = 1;
 			};
-			class NPAS { queryIndex = 13; };
+			/*class NPAS { queryIndex = 13; };
 			class SCO19 { queryIndex = 14; };
 			class NCA { queryIndex = 14; };
 			class MPU { queryIndex = 14; };
 			class RPU { queryIndex = 14; };
-			class AFO { queryIndex = 14; };
+			class AFO { queryIndex = 14; };*/
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "cop_";
-			customQuery = ", cop_blacklisted, coplevel, asolevel, sfolevel";
+			customQuery = ", cop_blacklisted, coplevel"; // , asolevel, sfolevel
 			timeIndex = 0;
 		};
 
@@ -49,11 +49,11 @@ class CfgFactions {
 		pay = 16000;
 		class Whitelisting {
 			class Main {
-				queryIndex = 12;
+				queryIndex = 13;
 				payMulti = 0.1;
 				required = 1;
 			};
-			class TAA { queryIndex = 13; };
+			class TAA { queryIndex = 14; };
 		};
 
 		class DatabaseInfo {
@@ -85,7 +85,7 @@ class CfgFactions {
 		pay = 15500;
 		class Whitelisting {
 			class Main {
-				queryIndex = 12;
+				queryIndex = 13;
 				payMulti = 0.1;
 				required = 1;
 			};

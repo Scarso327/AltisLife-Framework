@@ -19,10 +19,11 @@ class CfgVehicleStores {
 				};
 			};
 			class C_Hatchback_01_sport_F {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
 				class Textures {
 					class PoliceWhite {};
 					class PoliceBlack {};
+					class PoliceUnmarked {};
 				};
 			};
 			class B_GEN_Van_02_transport_F {

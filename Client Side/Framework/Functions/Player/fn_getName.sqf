@@ -9,5 +9,5 @@ _this params [
 	["_object", objNull, [objNull]]
 ];
 
-if (_object isKindOf "Man") exitWith { name _object };
+if (_object isKindOf "Man" && { isPlayer _object }) exitWith { name _object };
 _object getVariable ["name", ""];

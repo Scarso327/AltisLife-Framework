@@ -20,8 +20,8 @@ class CfgItemsStore {
 			// SUB-MACHINE GUNS
 			class SMG_05_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; }; 
 			class SMG_01_F : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
-			class SMG_03C_black : FactionBase { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
-			class SMG_03_black : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class SMG_03C_black : FactionBase { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
+			class SMG_03_black : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
 
 			// ASSAULT RIFLES
 			class arifle_SPAR_01_blk_F : FactionBase {
@@ -29,7 +29,7 @@ class CfgItemsStore {
 				class textures { class arifle_SPAR_01_blk_F {}; };
 			};
 			class arifle_SPAR_02_blk_F : FactionBase {
-				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess }";
 				class textures { class arifle_SPAR_02_blk_F {}; };
 			};
 			class arifle_CTAR_blk_F : FactionBase {
@@ -37,23 +37,23 @@ class CfgItemsStore {
 				class textures { class arifle_CTAR_blk_F {}; };
 			};
 			class arifle_CTARS_blk_F : FactionBase {
-				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }";
 				class textures { class arifle_CTARS_blk_F {}; };
 			};
 			class arifle_MX_Black_F : FactionBase {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MX_Black_F {}; };
 			};
 			class arifle_MXM_Black_F : FactionBase {
-				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MXM_Black_F {}; };
 			}; 
 			class arifle_MX_SW_Black_F : FactionBase {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MX_SW_Black_F {}; };
 			};
 			class arifle_MSBS65_black_F : FactionBase {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MSBS65_black_F {}; };
 			};
 			class arifle_Katiba_C_F : FactionBase {
@@ -69,7 +69,7 @@ class CfgItemsStore {
 				class textures { class arifle_SPAR_03_blk_F {}; };
 			};
 			class srifle_EBR_F : FactionBase {
-				condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
 				class textures { class srifle_EBR_F {}; };
 			};
 			class srifle_DMR_03_F : FactionBase {
@@ -79,7 +79,7 @@ class CfgItemsStore {
 		};
 		class Pistols {
 			class hgun_P07_F : FactionBase {};
-			class hgun_ACPC2_F : FactionBase {  condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 4] call ULP_fnc_hasAccess }"; };
+			class hgun_ACPC2_F : FactionBase {  condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 4] call ULP_fnc_hasAccess } || { [""Police_NCA"", 4] call ULP_fnc_hasAccess }"; };
 		};
 		class Attachments {
 			class bipod_01_F_blk : FactionBase { 
@@ -112,39 +112,35 @@ class CfgItemsStore {
 			};
 			class optic_ERCO_blk_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class optic_DMS : FactionBase {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
 				class textures { class optic_DMS {}; };
 			};
 			class optic_SOS : FactionBase {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
 				class textures { class optic_SOS {}; };
 			};
-			class optic_AMS : FactionBase {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess }";
-				class textures { class optic_AMS {}; };
-			};
-			class optic_NVS : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class optic_NVS : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
 
 			// SUPPRESSORS
-			class muzzle_snds_L : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class muzzle_snds_L : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
 			class muzzle_snds_acp : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
 			class muzzle_snds_M : FactionBase { 
-				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; 
 				class textures { class muzzle_snds_M {}; };
 			};
 			class muzzle_snds_570 : FactionBase { 
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; 
 			};
 			class muzzle_snds_58_blk_F : FactionBase { 
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; 
 				class textures { class muzzle_snds_58_blk_F {}; };
 			};
 			class muzzle_snds_H : FactionBase { 
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; 
 				class textures { class muzzle_snds_H {}; };
 			};
 			class muzzle_snds_65_TI_blk_F : FactionBase { 
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; 
 				class textures { class muzzle_snds_65_TI_blk_F {}; };
 			};
 		};
@@ -154,7 +150,7 @@ class CfgItemsStore {
 			class ItemCompass : FactionBase {};
 			class ItemWatch : FactionBase {};
 			class ItemGPS : FactionBase {};
-			class B_UavTerminal : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }"; };
+			class B_UavTerminal : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
 			class ToolKit : FactionBase {};

@@ -319,12 +319,12 @@ class CfgVehicles {
 			};
 			class PoliceANPR : PoliceWhite { 
 				displayName = "Interceptor";
-				conditions = "[""Police_ROAD"", 1] call ULP_fnc_hasAccess";
+				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "data\textures\vehicles\land\police\anprsuv.paa" }; 
 			};
 			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 
-				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess } || { [""Police_ROAD"", 1] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 			};
 			class Medic : MedicTexture { 

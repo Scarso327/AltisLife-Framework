@@ -23,6 +23,7 @@ class CfgVehicleStores {
 				class Textures {
 					class PoliceWhite {};
 					class PoliceBlack {};
+					class PoliceANPR {};
 					class PoliceUnmarked {};
 				};
 			};

@@ -12,8 +12,10 @@ class CfgFactions {
 				payMulti = 0.1;
 				required = 1;
 			};
-			class ASO { queryIndex = 13; };
-			class SFO { queryIndex = 14; };
+			class NPAS { queryIndex = 13; };
+			class SCO19 { queryIndex = 14; };
+			class NCA { queryIndex = 14; };
+			class AFO { queryIndex = 14; };
 		};
 
 		class DatabaseInfo {

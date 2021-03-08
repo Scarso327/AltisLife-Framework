@@ -60,6 +60,7 @@ class ULP_Functions {
 		class getAnim {};
 		class numberText {};
 		class bool {};
+		class switchMove {};
 	};
 
 	class Clothing {

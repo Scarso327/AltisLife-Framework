@@ -10,6 +10,7 @@ class CfgRemoteExec {
         class systemChat {};
         class lock {};
         class say3D {};
+        class switchMove {};
     };
 
     class Functions {
@@ -18,14 +19,16 @@ class CfgRemoteExec {
 
         // REMOVE IN PRODUCTION
         class bis_fnc_debugconsoleexec {};
-
+        
+        class ULP_fnc_onKnocked {};
         class ULP_fnc_setPlayerInfo {};
         class ULP_fnc_initVehicle {};
+        class ULP_fnc_vehicleLights {};
+        class ULP_fnc_invokeEvent {};
+
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;
         };
-        class ULP_fnc_vehicleLights {};
-        class ULP_fnc_invokeEvent {};
 
         class ULP_SRV_fnc_queryPlayerInfo {
             allowedTargets = SERVER;

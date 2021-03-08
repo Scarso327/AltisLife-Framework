@@ -54,7 +54,7 @@ publicVariable "life_server_extDB_notLoaded";
 
 {
     [format["CALL %1", _x], 1] call DB_fnc_asyncCall;
-} forEach ["resetVehicles"];
+} forEach ["resetVehicles", "deleteOldGroups"];
 
 ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
 ULP_SRV_Date resize 3; // We only need Year, Month, Day

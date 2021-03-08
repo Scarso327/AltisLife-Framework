@@ -714,9 +714,9 @@ class CfgVehicles {
 		};
 	};
 	class O_Truck_03_covered_F : O_Truck_03_transport_F {
-			buyPrice = 0;
-			virtualSpace = 0;
-		};
+		buyPrice = 0;
+		virtualSpace = 0;
+	};
 	class O_Truck_03_ammo_F : O_Truck_03_transport_F {
 		buyPrice = 0;
 		virtualSpace = 0;

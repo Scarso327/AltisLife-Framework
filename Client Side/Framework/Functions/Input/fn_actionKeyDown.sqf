@@ -19,7 +19,7 @@ if (!alive player ||
 	{ !(isNull (objectParent player)) } || 
 	{ dialog } || 
 	{ [player] call ULP_fnc_isRestrained } || 
-	{ [player] call ULP_fnc_isSurrended }
+	{ [player] call ULP_fnc_isSurrendered }
 ) exitWith {
 	false
 };

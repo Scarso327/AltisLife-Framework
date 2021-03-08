@@ -19,7 +19,7 @@ private _interactionKey = ACT_KEY("User10", LWINDOWS);
 
 _disabledKeys append (actionKeys "tacticalView"); // Disable tactical view...
 
-if ([player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isSurrended }) then {
+if ([player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isSurrendered }) then {
     _disabledKeys append (actionKeys "GetOver");
     _disabledKeys append (actionKeys "GetIn");
     _disabledKeys append (actionKeys "ReloadMagazine");

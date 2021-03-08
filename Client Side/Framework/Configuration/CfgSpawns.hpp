@@ -36,6 +36,7 @@ class CfgSpawns {
         class MarineStation : Police {
             displayName = "Marine Base";
             marker = "apc_spawn_marine";
+            conditions = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
             icon = "";
         };
 

@@ -12,7 +12,8 @@ class CfgFactions {
 				payMulti = 0.1;
 				required = 1;
 			};
-			/*class NPAS { queryIndex = 13; };
+			/*class RTA { queryIndex = 13; };
+			class NPAS { queryIndex = 13; };
 			class SCO19 { queryIndex = 14; };
 			class NCA { queryIndex = 14; };
 			class MPU { queryIndex = 14; };

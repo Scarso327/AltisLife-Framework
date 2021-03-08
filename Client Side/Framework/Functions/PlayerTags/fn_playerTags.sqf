@@ -29,7 +29,7 @@ if (_enable) then {
 			if !(_name isEqualTo "") then { drawIcon3D["", _mainColour, _pos, 0, 1.3, 0, _name, 0, 0.035, "RobotoCondensed", "center"]; };
 			if !(_subtitle isEqualTo "") then { drawIcon3D["", _otherColour, _pos, 0, 2.3, 0, _subtitle, 0, 0.03, "RobotoCondensed", "center"]; };
 		} count ((((getPosATLVisual player) nearEntities [ "Man", 10 ]) select { 
-			lineIntersects [eyePos player, eyePos _x, player, _x] || player isEqualTo _x
+			!(lineIntersects [eyePos player, eyePos _x, player, _x]) || { player isEqualTo _x }
 		}) apply {
 			private _headPos = (_x selectionPosition "head");
 			[

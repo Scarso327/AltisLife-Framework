@@ -7,3 +7,4 @@
 #include "DialogVehicleStore\DialogVehicleStore.hpp"
 #include "DialogGarage\DialogGarage.hpp"
 #include "DialogInteractions\DialogInteractions.hpp"
+#include "DisplaySelect\DisplayInputGroupInfo.hpp"

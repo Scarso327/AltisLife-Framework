@@ -36,6 +36,7 @@ class CfgFunctions {
 
         class DatabaseGroup {
             file = "\life_server\Functions\Database\Group";
+            class createGroup {};
             class queryGroupInfo {};
         };
     };

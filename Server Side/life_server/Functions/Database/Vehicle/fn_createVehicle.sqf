@@ -22,7 +22,7 @@ if (_steamid isEqualTo "" || { _name isEqualTo "" } || { !(isClass (missionConfi
 private _query = [format["SELECT MAX(id) FROM vehicles"], 2] call DB_fnc_asyncCall;
 
 _query params [
-	["_id", 1, [0]]
+	["_id", 0, [0]]
 ];
 
 // Insert...

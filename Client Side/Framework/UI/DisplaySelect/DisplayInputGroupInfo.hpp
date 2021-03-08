@@ -4,11 +4,11 @@
 #define UI_WIDTH 0.19
 #define BODY_HEIGHT 0.066
 
-class DisplayInputText {
+class DisplayInputGroupInfo {
     idd = 3700;
     movingEnable = 0;
     enableSimulation = 0;
-	onunload = "_this call { private _params = ((_this select 0) getVariable ""params""); _params append [(_this select 0), (sliderPosition ((_this select 0) displayCtrl 3205))]; if ((_this select 1) isEqualTo 1) then { ((_this select 0) getVariable ""params"") call ((_this select 0) getVariable ""onSelect""); }; };";
+	onunload = "_this call { private _params = ((_this select 0) getVariable ""params""); _params append [(_this select 0), ctrlText ((_this select 0) displayCtrl 3705), ctrlText ((_this select 0) displayCtrl 3706)]; if ((_this select 1) isEqualTo 1) then { ((_this select 0) getVariable ""params"") call ((_this select 0) getVariable ""onSelect""); }; };";
 
     class ControlsBackground {
 		class TabletBackground : Life_RscBackground {
@@ -32,7 +32,7 @@ class DisplayInputText {
 		class Header : Life_RscText {
 			idc = 3201;
 			colorBackground[] = HEADER_COLOUR;
-			text = "Input Text";
+			text = "Group Creation";
 			SAFEZONE_X(UI_X + 0.1125);
 			SAFEZONE_Y(0.434);
 			SAFEZONE_W(UI_WIDTH);
@@ -59,8 +59,18 @@ class DisplayInputText {
 	};
 
 	class Controls {
-		class Input : life_RscEdit {
+		class TagInput : life_RscEdit {
 			idc = 3705;
+			text = "Enter Group Tag...";
+			SAFEZONE_X((UI_X + 0.1125) + MARGIN_X);
+			SAFEZONE_Y(0.456 + MARGIN_Y);
+			SAFEZONE_W(UI_WIDTH - (MARGIN_X * 2));
+			SAFEZONE_H(0.022);
+		};
+
+		class NameInput : life_RscEdit {
+			idc = 3706;
+			text = "Enter Group Name...";
 			SAFEZONE_X((UI_X + 0.1125) + MARGIN_X);
 			SAFEZONE_Y((0.456 + 0.022) + MARGIN_Y);
 			SAFEZONE_W(UI_WIDTH - (MARGIN_X * 2));
@@ -68,8 +78,8 @@ class DisplayInputText {
 		};
 
 		class Select : Life_RscButtonCenter {
-			idc = 3706;
-			text = "<t align = 'center'>Input</t>";
+			idc = 3707;
+			text = "<t align = 'center'>Create</t>";
 			onButtonClick = "(ctrlParent (_this select 0)) closeDisplay 1;";
 			SAFEZONE_X(((UI_X + 0.1125) + UI_WIDTH - (UI_WIDTH / 4)) - MARGIN_X);
 			SAFEZONE_Y(0.52 + BUTTON_MARGIN_Y);

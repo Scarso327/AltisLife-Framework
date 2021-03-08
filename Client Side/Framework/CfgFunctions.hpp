@@ -42,6 +42,7 @@ class ULP_Functions {
 		class directCall {};
 		class waitExecute {};
 		class waitUntilExecute {};
+		class stripString {};
 	};
 
 	class Faction {
@@ -208,6 +209,7 @@ class ULP_Functions {
 	class Selects {
 		file = "Functions\Selects";
 		class selectNumber {};
+		class inputGroupInfo {};
 	};
 
 	class VirutalStores {
@@ -286,6 +288,7 @@ class ULP_Functions_UI {
 		class setSyncButton {};
 		class blockEsc {};
 		class setMapPosition {};
+		class inputLimit {};
 	};
 
 	class RscLayers {

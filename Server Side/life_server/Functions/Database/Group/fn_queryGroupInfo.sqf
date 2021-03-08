@@ -22,7 +22,7 @@ if (isNull _group) then {
 
 	if !(_query isEqualTo "" || { _query isEqualTo [] }) exitWith {
 		_query params [
-			"_queryid", "_queryowner", "_queryname"
+			"_queryId", "_queryOwner", "_queryName"
 		];
 
 		if !(_groupid isEqualTo _queryid) exitWith {

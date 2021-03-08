@@ -49,12 +49,6 @@ class CfgApps {
 		pageIdcs[] = {};
 	};
 
-	class CreateGroup : BaseScreen {
-		idc= 23005;
-		pageTitle = "Group Creation";
-		pageIdcs[] = {};
-	};
-
 	class Keys : BaseScreen {
 		idc= 23006;
 		pageTitle = "Keys";

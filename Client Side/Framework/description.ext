@@ -1,155 +1,27 @@
 disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}}; 
 overviewText = "An RPG game mode developed by Scarso and Lewis.";
+joinUnassigned=1;
+saving=0;
+disableRandomization[]={"All"};
 unsafeCVL = 1;
 enableDebugConsole = 2;
 
 onPauseScript[]={ "ULP_fnc_onPause" };
 
+#include "CfgDebriefing.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgNotifications.hpp"
 #include "CfgRemoteExec.hpp"
 #include "CfgSFX.hpp"
+#include "CfgSounds.hpp"
+
 #include "UI\Includes.hpp"
+#include "UI\RscTitles.hpp"
+
 #include "Configuration\CfgSettings.hpp"
 
 class CfgServer {
     DatabaseName = "altislife";
     DebugMode = 0;
     HeadlessSupport = 0;
-};
-
-class RscTitles {
-    #include "UI\RscIncapacitated\RscIncapacitated.hpp"
-    #include "UI\RscProgress\RscProgress.hpp"
-    #include "UI\RscHUD\RscHUD.hpp"
-};
-
-class CfgFunctions {
-    #include "CfgFunctions.hpp"
-};
-
-class CfgSounds {
-    sounds[] = {};
-    class welcome {
-        name = "welcome";
-        sound[] = {"\Data\Sounds\welcome.ogg", 1.0, 1};
-        titles[] = {};
-    };
-
-    class britishSiren {
-        name = "britishSiren";
-        sound[] = {"\Data\Sounds\britishSiren.ogg", 1.0, 1};
-        titles[] = {};
-    };
-
-    class taserSound {
-        name = "taserSound";
-        sound[] = {"\Data\Sounds\taser.ogg", 0.5, 1};
-        titles[] = {};
-    };
-
-    class lockCarSound {
-        name = "lockCarSound";
-        sound[] = {"\Data\Sounds\carLock.ogg", 1.0, 1};
-        titles[] = {};
-    };
-
-    class unlockCarSound {
-        name = "unlockCarSound";
-        sound[] = {"\Data\Sounds\carUnlock.ogg", 0.75, 1};
-        titles[] = {};
-    };
-};
-
-class CfgDebriefing {
-    class Abort {
-        title = "Aborted";
-        subtitle = "Thansk For Playing!";
-        description = "Your data has been synced and you've returned to the lobby.";
-        pictureBackground = "";
-        picture = "";
-        pictureColor[] = {0,0.3,0.6,1};
-    };
-
-    class NotWhitelisted {
-        title = "Unable to Join";
-        subtitle = "You are not currently whitelisted";
-        description = "Please contact a member of this faction's command for more information";
-        pictureBackground = "";
-        picture = "";
-        pictureColor[] = {0,0.3,0.6,1};
-    };
-
-    class Blacklisted {
-        title = "Unable to Join";
-        subtitle = "You are currently blacklisted";
-        description = "Please contact a member of this faction's command for more information";
-        pictureBackground = "";
-        picture = "";
-        pictureColor[] = {0,0.3,0.6,1};
-    };
-};
-
-class CfgNotifications {
-    class MedicalRequestEmerg {
-        title = "NHS Requested";
-        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
-        description = "%1";
-        duration = 5;
-        priority = 7;
-    };
-
-    class DeliveryAssigned {
-        title = "Delivery Job Accepted";
-        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
-        description = "%1";
-        duration = 10;
-        priority = 7;
-    };
-
-    class DeliveryFailed {
-        title = "Delivery Job Failed";
-        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
-        description = "%1";
-        duration = 7;
-        priority = 7;
-    };
-
-    class DeliverySucceeded {
-        title = "Delivery Job Completed";
-        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
-        description = "%1";
-        duration = 6;
-        priority = 6;
-    };
-
-    class TextMessage {
-        title = "Received A Text Message";
-        iconPicture = "Data\Icons\ico_messageNew.paa";
-        description = "%1";
-        duration = 10;
-        priority = 6;
-    };
-
-    class PoliceDispatch {
-        title = "Emergency Dispatch Center";
-        iconPicture = "Data\Icons\ico_messagePolice.paa";
-        description = "%1";
-        duration = 10;
-        priority = 6;
-    };
-
-    class AdminDispatch {
-        title = "Staff Dispatch Center";
-        iconPicture = "Data\Icons\ico_messageAdmin.paa";
-        description = "%1";
-        duration = 10;
-        priority = 6;
-    };
-
-    class AdminMessage {
-        title = "Staff Message";
-        iconPicture = "Data\Icons\ico_messageAdmin.paa";
-        description = "%1";
-        duration = 10;
-        priority = 5;
-    };
 };

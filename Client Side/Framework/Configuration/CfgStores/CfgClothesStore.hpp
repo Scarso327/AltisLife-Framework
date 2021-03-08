@@ -154,8 +154,8 @@ class CfgClothesStore {
 			class U_IG_Guerilla1_1 : FactionBase {
 				class Textures : FactionBase {
 					class U_IG_Guerilla2_2 {};
-					class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 {};
-					class U_IG_Guerilla2_3 : U_IG_Guerilla1_1 {};
+					class U_IG_Guerilla2_1 : U_IG_Guerilla2_2 {};
+					class U_IG_Guerilla2_3 : U_IG_Guerilla2_2 {};
 				};
 			};
 			class U_I_L_Uniform_01_tshirt_skull_F : FactionBase {};

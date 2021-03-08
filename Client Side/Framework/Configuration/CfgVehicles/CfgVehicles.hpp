@@ -778,7 +778,6 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 	};
-
 	class B_Truck_01_box_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;

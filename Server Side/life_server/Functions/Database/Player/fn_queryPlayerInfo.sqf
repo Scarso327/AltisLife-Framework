@@ -3,7 +3,6 @@
 ** Description: Asks the server to provide us with our information...
 */
 #include "\life_server\script_macros.hpp"
-#define CFG missionConfigFile >> "CfgFactions" >> _faction >> "DatabaseInfo"
 scopeName "fn_queryPlayerInfo";
 
 _this params [

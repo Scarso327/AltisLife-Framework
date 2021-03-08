@@ -34,7 +34,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 			false breakOut "fn_createGroup";
 		};
 		if (_queryName isEqualTo _name) exitWith {
-			["GroupCreationFailed", ["The group name you've entered is taken, please use another tag..."]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
+			["GroupCreationFailed", ["The group name you've entered is taken, please use another name..."]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 			false breakOut "fn_createGroup";
 		};
 

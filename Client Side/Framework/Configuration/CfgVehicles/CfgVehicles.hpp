@@ -170,6 +170,11 @@ class CfgVehicles {
 				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "data\textures\vehicles\land\police\anprhatchback.paa" }; 
 			};
+			class PoliceUnmarked : PoliceWhite { 
+				displayName = "Unmarked";
+				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" }; 
+			};
 			class Medic : MedicTexture { 
 				textures[] = { "data\textures\vehicles\land\medic\medic_hatchback.paa" }; 
 				class Lights : MedicLights {
@@ -329,7 +334,7 @@ class CfgVehicles {
 			};
 			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 
-				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO19"", 3] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 			};
 			class Medic : MedicTexture { 

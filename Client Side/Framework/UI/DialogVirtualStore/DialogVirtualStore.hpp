@@ -1,5 +1,3 @@
-#include "..\UI_Macros.hpp"
-
 #define UI_X 0.29375
 #define UI_WIDTH 0.4125
 #define INNER_UI_WIDTH (UI_WIDTH - MARGIN_X)

@@ -1,11 +1,58 @@
+// Geometry
+
+#define SAFEZONE_X(value) x = (value) * safezoneW + safezoneX
+#define SAFEZONE_Y(value) y = (value) * safezoneH + safezoneY
+#define SAFEZONE_W(value) w = (value) * safezoneW
+#define SAFEZONE_H(value) h = (value) * safezoneH
+
+#define MARGIN_X 0.00515625
+#define MARGIN_Y 0.011
+
+#define BUTTON_MARGIN_X (MARGIN_X / 2)
+#define BUTTON_MARGIN_Y (MARGIN_Y / 2)
+
+// Used for creating a line of equal width boxes.
+#define HORIZONTAL_GRID_X(x, width, itemNumber) (x + (width * itemNumber)) + (MARGIN_X * itemNumber)
+#define HORIZONTAL_GRID_W(width, items) (((width - (MARGIN_X * (items - 1))) / items))
+
+#define VERTICAL_GRID_Y(y, height, itemNumber) (y + (height * itemNumber)) + (MARGIN_Y * itemNumber)
+#define VERTICAL_GRID_H(height, items) (((height - (MARGIN_Y * (items - 1))) / items))
+
+#define BUTTON_H 0.022
+
+// Colours
+
+#define NO_COLOUR {0, 0, 0, 0}
+
+// Structure
+#define HEADER_COLOUR {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1}
+#define BODY_COLOUR {0.204, 0.2, 0.204, 1}
+#define FOOTER_COLOUR {0.125, 0.122, 0.125, 1}
+
+// Content
+#define INNER_BODY_COLOUR {0.098, 0.094, 0.098, 1}
+
 #define ST_LEFT           0x00
 #define ST_MULTI          0x10
-#define GUI_GRID_CENTER_WAbs        ((safezoneW / safezoneH) min 1.2)
-#define GUI_GRID_CENTER_HAbs        (GUI_GRID_CENTER_WAbs / 1.2)
-#define GUI_GRID_CENTER_W        (GUI_GRID_CENTER_WAbs / 40)
-#define GUI_GRID_CENTER_H        (GUI_GRID_CENTER_HAbs / 25)
-#define GUI_GRID_CENTER_X        (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
-#define GUI_GRID_CENTER_Y        (safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
+
+#define GUI_GRID_WAbs		    ((safezoneW / safezoneH) min 1.2)
+#define GUI_GRID_HAbs		    (GUI_GRID_WAbs / 1.2)
+#define GUI_GRID_X			    safezoneX
+#define GUI_GRID_Y			    (safezoneY + (safezoneH - GUI_GRID_HAbs))
+#define GUI_GRID_W			    (GUI_GRID_WAbs / 40)
+#define GUI_GRID_H			    (GUI_GRID_HAbs / 25)
+
+#define GUI_GRID_CENTER_WAbs    GUI_GRID_WAbs
+#define GUI_GRID_CENTER_HAbs    GUI_GRID_HAbs
+#define GUI_GRID_CENTER_X	    (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
+#define GUI_GRID_CENTER_Y	    (safezoneY + (safezoneH - (GUI_GRID_CENTER_HAbs / 1.2))/2)
+#define GUI_GRID_CENTER_W	    (GUI_GRID_CENTER_WAbs / 40)
+#define GUI_GRID_CENTER_H	    (GUI_GRID_CENTER_HAbs / 25)
+
+#define SET_GUI_GRID_CENTER_X(value) x = (value) * (GUI_GRID_CENTER_W + GUI_GRID_CENTER_X)
+#define SET_GUI_GRID_CENTER_Y(value) y = (value) * (GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y)
+#define SET_GUI_GRID_CENTER_W(value) w = (value) * GUI_GRID_CENTER_W
+#define SET_GUI_GRID_CENTER_H(value) h = (value) * GUI_GRID_CENTER_H
 
 class Life_Checkbox
 {
@@ -175,6 +222,10 @@ class Life_RscText {
     tooltipColorText[] = {1,1,1,1};
     tooltipColorBox[] = {1,1,1,1};
     tooltipColorShade[] = {0,0,0,0.65};
+};
+
+class Life_RscTextHeader : Life_RscText {
+    colorBackground[] = HEADER_COLOUR;
 };
 
 class Life_RscLine: Life_RscText {

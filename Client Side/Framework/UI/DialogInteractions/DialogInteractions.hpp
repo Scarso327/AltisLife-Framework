@@ -1,5 +1,3 @@
-#include "..\UI_Macros.hpp"
-
 #define UI_WIDTH 0.12375012375
 #define UI_X 0.5 - (UI_WIDTH / 2)
 #define UI_Y 0.5 - (BUTTON_H / 2)

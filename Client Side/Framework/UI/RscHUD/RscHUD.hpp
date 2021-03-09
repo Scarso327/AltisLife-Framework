@@ -1,5 +1,3 @@
-#include "..\UI_Macros.hpp"
-
 #define WIDTH 0.12375012375
 
 class RscHUD {

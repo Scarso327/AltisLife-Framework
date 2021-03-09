@@ -208,6 +208,11 @@ class CfgFunctions {
 			class openGroup {};
 		};
 
+		class TabletKeys {
+			file = "Functions\Tablet\Key";
+			class keys {};
+		};
+
 		class Selects {
 			file = "Functions\Selects";
 			class selectNumber {};

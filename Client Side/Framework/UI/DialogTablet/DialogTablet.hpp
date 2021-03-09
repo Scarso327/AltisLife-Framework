@@ -160,6 +160,7 @@ class DialogTablet {
 		};
 
 		#include "Screens\Inventory.hpp"
+		#include "Screens\Keys.hpp"
 	};
 };
 

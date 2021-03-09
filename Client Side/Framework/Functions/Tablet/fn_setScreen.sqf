@@ -13,6 +13,11 @@ private _display = findDisplay 23000;
 private _screen = missionConfigFile >> "CfgApps" >> _app;
 if !(isClass _screen || { !(isNull _display) }) exitWith {};
 
+private _unload = _display getVariable ["onUnload", ""];
+if !(_unload isEqualTo "") then {
+	_display call compile _unload;
+};
+
 private _showIdcs = getArray (missionConfigFile >> "CfgApps" >> "globalIdcs");
 _showIdcs append getArray (_screen >> "pageIdcs");
 
@@ -28,5 +33,6 @@ _showIdcs append getArray (_screen >> "pageIdcs");
 
 (_display displayCtrl 23001) ctrlSetStructuredText parseText format[" <t align='left'>%1</t>", getText (_screen >> "pageTitle")];
 _display setVariable ["screen", _screen];
+_display setVariable ["onUnload", getText(_screen >> "onUnload")];
 
-_display call compile getText(_screen >> "onload");
+_display call compile getText(_screen >> "onLoad");

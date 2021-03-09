@@ -7,8 +7,8 @@ class CfgApps {
 		idc = -1;
 		pageTitle = "";
 		pageIdcs[] = {};
-		onload = "";
-		onunload = "";
+		onLoad = "";
+		onUnload = "";
 		rebindEsc = "";
 	};
 
@@ -52,7 +52,10 @@ class CfgApps {
 	class Keys : BaseScreen {
 		idc= 23006;
 		pageTitle = "Keys";
-		pageIdcs[] = {};
+		pageIdcs[] = {
+			23021, 23022
+		};
+		onload = "_this call ULP_fnc_keys";
 	};
 
 	class Dispute : BaseScreen {

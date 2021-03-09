@@ -205,7 +205,13 @@ class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F{};
 class U_O_R_Gorka_01_black_F {
 	price = 0;
 	virtualSpace = 0;
-	class Textures {};
+	class Textures {
+		class NCA {
+			displayName = "Tracksuit";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_tracksuit.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+		};
+	};
 };
 
 class U_I_C_Soldier_Para_1_F {
@@ -312,43 +318,48 @@ class U_Rangemaster {
 	class Textures {
 		class CC {
 			displayName = "Chief Constable";
-			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 11] call ULP_fnc_hasAccess }";
 		};
 		class DCC {
 			displayName = "Deputy Chief Constable";
-			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\DCC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
 		class CSI {
 			displayName = "Chief Superindendent";
-			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CSI.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 9] call ULP_fnc_hasAccess }";
 		};
 		class SI {
 			displayName = "Superindendent";
-			textures[] = { "Data\Textures\Uniforms\Police\SUPT.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SI.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
 		};
 		class CI {
 			displayName = "Chief Inspector";
-			textures[] = { "Data\Textures\Uniforms\Police\CINSP.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CI.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 7] call ULP_fnc_hasAccess }";
 		};
 		class INS {
 			displayName = "Inspector";
-			textures[] = { "Data\Textures\Uniforms\Police\INSP.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\INS.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 6] call ULP_fnc_hasAccess }";
 		};
 		class SGT {
 			displayName = "Sergeant";
-			textures[] = { "Data\Textures\Uniforms\Police\SGT.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SGT.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
 		class PC {
 			displayName = "Contable";
-			textures[] = { "Data\Textures\Uniforms\Police\PC.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
+		};
+		class PCSO {
+			displayName = "PCSO";
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PCSO.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
 	};
 };
@@ -381,6 +392,29 @@ class U_Competitor {
 			displayName = "Student";
 			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
+		};
+	};
+};
+
+class U_BG_Guerrilla_6_1 {
+	displayName = "Patrol Jumper";
+	price = 0;
+	virtualSpace = 0;
+	class Textures {
+		class COMMAND {
+			displayName = "Command";
+			textures[] = { "Data\Textures\Uniforms\Police\command.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
+		};
+		class MAIN {
+			displayName = "Main";
+			textures[] = { "Data\Textures\Uniforms\Police\main.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
+		};
+		class NCA {
+			displayName = "Main";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_main.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
 };
@@ -442,11 +476,15 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 	virtualSpace = 0;
 	class Textures {
 		class U_I_ParadeUniform_01_AAF_decorated_F { 
-			displayName = "Command Parade"; 
+			displayName = "Command"; 
+			textures[] = { 
+				"Data\Textures\Uniforms\Police\parade_01.paa",
+				"Data\Textures\Uniforms\Police\parade_02.paa",
+			};
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
 		class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F { 
-			displayName = "Constable Parade"; 
+			displayName = "Main"; 
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 	};
@@ -463,9 +501,14 @@ class U_B_CombatUniform_mcam_worn {
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
+		class RPU {
+			displayName = "Traffic Uniform";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\RPU.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
+		};
 		class AFO {
 			displayName = "AFO Uniform";
-			textures[] = { "Data\Textures\Uniforms\Police\AFO.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Units\AFO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
@@ -499,7 +542,7 @@ class U_B_CTRG_Soldier_F {
 	class Textures {
 		class SCO19 {
 			displayName = "SCO19 Uniform";
-			textures[] = { "Data\Textures\Uniforms\Police\SCO19.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
@@ -513,7 +556,7 @@ class U_B_GhillieSuit {
 	class Textures {
 		class SCO19 {
 			displayName = "SCO19 Ghillie";
-			textures[] = { "Data\Textures\Uniforms\Police\SCO19.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }";
 		};
 		class U_B_GhillieSuit { 
@@ -556,6 +599,19 @@ class U_B_HeliPilotCoveralls {
 	};
 };
 class U_I_HeliPilotCoveralls : U_B_HeliPilotCoveralls{};
+
+class U_O_PilotCoveralls {
+	displayName = "Flight Clothes";
+	price = 0;
+	virtualSpace = 0;
+	class Textures {
+		class NPAS {
+			displayName = "NPAS Uniform";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\NPAS.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NPAS"", 1] call ULP_fnc_hasAccess }";
+		};
+	};
+};
 
 class U_C_CBRN_Suit_01_White_F {
 	displayName = "CBRN Suits";

@@ -212,6 +212,19 @@ class CfgFunctions {
 			file = "Functions\Tablet\Key";
 			class keys {};
 		};
+		
+		class TabletOptions {
+			file = "Functions\Tablet\Options";
+			class options {};
+		};
+
+		class Options {
+			file = "Functions\Options";
+			class setOption {};
+			class getOption {};
+			class resetOption {};
+			class getDefaultOption {};
+		};
 
 		class Selects {
 			file = "Functions\Selects";

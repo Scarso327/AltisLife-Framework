@@ -32,27 +32,92 @@
 // Content
 #define INNER_BODY_COLOUR {0.098, 0.094, 0.098, 1}
 
+// Control types
+#define CT_STATIC           0
+#define CT_BUTTON           1
+#define CT_EDIT             2
+#define CT_SLIDER           3
+#define CT_COMBO            4
+#define CT_LISTBOX          5
+#define CT_TOOLBOX          6
+#define CT_CHECKBOXES       7
+#define CT_PROGRESS         8
+#define CT_HTML             9
+#define CT_STATIC_SKEW      10
+#define CT_ACTIVETEXT       11
+#define CT_TREE             12
+#define CT_STRUCTURED_TEXT  13
+#define CT_CONTEXT_MENU     14
+#define CT_CONTROLS_GROUP   15
+#define CT_SHORTCUTBUTTON   16
+#define CT_HITZONES         17
+#define CT_XKEYDESC         40
+#define CT_XBUTTON          41
+#define CT_XLISTBOX         42
+#define CT_XSLIDER          43
+#define CT_XCOMBO           44
+#define CT_ANIMATED_TEXTURE 45
+#define CT_OBJECT           80
+#define CT_OBJECT_ZOOM      81
+#define CT_OBJECT_CONTAINER 82
+#define CT_OBJECT_CONT_ANIM 83
+#define CT_LINEBREAK        98
+#define CT_USER             99
+#define CT_MAP              100
+#define CT_MAP_MAIN         101
+#define CT_LISTNBOX         102
+#define CT_ITEMSLOT         103
+#define CT_CHECKBOX         77
+
+// Static styles
+#define ST_POS            0x0F
+#define ST_HPOS           0x03
+#define ST_VPOS           0x0C
 #define ST_LEFT           0x00
+#define ST_RIGHT          0x01
+#define ST_CENTER         0x02
+#define ST_DOWN           0x04
+#define ST_UP             0x08
+#define ST_VCENTER        0x0C
+#define ST_TYPE           0xF0
+#define ST_SINGLE         0x00
 #define ST_MULTI          0x10
+#define ST_TITLE_BAR      0x20
+#define ST_PICTURE        0x30
+#define ST_FRAME          0x40
+#define ST_BACKGROUND     0x50
+#define ST_GROUP_BOX      0x60
+#define ST_GROUP_BOX2     0x70
+#define ST_HUD_BACKGROUND 0x80
+#define ST_TILE_PICTURE   0x90
+#define ST_WITH_RECT      0xA0
+#define ST_LINE           0xB0
+#define ST_UPPERCASE      0xC0
+#define ST_LOWERCASE      0xD0
+#define ST_SHADOW         0x100
+#define ST_NO_RECT        0x200
+#define ST_KEEP_ASPECT_RATIO  0x800
 
-#define GUI_GRID_WAbs		    ((safezoneW / safezoneH) min 1.2)
-#define GUI_GRID_HAbs		    (GUI_GRID_WAbs / 1.2)
-#define GUI_GRID_X			    safezoneX
-#define GUI_GRID_Y			    (safezoneY + (safezoneH - GUI_GRID_HAbs))
-#define GUI_GRID_W			    (GUI_GRID_WAbs / 40)
-#define GUI_GRID_H			    (GUI_GRID_HAbs / 25)
+// Slider styles
+#define SL_DIR            0x400
+#define SL_VERT           0
+#define SL_HORZ           0x400
 
-#define GUI_GRID_CENTER_WAbs    GUI_GRID_WAbs
-#define GUI_GRID_CENTER_HAbs    GUI_GRID_HAbs
-#define GUI_GRID_CENTER_X	    (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
-#define GUI_GRID_CENTER_Y	    (safezoneY + (safezoneH - (GUI_GRID_CENTER_HAbs / 1.2))/2)
-#define GUI_GRID_CENTER_W	    (GUI_GRID_CENTER_WAbs / 40)
-#define GUI_GRID_CENTER_H	    (GUI_GRID_CENTER_HAbs / 25)
+#define SL_TEXTURES       0x10
 
-#define SET_GUI_GRID_CENTER_X(value) x = (value) * (GUI_GRID_CENTER_W + GUI_GRID_CENTER_X)
-#define SET_GUI_GRID_CENTER_Y(value) y = (value) * (GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y)
-#define SET_GUI_GRID_CENTER_W(value) w = (value) * GUI_GRID_CENTER_W
-#define SET_GUI_GRID_CENTER_H(value) h = (value) * GUI_GRID_CENTER_H
+// progress bar
+#define ST_VERTICAL       0x01
+#define ST_HORIZONTAL     0
+
+// Listbox styles
+#define LB_TEXTURES       0x10
+#define LB_MULTI          0x20
+
+// Tree styles
+#define TR_SHOWROOT       1
+#define TR_AUTOCOLLAPSE   2
+
+#include "gridCommon.inc"
 
 class Life_Checkbox
 {
@@ -211,7 +276,7 @@ class Life_RscText {
     w = 0.3;
     type = 0;
     style = 0;
-    shadow = 1;
+    shadow = 0;
     colorShadow[] = {0, 0, 0, 0.5};
     font = "RobotoCondensed";
     SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -226,6 +291,7 @@ class Life_RscText {
 
 class Life_RscTextHeader : Life_RscText {
     colorBackground[] = HEADER_COLOUR;
+    shadow = 0;
 };
 
 class Life_RscLine: Life_RscText {
@@ -319,7 +385,7 @@ idc = -1;
     h = 0.037;
     w = 0.3;
     sizeEx = 0.040;
-    font = "RobotoCondensedLight";
+    font = "RobotoCondensed";
     color[] = {1, 1, 1, 1};
     colorActive[] = {1, 0.2, 0.2, 1};
     soundEnter[] = {"\A3\ui_f\data\sound\onover", 0.09, 1};
@@ -481,7 +547,7 @@ class Life_RscButtonMenu : Life_RscShortcutButton {
     };
     class Attributes
     {
-        font = "RobotoCondensedLight";
+        font = "RobotoCondensed";
         color = "#E5E5E5";
         align = "left";
         shadow = "false";
@@ -1173,8 +1239,8 @@ class Life_RscMapControl
 };
 
 class Life_RscCombo {
-    style = 16;
-    type = 4;
+    type = CT_COMBO;
+    style = ST_LEFT + LB_TEXTURES + ST_NO_RECT;
     x = 0;
     y = 0;
     w = 0.12;
@@ -1191,8 +1257,8 @@ class Life_RscCombo {
     soundSelect[] = {
             "", 0.000000, 1
     };
-    arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-    arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+    arrowEmpty = "\a3\3DEN\Data\Controls\ctrlCombo\arrowEmpty_ca.paa";
+    arrowFull = "\a3\3DEN\Data\Controls\ctrlCombo\arrowFull_ca.paa";
     wholeHeight = 0.45;
     color[] = {1, 1, 1, 1};
     colorActive[] = {1, 0, 0, 1};
@@ -1200,7 +1266,12 @@ class Life_RscCombo {
     font = "RobotoCondensed";
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 
-    class ComboScrollBar : Life_RscScrollBar {};
+    class ComboScrollBar : Life_RscScrollBar {
+        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
+        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
+        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
+        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
+    };
 };
 
 class Life_RscToolbox {
@@ -1220,4 +1291,65 @@ class Life_RscToolbox {
 
 class Life_RscButtonCenter : Life_RscButtonMenu {
     style = 2;
+};
+
+class ULP_RscButtonClean : Life_RscButtonCenter {
+    fade = 0;
+	animTextureOver = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
+    animTextureFocused = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
+    animTexturePressed = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
+    colorText[] = {1, 1, 1, 1};
+	color2[] = {1, 1, 1, 1};
+	colorFocused[] = {1, 1, 1, 1};
+	colorBackgroundFocused[] = {0.2, 0.2, 0.2, 0.8};
+    colorBackground[] = {0.15, 0.15, 0.15, 0.7};
+	colorBackground2[] = {0.2, 0.2, 0.2, 0.8};
+};
+
+class ULP_RscButtonIcon : Life_RscButton {
+    type = 1;
+    style = 0x800 + 0x02 + 0x30;
+    shadow = 0;
+    animTextureOver = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
+    animTextureFocused = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
+    animTexturePressed = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
+    colorText[] = {1, 1, 1, 1};
+	color2[] = {1, 1, 1, 1};
+	colorFocused[] = {1, 1, 1, 1};
+    colorBackgroundActive[] = {0.2, 0.2, 0.2, 0.8};
+	colorBackgroundFocused[] = {0.2, 0.2, 0.2, 0.8};
+    colorBackground[] = {0.15, 0.15, 0.15, 0.7};
+	colorBackground2[] = {0.2, 0.2, 0.2, 0.8};
+};
+
+class ULP_ctrlOptionsHeader : Life_RscTextHeader {
+    w = 32.25 * GUI_GRID_CENTER_W;
+    h = SIZE_M * GUI_GRID_CENTER_H;
+};
+
+class ULP_ctrlOption : Life_RscControlsGroupNoScrollbars {
+    w = 32.25 * GUI_GRID_CENTER_W;
+    h = SIZE_M * GUI_GRID_CENTER_H;
+
+    class Controls {
+        class OptionName: Life_RscText {
+            idc = 101;
+            w = (32 / 2) * GUI_GRID_CENTER_W;
+            h = SIZE_M * GUI_GRID_CENTER_H;
+        };
+        class OptionsList : Life_RscCombo {
+            idc = 102;
+            colorBackgroundDisabled[] = {0.2, 0.2, 0.2, 0.8};
+            x = ((32 - (32 / 3)) - 1.2) * GUI_GRID_CENTER_W;
+            w = (32 / 3) * GUI_GRID_CENTER_W;
+            h = SIZE_M * GUI_GRID_H;
+        };
+        class OptionReset: ULP_RscButtonIcon {
+            idc = 103;
+            text = "\a3\ui_f_curator\Data\CfgCurator\waypointCycle_ca.paa";
+            x = (32 - 1) * GUI_GRID_CENTER_W;
+            w = SIZE_M * GUI_GRID_W;
+            h = SIZE_M * GUI_GRID_H;
+        };
+    };
 };

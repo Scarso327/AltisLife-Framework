@@ -18,7 +18,7 @@ class CfgApps {
 		pageIdcs[] = {
 			23002, 23003, 23004, 23005, 23006, 23007, 23008, 23009, 23010, 23011
 		};
-		onload = "(_this displayCtrl 23001) ctrlSetStructuredText parseText format["" <t align='left'>%1</t><t align='right'>£%2</t>"", name player, [life_atmbank] call ULP_fnc_numberText]";
+		onload = "(_this displayCtrl 23001) ctrlSetStructuredText parseText format[""<t align='left'>%1</t><t align='right'>£%2</t>"", name player, [life_atmbank] call ULP_fnc_numberText]";
 	};
 
 	class Profile : BaseScreen {
@@ -85,6 +85,10 @@ class CfgApps {
 	class Settings {
 		idc= 23011;
 		pageTitle = "Settings";
-		pageIdcs[] = {};
+		pageIdcs[] = {
+			23023
+		};
+		onload = "_this call ULP_fnc_options";
+		onUnload = "saveProfileNamespace;";
 	};
 };

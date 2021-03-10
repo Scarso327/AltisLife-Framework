@@ -5,19 +5,6 @@
 #define TABLET_BUTTON_W HORIZONTAL_GRID_W(UI_WIDTH, 5)
 #define TABLET_BUTTON_H VERTICAL_GRID_H(UI_HEIGHT, 3)
 
-class TabletApp : Life_RscButtonCenter {
-    fade = 0;
-	animTextureOver = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
-    animTextureFocused = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
-    animTexturePressed = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
-    colorText[] = {1, 1, 1, 1};
-	color2[] = {1, 1, 1, 1};
-	colorFocused[] = {1, 1, 1, 1};
-	colorBackgroundFocused[] = {0.2, 0.2, 0.2, 0.8};
-    colorBackground[] = {0.15, 0.15, 0.15, 0.7};
-	colorBackground2[] = {0.2, 0.2, 0.2, 0.8};
-};
-
 class DialogTablet {
     idd = 23000;
     onload = "uiNamespace setVariable ['DialogTablet', _this select 0]";
@@ -25,6 +12,17 @@ class DialogTablet {
 
     // Main Body...
     class ControlsBackground {
+		class Background : Life_RscText {
+			idc = 23012;
+			text = "";
+			SET_GUI_GRID_CENTER_X(3);
+			SET_GUI_GRID_CENTER_Y(-1);
+			SET_GUI_GRID_CENTER_W(34);
+			SET_GUI_GRID_CENTER_H(23);
+			
+			colorBackground[] = {0.086,0.082,0.102,1};
+		};
+		
         class TabletImage : life_RscPicture {
             idc = 23013;
             text = "data\ui\tablet.paa"; 
@@ -33,17 +31,6 @@ class DialogTablet {
             w = 0.443438 * safezoneW;
             h = 0.836 * safezoneH;
         };
-
-		class Background : Life_RscText {
-			idc = 23012;
-			text = "";
-			/*SET_GUI_GRID_CENTER_X(0);
-			SET_GUI_GRID_CENTER_Y(0);
-			SET_GUI_GRID_CENTER_W(1);
-			SET_GUI_GRID_CENTER_H(1);*/
-			
-			colorBackground[] = {0.086,0.082,0.102,1};
-		};
     };
 
 	class Controls {
@@ -57,7 +44,7 @@ class DialogTablet {
 			SAFEZONE_H(0.033);
         };
 
-		class Profile : TabletApp {
+		class Profile : ULP_RscButtonClean {
 			idc = 23002;
 			text = "<br/><br/><br/><img image='\a3\ui_f\data\GUI\Rsc\RscDisplayMain\menu_singleplayer_ca.paa' align='center' size='7' color='#808080'/><br/><t align = 'center'>Profile</t>";
 			onButtonClick = "[""Profile""] call ULP_fnc_setScreen;";
@@ -67,7 +54,7 @@ class DialogTablet {
 			SAFEZONE_H(((TABLET_BUTTON_H * 2) + MARGIN_Y));
 		};
 
-		class Inventory : TabletApp {
+		class Inventory : ULP_RscButtonClean {
 			idc = 23003;
 			text = "<br/><img image='\a3\ui_f_curator\Data\RscCommon\RscAttributeInventory\filter_10_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Inventory</t>";
 			onButtonClick = "[""Inventory""] call ULP_fnc_setScreen;";
@@ -77,7 +64,7 @@ class DialogTablet {
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
 
-		class Messaging : TabletApp {
+		class Messaging : ULP_RscButtonClean {
 			idc = 23004;
 			text = "<br/><img image='\a3\3den\data\Cfg3DEN\Comment\texture_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Messaging</t>";
 			onButtonClick = "[""Messaging""] call ULP_fnc_setScreen;";
@@ -87,7 +74,7 @@ class DialogTablet {
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
 
-		class Group : TabletApp {
+		class Group : ULP_RscButtonClean {
 			idc = 23005;
 			text = "<br/><img image='\a3\ui_f\data\GUI\Rsc\RscDisplayMain\menu_multiplayer_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Group</t>";
 			onButtonClick = "[] call ULP_fnc_openGroup;";
@@ -97,7 +84,7 @@ class DialogTablet {
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
 
-		class Keys : TabletApp {
+		class Keys : ULP_RscButtonClean {
 			idc = 23006;
 			text = "<br/><img image='data\ui\keys.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Keys</t>";
 			onButtonClick = "[""Keys""] call ULP_fnc_setScreen;";
@@ -107,7 +94,7 @@ class DialogTablet {
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
 
-		class Dispute : TabletApp {
+		class Dispute : ULP_RscButtonClean {
 			idc = 23007;
 			text = "<br/><img image='data\ui\dispute.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Dispute</t>";
 			onButtonClick = "[""Dispute""] call ULP_fnc_setScreen;";
@@ -117,7 +104,7 @@ class DialogTablet {
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
 
-		class Market : TabletApp {
+		class Market : ULP_RscButtonClean {
 			idc = 23008;
 			text = "<br/><img image='\a3\3den\data\Displays\Display3DEN\ToolBar\vert_ATL_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Market</t>";
 			onButtonClick = "[""Market""] call ULP_fnc_setScreen;";
@@ -127,7 +114,7 @@ class DialogTablet {
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
 
-		class Goals : TabletApp {
+		class Goals : ULP_RscButtonClean {
 			idc = 23009;
 			text = "<br/><br/><img image='\a3\ui_f_curator\Data\CfgMPGameTypes\zsc_ca.paa' align='center' size='3' color='#808080'/><br/><t align = 'center'>Goals</t>";
 			onButtonClick = "[""Goals""] call ULP_fnc_setScreen;";
@@ -137,7 +124,7 @@ class DialogTablet {
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
 
-		class Perks : TabletApp {
+		class Perks : ULP_RscButtonClean {
 			idc = 23010;
 			text = "<br/><br/><img image='\a3\ui_f_curator\Data\RscCommon\RscAttributePunishmentAnimation\PushupsLegs.paa' align='center' size='3' color='#808080'/><br/><t align = 'center'>Perks</t>";
 			onButtonClick = "[""Perks""] call ULP_fnc_setScreen;";
@@ -147,7 +134,7 @@ class DialogTablet {
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
 
-		class Settings : TabletApp {
+		class Settings : ULP_RscButtonClean {
 			idc = 23011;
 			text = "<br/><img image='\a3\ui_f\data\GUI\Rsc\RscDisplayMain\menu_options_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Settings</t>";
 			onButtonClick = "[""Settings""] call ULP_fnc_setScreen;";
@@ -159,6 +146,7 @@ class DialogTablet {
 
 		#include "Screens\Inventory.hpp"
 		#include "Screens\Keys.hpp"
+		#include "Screens\Options.hpp"
 	};
 };
 

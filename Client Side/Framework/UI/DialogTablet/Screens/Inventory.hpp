@@ -56,7 +56,7 @@ class ItemInformation : Life_RscStructuredText {
 	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 6));
 };
 
-class Use : TabletApp {
+class Use : ULP_RscButtonClean {
 	idc = 23018;
 	text = "<t align = 'center'>Use</t>";
 	onButtonClick = "";
@@ -66,7 +66,7 @@ class Use : TabletApp {
 	SAFEZONE_H(MARGIN_Y * 2);
 };
 
-class Remove : TabletApp {
+class Remove : ULP_RscButtonClean {
 	idc = 23019;
 	text = "<t align = 'center'>Remove</t>";
 	onButtonClick = "_this call ULP_fnc_removeItem;";

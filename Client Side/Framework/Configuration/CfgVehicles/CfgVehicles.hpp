@@ -567,8 +567,8 @@ class CfgVehicles {
 			class GoldLine : BaseTexture { 
 				displayName = "Gold Line";
 				textures[] = { 
-					"Data\Textures\Vehicles\Land\Civilian\Ifrit\donator_01.paa",
-					"Data\Textures\Vehicles\Land\Civilian\Ifrit\donator_02.paa"
+					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_01.paa",
+					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_02.paa"
 				}; 
 			};
 			class Oil : BaseTexture { 

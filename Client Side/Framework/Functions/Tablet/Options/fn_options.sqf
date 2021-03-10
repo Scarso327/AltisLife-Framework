@@ -36,6 +36,35 @@ private _lastCtrlPos = ctrlPosition controlNull;
 		private _isDefault = true;
 
 		_optionCtrl = switch (getText(_option >> "type")) do {
+			case "SLIDER": {
+				private _optionCtrlRaw = _display ctrlCreate ["ULP_ctrlOptionSlider", -1, _ctrlGroup];
+				private _slider = (_optionCtrlRaw controlsGroupCtrl 102);
+				
+				getArray (_option >> "values") params [ "_boundaries", "_defaultValue", "_speed" ];
+
+				private _optionValue = [configName _option, configName _category, _defaultValue] call ULP_fnc_getOption;
+
+				_slider sliderSetRange _boundaries;
+				_slider sliderSetPosition _optionValue;
+				_slider sliderSetSpeed _speed;
+
+				if !(_optionValue isEqualTo _defaultValue) then {
+					_isDefault = false;
+				};
+
+				_slider ctrlAddEventHandler ["SliderPosChanged", {
+					_this params [
+						["_slider", controlNull, [controlNull]],
+						["_value", 0, [0]]
+					];
+					
+					[_slider, _value, _combo getVariable "default"] call ULP_fnc_setOption;
+				}];
+
+				_slider setVariable ["default", _defaultValue];
+
+				_optionCtrlRaw
+			};
 			case "DROPDOWN": {
 				private _optionCtrlRaw = _display ctrlCreate ["ULP_ctrlOption", -1, _ctrlGroup];
 				private _dropdown = (_optionCtrlRaw controlsGroupCtrl 102);

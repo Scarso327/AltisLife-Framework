@@ -17,6 +17,8 @@ player addEventHandler ["GetOutMan", { _this call ULP_fnc_onGetOut }];
 
 	switch (format["%1_%2", _category, _option]) do {
 		case "HUD_EnablePlayerTags": { [(_newSetting isEqualTo 1)] call ULP_fnc_playerTags };
+		case "Audio_EffectsFade": { if (ULP_FadeSound) then { 0 fadeSound _newSetting; }; };
+		case "Audio_MusicFade": { if (ULP_FadeSound) then { 0 fadeMusic _newSetting; }; };
 	};
 
 	[format["Setting Changed (%1, %2, %3 -> %4)", _option, _category, _lastSetting, _newSetting]] call ULP_fnc_logIt;

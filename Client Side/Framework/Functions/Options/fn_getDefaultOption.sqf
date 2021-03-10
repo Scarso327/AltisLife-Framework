@@ -13,9 +13,4 @@ _this params [
 private _class = missionConfigFile >> "CfgOptions" >> _category >> _option;
 if !(isClass _class) exitWith {};
 
-switch (getText (_class >> "type")) do {
-	case "DROPDOWN": {
-		(getArray (_class >> "values") # 1) breakOut "fn_getDefaultOption";
-	};
-	default { 0 breakOut "fn_getDefaultOption"; }
-};
+(getArray (_class >> "values") # 1) breakOut "fn_getDefaultOption";

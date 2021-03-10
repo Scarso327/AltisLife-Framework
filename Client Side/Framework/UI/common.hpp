@@ -1353,3 +1353,16 @@ class ULP_ctrlOption : Life_RscControlsGroupNoScrollbars {
         };
     };
 };
+
+class ULP_ctrlOptionSlider : ULP_ctrlOption {
+    class Controls : Controls {
+        class OptionName: OptionName {};
+        class OptionsList : life_RscXSliderH {
+            idc = 102;
+            x = ((32 - (32 / 3)) - 1.2) * GUI_GRID_CENTER_W;
+            w = (32 / 3) * GUI_GRID_CENTER_W;
+            h = SIZE_M * GUI_GRID_H;
+        };
+        class OptionReset : OptionReset {};
+    };
+};

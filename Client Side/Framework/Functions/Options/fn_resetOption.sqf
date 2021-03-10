@@ -32,6 +32,9 @@ private _default = [_option, _category] call ULP_fnc_getDefaultOption;
 if !(isNull _resetCtrl) then {
 	
 	switch (getText (_class >> "type")) do {
+		case "SLIDER" : {
+			_valueCtrl sliderSetPosition _default;
+		};
 		case "DROPDOWN" : {
 			for "_i" from 0 to (lbSize _valueCtrl) do {
 				if ((_valueCtrl lbValue _i) isEqualTo _default) exitWith {
@@ -44,4 +47,5 @@ if !(isNull _resetCtrl) then {
 	_resetCtrl ctrlEnable false;
 };
 
+["OptionChanged", [_option, _category, _default, [_option, _category, _default] call ULP_fnc_getOption]] call ULP_fnc_invokeEvent;
 (profileNamespace setVariable [format["ULP_Options_%1_%2", _category, _option], _default])

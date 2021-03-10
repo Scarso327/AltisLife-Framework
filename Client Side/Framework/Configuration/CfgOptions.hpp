@@ -18,6 +18,24 @@ class CfgOptions {
 		};
 	};
 
+	class Audio {
+		title = "Audio";
+
+		class EffectsFade {
+			name = "Effects Volume";
+			tooltip = "This is the effects volume that will be used when using ear plugs.";
+			type = "SLIDER";
+			values[] = { { 0, 1 }, 0.25, { 0.1, 0.1 } };
+		};
+		
+		class MusicFade {
+			name = "Music Volume";
+			tooltip = "This is the music volume that will be used when using ear plugs.";
+			type = "SLIDER";
+			values[] = { { 0, 1 }, 0.25, { 0.1, 0.1 } };
+		};
+	};
+
 	class HUD {
 		title = "User Interface";
 

@@ -14,6 +14,7 @@ ULP_Last_Sync = time;
 
 /* Setting Variables */
 ULP_Settings_EnableSide = false;
+ULP_FadeSound = false;
 
 /* Player Variables */
 ULP_Paycheck = {0};

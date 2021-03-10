@@ -12,10 +12,20 @@ _this params [
 
 private _handled = false;
 
-if (isDowned(player)) then { 
-	switch (_code) do {
+switch (_code) do {
+    if (isDowned(player)) then {
         case F: { if (_shift && { missionNamespace getVariable ["ULP_CanRespawn", false] }) then { player SetDammage 1; _handled = true; } }; // Respawn (Shift + F)...
 		case SPACE: {  }; // Request Medic (Space, TODO)
+    };
+
+    case RWINDOWS: {
+        if !(_shift && { _ctrl } && { _alt }) then {
+            ULP_FadeSound = !ULP_FadeSound;
+            0 fadeSound ([1, ["EffectsFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
+            0 fadeMusic ([1, ["MusicFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
+
+            hint format["You %1 your earplugs", ["remove", "put in"] select (ULP_FadeSound)];
+        };
     };
 };
 

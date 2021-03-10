@@ -20,5 +20,12 @@ class CfgOptions {
 
 	class HUD {
 		title = "User Interface";
+
+		class EnablePlayerTags {
+			name = "Enable Player Tags";
+			tooltip = "When enabled, information about a player is displayed above their heads.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
+		};
 	};
 };

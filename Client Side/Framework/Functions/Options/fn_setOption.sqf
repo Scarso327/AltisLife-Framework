@@ -17,5 +17,9 @@ private _resetCtrl = _valueCtrl getVariable ["resetCtrl", controlNull];
 
 if (_category isEqualTo "" || { _option isEqualTo "" } || { isNull _resetCtrl }) exitWith { hint "An error occured while changing settings..."; };
 
+private _previous = [_option, _category, _default] call ULP_fnc_getOption;
+
 _resetCtrl ctrlEnable !(_value isEqualTo _default);
+
+["OptionChanged", [_option, _category, _value, _previous]] call ULP_fnc_invokeEvent;
 (profileNamespace setVariable [format["ULP_Options_%1_%2", _category, _option], _value])

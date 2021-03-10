@@ -67,7 +67,7 @@ private _lastCtrlPos = ctrlPosition controlNull;
 						["_combo", controlNull, [controlNull]],
 						["_index", 0, [0]]
 					];
-
+					
 					[_combo, _combo lbValue _index, _combo getVariable "default"] call ULP_fnc_setOption;
 				}];
 

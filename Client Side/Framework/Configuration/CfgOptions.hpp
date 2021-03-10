@@ -9,6 +9,7 @@ class CfgOptions {
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
 
+		// TODO
 		class EnableStreamerMode {
 			name = "Enable Streamer Mode";
 			tooltip = "When enabled, certain aspects of your game maybe hidden or censored for privacy.";

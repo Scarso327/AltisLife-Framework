@@ -37,10 +37,12 @@ titleText[format ["%2 %1", getText (_spawnCfg >> "displayName"), "You have spawn
 if (ULP_FirstSpawn) then {
     ULP_FirstSpawn = false;
 
-    [
-        3, [],
-        { [] call ULP_UI_fnc_screenCredits; }
-    ] call ULP_fnc_waitExecute;
+	if (["EnableWelcome"] call ULP_fnc_getOption isEqualTo 1) then {
+		[
+			3, [],
+			{ [] call ULP_UI_fnc_screenCredits; }
+		] call ULP_fnc_waitExecute;
+	};
 };
 
 player allowDammage true;

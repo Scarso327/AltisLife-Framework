@@ -21,7 +21,7 @@ player addEventHandler ["GetOutMan", { _this call ULP_fnc_onGetOut }];
 		case "Audio_MusicFade": { if (ULP_FadeSound) then { 0 fadeMusic _newSetting; }; };
 	};
 
-	[format["Setting Changed (%1, %2, %3 -> %4)", _option, _category, _lastSetting, _newSetting]] call ULP_fnc_logIt;
+	// [format["Setting Changed (%1, %2, %3 -> %4)", _option, _category, _lastSetting, _newSetting]] call ULP_fnc_logIt;
 }] call ULP_fnc_addEventHandler;
 
 // Group Events...

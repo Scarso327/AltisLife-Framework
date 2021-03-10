@@ -27,5 +27,12 @@ class CfgOptions {
 			type = "DROPDOWN";
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
+
+		class ShowOwnTags {
+			name = "Show Own Player Tags";
+			tooltip = "If player tags are enabled as well as this, you'll see your own player tag.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
+		};
 	};
 };

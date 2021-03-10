@@ -1316,8 +1316,10 @@ class ULP_RscButtonIcon : Life_RscButton {
     colorText[] = {1, 1, 1, 1};
 	color2[] = {1, 1, 1, 1};
 	colorFocused[] = {1, 1, 1, 1};
+    colorDisabled[] = {1, 1, 1, 0.6};
     colorBackgroundActive[] = {0.2, 0.2, 0.2, 0.8};
 	colorBackgroundFocused[] = {0.2, 0.2, 0.2, 0.8};
+    colorBackgroundDisabled[] = {0.2, 0.2, 0.2, 0.8};
     colorBackground[] = {0.15, 0.15, 0.15, 0.7};
 	colorBackground2[] = {0.2, 0.2, 0.2, 0.8};
 };
@@ -1339,7 +1341,6 @@ class ULP_ctrlOption : Life_RscControlsGroupNoScrollbars {
         };
         class OptionsList : Life_RscCombo {
             idc = 102;
-            colorBackgroundDisabled[] = {0.2, 0.2, 0.2, 0.8};
             x = ((32 - (32 / 3)) - 1.2) * GUI_GRID_CENTER_W;
             w = (32 / 3) * GUI_GRID_CENTER_W;
             h = SIZE_M * GUI_GRID_H;

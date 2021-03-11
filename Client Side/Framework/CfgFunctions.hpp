@@ -260,6 +260,12 @@ class CfgFunctions {
 			class setVehicleAmmo {};
 		};
 
+		class VehicleEvents {
+			file = "Functions\Vehicle\Events";
+			class onVehicleDeleted {};
+			class onVehicleKilled {};
+		};
+
 		class VehicleStore {
 			file = "Functions\VehicleStore";
 			class buyVehicle {};

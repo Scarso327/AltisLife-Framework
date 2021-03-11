@@ -27,3 +27,5 @@ if (local _vehicle) then {
 	_vehicle setVariable["jipReady", true, true];
 };
 
+_vehicle addEventHandler ["Killed", { _this call ULP_fnc_onVehicleKilled }];
+_vehicle addEventHandler ["Deleted", { _this call ULP_fnc_onVehicleDeleted }];

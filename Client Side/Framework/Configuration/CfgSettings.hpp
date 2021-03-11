@@ -190,6 +190,8 @@ class CfgSettings {
         {"STR_Crime_25","20000","25"}
     };
 
+    nlrTimer = 15 * 60;
+    nlrDistance = 1500;
     doesntThreaten[] = { "", "Binocular", "Rangefinder" };
     taserWeapons[] = { "hgun_P07_F", "hgun_P07_blk_F" };
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";

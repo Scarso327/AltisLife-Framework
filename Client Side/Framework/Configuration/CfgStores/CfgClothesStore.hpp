@@ -474,8 +474,8 @@ class CfgClothesStore {
 		};
 	};
 
-	class Syndikat {
-		storeName = "Syndikat Clothing Store";
+	class Rebel {
+		storeName = "Rebel Clothing Store";
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};

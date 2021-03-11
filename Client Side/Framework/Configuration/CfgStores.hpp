@@ -5,3 +5,51 @@ class CfgStores {
 	#include "CfgStores\CfgItemsStore.hpp"
 	#include "CfgStores\CfgVirtualStores.hpp"
 };
+
+/*
+APC -----------------------------------------------------
+# APC GENERAL
+[this, "<t color='#3266A8'>[APC]</t> General Market", "Police"] call ULP_fnc_addMarket;
+[this, "<t color='#3266A8'>[APC]</t> Equipment Store", "Police", "CfgItemsStore"] call ULP_fnc_addStore; 
+[this, "<t color='#3266A8'>[APC]</t> Clothing Store", "Police", "CfgClothesStore"] call ULP_fnc_addStore;
+
+NHS -----------------------------------------------------
+# NHS GENERAL
+[this, "<t color='#32A863'>[NHS]</t> General Market", "Medic"] call ULP_fnc_addMarket;
+[this, "<t color='#32A863'>[NHS]</t> Equipment Store", "Medic", "CfgItemsStore"] call ULP_fnc_addStore; 
+[this, "<t color='#32A863'>[NHS]</t> Clothing Store", "Medic", "CfgClothesStore"] call ULP_fnc_addStore;
+
+HATO ----------------------------------------------------
+# HATO GENERAL
+[this, "<t color='#D7E02D'>[HATO]</t> General Market", "Hato"] call ULP_fnc_addMarket;
+[this, "<t color='#D7E02D'>[HATO]</t> Equipment Store", "Hato", "CfgItemsStore"] call ULP_fnc_addStore; 
+[this, "<t color='#D7E02D'>[HATO]</t> Clothing Store", "Hato", "CfgClothesStore"] call ULP_fnc_addStore;
+
+CIVILIAN ------------------------------------------------
+[this, "<t color='#B92DE0'>[CIV]</t> General Market", "Civilian"] call ULP_fnc_addMarket;
+
+[this, "<t color='#B92DE0'>[CIV]</t> General Store", "Civilian", "CfgItemsStore"] call ULP_fnc_addStore; 
+[this, "<t color='#B92DE0'>[CIV]</t> Handgun Store", "Handgun", "CfgItemsStore"] call ULP_fnc_addStore; 
+
+[this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "Civilian", "CfgClothesStore"] call ULP_fnc_addStore;
+[this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "GoKart", "CfgClothesStore"] call ULP_fnc_addStore;
+[this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "Diving", "CfgClothesStore"] call ULP_fnc_addStore;
+[this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "Solicitor", "CfgClothesStore"] call ULP_fnc_addStore;
+[this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "Press", "CfgClothesStore"] call ULP_fnc_addStore;
+[this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "IDAP", "CfgClothesStore"] call ULP_fnc_addStore;
+[this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "Solicitor", "CfgClothesStore"] call ULP_fnc_addStore;
+
+# HUNTING CAMP
+[this, "<t color='#B92DE0'>[CIV]</t> Hunting Market", "Hunting"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Hunting Store", "Hunting", "CfgItemsStore"] call ULP_fnc_addStore; 
+
+# REBEL OUTPOST
+[this, "<t color='#E02D2D'>[REB]</t> General Market", "Rebel"] call ULP_fnc_addMarket;
+[this, "<t color='#E02D2D'>[REB]</t> Equipment Store", "Rebel", "CfgItemsStore"] call ULP_fnc_addStore; 
+[this, "<t color='#E02D2D'>[REB]</t> Clothing Store", "Rebel", "CfgClothesStore"] call ULP_fnc_addStore;
+
+# BLACKMARKET
+[this, "<t color='#E02D2D'>[REB]</t> General Market", "Blackmarket"] call ULP_fnc_addMarket;
+[this, "<t color='#E02D2D'>[REB]</t> Equipment Store", "Blackmarket", "CfgItemsStore"] call ULP_fnc_addStore; 
+[this, "<t color='#E02D2D'>[REB]</t> Clothing Store", "Blackmarket", "CfgClothesStore"] call ULP_fnc_addStore;
+*/

@@ -296,6 +296,12 @@ class CfgFunctions {
 			class getGroupById {};
 			class getGroupName {};
 		};
+
+		class NLR {
+			file = "Functions\NLR";
+			class addNLR {};
+			class addNLREachFrame {};
+		};
 	};
 
 	class ULP_Functions_UI {

@@ -52,6 +52,8 @@ if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
 ["RscIncapacitated"] call ULP_UI_fnc_destroyLayer;
 "WaitToRespawn" cutText ["<t color='#ffffff' font='PuristaLight' size='2px'>YOU HAVE DIED</t>", "BLACK", -1, false, true];
 
+[getPos _unit] call ULP_fnc_addNLR;
+
 ULP_Respawned = false;
 ULP_CanRespawn = nil;
 

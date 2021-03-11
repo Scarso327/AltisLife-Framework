@@ -24,7 +24,7 @@ private _vehicleCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle);
 if !(isClass _vehicleCfg) exitWith {};
 
 private _turrets = _vehicleCfg >> "turrets";
-if !(_texture isEqualTo "") then {
+if (!(_texture isEqualTo "") && { isArray (_vehicleCfg >> "Textures" >> _texture >> "turrets") }) then {
 	_turrets = _vehicleCfg >> "Textures" >> _texture >> "turrets";
 };
 

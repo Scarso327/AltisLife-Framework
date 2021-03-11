@@ -161,6 +161,7 @@ class CfgFunctions {
 			class playerTags {};
 			class setTags {};
 			class getTagColour {};
+			class getTagPos {};
 		};
 
 		class Licenses {

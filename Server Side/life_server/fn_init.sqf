@@ -44,7 +44,6 @@ if (isNil {uiNamespace getVariable "life_sql_id"}) then {
     diag_log "extDB3: Still Connected to Database";
 };
 
-
 if (_extDBNotLoaded isEqualType []) exitWith {
     life_server_extDB_notLoaded = true;
     publicVariable "life_server_extDB_notLoaded";
@@ -61,6 +60,26 @@ ULP_SRV_Date resize 3; // We only need Year, Month, Day
 
 private _timeStamp = diag_tickTime;
 ["Initialisation Started"] call ULP_fnc_logIt;
+
+["Getting Settings..."] call ULP_fnc_logIt;
+
+private _settings = ["SELECT * FROM settings", 2, true] call DB_fnc_asyncCall;
+
+if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
+    private _cfg = configFile >> "CfgPatches" >> "ULPServer" >> "Settings";
+    {
+        _x params ["", "_name", "_value"];
+
+        if (isClass (_cfg >> _name)) then {
+            _value = switch (getText (_cfg >> _name >> "type")) do {
+                case "BOOL": { [parseNumber _value] call ULP_fnc_bool };
+                default { _value };
+            };
+
+            missionNamespace setVariable [format["ULP_SRV_Setting_%1", _name], _value, [getNumber(_cfg >> _name >> "global")] call ULP_fnc_bool];
+        };
+    } forEach _settings;
+};
 
 /* Map-based server side initialization. */
 

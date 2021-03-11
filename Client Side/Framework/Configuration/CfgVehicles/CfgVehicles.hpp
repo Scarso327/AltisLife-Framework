@@ -1013,6 +1013,7 @@ class CfgVehicles {
 	class O_Heli_Light_02_unarmed_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1034,6 +1035,7 @@ class CfgVehicles {
 	class I_Heli_light_03_unarmed_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1056,11 +1058,19 @@ class CfgVehicles {
 	class B_Heli_Transport_01_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "LMG_Minigun_Transport", "LMG_Minigun_Transport2", "CMFlareLauncher" } };
+		class Textures {
+			class Civilian : BaseTexture {};
+			class Police : BaseTexture {
+				turrets[] = { { "CMFlareLauncher" } };
+			};
+		};
 	};
 
 	class I_Heli_Transport_02_F {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Ion : BaseTexture {
 				displayName = "Ion"; 
@@ -1086,30 +1096,37 @@ class CfgVehicles {
 	class O_Heli_Transport_04_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_bench_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_covered_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_box_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_ammo_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_fuel_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_medevac_black_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Medic : MedicTexture {
 				textures[] = { 
@@ -1125,6 +1142,7 @@ class CfgVehicles {
 	class B_Heli_Transport_03_unarmed_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1159,32 +1177,65 @@ class CfgVehicles {
 	class B_T_VTOL_01_infantry_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher_Triples" } };
 	};
 	class B_T_VTOL_01_vehicle_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher_Triples" } };
 	};
 
 	class O_T_VTOL_02_infantry_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 	class O_T_VTOL_02_vehicle_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 
 	class I_Plane_Fighter_03_CAS_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher", "Twin_Cannon_20mm", "missiles_SCALPEL", "missiles_ASRAAM", "GBU12BombLauncher_Plane_Fighter_03_F" } };
 	};
-	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
-	class B_Plane_CAS_01_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
-	class B_Plane_Fighter_01_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
-	class B_Plane_Fighter_01_Stealth_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
-	class O_Plane_CAS_02_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
-	class O_Plane_Fighter_02_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
-	class O_Plane_Fighter_02_Stealth_F : I_Plane_Fighter_03_CAS_F { buyPrice = 0; };
+	class I_Plane_Fighter_04_F : Base { 
+		buyPrice = 0; 
+		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
+	};
+	class B_Plane_CAS_01_F : Base { 
+		buyPrice = 0; 
+		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher", "Gatling_30mm_Plane_CAS_01_F", "Missile_AA_04_Plane_CAS_01_F", "Missile_AGM_02_Plane_CAS_01_F", "Rocket_04_HE_Plane_CAS_01_F", "Rocket_04_AP_Plane_CAS_01_F", "Bomb_04_Plane_CAS_01_F" } };
+	};
+	class B_Plane_Fighter_01_F : Base { 
+		buyPrice = 0; 
+		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
+	};
+	class B_Plane_Fighter_01_Stealth_F : Base { 
+		buyPrice = 0; 
+		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
+	};
+	class O_Plane_CAS_02_F : Base { 
+		buyPrice = 0; 
+		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher", "Cannon_30mm_Plane_CAS_02_F", "Missile_AA_03_Plane_CAS_02_F", "Missile_AGM_01_Plane_CAS_02_F", "Rocket_03_HE_Plane_CAS_02_F", "Rocket_03_AP_Plane_CAS_02_F", "Bomb_03_Plane_CAS_02_F" } };
+	};
+	class O_Plane_Fighter_02_F : Base { 
+		buyPrice = 0;
+		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher", "weapon_Fighter_Gun_30mm" } };
+	};
+	class O_Plane_Fighter_02_Stealth_F : Base {
+		buyPrice = 0; 
+		virtualSpace = 0;
+		turrets[] = { { "CMFlareLauncher", "weapon_Fighter_Gun_30mm" } };
+	};
 
 	// CONTAINERS --------------------------------------------------------------------------------------
 	class B_Slingload_01_Cargo_F : Base {

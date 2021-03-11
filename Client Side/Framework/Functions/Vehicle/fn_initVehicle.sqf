@@ -20,14 +20,7 @@ _vehicle setVariable ["ready", true];
 if (local _vehicle) then {
 	if (_jip) exitWith {};
 
-	_vehicle setAmmoCargo 0;
-	_vehicle setFuelCargo 0;
-	_vehicle setRepairCargo 0;
-
-	clearWeaponCargoGlobal _vehicle;
-	clearMagazineCargoGlobal _vehicle;
-	clearItemCargoGlobal _vehicle;
-	clearBackpackCargoGlobal _vehicle;
+	[_vehicle] call ULP_fnc_setVehicleAmmo;
 
 	[_vehicle] remoteExecCall ["ULP_fnc_initVehicle", -clientOwner];
 

@@ -1043,10 +1043,15 @@ class CfgVehicles {
 				displayName = "Green"; 
 				textures[] = { "\a3\air_f_epb\Heli_Light_03\data\Heli_Light_03_base_CO.paa" }; 
 			};
-			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" }; };
+			class Police : PoliceTexture {
+				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
+				turrets[] = { { "missiles_DAR", "CMFlareLauncher" } };
+			};
 		};
 	};
-	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {};
+	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {
+		turrets[] = { { "M134_minigun", "missiles_DAR", "CMFlareLauncher" } };
+	};
 
 	class B_Heli_Transport_01_F : Base {
 		buyPrice = 0;

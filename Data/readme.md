@@ -1,0 +1,1 @@
+This contains all data files so they can be copy and pasted. This means they don't have to be included when doing testing for quicker download times.

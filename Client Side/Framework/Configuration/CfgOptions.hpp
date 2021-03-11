@@ -16,6 +16,13 @@ class CfgOptions {
 			type = "DROPDOWN";
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
 		};
+
+		class NightLight {
+			name = "Ambient Night Light";
+			tooltip = "This is the level of light that will light up the map during night.";
+			type = "SLIDER";
+			values[] = { { 0, 0.5 }, 0.5, { 0.1, 0.1 } };
+		};
 	};
 
 	class Audio {

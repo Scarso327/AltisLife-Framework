@@ -217,3 +217,4 @@ class CfgSettings {
 #include "CfgStatusIcons.hpp"
 #include "CfgGroups.hpp"
 #include "CfgOptions.hpp"
+#include "CfgMaps.hpp"

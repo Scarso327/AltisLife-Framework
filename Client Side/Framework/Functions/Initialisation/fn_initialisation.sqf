@@ -72,6 +72,19 @@ CONSTVAR(ULP_Paycheck);
 [] call ULP_fnc_setTags;
 [true] call ULP_fnc_playerTags;
 
+["Creating World"] call ULP_fnc_logIt;
+
+private _mapCfg = missionConfigFile >> "CfgMaps" >> worldName;
+
+if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
+	ULP_NightLight = "#lightpoint" createVehicleLocal [0, 0, 0];
+
+    ULP_NightLight setLightDayLight false;
+	ULP_NightLight setLightBrightness (["NightLight"] call ULP_fnc_getOption);
+	ULP_NightLight setLightAttenuation [10e10, getNumber(_mapCfg >> "Lighting" >> "brightness"), 4.31918e-005, 4.31918e-005];
+	ULP_NightLight setLightAmbient getArray (_mapCfg >> "Lighting" >> "color");
+};
+
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 
 [] call ULP_fnc_spawnMenu;

@@ -46,6 +46,13 @@ class CfgOptions {
 	class HUD {
 		title = "User Interface";
 
+		class EnableHUD {
+			name = "Enable HUD";
+			tooltip = "When enabled, information such as health, water, etc are displayed on screen.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
+		};
+
 		class EnablePlayerTags {
 			name = "Enable Player Tags";
 			tooltip = "When enabled, information about a player is displayed above their heads.";

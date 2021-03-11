@@ -10,7 +10,10 @@ _this params [
 ];
 
 if !(isNull _ui) then {
+	private _evh = _ui getVariable ["eventhandler", -1];
+	if !(_evh isEqualTo -1) then {
+		[_evh] call ULP_fnc_removeEachFrame;
+	};
+	
 	["RscHUD"] call ULP_UI_fnc_destroyLayer;
 };
-
-[_thisEventHandler] call ULP_fnc_removeEachFrame;

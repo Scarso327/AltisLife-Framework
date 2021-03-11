@@ -535,6 +535,7 @@ class CfgVehicles {
 	class O_MRAP_02_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "SmokeLauncher" } };
 		class Textures {
 			class Black : BaseTexture { 
 				displayName = "Black";
@@ -919,6 +920,7 @@ class CfgVehicles {
 	class B_Boat_Armed_01_minigun_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		turrets[] = { { "GMG_40mm" } };
 		class Textures {
 			class Police : PoliceTexture {
 				textures[] = { 

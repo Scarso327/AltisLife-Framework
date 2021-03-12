@@ -13,7 +13,7 @@ _this params [
 
 if ((random 100) > _chance) exitWith { false };
 
-private _cfg = missionConfigFile >> "CfgProfessions" >> _profession;
+private _cfg = missionConfigFile >> "CfgProgression" >> "CfgProfessions" >> _profession;
 if (!(isClass _cfg) || { _amount < 1 }) exitWith { false };
 
 private _requirement = getNumber (_cfg >> "xpLevel");

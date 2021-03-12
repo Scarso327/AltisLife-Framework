@@ -41,19 +41,19 @@ class U_C_WorkerOveralls {
 		class U_C_ConstructionCoverall_Red_F : U_C_WorkerOveralls { displayName = "Red"; };
 		class U_C_ConstructionCoverall_Blue_F : U_C_WorkerOveralls { displayName = "Blue"; };
 		class U_C_ConstructionCoverall_Vrana_F : U_C_WorkerOveralls { displayName = "Vrana"; };
-		class White { 
+		class White : U_C_WorkerOveralls { 
 			displayName = "White"; 
 			textures[] = { "\A3\characters_f\common\data\coveralls_grey_co.paa" };
 		};
-		class Gray { 
+		class Gray : U_C_WorkerOveralls { 
 			displayName = "Gray"; 
 			textures[] = { "\A3\characters_f\common\data\coveralls_black_co.paa" };
 		};
-		class Rust { 
+		class Rust : U_C_WorkerOveralls { 
 			displayName = "Rust"; 
 			textures[] = { "\A3\characters_f\common\data\coveralls_bandit_co.paa" };
 		};
-		class Camo { 
+		class Camo : U_C_WorkerOveralls { 
 			displayName = "Camo"; 
 			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
 		};
@@ -75,11 +75,11 @@ class U_C_Man_casual_1_F {
 		};
 		class U_C_Man_casual_2_F : U_C_Man_casual_1_F { displayName = "Blue"; };
 		class U_C_Man_casual_3_F : U_C_Man_casual_1_F { displayName = "Green"; };
-		class Brown { 
+		class Brown : U_C_Man_casual_1_F { 
 			displayName = "Brown"; 
 			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
 		};
-		class Gray { 
+		class Gray : U_C_Man_casual_1_F { 
 			displayName = "Gray"; 
 			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
 		};
@@ -189,19 +189,19 @@ class U_I_C_Soldier_Bandit_3_F {
 			displayName = "Brown"; 
 			condition = "true";
 		};
-		class Black { 
+		class Black : U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Black"; 
 			textures[] = { "\A3\Characters_F_exp\Syndikat\Data\U_I_C_Soldier_Bandit_2_F_2_co.paa" };
 		};
-		class Red { 
+		class Red : U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Red"; 
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_6_F_1_co.paa" };
 		};
-		class Blue { 
+		class Blue : U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Blue"; 
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_4_F_1_co.paa" };
 		};
-		class Yellow { 
+		class Yellow : U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Yellow"; 
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_5_F_1_co.paa" };
 		};
@@ -222,31 +222,31 @@ class U_IG_Guerilla1_1 {
 		class U_IG_Guerilla2_3 : U_IG_Guerilla1_1 { displayName = "Plain, Light"; };
 		class U_IG_Guerilla3_1 : U_IG_Guerilla1_1 { displayName = "Smocks (Dark)"; };
 		class U_IG_Guerilla3_2 : U_IG_Guerilla1_1 { displayName = "Smocks (Light)"; };
-		class Blackwing {
+		class Blackwing : U_IG_Guerilla1_1 {
 			displayName = "Blackwing";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
 		};
-		class Black {
+		class Black : U_IG_Guerilla1_1 {
 			displayName = "Black";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
 		};
-		class Red {
+		class Red : U_IG_Guerilla1_1 {
 			displayName = "Red";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_bandit_co.paa" };
 		};
-		class Blue {
+		class Blue : U_IG_Guerilla1_1 {
 			displayName = "Blue";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_co.paa" };
 		};
-		class Orange {
+		class Orange : U_IG_Guerilla1_1 {
 			displayName = "Orange";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_v3_co.paa" };
 		};
-		class Yellow {
+		class Yellow : U_IG_Guerilla1_1 {
 			displayName = "Yellow";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_v2_co.paa" };
 		};
-		class Brown {
+		class Brown : U_IG_Guerilla1_1 {
 			displayName = "Brown";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_brown.paa" };
 		};

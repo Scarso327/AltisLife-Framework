@@ -251,7 +251,6 @@ class CfgClothesStore {
 				};
 			};
 			class U_C_E_LooterJacket_01_F {};
-			class U_O_R_Gorka_01_black_F {};
 			class U_OrestesBody {};
 			class U_NikosBody {};
 			class U_NikosAgedBody {};

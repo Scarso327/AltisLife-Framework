@@ -71,8 +71,6 @@ if (_houses isEqualType []) then {
 	} forEach ULP_Houses;
 };
 
-[] call life_fnc_initHouses;
-
 // Get vehicle keys we've had this restart...
 {
 	ULP_Keys pushBack _x

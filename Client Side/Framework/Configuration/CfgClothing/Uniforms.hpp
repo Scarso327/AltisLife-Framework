@@ -41,6 +41,22 @@ class U_C_WorkerOveralls {
 		class U_C_ConstructionCoverall_Red_F : U_C_WorkerOveralls { displayName = "Red"; };
 		class U_C_ConstructionCoverall_Blue_F : U_C_WorkerOveralls { displayName = "Blue"; };
 		class U_C_ConstructionCoverall_Vrana_F : U_C_WorkerOveralls { displayName = "Vrana"; };
+		class White { 
+			displayName = "White"; 
+			textures[] = { "\A3\characters_f\common\data\coveralls_grey_co.paa" };
+		};
+		class Gray { 
+			displayName = "Gray"; 
+			textures[] = { "\A3\characters_f\common\data\coveralls_black_co.paa" };
+		};
+		class Rust { 
+			displayName = "Rust"; 
+			textures[] = { "\A3\characters_f\common\data\coveralls_bandit_co.paa" };
+		};
+		class Camo { 
+			displayName = "Camo"; 
+			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
+		};
 	};
 };
 class U_C_ConstructionCoverall_Black_F : U_C_WorkerOveralls{};
@@ -59,6 +75,14 @@ class U_C_Man_casual_1_F {
 		};
 		class U_C_Man_casual_2_F : U_C_Man_casual_1_F { displayName = "Blue"; };
 		class U_C_Man_casual_3_F : U_C_Man_casual_1_F { displayName = "Green"; };
+		class Brown { 
+			displayName = "Brown"; 
+			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
+		};
+		class Gray { 
+			displayName = "Gray"; 
+			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
+		};
 	};
 };
 class U_C_Man_casual_2_F : U_C_Man_casual_1_F{};
@@ -148,15 +172,41 @@ class U_I_C_Soldier_Bandit_1_F {
 			condition = "true";
 		};
 		class U_I_C_Soldier_Bandit_2_F : U_I_C_Soldier_Bandit_1_F { displayName = "Skull"; };
-		class U_I_C_Soldier_Bandit_3_F : U_I_C_Soldier_Bandit_1_F { displayName = "Tee"; };
 		class U_I_C_Soldier_Bandit_4_F : U_I_C_Soldier_Bandit_1_F { displayName = "Checkered"; };
 		class U_I_C_Soldier_Bandit_5_F : U_I_C_Soldier_Bandit_1_F { displayName = "Tank Top"; };
 	};
 };
 class U_I_C_Soldier_Bandit_2_F : U_I_C_Soldier_Bandit_1_F{};
-class U_I_C_Soldier_Bandit_3_F : U_I_C_Soldier_Bandit_1_F{};
 class U_I_C_Soldier_Bandit_4_F : U_I_C_Soldier_Bandit_1_F{};
 class U_I_C_Soldier_Bandit_5_F : U_I_C_Soldier_Bandit_1_F{};
+
+class U_I_C_Soldier_Bandit_3_F { 
+	displayName = "Casual Outfit"; 
+	price = 0;
+	virtualSpace = 0;
+	class Textures {
+		class U_I_C_Soldier_Bandit_3_F { 
+			displayName = "Brown"; 
+			condition = "true";
+		};
+		class Black { 
+			displayName = "Black"; 
+			textures[] = { "\A3\Characters_F_exp\Syndikat\Data\U_I_C_Soldier_Bandit_2_F_2_co.paa" };
+		};
+		class Red { 
+			displayName = "Red"; 
+			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_6_F_1_co.paa" };
+		};
+		class Blue { 
+			displayName = "Blue"; 
+			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_4_F_1_co.paa" };
+		};
+		class Yellow { 
+			displayName = "Yellow"; 
+			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_5_F_1_co.paa" };
+		};
+	};
+};
 
 class U_IG_Guerilla1_1 {
 	displayName = "Guerilla Clothes";
@@ -172,6 +222,34 @@ class U_IG_Guerilla1_1 {
 		class U_IG_Guerilla2_3 : U_IG_Guerilla1_1 { displayName = "Plain, Light"; };
 		class U_IG_Guerilla3_1 : U_IG_Guerilla1_1 { displayName = "Smocks (Dark)"; };
 		class U_IG_Guerilla3_2 : U_IG_Guerilla1_1 { displayName = "Smocks (Light)"; };
+		class Blackwing {
+			displayName = "Blackwing";
+			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
+		};
+		class Black {
+			displayName = "Black";
+			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
+		};
+		class Red {
+			displayName = "Red";
+			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_bandit_co.paa" };
+		};
+		class Blue {
+			displayName = "Blue";
+			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_co.paa" };
+		};
+		class Orange {
+			displayName = "Orange";
+			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_v3_co.paa" };
+		};
+		class Yellow {
+			displayName = "Yellow";
+			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_v2_co.paa" };
+		};
+		class Brown {
+			displayName = "Brown";
+			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_brown.paa" };
+		};
 		class U_IG_leader : U_IG_Guerilla1_1 { displayName = "Uniform"; };
 	};
 };
@@ -203,11 +281,12 @@ class U_I_L_Uniform_01_tshirt_sport_F : U_C_E_LooterJacket_01_F{};
 class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F{};
 
 class U_O_R_Gorka_01_black_F {
+	displayName = "Tracksuit";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
 		class NCA {
-			displayName = "Tracksuit";
+			displayName = "NCA";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_tracksuit.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		};
@@ -498,6 +577,7 @@ class U_B_survival_uniform {
 };
 
 class U_B_CombatUniform_mcam_worn {
+	displayName = "Specialised Uniform";
 	price = 0;
 	virtualSpace = 0;
 	class Textures {

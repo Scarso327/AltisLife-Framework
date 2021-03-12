@@ -309,6 +309,12 @@ class CfgFunctions {
 			class addNLR {};
 			class addNLREachFrame {};
 		};
+
+		class Professions {
+			file = "Functions\Professions";
+			class increaseProfession {};
+			class getProfessionCalculation {};
+		};
 	};
 
 	class ULP_Functions_UI {

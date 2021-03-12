@@ -26,6 +26,11 @@ if (isNumber (_missionCfg >> "repairTime")) then {
 	_time = _time + getNumber (_missionCfg >> "repairTime");
 };
 
+private _profession = ["Repairing"] call ULP_fnc_getProfessionCalculation;
+if (_profession > 0) then {
+	_time = _time - (_time * (_profession / 100));
+};
+
 if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 	!(isNull (_this select 0)) && { alive (_this select 0) } && { "ToolKit" in (items player) } && { (player distance (_this select 0)) <= 5 }
 }, {
@@ -39,6 +44,11 @@ if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 
 	_vehicle setDamage 0;
 	hint format["You've repaired %1 using a toolkit...", _name];
+
+	if (time >= (_vehicle getVariable ["ProfessionCooldown", time - 120])) then {
+		["Repairing", 1, 20] call ULP_fnc_increaseProfession;
+		_vehicle setVariable ["ProfessionCooldown", time + 120];
+	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
 	hint "You can't repair a vehicle while performing another action...";
 };

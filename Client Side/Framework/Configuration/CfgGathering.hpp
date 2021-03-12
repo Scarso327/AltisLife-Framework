@@ -4,6 +4,7 @@ class CfgGathering {
 		factions[] = { "Civilian", "Police", "Medic", "Hato" };
 		reqItems[] = {};
 		reqLicenses[] = {};
+		profession[] = { "Gathering", 1, 30 }; // PROFESSION, INCREASE AMOUNT, CHANCE OF INCREASE
 	};
 
 	class Apple : BaseGather {

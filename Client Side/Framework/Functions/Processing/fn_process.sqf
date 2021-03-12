@@ -43,8 +43,10 @@ if (_items isEqualTo [] || { _materials isEqualTo [] }) exitWith { false };
     };
 } forEach _materials;
 
-[format["%1 Item(s)", getText(_cfg >> "processTitle")], getNumber(_zone >> "processTime"), [getPos player, _items, _materials, _cfg], { (player distance (_this select 0)) <= 5 }, {
-	_this params [ "", "_items", "_materials", "_cfg" ];
+private _profession = getArray (_zone >> "profession");
+
+[format["%1 Item(s)", getText(_cfg >> "processTitle")], getNumber(_zone >> "processTime"), [getPos player, _items, _materials, _cfg, _profession], { (player distance (_this select 0)) <= 5 }, {
+	_this params [ "", "_items", "_materials", "_cfg", "_profession" ];
 
 	private _possibleConversions = [];
 
@@ -64,6 +66,10 @@ if (_items isEqualTo [] || { _materials isEqualTo [] }) exitWith { false };
 	} forEach _items;
 
 	hint "You've successfully processed your materials";
+
+	if !(_profession isEqualTo []) then {
+		_profession call ULP_fnc_increaseProfession;
+	};
 }] call ULP_UI_fnc_startProgress;
 
 true

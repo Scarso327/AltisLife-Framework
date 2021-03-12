@@ -8,7 +8,7 @@ class CfgFactions {
 
 		class Whitelisting {
 			class Main {
-				queryIndex = 13;
+				queryIndex = 14;
 				payMulti = 0.1;
 				required = 1;
 			};
@@ -50,11 +50,11 @@ class CfgFactions {
 		pay = 16000;
 		class Whitelisting {
 			class Main {
-				queryIndex = 13;
+				queryIndex = 14;
 				payMulti = 0.1;
 				required = 1;
 			};
-			class TAA { queryIndex = 14; };
+			class TAA { queryIndex = 15; };
 		};
 
 		class DatabaseInfo {
@@ -86,7 +86,7 @@ class CfgFactions {
 		pay = 15500;
 		class Whitelisting {
 			class Main {
-				queryIndex = 13;
+				queryIndex = 14;
 				payMulti = 0.1;
 				required = 1;
 			};

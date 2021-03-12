@@ -220,3 +220,4 @@ class CfgSettings {
 #include "CfgGroups.hpp"
 #include "CfgOptions.hpp"
 #include "CfgMaps.hpp"
+#include "CfgProfessions.hpp"

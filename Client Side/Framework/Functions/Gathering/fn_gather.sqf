@@ -49,13 +49,18 @@ if (_total isEqualTo 0) exitWith {
 };
 
 private _title = ["Gathering", getText (_zone >> "actionTitle")] select (isText (_zone >> "actionTitle"));
+private _profession = getArray (_zone >> "profession");
 
-[format["%1 %2(s)", _title, getText(_item >> "displayName")], getNumber(_zone >> "gatherTime") * _total, [_item, _total], { true }, {
-	_this params [ "_item", "_total" ];
+[format["%1 %2(s)", _title, getText(_item >> "displayName")], getNumber(_zone >> "gatherTime") * _total, [_item, _total, _profession], { true }, {
+	_this params [ "_item", "_total", "_profession" ];
 
 	[configName _item, _total] call ULP_fnc_handleItem;
 
 	hint format["You've gathered %1 %2(s)", _total, getText(_item >> "displayName")];
+
+	if !(_profession isEqualTo []) then {
+		_profession call ULP_fnc_increaseProfession;
+	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
 
 true

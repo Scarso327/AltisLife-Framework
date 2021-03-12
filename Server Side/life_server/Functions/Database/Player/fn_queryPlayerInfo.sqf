@@ -18,7 +18,7 @@ private _factionCfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc
 private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex");
 
 private _query = [
-	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
+	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats, %1professions", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
 	format["FROM players WHERE pid='%1'", _uid]
 ];
@@ -40,7 +40,7 @@ for "_i" from 0 to 1 step 0 do {
 		private _name = name _unit;
 
 		[
-			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
+			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, civ_professions, cop_professions, med_professions) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
 				_uid,
 				[_name] call DB_fnc_mresString,
 				[LIFE_SETTINGS(getNumber,"starting_bank"), ""] call ULP_fnc_numberText,
@@ -55,15 +55,19 @@ for "_i" from 0 to 1 step 0 do {
 		// Player save found, time to convert data types etc...
 		private _newResult = _result;
 
-		// Playtime, Licenses, Gear, Stats
-		private _arraysToConvert = [5, 9, 10, 11];
+		// Playtime, Licenses, Gear, Stats, Professions
+		private _arraysToConvert = [5, 9, 10, 11, 12];
+
+		// Professions
+		private _hashmapsToCreate = [12];
 
 		// (Blacklist / Arrest Status)
-		private _boolsToConvert = [12];
+		private _boolsToConvert = [13];
 
 		// Coverts data types to something arma can understand...
 		{ _newResult set [_x, [(_result select _x)] call DB_fnc_mresToArray] } forEach _arraysToConvert;
 		{ _newResult set [_x, [(_result select _x), 1] call ULP_fnc_bool] } forEach _boolsToConvert;
+		{ _newResult set [_x, createHashMapFromArray (_newResult select _x)]; } forEach _hashmapsToCreate;
 
 		// Setup playtime tracking...
 		private _playtime = _newResult select 5;

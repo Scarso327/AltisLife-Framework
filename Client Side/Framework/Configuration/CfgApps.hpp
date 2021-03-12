@@ -24,8 +24,9 @@ class CfgApps {
 	class Profile : BaseScreen {
 		idc = 23002;
 		pageTitle = "Profile";
-		pageIdcs[] = {};
-		rebindEsc = "";
+		pageIdcs[] = {
+			23024, 23025, 23026, 23027, 23028
+		};
 	};
 
 	class Inventory : BaseScreen {

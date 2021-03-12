@@ -27,7 +27,7 @@ class CfgInteractions {
 	class Vehicle {
 		class VehicleBase {
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
-			condition = "ture";
+			condition = "true";
 		};
 
 		class Repair : VehicleBase {

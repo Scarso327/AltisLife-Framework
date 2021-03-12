@@ -15,7 +15,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -33,6 +33,8 @@ CONST(life_donorlevel, _donorlevel);
 ULP_Licenses = (_licenses select {
 	isClass (missionConfigFile >> "CfgLicenses" >> _x)
 });
+
+ULP_Professions = _professions;
 
 // Set saved survival statistics....
 ULP_Survival_Hunger = (_stats select 0);
@@ -68,8 +70,6 @@ if (_houses isEqualType []) then {
 		ULP_Keys pushBack (_house);
 	} forEach ULP_Houses;
 };
-
-[] call life_fnc_initHouses;
 
 // Get vehicle keys we've had this restart...
 {

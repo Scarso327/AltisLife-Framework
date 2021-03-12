@@ -6,6 +6,7 @@ class CfgSpawns {
         conditions = "true";
     };
     class Police : BaseSpawn { factions[] = { "Police" }; };
+    class HATO : BaseSpawn { factions[] = { "Hato" }; };
     class Medic : BaseSpawn { factions[] = { "Medic" }; };
     class Civilian : BaseSpawn {
         buildings[] = {};
@@ -54,6 +55,13 @@ class CfgSpawns {
         class PyrgosHospital : Medic {
             displayName = "Pyrgos Hospital";
             marker = "nhs_spawn_pyrgos";
+            icon = "";
+        };
+
+        // HATO
+        class HatoTemp : HATO {
+            displayName = "HATO";
+            marker = "nhs_spawn_kavala";
             icon = "";
         };
 

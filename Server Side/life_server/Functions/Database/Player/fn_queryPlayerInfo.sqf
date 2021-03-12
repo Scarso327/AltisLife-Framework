@@ -40,7 +40,7 @@ for "_i" from 0 to 1 step 0 do {
 		private _name = name _unit;
 
 		[
-			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, civ_professions, cop_professions, med_professions) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
+			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, civ_professions, cop_professions, med_professions, hato_licenses, hato_professions, hato_gear) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
 				_uid,
 				[_name] call DB_fnc_mresString,
 				[LIFE_SETTINGS(getNumber,"starting_bank"), ""] call ULP_fnc_numberText,

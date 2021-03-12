@@ -27,6 +27,38 @@ class CfgApps {
 		pageIdcs[] = {
 			23024, 23025, 23026, 23027, 23028
 		};
+		onload = "_this call ULP_fnc_profile";
+	};
+
+	class Professions : Profile {
+		pageTitle = "Profile - Professions";
+		pageIdcs[] = {
+			23024, 23025, 23026, 23027, 23028, 23029, 23030
+		};
+	};
+
+	class Achievements : Profile {
+		pageTitle = "Profile - Achievements";
+		pageIdcs[] = {
+			23024, 23025, 23026, 23027, 23028
+		};
+		onload = "";
+	};
+
+	class Loyalty : Profile {
+		pageTitle = "Profile - Loyalty";
+		pageIdcs[] = {
+			23024, 23025, 23026, 23027, 23028
+		};
+		onload = "";
+	};
+
+	class PlayerTag : Profile {
+		pageTitle = "Profile - Player Tag";
+		pageIdcs[] = {
+			23024, 23025, 23026, 23027, 23028
+		};
+		onload = "";
 	};
 
 	class Inventory : BaseScreen {

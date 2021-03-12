@@ -654,13 +654,13 @@ class Life_RscProgress
 {
     type = 8;
     style = 0;
-    x = 0.344;
-    y = 0.619;
+    x = 0;
+    y = 0;
     w = 0.313726;
     h = 0.0261438;
     texture = "";
-    shadow = 2;
-    colorFrame[] = {0, 0, 0, 1};
+    shadow = 0;
+    colorFrame[] = {0, 0, 0, 0};
     colorBackground[] = {0,0,0,0.7};
     colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 };
@@ -1365,5 +1365,50 @@ class ULP_ctrlOptionSlider : ULP_ctrlOption {
             h = SIZE_M * GUI_GRID_H;
         };
         class OptionReset : OptionReset {};
+    };
+};
+
+class ULP_ctrlProfession : Life_RscControlsGroupNoScrollbars {
+    y = (1 * GUI_GRID_CENTER_H) / 2;
+    x = (1 * GUI_GRID_CENTER_W) / 2;
+    w = (31 / 2) * GUI_GRID_CENTER_W;
+    h = 5 * GUI_GRID_CENTER_H;
+
+    class Controls {
+        class Background: Life_RscText {
+            idc = -1;
+            colorBackground[] = HEADER_COLOUR;
+            w = (31 / 2) * GUI_GRID_CENTER_W;
+            h = 5 * GUI_GRID_CENTER_H;
+        };
+
+        class XPBar : Life_RscProgress {
+            idc = 104;
+            colorBar[] = { 0.451, 0, 0.902, 1 };
+            colorBackground[] = HEADER_COLOUR;
+            w = 5 * GUI_GRID_CENTER_W;
+            h = 5 * GUI_GRID_CENTER_H;
+        };
+
+        class ProfessionIcon: Life_RscPictureKeepAspect {
+            idc = 101;
+            w = 5 * GUI_GRID_CENTER_W;
+            h = 5 * GUI_GRID_CENTER_H;
+        };
+        class ProfessionName: Life_RscStructuredText {
+            idc = 102;
+            x = 5 * GUI_GRID_CENTER_W;
+            w = 10.5 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+        class ProfessionDescription: Life_RscStructuredText {
+            idc = 103;
+            style = ST_MULTI;
+            colorBackground[] = FOOTER_COLOUR;
+            x = 5 * GUI_GRID_CENTER_W;
+            y = 1 * GUI_GRID_CENTER_H;
+            w = 10.5 * GUI_GRID_CENTER_W;
+            h = 4 * GUI_GRID_CENTER_H;
+        };
     };
 };

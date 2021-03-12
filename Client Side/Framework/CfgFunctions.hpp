@@ -222,6 +222,7 @@ class CfgFunctions {
 		class TabletProfile {
 			file = "Functions\Tablet\Profile";
 			class profile {};
+			class professions {};
 		};
 
 		class Options {
@@ -319,6 +320,7 @@ class CfgFunctions {
 			file = "Functions\Professions";
 			class increaseProfession {};
 			class getProfessionCalculation {};
+			class getProfessionLevel {};
 		};
 	};
 

@@ -35,6 +35,7 @@ class CfgApps {
 		pageIdcs[] = {
 			23024, 23025, 23026, 23027, 23028, 23029, 23030
 		};
+		onload = "_this call ULP_fnc_professions";
 	};
 
 	class Achievements : Profile {

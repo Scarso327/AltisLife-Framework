@@ -19,7 +19,7 @@ if (!(isClass _cfg) || { _amount < 1 }) exitWith { false };
 private _requirement = getNumber (_cfg >> "xpLevel");
 private _max = getNumber (_cfg >> "maxLevel");
 
-(ULP_Professions getOrDefault [_profession, [0, 0]]) params [
+([_profession] call ULP_fnc_getProfessionLevel) params [
 	"_level", "_points"
 ];
 

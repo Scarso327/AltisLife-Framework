@@ -108,20 +108,20 @@ class CfgProcessing {
 
 	class Schnaps : BaseProcess {
 		processTime = 40;
-		materials[] = { { "Peach", 2 } };
+		materials[] = { { "FreshPeach", 2 } };
 		items[] = { { "Schnaps", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Cigarette : BaseProcess {
-		materials[] = { { "Tobacco", 2 } };
+		materials[] = { { "Tobacco", 1 } };
 		items[] = { { "Cigarette", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Cigar : BaseProcess {
 		processTime = 70;
-		materials[] = { { "Tobacco", 2 } };
+		materials[] = { { "Tobacco", 1 } };
 		items[] = { { "Cigar", 1 } };
 		reqLicenses[] = {};
 	};
@@ -146,15 +146,22 @@ class CfgProcessing {
 		reqLicenses[] = {};
 	};
 
-	class Methamphetamine : BaseProcess {
+	class Meth : BaseProcess {
 		processTime = 90;
-		materials[] = { { "UnprocessedMeth", 1 } };
+		materials[] = { { "EphedrineBarrel", 1 } };
 		items[] = { { "ProcessedMeth", 1 } };
 		reqLicenses[] = {};
 	};
 
-	class Uranium : BaseProcess {
+	class Moonshine : BaseProcess {
 		processTime = 90;
+		materials[] = { { "Corn", 1 } };
+		items[] = { { "Moonshine", 1 } };
+		reqLicenses[] = {};
+	};
+
+	class Uranium : BaseProcess {
+		processTime = 100;
 		materials[] = { { "UraniumOre", 1 } };
 		items[] = { { "UraniumBar", 1 } };
 		reqLicenses[] = {};

@@ -43,3 +43,5 @@ if !(ULP_Level isEqualTo _previousLevel) then {
 } else {
 	hint format["You gained %1 XP for %2", [_xp] call ULP_fnc_numberText, _reason];
 };
+
+[player, 4, [ULP_Level, ULP_XP]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];

@@ -22,6 +22,7 @@ private _query = switch (_state) do {
 	case 1: { format["cash='%1'", [_data, ""] call ULP_fnc_numberText] };
 	case 2: { format["bankacc='%1'", [_data, ""] call ULP_fnc_numberText] };
 	case 3: { format["%1professions='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
+	case 4: { format["level = '%1', xp = '%2'", [(_data select 0), ""] call ULP_fnc_numberText, [(_data select 1), ""] call ULP_fnc_numberText]};
 	default { "" };
 };
 

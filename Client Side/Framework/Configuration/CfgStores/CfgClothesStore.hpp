@@ -25,7 +25,7 @@ class CfgClothesStore {
 				class textures { class SCO19 {}; };
 			};
 			class U_B_CTRG_Soldier_2_Arid_F : FactionBase {
-				condition = "[""Police_SCO19"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO19"", 4] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_Wetsuit : FactionBase {
@@ -38,12 +38,7 @@ class CfgClothesStore {
 			};
 			class U_C_Mechanic_01_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
 			class U_C_ArtTShirt_01_v1_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
-			class U_I_C_Soldier_Bandit_1_F : FactionBase {
-				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; 
-				class Textures : FactionBase {
-					class U_I_C_Soldier_Bandit_3_F {};
-				};
-			};
+			class U_I_C_Soldier_Bandit_3_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
 			class U_IG_Guerilla1_1 : FactionBase {
 				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; 
 				class Textures : FactionBase {
@@ -73,7 +68,7 @@ class CfgClothesStore {
 				class Textures { class H_Watchcap_blk {}; };
 			};
 			class H_Booniehat_khk : FactionBase { 
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; 
+				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures { class H_Booniehat_khk {}; };
 			};
 			class H_PilotHelmetHeli_B : FactionBase { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
@@ -245,6 +240,7 @@ class CfgClothesStore {
 			class U_C_Man_casual_6_F {};
 			class U_C_Scientist {};
 			class U_I_C_Soldier_Bandit_1_F {};
+			class U_I_C_Soldier_Bandit_3_F {};
 			class U_IG_Guerilla2_1 {
 				class Textures {
 					class U_IG_Guerilla2_1 {};
@@ -490,6 +486,7 @@ class CfgClothesStore {
 			class U_C_Farmer {};
 			class U_C_Mechanic_01_F {};
 			class U_I_C_Soldier_Bandit_1_F {};
+			class U_I_C_Soldier_Bandit_3_F {};
 			class U_IG_Guerilla1_1 {};
 			class U_C_E_LooterJacket_01_F {};
 			class U_O_R_Gorka_01_black_F {};

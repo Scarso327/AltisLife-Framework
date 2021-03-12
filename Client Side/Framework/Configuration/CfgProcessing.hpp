@@ -4,101 +4,102 @@ class CfgProcessing {
 		factions[] = { "Civilian", "Police", "Medic", "Hato" };
 		reqItems[] = {};
 		reqLicenses[] = {};
+		profession[] = { "Processing", 1, 100 };
 	};
 
 	// Skinning
 	class Skinning : BaseProcess {
 		processTitle = "Skinning";
 		processTime = 40;
+		profession[] = { "Skinning", 1, 100 };
 		reqItems[] = { { "cuttingKnife", 1 } };
 	};
 
 	class Rabbit : Skinning {
-		materials[] = { { "rawRabbit", 1 } };
-		items[] = { { "skinnedRabbit", 1 } };
+		materials[] = { { "UnskinnedRabbit", 1 } };
+		items[] = { { "SkinnedRabbit", 1 } };
 	};
 
 	class Goat : Skinning {
-		materials[] = { { "rawLamb", 1 } };
-		items[] = { { "skinnedLamb", 1 } };
+		materials[] = { { "UnskinnedGoat", 1 } };
+		items[] = { { "SkinnedGoat", 1 } };
 	};
 
 	// Cooking
 	class Cooking : BaseProcess {
 		processTitle = "Cooking";
 		processTime = 30;
+		profession[] = { "Cooking", 1, 100 };
 	};
 
 	class Salema : Cooking {
-		materials[] = { { "rawSalema", 1 } };
-		items[] = { { "cookedSalema", 1 } };
+		materials[] = { { "RawSalema", 1 } };
+		items[] = { { "CookedSalema", 1 } };
 	};
 
 	class Ornate : Cooking {
-		materials[] = { { "rawOrnate", 1 } };
-		items[] = { { "cookedOrnate", 1 } };
+		materials[] = { { "RawOrnate", 1 } };
+		items[] = { { "CookedOrnate", 1 } };
 	};
 
 	class Tuna : Cooking {
-		materials[] = { { "rawTuna", 1 } };
-		items[] = { { "cookedTuna", 1 } };
+		materials[] = { { "RawTuna", 1 } };
+		items[] = { { "CookedTuna", 1 } };
 	};
 
 	class Mullet : Cooking {
-		materials[] = { { "rawMullet", 1 } };
-		items[] = { { "cookedMullet", 1 } };
+		materials[] = { { "RawMullet", 1 } };
+		items[] = { { "CookedMullet", 1 } };
 	};
 
 	class Catshark : Cooking {
-		materials[] = { { "rawCatshark", 1 } };
-		items[] = { { "cookedCatshark", 1 } };
-	};
-
-	class Turtle : Cooking {
-		materials[] = { { "rawTurtle", 1 } };
-		items[] = { { "cookedTurtle", 1 } };
+		materials[] = { { "RawCatshark", 1 } };
+		items[] = { { "CookedCatshark", 1 } };
 	};
 
 	// Smelting
-	class Smelting : BaseProcess { processTitle = "Smelting"; };
+	class Smelting : BaseProcess { 
+		processTitle = "Smelting";
+		profession[] = { "Smelting", 1, 100 };
+	};
 
 	class Copper : Smelting {
-		materials[] = { { "copperOre", 1 } };
-		items[] = { { "copperBar", 1 } };
+		materials[] = { { "CopperOre", 1 } };
+		items[] = { { "CopperBar", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Silver : Smelting {
-		materials[] = { { "silverOre", 1 } };
-		items[] = { { "silverBar", 1 } };
+		materials[] = { { "SilverOre", 1 } };
+		items[] = { { "SilverBar", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Iron : Smelting {
-		materials[] = { { "ironOre", 1 } };
-		items[] = { { "ironBar", 1 } };
+		materials[] = { { "IronOre", 1 } };
+		items[] = { { "IronBar", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Sand : Smelting {
-		materials[] = { { "sand", 1 } };
-		items[] = { { "glass", 1 } };
+		materials[] = { { "Sand", 1 } };
+		items[] = { { "Glass", 1 } };
 		reqLicenses[] = {};
 	};
 
 	// Refining
 	class Salt : BaseProcess {
 		processTitle = "Refining";
-		materials[] = { { "unrefinedSalt", 1 } };
-		items[] = { { "refindedSalt", 1 } };
+		materials[] = { { "UnrefinedSalt", 1 } };
+		items[] = { { "RefindedSalt", 1 } };
 		reqLicenses[] = {};
 	};
 
 	// Cutting
 	class Diamond : BaseProcess {
 		processTitle = "Cutting";
-		materials[] = { { "uncutDiamond", 1 } };
-		items[] = { { "cutDiamond", 1 } };
+		materials[] = { { "UncutDiamond", 1 } };
+		items[] = { { "CutDiamond", 1 } };
 		reqLicenses[] = {};
 	};
 
@@ -107,61 +108,66 @@ class CfgProcessing {
 
 	class Schnaps : BaseProcess {
 		processTime = 40;
-		materials[] = { { "peach", 2 } };
-		items[] = { { "schnaps", 1 } };
+		materials[] = { { "Peach", 2 } };
+		items[] = { { "Schnaps", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Cigarette : BaseProcess {
-		materials[] = { { "tobacco", 2 } };
-		items[] = { { "cigarette", 1 } };
+		materials[] = { { "Tobacco", 2 } };
+		items[] = { { "Cigarette", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Cigar : BaseProcess {
 		processTime = 70;
-		materials[] = { { "tobacco", 2 } };
-		items[] = { { "cigar", 1 } };
+		materials[] = { { "Tobacco", 2 } };
+		items[] = { { "Cigar", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Weed : BaseProcess {
-		materials[] = { { "unprocessedWeed", 1 } };
-		items[] = { { "processedWeed", 1 } };
+		materials[] = { { "UnprocessedWeed", 1 } };
+		items[] = { { "ProcessedWeed", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Heroin : BaseProcess {
 		processTime = 70;
-		materials[] = { { "unprocessedHeroin", 1 } };
-		items[] = { { "processedHeroin", 1 } };
+		materials[] = { { "UnprocessedHeroin", 1 } };
+		items[] = { { "ProcessedHeroin", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Cocaine : BaseProcess {
 		processTime = 80;
-		materials[] = { { "unprocessedCocaine", 1 } };
-		items[] = { { "processedCocaine", 1 } };
+		materials[] = { { "UnprocessedCocaine", 1 } };
+		items[] = { { "ProcessedCocaine", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Methamphetamine : BaseProcess {
 		processTime = 90;
-		materials[] = { { "unprocessedMeth", 1 } };
-		items[] = { { "processedMeth", 1 } };
+		materials[] = { { "UnprocessedMeth", 1 } };
+		items[] = { { "ProcessedMeth", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class Uranium : BaseProcess {
 		processTime = 90;
-		materials[] = { { "uraniumOre", 1 } };
-		items[] = { { "uraniumBar", 1 } };
+		materials[] = { { "UraniumOre", 1 } };
+		items[] = { { "UraniumBar", 1 } };
 		reqLicenses[] = {};
+	};
+
+	class Oil : BaseProcess {
+		materials[] = { { "UnprocessedOil", 1 } };
+		items[] = { { "ProcessedOil", 1 } };
 	};
 
 	class Gold : BaseProcess {
 		processTime = 120;
-		materials[] = { { "unmarkedGold", 1 } };
-		items[] = { { "markedGold", 1 } };
+		materials[] = { { "UnmarkedGold", 1 } };
+		items[] = { { "MarkedGold", 1 } };
 	};
 };

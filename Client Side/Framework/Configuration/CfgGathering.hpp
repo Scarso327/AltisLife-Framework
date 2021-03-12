@@ -20,7 +20,12 @@ class CfgGathering {
 
 	class Peach : BaseGather {
 		areas[] = { { "peach_field_1", 20 }, { "peach_field_2", 20 }, { "peach_field_3", 20 }, { "peach_field_4", 20 } };
-		items[] = { { "Peach", 100 } };
+		items[] = { { "FreshPeach", 100 } };
+	};
+
+	class Corn : BaseGather {
+		areas[] = { { "corn_field", 20 } };
+		items[] = { { "Corn", 100 } };
 	};
 
 	class Tobacco : BaseGather {

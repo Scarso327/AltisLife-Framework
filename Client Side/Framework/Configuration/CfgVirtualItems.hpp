@@ -13,6 +13,19 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
+	class FreshPeach {
+		displayName = "Fresh Peach";
+		icon = "Data\Icons\peach.paa";
+		buyPrice = -1;
+		sellPrice = 0;
+		weight = 1;
+		class Settings {
+			isIllegal = false;
+			isSavable = true;
+		};
+		conditions = "true";
+	};
+
 	class Peach {
 		displayName = "Peach";
 		icon = "Data\Icons\peach.paa";

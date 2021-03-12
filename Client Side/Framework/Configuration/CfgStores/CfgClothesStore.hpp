@@ -8,6 +8,7 @@ class CfgClothesStore {
 
 	class Police {
 		storeName = "Police Clothing Store";
+		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Uniforms {
 			class U_Rangemaster : FactionBase {};
 			class U_BG_Guerrilla_6_1 : FactionBase {};
@@ -159,6 +160,7 @@ class CfgClothesStore {
 
 	class Medic {
 		storeName = "Medic Clothing Store";
+		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Uniforms {
 			class U_Competitor {};
 			class U_B_HeliPilotCoveralls {
@@ -232,6 +234,7 @@ class CfgClothesStore {
 
 	class Civilian {
 		storeName = "Civilian Clothing Store";
+		condition = "true";
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};
@@ -317,6 +320,7 @@ class CfgClothesStore {
 
 	class GoKart {
 		storeName = "Go-Kart Clothing Store";
+		condition = "true";
 		class Uniforms {
 			class U_Marshal {};
 		};
@@ -332,6 +336,7 @@ class CfgClothesStore {
 
 	class Diving {
 		storeName = "Diving Store";
+		condition = "true";
 		class Uniforms {
 			class U_C_Man_casual_6_F {};
 			class U_C_man_sport_1_F {};
@@ -380,6 +385,7 @@ class CfgClothesStore {
 
 	class Solicitor {
 		storeName = "Solicitor Clothing Store";
+		condition = "true";
 		class Uniforms {
 			class U_NikosAgedBody {};
 			class U_C_FormalSuit_01_black_F {};
@@ -408,6 +414,7 @@ class CfgClothesStore {
 
 	class Press {
 		storeName = "Press Clothing Store";
+		condition = "true";
 		class Uniforms {
 			class U_C_Journalist {};
 		};
@@ -441,6 +448,7 @@ class CfgClothesStore {
 
 	class IDAP {
 		storeName = "IDAP Clothing Store";
+		condition = "true";
 		class Uniforms {
 			class U_C_IDAP_Man_shorts_F {};
 		};
@@ -476,6 +484,7 @@ class CfgClothesStore {
 
 	class Rebel {
 		storeName = "Rebel Clothing Store";
+		condition = "true";
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};

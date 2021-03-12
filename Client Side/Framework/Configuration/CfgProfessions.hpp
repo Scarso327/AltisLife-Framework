@@ -9,6 +9,16 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
+	class Fishing {
+		displayName = "Fishing";
+		icon = "Data\UI\repairing_prof.paa";
+		effectDescription = "Does something %1%2";
+		effectCalculation = "5 * (_this select 0)";
+		xpLevel = 100;
+		xpMultipler = 2;
+		maxLevel = 5;
+	};
+
 	class Gathering {
 		displayName = "Gathering";
 		icon = "Data\UI\repairing_prof.paa";
@@ -29,16 +39,6 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	class Fishing {
-		displayName = "Fishing";
-		icon = "Data\UI\repairing_prof.paa";
-		effectDescription = "Does something %1%2";
-		effectCalculation = "5 * (_this select 0)";
-		xpLevel = 100;
-		xpMultipler = 2;
-		maxLevel = 5;
-	};
-
 	class Processing {
 		displayName = "Processing";
 		icon = "Data\UI\repairing_prof.paa";
@@ -49,8 +49,8 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	class Cooking {
-		displayName = "Cooking";
+	class Skinning {
+		displayName = "Skinning";
 		icon = "Data\UI\repairing_prof.paa";
 		effectDescription = "Does something %1%2";
 		effectCalculation = "5 * (_this select 0)";
@@ -59,8 +59,8 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	class Crafting {
-		displayName = "Crafting";
+	class Cooking {
+		displayName = "Cooking";
 		icon = "Data\UI\repairing_prof.paa";
 		effectDescription = "Does something %1%2";
 		effectCalculation = "5 * (_this select 0)";

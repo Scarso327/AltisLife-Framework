@@ -26,6 +26,7 @@ class CfgFunctions {
             class storeVehicle {};
             class getGarage {};
             class retrieveVehicle {};
+            class destroyVehicle {};
         };
 
         class DatabaseGroup {

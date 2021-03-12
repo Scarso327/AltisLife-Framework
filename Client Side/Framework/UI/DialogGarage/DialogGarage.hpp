@@ -93,5 +93,15 @@ class DialogGarage {
 			SAFEZONE_W(0.0584375);
 			SAFEZONE_H(BUTTON_H);
         };
+
+		class DestroyButton : Life_RscButtonCenter {
+            idc = 3506;
+            text = "<t align = 'center'>Destroy</t>";
+			onButtonClick = "_this call ULP_fnc_destroyGarage;";
+            SAFEZONE_X(0.64265625 - (0.0584375) - MARGIN_X);
+            SAFEZONE_Y(0.698 + BUTTON_MARGIN_Y);
+			SAFEZONE_W(0.0584375);
+			SAFEZONE_H(BUTTON_H);
+        };
 	};
 };

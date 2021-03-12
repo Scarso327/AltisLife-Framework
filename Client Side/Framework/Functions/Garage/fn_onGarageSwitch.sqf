@@ -42,6 +42,7 @@ _cfg params [
 private _retrievalPrice = round (getNumber(_missionCfg >> "buyPrice") * getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc"));
 
 _itemData set [3, _retrievalPrice];
+_itemData set [4, _index];
 _display setVariable ["selected", _itemData];
 
 _textureText ctrlSetStructuredText parseText format ["<t align = 'center'>%1</t>", getText(_missionCfg >> "Textures" >> _texture >> "displayName")];

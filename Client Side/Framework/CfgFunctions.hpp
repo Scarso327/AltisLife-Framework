@@ -293,6 +293,7 @@ class CfgFunctions {
 			class populateGarage {};
 			class onGarageSwitch {};
 			class retrieveGarage {};
+			class destroyGarage {};
 		};
 
 		class Interactions {

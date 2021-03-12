@@ -1,5 +1,4 @@
 class CfgVehicles {
-	sellPerc = 0.3;
 	retrievalPerc = 0.15;
 
 	class Base {

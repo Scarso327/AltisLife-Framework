@@ -156,24 +156,6 @@ class CfgItemsStore {
 		};
 	};
 
-	class Medic {
-		storeName = "Medic Equipment Store";
-		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
-		class Rifles {};
-		class Pistols {};
-		class Attachments {};
-		class Magazines {};
-		class Items {
-			class ItemMap : ItemBase {};
-			class ItemCompass : ItemBase {};
-			class ItemWatch : ItemBase {};
-			class ItemGPS : ItemBase {};
-			class ItemRadio : ItemBase {};
-			class Rangefinder : ItemBase {};
-			class ToolKit : ItemBase {};
-		};
-	};
-
 	class Civilian {
 		storeName = "General Store";
 		condition = "true";
@@ -413,61 +395,6 @@ class CfgItemsStore {
 			class 30Rnd_762x39_Mag_F {};
 		};
 		
-		class Items {
-			class ItemMap {};
-			class ItemCompass {};
-			class ItemWatch {};
-			class ItemGPS {};
-			class ItemRadio {};
-			class NVGoggles {};
-			class Binocular {};
-			class ToolKit {};
-			class SmokeShell {};
-		};
-	};
-
-	class Supplier {
-		storeName = "Blackmarket Supplier";
-		condition = "true";
-		class Rifles {
-			class hgun_PDW2000_F {};
-			class SMG_02_F {};
-			class sgun_HunterShotgun_01_sawedoff_F {};
-			class arifle_AKS_F {};
-			class arifle_TRG20_F {};
-			class arifle_Mk20_plain_F {};
-			class arifle_AKM_F {};
-		};
-
-		class Pistols {
-			class hgun_Pistol_01_F {};
-			class hgun_Rook40_F {};
-			class hgun_ACPC2_F {};
-			class hgun_Pistol_heavy_01_F {};
-			class hgun_Pistol_heavy_02_F {};
-		};
-
-		class Attachments {
-			class optic_Aco {};
-			class optic_Holosight {};
-		};
-
-		class Magazines {
-			class 10Rnd_9x21_Mag {};
-			class 16Rnd_9x21_Mag {};
-			class 30Rnd_9x21_Mag {};
-			class 30Rnd_9x21_Mag_SMG_02 {};
-			class 9Rnd_45ACP_Mag {};
-			class 11Rnd_45ACP_Mag {};
-			class 6Rnd_45ACP_Cylinder {};
-			class 30Rnd_45ACP_Mag_SMG_01 {};
-			class 2Rnd_12Gauge_Pellets {};
-			class 2Rnd_12Gauge_Slug {};
-			class 30Rnd_545x39_Mag_F {};
-			class 30Rnd_556x45_Stanag {};
-			class 30Rnd_762x39_Mag_F {};
-		};
-
 		class Items {
 			class ItemMap {};
 			class ItemCompass {};

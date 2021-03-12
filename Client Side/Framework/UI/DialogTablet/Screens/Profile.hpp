@@ -16,6 +16,21 @@ class PrestigeText : Life_RscStructuredText {
 	SAFEZONE_H(MARGIN_Y * 5);
 };
 
+class PrestigeButton : ULP_RscButtonIcon {
+    idc = 23031;
+	onButtonClick = "_this call ULP_fnc_prestige;";
+    text = "\a3\ui_f\data\GUI\Cfg\Ranks\general_gs.paa";
+	tooltip = "Pressing this will prestige your account and wipe your progression.";
+	colorText[] = {1, 0.843, 0, 1};
+	color2[] = {1, 0.843, 0, 1};
+	colorFocused[] = {1, 0.843, 0, 0.6};
+    colorDisabled[] = {1, 0.843, 0, 0.6};
+    SAFEZONE_X(UI_X + (UI_WIDTH - ((UI_WIDTH / 8) * 3)));
+	SAFEZONE_Y(UI_Y);
+	w = 1 * GUI_GRID_CENTER_W;
+	h = 1 * GUI_GRID_CENTER_H;
+};
+
 class LevelText : Life_RscStructuredText {
     idc = 23026;
     text = "<t size ='1' align='center'><t size ='1.25'>50</t><br/>Level</t>";

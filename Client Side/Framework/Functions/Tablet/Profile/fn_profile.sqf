@@ -24,3 +24,5 @@ switch (lbCurSel _toolbox) do {
 	case 1: { ["Achievements"] call ULP_fnc_setScreen; };
 	default { ["Professions"] call ULP_fnc_setScreen; };
 };
+
+(_display displayCtrl 23031) ctrlShow ([] call ULP_fnc_canPrestige);

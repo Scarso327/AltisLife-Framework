@@ -329,6 +329,8 @@ class CfgFunctions {
 			class addXP {};
 			class getMaxLevel {};
 			class getRequiredXP {};
+			class canPrestige {};
+			class prestige {};
 		};
 	};
 

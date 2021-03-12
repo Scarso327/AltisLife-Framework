@@ -47,21 +47,31 @@ class CfgSpawns {
             marker = "nhs_spawn_kavala";
             icon = "";
         };
-        class AthiraHospital : Medic {
-            displayName = "Athira Hospital";
+        class AthiraClinic : Medic {
+            displayName = "Athira Clinic";
             marker = "nhs_spawn_athira";
             icon = "";
         };
-        class PyrgosHospital : Medic {
-            displayName = "Pyrgos Hospital";
+        class PyrgosHClinic : Medic {
+            displayName = "Pyrgos Clinic";
             marker = "nhs_spawn_pyrgos";
+            icon = "";
+        };
+        class SofiaHClinic : Medic {
+            displayName = "Sofia Clinic";
+            marker = "nhs_spawn_sofia";
+            icon = "";
+        };
+        class AgiosHClinic : Medic {
+            displayName = "Agios Clinic";
+            marker = "nhs_spawn_agioss";
             icon = "";
         };
 
         // HATO
-        class HatoTemp : HATO {
-            displayName = "HATO";
-            marker = "nhs_spawn_kavala";
+        class HatoKavala : HATO {
+            displayName = "Highways Agency";
+            marker = "hato_spawn_kavala";
             icon = "";
         };
 

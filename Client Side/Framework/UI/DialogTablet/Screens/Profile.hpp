@@ -37,7 +37,7 @@ class RepText : Life_RscStructuredText {
 class ProfilePages : Life_RscToolbox {
 	idc = 23028;
 	style = 2;
-	onToolboxSelChanged = "";
+	onToolboxSelChanged = "(ctrlParent (_this select 0)) call ULP_fnc_profile;";
 	colorBackground[] = NO_COLOUR;
 	colorSelectedBg[] = INNER_BODY_COLOUR;
 	SAFEZONE_X(UI_X);
@@ -58,4 +58,24 @@ class ProfilePages : Life_RscToolbox {
 		"Loyalty",
 		"Player Tag"
 	};
+};
+
+class ProfessionsViewBackground : Life_RscText {
+    idc = 23029;
+	colorBackground[] = INNER_BODY_COLOUR;
+    SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 8));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 8));
+};
+
+class ProfessionsView : Life_RscControlsGroup {
+    idc = 23030;
+	colorBackground[] = INNER_BODY_COLOUR;
+    SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 8));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 8));
+
+    class Controls {};
 };

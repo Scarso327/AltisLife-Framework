@@ -219,6 +219,11 @@ class CfgFunctions {
 			class options {};
 		};
 
+		class TabletProfile {
+			file = "Functions\Tablet\Profile";
+			class profile {};
+		};
+
 		class Options {
 			file = "Functions\Options";
 			class setOption {};

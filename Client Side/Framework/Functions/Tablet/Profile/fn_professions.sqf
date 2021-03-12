@@ -74,4 +74,4 @@ private _yInc = false;
 
 		_lastCtrlPos = ctrlPosition _professionCtrl;
 	};
-} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgProfessions"));
+} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgProgression" >> "CfgProfessions"));

@@ -876,7 +876,7 @@ class CfgVirtualItems {
 	};
 
 	class UnprocessedHeroin {
-		displayName = "Unprocessed Heroin";
+		displayName = "Opium";
 		icon = "Data\Icons\heroinUnprocessed.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -915,7 +915,7 @@ class CfgVirtualItems {
 	};
 
 	class UnprocessedCocaine {
-		displayName = "Unprocessed Cocaine";
+		displayName = "Coca Leaf";
 		icon = "Data\Icons\cocaineUnprocessed.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -967,7 +967,7 @@ class CfgVirtualItems {
 	};
 
 	class ProcessedMeth {
-		displayName = "Processed Meth";
+		displayName = "Meth";
 		icon = "Data\Icons\meth.paa";
 		buyPrice = 0;
 		sellPrice = 0;

@@ -15,7 +15,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -35,6 +35,31 @@ ULP_Licenses = (_licenses select {
 });
 
 ULP_Professions = _professions;
+
+private _max = [] call ULP_fnc_getMaxLevel;
+if (_level > _max) then { _level = _max; };
+
+private _required = [_level] call ULP_fnc_getRequiredXP;
+for "_i" from 0 to 1 step 0 do {
+	scopeName "fn_setPlayerInfo_rankLoop";
+
+	if (_xp < _required) exitWith {};
+
+	if (_xp >= _required) then {
+		if (_level isEqualTo _max) then {
+			_xp = _required;
+			breakOut "fn_setPlayerInfo_rankLoop";
+		} else {
+			_xp = _xp - _required;
+			_level = _level + 1;
+			_required = [_level] call ULP_fnc_getRequiredXP;
+		};
+	};
+};
+
+ULP_Prestige = _prestige;
+ULP_Level = _level;
+ULP_XP = _xp;
 
 // Set saved survival statistics....
 ULP_Survival_Hunger = (_stats select 0);

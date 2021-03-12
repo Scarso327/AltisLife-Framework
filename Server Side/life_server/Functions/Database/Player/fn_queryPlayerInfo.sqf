@@ -18,7 +18,7 @@ private _factionCfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc
 private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex");
 
 private _query = [
-	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats, %1professions", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
+	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats, %1professions, prestige, level, xp", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
 	format["FROM players WHERE pid='%1'", _uid]
 ];
@@ -62,7 +62,7 @@ for "_i" from 0 to 1 step 0 do {
 		private _hashmapsToCreate = [12];
 
 		// (Blacklist / Arrest Status)
-		private _boolsToConvert = [13];
+		private _boolsToConvert = [16];
 
 		// Coverts data types to something arma can understand...
 		{ _newResult set [_x, [(_result select _x)] call DB_fnc_mresToArray] } forEach _arraysToConvert;

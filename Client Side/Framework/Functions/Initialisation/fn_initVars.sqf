@@ -26,6 +26,10 @@ ULP_Keys = [];
 ULP_Inventory = createHashMap;
 ULP_CarryInfo = [0, (LIFE_SETTINGS(getNumber, "total_maxWeight"))];
 
+ULP_Prestige = 0;
+ULP_Level = 1;
+ULP_XP = 0;
+
 ULP_Gang_ID = -1;
 
 /* Player State Variables */

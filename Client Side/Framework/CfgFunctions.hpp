@@ -323,6 +323,13 @@ class CfgFunctions {
 			class getProfessionCalculation {};
 			class getProfessionLevel {};
 		};
+
+		class Leveling {
+			file = "Functions\Leveling";
+			class addXP {};
+			class getMaxLevel {};
+			class getRequiredXP {};
+		};
 	};
 
 	class ULP_Functions_UI {

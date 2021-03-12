@@ -12,6 +12,7 @@ class CfgFactions {
 				payMulti = 0.1;
 				required = 1;
 			};
+			class NPAS { queryIndex = 18; };
 			/*class RTA { queryIndex = 13; };
 			class NPAS { queryIndex = 13; };
 			class SCO19 { queryIndex = 14; };
@@ -23,7 +24,7 @@ class CfgFactions {
 
 		class DatabaseInfo {
 			queryPrefix = "cop_";
-			customQuery = ", cop_blacklisted, coplevel"; // , asolevel, sfolevel
+			customQuery = ", cop_blacklisted, coplevel, npaslevel";
 			timeIndex = 0;
 		};
 

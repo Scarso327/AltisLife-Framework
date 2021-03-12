@@ -19,11 +19,6 @@ class CfgVirtualStores {
 			class BloodBag {};
 			class FirstAidKit {};
 			class MediKit {};
-			class FirstAidKit {};
-			class FirstAidKit {};
-			class FirstAidKit {};
-			class FirstAidKit {};
-			class FirstAidKit {};
 		};
 	};
 

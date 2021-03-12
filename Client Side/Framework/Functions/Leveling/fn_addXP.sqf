@@ -28,7 +28,7 @@ for "_i" from 0 to 1 step 0 do {
 	if (ULP_XP >= _required) then {
 		if (ULP_Level isEqualTo _max) then {
 			ULP_XP = _required;
-			breakOut "fn_setPlayerInfo_rankLoop";
+			breakOut "fn_addXP_rankLoop";
 		} else {
 			ULP_XP = ULP_XP - _required;
 			ULP_Level = ULP_Level + 1;

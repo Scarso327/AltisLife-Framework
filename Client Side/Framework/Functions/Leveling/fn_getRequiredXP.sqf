@@ -12,4 +12,4 @@ _this params [
 private _lvlCfg = missionConfigFile >> "CfgProgression" >> "Leveling";
 if !(isClass _lvlCfg) exitWith { 0 };
 
-(getNumber (_lvlCfg >> "baseXp") * (getNumber (_lvlCfg >> "xpMultiplier") * _level))
+(round(getNumber (_lvlCfg >> "baseXp") * (getNumber (_lvlCfg >> "xpMultiplier") * _level)))

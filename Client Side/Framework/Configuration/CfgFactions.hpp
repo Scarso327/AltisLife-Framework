@@ -52,7 +52,7 @@ class CfgFactions {
 		class Whitelisting {
 			class Main {
 				queryIndex = 17;
-				payMulti = 0.1;
+				payMulti = 0.15;
 				required = 1;
 			};
 			class AA { queryIndex = 18; };
@@ -84,11 +84,11 @@ class CfgFactions {
 
 	class Hato {
 		displayName = "Highways Traffic Agency";
-		pay = 15500;
+		pay = 14500;
 		class Whitelisting {
 			class Main {
 				queryIndex = 17;
-				payMulti = 0.1;
+				payMulti = 0.5;
 				required = 1;
 			};
 		};

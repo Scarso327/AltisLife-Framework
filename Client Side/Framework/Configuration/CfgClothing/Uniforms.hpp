@@ -623,7 +623,7 @@ class U_B_CTRG_Soldier_F {
 		class SCO19 {
 			displayName = "SCO19 Uniform";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO19"", 1] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
 };
@@ -637,7 +637,7 @@ class U_B_GhillieSuit {
 		class SCO19 {
 			displayName = "SCO19 Ghillie";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO19"", 2] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
 		};
 		class U_B_GhillieSuit { 
 			displayName = "MTP"; 

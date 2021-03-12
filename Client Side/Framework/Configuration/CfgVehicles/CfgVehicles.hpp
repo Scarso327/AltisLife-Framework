@@ -161,7 +161,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[""Police_SCO19"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_black.paa" }; 
 			};
 			class PoliceANPR : PoliceWhite { 
@@ -327,7 +327,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[""Police_SCO19"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_black.paa" }; 
 			};
 			class PoliceANPR : PoliceWhite { 

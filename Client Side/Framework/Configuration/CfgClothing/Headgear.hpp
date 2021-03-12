@@ -200,11 +200,11 @@ class H_Beret_blk {
 		};
 		class H_Beret_EAF_01_F : H_Beret_blk {
 			displayName = "SCO/NCA";
-			condition = "[""Police_SCO19"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+			condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		};
 		class H_Beret_gen_F : H_Beret_blk {
 			displayName = "";
-			condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_RTA"", 3] call ULP_fnc_hasAccess } || { [""Police_SCO19"", 4] call ULP_fnc_hasAccess } || { [""Police_NCA"", 4] call ULP_fnc_hasAccess } || { [""Police_MPU"", 3] call ULP_fnc_hasAccess } || { [""Police_RPU"", 3] call ULP_fnc_hasAccess }";
+			condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_RTA"", 3] call ULP_fnc_hasAccess } || { [""Police_SCO"", 4] call ULP_fnc_hasAccess } || { [""Police_NCA"", 4] call ULP_fnc_hasAccess } || { [""Police_MPU"", 3] call ULP_fnc_hasAccess } || { [""Police_RPU"", 3] call ULP_fnc_hasAccess }";
 		};
 	};
 };

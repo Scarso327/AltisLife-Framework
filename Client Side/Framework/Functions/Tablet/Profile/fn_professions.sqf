@@ -49,6 +49,7 @@ private _yInc = false;
 			"_level", "_points"
 		];
 
+		private _maxLevel = getNumber (_x >> "maxLevel");
 		private _requirement = getNumber (_x >> "xpLevel");
 		if (_level > 0) then {
 			_requirement = _requirement * (getNumber (_x >> "xpMultipler") * _level);
@@ -58,8 +59,12 @@ private _yInc = false;
 		_iconCtrl ctrlSetText getText (_x >> "icon");
 		_iconCtrl ctrlSetTooltip format["%1/%2", _points, _requirement];
 
+		if (_level isEqualTo _maxLevel && { _points isEqualTo _requirement }) then {
+			_iconCtrl ctrlSetTextColor [1, 0.843, 0, 1];
+		};
+
 		private _nameCtrl = _professionCtrl controlsGroupCtrl 102;
-		_nameCtrl ctrlSetStructuredText parseText format["%1<t align='right'>%2/%3</t>", getText (_x >> "displayName"), _level, getNumber (_x >> "maxLevel")];
+		_nameCtrl ctrlSetStructuredText parseText format["%1<t align='right'>%2/%3</t>", getText (_x >> "displayName"), _level, _maxLevel];
 
 		private _descCtrl = _professionCtrl controlsGroupCtrl 103;
 		_descCtrl ctrlSetStructuredText parseText format[getText (_x >> "effectDescription"), ([_level, _points] call compile getText (_x >> "effectCalculation")), "%"];

@@ -12,12 +12,19 @@ class CfgFactions {
 				payMulti = 0.1;
 				required = 1;
 			};
-			class NPAS { queryIndex = 18; };
+			class RTA { queryIndex = 18; };
+			class NPAS { queryIndex = 19; };
+			class SCO { queryIndex = 20; };
+			class NCA { queryIndex = 21; };
+			class MPU { queryIndex = 22; };
+			class RPU { queryIndex = 23; };
+			class AFO { queryIndex = 24; };
+			class UC { queryIndex = 25; };
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "cop_";
-			customQuery = ", cop_blacklisted, coplevel, npaslevel";
+			customQuery = ", cop_blacklisted, coplevel, rtalevel, npaslevel, scolevel, ncalevel, mpulevel, rpulevel, afolevel, uclevel";
 			timeIndex = 0;
 		};
 
@@ -48,12 +55,12 @@ class CfgFactions {
 				payMulti = 0.1;
 				required = 1;
 			};
-			class TAA { queryIndex = 18; };
+			class AA { queryIndex = 18; };
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "med_";
-			customQuery = ", med_blacklisted, mediclevel, taalevel";
+			customQuery = ", med_blacklisted, mediclevel, aalevel";
 			timeIndex = 1;
 		};
 

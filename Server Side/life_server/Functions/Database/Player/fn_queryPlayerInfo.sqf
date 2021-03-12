@@ -18,7 +18,7 @@ private _factionCfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc
 private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex");
 
 private _query = [
-	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats, %1professions, prestige, level, xp", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
+	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats, professions, prestige, level, xp", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
 	format["FROM players WHERE pid='%1'", _uid]
 ];
@@ -40,7 +40,7 @@ for "_i" from 0 to 1 step 0 do {
 		private _name = name _unit;
 
 		[
-			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, civ_professions, cop_professions, med_professions, hato_licenses, hato_professions, hato_gear) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
+			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, professions, hato_licenses, hato_gear) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
 				_uid,
 				[_name] call DB_fnc_mresString,
 				[LIFE_SETTINGS(getNumber,"starting_bank"), ""] call ULP_fnc_numberText,

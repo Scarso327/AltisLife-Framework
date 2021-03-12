@@ -423,27 +423,6 @@ class CfgVehicles {
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_adds_black_co.paa" 
 				}; 
 			};
-			class White : BaseTexture { 
-				displayName = "White";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.97,0.97,0.97,1)", 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class Red : BaseTexture { 
-				displayName = "Red";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.9,0.03,0.03,1)",
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class Blue : BaseTexture { 
-				displayName = "Blue";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.05,0.67,737,1)",
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
 			class Sand : BaseTexture { 
 				displayName = "Sand";
 				textures[] = { 
@@ -479,31 +458,11 @@ class CfgVehicles {
 		class Textures {
 			class Black : BaseTexture { 
 				displayName = "Black";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)", 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
+				textures[] = { "\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_01_black_CO.paa", }; 
 			};
-			class White : BaseTexture { 
-				displayName = "White";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.97,0.97,0.97,1)", 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class Red : BaseTexture { 
-				displayName = "Red";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.9,0.03,0.03,1)",
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class Blue : BaseTexture { 
-				displayName = "Blue";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.05,0.67,737,1)",
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
+			class Hex : BaseTexture { 
+				displayName = "Hex";
+				textures[] = { "\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa", }; 
 			};
 			class PoliceBlack : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\qilin.paa" }; 
@@ -537,32 +496,11 @@ class CfgVehicles {
 		virtualSpace = 0;
 		turrets[] = { { "SmokeLauncher" } };
 		class Textures {
-			class Black : BaseTexture { 
-				displayName = "Black";
+			class Hex : BaseTexture { 
+				displayName = "Hex";
 				textures[] = { 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)", 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class White : BaseTexture { 
-				displayName = "White";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.97,0.97,0.97,1)", 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class Red : BaseTexture { 
-				displayName = "Red";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.9,0.03,0.03,1)",
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class Blue : BaseTexture { 
-				displayName = "Blue";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.05,0.67,737,1)",
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
+					"\A3\soft_F\MRAP_02\data\MRAP_02_ext_01_CO.paa", 
+					"\A3\soft_F\MRAP_02\data\MRAP_02_ext_02_CO.paa"
 				}; 
 			};
 			class GoldLine : BaseTexture { 
@@ -586,33 +524,16 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 		class Textures {
-			class Black : BaseTexture { 
-				displayName = "Black";
+			class Tan : BaseTexture { 
+				displayName = "Tan";
 				textures[] = { 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)", 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
+					"\A3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa", 
+					"\A3\data_f\vehicles\turret_co.paa"
 				}; 
 			};
-			class White : BaseTexture { 
-				displayName = "White";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.97,0.97,0.97,1)", 
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class Red : BaseTexture { 
-				displayName = "Red";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.9,0.03,0.03,1)",
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
-			};
-			class Blue : BaseTexture { 
-				displayName = "Blue";
-				textures[] = { 
-					"#(rgb,8,8,3)color(0.05,0.67,737,1)",
-					"#(rgb,8,8,3)color(0.03,0.03,0.03,1)"
-				}; 
+			class Asiimov : BaseTexture { 
+				displayName = "Asiimov";
+				textures[] = { "Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
 			};
 		};
 	};

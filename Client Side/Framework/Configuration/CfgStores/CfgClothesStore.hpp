@@ -107,36 +107,36 @@ class CfgClothesStore {
 		};
 
 		class Vests {
-			class V_LegStrapBag_black_F {
+			class V_LegStrapBag_black_F : FactionBase {
 				price = 0;
 				condition = "true";
 				class Textures { class V_LegStrapBag_black_F {}; };
 			};
-			class V_Rangemaster_belt {
+			class V_Rangemaster_belt : FactionBase {
 				price = 0;
 				condition = "true";
 			};
-			class V_BandollierB_blk {
+			class V_BandollierB_blk : FactionBase {
 				price = 0;
 				condition = "true";
 				class Textures { class V_BandollierB_blk {}; };
 			};
-			class V_TacVest_blk_POLICE {
+			class V_TacVest_blk_POLICE : FactionBase {
 				price = 0;
 				condition = "true";
 				class Textures {};
 			};
-			class V_PlateCarrier1_blk {
+			class V_PlateCarrier1_blk : FactionBase {
 				price = 0;
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures { class V_PlateCarrier1_blk {}; };
 			};
-			class V_PlateCarrier2_blk {
+			class V_PlateCarrier2_blk : FactionBase {
 				price = 0;
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
 				class Textures { class V_PlateCarrier2_blk {}; };
 			};
-			class V_RebreatherB {
+			class V_RebreatherB : FactionBase {
 				price = 0;
 				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; 
 				class Textures { class V_RebreatherB {}; };
@@ -144,7 +144,7 @@ class CfgClothesStore {
 		};
 
 		class Backpacks {
-			class B_Carryall_cbr { 
+			class B_Carryall_cbr : FactionBase { 
 				displayName = "Invisible Backpack"; 
 				price = 0;
 				condition = "true";
@@ -157,21 +157,22 @@ class CfgClothesStore {
 		storeName = "Medic Clothing Store";
 		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Uniforms {
-			class U_Competitor {};
-			class U_B_HeliPilotCoveralls {
-				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
+			class U_Competitor : FactionBase {};
+			class U_O_R_Gorka_01_black_F : FactionBase {};
+			class U_B_HeliPilotCoveralls : FactionBase {
+				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
 				class textures { class U_B_HeliPilotCoveralls {}; };
 			};
-			class U_C_CBRN_Suit_01_White_F {
+			class U_C_CBRN_Suit_01_White_F : FactionBase {
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures { class U_C_CBRN_Suit_01_White_F {}; };
 			};
 		};
 		
 		class Headgear {
-			class H_HeadBandage_clean_F {};
-			class H_WirelessEarpiece_F {};
-			class H_Cap_blk {
+			class H_HeadBandage_clean_F : FactionBase {};
+			class H_WirelessEarpiece_F : FactionBase {};
+			class H_Cap_blk : FactionBase {
 				class Textures {
 					class H_Cap_blk {};
 					class H_Cap_red : H_Cap_blk {};
@@ -181,46 +182,93 @@ class CfgClothesStore {
 					class H_Cap_surfer : H_Cap_blk {};
 				};
 			};
-			class H_Watchcap_blk {};
-			class H_Beret_CSAT_01_F { condition = "[""Medic_Main"", 5] call ULP_fnc_hasAccess"; };
-			class H_PilotHelmetHeli_B { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
+			class H_Watchcap_blk : FactionBase {};
+			class H_Beret_CSAT_01_F : FactionBase { condition = "[""Medic_Main"", 5] call ULP_fnc_hasAccess"; };
+			class H_PilotHelmetHeli_B : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 
 		class Facewear {
-			class G_WirelessEarpiece_F {};
-			class G_Aviator {};
-			class G_Squares {};
-			class G_Spectacles {};
-			class G_Shades_Black {};
-			class G_Sport_Red {};
-			class G_Lady_Blue {};
-			class G_Tactical_Clear {};
-			class G_B_Diving { condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess"; };
-			class G_Respirator_white_F {};
-			class G_RegulatorMask_F { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
+			class G_WirelessEarpiece_F : FactionBase {};
+			class G_Aviator : FactionBase {};
+			class G_Squares : FactionBase {};
+			class G_Spectacles : FactionBase {};
+			class G_Shades_Black : FactionBase {};
+			class G_Sport_Red : FactionBase {};
+			class G_Lady_Blue : FactionBase {};
+			class G_Tactical_Clear : FactionBase {};
+			class G_B_Diving : FactionBase { condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess"; };
+			class G_Respirator_white_F : FactionBase {};
+			class G_RegulatorMask_F : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 
 		class Vests {
-			class V_LegStrapBag_black_F {
+			class V_LegStrapBag_black_F : FactionBase {
 				class Textures { class V_LegStrapBag_black_F {}; };
 			};
-			class V_Safety_yellow_F {
+			class V_Safety_yellow_F : FactionBase {
 				class Textures { class V_Safety_yellow_F {}; };
 			};
-			class V_BandollierB_blk {
+			class V_BandollierB_blk : FactionBase {
 				class Textures { class V_BandollierB_blk {}; };
 			};
-			class V_TacVestIR_blk {
+			class V_TacVestIR_blk : FactionBase {
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; 
 			};
-			class V_RebreatherB { 
+			class V_RebreatherB : FactionBase { 
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; 
 				class Textures { class V_RebreatherB {}; };
 			};
 		};
 
 		class Backpacks {
-			class B_Carryall_cbr { 
+			class B_Carryall_cbr : FactionBase { 
+				displayName = "Invisible Backpack"; 
+				class Textures { class INVIS {}; };
+			};
+		};
+	};
+
+	class Hato {
+		storeName = "HATO Clothing Store";
+		condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
+		class Uniforms {
+			class U_O_R_Gorka_01_black_F : FactionBase {};
+		};
+		
+		class Headgear {
+			class H_HeadBandage_clean_F : FactionBase {};
+			class H_WirelessEarpiece_F : FactionBase {};
+			class H_Cap_blk : FactionBase {
+				class Textures {
+					class H_Cap_blk {};
+					class H_Cap_red : H_Cap_blk {};
+					class H_Cap_blu : H_Cap_blk {};
+					class H_Cap_tan : H_Cap_blk {};
+					class H_Cap_oli : H_Cap_blk {};
+					class H_Cap_surfer : H_Cap_blk {};
+				};
+			};
+			class H_Watchcap_blk : FactionBase {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F : FactionBase {};
+			class G_Aviator : FactionBase {};
+			class G_Squares : FactionBase {};
+			class G_Spectacles : FactionBase {};
+			class G_Shades_Black : FactionBase {};
+			class G_Sport_Red : FactionBase {};
+			class G_Lady_Blue : FactionBase {};
+			class G_Tactical_Clear : FactionBase {};
+			class G_B_Diving : FactionBase { condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess"; };
+			class G_Respirator_white_F : FactionBase {};
+			class G_RegulatorMask_F : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
+		};
+
+		class Vests {};
+
+		class Backpacks {
+			class B_Carryall_cbr : FactionBase { 
 				displayName = "Invisible Backpack"; 
 				class Textures { class INVIS {}; };
 			};

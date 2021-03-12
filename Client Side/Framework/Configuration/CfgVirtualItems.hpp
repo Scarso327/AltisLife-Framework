@@ -287,6 +287,19 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
+	class Coral {
+		displayName = "Coral";
+		picture = "";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 2;
+		class Settings {
+			isIllegal = true;
+			isSavable = false;
+		};
+		conditions = "true";
+	};
+
 	class Pickaxe {
 		displayName = "Pickaxe";
 		picture = "";
@@ -745,7 +758,7 @@ class CfgVirtualItems {
 	};
 
 	class RefindedSalt {
-		displayName = "RefindedSalt";
+		displayName = "Refinded Salt";
 		picture = "";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -994,6 +1007,19 @@ class CfgVirtualItems {
 
 	class PurifiedMoonshine {
 		displayName = "Purified Moonshine";
+		picture = "";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 2;
+		class Settings {
+			isIllegal = true;
+			isSavable = true;
+		};
+		conditions = "true";
+	};
+
+	class Ecstasy {
+		displayName = "Ecstasy";
 		picture = "";
 		buyPrice = 0;
 		sellPrice = 0;

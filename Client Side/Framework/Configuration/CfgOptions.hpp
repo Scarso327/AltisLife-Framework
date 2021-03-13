@@ -53,6 +53,13 @@ class CfgOptions {
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
 
+		class EnableXPBar {
+			name = "Enable XP Bar";
+			tooltip = "If the hud is enabled as well as this, you'll have your xp displayed on screen.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
+		};
+
 		class EnablePlayerTags {
 			name = "Enable Player Tags";
 			tooltip = "When enabled, information about a player is displayed above their heads.";

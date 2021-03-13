@@ -37,6 +37,10 @@ private _sellPrice = -1;
 		_buyPrice = getNumber (_cfg >> "buyPrice");
 		_sellPrice = getNumber (_cfg >> "sellPrice");
 
+		([_buyPrice, _sellPrice] call ULP_fnc_getSellPrices) params [
+			["_sellPrice", _sellPrice, [0]]
+		];
+
 		private _row = _list lnbAddRow [
 			_itemName, 
 			([format["£%1", [_buyPrice] call ULP_fnc_numberText], "-"] select (_buyPrice isEqualTo -1)),

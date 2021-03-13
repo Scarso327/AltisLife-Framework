@@ -190,6 +190,13 @@ class CfgSettings {
         {"STR_Crime_25","20000","25"}
     };
 
+    class DonationRewards {
+        sellIncrease = 1.25;
+        profChanceIncrease = 1.30;
+        xpIncrease = 1.25;
+        payIncrease = 1.25;
+    };
+
     nlrTimer = 15 * 60;
     nlrDistance = 1500;
     doesntThreaten[] = { "", "Binocular", "Rangefinder" };

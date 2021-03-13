@@ -14,12 +14,17 @@ private _display = ctrlParent _list;
 if (isNull _display) exitWith {};
 
 private _info = _display displayCtrl 3304;
+private _buyButton = _display displayCtrl 3305;
+private _sellButton = _display displayCtrl 3306;
 
 private _cfg = missionConfigFile >> "CfgVirtualItems" >> (_list lnbData [_index, 0]);
 if !(isClass _cfg) exitWith {};
 
-private _buyPrice = getNumber (_cfg >> "buyPrice");
-private _sellPrice = getNumber (_cfg >> "sellPrice");
+private _buyPrice = _list lnbValue [_index, 1];
+private _sellPrice = _list lnbValue [_index, 2];
+
+_buyButton ctrlEnable !(_buyPrice isEqualTo -1);
+_sellButton ctrlEnable !(_sellPrice isEqualTo -1);
 
 _info ctrlSetStructuredText parseText format ["
 <br/>

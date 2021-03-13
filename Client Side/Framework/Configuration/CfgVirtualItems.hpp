@@ -3,8 +3,8 @@ class CfgVirtualItems {
 	class Apple {
 		displayName = "Apple";
 		icon = "Data\Icons\apple.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 100;
+		sellPrice = 70;
 		weight = 1;
 		class Settings {
 			isIllegal = false;

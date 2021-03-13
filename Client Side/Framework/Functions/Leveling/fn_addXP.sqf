@@ -12,6 +12,7 @@ _this params [
 ];
 
 if ((random 100) > _chance || { _xp < 1 }) exitWith { false };
+if (ULP_SRV_Setting_DonationGoal) then { _xp = _xp * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "xpIncrease"); };
 
 private _required = [ULP_Level] call ULP_fnc_getRequiredXP;
 private _max = [] call ULP_fnc_getMaxLevel;

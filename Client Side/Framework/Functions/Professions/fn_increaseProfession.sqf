@@ -11,6 +11,8 @@ _this params [
 	["_chance", 5, [0]]
 ];
 
+if (ULP_SRV_Setting_DonationGoal) then { _chance = (_chance * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "profChanceIncrease")) min 100; };
+
 if ((random 100) > _chance) exitWith { false };
 
 private _cfg = missionConfigFile >> "CfgProgression" >> "CfgProfessions" >> _profession;

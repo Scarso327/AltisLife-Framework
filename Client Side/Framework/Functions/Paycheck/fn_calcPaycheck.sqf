@@ -7,7 +7,11 @@ scopeName "fn_calcPaycheck";
 
 private _faction = CFG >> [player] call ULP_fnc_getFaction;
 
-getNumber ([
+private _pay = getNumber ([
 	CFG >> "fallbackPay",
 	_faction >> "pay"
 ] select (isClass (_faction)))
+
+if (ULP_SRV_Setting_DonationGoal) then { _pay = _pay * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "payIncrease"); };
+
+(round _pay)

@@ -1,7 +1,7 @@
 #define SYSTEM_TAG "life"
 #define ITEM_TAG format ["%1%2",SYSTEM_TAG,"item_"]
-#define CASH life_cash
-#define BANK life_atmbank
+#define CASH ULP_234_Cash
+#define BANK ULP_547_Bank
 #define GANG_FUNDS group player getVariable ["gang_bank",0];
 
 /*

@@ -17,7 +17,6 @@ if (["RscHUD", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	private _ui = ["RscHUD"] call ULP_UI_fnc_getLayer;
 	if (isNull _ui) exitWith {}; // Shouldn't happen but we'll be safe...
 
-	_ui setVariable ["cash", 0];
 	_ui setVariable ["food", 100];
 	_ui setVariable ["water", 100];
 	_ui setVariable ["health", 100];
@@ -28,12 +27,26 @@ if (["RscHUD", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	private _foodText = _ui displayCtrl 501;
 	private _waterText = _ui displayCtrl 503;
 	private _healthText = _ui displayCtrl 505;
+	private _moneyText = _ui displayCtrl 512;
+	_moneyText ctrlSetStructuredText parseText format["<t align='right'>£%1</t>", [CASH] call ULP_fnc_numberText];
 
 	_ui setVariable ["eachframe", ([[_ui, _foodText, _waterText, _healthText], { _this call ULP_UI_fnc_eachFrameHUD }] call ULP_fnc_addEachFrame)];
 
 	[] call ULP_UI_fnc_updateXpHud;
 	_ui setVariable ["eventhandler", (["OnXPIncreased", { [] call ULP_UI_fnc_updateXpHud; }] call ULP_fnc_addEventHandler)];
+	
+	_ui setVariable ["money", (["MoneyChanged", {
+		_this params [
+			["_cash", 0, [0]],
+			["_bank", 0, [0]]
+		];
 
+		private _ui = ["RscHUD"] call ULP_UI_fnc_getLayer;
+		if (isNull _ui) exitWith {};
+
+		(_ui displayCtrl 512) ctrlSetStructuredText parseText format["<t align='right'>£%1</t>", [_cash] call ULP_fnc_numberText];
+	}] call ULP_fnc_addEventHandler)];
+	
 	true breakOut "fn_openHud";
 };
 

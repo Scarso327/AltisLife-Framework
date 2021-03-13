@@ -65,15 +65,14 @@ if (_remove) then {
 		private _name = getText(_cfg >> "displayName");
 		if ([configName _cfg, _value, _remove] call ULP_fnc_handleItem) then {
 			if (_remove) then {
+				[_sellPrice, false, format["Sold %1 %2(s)", _value, _name]] call ULP_fnc_addMoney;
 				hint format["You have sold %1 %2(s) for £%3...", _value, _name, [_sellPrice] call ULP_fnc_numberText];
-				CASH = CASH + _sellPrice;
 			} else {
-				if (_buyPrice > CASH) exitWith {
+				if !([_sellPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) exitWith {
 					hint format["You can't afford £%1 for %2 %3(s)...", [_buyPrice] call ULP_fnc_numberText, _value, _name]
 				};
 
 				hint format["You have bought %1 %2(s) for £%3...", _value, _name, [_buyPrice] call ULP_fnc_numberText];
-				CASH = CASH - _sellPrice;
 			};
 
 			[_display] call ULP_fnc_updateVStore;

@@ -36,7 +36,7 @@ if (_itemClass isEqualTo "" || { _itemValue < 0 }) exitWith {
 _invList lbDelete _selItem;
 _invList lbSetCurSel -1;
 
-CASH = CASH + _itemValue;
+[_itemValue, false, format["Sold %1", (_itemCfg select 5)]] call ULP_fnc_addMoney;
 [] call ULP_fnc_syncPlayerInfo;
 
 hint format["You sold %1 for £%2", (_itemCfg select 5), [_itemValue] call ULP_fnc_numberText];

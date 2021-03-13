@@ -340,6 +340,12 @@ class CfgFunctions {
 			class canPrestige {};
 			class prestige {};
 		};
+		
+		class Money {
+			file = "Functions\Money";
+			class addMoney {};
+			class removeMoney {};
+		};
 	};
 
 	class ULP_Functions_UI {

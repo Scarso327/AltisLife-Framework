@@ -18,14 +18,9 @@ if (!isClass _license ||
 	{ !([] call compile getText(_license >> "conditions")) }
 ) exitWith { false };
 
-if !(_price isEqualTo -1) then {
-	if (CASH < _price) exitWith {
-		hint format["You can't afford this license. You need £%1", _price];
-		false breakOut "fn_addLicense";
-	};
-
-	CASH = CASH - _price;
-	[player, 1, CASH] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+if (!(_price isEqualTo -1) && { !([_price, false, format["Purchased %1", getText (_license >> "displayName")]] call ULP_fnc_removeMoney) }) exitWith {
+	hint format["You can't afford this license. You need £%1", _price];
+	false breakOut "fn_addLicense";
 };
 
 ULP_Licenses pushBackUnique (configName _license);

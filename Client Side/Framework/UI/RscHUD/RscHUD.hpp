@@ -51,6 +51,15 @@ class RscHUD {
     };
 
     class Controls {
+        class MoneyText: Life_RscStructuredText {
+            idc = 512;
+            text = "<t align='right'>£000,000,000</t>";
+            SAFEZONE_X((1 - WIDTH) - MARGIN_X);
+			SAFEZONE_Y(((1 - (BUTTON_H * 4)) - MARGIN_Y) - MARGIN_Y);
+            SAFEZONE_W(WIDTH);
+			SAFEZONE_H(BUTTON_H);
+        };
+
         class FoodText: Life_RscStructuredText {
             idc = 501;
             text = "<t><img image='Data\UI\food.paa' size='0.8'/></t><t align='right'>100%</t>";

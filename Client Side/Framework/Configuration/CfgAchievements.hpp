@@ -7,6 +7,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class JoinGroup {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Member";
@@ -15,6 +16,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class JoinAPC {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Constable";
@@ -23,6 +25,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class JoinNHS {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Paramedic";
@@ -31,6 +34,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class JoinHATO {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Traffic Officer";
@@ -39,6 +43,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class Governor {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Governor";
@@ -47,6 +52,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class Employment {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Employment";
@@ -55,6 +61,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class Convict {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Convict";
@@ -63,6 +70,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class TaskMaster {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Task Master";
@@ -71,6 +79,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class LifeSaver {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Life Saver";
@@ -79,6 +88,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class Cartel {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Cartel Lord";
@@ -95,6 +105,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class BuyHouse {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "First House";
@@ -103,6 +114,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class BuyWarehouse {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "First Warehouse";
@@ -111,6 +123,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class OneMillion {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "£1,000,000";
@@ -119,6 +132,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class TenMillion {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "£10,000,000";
@@ -127,6 +141,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class HundredMillion {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "£100,000,000";
@@ -143,6 +158,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class FanGirl {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Fan Girl";

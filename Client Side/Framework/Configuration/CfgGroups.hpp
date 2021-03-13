@@ -8,6 +8,6 @@ class CfgGroups {
 	class Name {
 		MinLength = 6;
     	MaxLength = 30;
-		Blacklisted[] = { "Altis Police Contabulary", "National Health Service", "Civilian" };
+		Blacklisted[] = { "Altis Police Contabulary", "National Health Service", "Highways Agency", "Civilian" };
 	};
 };

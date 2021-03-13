@@ -37,7 +37,13 @@ if (createDialog "DialogGenericStore") then {
 	_display setVariable ["cartValue", 0];
 
 	private _toolBox = _display displayCtrl _idc;
-	[_toolBox, 0] call ULP_fnc_switchCategory;
+
+	private _openPage = 0;
+	if (isNumber (_storeCfg >> "default")) then { _openPage = (getNumber (_storeCfg >> "default") min 4) max 0; };
+
+	_toolBox lbSetCurSel _openPage;
+	[_toolBox, _openPage] call ULP_fnc_switchCategory;
+
 	_toolBox ctrlSetEventHandler ["ToolboxSelChanged", "_this call ULP_fnc_switchCategory"];
 
 	(_display displayCtrl 3105) ctrlSetStructuredText parseText "<t size='0.8'>Select and start adding items to your cart to begin...</t>";

@@ -158,6 +158,7 @@ class CfgItemsStore {
 
 	class Civilian {
 		storeName = "General Store";
+		default = 4;
 		condition = "true";
 		class Rifles {};
 		class Pistols {};

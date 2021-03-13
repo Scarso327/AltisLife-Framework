@@ -369,6 +369,7 @@ class CfgFunctions {
 			class closeHUD {};
 			class eachFrameHUD {};
 			class isHudShown {};
+			class updateXpHud {};
 		};
 	};
 };

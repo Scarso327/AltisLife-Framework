@@ -45,3 +45,4 @@ if !(ULP_Level isEqualTo _previousLevel) then {
 };
 
 [player, 4, [ULP_Level, ULP_XP]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+["OnXPIncreased"] call ULP_fnc_invokeEvent;

@@ -29,7 +29,10 @@ if (["RscHUD", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	private _waterText = _ui displayCtrl 503;
 	private _healthText = _ui displayCtrl 505;
 
-	_ui setVariable ["eventhandler", ([[_ui, _foodText, _waterText, _healthText], { _this call ULP_UI_fnc_eachFrameHUD }] call ULP_fnc_addEachFrame)];
+	_ui setVariable ["eachframe", ([[_ui, _foodText, _waterText, _healthText], { _this call ULP_UI_fnc_eachFrameHUD }] call ULP_fnc_addEachFrame)];
+
+	[] call ULP_UI_fnc_updateXpHud;
+	_ui setVariable ["eventhandler", (["OnXPIncreased", { [] call ULP_UI_fnc_updateXpHud; }] call ULP_fnc_addEventHandler)];
 
 	true breakOut "fn_openHud";
 };

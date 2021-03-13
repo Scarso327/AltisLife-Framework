@@ -9,6 +9,7 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
+	// TODO
 	class Fishing {
 		displayName = "Fishing";
 		icon = "Data\UI\repairing_prof.paa";
@@ -19,6 +20,7 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
+	// TODO
 	class Gathering {
 		displayName = "Gathering";
 		icon = "Data\UI\repairing_prof.paa";
@@ -29,6 +31,7 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
+	// TODO
 	class Mining {
 		displayName = "Mining";
 		icon = "Data\UI\repairing_prof.paa";
@@ -39,6 +42,7 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
+	// TODO
 	class Processing {
 		displayName = "Processing";
 		icon = "Data\UI\repairing_prof.paa";
@@ -49,6 +53,7 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
+	// TODO
 	class Skinning {
 		displayName = "Skinning";
 		icon = "Data\UI\repairing_prof.paa";
@@ -59,6 +64,7 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
+	// TODO
 	class Cooking {
 		displayName = "Cooking";
 		icon = "Data\UI\repairing_prof.paa";

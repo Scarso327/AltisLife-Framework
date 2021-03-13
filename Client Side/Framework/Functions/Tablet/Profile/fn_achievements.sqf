@@ -74,6 +74,11 @@ private _item = 1;
 	_coverCtrl ctrlShow !(_state isEqualTo 0);
 	_coverCtrl ctrlSetTooltip (["Locked", "Mystery Achievemnt"] select (_state isEqualTo 2));
 
+	if (_state isEqualTo 0 && { getNumber (_cfg >> "isMystery") isEqualTo 1 }) then {
+		_iconCtrl ctrlSetTextColor [1, 0.843, 0, 1];
+		_nameCtrl ctrlSetTextColor [1, 0.843, 0, 1];
+	};
+
 	_lastCtrlPos = ctrlPosition _achieveCtrl;
 	_ctrls pushBack _achieveCtrl;
 } forEach _achievements;

@@ -1412,3 +1412,40 @@ class ULP_ctrlProfession : Life_RscControlsGroupNoScrollbars {
         };
     };
 };
+
+class ULP_ctrlAchievement : Life_RscControlsGroupNoScrollbars {
+    y = (1 * GUI_GRID_CENTER_H) / 2;
+    x = (1 * GUI_GRID_CENTER_W) / 2;
+    w = 5.885 * GUI_GRID_CENTER_W;
+    h = 5.885 * GUI_GRID_CENTER_H;
+
+    class Controls {
+        class Background: Life_RscText {
+            idc = -1;
+            colorBackground[] = FOOTER_COLOUR;
+            w = 5.885 * GUI_GRID_CENTER_W;
+            h = 5.885 * GUI_GRID_CENTER_H;
+        };
+
+        class AchievementIcon: Life_RscPictureKeepAspect {
+            idc = 101;
+            w = 5.885 * GUI_GRID_CENTER_W;
+            h = 4.885 * GUI_GRID_CENTER_H;
+        };
+
+        class AchievementName: Life_RscStructuredText {
+            idc = 102;
+            colorBackground[] = HEADER_COLOUR;
+            y = 4.885 * GUI_GRID_CENTER_H;
+            w = 5.885 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+
+        class Cover : Life_RscText {
+            idc = 103;
+            colorBackground[] = { 0.06,0.06,0.06,0.9 };
+            w = 5.885 * GUI_GRID_CENTER_W;
+            h = 5.885 * GUI_GRID_CENTER_H;
+        };
+    };
+};

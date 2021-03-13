@@ -72,6 +72,7 @@ class CfgFunctions {
 		class Items {
 			file = "Functions\Items";
 			class itemCfg {};
+			class getSellPrices {};
 		};
 
 		class Input {

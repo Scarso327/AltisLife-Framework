@@ -2,6 +2,12 @@ class CfgFunctions {
 	class ULP_Functions {
 		tag = "ULP";
 
+		class Achievements {
+			file = "Functions\Achievements";
+			class achieve {};
+			class hasAchieved {};
+		};
+		
 		class General {
 			file = "Functions\General";
 			class logIt {};

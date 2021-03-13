@@ -150,6 +150,31 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
+	class WeekLoyalty {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "A Week's Loyalty";
+		description = "Achieved a loyalty streak of 7-days.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class MonthLoyalty {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "A Month's Loyalty";
+		description = "Achieved a loyalty streak of 30-days.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class YearLoyalty {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Simply No Life";
+		description = "Achieved a loyalty streak of 365-days.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
 	class Prestige {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Prestigious";

@@ -159,6 +159,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class MonthLoyalty {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "A Month's Loyalty";
@@ -167,6 +168,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TODO
 	class YearLoyalty {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Simply No Life";

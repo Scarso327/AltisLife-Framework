@@ -34,12 +34,6 @@ class CfgSpawns {
             marker = "apc_spawn_agios";
             icon = "";
         };
-        class MarineStation {
-            displayName = "Marine Base";
-            factions[] = { "Police", "Medic" };
-            marker = "joint_spawn_marine";
-            icon = "";
-        };
 
         // National Health Service
         class KavalaHospital : Medic {
@@ -65,6 +59,14 @@ class CfgSpawns {
         class AgiosHClinic : Medic {
             displayName = "Agios Clinic";
             marker = "nhs_spawn_agioss";
+            icon = "";
+        };
+
+        // Altis Police Constabulary / National Health Service
+        class MarineStation {
+            displayName = "Marine Base";
+            factions[] = { "Police", "Medic" };
+            marker = "joint_spawn_marine";
             icon = "";
         };
 

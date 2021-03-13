@@ -34,10 +34,10 @@ class CfgSpawns {
             marker = "apc_spawn_agios";
             icon = "";
         };
-        class MarineStation : Police {
+        class MarineStation {
             displayName = "Marine Base";
-            marker = "apc_spawn_marine";
-            conditions = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
+            factions[] = { "Police", "Medic" };
+            marker = "joint_spawn_marine";
             icon = "";
         };
 

@@ -44,9 +44,16 @@ if (_items isEqualTo [] || { _materials isEqualTo [] }) exitWith { false };
 } forEach _materials;
 
 private _profession = getArray (_zone >> "profession");
-private _profession = getArray (_zone >> "leveling");
+private _leveling = getArray (_zone >> "leveling");
 
-[format["%1 Item(s)", getText(_cfg >> "processTitle")], getNumber(_zone >> "processTime"), [getPos player, _items, _materials, _cfg, _profession, _leveling], { (player distance (_this select 0)) <= 5 }, {
+private _time = getNumber(_zone >> "processTime");
+
+if !(_profession isEqualTo []) then {
+	private _profCal = [(_profession select 0)] call ULP_fnc_getProfessionCalculation;
+	if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
+};
+
+[format["%1 Item(s)", getText(_cfg >> "processTitle")], _time, [getPos player, _items, _materials, _cfg, _profession, _leveling], { (player distance (_this select 0)) <= 5 }, {
 	_this params [ "", "_items", "_materials", "_cfg", "_profession", "_leveling" ];
 
 	private _possibleConversions = [];

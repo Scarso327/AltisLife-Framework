@@ -22,3 +22,4 @@ ULP_Prestige = ULP_Prestige + 1;
 
 [player, 5, ULP_Prestige] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 _display call ULP_fnc_profile;
+playMusic "News_Jingle";

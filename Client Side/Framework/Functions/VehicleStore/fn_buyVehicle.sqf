@@ -53,6 +53,7 @@ if (CASH >= _buyPrice) exitWith {
 		[configName _missionCfg, _spawn, _texture] call ULP_fnc_createVehicle;
 	};
 
+	["BuyVehicle"] call ULP_fnc_achieve;
 	closeDialog 0;
 };
 

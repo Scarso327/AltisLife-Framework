@@ -5,6 +5,6 @@ class CfgProgression {
 		maxLevel = 50;
 	};
 
-
+	#include "CfgAchievements.hpp"
 	#include "CfgProfessions.hpp"
 };

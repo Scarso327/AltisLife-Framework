@@ -43,6 +43,8 @@ if (ULP_FirstSpawn) then {
 			{ [] call ULP_UI_fnc_screenCredits; }
 		] call ULP_fnc_waitExecute;
 	};
+
+	["FirstSpawn"] call ULP_fnc_achieve;
 };
 
 player allowDammage true;

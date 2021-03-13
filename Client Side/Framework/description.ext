@@ -9,6 +9,7 @@ enableDebugConsole = 2;
 onPauseScript[]={ "ULP_fnc_onPause" };
 
 #include "CfgDebriefing.hpp"
+#include "CfgDisabledCommands.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgNotifications.hpp"
 #include "CfgRemoteExec.hpp"

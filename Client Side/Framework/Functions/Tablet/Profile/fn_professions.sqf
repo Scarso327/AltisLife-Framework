@@ -9,13 +9,13 @@ scopeName "fn_professions";
 _display = _this;
 if (isNull _display) exitWith {};
 
-private _ctrls = _display getVariable ["profession_ctrls", []];
+private _ctrls = _display getVariable ["display_ctrls", []];
 
 if !(_ctrls isEqualTo []) then {
 	{ ctrlDelete _x; } forEach _ctrls;
 };
 
-private _faction = [player] call ULP_fnc_getFaction;
+_ctrls = [];
 
 private _ctrlGroup = _display displayCtrl 23030;
 private _professionCtrl = controlNull;
@@ -72,4 +72,7 @@ private _yInc = false;
 	_progressCtrl progressSetPosition (_points / _requirement);
 
 	_lastCtrlPos = ctrlPosition _professionCtrl;
+	_ctrls pushBack _professionCtrl;
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgProgression" >> "CfgProfessions"));
+
+_display setVariable ["display_ctrls", _ctrls];

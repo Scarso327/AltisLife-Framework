@@ -41,7 +41,7 @@ class RscHUD {
         };
 
         class XPBackground: Life_RscText {
-            idc = -1;
+            idc = 511;
             colorBackground[] = {0.1,0.1,0.1,0.85};
             SAFEZONE_X(0.5 - (XP_WIDTH / 2));
 			SAFEZONE_Y(((1 - BUTTON_H) - MARGIN_Y));

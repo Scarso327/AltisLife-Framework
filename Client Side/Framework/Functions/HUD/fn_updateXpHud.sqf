@@ -8,10 +8,23 @@ scopeName "fn_updateXpHud";
 private _ui = ["RscHUD"] call ULP_UI_fnc_getLayer;
 if (isNull _ui) exitWith {}; 
 
+_this params [
+	["_show", [["EnableXPBar", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool, [false]]
+];
+
 private _xpBar = _ui displayCtrl 507;
 private _xpTxt = _ui displayCtrl 508;
 private _curLvlTxt = _ui displayCtrl 509;
 private _nextLvlTxt = _ui displayCtrl 510;
+private _bg = _ui displayCtrl 511;
+
+if !((CtrlShown _bg) isEqualTo _show) then {
+	{
+		_x ctrlShow _show;
+	} forEach [
+		_xpBar, _xpTxt, _curLvlTxt, _nextLvlTxt, _bg
+	];
+};
 
 _curLvlTxt ctrlSetStructuredText parseText format["<t align='center'>%1</t>", [ULP_Level] call ULP_fnc_numberText];
 

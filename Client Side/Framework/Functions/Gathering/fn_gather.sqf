@@ -50,17 +50,17 @@ if (_total isEqualTo 0) exitWith {
 
 private _title = ["Gathering", getText (_zone >> "actionTitle")] select (isText (_zone >> "actionTitle"));
 private _profession = getArray (_zone >> "profession");
+private _leveling = getArray (_zone >> "leveling");
 
-[format["%1 %2(s)", _title, getText(_item >> "displayName")], getNumber(_zone >> "gatherTime") * _total, [_item, _total, _profession], { true }, {
-	_this params [ "_item", "_total", "_profession" ];
+[format["%1 %2(s)", _title, getText(_item >> "displayName")], getNumber(_zone >> "gatherTime") * _total, [_item, _total, _profession, _leveling], { true }, {
+	_this params [ "_item", "_total", "_profession", "_leveling" ];
 
 	[configName _item, _total] call ULP_fnc_handleItem;
 
 	hint format["You've gathered %1 %2(s)", _total, getText(_item >> "displayName")];
 
-	if !(_profession isEqualTo []) then {
-		_profession call ULP_fnc_increaseProfession;
-	};
+	if !(_profession isEqualTo []) then { _profession call ULP_fnc_increaseProfession; };
+	if !(_leveling isEqualTo []) then { _leveling call ULP_fnc_addXP; };
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
 
 true

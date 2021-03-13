@@ -6,6 +6,7 @@ class CfgGathering {
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Gathering", 1, 100 };
+		leveling[] = { 1, "Gathering", 100 }; // Amount, Reason, Chance of increasing xp...
 	};
 
 	class BaseMine : BaseGather {

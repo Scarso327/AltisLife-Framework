@@ -5,6 +5,7 @@ class CfgProcessing {
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Processing", 1, 100 };
+		leveling[] = { 1, "Processing", 100 }; // Amount, Chance of increasing xp...
 	};
 
 	// Skinning

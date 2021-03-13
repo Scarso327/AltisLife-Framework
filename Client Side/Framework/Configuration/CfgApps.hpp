@@ -41,9 +41,9 @@ class CfgApps {
 	class Achievements : Profile {
 		pageTitle = "Profile - Achievements";
 		pageIdcs[] = {
-			23024, 23025, 23026, 23027, 23028
+			23024, 23025, 23026, 23027, 23028, 23029, 23030
 		};
-		onload = "";
+		onload = "_this call ULP_fnc_achievements";
 	};
 
 	class Loyalty : Profile {

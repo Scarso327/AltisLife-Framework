@@ -75,7 +75,7 @@ class ProfilePages : Life_RscToolbox {
 	};
 };
 
-class ProfessionsViewBackground : Life_RscText {
+class FullViewBackground : Life_RscText {
     idc = 23029;
 	colorBackground[] = INNER_BODY_COLOUR;
     SAFEZONE_X(UI_X);
@@ -84,7 +84,7 @@ class ProfessionsViewBackground : Life_RscText {
 	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 8));
 };
 
-class ProfessionsView : Life_RscControlsGroup {
+class FullView : Life_RscControlsGroup {
     idc = 23030;
 	colorBackground[] = INNER_BODY_COLOUR;
     SAFEZONE_X(UI_X);

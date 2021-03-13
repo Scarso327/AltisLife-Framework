@@ -230,6 +230,7 @@ class CfgFunctions {
 			file = "Functions\Tablet\Profile";
 			class profile {};
 			class professions {};
+			class achievements {};
 		};
 
 		class Options {

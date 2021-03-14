@@ -183,7 +183,7 @@ class CfgClothesStore {
 				};
 			};
 			class H_Watchcap_blk : FactionBase {};
-			class H_Beret_CSAT_01_F : FactionBase { condition = "[""Medic_Main"", 5] call ULP_fnc_hasAccess"; };
+			class H_Beret_CSAT_01_F : FactionBase { condition = "[""Medic_Main"", 7] call ULP_fnc_hasAccess"; };
 			class H_PilotHelmetHeli_B : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 

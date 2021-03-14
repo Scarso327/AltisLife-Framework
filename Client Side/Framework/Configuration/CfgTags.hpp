@@ -22,12 +22,12 @@ class CfgTags {
 			class Medic {
 				class Main {
 					class PoliceSTU {};
-					class PoliceFA {};
 					class PolicePAR {};
+					class PoliceSPAR {};
 					class PoliceDR {};
 					class MedicGP {};
-					class MedicSUR {};
 					class MedicCST {};
+					class MedicDOO {};
 					class MedicCMO {};
 				};
 			};
@@ -104,14 +104,14 @@ class CfgTags {
 			subtitle = "Chief Medical Officer";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 8] call ULP_fnc_hasAccess }";
 		};
-		class MedicCST {
+		class MedicDOO {
 			icon = "Data\Tags\Ranks\Medic\CST.paa";
-			subtitle = "Consultant";
+			subtitle = "Director of Operations";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 7] call ULP_fnc_hasAccess }";
 		};
-		class MedicSUR {
+		class MedicCST {
 			icon = "Data\Tags\Ranks\Medic\SUR.paa";
-			subtitle = "Surgeon";
+			subtitle = "Consultant";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 6] call ULP_fnc_hasAccess }";
 		};
 		class MedicGP {
@@ -124,14 +124,14 @@ class CfgTags {
 			subtitle = "Doctor";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
 		};
-		class MedicPAR  {
+		class MedicSPAR  {
 			icon = "Data\Tags\Ranks\Medic\PAR.paa";
-			subtitle = "Paramedic";
+			subtitle = "Senior Paramedic";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
 		};
-		class MedicFA  {
+		class MedicPAR  {
 			icon = "Data\Tags\Ranks\Medic\FA.paa";
-			subtitle = "First Aider";
+			subtitle = "Paramedic";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class MedicSTU  {

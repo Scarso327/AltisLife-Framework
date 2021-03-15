@@ -6,10 +6,17 @@
 scopeName "fn_addXP";
 
 _this params [
-	["_xp", 1, [0]],
+	["_xp", 1, [0, 0]],
 	["_reason", "doing something...", [""]],
 	["_chance", 100, [0]]
 ];
+
+if (_xp isEqualType []) then {
+	private _min = _xp # 0;
+	private _max = _xp # 1;
+
+	_xp = round (random [_min, ((_min + _max) / 2), _max]);
+};
 
 if ((random 100) > _chance || { _xp < 1 }) exitWith { false };
 if (ULP_SRV_Setting_DonationGoal) then { _xp = _xp * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "xpIncrease"); };

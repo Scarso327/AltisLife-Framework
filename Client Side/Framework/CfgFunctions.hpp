@@ -61,6 +61,7 @@ class CfgFunctions {
 			class setLoadout {};
 			class factionPresistant {};
 			class allMembers {};
+			class onlineFaction {};
 		};
 
 		class Functions {
@@ -348,6 +349,11 @@ class CfgFunctions {
 			file = "Functions\Money";
 			class addMoney {};
 			class removeMoney {};
+		};
+
+		class Robberies {
+			file = "Functions\Robberies";
+			class robObject {};
 		};
 	};
 

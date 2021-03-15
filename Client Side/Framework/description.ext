@@ -20,6 +20,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "UI\RscTitles.hpp"
 
 #include "Configuration\CfgSettings.hpp"
+#include "Functions\Robberies\CfgRobberies.hpp"
 
 class CfgServer {
     DatabaseName = "altislife";

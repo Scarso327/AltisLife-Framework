@@ -307,18 +307,41 @@ class Life_RscLine: Life_RscText {
 };
 
 class Life_RscTree {
-    style = 2;
+    type = CT_TREE;
+    style = ST_SINGLE;
     font = "RobotoCondensed";
-    sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-    expandedTexture = "A3\ui_f\data\gui\Rsccommon\Rsctree\expandedTexture_ca.paa";
-    hiddenTexture = "A3\ui_f\data\gui\Rsccommon\Rsctree\hiddenTexture_ca.paa";
-    rowHeight = 0.0439091;
-    color[] = {1, 1, 1, 1};
-    colorSelect[] = {0.7, 0.7, 0.7, 1};
-    colorBackground[] = {0, 0, 0, 0};
-    colorSelectBackground[] = {0, 0, 0, 0.5};
-    colorBorder[] = {0, 0, 0, 0};
+    sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+    hiddenTexture = "\a3\3DEN\Data\Controls\ctrlTree\hiddenTexture_ca.paa";
+    expandedTexture = "\a3\3DEN\Data\Controls\ctrlTree\expandedTexture_ca.paa";
+    expandOnDoubleclick = 1;
+	colorBackground[] = {0,0,0,0};
+	colorSelect[] = {1,1,1,0.7};
+	colorDisabled[] = {1,1,1,0.25};
+	colorText[] = {1,1,1,1};
+	colorSelectText[] = {0,0,0,1};
+	colorBorder[] = {0,0,0,0};
+	colorSearch[] =
+	{
+		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])",
+		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])",
+		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",
+		"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"
+	};
+	colorMarked[] = {0.2,0.3,0.7,1};
+	colorMarkedText[] = {0,0,0,1};
+	colorMarkedSelected[] = {0,0.5,0.5,1};
+	multiselectEnabled = 0;
+	colorPicture[] = {1,1,1,1};
+	colorPictureSelected[] = {0,0,0,1};
+	colorPictureDisabled[] = {1,1,1,0.25};
+	colorPictureRight[] = {1,1,1,1};
+	colorPictureRightSelected[] = {0,0,0,1};
+	colorPictureRightDisabled[] = {1,1,1,0.25};
+	colorArrow[] = {1,1,1,1};
+    colorLines[] = {0,0,0,0};
     borderSize = 0;
+    maxHistoryDelay = 1;
+    class ScrollBar: Life_RscScrollBar {};
 };
 
 class Life_RscTitle: Life_RscText {

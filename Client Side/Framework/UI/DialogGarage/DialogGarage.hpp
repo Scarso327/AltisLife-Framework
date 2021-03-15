@@ -103,5 +103,15 @@ class DialogGarage {
 			SAFEZONE_W(0.0584375);
 			SAFEZONE_H(BUTTON_H);
         };
+
+		class TransferButton : Life_RscButtonCenter {
+            idc = 3507;
+            text = "<t align = 'center'>Transfer</t>";
+			onButtonClick = "_this call ULP_fnc_transferGarage;";
+            SAFEZONE_X(0.64265625 - (0.0584375 * 2) - (MARGIN_X * 2));
+            SAFEZONE_Y(0.698 + BUTTON_MARGIN_Y);
+			SAFEZONE_W(0.0584375);
+			SAFEZONE_H(BUTTON_H);
+        };
 	};
 };

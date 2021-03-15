@@ -60,6 +60,7 @@ class CfgFunctions {
 			class hasAccess {};
 			class setLoadout {};
 			class factionPresistant {};
+			class allMembers {};
 		};
 
 		class Functions {
@@ -245,6 +246,7 @@ class CfgFunctions {
 			file = "Functions\Selects";
 			class selectNumber {};
 			class inputGroupInfo {};
+			class selectPlayer {};
 		};
 
 		class VirutalStores {
@@ -302,6 +304,7 @@ class CfgFunctions {
 			class onGarageSwitch {};
 			class retrieveGarage {};
 			class destroyGarage {};
+			class transferGarage {};
 		};
 
 		class Interactions {

@@ -8,3 +8,4 @@
 #include "DialogGarage\DialogGarage.hpp"
 #include "DialogInteractions\DialogInteractions.hpp"
 #include "DisplaySelect\DisplayInputGroupInfo.hpp"
+#include "DisplaySelect\DisplaySelectPlayer.hpp"

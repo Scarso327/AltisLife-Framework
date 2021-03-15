@@ -54,6 +54,9 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_destroyVehicle {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_transferVehicle {
+            allowedTargets = SERVER;
+        };
         class ULP_SRV_fnc_createGroup {
             allowedTargets = SERVER;
         };

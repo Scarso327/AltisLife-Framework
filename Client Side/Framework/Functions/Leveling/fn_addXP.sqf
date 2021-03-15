@@ -6,7 +6,7 @@
 scopeName "fn_addXP";
 
 _this params [
-	["_xp", 1, [0, 0]],
+	["_xp", 1, [0, []]],
 	["_reason", "doing something...", [""]],
 	["_chance", 100, [0]]
 ];

@@ -58,7 +58,7 @@ _marker setMarkerColor "ColorRed";
 
 	hint format["You have robbed this store for £%1", [_money] call ULP_fnc_numberText];
 
-	_object setVariable["_timeout", time + (getNumber (_cfg >> "timeout")), true];
+	_object setVariable["timeout", time + (getNumber (_cfg >> "timeout")), true];
 	_object setVariable["robber", nil, true];
 	deleteMarker _marker;
 }, {

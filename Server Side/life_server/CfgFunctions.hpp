@@ -35,6 +35,19 @@ class CfgFunctions {
             class createGroup {};
             class queryGroupInfo {};
         };
+
+        class Events {
+            file = "\life_server\Functions\Events";
+            class initEvents {};
+            class onPlayerRespawn {};
+            class onPlayerDisconnect {};
+        };
+
+        class Player {
+            file = "\life_server\Functions\Player";
+            class registerSession {};
+            class unregisterSession {};
+        };
     };
 
     class MySQL_Database {
@@ -54,8 +67,6 @@ class CfgFunctions {
         class Systems {
             file = "\life_server\Functions\Systems";
             class cleanup {};
-            class clientDisconnect {};
-            class entityRespawned {};
         };
 
         class PlayTime {

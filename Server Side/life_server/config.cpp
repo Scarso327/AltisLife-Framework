@@ -15,6 +15,13 @@ class CfgPatches {
                 constant = true;
                 global = true;
             };
+            class ThreatLevel {
+                type = "NUMBER";
+                bounds[] = { 0, 4 }; // Number min / max...
+                default = 0;
+                constant = true;
+                global = true;
+            };
         };
     };
 };

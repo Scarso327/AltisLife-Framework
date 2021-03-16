@@ -202,6 +202,7 @@ class CfgSettings {
     doesntThreaten[] = { "", "Binocular", "Rangefinder" };
     taserWeapons[] = { "hgun_P07_F", "hgun_P07_blk_F" };
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
+    threatLevels[] = { "Low", "Moderate", "Substantial", "Severe", "Critical" };
 };
 
 #include "CfgLicenses.hpp"

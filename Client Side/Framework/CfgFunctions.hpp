@@ -70,6 +70,7 @@ class CfgFunctions {
 			class numberText {};
 			class bool {};
 			class switchMove {};
+			class threatLevel {};
 		};
 
 		class Clothing {

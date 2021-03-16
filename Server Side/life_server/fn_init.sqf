@@ -73,6 +73,15 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
         if (isClass (_cfg >> _name)) then {
             _value = switch (getText (_cfg >> _name >> "type")) do {
                 case "BOOL": { [parseNumber _value] call ULP_fnc_bool };
+                CASE "NUMBER": {
+                    _value = parseNumber _value;
+                    if (isArray (_cfg >> _name >> "bounds")) exitWith {
+                        private _bounds = getArray (_cfg >> _name >> "bounds");
+                        ((_value min (_bounds # 1)) max (_bounds # 0))
+                    };
+
+                    _value
+                };
                 default { _value };
             };
 

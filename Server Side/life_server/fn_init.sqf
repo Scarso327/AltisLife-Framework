@@ -93,6 +93,7 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
     } forEach _settings;
 };
 
+[] call ULP_SRV_fnc_initRadios;
 [] call ULP_SRV_fnc_initEvents;
 
 /* Map-based server side initialization. */

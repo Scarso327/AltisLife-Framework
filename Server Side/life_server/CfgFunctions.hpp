@@ -36,6 +36,13 @@ class CfgFunctions {
             class queryGroupInfo {};
         };
 
+        class Channels {
+            file = "\life_server\Functions\Channels";
+            class initRadios {};
+            class addRadio {};
+            class removeRadio {};
+        };
+
         class Events {
             file = "\life_server\Functions\Events";
             class initEvents {};

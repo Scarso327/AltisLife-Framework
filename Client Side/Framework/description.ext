@@ -1,4 +1,4 @@
-disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}}; 
+disableChannels[] = {{0,true,true},{1,true,true},{2,true,true},{6,false,true}}; 
 overviewText = "An RPG game mode developed by Scarso and Lewis.";
 joinUnassigned=1;
 saving=0;
@@ -18,6 +18,9 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 
 #include "UI\Includes.hpp"
 #include "UI\RscTitles.hpp"
+
+#define true 1
+#define false 0
 
 #include "Configuration\CfgSettings.hpp"
 #include "Functions\Clothing\CfgClothing.hpp"

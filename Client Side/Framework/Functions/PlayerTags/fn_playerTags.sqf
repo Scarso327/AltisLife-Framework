@@ -24,6 +24,10 @@ if (_enable) then {
 			private _alpha = linearConversion [ 15 / 1.25, 15, _distance, 1, 0, true];
 			_mainColour set [3, _alpha];
 			_otherColour set [3, _alpha];
+
+			if (_object getVariable ["speaking", false]) then {
+				_icon = format["data\ui\sound%1.paa", (round(time * 7)) mod 2];
+			};
 			
 			if !(_icon isEqualTo "") then { drawIcon3D[getMissionPath _icon, [1, 1, 1, _alpha], _pos, 1.3, 1.3, 0, ""]; };
 			if !(_name isEqualTo "") then { drawIcon3D["", _mainColour, _pos, 0, 1.3, 0, _name, 0, 0.035, "RobotoCondensed", "center"]; };

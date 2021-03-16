@@ -29,3 +29,14 @@ for "_i" from 0 to 1 step 0 do {
 } count + (ULP_waitUntilExecute select {
 	(_x select 1) call (_x select 0)
 });
+
+if !(hasInterface) exitWith {};
+
+private _isSpeaking = !isNull findDisplay 55;
+if !(player getVariable["speaking", false] isEqualTo _isSpeaking) then {
+    player setVariable["speaking", _isSpeaking, true];
+
+    if (_isSpeaking && { inputAction "PushToTalk" > 0 } && { !isNull (objectParent player) } && { currentChannel isEqualTo 5 }) then {
+		setCurrentChannel 4;
+    };
+};

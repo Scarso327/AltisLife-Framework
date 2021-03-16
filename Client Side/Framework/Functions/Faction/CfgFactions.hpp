@@ -6,6 +6,7 @@ class CfgFactions {
 		displayName = "Altis Police Constabulary";
 		colour[] = { 0.4, 0, 0.5, 1};
 		pay = 15000;
+		jointChannel = true;
 
 		class Whitelisting {
 			class Main {
@@ -51,6 +52,8 @@ class CfgFactions {
 		displayName = "National Health Service";
 		colour[] = { 0.4, 0, 0.5, 1};
 		pay = 16000;
+		jointChannel = true;
+
 		class Whitelisting {
 			class Main {
 				queryIndex = 18;
@@ -88,6 +91,8 @@ class CfgFactions {
 		displayName = "Highways Traffic Agency";
 		colour[] = { 0.4, 0, 0.5, 1};
 		pay = 14500;
+		jointChannel = true;
+		
 		class Whitelisting {
 			class Main {
 				queryIndex = 18;

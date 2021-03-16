@@ -93,6 +93,9 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
     } forEach _settings;
 };
 
+[] call ULP_SRV_fnc_initRadios;
+[] call ULP_SRV_fnc_initEvents;
+
 /* Map-based server side initialization. */
 
 {
@@ -102,9 +105,6 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
 });
 
 [8, true, 12] execFSM "\life_server\FSM\timeModule.fsm";
-
-/* Event handler for disconnecting players */
-addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect; false;}];
 
 /* Miscellaneous mission-required stuff */
 
@@ -121,7 +121,5 @@ publicVariable "TON_fnc_playtime_values_request";
 /* Tell clients that the server is ready and is accepting queries */
 life_server_isReady = true;
 publicVariable "life_server_isReady";
-
-addMissionEventHandler ["EntityRespawned", {_this call TON_fnc_entityRespawned}];
 
 [format["Initialisation Lasted %1s", diag_tickTime - _timeStamp]] call ULP_fnc_logIt;

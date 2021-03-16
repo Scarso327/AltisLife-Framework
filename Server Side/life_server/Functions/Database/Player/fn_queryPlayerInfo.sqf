@@ -93,6 +93,11 @@ for "_i" from 0 to 1 step 0 do {
 		_newResult pushBack ULP_SRV_Date; // Include date from serer here...
 
 		_playerData = _newResult;
+
+		// If session registration fails then return nothing...
+		if !([_unit, _uid, _factionCfg] call ULP_SRV_fnc_registerSession) then {
+			_playerData = [];
+		};
 	};
 	
 	_attempts = _attempts + 1;

@@ -26,7 +26,7 @@ private _button = _display displayCtrl 3206;
 
 _slider sliderSetRange _boundaries;
 _slider sliderSetPosition 1;
-_slider sliderSetSpeed [1, 1];
+_slider sliderSetSpeed [1, 1, 1];
 
 _minMaxText ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>%2</t>",
 	_boundaries select 0,

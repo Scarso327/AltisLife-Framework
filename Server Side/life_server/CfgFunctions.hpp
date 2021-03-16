@@ -54,6 +54,8 @@ class CfgFunctions {
             file = "\life_server\Functions\Player";
             class registerSession {};
             class unregisterSession {};
+            class getSessionField {};
+            class validateField {};
         };
     };
 

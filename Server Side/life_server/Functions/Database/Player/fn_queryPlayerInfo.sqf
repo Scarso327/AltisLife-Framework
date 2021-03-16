@@ -95,7 +95,7 @@ for "_i" from 0 to 1 step 0 do {
 		_playerData = _newResult;
 
 		// If session registration fails then return nothing...
-		if !([_unit, _uid, _factionCfg] call ULP_SRV_fnc_registerSession) then {
+		if !([_unit, _uid, _factionCfg, _playerData] call ULP_SRV_fnc_registerSession) then {
 			_playerData = [];
 		};
 	};

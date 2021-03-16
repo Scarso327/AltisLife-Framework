@@ -22,12 +22,12 @@ if (_isBank) then {
 	if (BANK < _amount) exitWith { false breakOut "fn_removeMoney"; };
 
 	BANK = BANK - _amount;
-	[player, 2, BANK] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	[player, 2, [BANK, _amount, false]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 } else {
 	if (CASH < _amount) exitWith { false breakOut "fn_removeMoney"; };
 
 	CASH = CASH - _amount;
-	[player, 1, CASH] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	[player, 1, [CASH, _amount, false]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 };
 
 ["MoneyChanged", [CASH, BANK]] call ULP_fnc_invokeEvent;

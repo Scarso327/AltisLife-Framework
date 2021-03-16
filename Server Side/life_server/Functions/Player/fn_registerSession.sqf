@@ -28,7 +28,7 @@ _session set ["Prestige", _prestige];
 _session set ["Level", _level];
 _session set ["XP", _xp];
 
-_unit setVariable ["session", _session, true];
+_unit setVariable ["session", _session];
 
 [format ["Registered %1", _uid]] call ULP_fnc_logIt;
 true

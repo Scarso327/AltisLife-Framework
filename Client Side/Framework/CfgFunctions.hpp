@@ -82,6 +82,7 @@ class CfgFunctions {
 			file = "Functions\Items";
 			class itemCfg {};
 			class getSellPrices {};
+			class addSustenance {};
 		};
 
 		class Input {
@@ -212,6 +213,7 @@ class CfgFunctions {
 			class inventory {};
 			class invLbChange {};
 			class removeItem {};
+			class useItem {};
 		};
 
 		class TabletGroup {

@@ -59,7 +59,7 @@ class ItemInformation : Life_RscStructuredText {
 class Use : ULP_RscButtonClean {
 	idc = 23018;
 	text = "<t align = 'center'>Use</t>";
-	onButtonClick = "";
+	onButtonClick = "_this call ULP_fnc_useItem;";
 	SAFEZONE_X(UI_X);
 	SAFEZONE_Y((UI_Y + UI_HEIGHT) - (MARGIN_Y * 2));
 	SAFEZONE_W((UI_WIDTH / 2) / 3);

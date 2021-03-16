@@ -114,6 +114,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 50;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 

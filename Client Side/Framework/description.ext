@@ -20,7 +20,26 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "UI\RscTitles.hpp"
 
 #include "Configuration\CfgSettings.hpp"
+#include "Functions\Clothing\CfgClothing.hpp"
+#include "Functions\Faction\CfgFactions.hpp"
+#include "Functions\Gathering\CfgGathering.hpp"
+#include "Functions\Group\CfgGroups.hpp"
+#include "Functions\HUD\CfgStatusIcons.hpp"
+#include "Functions\Interactions\CfgInteractions.hpp"
+#include "Functions\Items\CfgItems.hpp"
+#include "Functions\Items\CfgVirtualItems.hpp"
+#include "Functions\Leveling\CfgProgression.hpp"
+#include "Functions\Licenses\CfgLicenses.hpp"
+#include "Functions\Map\CfgMaps.hpp"
+#include "Functions\Options\CfgOptions.hpp"
+#include "Functions\PlayerTags\CfgTags.hpp"
+#include "Functions\Processing\CfgProcessing.hpp"
 #include "Functions\Robberies\CfgRobberies.hpp"
+#include "Functions\Spawn\CfgSpawns.hpp"
+#include "Functions\Stores\CfgStores.hpp"
+#include "Functions\Tablet\CfgTablet.hpp"
+#include "Functions\Vehicle\CfgVehicles.hpp"
+#include "Functions\VehicleStore\CfgVehicleStores.hpp"
 
 class CfgServer {
     DatabaseName = "altislife";

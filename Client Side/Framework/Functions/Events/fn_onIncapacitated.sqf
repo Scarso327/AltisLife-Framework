@@ -70,8 +70,8 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	ULP_CanRespawn = false;
 
 	private _startTime = time;
-	private _respawnTime = getNumber(missionConfigFile >> "CfgMedical" >> "WaitForBleedOutTime");
-	private _endTime = time + _respawnTime + getNumber(missionConfigFile >> "CfgMedical" >> "BleedOutTime");
+	private _respawnTime = getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "WaitForBleedOutTime");
+	private _endTime = time + _respawnTime + getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BleedOutTime");
 
 	if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then { terminate (uiNamespace getVariable "_fnc_bleedout") };
 

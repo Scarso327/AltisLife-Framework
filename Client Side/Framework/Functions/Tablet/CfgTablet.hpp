@@ -1,4 +1,4 @@
-class CfgApps {
+class CfgTablet {
 	globalIdcs[] = {
 		23001, 23012, 23013
 	};

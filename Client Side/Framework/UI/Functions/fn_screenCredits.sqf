@@ -10,12 +10,12 @@ _this params [
 ];
 
 if (_credits isEqualTo []) then {
-	_credits = (("isClass _x" configClasses (missionConfigFile >> "CfgCredits")) apply {
+	_credits = (("isClass _x" configClasses (missionConfigFile >> "CfgSettings" >> "CfgCredits")) apply {
 		[(configName _x), getArray(_x >> "items")]
 	});
 };
 
-private _screenTime = getNumber(missionConfigFile >> "CfgCredits" >> "screenTime");
+private _screenTime = getNumber(missionConfigFile >> "CfgSettings" >> "CfgCredits" >> "screenTime");
 
 (_credits select 0) params ["_title", "_items"];
 

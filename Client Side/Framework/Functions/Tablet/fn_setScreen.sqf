@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _display = findDisplay 23000;
-private _screen = missionConfigFile >> "CfgApps" >> _app;
+private _screen = missionConfigFile >> "CfgTablet" >> _app;
 if !(isClass _screen || { !(isNull _display) }) exitWith {};
 
 private _unload = _display getVariable ["onUnload", ""];
@@ -18,7 +18,7 @@ if !(_unload isEqualTo "") then {
 	_display call compile _unload;
 };
 
-private _showIdcs = getArray (missionConfigFile >> "CfgApps" >> "globalIdcs");
+private _showIdcs = getArray (missionConfigFile >> "CfgTablet" >> "globalIdcs");
 _showIdcs append getArray (_screen >> "pageIdcs");
 
 {

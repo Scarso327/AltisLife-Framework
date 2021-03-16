@@ -1,7 +1,7 @@
 class CfgPrison {
 	class Altis {
 		marker = "hmp_altis";
-		release[] = { { 0, 0, 0 }, 0 };
+		release[] = { { 9735.43, 12548.6, 0 }, 306 };
 		maxDuraction = 50 * 60;
 
 		class PrisonLoadout {

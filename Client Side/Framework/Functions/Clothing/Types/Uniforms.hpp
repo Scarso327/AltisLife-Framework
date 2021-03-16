@@ -77,11 +77,11 @@ class U_C_Man_casual_1_F {
 		class U_C_Man_casual_3_F : U_C_Man_casual_1_F { displayName = "Green"; };
 		class Brown : U_C_Man_casual_1_F { 
 			displayName = "Brown"; 
-			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
+			textures[] = { "A3\Characters_F\Civil\Data\ig_poloshirt_2_co.paa" };
 		};
 		class Gray : U_C_Man_casual_1_F { 
 			displayName = "Gray"; 
-			textures[] = { "\A3\characters_f\common\data\coveralls_urbancamo_co.paa" };
+			textures[] = { "A3\Characters_F\Civil\Data\ig_poloshirt_1_co.paa" };
 		};
 	};
 };

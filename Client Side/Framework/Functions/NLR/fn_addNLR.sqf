@@ -7,10 +7,10 @@ scopeName "fn_addNLR";
 
 _this params [
 	["_pos", [], [[]]],
-	["_endTime", time + getNumber(missionConfigFile >> "CfgSettings" >> "nlrTimer"), [0]]
+	["_endTime", time + getNumber(missionConfigFile >> "CfgSettings" >> "NLR" >> "nlrTimer"), [0]]
 ];
 
-private _nlrDistance = getNumber(missionConfigFile >> "CfgSettings" >> "nlrDistance");
+private _nlrDistance = getNumber(missionConfigFile >> "CfgSettings" >> "NLR" >> "nlrDistance");
 private _nlrName = format["nlr_%1_%2", _pos, _endTime];
 
 private _nlrArea = createMarkerLocal [format["%1_area", _nlrName], _pos];

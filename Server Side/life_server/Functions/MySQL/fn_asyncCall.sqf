@@ -1,14 +1,12 @@
 /*
-    File: fn_asyncCall.sqf
-    Author: Bryan "Tonic" Boardwine
-
-    Description:
-    Commits an asynchronous call to ExtDB
-
-    Parameters:
-        0: STRING (Query to be ran).
-        1: INTEGER (1 = ASYNC + not return for update/insert, 2 = ASYNC + return for query's).
-        3: BOOL (True to return a single array, false to return multiple entries mainly for garage).
+** Author: Bryan "Tonic" Boardwine
+** Editor: Jack "Scarso" Farhall (Optmisation + Cleanup)
+** Description: Commits an asynchronous call to ExtDB
+**
+** Parameters:
+**  0: STRING (Query to be ran).
+**  1: INTEGER (1 = ASYNC + not return for update/insert, 2 = ASYNC + return for query's).
+**  2: BOOL (True to return a single array, false to return multiple entries mainly for garage).
 */
 #include "\life_server\script_macros.hpp"
 

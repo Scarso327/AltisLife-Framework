@@ -51,4 +51,4 @@ _cfg params [ "", "", "", "_name" ];
 
 	[player, _player, _vehId] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
 	hint format ["You transfered your %1 to %2", _name, name _player];
-}, true, false] call ULP_fnc_selectPlayer;
+}, false, false] call ULP_fnc_selectPlayer;

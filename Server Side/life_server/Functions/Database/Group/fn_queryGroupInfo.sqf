@@ -7,8 +7,11 @@ scopeName "fn_queryPlayerInfo";
 
 _this params [
 	["_unit", objNull, [objNull]],
-	["_groupid", 0, [0]]
+	["_groupid", 0, [0]],
+	["_faction", configNull, [configNull]]
 ];
+
+if !(isClass (_faction >> "Groups")) exitWith { false };
 
 private _steamid = getPlayerUID _unit;
 if (isNull _unit || { _steamid isEqualTo "" } || { _groupid <= 0 }) exitWith { false };

@@ -11,7 +11,7 @@ _this params [
 	["_chance", 5, [0]]
 ];
 
-if (ULP_SRV_Setting_DonationGoal) then { _chance = (_chance * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "profChanceIncrease")) min 100; };
+if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _chance = (_chance * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "profChanceIncrease")) min 100; };
 
 if ((random 100) > _chance) exitWith { false };
 

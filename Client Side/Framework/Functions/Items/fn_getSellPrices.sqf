@@ -16,7 +16,7 @@ if (_buyPrice isEqualTo -1 && { _sellPrice isEqualTo -1 }) exitWith { [] };
 private _gangTax = 0;
 
 if (_sellPrice > 0) then {
-	if (ULP_SRV_Setting_DonationGoal) then { _sellPrice = _sellPrice * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "sellIncrease"); };
+	if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _sellPrice = _sellPrice * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "sellIncrease"); };
 
 	// TODO : Group Tax...
 

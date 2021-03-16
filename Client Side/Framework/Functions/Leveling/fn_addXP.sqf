@@ -19,7 +19,7 @@ if (_xp isEqualType []) then {
 };
 
 if ((random 100) > _chance || { _xp < 1 }) exitWith { false };
-if (ULP_SRV_Setting_DonationGoal) then { _xp = _xp * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "xpIncrease"); };
+if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _xp = _xp * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "xpIncrease"); };
 
 private _required = [ULP_Level] call ULP_fnc_getRequiredXP;
 private _max = [] call ULP_fnc_getMaxLevel;

@@ -76,7 +76,10 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
                 default { _value };
             };
 
-            missionNamespace setVariable [format["ULP_SRV_Setting_%1", _name], _value, [getNumber(_cfg >> _name >> "global")] call ULP_fnc_bool];
+            private _varName = format["ULP_SRV_Setting_%1", _name];
+
+            missionNamespace setVariable [_varName, ([_value, [_varName, true, _value] call ULP_fnc_constant] select ([getNumber(_cfg >> _name >> "constant")] call ULP_fnc_bool))
+            , [getNumber(_cfg >> _name >> "global")] call ULP_fnc_bool];
         };
     } forEach _settings;
 };

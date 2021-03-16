@@ -12,6 +12,7 @@ class CfgPatches {
             class DonationGoal {
                 type = "BOOL";
                 default = false;
+                constant = true;
                 global = true;
             };
         };

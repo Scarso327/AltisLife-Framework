@@ -13,8 +13,6 @@ _this params [
 	["_increase", true, [false]]
 ];
 
-diag_log _this;
-
 private _result = (([
 	_sessiontotal - _amount,
 	_sessiontotal + _amount

@@ -1,10 +1,23 @@
 class CfgVirtualItems {
 	// Food & Drinks
+	class FreshApple {
+		displayName = "Fresh Apple";
+		icon = "Data\Icons\apple.paa";
+		buyPrice = -1;
+		sellPrice = 51;
+		weight = 1;
+		class Settings {
+			isIllegal = false;
+			isSavable = true;
+		};
+		conditions = "true";
+	};
+	
 	class Apple {
 		displayName = "Apple";
 		icon = "Data\Icons\apple.paa";
-		buyPrice = 100;
-		sellPrice = 70;
+		buyPrice = 0;
+		sellPrice = 51;
 		weight = 1;
 		class Settings {
 			isIllegal = false;
@@ -17,7 +30,7 @@ class CfgVirtualItems {
 		displayName = "Fresh Peach";
 		icon = "Data\Icons\peach.paa";
 		buyPrice = -1;
-		sellPrice = 0;
+		sellPrice = 51;
 		weight = 1;
 		class Settings {
 			isIllegal = false;
@@ -30,7 +43,7 @@ class CfgVirtualItems {
 		displayName = "Peach";
 		icon = "Data\Icons\peach.paa";
 		buyPrice = 0;
-		sellPrice = 0;
+		sellPrice = 51;
 		weight = 1;
 		class Settings {
 			isIllegal = false;
@@ -264,9 +277,9 @@ class CfgVirtualItems {
 	class Tobacco {
 		displayName = "Tobacco";
 		icon = "Data\Icons\tobacco.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 3;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 4;
 		class Settings {
 			isIllegal = false;
 			isSavable = false;

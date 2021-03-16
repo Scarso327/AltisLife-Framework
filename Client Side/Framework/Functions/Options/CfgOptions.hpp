@@ -73,5 +73,12 @@ class CfgOptions {
 			type = "DROPDOWN";
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
+
+		class SideChat {
+			name = "Show Side Chat";
+			tooltip = "When enabled, messages in side chat will be displayed.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
+		};
 	};
 };

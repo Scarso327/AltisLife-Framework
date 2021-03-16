@@ -22,6 +22,10 @@ player allowDammage false;
 [] call ULP_fnc_initEventHandlers;
 [] call ULP_fnc_initSurvival;
 
+0 enableChannel [false, false];
+1 enableChannel [[["SideChat", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool, false];
+2 enableChannel [false, false];
+
 ["Waiting For Server"] call ULP_fnc_logIt;
 
 waitUntil { !isNil "life_server_isReady" };
@@ -70,7 +74,7 @@ CONSTVAR(ULP_Paycheck);
 
 ["Setting Player Tags"] call ULP_fnc_logIt;
 [] call ULP_fnc_setTags;
-[true] call ULP_fnc_playerTags;
+[[["EnablePlayerTags", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_playerTags;
 
 ["Creating World"] call ULP_fnc_logIt;
 

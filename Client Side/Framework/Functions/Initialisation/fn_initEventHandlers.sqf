@@ -17,6 +17,7 @@ player addEventHandler ["GetOutMan", { _this call ULP_fnc_onGetOut }];
 
 	switch (format["%1_%2", _category, _option]) do {
 		case "General_NightLight": { if (hasInterface && { !(isNil "ULP_NightLight") }) then { ULP_NightLight setLightBrightness _newSetting; }; };
+		case "HUD_SideChat": { 1 enableChannel ([_newSetting] call ULP_fnc_bool); };
 		case "HUD_EnableHUD": {
 			if (_newSetting isEqualTo 1) then {
 				[] call ULP_UI_fnc_openHUD;

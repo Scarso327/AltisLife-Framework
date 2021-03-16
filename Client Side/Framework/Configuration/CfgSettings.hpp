@@ -1,6 +1,3 @@
-#define true 1
-#define false 0
-
 class CfgSettings {
     framework_version = "5.0.0";
     local_version = "1.0.0";

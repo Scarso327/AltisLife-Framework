@@ -6,7 +6,7 @@
 scopeName "fn_threatLevel";
 
 _this params [
-	["_friendly", true, [false]]
+	["_friendly", false, [false]]
 ];
 
 if (_friendly) exitWith {

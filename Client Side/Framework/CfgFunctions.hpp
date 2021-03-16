@@ -193,6 +193,7 @@ class CfgFunctions {
 			class addItems {};
 			class stripGear {};
 			class getInventory {};
+			class setCfgLoadout {};
 		};
 		
 		class Gathering {
@@ -362,6 +363,14 @@ class CfgFunctions {
 		class Variables {
 			file = "Functions\Variables";
 			class constant {};
+		};
+
+		class Prison {
+			file = "Functions\Prison";
+			class canImprison {};
+			class canImprisoned {};
+			class imprison {};
+			class release {};
 		};
 	};
 

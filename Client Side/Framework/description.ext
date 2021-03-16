@@ -36,6 +36,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Map\CfgMaps.hpp"
 #include "Functions\Options\CfgOptions.hpp"
 #include "Functions\PlayerTags\CfgTags.hpp"
+#include "Functions\Prison\CfgPrison.hpp"
 #include "Functions\Processing\CfgProcessing.hpp"
 #include "Functions\Robberies\CfgRobberies.hpp"
 #include "Functions\Spawn\CfgSpawns.hpp"

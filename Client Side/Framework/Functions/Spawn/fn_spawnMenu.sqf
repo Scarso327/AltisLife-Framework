@@ -5,6 +5,10 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_spawnMenu";
 
+if (ULP_Imprisioned && { [player, ULP_Prison_Time, objNull, false] call ULP_fnc_imprison }) exitWith {
+	cutText [ "", "BLACK IN" ];
+};
+
 disableSerialization;
 
 if !(createDialog "DialogSpawn") exitWith {

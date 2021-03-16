@@ -7,6 +7,7 @@ class CfgFactions {
 		colour[] = { 0.4, 0, 0.5, 1};
 		pay = 15000;
 		jointChannel = true;
+		imprison = true;
 
 		class Whitelisting {
 			class Main {
@@ -129,11 +130,13 @@ class CfgFactions {
 		displayName = "Civilian";
 		colour[] = { 0.4, 0, 0.5, 1};
 		pay = 7500;
+		imprisoned = true;
+		
 		class Groups {};
 		class Housing {};
 		class DatabaseInfo {
 			queryPrefix = "civ_";
-			customQuery = ", arrested";
+			customQuery = ", arrested, prison_timer";
 			timeIndex = 2;
 		};
 

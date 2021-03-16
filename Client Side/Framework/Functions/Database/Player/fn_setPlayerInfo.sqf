@@ -15,7 +15,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_bool"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -68,6 +68,13 @@ ULP_Survival_Thirst = (_stats select 1);
 player setDamage (_stats select 2);
 
 // TODO : Handle Blacklisting...
+
+switch (configName _factionCfg) do {
+	case "Civilian": {
+		ULP_Imprisioned = _bool;
+		ULP_Prison_Time = (_playerData select 18);
+	};
+};
 
 // Set any whitelisting values our faction may have...
 if (isClass (_factionCfg >> "Whitelisting")) then {

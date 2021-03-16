@@ -355,6 +355,11 @@ class CfgFunctions {
 			file = "Functions\Robberies";
 			class robObject {};
 		};
+		
+		class Variables {
+			file = "Functions\Variables";
+			class constant {};
+		};
 	};
 
 	class ULP_Functions_UI {

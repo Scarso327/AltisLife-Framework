@@ -27,6 +27,11 @@ HATO ----------------------------------------------------
 
 CIVILIAN ------------------------------------------------
 [this, "<t color='#B92DE0'>[CIV]</t> General Market", "Civilian"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Fish Market", "Fish"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Medical Supplies", "Fish"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Redburger", "Burger"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Tea Room", "Tea"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Local Pub", "Pub"] call ULP_fnc_addMarket;
 
 [this, "<t color='#B92DE0'>[CIV]</t> General Store", "Civilian", "CfgItemsStore"] call ULP_fnc_addStore; 
 [this, "<t color='#B92DE0'>[CIV]</t> Handgun Store", "Handgun", "CfgItemsStore"] call ULP_fnc_addStore; 
@@ -38,6 +43,21 @@ CIVILIAN ------------------------------------------------
 [this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "Press", "CfgClothesStore"] call ULP_fnc_addStore;
 [this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "IDAP", "CfgClothesStore"] call ULP_fnc_addStore;
 [this, "<t color='#B92DE0'>[CIV]</t> Clothing Store", "Solicitor", "CfgClothesStore"] call ULP_fnc_addStore;
+
+# TRADING SITES
+[this, "<t color='#B92DE0'>[CIV]</t> Cigarette Trader", "Cigarette"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Cigar Trader", "Cigar"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Coal Trader", "Coal"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Coral Trader", "Coral"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Glass Trader", "Glass"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Salt Trader", "Salt"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Diamond Trader", "Diamond"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Oil Trader", "Oil"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Metal Exports", "Metal"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Uranium Trader", "Uranium"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Gold Buyer", "Gold"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Drug Dealer", "Drug"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Turtle Dealer", "Turtle"] call ULP_fnc_addMarket;
 
 # HUNTING CAMP
 [this, "<t color='#B92DE0'>[CIV]</t> Hunting Market", "Hunting"] call ULP_fnc_addMarket;

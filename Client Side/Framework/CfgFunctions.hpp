@@ -299,6 +299,7 @@ class CfgFunctions {
 			file = "Functions\Map";
 			class addMarket {};
 			class addStore {};
+			class addGarage {};
 		};
 		
 		class Garage {

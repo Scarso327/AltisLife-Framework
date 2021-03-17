@@ -9,7 +9,20 @@ class CfgSpawns {
     class HATO : BaseSpawn { factions[] = { "Hato" }; };
     class Medic : BaseSpawn { factions[] = { "Medic" }; };
     class Civilian : BaseSpawn {
-        buildings[] = {};
+        buildings[] = {
+            "Land_i_Shop_01_V1_F",
+            "Land_i_Shop_02_V1_F",
+            "Land_i_Shop_03_V1_F",
+            "Land_i_Stone_HouseBig_V1_F",
+            "Land_Chapel_V1_F",
+            "Land_Chapel_V2_F",
+            "Land_u_House_Big_02_V1_F",
+            "Land_u_House_Big_01_V1_F",
+            "Land_i_Stone_HouseBig_V1_F",
+            "Land_d_Stone_HouseBig_V1_F",
+            "Land_d_Stone_HouseSmall_V1_F",
+            "Land_d_House_Big_01_V1_F"
+        };
     };
 
     class Altis {

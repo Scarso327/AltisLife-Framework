@@ -18,7 +18,7 @@ if (isNull _location) exitWith {};
 
 private _near = _location nearEntities [_types, 15];
 private _vehicle = _near param [(_near findIf {
-	alive _x && { ((keys (cursorObject getVariable ["vehicle_owners", [[]]])) param [0, ""]) isEqualTo (getPlayerUID player) }
+	alive _x && { ((keys (_x getVariable ["vehicle_owners", [[]]])) param [0, ""]) isEqualTo (getPlayerUID player) }
 }), objNull];
 
 if (isNil "_vehicle" || { isNull _vehicle } || { !(alive _vehicle) }) exitWith {

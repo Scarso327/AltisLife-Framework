@@ -22,5 +22,9 @@ lbClear _list;
 	};
 } forEach getArray(_cfg >> "licenses");
 
+if ((lbSize _list) isEqualTo 0) then {
+	_list lbAdd "No Available Licenses...";
+};
+
 _list lbSetCurSel 0;
 [_list, 0] call ULP_fnc_onLicenseSwitch;

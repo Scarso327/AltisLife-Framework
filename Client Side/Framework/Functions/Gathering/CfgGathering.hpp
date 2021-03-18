@@ -1,16 +1,17 @@
 class CfgGathering {
 	class BaseGather {
 		actionTitle = "Gathering";
-		gatherTime = 4;
+		gatherTime = 2;
 		factions[] = { "Civilian", "Police", "Medic", "Hato" };
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Gathering", 1, 100 };
-		leveling[] = { 1, "Gathering", 100 }; // Amount, Reason, Chance of increasing xp...
+		leveling[] = { 1, "Gathering", 100 }; // Amount, Reason, Chance
 	};
 
 	class BaseMine : BaseGather {
 		actionTitle = "Mining";
+		gatherTime = 4;
 		profession[] = { "Mining", 1, 100 };
 	};
 

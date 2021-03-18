@@ -393,20 +393,6 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
-	class Package {
-		displayName = "Package";
-		icon = "Data\Icons\package.paa";
-		buyPrice = -1;
-		sellPrice = -1;
-		weight = 3;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = false;
-		};
-		conditions = "true";
-	};
-
 	class StollenCargo {
 		displayName = "StollenCargo";
 		icon = "Data\Icons\stollenCargo.paa";

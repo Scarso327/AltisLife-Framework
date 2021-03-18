@@ -163,6 +163,29 @@ class CfgVehicleStores {
 		};
 	};
 
+	class HatoCar : Base {
+		storeName = "HATO Vehicle Store";
+		factions[] = { "Hato" };
+		class Vehicles {
+			class C_SUV_01_F {
+				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Hato {}; };
+			};
+			class C_Offroad_01_repair_F {
+				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Hato {}; };
+			};
+			class C_Hatchback_01_sport_F {
+				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Hato {}; };
+			};
+			class C_Van_02_service_F {
+				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Hato {}; };
+			};
+		};
+	};
+
 	class Kart : Base {
 		storeName = "Kart Dealership";
 		class Vehicles {

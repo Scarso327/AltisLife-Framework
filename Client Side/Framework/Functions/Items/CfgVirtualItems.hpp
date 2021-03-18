@@ -10,6 +10,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 40;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 	
@@ -22,6 +29,13 @@ class CfgVirtualItems {
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
+		};
+		class Sustain {
+			hunger = 30;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
 		};
 		conditions = "true";
 	};
@@ -36,6 +50,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 40;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 
@@ -48,6 +69,13 @@ class CfgVirtualItems {
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
+		};
+		class Sustain {
+			hunger = 30;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
 		};
 		conditions = "true";
 	};
@@ -62,6 +90,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 50;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 
@@ -74,6 +109,13 @@ class CfgVirtualItems {
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
+		};
+		class Sustain {
+			hunger = 70;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
 		};
 		conditions = "true";
 	};
@@ -88,6 +130,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 60;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 
@@ -100,6 +149,13 @@ class CfgVirtualItems {
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
+		};
+		class Sustain {
+			hunger = 45;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
 		};
 		conditions = "true";
 	};
@@ -115,7 +171,7 @@ class CfgVirtualItems {
 			isSavable = true;
 		};
 		class Sustain {
-			hunger = 50;
+			hunger = 80;
 			thirst = 0;
 		};
 		class Events {
@@ -134,6 +190,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 20;
+			thirst = 0;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 
@@ -146,6 +209,13 @@ class CfgVirtualItems {
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
+		};
+		class Sustain {
+			hunger = 0;
+			thirst = 70;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
 		};
 		conditions = "true";
 	};
@@ -160,6 +230,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 0;
+			thirst = 60;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 
@@ -172,6 +249,13 @@ class CfgVirtualItems {
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
+		};
+		class Sustain {
+			hunger = 0;
+			thirst = 60;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
 		};
 		conditions = "true";
 	};
@@ -186,6 +270,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 0;
+			thirst = 50;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 
@@ -199,18 +290,32 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 0;
+			thirst = 25;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 
 	class Schnaps {
 		displayName = "Schnaps";
 		icon = "Data\Icons\schnaps.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 580;
+		sellPrice = 290;
 		weight = 1;
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
+		};
+		class Sustain {
+			hunger = 0;
+			thirst = 30;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
 		};
 		conditions = "true";
 	};
@@ -225,6 +330,13 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 		};
+		class Sustain {
+			hunger = 0;
+			thirst = 25;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
+		};
 		conditions = "true";
 	};
 
@@ -237,6 +349,13 @@ class CfgVirtualItems {
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
+		};
+		class Sustain {
+			hunger = 0;
+			thirst = 15;
+		};
+		class Events {
+			onUse = "[(_this select 0)] call ULP_fnc_addSustenance;";
 		};
 		conditions = "true";
 	};
@@ -258,8 +377,8 @@ class CfgVirtualItems {
 	class Package {
 		displayName = "Package";
 		icon = "Data\Icons\package.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = -1;
 		weight = 3;
 		class Settings {
 			isIllegal = false;
@@ -271,9 +390,9 @@ class CfgVirtualItems {
 	class StollenCargo {
 		displayName = "StollenCargo";
 		icon = "Data\Icons\stollenCargo.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 5;
+		buyPrice = -1;
+		sellPrice = 98500;
+		weight = 14;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -297,8 +416,8 @@ class CfgVirtualItems {
 	class Cigarette {
 		displayName = "Cigarette";
 		icon = "Data\Icons\cigaretee.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 5700;
+		sellPrice = 2850;
 		weight = 3;
 		class Settings {
 			isIllegal = false;
@@ -310,8 +429,8 @@ class CfgVirtualItems {
 	class Cigar {
 		displayName = "Cigar";
 		icon = "Data\Icons\cigar.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 6720;
+		sellPrice = 3360;
 		weight = 3;
 		class Settings {
 			isIllegal = false;
@@ -323,9 +442,9 @@ class CfgVirtualItems {
 	class Coral {
 		displayName = "Coral";
 		icon = "Data\Icons\coral.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = 6700;
+		weight = 7;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -364,7 +483,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\knife.paa";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 2;
+		weight = 1;
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
@@ -377,7 +496,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\fishingNet.paa";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 1;
+		weight = 2;
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
@@ -611,9 +730,9 @@ class CfgVirtualItems {
 	class Coal {
 		displayName = "Coal";
 		icon = "Data\Icons\coal.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = 2400;
+		weight = 4;
 		class Settings {
 			isIllegal = false;
 			isSavable = false;
@@ -624,9 +743,9 @@ class CfgVirtualItems {
 	class CopperOre {
 		displayName = "Copper Ore";
 		icon = "Data\Icons\ore.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 3;
 		class Settings {
 			isIllegal = false;
 			isSavable = false;
@@ -637,8 +756,8 @@ class CfgVirtualItems {
 	class CopperBar {
 		displayName = "Copper Bar";
 		icon = "Data\Icons\ingotUnmarked.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = 1900;
 		weight = 2;
 		class Settings {
 			isIllegal = false;
@@ -650,9 +769,9 @@ class CfgVirtualItems {
 	class SilverOre {
 		displayName = "Silver Ore";
 		icon = "Data\Icons\ore.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 3;
 		class Settings {
 			isIllegal = false;
 			isSavable = false;
@@ -663,8 +782,8 @@ class CfgVirtualItems {
 	class SilverBar {
 		displayName = "Silver Bar";
 		icon = "Data\Icons\ingotUnmarked.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = 2200;
 		weight = 2;
 		class Settings {
 			isIllegal = false;
@@ -676,9 +795,9 @@ class CfgVirtualItems {
 	class IronOre {
 		displayName = "IronOre";
 		icon = "Data\Icons\ore.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 4;
 		class Settings {
 			isIllegal = false;
 			isSavable = false;
@@ -689,9 +808,9 @@ class CfgVirtualItems {
 	class IronBar {
 		displayName = "IronBar";
 		icon = "Data\Icons\ingotUnmarked.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = 7350;
+		weight = 3;
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
@@ -702,9 +821,9 @@ class CfgVirtualItems {
 	class UraniumOre {
 		displayName = "Uranium Ore";
 		icon = "Data\Icons\ore.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 8;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -715,9 +834,9 @@ class CfgVirtualItems {
 	class UraniumBar {
 		displayName = "Uranium Bar";
 		icon = "Data\Icons\ingotUnmarked.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = 28650;
+		weight = 6;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -728,9 +847,9 @@ class CfgVirtualItems {
 	class MakredGold {
 		displayName = "Marked Gold";
 		icon = "Data\Icons\ingotMarked.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 16;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -741,9 +860,9 @@ class CfgVirtualItems {
 	class UnmarkedGold {
 		displayName = "Unmarked Gold";
 		icon = "Data\Icons\ingotUnmarked.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = 700000;
+		weight = 16;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -754,8 +873,8 @@ class CfgVirtualItems {
 	class Sand {
 		displayName = "Sand";
 		icon = "Data\Icons\sand.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = -1;
 		weight = 2;
 		class Settings {
 			isIllegal = false;
@@ -767,9 +886,9 @@ class CfgVirtualItems {
 	class Glass {
 		displayName = "Glass";
 		icon = "Data\Icons\glass.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = 2450;
+		weight = 1;
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
@@ -780,9 +899,9 @@ class CfgVirtualItems {
 	class UnrefinedSalt {
 		displayName = "Unrefined Salt";
 		icon = "Data\Icons\saltUnprocessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 3;
 		class Settings {
 			isIllegal = false;
 			isSavable = false;
@@ -793,8 +912,8 @@ class CfgVirtualItems {
 	class RefindedSalt {
 		displayName = "Refinded Salt";
 		icon = "Data\Icons\saltProcessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = 3200;
 		weight = 2;
 		class Settings {
 			isIllegal = false;
@@ -806,9 +925,9 @@ class CfgVirtualItems {
 	class UncutDiamond {
 		displayName = "Diamond Ore";
 		icon = "Data\Icons\ore.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 3;
 		class Settings {
 			isIllegal = false;
 			isSavable = false;
@@ -819,8 +938,8 @@ class CfgVirtualItems {
 	class CutDiamond {
 		displayName = "Cut Diamond";
 		icon = "Data\Icons\diamond.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = 6100;
 		weight = 2;
 		class Settings {
 			isIllegal = false;
@@ -832,9 +951,9 @@ class CfgVirtualItems {
 	class UnprocessedOil {
 		displayName = "Unprocessed Oil";
 		icon = "Data\Icons\oilUnprocessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 6;
 		class Settings {
 			isIllegal = false;
 			isSavable = false;
@@ -845,9 +964,9 @@ class CfgVirtualItems {
 	class ProcessedOil {
 		displayName = "Processed Oil";
 		icon = "Data\Icons\oilProcessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = 9850;
+		weight = 4;
 		class Settings {
 			isIllegal = false;
 			isSavable = true;
@@ -859,9 +978,9 @@ class CfgVirtualItems {
 	class UnprocessedWeed {
 		displayName = "Unprocessed Weed";
 		icon = "Data\Icons\weedUnprocessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 4;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -872,9 +991,9 @@ class CfgVirtualItems {
 	class ProcessedWeed {
 		displayName = "Processed Weed";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 6680;
+		sellPrice = 3340;
+		weight = 3;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -885,9 +1004,9 @@ class CfgVirtualItems {
 	class PurifiedWeed {
 		displayName = "Purified Weed";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 8016;
+		sellPrice = 4008;
+		weight = 3;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -898,9 +1017,9 @@ class CfgVirtualItems {
 	class UnprocessedHeroin {
 		displayName = "Opium";
 		icon = "Data\Icons\heroinUnprocessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 5;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -911,9 +1030,9 @@ class CfgVirtualItems {
 	class ProcessedHeroin {
 		displayName = "Processed Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 14160;
+		sellPrice = 7080;
+		weight = 4;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -924,9 +1043,9 @@ class CfgVirtualItems {
 	class PurifiedHeroin {
 		displayName = "Purified Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 16992;
+		sellPrice = 8496;
+		weight = 4;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -937,9 +1056,9 @@ class CfgVirtualItems {
 	class UnprocessedCocaine {
 		displayName = "Coca Leaf";
 		icon = "Data\Icons\cocaineUnprocessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 6;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -950,9 +1069,9 @@ class CfgVirtualItems {
 	class ProcessedCocaine {
 		displayName = "Processed Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 22900;
+		sellPrice = 11450;
+		weight = 5;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -963,9 +1082,9 @@ class CfgVirtualItems {
 	class PurifiedCocaine {
 		displayName = "Purified Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 27480;
+		sellPrice = 13740;
+		weight = 5;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -976,9 +1095,9 @@ class CfgVirtualItems {
 	class EphedrineBarrel {
 		displayName = "Ephedrine Barrel";
 		icon = "Data\Icons\ephedrine.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 6050;
+		sellPrice = -1;
+		weight = 12;
 		class Settings {
 			isIllegal = true;
 			isSavable = false;
@@ -989,9 +1108,9 @@ class CfgVirtualItems {
 	class ProcessedMeth {
 		displayName = "Meth";
 		icon = "Data\Icons\meth.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 61000;
+		sellPrice = 30500;
+		weight = 5;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -1002,9 +1121,9 @@ class CfgVirtualItems {
 	class PurifiedMeth {
 		displayName = "Purified Meth";
 		icon = "Data\Icons\meth.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 73200;
+		sellPrice = 36600;
+		weight = 5;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -1015,8 +1134,8 @@ class CfgVirtualItems {
 	class Corn {
 		displayName = "Corn";
 		icon = "Data\Icons\corn.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = -1;
 		weight = 2;
 		class Settings {
 			isIllegal = true;
@@ -1028,9 +1147,9 @@ class CfgVirtualItems {
 	class Moonshine {
 		displayName = "Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 13400;
+		sellPrice = 6700;
+		weight = 1;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -1041,9 +1160,9 @@ class CfgVirtualItems {
 	class PurifiedMoonshine {
 		displayName = "Purified Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 16080;
+		sellPrice = 8040;
+		weight = 1;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;
@@ -1054,9 +1173,9 @@ class CfgVirtualItems {
 	class Ecstasy {
 		displayName = "Ecstasy";
 		icon = "Data\Icons\ecstasy.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
+		buyPrice = 10500;
+		sellPrice = 5250;
+		weight = 1;
 		class Settings {
 			isIllegal = true;
 			isSavable = true;

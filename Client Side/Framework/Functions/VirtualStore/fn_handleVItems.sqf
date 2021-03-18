@@ -76,7 +76,7 @@ if (_remove) then {
 				if ([configName _cfg, _value, false] call ULP_fnc_handleItem) then {
 					hint format["You have bought %1 %2(s) for £%3...", _value, _name, [_buyPrice] call ULP_fnc_numberText];
 				} else {
-					[_buyPrice, false] call ULP_fnc_addMoney; // Give them they money back, they didn't get what they paid for...
+					[_buyPrice, false] call ULP_fnc_addMoney; // Give them the money back, they didn't get what they paid for...
 					hint "You don't have enough inventory space...";
 				};
 			} else {

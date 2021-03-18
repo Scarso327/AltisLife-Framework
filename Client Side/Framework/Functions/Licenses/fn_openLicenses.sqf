@@ -12,7 +12,7 @@ _this params [
 private _cfg = missionConfigFile >> "CfgLicenseStores" >> _store;
 if (dialog || { !(isClass _cfg) }) exitWith {};
 
-if !(call compile getText(_cfg >> "condition")) exitWith {
+if !(call compile getText(_cfg >> "conditions")) exitWith {
 	hint "You don't have access to this store...";
 };
 

@@ -15,7 +15,7 @@ lbClear _list;
 {
 	private _license = missionConfigFile >> "CfgLicenses" >> _x;
 
-	if (isClass _license) then {
+	if (isClass _license && { !([_x] call ULP_fnc_hasLicense) }) then {
 		private _item = _list lbAdd format["%1", getText (_license >> "displayName")];
 		_list lbSetValue [_item, getNumber (_license >> "buyPrice")];
 		_list lbSetData [_item, _x];

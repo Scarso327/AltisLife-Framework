@@ -82,7 +82,7 @@ class CfgVirtualItems {
 
 	class Bacon {
 		displayName = "Bacon";
-		icon = "Data\Icons\becon.paa";
+		icon = "Data\Icons\bacon.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 1;

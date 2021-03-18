@@ -37,7 +37,7 @@ if (_enable) then {
 		}) apply {
 			[
 				_x, [_x] call ULP_fnc_getTagPos, (player distance _x), 
-				(_x getVariable ["icon", ""]), [_x] call ULP_fnc_getName, (_x getVariable ["subtitle", ""])
+				(_x getVariable ["icon", ""]), [_x, (isPlayer _x)] call ULP_fnc_getName, (_x getVariable ["subtitle", ""])
 			]
 		});
 	}];

@@ -76,6 +76,7 @@ class CfgFunctions {
 		class Clothing {
 			file = "Functions\Clothing";
 			class setTextures {};
+			class isMask {};
 		};
 
 		class Items {

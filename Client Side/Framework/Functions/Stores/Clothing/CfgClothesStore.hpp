@@ -30,7 +30,7 @@ class CfgClothesStore {
 			};
 			class U_B_Wetsuit : FactionBase {
 				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
-				class Textures { class U_B_Wetsuit {}; };
+				class Textures { class MPU {}; };
 			};
 			class U_C_CBRN_Suit_01_White_F : FactionBase {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";

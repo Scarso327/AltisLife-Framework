@@ -324,6 +324,11 @@ class U_B_Wetsuit {
 		};
 		class U_O_Wetsuit : U_B_Wetsuit { displayName = "Brown"; };
 		class U_I_Wetsuit : U_B_Wetsuit { displayName = "Green"; };
+		class MPU {
+			displayName = "MPU";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\MPU.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_MPU"", 1] call ULP_fnc_hasAccess }";
+		};
 	};
 };
 class U_O_Wetsuit : U_B_Wetsuit{};
@@ -491,7 +496,7 @@ class U_BG_Guerrilla_6_1 {
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class NCA {
-			displayName = "Main";
+			displayName = "NCA";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_main.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		};
@@ -558,7 +563,7 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 			displayName = "Command"; 
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
-				"Data\Textures\Uniforms\Police\parade_02.paa",
+				"Data\Textures\Uniforms\Police\parade_02.paa"
 			};
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};

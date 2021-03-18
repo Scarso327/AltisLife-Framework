@@ -120,7 +120,10 @@ class CfgFunctions {
 
 		class Processing {
 			file = "Functions\Processing";
-			class process {};		
+			class process {};	
+			class listProcesses {};
+			class openProcessing {};
+			class selectProcess {};	
 		};
 
 		class Database {

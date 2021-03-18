@@ -10,3 +10,4 @@
 #include "DisplaySelect\DisplayInputGroupInfo.hpp"
 #include "DisplaySelect\DisplaySelectPlayer.hpp"
 #include "DialogLicenses\DialogLicenses.hpp"
+#include "DialogProcessing\DialogProcessing.hpp"

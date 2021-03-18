@@ -286,6 +286,9 @@ class CfgFunctions {
 			class vehicleLights {};
 			class repairVehicle {};
 			class setVehicleAmmo {};
+			class isVehicleOwner {};
+			class getVehicleOwner {};
+			class vehicleRegistration {};
 		};
 
 		class VehicleEvents {

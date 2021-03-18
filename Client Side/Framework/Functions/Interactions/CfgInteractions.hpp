@@ -39,10 +39,9 @@ class CfgInteractions {
 			onClick = "_this call ULP_fnc_repairVehicle";
 		};
 
-		// TODO
 		class Registration : Repair {
 			title = "Registration";
-			onClick = "hint ""Hello"";";
+			onClick = "closeDialog 0; [(_this select 0)] call ULP_fnc_vehicleRegistration";
 			factions[] = { "Police", "Hato" };
 		};
 

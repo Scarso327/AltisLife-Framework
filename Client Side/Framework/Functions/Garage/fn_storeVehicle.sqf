@@ -17,9 +17,7 @@ _this params [
 if (isNull _location) exitWith {};
 
 private _near = _location nearEntities [_types, 15];
-private _vehicle = _near param [(_near findIf {
-	alive _x && { ((keys (_x getVariable ["vehicle_owners", [[]]])) param [0, ""]) isEqualTo (getPlayerUID player) }
-}), objNull];
+private _vehicle = _near param [(_near findIf { [player, _x] call ULP_fnc_isVehicleOwner }), objNull];
 
 if (isNil "_vehicle" || { isNull _vehicle } || { !(alive _vehicle) }) exitWith {
 	hint "No vehicles near stand to store...";

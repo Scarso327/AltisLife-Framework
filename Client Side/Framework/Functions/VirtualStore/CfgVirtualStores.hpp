@@ -277,6 +277,14 @@ class CfgVirtualStores {
 		};
 	};
 
+	class Dispensary {
+		storeName = "Meth Dispensary";
+		conditions = "true";
+		class Items {
+			class EphedrineBarrel {};
+		};
+	};
+
 	class Drug {
 		storeName = "Drug Dealer";
 		conditions = "true";

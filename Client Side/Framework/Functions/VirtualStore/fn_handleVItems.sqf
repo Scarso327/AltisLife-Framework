@@ -63,24 +63,24 @@ if (_remove) then {
 		_sellPrice = _sellPrice * _value;
 
 		private _name = getText(_cfg >> "displayName");
-		if ([configName _cfg, _value, _remove] call ULP_fnc_handleItem) then {
-			if (_remove) then {
+
+		if (_remove) then {
+			if ([configName _cfg, _value, true] call ULP_fnc_handleItem) then {
 				[_sellPrice, false, format["Sold %1 %2(s)", _value, _name]] call ULP_fnc_addMoney;
 				hint format["You have sold %1 %2(s) for £%3...", _value, _name, [_sellPrice] call ULP_fnc_numberText];
 			} else {
-				if !([_sellPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) exitWith {
-					hint format["You can't afford £%1 for %2 %3(s)...", [_buyPrice] call ULP_fnc_numberText, _value, _name]
-				};
-
-				hint format["You have bought %1 %2(s) for £%3...", _value, _name, [_buyPrice] call ULP_fnc_numberText];
-			};
-
-			[_display] call ULP_fnc_updateVStore;
-		} else {
-			if (_remove) then {
 				hint format["You don't have %1 %2(s) to sell...", _value, _name];
+			};
+		} else {
+			if ([_buyPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) exitWith {
+				if ([configName _cfg, _value, false] call ULP_fnc_handleItem) then {
+					hint format["You have bought %1 %2(s) for £%3...", _value, _name, [_buyPrice] call ULP_fnc_numberText];
+				} else {
+					[_buyPrice, false] call ULP_fnc_addMoney; // Give them they money back, they didn't get what they paid for...
+					hint "You don't have enough inventory space...";
+				};
 			} else {
-				hint "You don't have enough inventory space...";
+				hint format["You can't afford £%1 for %2 %3(s)...", [_buyPrice] call ULP_fnc_numberText, _value, _name];
 			};
 		};
 	}, false

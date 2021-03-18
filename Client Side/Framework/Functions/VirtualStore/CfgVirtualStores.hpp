@@ -1,6 +1,6 @@
 class CfgVirtualStores {
 	class Police {
-		storeName = "Police Market";
+		storeName = "APC Market";
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};
@@ -23,20 +23,28 @@ class CfgVirtualStores {
 	};
 
 	class Medic {
-		storeName = "Medic Market";
+		storeName = "NHS Market";
 		conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Items {
-			class Apple {};
-			class Peach {};
-			class Bacon {};
-			class Water {};
+			class RationPack {};
+			class Doughnut {};
+			class Coffee {};
+			class Tea {};
 			class Redbull {};
-			class Pickaxe {};
-			class Shovel {};
-			class FishingNet {};
 			class FuelCan {};
+			class Breathalyser {};
 			class Lockpick {};
+			class BoltCutter {};
+			class Painkillers {};
+			class Bandage {};
+			class BloodBag {};
+			class FirstAidKit {};
+			class MediKit {};
 		};
+	};
+	class Hato : Medic {
+		storeName = "HATO Market";
+		conditions = "[player, [""Hato""]] call ULP_fnc_isFaction";
 	};
 
 	class Civilian {
@@ -266,6 +274,14 @@ class CfgVirtualStores {
 		class Items {
 			class MakredGold {};
 			class UnmakredGold {};
+		};
+	};
+
+	class Dispensary {
+		storeName = "Meth Dispensary";
+		conditions = "true";
+		class Items {
+			class EphedrineBarrel {};
 		};
 	};
 

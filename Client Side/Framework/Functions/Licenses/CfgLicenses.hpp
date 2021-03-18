@@ -104,7 +104,7 @@ class CfgLicenses {
         class Settings {};
     };
 
-    class Blacklist : BaseLicense {
+    class Blackmarket : BaseLicense {
         displayName = "Blackmarket Access";
         buyPrice = 0;
         class Settings {};
@@ -191,6 +191,12 @@ class CfgLicenses {
 
     class Meth : BaseLicense {
         displayName = "Meth Processing";
+        buyPrice = 0;
+        class Settings {};
+    };
+
+    class Moonshine : BaseLicense {
+        displayName = "Moonshine Processing";
         buyPrice = 0;
         class Settings {};
     };

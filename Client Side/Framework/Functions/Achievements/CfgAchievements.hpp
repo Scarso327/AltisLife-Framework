@@ -1,6 +1,6 @@
 class CfgAchievements {
 	class FirstSpawn {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\firstSpawn.paa";
 		displayName = "Newbie";
 		description = "Spawned for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -9,7 +9,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinGroup {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\joinGroup.paa";
 		displayName = "Member";
 		description = "Joined a group for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -45,7 +45,7 @@ class CfgAchievements {
 
 	// TODO
 	class Governor {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\governor.paa";
 		displayName = "Governor";
 		description = "Win an election and become the Governor.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -61,7 +61,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class Convict {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Convict";
@@ -189,8 +188,97 @@ class CfgAchievements {
 	class FanGirl {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Fan Girl";
-		description = "You have successfully discovered the pleasure in Belle Delphine.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		description = "You have discovered the pleasure in Belle Delphine.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Uncharted {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Explorer";
+		description = "You have chosen to leave this island, but returned.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Protest {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Protester";
+		description = "You have taken a simple protest to the extreme...";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class MileHighClub {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Mile High Club";
+		description = "You have flown exactly 1-Mile or higher in the sky.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Stonehenge {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Stonehenge";
+		description = "You have discovered the Stonehenge on Altis.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Atlantis {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Atlantis";
+		description = "You have discovered Atlantis on Altis.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class PirateDen {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Pirate Den";
+		description = "You have discovered a Pirate Den on Altis.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	// PERSONAL ACHIEVEMENTS
+	class Scarso {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "The Wrokspace";
+		description = "You have discovered the workspace of Scarso.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Lewis {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Bushmaker";
+		description = "You have climbed the statue of Lewis 'Bushmaker' Holloway.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Oliver {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Nationalist";
+		description = "You have visited the metropolitan hub of the North.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Ace {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Norwegian Retreat";
+		description = "You have located the hidden retreat of Ace Boyden.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Jetan {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Boat Boy";
+		description = "You have boarded the home of one Jetan Holo.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
 };

@@ -28,7 +28,7 @@ HATO ----------------------------------------------------
 CIVILIAN ------------------------------------------------
 [this, "<t color='#B92DE0'>[CIV]</t> General Market", "Civilian"] call ULP_fnc_addMarket;
 [this, "<t color='#B92DE0'>[CIV]</t> Fish Market", "Fish"] call ULP_fnc_addMarket;
-[this, "<t color='#B92DE0'>[CIV]</t> Medical Supplies", "Fish"] call ULP_fnc_addMarket;
+[this, "<t color='#B92DE0'>[CIV]</t> Medical Supplies", "Medical"] call ULP_fnc_addMarket;
 [this, "<t color='#B92DE0'>[CIV]</t> Redburger", "Burger"] call ULP_fnc_addMarket;
 [this, "<t color='#B92DE0'>[CIV]</t> Tea Room", "Tea"] call ULP_fnc_addMarket;
 [this, "<t color='#B92DE0'>[CIV]</t> Local Pub", "Pub"] call ULP_fnc_addMarket;

@@ -156,6 +156,29 @@ class CfgItemsStore {
 		};
 	};
 
+	class Medic {
+		storeName = "Medic Equipment Store";
+		default = 4;
+		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
+		class Rifles {};
+		class Pistols {};
+		class Attachments {};
+		class Magazines {};
+		class Items {
+			class ItemMap : FactionBase {};
+			class ItemCompass : FactionBase {};
+			class ItemWatch : FactionBase {};
+			class ItemGPS : FactionBase {};
+			class ItemRadio : FactionBase {};
+			class Rangefinder : FactionBase {};
+			class ToolKit : FactionBase {};
+		};
+	};
+	class Hato : Medic {
+		storeName = "HATO Equipment Store";
+		condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
+	};
+
 	class Civilian {
 		storeName = "General Store";
 		default = 4;

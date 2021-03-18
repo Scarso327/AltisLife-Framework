@@ -140,10 +140,24 @@ class CfgProcessing {
 		reqLicenses[] = {};
 	};
 
+	class PurifiedWeed : BaseProcess {
+		processTime = 100;
+		materials[] = { { "ProcessedWeed", 1 } };
+		items[] = { { "PurifiedWeed", 1 } };
+		reqLicenses[] = {};
+	};
+
 	class Heroin : BaseProcess {
 		processTime = 70;
 		materials[] = { { "UnprocessedHeroin", 1 } };
 		items[] = { { "ProcessedHeroin", 1 } };
+		reqLicenses[] = {};
+	};
+
+	class PurifiedHeroin : BaseProcess {
+		processTime = 100;
+		materials[] = { { "ProcessedHeroin", 1 } };
+		items[] = { { "PurifiedHeroin", 1 } };
 		reqLicenses[] = {};
 	};
 
@@ -154,6 +168,13 @@ class CfgProcessing {
 		reqLicenses[] = {};
 	};
 
+	class PurifiedCocaine : BaseProcess {
+		processTime = 100;
+		materials[] = { { "ProcessedCocaine", 1 } };
+		items[] = { { "PurifiedCocaine", 1 } };
+		reqLicenses[] = {};
+	};
+
 	class Meth : BaseProcess {
 		processTime = 90;
 		materials[] = { { "EphedrineBarrel", 1 } };
@@ -161,10 +182,24 @@ class CfgProcessing {
 		reqLicenses[] = {};
 	};
 
+	class PurifiedMeth : BaseProcess {
+		processTime = 100;
+		materials[] = { { "ProcessedMeth", 1 } };
+		items[] = { { "PurifiedMeth", 1 } };
+		reqLicenses[] = {};
+	};
+
 	class Moonshine : BaseProcess {
 		processTime = 90;
 		materials[] = { { "Corn", 1 } };
 		items[] = { { "Moonshine", 1 } };
+		reqLicenses[] = {};
+	};
+
+	class PurifiedMoonshine : BaseProcess {
+		processTime = 100;
+		materials[] = { { "Moonshine", 1 } };
+		items[] = { { "PurifiedMoonshine", 1 } };
 		reqLicenses[] = {};
 	};
 

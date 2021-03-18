@@ -217,6 +217,30 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
+	class Stonehenge {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Stonehenge";
+		description = "You have discovered the Stonehenge on Altis.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Atlantis {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Atlantis";
+		description = "You have discovered Atlantis on Altis.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class PirateDen {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Pirate Den";
+		description = "You have discovered a Pirate Den on Altis.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
 	// PERSONAL ACHIEVEMENTS
 	class Scarso {
 		icon = "Data\UI\repairing_prof.paa";

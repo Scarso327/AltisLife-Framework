@@ -8,24 +8,6 @@ class CfgProcessing {
 		leveling[] = { 1, "Processing", 100 }; // Amount, Chance of increasing xp...
 	};
 
-	// Skinning
-	class Skinning : BaseProcess {
-		processTitle = "Skinning";
-		processTime = 40;
-		profession[] = { "Skinning", 1, 100 };
-		reqItems[] = { { "cuttingKnife", 1 } };
-	};
-
-	class Rabbit : Skinning {
-		materials[] = { { "UnskinnedRabbit", 1 } };
-		items[] = { { "SkinnedRabbit", 1 } };
-	};
-
-	class Goat : Skinning {
-		materials[] = { { "UnskinnedGoat", 1 } };
-		items[] = { { "SkinnedGoat", 1 } };
-	};
-
 	// Cooking
 	class Cooking : BaseProcess {
 		processTitle = "Cooking";

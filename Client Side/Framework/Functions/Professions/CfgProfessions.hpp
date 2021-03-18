@@ -54,17 +54,6 @@ class CfgProfessions {
 	};
 
 	// TODO
-	class Skinning {
-		displayName = "Skinning";
-		icon = "Data\UI\repairing_prof.paa";
-		effectDescription = "Does something %1%2";
-		effectCalculation = "5 * (_this select 0)";
-		xpLevel = 100;
-		xpMultipler = 2;
-		maxLevel = 5;
-	};
-
-	// TODO
 	class Cooking {
 		displayName = "Cooking";
 		icon = "Data\UI\repairing_prof.paa";

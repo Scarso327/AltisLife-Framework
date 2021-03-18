@@ -121,6 +121,22 @@ class CfgSpawns {
             marker = "civ_spawn_neochori";
             icon = "";
         };
+
+        class Taxi : Civilian {
+            displayName = "Taxi Altis";
+            marker = "civ_spawn_taxi";
+            icon = "";
+        };
+        class Solicitor : Civilian {
+            displayName = "Altis Solicitor";
+            marker = "civ_spawn_solicitor";
+            icon = "";
+        };
+        class News : Civilian {
+            displayName = "AAN World News";
+            marker = "civ_spawn_news";
+            icon = "";
+        };
     };
 
     class Malden {

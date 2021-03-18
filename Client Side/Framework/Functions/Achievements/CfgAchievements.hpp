@@ -192,6 +192,15 @@ class CfgAchievements {
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
+
+	class Uncharted {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "The Explorer";
+		description = "You have successfully gone beyond the mapped world...";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
 	// PERSONAL ACHIEVEMENTS
 	class Scarso {
 		icon = "Data\UI\repairing_prof.paa";

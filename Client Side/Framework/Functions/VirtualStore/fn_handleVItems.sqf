@@ -72,7 +72,7 @@ if (_remove) then {
 				hint format["You don't have %1 %2(s) to sell...", _value, _name];
 			};
 		} else {
-			if ([_buyPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) exitWith {
+			if ([_buyPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) then {
 				if ([configName _cfg, _value, false] call ULP_fnc_handleItem) then {
 					hint format["You have bought %1 %2(s) for £%3...", _value, _name, [_buyPrice] call ULP_fnc_numberText];
 				} else {

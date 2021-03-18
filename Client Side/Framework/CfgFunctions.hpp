@@ -182,6 +182,7 @@ class CfgFunctions {
 			class listLicenses {};
 			class openLicenses {};
 			class onLicenseSwitch {};
+			class buyLicense {};
 		};
 
 		class Inventory {

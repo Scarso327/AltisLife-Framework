@@ -17,5 +17,6 @@ private _display = ctrlParent _button;
 if (isNull _display) exitWith {};
 
 private _list = _display displayCtrl 4003;
-[_list lbData (lbCurSel _list)] call ULP_fnc_process;
-closeDialog 0;
+if ([_list lbData (lbCurSel _list)] call ULP_fnc_process) then {
+	closeDialog 0;
+};

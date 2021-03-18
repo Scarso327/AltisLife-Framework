@@ -5,6 +5,10 @@
 #include "..\..\..\script_macros.hpp"
 scopeName "fn_openGroup";
 
+if !(isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Groups")) exitWith {
+	hint "You don't have access to this...";
+};
+
 if (ULP_Group_Creating) exitWith {
 	hint "You can't currently access this application as it's processing a previous creation request...";
 };

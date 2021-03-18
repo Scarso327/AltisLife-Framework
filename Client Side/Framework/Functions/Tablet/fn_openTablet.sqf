@@ -18,6 +18,8 @@ if (createDialog "DialogTablet") then {
 
 	_display setVariable ["blur", _id];
 
+	(_display displayCtrl 23005) ctrlEnable (isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Groups"));
+
 	_display displaySetEventHandler ["keyDown","_this call ULP_fnc_rebindEsc"];
 
 	["Home"] call ULP_fnc_setScreen;

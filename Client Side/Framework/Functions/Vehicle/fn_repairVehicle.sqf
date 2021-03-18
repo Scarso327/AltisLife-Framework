@@ -46,7 +46,7 @@ if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 	hint format["You've repaired %1 using a toolkit...", _name];
 
 	if (time >= (_vehicle getVariable ["ProfessionCooldown", time - 120])) then {
-		["Repairing", 1, 20] call ULP_fnc_increaseProfession;
+		["Repairing", 1, 40] call ULP_fnc_increaseProfession;
 		_vehicle setVariable ["ProfessionCooldown", time + 120];
 	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {

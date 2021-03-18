@@ -12,7 +12,7 @@ class RscProgress {
     class controlsBackground {
         class Background: Life_RscText {
             idc = -1;
-            colorBackground[] = {0.5,0.5,0.5,0.4};
+            colorBackground[] = {0.1,0.1,0.1,0.85};
 			x = 0.386562 * safezoneW + safezoneX;
             y = 0.87 * safezoneH + safezoneY;
             w = 0.226875 * safezoneW;
@@ -25,8 +25,6 @@ class RscProgress {
             y = 0.87 * safezoneH + safezoneY;
             w = 0.226875 * safezoneW;
             h = 0.022 * safezoneH;
-			colorBar[] = {0, 0, 0, 0.5};
-			colorFrame[] = {0, 0, 0, 0};
         };
 
 		class ProgressText: Life_RscStructuredText {

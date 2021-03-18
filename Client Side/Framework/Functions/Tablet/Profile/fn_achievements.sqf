@@ -25,7 +25,12 @@ private _achievements = ("isClass _x" configClasses (missionConfigFile >> "CfgPr
 	}), _x]
 };
 
-_achievements sort true;
+// Shitty method of ensuring all achievemnts are grouped with achievements of the same state...
+private _orderedList = [];
+_orderedList append (_achievements select { (_x select 0) isEqualTo 0 });
+_orderedList append (_achievements select { (_x select 0) isEqualTo 1 });
+_orderedList append (_achievements select { (_x select 0) isEqualTo 2 });
+_achievements = _orderedList;
 
 private _ctrlGroup = _display displayCtrl 23030;
 private _achieveCtrl = controlNull;

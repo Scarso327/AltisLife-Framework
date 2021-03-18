@@ -140,7 +140,7 @@ class CfgProcessing {
 		reqLicenses[] = {};
 	};
 
-	class PurifiedHeroin : BaseProcess {
+	class PurifiedWeed : BaseProcess {
 		processTime = 100;
 		materials[] = { { "ProcessedWeed", 1 } };
 		items[] = { { "PurifiedWeed", 1 } };

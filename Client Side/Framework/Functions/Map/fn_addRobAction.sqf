@@ -9,7 +9,7 @@ scopeName "fn_addRobAction";
 
 _this params [
 	["_trader", objNull, [objNull]],
-	["_object", objNull, [objNull]]
+	["_object", objNull, [objNull]],
 	["_title", "", [""]],
 	["_store", "", [""]],
 	["_name", "", [""]]

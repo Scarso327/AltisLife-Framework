@@ -209,6 +209,14 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
+	class MileHighClub {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Mile High Club";
+		description = "You have flown exactly 1-Mile or higher in the sky.";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
 	// PERSONAL ACHIEVEMENTS
 	class Scarso {
 		icon = "Data\UI\repairing_prof.paa";

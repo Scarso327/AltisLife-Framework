@@ -179,6 +179,9 @@ class CfgFunctions {
 			file = "Functions\Licenses";
 			class addLicense {};
 			class hasLicense {};
+			class listLicenses {};
+			class openLicenses {};
+			class onLicenseSwitch {};
 		};
 
 		class Inventory {

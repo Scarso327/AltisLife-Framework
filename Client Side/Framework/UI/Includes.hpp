@@ -9,3 +9,4 @@
 #include "DialogInteractions\DialogInteractions.hpp"
 #include "DisplaySelect\DisplayInputGroupInfo.hpp"
 #include "DisplaySelect\DisplaySelectPlayer.hpp"
+#include "DialogLicenses\DialogLicenses.hpp"

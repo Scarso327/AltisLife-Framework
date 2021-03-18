@@ -181,7 +181,7 @@ class CfgAchievements {
 		displayName = "Prestigious";
 		description = "Prestiged for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
-		isMystery = false;
+		isMystery = true;
 	};
 
 	// TODO

@@ -186,7 +186,7 @@ class CfgAchievements {
 
 	// TODO
 	class FanGirl {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\PilotingQuadroter_ca.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\PilotingQuadrotor_ca.paa";
 		displayName = "Fan Girl";
 		description = "You have discovered the pleasure in Belle Delphine.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
@@ -244,7 +244,7 @@ class CfgAchievements {
 	// PERSONAL ACHIEVEMENTS
 	class Scarso {
 		icon = "Data\UI\repairing_prof.paa";
-		displayName = "The Wrokspace";
+		displayName = "The Workspace";
 		description = "You have discovered the workspace of Scarso.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;

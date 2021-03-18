@@ -21,6 +21,13 @@ class CfgVehicles {
 		rightColour[] = {0.1, 0.1, 20};
 	};
 
+	class HatoLights {
+		leftPos[] = {0, 0, 0};
+		leftColour[] = {0.1, 0.1, 20};
+		rightPos[] = {0, 0, 0};
+		rightColour[] = {0.1, 0.1, 20};
+	};
+
 	// TEXTURES --------------------------------------------------------------------------------------
 	class BaseTexture {
 		displayName = "Default";
@@ -44,6 +51,14 @@ class CfgVehicles {
 			SFX[] = { "Police_One" };
 		};
 		class Lights : MedicLights {};
+	};
+
+	class HatoTexture : BaseTexture {
+		factions[] = { "Hato" };
+		class Siren {
+			SFX[] = { "Police_One" };
+		};
+		class Lights : HatoLights {};
 	};
 
 	// CARS --------------------------------------------------------------------------------------
@@ -181,6 +196,13 @@ class CfgVehicles {
 					rightPos[] = {0.402344, 2.2793, -0.531359};
 				};
 			};
+			class Hato : HatoTexture { 
+				textures[] = { "data\textures\vehicles\land\hato\hatchback.paa" }; 
+				class Lights : HatoLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
+			};
 		};
 	};
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 0; };
@@ -256,6 +278,15 @@ class CfgVehicles {
 	class C_Offroad_01_repair_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		class Textures {
+			class Hato : HatoTexture { 
+				textures[] = { "data\textures\vehicles\land\hato\offroad.paa" }; 
+				class Lights : HatoLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
+			};
+		};
 	};
 
 	class C_Offroad_02_unarmed_F : Base {
@@ -347,6 +378,13 @@ class CfgVehicles {
 					rightPos[] = {0.402344, 2.2793, -0.531359};
 				};
 			};
+			class Hato : HatoTexture { 
+				textures[] = { "data\textures\vehicles\land\hato\suv.paa" }; 
+				class Lights : HatoLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
+			};
 		};
 	};
 
@@ -394,6 +432,13 @@ class CfgVehicles {
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\medic_van.paa" }; 
 				class Lights : MedicLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
+			};
+			class Hato : HatoTexture { 
+				textures[] = { "data\textures\vehicles\land\hato\van.paa" }; 
+				class Lights : HatoLights {
 					leftPos[] = {-0.402344, 2.2793, -0.531359};
 					rightPos[] = {0.402344, 2.2793, -0.531359};
 				};

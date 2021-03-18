@@ -861,6 +861,13 @@ class CfgVehicles {
 					rightPos[] = {0.402344, 2.2793, -0.531359};
 				};
 			};
+			class Medic : MedicTexture {
+				textures[] = { "Data\Textures\Vehicles\Sea\Medic\motorboat.paa" }; 
+				class Lights : MedicLights {
+					leftPos[] = {-0.402344, 2.2793, -0.531359};
+					rightPos[] = {0.402344, 2.2793, -0.531359};
+				};
+			};
 		};
 	};
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};

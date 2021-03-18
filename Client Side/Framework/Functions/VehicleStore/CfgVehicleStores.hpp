@@ -93,7 +93,7 @@ class CfgVehicleStores {
 		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
-			class C_Boat_Civil_01_F {
+			class C_Boat_Civil_01_police_F {
 				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
 				class Textures { class Police {}; };
 			};
@@ -159,6 +159,17 @@ class CfgVehicleStores {
 				class Textures {
 					class Medic {};
 				};
+			};
+		};
+	};
+
+	class MedicBoat : Base {
+		storeName = "Medic Vehicle Store";
+		factions[] = { "Medic" };
+		class Vehicles {
+			class C_Boat_Civil_01_police_F {
+				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Medic {}; };
 			};
 		};
 	};

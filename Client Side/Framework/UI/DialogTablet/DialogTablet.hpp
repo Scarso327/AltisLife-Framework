@@ -148,6 +148,7 @@ class DialogTablet {
 		#include "Screens\Keys.hpp"
 		#include "Screens\Options.hpp"
 		#include "Screens\Profile.hpp"
+		#include "Screens\Market.hpp"
 	};
 };
 

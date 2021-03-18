@@ -216,6 +216,11 @@ class CfgFunctions {
 			class rebindEsc {};
 		};
 
+		class TabletMarket {
+			file = "Functions\Tablet\Market";
+			class market {};
+		};
+
 		class TabletInventory {
 			file = "Functions\Tablet\Inventory";
 			class inventory {};

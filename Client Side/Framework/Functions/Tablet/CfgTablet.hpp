@@ -101,7 +101,10 @@ class CfgTablet {
 	class Market : BaseScreen {
 		idc= 23008;
 		pageTitle = "Market";
-		pageIdcs[] = {};
+		pageIdcs[] = {
+			23032, 23033, 23034, 23035
+		};
+		onload = "_this call ULP_fnc_market";
 	};
 
 	class Goals : BaseScreen {

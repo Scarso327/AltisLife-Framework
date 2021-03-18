@@ -32,6 +32,8 @@ _unit setPos _pos;
 ULP_Imprisioned = true;
 ULP_Prison_Time = time + _duraction;
 
+["Convict"] call ULP_fnc_achieve;
+
 ["RscFiringDrillTime", "PLAIN", 3] call ULP_UI_fnc_createLayer;
 
 // Recolour...

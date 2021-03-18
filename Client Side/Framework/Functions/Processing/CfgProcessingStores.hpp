@@ -15,11 +15,6 @@ class CfgProcessingStores {
 		processes[] = { "Salema", "Ornate", "Tuna", "Mullet", "Catshark" };
 	};
 
-	class HuntingCamp : Base {
-		title = "Hunting Camp";
-		processes[] = { "Rabbit", "Goat" };
-	};
-
 	class Schnapps : Base {
 		title = "Schnapps Processing";
 		processes[] = { "SchnapsApple", "SchnapsPeach" };

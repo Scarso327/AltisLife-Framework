@@ -1265,62 +1265,6 @@ class CfgVirtualItems {
 	};
 
 	// Animals
-	class UnskinnedRabbit {
-		displayName = "Unskinned Rabbit";
-		icon = "";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = false;
-		};
-		conditions = "true";
-	};
-
-	class SkinnedRabbit {
-		displayName = "Skinned Rabbit";
-		icon = "";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = true;
-		};
-		conditions = "true";
-	};
-
-	class UnskinnedGoat {
-		displayName = "Unskinned Goat";
-		icon = "";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = false;
-		};
-		conditions = "true";
-	};
-
-	class SkinnedGoat {
-		displayName = "Skinned Goat";
-		icon = "";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 2;
-		class Settings {
-			onMarket = true;
-			isIllegal = false;
-			isSavable = true;
-		};
-		conditions = "true";
-	};
-
 	class RawSalema {
 		displayName = "Raw Salema";
 		icon = "Data\Icons\fishRaw.paa";

@@ -173,18 +173,6 @@ class CfgVirtualStores {
 			class Turtle {};
 		};
 	};
-
-	class Hunting {
-		storeName = "Hunting Camp";
-		conditions = "true";
-		class Items {
-			class CuttingKnife {};
-			class UnskinnedRabbit {};
-			class SkinnedRabbit {};
-			class UnskinnedGoat {};
-			class SkinnedGoat {};
-		};
-	};
 	
 	class Cigarette {
 		storeName = "Cigarette Trader";

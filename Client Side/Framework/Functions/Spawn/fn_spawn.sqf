@@ -23,7 +23,7 @@ private _radius = getNumber (_spawnCfg >> "radius");
 if !(_buildings isEqualTo []) then {
 	_buildings = nearestObjects[_pos, _buildings, _radius];
 	if !(_buildings isEqualTo []) then {
-		_pos = (selectRandom _buildings) buildingPos 0;
+		_pos = (selectRandom (_buildings select { isObjectHidden _x })) buildingPos 0;
 	};
 };
 

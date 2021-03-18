@@ -2,6 +2,7 @@ class CfgVehicles {
 	retrievalPerc = 0.15;
 
 	class Base {
+		garageLimit = 4;
 		conditions = "true";
 		class Textures {};
 	};

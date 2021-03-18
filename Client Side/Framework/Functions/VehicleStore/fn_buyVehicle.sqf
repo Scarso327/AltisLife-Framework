@@ -44,11 +44,38 @@ if (isNil "_spawn") exitWith {
 	hint "There are no available spawn points...";
 };
 
-if (CASH >= _buyPrice) exitWith {
+if ([_buyPrice, false, format ["Purchased %1", _name]] call ULP_fnc_removeMoney) exitWith {
 	private _faction = [player] call ULP_fnc_getFaction;
 
 	if ([_faction, "vehicles"] call ULP_fnc_factionPresistant) then {
-		[getPlayerUID player, profileName, _faction, configName _missionCfg, _spawn, _texture] remoteExecCall ["ULP_SRV_fnc_createVehicle", RSERV];
+		["VehicleBought", {
+			_this params [
+				["_params", [], [[]]],
+				["_limitReached", false, [true]],
+				["_price", 0, [0]],
+				["_limit", 0, [0]]
+			];
+
+			if (_limitReached) exitWith {
+				([_params select 0] call ULP_fnc_vehicleCfg) params [
+					"", "", "", ["_name", "Unknown", [""]], "", "", "", "", ""
+				];
+
+				hint ([
+					format ["Your purchase was unable to be made as you've reached the max garagable limit for %1 of %2", _name, [_limit] call ULP_fnc_numberText],
+					format ["You've been refunded %1%2 for %3 as you've reached the max garagable limit of %4...", 
+						"£", 
+						[_price] call ULP_fnc_numberText, 
+						_name, 
+						[_limit] call ULP_fnc_numberText
+					]
+				] select (_price > 0));
+			};
+
+			_params call ULP_fnc_createVehicle;
+		}, true] call ULP_fnc_addEventHandler;
+
+		[_buyPrice, getPlayerUID player, profileName, _faction, configName _missionCfg, _spawn, _texture] remoteExecCall ["ULP_SRV_fnc_createVehicle", RSERV];
 	} else {
 		[configName _missionCfg, _spawn, _texture] call ULP_fnc_createVehicle;
 	};

@@ -36,6 +36,7 @@ _object setVariable ["robber", player, true];
 private _marker = createMarker [format["store_robbery_%1", getPlayerUID player], position _object];
 _marker setMarkerType "mil_warning";
 _marker setMarkerColor "ColorRed";
+_marker setMarkerSize [0.8, 0.8];
 
 [format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg], {
 	_this params [ "_object" ];

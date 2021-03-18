@@ -18,7 +18,7 @@ class CfgLicenseStores {
 		factions[] = { "Civilian" };
 		condition = "true";
 	};
-	class Schnaps : Process { licenses[] = { "Schnaps" }; };
+	class Schnapps : Process { licenses[] = { "Schnapps" }; };
 	class Tobacco : Process { licenses[] = { "Tobacco" }; };
 	class Copper : Process { licenses[] = { "Tobacco" }; };
 	class Silver : Process { licenses[] = { "Silver" }; };

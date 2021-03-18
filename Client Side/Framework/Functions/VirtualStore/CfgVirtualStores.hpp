@@ -131,7 +131,7 @@ class CfgVirtualStores {
 		conditions = "true";
 		class Items {
 			class Beer {};
-			class Schnaps {};
+			class Schnapps {};
 			class Gin {};
 			class Whiskey {};
 		};

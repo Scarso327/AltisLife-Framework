@@ -1,7 +1,7 @@
 class CfgAchievements {
 	class FirstSpawn {
-		icon = "Data\UI\Achievements\firstSpawn.paa";
-		displayName = "Newbie";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa";
+		displayName = "First Steps";
 		description = "Spawned for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
@@ -9,7 +9,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinGroup {
-		icon = "Data\UI\Achievements\joinGroup.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Member";
 		description = "Joined a group for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -45,7 +45,7 @@ class CfgAchievements {
 
 	// TODO
 	class Governor {
-		icon = "Data\UI\Achievements\governor.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Rules_ca.paa";
 		displayName = "Governor";
 		description = "Win an election and become the Governor.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -71,7 +71,7 @@ class CfgAchievements {
 
 	// TODO
 	class TaskMaster {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Tasks_ca.paa";
 		displayName = "Task Master";
 		description = "Completed a task for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -80,7 +80,7 @@ class CfgAchievements {
 
 	// TODO
 	class LifeSaver {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
 		displayName = "Life Saver";
 		description = "Sucessfully revived another person.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -89,7 +89,7 @@ class CfgAchievements {
 
 	// TODO
 	class Cartel {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Miss_icon_ca.paa";
 		displayName = "Cartel Lord";
 		description = "Sucessfully capture a cartel.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -97,7 +97,7 @@ class CfgAchievements {
 	};
 
 	class BuyVehicle {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Driving_ca.paa";
 		displayName = "First Ride";
 		description = "Bought your first vehicle.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -186,7 +186,7 @@ class CfgAchievements {
 
 	// TODO
 	class FanGirl {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\PilotingQuadroter_ca.paa";
 		displayName = "Fan Girl";
 		description = "You have discovered the pleasure in Belle Delphine.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
@@ -194,7 +194,7 @@ class CfgAchievements {
 	};
 
 	class Uncharted {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Map_ca.paa";
 		displayName = "Explorer";
 		description = "You have chosen to leave this island, but returned.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
@@ -202,7 +202,7 @@ class CfgAchievements {
 	};
 
 	class Protest {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Voice_ca.paa";
 		displayName = "Protester";
 		description = "You have taken a simple protest to the extreme...";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
@@ -210,7 +210,7 @@ class CfgAchievements {
 	};
 
 	class MileHighClub {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\TakeOff_ca.paa";
 		displayName = "Mile High Club";
 		description = "You have flown exactly 1-Mile or higher in the sky.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
@@ -218,7 +218,7 @@ class CfgAchievements {
 	};
 
 	class Stonehenge {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Direction_ca.paa";
 		displayName = "Stonehenge";
 		description = "You have discovered the Stonehenge on Altis.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
@@ -234,7 +234,7 @@ class CfgAchievements {
 	};
 
 	class PirateDen {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Death_ca.paa";
 		displayName = "Pirate Den";
 		description = "You have discovered a Pirate Den on Altis.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };

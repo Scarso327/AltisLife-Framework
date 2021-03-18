@@ -111,8 +111,8 @@ class CfgLicenses {
     };
 
     // Processing Sites
-    class Schnaps : BaseLicense {
-        displayName = "Schnaps Processing";
+    class Schnapps : BaseLicense {
+        displayName = "Schnapps Processing";
         buyPrice = 0;
         class Settings {};
     };

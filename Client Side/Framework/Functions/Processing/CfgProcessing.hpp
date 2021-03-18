@@ -110,14 +110,14 @@ class CfgProcessing {
 	class SchnapsApple : Processing {
 		processTime = 40;
 		materials[] = { { "FreshApple", 2 } };
-		items[] = { { "Schnaps", 1 } };
+		items[] = { { "Schnapps", 1 } };
 		reqLicenses[] = {};
 	};
 
 	class SchnapsPeach : Processing {
 		processTime = 40;
 		materials[] = { { "FreshPeach", 2 } };
-		items[] = { { "Schnaps", 1 } };
+		items[] = { { "Schnapps", 1 } };
 		reqLicenses[] = {};
 	};
 

@@ -300,9 +300,9 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
-	class Schnaps {
-		displayName = "Schnaps";
-		icon = "Data\Icons\schnaps.paa";
+	class Schnapps {
+		displayName = "Schnapps";
+		icon = "Data\Icons\Schnapps.paa";
 		buyPrice = 580;
 		sellPrice = 290;
 		weight = 1;

@@ -241,4 +241,12 @@ class CfgAchievements {
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
+
+	class Jetan {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Boat Boy";
+		description = "You have boarded the home of one Jetan Holo.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
 };

@@ -307,6 +307,8 @@ class CfgFunctions {
 			class addMarket {};
 			class addStore {};
 			class addGarage {};
+			class addLicenseStore {};
+			class addProcessing {};
 		};
 		
 		class Garage {

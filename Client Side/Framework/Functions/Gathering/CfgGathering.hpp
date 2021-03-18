@@ -16,7 +16,7 @@ class CfgGathering {
 
 	class Apple : BaseGather {
 		areas[] = { { "apple_field_1", 20 }, { "apple_field_2", 20 }, { "apple_field_3", 20 }, { "apple_field_4", 20 } };
-		items[] = { { "Apple", 100 } };
+		items[] = { { "FreshApple", 100 } };
 	};
 
 	class Peach : BaseGather {

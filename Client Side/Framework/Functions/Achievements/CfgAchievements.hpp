@@ -196,7 +196,7 @@ class CfgAchievements {
 	class Uncharted {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Explorer";
-		description = "You have gone beyond the mapped world...";
+		description = "You have chosen to leave this island, but returned.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};

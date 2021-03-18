@@ -20,7 +20,7 @@ class CfgLicenseStores {
 	};
 	class Schnapps : Process { licenses[] = { "Schnapps" }; };
 	class Tobacco : Process { licenses[] = { "Tobacco" }; };
-	class Copper : Process { licenses[] = { "Tobacco" }; };
+	class Copper : Process { licenses[] = { "Copper" }; };
 	class Silver : Process { licenses[] = { "Silver" }; };
 	class Iron : Process { licenses[] = { "Iron" }; };
 	class Uranium : Process { licenses[] = { "Uranium" }; };

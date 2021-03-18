@@ -22,7 +22,7 @@ class CfgProcessingStores {
 
 	class Schnapps : Base {
 		title = "Schnapps Processing";
-		processes[] = { "Schnapps" };
+		processes[] = { "SchnapsApple", "SchnapsPeach" };
 	};
 
 	class Tobacco : Base {

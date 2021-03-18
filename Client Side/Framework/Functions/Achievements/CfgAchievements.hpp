@@ -188,15 +188,19 @@ class CfgAchievements {
 	class FanGirl {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Fan Girl";
-		description = "You have successfully discovered the pleasure in Belle Delphine.";
+		description = "You have discovered the pleasure in Belle Delphine.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
 
 	class Uncharted {
 		icon = "Data\UI\repairing_prof.paa";
-		displayName = "The Explorer";
-		description = "You have successfully gone beyond the mapped world...";
+		displayName = "Explorer";
+		description = "You have gone beyond the mapped world...";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
 	class Protest {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Protester";
@@ -209,7 +213,7 @@ class CfgAchievements {
 	class Scarso {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "The Wrokspace";
-		description = "You have successfully discovered the workspace of Scarso.";
+		description = "You have discovered the workspace of Scarso.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -217,7 +221,7 @@ class CfgAchievements {
 	class Lewis {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Bushmaker";
-		description = "You have successfully discovered the statue of Lewis 'Bushmaker' Holloway.";
+		description = "You have climbed the statue of Lewis 'Bushmaker' Holloway.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -225,7 +229,7 @@ class CfgAchievements {
 	class Oliver {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Nationalist";
-		description = "You have successfully discovered the metropolitan hub of the North.";
+		description = "You have visited the metropolitan hub of the North.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -233,7 +237,7 @@ class CfgAchievements {
 	class Ace {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Norwegian Retreat";
-		description = "You have successfully discovered the retreat of Ace Boyden.";
+		description = "You have located the hidden retreat of Ace Boyden.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};

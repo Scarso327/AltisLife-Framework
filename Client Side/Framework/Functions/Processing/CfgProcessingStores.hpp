@@ -1,8 +1,107 @@
 class CfgProcessingStores {
-	class Test {
-		title = "Test";
+	class Base {
 		factions[] = { "Civilian" };
 		condition = "true";
-		processes[] = { "Copper", "SchnapsApple", "Weed" };
+	};
+
+	class Gold : Base {
+		title = "Goldsmith";
+		factions[] = { "Civilian", "Police", "Medic", "Hato" };
+		processes[] = { "Gold" };
+	};
+
+	class PublicCookhouse : Base {
+		title = "Public Cookhouse";
+		processes[] = { "Salema", "Ornate", "Tuna", "Mullet", "Catshark" };
+	};
+
+	class HuntingCamp : Base {
+		title = "Hunting Camp";
+		processes[] = { "Rabbit", "Goat" };
+	};
+
+	class Schnaps : Base {
+		title = "Schnaps Processing";
+		processes[] = { "Schnaps" };
+	};
+
+	class Tobacco : Base {
+		title = "Tobacco Processing";
+		processes[] = { "Cigarette", "Cigar" };
+	};
+
+	class Copper : Base {
+		title = "Copper Processing";
+		processes[] = { "Copper" };
+	};
+
+	class Silver : Base {
+		title = "Silver Processing";
+		processes[] = { "Silver" };
+	};
+
+	class Iron : Base {
+		title = "Iron Processing";
+		processes[] = { "Iron" };
+	};
+
+	class Uranium : Base {
+		title = "Uranium Processing";
+		processes[] = { "Uranium" };
+	};
+
+	class Diamond : Base {
+		title = "Diamond Processing";
+		processes[] = { "Diamond" };
+	};
+
+	class Salt : Base {
+		title = "Salt Processing";
+		processes[] = { "Salt" };
+	};
+
+	class Sand : Base {
+		title = "Sand Processing";
+		processes[] = { "Sand" };
+	};
+
+	class Oil : Base {
+		title = "Oil Processing";
+		processes[] = { "Oil" };
+	};
+
+	class Weed : Base {
+		title = "Weed Processing";
+		processes[] = { "Weed" };
+	};
+
+	class Heroin : Base {
+		title = "Heroin Processing";
+		processes[] = { "Heroin" };
+	};
+
+	class Cocaine : Base {
+		title = "Cocaine Processing";
+		processes[] = { "Cocaine" };
+	};
+
+	class Meth : Base {
+		title = "Meth Processing";
+		processes[] = { "Meth" };
+	};
+
+	class Moonshine : Base {
+		title = "Moonshine Processing";
+		processes[] = { "Moonshine" };
+	};
+
+	class Purifier : Base {
+		title = "Drugs Purifier";
+		processes[] = { "PurifiedWeed", "PurifiedHeroin", "PurifiedCocaine", "PurifiedMeth", "PurifiedMoonshine" };
+	};
+
+	class MultiDrug : Base {
+		title = "Multi-Drug Processing";
+		processes[] = { "Weed", "Heroin", "Cocaine", "Meth", "Moonshine" };
 	};
 };

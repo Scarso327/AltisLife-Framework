@@ -197,6 +197,10 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "The Explorer";
 		description = "You have successfully gone beyond the mapped world...";
+	class Protest {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Protester";
+		description = "You have taken a simple protest to the extreme...";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};

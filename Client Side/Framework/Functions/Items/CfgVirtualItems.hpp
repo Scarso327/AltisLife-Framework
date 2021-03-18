@@ -7,7 +7,7 @@ class CfgVirtualItems {
 		sellPrice = 51;
 		weight = 1;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -49,7 +49,7 @@ class CfgVirtualItems {
 		sellPrice = 51;
 		weight = 1;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -414,7 +414,7 @@ class CfgVirtualItems {
 		sellPrice = 98500;
 		weight = 14;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = false;
 		};
@@ -442,7 +442,7 @@ class CfgVirtualItems {
 		sellPrice = 2850;
 		weight = 3;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -456,7 +456,7 @@ class CfgVirtualItems {
 		sellPrice = 3360;
 		weight = 3;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -694,7 +694,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 7;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = false;
 		};
@@ -780,7 +780,7 @@ class CfgVirtualItems {
 		sellPrice = 2400;
 		weight = 4;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
 		};
@@ -864,7 +864,7 @@ class CfgVirtualItems {
 		sellPrice = 7350;
 		weight = 3;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -892,7 +892,7 @@ class CfgVirtualItems {
 		sellPrice = 28650;
 		weight = 6;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -920,7 +920,7 @@ class CfgVirtualItems {
 		sellPrice = 700000;
 		weight = 16;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = false;
 		};
@@ -948,7 +948,7 @@ class CfgVirtualItems {
 		sellPrice = 2450;
 		weight = 1;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -976,7 +976,7 @@ class CfgVirtualItems {
 		sellPrice = 3200;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1004,7 +1004,7 @@ class CfgVirtualItems {
 		sellPrice = 6100;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1032,7 +1032,7 @@ class CfgVirtualItems {
 		sellPrice = 9850;
 		weight = 4;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1061,7 +1061,7 @@ class CfgVirtualItems {
 		sellPrice = 3340;
 		weight = 3;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1075,7 +1075,7 @@ class CfgVirtualItems {
 		sellPrice = 4008;
 		weight = 3;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1103,7 +1103,7 @@ class CfgVirtualItems {
 		sellPrice = 7080;
 		weight = 4;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1117,7 +1117,7 @@ class CfgVirtualItems {
 		sellPrice = 8496;
 		weight = 4;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1145,7 +1145,7 @@ class CfgVirtualItems {
 		sellPrice = 11450;
 		weight = 5;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1159,7 +1159,7 @@ class CfgVirtualItems {
 		sellPrice = 13740;
 		weight = 5;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1187,7 +1187,7 @@ class CfgVirtualItems {
 		sellPrice = 30500;
 		weight = 5;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1201,7 +1201,7 @@ class CfgVirtualItems {
 		sellPrice = 36600;
 		weight = 5;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1229,7 +1229,7 @@ class CfgVirtualItems {
 		sellPrice = 6700;
 		weight = 1;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1243,7 +1243,7 @@ class CfgVirtualItems {
 		sellPrice = 8040;
 		weight = 1;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1257,7 +1257,7 @@ class CfgVirtualItems {
 		sellPrice = 5250;
 		weight = 1;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};
@@ -1314,7 +1314,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1328,7 +1328,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
 		};
@@ -1342,7 +1342,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1356,7 +1356,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
 		};
@@ -1370,7 +1370,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1384,7 +1384,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
 		};
@@ -1398,7 +1398,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1412,7 +1412,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
 		};
@@ -1426,7 +1426,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1440,7 +1440,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
 		};
@@ -1454,7 +1454,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
 		};
@@ -1468,7 +1468,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = false;
+			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
 		};

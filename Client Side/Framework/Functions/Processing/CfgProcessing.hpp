@@ -107,14 +107,14 @@ class CfgProcessing {
 	// Processing
 	class Processing : BaseProcess { processTitle = "Processing"; };
 
-	class SchnapsApple : BaseProcess {
+	class SchnapsApple : Processing {
 		processTime = 40;
 		materials[] = { { "FreshApple", 2 } };
 		items[] = { { "Schnaps", 1 } };
 		reqLicenses[] = {};
 	};
 
-	class SchnapsPeach : BaseProcess {
+	class SchnapsPeach : Processing {
 		processTime = 40;
 		materials[] = { { "FreshPeach", 2 } };
 		items[] = { { "Schnaps", 1 } };

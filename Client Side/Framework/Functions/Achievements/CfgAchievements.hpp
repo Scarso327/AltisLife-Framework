@@ -61,7 +61,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class Convict {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Convict";
@@ -190,7 +189,39 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Fan Girl";
 		description = "You have successfully discovered the pleasure in Belle Delphine.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+	// PERSONAL ACHIEVEMENTS
+	class Scarso {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "The Wrokspace";
+		description = "You have successfully discovered the workspace of Scarso.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Lewis {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Bushmaker";
+		description = "You have successfully discovered the statue of Lewis 'Bushmaker' Holloway.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Oliver {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Nationalist";
+		description = "You have successfully discovered the metropolitan hub of the North.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Ace {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Norwegian Retreat";
+		description = "You have successfully discovered the retreat of Ace Boyden.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
 };

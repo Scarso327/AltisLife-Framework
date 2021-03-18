@@ -55,6 +55,7 @@ class CfgFunctions {
             class registerSession {};
             class unregisterSession {};
             class getSessionField {};
+            class setSessionField {};
             class validateField {};
         };
     };

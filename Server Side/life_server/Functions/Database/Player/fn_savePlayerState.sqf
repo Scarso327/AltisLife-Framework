@@ -22,11 +22,13 @@ private _query = switch (_state) do {
 	case 1: {
 		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_increase", true, [false]]];
 		if !([_player, [_player, "Cash"] call ULP_SRV_fnc_getSessionField, _total, _amount, _increase] call ULP_SRV_fnc_validateField) exitWith { "" };
+		[_player, "Cash", _total] call ULP_SRV_fnc_setSessionField;
 		format["cash='%1'", [_total, ""] call ULP_fnc_numberText]
 	};
 	case 2:  {
 		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_increase", true, [false]]];
 		if !([_player, [_player, "Bank"] call ULP_SRV_fnc_getSessionField, _total, _amount, _increase] call ULP_SRV_fnc_validateField) exitWith { "" };
+		[_player, "Bank", _total] call ULP_SRV_fnc_setSessionField;
 		format["bankacc='%1'", [_total, ""] call ULP_fnc_numberText]
 	};
 	case 3: { format["professions='%1'", [_data] call DB_fnc_mresArray] };

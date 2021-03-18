@@ -1,6 +1,6 @@
 #define UI_WIDTH 0.14
 #define UI_X 0.5 - (UI_WIDTH / 2)
-#define BODY_HEIGHT 0.300
+#define BODY_HEIGHT 0.400
 #define BODY_Y 0.5 - (BODY_HEIGHT / 2)
 
 class DialogLicenses {

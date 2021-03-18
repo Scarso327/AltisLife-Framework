@@ -1,6 +1,6 @@
 class CfgAchievements {
 	class FirstSpawn {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\firstSpawn.paa";
 		displayName = "Newbie";
 		description = "Spawned for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -9,7 +9,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinGroup {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\joinGroup.paa";
 		displayName = "Member";
 		description = "Joined a group for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -45,7 +45,7 @@ class CfgAchievements {
 
 	// TODO
 	class Governor {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\governor.paa";
 		displayName = "Governor";
 		description = "Win an election and become the Governor.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };

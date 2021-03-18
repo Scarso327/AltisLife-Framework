@@ -128,7 +128,7 @@ class CfgSpawns {
             icon = "";
         };
         class Solicitor : Civilian {
-            displayName = "Altis Solicitor";
+            displayName = "Altis Solicitors";
             marker = "civ_spawn_solicitor";
             icon = "";
         };

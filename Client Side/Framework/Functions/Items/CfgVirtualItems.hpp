@@ -793,7 +793,7 @@ class CfgVirtualItems {
 	};
 
 	class IronOre {
-		displayName = "IronOre";
+		displayName = "Iron Ore";
 		icon = "Data\Icons\ore.paa";
 		buyPrice = -1;
 		sellPrice = -1;
@@ -806,7 +806,7 @@ class CfgVirtualItems {
 	};
 
 	class IronBar {
-		displayName = "IronBar";
+		displayName = "Iron Bar";
 		icon = "Data\Icons\ingotUnmarked.paa";
 		buyPrice = -1;
 		sellPrice = 7350;

@@ -21,7 +21,7 @@ private _objectTimeout = _object getVariable "timeout";
 if (!isNil "ULP_Robbery_Timeout" && { time < ULP_Robbery_Timeout }) exitWith {
 	hint format["You have attempted or successfully robbed a store within the last %1 minutes", round (_personalTimeout / 60)];
 };
-if (!isNil "_timeout" && { time < _objectTimeout }) exitWith { hint format["This store was robbed within the last %1 minutes", round (_timeout / 60)]; };
+if (!isNil "_objectTimeout" && { time < _objectTimeout }) exitWith { hint format["This store was robbed within the last %1 minutes", round (_timeout / 60)]; };
 
 private _condition = getText (_cfg >> "condition");
 private _onFail = getText (_cfg >> "onFail");

@@ -36,7 +36,7 @@ class CfgInteractions {
 		// TODO
 		class Lockpick : Repair {
 			title = "Lockpick";
-			onClick = "_this call ULP_fnc_repairVehicle";
+			condition = "!([player, _this] call ULP_fnc_isVehicleOwner) && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
 		};
 
 		class Registration : Repair {

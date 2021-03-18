@@ -170,7 +170,6 @@ class CfgClothesStore {
 		};
 		
 		class Headgear {
-			class H_HeadBandage_clean_F : FactionBase {};
 			class H_WirelessEarpiece_F : FactionBase {};
 			class H_Cap_blk : FactionBase {
 				class Textures {
@@ -236,7 +235,6 @@ class CfgClothesStore {
 		};
 		
 		class Headgear {
-			class H_HeadBandage_clean_F : FactionBase {};
 			class H_WirelessEarpiece_F : FactionBase {};
 			class H_Cap_blk : FactionBase {
 				class Textures {
@@ -260,9 +258,7 @@ class CfgClothesStore {
 			class G_Sport_Red : FactionBase {};
 			class G_Lady_Blue : FactionBase {};
 			class G_Tactical_Clear : FactionBase {};
-			class G_B_Diving : FactionBase { condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F : FactionBase {};
-			class G_RegulatorMask_F : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 
 		class Vests {};

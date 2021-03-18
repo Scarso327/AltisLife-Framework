@@ -25,46 +25,43 @@ class CfgInteractions {
 	// Revive
 
 	class Vehicle {
-		class VehicleBase {
+
+		class Repair {
+			title = "Repair";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_repairVehicle";
 			condition = "true";
 		};
 
 		// TODO
-		class Repair : VehicleBase {
-			title = "Repair";
-			onClick = "_this call ULP_fnc_repairVehicle";
-		};
-
-		// TODO
-		class Lockpick : VehicleBase {
+		class Lockpick : Repair {
 			title = "Lockpick";
 			onClick = "_this call ULP_fnc_repairVehicle";
 		};
 
 		// TODO
-		class Registration : VehicleBase {
+		class Registration : Repair {
 			title = "Registration";
 			onClick = "hint ""Hello"";";
 			factions[] = { "Police", "Hato" };
 		};
 
 		// TODO
-		class Clamp : VehicleBase {
+		class Clamp : Repair {
 			title = "Clamp";
 			onClick = "_this call ULP_fnc_repairVehicle";
 			factions[] = { "Police", "Hato" };
 		};
 
 		// TODO
-		class Search : VehicleBase {
+		class Search : Repair {
 			title = "Search";
 			onClick = "hint ""Hello"";";
 			factions[] = { "Police" };
 		};
 
 		// TODO
-		class Garage : VehicleBase {
+		class Garage : Repair {
 			title = "Garage";
 			onClick = "hint ""Hello"";";
 			factions[] = { "Police", "Hato" };
@@ -72,7 +69,7 @@ class CfgInteractions {
 		};
 
 		// TODO
-		class Impound : VehicleBase {
+		class Impound : Repair {
 			title = "Impound";
 			onClick = "hint ""Hello"";";
 			factions[] = { "Police", "Hato" };
@@ -80,7 +77,7 @@ class CfgInteractions {
 		};
 
 		// TODO
-		class Scrap : VehicleBase {
+		class Scrap : Repair {
 			title = "Scrap";
 			onClick = "hint ""Hello"";";
 			factions[] = { "Police" };
@@ -88,13 +85,13 @@ class CfgInteractions {
 		};
 
 		// TODO
-		class PulloutOccupants : VehicleBase {
+		class PulloutOccupants : Repair {
 			title = "Pullout Occupants";
 			onClick = "hint ""Hello"";";
 		};
 
 		// TODO
-		class Push : VehicleBase {
+		class Push : Repair {
 			title = "Push";
 			onClick = "hint ""Hello"";";
 		};

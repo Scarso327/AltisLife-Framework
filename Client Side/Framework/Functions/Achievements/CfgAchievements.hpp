@@ -18,7 +18,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinAPC {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "Constable";
 		description = "Joined the Altis Police Constabulary.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -27,7 +27,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinNHS {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "Paramedic";
 		description = "Joined the National Health Service.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -36,7 +36,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinHATO {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "Traffic Officer";
 		description = "Joined the Highways Agency.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -54,7 +54,7 @@ class CfgAchievements {
 
 	// TODO
 	class Employment {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\employment.paa";
 		displayName = "Employment";
 		description = "Successfully become employemented.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -62,7 +62,7 @@ class CfgAchievements {
 	};
 
 	class Convict {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\convict.paa";
 		displayName = "Convict";
 		description = "Have been sent to prison by a constable.";
 		leveling[] = { 10, "Achievement Unlocked", 100 };
@@ -106,7 +106,7 @@ class CfgAchievements {
 
 	// TODO
 	class BuyHouse {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\house.paa";
 		displayName = "First House";
 		description = "Bought your first house.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -115,7 +115,7 @@ class CfgAchievements {
 
 	// TODO
 	class BuyWarehouse {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\warehouse.paa";
 		displayName = "First Warehouse";
 		description = "Bought your first warehouse.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -124,7 +124,7 @@ class CfgAchievements {
 
 	// TODO
 	class OneMillion {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "£1,000,000";
 		description = "Had a total of £1,000,000 in your bank.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -133,7 +133,7 @@ class CfgAchievements {
 
 	// TODO
 	class TenMillion {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "£10,000,000";
 		description = "Had a total of £10,000,000 in your bank.";
 		leveling[] = { 200, "Achievement Unlocked", 100 };
@@ -142,7 +142,7 @@ class CfgAchievements {
 
 	// TODO
 	class HundredMillion {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "£100,000,000";
 		description = "Had a total of £100,000,000 in your bank.";
 		leveling[] = { 300, "Achievement Unlocked", 100 };
@@ -151,7 +151,7 @@ class CfgAchievements {
 
 	// TODO
 	class WeekLoyalty {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "A Week's Loyalty";
 		description = "Achieved a loyalty streak of 7-days.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
@@ -160,7 +160,7 @@ class CfgAchievements {
 
 	// TODO
 	class MonthLoyalty {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "A Month's Loyalty";
 		description = "Achieved a loyalty streak of 30-days.";
 		leveling[] = { 5000, "Achievement Unlocked", 100 };
@@ -169,7 +169,7 @@ class CfgAchievements {
 
 	// TODO
 	class YearLoyalty {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\loyaltyYear.paa";
 		displayName = "Simply No Life";
 		description = "Achieved a loyalty streak of 365-days.";
 		leveling[] = { 10000, "Achievement Unlocked", 100 };
@@ -178,7 +178,7 @@ class CfgAchievements {
 
 	// MYSTERY ---------------------------------------------------------
 	class Prestige {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\repairing_prof.paa"; // ICON
 		displayName = "Prestigious";
 		description = "Prestiged for the first time.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
@@ -195,7 +195,7 @@ class CfgAchievements {
 	};
 
 	class Uncharted {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Map_ca.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Map_ca.paa"; // ICON
 		displayName = "Explorer";
 		description = "You have chosen to leave this island, but returned.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
@@ -235,7 +235,7 @@ class CfgAchievements {
 	};
 
 	class Atlantis {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\atlantis.paa";
 		displayName = "Atlantis";
 		description = "You have discovered Atlantis on Altis.";
 		leveling[] = { 3000, "Achievement Unlocked", 100 };
@@ -244,7 +244,7 @@ class CfgAchievements {
 
 	// PERSONAL ACHIEVEMENTS
 	class Scarso {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\scarso.paa";
 		displayName = "The Workspace";
 		description = "You have discovered the workspace of Scarso.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
@@ -252,7 +252,7 @@ class CfgAchievements {
 	};
 
 	class Lewis {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\lewis.paa";
 		displayName = "Bushmaker";
 		description = "You have climbed the statue of Lewis 'Bushmaker' Holloway.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
@@ -260,7 +260,7 @@ class CfgAchievements {
 	};
 
 	class Oliver {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\oliver.paa";
 		displayName = "Nationalist";
 		description = "You have visited the metropolitan hub of the North. Home of Oliver Lawson.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
@@ -268,7 +268,7 @@ class CfgAchievements {
 	};
 
 	class Ace {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\ace.paa";
 		displayName = "Norwegian Retreat";
 		description = "You have located the hidden retreat of Ace Boyden.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
@@ -276,7 +276,7 @@ class CfgAchievements {
 	};
 
 	class Jetan {
-		icon = "Data\UI\repairing_prof.paa";
+		icon = "Data\UI\Achievements\jetan.paa";
 		displayName = "Boat Boy";
 		description = "You have boarded the home of one Jetan Holo.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };

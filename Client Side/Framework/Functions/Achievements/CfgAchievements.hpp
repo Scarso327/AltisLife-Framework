@@ -43,21 +43,11 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class Captain {
 		icon = ""; // ICON
 		displayName = "Ship Captain";
 		description = "Visited the command deck of the HMS Liberty.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
-		isMystery = false;
-	};
-
-	// TODO
-	class Radiation {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
-		displayName = "Goodbye Fatherhood";
-		description = "Experienced the effects of radation poisoning.";
-		leveling[] = { 200, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -307,6 +297,15 @@ class CfgAchievements {
 		displayName = "Explorer";
 		description = "You have chosen to leave this island, but returned.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	// TODO
+	class Radiation {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
+		displayName = "Goodbye Fatherhood";
+		description = "Experienced the effects of radation poisoning.";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
 

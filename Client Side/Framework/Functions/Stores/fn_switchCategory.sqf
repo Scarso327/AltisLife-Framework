@@ -59,4 +59,6 @@ if ((count _items) isEqualTo 0) exitWith {
 	_itemList lbSetPicture [_item, (_itemInfo select 2)];
 	_itemList lbSetValue [_item, (_itemCfg select 6)];
 	_itemList lbSetData [_item, (str _itemInfo)];
-} forEach _items;
+} forEach (_items select {
+	call compile getText (_x >> "condition")
+});

@@ -28,6 +28,6 @@ _syncDelay = ULP_Last_Sync + _syncDelay;
 	} else {
 		_saveButton ctrlSetText "SYNC DATA";
 		_saveButton ctrlEnable true;
-		[_thisEventHandler] call GTA_fnc_removeEachFrameHandler;
+		[_thisEventHandler] call ULP_fnc_removeEachFrame;
 	};
 }] call ULP_fnc_addEachFrame;

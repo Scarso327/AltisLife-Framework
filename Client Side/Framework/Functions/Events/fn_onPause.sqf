@@ -34,7 +34,7 @@ with missionNamespace do {
 		} else {
 			_abortButton ctrlSetText "ABORT";
 			_abortButton ctrlEnable true;
-            [_thisEventHandler] call GTA_fnc_removeEachFrameHandler;
+            [_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};
     }] call ULP_fnc_addEachFrame;
 };

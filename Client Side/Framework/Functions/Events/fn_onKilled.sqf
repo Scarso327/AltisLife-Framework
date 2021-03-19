@@ -44,7 +44,7 @@ _unit removeWeapon (secondaryWeapon _unit);
 
 // Close bleedout script...
 if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
-	terminate (uiNamespace getVariable "_fnc_bleedout");
+	[uiNamespace getVariable "_fnc_bleedout"] call ULP_fnc_removeEachFrame;
 	uiNamespace setVariable ["_fnc_bleedout", nil];
 };
 

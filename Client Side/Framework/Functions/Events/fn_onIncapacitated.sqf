@@ -5,6 +5,10 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_onIncapacitated";
 
+if (canSuspend) exitWith {
+    [ULP_fnc_onIncapacitated, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_unit", objNull, [objNull]],
 	["_killer", objNull, [objNull]]
@@ -73,41 +77,42 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	private _respawnTime = getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "WaitForBleedOutTime");
 	private _endTime = time + _respawnTime + getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BleedOutTime");
 
-	if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then { terminate (uiNamespace getVariable "_fnc_bleedout") };
+	if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
+		 [uiNamespace getVariable "_fnc_bleedout"] call ULP_fnc_removeEachFrame;
+	};
 
-	// I continue to use the _unit, _incapUi vars, etc to keep consistency throughout the script.
-	private _bleedout = [_incapUi, _unit, _startTime, _respawnTime, _endTime] spawn {
+	private _rspMsg = "Waiting to respawn...";
+
+	uiNamespace setVariable ["_fnc_bleedout", ([[_incapUi, _unit, _startTime, _respawnTime, _endTime, _rspMsg], {
 		_this params [
 			["_incapUi", displayNull, [displayNull]],
 			["_unit", objNull, [objNull]],
-			"_startTime", "_respawnTime", "_endTime" // Time vars...
+			"_startTime", "_respawnTime", "_endTime", // Time vars...
+			["_rspMsg", "Waiting to respawn...", [""]]
 		];
 
-		if (isNull _unit || { isNull _incapUi }) exitWith {};
-
-		private _rspMsg = "Waiting to respawn...";
-
-		// Bleedout Loop...
-		for "_i" from 0 to 1 step 0 do {
-			if (!alive _unit || !(isDowned(_unit))) exitWith {};
-
-			if (time >= _endTime) exitWith { _unit setDamage 1 }; // My time has come...
-
-			if (time >= (_startTime + _respawnTime) && { !ULP_CanRespawn }) then {
-				ULP_CanRespawn = true;
-				_rspMsg = "Press <t color = '#7300e6'>Shift + F</t> to respawn...";
-			};
-
-			(_incapUi displayCtrl 9002) ctrlSetStructuredText parseText format [
-				"<t align='left' size='1'>%1</t><t align='right' size='1'>Nearest Medic: 0m</t>",
-				_rspMsg
-			];
-
-			(_incapUi displayCtrl 9004) progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
+		if !(alive _unit || { isDowned(_unit) }) exitWith {
+			uiNamespace setVariable ["_fnc_bleedout", nil];
+			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};
 
-		uiNamespace setVariable ["_fnc_bleedout", nil];
-	};
+		// My time has come...
+		if (time >= _endTime) exitWith {
+			_unit setDamage 1;
+			uiNamespace setVariable ["_fnc_bleedout", nil];
+			[_thisEventHandler] call ULP_fnc_removeEachFrame;
+		};
 
-	uiNamespace setVariable ["_fnc_bleedout", _bleedout];
+		if (time >= (_startTime + _respawnTime) && { !ULP_CanRespawn }) then {
+			ULP_CanRespawn = true;
+			_rspMsg = "Press <t color = '#7300e6'>Shift + F</t> to respawn...";
+		};
+
+		(_incapUi displayCtrl 9002) ctrlSetStructuredText parseText format [
+			"<t align='left' size='1'>%1</t><t align='right' size='1'>Nearest Medic: 0m</t>",
+			_rspMsg
+		];
+
+		(_incapUi displayCtrl 9004) progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
+    }] call ULP_fnc_addEachFrame)];
 };

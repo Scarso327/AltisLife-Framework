@@ -36,7 +36,7 @@ class CfgSettings {
         };
         class Forums {
             title = "Forums and Teamspeak!";
-            items[] = {"URL:", "ascensionroleplay.co.uk"};
+            items[] = {"Join us:", "ascensionrp.co.uk"};
         };
         class Development {
             title = "Development Team!";

@@ -21,7 +21,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Constable";
 		description = "Joined the Altis Police Constabulary.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -30,7 +30,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Paramedic";
 		description = "Joined the National Health Service.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -39,7 +39,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Traffic Officer";
 		description = "Joined the Highways Agency.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -48,7 +48,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Rules_ca.paa";
 		displayName = "Governor";
 		description = "Win an election and become the Governor.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -65,7 +65,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Convict";
 		description = "Have been sent to prison by a constable.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 10, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -74,7 +74,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Tasks_ca.paa";
 		displayName = "Task Master";
 		description = "Completed a task for the first time.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 75, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -83,7 +83,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
 		displayName = "Life Saver";
 		description = "Sucessfully revived another person.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 350, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -118,7 +118,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "First Warehouse";
 		description = "Bought your first warehouse.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -127,7 +127,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "£1,000,000";
 		description = "Had a total of £1,000,000 in your bank.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -136,7 +136,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "£10,000,000";
 		description = "Had a total of £10,000,000 in your bank.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 200, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -145,7 +145,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "£100,000,000";
 		description = "Had a total of £100,000,000 in your bank.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 300, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -154,7 +154,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "A Week's Loyalty";
 		description = "Achieved a loyalty streak of 7-days.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -163,7 +163,7 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "A Month's Loyalty";
 		description = "Achieved a loyalty streak of 30-days.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 5000, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -172,15 +172,16 @@ class CfgAchievements {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Simply No Life";
 		description = "Achieved a loyalty streak of 365-days.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 10000, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
+	// MYSTERY ---------------------------------------------------------
 	class Prestige {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Prestigious";
 		description = "Prestiged for the first time.";
-		leveling[] = { 50, "Achievement Unlocked", 100 };
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
 
@@ -221,15 +222,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Direction_ca.paa";
 		displayName = "Stonehenge";
 		description = "You have discovered the Stonehenge on Altis.";
-		leveling[] = { 500, "Achievement Unlocked", 100 };
-		isMystery = true;
-	};
-
-	class Atlantis {
-		icon = "Data\UI\repairing_prof.paa";
-		displayName = "Atlantis";
-		description = "You have discovered Atlantis on Altis.";
-		leveling[] = { 500, "Achievement Unlocked", 100 };
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
 
@@ -237,7 +230,15 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Death_ca.paa";
 		displayName = "Pirate Den";
 		description = "You have discovered a Pirate Den on Altis.";
-		leveling[] = { 500, "Achievement Unlocked", 100 };
+		leveling[] = { 2000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Atlantis {
+		icon = "Data\UI\repairing_prof.paa";
+		displayName = "Atlantis";
+		description = "You have discovered Atlantis on Altis.";
+		leveling[] = { 3000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
 
@@ -261,7 +262,7 @@ class CfgAchievements {
 	class Oliver {
 		icon = "Data\UI\repairing_prof.paa";
 		displayName = "Nationalist";
-		description = "You have visited the metropolitan hub of the North.";
+		description = "You have visited the metropolitan hub of the North. Home of Oliver Lawson.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};

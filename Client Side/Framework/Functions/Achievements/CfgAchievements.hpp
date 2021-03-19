@@ -10,16 +10,70 @@ class CfgAchievements {
 	// TODO
 	class FirstDrink {
 		icon = ""; // ICON
-		displayName = "Wasted";
+		displayName = "Big Drink";
 		description = "Taken your frist drink of alcohol.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
 	// TODO
+	class FirstDrug {
+		icon = ""; // ICON
+		displayName = "Druggie";
+		description = "Had your first drug experience.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
+	class GirlsBestFriend {
+		icon = ""; // ICON
+		displayName = "Girl's Best Friend";
+		description = "Aquired a finely cut diamond.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
+	class Salty {
+		icon = ""; // ICON
+		displayName = "Extremely Salty";
+		description = "Held a vast amount of salt on your person.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
+	class Captain {
+		icon = ""; // ICON
+		displayName = "Ship Captain";
+		description = "Visited the command deck of the HMS Liberty.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
+	class Radiation {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
+		displayName = "Goodbye Fatherhood";
+		description = "Experienced the effects of radation poisoning.";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
+	class JoinRebel {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
+		displayName = "The Rebellion";
+		description = "Joined the Rebellion. Hope.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
 	class JoinGroup {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
-		displayName = "Member";
+		displayName = "Group Member";
 		description = "Joined a group for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;

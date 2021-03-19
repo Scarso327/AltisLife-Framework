@@ -13,10 +13,7 @@ _vehicle setAmmoCargo 0;
 _vehicle setFuelCargo 0;
 _vehicle setRepairCargo 0;
 
-clearWeaponCargoGlobal _vehicle;
-clearMagazineCargoGlobal _vehicle;
-clearItemCargoGlobal _vehicle;
-clearBackpackCargoGlobal _vehicle;
+[_vehicle] call ULP_fnc_clearCargo;
 
 private _texture = _vehicle getVariable ["texture", ""];
 private _vehicleCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle);

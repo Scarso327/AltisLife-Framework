@@ -24,6 +24,22 @@ class CfgInteractions {
 	/* MEDIC INTERACTIONS */
 	// Revive
 
+	class EquipmentBox {
+		class ClearBox {
+			title = "Clear Box";
+			factions[] = { "Police" };
+			onClick = "[_this] call ULP_fnc_clearCargo;";
+			condition = "true";
+		};
+		
+		class ResetLoadout {
+			title = "Reset Loadout";
+			factions[] = { "Police", "Medic", "Hato" };
+			onClick = "[] call ULP_fnc_setLoadout;";
+			condition = "[[player] call ULP_fnc_getFaction] call ULP_fnc_canResetLoadout;"
+		};
+	};
+
 	class Vehicle {
 
 		class Repair {

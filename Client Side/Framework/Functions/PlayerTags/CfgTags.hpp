@@ -79,22 +79,22 @@ class CfgTags {
 		};
 		class PolicePC  {
 			icon = "Data\Tags\Ranks\Police\PC.paa";
-			subtitle = "Constable";
+			subtitle = "Police Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 		class PoliceSC  {
-			icon = "Data\Tags\Ranks\Police\PC.paa";
-			subtitle = "Constable";
+			icon = "Data\Tags\Ranks\Police\SC.paa";
+			subtitle = "Special Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class PolicPPC  {
 			icon = "Data\Tags\Ranks\Police\PC.paa";
-			subtitle = "Constable";
+			subtitle = "Probationary Police Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class PolicPCSO  {
 			icon = "Data\Tags\Ranks\Police\PCSO.paa";
-			subtitle = "Constable";
+			subtitle = "Police Community Support Officer";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 

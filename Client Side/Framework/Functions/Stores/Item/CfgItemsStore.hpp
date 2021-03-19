@@ -12,6 +12,7 @@ class CfgItemsStore {
 		class Rifles {
 			// SPECIAL
 			class arifle_Mk20C_plain_F : FactionBase {
+				displayName = "Rubber Bullet Gun";
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 				class textures { class arifle_Mk20C_plain_F {}; };
 			};
@@ -19,9 +20,9 @@ class CfgItemsStore {
 
 			// SUB-MACHINE GUNS
 			class SMG_05_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; }; 
-			class SMG_01_F : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess }"; };
-			class SMG_03C_black : FactionBase { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
-			class SMG_03_black : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
+			class SMG_01_F : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 9] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
+			class SMG_03C_black : FactionBase { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
+			class SMG_03_black : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
 
 			// ASSAULT RIFLES
 			class arifle_SPAR_01_blk_F : FactionBase {
@@ -29,7 +30,7 @@ class CfgItemsStore {
 				class textures { class arifle_SPAR_01_blk_F {}; };
 			};
 			class arifle_SPAR_02_blk_F : FactionBase {
-				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 7] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_SPAR_02_blk_F {}; };
 			};
 			class arifle_CTAR_blk_F : FactionBase {
@@ -37,7 +38,7 @@ class CfgItemsStore {
 				class textures { class arifle_CTAR_blk_F {}; };
 			};
 			class arifle_CTARS_blk_F : FactionBase {
-				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 8] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_CTARS_blk_F {}; };
 			};
 			class arifle_MX_Black_F : FactionBase {
@@ -49,7 +50,7 @@ class CfgItemsStore {
 				class textures { class arifle_MXM_Black_F {}; };
 			}; 
 			class arifle_MX_SW_Black_F : FactionBase {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 3] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 3] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { ([""Police_Main"", 9] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_MX_SW_Black_F {}; };
 			};
 			class arifle_MSBS65_black_F : FactionBase {
@@ -79,7 +80,7 @@ class CfgItemsStore {
 		};
 		class Pistols {
 			class hgun_P07_F : FactionBase {};
-			class hgun_ACPC2_F : FactionBase {  condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 4] call ULP_fnc_hasAccess } || { [""Police_NCA"", 4] call ULP_fnc_hasAccess }"; };
+			class hgun_ACPC2_F : FactionBase {  condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 4] call ULP_fnc_hasAccess } || { [""Police_NCA"", 4] call ULP_fnc_hasAccess } || { [""Police_NPAS"", 4] call ULP_fnc_hasAccess } || { [""Police_MPU"", 3] call ULP_fnc_hasAccess } || { [""Police_RPU"", 3] call ULP_fnc_hasAccess }"; };
 		};
 		class Attachments {
 			class bipod_01_F_blk : FactionBase { 
@@ -142,7 +143,29 @@ class CfgItemsStore {
 				class textures { class muzzle_snds_65_TI_blk_F {}; };
 			};
 		};
-		class Magazines {};
+		class Magazines {
+			class 16Rnd_9x21_Mag : FactionBase { displayName = "Taser Cartridge"; };
+			class 30Rnd_9x21_Mag_SMG_02 : FactionBase {};
+			class 30Rnd_45ACP_Mag_SMG_01 : FactionBase {};
+			class 9Rnd_45ACP_Mag : FactionBase {};
+			class 50Rnd_570x28_SMG_03 : FactionBase {};
+			class 30Rnd_556x45_Stanag_Tracer_Green : FactionBase {};
+			class 20Rnd_556x45_UW_mag : FactionBase {};
+			class 30Rnd_556x45_Stanag : FactionBase {};
+			class 150Rnd_556x45_Drum_Mag_F : FactionBase { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 7] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
+			class 30Rnd_580x42_Mag_F : FactionBase {};
+			class 100Rnd_580x42_Mag_F : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 3] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { ([""Police_Main"", 9] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }"; };
+			class 30Rnd_65x39_caseless_green : FactionBase {};
+			class 30Rnd_65x39_caseless_msbs_mag : FactionBase {};
+			class 30Rnd_65x39_caseless_black_mag : FactionBase {
+				class textures { class 30Rnd_65x39_caseless_black_mag {}; }; 
+			};
+			class 100Rnd_65x39_caseless_black_mag : FactionBase {
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 3] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
+				class textures { class 100Rnd_65x39_caseless_black_mag {}; }; 
+			};
+			class 20Rnd_762x51_Mag : FactionBase {};
+		};
 		class Items {
 			class ItemMap : FactionBase {};
 			class ItemCompass : FactionBase {};
@@ -152,7 +175,9 @@ class CfgItemsStore {
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
 			class ToolKit : FactionBase {};
-			class SmokeShell : FactionBase { class textures { class SmokeShell {}; }; };
+			class SmokeShell : FactionBase { 
+				class textures { class SmokeShell {}; }; 
+			};
 		};
 	};
 

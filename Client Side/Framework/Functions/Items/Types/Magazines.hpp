@@ -40,6 +40,12 @@ class 30Rnd_545x39_Mag_F : BaseMagazine { price = 0; };
 // 5.7mm
 class 50Rnd_570x28_SMG_03 : BaseMagazine { price = 0; };
 
+// Rubber Bullets
+class 30Rnd_556x45_Stanag_Tracer_Green : BaseMagazine { 
+	displayName = "Rubber Bullets";
+	price = 0; 
+};
+
 // 5.56mm
 class 20Rnd_556x45_UW_mag : BaseMagazine { price = 0; };
 class 30Rnd_556x45_Stanag : BaseMagazine { price = 0; };

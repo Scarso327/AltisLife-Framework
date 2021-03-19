@@ -1153,6 +1153,13 @@ class CfgVehicles {
 		};
 	};
 
+	class B_Heli_Attack_01_F : Base {
+		buyPrice = 0;
+		virtualSpace = 0;
+		garageLimit = 1;
+		turrets[] = { { "CMFlareLauncher", "gatling_20mm", "missiles_DAGR", "missiles_ASRAAM" } };
+	};
+
 	// PLANES --------------------------------------------------------------------------------------
 	class C_Plane_Civil_01_F : Base {
 		buyPrice = 0;

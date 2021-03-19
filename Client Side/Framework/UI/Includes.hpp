@@ -11,3 +11,4 @@
 #include "DisplaySelect\DisplaySelectPlayer.hpp"
 #include "DialogLicenses\DialogLicenses.hpp"
 #include "DialogProcessing\DialogProcessing.hpp"
+#include "DialogMoney\DialogMoney.hpp"

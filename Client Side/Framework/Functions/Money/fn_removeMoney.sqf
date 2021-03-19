@@ -23,6 +23,8 @@ if (_isBank) then {
 
 	BANK = BANK - _amount;
 	[player, 2, [BANK, _amount, false]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+
+	[0, _amount, _transaction] call ULP_fnc_logTransaction;
 } else {
 	if (CASH < _amount) exitWith { false breakOut "fn_removeMoney"; };
 

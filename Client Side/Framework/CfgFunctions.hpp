@@ -320,6 +320,7 @@ class CfgFunctions {
 			class addLicenseStore {};
 			class addProcessing {};
 			class addRobAction {};
+			class addBank {};
 		};
 		
 		class Garage {
@@ -374,6 +375,11 @@ class CfgFunctions {
 			file = "Functions\Money";
 			class addMoney {};
 			class removeMoney {};
+			class openBank {};
+			class switchBank {};
+			class logTransaction {};
+			class withdrawMoney {};
+			class depositMoney {};
 		};
 
 		class Robberies {

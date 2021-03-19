@@ -1,5 +1,5 @@
 class CfgVehicles {
-	retrievalPerc = 0.15;
+	retrievalPerc = 0.02;
 
 	class Base {
 		garageLimit = 4;

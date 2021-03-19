@@ -8,6 +8,15 @@ class CfgAchievements {
 	};
 
 	// TODO
+	class FirstDrink {
+		icon = ""; // ICON
+		displayName = "Wasted";
+		description = "Taken your frist drink of alcohol.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
 	class JoinGroup {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Member";
@@ -35,6 +44,24 @@ class CfgAchievements {
 	};
 
 	// TODO
+	class FirstTicket {
+		icon = ""; // ICON
+		displayName = "Ticketer";
+		description = "Issued a Fixed Pelenty Notice to an individual.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
+	class FirstArrest {
+		icon = ""; // ICON
+		displayName = "Law Enforcer";
+		description = "Sentenced an individual to serve time in the HMP.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
 	class JoinNHS {
 		icon = "Data\UI\Achievements\NHS.paa";
 		displayName = "Paramedic";
@@ -44,11 +71,38 @@ class CfgAchievements {
 	};
 
 	// TODO
+	class LifeSaver {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
+		displayName = "Life Saver";
+		description = "Sucessfully revived another person.";
+		leveling[] = { 350, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
 	class JoinHATO {
 		icon = "Data\UI\Achievements\HATO.paa";
 		displayName = "Traffic Officer";
 		description = "Joined the Highways Agency.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
+	class FirstImpound {
+		icon = ""; // ICON
+		displayName = "Street Cleaner";
+		description = "Impounded a vehicle for the first time.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	// TODO
+	class FirstCrush {
+		icon = ""; // ICON
+		displayName = "Vehicle Scrapper";
+		description = "Crushed/Chopped a vehicle for the first time.";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
@@ -84,15 +138,6 @@ class CfgAchievements {
 		displayName = "Task Master";
 		description = "Completed a task for the first time.";
 		leveling[] = { 75, "Achievement Unlocked", 100 };
-		isMystery = false;
-	};
-
-	// TODO
-	class LifeSaver {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
-		displayName = "Life Saver";
-		description = "Sucessfully revived another person.";
-		leveling[] = { 350, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 

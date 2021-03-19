@@ -16,9 +16,18 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	// TO DO
+	class JoinStaff {
+		icon = "Data\UI\Achievements\staff.paa";
+		displayName = "Staff Team";
+		description = "You have joined the community's Staff Team.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
 	// TODO
 	class JoinAPC {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\APC.paa";
 		displayName = "Constable";
 		description = "Joined the Altis Police Constabulary.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -27,7 +36,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinNHS {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\NHS.paa";
 		displayName = "Paramedic";
 		description = "Joined the National Health Service.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -36,7 +45,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinHATO {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\HATO.paa";
 		displayName = "Traffic Officer";
 		description = "Joined the Highways Agency.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -124,7 +133,7 @@ class CfgAchievements {
 
 	// TODO
 	class OneMillion {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\money1.paa";
 		displayName = "£1,000,000";
 		description = "Had a total of £1,000,000 in your bank.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -133,7 +142,7 @@ class CfgAchievements {
 
 	// TODO
 	class TenMillion {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\money10.paa";
 		displayName = "£10,000,000";
 		description = "Had a total of £10,000,000 in your bank.";
 		leveling[] = { 200, "Achievement Unlocked", 100 };
@@ -142,7 +151,7 @@ class CfgAchievements {
 
 	// TODO
 	class HundredMillion {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\money100.paa";
 		displayName = "£100,000,000";
 		description = "Had a total of £100,000,000 in your bank.";
 		leveling[] = { 300, "Achievement Unlocked", 100 };
@@ -151,7 +160,7 @@ class CfgAchievements {
 
 	// TODO
 	class WeekLoyalty {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\loyaltyWeek.paa";
 		displayName = "A Week's Loyalty";
 		description = "Achieved a loyalty streak of 7-days.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
@@ -160,7 +169,7 @@ class CfgAchievements {
 
 	// TODO
 	class MonthLoyalty {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\loyaltyMonth.paa";
 		displayName = "A Month's Loyalty";
 		description = "Achieved a loyalty streak of 30-days.";
 		leveling[] = { 5000, "Achievement Unlocked", 100 };
@@ -178,7 +187,7 @@ class CfgAchievements {
 
 	// MYSTERY ---------------------------------------------------------
 	class Prestige {
-		icon = "Data\UI\repairing_prof.paa"; // ICON
+		icon = "Data\UI\Achievements\prestige.paa";
 		displayName = "Prestigious";
 		description = "Prestiged for the first time.";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
@@ -195,7 +204,7 @@ class CfgAchievements {
 	};
 
 	class Uncharted {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Map_ca.paa"; // ICON
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Map_ca.paa";
 		displayName = "Explorer";
 		description = "You have chosen to leave this island, but returned.";
 		leveling[] = { 500, "Achievement Unlocked", 100 };

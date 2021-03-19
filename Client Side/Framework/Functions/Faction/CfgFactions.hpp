@@ -76,7 +76,7 @@ class CfgFactions {
 
 		class Loadout {
 			class Uniforms {
-				class U_Rangemaster {};
+				class U_Competitor {};
 			};
 			class LinkedItems {
 				hasMap = true;

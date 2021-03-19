@@ -285,6 +285,11 @@ class U_O_R_Gorka_01_black_F {
 	price = 0;
 	virtualSpace = 0;
 	class Textures {
+		class RPU {
+			displayName = "RPU";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\RPU_tracksuit.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
+		};
 		class NCA {
 			displayName = "NCA";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_tracksuit.paa" };
@@ -583,7 +588,7 @@ class U_B_CombatUniform_mcam_worn {
 	class Textures {
 		class RPU {
 			displayName = "Traffic Uniform";
-			textures[] = { "Data\Textures\Uniforms\Police\Units\RPU.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Units\RPU_main.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
 		};
 		class AFO {

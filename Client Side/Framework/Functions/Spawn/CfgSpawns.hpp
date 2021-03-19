@@ -69,11 +69,6 @@ class CfgSpawns {
             marker = "nhs_spawn_sofia";
             icon = "";
         };
-        class AgiosHClinic : Medic {
-            displayName = "Agios Clinic";
-            marker = "nhs_spawn_agioss";
-            icon = "";
-        };
 
         // Altis Police Constabulary / National Health Service
         class MarineStation {

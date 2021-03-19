@@ -167,19 +167,13 @@ class CfgClothesStore {
 		};
 		
 		class Headgear {
-			class H_WirelessEarpiece_F : FactionBase {};
-			class H_Cap_blk : FactionBase {
-				class Textures {
-					class H_Cap_blk {};
-					class H_Cap_red : H_Cap_blk {};
-					class H_Cap_blu : H_Cap_blk {};
-					class H_Cap_tan : H_Cap_blk {};
-					class H_Cap_oli : H_Cap_blk {};
-					class H_Cap_surfer : H_Cap_blk {};
-				};
-			};
-			class H_Watchcap_blk : FactionBase {};
-			class H_Beret_CSAT_01_F : FactionBase { condition = "[""Medic_Main"", 7] call ULP_fnc_hasAccess"; };
+			class H_WirelessEarpiece_F {};
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_Hat_grey {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+			class H_Beret_blk : FactionBase { condition = "[""Medic_Main"", 7] call ULP_fnc_hasAccess"; };
 			class H_PilotHelmetHeli_B : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 

@@ -17,18 +17,22 @@ class CfgClothesStore {
 			class U_B_CombatUniform_mcam_worn : FactionBase { condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
 			class U_O_PilotCoveralls : FactionBase { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class U_B_CTRG_Soldier_F : FactionBase {
+				displayName = "SCO19 Stealth Uniform";
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_GhillieSuit : FactionBase {
+				displayName = "SCO19 Ghillie Suit";
 				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_CTRG_Soldier_2_Arid_F : FactionBase {
+				displayName = "SCO19 Command Uniform";
 				condition = "[""Police_SCO"", 4] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_Wetsuit : FactionBase {
+				displayName = "MPU Wetsuit";
 				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
 				class Textures { class MPU {}; };
 			};
@@ -49,6 +53,7 @@ class CfgClothesStore {
 			};
 			class U_I_L_Uniform_01_tshirt_skull_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
 		};
+		
 		class Headgear {
 			class H_WirelessEarpiece_F : FactionBase {};
 			class H_Cap_blk : FactionBase {
@@ -77,6 +82,7 @@ class CfgClothesStore {
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess"; 
 			};
 		};
+
 		class Facewear {
 			class G_WirelessEarpiece_F : FactionBase {};
 			class G_Aviator : FactionBase {};
@@ -90,7 +96,6 @@ class CfgClothesStore {
 			class G_Shades_Black : FactionBase {};
 			class G_Sport_Red : FactionBase {};
 			class G_Lady_Blue : FactionBase {};
-			class G_Tactical_Clear : FactionBase {};
 			class G_B_Diving : FactionBase { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F : FactionBase {};
 			class G_RegulatorMask_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
@@ -153,6 +158,100 @@ class CfgClothesStore {
 		};
 	};
 
+	class PoliceUM {
+		storeName = "Police Unmarked Clothing Store";
+		condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+		class Uniforms {
+			class U_C_Mechanic_01_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
+			class U_C_ArtTShirt_01_v1_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
+			class U_I_C_Soldier_Bandit_3_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
+			class U_IG_Guerilla1_1 : FactionBase {
+				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; 
+				class Textures : FactionBase {
+					class U_IG_Guerilla2_2 {};
+					class U_IG_Guerilla2_1 : U_IG_Guerilla2_2 {};
+					class U_IG_Guerilla2_3 : U_IG_Guerilla2_2 {};
+				};
+			};
+			class U_I_L_Uniform_01_tshirt_skull_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
+		};
+
+		class Headgear {
+			class H_WirelessEarpiece_F {};
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_Hat_grey {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F : FactionBase {};
+			class G_Aviator : FactionBase {};
+			class G_Squares : FactionBase {
+				class Textures : FactionBase {
+					class G_Squares {};
+					class G_Squares_Tinted : G_Squares {};
+				};
+			};
+			class G_Spectacles : FactionBase {};
+			class G_Shades_Black : FactionBase {};
+			class G_Sport_Red : FactionBase {};
+			class G_Lady_Blue : FactionBase {};
+			class G_Respirator_white_F : FactionBase {};
+			class G_Bandanna_aviator : FactionBase { 
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; 
+				class Textures {
+					class G_Bandanna_aviator {};
+					class G_Bandanna_sport : G_Bandanna_aviator {};
+					class G_Bandanna_beast : G_Bandanna_aviator {};
+					class G_Bandanna_blk : G_Bandanna_aviator {};
+				};
+			};
+		};
+
+		class Vests {
+			class V_LegStrapBag_black_F : FactionBase {
+				price = 0;
+				condition = "true";
+				class Textures { class V_LegStrapBag_black_F {}; };
+			};
+			class V_Rangemaster_belt : FactionBase {
+				price = 0;
+				condition = "true";
+			};
+			class V_BandollierB_blk : FactionBase {
+				price = 0;
+				condition = "true";
+				class Textures { class V_BandollierB_blk {}; };
+			};
+			class V_TacVest_blk_POLICE : FactionBase {
+				price = 0;
+				condition = "true";
+				class Textures {};
+			};
+			class V_PlateCarrier1_blk : FactionBase {
+				price = 0;
+				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
+				class Textures { class V_PlateCarrier1_blk {}; };
+			};
+			class V_PlateCarrier2_blk : FactionBase {
+				price = 0;
+				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
+				class Textures { class V_PlateCarrier2_blk {}; };
+			};
+		};
+
+		class Backpacks {
+			class B_Carryall_cbr : FactionBase { 
+				displayName = "Invisible Backpack"; 
+				price = 0;
+				condition = "true";
+				class Textures { class INVIS {}; };
+			};
+		};
+	};
+
 	class Medic {
 		storeName = "Medic Clothing Store";
 		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
@@ -185,7 +284,6 @@ class CfgClothesStore {
 			class G_Shades_Black : FactionBase {};
 			class G_Sport_Red : FactionBase {};
 			class G_Lady_Blue : FactionBase {};
-			class G_Tactical_Clear : FactionBase {};
 			class G_B_Diving : FactionBase { condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F : FactionBase {};
 			class G_RegulatorMask_F : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
@@ -201,9 +299,6 @@ class CfgClothesStore {
 			class V_BandollierB_blk : FactionBase {
 				class Textures { class V_BandollierB_blk {}; };
 			};
-			class V_TacVestIR_blk : FactionBase {
-				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; 
-			};
 			class V_RebreatherB : FactionBase { 
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; 
 				class Textures { class V_RebreatherB {}; };
@@ -215,6 +310,7 @@ class CfgClothesStore {
 				displayName = "Invisible Backpack"; 
 				class Textures { class INVIS {}; };
 			};
+			class B_SCBA_01_F : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 	};
 
@@ -248,7 +344,6 @@ class CfgClothesStore {
 			class G_Shades_Black : FactionBase {};
 			class G_Sport_Red : FactionBase {};
 			class G_Lady_Blue : FactionBase {};
-			class G_Tactical_Clear : FactionBase {};
 			class G_Respirator_white_F : FactionBase {};
 		};
 
@@ -313,7 +408,6 @@ class CfgClothesStore {
 			class G_Shades_Black {};
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
-			class G_Tactical_Clear {};
 			class G_Respirator_white_F {};
 			class G_EyeProtectors_F {};
 		};
@@ -433,7 +527,6 @@ class CfgClothesStore {
 			class G_Shades_Black {};
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
-			class G_Tactical_Clear {};
 			class G_Respirator_white_F {};
 			class G_EyeProtectors_F {};
 		};
@@ -462,7 +555,6 @@ class CfgClothesStore {
 			class G_Shades_Black {};
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
-			class G_Tactical_Clear {};
 			class G_Respirator_white_F {};
 			class G_EyeProtectors_F {};
 		};
@@ -497,7 +589,6 @@ class CfgClothesStore {
 			class G_Shades_Black {};
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
-			class G_Tactical_Clear {};
 			class G_Respirator_white_F {};
 			class G_EyeProtectors_F {};
 		};
@@ -560,7 +651,6 @@ class CfgClothesStore {
 			class G_Sport_Red {};
 			class G_Lowprofile {};
 			class G_Combat {};
-			class G_Tactical_Clear {};
 			class G_RegulatorMask_F {};
 			class G_Blindfold_01_black__F {};
 			class G_Bandanna_aviator {};

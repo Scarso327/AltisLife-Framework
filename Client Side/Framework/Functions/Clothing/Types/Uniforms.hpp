@@ -557,7 +557,8 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 			displayName = "Command"; 
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
-				"Data\Textures\Uniforms\Police\parade_02.paa"
+				"Data\Textures\Uniforms\Police\parade_02.paa",
+				"Data\Textures\Uniforms\Police\parade_03.paa"
 			};
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};

@@ -112,15 +112,6 @@ class G_Combat {
 	class Textures {};
 };
 
-class G_Tactical_Clear {
-	displayName = "Night Vision Glasses";
-	price = 0;
-	isMask = false;
-	isNV = true;
-	isGas = false;
-	class Textures {};
-};
-
 class G_EyeProtectors_F {
 	price = 0;
 	isMask = false;

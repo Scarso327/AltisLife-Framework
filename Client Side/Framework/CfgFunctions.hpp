@@ -62,6 +62,7 @@ class CfgFunctions {
 			class factionPresistant {};
 			class allMembers {};
 			class onlineFaction {};
+			class canResetLoadout {};
 		};
 
 		class Functions {
@@ -295,6 +296,7 @@ class CfgFunctions {
 			class isVehicleOwner {};
 			class getVehicleOwner {};
 			class vehicleRegistration {};
+			class clearCargo {};
 		};
 
 		class VehicleEvents {

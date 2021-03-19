@@ -7,7 +7,7 @@ class CfgFactions {
 		colour[] = { 0.4, 0, 0.5, 1};
 		pay = 15000;
 		jointChannel = true;
-		imprison = true;
+		imprison = true;		
 
 		class Whitelisting {
 			class Main {
@@ -36,6 +36,7 @@ class CfgFactions {
 		};
 
 		class Loadout {
+			canRestLoadout = true;
 			class Uniforms {
 				class U_Rangemaster {};
 			};
@@ -75,6 +76,7 @@ class CfgFactions {
 		};
 
 		class Loadout {
+			canRestLoadout = true;
 			class Uniforms {
 				class U_Competitor {};
 			};
@@ -113,6 +115,7 @@ class CfgFactions {
 		};
 
 		class Loadout {
+			canRestLoadout = true;
 			class Uniforms {
 				class U_Rangemaster {};
 			};
@@ -145,6 +148,7 @@ class CfgFactions {
 		};
 		
 		class Loadout {
+			canRestLoadout = false;
 			class Uniforms {
 				class U_C_Poor_1 {};
 				class U_C_Poloshirt_blue {};

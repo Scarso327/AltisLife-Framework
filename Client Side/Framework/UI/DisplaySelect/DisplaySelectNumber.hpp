@@ -65,6 +65,15 @@ class DisplaySelectNumber {
 			SAFEZONE_H(0.022);
 		};
 
+		class ValueInput : life_RscEdit {
+			idc = 3209;
+			text = "";
+			SAFEZONE_X((UI_X + 0.1125) + MARGIN_X);
+			SAFEZONE_Y(0.456 + MARGIN_Y);
+			SAFEZONE_W(UI_WIDTH - (MARGIN_X * 2));
+			SAFEZONE_H(0.022);
+		};
+
 		class Slider : life_RscXSliderH {
 			idc = 3205;
 			SAFEZONE_X((UI_X + 0.1125) + MARGIN_X);

@@ -23,6 +23,7 @@ private _display = _parent createDisplay "DisplaySelectNumber";
 private _minMaxText = _display displayCtrl 3204;
 private _slider = _display displayCtrl 3205;
 private _button = _display displayCtrl 3206;
+private _input = _display displayCtrl 3209;
 
 _slider sliderSetRange _boundaries;
 _slider sliderSetPosition 1;
@@ -32,6 +33,26 @@ _minMaxText ctrlSetStructuredText parseText format["<t align='left'>%1</t><t ali
 	_boundaries select 0,
 	_boundaries select 1
 ];
+
+_input ctrlSetText ([_boundaries select 0] call ULP_fnc_numberText);
+
+_input ctrlAddEventHandler ["KeyUp", {
+	_this params [ "_ctrl" ];
+
+	private _display = ctrlParent _ctrl;
+	private _slider = _display displayCtrl 3205;
+
+	(sliderRange _slider) params ["_min", "_max"];
+	_slider sliderSetPosition (_max min ((parseNumber ctrlText _ctrl) max _min));
+}];
+
+_slider ctrlAddEventHandler ["SliderPosChanged", {
+	_this params [ "_ctrl", "_val" ];
+
+	private _display = ctrlParent _ctrl;
+	private _input = _display displayCtrl 3209;
+	_input ctrlSetText ([_val] call ULP_fnc_numberText);
+}];
 
 _display setVariable ["params", _params];
 _display setVariable ["onSelect", _onSelect];

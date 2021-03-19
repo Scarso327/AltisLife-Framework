@@ -28,7 +28,7 @@ class CfgInteractions {
 		class ClearBox {
 			title = "Clear Box";
 			factions[] = { "Police" };
-			onClick = "[_this] call ULP_fnc_clearCargo;";
+			onClick = "_this call ULP_fnc_clearCargo;";
 			condition = "true";
 		};
 		

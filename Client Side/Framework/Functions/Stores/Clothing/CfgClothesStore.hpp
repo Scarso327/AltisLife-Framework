@@ -159,10 +159,7 @@ class CfgClothesStore {
 		class Uniforms {
 			class U_Competitor : FactionBase {};
 			class U_O_R_Gorka_01_black_F : FactionBase {};
-			class U_B_HeliPilotCoveralls : FactionBase {
-				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
-				class textures { class U_B_HeliPilotCoveralls {}; };
-			};
+			class U_O_PilotCoveralls : FactionBase { condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess"; };
 			class U_C_CBRN_Suit_01_White_F : FactionBase {
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures { class U_C_CBRN_Suit_01_White_F {}; };

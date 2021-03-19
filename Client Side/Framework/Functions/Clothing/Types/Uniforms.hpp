@@ -290,6 +290,10 @@ class U_O_R_Gorka_01_black_F {
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_tracksuit.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		};
+		class Medic {
+			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
+		};
 	};
 };
 
@@ -452,29 +456,19 @@ class U_Competitor {
 	displayName = "Response Uniform";
 	price = 0;
 	class Textures {
-		class DIR {
-			displayName = "Director of Ambulance Services";
-			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
-		};
-		class SUR {
-			displayName = "Surgeon";
-			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
-		};
 		class DR {
 			displayName = "Doctor";
-			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
+			textures[] = { "Data\Textures\Uniforms\Medic\main_03.paa" };
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 		class PAR {
 			displayName = "Paramedic";
-			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			textures[] = { "Data\Textures\Uniforms\Medic\main_02.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class STU {
 			displayName = "Student";
-			textures[] = { "Data\Textures\Uniforms\Police\CSUPT.paa" };
+			textures[] = { "Data\Textures\Uniforms\Medic\main_01.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
@@ -694,6 +688,11 @@ class U_O_PilotCoveralls {
 			displayName = "NPAS Uniform";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NPAS.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NPAS"", 1] call ULP_fnc_hasAccess }";
+		};
+		class AAA {
+			displayName = "AAA Uniform";
+			textures[] = { "Data\Textures\Uniforms\Medic\aa.paa" };
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_AA"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
 };

@@ -13,7 +13,7 @@ class CfgClothesStore {
 			class U_Rangemaster : FactionBase {};
 			class U_BG_Guerrilla_6_1 : FactionBase {};
 			class U_O_R_Gorka_01_black_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
-			class U_I_ParadeUniform_01_AAF_decorated_F : FactionBase { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess"; };
+			class U_I_ParadeUniform_01_AAF_decorated_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class U_B_CombatUniform_mcam_worn : FactionBase { condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
 			class U_O_PilotCoveralls : FactionBase { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class U_B_CTRG_Soldier_F : FactionBase {
@@ -40,20 +40,8 @@ class CfgClothesStore {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures { class U_C_CBRN_Suit_01_Blue_F {}; };
 			};
-			class U_C_Mechanic_01_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
-			class U_C_ArtTShirt_01_v1_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
-			class U_I_C_Soldier_Bandit_3_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
-			class U_IG_Guerilla1_1 : FactionBase {
-				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; 
-				class Textures : FactionBase {
-					class U_IG_Guerilla2_2 {};
-					class U_IG_Guerilla2_1 : U_IG_Guerilla2_2 {};
-					class U_IG_Guerilla2_3 : U_IG_Guerilla2_2 {};
-				};
-			};
-			class U_I_L_Uniform_01_tshirt_skull_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
 		};
-		
+
 		class Headgear {
 			class H_WirelessEarpiece_F : FactionBase {};
 			class H_Cap_blk : FactionBase {
@@ -80,6 +68,7 @@ class CfgClothesStore {
 			class H_HelmetSpecB_blk : FactionBase { 
 				displayName = "Operation Helmet";
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess"; 
+				class Textures { class H_HelmetSpecB_blk {}; };
 			};
 		};
 

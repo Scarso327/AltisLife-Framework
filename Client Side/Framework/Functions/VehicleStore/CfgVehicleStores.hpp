@@ -140,22 +140,12 @@ class CfgVehicleStores {
 					class Medic {};
 				};
 			};
-			class B_Heli_Light_01_F {
-				class Textures {
-					class Medic {};
-				};
-			};
 			class O_Heli_Light_02_unarmed_F {
 				class Textures {
 					class Medic {};
 				};
 			};
 			class O_Heli_Transport_04_medevac_black_F {
-				class Textures {
-					class Medic {};
-				};
-			};
-			class B_Heli_Transport_03_unarmed_F {
 				class Textures {
 					class Medic {};
 				};

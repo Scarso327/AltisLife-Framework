@@ -73,6 +73,14 @@ if (createDialog "DialogInventory") exitWith {
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};
 
+		if ((_container distance player) > 10) exitWith {
+			hint "You're too far from the container to access it...";
+			closeDialog 0;
+
+			[_container, player] remoteExecCall ["ULP_SRV_fnc_unregisterCargoUser", RSERV];
+			[_thisEventHandler] call ULP_fnc_removeEachFrame;
+		};
+
 		private _curInv = _container getVariable ["ULP_VirtualCargo", createHashMap];
 		private _lastInv = _display getVariable ["lastInventory", createHashMap];
 

@@ -401,6 +401,20 @@ class CfgFunctions {
 			class imprison {};
 			class release {};
 		};
+
+		class VirtualInventory {
+			file = "Functions\VirtualInventory";
+			class addToCargo {};
+			class removeFromCargo {};
+			class currentLoad {};
+			class maxLoad {};
+			class hasInventory {};
+			class openInventory {};
+			class updateInventory {};
+			class takeFromCargo {};
+			class putInCargo {};
+			class isCargoUser {};
+		};
 	};
 
 	class ULP_Functions_UI {

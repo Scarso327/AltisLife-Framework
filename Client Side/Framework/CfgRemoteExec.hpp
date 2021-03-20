@@ -60,5 +60,11 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_createGroup {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_registerCargoUser {
+            allowedTargets = SERVER;
+        };
+        class ULP_SRV_fnc_unregisterCargoUser {
+            allowedTargets = SERVER;
+        };
     };
 };

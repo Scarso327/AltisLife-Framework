@@ -18,6 +18,20 @@ switch (_code) do {
 		case SPACE: {  }; // Request Medic (Space, TODO)
     };
 
+    case T: {
+        if !(_shift && { _ctrl } && { _alt } && { dialog }) then {
+            if (isNull (objectParent player)) then {
+                private _container = cursorObject;
+
+                if ((player distance _container) < 5) then {
+                    _handled = [_container] call ULP_fnc_openInventory;
+                };
+            } else {
+                _handled = [vehicle player] call ULP_fnc_openInventory;
+            };
+        };
+    };
+
     case RWINDOWS: {
         if !(_shift && { _ctrl } && { _alt }) then {
             ULP_FadeSound = !ULP_FadeSound;

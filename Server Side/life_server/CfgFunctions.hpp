@@ -58,6 +58,12 @@ class CfgFunctions {
             class setSessionField {};
             class validateField {};
         };
+
+        class Containers {
+            file = "\life_server\Functions\Containers";
+            class registerCargoUser {};
+            class unregisterCargoUser {};
+        };
     };
 
     class MySQL_Database {

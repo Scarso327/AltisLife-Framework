@@ -331,7 +331,7 @@ class CfgVehicles {
 
 	class C_SUV_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 50;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 

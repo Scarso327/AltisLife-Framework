@@ -442,8 +442,8 @@ class Life_RscButton
     offsetPressedX = 0.002;
     offsetPressedY = 0.002;
     colorFocused[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",1};
-    colorShadow[] = {0,0,0,1};
-    colorBorder[] = {0,0,0,1};
+    colorShadow[] = {0,0,0,0};
+    colorBorder[] = {0,0,0,0};
     borderSize = 0.0;
     soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
     soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
@@ -1337,6 +1337,22 @@ class ULP_RscButtonIcon : Life_RscButton {
     animTextureOver = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
     animTextureFocused = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
     animTexturePressed = "#(argb,8,8,3)color(0.6,0.6,0.6,0.8)";
+    colorText[] = {1, 1, 1, 1};
+	color2[] = {1, 1, 1, 1};
+	colorFocused[] = {1, 1, 1, 1};
+    colorDisabled[] = {1, 1, 1, 0.6};
+    colorBackgroundActive[] = {0.2, 0.2, 0.2, 0.8};
+	colorBackgroundFocused[] = {0.2, 0.2, 0.2, 0.8};
+    colorBackgroundDisabled[] = {0.2, 0.2, 0.2, 0.8};
+    colorBackground[] = {0.15, 0.15, 0.15, 0.7};
+	colorBackground2[] = {0.2, 0.2, 0.2, 0.8};
+};
+
+
+class ULP_RscButtonIconNoAnim : Life_RscButton {
+    type = 1;
+    style = 0x800 + 0x02 + 0x30;
+    shadow = 0;
     colorText[] = {1, 1, 1, 1};
 	color2[] = {1, 1, 1, 1};
 	colorFocused[] = {1, 1, 1, 1};

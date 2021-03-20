@@ -36,7 +36,7 @@ class CfgInteractions {
 			title = "Reset Loadout";
 			factions[] = { "Police", "Medic", "Hato" };
 			onClick = "[] call ULP_fnc_setLoadout;";
-			condition = "[[player] call ULP_fnc_getFaction] call ULP_fnc_canResetLoadout;"
+			condition = "[[player] call ULP_fnc_getFaction] call ULP_fnc_canResetLoadout;";
 		};
 	};
 

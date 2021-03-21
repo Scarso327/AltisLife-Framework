@@ -77,7 +77,10 @@ class CfgVehicleStores {
 				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess";
 				class Textures { class Police {}; };
 			};
-			class B_Heli_Transport_03_unarmed_F { condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; };
+			class B_Heli_Transport_03_unarmed_F { 
+				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; 
+				class Textures { class Black {}; };
+			};
 			class B_Heli_Transport_01_F { 
 				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess"; 
 				class Textures { class Police {}; };

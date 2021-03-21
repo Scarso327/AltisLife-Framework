@@ -150,6 +150,11 @@ class CfgVehicleStores {
 					class Medic {};
 				};
 			};
+			class I_Heli_Transport_02_F {
+				class Textures {
+					class Medic {};
+				};
+			};
 		};
 	};
 

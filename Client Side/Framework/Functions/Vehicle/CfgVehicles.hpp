@@ -1060,7 +1060,7 @@ class CfgVehicles {
 		};
 	};
 
-	class I_Heli_Transport_02_F {
+	class I_Heli_Transport_02_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
 		garageLimit = 1;
@@ -1082,6 +1082,13 @@ class CfgVehicles {
 					"\a3\air_f_beta\heli_transport_02\data\skins\heli_transport_02_2_dahoman_co.paa",
 					"\a3\air_f_beta\heli_transport_02\data\skins\heli_transport_02_3_dahoman_co.paa",
 					"\a3\air_f_beta\heli_transport_02\data\heli_transport_02_int_02_co.paa" 
+				}; 
+			};
+			class Medic : MedicTexture {
+				textures[] = { 
+					"Data\Textures\Vehicles\Air\Medic\mohawk_01.paa",
+					"Data\Textures\Vehicles\Air\Medic\mohawk_02.paa",
+					"Data\Textures\Vehicles\Air\Medic\mohawk_03.paa"
 				}; 
 			};
 		};

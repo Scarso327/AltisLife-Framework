@@ -634,6 +634,13 @@ class CfgVehicles {
 				displayName = "Olive";
 				textures[] = { "\a3\soft_f_exp\van_01\data\van_01_ext_oli_co.paa" }; 
 			};
+			class Aldsa : BaseTexture {
+				displayName = "Aldsa"; 
+				textures[] = { 
+					"Data\Textures\Vehicles\Land\Civilian\Truck_Boxer\aldsa_01.paa", 
+					"Data\Textures\Vehicles\Land\Civilian\Truck_Boxer\aldsa_02.paa"
+				 }; 
+			};
 		};
 	};
 	class C_Van_01_box_F : C_Van_01_transport_F {
@@ -641,9 +648,31 @@ class CfgVehicles {
 		virtualSpace = 0;
 		garageLimit = 3;
 	};
-	class C_Van_01_fuel_F : C_Van_01_transport_F {
+	class C_Van_01_fuel_F : Base {
 		buyPrice = 0;
 		virtualSpace = 0;
+		class Textures {
+			class Black : BaseTexture {
+				displayName = "Black"; 
+				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_black_co.paa" }; 
+			};
+			class White : BaseTexture { 
+				displayName = "White";
+				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa" }; 
+			};
+			class Red : BaseTexture { 
+				displayName = "Red";
+				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa" }; 
+			};
+			class Brown : BaseTexture { 
+				displayName = "Brown";
+				textures[] = { "\a3\soft_f_exp\van_01\data\van_01_ext_brn_co.paa" }; 
+			};
+			class Olive : BaseTexture { 
+				displayName = "Olive";
+				textures[] = { "\a3\soft_f_exp\van_01\data\van_01_ext_oli_co.paa" }; 
+			};
+		};
 	};
 
 	class I_Truck_02_transport_F : Base {

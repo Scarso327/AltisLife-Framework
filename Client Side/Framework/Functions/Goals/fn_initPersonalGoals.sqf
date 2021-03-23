@@ -16,6 +16,8 @@ _this params [
 
 ["Setting Personal Goals"] call ULP_fnc_logIt;
 
+private _addedEvhs = [];
+
 {
 	_x params [
 		["_cfgName", "", [""]],
@@ -69,49 +71,52 @@ _this params [
 
 		// Setup EventHandlers...
 		{
-			switch (_x) do {
-				case "GATHERING": {
-					["GatheredVirtualItem", {
-						if (["GATHERING", _this, {
-							_this params ["_evhParams", "_goal", "_goalType"];
-							_evhParams params [ "_gatheredItem", "_amount" ];
-							_goal params [ "_cfgName", "_progress", "_tier" ];
+			if !(_x in _addedEvhs) then {
+				switch (_x) do {
+					case "GATHERING": {
+						["GatheredVirtualItem", {
+							diag_log _this;
+							if (["GATHERING", _this, {
+								_this params ["_evhParams", "_goal", "_goalType"];
+								_evhParams params [ "_gatheredItem", "_amount" ];
+								_goal params [ "_cfgName", "_progress", "_tier" ];
 
-							diag_log _amount;
+								private _goalCfg = missionConfigFile >> "CfgGoals" >> "Personal" >> _goalType >> _cfgName;
+								private _item = getText (_goalCfg >> "item");
 
-							private _goalCfg = missionConfigFile >> "CfgGoals" >> "Personal" >> _goalType >> _cfgName;
-							private _item = getText (_goalCfg >> "item");
+								if (_item isEqualTo _gatheredItem) then {
+									_goal = [_goal, _goalCfg] call ULP_fnc_increaseGoal;
+								};
 
-							if (_item isEqualTo _gatheredItem) then {
-								_goal = [_goal, _goalCfg] call ULP_fnc_increaseGoal;
+								_goal
+							}] call ULP_fnc_handleGoal) then {
+								[_event, _eventId] call ULP_fnc_removeEventHandler;
 							};
+						}] call ULP_fnc_addEventHandler;
+					};
+					case "SELLING": {
+						["SoldVirtualItem", {
+							if (["SELLING", _this, {
+								_this params ["_evhParams", "_goal", "_goalType"];
+								_evhParams params [ "_soldItem", "_amount" ];
+								_goal params [ "_cfgName", "_progress", "_tier" ];
 
-							_goal
-						}] call ULP_fnc_handleGoal) then {
-							[_event, _eventId] call ULP_fnc_removeEventHandler;
-						};
-					}] call ULP_fnc_addEventHandler;
-				};
-				case "SELLING": {
-					["SoldVirtualItem", {
-						if (["SELLING", _this, {
-							_this params ["_evhParams", "_goal", "_goalType"];
-							_evhParams params [ "_soldItem", "_amount" ];
-							_goal params [ "_cfgName", "_progress", "_tier" ];
+								private _goalCfg = missionConfigFile >> "CfgGoals" >> "Personal" >> _goalType >> _cfgName;
+								private _item = getText (_goalCfg >> "item");
 
-							private _goalCfg = missionConfigFile >> "CfgGoals" >> "Personal" >> _goalType >> _cfgName;
-							private _item = getText (_goalCfg >> "item");
+								if (_item isEqualTo _soldItem) then {
+									_goal = [_goal, _goalCfg] call ULP_fnc_increaseGoal;
+								};
 
-							if (_item isEqualTo _soldItem) then {
-								_goal = [_goal, _goalCfg] call ULP_fnc_increaseGoal;
+								_goal
+							}] call ULP_fnc_handleGoal) then {
+								[_event, _eventId] call ULP_fnc_removeEventHandler;
 							};
-
-							_goal
-						}] call ULP_fnc_handleGoal) then {
-							[_event, _eventId] call ULP_fnc_removeEventHandler;
-						};
-					}] call ULP_fnc_addEventHandler;
+						}] call ULP_fnc_addEventHandler;
+					};
 				};
+
+				_addedEvhs pushBackUnique _x;
 			};
 		} forEach (keys _goalsVar);
 

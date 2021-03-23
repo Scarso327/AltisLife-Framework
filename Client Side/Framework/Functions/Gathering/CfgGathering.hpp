@@ -2,7 +2,7 @@ class CfgGathering {
 	class BaseGather {
 		actionTitle = "Gathering";
 		gatherTime = 2;
-		factions[] = { "Civilian", "Police", "Medic", "Hato" };
+		factions[] = { "Civilian" };
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Gathering", 1, 100 };
@@ -23,6 +23,11 @@ class CfgGathering {
 	class Peach : BaseGather {
 		areas[] = { { "peach_field_1", 20 }, { "peach_field_2", 20 }, { "peach_field_3", 20 }, { "peach_field_4", 20 } };
 		items[] = { { "FreshPeach", 100 } };
+	};
+
+	class Coral : BaseGather {
+		areas[] = { { "coral_field", 20 } };
+		items[] = { { "Coral", 100 } };
 	};
 
 	class Corn : BaseGather {
@@ -48,6 +53,11 @@ class CfgGathering {
 	class Cocaine : BaseGather {
 		areas[] = { { "cocaine_field", 20 } };
 		items[] = { { "UnprocessedCocaine", 100 } };
+	};
+
+	class Coal : BaseMine {
+		areas[] = { { "coal_mine", 20 } };
+		items[] = { { "coal", 100 } };
 	};
 
 	class Copper : BaseMine {

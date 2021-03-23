@@ -12,6 +12,7 @@ class CfgGathering {
 	class BaseMine : BaseGather {
 		actionTitle = "Mining";
 		gatherTime = 4;
+		reqItems[] = { "Pickaxe" };
 		profession[] = { "Mining", 1, 100 };
 	};
 
@@ -76,6 +77,7 @@ class CfgGathering {
 	};
 
 	class Sand : BaseMine {
+		reqItems[] = { "Shovel" };
 		areas[] = { { "sand_mine", 20 } };
 		items[] = { { "Sand", 100 } };
 	};

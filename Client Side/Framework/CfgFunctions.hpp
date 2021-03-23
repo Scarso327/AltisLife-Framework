@@ -297,6 +297,8 @@ class CfgFunctions {
 			class getVehicleOwner {};
 			class vehicleRegistration {};
 			class clearCargo {};
+			class unlockTexture {};
+			class isTextureUnlocked {};
 		};
 
 		class VehicleEvents {

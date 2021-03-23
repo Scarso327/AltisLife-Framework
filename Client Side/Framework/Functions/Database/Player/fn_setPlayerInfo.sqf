@@ -15,7 +15,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_bool"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_textures", "_bool"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -117,5 +117,7 @@ ULP_Date = (_playerData select (_count - 1)); // Contains Year, Month and Day in
 // Apply our saved gear...
 ULP_Gear = _gear;
 [ULP_Gear] call ULP_fnc_loadGear;
+
+ULP_UnlockedTextures = _textures;
 
 ULP_Loaded = true; // Tells the initialisation script we're able to continue...

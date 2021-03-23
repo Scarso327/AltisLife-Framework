@@ -18,7 +18,7 @@ private _factionCfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc
 private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex");
 
 private _query = [
-	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats, professions, prestige, level, xp, achievements, daily_tasks, weekly_tasks", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
+	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, donorlevel, %1licenses, %1gear, %1stats, professions, prestige, level, xp, achievements, daily_tasks, weekly_tasks, textures", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
 	format["FROM players WHERE pid='%1'", _uid]
 ];
@@ -40,7 +40,7 @@ for "_i" from 0 to 1 step 0 do {
 		private _name = name _unit;
 
 		[
-			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, professions, hato_licenses, hato_gear, achievements, daily_tasks, weekly_tasks) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
+			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, professions, hato_licenses, hato_gear, achievements, daily_tasks, weekly_tasks, textures) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
 				_uid,
 				[_name] call DB_fnc_mresString,
 				[LIFE_SETTINGS(getNumber,"starting_bank"), ""] call ULP_fnc_numberText,
@@ -56,13 +56,13 @@ for "_i" from 0 to 1 step 0 do {
 		private _newResult = _result;
 
 		// Playtime, Licenses, Gear, Stats, Professions, Achievements, Daily Tasks, Weekly Tasks
-		private _arraysToConvert = [5, 9, 10, 11, 12, 16, 17, 18];
+		private _arraysToConvert = [5, 9, 10, 11, 12, 16, 17, 18, 19];
 
-		// Professions, Daily Tasks, Weekly Tasks
-		private _hashmapsToCreate = [12, 17, 18];
+		// Professions, Daily Tasks, Weekly Tasks, Textures
+		private _hashmapsToCreate = [12, 17, 18, 19];
 
 		// (Blacklist / Arrest Status)
-		private _boolsToConvert = [19];
+		private _boolsToConvert = [20];
 
 		// Coverts data types to something arma can understand...
 		{ _newResult set [_x, [(_result select _x)] call DB_fnc_mresToArray] } forEach _arraysToConvert;

@@ -29,6 +29,14 @@ private _buyPrice = getNumber(_missionCfg >> "buyPrice");
 private _plate = false;
 private _texture = _texList lbData (lbCurSel _texList);
 
+private _textureCfg = _missionCfg >> "Textures" >> _texture;
+if (isClass _textureCfg) then {
+	if !([configName _missionCfg, _texture] call ULP_fnc_isTextureUnlocked) then {
+		hint format ["The texture %1 is currently locked, you'll have to unlock it before you can use it...", getText (_textureCfg >> "displayName")];
+		breakOut "fn_buyVehicle";
+	};
+};
+
 private _spawns = _display getVariable ["spawns", []];
 
 _spawns = _spawns apply {

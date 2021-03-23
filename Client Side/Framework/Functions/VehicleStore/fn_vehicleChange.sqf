@@ -45,6 +45,11 @@ private _index = -1;
 		_item = _textureList lbAdd (getText (_texCfg >> "displayName"));
 		_textureList lbSetValue [_item, getNumber (_texCfg >> "buyPrice")];
 		_textureList lbSetData [_item, configName _texCfg];
+
+		if !([configName _missionCfg, configName _texCfg] call ULP_fnc_isTextureUnlocked) then {
+			_textureList lbSetColor [_item, [0, 0, 0, 0.8]];
+			_textureList lbSetTooltip [_item, "Locked"];
+		};
 	};
 } forEach ("isText (_x >> ""conditions"") && { call compile getText (_x >> ""conditions"") }" configClasses (_missionCfg >> "Textures"));
 

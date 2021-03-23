@@ -35,6 +35,7 @@ class CfgVehicles {
 		buyPrice = 0;
 		factions[] = { "Civilian" };
 		textures[] = {};
+		locked = false;
 		conditions = "true";
 	};
 
@@ -347,7 +348,8 @@ class CfgVehicles {
 			};
 			class Orange : BaseTexture { 
 				displayName = "Orange";
-				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" }; 
+				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" };
+				locked = true;
 			};
 			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";

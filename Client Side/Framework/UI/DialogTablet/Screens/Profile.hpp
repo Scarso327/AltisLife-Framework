@@ -64,13 +64,13 @@ class ProfilePages : Life_RscToolbox {
 	strings[] = {
 		"Professions",
 		"Achievements",
-		"Loyalty",
+		"Personal Goals",
 		"Player Tag"
 	};
 	tooltips[] = {
 		"Professions",
 		"Achievements",
-		"Loyalty",
+		"Personal Goals",
 		"Player Tag"
 	};
 };

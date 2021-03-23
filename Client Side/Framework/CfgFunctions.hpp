@@ -415,6 +415,15 @@ class CfgFunctions {
 			class putInCargo {};
 			class isCargoUser {};
 		};
+
+		class Goals {
+			file = "Functions\Goals";
+			class initPersonalGoals {};
+			class handleGoal {};
+			class increaseGoal {};
+			class saveGoals {};
+			class rewardTier {};
+		};
 	};
 
 	class ULP_Functions_UI {

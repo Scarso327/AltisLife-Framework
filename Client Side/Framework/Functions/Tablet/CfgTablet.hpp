@@ -47,7 +47,7 @@ class CfgTablet {
 	};
 
 	class Loyalty : Profile {
-		pageTitle = "Profile - Loyalty";
+		pageTitle = "Profile - Personal Goals";
 		pageIdcs[] = {
 			23024, 23025, 23026, 23027, 23028
 		};
@@ -109,7 +109,7 @@ class CfgTablet {
 
 	class Goals : BaseScreen {
 		idc= 23009;
-		pageTitle = "Goals";
+		pageTitle = "Community Goals";
 		pageIdcs[] = {};
 	};
 

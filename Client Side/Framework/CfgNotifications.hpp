@@ -5,4 +5,8 @@ class CfgNotifications {
 		description = "%1";
 		priority = 0;
 	};
+
+	class GoalReward : AchievementUnlocked {
+		title = "PERSONAL GOAL";
+	};
 };

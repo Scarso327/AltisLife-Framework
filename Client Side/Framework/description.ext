@@ -26,6 +26,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Clothing\CfgClothing.hpp"
 #include "Functions\Faction\CfgFactions.hpp"
 #include "Functions\Gathering\CfgGathering.hpp"
+#include "Functions\Goals\CfgGoals.hpp"
 #include "Functions\Group\CfgGroups.hpp"
 #include "Functions\HUD\CfgStatusIcons.hpp"
 #include "Functions\Interactions\CfgInteractions.hpp"

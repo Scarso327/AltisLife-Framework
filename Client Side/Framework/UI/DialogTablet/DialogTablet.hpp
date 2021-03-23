@@ -116,7 +116,7 @@ class DialogTablet {
 
 		class Goals : ULP_RscButtonClean {
 			idc = 23009;
-			text = "<br/><br/><img image='\a3\ui_f_curator\Data\CfgMPGameTypes\zsc_ca.paa' align='center' size='3' color='#808080'/><br/><t align = 'center'>Goals</t>";
+			text = "<br/><br/><img image='\a3\ui_f_curator\Data\CfgMPGameTypes\zsc_ca.paa' align='center' size='3' color='#808080'/><br/><t align = 'center'>Community Goals</t>";
 			onButtonClick = "[""Goals""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 2));
 			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2));

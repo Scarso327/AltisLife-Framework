@@ -11,18 +11,18 @@ class CfgFactions {
 
 		class Whitelisting {
 			class Main {
-				queryIndex = 18;
+				queryIndex = 20;
 				payMulti = 0.1;
 				required = 1;
 			};
-			class RTA { queryIndex = 19; };
-			class NPAS { queryIndex = 20; };
-			class SCO { queryIndex = 21; };
-			class NCA { queryIndex = 22; };
-			class MPU { queryIndex = 23; };
-			class RPU { queryIndex = 24; };
-			class AFO { queryIndex = 25; };
-			class UC { queryIndex = 26; };
+			class RTA { queryIndex = 21; };
+			class NPAS { queryIndex = 22; };
+			class SCO { queryIndex = 23; };
+			class NCA { queryIndex = 24; };
+			class MPU { queryIndex = 25; };
+			class RPU { queryIndex = 26; };
+			class AFO { queryIndex = 27; };
+			class UC { queryIndex = 28; };
 		};
 
 		class DatabaseInfo {
@@ -58,11 +58,11 @@ class CfgFactions {
 
 		class Whitelisting {
 			class Main {
-				queryIndex = 18;
+				queryIndex = 20;
 				payMulti = 0.15;
 				required = 1;
 			};
-			class AA { queryIndex = 19; };
+			class AA { queryIndex = 21; };
 		};
 
 		class DatabaseInfo {
@@ -98,7 +98,7 @@ class CfgFactions {
 		
 		class Whitelisting {
 			class Main {
-				queryIndex = 18;
+				queryIndex = 20;
 				payMulti = 0.5;
 				required = 1;
 			};

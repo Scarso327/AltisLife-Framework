@@ -15,7 +15,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_bool"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_bool"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -108,6 +108,8 @@ if (_houses isEqualType []) then {
 {
 	ULP_Keys pushBack _x
 } forEach (_playerData select (_count - 3));
+
+[_daily, _weekly] call ULP_fnc_initPersonalGoals;
 
 ULP_New = (_playerData select (_count - 2)); // Tells us if this is a new database insert...
 ULP_Date = (_playerData select (_count - 1)); // Contains Year, Month and Day in that order...

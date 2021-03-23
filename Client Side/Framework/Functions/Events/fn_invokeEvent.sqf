@@ -19,6 +19,7 @@ if (isNil "_events") exitWith {}; // No events...
 
 {
 	if (_x isEqualType 0) then {
+		private _eventId = _x;
 		_y params [
 			"_fnc",
 			"_once"
@@ -27,7 +28,7 @@ if (isNil "_events") exitWith {}; // No events...
 		_params call _fnc;
 
 		if (_once) then {
-			[_event, _x] call ULP_fnc_removeEventHandler;
+			[_event, _eventId] call ULP_fnc_removeEventHandler;
 		};
 	};
 } forEach + _events;

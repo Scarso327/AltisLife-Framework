@@ -11,6 +11,7 @@ class CfgFunctions {
         class DatabaseMain {
             file = "\life_server\Functions\Database";
             class getLocalTime {};
+            class getWeek {};
         };
 
         class DatabasePlayer {

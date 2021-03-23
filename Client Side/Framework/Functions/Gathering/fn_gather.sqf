@@ -65,6 +65,7 @@ if !(_profession isEqualTo []) then {
 	[configName _item, _total] call ULP_fnc_handleItem;
 
 	hint format["You've gathered %1 %2(s)", _total, getText(_item >> "displayName")];
+	["GatheredVirtualItem", [configName _item, _total]] call ULP_fnc_invokeEvent;
 
 	if !(_profession isEqualTo []) then { _profession call ULP_fnc_increaseProfession; };
 	if !(_leveling isEqualTo []) then { _leveling call ULP_fnc_addXP; };

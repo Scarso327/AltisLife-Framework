@@ -22,6 +22,18 @@ class CfgPatches {
                 constant = true;
                 global = true;
             };
+            class Day {
+                type = "STRING";
+                default = "2021-01-01";
+                constant = false;
+                global = false;
+            };
+            class Week {
+                type = "NUMBER";
+                default = "12";
+                constant = false;
+                global = false;
+            };
         };
     };
 };

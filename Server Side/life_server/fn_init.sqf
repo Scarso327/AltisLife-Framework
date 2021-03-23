@@ -51,12 +51,10 @@ if (_extDBNotLoaded isEqualType []) exitWith {
 life_server_extDB_notLoaded = false;
 publicVariable "life_server_extDB_notLoaded";
 
-{
-    [format["CALL %1", _x], 1] call DB_fnc_asyncCall;
-} forEach ["resetVehicles", "deleteOldGroups"];
-
 ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
 ULP_SRV_Date resize 3; // We only need Year, Month, Day
+
+private _routines = ["resetVehicles", "deleteOldGroups"];
 
 private _timeStamp = diag_tickTime;
 ["Initialisation Started"] call ULP_fnc_logIt;
@@ -92,6 +90,22 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
         };
     } forEach _settings;
 };
+
+["Checking Personal Goals..."] call ULP_fnc_logIt;
+
+diag_Log ULP_SRV_Setting_Day;
+diag_Log (ULP_SRV_Date joinString "-");
+diag_Log ULP_SRV_Setting_Week;
+diag_Log ([] call ULP_SRV_fnc_getWeek);
+
+if !(ULP_SRV_Setting_Day isEqualTo (ULP_SRV_Date joinString "-")) then { _routines pushBack "resetDailyGoals"; };
+if !(ULP_SRV_Setting_Week isEqualTo ([] call ULP_SRV_fnc_getWeek)) then { _routines pushBack "resetWeeklyGoals"; };
+
+["Running Routines..."] call ULP_fnc_logIt;
+
+{
+    [format["CALL %1", _x], 1] call DB_fnc_asyncCall;
+} forEach _routines;
 
 [] call ULP_SRV_fnc_initRadios;
 [] call ULP_SRV_fnc_initEvents;

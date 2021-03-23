@@ -17,6 +17,10 @@ if ([_achievement] call ULP_fnc_hasAchieved) exitWith { false };
 ["AchievementUnlocked", [getText(_cfg >> "description")]] call BIS_fnc_showNotification;
 playSound "FD_Finish_F";
 
+if (isText (_cfg >> "onUnlocked")) then {
+	call compile getText (_cfg >> "onUnlocked");
+};
+
 private _leveling = getArray (_cfg >> "leveling");
 if !(_leveling isEqualTo []) then { _leveling call ULP_fnc_addXP; };
 

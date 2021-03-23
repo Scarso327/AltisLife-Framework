@@ -426,6 +426,12 @@ class CfgFunctions {
 			class saveGoals {};
 			class rewardTier {};
 		};
+
+		class Rewards {
+			file = "Functions\Rewards";
+			class grantReward {};
+			class grantTexture {};
+		};
 	};
 
 	class ULP_Functions_UI {

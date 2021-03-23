@@ -13,7 +13,7 @@ _this params [
 	["_container", objNull, [objNull]]
 ];
 
-if (isNull _container || { !alive _container } || { !([_container] call ULP_fnc_hasInventory) } || { dialog }) exitWith { false };
+if (isNull _container || { !alive _container } || { !([_container] call ULP_fnc_hasInventory) } || { dialog } || { [] call ULP_UI_fnc_isProgress }) exitWith { false };
 
 if (createDialog "DialogInventory") exitWith {
 	private _display = findDisplay 4200;

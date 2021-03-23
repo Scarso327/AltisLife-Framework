@@ -38,6 +38,14 @@ CREATE TABLE IF NOT EXISTS `containers` (
 /*!40000 ALTER TABLE `containers` DISABLE KEYS */;
 /*!40000 ALTER TABLE `containers` ENABLE KEYS */;
 
+-- Dumping structure for procedure altislife.deleteOldGroups
+DELIMITER //
+CREATE PROCEDURE `deleteOldGroups`()
+BEGIN
+	DELETE FROM groups WHERE active='0';
+END//
+DELIMITER ;
+
 -- Dumping structure for table altislife.groups
 CREATE TABLE IF NOT EXISTS `groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -116,12 +124,15 @@ CREATE TABLE IF NOT EXISTS `players` (
   `civ_licenses` text NOT NULL,
   `civ_stats` varchar(25) NOT NULL DEFAULT '"[100,100,0]"',
   `arrested` tinyint(4) NOT NULL DEFAULT 0,
+  `prison_timer` int(11) NOT NULL DEFAULT 0,
   `adminlevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
   `donorlevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
   `prestige` int(11) NOT NULL DEFAULT 0,
   `level` int(11) NOT NULL DEFAULT 1,
   `xp` int(11) NOT NULL DEFAULT 0,
   `professions` text NOT NULL,
+  `daily_tasks` text NOT NULL,
+  `weekly_tasks` text NOT NULL,
   `achievements` text NOT NULL,
   `playtime` varchar(32) NOT NULL DEFAULT '"[0,0,0]"',
   `insert_time` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -130,17 +141,42 @@ CREATE TABLE IF NOT EXISTS `players` (
   UNIQUE KEY `unique_uid` (`uid`),
   KEY `index_name` (`name`),
   KEY `index_blacklist` (`cop_blacklisted`,`med_blacklisted`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table altislife.players: ~5 rows (approximately)
+-- Dumping data for table altislife.players: ~6 rows (approximately)
 /*!40000 ALTER TABLE `players` DISABLE KEYS */;
-INSERT INTO `players` (`uid`, `pid`, `name`, `aliases`, `cash`, `bankacc`, `group_id`, `coplevel`, `rtalevel`, `npaslevel`, `scolevel`, `ncalevel`, `mpulevel`, `rpulevel`, `afolevel`, `uclevel`, `cop_licenses`, `cop_gear`, `cop_stats`, `cop_blacklisted`, `mediclevel`, `aalevel`, `med_licenses`, `med_gear`, `med_stats`, `med_blacklisted`, `hatolevel`, `hato_licenses`, `hato_stats`, `hato_gear`, `hato_blacklisted`, `civ_gear`, `civ_licenses`, `civ_stats`, `arrested`, `adminlevel`, `donorlevel`, `prestige`, `level`, `xp`, `professions`, `achievements`, `playtime`, `insert_time`, `last_seen`) VALUES
-	(4, '76561197971322689', 'Lewis Holloway [CO0101]', '"[`Lewis Holloway [CO0101]`]"', 0, 50000, -1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', 0, 1, 0, '"[]"', '"[]"', '"[0,0,0]"', '2021-03-07 22:07:36', '2021-03-13 16:12:25'),
-	(2, '76561198054519084', 'Ben Sewell', '"[`Ben Sewell`]"', 0, 50000, -1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', '"[]"', '"[100,100,0]"', 0, '0', '0', 0, 1, 0, '"[]"', '"[]"', '"[0,0,7]"', '2021-01-29 14:51:04', '2021-03-13 16:12:24'),
-	(1, '76561198092567307', 'Jack Williams', '"[`Scarso`]"', 200, 883000, 1, '8', '0', '0', '0', '0', '0', '0', '0', '0', '"[`Driving`]"', '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[`SGT`,``]]"', '"[70,60,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '1', '"[]"', '"[100,100,0]"', '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', 0, '"[[[],[],[],[`U_C_FormalSuit_01_blue_F`,[]],[`V_Pocketed_coyote_F`,[]],[`B_Messenger_Black_F`,[]],``,``,[],[`ItemMap`,`ItemGPS`,``,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', '"[`Driving`]"', '"[90,100,0]"', 0, '5', '0', 5, 1, 0, '"[]"', '"[`FirstSpawn`,`FanGirl`,`Prestige`]"', '"[488,1,186]"', '2021-01-18 00:53:15', '2021-03-13 23:13:05'),
-	(5, '76561198173004713', 'Steve White', '"[`Steve White`]"', 0, 50000, -1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', 0, 1, 0, '"[]"', '"[]"', '"[0,0,0]"', '2021-03-08 22:01:19', '2021-03-13 16:12:26'),
-	(3, '76561198342068529', 'Ace Boyden', '"[`Mr. Ace Boyden`]"', 0, 50000, 3, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[`arifle_SPAR_01_GL_blk_F`,``,``,``,[`30Rnd_556x45_Stanag`,0],[],``],[],[],[`U_C_Man_casual_1_F`,[[`1Rnd_HE_Grenade_shell`,1,1]]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[],[`U_C_Man_casual_1_F`,``]]"', '"[]"', '"[100,100,0]"', 0, '0', '0', 0, 1, 0, '"[]"', '"[]"', '"[0,0,25]"', '2021-02-28 15:40:50', '2021-03-13 16:12:25');
+INSERT INTO `players` (`uid`, `pid`, `name`, `aliases`, `cash`, `bankacc`, `group_id`, `coplevel`, `rtalevel`, `npaslevel`, `scolevel`, `ncalevel`, `mpulevel`, `rpulevel`, `afolevel`, `uclevel`, `cop_licenses`, `cop_gear`, `cop_stats`, `cop_blacklisted`, `mediclevel`, `aalevel`, `med_licenses`, `med_gear`, `med_stats`, `med_blacklisted`, `hatolevel`, `hato_licenses`, `hato_stats`, `hato_gear`, `hato_blacklisted`, `civ_gear`, `civ_licenses`, `civ_stats`, `arrested`, `prison_timer`, `adminlevel`, `donorlevel`, `prestige`, `level`, `xp`, `professions`, `daily_tasks`, `weekly_tasks`, `achievements`, `playtime`, `insert_time`, `last_seen`) VALUES
+	(4, '76561197971322689', 'Lewis Holloway [CO0101]', '"[`Lewis Holloway [CO0101]`]"', 0, 50000, -1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '5', '0', '"[]"', '"[[[],[],[],[`U_O_R_Gorka_01_black_F`,[]],[`V_TacVestIR_blk`,[]],[],`H_Beret_blk`,`G_Aviator`,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[]"', '"[]"', '"[100,100,0]"', 0, 0, '0', '0', 0, 1, 50, '"[]"', '"[]"', '"[]"', '"[`FirstSpawn`]"', '"[0,2,0]"', '2021-03-07 22:07:36', '2021-03-23 01:49:02'),
+	(2, '76561198054519084', 'Ben Sewell', '"[`Ben Sewell`]"', 0, 50000, -1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', '"[]"', '"[100,100,0]"', 0, 0, '0', '0', 0, 1, 0, '"[]"', '"[]"', '"[]"', '"[]"', '"[0,0,7]"', '2021-01-29 14:51:04', '2021-03-23 01:49:01'),
+	(1, '76561198092567307', 'Jack Williams', '"[`Scarso`]"', 19000, 1060171, 1, '8', '3', '3', '3', '3', '3', '3', '3', '3', '"[]"', '"[[[],[],[],[`U_Rangemaster`,[]],[`V_TacVest_blk_POLICE`,[]],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[`SI`,``]]"', '"[70,60,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '1', '"[]"', '"[100,100,0]"', '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', 0, '"[[[],[],[],[`U_C_Man_casual_1_F`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[[`Water`,2],[`Pickaxe`,1]],[`U_C_Man_casual_1_F`,``]]"', '"[`Driving`,`Boating`,`Trucking`,`Piloting`,`Schnapps`,`Tobacco`]"', '"[100,100,0]"', 0, 0, '5', '0', 5, 1, 2095, '"[[`Mining`,[0,21]],[`Repairing`,[0,1]],[`Gathering`,[0,3]]]"', '"[[`SellIron`,0],[`SellCopper`,0],[`SellSilver`,0],[`GatherIron`,0],[`GatherSilver`,0]]"', '"[[`GatherCopper`,64],[`GatherSilver`,0]]"', '"[`FirstSpawn`,`FanGirl`,`Prestige`,`BuyVehicle`,`Scarso`,`Lewis`]"', '"[721,1,334]"', '2021-01-18 00:53:15', '2021-03-23 17:14:38'),
+	(5, '76561198173004713', 'Steve White', '"[`Steve White`]"', 0, 50000, -1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[]"', '"[]"', '"[100,100,0]"', 0, 0, '0', '0', 0, 1, 0, '"[]"', '"[]"', '"[]"', '"[]"', '"[0,0,0]"', '2021-03-08 22:01:19', '2021-03-23 01:49:04'),
+	(6, '76561198273172138', 'Albert Stuart', '"[`Jetan Holo`]"', 8619, 87500, -1, '3', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[[[`arifle_SPAR_01_blk_F`,``,``,``,[],[],``],[],[],[`U_Rangemaster`,[]],[`V_PlateCarrier1_blk`,[]],[`B_Carryall_cbr`,[]],`H_Beret_blk`,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[[`Coffee`,12]],[`PC`,`INVIS`]]"', '"[100,90,0.495058]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[],[],[],[`U_C_Man_casual_1_F`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[[`Pickaxe`,1]],[`U_C_Man_casual_1_F`,``]]"', '"[`Driving`,`Trucking`,`Boating`,`Piloting`]"', '"[100,80,0]"', 0, 0, '0', '0', 0, 1, 100, '"[]"', '"[]"', '"[]"', '"[`FirstSpawn`,`BuyVehicle`]"', '"[18,0,82]"', '2021-03-18 19:02:22', '2021-03-23 01:49:04'),
+	(3, '76561198342068529', 'greans', '"[`Mr. Ace Boyden`]"', 0, 110000, 3, '3', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[[`Redbull`,15]],[`PC`,``]]"', '"[60,40,0.717396]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[`arifle_SPAR_01_GL_blk_F`,``,``,``,[`30Rnd_556x45_Stanag`,0],[],``],[],[],[`U_C_Man_casual_1_F`,[[`1Rnd_HE_Grenade_shell`,1,1]]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[],[`U_C_Man_casual_1_F`,``]]"', '"[]"', '"[100,100,0]"', 0, 0, '0', '0', 0, 1, 100, '"[]"', '"[]"', '"[]"', '"[`FirstSpawn`,`BuyVehicle`]"', '"[71,0,25]"', '2021-02-28 15:40:50', '2021-03-23 01:49:01');
 /*!40000 ALTER TABLE `players` ENABLE KEYS */;
+
+-- Dumping structure for procedure altislife.resetDailyGoals
+DELIMITER //
+CREATE PROCEDURE `resetDailyGoals`()
+BEGIN
+	UPDATE players SET daily_tasks = '"[]"';
+END//
+DELIMITER ;
+
+-- Dumping structure for procedure altislife.resetVehicles
+DELIMITER //
+CREATE PROCEDURE `resetVehicles`()
+BEGIN
+	UPDATE vehicles SET `active`='0';
+END//
+DELIMITER ;
+
+-- Dumping structure for procedure altislife.resetWeeklyGoals
+DELIMITER //
+CREATE PROCEDURE `resetWeeklyGoals`()
+BEGIN
+	UPDATE players SET weekly_tasks = '"[]"';
+END//
+DELIMITER ;
 
 -- Dumping structure for table altislife.settings
 CREATE TABLE IF NOT EXISTS `settings` (
@@ -148,12 +184,15 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `setting` varchar(50) NOT NULL,
   `value` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table altislife.settings: ~1 rows (approximately)
+-- Dumping data for table altislife.settings: ~4 rows (approximately)
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
 INSERT INTO `settings` (`id`, `setting`, `value`) VALUES
-	(1, 'DonationGoal', '0');
+	(1, 'DonationGoal', '0'),
+	(2, 'ThreatLevel', '0'),
+	(3, 'Day', '2021-03-23'),
+	(4, 'Week', '12');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
 -- Dumping structure for table altislife.vehicles
@@ -174,26 +213,17 @@ CREATE TABLE IF NOT EXISTS `vehicles` (
   KEY `index_type` (`type`),
   KEY `index_side` (`faction`) USING BTREE,
   CONSTRAINT `FK_players_vehicles` FOREIGN KEY (`pid`) REFERENCES `players` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table altislife.vehicles: ~15 rows (approximately)
+-- Dumping data for table altislife.vehicles: ~6 rows (approximately)
 /*!40000 ALTER TABLE `vehicles` DISABLE KEYS */;
 INSERT INTO `vehicles` (`id`, `pid`, `faction`, `classname`, `type`, `alive`, `active`, `sold`, `plate`, `texture`, `insert_time`) VALUES
-	(1, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 1, '', 'Red', '2021-03-02 21:37:25'),
-	(2, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 1, '', 'Black', '2021-03-02 21:37:40'),
-	(3, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 1, '', 'Orange', '2021-03-05 01:51:06'),
-	(4, '76561198092567307', 'Civilian', 'C_Offroad_01_F', 'Car', 1, 0, 1, '', 'White', '2021-03-05 01:58:13'),
-	(5, '76561198092567307', 'Civilian', 'C_Hatchback_01_sport_F', 'Car', 1, 0, 1, '', 'BeigeSport', '2021-03-05 02:02:06'),
-	(6, '76561198092567307', 'Civilian', 'C_Offroad_02_unarmed_F', 'Car', 1, 0, 1, '', 'Red', '2021-03-05 02:08:11'),
-	(7, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, '', 'Silver', '2021-03-05 02:17:32'),
-	(8, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, '', 'Silver', '2021-03-05 17:32:04'),
-	(9, '76561198092567307', 'Civilian', 'C_Offroad_02_unarmed_F', 'Car', 1, 0, 1, '', 'Black', '2021-03-05 17:37:32'),
-	(10, '76561198092567307', 'Civilian', 'C_Hatchback_01_sport_F', 'Car', 1, 0, 1, '', 'Blue', '2021-03-05 17:40:04'),
-	(11, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 1, '', 'Red', '2021-03-06 00:19:56'),
-	(12, '76561198092567307', 'Civilian', 'C_Van_02_vehicle_F', 'Car', 1, 0, 0, '', 'Press', '2021-03-06 00:22:10'),
-	(13, '76561198092567307', 'Civilian', 'C_Offroad_01_F', 'Car', 1, 0, 1, '', 'White', '2021-03-06 00:25:01'),
-	(14, '76561198092567307', 'Civilian', 'C_Offroad_01_comms_F', 'Car', 1, 0, 1, '', 'Black', '2021-03-06 00:26:47'),
-	(15, '76561198092567307', 'Civilian', 'C_Quadbike_01_F', 'Car', 1, 0, 1, '', 'Black', '2021-03-06 01:56:14');
+	(1, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 1, '', 'Black', '2021-03-18 23:26:26'),
+	(2, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, '', 'Black', '2021-03-18 23:26:59'),
+	(3, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, '', 'Black', '2021-03-18 23:27:34'),
+	(4, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, '', 'Black', '2021-03-18 23:28:11'),
+	(5, '76561198092567307', 'Civilian', 'C_Offroad_01_F', 'Car', 1, 0, 0, '', 'White', '2021-03-18 23:28:45'),
+	(6, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, '', 'Black', '2021-03-18 23:29:22');
 /*!40000 ALTER TABLE `vehicles` ENABLE KEYS */;
 
 -- Dumping structure for table altislife.wanted

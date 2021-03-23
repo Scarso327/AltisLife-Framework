@@ -379,20 +379,6 @@ class CfgVirtualItems {
 	};
 
 	// General Items
-	class Stick {
-		displayName = "Stick";
-		icon = "Data\Icons\stick.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 1;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = true;
-		};
-		conditions = "true";
-	};
-
 	class StollenCargo {
 		displayName = "StollenCargo";
 		icon = "Data\Icons\stollenCargo.paa";
@@ -483,20 +469,6 @@ class CfgVirtualItems {
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = true;
-		};
-		conditions = "true";
-	};
-
-	class CuttingKnife {
-		displayName = "CuttingKnife";
-		icon = "Data\Icons\knife.paa";
-		buyPrice = 0;
-		sellPrice = 0;
-		weight = 1;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;

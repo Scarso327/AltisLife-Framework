@@ -915,7 +915,7 @@ class CfgVirtualItems {
 
 	class UnrefinedSalt {
 		displayName = "Unrefined Salt";
-		icon = "Data\Icons\saltUnrefinded.paa";
+		icon = "Data\Icons\saltUnrefined.paa";
 		buyPrice = -1;
 		sellPrice = -1;
 		weight = 3;
@@ -929,7 +929,7 @@ class CfgVirtualItems {
 
 	class RefindedSalt {
 		displayName = "Refinded Salt";
-		icon = "Data\Icons\saltRefinded.paa";
+		icon = "Data\Icons\saltRefined.paa";
 		buyPrice = -1;
 		sellPrice = 3200;
 		weight = 2;

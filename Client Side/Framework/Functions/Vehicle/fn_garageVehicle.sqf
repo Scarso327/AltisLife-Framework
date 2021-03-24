@@ -45,7 +45,7 @@ if !([format["Storing %1", _name], _time, [_vehicle, _name], {
 		hint "Vehicle has been stored.";
 	};
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
-	hint "You can't impound a vehicle while performing another action...";
+	hint "You can't garage a vehicle while performing another action...";
 };
 
 closeDialog 0;

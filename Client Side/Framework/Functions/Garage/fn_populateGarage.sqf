@@ -16,6 +16,8 @@ _this params [
 private _display = findDisplay 3500;
 if (isNull _display) exitWith {};
 
+private _impound = _display getVariable ["impound", false];
+
 private _list = _display displayCtrl 3501;
 lbClear _list;
 
@@ -24,7 +26,7 @@ private _index = -1;
 
 {
 	_x params [
-		"_id", "_classname", "", "_texture"
+		"_id", "_classname", "", "_texture", ["_fee", 0, [0]]
 	];
 
 	_vehicleCfg = [_classname] call ULP_fnc_vehicleCfg;
@@ -36,12 +38,16 @@ private _index = -1;
 
 		_index = _list lbAdd _name;
 		_list lbSetPicture[_index, _picture];
-		_list lbSetData[_index, str [_id, _classname, _texture]];
+		_list lbSetData[_index, str [_id, _classname, _texture, _fee]];
+
+		if (_impound && { _fee > 0 }) then {
+			_list lbSetValue [_index, _fee];
+		};
 	};
 } forEach _vehicles;
 
 if ((lbSize _list) isEqualTo 0) then {
-	_list lbAdd "No Garaged Vehicles...";
+	_list lbAdd format["No %1 Vehicles...", (["Garaged", "Impounded"] select (_impound))];
 };
 
 lbSort _list;

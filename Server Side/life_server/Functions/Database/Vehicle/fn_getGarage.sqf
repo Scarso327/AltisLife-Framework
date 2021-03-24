@@ -8,7 +8,8 @@ scopeName "fn_getGarage";
 _this params [
 	["_steamid", "", [""]],
 	["_faction", "", [""]],
-	["_types", ["Car", "Air", "Ship"], [[]]]
+	["_types", ["Car", "Air", "Ship"], [[]]],
+	["_impounded", false, [true]]
 ];
 
 private _vehicles = [];
@@ -18,8 +19,8 @@ if !(_steamid isEqualTo "" && { isClass (missionConfigFile >> "CfgFactions" >> _
 		format["'%1'", _x]
 	}) joinString ", ";
 
-	private _query = [format["SELECT id, classname, type, texture FROM vehicles WHERE `type` IN (%1) AND pid='%2' AND faction='%3' AND active='0' AND sold='0'",
-		_types, _steamid, _faction
+	private _query = [format["SELECT id, classname, type, texture, impound FROM vehicles WHERE `type` IN (%1) AND pid='%2' AND faction='%3' AND active='0' AND sold='0' AND impound%4'0'",
+		_types, _steamid, _faction, (["=", ">"] select (_impounded))
 	], 2, true] call DB_fnc_asyncCall;
 
 	if !(_query isEqualTo "" || { _query isEqualTo [] }) then {

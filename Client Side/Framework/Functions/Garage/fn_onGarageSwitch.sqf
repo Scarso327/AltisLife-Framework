@@ -26,7 +26,7 @@ if (_itemData isEqualTo "") exitWith {};
 
 _itemData = parseSimpleArray _itemData;
 
-_display setVariable ["selected", _itemData];
+private _impound = _display getVariable ["impound", false];
 
 _itemData params [
 	"_id", "_classname", "_texture"
@@ -39,7 +39,10 @@ _cfg params [
 	"", "_missionCfg", "_picture", "_name", "_topSpeed", "_armor", "_seats", "_power", "_fuel"
 ];
 
-private _retrievalPrice = round (getNumber(_missionCfg >> "buyPrice") * getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc"));
+private _retrievalPrice = [
+	round (getNumber(_missionCfg >> "buyPrice") * getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc")),
+	(_list lbValue _index)
+] select (_impound);
 
 _itemData set [3, _retrievalPrice];
 _itemData set [4, _index];
@@ -53,7 +56,7 @@ _settings ctrlSetStructuredText parseText format ["
 <t align = 'center' size = '1.5'>%2</t><br/>
 <t align = 'left' size = '1'><br/>%3</t>", _picture, _name, "DESCRIPTION TODO"];
 
-_info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Retrival Price <t align='right'>%1</t></t>
+_info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>%8<t align='right'>%1</t></t>
 <t align = 'left' size = '1'><br/>Virtual Item Space <t align='right'>%2</t></t>
 <t align = 'left' size = '1'><br/>Top Speed <t align='right'>%3 km/h</t></t>
 <t align = 'left' size = '1'><br/>Armor Level <t align='right'>%4</t></t>
@@ -61,4 +64,4 @@ _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Retr
 <t align = 'left' size = '1'><br/>Horse Power <t align='right'>%6 bhp</t></t>
 <t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%7</t></t>", 
 ([format["£%1", [_retrievalPrice] call ULP_fnc_numberText], "-"] select (_retrievalPrice < 1)),
-getNumber(_missionCfg >> "virtualSpace"), _topSpeed, _armor, _seats + 1, _power, _fuel];
+getNumber(_missionCfg >> "virtualSpace"), _topSpeed, _armor, _seats + 1, _power, _fuel, (["Retreival Price", "Unimpound Fee"] select (_impound))];

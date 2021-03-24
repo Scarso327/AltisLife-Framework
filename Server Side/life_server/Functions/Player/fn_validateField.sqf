@@ -19,7 +19,13 @@ private _result = (([
 ] select (_increase)) isEqualTo _total);
 
 if !(_result) then {
-	[format ["Field Validation Failed %1", _this]] call ULP_fnc_logIt;
+	[format ["Field Validation Failed %1 %2 %3 %4 %5 = %6", _unit, 
+		[_sessiontotal] call ULP_fnc_numberText,
+		[_total] call ULP_fnc_numberText,
+		[_amount] call ULP_fnc_numberText,
+		_increase,
+		[_result] call ULP_fnc_numberText
+	]] call ULP_fnc_logIt;
 	"qwerty12345" serverCommand format["#exec ban %1", owner _unit];
 };
 

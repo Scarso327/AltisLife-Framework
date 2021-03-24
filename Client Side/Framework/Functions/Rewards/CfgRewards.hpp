@@ -68,21 +68,21 @@ class CfgRewards {
 			};
 
 			class Ifrit_Oil {
-				chance = 0.95; // Chance 1 - VAL so this is 5% chance
+				chance = 0.90; // Chance 1 - VAL so this is 5% chance
 				type = "TEXTURE";
 				fallback[] = { 200000, 450000 }; // Money to be given if they already have this texture
 				value[] = { "O_MRAP_02_F", "Oil" };
 			};
 
 			class Strider_Asiimov {
-				chance = 0.95; // Chance 1 - VAL so this is 5% chance
+				chance = 0.85; // Chance 1 - VAL so this is 5% chance
 				type = "TEXTURE";
 				fallback[] = { 200000, 450000 }; // Money to be given if they already have this texture
 				value[] = { "I_MRAP_03_F", "Asiimov" };
 			};
 
 			class Money {
-				chance = 0.80;
+				chance = 0.45;
 				type = "CASH";
 				value[] = { 100000, 250000 }; // VAL_1 + (random VAL_2);
 			};

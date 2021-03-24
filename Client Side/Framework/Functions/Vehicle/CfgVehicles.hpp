@@ -317,6 +317,7 @@ class CfgVehicles {
 			};
 			class Ridge : BaseTexture { 
 				displayName = "Ridge";
+				locked = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Civilian\MB4_WD\ridge.paa" }; 
 			};
 			class Medic : MedicTexture { 
@@ -349,7 +350,6 @@ class CfgVehicles {
 			class Orange : BaseTexture { 
 				displayName = "Orange";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" };
-				locked = true;
 			};
 			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";
@@ -563,6 +563,7 @@ class CfgVehicles {
 			};
 			class Oil : BaseTexture { 
 				displayName = "Oil Spill";
+				locked = true;
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_01.paa",
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_02.paa"
@@ -585,6 +586,7 @@ class CfgVehicles {
 			};
 			class Asiimov : BaseTexture { 
 				displayName = "Asiimov";
+				locked = true;
 				textures[] = { "Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
 			};
 		};
@@ -638,10 +640,11 @@ class CfgVehicles {
 			};
 			class Aldsa : BaseTexture {
 				displayName = "Aldsa"; 
+				locked = true;
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Truck_Boxer\aldsa_01.paa", 
 					"Data\Textures\Vehicles\Land\Civilian\Truck_Boxer\aldsa_02.paa"
-				 }; 
+				}; 
 			};
 		};
 	};
@@ -822,6 +825,7 @@ class CfgVehicles {
 			}; 
 			class Ridge : BaseTexture { 
 				displayName = "Ridge";
+				locked = true;
 				textures[] = { 
 					"data\textures\vehicles\land\civilian\ridge_hemtt_1.paa",
 					"data\textures\vehicles\land\civilian\ridge_hemtt_2.paa",

@@ -19,11 +19,13 @@ class CfgGathering {
 	class Apple : BaseGather {
 		areas[] = { { "apple_field_1", 20 }, { "apple_field_2", 20 }, { "apple_field_3", 20 }, { "apple_field_4", 20 } };
 		items[] = { { "FreshApple", 100 } };
+		gatherTime = 2;
 	};
 
 	class Peach : BaseGather {
 		areas[] = { { "peach_field_1", 20 }, { "peach_field_2", 20 }, { "peach_field_3", 20 }, { "peach_field_4", 20 } };
 		items[] = { { "FreshPeach", 100 } };
+		gatherTime = 2;
 	};
 
 	class Coral : BaseGather {
@@ -34,6 +36,7 @@ class CfgGathering {
 	class Corn : BaseGather {
 		areas[] = { { "corn_field", 20 } };
 		items[] = { { "Corn", 100 } };
+		gatherTime = 2;
 	};
 
 	class Tobacco : BaseGather {
@@ -100,5 +103,6 @@ class CfgGathering {
 	class Uranium : BaseMine {
 		areas[] = { { "uranium_mine", 20 } };
 		items[] = { { "UraniumOre", 100 } };
+		gatherTime = 5;
 	};
 };

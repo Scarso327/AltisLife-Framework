@@ -7,7 +7,7 @@ class CfgGoals {
 				type = "GATHERING";
 				item = "CopperOre";
 				title = "Copper Kings";
-				description = "Mine %1 copper before todays end!";
+				description = "Mine Copper Ore before todays end!";
 				tiers[] = { 300, 500, 700 };
 				condition = "true";
 			};
@@ -16,16 +16,16 @@ class CfgGoals {
 				type = "GATHERING";
 				item = "SilverOre";
 				title = "Silverware";
-				description = "Mine %1 silver before todays end!";
+				description = "Mine Silver Ore before todays end!";
 				tiers[] = { 300, 500, 700 };
 				condition = "true";
 			};
 
 			class GatherIron {
 				type = "GATHERING";
-				item = "IronBar";
+				item = "IronOre";
 				title = "Ironman";
-				description = "Mine %1 iron before todays end!";
+				description = "Mine Iron Ore before todays end!";
 				tiers[] = { 300, 500, 700 };
 				condition = "true";
 			};
@@ -34,7 +34,7 @@ class CfgGoals {
 				type = "SELLING";
 				item = "CopperBar";
 				title = "Seat of Copper";
-				description = "Sell %1 copper before todays end!";
+				description = "Sell Copper Bar(s) before todays end!";
 				tiers[] = { 100, 150, 300 };
 				condition = "true";
 			};
@@ -43,7 +43,7 @@ class CfgGoals {
 				type = "SELLING";
 				item = "SilverOre";
 				title = "Silver Rings";
-				description = "Sell %1 silver before todays end!";
+				description = "Sell Silver Bar(s) before todays end!";
 				tiers[] = { 100, 150, 300 };
 				condition = "true";
 			};
@@ -52,7 +52,7 @@ class CfgGoals {
 				type = "SELLING";
 				item = "IronBar";
 				title = "Iron Suits";
-				description = "Sell %1 iron before todays end!";
+				description = "Sell Iron Bar(s) before todays end!";
 				tiers[] = { 100, 150, 300 };
 				condition = "true";
 			};
@@ -65,7 +65,7 @@ class CfgGoals {
 				type = "GATHERING";
 				item = "CopperOre";
 				title = "Copper Gods";
-				description = "Mine %1 copper before the weeks end!";
+				description = "Mine Copper Ore before the weeks end!";
 				tiers[] = { 500, 750, 1000 };
 				condition = "true";
 			};
@@ -74,7 +74,7 @@ class CfgGoals {
 				type = "GATHERING";
 				item = "SilverOre";
 				title = "Roads of Silver";
-				description = "Mine %1 silver before the weeks end!";
+				description = "Mine Silver Ore before the weeks end!";
 				tiers[] = { 500, 750, 1000 };
 				condition = "true";
 			};
@@ -83,7 +83,7 @@ class CfgGoals {
 				type = "SELLING";
 				item = "CopperBar";
 				title = "Throne of Copper";
-				description = "Sell %1 copper before the weeks end!";
+				description = "Sell Copper Bar(s) before the weeks end!";
 				tiers[] = { 600, 800, 1000 };
 				condition = "true";
 			};

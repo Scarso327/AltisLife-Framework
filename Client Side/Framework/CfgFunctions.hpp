@@ -251,6 +251,7 @@ class CfgFunctions {
 			class profile {};
 			class professions {};
 			class achievements {};
+			class personalGoals {};
 		};
 
 		class Options {

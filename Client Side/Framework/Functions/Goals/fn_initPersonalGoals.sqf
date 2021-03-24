@@ -75,7 +75,6 @@ private _addedEvhs = [];
 				switch (_x) do {
 					case "GATHERING": {
 						["GatheredVirtualItem", {
-							diag_log _this;
 							if (["GATHERING", _this, {
 								_this params ["_evhParams", "_goal", "_goalType"];
 								_evhParams params [ "_gatheredItem", "_amount" ];

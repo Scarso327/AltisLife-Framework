@@ -66,7 +66,11 @@ if !(_profession isEqualTo []) then {
 	if (_conversion <= 0) exitWith {};
 
 	{
-		[(_x select 0), (_x select 1) * _conversion, true] call ULP_fnc_handleItem;
+		_x params ["_item", "_amount"];
+		private _total = _amount * _conversion;
+
+		[_item, _total, true] call ULP_fnc_handleItem;
+		["ProcessedVirtualItem", [_item, _total]] call ULP_fnc_invokeEvent;
 	} forEach _materials;
 
 	{

@@ -96,10 +96,10 @@ class CfgInteractions {
 			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
 		};
 
-		// TODO
 		class PulloutOccupants : Repair {
 			title = "Pullout Occupants";
-			onClick = "hint ""Hello"";";
+			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; };";
+			// TODO : Condition Keys or (Police or License) & canMove ! on veh
 		};
 
 		// TODO

@@ -89,10 +89,9 @@ class CfgInteractions {
 			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
 		};
 
-		// TODO
 		class Scrap : Repair {
 			title = "Scrap";
-			onClick = "hint ""Hello"";";
+			onClick = "_this call ULP_fnc_crushVehicle";
 			factions[] = { "Police" };
 			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
 		};

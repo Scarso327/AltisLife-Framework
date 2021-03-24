@@ -52,6 +52,7 @@ class CfgSettings {
     class Police {
         impoundTime = 30;
         impoundFee[] = { 5000, 30000 };
+        crushTime = 60;
     };
     
     garageDelay = 15;

@@ -294,6 +294,7 @@ class CfgFunctions {
 			class vehicleLights {};
 			class repairVehicle {};
 			class garageVehicle {};
+			class crushVehicle {};
 			class impoundVehicle {};
 			class setVehicleAmmo {};
 			class isVehicleOwner {};

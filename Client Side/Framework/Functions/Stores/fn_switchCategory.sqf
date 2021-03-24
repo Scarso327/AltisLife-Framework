@@ -60,5 +60,5 @@ if ((count _items) isEqualTo 0) exitWith {
 	_itemList lbSetValue [_item, (_itemCfg select 6)];
 	_itemList lbSetData [_item, (str _itemInfo)];
 } forEach (_items select {
-	call compile getText (_x >> "condition")
+	!isText (_x >> "condition") || { call compile getText (_x >> "condition") }
 });

@@ -317,7 +317,7 @@ class CfgVirtualItems {
 
 	class Schnapps {
 		displayName = "Schnapps";
-		icon = "Data\Icons\Schnapps.paa";
+		icon = "Data\Icons\schnapps.paa";
 		buyPrice = 580;
 		sellPrice = 290;
 		weight = 1;
@@ -381,7 +381,7 @@ class CfgVirtualItems {
 	// General Items
 	class StollenCargo {
 		displayName = "StollenCargo";
-		icon = "Data\Icons\stollenCargo.paa";
+		icon = "Data\Icons\crate.paa";
 		buyPrice = -1;
 		sellPrice = 98500;
 		weight = 14;
@@ -733,7 +733,7 @@ class CfgVirtualItems {
 	// Minerals
 	class Coal {
 		displayName = "Coal";
-		icon = "Data\Icons\coal.paa";
+		icon = "Data\Icons\ore.paa";
 		buyPrice = -1;
 		sellPrice = 2400;
 		weight = 4;
@@ -761,7 +761,7 @@ class CfgVirtualItems {
 
 	class CopperBar {
 		displayName = "Copper Bar";
-		icon = "Data\Icons\ingotUnmarked.paa";
+		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
 		sellPrice = 1900;
 		weight = 2;
@@ -789,7 +789,7 @@ class CfgVirtualItems {
 
 	class SilverBar {
 		displayName = "Silver Bar";
-		icon = "Data\Icons\ingotUnmarked.paa";
+		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
 		sellPrice = 2200;
 		weight = 2;
@@ -817,7 +817,7 @@ class CfgVirtualItems {
 
 	class IronBar {
 		displayName = "Iron Bar";
-		icon = "Data\Icons\ingotUnmarked.paa";
+		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
 		sellPrice = 7350;
 		weight = 3;
@@ -845,7 +845,7 @@ class CfgVirtualItems {
 
 	class UraniumBar {
 		displayName = "Uranium Bar";
-		icon = "Data\Icons\ingotUnmarked.paa";
+		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
 		sellPrice = 28650;
 		weight = 6;
@@ -859,7 +859,7 @@ class CfgVirtualItems {
 
 	class MakredGold {
 		displayName = "Marked Gold";
-		icon = "Data\Icons\ingotMarked.paa";
+		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
 		sellPrice = -1;
 		weight = 16;
@@ -873,7 +873,7 @@ class CfgVirtualItems {
 
 	class UnmarkedGold {
 		displayName = "Unmarked Gold";
-		icon = "Data\Icons\ingotUnmarked.paa";
+		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
 		sellPrice = 700000;
 		weight = 16;
@@ -915,7 +915,7 @@ class CfgVirtualItems {
 
 	class UnrefinedSalt {
 		displayName = "Unrefined Salt";
-		icon = "Data\Icons\saltUnprocessed.paa";
+		icon = "Data\Icons\saltUnrefinded.paa";
 		buyPrice = -1;
 		sellPrice = -1;
 		weight = 3;
@@ -929,7 +929,7 @@ class CfgVirtualItems {
 
 	class RefindedSalt {
 		displayName = "Refinded Salt";
-		icon = "Data\Icons\saltProcessed.paa";
+		icon = "Data\Icons\saltRefinded.paa";
 		buyPrice = -1;
 		sellPrice = 3200;
 		weight = 2;
@@ -970,8 +970,8 @@ class CfgVirtualItems {
 	};
 
 	class UnprocessedOil {
-		displayName = "Unprocessed Oil";
-		icon = "Data\Icons\oilUnprocessed.paa";
+		displayName = "Unrefinded Oil";
+		icon = "Data\Icons\oilUnrefinded.paa";
 		buyPrice = -1;
 		sellPrice = -1;
 		weight = 6;
@@ -984,8 +984,8 @@ class CfgVirtualItems {
 	};
 
 	class ProcessedOil {
-		displayName = "Processed Oil";
-		icon = "Data\Icons\oilProcessed.paa";
+		displayName = "Refinded Oil";
+		icon = "Data\Icons\oilRefinded.paa";
 		buyPrice = -1;
 		sellPrice = 9850;
 		weight = 4;
@@ -1126,7 +1126,7 @@ class CfgVirtualItems {
 
 	class EphedrineBarrel {
 		displayName = "Ephedrine Barrel";
-		icon = "Data\Icons\ephedrine.paa";
+		icon = "Data\Icons\methUnprocessed.paa";
 		buyPrice = 6050;
 		sellPrice = -1;
 		weight = 12;
@@ -1140,7 +1140,7 @@ class CfgVirtualItems {
 
 	class ProcessedMeth {
 		displayName = "Meth";
-		icon = "Data\Icons\meth.paa";
+		icon = "Data\Icons\methProcessed.paa";
 		buyPrice = 61000;
 		sellPrice = 30500;
 		weight = 5;
@@ -1154,7 +1154,7 @@ class CfgVirtualItems {
 
 	class PurifiedMeth {
 		displayName = "Purified Meth";
-		icon = "Data\Icons\meth.paa";
+		icon = "Data\Icons\methProcessed.paa";
 		buyPrice = 73200;
 		sellPrice = 36600;
 		weight = 5;
@@ -1225,7 +1225,7 @@ class CfgVirtualItems {
 	// Animals
 	class RawSalema {
 		displayName = "Raw Salema";
-		icon = "Data\Icons\fishRaw.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1239,7 +1239,7 @@ class CfgVirtualItems {
 
 	class CookedSalema {
 		displayName = "Cooked Salema";
-		icon = "Data\Icons\fishCooked.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1253,7 +1253,7 @@ class CfgVirtualItems {
 
 	class RawOrnate {
 		displayName = "Raw Ornate";
-		icon = "Data\Icons\fishRaw.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1267,7 +1267,7 @@ class CfgVirtualItems {
 
 	class CookedOrnate {
 		displayName = "Cooked Ornate";
-		icon = "Data\Icons\fishCooked.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1281,7 +1281,7 @@ class CfgVirtualItems {
 
 	class RawTuna {
 		displayName = "Raw Tuna";
-		icon = "Data\Icons\fishRaw.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1295,7 +1295,7 @@ class CfgVirtualItems {
 
 	class CookedTuna {
 		displayName = "Cooked Tuna";
-		icon = "Data\Icons\fishCooked.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1309,7 +1309,7 @@ class CfgVirtualItems {
 
 	class RawMullet {
 		displayName = "Raw Mullet";
-		icon = "Data\Icons\fishRaw.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1323,7 +1323,7 @@ class CfgVirtualItems {
 
 	class CookedMullet {
 		displayName = "Cooked Mullet";
-		icon = "Data\Icons\fishCooked.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1337,7 +1337,7 @@ class CfgVirtualItems {
 
 	class RawCatshark {
 		displayName = "Raw Catshark";
-		icon = "Data\Icons\fishRaw.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;
@@ -1351,7 +1351,7 @@ class CfgVirtualItems {
 
 	class CookedCatshark {
 		displayName = "Cooked Catshark";
-		icon = "Data\Icons\fishCooked.paa";
+		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;

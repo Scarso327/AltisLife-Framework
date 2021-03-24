@@ -93,6 +93,26 @@ private _addedEvhs = [];
 							};
 						}] call ULP_fnc_addEventHandler;
 					};
+					case "PROCESSING": {
+						["ProcessedVirtualItem", {
+							if (["PROCESSING", _this, {
+								_this params ["_evhParams", "_goal", "_goalType"];
+								_evhParams params [ "_processedItem", "_amount" ];
+								_goal params [ "_cfgName", "_progress", "_tier" ];
+
+								private _goalCfg = missionConfigFile >> "CfgGoals" >> "Personal" >> _goalType >> _cfgName;
+								private _item = getText (_goalCfg >> "item");
+
+								if (_item isEqualTo _processedItem) then {
+									_goal = [_goal, _goalCfg] call ULP_fnc_increaseGoal;
+								};
+
+								_goal
+							}] call ULP_fnc_handleGoal) then {
+								[_event, _eventId] call ULP_fnc_removeEventHandler;
+							};
+						}] call ULP_fnc_addEventHandler;
+					};
 					case "SELLING": {
 						["SoldVirtualItem", {
 							if (["SELLING", _this, {

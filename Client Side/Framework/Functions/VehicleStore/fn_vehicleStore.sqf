@@ -13,7 +13,7 @@ _this params [
 if (dialog) exitWith {};
 
 private _cfg = missionConfigFile >> "CfgVehicleStores" >> _store;
-if !(isClass (_cfg)) exitWith {};
+if !(isClass _cfg || { [player, getArray (_cfg >> "factions")] call ULP_fnc_isFaction }) exitWith {};
 
 if !(call compile getText(_cfg >> "conditions")) exitWith {
 	hint "You don't have access to this store...";

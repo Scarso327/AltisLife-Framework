@@ -9,7 +9,7 @@ class CfgAchievements {
 
 	// TODO
 	class FirstDrink {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\firstDrink.paa";
 		displayName = "Big Drink";
 		description = "Taken your frist drink of alcohol.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -18,7 +18,7 @@ class CfgAchievements {
 
 	// TODO
 	class FirstDrug {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\firstDrug.paa";
 		displayName = "Druggie";
 		description = "Had your first drug experience.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -27,7 +27,7 @@ class CfgAchievements {
 
 	// TODO
 	class GirlsBestFriend {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\girlsBestFriend.paa";
 		displayName = "Girl's Best Friend";
 		description = "Aquired a finely cut diamond.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -36,7 +36,7 @@ class CfgAchievements {
 
 	// TODO
 	class Salty {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\salty.paa";
 		displayName = "Extremely Salty";
 		description = "Held a vast amount of salt on your person.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -44,7 +44,7 @@ class CfgAchievements {
 	};
 
 	class Captain {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\captain.paa";
 		displayName = "Ship Captain";
 		description = "Visited the command deck of the HMS Liberty.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -53,7 +53,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinRebel {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
+		icon = "Data\UI\Achievements\joinRebel.paa";
 		displayName = "The Rebellion";
 		description = "Joined the Rebellion. Hope.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -89,7 +89,7 @@ class CfgAchievements {
 
 	// TODO
 	class FirstTicket {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\firstTicket.paa";
 		displayName = "Ticketer";
 		description = "Issued a Fixed Pelenty Notice to an individual.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -98,7 +98,7 @@ class CfgAchievements {
 
 	// TODO
 	class FirstArrest {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\firstArrest.paa";
 		displayName = "Law Enforcer";
 		description = "Sentenced an individual to serve time in the HMP.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -134,7 +134,7 @@ class CfgAchievements {
 
 	// TODO
 	class FirstImpound {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\firstImpound.paa";
 		displayName = "Street Cleaner";
 		description = "Impounded a vehicle for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -143,7 +143,7 @@ class CfgAchievements {
 
 	// TODO
 	class FirstCrush {
-		icon = ""; // ICON
+		icon = "Data\UI\Achievements\firstCrush.paa";
 		displayName = "Vehicle Scrapper";
 		description = "Crushed/Chopped a vehicle for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };

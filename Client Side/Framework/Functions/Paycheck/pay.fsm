@@ -3,92 +3,91 @@
 /*
 item0[] = {"Main_Init",0,250,-40.348839,-141.279068,49.651161,-91.279068,0.000000,"Main Init"};
 item1[] = {"true",8,218,-39.994308,-65.712906,50.005692,-15.712896,0.000000,"true"};
-item2[] = {"Split",2,4346,-39.994308,10.874098,50.005707,60.874100,0.000000,"Split"};
-item3[] = {"Time_to_pay_",4,218,-168.727005,-14.470595,-78.726974,35.529457,0.000000,"Time to pay?"};
+item2[] = {"Split",2,250,-39.994308,10.874098,50.005707,60.874100,0.000000,"Split"};
+item3[] = {"Time_to_pay_",4,4314,-168.727005,-14.470595,-78.726974,35.529457,0.000000,"Time to pay?"};
 link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,3};
 link3[] = {3,2};
-globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-456.200378,358.065338,379.837494,-151.171021,1032,673,1};
-window[] = {0,-1,-1,-1,-1,893,75,1515,75,1,1050};
+globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-456.200378,358.065338,379.837494,-151.171021,297,884,1};
+window[] = {2,-1,-1,-1,-1,948,130,1570,130,3,315};
 *//*%FSM</HEAD>*/
 class FSM
 {
-  fsmName = "Paycheck FSM";
-  class States
-  {
-    /*%FSM<STATE "Main_Init">*/
-    class Main_Init
-    {
-      name = "Main_Init";
-      init = /*%FSM<STATEINIT""">*/"private [""_lastcheck"",""_food"",""_water"",""_lastsync""];" \n
-       "_lastcheck = time;" \n
-       "_food = time;" \n
-       "_water = time;" \n
-       "_lastsync = time;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "true">*/
-        class true
+        fsmName = "Paycheck FSM";
+        class States
         {
-          priority = 0.000000;
-          to="Split";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                /*%FSM<STATE "Main_Init">*/
+                class Main_Init
+                {
+                        name = "Main_Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"private [""_lastcheck"",""_food"",""_water"",""_lastsync""];" \n
+                         "_lastcheck = time;" \n
+                         "_food = time;" \n
+                         "_water = time;" \n
+                         "_lastsync = time;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Split">*/
+                class Split
+                {
+                        name = "Split";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"systemChat format [""You will receive your next paycheck in %1 minutes."",(getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Time_to_pay_">*/
+                                class Time_to_pay_
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _lastcheck) > ((getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period"")) * 60)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (!alive player) then {" \n
+                                         "    systemChat ""You have missed a paycheck because you were incapacitated."";" \n
+                                         "} else {" \n
+                                         "	[(call ULP_Paycheck), true, ""Paycheck""] call ULP_fnc_addMoney;" \n
+                                         "	systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck)] call ULP_fnc_numberText];" \n
+                                         "};" \n
+                                         "" \n
+                                         "_lastcheck = time;" \n
+                                         "" \n
+                                         "//Group clean (Local)" \n
+                                         "{" \n
+                                         "    if (local _x && {(units _x isEqualTo [])}) then {" \n
+                                         "        deleteGroup _x;" \n
+                                         "    };" \n
+                                         "} forEach allGroups;" \n
+                                         "" \n
+                                         "" \n
+                                         ""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
         };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Split">*/
-    class Split
-    {
-      name = "Split";
-      init = /*%FSM<STATEINIT""">*/"systemChat format [""You will receive your next paycheck in %1 minutes."",(getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "Time_to_pay_">*/
-        class Time_to_pay_
+        initState="Main_Init";
+        finalStates[] =
         {
-          priority = 0.000000;
-          to="Split";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"(time - _lastcheck) > ((getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period"")) * 60)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"if (!alive player) then {" \n
-           "    systemChat ""You have missed a paycheck because you were incapacitated."";" \n
-           "} else {" \n
-           "    if (player distance (getMarkerPos ""fed_reserve"") < 120 && playerSide isEqualTo west) then {" \n
-           "        systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck) + 1500] call ULP_fnc_numberText];" \n
-           "        ULP_547_Bank = ULP_547_Bank + (call ULP_Paycheck) + 1500;" \n
-           "    } else {" \n
-           "        ULP_547_Bank = ULP_547_Bank + (call ULP_Paycheck);" \n
-           "        systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck)] call ULP_fnc_numberText];" \n
-           "    };" \n
-           "};" \n
-           "" \n
-           "_lastcheck = time;" \n
-           "" \n
-           "//Group clean (Local)" \n
-           "{" \n
-           "    if (local _x && {(units _x isEqualTo [])}) then {" \n
-           "        deleteGroup _x;" \n
-           "    };" \n
-           "} forEach allGroups;" \n
-           "" \n
-           "" \n
-           ""/*%FSM</ACTION""">*/;
         };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-  };
-  initState="Main_Init";
-  finalStates[] =
-  {
-  };
 };
 /*%FSM</COMPILE>*/

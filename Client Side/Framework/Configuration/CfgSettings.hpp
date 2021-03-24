@@ -54,6 +54,8 @@ class CfgSettings {
         impoundFee[] = { 5000, 30000 };
     };
     
+    garageDelay = 15;
+
     doesntThreaten[] = { "", "Binocular", "Rangefinder", "hgun_Pistol_Signal_F" };
     taserWeapons[] = { "hgun_P07_F", "hgun_P07_blk_F" };
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";

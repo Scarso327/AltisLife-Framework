@@ -75,10 +75,9 @@ class CfgInteractions {
 			factions[] = { "Police" };
 		};
 
-		// TODO
 		class Garage : Repair {
 			title = "Garage";
-			onClick = "hint ""Hello"";";
+			onClick = "_this call ULP_fnc_garageVehicle";
 			factions[] = { "Police", "Hato" };
 			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess || { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};

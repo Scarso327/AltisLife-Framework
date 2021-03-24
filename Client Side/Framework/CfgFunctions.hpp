@@ -293,6 +293,7 @@ class CfgFunctions {
 			class vehicleSiren {};
 			class vehicleLights {};
 			class repairVehicle {};
+			class garageVehicle {};
 			class impoundVehicle {};
 			class setVehicleAmmo {};
 			class isVehicleOwner {};

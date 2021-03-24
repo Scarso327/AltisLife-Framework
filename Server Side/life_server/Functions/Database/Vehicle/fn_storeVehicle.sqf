@@ -6,7 +6,8 @@
 scopeName "fn_storeVehicle";
 
 _this params [
-	["_vehicle", objNull, [objNull]]
+	["_vehicle", objNull, [objNull]],
+	["_impoundFee", 0, [0]]
 ];
 
 if (isNull _vehicle) exitWith {};
@@ -14,11 +15,9 @@ if (isNull _vehicle) exitWith {};
 private _id = _vehicle getVariable ["vehicle_id", -1];
 if (_id < 0) exitWith {};
 
-_id = [_id, ""] call ULP_fnc_numberText;
-
 [format[
-	"UPDATE vehicles SET active='0' WHERE id='%1'", 
-	_id
+	"UPDATE vehicles SET active='0', impound='%2' WHERE id='%1'", 
+	[_id, ""] call ULP_fnc_numberText, [_impoundFee, ""] call ULP_fnc_numberText
 ], 1] call DB_fnc_asyncCall;
 
 deleteVehicle _vehicle;

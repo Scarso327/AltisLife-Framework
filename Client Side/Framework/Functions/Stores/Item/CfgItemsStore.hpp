@@ -249,9 +249,7 @@ class CfgItemsStore {
 		storeName = "Hunting Store";
 		condition = "true";
 		class Rifles {
-			class sgun_HunterShotgun_01_sawedoff_F {
-				class textures { class sgun_HunterShotgun_01_F {}; };
-			};
+			class sgun_HunterShotgun_01_F {};
 			class srifle_DMR_06_hunter_F {};
 		};
 		class Pistols {};

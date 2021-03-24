@@ -76,6 +76,11 @@ class CfgGathering {
 		items[] = { { "IronOre", 100 } };
 	};
 
+	class Oil : BaseMine {
+		areas[] = { { "oil_extraction", 20 } };
+		items[] = { { "UnprocessedOil", 100 } };
+	};
+
 	class Sand : BaseMine {
 		reqItems[] = { "Shovel" };
 		areas[] = { { "sand_mine", 20 } };

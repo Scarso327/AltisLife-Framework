@@ -25,6 +25,7 @@
 #define NO_COLOUR {0, 0, 0, 0}
 
 // Structure
+#define HEADER_COLOUR_SOLID {0, 0, 0, 1}
 #define HEADER_COLOUR {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1}
 #define BODY_COLOUR {0.204, 0.2, 0.204, 1}
 #define FOOTER_COLOUR {0.125, 0.122, 0.125, 1}
@@ -1417,7 +1418,7 @@ class ULP_ctrlProfession : Life_RscControlsGroupNoScrollbars {
     class Controls {
         class Background: Life_RscText {
             idc = -1;
-            colorBackground[] = HEADER_COLOUR;
+            colorBackground[] = HEADER_COLOUR_SOLID;
             w = (31 / 2) * GUI_GRID_CENTER_W;
             h = 5 * GUI_GRID_CENTER_H;
         };
@@ -1425,7 +1426,7 @@ class ULP_ctrlProfession : Life_RscControlsGroupNoScrollbars {
         class XPBar : Life_RscProgress {
             idc = 104;
             colorBar[] = { 0.451, 0, 0.902, 1 };
-            colorBackground[] = HEADER_COLOUR;
+            colorBackground[] = HEADER_COLOUR_SOLID;
             w = 5 * GUI_GRID_CENTER_W;
             h = 5 * GUI_GRID_CENTER_H;
         };
@@ -1491,6 +1492,7 @@ class ULP_ctrlAchievement : Life_RscControlsGroupNoScrollbars {
 };
 
 class ULP_ctrlGoalsHeader : ULP_ctrlOptionsHeader {
+    colorBackground[] = HEADER_COLOUR_SOLID;
     y = (1 * GUI_GRID_CENTER_H) / 2;
     x = (1 * GUI_GRID_CENTER_W) / 2;
     w = 31 * GUI_GRID_CENTER_W;
@@ -1502,7 +1504,7 @@ class ULP_ctrlGoal : ULP_ctrlProfession {
     class Controls {
         class Background: Life_RscText {
             idc = -1;
-            colorBackground[] = HEADER_COLOUR;
+            colorBackground[] = HEADER_COLOUR_SOLID;
             w = 31 * GUI_GRID_CENTER_W;
             h = 5 * GUI_GRID_CENTER_H;
         };
@@ -1532,7 +1534,7 @@ class ULP_ctrlGoal : ULP_ctrlProfession {
 
         class ProgressBackground: Life_RscText {
             idc = -1;
-            colorBackground[] = HEADER_COLOUR;
+            colorBackground[] = HEADER_COLOUR_SOLID;
             x = 5.25 * GUI_GRID_CENTER_W;
             y = 3.75 * GUI_GRID_CENTER_H;
             w = 25.5 * GUI_GRID_CENTER_W;
@@ -1542,7 +1544,7 @@ class ULP_ctrlGoal : ULP_ctrlProfession {
         class ProgressBar : Life_RscProgress {
             idc = 104;
             colorBar[] = { 0.451, 0, 0.902, 1 };
-            colorBackground[] = HEADER_COLOUR;
+            colorBackground[] = HEADER_COLOUR_SOLID;
             x = 5.25 * GUI_GRID_CENTER_W;
             y = 3.75 * GUI_GRID_CENTER_H;
             w = 25.5 * GUI_GRID_CENTER_W;

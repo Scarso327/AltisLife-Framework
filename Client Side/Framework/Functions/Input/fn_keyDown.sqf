@@ -98,7 +98,7 @@ if (isDowned(player)) then {
 
             if (_shift) then {
                 if ([_object] call ULP_fnc_canRestrain) then {
-                    [_object, !([_object] call ULP_fnc_isRestrained)] call ULP_fnc_restrain;
+                    [_object, player, true] call ULP_fnc_restrain;
                 };
                 _handled = true;
             };

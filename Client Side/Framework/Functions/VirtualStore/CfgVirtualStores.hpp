@@ -261,7 +261,6 @@ class CfgVirtualStores {
 		storeName = "Gold Buyer";
 		conditions = "true";
 		class Items {
-			class MakredGold {};
 			class UnmakredGold {};
 		};
 	};

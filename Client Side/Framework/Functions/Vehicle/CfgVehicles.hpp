@@ -79,7 +79,7 @@ class CfgVehicles {
 
 	class C_Quadbike_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 15;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -106,7 +106,7 @@ class CfgVehicles {
 
 	class C_Hatchback_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 25;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -211,7 +211,7 @@ class CfgVehicles {
 
 	class C_Offroad_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 60;
 		class Textures {
 			class White : BaseTexture {
 				displayName = "White"; 
@@ -248,6 +248,11 @@ class CfgVehicles {
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa" 
 				}; 
 			};
+			class Ridge : BaseTexture { 
+				displayName = "Ridge";
+				locked = true;
+				textures[] = { "Data\Textures\Vehicles\Land\Civilian\Offroad\ridge.paa" }; 
+			};
 		};
 	};
 	class B_G_Offroad_01_armed_F : C_Offroad_01_F { buyPrice = 0; };
@@ -255,7 +260,7 @@ class CfgVehicles {
 
 	class C_Offroad_01_covered_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 75;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -279,7 +284,7 @@ class CfgVehicles {
 
 	class C_Offroad_01_repair_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 65;
 		class Textures {
 			class Hato : HatoTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
@@ -293,7 +298,7 @@ class CfgVehicles {
 
 	class C_Offroad_02_unarmed_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 55;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -333,7 +338,7 @@ class CfgVehicles {
 
 	class C_SUV_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 50;
+		virtualSpace = 45;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -393,7 +398,7 @@ class CfgVehicles {
 
 	class C_Van_02_transport_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 90;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -452,14 +457,14 @@ class CfgVehicles {
 	class C_Van_02_medevac_F : C_Van_02_transport_F {};
 	class C_Van_02_vehicle_F : C_Van_02_transport_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 110;
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
 	class C_Van_02_service_F : C_Van_02_vehicle_F {};
 
 	class B_CTRG_LSV_01_light_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
 			class Black : BaseTexture {
@@ -502,7 +507,7 @@ class CfgVehicles {
 
 	class O_LSV_02_unarmed_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
 			class Black : BaseTexture { 
@@ -525,7 +530,7 @@ class CfgVehicles {
 
 	class B_MRAP_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 65;
 		garageLimit = 1;
 		class Textures {
 			class PoliceBlack : PoliceTexture {
@@ -543,7 +548,7 @@ class CfgVehicles {
 
 	class O_MRAP_02_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 65;
 		garageLimit = 2;
 		turrets[] = { { "SmokeLauncher" } };
 		class Textures {
@@ -574,7 +579,7 @@ class CfgVehicles {
 
 	class I_MRAP_03_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 65;
 		garageLimit = 2;
 		class Textures {
 			class Tan : BaseTexture { 
@@ -595,7 +600,7 @@ class CfgVehicles {
 	// TRUCKS --------------------------------------------------------------------------------------
 	class C_Tractor_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 10;
 		garageLimit = 3;
 		class Textures {
 			class Red : BaseTexture {
@@ -615,7 +620,7 @@ class CfgVehicles {
 
 	class C_Van_01_transport_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 100;
 		garageLimit = 3;
 		class Textures {
 			class Black : BaseTexture {
@@ -642,20 +647,20 @@ class CfgVehicles {
 				displayName = "Aldsa"; 
 				locked = true;
 				textures[] = { 
-					"Data\Textures\Vehicles\Land\Civilian\Truck_Boxer\aldsa_01.paa", 
-					"Data\Textures\Vehicles\Land\Civilian\Truck_Boxer\aldsa_02.paa"
+					"Data\Textures\Vehicles\Land\Civilian\Truck\aldsa_01.paa", 
+					"Data\Textures\Vehicles\Land\Civilian\Truck\aldsa_02.paa"
 				}; 
 			};
 		};
 	};
 	class C_Van_01_box_F : C_Van_01_transport_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 150;
 		garageLimit = 3;
 	};
 	class C_Van_01_fuel_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 120;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -682,7 +687,7 @@ class CfgVehicles {
 
 	class I_Truck_02_transport_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 280;
 		garageLimit = 2;
 		class Textures {
 			class Orange : BaseTexture {
@@ -703,17 +708,17 @@ class CfgVehicles {
 		};
 	};
 	class I_Truck_02_covered_F : I_Truck_02_transport_F {
-		buyPrice = 0;
+		buyPrice = 350;
 		virtualSpace = 0;
 	};
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
-		buyPrice = 0;
+		buyPrice = 200;
 		virtualSpace = 0;
 	};
 
 	class O_Truck_03_transport_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 370;
 		garageLimit = 2;
 		class Textures {
 			class BrownHex : BaseTexture {
@@ -735,25 +740,25 @@ class CfgVehicles {
 		};
 	};
 	class O_Truck_03_covered_F : O_Truck_03_transport_F {
-		buyPrice = 0;
+		buyPrice = 410;
 		virtualSpace = 0;
 	};
 	class O_Truck_03_ammo_F : O_Truck_03_transport_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 460;
 	};
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 350;
 	};
 	class O_Truck_03_device_F : O_Truck_03_transport_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 150;
 	};
 
 	class B_Truck_01_mover_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 10;
 		garageLimit = 2;
 		class Textures {
 			class Sand : BaseTexture {
@@ -778,31 +783,31 @@ class CfgVehicles {
 	};
 	class B_Truck_01_flatbed_F : B_Truck_01_mover_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 10;
 	};
 	class B_Truck_01_cargo_F : B_Truck_01_mover_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 450;
 	};
 	class B_Truck_01_transport_F : B_Truck_01_mover_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 535;
 	};
 	class B_Truck_01_covered_F : B_Truck_01_mover_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 590;
 	};
 	class B_Truck_01_ammo_F : B_Truck_01_mover_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 650;
 	};
 	class B_T_Truck_01_fuel_F : B_Truck_01_mover_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 500;
 	};
 	class B_Truck_01_box_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 800;
 		garageLimit = 1;
 		class Textures {
 			class Sand : BaseTexture {
@@ -839,7 +844,7 @@ class CfgVehicles {
 	// BOATS --------------------------------------------------------------------------------------
 	class C_Scooter_Transport_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 5;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -894,12 +899,12 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat : Base {
-		buyPrice = 0;
+		buyPrice = 50;
 		virtualSpace = 0;
 	};
 
 	class C_Boat_Civil_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 75;
 		virtualSpace = 0;
 		class Textures {
 			class Police : PoliceTexture {
@@ -921,7 +926,7 @@ class CfgVehicles {
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
 	class C_Boat_Transport_02_F : Base {
-		buyPrice = 0;
+		buyPrice = 150;
 		virtualSpace = 0;
 		class Textures {
 			class Police : PoliceTexture {
@@ -939,7 +944,7 @@ class CfgVehicles {
 
 	class B_Boat_Armed_01_minigun_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 80;
 		garageLimit = 1;
 		turrets[] = { { "GMG_40mm" } };
 		class Textures {
@@ -958,7 +963,7 @@ class CfgVehicles {
 
 	class B_SDV_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 5;
 	};
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
@@ -969,7 +974,7 @@ class CfgVehicles {
 	
 	class C_Heli_Light_01_civil_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 5;
 		garageLimit = 2;
 		class Textures {
 			class TotalRed : BaseTexture {
@@ -1036,7 +1041,7 @@ class CfgVehicles {
 
 	class O_Heli_Light_02_unarmed_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 25;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
@@ -1059,7 +1064,7 @@ class CfgVehicles {
 
 	class I_Heli_light_03_unarmed_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 20;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
@@ -1084,7 +1089,7 @@ class CfgVehicles {
 
 	class B_Heli_Transport_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 30;
 		garageLimit = 1;
 		turrets[] = { { "LMG_Minigun_Transport", "LMG_Minigun_Transport2", "CMFlareLauncher" } };
 		class Textures {
@@ -1097,7 +1102,7 @@ class CfgVehicles {
 
 	class I_Heli_Transport_02_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 55;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
@@ -1141,23 +1146,23 @@ class CfgVehicles {
 	};
 	class O_Heli_Transport_04_covered_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 35;
 	};
 	class O_Heli_Transport_04_box_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 70;
 	};
 	class O_Heli_Transport_04_ammo_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 80;
 	};
 	class O_Heli_Transport_04_fuel_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 50;
 	};
 	class O_Heli_Transport_04_medevac_black_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 40;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
@@ -1174,7 +1179,7 @@ class CfgVehicles {
 
 	class B_Heli_Transport_03_unarmed_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 100;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
@@ -1205,31 +1210,31 @@ class CfgVehicles {
 	// PLANES --------------------------------------------------------------------------------------
 	class C_Plane_Civil_01_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 5;
 		garageLimit = 2;
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
 	class B_T_VTOL_01_infantry_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 175;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher_Triples" } };
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 225;
 	};
 
 	class O_T_VTOL_02_infantry_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 80;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 95;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 
@@ -1278,22 +1283,22 @@ class CfgVehicles {
 	// CONTAINERS --------------------------------------------------------------------------------------
 	class B_Slingload_01_Cargo_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 250;
 		garageLimit = 1;
 	};
 	class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 100;
 	};
 
 	class Land_Pod_Heli_Transport_04_box_black_F : Base {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 125;
 		garageLimit = 1;
 	};
 	class Land_Pod_Heli_Transport_04_fuel_black_F : Land_Pod_Heli_Transport_04_box_black_F {
 		buyPrice = 0;
-		virtualSpace = 0;
+		virtualSpace = 50;
 	};
 
 	// SOUNDS --------------------------------------------------------------------------------------

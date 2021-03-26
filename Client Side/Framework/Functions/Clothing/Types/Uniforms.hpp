@@ -547,6 +547,11 @@ class U_C_FormalSuit_01_black_F {
 		class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F { displayName = "Gray"; };
 		class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F { displayName = "Blue"; };
 		class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F { displayName = "Khaki"; };
+		class ACF { 
+			displayName = "Khaki"; 
+			textures[] = { "Data\Textures\Uniforms\Police\parade_01.paa" };
+			condition = "true";
+		};
 	};
 };
 class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F{};

@@ -247,7 +247,7 @@ class CfgVehicleStores {
 			class B_Truck_01_transport_F {};
 			class B_Truck_01_covered_F {};
 			class B_Truck_01_ammo_F {};
-			class B_T_Truck_01_fuel_F {};
+			class B_Truck_01_fuel_F {};
 			class B_Truck_01_box_F {};
 		};
 	};

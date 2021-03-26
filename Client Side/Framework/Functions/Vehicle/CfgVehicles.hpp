@@ -248,6 +248,11 @@ class CfgVehicles {
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa" 
 				}; 
 			};
+			class Ridge : BaseTexture { 
+				displayName = "Ridge";
+				locked = true;
+				textures[] = { "Data\Textures\Vehicles\Land\Civilian\Offroad\ridge.paa" }; 
+			};
 		};
 	};
 	class B_G_Offroad_01_armed_F : C_Offroad_01_F { buyPrice = 0; };
@@ -642,8 +647,8 @@ class CfgVehicles {
 				displayName = "Aldsa"; 
 				locked = true;
 				textures[] = { 
-					"Data\Textures\Vehicles\Land\Civilian\Truck_Boxer\aldsa_01.paa", 
-					"Data\Textures\Vehicles\Land\Civilian\Truck_Boxer\aldsa_02.paa"
+					"Data\Textures\Vehicles\Land\Civilian\Truck\aldsa_01.paa", 
+					"Data\Textures\Vehicles\Land\Civilian\Truck\aldsa_02.paa"
 				}; 
 			};
 		};

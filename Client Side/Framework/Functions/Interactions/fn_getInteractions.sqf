@@ -20,7 +20,7 @@ private _actions = missionConfigFile >> "CfgInteractions" >> (switch (true) do {
 	case (isPlayer _object && { [_object] call ULP_fnc_isEscorted } && { [] call ULP_fnc_isEscorting }): { "PersonEscortOnly" };
 	case (isPlayer _object): { "Person" };
 	case (_typeOf isKindOf "Box_NATO_Equip_F"): { "EquipmentBox" };
-	case (_type in ["Car", "Air", "Ship"]): { "Vehicle" };
+	case (_type in ["Car", "Helicopter", "Ship"]): { "Vehicle" };
 	default { "" };
 });
 

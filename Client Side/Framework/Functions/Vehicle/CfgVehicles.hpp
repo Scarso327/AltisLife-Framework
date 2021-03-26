@@ -801,7 +801,7 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 650;
 	};
-	class B_T_Truck_01_fuel_F : B_Truck_01_mover_F {
+	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
 		buyPrice = 0;
 		virtualSpace = 500;
 	};

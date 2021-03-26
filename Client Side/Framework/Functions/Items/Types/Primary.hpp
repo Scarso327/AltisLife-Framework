@@ -470,18 +470,18 @@ class LMG_Zafir_F {
 	class Textures {};
 };
 
-class srifle_DMR_04_DMS_weathered_Kir_F_F {
+class srifle_DMR_04_F {
 	displayName = "ASP-1 Kir 12.7 mm";
 	price = 0;
 	class Textures {
-		class srifle_DMR_04_DMS_weathered_Kir_F_F {
+		class srifle_DMR_04_F {
 			displayName = "Black";
 			condition = "true";
 		};
-		class srifle_DMR_04_Tan_F : srifle_DMR_04_DMS_weathered_Kir_F_F { displayName = "Tan"; };
+		class srifle_DMR_04_Tan_F : srifle_DMR_04_F { displayName = "Tan"; };
 	};
 };
-class srifle_DMR_04_Tan_F : srifle_DMR_04_DMS_weathered_Kir_F_F {};
+class srifle_DMR_04_Tan_F : srifle_DMR_04_F {};
 
 class srifle_DMR_02_F {
 	displayName = "MAR-10 .338";

@@ -42,12 +42,6 @@ class ToolKit {
 	class Textures {};	
 };
 
-class HandGrenade_Stone {
-	displayName = "Flash Grenade";
-	price = 0;
-	class Textures {};	
-};
-
 class SmokeShell {
 	displayName = "Smoke Grenade";
 	price = 0;
@@ -78,9 +72,3 @@ class SmokeShellGreen : SmokeShell {};
 class SmokeShellBlue : SmokeShell {};
 class SmokeShellOrange : SmokeShell {};
 class SmokeShellPurple : SmokeShell {};
-
-class SmokeShellYellow {
-	displayName = "Tear Gas";
-	price = 0;
-	class Textures {};	
-};

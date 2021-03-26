@@ -7,11 +7,11 @@ class CfgChat {
 		class Bleedout : Injured {
 			message = "%1 bled out...";
 		};
-		class Executed : InjuredBy {
+		class Executed  {
 			message = "%1 was executed by %2";
 			params = 2;
 		};
-		class InjuredBy {
+		class InjuredBy : Executed {
 			message = "%1 was seriously injured by %2";
 		};
 	};

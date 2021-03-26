@@ -182,13 +182,13 @@ if (isDowned(player)) then {
                         // TODO : Door Unlocking...
                     } else {
                         if ((locked _veh) isEqualTo 2) then {
-                            [_veh, 0] remoteExec ["lock", _veh];
                             [_veh, ["unlockCarSound", 50, 1]] remoteExec ["say3D"];
+                            [_veh, 0] remoteExecCall ["ULP_fnc_lock", _veh];
 
                             systemChat "You've unlocked this vehicle.";
                         } else {
-                            [_veh, 2] remoteExec ["lock", _veh];
                             [_veh, ["lockCarSound", 50, 1]] remoteExec ["say3D"];
+                            [_veh, 2] remoteExecCall ["ULP_fnc_lock", _veh];
 
                             systemChat "You've locked this vehicle.";
                         };

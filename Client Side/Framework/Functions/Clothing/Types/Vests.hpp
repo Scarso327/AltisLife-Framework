@@ -31,7 +31,7 @@ class V_Pocketed_black_F {
 			condition = "true";
 		};
 		class V_Pocketed_coyote_F : V_Pocketed_black_F { displayName = "Coyote"; };
-		class V_Safety_yellow_F : V_Pocketed_black_F { displayName = "Olive"; };
+		class V_Pocketed_olive_F : V_Pocketed_black_F { displayName = "Olive"; };
 	};
 };
 class V_Pocketed_coyote_F : V_Pocketed_black_F{};

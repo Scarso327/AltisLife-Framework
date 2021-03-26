@@ -74,6 +74,7 @@ class CfgFunctions {
 			class threatLevel {};
 			class lock {};
 			class say3D {};
+			class setFuel {};
 		};
 
 		class Clothing {
@@ -301,6 +302,7 @@ class CfgFunctions {
 			class ejectVehicleUnit {};
 			class repairVehicle {};
 			class garageVehicle {};
+			class serviceVehicle {};
 			class crushVehicle {};
 			class impoundVehicle {};
 			class setVehicleAmmo {};

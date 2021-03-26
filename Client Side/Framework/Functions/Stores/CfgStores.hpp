@@ -7,6 +7,8 @@ class CfgStores {
 };
 
 /*
+this addAction ["Service Vehicle", { [(_this select 0)] call ULP_fnc_serviceVehicle }, nil, 1, true, true, "", "true", 3];
+
 APC -----------------------------------------------------
 # APC GENERAL
 [this, "<t color='#3266A8'>[APC]</t> General Market", "Police"] call ULP_fnc_addMarket;

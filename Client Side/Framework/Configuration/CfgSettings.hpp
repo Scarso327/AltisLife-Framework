@@ -61,6 +61,13 @@ class CfgSettings {
     taserWeapons[] = { "hgun_P07_F", "hgun_P07_blk_F" };
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
     threatLevels[] = { "Low", "Moderate", "Substantial", "Severe", "Critical" };
+    
+    class Remotes {
+        class Sound {
+            maxDistance = 50;
+            sounds[] = { "taserSound", "unlockCarSound", "lockCarSound" };
+        };
+    };
 };
 
 #include "CfgSurvival.hpp"

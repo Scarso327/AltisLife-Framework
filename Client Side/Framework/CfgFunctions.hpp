@@ -73,6 +73,7 @@ class CfgFunctions {
 			class switchMove {};
 			class threatLevel {};
 			class lock {};
+			class say3D {};
 		};
 
 		class Clothing {

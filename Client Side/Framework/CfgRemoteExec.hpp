@@ -8,7 +8,6 @@ class CfgRemoteExec {
         jip = 0;
 
         class systemChat {};
-        class say3D {};
         class switchMove {};
     };
 
@@ -20,6 +19,7 @@ class CfgRemoteExec {
         class bis_fnc_debugconsoleexec {};
         
         class ULP_fnc_lock {};
+        class ULP_fnc_say3D {};
 
         class ULP_fnc_restrain {};
         class ULP_fnc_onKnocked {};

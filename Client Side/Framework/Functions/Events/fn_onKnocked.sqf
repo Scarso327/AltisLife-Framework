@@ -31,7 +31,7 @@ _effectBlur ppEffectCommit 3;
 private _effectId = [[_effectBlur, {}]] call ULP_fnc_createEffect;
 
 if (_taser) then {
-	[player, ["taserSound", 50, 1]] remoteExec ["say3D"];
+	[player, "taserSound", 50, 1] remoteExecCall ["ULP_fnc_say3D"];
 } else {
 	if !(isNull _attacker) then {
 		hint format["%1 has knocked you out...", name _attacker];

@@ -20,6 +20,7 @@ class CfgRemoteExec {
         // REMOVE IN PRODUCTION
         class bis_fnc_debugconsoleexec {};
         
+        class ULP_fnc_restrain {};
         class ULP_fnc_onKnocked {};
         class ULP_fnc_setPlayerInfo {};
         class ULP_fnc_initVehicle {};

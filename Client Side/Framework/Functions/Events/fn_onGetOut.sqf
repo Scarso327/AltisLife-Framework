@@ -14,4 +14,8 @@ _this params [
 
 _unit setVariable ["seatbelt", false];
 
+if ([] call ULP_UI_fnc_isProgress) then {
+	[["RscProgress"] call ULP_UI_fnc_getLayer, false] call ULP_UI_fnc_endProgress;
+};
+
 true

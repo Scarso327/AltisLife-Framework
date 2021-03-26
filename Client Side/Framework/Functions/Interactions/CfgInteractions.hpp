@@ -24,6 +24,15 @@ class CfgInteractions {
 	/* MEDIC INTERACTIONS */
 	// Revive
 
+	class Person {
+		class Unrestrain {
+			title = "Unrestrain";
+			factions[] = { "Police" };
+			onClick = "[_this select 0, player, false] call ULP_fnc_restrain; closeDialog 0;";
+			condition = "[_this] call ULP_fnc_isRestrained";
+		};
+	};
+
 	class EquipmentBox {
 		class ClearBox {
 			title = "Clear Box";

@@ -27,16 +27,11 @@ if ([] call ULP_fnc_isEscorting) then {
 
 // Notify the server...
 if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {	
-	[format ["%1 was executed by %2", 
-		_unit getVariable ["realname", name _unit], 
-		_killer getVariable ["realname", name _killer]
-	]] remoteExecCall ["systemChat", RCLIENT];
+	["Executed", [_unit getVariable ["realname", name _unit], _killer getVariable ["realname", name _killer]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 
 	// TODO : Add crime to killer...
 } else {
-	[format ["%1 bled out...", 
-		_unit getVariable ["realname", name _unit]
-	]] remoteExecCall ["systemChat", RCLIENT];
+	["Bleedout", [_unit getVariable ["realname", name _unit]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 };
 
 // Weapon Removal...

@@ -443,6 +443,11 @@ class CfgFunctions {
 			class grantReward {};
 			class grantTexture {};
 		};
+
+		class Chat {
+			file = "Functions\Chat";
+			class chatMessage {};
+		};
 	};
 
 	class ULP_Functions_UI {

@@ -6,8 +6,7 @@ class CfgRemoteExec {
     class Commands {
         mode = 1;
         jip = 0;
-
-        class systemChat {};
+        
         class switchMove {};
     };
 
@@ -21,6 +20,7 @@ class CfgRemoteExec {
         class ULP_fnc_lock {};
         class ULP_fnc_say3D {};
 
+        class ULP_fnc_chatMessage {};
         class ULP_fnc_restrain {};
         class ULP_fnc_onKnocked {};
         class ULP_fnc_setPlayerInfo {};

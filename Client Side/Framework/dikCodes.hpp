@@ -36,5 +36,6 @@
 #define N 49
 #define M 50
 #define SPACE 57
+#define NUMENTER 156
 #define LWINDOWS 219
 #define RWINDOWS 220

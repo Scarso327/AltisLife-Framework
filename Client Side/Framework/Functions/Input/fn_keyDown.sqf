@@ -39,9 +39,13 @@ if ([] call ULP_UI_fnc_isProgress) then {
 };
 
 if (isDowned(player)) then { 
-    // Incapacitated Inputs...
+    _handled = true;
+
+    private _viewToggle = ACT_KEY("personView", NUMENTER);
+
+    // Available Incapacitated Inputs...
     switch (_code) do {
-        case ESC: { _handled = true };
+        case _viewToggle: { _handled = false };
     };
 } else {
     switch (_code) do {

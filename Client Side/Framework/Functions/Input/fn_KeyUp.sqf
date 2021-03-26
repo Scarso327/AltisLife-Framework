@@ -14,7 +14,8 @@ private _handled = false;
 
 switch (_code) do {
     if (isDowned(player)) then {
-        case F: { if (_shift && { missionNamespace getVariable ["ULP_CanRespawn", false] }) then { player SetDammage 1; _handled = true; } }; // Respawn (Shift + F)...
+        _handled = true;
+        case F: { if (_shift && { missionNamespace getVariable ["ULP_CanRespawn", false] }) then { player SetDammage 1; } }; // Respawn (Shift + F)...
 		case SPACE: {  }; // Request Medic (Space, TODO)
     };
 

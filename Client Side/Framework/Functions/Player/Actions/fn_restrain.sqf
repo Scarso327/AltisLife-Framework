@@ -30,6 +30,7 @@ if (_restrain) then {
 
 	if ([_target] call ULP_fnc_isSurrendered) then { _target setVariable ["surrender", nil, true]; };
 	if !((currentWeapon _target) isEqualTo "") then { _target action ["SwitchWeapon", _target, _target, 100]; };
+	if ([] call ULP_fnc_isEscorting) then { detach ULP_Escort; ULP_Escort = nil; };
 
 	if !(isNil "ULP_RestrainEVH") then { [ULP_RestrainEVH] call ULP_fnc_removeEachFrame; };
 
@@ -54,7 +55,9 @@ if (_restrain) then {
 		_target playMove (["IDLE", "STAND"] call ULP_fnc_getAnim);
 	};
 
-	detach _target;
+	if ([_target] call ULP_fnc_isEscorted) then {
+		detach _target;
+	};
 	
 	hint format ["You've been unrestrained by %1", name _detainer];
 };

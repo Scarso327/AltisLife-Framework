@@ -100,6 +100,8 @@ class CfgFunctions {
 			class saveGear {};
 			class isRestrained {};
 			class isSurrendered {};
+			class isEscorted {};
+			class isEscorting {};
 			class isKnocked {};
 			class initSurvival {};
 			class initPlayerEvents {};
@@ -113,6 +115,7 @@ class CfgFunctions {
 			class knockOut {};
 			class surrender {};
 			class restrain {};
+			class escort {};
 		};
 
 		class Paycheck {

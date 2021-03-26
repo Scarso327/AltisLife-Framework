@@ -59,7 +59,7 @@ if !(_profession isEqualTo []) then {
 	if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
 };
 
-[format["%1 %2", _title, getText(_item >> "displayName")], _time * _total, [_item, _total, _profession, _leveling], { true }, {
+[format["%1 %2(s)", _title, getText(_item >> "displayName")], _time * _total, [_item, _total, _profession, _leveling], { true }, {
 	_this params [ "_item", "_total", "_profession", "_leveling" ];
 
 	[configName _item, _total] call ULP_fnc_handleItem;

@@ -16,4 +16,8 @@ if ([] call ULP_UI_fnc_isProgress) then {
 	[["RscProgress"] call ULP_UI_fnc_getLayer, false] call ULP_UI_fnc_endProgress;
 };
 
+if ([] call ULP_fnc_isEscorting) then {
+	[ULP_Escort, player, false] call ULP_fnc_escort;
+};
+
 true

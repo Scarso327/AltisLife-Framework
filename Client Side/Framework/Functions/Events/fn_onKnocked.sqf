@@ -14,6 +14,11 @@ if (isDowned(player)) exitWith { false };
 
 [] spawn ULP_UI_fnc_closeDialogs;
 
+if ([] call ULP_fnc_isEscorting) then {
+	detach ULP_Escort;
+	ULP_Escort = nil;
+};
+
 disableUserInput true;
 player setUnconscious true;
 player setVariable ["knocked", true, true];
@@ -34,14 +39,14 @@ if (_taser) then {
 };
 
 [
-	10, [_effectId],
+	10, _effectId,
 	{
 		disableUserInput false;
 		player setVariable ["knocked", false, true];
 
 		if (isDowned(player)) exitWith {}; // If we're incapped the stuff after doesn't matter...
 
-		[(_this select 0)] call ULP_fnc_destroyEffect;
+		[_this] call ULP_fnc_destroyEffect;
 
 		player setUnconscious false;
 		player playMoveNow "amovppnemstpsraswrfldnon";

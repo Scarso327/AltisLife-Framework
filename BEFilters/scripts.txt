@@ -1,2 +1,2 @@
 //new2
-5 createDialog !="DialogSpawn" !="DialogTablet" !="DialogGarage" !="DialogGenericStore" !="DialogInteractions" !="DialogLicenses" !="DialogMoney" !="DialogProcessing" !="DialogVehicleStore" !="DisplayInputGroupInfo" !="DisplaySelectNumber" !="DisplaySelectPlayer"
+5 createDialog !="DialogSpawn" !="DialogTablet" !="DialogGarage" !="DialogVirtualStore" !="DialogGenericStore" !="DialogInteractions" !="DialogLicenses" !="DialogMoney" !="DialogProcessing" !="DialogVehicleStore" !="DisplayInputGroupInfo" !="DisplaySelectNumber" !="DisplaySelectPlayer"

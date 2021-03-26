@@ -102,7 +102,6 @@ class CfgVirtualStores {
 			class Painkillers {};
 			class Bandage {};
 			class FirstAidKit {};
-			class GalleryPiece {};
 		};
 	};
 
@@ -272,6 +271,14 @@ class CfgVirtualStores {
 		conditions = "true";
 		class Items {
 			class EphedrineBarrel {};
+		};
+	};
+
+	class Art {
+		storeName = "Art Dealer";
+		conditions = "true";
+		class Items {
+			class GalleryPiece {};
 		};
 	};
 

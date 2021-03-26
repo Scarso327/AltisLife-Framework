@@ -1,0 +1,2 @@
+//regex
+5 "" !BIS_fnc_(effectKilled(AirDestruction|Secondaries)|execVM) !ULP_fnc_(lock|say3D|restrain|onKnocked|setPlayerInfo|initVehicle|vehicleLights|invokeEvent|createVehicle) !ULP_SRV_fnc_(createVehicle|queryPlayerInfo|savePlayerInfo|savePlayerState|storeVehicle|getGarage|destroyVehicle|transferVehicle|createGroup|registerCargoUser|unregisterCargoUser) !=switchMove !=systemChat

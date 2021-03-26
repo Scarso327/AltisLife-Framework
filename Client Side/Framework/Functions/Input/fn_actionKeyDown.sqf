@@ -24,7 +24,7 @@ if (!alive player ||
 	false
 };
 
-private _object = cursorObject;
+private _object = ([cursorObject, ULP_Escort] select ([] call ULP_fnc_isEscorting));
 
 if (isNull _object) then {
 	switch (true) do {

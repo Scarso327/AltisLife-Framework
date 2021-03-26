@@ -6,8 +6,6 @@ class CfgInteractions {
 	// Give Keys
 
 	/* RESTRAINED INTERACTIONS */
-	// Unrestrain
-	// Escort/Stop Escorting
 	// Put In Vehicle
 	// Feed/Hydrate
 	// Blindfold/Remove Blindfold
@@ -30,6 +28,25 @@ class CfgInteractions {
 			factions[] = { "Police" };
 			onClick = "[_this select 0, player, false] call ULP_fnc_restrain; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained";
+		};
+		class Escort : Unrestrain {
+			title = "Escort";
+			onClick = "[_this select 0, player, true] call ULP_fnc_escort; closeDialog 0;";
+			condition = "[_this] call ULP_fnc_isRestrained && { !([_this] call ULP_fnc_isEscorted) }";
+		};
+		class StopEscort : Unrestrain {
+			title = "Stop Escorting";
+			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
+			condition = "[_this] call ULP_fnc_isRestrained && { [_this] call ULP_fnc_isEscorted }";
+		};
+	};
+
+	class PersonEscortOnly {
+		class StopEscort {
+			title = "Stop Escorting";
+			factions[] = { "Police" };
+			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
+			condition = "[_this] call ULP_fnc_isRestrained && { [_this] call ULP_fnc_isEscorted }";
 		};
 	};
 

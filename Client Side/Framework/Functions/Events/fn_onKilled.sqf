@@ -20,6 +20,11 @@ if ([] call ULP_UI_fnc_isProgress) then {
 	[(["RscProgress"] call ULP_UI_fnc_getLayer), false] call ULP_UI_endProgress;
 };
 
+if ([] call ULP_fnc_isEscorting) then {
+	detach ULP_Escort;
+	ULP_Escort = nil;
+};
+
 // Notify the server...
 if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {	
 	[format ["%1 was executed by %2", 

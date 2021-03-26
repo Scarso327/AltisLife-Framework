@@ -14,6 +14,11 @@ if (isDowned(player)) exitWith { false };
 
 [] spawn ULP_UI_fnc_closeDialogs;
 
+if ([] call ULP_fnc_isEscorting) then {
+	detach ULP_Escort;
+	ULP_Escort = nil;
+};
+
 disableUserInput true;
 player setUnconscious true;
 player setVariable ["knocked", true, true];

@@ -17,6 +17,7 @@ private _typeOf = typeOf _object;
 (_typeOf call BIS_fnc_objectType) params ["", "_type"];
 
 private _actions = missionConfigFile >> "CfgInteractions" >> (switch (true) do {
+	case (isPlayer _object && { [_object] call ULP_fnc_isEscorted } && { [] call ULP_fnc_isEscorting }): { "PersonEscortOnly" };
 	case (isPlayer _object): { "Person" };
 	case (_typeOf isKindOf "Box_NATO_Equip_F"): { "EquipmentBox" };
 	case (_type in ["Car", "Air", "Ship"]): { "Vehicle" };

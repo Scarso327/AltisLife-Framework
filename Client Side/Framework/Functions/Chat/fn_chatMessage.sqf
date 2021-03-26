@@ -10,7 +10,7 @@ _this params [
 	["_params", [], [[]]]
 ];
 
-private _cfg = missionConfigFile >> "CfgChat" >> _message;
+private _cfg = missionConfigFile >> "CfgChat" >> "Messages" >> _message;
 if !(isClass _cfg || { (count _params) isEqualTo getNumber (_cfg >> "params") }) exitWith { false };
 
 private _msg = [getText (_cfg >> "messsage")];

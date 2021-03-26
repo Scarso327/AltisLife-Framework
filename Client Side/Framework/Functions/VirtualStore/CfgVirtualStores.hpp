@@ -51,7 +51,9 @@ class CfgVirtualStores {
 		storeName = "General Market";
 		conditions = "true";
 		class Items {
+			class FreshApple {};
 			class Apple {};
+			class FreshPeach {};
 			class Peach {};
 			class Bacon {};
 			class Water {};

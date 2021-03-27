@@ -1,3 +1,3 @@
 //regex
 // REMOVE bis_fnc_debugconsoleexec IN PRODUCTION
-5 "" !bis_fnc_debugconsoleexec !BIS_fnc_(effectKilled(AirDestruction|Secondaries)|execVM) !ULP_fnc_(receiveMessage|chatMessage|setFuel|lock|say3D|restrain|onKnocked|setPlayerInfo|initVehicle|vehicleLights|invokeEvent|createVehicle) !ULP_SRV_fnc_(createVehicle|queryPlayerInfo|savePlayerInfo|savePlayerState|storeVehicle|getGarage|destroyVehicle|transferVehicle|createGroup|registerCargoUser|unregisterCargoUser) !=switchMove
+5 "" !bis_fnc_debugconsoleexec !BIS_fnc_(effectKilled(AirDestruction|Secondaries)|execVM) !ULP_fnc_(receiveMessage|chatMessage|setFuel|lock|say3D|restrain|onKnocked|setPlayerInfo|initVehicle|vehicleLights|invokeEvent|createVehicle) !ULP_SRV_fnc_(createVehicle|queryPlayerInfo|savePlayerInfo|savePlayerState|storeVehicle|getGarage|destroyVehicle|transferVehicle|createGroup|registerCargoUser|unregisterCargoUser|logPlayerEvent) !=switchMove

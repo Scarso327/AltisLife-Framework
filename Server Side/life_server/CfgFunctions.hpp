@@ -16,6 +16,7 @@ class CfgFunctions {
 
         class DatabasePlayer {
             file = "\life_server\Functions\Database\Player";
+            class logPlayerEvent {};
             class queryPlayerInfo {};
             class savePlayerInfo {};
             class savePlayerState {};
@@ -76,6 +77,7 @@ class CfgFunctions {
             class asyncCall {};
             class mresToArray {};
             class mresString {};
+            class mresJson {};
         };
     };
 

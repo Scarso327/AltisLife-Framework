@@ -20,16 +20,24 @@ if (_steamid isEqualTo "" || { !(isClass (_faction)) }) exitWith {};
 private _query = switch (_state) do {
 	case 0: { format["%1licenses='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
 	case 1: {
-		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_increase", true, [false]]];
+		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_increase", true, [false]], ["_reason", "", [""]]];
 		if !([_player, [_player, "Cash"] call ULP_SRV_fnc_getSessionField, _total, _amount, _increase] call ULP_SRV_fnc_validateField) exitWith { "" };
 		[_player, "Cash", _total] call ULP_SRV_fnc_setSessionField;
-		format["cash='%1'", [_total, ""] call ULP_fnc_numberText]
+
+		_total = [_total, ""] call ULP_fnc_numberText;
+
+		[_steamid, "Money", ["Cash", (["Removed", "Added"] select (_increase)), _total, [_amount, ""] call ULP_fnc_numberText, _reason]] call ULP_SRV_fnc_logPlayerEvent;
+		format["cash='%1'", _total]
 	};
 	case 2:  {
-		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_increase", true, [false]]];
+		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_increase", true, [false]], ["_reason", "", [""]]];
 		if !([_player, [_player, "Bank"] call ULP_SRV_fnc_getSessionField, _total, _amount, _increase] call ULP_SRV_fnc_validateField) exitWith { "" };
 		[_player, "Bank", _total] call ULP_SRV_fnc_setSessionField;
-		format["bankacc='%1'", [_total, ""] call ULP_fnc_numberText]
+
+		_total = [_total, ""] call ULP_fnc_numberText;
+
+		[_steamid, "Money", ["Bank", (["Removed", "Added"] select (_increase)), _total, [_amount, ""] call ULP_fnc_numberText, _reason]] call ULP_SRV_fnc_logPlayerEvent;
+		format["bankacc='%1'", _total]
 	};
 	case 3: { format["professions='%1'", [_data] call DB_fnc_mresArray] };
 	case 4: { format["level = '%1', xp = '%2'", [(_data select 0), ""] call ULP_fnc_numberText, [(_data select 1), ""] call ULP_fnc_numberText]};

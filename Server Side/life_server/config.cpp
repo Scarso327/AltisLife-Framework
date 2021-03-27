@@ -35,6 +35,18 @@ class CfgPatches {
                 global = false;
             };
         };
+
+        class EventLogs {
+            class Spawn {
+                params = 1;
+            };
+
+            class Money {
+                params = 5;
+            };
+
+            class Misc {};
+        };
     };
 };
 

@@ -70,5 +70,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_unregisterCargoUser {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_logPlayerEvent {
+            allowedTargets = SERVER;
+        };
     };
 };

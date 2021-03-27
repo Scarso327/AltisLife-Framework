@@ -121,27 +121,6 @@ class CfgItemsStore {
 				class textures { class optic_SOS {}; };
 			};
 			class optic_NVS : FactionBase { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
-
-			// SUPPRESSORS
-			class muzzle_snds_L : FactionBase { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
-			class muzzle_snds_acp : FactionBase { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
-			class muzzle_snds_M : FactionBase { 
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; 
-				class textures { class muzzle_snds_M {}; };
-			};
-			class muzzle_snds_570 : FactionBase { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
-			class muzzle_snds_58_blk_F : FactionBase { 
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; 
-				class textures { class muzzle_snds_58_blk_F {}; };
-			};
-			class muzzle_snds_H : FactionBase { 
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; 
-				class textures { class muzzle_snds_H {}; };
-			};
-			class muzzle_snds_65_TI_blk_F : FactionBase { 
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; 
-				class textures { class muzzle_snds_65_TI_blk_F {}; };
-			};
 		};
 		class Magazines {
 			class 16Rnd_9x21_Mag : FactionBase { displayName = "Taser Cartridge"; };

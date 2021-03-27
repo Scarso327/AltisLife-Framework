@@ -299,6 +299,10 @@ class U_O_R_Gorka_01_black_F {
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};
+		class Hato {
+			textures[] = { "Data\Textures\Uniforms\Hato\tracksuit.paa" };
+			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 2] call ULP_fnc_hasAccess }";
+		};
 	};
 };
 

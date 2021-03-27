@@ -532,6 +532,9 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 65;
 		garageLimit = 1;
+		garageDelay = 15;
+		repairTime = 20;
+		crushTime = 60;
 		class Textures {
 			class PoliceBlack : PoliceTexture {
 				textures[] = {
@@ -550,6 +553,9 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 65;
 		garageLimit = 2;
+		garageDelay = 15;
+		repairTime = 20;
+		crushTime = 60;
 		turrets[] = { { "SmokeLauncher" } };
 		class Textures {
 			class Hex : BaseTexture { 
@@ -581,6 +587,9 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 65;
 		garageLimit = 2;
+		garageDelay = 15;
+		repairTime = 20;
+		crushTime = 60;
 		class Textures {
 			class Tan : BaseTexture { 
 				displayName = "Tan";
@@ -809,6 +818,9 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 800;
 		garageLimit = 1;
+		garageDelay = 30;
+		repairTime = 15;
+		crushTime = 30;
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 

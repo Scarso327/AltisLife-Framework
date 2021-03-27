@@ -51,7 +51,7 @@ class CfgSettings {
     
     class Police {
         impoundTime = 30;
-        impoundFee[] = { 5000, 30000 };
+        impoundFee[] = { 5000, 150000 };
         crushTime = 60;
     };
     

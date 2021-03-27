@@ -56,4 +56,4 @@ if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
 	[] call ULP_UI_fnc_openHUD;
 };
 
-[getPlayerUID player, "Spawn", [getPos player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+[getPlayerUID player, "Spawn", [configName _spawnCfg, getPos player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

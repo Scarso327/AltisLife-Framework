@@ -6,4 +6,4 @@
 
 # Communication Methods:
   - Website: https://ascensionroleplay.co.uk/
-  - Discord: https://discord.gg/kAEnPAYGYM
+  - Discord: https://discord.gg/s6PuNums8F

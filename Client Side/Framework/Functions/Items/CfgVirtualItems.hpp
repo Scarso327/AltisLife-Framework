@@ -409,7 +409,7 @@ class CfgVirtualItems {
 
 	class Cigarette {
 		displayName = "Cigarette";
-		icon = "Data\Icons\cigaretee.paa";
+		icon = "Data\Icons\cigarette.paa";
 		buyPrice = 5700;
 		sellPrice = 2850;
 		weight = 3;

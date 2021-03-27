@@ -38,7 +38,7 @@ class CfgPatches {
 
         class EventLogs {
             class Spawn {
-                params = 1;
+                params = 2;
             };
 
             class Money {

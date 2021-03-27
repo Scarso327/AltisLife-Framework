@@ -42,7 +42,7 @@ if (_targets isEqualTo "") then {
 		};
 
 		[_type, _message, _player] call ULP_fnc_sendMessage;
-	}, true, true] call ULP_fnc_selectPlayer;
+	}, true, false] call ULP_fnc_selectPlayer;
 } else {
 	[_type, _message, _targets] call ULP_fnc_sendMessage;
 };

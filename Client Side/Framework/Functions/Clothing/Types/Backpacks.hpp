@@ -147,7 +147,7 @@ class B_Carryall_cbr {
 		class INVIS {
 			displayName = "Invisible";
 			textures[] = { "" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction || [player, [""Medic""]] call ULP_fnc_isFaction";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction || [player, [""Medic""]] call ULP_fnc_isFaction || [player, [""Hato""]] call ULP_fnc_isFaction";
 		};
 		class B_Carryall_cbr {
 			displayName = "Coyote";

@@ -1,3 +1,0 @@
-//regex
-1 ""
-5 "" !=B_LegStrapBag_(black|coyote|olive)_F !=B_Messenger_(Black|Gray|Coyote|Olive)_F !=B_SCBA_01_F !=B_(AssaultPack|FieldPack|Kitbag|OutdoorPack|TacticalPack|Carryall|ViperLightHarness|B_ViperHarness_blk_F)_(blk|cbr|khk|rgr|sgg|oli|wdl|wdl_F|eaf|oucamo|green|mcamo|tan|rgr|ghex) !=B_CivilianBackpack_01_(Everyday|Sport)_(Black|Astra|Vrana|Blue|Green|Red)_F !=B_Bergen_(mcamo|dgtl|hex)_F !=B_Parachute

@@ -15,7 +15,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_textures", "_bool"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_eventslevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_textures", "_bool"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -27,8 +27,9 @@ CASH = _cash;
 BANK = _bank;
 
 // System whitelisting...
-CONST(life_adminlevel, _adminlevel);
-CONST(life_donorlevel, _donorlevel);
+CONST(ULP_Staff, _adminlevel);
+CONST(ULP_Event, _eventslevel);
+CONST(ULP_Donator, _donorlevel);
 
 ULP_Licenses = (_licenses select {
 	isClass (missionConfigFile >> "CfgLicenses" >> _x)

@@ -45,6 +45,12 @@ class CfgPatches {
                 params = 5;
             };
 
+            class Executed {
+                params = 3;
+            };
+
+            class Bleedout : Spawn {};
+
             class Misc {};
         };
     };

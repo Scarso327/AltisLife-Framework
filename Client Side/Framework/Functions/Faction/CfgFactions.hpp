@@ -63,11 +63,12 @@ class CfgFactions {
 				required = 1;
 			};
 			class AA { queryIndex = 22; };
+			//class HR { queryIndex = 22; };
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "med_";
-			customQuery = ", med_blacklisted, mediclevel, aalevel";
+			customQuery = ", med_blacklisted, mediclevel, aalevel"; // ,hrlevel
 			timeIndex = 1;
 		};
 

@@ -34,12 +34,13 @@ class CfgMessages {
 		ignoreComms = true;
 		canReply = false;
 		sender = "Server";
-		targets = "0";
+		targets = "[""ULP_Staff"", 3] call ULP_fnc_hasAccess || { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 	};
 
 	class EventsAnnoucement : PublicAnnoucement {
 		displayName = "Event Annoucement";
 		sender = "Events Team";
 		targets = "0";
+		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess || { [""ULP_Event"", 1] call ULP_fnc_hasAccess }"
 	};
 };

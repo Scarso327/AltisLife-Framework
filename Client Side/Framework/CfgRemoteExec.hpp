@@ -28,6 +28,7 @@ class CfgRemoteExec {
         class ULP_fnc_initVehicle {};
         class ULP_fnc_vehicleLights {};
         class ULP_fnc_invokeEvent {};
+        class ULP_fnc_receiveMessage {};
 
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;

@@ -74,7 +74,10 @@ class CfgTablet {
 	class Messaging : BaseScreen {
 		idc= 23004;
 		pageTitle = "Messaging";
-		pageIdcs[] = {};
+		pageIdcs[] = {
+			23036, 23037, 23038, 23039, 23040, 23041, 23042, 23043, 23044, 23045, 23046, 23047, 23048, 23049, 23050
+		};
+		onload = "_this call ULP_fnc_messages";
 	};
 
 	class Group : BaseScreen {

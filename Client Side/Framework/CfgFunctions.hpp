@@ -111,6 +111,7 @@ class CfgFunctions {
 			class resetSurvival {};
 			class canRestrain {};
 			class getName {};
+			class playerByUID {};
 		};
 
 		class PlayerActions {
@@ -250,6 +251,16 @@ class CfgFunctions {
 		class TabletOptions {
 			file = "Functions\Tablet\Options";
 			class options {};
+		};
+
+		class TabletMessaging {
+			file = "Functions\Tablet\Messaging";
+			class messages {};
+			class sendByType {};
+			class sendMessage {};
+			class inbox {};
+			class replyMessage {};
+			class deleteMessage {};
 		};
 
 		class TabletProfile {
@@ -450,6 +461,11 @@ class CfgFunctions {
 			file = "Functions\Chat";
 			class chatMessage {};
 		};
+
+		class Messaging {
+			file = "Functions\Messaging";
+			class receiveMessage {};
+		};
 	};
 
 	class ULP_Functions_UI {
@@ -464,6 +480,7 @@ class CfgFunctions {
 			class blockEsc {};
 			class setMapPosition {};
 			class inputLimit {};
+			class placeholder {};
 		};
 
 		class RscLayers {

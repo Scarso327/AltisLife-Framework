@@ -25,6 +25,7 @@ _bodyBag setDir _dir;
 } forEach _items;
 
 ULP_Inventory = createHashMap; // Wipe Inventory...
+ULP_CarryInfo set [0, 0];
 [] call ULP_fnc_saveGear;
 
 true

@@ -42,7 +42,8 @@ _unit removeWeapon (handgunWeapon _unit);
 _unit removeWeapon (secondaryWeapon _unit);
 {deleteVehicle _x;} forEach (nearestObjects [_unit, ["WeaponHolderSimulated"], 5]);
 
-// TODO : Drop Money & Items and Default Death Related Variables...
+// TODO : Drop Money and Default Death Related Variables...
+[getPos _unit, getDir _unit] call ULP_fnc_createBodyBag;
 
 // Close bleedout script...
 if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {

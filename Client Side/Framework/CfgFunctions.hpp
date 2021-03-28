@@ -466,6 +466,11 @@ class CfgFunctions {
 			file = "Functions\Messaging";
 			class receiveMessage {};
 		};
+
+		class Medical {
+			file = "Functions\Medical";
+			class createBodyBag {};
+		};
 	};
 
 	class ULP_Functions_UI {

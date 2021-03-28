@@ -1313,6 +1313,11 @@ class CfgVehicles {
 		virtualSpace = 50;
 	};
 
+	class Land_Bodybag_01_black_F : Base {
+		virtualSpace = 0;
+		tempStorage = true;
+	};
+
 	// SOUNDS --------------------------------------------------------------------------------------
 	class Police_One {
 		sound = "Police_One";

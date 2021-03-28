@@ -14,4 +14,4 @@ _this params [
 ];
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
-isClass  _containerCfg && { (getNumber (_containerCfg >> "virtualSpace") > 0) }
+isClass  _containerCfg && { (getNumber (_containerCfg >> "virtualSpace") > 0) || isNumber (_containerCfg >> "tempStorage") }

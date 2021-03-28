@@ -30,5 +30,9 @@ if (_count <= 0) then {
 	_cargo set [_item, _count];
 };
 
-_container setVariable ["ULP_VirtualCargo", _cargo, _global];
+if ((count _cargo) isEqualTo 0 && { isNumber (missionConfigFile >> "CfgVehicles" >> (typeOf _container) >> "tempStorage") }) then {
+	deleteVehicle _container;
+} else {
+	_container setVariable ["ULP_VirtualCargo", _cargo, _global];
+};
 true

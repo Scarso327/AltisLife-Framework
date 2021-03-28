@@ -1,0 +1,2 @@
+//regex
+1 "" !="bis_fnc_selectrespawntemplate_respawned" !="texture" !="icon" !="subtitle" !="ulp_virtualcargo" !="isincapacitated" !="killer" !="vehicle_owners" !="jipready"

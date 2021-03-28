@@ -375,6 +375,7 @@ class CfgFunctions {
 			class isGroup {};
 			class getGroupById {};
 			class getGroupName {};
+			class groupId {};
 		};
 
 		class NLR {

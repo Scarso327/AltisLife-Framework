@@ -77,7 +77,6 @@ class CfgFunctions {
             class asyncCall {};
             class mresToArray {};
             class mresString {};
-            class mresJson {};
         };
     };
 

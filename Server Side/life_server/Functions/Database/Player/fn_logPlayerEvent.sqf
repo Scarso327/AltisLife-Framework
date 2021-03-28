@@ -24,6 +24,6 @@ if (isNumber (_cfg >> "params") && { !((count _params) isEqualTo getNumber (_cfg
 	format ["INSERT INTO logs (event, pid, content) VALUES('%1', '%2', '%3')",
 		_event,
 		_steamid,
-		[[_params] call DB_fnc_mresArray] call DB_fnc_mresJson
+		[_params] call DB_fnc_mresArray
 	], 1
 ] call DB_fnc_asyncCall;

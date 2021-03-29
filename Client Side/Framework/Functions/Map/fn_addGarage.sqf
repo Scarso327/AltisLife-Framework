@@ -3,7 +3,7 @@
 ** Description: 
 ** Usage:
 ** 	[this, ["Car"], ["marker_pos_1"]] call ULP_fnc_addGarage;
-** 	[this, ["Car"], ["marker_pos_1"], true, true, true] call ULP_fnc_addGarage; // Impound
+** 	[this, ["Car", "Air", "Ship"], ["marker_pos_1"], true, true, true] call ULP_fnc_addGarage; // Impound
 ** 	[this, ["Car"], ["marker_pos_1"], false, true, false, "[player] call ULP_fnc_getFaction isEqualTo ""Police""", "<t color='#3266A8'>[APC]</t>"] call ULP_fnc_addGarage;
 */
 #include "..\..\script_macros.hpp"

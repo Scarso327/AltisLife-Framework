@@ -13,6 +13,7 @@ class CfgClothesStore {
 			class U_Rangemaster : FactionBase {};
 			class U_BG_Guerrilla_6_1 : FactionBase {};
 			class U_O_R_Gorka_01_black_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }"; };
+			class U_C_FormalSuit_01_black_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class U_I_ParadeUniform_01_AAF_decorated_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class U_B_CombatUniform_mcam_worn : FactionBase { condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
 			class U_O_PilotCoveralls : FactionBase { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
@@ -28,7 +29,7 @@ class CfgClothesStore {
 			};
 			class U_B_CTRG_Soldier_2_Arid_F : FactionBase {
 				displayName = "SCO19 Command Uniform";
-				condition = "[""Police_SCO"", 4] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_Wetsuit : FactionBase {

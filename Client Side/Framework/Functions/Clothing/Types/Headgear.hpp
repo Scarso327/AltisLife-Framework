@@ -204,7 +204,7 @@ class H_Beret_blk {
 		};
 		class H_Beret_EAF_01_F : H_Beret_blk {
 			displayName = "Spec. Command";
-			condition = "[""Police_SCO"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 4] call ULP_fnc_hasAccess } || { [""Police_MPU"", 3] call ULP_fnc_hasAccess } || { [""Police_RPU"", 3] call ULP_fnc_hasAccess }";
+			condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess || { [""Police_NCA"", 4] call ULP_fnc_hasAccess } || { [""Police_MPU"", 3] call ULP_fnc_hasAccess } || { [""Police_RPU"", 3] call ULP_fnc_hasAccess }";
 		};
 		class H_Beret_CSAT_01_F : H_Beret_blk {
 			displayName = "Command Beret";

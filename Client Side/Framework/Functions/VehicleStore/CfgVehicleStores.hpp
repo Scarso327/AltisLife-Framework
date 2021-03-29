@@ -42,7 +42,7 @@ class CfgVehicleStores {
 				};
 			};
 			class B_T_LSV_01_unarmed_black_F {
-				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				class Textures { class PoliceBlack {}; };
 			};
 			class O_LSV_02_unarmed_F {
@@ -50,7 +50,7 @@ class CfgVehicleStores {
 				class Textures { class PoliceBlack {}; };
 			};
 			class B_MRAP_01_F {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 3] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
 				class Textures { class PoliceBlack {}; };
 			};
 		};

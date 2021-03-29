@@ -84,8 +84,9 @@ for "_i" from 0 to 1 step 0 do {
         [_uid, (_playtime select _playTimeIndex)] call TON_fnc_setPlayTime;
 
 		// Groups + Housing
-		_newResult pushBack ([_unit, _result select 2, _factionCfg] call ULP_SRV_fnc_queryGroupInfo);
-		_newResult pushBack false;
+		private _group = [_unit, _result select 2, _factionCfg] call ULP_SRV_fnc_queryGroupInfo;
+		_newResult pushBack _group;
+		_newResult pushBack ([_unit, _factionCfg, _group] call ULP_SRV_fnc_getHouses);
 
 		// Misc
 		_newResult pushBack (missionNamespace getVariable [format ["%1_KEYS_%2", _uid, (side _unit)], []]);

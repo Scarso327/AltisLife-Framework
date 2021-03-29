@@ -75,6 +75,8 @@ class CfgFunctions {
 			class lock {};
 			class say3D {};
 			class setFuel {};
+			class getBuildingDoors {};
+			class getNearestDoor {};
 		};
 
 		class Clothing {
@@ -284,6 +286,7 @@ class CfgFunctions {
 			class selectNumber {};
 			class inputGroupInfo {};
 			class selectPlayer {};
+			class confirm {};
 		};
 
 		class VirutalStores {
@@ -471,6 +474,16 @@ class CfgFunctions {
 		class Medical {
 			file = "Functions\Medical";
 			class createBodyBag {};
+		};
+
+		class Housing {
+			file = "Functions\Housing";
+			class setupHouses {};
+			class isHouse {};
+			class isHouseOwner {};
+			class isHouseShared {};
+			class isHouseOwned {};
+			class sellHouse {};
 		};
 	};
 

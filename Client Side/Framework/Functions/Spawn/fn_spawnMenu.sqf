@@ -38,9 +38,19 @@ private _icon = "";
 			_list lbSetPicture [_item, _icon];
 		};
 		
+		_list lbSetValue [_item, 0];
 		_list lbSetData [_item, configName _x];
 	};
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgSpawns" >> worldName));
+
+if (isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Housing")) then {
+	{
+		private _cfg = [typeOf _x] call ULP_fnc_vehicleCfg;
+		_item = _list lbAdd (_cfg param [3, "House"]);
+		_list lbSetValue [_item, 1];
+		_list lbSetData [_item, _x call BIS_fnc_netId];
+	} forEach ULP_Houses;
+};
 
 _list lbSetCurSel 0;
 [_list, 0, 0] call ULP_fnc_changeSpawn;

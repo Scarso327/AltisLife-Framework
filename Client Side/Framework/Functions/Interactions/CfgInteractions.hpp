@@ -50,6 +50,15 @@ class CfgInteractions {
 		};
 	};
 
+	class HouseOwner {
+		class SellHouse {
+			title = "Sell House";
+			factions[] = { "Civilian" };
+			onClick = "_this call ULP_fnc_sellHouse;";
+			condition = "[_this, player, false] call ULP_fnc_isHouseOwner";
+		};
+	};
+
 	class EquipmentBox {
 		class ClearBox {
 			title = "Clear Box";

@@ -11,12 +11,16 @@ _this params [
 
 private _interactions = [];
 
-if (isNull _object || { (_object distance player) > 5 }) exitWith { _interactions };
+if (isNull _object || { (_object distance player) > 10 }) exitWith { _interactions };
 
 private _typeOf = typeOf _object;
 (_typeOf call BIS_fnc_objectType) params ["", "_type"];
 
 private _actions = missionConfigFile >> "CfgInteractions" >> (switch (true) do {
+	case ([_object] call ULP_fnc_isHouse && 
+		{ isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Housing") } &&
+		{ [_object, player] call ULP_fnc_isHouseOwner }
+	): { "HouseOwner" };
 	case (isPlayer _object && { [_object] call ULP_fnc_isEscorted } && { [] call ULP_fnc_isEscorting }): { "PersonEscortOnly" };
 	case (isPlayer _object): { "Person" };
 	case (_typeOf isKindOf "Box_NATO_Equip_F"): { "EquipmentBox" };

@@ -17,8 +17,17 @@ if (isNull _display) exitWith {};
 private _selected = _list lbData _index;
 
 if !(_selected isEqualTo "") then {
-	private _cfg = missionConfigFile >> "CfgSpawns" >> worldName >> _selected;
-	_display setVariable ["spawn", _cfg];
+	if ([_list lbValue _index] call ULP_fnc_bool) then {
+		private _house = _selected call BIS_fnc_objectFromNetId;
 
-	[(_display displayCtrl 3001), [_time, 0.05, getMarkerPos getText(_cfg >> "marker")]] call ULP_UI_fnc_setMapPosition;
+		if !(isNull _house) then {
+			_display setVariable ["spawn", _house];
+			[(_display displayCtrl 3001), [_time, 0.05, position _house]] call ULP_UI_fnc_setMapPosition;
+		};
+	} else {
+		private _cfg = missionConfigFile >> "CfgSpawns" >> worldName >> _selected;
+		_display setVariable ["spawn", _cfg];
+
+		[(_display displayCtrl 3001), [_time, 0.05, getMarkerPos getText(_cfg >> "marker")]] call ULP_UI_fnc_setMapPosition;
+	};
 };

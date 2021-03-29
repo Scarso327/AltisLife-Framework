@@ -7,6 +7,10 @@ scopeName "fn_setPlayerInfo";
 
 if (ULP_Loaded) exitWith {};
 
+if (canSuspend) exitWith {
+    [ULP_fnc_setPlayerInfo, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_playerData", false, [[], false]]
 ];
@@ -91,18 +95,14 @@ if (_group isEqualType 0) then {
 		[format["Server didn't catch group id mismatch (%1, %2)", _groupid, _group]] call ULP_fnc_logIt;
 	};
 
+	InitGroupId = _groupid;
 	[format["Joined Group (%1)", _group]] call ULP_fnc_logIt;
 };
 
 // Retrieve any houses returned to us from the sever and set them up...
 private _houses = _playerData select (_count - 4);
 if (_houses isEqualType []) then {
-	ULP_Houses = _houses;
-
-	{
-		_house = nearestObject [(parseSimpleArray (_x select 0)), "House"];
-		ULP_Keys pushBack (_house);
-	} forEach ULP_Houses;
+	[_houses] call ULP_fnc_setupHouses;
 };
 
 // Get vehicle keys we've had this restart...
@@ -122,3 +122,4 @@ ULP_Gear = _gear;
 ULP_UnlockedTextures = _textures;
 
 ULP_Loaded = true; // Tells the initialisation script we're able to continue...
+InitGroupId = nil; // Only used during init as Arma doesn't seem to add us to group in time...

@@ -20,6 +20,10 @@ if (_index >= 0) then {
 	_users deleteAt _index;
 	_container setVariable ["ULP_VirtualCargo_WaitingUsers", _users];
 } else {
+	if ([getNumber (missionConfigFile >> "CfgVehicles" >> (typeOf _container) >> "isHouse")] call ULP_fnc_bool) then {
+		[_container] call ULP_SRV_fnc_saveVirtualStorage;
+	};
+
 	if (!(isNull _cargoUser) && { _cargoUser isEqualTo _user }) then {
 		private _newUser = _users param [0, objNull];
 		_container setVariable ["ULP_VirtualCargo_User", _newUser, true];

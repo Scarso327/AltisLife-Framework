@@ -176,10 +176,25 @@ if (isDowned(player)) then {
                 private _veh = ([cursorObject, (vehicle player)] select !(isNull (objectParent player)));
 
                 if (ULP_Ability_Cooldown > time) exitWith {};
+                
+                if ((player distance _veh) <= 10 && { _veh in ULP_Keys || { _veh in ULP_Houses } }) then {
+                    if ([_veh] call ULP_fnc_isHouse) then {
+                        private _door = [_veh] call ULP_fnc_getNearestDoor;
+                        if (_door > 0) then {
+                            if ((_veh getVariable [format ["bis_disabled_Door_%1",_door], 0]) isEqualTo 0) then {
+                                _veh setVariable [format ["bis_disabled_Door_%1",_door], 1, true];
+                                _veh animate [format["door_%1_rot",_door],0];
 
-                if (_veh in ULP_Keys && { (player distance _veh) <= 10 }) then {
-                    if (_veh isKindOf "House_F") then {
-                        // TODO : Door Unlocking...
+                                systemChat "You've locked this door.";
+                            } else {
+                                _veh setVariable [format ["bis_disabled_Door_%1", _door], 0, true];
+                                _veh animate [format["door_%1_rot", _door], 1];
+
+                                systemChat "You've unlocked this door.";
+                            };
+                        };
+
+                        _handled = true;
                     } else {
                         if ((locked _veh) isEqualTo 2) then {
                             [_veh, 0] remoteExecCall ["ULP_fnc_lock", _veh];

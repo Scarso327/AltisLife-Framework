@@ -49,8 +49,8 @@ class CfgPatches {
                 params = 3;
             };
 
+            class House : Executed {};
             class Bleedout : Spawn {};
-
             class Misc {};
         };
     };

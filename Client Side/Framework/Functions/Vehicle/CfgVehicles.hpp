@@ -2,7 +2,9 @@ class CfgVehicles {
 	retrievalPerc = 0.02;
 
 	class Base {
+		virtualSpace = 0;
 		garageLimit = 4;
+		isHouse = false;
 		conditions = "true";
 		class Textures {};
 	};
@@ -1343,7 +1345,14 @@ class CfgVehicles {
 
 	class Land_Bodybag_01_black_F : Base {
 		virtualSpace = 0;
+		garageLimit = 0;
 		tempStorage = true;
+	};
+
+	class Land_PlasticCase_01_large_gray_F : Base {
+		virtualSpace = 1000;
+		garageLimit = 0;
+		isHouse = true;
 	};
 
 	// SOUNDS --------------------------------------------------------------------------------------

@@ -9,6 +9,33 @@ player addEventHandler ["Reloaded", { _this call ULP_fnc_onReloaded }];
 player addEventHandler ["GetInMan", { _this call ULP_fnc_onGetIn }];
 player addEventHandler ["GetOutMan", { _this call ULP_fnc_onGetOut }];
 
+["HouseAdded", {
+	_this params [
+		["_house", objNull, [objNull]]
+	];
+
+	ULP_Houses pushBackUnique _house;
+	
+	private _marker = createMarkerLocal [format["house_%1", _house call BIS_fnc_netId], position _house];
+	_marker setMarkerTypeLocal "loc_Lighthouse";
+	_marker setMarkerColorLocal (["ColorIndependent", "colorBLUFOR"] select ([_house, player, false] call ULP_fnc_isHouseOwner));
+
+	_house setVariable ["building_marker", _marker];
+}] call ULP_fnc_addEventHandler;
+
+["HouseRemoved", {
+	_this params [
+		["_house", objNull, [objNull]]
+	];
+
+	if (_house in ULP_Houses) then { ULP_Houses deleteAt (ULP_Houses find _house); };
+	
+	private _marker = _house getVariable ["building_marker", ""];
+	if !(_marker isEqualTo "") then {
+		deleteMarkerLocal _marker;
+	};
+}] call ULP_fnc_addEventHandler;
+
 // Settings Events...
 ["OptionChanged", {
 	_this params [

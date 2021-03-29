@@ -30,3 +30,14 @@ class KeyList: Life_RscListBox {
 	SAFEZONE_W(UI_WIDTH - (MARGIN_X / 2));
 	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 3));
 };
+
+class HouseList: Life_RscListBox {
+    idc = 23051;
+	colorBackground[] = INNER_BODY_COLOUR;
+    rowHeight = 0.09;
+    sizeEx = 0.033;
+    SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W(((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2));
+	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 3));
+};

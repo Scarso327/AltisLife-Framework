@@ -13,3 +13,4 @@
 #include "DialogProcessing\DialogProcessing.hpp"
 #include "DialogMoney\DialogMoney.hpp"
 #include "DialogInventory\DialogInventory.hpp"
+#include "DisplaySelect\DisplayConfirm.hpp"

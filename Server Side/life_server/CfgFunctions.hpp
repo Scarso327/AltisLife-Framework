@@ -38,6 +38,15 @@ class CfgFunctions {
             class queryGroupInfo {};
         };
 
+        class DatabaseHousing {
+            file = "\life_server\Functions\Database\Housing";
+            class initHousing {};
+            class getHouses {};
+            class setupHouse {};
+            class saveVirtualStorage {};
+            class sellHouse {};
+        };
+
         class Channels {
             file = "\life_server\Functions\Channels";
             class initRadios {};

@@ -54,7 +54,7 @@ publicVariable "life_server_extDB_notLoaded";
 ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
 ULP_SRV_Date resize 3; // We only need Year, Month, Day
 
-private _routines = ["resetVehicles", "deleteOldGroups"];
+private _routines = ["resetVehicles", "deleteOldGroups", "deleteOldHouses"];
 
 private _timeStamp = diag_tickTime;
 ["Initialisation Started"] call ULP_fnc_logIt;

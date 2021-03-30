@@ -11,7 +11,7 @@ _this params [
 ];
 
 _params params [
-	"_id", "_owner", "_shared", "_storage", "_vStorage"
+	"_id", "_owner", ["_shared", false, [true]], ["_storage", [], [[]]], ["_vStorage", [], [[]]]
 ];
 
 _house allowDamage false;

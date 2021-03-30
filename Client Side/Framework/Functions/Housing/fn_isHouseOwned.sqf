@@ -9,4 +9,4 @@ _this params [
 	["_building", objNull, [objNull]]
 ];
 
-(isNil { _building getVariable "building_id" })
+!(isNil { _building getVariable "building_id" })

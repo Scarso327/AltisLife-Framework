@@ -12,6 +12,7 @@ class CfgFunctions {
             file = "\life_server\Functions\Database";
             class getLocalTime {};
             class getWeek {};
+            class getNextId {};
         };
 
         class DatabasePlayer {
@@ -44,6 +45,7 @@ class CfgFunctions {
             class getHouses {};
             class setupHouse {};
             class saveVirtualStorage {};
+            class buyHouse {};
             class sellHouse {};
         };
 

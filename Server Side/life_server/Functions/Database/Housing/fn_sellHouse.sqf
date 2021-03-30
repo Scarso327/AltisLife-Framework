@@ -61,5 +61,7 @@ if !(isNull _storage) then {
 
 _house allowDamage true;
 
+ULP_SRV_Houses deleteAt (ULP_SRV_Houses find _house);
+
 ["CALL deleteOldHouses", 1] call DB_fnc_asyncCall;
 ["HouseSold", [_house, true, format["You have successfully sold this house for %1%2...", "£", [_money] call ULP_fnc_numberText], _money]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

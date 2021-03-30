@@ -1,4 +1,6 @@
 class CfgHousing {
+	houseLimit = 4;
+	
 	class Houses {
 		class Base {
 			price = 1500000;

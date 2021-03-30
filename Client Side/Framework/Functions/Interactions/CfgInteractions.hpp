@@ -50,6 +50,15 @@ class CfgInteractions {
 		};
 	};
 
+	class House {
+		class BuyHouse {
+			title = "Buy House";
+			factions[] = { "Civilian" };
+			onClick = "_this call ULP_fnc_buyHouse;";
+			condition = "isClass (missionConfigFile >> ""CfgFactions"" >> [player] call ULP_fnc_getFaction >> ""Housing"") && { !([_this] call ULP_fnc_isHouseOwned) }";
+		};
+	};
+
 	class HouseOwner {
 		class SellHouse {
 			title = "Sell House";

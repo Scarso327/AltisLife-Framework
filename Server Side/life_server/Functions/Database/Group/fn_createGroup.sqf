@@ -77,23 +77,13 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	_id = _queryId;
 } else {
 	// Get ID...
-	private _query = [format["SELECT MAX(id) FROM groups"], 2] call DB_fnc_asyncCall;
-	
-	if (_query isEqualTo "" || { _query isEqualTo [] }) then {
-		_query = [0];
-	};
-
-	_query params [
-		["_queryId", 0, [0]]
-	];
+	_id = ["groups"] call ULP_SRV_fnc_getNextId;
 
 	// Insert...
 	[format[
 		"INSERT INTO groups (owner, tag, name) VALUES ('%1', '%2', '%3');", 
 		_steamid, _tag, _name
 	], 1] call DB_fnc_asyncCall;
-
-	_id = _queryId + 1;
 
 	private _group = createGroup [(side _owner), true];
 	[_owner] joinSilent _group;

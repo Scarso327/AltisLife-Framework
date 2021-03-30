@@ -3,7 +3,7 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_buylHouse";
+scopeName "fn_buyHouse";
 
 if (canSuspend) exitWith {
     [ULP_fnc_buyHouse, _this] call ULP_fnc_directCall;

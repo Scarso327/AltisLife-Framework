@@ -949,6 +949,7 @@ class CfgVehicles {
 		buyPrice = 75;
 		virtualSpace = 0;
 		class Textures {
+			class Civilian : BaseTexture {}; 
 			class Police : PoliceTexture {
 				textures[] = { "Data\Textures\Vehicles\Sea\Police\motorboat.paa" }; 
 				class Lights : PoliceLights {
@@ -971,6 +972,7 @@ class CfgVehicles {
 		buyPrice = 150;
 		virtualSpace = 0;
 		class Textures {
+			class Civilian : BaseTexture {}; 
 			class Police : PoliceTexture {
 				textures[] = { 
 					"Data\Textures\Vehicles\Sea\Police\RHIB_01.paa",

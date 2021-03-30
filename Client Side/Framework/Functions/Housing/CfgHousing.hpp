@@ -7,6 +7,7 @@ class CfgHousing {
 			sellMultiplier = 0.4; // 40% of buy...
 			breakIn = 5 * 60;
 			canShare = true;
+			canSpawn = true;
 			spawnPos[] = {0, 0, 0};
 			disabledUpgrades[] = {};
 			class Storage {
@@ -27,6 +28,7 @@ class CfgHousing {
 
 		// Garages...
 		class Land_i_Garage_V1_F : Base {
+			canSpawn = false;
 			class Garage {
 				spawnPos[] = {{0, 0, 0}, 0};
 			};

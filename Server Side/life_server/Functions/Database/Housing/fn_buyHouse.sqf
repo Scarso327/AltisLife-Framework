@@ -47,5 +47,5 @@ private _id = ["houses"] call ULP_SRV_fnc_getNextId;
 
 ["HouseBought", [
 	_house, true, 
-	format ["You have successfully bought this house for £%1%2...", "£", [_money] call ULP_fnc_numberText]
+	format ["You have successfully bought this house for %1%2...", "£", [_money] call ULP_fnc_numberText]
 ]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

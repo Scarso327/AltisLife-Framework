@@ -4,6 +4,7 @@
 */
 #include "..\..\script_macros.hpp"
 #include "..\..\dikCodes.hpp"
+#define ACT_KEY(name, default) [(actionKeys name) select 0, default] select (actionKeys name isEqualTo [])
 scopeName "fn_keyUp";
 
 _this params [
@@ -12,11 +13,27 @@ _this params [
 
 private _handled = false;
 
+private _seatKey = ACT_KEY("User1", B);
+private _interactionKey = ACT_KEY("User10", LWINDOWS);
+
 switch (_code) do {
     if (isDowned(player)) then {
         _handled = true;
         case F: { if (_shift && { missionNamespace getVariable ["ULP_CanRespawn", false] }) then { player SetDammage 1; } }; // Respawn (Shift + F)...
 		case SPACE: {  }; // Request Medic (Space, TODO)
+    };
+
+    case _interactionKey: {
+        if !([] call ULP_UI_fnc_isProgress) then {
+            _this call ULP_fnc_actionKeyDown;
+            _handled = true;
+        };
+    };
+
+    case _seatKey: {
+        if (!(isNull (objectParent player)) && { (vehicle player) isKindOf "LandVehicle" }) then {
+            player setVariable["seatbelt", !(player getVariable["seatbelt", false])];
+        };
     };
 
     case T: {

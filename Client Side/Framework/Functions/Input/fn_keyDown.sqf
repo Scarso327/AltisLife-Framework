@@ -14,9 +14,6 @@ _this params [
 private _handled = false;
 private _disabledKeys = [];
 
-private _seatKey = ACT_KEY("User1", B);
-private _interactionKey = ACT_KEY("User10", LWINDOWS);
-
 _disabledKeys append (actionKeys "tacticalView"); // Disable tactical view...
 
 if ([player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isSurrendered }) then {
@@ -49,19 +46,6 @@ if (isDowned(player)) then {
     };
 } else {
     switch (_code) do {
-        case _interactionKey: {
-            if !([] call ULP_UI_fnc_isProgress) then {
-                _this call ULP_fnc_actionKeyDown;
-                _handled = true;
-            };
-        };
-
-        case _seatKey: {
-            if (!(isNull (objectParent player)) && { (vehicle player) isKindOf "LandVehicle" }) then {
-                player setVariable["seatbelt", !(player getVariable["seatbelt", false])];
-            };
-        };
-
         case B: {
             if (_shift && { !_ctrlKey }) then {
                 if (ULP_Ability_Cooldown < time) then {

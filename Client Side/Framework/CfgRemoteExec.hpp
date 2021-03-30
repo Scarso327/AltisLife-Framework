@@ -79,5 +79,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_sellHouse {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_setHouseShared {
+            allowedTargets = SERVER;
+        };
     };
 };

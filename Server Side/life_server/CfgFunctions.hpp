@@ -47,6 +47,7 @@ class CfgFunctions {
             class saveVirtualStorage {};
             class buyHouse {};
             class sellHouse {};
+            class setHouseShared {};
         };
 
         class Channels {

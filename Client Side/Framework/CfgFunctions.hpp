@@ -486,6 +486,7 @@ class CfgFunctions {
 			class ownedHouses {};
 			class buyHouse {};
 			class sellHouse {};
+			class shareHouse {};
 		};
 	};
 

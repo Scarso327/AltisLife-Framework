@@ -13,6 +13,8 @@ _this params [
 	["_house", objNull, [objNull]]
 ];
 
+if (isNull _house) exitWith { false };
+
 if !([_house, player, false] call ULP_fnc_isHouseOwner) exitWith {
 	hint "Only the house owner can change whether the house is shared or not...";
 	false

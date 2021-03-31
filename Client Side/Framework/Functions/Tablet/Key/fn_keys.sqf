@@ -17,6 +17,8 @@ lbClear _list;
 private _houseList = _display displayCtrl 23051;
 lbClear _houseList;
 
+private _houseView = _display displayCtrl 23052;
+
 switch (lbCurSel _toolbox) do {
 	case 1: {
 		_keyList ctrlShow false;
@@ -45,17 +47,22 @@ switch (lbCurSel _toolbox) do {
 				};
 			};
 		} forEach ULP_Houses;
-
+		
 		if ((lbSize _houseList) > 0) then {
 			_houseList lbSetCurSel 0;
+			_houseView ctrlShow true;
+
+			[_houseList, 0] call ULP_fnc_switchHouse;
 		} else {
 			_houseList lbAdd "No Houses...";
+			_houseView ctrlShow false;
 		};
 	};
 	default {
 		_keyList ctrlShow true;
 		_houseList ctrlShow false;
-		
+		_houseView ctrlShow false;
+
 		private _item = -1;
 		private _vehInfo = [];
 		private _texture = "";

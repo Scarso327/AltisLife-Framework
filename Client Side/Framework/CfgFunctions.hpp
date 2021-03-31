@@ -248,6 +248,7 @@ class CfgFunctions {
 		class TabletKeys {
 			file = "Functions\Tablet\Key";
 			class keys {};
+			class switchHouse {};
 		};
 		
 		class TabletOptions {

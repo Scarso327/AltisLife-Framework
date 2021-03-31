@@ -11,14 +11,14 @@ if (canSuspend) exitWith {
 
 ["Setting Up Housing..."] call ULP_fnc_logIt;
 
-private _query = ["SELECT houses.id, houses.pid, players.group_id, players.name, houses.classname, houses.pos, houses.storage, houses.virtualStorage, houses.shared FROM houses INNER JOIN players ON players.pid = houses.pid WHERE houses.sold='0'", 2, true] call DB_fnc_asyncCall;
+private _query = ["SELECT houses.id, houses.pid, players.group_id, players.name, houses.classname, houses.pos, houses.name, houses.storage, houses.virtualStorage, houses.shared FROM houses INNER JOIN players ON players.pid = houses.pid WHERE houses.sold='0'", 2, true] call DB_fnc_asyncCall;
 
 if (_query isEqualTo "" || { _query isEqualTo [] }) exitWith { 0 };
 
 ULP_SRV_Houses = [];
 
 {
-	_x params ["_id", "_pid", "_gangId", "_ownerName", "_classname", "_pos", "_storage", "_virtualStorage", "_shared"];
+	_x params ["_id", "_pid", "_gangId", "_ownerName", "_classname", "_pos", "_name", "_storage", "_virtualStorage", "_shared"];
 
 	if (isClass (missionConfigFile >> "CfgHousing" >> "Houses" >> _classname)) then {
 		// Convert Datatypes...
@@ -36,7 +36,7 @@ ULP_SRV_Houses = [];
 				[format["UPDATE houses SET sold='1' WHERE id='%1'", [_id, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
 				[_steamid, "House", ["Blacklisted", getPos _house, [0, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
 			} else {
-				[_house, [_id, [_pid, _gangId, _ownerName], _shared, _storage, _virtualStorage]] call ULP_SRV_fnc_setupHouse;
+				[_house, [_id, [_pid, _gangId, _ownerName], _shared, _name, _storage, _virtualStorage]] call ULP_SRV_fnc_setupHouse;
 			};
 		};
 	} else {

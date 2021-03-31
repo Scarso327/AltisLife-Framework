@@ -16,12 +16,14 @@ if (isNull _display) exitWith {};
 private _houseView = _display displayCtrl 23052;
 
 private _house = (_list lbData _index) call BIS_fnc_objectFromNetId;
-if (isNull _player) exitWith { _houseView ctrlShow false; };
+if (isNull _house) exitWith { _houseView ctrlShow false; };
 if !(ctrlShown _houseView) then { _houseView ctrlShow true; };
 
-private _shareButton = (_houseView controlsGroupCtrl 101) controlsGroupCtrl 102;
+private _shareButton = (_houseView controlsGroupCtrl 103) controlsGroupCtrl 102;
+
 _shareButton ctrlSetStructuredText parseText format["<t align = 'center'>%1</t>", [
 	"Share",
 	"Unshare"
 ] select ([_house] call ULP_fnc_isHouseShared)];
-_shareButton setVariable ["house", _house];
+
+_display setVariable ["house", _house];

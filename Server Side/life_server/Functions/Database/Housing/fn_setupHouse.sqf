@@ -11,7 +11,7 @@ _this params [
 ];
 
 _params params [
-	"_id", "_owner", ["_shared", false, [true]], ["_storage", [], [[]]], ["_vStorage", [], [[]]]
+	"_id", "_owner", ["_shared", false, [true]], ["_name", "", [""]], ["_storage", [], [[]]], ["_vStorage", [], [[]]]
 ];
 
 _house allowDamage false;
@@ -19,6 +19,10 @@ _house allowDamage false;
 _house setVariable ["building_id", _id, true];
 _house setVariable ["building_owner", _owner, true];
 _house setVariable ["building_shared", _shared, true];
+
+if !(_name isEqualTo "") then {
+	_house setVariable ["building_name", _name, true];
+};
 
 // Lock Doors...
 for "_i" from 1 to (getNumber(configFile >> "CfgVehicles" >> (typeOf _house) >> "numberOfDoors")) do {

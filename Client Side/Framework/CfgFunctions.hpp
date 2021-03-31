@@ -288,6 +288,7 @@ class CfgFunctions {
 			class inputGroupInfo {};
 			class selectPlayer {};
 			class confirm {};
+			class enterString {};
 		};
 
 		class VirutalStores {
@@ -488,6 +489,7 @@ class CfgFunctions {
 			class buyHouse {};
 			class sellHouse {};
 			class shareHouse {};
+			class renameHouse {};
 		};
 	};
 

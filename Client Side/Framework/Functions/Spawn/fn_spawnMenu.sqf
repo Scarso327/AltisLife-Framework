@@ -48,7 +48,7 @@ if (isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFact
 		private _cfg = [typeOf _x] call ULP_fnc_vehicleCfg;
 
 		if ([getNumber (missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _x) >> "canSpawn")] call ULP_fnc_bool) then {
-			_item = _list lbAdd (_cfg param [3, "House"]);
+			_item = _list lbAdd (_x getVariable ["building_name", (_cfg param [3, "House"])]);;
 			_list lbSetValue [_item, 1];
 			_list lbSetData [_item, _x call BIS_fnc_netId];
 		};

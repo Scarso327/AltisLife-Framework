@@ -82,5 +82,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_setHouseShared {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_setHouseName {
+            allowedTargets = SERVER;
+        };
     };
 };

@@ -48,6 +48,7 @@ class CfgFunctions {
             class buyHouse {};
             class sellHouse {};
             class setHouseShared {};
+            class setHouseName {};
         };
 
         class Channels {

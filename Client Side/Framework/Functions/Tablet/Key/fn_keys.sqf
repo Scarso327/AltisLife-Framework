@@ -35,7 +35,7 @@ switch (lbCurSel _toolbox) do {
 					
 					private _distance = round (player distance _x);
 					
-					private _item = _houseList lbAdd _name;
+					private _item = _houseList lbAdd (_x getVariable ["building_name", _name]);
 					_houseList lbSetData [_item, _x call BIS_fnc_netId];
 
 					private _tooltip = [
@@ -50,8 +50,6 @@ switch (lbCurSel _toolbox) do {
 		
 		if ((lbSize _houseList) > 0) then {
 			_houseList lbSetCurSel 0;
-			_houseView ctrlShow true;
-
 			[_houseList, 0] call ULP_fnc_switchHouse;
 		} else {
 			_houseList lbAdd "No Houses...";

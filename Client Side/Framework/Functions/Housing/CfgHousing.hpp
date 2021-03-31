@@ -1,4 +1,5 @@
 class CfgHousing {
+	nameLength = 32;
 	houseLimit = 4;
 	
 	class Houses {

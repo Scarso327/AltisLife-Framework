@@ -63,6 +63,7 @@ CREATE TABLE IF NOT EXISTS `houses` (
   `pid` varchar(17) NOT NULL,
   `classname` varchar(64) DEFAULT NULL,
   `pos` varchar(32) DEFAULT NULL,
+  `name` varchar(32) DEFAULT '',
   `storage` text DEFAULT NULL,
   `virtualStorage` text DEFAULT NULL,
   `shared` tinyint(4) DEFAULT 0,
@@ -72,16 +73,16 @@ CREATE TABLE IF NOT EXISTS `houses` (
   UNIQUE KEY `pos` (`pos`),
   KEY `fkIdx_players_houses` (`pid`),
   CONSTRAINT `FK_players_houses` FOREIGN KEY (`pid`) REFERENCES `players` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table altislife.houses: ~0 rows (approximately)
+-- Dumping data for table altislife.houses: ~5 rows (approximately)
 /*!40000 ALTER TABLE `houses` DISABLE KEYS */;
-INSERT INTO `houses` (`id`, `pid`, `classname`, `pos`, `storage`, `virtualStorage`, `shared`, `sold`, `insert_time`) VALUES
-	(5, '76561198092567307', 'Land_i_House_Big_02_V1_F', '"[3685.34,13059.8,1.16742]"', '"[]"', '"[]"', 0, 0, '2021-03-30 01:14:20'),
-	(11, '76561197971322689', 'Land_i_House_Big_02_V1_F', '"[3647.58,13052.2,0.202638]"', '"[]"', '"[]"', 0, 0, '2021-03-30 01:26:45'),
-	(15, '76561197971322689', 'Land_i_House_Big_02_V1_F', '"[3663.14,13031.2,0.480713]"', '"[]"', '"[]"', 0, 0, '2021-03-30 01:27:30'),
-	(16, '76561197971322689', 'Land_i_House_Big_02_V1_F', '"[3679.29,13001,0.359909]"', '"[]"', '"[]"', 0, 0, '2021-03-30 01:27:36'),
-	(17, '76561197971322689', 'Land_i_House_Big_02_V1_F', '"[3688.23,12996.5,0.375095]"', '"[]"', '"[]"', 0, 0, '2021-03-30 01:27:40');
+INSERT INTO `houses` (`id`, `pid`, `classname`, `pos`, `name`, `storage`, `virtualStorage`, `shared`, `sold`, `insert_time`) VALUES
+	(11, '76561197971322689', 'Land_i_House_Big_02_V1_F', '"[3647.58,13052.2,0.202638]"', '', '"[]"', '"[]"', 0, 0, '2021-03-30 01:26:45'),
+	(16, '76561197971322689', 'Land_i_House_Big_02_V1_F', '"[3679.29,13001,0.359909]"', '', '"[]"', '"[]"', 0, 0, '2021-03-30 01:27:36'),
+	(17, '76561197971322689', 'Land_i_House_Big_02_V1_F', '"[3688.23,12996.5,0.375095]"', '', '"[]"', '"[]"', 0, 0, '2021-03-30 01:27:40'),
+	(18, '76561198092567307', 'Land_i_House_Big_02_V1_F', '"[3685.34,13059.8,1.16742]"', 'House', '"[]"', '"[]"', 0, 0, '2021-03-30 01:55:36'),
+	(19, '76561197971322689', 'Land_i_House_Big_02_V1_F', '"[3663.14,13031.2,0.480713]"', '', '"[]"', '"[]"', 0, 0, '2021-03-30 01:55:56');
 /*!40000 ALTER TABLE `houses` ENABLE KEYS */;
 
 -- Dumping structure for table altislife.logs
@@ -94,9 +95,9 @@ CREATE TABLE IF NOT EXISTS `logs` (
   PRIMARY KEY (`id`),
   KEY `pid` (`pid`),
   CONSTRAINT `FK_logs_players` FOREIGN KEY (`pid`) REFERENCES `players` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=310 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table altislife.logs: ~162 rows (approximately)
+-- Dumping data for table altislife.logs: ~255 rows (approximately)
 /*!40000 ALTER TABLE `logs` DISABLE KEYS */;
 INSERT INTO `logs` (`id`, `event`, `pid`, `content`, `insert`) VALUES
 	(1, 'Spawn', '76561198092567307', '"[`KavalaStation`,[3633.68,13361.1,0]]"', '2021-03-28 02:24:14'),
@@ -333,7 +334,81 @@ INSERT INTO `logs` (`id`, `event`, `pid`, `content`, `insert`) VALUES
 	(232, 'Money', '76561197971322689', '"[`Bank`,`Removed`,`63538896`,`1500000`,`Bought House`]"', '2021-03-30 01:27:36'),
 	(233, 'House', '76561197971322689', '"[`Bought`,[3679.29,13001,0.359909],`1500000`]"', '2021-03-30 01:27:36'),
 	(234, 'Money', '76561197971322689', '"[`Bank`,`Removed`,`62038896`,`1500000`,`Bought House`]"', '2021-03-30 01:27:40'),
-	(235, 'House', '76561197971322689', '"[`Bought`,[3688.23,12996.5,0.375095],`1500000`]"', '2021-03-30 01:27:40');
+	(235, 'House', '76561197971322689', '"[`Bought`,[3688.23,12996.5,0.375095],`1500000`]"', '2021-03-30 01:27:40'),
+	(236, 'Money', '76561198273172138', '"[`Cash`,`Removed`,`8544`,`75`,`Purchased Motorboat`]"', '2021-03-30 01:28:49'),
+	(237, 'Spawn', '76561198273172138', '"[`Kavala`,[3686.96,13101.7,0.444872]]"', '2021-03-30 01:30:16'),
+	(238, 'Money', '76561198273172138', '"[`Cash`,`Removed`,`8469`,`75`,`Purchased Motorboat`]"', '2021-03-30 01:31:08'),
+	(239, 'Money', '76561198092567307', '"[`Bank`,`Added`,`72546400`,`7500`,`Paycheck`]"', '2021-03-30 01:33:33'),
+	(240, 'Money', '76561197971322689', '"[`Bank`,`Added`,`62046396`,`7500`,`Paycheck`]"', '2021-03-30 01:38:51'),
+	(241, 'Spawn', '76561198273172138', '"[`Kavala`,[3647.62,13076.9,0.0186119]]"', '2021-03-30 01:40:13'),
+	(242, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-30 01:51:55'),
+	(243, 'Spawn', '76561197971322689', '"[`House (Big, White)`,[3649.36,13051.7,-0.257817]]"', '2021-03-30 01:54:11'),
+	(244, 'House', '76561198092567307', '"[`Sold`,[3685.34,13059.8,1.16742],`600000`]"', '2021-03-30 01:55:19'),
+	(245, 'Money', '76561198092567307', '"[`Bank`,`Added`,`73146400`,`600000`,`House Sold`]"', '2021-03-30 01:55:19'),
+	(246, 'Money', '76561198092567307', '"[`Bank`,`Removed`,`71646400`,`1500000`,`Bought House`]"', '2021-03-30 01:55:36'),
+	(247, 'House', '76561198092567307', '"[`Bought`,[3685.34,13059.8,1.16742],`1500000`]"', '2021-03-30 01:55:36'),
+	(248, 'House', '76561197971322689', '"[`Sold`,[3663.14,13031.2,0.480713],`600000`]"', '2021-03-30 01:55:54'),
+	(249, 'Money', '76561197971322689', '"[`Bank`,`Added`,`62646396`,`600000`,`House Sold`]"', '2021-03-30 01:55:54'),
+	(250, 'Money', '76561197971322689', '"[`Bank`,`Removed`,`61146396`,`1500000`,`Bought House`]"', '2021-03-30 01:55:56'),
+	(251, 'House', '76561197971322689', '"[`Bought`,[3663.14,13031.2,0.480713],`1500000`]"', '2021-03-30 01:55:56'),
+	(252, 'Money', '76561198092567307', '"[`Bank`,`Added`,`71653904`,`7500`,`Paycheck`]"', '2021-03-30 02:06:53'),
+	(253, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:01:47'),
+	(254, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:07:16'),
+	(255, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:13:19'),
+	(256, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:25:22'),
+	(257, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:27:32'),
+	(258, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:41:42'),
+	(259, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:45:43'),
+	(260, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:48:43'),
+	(261, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:51:25'),
+	(262, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 00:53:51'),
+	(263, 'Money', '76561198092567307', '"[`Bank`,`Added`,`71661408`,`7500`,`Paycheck`]"', '2021-03-31 01:08:49'),
+	(264, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 01:12:14'),
+	(265, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 01:21:07'),
+	(266, 'Money', '76561198092567307', '"[`Bank`,`Added`,`71668912`,`7500`,`Paycheck`]"', '2021-03-31 01:35:20'),
+	(267, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 01:42:44'),
+	(268, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 01:47:03'),
+	(269, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 01:51:06'),
+	(270, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 01:55:28'),
+	(271, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 01:59:39'),
+	(272, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 02:01:28'),
+	(273, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 02:05:14'),
+	(274, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 02:08:16'),
+	(275, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 02:14:05'),
+	(276, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 19:49:49'),
+	(277, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 19:53:46'),
+	(278, 'Money', '76561198092567307', '"[`Bank`,`Added`,`71676416`,`7500`,`Paycheck`]"', '2021-03-31 20:08:35'),
+	(279, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:23:37'),
+	(280, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:30:50'),
+	(281, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:34:09'),
+	(282, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:37:36'),
+	(283, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:42:23'),
+	(284, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:44:42'),
+	(285, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:48:12'),
+	(286, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:51:23'),
+	(287, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:53:29'),
+	(288, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:56:20'),
+	(289, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 20:58:48'),
+	(290, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 21:01:02'),
+	(291, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 21:29:22'),
+	(292, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 21:32:01'),
+	(293, 'Money', '76561198092567307', '"[`Bank`,`Added`,`71683920`,`7500`,`Paycheck`]"', '2021-03-31 21:46:41'),
+	(294, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 21:58:34'),
+	(295, 'Money', '76561198092567307', '"[`Bank`,`Added`,`71691424`,`7500`,`Paycheck`]"', '2021-03-31 22:13:08'),
+	(296, 'Money', '76561198092567307', '"[`Bank`,`Added`,`71698928`,`7500`,`Paycheck`]"', '2021-03-31 22:28:08'),
+	(297, 'Money', '76561198092567307', '"[`Bank`,`Added`,`71706432`,`7500`,`Paycheck`]"', '2021-03-31 22:43:08'),
+	(298, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 23:01:14'),
+	(299, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 23:02:52'),
+	(300, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 23:08:03'),
+	(301, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-03-31 23:10:53'),
+	(302, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-04-01 00:07:13'),
+	(303, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-04-01 00:10:24'),
+	(304, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-04-01 00:17:24'),
+	(305, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-04-01 00:20:39'),
+	(306, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-04-01 00:25:54'),
+	(307, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-04-01 00:30:41'),
+	(308, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-04-01 00:34:54'),
+	(309, 'Spawn', '76561198092567307', '"[`House (Big, White)`,[3684.44,13058.3,-0.257817]]"', '2021-04-01 00:35:09');
 /*!40000 ALTER TABLE `logs` ENABLE KEYS */;
 
 -- Dumping structure for table altislife.players
@@ -397,11 +472,11 @@ CREATE TABLE IF NOT EXISTS `players` (
 -- Dumping data for table altislife.players: ~6 rows (approximately)
 /*!40000 ALTER TABLE `players` DISABLE KEYS */;
 INSERT INTO `players` (`uid`, `pid`, `name`, `aliases`, `cash`, `bankacc`, `group_id`, `coplevel`, `rtalevel`, `npaslevel`, `scolevel`, `ncalevel`, `mpulevel`, `rpulevel`, `afolevel`, `uclevel`, `cop_licenses`, `cop_gear`, `cop_stats`, `cop_blacklisted`, `mediclevel`, `aalevel`, `med_licenses`, `med_gear`, `med_stats`, `med_blacklisted`, `hatolevel`, `hato_licenses`, `hato_stats`, `hato_gear`, `hato_blacklisted`, `civ_gear`, `civ_licenses`, `civ_stats`, `arrested`, `prison_timer`, `adminlevel`, `eventslevel`, `donorlevel`, `prestige`, `level`, `xp`, `professions`, `daily_tasks`, `weekly_tasks`, `achievements`, `textures`, `playtime`, `insert_time`, `last_seen`) VALUES
-	(4, '76561197971322689', 'Lewis Holloway [CO0003]', '"[`Lewis Holloway [CO0101]`]"', 0, 62038896, 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '5', '0', '"[]"', '"[[[],[],[],[`U_O_R_Gorka_01_black_F`,[]],[`V_TacVestIR_blk`,[]],[],`H_Beret_blk`,`G_Aviator`,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[],[],[],[`U_C_Man_casual_1_F`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[],[`U_C_Man_casual_1_F`,``]]"', '"[`Home`]"', '"[100,100,0]"', 0, 0, '0', '0', '0', 0, 1, 50, '"[]"', '"[[`MineCoal`,0],[`GatherApple`,0],[`ProcessSalt`,0]]"', '"[[`SellSchnapps`,0],[`SellMoonshine`,0]]"', '"[`FirstSpawn`]"', '"[]"', '"[0,2,11]"', '2021-03-07 22:07:36', '2021-03-30 01:27:40'),
+	(4, '76561197971322689', 'Lewis Holloway [CO0003]', '"[`Lewis Holloway [CO0101]`]"', 0, 61146396, 1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '5', '0', '"[]"', '"[[[],[],[],[`U_O_R_Gorka_01_black_F`,[]],[`V_TacVestIR_blk`,[]],[],`H_Beret_blk`,`G_Aviator`,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[],[],[],[`U_C_Man_casual_1_F`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[],[`U_C_Man_casual_1_F`,``]]"', '"[`Home`]"', '"[100,100,0]"', 0, 0, '0', '0', '0', 0, 1, 50, '"[]"', '"[]"', '"[[`SellSchnapps`,0],[`SellMoonshine`,0]]"', '"[`FirstSpawn`]"', '"[]"', '"[0,2,11]"', '2021-03-07 22:07:36', '2021-03-31 00:02:40'),
 	(2, '76561198054519084', 'Ben Sewell', '"[`Ben Sewell`]"', 0, 50000, -1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', '"[]"', '"[100,100,0]"', 0, 0, '0', '0', '0', 0, 1, 0, '"[]"', '"[]"', '"[]"', '"[]"', '"[]"', '"[0,0,7]"', '2021-01-29 14:51:04', '2021-03-23 20:59:30'),
-	(1, '76561198092567307', 'Jack Williams', '"[`Scarso`]"', 0, 72538900, 1, '8', '3', '3', '3', '3', '3', '3', '3', '3', '"[]"', '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[`SI`,``]]"', '"[50,30,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '1', '"[]"', '"[100,100,0]"', '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', 0, '"[[[],[],[],[`U_C_Man_casual_1_F`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[[`FreshApple`,20],[`Water`,2]],[`U_C_Man_casual_1_F`,``]]"', '"[`Driving`,`Boating`,`Trucking`,`Piloting`,`Schnapps`,`Tobacco`,`Home`]"', '"[90,70,0.00200193]"', 0, 0, '5', '0', '0', 5, 3, 3439, '"[[`Gathering`,[0,19]],[`Mining`,[0,28]],[`Repairing`,[0,1]]]"', '"[[`GatherPeach`,0],[`GatherCoral`,0],[`ProcessSand`,0]]"', '"[[`SellCigarette`,0],[`SellCigar`,0]]"', '"[`FirstSpawn`,`FanGirl`,`Prestige`,`BuyVehicle`,`Scarso`,`Lewis`]"', '"[[`C_SUV_01_F`,[`Orange`]]]"', '"[913,1,393]"', '2021-01-18 00:53:15', '2021-03-30 01:18:29'),
+	(1, '76561198092567307', 'Jack Williams', '"[`Scarso`]"', 0, 71706432, 1, '8', '3', '3', '3', '3', '3', '3', '3', '3', '"[]"', '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[`SI`,``]]"', '"[50,30,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '1', '"[]"', '"[100,100,0]"', '"[[[],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[],[``,``]]"', 0, '"[[[],[],[],[`U_C_Man_casual_1_F`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[[`FreshApple`,20],[`Water`,2]],[`U_C_Man_casual_1_F`,``]]"', '"[`Driving`,`Boating`,`Trucking`,`Piloting`,`Schnapps`,`Tobacco`,`Home`]"', '"[90,70,0.00200193]"', 0, 0, '5', '0', '0', 5, 3, 3439, '"[[`Gathering`,[0,19]],[`Mining`,[0,28]],[`Repairing`,[0,1]]]"', '"[[`MineSilver`,0],[`ProcessTobacco`,0],[`UncutDiamond`,0]]"', '"[[`SellCigarette`,0],[`SellCigar`,0]]"', '"[`FirstSpawn`,`FanGirl`,`Prestige`,`BuyVehicle`,`Scarso`,`Lewis`]"', '"[[`C_SUV_01_F`,[`Orange`]]]"', '"[913,1,393]"', '2021-01-18 00:53:15', '2021-04-01 00:07:11'),
 	(5, '76561198173004713', 'Steve White', '"[`Steve White`]"', 0, 50000, -1, '0', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[]"', '"[]"', '"[100,100,0]"', 0, 0, '0', '0', '0', 0, 1, 0, '"[]"', '"[]"', '"[]"', '"[]"', '"[]"', '"[0,0,0]"', '2021-03-08 22:01:19', '2021-03-23 20:59:31'),
-	(6, '76561198273172138', 'Albert Stuart', '"[`Jetan Holo`]"', 8619, 69838896, -1, '3', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[[[`arifle_SPAR_01_blk_F`,``,``,``,[],[],``],[],[],[`U_Rangemaster`,[]],[`V_PlateCarrier1_blk`,[]],[`B_Carryall_cbr`,[]],`H_Beret_blk`,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[[`Coffee`,12]],[`PC`,`INVIS`]]"', '"[100,90,0.495058]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[],[],[],[`U_C_Poor_1`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[[`Water`,1]],[``,``]]"', '"[`Driving`,`Trucking`,`Boating`,`Piloting`,`Home`]"', '"[100,80,0]"', 0, 0, '0', '0', '0', 0, 1, 100, '"[]"', '"[[`ProcessSalt`,0],[`GatherCorn`,0],[`GatherApple`,0]]"', '"[[`SellCopper`,0],[`SellIron`,0]]"', '"[`FirstSpawn`,`BuyVehicle`]"', '"[]"', '"[18,0,103]"', '2021-03-18 19:02:22', '2021-03-30 01:27:21'),
+	(6, '76561198273172138', 'Albert Stuart', '"[`Jetan Holo`]"', 8469, 69838896, -1, '3', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[[[`arifle_SPAR_01_blk_F`,``,``,``,[],[],``],[],[],[`U_Rangemaster`,[]],[`V_PlateCarrier1_blk`,[]],[`B_Carryall_cbr`,[]],`H_Beret_blk`,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[[`Coffee`,12]],[`PC`,`INVIS`]]"', '"[100,90,0.495058]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[],[],[],[`U_C_Poor_1`,[]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[[`Water`,1]],[``,``]]"', '"[`Driving`,`Trucking`,`Boating`,`Piloting`,`Home`]"', '"[100,80,0.39011]"', 0, 0, '0', '0', '0', 0, 1, 1100, '"[]"', '"[]"', '"[[`SellCopper`,0],[`SellIron`,0]]"', '"[`FirstSpawn`,`BuyVehicle`,`Jetan`]"', '"[]"', '"[18,0,117]"', '2021-03-18 19:02:22', '2021-03-31 00:02:40'),
 	(3, '76561198342068529', 'Ace Boyden', '"[`Mr. Ace Boyden`]"', 0, 110000, 3, '3', '0', '0', '0', '0', '0', '0', '0', '0', '"[]"', '"[[[`arifle_SPAR_01_blk_F`,``,``,``,[],[],``],[],[],[`U_Rangemaster`,[]],[],[],``,``,[],[`ItemMap`,`ItemGPS`,`ItemRadio`,`ItemCompass`,`ItemWatch`,``]],[[`Redbull`,15]],[`PC`,``]]"', '"[100,100,0]"', 0, '0', '0', '"[]"', '"[]"', '"[100,100,0]"', 0, '0', '"[]"', '"[100,100,0]"', '"[]"', 0, '"[[[`arifle_SPAR_01_GL_blk_F`,``,``,``,[`30Rnd_556x45_Stanag`,0],[],``],[],[],[`U_C_Man_casual_1_F`,[[`1Rnd_HE_Grenade_shell`,1,1]]],[],[],``,``,[],[`ItemMap`,``,``,`ItemCompass`,`ItemWatch`,``]],[],[`U_C_Man_casual_1_F`,``]]"', '"[]"', '"[100,100,0]"', 0, 0, '0', '0', '0', 0, 1, 100, '"[]"', '"[]"', '"[]"', '"[`FirstSpawn`,`BuyVehicle`]"', '"[]"', '"[72,0,25]"', '2021-02-28 15:40:50', '2021-03-28 02:23:11');
 /*!40000 ALTER TABLE `players` ENABLE KEYS */;
 
@@ -445,7 +520,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
 INSERT INTO `settings` (`id`, `setting`, `value`) VALUES
 	(1, 'DonationGoal', '0'),
 	(2, 'ThreatLevel', '0'),
-	(3, 'Day', '2021-3-30'),
+	(3, 'Day', '2021-4-1'),
 	(4, 'Week', '13');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
@@ -468,9 +543,9 @@ CREATE TABLE IF NOT EXISTS `vehicles` (
   KEY `index_type` (`type`),
   KEY `index_side` (`faction`) USING BTREE,
   CONSTRAINT `FK_players_vehicles` FOREIGN KEY (`pid`) REFERENCES `players` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table altislife.vehicles: ~14 rows (approximately)
+-- Dumping data for table altislife.vehicles: ~16 rows (approximately)
 /*!40000 ALTER TABLE `vehicles` DISABLE KEYS */;
 INSERT INTO `vehicles` (`id`, `pid`, `faction`, `classname`, `type`, `alive`, `active`, `sold`, `impound`, `plate`, `texture`, `insert_time`) VALUES
 	(2, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-18 23:26:59'),
@@ -478,14 +553,19 @@ INSERT INTO `vehicles` (`id`, `pid`, `faction`, `classname`, `type`, `alive`, `a
 	(4, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-18 23:28:11'),
 	(6, '76561198092567307', 'Civilian', 'C_SUV_01_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-18 23:29:22'),
 	(7, '76561198273172138', 'Civilian', 'C_Hatchback_01_sport_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-24 21:41:23'),
-	(8, '76561198273172138', 'Civilian', 'O_LSV_02_unarmed_F', 'Car', 1, 1, 0, 0, '', 'PoliceBlack', '2021-03-24 21:42:16'),
+	(8, '76561198273172138', 'Civilian', 'O_LSV_02_unarmed_F', 'Car', 1, 0, 0, 0, '', 'PoliceBlack', '2021-03-24 21:42:16'),
 	(9, '76561198273172138', 'Civilian', 'C_Hatchback_01_sport_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-25 23:41:05'),
 	(10, '76561198273172138', 'Civilian', 'C_Hatchback_01_sport_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-25 23:47:17'),
 	(11, '76561198273172138', 'Civilian', 'C_Hatchback_01_sport_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-25 23:52:44'),
 	(12, '76561198092567307', 'Civilian', 'C_Offroad_01_F', 'Car', 1, 0, 0, 0, '', 'White', '2021-03-26 16:18:53'),
 	(13, '76561198092567307', 'Civilian', 'C_Hatchback_01_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-26 16:21:46'),
 	(14, '76561198092567307', 'Civilian', 'C_Van_02_vehicle_F', 'Car', 1, 0, 0, 0, '', 'Black', '2021-03-26 16:23:52'),
-	(15, '76561198092567307', 'Civilian', 'C_Offroad_01_F', 'Car', 1, 0, 0, 0, '', 'White', '2021-03-30 01:12:06');
+	(15, '76561198092567307', 'Civilian', 'C_Offroad_01_F', 'Car', 1, 0, 0, 0, '', 'White', '2021-03-30 01:12:06'),
+	(16, '76561198273172138', 'Civilian', 'C_Boat_Civil_01_F', 'Ship', 1, 0, 0, 0, '', 'Medic', '2021-03-30 01:28:49'),
+	(17, '76561198273172138', 'Civilian', 'C_Boat_Civil_01_F', 'Ship', 1, 0, 0, 0, '', 'Medic', '2021-03-30 01:31:08'),
+	(18, '76561198273172138', 'Civilian', 'C_Heli_Light_01_civil_F', 'Helicopter', 1, 0, 0, 0, '', 'TotalRed', '2021-03-30 01:35:02'),
+	(19, '76561198273172138', 'Civilian', 'B_Plane_CAS_01_F', 'Plane', 1, 0, 0, 0, '', '', '2021-03-30 01:35:17'),
+	(20, '76561198273172138', 'Civilian', 'O_Plane_Fighter_02_Stealth_F', 'Plane', 1, 0, 0, 0, '', '', '2021-03-30 01:40:52');
 /*!40000 ALTER TABLE `vehicles` ENABLE KEYS */;
 
 -- Dumping structure for table altislife.wanted

@@ -182,9 +182,24 @@ class CfgItemsStore {
 			class ToolKit : FactionBase {};
 		};
 	};
-	class Hato : Medic {
+
+	class Hato {
 		storeName = "HATO Equipment Store";
+		default = 4;
 		condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
+		class Rifles {};
+		class Pistols {};
+		class Attachments {};
+		class Magazines {};
+		class Items {
+			class ItemMap : FactionBase {};
+			class ItemCompass : FactionBase {};
+			class ItemWatch : FactionBase {};
+			class ItemGPS : FactionBase {};
+			class ItemRadio : FactionBase {};
+			class Rangefinder : FactionBase {};
+			class ToolKit : FactionBase {};
+		};
 	};
 
 	class Civilian {

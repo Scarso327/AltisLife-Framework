@@ -354,6 +354,7 @@ class CfgFunctions {
 
 		class Map {
 			file = "Functions\Map";
+			class createSimpleObject {};
 			class addMarket {};
 			class addStore {};
 			class addGarage {};

@@ -192,6 +192,14 @@ class CfgVehicleStores {
 				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
 				class Textures { class Hato {}; };
 			};
+			class B_Truck_01_mover_F {
+				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Hato {}; };
+			};
+			class B_Truck_01_flatbed_F {
+				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Hato {}; };
+			};
 		};
 	};
 

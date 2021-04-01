@@ -12,7 +12,7 @@ _display setVariable ["preScreen", "Home"];
 
 private _toolbox = _display displayCtrl 23021;
 private _keyList = _display displayCtrl 23022;
-lbClear _list;
+lbClear _keyList;
 
 private _houseList = _display displayCtrl 23051;
 lbClear _houseList;

@@ -364,6 +364,7 @@ class CfgFunctions {
 			class addBank {};
 			class addMission {};
 			class isATM {};
+			class lockForFactions {};
 		};
 		
 		class Garage {

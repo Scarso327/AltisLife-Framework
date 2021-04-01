@@ -57,9 +57,6 @@ if (ULP_FirstSpawn) then {
 };
 
 player allowDammage true;
-player enableFatigue false;
-player enableStamina false;
-player enableAimPrecision false;
 
 if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
 	[] call ULP_UI_fnc_openHUD;

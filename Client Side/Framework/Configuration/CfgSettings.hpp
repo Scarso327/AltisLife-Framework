@@ -68,6 +68,11 @@ class CfgSettings {
             sounds[] = { "taserSound", "unlockCarSound", "lockCarSound" };
         };
     };
+
+    class Player {
+        aimPrecision = false;
+        loadCoef = 0.75;
+    };
 };
 
 #include "CfgSurvival.hpp"

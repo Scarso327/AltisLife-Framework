@@ -15,6 +15,7 @@ class CfgFunctions {
 
 		class Initalisation {
 			file = "Functions\Initialisation";
+			class initPlayer {};
 			class initialisation {};
 			class initEventHandlers {};
 			class initVars {};

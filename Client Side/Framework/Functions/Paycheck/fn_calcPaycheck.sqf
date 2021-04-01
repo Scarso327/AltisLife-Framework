@@ -12,6 +12,12 @@ private _pay = getNumber ([
 	_faction >> "pay"
 ] select (isClass (_faction)));
 
+if (isClass (_faction >> "Whitelisting")) then {
+	{
+		_pay = _pay + ((_pay * getNumber (_x >> "payMulti")) * (call (missionNamespace getVariable format["%1_%2", configName _faction, configName _x])));
+	} forEach ("isNumber(_x >> 'payMulti')" configClasses (_faction >> "Whitelisting"));
+};
+
 if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _pay = _pay * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "payIncrease"); };
 
 (round _pay)

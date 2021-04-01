@@ -536,6 +536,11 @@ class U_C_FormalSuit_01_tshirt_black_F {
 			condition = "true";
 		};
 		class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F { displayName = "Gray"; };
+		class Ridge {
+			displayName = "Ridge Formal Uniform";
+			textures[] = { "Data\Textures\Groups\Ridge\U_C_FormalSuit_01_tshirt_gray_F.paa" };
+			condition = "true";
+		};
 	};
 };
 
@@ -552,7 +557,7 @@ class U_C_FormalSuit_01_black_F {
 		class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F { displayName = "Blue"; };
 		class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F { displayName = "Khaki"; };
 		class ACF { 
-			displayName = "Khaki"; 
+			displayName = "ACF"; 
 			textures[] = { "Data\Textures\Uniforms\Police\parade_01.paa" };
 			condition = "true";
 		};
@@ -638,6 +643,11 @@ class U_B_CTRG_Soldier_F {
 			displayName = "SCO19 Uniform";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
+		};
+		class Ridge {
+			displayName = "Ridge Combat Uniform";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "true";
 		};
 	};
 };

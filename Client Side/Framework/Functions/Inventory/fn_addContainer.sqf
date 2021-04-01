@@ -23,11 +23,11 @@ switch (_itemType) do {
 		_container addMagazineCargoGlobal [_item, 1];
 	};
 	default {
-		if (_itemCategory isEqualTo "Backpack") then {
-			_container addBackpackCargoGlobal [_item, 1];
-		} else {
+		if !(_itemCategory isEqualTo "Backpack") then {
 			_container addItemCargoGlobal [_item, 1];
 		};
+
+		// _container addBackpackCargoGlobal [_item, 1];
 	};
 };
 

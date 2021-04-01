@@ -5,9 +5,13 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_initPlayer";
 
-["Initialising Player"] call ULP_fnc_logIt;
+_this params [
+	["_setTags", true, [false]]
+];
 
-[] call ULP_fnc_setTags;
+if (_setTags) then {
+	[] call ULP_fnc_setTags;
+};
 
 player enableFatigue false;
 player enableStamina false;

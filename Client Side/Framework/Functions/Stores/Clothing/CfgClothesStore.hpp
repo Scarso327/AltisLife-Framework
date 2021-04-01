@@ -497,6 +497,42 @@ class CfgClothesStore {
 		};
 	};
 
+	class Taxi {
+		storeName = "Taxi Clothing Store";
+		condition = "true";
+		class Uniforms {
+			class U_Competitor {};
+		};
+
+		class Headgear {
+			class H_WirelessEarpiece_F {};
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_Hat_grey {};
+			class H_Hat_Safari_sand_F {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+			class H_EarProtectors_black_F {};
+			class H_Construction_basic_black_F {};
+			class H_Helmet_Skate {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F {};
+			class G_Aviator {};
+			class G_Squares {};
+			class G_Spectacles {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+			class G_Lady_Blue {};
+			class G_Respirator_white_F {};
+			class G_EyeProtectors_F {};
+		};
+
+		class Vests {};
+		class Backpacks {};
+	};
+
 	class Solicitor {
 		storeName = "Solicitor Clothing Store";
 		condition = "true";

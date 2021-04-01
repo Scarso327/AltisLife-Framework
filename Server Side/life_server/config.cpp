@@ -37,6 +37,10 @@ class CfgPatches {
         };
 
         class EventLogs {
+            class Dispute { 
+                params = 1;
+            };
+
             class Spawn {
                 params = 2;
             };

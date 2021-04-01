@@ -43,4 +43,11 @@ class CfgMessages {
 		targets = "0";
 		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess || { [""ULP_Event"", 1] call ULP_fnc_hasAccess }";
 	};
+
+	class Dispute : Message {
+		displayName = "Dispute";
+		ignoreStreamer = true;
+		ignoreComms = true;
+		condition = "false";
+	};
 };

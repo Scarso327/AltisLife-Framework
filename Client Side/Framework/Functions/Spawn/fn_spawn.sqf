@@ -54,6 +54,8 @@ if (ULP_FirstSpawn) then {
 	};
 
 	["FirstSpawn"] call ULP_fnc_achieve;
+} else {
+	[false] call ULP_fnc_initPlayer;
 };
 
 player allowDammage true;

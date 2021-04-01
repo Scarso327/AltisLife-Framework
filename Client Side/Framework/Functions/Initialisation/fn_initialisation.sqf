@@ -72,6 +72,7 @@ CONSTVAR(ULP_Paycheck);
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call ULP_fnc_keyDown"];
 (findDisplay 46) displayAddEventHandler ["KeyUp", "_this call ULP_fnc_KeyUp"];
 
+["Initialising Player"] call ULP_fnc_logIt;
 [] call ULP_fnc_initPlayer;
 [[["EnablePlayerTags", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_playerTags;
 

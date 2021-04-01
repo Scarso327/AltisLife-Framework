@@ -96,7 +96,7 @@ class CfgMissions {
 	class Patrol {
 		name = "Patrol Mission";
 		description = "You need to patrol %1";
-		factions[] = { "Police", "Medic" };
+		factions[] = { "Police", "Medic", "Hato" };
 		eachFrame = "";
 		onClaimed = "[ { (player distance _this) <= 10 }, _this, { [""Patrol""] call ULP_fnc_finishMission; } ] call ULP_fnc_waitUntilExecute;";
 		onFinished = "";
@@ -117,10 +117,6 @@ class CfgMissions {
 			class TownOfSofia {
 				pos = "civ_spawn_sofia";
 				name = "Town of Sofia";
-			};
-			class CentralAthira {
-				pos = "car_dealership_athira_01";
-				name = "Central Athira";
 			};
 			class AgiosCenter {
 				pos = "civ_spawn_agios";

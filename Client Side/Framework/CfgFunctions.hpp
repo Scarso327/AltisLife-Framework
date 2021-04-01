@@ -272,6 +272,8 @@ class CfgFunctions {
 			class professions {};
 			class achievements {};
 			class personalGoals {};
+			class nameTags {};
+			class updateTagPreview {};
 		};
 
 		class Options {
@@ -498,6 +500,12 @@ class CfgFunctions {
 			file = "Functions\Missions";
 			class claimMission {};
 			class finishMission {};
+		};
+
+		class Titles {
+			file = "Functions\Titles";
+			class hasTitle {};
+			class unlockTitle {};
 		};
 	};
 

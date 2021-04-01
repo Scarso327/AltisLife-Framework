@@ -94,3 +94,60 @@ class FullView : Life_RscControlsGroup {
 
     class Controls {};
 };
+
+class PreviewText : Life_RscStructuredText {
+	idc = 23057;
+	text = "<t align='center' color='#75ffffff'>Preview</t>";
+	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 8));
+	SAFEZONE_W((UI_WIDTH / 4));
+	SAFEZONE_H(BUTTON_H);
+};
+
+class PlayerIcon : Life_RscPictureKeepAspect {
+	idc = 23053;
+	text = "Data\Tags\Ranks\Police\SI.paa";
+	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
+	SAFEZONE_Y(((UI_Y + (MARGIN_Y * 2)) + (UI_HEIGHT / 2)) - (BUTTON_H * 2));
+	SAFEZONE_W((UI_WIDTH / 4));
+	SAFEZONE_H(BUTTON_H * 2);
+};
+
+class PlayerName : Life_RscStructuredText {
+	idc = 23054;
+	text = "<t align='center'>Jack Williams</t>";
+	size = 0.045;
+	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
+	SAFEZONE_Y(((UI_Y + (MARGIN_Y * 2)) + (UI_HEIGHT / 2)));
+	SAFEZONE_W((UI_WIDTH / 4));
+	SAFEZONE_H(BUTTON_H);
+};
+
+class PlayerSubtitle : Life_RscStructuredText {
+	idc = 23055;
+	text = "<t align='center'>Civilian</t>";
+	size = 0.04;
+	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
+	SAFEZONE_Y(((UI_Y + (MARGIN_Y * 2)) + (UI_HEIGHT / 2)) + BUTTON_H);
+	SAFEZONE_W((UI_WIDTH / 4));
+	SAFEZONE_H(BUTTON_H);
+};
+
+class PlayerTitle : Life_RscStructuredText {
+	idc = 23058;
+	text = "";
+	size = 0.04;
+	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
+	SAFEZONE_Y(((UI_Y + (MARGIN_Y * 2)) + (UI_HEIGHT / 2)) + (BUTTON_H * 2));
+	SAFEZONE_W((UI_WIDTH / 4));
+	SAFEZONE_H(BUTTON_H);
+};
+
+class TitleList : Life_RscCombo {
+	idc = 23056;
+	onLBSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, [""_name"", [player] call ULP_fnc_getName, [""""]], [""_subtitle"", player getVariable [""subtitle"", """"], [""""]], getText (missionConfigFile >> ""CfgTitles"" >> (_ctrl lbData _index) >> ""displayName"")] call ULP_fnc_updateTagPreview;";
+	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
+	SAFEZONE_Y((UI_Y + UI_HEIGHT) - (BUTTON_H + (BUTTON_H / 2)));
+	SAFEZONE_W((UI_WIDTH / 4));
+	SAFEZONE_H(BUTTON_H);
+};

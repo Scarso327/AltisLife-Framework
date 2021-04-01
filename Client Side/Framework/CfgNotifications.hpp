@@ -9,4 +9,8 @@ class CfgNotifications {
 	class GoalReward : AchievementUnlocked {
 		title = "PERSONAL GOAL";
 	};
+
+	class TitleUnlocked : AchievementUnlocked {
+		title = "TITLE UNLOCKED";
+	};
 };

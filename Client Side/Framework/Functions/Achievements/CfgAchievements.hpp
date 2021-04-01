@@ -279,6 +279,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\prestige.paa";
 		displayName = "Prestigious";
 		description = "Prestiged for the first time.";
+		onUnlocked = "[""Prestige""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};

@@ -50,6 +50,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Spawn\CfgSpawns.hpp"
 #include "Functions\Stores\CfgStores.hpp"
 #include "Functions\Tablet\CfgTablet.hpp"
+#include "Functions\Titles\CfgTitles.hpp"
 #include "Functions\Vehicle\CfgVehicles.hpp"
 #include "Functions\VehicleStore\CfgVehicleStores.hpp"
 

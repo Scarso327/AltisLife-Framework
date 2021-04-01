@@ -34,5 +34,6 @@ private _message = format["Completed a %1", getText (_typeCfg >> "name")];
 [getNumber (_typeCfg >> "Rewards" >> "xpReward"), _message] call ULP_fnc_addXP;
 
 hint format [getText (_typeCfg >> "Messages" >> "onFinished"), [_reward] call ULP_fnc_numberText];
+ULP_Missions deleteAt _type;
 
 [3, _task, { player removeSimpleTask _this; }] call ULP_fnc_waitExecute;

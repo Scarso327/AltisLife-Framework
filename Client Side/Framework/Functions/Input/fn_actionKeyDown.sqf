@@ -37,7 +37,7 @@ if (isNull _object) then {
 		};
 	};
 } else {
-	if ((typeOf _object) in getArray (missionConfigFile >> "CfgMaps" >> worldName >> "atmObjects")) then {
+	if ([_object] call ULP_fnc_isATM) then {
 		[] call ULP_fnc_openBank
 	} else {
 		private _interactions = [_object] call ULP_fnc_getInteractions;

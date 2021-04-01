@@ -355,6 +355,7 @@ class CfgFunctions {
 			class addRobAction {};
 			class addBank {};
 			class addMission {};
+			class isATM {};
 		};
 		
 		class Garage {

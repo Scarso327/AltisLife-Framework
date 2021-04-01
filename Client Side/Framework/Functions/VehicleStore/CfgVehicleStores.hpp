@@ -292,6 +292,27 @@ class CfgVehicleStores {
 		};
 	};
 
+	class Taxi : Base {
+		storeName = "Taxi Vehicles";
+		class Vehicles {
+			class C_Hatchback_01_F {};
+			class C_Hatchback_01_sport_F {};
+			class C_SUV_01_F {};
+		};
+	};
+
+	class News : Base {
+		storeName = "News Vehicles";
+		class Vehicles {
+			class C_Van_02_transport_F {
+				class Textures { class Press {}; };
+			};
+			class C_Van_02_vehicle_F {
+				class Textures { class Press {}; };
+			};
+		};
+	};
+
 	class IDAP : Base {
 		storeName = "IDAP Vehicles";
 		class Vehicles {

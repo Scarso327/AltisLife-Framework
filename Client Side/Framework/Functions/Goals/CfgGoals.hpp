@@ -75,7 +75,7 @@ class CfgGoals {
 				description = "Process Salt before today's end!";
 			};
 			class UncutDiamond : ProcessTobacco {
-				item = "Diamond";
+				item = "UncutDiamond";
 				title = "Process Diamonds";
 				description = "Process Diamond before today's end!";
 			};

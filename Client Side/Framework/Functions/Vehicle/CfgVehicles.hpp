@@ -975,7 +975,7 @@ class CfgVehicles {
 	class B_Truck_01_box_F : Base {
 		buyPrice = 0;
 		virtualSpace = 800;
-		garageLimit = 1;
+		garageLimit = 3;
 		garageDelay = 30;
 		repairTime = 15;
 		crushTime = 30;

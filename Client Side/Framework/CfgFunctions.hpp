@@ -515,6 +515,11 @@ class CfgFunctions {
 			class hasTitle {};
 			class unlockTitle {};
 		};
+
+		class RandomEvents {
+			file = "Functions\RandomEvents";
+			class initRandomEvents {};
+		};
 	};
 
 	class ULP_Functions_UI {

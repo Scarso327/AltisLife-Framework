@@ -79,6 +79,17 @@ class CfgFunctions {
             class registerCargoUser {};
             class unregisterCargoUser {};
         };
+
+        class ServerEvents {
+            file = "\life_server\Functions\ServerEvents";
+            class spawnEvent {};
+            class initServerEvents {};
+        };
+
+        class EventTypes {
+            file = "\life_server\Functions\ServerEvents\Types";
+            class airdrop {};
+        };
     };
 
     class MySQL_Database {

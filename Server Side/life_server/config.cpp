@@ -35,7 +35,7 @@ class CfgPatches {
                 global = false;
             };
         };
-
+        
         class EventLogs {
             class Dispute { 
                 params = 1;

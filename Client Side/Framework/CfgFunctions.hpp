@@ -257,6 +257,11 @@ class CfgFunctions {
 			class options {};
 		};
 
+		class TabletDispute {
+			file = "Functions\Tablet\Dispute";
+			class dispute {};
+		};
+
 		class TabletMessaging {
 			file = "Functions\Tablet\Messaging";
 			class messages {};

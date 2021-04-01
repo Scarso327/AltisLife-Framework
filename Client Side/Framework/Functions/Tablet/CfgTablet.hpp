@@ -96,10 +96,10 @@ class CfgTablet {
 		onload = "_this call ULP_fnc_keys";
 	};
 
-	class Dispute : BaseScreen {
+	class Dispute : Home {
 		idc= 23007;
 		pageTitle = "Dispute";
-		pageIdcs[] = {};
+		onload = "_this call ULP_fnc_dispute";
 	};
 
 	class Market : BaseScreen {

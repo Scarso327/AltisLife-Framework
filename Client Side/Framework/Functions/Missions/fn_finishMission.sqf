@@ -27,6 +27,7 @@ if ((player distance (taskDestination _task)) > 10) exitWith {
 if !(_eachFrame isEqualTo -1) then { [_eachFrame] call ULP_fnc_removeEachFrame; };
 
 _task setTaskState "Succeeded";
+["TaskMaster"] call ULP_fnc_achieve;
 
 private _message = format["Completed a %1", getText (_typeCfg >> "name")];
 

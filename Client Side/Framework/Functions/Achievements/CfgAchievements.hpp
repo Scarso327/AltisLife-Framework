@@ -176,7 +176,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class TaskMaster {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Tasks_ca.paa";
 		displayName = "Task Master";

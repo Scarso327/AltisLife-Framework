@@ -12,6 +12,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\firstDrink.paa";
 		displayName = "Big Drink";
 		description = "Taken your frist drink of alcohol.";
+		onUnlocked = "[""FirstDrink""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -21,6 +22,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\firstDrug.paa";
 		displayName = "Druggie";
 		description = "Had your first drug experience.";
+		onUnlocked = "[""FirstDrug""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -30,6 +32,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\girlsBestFriend.paa";
 		displayName = "Girl's Best Friend";
 		description = "Aquired a finely cut diamond.";
+		onUnlocked = "[""GirlsBestFriend""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -39,6 +42,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\salty.paa";
 		displayName = "Extremely Salty";
 		description = "Held a vast amount of salt on your person.";
+		onUnlocked = "[""Salty""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -47,6 +51,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\captain.paa";
 		displayName = "Ship Captain";
 		description = "Visited the command deck of the HMS Liberty.";
+		onUnlocked = "[""Captain""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -56,6 +61,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\joinRebel.paa";
 		displayName = "The Rebellion";
 		description = "Joined the Rebellion. Hope.";
+		onUnlocked = "[""JoinRebel""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -74,6 +80,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\staff.paa";
 		displayName = "Staff Team";
 		description = "You have joined the community's Staff Team.";
+		onUnlocked = "[""JoinStaff""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -119,6 +126,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
 		displayName = "Life Saver";
 		description = "Sucessfully revived another person.";
+		onUnlocked = "[""LifeSaver""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 350, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -155,6 +163,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Rules_ca.paa";
 		displayName = "Governor";
 		description = "Win an election and become the Governor.";
+		onUnlocked = "[""Governor""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -164,6 +173,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\employment.paa";
 		displayName = "Employment";
 		description = "Successfully become employemented.";
+		onUnlocked = "[""Employment""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -172,15 +182,16 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\convict.paa";
 		displayName = "Convict";
 		description = "Have been sent to prison by a constable.";
+		onUnlocked = "[""Convict""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 10, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
 
-	// TODO
 	class TaskMaster {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Tasks_ca.paa";
 		displayName = "Task Master";
 		description = "Completed a task for the first time.";
+		onUnlocked = "[""TaskMaster""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 75, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -190,6 +201,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Miss_icon_ca.paa";
 		displayName = "Cartel Lord";
 		description = "Sucessfully capture a cartel.";
+		onUnlocked = "[""Cartel""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -225,6 +237,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\money1.paa";
 		displayName = "£1,000,000";
 		description = "Had a total of £1,000,000 in your bank.";
+		onUnlocked = "[""OneMillion""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -252,6 +265,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\loyaltyWeek.paa";
 		displayName = "A Week's Loyalty";
 		description = "Achieved a loyalty streak of 7-days.";
+		onUnlocked = "[""WeekLoyalty""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -270,6 +284,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\loyaltyYear.paa";
 		displayName = "Simply No Life";
 		description = "Achieved a loyalty streak of 365-days.";
+		onUnlocked = "[""YearLoyalty""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 10000, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -289,6 +304,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\PilotingQuadrotor_ca.paa";
 		displayName = "Fan Girl";
 		description = "You have discovered the pleasure in Belle Delphine.";
+		onUnlocked = "[""FanGirl""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -297,6 +313,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Map_ca.paa";
 		displayName = "Explorer";
 		description = "You have chosen to leave this island, but returned.";
+		onUnlocked = "[""Uncharted""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -306,6 +323,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Goodbye Fatherhood";
 		description = "Experienced the effects of radation poisoning.";
+		onUnlocked = "[""Radiation""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 200, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -314,6 +332,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Voice_ca.paa";
 		displayName = "Protester";
 		description = "You have taken a simple protest to the extreme...";
+		onUnlocked = "[""Protest""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -322,6 +341,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\TakeOff_ca.paa";
 		displayName = "Mile High Club";
 		description = "You have flown exactly 1-Mile or higher in the sky.";
+		onUnlocked = "[""MileHighClub""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -338,6 +358,7 @@ class CfgAchievements {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Death_ca.paa";
 		displayName = "Pirate Den";
 		description = "You have discovered a Pirate Den on Altis.";
+		onUnlocked = "[""PirateDen""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 2000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -346,6 +367,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\atlantis.paa";
 		displayName = "Atlantis";
 		description = "You have discovered Atlantis on Altis.";
+		onUnlocked = "[""Atlantis""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 3000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};

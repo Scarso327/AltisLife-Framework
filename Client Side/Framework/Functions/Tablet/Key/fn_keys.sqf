@@ -37,13 +37,7 @@ switch (lbCurSel _toolbox) do {
 					
 					private _item = _houseList lbAdd (_x getVariable ["building_name", _name]);
 					_houseList lbSetData [_item, _x call BIS_fnc_netId];
-
-					private _tooltip = [
-						format ["Distance: %1m", [_distance] call ULP_fnc_numberText],
-						format ["Shared: %1", ["No", "Yes"] select ([_x] call ULP_fnc_isHouseShared)]
-					];
-
-					_houseList lbSetTooltip [_item, _tooltip joinString "\n"];
+					_houseList lbSetTooltip [_item, format ["Distance: %1m", [_distance] call ULP_fnc_numberText]];
 				};
 			};
 		} forEach ULP_Houses;

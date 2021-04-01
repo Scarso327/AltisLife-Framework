@@ -805,6 +805,68 @@ class CfgVehicles {
 				textures[] = { 
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
 					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_mprimer_co.paa"
+				 }; 
+			};
+			class Olive : BaseTexture { 
+				displayName = "Olive";
+				textures[] = { 
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_olive_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_olive_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_mprimer_olive_co.paa"
+				};
+			}; 
+			class Hato : HatoTexture { 
+				displayName = "HATO";
+				textures[] = { 
+					"data\textures\vehicles\land\HATO\hemtt_1.paa",
+					"data\textures\vehicles\land\HATO\hemtt_2.paa",
+					"data\textures\vehicles\land\HATO\hemtt_primer.paa"
+				};
+			}; 
+		};
+	};
+	class B_Truck_01_flatbed_F : B_Truck_01_mover_F {
+		buyPrice = 0;
+		virtualSpace = 10;
+		class Textures {
+			class Sand : BaseTexture {
+				displayName = "Sand"; 
+				textures[] = { 
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
+					"\a3\soft_f_enoch\truck_01\data\truck_01_ammo_co.paa",
+					"\a3\soft_f_enoch\truck_01\data\truck_01_cargo_co.paa"
+				 }; 
+			};
+			class Olive : BaseTexture { 
+				displayName = "Olive";
+				textures[] = { 
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
+					"\a3\soft_f_enoch\truck_01\data\truck_01_ammo_pacific_co.paa",
+					"\a3\soft_f_enoch\truck_01\data\truck_01_cargo_pacific_co.paa"
+				};
+			}; 
+			class Hato : HatoTexture { 
+				displayName = "HATO";
+				textures[] = { 
+					"data\textures\vehicles\land\HATO\hemtt_1.paa",
+					"data\textures\vehicles\land\HATO\hemtt_2.paa",
+					"data\textures\vehicles\land\HATO\hemtt_flatbed.paa"
+				};
+			}; 
+		};
+	};
+	class B_Truck_01_cargo_F : B_Truck_01_mover_F {
+		buyPrice = 0;
+		virtualSpace = 450;
+		class Textures {
+			class Sand : BaseTexture {
+				displayName = "Sand"; 
+				textures[] = { 
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
 					"\a3\soft_f_enoch\truck_01\data\truck_01_ammo_co.paa",
 					"\a3\soft_f_enoch\truck_01\data\truck_01_cargo_co.paa"
 				 }; 
@@ -820,29 +882,95 @@ class CfgVehicles {
 			}; 
 		};
 	};
-	class B_Truck_01_flatbed_F : B_Truck_01_mover_F {
-		buyPrice = 0;
-		virtualSpace = 10;
-	};
-	class B_Truck_01_cargo_F : B_Truck_01_mover_F {
-		buyPrice = 0;
-		virtualSpace = 450;
-	};
 	class B_Truck_01_transport_F : B_Truck_01_mover_F {
 		buyPrice = 0;
 		virtualSpace = 535;
+		class Textures {
+			class Sand : BaseTexture {
+				displayName = "Sand"; 
+				textures[] = { 
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_cargo_co.paa"
+				 }; 
+			};
+			class Olive : BaseTexture { 
+				displayName = "Olive";
+				textures[] = { 
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_cargo_olive_co.paa"
+				};
+			}; 
+		};
 	};
 	class B_Truck_01_covered_F : B_Truck_01_mover_F {
 		buyPrice = 0;
 		virtualSpace = 590;
+		class Textures {
+			class Sand : BaseTexture {
+				displayName = "Sand"; 
+				textures[] = { 
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_cargo_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_cover_co.paa"
+				 }; 
+			};
+			class Olive : BaseTexture { 
+				displayName = "Olive";
+				textures[] = { 
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_cargo_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_cover_olive_co.paa"
+				};
+			}; 
+		};
 	};
 	class B_Truck_01_ammo_F : B_Truck_01_mover_F {
 		buyPrice = 0;
 		virtualSpace = 650;
+		class Textures {
+			class Sand : BaseTexture {
+				displayName = "Sand"; 
+				textures[] = { 
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
+					"\a3\soft_f_gamma\truck_01\data\truck_01_ammo_co.paa"
+				 }; 
+			};
+			class Olive : BaseTexture { 
+				displayName = "Olive";
+				textures[] = { 
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_ammo_olive_co.paa"
+				};
+			}; 
+		};
 	};
 	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
 		buyPrice = 0;
 		virtualSpace = 500;
+		class Textures {
+			class Sand : BaseTexture {
+				displayName = "Sand"; 
+				textures[] = { 
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
+					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
+					"\a3\soft_f_gamma\truck_01\data\truck_01_fuel_co.paa"
+				 }; 
+			};
+			class Olive : BaseTexture { 
+				displayName = "Olive";
+				textures[] = { 
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
+					"\a3\soft_f_exp\truck_01\data\truck_01_fuel_olive_co.paa"
+				};
+			}; 
+		};
 	};
 	class B_Truck_01_box_F : Base {
 		buyPrice = 0;

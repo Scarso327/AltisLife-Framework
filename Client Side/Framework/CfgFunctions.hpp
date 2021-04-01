@@ -354,6 +354,7 @@ class CfgFunctions {
 			class addProcessing {};
 			class addRobAction {};
 			class addBank {};
+			class addMission {};
 		};
 		
 		class Garage {
@@ -490,6 +491,12 @@ class CfgFunctions {
 			class sellHouse {};
 			class shareHouse {};
 			class renameHouse {};
+		};
+
+		class Missions {
+			file = "Functions\Missions";
+			class claimMission {};
+			class finishMission {};
 		};
 	};
 

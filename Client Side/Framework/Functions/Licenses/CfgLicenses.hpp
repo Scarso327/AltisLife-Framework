@@ -80,6 +80,15 @@ class CfgLicenses {
         };
     };
 
+    class IDAP : BaseLicense {
+        displayName = "IDAP Volunteer";
+        buyPrice = 0;
+        class Settings {
+            isVisible = true;
+            isRemovable = true;
+        };
+    };
+
     class Handgun : BaseLicense {
         displayName = "Handgun Certificate";
         buyPrice = 0;

@@ -6,11 +6,23 @@ class CfgLicenseStores {
 		licenses[] = { "Driving", "Trucking", "Boating", "Piloting" };
 	};
 
-	class Job {
-		title = "Altis Job Market";
+	class Taxi {
+		title = "Taxi Altis";
 		factions[] = { "Civilian" };
 		condition = "true";
-		licenses[] = { "Taxi", "Solicitor", "News" };
+		licenses[] = { "Taxi" };
+	};
+	class Solicitor : Taxi {
+		title = "Altis Solicitors";
+		licenses[] = { "Solicitor" };
+	};
+	class News : Taxi {
+		title = "AAN World News";
+		licenses[] = { "News" };
+	};
+	class IDAP : Taxi {
+		title = "IDAP Volunteer";
+		licenses[] = { "IDAP" };
 	};
 
 	class Process {

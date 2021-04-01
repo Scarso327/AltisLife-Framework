@@ -119,7 +119,7 @@ class CfgFactions {
 		class Loadout {
 			canRestLoadout = true;
 			class Uniforms {
-				class U_Rangemaster {};
+				class U_O_R_Gorka_01_black_F {};
 			};
 			class LinkedItems {
 				hasMap = true;

@@ -284,6 +284,7 @@ class CfgVehicles {
 	};
 	class B_G_Offroad_01_armed_F : C_Offroad_01_F { buyPrice = 0; };
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
+	class C_IDAP_Offroad_01_F : C_Offroad_01_F {};
 
 	class C_Offroad_01_covered_F : Base {
 		buyPrice = 0;
@@ -361,6 +362,7 @@ class CfgVehicles {
 			};
 		};
 	};
+	class C_IDAP_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F { buyPrice = 0; };
 	class I_C_Offroad_02_LMG_F : C_Offroad_02_unarmed_F { buyPrice = 0; };
 
 	class C_SUV_01_F : Base {
@@ -485,11 +487,13 @@ class CfgVehicles {
 	};
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
 	class C_Van_02_medevac_F : C_Van_02_transport_F {};
+	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {};
 	class C_Van_02_vehicle_F : C_Van_02_transport_F {
 		buyPrice = 0;
 		virtualSpace = 110;
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
+	class C_IDAP_Van_02_vehicle_F : C_Van_02_vehicle_F {};
 	class C_Van_02_service_F : C_Van_02_vehicle_F {};
 
 	class B_CTRG_LSV_01_light_F : Base {
@@ -746,13 +750,22 @@ class CfgVehicles {
 			}; 
 		};
 	};
+	class C_IDAP_Truck_02_transport_F : I_Truck_02_transport_F {
+		buyPrice = 0;
+	};
 	class I_Truck_02_covered_F : I_Truck_02_transport_F {
 		buyPrice = 350;
 		virtualSpace = 0;
 	};
+	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {
+		buyPrice = 0;
+	};
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 200;
 		virtualSpace = 0;
+	};
+	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
+		buyPrice = 0;
 	};
 
 	class O_Truck_03_transport_F : Base {
@@ -1304,6 +1317,9 @@ class CfgVehicles {
 				}; 
 			};
 		};
+	};
+	class C_IDAP_Heli_Transport_02_F : I_Heli_Transport_02_F {
+		buyPrice = 0;
 	};
 
 	class O_Heli_Transport_04_black_F : Base {

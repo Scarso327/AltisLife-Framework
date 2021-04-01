@@ -292,6 +292,41 @@ class CfgVehicleStores {
 		};
 	};
 
+	class Taxi : Base {
+		storeName = "Taxi Vehicles";
+		class Vehicles {
+			class C_Hatchback_01_F {};
+			class C_Hatchback_01_sport_F {};
+			class C_SUV_01_F {};
+		};
+	};
+
+	class News : Base {
+		storeName = "News Vehicles";
+		class Vehicles {
+			class C_Van_02_transport_F {
+				class Textures { class Press {}; };
+			};
+			class C_Van_02_vehicle_F {
+				class Textures { class Press {}; };
+			};
+		};
+	};
+
+	class IDAP : Base {
+		storeName = "IDAP Vehicles";
+		class Vehicles {
+			class C_IDAP_Offroad_01_F {};
+			class C_IDAP_Offroad_02_unarmed_F {};
+			class C_IDAP_Van_02_transport_F {};
+			class C_IDAP_Van_02_vehicle_F {};
+			class C_IDAP_Truck_02_transport_F {};
+			class C_IDAP_Truck_02_F {};
+			class C_IDAP_Truck_02_water_F {};
+			class C_IDAP_Heli_Transport_02_F {};
+		};
+	};
+
 	class Rebel : Base {
 		storeName = "Rebel Outpost";
 		class Vehicles {

@@ -1,5 +1,5 @@
 disableChannels[] = {{0,true,true},{1,true,true},{2,true,true},{6,false,true}}; 
-overviewText = "A roleplaying gamemode developed by Scarso & Lewis for AscensionRP.co.uk!";
+overviewText = "A roleplaying gamemode developed by Scarso and Lewis for AscensionRP.co.uk!";
 joinUnassigned=1;
 saving=0;
 disableRandomization[]={"All"};

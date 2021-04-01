@@ -64,11 +64,12 @@ class CfgFactions {
 			};
 			class AA { queryIndex = 23; };
 			//class HR { queryIndex = 24; };
+			class HR { queryIndex = 24; };
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "med_";
-			customQuery = ", med_blacklisted, mediclevel, aalevel"; // ,hrlevel
+			customQuery = ", med_blacklisted, mediclevel, aalevel, hrlevel";
 			timeIndex = 1;
 		};
 

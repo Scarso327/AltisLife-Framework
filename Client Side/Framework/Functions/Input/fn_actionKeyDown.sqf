@@ -37,10 +37,14 @@ if (isNull _object) then {
 		};
 	};
 } else {
-	private _interactions = [_object] call ULP_fnc_getInteractions;
+	if ((typeOf _object) in getArray (missionConfigFile >> "CfgMaps" >> worldName >> "atmObjects")) then {
+		[] call ULP_fnc_openBank
+	} else {
+		private _interactions = [_object] call ULP_fnc_getInteractions;
 
-	if !(_interactions isEqualTo []) exitWith {
-		[_object, _interactions] call ULP_fnc_openInteractions;
+		if !(_interactions isEqualTo []) exitWith {
+			[_object, _interactions] call ULP_fnc_openInteractions;
+		};
 	};
 };
 

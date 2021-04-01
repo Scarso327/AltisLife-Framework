@@ -5,8 +5,6 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_createSimpleObject";
 
-diag_log _this;
-
 _this params [
 	["_model", "", [""]],
 	["_pos", [[0,0,0], 0], []],

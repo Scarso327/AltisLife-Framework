@@ -19,7 +19,7 @@ class CfgSettings {
 
     class CfgMedical {
         /* Bleed Out */
-        WaitForBleedOutTime = 30;
+        AllowBleedoutPercentage = 0.7;
         BleedOutTime = 300;
 
         /* Revival */

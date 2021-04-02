@@ -73,8 +73,9 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	ULP_CanRespawn = false;
 
 	private _startTime = time;
-	private _respawnTime = getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "WaitForBleedOutTime");
-	private _endTime = time + _respawnTime + getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BleedOutTime");
+	private _respawnPer = getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "AllowBleedoutPercentage");
+	_incapUi setVariable ["endTime", time + getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BleedOutTime")];
+	private _progressBar = _incapUi displayCtrl 9004;
 
 	if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
 		 [uiNamespace getVariable "_fnc_bleedout"] call ULP_fnc_removeEachFrame;
@@ -82,18 +83,21 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 
 	private _rspMsg = "Waiting to respawn...";
 
-	uiNamespace setVariable ["_fnc_bleedout", ([[_incapUi, _unit, _startTime, _respawnTime, _endTime, _rspMsg], {
+	uiNamespace setVariable ["_fnc_bleedout", ([[_incapUi, _unit, _startTime, _respawnPer, _rspMsg, _progressBar], {
 		_this params [
 			["_incapUi", displayNull, [displayNull]],
 			["_unit", objNull, [objNull]],
-			"_startTime", "_respawnTime", "_endTime", // Time vars...
-			["_rspMsg", "Waiting to respawn...", [""]]
+			"_startTime", "_respawnPer", // Time vars...
+			["_rspMsg", "Waiting to respawn...", [""]],
+			["_progressBar", controlNull, [controlNull]]
 		];
 
 		if !(alive _unit || { isDowned(_unit) }) exitWith {
 			uiNamespace setVariable ["_fnc_bleedout", nil];
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};
+
+		private _endTime = _incapUi getVariable ["endTime", time + 10];
 
 		// My time has come...
 		if (time >= _endTime) exitWith {
@@ -102,7 +106,9 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};
 
-		if (time >= (_startTime + _respawnTime) && { !ULP_CanRespawn }) then {
+		_progressBar progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
+
+		if ((progressPosition _progressBar) <= _respawnPer && { !ULP_CanRespawn }) then {
 			ULP_CanRespawn = true;
 			_rspMsg = "Press <t color = '#7300e6'>Shift + F</t> to respawn...";
 		};
@@ -111,7 +117,5 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 			"<t align='left' size='1'>%1</t><t align='right' size='1'>Nearest Medic: 0m</t>",
 			_rspMsg
 		];
-
-		(_incapUi displayCtrl 9004) progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
     }] call ULP_fnc_addEachFrame)];
 };

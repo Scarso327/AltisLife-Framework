@@ -5,6 +5,7 @@ class CfgRandomEvents {
 	SpawnDelay = 1 * 60;
 	Cooldown = 2 * 60;
 	RandomAddition = 2 * 60;*/
+	
 	class Airdrop {
 		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 20";
 		NotifyDelay = 10 * 60;

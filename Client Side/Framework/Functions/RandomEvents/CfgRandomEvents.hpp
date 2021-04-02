@@ -26,4 +26,24 @@ class CfgRandomEvents {
 			};
 		};
 	};
+
+	class Shipwreck : Airdrop {
+		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 5";
+		NotifyDelay = 10 * 60;
+		SpawnDelay = 20 * 60;
+		Cooldown = 40 * 60;
+		RandomAddition = 30 * 60;
+		class Events : Events {
+			class OnSpawn : OnSpawn {};
+			class OnClaimed : OnSpawn {};
+		};
+		class ServerFunctions : ServerFunctions {
+			onSpawn = "_this call ULP_SRV_fnc_shipwreck;";
+		};
+		class Locations {
+			class Test {
+				position[] = {0, 0, 0};
+			};
+		};
+	};
 };

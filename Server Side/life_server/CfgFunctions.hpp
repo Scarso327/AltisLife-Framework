@@ -89,6 +89,7 @@ class CfgFunctions {
         class EventTypes {
             file = "\life_server\Functions\ServerEvents\Types";
             class airdrop {};
+            class shipwreck {};
         };
     };
 

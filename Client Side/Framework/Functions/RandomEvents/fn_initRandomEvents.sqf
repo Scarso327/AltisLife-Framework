@@ -4,6 +4,8 @@
 */
 scopeName "fn_initRandomEvents";
 
+["Initialising Server Events"] call ULP_fnc_logIt;
+
 {
 	private _event = _x;
 

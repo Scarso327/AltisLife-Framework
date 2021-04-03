@@ -51,6 +51,7 @@ class CfgFunctions {
 			class waitExecute {};
 			class waitUntilExecute {};
 			class stripString {};
+			class inString {};
 		};
 
 		class Faction {
@@ -78,6 +79,8 @@ class CfgFunctions {
 			class setFuel {};
 			class getBuildingDoors {};
 			class getNearestDoor {};
+			class isUnitsInZone {};
+			class unitsInZone {};
 		};
 
 		class Clothing {
@@ -519,6 +522,12 @@ class CfgFunctions {
 		class RandomEvents {
 			file = "Functions\RandomEvents";
 			class initRandomEvents {};
+		};
+
+		class Cartels {
+			file = "Functions\Cartels";
+			class initCartels {};
+			class cartelHud {};
 		};
 	};
 

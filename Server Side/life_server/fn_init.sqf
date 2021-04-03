@@ -105,6 +105,7 @@ if !(ULP_SRV_Setting_Week isEqualTo ([] call ULP_SRV_fnc_getWeek)) then { _routi
 [] call ULP_SRV_fnc_initRadios;
 [] call ULP_SRV_fnc_initEvents;
 [] call ULP_SRV_fnc_initHousing;
+[] call ULP_SRV_fnc_initCartels;
 [] call ULP_SRV_fnc_initServerEvents;
 
 /* Map-based server side initialization. */

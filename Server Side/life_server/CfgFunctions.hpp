@@ -63,6 +63,7 @@ class CfgFunctions {
             class initEvents {};
             class onPlayerRespawn {};
             class onPlayerDisconnect {};
+            class onPlayerKilled {};
         };
 
         class Player {
@@ -90,6 +91,14 @@ class CfgFunctions {
             file = "\life_server\Functions\ServerEvents\Types";
             class airdrop {};
             class shipwreck {};
+        };
+
+        class Cartels {
+            file = "\life_server\Functions\Cartels";
+            class initCartels {};
+            class cartelTick {};
+            class cartelReward {};
+            class onCartelKill {};
         };
     };
 

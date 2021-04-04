@@ -149,7 +149,7 @@ class CfgFactions {
 		class Housing {};
 		class DatabaseInfo {
 			queryPrefix = "civ_";
-			customQuery = ", arrested, prison_timer, identification";
+			customQuery = ", arrested, prison_timer";
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};

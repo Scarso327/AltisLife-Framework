@@ -81,14 +81,12 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 		 [uiNamespace getVariable "_fnc_bleedout"] call ULP_fnc_removeEachFrame;
 	};
 
-	private _rspMsg = "Waiting to respawn...";
-
-	uiNamespace setVariable ["_fnc_bleedout", ([[_incapUi, _unit, _startTime, _respawnPer, _rspMsg, _progressBar], {
+	_incapUi setVariable ["status", "Waiting to respawn..."];
+	uiNamespace setVariable ["_fnc_bleedout", ([[_incapUi, _unit, _startTime, _respawnPer, _progressBar], {
 		_this params [
 			["_incapUi", displayNull, [displayNull]],
 			["_unit", objNull, [objNull]],
 			"_startTime", "_respawnPer", // Time vars...
-			["_rspMsg", "Waiting to respawn...", [""]],
 			["_progressBar", controlNull, [controlNull]]
 		];
 
@@ -110,12 +108,12 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 
 		if ((progressPosition _progressBar) <= _respawnPer && { !ULP_CanRespawn }) then {
 			ULP_CanRespawn = true;
-			_rspMsg = "Press <t color = '#7300e6'>Shift + F</t> to respawn...";
+			_incapUi setVariable ["status", "Press <t color = '#7300e6'>Shift + F</t> to respawn..."];
 		};
 
 		(_incapUi displayCtrl 9002) ctrlSetStructuredText parseText format [
 			"<t align='left' size='1'>%1</t><t align='right' size='1'>Nearest Medic: 0m</t>",
-			_rspMsg
+			_incapUi getVariable ["status", "Waiting to respawn..."]
 		];
     }] call ULP_fnc_addEachFrame)];
 

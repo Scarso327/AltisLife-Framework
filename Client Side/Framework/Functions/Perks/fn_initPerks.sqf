@@ -13,7 +13,10 @@ scopeName "fn_initPerks";
 	if (_sellPrice > 0) then {
 		// We've already got the sell price, we just need to activate the perk for leveling here...
 		if !(_illegal) then {
-			["ExpertTrader", _sellPrice, true] call ULP_fnc_activatePerk;
+			["LegalTrader", _sellPrice, true] call ULP_fnc_activatePerk;
+		};
+		if (_illegal) then {
+			["ShadyTrader", _sellPrice, true] call ULP_fnc_activatePerk;
 		};
 	};
 }] call ULP_fnc_addEventHandler;

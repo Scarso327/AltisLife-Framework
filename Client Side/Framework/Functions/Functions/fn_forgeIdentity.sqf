@@ -29,7 +29,7 @@ if !([player, ["Civilian"]] call ULP_fnc_isFaction) exitWith {
 			hint format ["You need %1%2 to forge an identity card...", "£", [_cost] call ULP_fnc_numberText];
 		};
 
-		if ([_cost, true, format ["Creating ID with name %1", _name]] call ULP_fnc_removeMoney) then {
+		if ([_cost, true, "Forged ID"] call ULP_fnc_removeMoney) then {
 			if (["Identification", _name] call ULP_fnc_handleItem) then {
 				hint format ["You've forge an identity card with the name %1", _name];
 			} else {

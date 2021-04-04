@@ -108,7 +108,7 @@ class CfgFactions {
 		class DatabaseInfo {
 			queryPrefix = "hato_";
 			customQuery = ", hato_blacklisted, hatolevel";
-			timeIndex = 1;
+			timeIndex = 2;
 		};
 
 		class Persistance {
@@ -141,7 +141,7 @@ class CfgFactions {
 		class DatabaseInfo {
 			queryPrefix = "civ_";
 			customQuery = ", arrested, prison_timer";
-			timeIndex = 2;
+			timeIndex = 3;
 		};
 
 		class Persistance {

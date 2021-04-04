@@ -499,7 +499,7 @@ class CfgClothesStore {
 
 	class Taxi {
 		storeName = "Taxi Clothing Store";
-		condition = "true";
+		condition = "[""Taxi""] call ULP_fnc_hasLicense";
 		class Uniforms {
 			class U_Competitor {};
 		};
@@ -535,7 +535,7 @@ class CfgClothesStore {
 
 	class Solicitor {
 		storeName = "Solicitor Clothing Store";
-		condition = "true";
+		condition = "[""Solicitor""] call ULP_fnc_hasLicense";
 		class Uniforms {
 			class U_NikosAgedBody {};
 			class U_C_FormalSuit_01_black_F {};
@@ -563,7 +563,7 @@ class CfgClothesStore {
 
 	class Press {
 		storeName = "Press Clothing Store";
-		condition = "true";
+		condition = "[""News""] call ULP_fnc_hasLicense";
 		class Uniforms {
 			class U_C_Journalist {};
 		};
@@ -596,7 +596,7 @@ class CfgClothesStore {
 
 	class IDAP {
 		storeName = "IDAP Clothing Store";
-		condition = "true";
+		condition = "[""IDAP""] call ULP_fnc_hasLicense";
 		class Uniforms {
 			class U_C_IDAP_Man_shorts_F {};
 		};
@@ -631,7 +631,7 @@ class CfgClothesStore {
 
 	class Rebel {
 		storeName = "Rebel Clothing Store";
-		condition = "true";
+		condition = "[""Rebel""] call ULP_fnc_hasLicense";
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};

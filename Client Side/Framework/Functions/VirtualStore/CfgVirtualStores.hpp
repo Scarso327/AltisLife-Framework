@@ -68,7 +68,7 @@ class CfgVirtualStores {
 
 	class Rebel {
 		storeName = "Rebel Market";
-		conditions = "true";
+		conditions = "[""Rebel""] call ULP_fnc_hasLicense";
 		class Items {
 			class RationPack {};
 			class Water {};
@@ -86,7 +86,7 @@ class CfgVirtualStores {
 
 	class Blackmarket {
 		storeName = "Blackmarket";
-		conditions = "true";
+		conditions = "[""Blackmarket""] call ULP_fnc_hasLicense";
 		class Items {
 			class RationPack {};
 			class Water {};

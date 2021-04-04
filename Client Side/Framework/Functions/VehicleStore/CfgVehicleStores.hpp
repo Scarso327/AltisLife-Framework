@@ -220,6 +220,7 @@ class CfgVehicleStores {
 
 	class Car : Base {
 		storeName = "Car Dealership";
+		conditions = "[""Driving""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_Quadbike_01_F {};
 			class C_Hatchback_01_F {};
@@ -236,6 +237,7 @@ class CfgVehicleStores {
 
 	class Truck : Base {
 		storeName = "Truck Dealership";
+		conditions = "[""Trucking""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_Tractor_01_F {};
 			class C_Van_01_transport_F {};
@@ -262,6 +264,7 @@ class CfgVehicleStores {
 
 	class Air : Base {
 		storeName = "Altis International";
+		conditions = "[""Piloting""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_Heli_Light_01_civil_F {};
 			class O_Heli_Light_02_unarmed_F {};
@@ -284,6 +287,7 @@ class CfgVehicleStores {
 
 	class Boat : Base {
 		storeName = "Boat Dealership";
+		conditions = "[""Boating""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_Scooter_Transport_01_F {};
 			class C_Rubberboat {};
@@ -294,6 +298,7 @@ class CfgVehicleStores {
 
 	class Taxi : Base {
 		storeName = "Taxi Vehicles";
+		conditions = "[""Taxi""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_Hatchback_01_F {};
 			class C_Hatchback_01_sport_F {};
@@ -303,6 +308,7 @@ class CfgVehicleStores {
 
 	class News : Base {
 		storeName = "News Vehicles";
+		conditions = "[""News""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_Van_02_transport_F {
 				class Textures { class Press {}; };
@@ -315,6 +321,7 @@ class CfgVehicleStores {
 
 	class IDAP : Base {
 		storeName = "IDAP Vehicles";
+		conditions = "[""IDAP""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_IDAP_Offroad_01_F {};
 			class C_IDAP_Offroad_02_unarmed_F {};
@@ -329,6 +336,7 @@ class CfgVehicleStores {
 
 	class Rebel : Base {
 		storeName = "Rebel Outpost";
+		conditions = "[""Rebel""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_Quadbike_01_F {};
 			class C_Offroad_01_F {};
@@ -348,6 +356,7 @@ class CfgVehicleStores {
 
 	class Blackmarket : Base {
 		storeName = "Blackmarket";
+		conditions = "[""Blackmarket""] call ULP_fnc_hasLicense";
 		class Vehicles {
 			class C_Quadbike_01_F {};
 			class C_Offroad_01_F {};

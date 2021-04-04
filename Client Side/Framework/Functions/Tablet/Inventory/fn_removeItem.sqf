@@ -24,23 +24,46 @@ if (_amount isEqualTo -1) exitWith {
 	hint "You don't have any of these items to remove...";
 };
 
-[
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _amount], [_curSel],
-	{
-		_this params [
-			["_cfg", configNull, [configNull]],
-			["_display", displayNull, [displayNull]],
-			["_value", 1, [0]]
-		];
+if ([getNumber (_curSel >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+	private _itemData = (([configName _curSel] call ULP_fnc_hasItem) select (_list lbValue (lbCurSel _list)));
+	private _name = format [getText(_curSel >> "displayName"), _itemData];
 
-		_display = findDisplay 23000; // We don't need select so we switch this to tablet...
-		if (isNull _display || { isNull _cfg }) exitWith {};
+	[
+		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Yes", "No"],
+		format ["Are you sure you want to remove %1...", _name], [_curSel, _itemData, _name],
+		{	
+			_this params [ "_cfg", "_data", "_name" ];
 
-		if ([configName _cfg, _value, true] call ULP_fnc_handleItem) then {
-			hint format["You have removed %1 %2(s) from your inventory...", _value, getText(_cfg >> "displayName")];
-			_display call ULP_fnc_inventory;
-		} else {
-			hint "You don't have that many of this item...";
-		};
-	}
-] call ULP_fnc_selectNumber;
+			_display = findDisplay 23000; // We don't need select so we switch this to tablet...
+			if (isNull _display || { isNull _cfg }) exitWith {};
+
+			if ([configName _cfg, _data, true] call ULP_fnc_handleItem) then {
+				hint format["You have removed %1 from your inventory...", _name];
+				_display call ULP_fnc_inventory;
+			} else {
+				hint "You don't have this item to remove...";
+			};
+		}, false
+	] call ULP_fnc_confirm;
+} else {
+	[
+		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _amount], [_curSel],
+		{
+			_this params [
+				["_cfg", configNull, [configNull]],
+				["_display", displayNull, [displayNull]],
+				["_value", 1, [0]]
+			];
+
+			_display = findDisplay 23000; // We don't need select so we switch this to tablet...
+			if (isNull _display || { isNull _cfg }) exitWith {};
+
+			if ([configName _cfg, _value, true] call ULP_fnc_handleItem) then {
+				hint format["You have removed %1 %2(s) from your inventory...", _value, getText(_cfg >> "displayName")];
+				_display call ULP_fnc_inventory;
+			} else {
+				hint "You don't have that many of this item...";
+			};
+		}
+	] call ULP_fnc_selectNumber;
+};

@@ -7,31 +7,51 @@ scopeName "fn_handleItem";
 
 _this params [
 	["_item", "", [""]],
-	["_quantity", 0, [1]],
+	["_data", 0, [1, "", []]],
 	["_remove", false, [true]],
 	["_ignoreCarry", false, [true]]
 ];
 
 private _itemCfg = missionConfigFile >> "CfgVirtualItems" >> _item;
-if !(isClass _itemCfg || { _quantity > 0 }) exitWith { false };
+if !(isClass _itemCfg || { _data > 0 && (_data isEqualTo "") }) exitWith { false };
 
-private _weight = getNumber (_itemCfg >> "weight") * _quantity;
+private _isItemScripted = [getNumber (_itemCfg >> "Settings" >> "isScripted")] call ULP_fnc_bool;
+
+private _weight = getNumber (_itemCfg >> "weight");
+if !(_isItemScripted) then { _weight = _weight * _data; };
 
 ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
 
-private _curTotal = [_item] call ULP_fnc_hasItem;
-if (_curTotal isEqualTo -1) then { _curTotal = 0 };
+private _curData = [_item] call ULP_fnc_hasItem;
+if (_curData isEqualTo -1) then { _curData = 0 };
 
 if (_remove) then {
 	private _newWeight = _carryWeight - _weight;
-	private _newTotal = _curTotal - _quantity;
+	if (_isItemScripted) then {
+		if (_curData isEqualType 0) then {
+			_curData = [];
+		};
 
-	if (_newTotal < 0) exitWith { false breakOut "fn_handleItem" };
+		private _index = _curData find _data;
+		if (_index isEqualTo -1) exitWith { false breakOut "fn_handleItem" };
+		
+		_curData deleteAt _index;
 
-	if (_newTotal isEqualTo 0) then {
-		ULP_Inventory deleteAt _item;
+		if ((count _curData) > 0) then {
+			ULP_Inventory set [_item, _curData];
+		} else {
+			ULP_Inventory deleteAt _item;
+		};
 	} else {
-		ULP_Inventory set [_item, _newTotal];
+		private _newTotal = _curData - _data;
+
+		if (_newTotal < 0) exitWith { false breakOut "fn_handleItem" };
+
+		if (_newTotal isEqualTo 0) then {
+			ULP_Inventory deleteAt _item;
+		} else {
+			ULP_Inventory set [_item, _newTotal];
+		};
 	};
 
 	ULP_CarryInfo set [0, _newWeight];
@@ -39,7 +59,21 @@ if (_remove) then {
 	private _newWeight = _carryWeight + _weight;
 	if (!_ignoreCarry && { _newWeight > _maxWeight }) exitWith { false breakOut "fn_handleItem" };
 
-	ULP_Inventory set [_item, _curTotal + _quantity];
+	if (_isItemScripted) then {
+		if (_curData isEqualTo 0) then {
+			if (_data isEqualType "") then {
+				_data = [_data];
+			};
+
+			ULP_Inventory set [_item, _data];
+		} else {
+			_curData pushBack _data;
+			ULP_Inventory set [_item, _curData];
+		};
+	} else {
+		ULP_Inventory set [_item, _curData + _data];
+	};
+	
 	ULP_CarryInfo set [0, _newWeight];
 };
 

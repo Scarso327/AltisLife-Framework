@@ -55,13 +55,27 @@ switch (lbCurSel _toolbox) do {
 			_cfg = missionConfigFile >> "CfgVirtualItems" >> _x;
 
 			if (isClass _cfg) then {
-				_item = _list lbAdd format ["%2 [x%1]", _y, getText(_cfg >> "displayName")];
-				_list lbSetData [_item, _x];
-
 				_icon = getText(_cfg >> "icon");
 
-				if !(_icon isEqualTo "") then {
-					_list lbSetPicture [_item, _icon];
+				if ([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+					{
+						_item = _list lbAdd format [getText(_cfg >> "displayName"), _x];
+						_list lbSetData [_item, configName _cfg];
+						_list lbSetValue [_item, _forEachIndex];
+
+						if !(_icon isEqualTo "") then {
+							_list lbSetPicture [_item, _icon];
+						};
+					} forEach _y;
+				} else {
+					_item = _list lbAdd format ["%2 [x%1]", _y, getText(_cfg >> "displayName")];
+					_list lbSetData [_item, _x];
+
+					_icon = getText(_cfg >> "icon");
+
+					if !(_icon isEqualTo "") then {
+						_list lbSetPicture [_item, _icon];
+					};
 				};
 			};
 		} forEach ULP_Inventory;

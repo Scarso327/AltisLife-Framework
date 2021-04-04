@@ -11,7 +11,7 @@ private _yItems = [];
     _yItems pushBackUnique _x;
 } forEach ((("getNumber(_x >> ""Settings"" >> ""isSavable"") isEqualTo 1" configClasses (missionConfigFile >> "CfgVirtualItems")) apply {
     [configName _x, [configName _x] call ULP_fnc_hasItem]
-}) select { (_x select 1) > 0 });
+}) select { (_x select 1) isEqualType [] || { (_x select 1) > 0 } });
 
 private _fnc_getCurTexture = {
     _this params ["_container"];

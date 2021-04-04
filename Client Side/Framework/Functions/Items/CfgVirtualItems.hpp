@@ -10,6 +10,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 40;
@@ -31,6 +32,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 30;
@@ -52,6 +54,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 40;
@@ -73,6 +76,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 30;
@@ -94,6 +98,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 50;
@@ -115,6 +120,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 70;
@@ -136,6 +142,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 60;
@@ -157,6 +164,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 45;
@@ -178,6 +186,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 80;
@@ -199,6 +208,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 20;
@@ -220,6 +230,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -241,6 +252,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -262,6 +274,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -283,6 +296,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -304,6 +318,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -325,6 +340,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -346,6 +362,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -367,6 +384,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -389,6 +407,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -403,6 +422,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -417,6 +437,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -431,6 +452,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -445,6 +467,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -459,6 +482,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -473,6 +497,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -487,6 +512,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -501,6 +527,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -515,6 +542,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -529,6 +557,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -543,6 +572,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -557,6 +587,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -571,6 +602,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -585,6 +617,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -599,6 +632,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -613,6 +647,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -627,6 +662,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -641,6 +677,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -655,6 +692,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -670,6 +708,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -684,6 +723,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -698,6 +738,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -712,6 +753,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -726,6 +768,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -741,6 +784,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -755,6 +799,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -769,6 +814,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -783,6 +829,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -797,6 +844,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -811,6 +859,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -825,6 +874,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -839,6 +889,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -853,6 +904,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -867,6 +919,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -881,6 +934,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -895,6 +949,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -909,6 +964,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -923,6 +979,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -937,6 +994,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -951,6 +1009,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -965,6 +1024,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -979,6 +1039,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -993,6 +1054,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1008,6 +1070,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1022,6 +1085,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1036,6 +1100,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1050,6 +1115,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1064,6 +1130,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1078,6 +1145,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1092,6 +1160,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1106,6 +1175,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1120,6 +1190,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1134,6 +1205,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1148,6 +1220,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1162,6 +1235,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1176,6 +1250,7 @@ class CfgVirtualItems {
 			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1190,6 +1265,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1204,6 +1280,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1218,6 +1295,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1233,6 +1311,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1247,6 +1326,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1261,6 +1341,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1275,6 +1356,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1289,6 +1371,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1303,6 +1386,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1317,6 +1401,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1331,6 +1416,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1345,6 +1431,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1359,6 +1446,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = true;
+			isScripted = false;
 		};
 		conditions = "true";
 	};
@@ -1373,6 +1461,7 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+		conditions = "true";
 		};
 		conditions = "true";
 	};

@@ -1464,6 +1464,19 @@ class CfgVirtualItems {
 			isScripted = false;
 		};
 		conditions = "true";
+	};
+
+	class Identification {
+		displayName = "%1's ID";
+		icon = "";
+		buyPrice = 15000;
+		sellPrice = -1;
+		weight = 1;
+		class Settings {
+			onMarket = true;
+			isIllegal = true;
+			isSavable = true;
+			isScripted = true;
 		};
 		conditions = "true";
 	};

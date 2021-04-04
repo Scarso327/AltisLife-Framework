@@ -3,7 +3,7 @@ class CfgPerks {
 	maxLimit = 15;
 	removalCost = 100000;
 
-	class SecondNature { // TODO
+	class SecondNature {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
 		displayName = "Second Nature";
 		description = "Automatically applies your seatbelt.";
@@ -37,7 +37,7 @@ class CfgPerks {
 		onActivated = "_params setVariable [""seatbelt"", true]; _params"; // TO DO
 	};
 
-	class GovernmentBonus { // TODO
+	class GovernmentBonus {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
 		displayName = "Government Bonus";
 		description = "Increases your base paycheck by %1%2.";
@@ -54,7 +54,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "_params setVariable [""seatbelt"", true]; _params"; // TO DO
+		onActivated = "_params + (_params * (_bonus / 100))"; // TO DO
 	};
 
 	class Muscleman { // TODO

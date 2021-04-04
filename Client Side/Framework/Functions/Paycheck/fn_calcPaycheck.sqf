@@ -19,5 +19,6 @@ if (isClass (_faction >> "Whitelisting")) then {
 };
 
 if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _pay = _pay * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "payIncrease"); };
+if (_pay = ["GovernmentBonus", _pay, false] call ULP_fnc_activatePerk;};
 
 (round _pay)

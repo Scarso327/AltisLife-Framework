@@ -20,21 +20,15 @@ class CfgPerks {
 	class ImprovedMetabolism { // TODO
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
 		displayName = "Improved Metabolism";
-		description = "Slows your hunger and dehydration gain by %1%2.";
+		description = "Slows your hunger and dehydration gain by 50%.";
 		removalMultiplier = 1;
-		class Leveling {
-			maxLevel = 3;
-			xpLevel = 100;
-			xpMultipler = 2;
-			levelCalculation = "25 * (_this select 0)";
-		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 2;
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "_params setVariable [""seatbelt"", true]; _params"; // TO DO
+		onActivated = "";
 	};
 
 	class GovernmentBonus {
@@ -54,27 +48,21 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "_params + (_params * (_bonus / 100))"; // TO DO
+		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
 	class Muscleman { // TODO
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
 		displayName = "Muscleman";
-		description = "Increases your Item carry limit by %1%2.";
+		description = "Increases your Item carry limit by 25%.";
 		removalMultiplier = 1;
-		class Leveling {
-			maxLevel = 3;
-			xpLevel = 100;
-			xpMultipler = 2;
-			levelCalculation = "25 * (_this select 0)";
-		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 4;
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "_params setVariable [""seatbelt"", true]; _params"; // TO DO
+		onActivated = "";
 	};
 
 	class GeneralMechanic { // TODO
@@ -94,7 +82,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "_params setVariable [""seatbelt"", true]; _params"; // TO DO
+		onActivated = "";
 	};
 
 	class MindfulPlanner { // TODO
@@ -276,14 +264,8 @@ class CfgPerks {
 	class QuickLearner { // TODO
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
 		displayName = "Quick Learner";
-		description = "Increases the amount of profession's XP gained by %1%2.";
+		description = "Increases the amount of profession's XP gained by 10%.";
 		removalMultiplier = 1.5;
-		class Leveling {
-			maxLevel = 3;
-			xpLevel = 100;
-			xpMultipler = 2;
-			levelCalculation = "10 * (_this select 0)";
-		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 27;

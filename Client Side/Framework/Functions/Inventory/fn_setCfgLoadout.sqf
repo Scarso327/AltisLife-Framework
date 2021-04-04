@@ -53,4 +53,13 @@ if (isClass (_class)) then {
 	if (getNumber (_class >> "hasRadio") isEqualTo 1) then { player linkItem "ItemRadio" };
 };
 
+_class = _cfg >> "VirtualItems";
+if (isArray (_class)) then {
+	{
+		private _data = (_x select 1);
+		if (_data isEqualType "") then { _data = call compile _data; };
+		[(_x select 0), _data, false, true] call ULP_fnc_handleItem;
+	} forEach getArray (_class);
+};
+
 true

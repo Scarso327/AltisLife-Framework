@@ -24,8 +24,10 @@ if (_amount isEqualTo -1) exitWith {
 
 if !(isText (_curSel >> "Events" >> "onUse")) exitWith { hint "This item can't be used to do anything..."; };
 
-if ([configName _curSel, 1, true] call ULP_fnc_handleItem) then {
-	[configName _curSel] call compile getText (_curSel >> "Events" >> "onUse");
+private _item = 1;
+if !(_amount isEqualType 0) then {
+	_item = (_amount select (_list lbValue (lbCurSel _list)));
 };
 
+[configName _curSel, _item] call compile getText (_curSel >> "Events" >> "onUse");
 _display call ULP_fnc_inventory;

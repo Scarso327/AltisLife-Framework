@@ -105,19 +105,19 @@ class CfgSpawns {
             displayName = "Sofia";
             marker = "civ_spawn_sofia";
             icon = "";
-            conditions = "["WideTraveller"] call ULP_fnc_hasPerk";
+            conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
         class Agios : Civilian {
             displayName = "Agios";
             marker = "civ_spawn_agios";
             icon = "";
-            conditions = "["WideTraveller"] call ULP_fnc_hasPerk";
+            conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
         class Neochori : Civilian {
             displayName = "Neochori";
             marker = "civ_spawn_neochori";
             icon = "";
-            conditions = "["WideTraveller"] call ULP_fnc_hasPerk";
+            conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
 
         class Taxi : Civilian {

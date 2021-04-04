@@ -175,6 +175,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = false;
 			};
+			virtualItems[] = { { "Identification", "name player" }};
 		};
 	};
 };

@@ -54,6 +54,10 @@ if (_remove) then {
 		};
 	};
 
+	if (isText (_itemCfg >> "Events" >> "onRemove")) exitWith {
+		[_item, _data] call compile getText (_itemCfg >> "Events" >> "onRemove");
+	};
+
 	ULP_CarryInfo set [0, _newWeight];
 } else {
 	private _newWeight = _carryWeight + _weight;

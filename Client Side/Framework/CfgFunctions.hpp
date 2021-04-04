@@ -93,7 +93,12 @@ class CfgFunctions {
 			file = "Functions\Items";
 			class itemCfg {};
 			class getSellPrices {};
+		};
+
+		class ItemScripts {
+			file = "Functions\Items\Scripts";
 			class addSustenance {};
+			class disguiseIdentity {};
 		};
 
 		class Input {

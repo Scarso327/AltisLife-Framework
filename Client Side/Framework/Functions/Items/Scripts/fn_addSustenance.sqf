@@ -2,7 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-#include "..\..\script_macros.hpp"
+#include "..\..\..\script_macros.hpp"
 scopeName "fn_addSustenance";
 
 _this params [
@@ -18,4 +18,5 @@ private _thirst = getNumber(_cfg >> "Sustain" >> "thirst");
 ULP_Survival_Hunger = 1 max ((ULP_Survival_Hunger + _hunger) min 100);
 ULP_Survival_Thirst = 1 max ((ULP_Survival_Thirst + _thirst) min 100);
 
+[_item, 1, true] call ULP_fnc_handleItem;
 true

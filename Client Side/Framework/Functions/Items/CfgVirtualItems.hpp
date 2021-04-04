@@ -1478,6 +1478,10 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = true;
 		};
+		class Events {
+			onUse = "_this call ULP_fnc_disguiseIdentity;";
+			onRemove = "if ((player getVariable [""name"", """"]) isEqualTo (_this select 1)) then { player setVariable [""name"", nil, true]; hint ""You've lost the ID card you were disguising yourself with...""; };";
+		};
 		conditions = "true";
 	};
 };

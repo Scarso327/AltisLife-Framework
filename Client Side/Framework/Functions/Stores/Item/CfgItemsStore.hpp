@@ -223,7 +223,7 @@ class CfgItemsStore {
 
 	class Handgun {
 		storeName = "Handgun Store";
-		condition = "true";
+		condition = "[""Handgun""] call ULP_fnc_hasLicense";
 		class Rifles {};
 		class Pistols {
 			class hgun_Pistol_01_F : ItemBase {};
@@ -245,7 +245,7 @@ class CfgItemsStore {
 
 	class Hunting {
 		storeName = "Hunting Store";
-		condition = "true";
+		condition = "[""Hunting""] call ULP_fnc_hasLicense";
 		class Rifles {
 			class sgun_HunterShotgun_01_F {};
 			class srifle_DMR_06_hunter_F {};
@@ -269,7 +269,7 @@ class CfgItemsStore {
 
 	class Rebel {
 		storeName = "Rebel Outpost";
-		condition = "true";
+		condition = "[""Rebel""] call ULP_fnc_hasLicense";
 		class Rifles {
 			class hgun_PDW2000_F {};
 			class SMG_02_F {};
@@ -353,7 +353,7 @@ class CfgItemsStore {
 
 	class Blackmarket {
 		storeName = "Blackmarket";
-		condition = "true";
+		condition = "[""Blackmarket""] call ULP_fnc_hasLicense";
 		class Rifles {
 			class hgun_PDW2000_F {};
 			class SMG_02_F {};

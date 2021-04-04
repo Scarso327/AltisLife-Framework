@@ -1469,7 +1469,7 @@ class CfgVirtualItems {
 	class Identification {
 		displayName = "%1's ID";
 		icon = "";
-		buyPrice = 15000;
+		buyPrice = 75000;
 		sellPrice = -1;
 		weight = 1;
 		class Settings {

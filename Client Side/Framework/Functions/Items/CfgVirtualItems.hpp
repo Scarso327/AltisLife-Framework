@@ -1461,6 +1461,8 @@ class CfgVirtualItems {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
+			isScripted = false;
+		};
 		conditions = "true";
 		};
 		conditions = "true";

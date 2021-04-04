@@ -30,7 +30,7 @@ if (_type isEqualTo 0) then {
 
 	{
 		private _cfg = missionConfigFile >> "CfgVirtualItems" >> _x;
-		if (isClass _cfg) then {
+		if (isClass _cfg && { !([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) }) then {
 			private _itemIcon = getText (_cfg >> "icon");
 
 			private _row = _list lnbAddRow [
@@ -60,7 +60,7 @@ if (_type isEqualTo 0) then {
 
 	{
 		private _cfg = missionConfigFile >> "CfgVirtualItems" >> _x;
-		if (isClass _cfg) then {
+		if (isClass _cfg && { !([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) }) then {
 			private _itemIcon = getText (_cfg >> "icon");
 
 			private _row = _list lnbAddRow [

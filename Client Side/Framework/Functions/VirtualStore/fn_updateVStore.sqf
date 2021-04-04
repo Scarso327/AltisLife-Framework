@@ -30,7 +30,7 @@ private _sellPrice = -1;
 	_itemClass = configName _x;
 	_cfg = missionConfigFile >> "CfgVirtualItems" >> _itemClass;
 
-	if (isClass _cfg && { call compile getText(_cfg >> "conditions") }) then {
+	if (isClass _cfg && { call compile getText(_cfg >> "conditions") } && { !([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) }) then {
 		_itemIcon = getText (_cfg >> "icon");
 		_itemName = getText (_cfg >> "displayName");
 		_itemCount = (0 max ([_itemClass] call ULP_fnc_hasItem));

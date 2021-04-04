@@ -311,6 +311,7 @@ class CfgFunctions {
 			class selectPlayer {};
 			class confirm {};
 			class enterString {};
+			class selectObject {};
 		};
 
 		class VirutalStores {

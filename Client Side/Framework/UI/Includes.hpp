@@ -15,3 +15,4 @@
 #include "DialogInventory\DialogInventory.hpp"
 #include "DisplaySelect\DisplayConfirm.hpp"
 #include "DisplaySelect\DisplayInput.hpp"
+#include "DisplaySelect\DisplaySelectObject.hpp"

@@ -28,7 +28,7 @@ if (_spawnCfg isEqualType configNull) then {
 	if !(_buildings isEqualTo []) then {
 		_buildings = nearestObjects[_pos, _buildings, getNumber (_spawnCfg >> "radius")];
 		if !(_buildings isEqualTo []) then {
-			_pos = (selectRandom (_buildings select { isObjectHidden _x })) buildingPos 0;
+			_pos = (selectRandom (_buildings select { !(isObjectHidden _x && { [_x] call ULP_fnc_isHouseOwned }) })) buildingPos 0;
 		};
 	};
 } else {

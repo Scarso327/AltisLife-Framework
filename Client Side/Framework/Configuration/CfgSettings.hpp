@@ -76,6 +76,10 @@ class CfgSettings {
         aimPrecision = false;
         loadCoef = 0.75;
     };
+
+    class Identity {
+        nameLength = 24;
+    };
 };
 
 #include "CfgSurvival.hpp"

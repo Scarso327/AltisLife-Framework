@@ -5,6 +5,10 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_switchBank";
 
+if (canSuspend) exitWith {
+    [ULP_fnc_switchBank, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	"_ctrl", "_index"
 ];

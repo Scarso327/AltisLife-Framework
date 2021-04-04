@@ -81,6 +81,7 @@ class CfgFunctions {
 			class getNearestDoor {};
 			class isUnitsInZone {};
 			class unitsInZone {};
+			class forgeIdentity {};
 		};
 
 		class Clothing {

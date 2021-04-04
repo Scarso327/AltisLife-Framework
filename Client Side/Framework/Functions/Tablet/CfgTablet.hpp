@@ -120,8 +120,11 @@ class CfgTablet {
 	class Perks : BaseScreen {
 		idc= 23010;
 		pageTitle = "Perks";
-		pageIdcs[] = {};
-		onUnload = "[player, 11, ULP_Perks] remoteExecCall [""ULP_SRV_fnc_savePlayerState"", 2];";
+		pageIdcs[] = {
+			23059, 23060
+		};
+		onLoad = "_this setVariable [""perksEvent"", [""PerksChanged"", { (findDisplay 23000) call ULP_fnc_perks; }] call ULP_fnc_addEventHandler]; _this call ULP_fnc_perks;";
+		onUnload = "[""PerksChanged"", _this getVariable [""perksEvent"", -1]] call ULP_fnc_removeEventHandler; [player, 11, ULP_Perks] remoteExecCall [""ULP_SRV_fnc_savePlayerState"", 2];";
 	};
 
 	class Settings {

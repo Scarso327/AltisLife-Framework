@@ -4,9 +4,9 @@ class CfgPerks {
 	removalCost = 100000;
 
 	class SecondNature {
-		icon = "";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa";
 		displayName = "Second Nature";
-		description = "<t color = '#8A2BE2'>Automatically</t> put on your seatbelt when entering a vehicle.";
+		description = "Automatically put on your seatbelt when entering a vehicle.";
 		removalMultiplier = 1;
 		class Requirements {
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
@@ -18,9 +18,9 @@ class CfgPerks {
 	};
 
 	class ExpertTrader {
-		icon = "";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa";
 		displayName = "Expert Trader";
-		description = "Increase the price you sell legal items for by <t color = '#8A2BE2'>%1%2</t>.";
+		description = "Increase the price you sell legal items for by %1%2.";
 		removalMultiplier = 1.1; // Increase removal cost by 10%...
 		class Leveling {
 			maxLevel = 5;

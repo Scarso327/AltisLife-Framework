@@ -1491,6 +1491,22 @@ class ULP_ctrlAchievement : Life_RscControlsGroupNoScrollbars {
     };
 };
 
+class ULP_ctrlPerk : ULP_ctrlAchievement {
+    class Controls : Controls {
+        class Background : Background {};
+        class PerkIcon : AchievementIcon {};
+        class PerkName : AchievementName {};
+        class SelectButton : ULP_RscButtonClean {
+            idc = 104;
+            colorBackground[] = {0, 0, 0, 0};
+            y = 4.885 * GUI_GRID_CENTER_H;
+            w = 5.885 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+        class Cover : Cover {};
+    };
+};
+
 class ULP_ctrlGoalsHeader : ULP_ctrlOptionsHeader {
     colorBackground[] = HEADER_COLOUR_SOLID;
     y = (1 * GUI_GRID_CENTER_H) / 2;

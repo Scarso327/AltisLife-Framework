@@ -285,6 +285,11 @@ class CfgFunctions {
 			class updateTagPreview {};
 		};
 
+		class TabletPerks {
+			file = "Functions\Tablet\Perks";
+			class perks {};
+		};
+
 		class Options {
 			file = "Functions\Options";
 			class setOption {};

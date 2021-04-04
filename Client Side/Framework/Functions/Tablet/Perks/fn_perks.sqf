@@ -67,12 +67,20 @@ private _item = 1;
 	_coverCtrl ctrlShow (_state isEqualTo 2);
 		
 	private _button = _perkCtrl controlsGroupCtrl 104;
+	private _ctrlLevel = _perkCtrl controlsGroupCtrl 105;
+	_ctrlLevel ctrlShow false;
 
 	if (_state isEqualTo 2) then {
 		private _requirement = [configName _cfg] call ULP_fnc_getPerkRequirement;
 		_coverCtrl ctrlSetTooltip format ["Requires %1 %2", _requirement select 0, _requirement select 1];
 		_button ctrlEnable false;
 	} else {
+		private _maxLevel = getNumber (_cfg >> "Leveling" >> "maxLevel");
+		if (_maxLevel > 1) then {
+			_ctrlLevel ctrlSetStructuredText parseText format["<t align='center'>%1/%2</t>", (([configName _cfg] call ULP_fnc_getPerkLevel) select 0), _maxLevel];
+			_ctrlLevel ctrlShow true;
+		};
+
 		_button ctrlSetEventHandler ["ButtonClick", format["[""%1""] call ULP_fnc_togglePerk", configName _cfg]];
 	};
 	

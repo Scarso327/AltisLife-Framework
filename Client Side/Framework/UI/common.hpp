@@ -1503,6 +1503,13 @@ class ULP_ctrlPerk : ULP_ctrlAchievement {
             w = 5.885 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
+        class PerkLevel: Life_RscStructuredText {
+            idc = 105;
+            colorBackground[] = HEADER_COLOUR;
+            x = 4.32375 * GUI_GRID_CENTER_W;
+            w = 1.57125 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
         class Cover : Cover {};
     };
 };

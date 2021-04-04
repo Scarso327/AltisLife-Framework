@@ -630,8 +630,8 @@ class CfgClothesStore {
 	};
 
 	class Rebel {
-		storeName = "Rebel Clothing Store";
-		condition = "[""Rebel""] call ULP_fnc_hasLicense";
+		storeName = "Rebel/Blackmarket Clothing Store";
+		condition = "[""Rebel""] call ULP_fnc_hasLicense || [""Blackmarket""] call ULP_fnc_hasLicense";
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};
@@ -643,11 +643,12 @@ class CfgClothesStore {
 			class U_O_R_Gorka_01_black_F {};
 			class U_I_C_Soldier_Para_1_F {};
 			class U_B_Wetsuit {};
-			class U_B_survival_uniform {};
+			class U_B_survival_uniform { condition = "[""Blackmarket""] call ULP_fnc_hasLicense"; };
 			class U_B_CombatUniform_mcam {};
 			class U_B_GhillieSuit {};
-			class U_B_FullGhillie_ard {};
+			class U_B_FullGhillie_ard { condition = "[""Blackmarket""] call ULP_fnc_hasLicense"; };
 			class U_C_CBRN_Suit_01_White_F {
+				condition = "[""Blackmarket""] call ULP_fnc_hasLicense"; 
 				class Textures {
 					class U_B_CBRN_Suit_01_MTP_F {};
 					class U_B_CBRN_Suit_01_Wdl_F {};
@@ -665,7 +666,7 @@ class CfgClothesStore {
 			class H_ShemagOpen_khk {};
 			class H_HelmetB_light {};
 			class H_HelmetB {};
-			class H_HelmetSpecB {};
+			class H_HelmetSpecB { condition = "[""Blackmarket""] call ULP_fnc_hasLicense"; };
 		};
 
 		class Facewear {
@@ -720,6 +721,7 @@ class CfgClothesStore {
 				};
 			};
 			class V_PlateCarrier2_blk {
+				condition = "[""Blackmarket""] call ULP_fnc_hasLicense"; 
 				class Textures {
 					class V_PlateCarrier2_rgr {};
 					class V_PlateCarrier2_rgr_noflag_F {};

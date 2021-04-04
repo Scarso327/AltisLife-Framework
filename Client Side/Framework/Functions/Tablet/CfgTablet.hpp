@@ -121,6 +121,7 @@ class CfgTablet {
 		idc= 23010;
 		pageTitle = "Perks";
 		pageIdcs[] = {};
+		onUnload = "[player, 11, ULP_Perks] remoteExecCall [""ULP_SRV_fnc_savePlayerState"", 2];";
 	};
 
 	class Settings {

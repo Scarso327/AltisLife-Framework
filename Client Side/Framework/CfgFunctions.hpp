@@ -529,6 +529,17 @@ class CfgFunctions {
 			class initCartels {};
 			class cartelHud {};
 		};
+
+		class Perks {
+			file = "Functions\Perks";
+			class hasPerk {};
+			class getPerkLevel {};
+			class activatePerk {};
+			class getPerkBonus {};
+			class getPerkRequirement {};
+			class getPerkLimit {};
+			class togglePerk {};
+		};
 	};
 
 	class ULP_Functions_UI {

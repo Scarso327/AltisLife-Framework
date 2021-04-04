@@ -18,6 +18,10 @@ private _gangTax = 0;
 if (_sellPrice > 0) then {
 	if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _sellPrice = _sellPrice * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "sellIncrease"); };
 
+	if (_isLegal) then {
+		_sellPrice = ["ExpertTrader", _sellPrice] call ULP_fnc_activatePerk;
+	};
+
 	// TODO : Group Tax...
 
 	// If the sell price is higher than buy, make sell 95% of buy...

@@ -47,6 +47,7 @@ private _query = switch (_state) do {
 	case 8: { format["daily_tasks='%1', weekly_tasks='%2'", [_data select 0] call DB_fnc_mresArray, [_data select 1] call DB_fnc_mresArray] };
 	case 9: { format["textures='%1'", [_data] call DB_fnc_mresArray] };
 	case 10: { format["titles='%1'", [_data] call DB_fnc_mresArray] };
+	case 11: { format["perks='%1'", [_data] call DB_fnc_mresArray] };
 	default { "" };
 };
 

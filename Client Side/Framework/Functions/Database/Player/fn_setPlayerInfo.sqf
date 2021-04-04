@@ -19,7 +19,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_eventslevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_textures", "_titles", "_bool"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_eventslevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_textures", "_titles", "_perks", "_bool"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -121,6 +121,7 @@ ULP_Gear = _gear;
 
 ULP_UnlockedTextures = _textures;
 ULP_Titles = _titles;
+ULP_Perks = _perks;
 
 ULP_Loaded = true; // Tells the initialisation script we're able to continue...
 InitGroupId = nil; // Only used during init as Arma doesn't seem to add us to group in time...

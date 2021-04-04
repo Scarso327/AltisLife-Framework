@@ -20,4 +20,6 @@ if ([] call ULP_fnc_isEscorting) then {
 	[ULP_Escort, player, false] call ULP_fnc_escort;
 };
 
+["SecondNature", _unit] call ULP_fnc_activatePerk;
+
 true

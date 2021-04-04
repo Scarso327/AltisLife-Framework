@@ -491,6 +491,8 @@ class CfgFunctions {
 		class Medical {
 			file = "Functions\Medical";
 			class createBodyBag {};
+			class administerBlood {};
+			class receivedBlood {};
 		};
 
 		class Housing {

@@ -106,9 +106,17 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 
 		_progressBar progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
 
-		if ((progressPosition _progressBar) <= _respawnPer && { !ULP_CanRespawn }) then {
-			ULP_CanRespawn = true;
-			_incapUi setVariable ["status", "Press <t color = '#7300e6'>Shift + F</t> to respawn..."];
+		if ((progressPosition _progressBar) <= _respawnPer) then {
+			if (!ULP_CanRespawn) then {
+				ULP_CanRespawn = true;
+				_incapUi setVariable ["status", "Press <t color = '#7300e6'>Shift + F</t> to respawn..."];
+			};
+		} else {
+			// We've likely been administered blood so we're above the bleedout requirement and so can no longer respawn..
+			if (ULP_CanRespawn) then {
+				ULP_CanRespawn = false;
+				_incapUi setVariable ["status", "Waiting to respawn..."];
+			};
 		};
 
 		(_incapUi displayCtrl 9002) ctrlSetStructuredText parseText format [

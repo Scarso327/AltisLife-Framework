@@ -41,6 +41,15 @@ class CfgInteractions {
 		};
 	};
 
+	class PersonMedical {
+		class AdministerBlood {
+			title = "Administer Blood";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_administerBlood";
+			condition = "(0 max ([""BloodBag""] call ULP_fnc_hasItem)) > 0";
+		};
+	};
+
 	class PersonEscortOnly {
 		class StopEscort {
 			title = "Stop Escorting";

@@ -22,6 +22,9 @@ class CfgSettings {
         AllowBleedoutPercentage = 0.7;
         BleedOutTime = 300;
 
+        /* Blood */
+        BloodBagIncrease = 60;
+
         /* Revival */
         RevivalFee = 2500;
         PoliceRevive = false;

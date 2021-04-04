@@ -512,7 +512,6 @@ class CfgFunctions {
 			class claimMission {};
 			class finishMission {};
 			class initMissions {};
-			class failMissions {};
 		};
 
 		class Titles {

@@ -7,6 +7,17 @@ scopeName "fn_initMissions";
 
 ["Initialising Missions"] call ULP_fnc_logIt;
 
-// On Incap & Died to stop force respawns to spawn closer...
-["Incapacitated", { [] call ULP_fnc_failMissions; }] call ULP_fnc_addEventHandler;
-["Died", { [] call ULP_fnc_failMissions; }] call ULP_fnc_addEventHandler;
+["Died", {
+	if ((count ULP_Missions) > 0) then {
+		{
+			_y params [
+				"_task", "_reward", "_eachFrame"
+			];
+
+			_task setTaskState "Failed";
+			player removeSimpleTask _task;
+		} forEach ULP_Missions;
+
+		ULP_Missions = createHashMap;
+	};
+}] call ULP_fnc_addEventHandler;

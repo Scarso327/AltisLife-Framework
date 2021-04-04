@@ -118,4 +118,6 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 			_rspMsg
 		];
     }] call ULP_fnc_addEachFrame)];
+
+	["Incapacitated", [_unit, _killer, _incapUi]] call ULP_fnc_invokeEvent;
 };

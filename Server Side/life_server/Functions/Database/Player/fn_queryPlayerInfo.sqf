@@ -57,12 +57,18 @@ for "_i" from 0 to 1 step 0 do {
 
 		// Playtime, Licenses, Gear, Stats, Professions, Achievements, Daily Tasks, Weekly Tasks, Textures, Titles, Perks
 		private _arraysToConvert = [5, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22];
+		private _factionArrays = getArray (_factionCfg >> "DatabaseInfo" >> "arrayIndexes");
+		if !(_factionArrays isEqualTo []) then { _arraysToConvert append _factionArrays; };
 
 		// Professions, Daily Tasks, Weekly Tasks, Textures, Perks
 		private _hashmapsToCreate = [13, 18, 19, 20, 22];
+		private _factionMaps = getArray (_factionCfg >> "DatabaseInfo" >> "mapIndexes");
+		if !(_factionMaps isEqualTo []) then { _arraysToConvert append _factionMaps; };
 
 		// (Blacklist / Arrest Status)
 		private _boolsToConvert = [23];
+		private _factionBools = getArray (_factionCfg >> "DatabaseInfo" >> "boolIndexes");
+		if !(_factionBools isEqualTo []) then { _arraysToConvert append _factionBools; };
 
 		// Coverts data types to something arma can understand...
 		{ _newResult set [_x, [(_result select _x)] call DB_fnc_mresToArray] } forEach _arraysToConvert;

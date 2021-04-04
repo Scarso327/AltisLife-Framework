@@ -28,6 +28,9 @@ class CfgFactions {
 		class DatabaseInfo {
 			queryPrefix = "cop_";
 			customQuery = ", cop_blacklisted, coplevel, rtalevel, npaslevel, scolevel, ncalevel, mpulevel, rpulevel, afolevel, uclevel";
+			arrayIndexes[] = {};
+			mapIndexes[] = {};
+			boolIndexes[] = {};
 			timeIndex = 0;
 		};
 
@@ -69,6 +72,9 @@ class CfgFactions {
 		class DatabaseInfo {
 			queryPrefix = "med_";
 			customQuery = ", med_blacklisted, mediclevel, aalevel, hrlevel";
+			arrayIndexes[] = {};
+			mapIndexes[] = {};
+			boolIndexes[] = {};
 			timeIndex = 1;
 		};
 
@@ -108,6 +114,9 @@ class CfgFactions {
 		class DatabaseInfo {
 			queryPrefix = "hato_";
 			customQuery = ", hato_blacklisted, hatolevel";
+			arrayIndexes[] = {};
+			mapIndexes[] = {};
+			boolIndexes[] = {};
 			timeIndex = 2;
 		};
 
@@ -140,7 +149,10 @@ class CfgFactions {
 		class Housing {};
 		class DatabaseInfo {
 			queryPrefix = "civ_";
-			customQuery = ", arrested, prison_timer";
+			customQuery = ", arrested, prison_timer, identification";
+			arrayIndexes[] = {};
+			mapIndexes[] = {};
+			boolIndexes[] = {};
 			timeIndex = 3;
 		};
 

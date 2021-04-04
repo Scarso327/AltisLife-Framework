@@ -539,6 +539,8 @@ class CfgFunctions {
 			class getPerkRequirement {};
 			class getPerkLimit {};
 			class togglePerk {};
+			class addPerkXP {};
+			class initPerks {};
 		};
 	};
 

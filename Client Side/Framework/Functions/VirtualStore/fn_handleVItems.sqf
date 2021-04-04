@@ -66,7 +66,7 @@ if (_remove) then {
 
 		if (_remove) then {
 			if ([configName _cfg, _value, true] call ULP_fnc_handleItem) then {
-				["SoldVirtualItem", [configName _cfg, _value, _sellPrice]] call ULP_fnc_invokeEvent;
+				["SoldVirtualItem", [configName _cfg, _value, _sellPrice, [getNumber (_cfg >> "Settings" >> "isIllegal")] call ULP_fnc_bool]] call ULP_fnc_invokeEvent;
 				[_sellPrice, false, format["Sold %1 %2(s)", _value, _name]] call ULP_fnc_addMoney;
 				hint format["You have sold %1 %2(s) for £%3...", _value, _name, [_sellPrice] call ULP_fnc_numberText];
 			} else {

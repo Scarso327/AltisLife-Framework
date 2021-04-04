@@ -19,7 +19,7 @@ if (_sellPrice > 0) then {
 	if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _sellPrice = _sellPrice * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "sellIncrease"); };
 
 	if (_isLegal) then {
-		_sellPrice = ["ExpertTrader", _sellPrice] call ULP_fnc_activatePerk;
+		_sellPrice = ["ExpertTrader", _sellPrice, false] call ULP_fnc_activatePerk;
 	};
 
 	// TODO : Group Tax...

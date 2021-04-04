@@ -8,7 +8,6 @@ scopeName "fn_initPerks";
 ["Initialising Perks"] call ULP_fnc_logIt;
 
 ["SoldVirtualItem", {
-	diag_log _this;
 	_this params [ "_soldItem", "_amount", "_sellPrice", "_illegal" ];
 
 	if (_sellPrice > 0) then {

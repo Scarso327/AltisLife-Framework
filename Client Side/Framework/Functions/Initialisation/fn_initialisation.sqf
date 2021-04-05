@@ -93,6 +93,7 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 	ULP_NightLight setLightAmbient getArray (_mapCfg >> "Lighting" >> "color");
 };
 
+[] call ULP_fnc_initGroups;
 [] call ULP_fnc_initMissions;
 [] call ULP_fnc_initPerks;
 [] call ULP_fnc_initCartels;

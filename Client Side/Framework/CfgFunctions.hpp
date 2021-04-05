@@ -411,6 +411,8 @@ class CfgFunctions {
 			class getGroupById {};
 			class getGroupName {};
 			class groupId {};
+			class groupFunds {};
+			class initGroups {};
 		};
 
 		class NLR {

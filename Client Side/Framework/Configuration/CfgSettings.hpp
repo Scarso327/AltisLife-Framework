@@ -1,4 +1,6 @@
 class CfgSettings {
+    developers[] = { "76561198092567307" };
+    
     framework_version = "5.0.0";
     local_version = "1.0.0";
 

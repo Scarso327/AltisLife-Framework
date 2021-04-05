@@ -47,7 +47,7 @@ if (isClass _cfg && { [player, getArray (_cfg >> "factions")] call ULP_fnc_isFac
 		{
 			_vehicleCfg = [configName _x] call ULP_fnc_vehicleCfg;
 
-			if ((count _vehicleCfg) > 0 && { call compile getText((_vehicleCfg select 1) >> "conditions") }) then {
+			if ((count _vehicleCfg) > 0 && { call compile getText ((_vehicleCfg select 1) >> "conditions") }) then {
 				_vehicleCfg params [
 					"", "_missionCfg", "_picture", "_name"
 				];
@@ -57,7 +57,7 @@ if (isClass _cfg && { [player, getArray (_cfg >> "factions")] call ULP_fnc_isFac
 				_list lbSetValue[_index, ([getNumber (_missionCfg >> "buyPrice"), getNumber (_x >> "buyPrice")] select (isNumber (_x >> "buyPrice")))];
 				_list lbSetData[_index, configName _x];
 			};
-		} forEach ("isClass _x" configClasses (_cfg >> "Vehicles"));
+		} forEach ("!(isText (_x >> ""condition"")) || { call compile getText (_x >> ""condition"") }" configClasses (_cfg >> "Vehicles"));
 
 		lbSort _list;
 		_list lbSetCurSel 0;

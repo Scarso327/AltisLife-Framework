@@ -16,7 +16,7 @@ if !(isDowned(_unit)) exitWith { hint "You can only administer blood to injured 
 
 private _name = [_unit] call ULP_fnc_getName;
 
-private _time = 40;
+private _time = 30;
 
 if !([format["Administering Blood to %1", _name], _time, [_unit, _name], {
 	!(isNull (_this select 0)) && { alive (_this select 0) } && { isDowned((_this select 0)) } && { (0 max (["BloodBag"] call ULP_fnc_hasItem)) > 0 } && 

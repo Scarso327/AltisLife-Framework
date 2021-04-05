@@ -30,7 +30,7 @@ class CfgCartels {
 		class Church {
 			name = "Church Arms Cartel";
 			factions[] = { "Police", "Civilian" };
-			position[] = {8926, 74936, 0};
+			position[] = {8926, 7493, 0};
 			zoneRadius = 50;
 			kosRadius = 0;
 			class Arms {

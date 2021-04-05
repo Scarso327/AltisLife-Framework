@@ -381,10 +381,6 @@ class CfgItemsStore {
 			class arifle_ARX_blk_F {};
 			class arifle_AKM_F {};
 			class arifle_AK12_F {};
-			class srifle_DMR_01_F {};
-			class arifle_SPAR_03_blk_F {};
-			class srifle_EBR_F {};
-			class srifle_DMR_03_F {};
 		};
 
 		class Pistols {
@@ -407,8 +403,6 @@ class CfgItemsStore {
 			class optic_MRCO {};
 			class optic_Arco {};
 			class optic_ERCO_blk_F {};
-			class optic_DMS {};
-			class optic_SOS {};
 		};
 
 		class Magazines {

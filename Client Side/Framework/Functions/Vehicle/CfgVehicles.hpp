@@ -1479,12 +1479,11 @@ class CfgVehicles {
 		virtualSpace = 100;
 	};
 
-	class Land_Pod_Heli_Transport_04_box_black_F : Base {
+	class Land_Pod_Heli_Transport_04_box_black_F : B_Slingload_01_Cargo_F {
 		buyPrice = 0;
 		virtualSpace = 125;
-		garageLimit = 1;
 	};
-	class Land_Pod_Heli_Transport_04_fuel_black_F : Land_Pod_Heli_Transport_04_box_black_F {
+	class Land_Pod_Heli_Transport_04_fuel_black_F : B_Slingload_01_Cargo_F {
 		buyPrice = 0;
 		virtualSpace = 50;
 	};
@@ -1495,13 +1494,17 @@ class CfgVehicles {
 		tempStorage = true;
 	};
 
-	class Land_PlasticCase_01_large_gray_F : Base {
-		virtualSpace = 1000;
+	class Land_WoodenCrate_01_F : Base {
+		virtualSpace = 500;
 		garageLimit = 0;
 		isHouse = true;
 	};
 
-	class Land_Cargo20_white_F : Land_PlasticCase_01_large_gray_F {
+	class Land_PlasticCase_01_large_gray_F : Land_WoodenCrate_01_F {
+		virtualSpace = 1000;
+	};
+
+	class Land_Cargo20_white_F : Land_WoodenCrate_01_F {
 		virtualSpace = 5000;
 	};
 

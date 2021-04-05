@@ -34,11 +34,11 @@ class CfgHousing {
 
 		class Land_Slub_House02_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {1.46924,0.984863,-1.0281};
+			spawnPos[] = {1.46875,0.984863,-1.0281};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{-0.611529,0,0}, 0};
+				object = "Land_WoodenCrate_01_F";
+				position[] = {{2.84766,2.18945,-0.980395}, 0};
 			};
 		};
 
@@ -47,8 +47,8 @@ class CfgHousing {
 			spawnPos[] = {-0.27002,2.06299,-0.360504};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0,0,-0.641529}, 0};
+				object = "Land_WoodenCrate_01_F";
+				position[] = {{-1.91016,3.89063,-0.362943}, 90};
 			};
 		};
 		class Land_i_Stone_Shed_V2_F : Land_i_Stone_Shed_V1_F {};
@@ -56,11 +56,11 @@ class CfgHousing {
 
 		class Land_i_Stone_HouseSmall_V1_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {-0.0405273,1.93848,-0.201251};
+			spawnPos[] = {-5.47412,2.09326,-1.86095};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0,0,-0.695044}, 0};
+				object = "Land_WoodenCrate_01_F";
+				position[] = {{5.80176,4.75635,-1.79905}, 270};
 			};
 		};
 		class Land_i_Stone_HouseSmall_V2_F : Land_i_Stone_HouseSmall_V1_F {};
@@ -68,21 +68,21 @@ class CfgHousing {
 
 		class Land_i_Addon_02_V1_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {-5.35059,2.10596,-1.86095};
+			spawnPos[] = {-0.0400391,1.93896,-0.201251};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0.00390625,0.0185547,-1.62997}, 0};
+				object = "Land_WoodenCrate_01_F";
+				position[] = {{-2.8501,2.09277,-0.20369}, 0};
 			};
 		};
 
 		class Land_i_House_Small_02_V1_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {-1.74902,-0.0693359,-1.12361};
+			spawnPos[] = {-1.74902,-0.0688477,-1.12361};
 			
 			class Storage {
 				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{-0.000976563,-0.80283}, 0};
+				position[] = {{4.62061,-2.86719,-1.12596}, 90};
 			};
 		};
 		class Land_i_House_Small_02_V2_F : Land_i_House_Small_02_V1_F {};
@@ -90,11 +90,11 @@ class CfgHousing {
 
 		class Land_i_House_Small_01_V1_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {3.16748,1.87109,-1.34062};
+			spawnPos[] = {3.16797,1.87061,-1.34062};
 			
 			class Storage {
 				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0,-0.000488281,-0.681095}, 0};
+				position[] = {{-1.13623,-3.92871,-1.34306}, 90};
 			};
 		};
 		class Land_i_House_Small_01_V2_F : Land_i_House_Small_01_V1_F {};
@@ -102,21 +102,21 @@ class CfgHousing {
 
 		class Land_i_House_Small_03_V1_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {-3.26807,0.971191,-0.314249};
+			spawnPos[] = {-3.26758,0.970703,-0.314249};
 			
 			class Storage {
 				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0,0,-0.701529}, 0};
+				position[] = {{0.559082,4.48291,-0.316688}, 270};
 			};
 		};
 
 		class Land_i_House_Big_02_V1_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {0.185303,2.71582,-3.75515};
+			spawnPos[] = {0.442383,2.39697,-2.88253};
 			
 			class Storage {
 				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{4.37598, 2.84668, -2.88497}, 0};
+				position[] = {{4.28613,2.84229,-2.88497}, 0};
 			};
 		};
 		class Land_i_House_Big_02_V2_F : Land_i_House_Big_02_V1_F {};
@@ -124,11 +124,11 @@ class CfgHousing {
 
 		class Land_i_House_Big_01_V1_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {-1.92041,-1.29736,-3.06494};
+			spawnPos[] = {-1.91992,-1.29736,-3.06494};
 			
 			class Storage {
 				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0,0,-4.30153}, 0};
+				position[] = {{-4.03271,5.45361,-3.06737}, 180};
 			};
 		};
 		class Land_i_House_Big_01_V2_F : Land_i_House_Big_01_V1_F {};
@@ -136,22 +136,22 @@ class CfgHousing {
 
 		class Land_LightHouse_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {0.598633,-2.52002,-11.5156};
+			spawnPos[] = {0.598145,-2.52051,-11.5156};
 			
 			class Storage {
 				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0,0,-0.381529}, 0};
+				position[] = {{1.00732,-4.0791,-11.1185}, 102.99};
 			};
 		};
 
 		class C_Boat_Civil_04_F : BaseHouse {
 			price = 0;
 			canShare = false;
-			spawnPos[] = {-0.215332,-7.34668,-7.68176};
+			spawnPos[] = {-2.46826,-7.74512,-7.68176};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0,0,-4.93714}, 0};
+				object = "Land_Cargo20_white_F";
+				position[] = {{-0.169434,-8.78467,-7.70293}, 270};
 			};
 		};
 
@@ -159,11 +159,11 @@ class CfgHousing {
 		class Land_i_Shed_Ind_F : BaseHouse {
 			price = 0;
 			breakIn = 10 * 60;
-			spawnPos[] = {5.79297,3.77734,-1.68373};
+			spawnPos[] = {5.79297,3.77783,-1.68354};
 			
 			class Storage {
 				object = "Land_Cargo20_white_F";
-				position[] = {{0,0,-1.47017}, 0};
+				position[] = {{-0.140137,0.405273,-1.64059}, 180};
 			};
 			class Garage {
 				spawnPos[] = {{0, 0, 0}, 0};

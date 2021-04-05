@@ -413,6 +413,7 @@ class CfgFunctions {
 			class groupId {};
 			class groupFunds {};
 			class initGroups {};
+			class isGroupPremium {};
 		};
 
 		class NLR {

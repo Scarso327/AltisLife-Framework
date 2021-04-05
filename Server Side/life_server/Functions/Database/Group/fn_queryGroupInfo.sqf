@@ -19,13 +19,13 @@ if (isNull _unit || { _steamid isEqualTo "" } || { _groupid <= 0 }) exitWith { f
 private _group = [_groupid] call ULP_fnc_getGroupById;
 
 if (isNull _group) then {
-	private _query = [format["SELECT id, owner, name, bank FROM groups WHERE (owner = '%1' OR id = '%2') AND active='1'",
+	private _query = [format["SELECT id, owner, name, bank, premium FROM groups WHERE (owner = '%1' OR id = '%2') AND active='1'",
 		_steamid, _groupid
 	], 2] call DB_fnc_asyncCall;
 
 	if !(_query isEqualTo "" || { _query isEqualTo [] }) exitWith {
 		_query params [
-			"_queryId", "_queryOwner", "_queryName", "_queryBank"
+			"_queryId", "_queryOwner", "_queryName", "_queryBank", "_queryPremium"
 		];
 
 		if !(_groupid isEqualTo _queryid) exitWith {
@@ -44,6 +44,11 @@ if (isNull _group) then {
 		if (_queryBank > 0) then {
 			_group setVariable ["group_viewablefunds", _queryBank, true];
 			_group setVariable ["group_funds", _queryBank];
+		};
+
+		_queryPremium = [_queryPremium] call ULP_fnc_bool;
+		if (_queryPremium) then {
+			_group setVariable ["group_premium", _queryPremium, true];
 		};
 	};
 

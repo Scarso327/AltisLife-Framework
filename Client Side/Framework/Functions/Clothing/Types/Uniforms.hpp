@@ -22,6 +22,11 @@ class U_C_Poloshirt_blue {
 		class U_C_Poloshirt_tricolour : U_C_Poloshirt_blue { displayName = "Tricolor"; };
 		class U_C_Poloshirt_salmon : U_C_Poloshirt_blue { displayName = "Salmon"; };
 		class U_C_Poloshirt_redwhite : U_C_Poloshirt_blue { displayName = "Redwhite"; };
+		class GroupUniform : U_C_Poloshirt_blue {
+			displayName = "Group Uniform";
+			textures[] = { "#(rgb,8,8,3)color(1,0,0,1)" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
 class U_C_Poloshirt_burgundy : U_C_Poloshirt_blue{};

@@ -42,7 +42,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	};
 
 	// This gang has something matching but is also inactive, to save queries we can just update this one as ours...
-	[format["UPDATE groups SET owner = '%1', tag = '%2', name = '%3', bank = '0', active = '1' WHERE id = '%4'",
+	[format["UPDATE groups SET owner = '%1', tag = '%2', name = '%3', bank = '0', premium = '0', active = '1' WHERE id = '%4'",
 		_steamid, _tag, _name, _queryId
 	], 1] call DB_fnc_asyncCall;
 

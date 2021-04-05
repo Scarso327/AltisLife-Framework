@@ -10,7 +10,7 @@ _this params [
 	["_taser", false, [true]]
 ];
 
-if (isDowned(player)) exitWith { false };
+if (!(isNull (objectParent player)) || { isDowned(player) }) exitWith { false };
 
 [] spawn ULP_UI_fnc_closeDialogs;
 

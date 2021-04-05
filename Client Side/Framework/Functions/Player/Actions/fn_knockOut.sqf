@@ -14,7 +14,8 @@ if (isNull _target || { !(isPlayer _target) } ||
 	{ _target isEqualTo player } || { (_target distance player) >= 3 } || 
 	{ isDowned(_target) } || { isDowned(player) } ||
 	{ time <= missionNamespace getVariable["ULP_KnockOut_Cooldown", 0] } ||
-	{ [player] call ULP_fnc_isKnocked } || { [_target] call ULP_fnc_isKnocked }
+	{ [player] call ULP_fnc_isKnocked } || { [_target] call ULP_fnc_isKnocked } ||
+	{ !(isNull (objectParent player)) } || { !(isNull (objectParent _target)) }
 ) exitWith { false };
 
 if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith {

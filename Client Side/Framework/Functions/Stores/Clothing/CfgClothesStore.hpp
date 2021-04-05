@@ -679,7 +679,7 @@ class CfgClothesStore {
 			class G_Lowprofile {};
 			class G_Combat {};
 			class G_RegulatorMask_F {};
-			class G_Blindfold_01_black__F {};
+			class G_Blindfold_01_black_F {};
 			class G_Bandanna_aviator {};
 			class G_Balaclava_blk {};
 		};

@@ -47,16 +47,20 @@ if (isClass (_factionCfg >> "Whitelisting")) then {
 };
 
 ["Setting Textures"] call ULP_fnc_logIt;
-private _container = objNull;
-
-{
-	_container = uniformContainer _x;
-	[_x, _container, _container getVariable ["texture", ""], false] call ULP_fnc_setTextures;
-} forEach allUnits select {
-	!(_x isEqualTo player)
-};
 
 [{
+	{
+		{
+			_x params [ "_object", "_objectContainer" ];
+			
+			private _texture = _objectContainer getVariable ["texture", ""];
+
+			if !(_texture isEqualTo "") then {
+				[_object, _objectContainer, _texture] call ULP_fnc_setTextures;
+			};
+		} foreach [[_x, uniformContainer _x], [unitBackpack _x, backpackContainer _x]];
+	} forEach (allUnits select { !(_x isEqualTo player) });
+
 	{
 		if (_x getVariable["jipReady", false]) then { [_x, true] call ULP_fnc_initVehicle; };
 		if ((getPlayerUID player) in (_x getVariable ["vehicle_owners", createHashMap])) then { ULP_Keys pushBackUnique _x; };

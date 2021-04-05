@@ -45,6 +45,8 @@ if !([format["Crushing %1", _name], _time, [_vehicle, _name, _fee], {
 	};
 
 	deleteVehicle _vehicle;
+	["FirstCrush"] call ULP_fnc_achieve;
+
 	hint "Vehicle has been crushed.";
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
 	hint "You can't crush a vehicle while performing another action...";

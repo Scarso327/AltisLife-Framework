@@ -57,6 +57,8 @@ if ((_vehicle getVariable ["vehicle_id", -1]) < 0) exitWith {
 				hint "Rentals can't be impounded";
 			};
 
+			["FirstImpound"] call ULP_fnc_achieve;
+
 			hint format["You've requested an impounded for %1 with a fee of %2%3...", _name, "£", [_fee] call ULP_fnc_numberText];
 			["VehicleStored", { hint "Vehicle has been impounded."; }, true] call ULP_fnc_addEventHandler;
 			[_vehicle, _fee] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];

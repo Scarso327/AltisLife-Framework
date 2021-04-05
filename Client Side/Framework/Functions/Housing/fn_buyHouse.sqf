@@ -79,6 +79,7 @@ _objectCfg params [ "", "", "", "_name" ];
 
 		if ([_money, true, "Bought House"] call ULP_fnc_removeMoney) then {
 			hint "Buying House...";
+			["BuyHouse"] call ULP_fnc_achieve;
 			[player, _house, _money] remoteExecCall ["ULP_SRV_fnc_buyHouse", RSERV];
 		} else {
 			hint format ["You can't afford %1%2 to buy this house...", "£", [_money] call ULP_fnc_numberText];

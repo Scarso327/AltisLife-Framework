@@ -43,6 +43,7 @@ class CfgFunctions {
 			class onGetOut {};
 			class onFired {};
 			class onReloaded {};
+			class onTake {};
 		};
 
 		class Utility {

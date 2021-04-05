@@ -50,8 +50,8 @@ switch (_code) do {
         };
     };
 
-    case RWINDOWS: {
-        if !(_shift && { _ctrlKey } && { _alt }) then {
+    case O: {
+        if (_shift && { !_ctrlKey } && { !_alt }) then {
             ULP_FadeSound = !ULP_FadeSound;
             0 fadeSound ([1, ["EffectsFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
             0 fadeMusic ([1, ["MusicFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));

@@ -11,21 +11,11 @@ class CfgVehicleStores {
 		class Vehicles {
 			class C_SUV_01_F {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
-				class Textures {
-					class PoliceWhite {};
-					class PoliceBlack {};
-					class PoliceANPR {};
-					class PoliceUnmarked {};
-				};
+				class Textures {};
 			};
 			class C_Hatchback_01_sport_F {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
-				class Textures {
-					class PoliceWhite {};
-					class PoliceBlack {};
-					class PoliceANPR {};
-					class PoliceUnmarked {};
-				};
+				class Textures {};
 			};
 			class B_GEN_Van_02_transport_F {
 				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";

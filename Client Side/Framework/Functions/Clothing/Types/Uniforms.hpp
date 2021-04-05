@@ -1,6 +1,7 @@
 class U_C_Poor_1 {
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {};
 };
 class U_C_Farmer : U_C_Poor_1{};
@@ -10,6 +11,7 @@ class U_C_Poloshirt_blue {
 	displayName = "Commoner Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_Poloshirt_blue { 
 			displayName = "Blue"; 
@@ -32,6 +34,7 @@ class U_C_WorkerOveralls {
 	displayName = "Worker Overalls";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_WorkerOveralls { 
 			displayName = "Used"; 
@@ -68,6 +71,7 @@ class U_C_Man_casual_1_F {
 	displayName = "Casual Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_Man_casual_1_F { 
 			displayName = "Navy"; 
@@ -92,6 +96,7 @@ class U_C_ArtTShirt_01_v1_F {
 	displayName = "Casual T-Shirts";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_ArtTShirt_01_v1_F { 
 			displayName = "Art of War"; 
@@ -114,6 +119,7 @@ class U_C_Man_casual_6_F {
 	displayName = "Summer Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_Man_casual_6_F { 
 			displayName = "Red"; 
@@ -130,6 +136,7 @@ class U_C_man_sport_1_F {
 	displayName = "Sport Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_man_sport_1_F { 
 			displayName = "Beach"; 
@@ -146,6 +153,7 @@ class U_C_Scientist {
 	displayName = "Scientist Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_Scientist { 
 			displayName = "White Overalls"; 
@@ -166,6 +174,7 @@ class U_I_C_Soldier_Bandit_1_F {
 	displayName = "Banit Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_I_C_Soldier_Bandit_1_F { 
 			displayName = "Polo Shirt"; 
@@ -184,6 +193,7 @@ class U_I_C_Soldier_Bandit_3_F {
 	displayName = "Casual Outfit"; 
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Brown"; 
@@ -212,6 +222,7 @@ class U_IG_Guerilla1_1 {
 	displayName = "Guerilla Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_IG_Guerilla1_1 { 
 			displayName = "Garment"; 
@@ -264,6 +275,7 @@ class U_C_E_LooterJacket_01_F {
 	displayName = "Looter Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_E_LooterJacket_01_F { 
 			displayName = "Leather Jacket"; 
@@ -284,6 +296,7 @@ class U_O_R_Gorka_01_black_F {
 	displayName = "Tracksuit";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class RPU {
 			displayName = "RPU";
@@ -310,6 +323,7 @@ class U_I_C_Soldier_Para_1_F {
 	displayName = "Paramilitary Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_I_C_Soldier_Para_1_F { 
 			displayName = "Tee"; 
@@ -330,6 +344,7 @@ class U_B_Wetsuit {
 	displayName = "Wetsuits";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_B_Wetsuit { 
 			displayName = "Black"; 
@@ -351,6 +366,7 @@ class U_Marshal {
 	displayName = "Driver Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_Marshal { 
 			displayName = "Marshall"; 
@@ -385,6 +401,7 @@ class U_C_IDAP_Man_shorts_F {
 	displayName = "IDAP Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_IDAP_Man_shorts_F { 
 			displayName = "Polo, Shorts"; 
@@ -406,12 +423,15 @@ class U_C_IDAP_Man_TeeShorts_F : U_C_IDAP_Man_shorts_F{};
 class U_C_Journalist {
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {};
 };
 
 class U_Rangemaster {
 	displayName = "Patrol Uniform";
 	price = 0;
+	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class CC {
 			displayName = "Chief Constable";
@@ -464,6 +484,8 @@ class U_Rangemaster {
 class U_Competitor {
 	displayName = "Response Uniform";
 	price = 0;
+	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class DR {
 			displayName = "Doctor";
@@ -487,6 +509,7 @@ class U_BG_Guerrilla_6_1 {
 	displayName = "Patrol Jumper";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class COMMAND {
 			displayName = "Command";
@@ -509,6 +532,7 @@ class U_BG_Guerrilla_6_1 {
 class U_OrestesBody {
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {};
 };
 
@@ -516,6 +540,7 @@ class U_NikosBody {
 	displayName = "Fine Shirt";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {};
 };
 
@@ -523,6 +548,7 @@ class U_NikosAgedBody {
 	displayName = "Fine Suit";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {};
 };
 
@@ -530,6 +556,7 @@ class U_C_FormalSuit_01_tshirt_black_F {
 	displayName = "Formal Suit, T-Shirt";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_FormalSuit_01_tshirt_black_F { 
 			displayName = "Black"; 
@@ -548,6 +575,7 @@ class U_C_FormalSuit_01_black_F {
 	displayName = "Formal Suit";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_C_FormalSuit_01_black_F { 
 			displayName = "Black"; 
@@ -571,6 +599,7 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 	displayName = "Parade Uniform";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_I_ParadeUniform_01_AAF_decorated_F { 
 			displayName = "Command"; 
@@ -592,6 +621,7 @@ class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F{};
 class U_B_survival_uniform {
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {};
 };
 
@@ -599,6 +629,7 @@ class U_B_CombatUniform_mcam_worn {
 	displayName = "Specialised Uniform";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class RPU {
 			displayName = "Traffic Uniform";
@@ -617,6 +648,7 @@ class U_B_CombatUniform_mcam {
 	displayName = "Combat Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_B_CombatUniform_mcam { 
 			displayName = "MTP (Base)"; 
@@ -638,6 +670,7 @@ class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam{};
 class U_B_CTRG_Soldier_F {
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class SCO19 {
 			displayName = "SCO19 Uniform";
@@ -657,6 +690,7 @@ class U_B_GhillieSuit {
 	displayName = "Half-Ghillies";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class SCO19 {
 			displayName = "SCO19 Ghillie";
@@ -678,6 +712,7 @@ class U_B_FullGhillie_ard {
 	displayName = "Full-Ghillies";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_B_FullGhillie_ard { 
 			displayName = "Arid"; 
@@ -694,6 +729,7 @@ class U_B_HeliPilotCoveralls {
 	displayName = "Flight Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class U_B_HeliPilotCoveralls { 
 			displayName = "Green"; 
@@ -708,6 +744,7 @@ class U_O_PilotCoveralls {
 	displayName = "Flight Clothes";
 	price = 0;
 	virtualSpace = 0;
+	isGas = false;
 	class Textures {
 		class NPAS {
 			displayName = "NPAS Uniform";
@@ -726,6 +763,7 @@ class U_C_CBRN_Suit_01_White_F {
 	displayName = "CBRN Suits";
 	price = 0;
 	virtualSpace = 0;
+	isGas = true;
 	class Textures {
 		class U_C_CBRN_Suit_01_White_F { 
 			displayName = "White"; 

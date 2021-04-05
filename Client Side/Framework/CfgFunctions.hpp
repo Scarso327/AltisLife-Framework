@@ -87,6 +87,7 @@ class CfgFunctions {
 		class Clothing {
 			file = "Functions\Clothing";
 			class setTextures {};
+			class isGas {};
 			class isMask {};
 		};
 

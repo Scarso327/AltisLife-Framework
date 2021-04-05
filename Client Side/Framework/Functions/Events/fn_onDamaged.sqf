@@ -34,19 +34,26 @@ if (!(isNull (objectParent _unit)) && { (vehicle _unit) isKindOf "LandVehicle" }
 	] select ((speed (vehicle _unit)) <= 80));
 };
 
-if (!isNull _source) then {
+if !(isNull _source) then {
 	if ((currentWeapon _source) in getArray(missionConfigFile >> "CfgSettings" >> "taserWeapons")) exitWith {
 		if ((_unit distance _source) <= 50) then {
 			[_source, true] call ULP_fnc_onKnocked;
 		};
 
+		_originalDamage;
+	};
+
+	if (_projectile isEqualTo "" && { (vehicle _source) isKindOf "LandVehicle" }) then {
+		if !(diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2) then {
+			hint format ["You have just been ran over by %1", name _source];
+		};
+		_unit setVariable ["vdmVar", diag_tickTime];
+
 		_originalDamage breakOut "fn_onDamaged";
 	};
 };
 
-// TODO : Exit with original damage if knocked or tased...
-
-// TODO : Handle Taser, Anti-VDM & Seatbelts...
+if (_part isEqualTo "" && { diag_tickTime  - (_unit getVariable ["vdmVar", 0]) < 1 }) exitWith { _orginalDamage };
 
 if (_damage >= 1) then {
 	_damage = 0.99; // They're hurt... 1 or over would kill them...

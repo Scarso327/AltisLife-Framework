@@ -1501,6 +1501,10 @@ class CfgVehicles {
 		isHouse = true;
 	};
 
+	class Land_Cargo20_white_F : Land_PlasticCase_01_large_gray_F {
+		virtualSpace = 5000;
+	};
+
 	// SOUNDS --------------------------------------------------------------------------------------
 	class Police_One {
 		sound = "Police_One";

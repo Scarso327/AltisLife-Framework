@@ -39,7 +39,9 @@ if (isClass (_class)) then {
 		private _texture = (_textures select 0); // Always select first as that'll be highest rank if it's a rank based item...
 
 		if !(_texture isEqualTo "") then {
-			[player, uniformContainer player, _texture] call ULP_fnc_setTextures;
+			[{ (uniform player) isEqualTo (_this select 0) }, [_uniform, _texture], {
+				[player, uniformContainer player, (_this select 1)] call ULP_fnc_setTextures;
+			}] call ULP_fnc_waitUntilExecute;
 		};
 	};
 };

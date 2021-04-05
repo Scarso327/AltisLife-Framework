@@ -12,10 +12,10 @@ class CfgTags {
 					"PoliceSC",
 					"PolicePC",
 					"PoliceSGT",
-					"PoliceINS",
+					"PoliceSU",
 					"PoliceCI",
-					"PoliceSI",
-					"PoliceCSI",
+					"PoliceSU",
+					"PoliceCSU",
 					"PoliceDCC",
 					"PoliceCC"
 				};
@@ -55,13 +55,13 @@ class CfgTags {
 			subtitle = "Deputy Chief Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
-		class PoliceCSI {
-			icon = "Data\Tags\Ranks\Police\CSI.paa";
+		class PoliceCSU {
+			icon = "Data\Tags\Ranks\Police\CSU.paa";
 			subtitle = "Chief Superintendent";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 9] call ULP_fnc_hasAccess }";
 		};
-		class PoliceSI {
-			icon = "Data\Tags\Ranks\Police\SI.paa";
+		class PoliceSU {
+			icon = "Data\Tags\Ranks\Police\SU.paa";
 			subtitle = "Superintendent";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
 		};
@@ -70,14 +70,14 @@ class CfgTags {
 			subtitle = "Chief Inspector";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 7] call ULP_fnc_hasAccess }";
 		};
-		class PoliceINS {
-			icon = "Data\Tags\Ranks\Police\INS.paa";
-			subtitle = "Inspector";
+		class PolicePI {
+			icon = "Data\Tags\Ranks\Police\PI.paa";
+			subtitle = "Police Inspector";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 6] call ULP_fnc_hasAccess }";
 		};
-		class PoliceSGT {
-			icon = "Data\Tags\Ranks\Police\SGT.paa";
-			subtitle = "Sergeant";
+		class PolicePS {
+			icon = "Data\Tags\Ranks\Police\PS.paa";
+			subtitle = "Police Sergeant";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
 		class PolicePC  {

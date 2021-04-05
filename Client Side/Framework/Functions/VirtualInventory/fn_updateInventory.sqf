@@ -47,7 +47,7 @@ if (_type isEqualTo 0) then {
 		};
 	} forEach ULP_Inventory;
 
-	(_display displayCtrl 4205) ctrlEnable (((count ULP_Inventory) > 0) && { [_container] call ULP_fnc_isCargoUser });
+	(_display displayCtrl 4205) ctrlEnable (((lbSize _list) > 0) && { [_container] call ULP_fnc_isCargoUser });
 } else {
 	private _containerTitle = _display displayCtrl 4206;
 	_containerTitle ctrlSetStructuredText parseText format["Container Inventory<t align='right'>%1/%2</t>", [_container] call ULP_fnc_currentLoad, [_container] call ULP_fnc_maxLoad];
@@ -77,7 +77,7 @@ if (_type isEqualTo 0) then {
 		};
 	} forEach _inventory;
 
-	(_display displayCtrl 4209) ctrlEnable (((count _inventory) > 0) && { [_container] call ULP_fnc_isCargoUser });;
+	(_display displayCtrl 4209) ctrlEnable (((lbSize _list) > 0) && { [_container] call ULP_fnc_isCargoUser });
 };
 
 true

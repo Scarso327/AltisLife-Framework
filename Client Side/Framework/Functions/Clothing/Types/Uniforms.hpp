@@ -478,6 +478,11 @@ class U_Rangemaster {
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SGT.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
+		class SC {
+			displayName = "Special Contable";
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SC.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 3] call ULP_fnc_hasAccess }";
+		};
 		class PC {
 			displayName = "Contable";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PC.paa" };

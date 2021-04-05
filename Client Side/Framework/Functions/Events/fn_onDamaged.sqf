@@ -20,6 +20,8 @@ private _originalDamage = [
 	damage _unit
 ] select (_part isEqualTo "");
 
+if ([_unit] call ULP_fnc_isKnocked) exitWith { _originalDamage };
+
 if (!(isNull (objectParent _unit)) && { (vehicle _unit) isKindOf "LandVehicle" }) then {
 	private _multiplier = [
 		1.25,

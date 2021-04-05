@@ -8,6 +8,7 @@ scopeName "fn_selectVehicles";
 _this params [
 	["_parent", displayNull, [displayNull]],
 	["_objects", [], [[]]],
+	["_buttons", ["Select", "Cancel"], [[]]],
 	["_params", [], [[]]],
 	["_onSelect", {}, [{}]],
 	["_tablet", true, [false]]
@@ -38,6 +39,8 @@ private _list = _display displayCtrl 4509;
 		_list lbSetPicture [_item, _icon];
 	};
 } forEach _objects;
+
+(_display displayCtrl 4506) ctrlSetStructuredText parseText format ["<t align = 'center'>%1</t>", _buttons select 0];
 
 _display setVariable ["params", _params];
 _display setVariable ["onSelect", _onSelect];

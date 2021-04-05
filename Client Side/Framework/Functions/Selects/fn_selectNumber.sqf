@@ -30,8 +30,8 @@ _slider sliderSetPosition 1;
 _slider sliderSetSpeed [1, 1, 1];
 
 _minMaxText ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>%2</t>",
-	_boundaries select 0,
-	_boundaries select 1
+	[_boundaries select 0] call ULP_fnc_numberText,
+	[_boundaries select 1] call ULP_fnc_numberText
 ];
 
 _input ctrlSetText ([_boundaries select 0] call ULP_fnc_numberText);

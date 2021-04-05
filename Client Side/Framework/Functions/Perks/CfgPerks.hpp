@@ -4,7 +4,7 @@ class CfgPerks {
 	removalCost = 100000;
 
 	class SecondNature {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\secondNature.paa";
 		displayName = "Second Nature";
 		description = "Automatically applies your seatbelt.";
 		removalMultiplier = 1;
@@ -18,7 +18,7 @@ class CfgPerks {
 	};
 
 	class ImprovedMetabolism { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\improvedMetabolism.paa";
 		displayName = "Improved Metabolism";
 		description = "Slows your hunger and dehydration gain by 50%.";
 		removalMultiplier = 1;
@@ -32,7 +32,7 @@ class CfgPerks {
 	};
 
 	class GovernmentBonus {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\governmentBonus.paa";
 		displayName = "Government Bonus";
 		description = "Increases your base paycheck by %1%2.";
 		removalMultiplier = 1;
@@ -52,7 +52,7 @@ class CfgPerks {
 	};
 
 	class Muscleman { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\muscleman.paa";
 		displayName = "Muscleman";
 		description = "Increases your Item carry limit by 25%.";
 		removalMultiplier = 1;
@@ -66,7 +66,7 @@ class CfgPerks {
 	};
 
 	class GeneralMechanic { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\generalMechanic.paa";
 		displayName = "General Mechanic";
 		description = "Decreases the likelihood of breaking your toolkit by %1%2.";
 		removalMultiplier = 1;
@@ -86,7 +86,7 @@ class CfgPerks {
 	};
 
 	class MindfulPlanner { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\mindfulPlanner.paa";
 		displayName = "Mindful Planner";
 		description = "You will spawn with a GPS and Binoculars.";
 		removalMultiplier = 2;
@@ -100,7 +100,7 @@ class CfgPerks {
 	};
 
 	class WideTraveller {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\wideTraveller.paa";
 		displayName = "Wide Traveller";
 		description = "Allows you to spawn in Sofia, Agios and Neochori.";
 		removalMultiplier = 5;
@@ -114,7 +114,7 @@ class CfgPerks {
 	};
 
 	class LegalTrader {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\legalTrader.paa";
 		displayName = "Legal Trader";
 		description = "Increase the price you sell legal items for by %1%2.";
 		removalMultiplier = 3;
@@ -134,7 +134,7 @@ class CfgPerks {
 	};
 
 	class ShadyTrader {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\shadyTrader.paa";
 		displayName = "Shady Trader";
 		description = "Increase the price you sell illegal items for by %1%2.";
 		removalMultiplier = 3;
@@ -154,7 +154,7 @@ class CfgPerks {
 	};
 
 	class EcoDriver { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\ecoDriver.paa";
 		displayName = "Eco Driver";
 		description = "Decreases the cost of fuel per litre by %1%2.";
 		removalMultiplier = 1;
@@ -174,7 +174,7 @@ class CfgPerks {
 	};
 
 	class SlightofHand { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\slightOfHand.paa";
 		displayName = "Slight of Hand";
 		description = "Increases repacking of your magazines speed by %1%2.";
 		removalMultiplier = 1.5;
@@ -194,7 +194,7 @@ class CfgPerks {
 	};
 
 	class BloodCarrier { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\bloodCarrier.paa";
 		displayName = "Blood Carrier";
 		description = "Blood bags become 50% more effective.";
 		removalMultiplier = 1.2;
@@ -208,7 +208,7 @@ class CfgPerks {
 	};
 
 	class FirstAider { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "First Aider";
 		description = "FirstAidKits becomes 100% effective.";
 		removalMultiplier = 1.2;
@@ -222,7 +222,7 @@ class CfgPerks {
 	};
 
 	class SpeedyLocksmith { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\speedyLocksmith.paa";
 		displayName = "Speedy Locksmith";
 		description = "Increases your lockpicking speed by %1%2.";
 		removalMultiplier = 1.3;
@@ -242,7 +242,7 @@ class CfgPerks {
 	};
 
 	class SilentLocksmith { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\silentLocksmith.paa";
 		displayName = "Silent Locksmith";
 		description = "Decreases the likelihood of triggering an alarm by %1%2.";
 		removalMultiplier = 1.3;
@@ -262,7 +262,7 @@ class CfgPerks {
 	};
 
 	class QuickLearner { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\quickLearner.paa";
 		displayName = "Quick Learner";
 		description = "Increases the amount of profession's XP gained by 10%.";
 		removalMultiplier = 1.5;
@@ -276,7 +276,7 @@ class CfgPerks {
 	};
 
 	class UncertainPersonality { // TODO
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicWalk_ca.paa"; // ICON
+		icon = "Data\UI\Perks\uncertainPersonality.paa";
 		displayName = "Uncertain Personality";
 		description = "Gain the chance of keeping a vehicle when chopping.";
 		removalMultiplier = 2;

@@ -19,17 +19,19 @@ class CfgMessages {
 	};
 
 	class PoliceDispatch : Message {
+		picture = "Data\UI\Messaging\999.paa";
 		displayName = "Police Dispatch";
 		targets = "[""Police""] call ULP_fnc_allMembers";
 	};
 
-	class NHSDispatch : Message {
+	class NHSDispatch : PoliceDispatch {
 		displayName = "NHS Dispatch";
 		targets = "[""Medic""] call ULP_fnc_allMembers";
 	};
 
 	class PublicAnnoucement : Message {
-		displayName = "Annoucement";
+		picture = "Data\UI\Messaging\publicAnnouncement.paa";
+		displayName = "Public Annoucement";
 		ignoreStreamer = true;
 		ignoreComms = true;
 		canReply = false;
@@ -38,6 +40,7 @@ class CfgMessages {
 	};
 
 	class EventsAnnoucement : PublicAnnoucement {
+		picture = "Data\UI\Messaging\eventAnnouncement.paa";
 		displayName = "Event Annoucement";
 		sender = "Events Team";
 		targets = "0";
@@ -45,6 +48,7 @@ class CfgMessages {
 	};
 
 	class Dispute : Message {
+		picture = "Data\UI\dispute.paa";
 		displayName = "Dispute";
 		ignoreStreamer = true;
 		ignoreComms = true;

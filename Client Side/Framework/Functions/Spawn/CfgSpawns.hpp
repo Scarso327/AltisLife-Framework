@@ -30,44 +30,44 @@ class CfgSpawns {
         class KavalaStation : Police {
             displayName = "Kavala Headquarters";
             marker = "apc_spawn_kavala";
-            icon = "";
+            icon = "Data\UI\Spawns\kavala.paa";
         };
         class AthiraStation : Police {
             displayName = "Athira Station";
             marker = "apc_spawn_athira";
-            icon = "";
+            icon = "Data\UI\Spawns\athira.paa";
         };
         class PyrgosStation : Police {
             displayName = "Pyrgos Station";
             marker = "apc_spawn_pyrgos";
-            icon = "";
+            icon = "Data\UI\Spawns\pyrgos.paa";
         };
         class AgiosStation : Police {
             displayName = "Agios Station";
             marker = "apc_spawn_agios";
-            icon = "";
+            icon = "Data\UI\Spawns\agios.paa";
         };
 
         // National Health Service
         class KavalaHospital : Medic {
             displayName = "Kavala Hospital";
             marker = "nhs_spawn_kavala";
-            icon = "";
+            icon = "Data\UI\Spawns\kavala.paa";
         };
         class AthiraClinic : Medic {
             displayName = "Athira Clinic";
             marker = "nhs_spawn_athira";
-            icon = "";
+            icon = "Data\UI\Spawns\athira.paa";
         };
         class PyrgosHClinic : Medic {
             displayName = "Pyrgos Clinic";
             marker = "nhs_spawn_pyrgos";
-            icon = "";
+            icon = "Data\UI\Spawns\pyrgos.paa";
         };
         class SofiaHClinic : Medic {
             displayName = "Sofia Clinic";
             marker = "nhs_spawn_sofia";
-            icon = "";
+            icon = "Data\UI\Spawns\sofia.paa";
         };
 
         // Altis Police Constabulary / National Health Service
@@ -75,65 +75,70 @@ class CfgSpawns {
             displayName = "Marine Base";
             factions[] = { "Police", "Medic" };
             marker = "joint_spawn_marine";
-            icon = "";
+            icon = "Data\UI\Spawns\marine.paa";
         };
 
         // HATO
         class HatoKavala : HATO {
             displayName = "Highways Agency";
             marker = "hato_spawn_kavala";
-            icon = "";
+            icon = "Data\UI\Spawns\kavala.paa";
         };
 
         // Civilian
         class Kavala : Civilian {
             displayName = "Kavala";
             marker = "civ_spawn_kavala";
-            icon = "";
+            icon = "Data\UI\Spawns\kavala.paa";
         };
         class Athira : Civilian {
             displayName = "Athira";
             marker = "civ_spawn_athira";
-            icon = "";
+            icon = "Data\UI\Spawns\athira.paa";
         };
         class Pyrgos : Civilian {
             displayName = "Pyrgos";
             marker = "civ_spawn_pyrgos";
-            icon = "";
+            icon = "Data\UI\Spawns\pyrgos.paa";
         };
         class Sofia : Civilian {
             displayName = "Sofia";
             marker = "civ_spawn_sofia";
-            icon = "";
+            icon = "Data\UI\Spawns\sofia.paa";
             conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
         class Agios : Civilian {
             displayName = "Agios";
             marker = "civ_spawn_agios";
-            icon = "";
+            icon = "Data\UI\Spawns\agios.paa";
             conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
         class Neochori : Civilian {
             displayName = "Neochori";
             marker = "civ_spawn_neochori";
-            icon = "";
+            icon = "Data\UI\Spawns\neochori.paa";
             conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
 
         class Taxi : Civilian {
             displayName = "Taxi Altis";
             marker = "civ_spawn_taxi";
-            icon = "";
+            icon = "Data\UI\Spawns\taxi.paa";
         };
         class Solicitor : Civilian {
             displayName = "Altis Solicitors";
             marker = "civ_spawn_solicitor";
-            icon = "";
+            icon = "Data\UI\Spawns\solicitor.paa";
         };
         class News : Civilian {
             displayName = "AAN World News";
             marker = "civ_spawn_news";
-            icon = "";
+            icon = "Data\UI\Spawns\news.paa";
+        };
+        class IDAP : Civilian {
+            displayName = "IDAP Camp";
+            marker = "civ_spawn_idap";
+            icon = "Data\UI\Spawns\idap.paa";
         };
     };
 

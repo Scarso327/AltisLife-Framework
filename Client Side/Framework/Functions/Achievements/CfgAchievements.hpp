@@ -254,35 +254,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
-	class WeekLoyalty {
-		icon = "Data\UI\Achievements\loyaltyWeek.paa";
-		displayName = "A Week's Loyalty";
-		description = "Achieved a loyalty streak of 7-days.";
-		onUnlocked = "[""WeekLoyalty""] call ULP_fnc_unlockTitle;";
-		leveling[] = { 1000, "Achievement Unlocked", 100 };
-		isMystery = false;
-	};
-
-	// TODO
-	class MonthLoyalty {
-		icon = "Data\UI\Achievements\loyaltyMonth.paa";
-		displayName = "A Month's Loyalty";
-		description = "Achieved a loyalty streak of 30-days.";
-		leveling[] = { 5000, "Achievement Unlocked", 100 };
-		isMystery = false;
-	};
-
-	// TODO
-	class YearLoyalty {
-		icon = "Data\UI\Achievements\loyaltyYear.paa";
-		displayName = "Simply No Life";
-		description = "Achieved a loyalty streak of 365-days.";
-		onUnlocked = "[""YearLoyalty""] call ULP_fnc_unlockTitle;";
-		leveling[] = { 10000, "Achievement Unlocked", 100 };
-		isMystery = false;
-	};
-
 	// MYSTERY ---------------------------------------------------------
 	class Prestige {
 		icon = "Data\UI\Achievements\prestige.paa";

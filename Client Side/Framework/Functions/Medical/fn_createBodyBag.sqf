@@ -15,6 +15,7 @@ if !(_this params [
 ]) exitWith { false };
 
 private _items = + ULP_Inventory;
+if ("Identification" in _items) then { _items deleteAt "Identification"; };
 if ((count _items) isEqualTo 0) exitWith { false };
 
 private _bodyBag = createSimpleObject ["Land_Bodybag_01_black_F", AGLtoASL _pos];

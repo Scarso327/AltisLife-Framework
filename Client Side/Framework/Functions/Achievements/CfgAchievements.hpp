@@ -140,7 +140,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class FirstImpound {
 		icon = "Data\UI\Achievements\firstImpound.paa";
 		displayName = "Street Cleaner";
@@ -149,7 +148,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class FirstCrush {
 		icon = "Data\UI\Achievements\firstCrush.paa";
 		displayName = "Vehicle Scrapper";
@@ -214,7 +212,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class BuyHouse {
 		icon = "Data\UI\Achievements\house.paa";
 		displayName = "First House";
@@ -232,7 +229,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class OneMillion {
 		icon = "Data\UI\Achievements\money1.paa";
 		displayName = "£1,000,000";
@@ -242,7 +238,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class TenMillion {
 		icon = "Data\UI\Achievements\money10.paa";
 		displayName = "£10,000,000";
@@ -251,7 +246,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class HundredMillion {
 		icon = "Data\UI\Achievements\money100.paa";
 		displayName = "£100,000,000";

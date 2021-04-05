@@ -28,5 +28,9 @@ if (_isBank) then {
 	[player, 1, [CASH, _amount, true, _transaction]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 };
 
+if (BANK >= 1000000) then { ["OneMillion"] call ULP_fnc_achieve; };
+if (BANK >= 10000000) then { ["TenMillion"] call ULP_fnc_achieve; };
+if (BANK >= 100000000) then { ["HundredMillion"] call ULP_fnc_achieve; };
+
 ["MoneyChanged", [CASH, BANK]] call ULP_fnc_invokeEvent;
 true

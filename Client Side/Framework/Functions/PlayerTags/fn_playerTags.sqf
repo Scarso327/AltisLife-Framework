@@ -34,7 +34,7 @@ if (_enable) then {
 			if !(_subtitle isEqualTo "") then { drawIcon3D["", _otherColour, _pos, 0, 2.3, 0, _subtitle, 0, 0.03, "RobotoCondensed", "center"]; };
 			if !(_title isEqualTo "") then { drawIcon3D["", _otherColour, _pos, 0, 3.3, 0, _title, 0, 0.03, "RobotoCondensed", "center"]; };
 		} count ((((getPosATLVisual player) nearEntities [ ["Man", "Land_InfoStand_V1_F"], 10 ]) select { 
-			_x getVariable["hasPlayerTags", false] && { !(lineIntersects [eyePos player, eyePos _x, player, _x]) } && { !(player isEqualTo _x) || { ["ShowOwnTags", "HUD"] call ULP_fnc_getOption isEqualTo 1 } }
+			(isPlayer _x || { _x getVariable["hasPlayerTags", false] }) && { !(lineIntersects [eyePos player, eyePos _x, player, _x]) } && { !(player isEqualTo _x) || { ["ShowOwnTags", "HUD"] call ULP_fnc_getOption isEqualTo 1 } }
 		}) apply {
 			[
 				_x, [_x] call ULP_fnc_getTagPos, (player distance _x), 

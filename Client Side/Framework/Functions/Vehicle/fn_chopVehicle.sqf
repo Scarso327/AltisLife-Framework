@@ -16,8 +16,8 @@ _this params [
 ];
 
 private _near = ((_trader nearEntities [["Car", "Air", "Ship"], 15]) select {
-	!([_x] call ULP_fnc_getVehicleOwner isEqualTo "") //&&
-	//{ [player, _x] call ULP_fnc_isVehicleOwner })
+	!([_x] call ULP_fnc_getVehicleOwner isEqualTo "") &&
+	{ [player, _x] call ULP_fnc_isVehicleOwner })
 });
 
 if (_near isEqualTo []) exitWith {

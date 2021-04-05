@@ -1,5 +1,8 @@
 class CfgVehicles {
 	retrievalPerc = 0.02;
+	chopKeepChance = 80;
+	chopPerc = 0.035;
+	chopTime = 240;
 
 	class Base {
 		virtualSpace = 0;

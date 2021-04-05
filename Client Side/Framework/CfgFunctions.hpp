@@ -332,6 +332,7 @@ class CfgFunctions {
 
 		class Vehicle {
 			file = "Functions\Vehicle";
+			class chopVehicle {};
 			class createVehicle {};
 			class initVehicle {};
 			class skinVehicle {};

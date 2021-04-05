@@ -275,7 +275,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class UncertainPersonality { // TODO
+	class UncertainPersonality {
 		icon = "Data\UI\Perks\uncertainPersonality.paa";
 		displayName = "Uncertain Personality";
 		description = "Gain the chance of keeping a vehicle when chopping.";
@@ -286,6 +286,6 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "((random 100) max 1)";
 	};
 };

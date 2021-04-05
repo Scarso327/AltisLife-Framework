@@ -6,7 +6,7 @@
 scopeName "fn_receivedBlood";
 
 _this params [
-	["_medic", objNull, [obNull]]
+	["_medic", objNull, [objNull]]
 ];
 
 if !(alive player || { isDowned(player) }) exitWith {};
@@ -14,7 +14,7 @@ if !(alive player || { isDowned(player) }) exitWith {};
 private _incapUi = ["RscIncapacitated"] call ULP_UI_fnc_getLayer;
 if (isNull _incapUi) exitWith {};
 
-private _increase = getNumber (missionConfigFile >> "CfgSettings" >> "Medical" >> "BloodBagIncrease");
+private _increase = getNumber (missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BloodBagIncrease");
 
 hint ([
 	format ["%1 has administered you blood and so your bleedout has been extended...", name _medic],

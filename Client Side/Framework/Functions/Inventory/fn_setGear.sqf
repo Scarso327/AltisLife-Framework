@@ -63,7 +63,9 @@ if (_itemType isEqualTo "Magazine") then {
 			if !(_items isEqualTo []) then { [_items] call ULP_fnc_addItems; };
 
 			if !(_item isEqualTo _texture) then {
-				[unitBackpack player, backpackContainer player, _texture] call ULP_fnc_setTextures;
+				[{ (backpack player) isEqualTo (_this select 0) }, [_item, _texture], {
+					[unitBackpack player, uniformContainer player, (_this select 1)] call ULP_fnc_setTextures;
+				}] call ULP_fnc_waitUntilExecute;
 			};
 
 			true breakOut "fn_setGear";
@@ -81,7 +83,9 @@ if (_itemType isEqualTo "Magazine") then {
 			if !(_items isEqualTo []) then { [_items] call ULP_fnc_addItems; };
 
 			if !(_item isEqualTo _texture) then {
-				[player, uniformContainer player, _texture] call ULP_fnc_setTextures;
+				[{ (uniform player) isEqualTo (_this select 0) }, [_item, _texture], {
+					[player, uniformContainer player, (_this select 1)] call ULP_fnc_setTextures;
+				}] call ULP_fnc_waitUntilExecute;
 			};
 
 			true breakOut "fn_setGear";

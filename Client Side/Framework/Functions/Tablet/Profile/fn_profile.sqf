@@ -13,7 +13,7 @@ _display setVariable ["preScreen", "Home"];
 private _toolbox = _display displayCtrl 23028;
 
 private _mainText = _display displayCtrl 23024;
-_mainText ctrlSetStructuredText parseText format["<t size='1.25'>%1<br/><t size ='1'>Developer</t></t>", name player];
+_mainText ctrlSetStructuredText parseText format["<t size='1.25'>%1<br/><t size ='1'>%2</t></t>", name player, player getVariable ["title", ""]];
 
 private _prestigeText = _display displayCtrl 23025;
 _prestigeText ctrlSetStructuredText parseText format["<t size ='1' align='center'><t size ='1.25'>%1</t><br/>Prestige</t>", [ULP_Prestige] call ULP_fnc_numberText];

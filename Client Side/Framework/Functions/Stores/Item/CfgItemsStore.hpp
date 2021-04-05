@@ -381,6 +381,8 @@ class CfgItemsStore {
 			class arifle_ARX_blk_F {};
 			class arifle_AKM_F {};
 			class arifle_AK12_F {};
+			class srifle_DMR_01_F {};
+			class srifle_DMR_06_hunter_F {};
 		};
 
 		class Pistols {

@@ -112,11 +112,11 @@ class CfgHousing {
 
 		class Land_i_House_Big_02_V1_F : BaseHouse {
 			price = 0;
-			spawnPos[] = {0.441895,2.39648,-2.88253};
+			spawnPos[] = {0.185303,2.71582,-3.75515};
 			
 			class Storage {
 				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0,0,-4.04812}, 0};
+				position[] = {{4.37598, 2.84668, -2.88497}, 0};
 			};
 		};
 		class Land_i_House_Big_02_V2_F : Land_i_House_Big_02_V1_F {};

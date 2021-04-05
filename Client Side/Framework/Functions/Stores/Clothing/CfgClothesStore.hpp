@@ -369,6 +369,7 @@ class CfgClothesStore {
 			class U_OrestesBody {};
 			class U_NikosBody {};
 			class U_NikosAgedBody {};
+			class U_C_FormalSuit_01_tshirt_black_F {};
 			class U_C_FormalSuit_01_black_F {};
 		};
 

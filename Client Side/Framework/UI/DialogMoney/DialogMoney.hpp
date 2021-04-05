@@ -7,6 +7,7 @@ class DialogMoney {
     idd = 4100;
     movingEnable = 0;
     enableSimulation = 0;
+	onUnload = "[""TransactionsUpdated"", ((_this select 0) getVariable [""trans_event"", -1])] call ULP_fnc_removeEventHandler; [""MoneyChanged"", ((_this select 0) getVariable [""money_event"", -1])] call ULP_fnc_removeEventHandler; [""GroupMoneyChanged"", ((_this select 0) getVariable [""gang_event"", -1])] call ULP_fnc_removeEventHandler;";
 
     class ControlsBackground {
 		class Header : Life_RscText {

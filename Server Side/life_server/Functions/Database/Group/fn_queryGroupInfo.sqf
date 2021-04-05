@@ -19,13 +19,13 @@ if (isNull _unit || { _steamid isEqualTo "" } || { _groupid <= 0 }) exitWith { f
 private _group = [_groupid] call ULP_fnc_getGroupById;
 
 if (isNull _group) then {
-	private _query = [format["SELECT id, owner, name, maxmembers, bank FROM groups WHERE (owner = '%1' OR id = '%2') AND active='1'",
+	private _query = [format["SELECT id, owner, name, bank FROM groups WHERE (owner = '%1' OR id = '%2') AND active='1'",
 		_steamid, _groupid
 	], 2] call DB_fnc_asyncCall;
 
 	if !(_query isEqualTo "" || { _query isEqualTo [] }) exitWith {
 		_query params [
-			"_queryId", "_queryOwner", "_queryName"
+			"_queryId", "_queryOwner", "_queryName", "_queryBank"
 		];
 
 		if !(_groupid isEqualTo _queryid) exitWith {
@@ -40,6 +40,11 @@ if (isNull _group) then {
 		_group setVariable ["group_id", _queryid, true];
 		_group setVariable ["group_owner", _queryowner, true];
 		_group setGroupIdGlobal [_queryname];
+
+		if (_queryBank > 0) then {
+			_group setVariable ["group_viewablefunds", _queryBank, true];
+			_group setVariable ["group_funds", _queryBank];
+		};
 	};
 
 	false breakOut "fn_queryPlayerInfo";

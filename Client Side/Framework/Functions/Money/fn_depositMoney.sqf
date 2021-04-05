@@ -37,7 +37,12 @@ if (_amount <= 0) exitWith {
 		};
 
 		if ([_value, false] call ULP_fnc_removeMoney) then {
-			[_value, true, "Bank Deposit"] call ULP_fnc_addMoney;
+			if (_group) then {
+				[player, _value, true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
+			} else {
+				[_value, true, "Bank Deposit"] call ULP_fnc_addMoney;
+			};
+
 			hint format["You have deposited %1%2", "£", [_value] call ULP_fnc_numberText];
 		};
 	}, false

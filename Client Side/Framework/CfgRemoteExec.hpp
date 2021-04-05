@@ -90,5 +90,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_setHouseName {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_handleGroupFunds {
+            allowedTargets = SERVER;
+        };
     };
 };

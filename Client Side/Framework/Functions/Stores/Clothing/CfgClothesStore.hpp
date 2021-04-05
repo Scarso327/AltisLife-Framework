@@ -18,18 +18,13 @@ class CfgClothesStore {
 			class U_B_CombatUniform_mcam_worn : FactionBase { condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
 			class U_O_PilotCoveralls : FactionBase { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class U_B_CTRG_Soldier_F : FactionBase {
-				displayName = "SCO19 Stealth Uniform";
+				displayName = "SCO19 Combat Uniform";
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_GhillieSuit : FactionBase {
 				displayName = "SCO19 Ghillie Suit";
 				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
-				class textures { class SCO19 {}; };
-			};
-			class U_B_CTRG_Soldier_2_Arid_F : FactionBase {
-				displayName = "SCO19 Command Uniform";
-				condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_Wetsuit : FactionBase {

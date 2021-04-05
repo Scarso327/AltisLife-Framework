@@ -15,6 +15,10 @@ _this params [
 	["_allowKeep", false, [true]]
 ];
 
+if !([player, ["Civilian"]] call ULP_fnc_isFaction) exitWith {
+	hint "Only civilians can access this...";
+};
+
 private _near = ((_trader nearEntities [["Car", "Air", "Ship"], 15]) select {
 	!([_x] call ULP_fnc_getVehicleOwner isEqualTo "" &&
 	{ [player, _x] call ULP_fnc_isVehicleOwner })

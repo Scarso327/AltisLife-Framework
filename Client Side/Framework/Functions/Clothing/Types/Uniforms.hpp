@@ -309,10 +309,12 @@ class U_O_R_Gorka_01_black_F {
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		};
 		class Medic {
+			displayName = "Paramedic";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class Hato {
+			displayName = "Traffic Officer";
 			textures[] = { "Data\Textures\Uniforms\Hato\tracksuit.paa" };
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 2] call ULP_fnc_hasAccess }";
 		};
@@ -416,7 +418,15 @@ class U_C_IDAP_Man_shorts_F {
 };
 class U_C_IDAP_Man_casual_F : U_C_IDAP_Man_shorts_F{};
 class U_C_IDAP_Man_cargo_F : U_C_IDAP_Man_shorts_F{ };
-class U_C_IDAP_Man_Tee_F : U_C_IDAP_Man_shorts_F{};
+class U_C_IDAP_Man_Tee_F : U_C_IDAP_Man_shorts_F{
+	class Textures {
+		class HMP {
+			displayName = "HMP";
+			textures[] = { "Data\Textures\Uniforms\Global\hmp_uniform.paa" };
+			condition = "true";
+		};
+	};
+};
 class U_C_IDAP_Man_Jeans_F : U_C_IDAP_Man_shorts_F{};
 class U_C_IDAP_Man_TeeShorts_F : U_C_IDAP_Man_shorts_F{};
 
@@ -467,6 +477,11 @@ class U_Rangemaster {
 			displayName = "Sergeant";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SGT.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
+		};
+		class SC {
+			displayName = "Special Contable";
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SC.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class PC {
 			displayName = "Contable";

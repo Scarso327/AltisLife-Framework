@@ -6,7 +6,9 @@ class CfgPrison {
 
 		class PrisonLoadout {
 			class Uniforms {
-				class U_C_Poor_1 {}; // TODO : Prisoner Uniform
+				class U_C_IDAP_Man_Tee_F {
+					class Textures { class HMP {}; };
+				};
 			};
 			class LinkedItems {
 				hasMap = true;

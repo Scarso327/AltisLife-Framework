@@ -2,7 +2,7 @@ class CfgSpawns {
     class BaseSpawn {
         factions[] = { "Civilian" };
         buildings[] = {};
-        radius = 300;
+        radius = 100;
         conditions = "true";
     };
     class Police : BaseSpawn { factions[] = { "Police" }; };

@@ -418,7 +418,15 @@ class U_C_IDAP_Man_shorts_F {
 };
 class U_C_IDAP_Man_casual_F : U_C_IDAP_Man_shorts_F{};
 class U_C_IDAP_Man_cargo_F : U_C_IDAP_Man_shorts_F{ };
-class U_C_IDAP_Man_Tee_F : U_C_IDAP_Man_shorts_F{};
+class U_C_IDAP_Man_Tee_F : U_C_IDAP_Man_shorts_F{
+	class Textures {
+		class HMP {
+			displayName = "HMP";
+			textures[] = { "Data\Textures\Uniforms\Global\hmp_uniform.paa" };
+			condition = "true";
+		};
+	};
+};
 class U_C_IDAP_Man_Jeans_F : U_C_IDAP_Man_shorts_F{};
 class U_C_IDAP_Man_TeeShorts_F : U_C_IDAP_Man_shorts_F{};
 

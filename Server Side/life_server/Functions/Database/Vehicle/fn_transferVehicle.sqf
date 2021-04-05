@@ -16,7 +16,7 @@ private _steamId = ([
 	getPlayerUID _owner
 ] select (_owner isEqualType objNull && { !(isNull _owner) }));
 
-if (isNull _newOwner || { _steamId isEqualTo "" } } || { _vehicleId isEqualTo -1 }) exitWith {};
+if (isNull _newOwner || { _steamId isEqualTo "" } || { _vehicleId isEqualTo -1 }) exitWith {};
 
 private _newSteamId = getPlayerUID _newOwner;
 

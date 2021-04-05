@@ -25,9 +25,9 @@ class RscHUD {
         class WaterBackground: Life_RscText {
             idc = -1;
             colorBackground[] = {0.1,0.1,0.1,0.85};
-           SAFEZONE_X((1 - WIDTH) - MARGIN_X);
+            SAFEZONE_X((1 - WIDTH) - MARGIN_X);
 			SAFEZONE_Y(((1 - (BUTTON_H * 2)) - MARGIN_Y) - (MARGIN_Y / 2));
-             SAFEZONE_W(WIDTH);
+            SAFEZONE_W(WIDTH);
 			SAFEZONE_H(BUTTON_H);
         };
 
@@ -36,7 +36,7 @@ class RscHUD {
             colorBackground[] = {0.1,0.1,0.1,0.85};
             SAFEZONE_X((1 - WIDTH) - MARGIN_X);
 			SAFEZONE_Y(((1 - BUTTON_H) - MARGIN_Y));
-             SAFEZONE_W(WIDTH);
+            SAFEZONE_W(WIDTH);
 			SAFEZONE_H(BUTTON_H);
         };
 
@@ -58,6 +58,25 @@ class RscHUD {
 			SAFEZONE_Y(((1 - (BUTTON_H * 4)) - MARGIN_Y) - MARGIN_Y);
             SAFEZONE_W(WIDTH);
 			SAFEZONE_H(BUTTON_H);
+        };
+
+        class HealthBar: Life_RscProgress {
+            idc = 513;
+            colorBar[] = { 0.06, 0.06, 0.06, 0.85 };
+            SAFEZONE_X((1 - WIDTH) - MARGIN_X);
+			SAFEZONE_Y(((1 - BUTTON_H) - MARGIN_Y));
+            SAFEZONE_W(WIDTH);
+			SAFEZONE_H(BUTTON_H);
+        };
+
+        class WaterBar: HealthBar {
+            idc = 514;
+			SAFEZONE_Y(((1 - (BUTTON_H * 2)) - MARGIN_Y) - (MARGIN_Y / 2));
+        };
+
+        class FoodBar: HealthBar {
+            idc = 515;
+			SAFEZONE_Y(((1 - (BUTTON_H * 3)) - MARGIN_Y) - MARGIN_Y);
         };
 
         class FoodText: Life_RscStructuredText {
@@ -87,13 +106,11 @@ class RscHUD {
 			SAFEZONE_H(BUTTON_H);
         };
 
-        class XPBar: Life_RscProgress {
+        class XPBar: HealthBar {
             idc = 507;
-            colorBar[] = { 0.06, 0.06, 0.06, 0.85 };
             SAFEZONE_X(0.5 - (XP_WIDTH / 2));
 			SAFEZONE_Y(((1 - BUTTON_H) - MARGIN_Y));
             SAFEZONE_W(XP_WIDTH);
-			SAFEZONE_H(BUTTON_H);
         };
 
         class XPText: Life_RscStructuredText {

@@ -453,14 +453,14 @@ class U_Rangemaster {
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\DCC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
-		class CSI {
+		class CSU {
 			displayName = "Chief Superindendent";
-			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CSI.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CSU.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 9] call ULP_fnc_hasAccess }";
 		};
-		class SI {
+		class SU {
 			displayName = "Superindendent";
-			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SI.paa" };
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SU.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
 		};
 		class CI {
@@ -468,14 +468,14 @@ class U_Rangemaster {
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\CI.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 7] call ULP_fnc_hasAccess }";
 		};
-		class INS {
-			displayName = "Inspector";
-			textures[] = { "Data\Textures\Uniforms\Police\Ranks\INS.paa" };
+		class PI {
+			displayName = "Police Inspector";
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PI.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 6] call ULP_fnc_hasAccess }";
 		};
-		class SGT {
-			displayName = "Sergeant";
-			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SGT.paa" };
+		class PS {
+			displayName = "Police Sergeant";
+			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PS.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
 		class SC {

@@ -594,7 +594,7 @@ class CfgVirtualItems {
 
 	class Stinger {
 		displayName = "Stinger";
-		icon = "Data\Icons\stringer.paa";
+		icon = "Data\Icons\stinger.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 2;

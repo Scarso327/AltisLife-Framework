@@ -1,8 +1,8 @@
 class CfgVehicles {
 	retrievalPerc = 0.02;
 	chopKeepChance = 80;
-	chopPerc = 0.035;
-	chopTime = 240;
+	chopPerc = 0.35;
+	chopTime = 300;
 
 	class Base {
 		virtualSpace = 0;
@@ -572,6 +572,8 @@ class CfgVehicles {
 		garageDelay = 15;
 		repairTime = 20;
 		crushTime = 60;
+		chopKeepChance = 95;
+		chopTime = 300;
 		class Textures {
 			class PoliceBlack : PoliceTexture {
 				textures[] = {
@@ -593,6 +595,8 @@ class CfgVehicles {
 		garageDelay = 15;
 		repairTime = 20;
 		crushTime = 60;
+		chopKeepChance = 90;
+		chopTime = 300;
 		turrets[] = { { "SmokeLauncher" } };
 		class Textures {
 			class Hex : BaseTexture { 
@@ -627,6 +631,8 @@ class CfgVehicles {
 		garageDelay = 15;
 		repairTime = 20;
 		crushTime = 60;
+		chopKeepChance = 90;
+		chopTime = 300;
 		class Textures {
 			class Tan : BaseTexture { 
 				displayName = "Tan";
@@ -995,6 +1001,8 @@ class CfgVehicles {
 		garageDelay = 30;
 		repairTime = 15;
 		crushTime = 30;
+		chopKeepChance = 85;
+		chopTime = 120;
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1292,6 +1300,7 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 55;
 		garageLimit = 1;
+		chopKeepChance = 85;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Ion : BaseTexture {
@@ -1329,6 +1338,9 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 		garageLimit = 1;
+		chopKeepChance = 85;
+		chopPerc = 0.20;
+		chopTime = 60;
 		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
@@ -1355,6 +1367,9 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 40;
 		garageLimit = 1;
+		chopKeepChance = 100;
+		chopPerc = 0.20;
+		chopTime = 60;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Medic : MedicTexture {
@@ -1372,6 +1387,9 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 100;
 		garageLimit = 1;
+		chopKeepChance = 95;
+		chopPerc = 0.20;
+		chopTime = 300;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Black : BaseTexture {
@@ -1395,6 +1413,9 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 		garageLimit = 1;
+		chopKeepChance = 97;
+		chopPerc = 0.20;
+		chopTime = 600;
 		turrets[] = { { "CMFlareLauncher", "gatling_20mm", "missiles_DAGR", "missiles_ASRAAM" } };
 	};
 
@@ -1410,6 +1431,10 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 175;
 		garageLimit = 1;
+		retrievalPerc = 0.01;
+		chopKeepChance = 95;
+		chopPerc = 0.15;
+		chopTime = 180;
 		turrets[] = { { "CMFlareLauncher_Triples" } };
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
@@ -1421,6 +1446,10 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 80;
 		garageLimit = 1;
+		retrievalPerc = 0.01;
+		chopKeepChance = 90;
+		chopPerc = 0.15;
+		chopTime = 180;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
@@ -1433,6 +1462,10 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 0;
 		garageLimit = 1;
+		retrievalPerc = 0.01;
+		chopKeepChance = 99;
+		chopPerc = 0.10;
+		chopTime = 300;
 		turrets[] = { { "CMFlareLauncher", "Twin_Cannon_20mm", "missiles_SCALPEL", "missiles_ASRAAM", "GBU12BombLauncher_Plane_Fighter_03_F" } };
 	};
 	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { 

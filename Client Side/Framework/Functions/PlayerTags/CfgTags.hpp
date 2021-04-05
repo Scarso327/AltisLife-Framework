@@ -23,11 +23,11 @@ class CfgTags {
 
 			class Medic {
 				Main[] = {
-					"PoliceSTU",
-					"PoliceSTU",
-					"PolicePAR",
-					"PoliceSPAR",
-					"PoliceDR",
+					"MedicSTU",
+					"MedicSTU",
+					"MedicPAR",
+					"MedicSPAR",
+					"MedicDR",
 					"MedicGP",
 					"MedicCST",
 					"MedicDOO",
@@ -90,12 +90,12 @@ class CfgTags {
 			subtitle = "Special Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 3] call ULP_fnc_hasAccess }";
 		};
-		class PolicPPC  {
+		class PolicePPC  {
 			icon = "Data\Tags\Ranks\Police\PC.paa";
 			subtitle = "Probationary Police Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
-		class PolicPCSO  {
+		class PolicePCSO  {
 			icon = "Data\Tags\Ranks\Police\PCSO.paa";
 			subtitle = "Police Community Support Officer";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 1] call ULP_fnc_hasAccess }";

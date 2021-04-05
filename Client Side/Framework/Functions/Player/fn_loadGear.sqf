@@ -21,8 +21,28 @@ _itemArray params [
 
 player setUnitLoadout _pItems;
 
-[player, uniformContainer player, _textures select 0] call ULP_fnc_setTextures;
-[unitBackpack player, backpackContainer player, _textures select 1] call ULP_fnc_setTextures;
+// Ensure it's had a chance to apply the uniform before texturing...
+[ 1, [_pItems, _textures], {
+    _this params [
+        "_items", "_textures"
+    ];
+
+    _textures params [
+        "_uniform", "_backpack"
+    ];
+
+    if !(_uniform isEqualTo "") then {
+        [{ (uniform player) isEqualTo (_this select 0) }, [((_items param [3, []]) param [0, ""]), _uniform], {
+            [player, uniformContainer player, (_this select 1)] call ULP_fnc_setTextures;
+        }] call ULP_fnc_waitUntilExecute;
+    };
+
+    if !(_backpack isEqualTo "") then {
+        [{ (backpack player) isEqualTo (_this select 0) }, [((_items param [5, []]) param [0, ""]), _backpack], {
+            [unitBackpack player, backpackContainer player, (_this select 1)] call ULP_fnc_setTextures;
+        }] call ULP_fnc_waitUntilExecute;
+    };
+}] call ULP_fnc_waitExecute;
 
 ULP_CarryInfo set [1, ([LIFE_SETTINGS(getNumber,"total_maxWeight"), LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",(backpack player),"maximumload") / 4)] select ((backpack player) isEqualTo ""))];
 

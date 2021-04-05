@@ -5,30 +5,33 @@ class CfgTags {
 	class Tags {
 		class Whitelisting {
 			class Police {
-				class Main {
-					class PolicePCSO {};
-					class PolicePPC {};
-					class PolicePC {};
-					class PoliceSGT {};
-					class PoliceINS {};
-					class PoliceCI {};
-					class PoliceSI {};
-					class PoliceCSI {};
-					class PoliceDCC {};
-					class PoliceCC {};
+				Main[] = {
+					"PolicePCSO",
+					"PolicePCSO",
+					"PolicePPC",
+					"PoliceSC",
+					"PolicePC",
+					"PoliceSGT",
+					"PoliceINS",
+					"PoliceCI",
+					"PoliceSI",
+					"PoliceCSI",
+					"PoliceDCC",
+					"PoliceCC"
 				};
 			};
 
 			class Medic {
-				class Main {
-					class PoliceSTU {};
-					class PolicePAR {};
-					class PoliceSPAR {};
-					class PoliceDR {};
-					class MedicGP {};
-					class MedicCST {};
-					class MedicDOO {};
-					class MedicCMO {};
+				Main[] = {
+					"PoliceSTU",
+					"PoliceSTU",
+					"PolicePAR",
+					"PoliceSPAR",
+					"PoliceDR",
+					"MedicGP",
+					"MedicCST",
+					"MedicDOO",
+					"MedicCMO"
 				};
 			};
 		};

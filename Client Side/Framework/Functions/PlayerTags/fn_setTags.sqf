@@ -18,21 +18,19 @@ if (isClass(missionConfigFile >> "CfgFactions" >> _faction >> "Groups") && { [] 
 if (isClass _tagCfg) then {
 	{
 		scopeName "fn_setTags_Loop";
-		private _texs = (("true" configClasses (missionConfigFile >> "CfgTags" >> "Tags" >> "Whitelisting" >> _faction >> _x)) apply { (configName _x) });
-		reverse _texs;
+		private _texs = getArray (missionConfigFile >> "CfgTags" >> "Tags" >> "Whitelisting" >> _faction >> _x);
+		private _level = (call (missionNamespace getVariable [format ["Police_%1", _x], {0}]));
 
-		{
-			private _icons = (format["(configName _x) isEqualTo ""%1"" && { call compile getText(_x >> ""condition"") }", _x] configClasses (missionConfigFile >> "CfgTags" >> "Icons"));
-			
-			if !(_icons isEqualTo []) exitWith {
-				_icon = getText((_icons select 0) >> "icon");
-				_subtitle = getText((_icons select 0) >> "subtitle");
+		if (_level > 0 && { _level < (count _texs) }) then {
+			private _iconCfg = missionConfigFile >> "CfgTags" >> "Icons" >> (_texs select _level);
+			if (isClass _iconCfg && { call compile getText (_iconCfg >> "condition") }) then {
+				_icon = getText(_iconCfg >> "icon");
+				_subtitle = getText(_iconCfg >> "subtitle");
 				breakOut "fn_setTags_Loop";
 			};
-			nil
-		} count _texs;
+		};
 		nil
-	} count ((configProperties [(missionConfigFile >> "CfgFactions" >> _faction >> "Whitelisting"), format["isClass (missionConfigFile >> ""CfgTags"" >> ""Tags"" >> ""Whitelisting"" >> ""%1"" >> (configName _x))", _faction]]) apply { (configName _x) });
+	} count ((configProperties [(missionConfigFile >> "CfgFactions" >> _faction >> "Whitelisting"), format["isArray (missionConfigFile >> ""CfgTags"" >> ""Tags"" >> ""Whitelisting"" >> ""%1"" >> (configName _x))", _faction]]) apply { (configName _x) });
 };
 
 if (_subtitle isEqualTo "") then {

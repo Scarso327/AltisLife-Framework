@@ -1308,7 +1308,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
@@ -1323,7 +1323,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
@@ -1338,7 +1338,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
@@ -1353,7 +1353,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
@@ -1368,7 +1368,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
@@ -1383,7 +1383,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
@@ -1398,7 +1398,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
@@ -1413,7 +1413,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
@@ -1428,7 +1428,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
@@ -1443,7 +1443,7 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;

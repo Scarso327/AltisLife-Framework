@@ -135,7 +135,7 @@ class CfgHousing {
 		class Land_i_House_Big_01_V3_F : Land_i_House_Big_01_V1_F {};
 
 		class Land_LightHouse_F : BaseHouse {
-			price = 560000000;
+			price = 660000000;
 			spawnPos[] = {0.598145,-2.52051,-11.5156};
 			
 			class Storage {

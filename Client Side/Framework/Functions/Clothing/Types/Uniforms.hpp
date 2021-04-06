@@ -620,7 +620,7 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 			};
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
-		class Main : U_I_ParadeUniform_01_AAF_decorated_F { 
+		class Main : Command { 
 			displayName = "Main"; 
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};

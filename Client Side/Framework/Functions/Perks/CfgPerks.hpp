@@ -207,6 +207,20 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class VehicleCollector {
+		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		displayName = "Vehicle Collector";
+		description = "Increases the garage limit of each vehicle type by 1.";
+		removalMultiplier = 10;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 21;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class BloodCarrier { // TODO
 		icon = "Data\UI\Perks\bloodCarrier.paa";
 		displayName = "Blood Carrier";

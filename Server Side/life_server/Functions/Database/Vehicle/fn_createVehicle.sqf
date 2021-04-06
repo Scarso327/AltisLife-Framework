@@ -25,6 +25,7 @@ _query params [
 ];
 
 private _garageLimit = getNumber (missionConfigFile >> "CfgVehicles" >> _class >> "garageLimit");
+if (["VehicleCollector"] call ULP_fnc_hasPerk) then { _garageLimit = _garageLimit + 1 };
 if (_vehicleCount >= _garageLimit) exitWith {
 	["VehicleBought", [[_class], true, _price, _garageLimit]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 };

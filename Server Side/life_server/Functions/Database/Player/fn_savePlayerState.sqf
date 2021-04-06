@@ -6,16 +6,22 @@
 scopeName "fn_savePlayerState";
 
 _this params [
-	["_player", objNull, [objNull]],
+	["_player", objNull, [objNull, ""]],
 	["_state", 0, [0]],
 	"_data"
 ];
 
-private _steamid = getPlayerUID _player;
-private _faction = [_player] call ULP_fnc_getFaction;
+private _steamid = _player;
+private _faction = "";
+
+if (_player isEqualType objNull) then {
+	_steamid = getPlayerUID _player;
+
+	_faction = [_player] call ULP_fnc_getFaction;
+};
 
 _faction = missionConfigFile >> "CfgFactions" >> _faction;
-if (_steamid isEqualTo "" || { !(isClass (_faction)) }) exitWith {};
+if (_steamid isEqualTo "" || { _player isEqualType objNull && { !(isClass (_faction)) } }) exitWith {};
 
 private _query = switch (_state) do {
 	case 0: { format["%1licenses='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
@@ -48,6 +54,7 @@ private _query = switch (_state) do {
 	case 9: { format["textures='%1'", [_data] call DB_fnc_mresArray] };
 	case 10: { format["titles='%1'", [_data] call DB_fnc_mresArray] };
 	case 11: { format["%1perks='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
+	case 12: { format["group_id = '%1', group_level = '%2'", _data select 0, _data select 1] };
 	default { "" };
 };
 

@@ -18,7 +18,7 @@ class CfgGoals {
 			};
 			class GatherCoral : GatherApple {
 				item = "Coral";
-				title = "Gather Peaches";
+				title = "Gather Coral";
 				description = "Gather Coral before today's end!";
 			};
 			class GatherCorn : GatherApple {

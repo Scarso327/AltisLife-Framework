@@ -1135,13 +1135,13 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat : Base {
-		buyPrice = 50;
-		virtualSpace = 0;
+		buyPrice = 0;
+		virtualSpace = 50;
 	};
 
 	class C_Boat_Civil_01_F : Base {
-		buyPrice = 75;
-		virtualSpace = 0;
+		buyPrice = 0;
+		virtualSpace = 75;
 		class Textures {
 			class Civilian : BaseTexture {}; 
 			class Police : PoliceTexture {
@@ -1163,8 +1163,8 @@ class CfgVehicles {
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
 	class C_Boat_Transport_02_F : Base {
-		buyPrice = 150;
-		virtualSpace = 0;
+		buyPrice = 0;
+		virtualSpace = 150;
 		class Textures {
 			class Civilian : BaseTexture {}; 
 			class Police : PoliceTexture {

@@ -7,7 +7,7 @@ class CfgVirtualItems {
 		sellPrice = 51;
 		weight = 1;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
@@ -51,7 +51,7 @@ class CfgVirtualItems {
 		sellPrice = 51;
 		weight = 1;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
@@ -91,8 +91,8 @@ class CfgVirtualItems {
 	class Bacon {
 		displayName = "Bacon";
 		icon = "Data\Icons\bacon.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 130;
+		sellPrice = 65;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -113,8 +113,8 @@ class CfgVirtualItems {
 	class Burger {
 		displayName = "Burger";
 		icon = "Data\Icons\burger.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 165;
+		sellPrice = 83;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -135,8 +135,8 @@ class CfgVirtualItems {
 	class Hotdog {
 		displayName = "Hotdog";
 		icon = "Data\Icons\hotdog.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 140;
+		sellPrice = 70;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -157,8 +157,8 @@ class CfgVirtualItems {
 	class Chips {
 		displayName = "Chips";
 		icon = "Data\Icons\chips.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 105;
+		sellPrice = 53;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -179,7 +179,7 @@ class CfgVirtualItems {
 	class RationPack {
 		displayName = "Ration Pack";
 		icon = "Data\Icons\rationPack.paa";
-		buyPrice = 0;
+		buyPrice = 325;
 		sellPrice = 0;
 		weight = 1;
 		class Settings {
@@ -201,8 +201,8 @@ class CfgVirtualItems {
 	class Doughnut {
 		displayName = "Doughnut";
 		icon = "Data\Icons\doughnut.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 20;
+		sellPrice = 10;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -223,8 +223,8 @@ class CfgVirtualItems {
 	class Water {
 		displayName = "Water";
 		icon = "Data\Icons\bottle.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 10;
+		sellPrice = 5;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -245,8 +245,8 @@ class CfgVirtualItems {
 	class Coffee {
 		displayName = "Coffee";
 		icon = "Data\Icons\coffee.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 35;
+		sellPrice = 18;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -267,8 +267,8 @@ class CfgVirtualItems {
 	class Tea {
 		displayName = "Tea";
 		icon = "Data\Icons\tea.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 30;
+		sellPrice = 15;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -289,8 +289,8 @@ class CfgVirtualItems {
 	class Redbull {
 		displayName = "Redbull";
 		icon = "Data\Icons\can.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 2100;
+		sellPrice = 1050;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -311,8 +311,8 @@ class CfgVirtualItems {
 	class Beer {
 		displayName = "Beer";
 		icon = "Data\Icons\beer.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 290;
+		sellPrice = 145;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -337,7 +337,7 @@ class CfgVirtualItems {
 		sellPrice = 290;
 		weight = 1;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
@@ -355,8 +355,8 @@ class CfgVirtualItems {
 	class Gin {
 		displayName = "Gin";
 		icon = "Data\Icons\gin.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 375;
+		sellPrice = 188;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -377,8 +377,8 @@ class CfgVirtualItems {
 	class Whiskey {
 		displayName = "Whiskey";
 		icon = "Data\Icons\whiskey.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 495;
+		sellPrice = 248;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -404,7 +404,7 @@ class CfgVirtualItems {
 		sellPrice = 98500;
 		weight = 14;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
@@ -475,8 +475,8 @@ class CfgVirtualItems {
 	class Pickaxe {
 		displayName = "Pickaxe";
 		icon = "Data\Icons\pickaxe.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 1200;
+		sellPrice = 600;
 		weight = 2;
 		class Settings {
 			onMarket = false;
@@ -490,8 +490,8 @@ class CfgVirtualItems {
 	class Shovel {
 		displayName = "Shovel";
 		icon = "Data\Icons\shovel.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 1100;
+		sellPrice = 550;
 		weight = 2;
 		class Settings {
 			onMarket = false;
@@ -505,8 +505,8 @@ class CfgVirtualItems {
 	class FishingNet {
 		displayName = "Fishing Net";
 		icon = "Data\Icons\fishingNet.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 750;
+		sellPrice = 375;
 		weight = 2;
 		class Settings {
 			onMarket = false;
@@ -520,8 +520,8 @@ class CfgVirtualItems {
 	class FuelCan {
 		displayName = "Fuel Can";
 		icon = "Data\Icons\fuelCan.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3000;
+		sellPrice = 1500;
 		weight = 3;
 		class Settings {
 			onMarket = false;
@@ -565,8 +565,8 @@ class CfgVirtualItems {
 	class Ziptie {
 		displayName = "Ziptie";
 		icon = "Data\Icons\ziptie.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 13500;
+		sellPrice = 6750;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -580,8 +580,8 @@ class CfgVirtualItems {
 	class Blindfold {
 		displayName = "Blindfold";
 		icon = "Data\Icons\blindfold.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 17000;
+		sellPrice = 8500;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -610,8 +610,8 @@ class CfgVirtualItems {
 	class Lockpick {
 		displayName = "Lockpick";
 		icon = "Data\Icons\lockpick.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 2500;
+		sellPrice = 1250;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -625,8 +625,8 @@ class CfgVirtualItems {
 	class BoltCutter {
 		displayName = "Bolt Cutter";
 		icon = "Data\Icons\boltCutter.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 345000;
+		sellPrice = 172500;
 		weight = 4;
 		class Settings {
 			onMarket = false;
@@ -640,8 +640,8 @@ class CfgVirtualItems {
 	class HackingDevice {
 		displayName = "Hacking Device";
 		icon = "Data\Icons\hackingDevice.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 475000;
+		sellPrice = 237500;
 		weight = 3;
 		class Settings {
 			onMarket = false;
@@ -655,8 +655,8 @@ class CfgVirtualItems {
 	class ExplosiveCharge {
 		displayName = "Explosive Charge";
 		icon = "Data\Icons\explosiveCharge.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 750000;
+		sellPrice = 375000;
 		weight = 4;
 		class Settings {
 			onMarket = false;
@@ -670,8 +670,8 @@ class CfgVirtualItems {
 	class IndustrialDrill {
 		displayName = "Industrial Drill";
 		icon = "Data\Icons\industrialDrill.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 600000;
+		sellPrice = 300000;
 		weight = 4;
 		class Settings {
 			onMarket = false;
@@ -686,7 +686,7 @@ class CfgVirtualItems {
 		displayName = "Gallery Piece";
 		icon = "Data\Icons\galleryPiece.paa";
 		buyPrice = 0;
-		sellPrice = 0;
+		sellPrice = 365000;
 		weight = 7;
 		class Settings {
 			onMarket = true;
@@ -701,8 +701,8 @@ class CfgVirtualItems {
 	class Painkillers {
 		displayName = "Painkillers";
 		icon = "Data\Icons\painkillers.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 6000;
+		sellPrice = 3000;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -716,8 +716,8 @@ class CfgVirtualItems {
 	class Bandage {
 		displayName = "Bandage";
 		icon = "Data\Icons\bandage.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 8500;
+		sellPrice = 4250;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -731,8 +731,8 @@ class CfgVirtualItems {
 	class BloodBag {
 		displayName = "Blood Bag";
 		icon = "Data\Icons\bloodbag.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 10000;
+		sellPrice = 5000;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -746,8 +746,8 @@ class CfgVirtualItems {
 	class FirstAidKit {
 		displayName = "First Aid Kit";
 		icon = "Data\Icons\firstAidKit.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 15000;
+		sellPrice = 7500;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -761,8 +761,8 @@ class CfgVirtualItems {
 	class MediKit {
 		displayName = "MediKit";
 		icon = "Data\Icons\mediKit.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 180000;
+		sellPrice = 90000;
 		weight = 2;
 		class Settings {
 			onMarket = false;

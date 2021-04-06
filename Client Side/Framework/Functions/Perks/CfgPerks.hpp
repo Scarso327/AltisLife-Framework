@@ -289,6 +289,20 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class LandLord {
+		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		displayName = "Land Lord";
+		description = "Allows you to purchase an additional property.";
+		removalMultiplier = 4;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 28;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class UncertainPersonality {
 		icon = "Data\UI\Perks\uncertainPersonality.paa";
 		displayName = "Uncertain Personality";

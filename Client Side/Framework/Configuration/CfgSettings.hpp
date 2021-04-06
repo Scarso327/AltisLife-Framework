@@ -21,8 +21,8 @@ class CfgSettings {
 
     class CfgMedical {
         /* Bleed Out */
-        AllowBleedoutPercentage = 0.7;
-        BleedOutTime = 300;
+        AllowBleedoutPercentage = 0.5;
+        BleedOutTime = 10 * 60;
 
         /* Blood */
         BloodBagIncrease = 90;

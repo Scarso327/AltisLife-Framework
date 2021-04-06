@@ -96,7 +96,7 @@ class CfgTablet {
 			23061, 23062, 23063, 23064, 23065, 23066
 		};
 		onload = "_this call ULP_fnc_overview";
-		onUnload = "[""GroupMoneyChanged"", ((_this select 0) getVariable [""funds_changed"", -1])] call ULP_fnc_removeEventHandler; (_this select 0) setVariable [""funds_changed"", nil];";
+		onUnload = "[""GroupMoneyChanged"", (_this getVariable [""funds_changed"", -1])] call ULP_fnc_removeEventHandler; _this setVariable [""funds_changed"", nil];";
 	};
 
 	class GroupProgression : Group {

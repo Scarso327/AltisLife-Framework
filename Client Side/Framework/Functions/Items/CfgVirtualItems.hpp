@@ -1468,7 +1468,7 @@ class CfgVirtualItems {
 
 	class Identification {
 		displayName = "%1's ID";
-		icon = "";
+		icon = "Data\Icons\identification.paa";
 		buyPrice = 75000;
 		sellPrice = -1;
 		weight = 0;

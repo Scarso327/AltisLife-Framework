@@ -10,6 +10,19 @@ player addEventHandler ["GetInMan", { _this call ULP_fnc_onGetIn }];
 player addEventHandler ["GetOutMan", { _this call ULP_fnc_onGetOut }];
 player addEventHandler ["Take", { _this call ULP_fnc_onTake }];
 
+["KeysGiven", {
+	_this params [
+		["_vehicle", objNull, [objNull]],
+		["_giver", objNull, [objNull]]
+	];
+
+	if (isNull _vehicle) exitWith {};
+
+	if (((ULP_Keys pushBackUnique _vehicle) > -1) && { !(isNull _giver) }) then {
+		hint format ["%1 has given you keys to %2...", name _giver, ([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "something"]];
+	};
+}] call ULP_fnc_addEventHandler;
+
 ["HouseAdded", {
 	_this params [
 		["_house", objNull, [objNull]]

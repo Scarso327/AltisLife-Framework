@@ -23,6 +23,13 @@ class CfgInteractions {
 	// Revive
 
 	class Person {
+		class GiveKeys {
+			title = "Give Keys";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_giveVehicleKeys";
+			condition = "true";
+		};
+
 		class Unrestrain {
 			title = "Unrestrain";
 			factions[] = { "Police" };

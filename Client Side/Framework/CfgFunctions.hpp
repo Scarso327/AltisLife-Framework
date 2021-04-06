@@ -342,6 +342,7 @@ class CfgFunctions {
 			class vehicleCfg {};
 			class vehicleSiren {};
 			class vehicleLights {};
+			class giveVehicleKeys {};
 			class ejectVehicleCrew {};
 			class ejectVehicleUnit {};
 			class repairVehicle {};

@@ -25,7 +25,7 @@ class CfgSettings {
         BleedOutTime = 300;
 
         /* Blood */
-        BloodBagIncrease = 60;
+        BloodBagIncrease = 90;
 
         /* Revival */
         RevivalFee = 2500;

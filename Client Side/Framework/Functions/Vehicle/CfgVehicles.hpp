@@ -13,24 +13,16 @@ class CfgVehicles {
 	};
 
 	// LIGHTS --------------------------------------------------------------------------------------
-	class PoliceLights {
-		leftPos[] = {0, 0, 0};
+	class PoliceColour {
 		leftColour[] = {0.1, 0.1, 20};
-		rightPos[] = {0, 0, 0};
 		rightColour[] = {0.1, 0.1, 20};
 	};
-
-	class MedicLights {
-		leftPos[] = {0, 0, 0};
+	class MedicColour {
 		leftColour[] = {0.1, 0.1, 20};
-		rightPos[] = {0, 0, 0};
 		rightColour[] = {0.1, 0.1, 20};
 	};
-
-	class HatoLights {
-		leftPos[] = {0, 0, 0};
+	class HatoColour {
 		leftColour[] = {0.1, 0.1, 20};
-		rightPos[] = {0, 0, 0};
 		rightColour[] = {0.1, 0.1, 20};
 	};
 
@@ -49,7 +41,7 @@ class CfgVehicles {
 		class Siren {
 			SFX[] = { "Police_One" };
 		};
-		class Lights : PoliceLights {};
+		class Lights : PoliceColour {};
 	};
 	
 	class MedicTexture : BaseTexture {
@@ -57,7 +49,7 @@ class CfgVehicles {
 		class Siren {
 			SFX[] = { "Police_One" };
 		};
-		class Lights : MedicLights {};
+		class Lights : MedicColour {};
 	};
 
 	class HatoTexture : BaseTexture {
@@ -65,7 +57,7 @@ class CfgVehicles {
 		class Siren {
 			SFX[] = { "Police_One" };
 		};
-		class Lights : HatoLights {};
+		class Lights : HatoColour {};
 	};
 
 	class BaseChromeGreen : BaseTexture {
@@ -138,20 +130,28 @@ class CfgVehicles {
 			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_white.paa" }; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : PoliceColour {
+					leftPos[] = {0.749023,1.58203,-0.560124};
+					rightPos[] = {-0.827637,1.57617,-0.560124};
 				};
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
 				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_black.paa" }; 
+				class Lights : PoliceColour {
+					leftPos[] = {0.749023,1.58203,-0.560124};
+					rightPos[] = {-0.827637,1.57617,-0.560124};
+				};
 			};
 			class PoliceANPR : PoliceWhite { 
 				displayName = "Interceptor";
 				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_ANPR.paa" }; 
+				class Lights : PoliceColour {
+					leftPos[] = {0.749023,1.58203,-0.560124};
+					rightPos[] = {-0.827637,1.57617,-0.560124};
+				};
 			};
 			class Black : BaseTexture {
 				displayName = "Black";
@@ -245,16 +245,16 @@ class CfgVehicles {
 			};
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\hatchback.paa" }; 
-				class Lights : MedicLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : MedicColour {
+					leftPos[] = {0.749023,1.58203,-0.560124};
+					rightPos[] = {-0.827637,1.57617,-0.560124};
 				};
 			};
 			class Hato : HatoTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\hatchback.paa" }; 
-				class Lights : HatoLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : HatoColour {
+					leftPos[] = {0.749023,1.58203,-0.560124};
+					rightPos[] = {-0.827637,1.57617,-0.560124};
 				};
 			};
 		};
@@ -340,11 +340,8 @@ class CfgVehicles {
 		virtualSpace = 65;
 		class Textures {
 			class Hato : HatoTexture { 
+				displayName = "HATO"; 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
-				class Lights : HatoLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
-				};
 			};
 		};
 	};
@@ -380,9 +377,9 @@ class CfgVehicles {
 			};
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\MB4.paa" }; 
-				class Lights : MedicLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : MedicColour {
+					leftPos[] = {0.757324,1.83252,-0.379596};
+					rightPos[] = {-0.844727,1.82861,-0.379596};
 				};
 			};
 		};
@@ -397,20 +394,28 @@ class CfgVehicles {
 			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_white.paa" };
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : PoliceColour {
+					leftPos[] = {0.37793,2.25098,-0.531462};
+					rightPos[] = {-0.412109,2.26709,-0.531462};
 				};
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
 				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
-				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_black.paa" }; 
+				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_black.paa" };
+				class Lights : PoliceColour {
+					leftPos[] = {0.37793,2.25098,-0.531462};
+					rightPos[] = {-0.412109,2.26709,-0.531462};
+				}; 
 			};
 			class PoliceANPR : PoliceWhite { 
 				displayName = "Interceptor";
 				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
-				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_ANPR.paa" }; 
+				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_ANPR.paa" };
+				class Lights : PoliceColour {
+					leftPos[] = {0.37793,2.25098,-0.531462};
+					rightPos[] = {-0.412109,2.26709,-0.531462};
+				}; 
 			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -438,16 +443,16 @@ class CfgVehicles {
 			};
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\SUV.paa" }; 
-				class Lights : MedicLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : MedicColour {
+					leftPos[] = {0.37793,2.25098,-0.531462};
+					rightPos[] = {-0.412109,2.26709,-0.531462};
 				};
 			};
 			class Hato : HatoTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\SUV.paa" }; 
-				class Lights : HatoLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : HatoColour {
+					leftPos[] = {0.37793,2.25098,-0.531462};
+					rightPos[] = {-0.412109,2.26709,-0.531462};
 				};
 			};
 		};
@@ -480,34 +485,14 @@ class CfgVehicles {
 			class PoliceWhite : PoliceTexture { 
 				displayName = "Public Order";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\van.paa" }; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
-				};
 			};
 			class PoliceUnmarked : PoliceWhite {
 				displayName = "Unmarked"; 
 				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
-				};
 			};
-			class Medic : MedicTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Medic\van.paa" }; 
-				class Lights : MedicLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
-				};
-			};
-			class Hato : HatoTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Hato\van.paa" }; 
-				class Lights : HatoLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
-				};
-			};
+			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Land\Medic\van.paa" }; };
+			class Hato : HatoTexture { textures[] = { "Data\Textures\Vehicles\Land\Hato\van.paa" }; };
 		};
 	};
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
@@ -560,9 +545,9 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 			class PoliceBlack : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\prowler.paa" }; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : PoliceColour {
+					leftPos[] = {0.754883,2.05811,-0.930151};
+					rightPos[] = {-0.679199,2.06689,-0.930151};
 				};
 			};
 		};
@@ -589,9 +574,9 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 			class PoliceBlack : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\qilin.paa" }; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : PoliceColour {
+					leftPos[] = {0.625977,2.06201,-0.398819};
+					rightPos[] = {-0.961426,2.05908,-0.398819};
 				};
 			};
 		};
@@ -612,9 +597,9 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Land\Police\hunter_01.paa",
 					"Data\Textures\Vehicles\Land\Police\hunter_02.paa"
 				}; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
+				class Lights : PoliceColour {
+					leftPos[] = {1.08105,1.41455,-0.614945};
+					rightPos[] = {-1.06494,1.42627,-0.614945};
 				};
 			};
 		};

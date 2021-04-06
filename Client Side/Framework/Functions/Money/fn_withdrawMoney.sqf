@@ -18,6 +18,10 @@ if (isNull _display) exitWith {};
 
 private _group = _display getVariable ["group", false];
 
+if (_group && { !([1] call ULP_fnc_canGroupRank) }) exitWith {
+	hint "You don't have permission to withdraw from group funds...";
+};
+
 private _amount = ([BANK, [] call ULP_fnc_groupFunds] select (_group));
 if (_amount <= 0) exitWith {
 	hint "You don't have anything to withdraw...";

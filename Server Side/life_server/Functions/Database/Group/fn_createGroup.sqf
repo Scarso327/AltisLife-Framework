@@ -18,6 +18,10 @@ private _id = -1;
 _tag = [_tag] call DB_fnc_mresString;
 _name = [_name] call DB_fnc_mresString;
 
+private _ranks = getArray (missionConfigFile >> "CfgGroups" >> "ranks");
+private _depositIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "deposit");
+private _withdrawIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "withdraw");
+
 private _query = [format["SELECT id, tag, name, active FROM groups WHERE tag = '%1' OR name = '%2'",
 	_tag, _name
 ], 2] call DB_fnc_asyncCall;
@@ -42,8 +46,8 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	};
 
 	// This gang has something matching but is also inactive, to save queries we can just update this one as ours...
-	[format["UPDATE groups SET owner = '%1', tag = '%2', name = '%3', bank = '0', premium = '0', active = '1' WHERE id = '%4'",
-		_steamid, _tag, _name, _queryId
+	[format["UPDATE groups SET owner = '%1', tag = '%2', name = '%3', ranks = '%5', deposit = '%6', withdraw = '%7', bank = '0', premium = '0', active = '1' WHERE id = '%4'",
+		_steamid, _tag, _name, _queryId, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex
 	], 1] call DB_fnc_asyncCall;
 
 	private _group = [_queryId] call ULP_fnc_getGroupById;
@@ -72,6 +76,12 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 		if !((groupId _group) isEqualTo _name) then {
 			_group setGroupIdGlobal [_name];
 		};
+
+		// Wipe...
+		_group setVariable ["group_ranks", nil, true];
+		_group setVariable ["group_viewablefunds", nil, true];
+		_group setVariable ["group_funds", nil];
+		_group setVariable ["group_premium", nil, true];
 	};
 
 	_id = _queryId;
@@ -81,8 +91,8 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 
 	// Insert...
 	[format[
-		"INSERT INTO groups (owner, tag, name) VALUES ('%1', '%2', '%3');", 
-		_steamid, _tag, _name
+		"INSERT INTO groups (owner, tag, name, ranks, deposit, withdraw) VALUES ('%1', '%2', '%3', '%4', '%5', '%6');", 
+		_steamid, _tag, _name, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex
 	], 1] call DB_fnc_asyncCall;
 
 	private _group = createGroup [(side _owner), true];
@@ -93,9 +103,12 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	_group setGroupIdGlobal [_name];
 };
 
+private _level = ((count _ranks) - 1);
+_owner setUnitRank (_ranks select _level);
+
 // Update Owner's Gang ID...
-[format["UPDATE players SET group_id = '%1' WHERE pid = '%2'",
-	_id, _steamid
+[format["UPDATE players SET group_id = '%1', group_level = '%3' WHERE pid = '%2'",
+	_id, _steamid, _level
 ], 1] call DB_fnc_asyncCall;
 
 ["GroupCreationSucceeded", [_id]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

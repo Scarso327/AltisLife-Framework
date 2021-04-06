@@ -17,16 +17,19 @@ private _steamid = getPlayerUID _unit;
 if (isNull _unit || { _steamid isEqualTo "" } || { _groupid <= 0 }) exitWith { false };
 
 private _group = [_groupid] call ULP_fnc_getGroupById;
+private _ranks = getArray (missionConfigFile >> "CfgGroups" >> "ranks");
 
 if (isNull _group) then {
-	private _query = [format["SELECT id, owner, name, bank, premium FROM groups WHERE (owner = '%1' OR id = '%2') AND active='1'",
+	private _query = [format["SELECT groups.id, groups.owner, players.group_level, groups.name, groups.ranks, groups.bank, groups.premium, groups.deposit, groups.withdraw FROM groups INNER JOIN players ON players.group_id = groups.id AND players.pid = '%1' WHERE (groups.owner = '%1' OR groups.id = '%2') AND groups.active='1'",
 		_steamid, _groupid
 	], 2] call DB_fnc_asyncCall;
 
 	if !(_query isEqualTo "" || { _query isEqualTo [] }) exitWith {
 		_query params [
-			"_queryId", "_queryOwner", "_queryName", "_queryBank", "_queryPremium"
+			"_queryId", "_queryOwner", "_queryRank", "_queryName", "_queryRanks", "_queryBank", "_queryPremium", "_queryDeposit", "_queryWithdraw"
 		];
+
+		_queryRanks = [_queryRanks] call DB_fnc_mresToArray;
 
 		if !(_groupid isEqualTo _queryid) exitWith {
 			// Shouldn't happen...
@@ -39,7 +42,12 @@ if (isNull _group) then {
 
 		_group setVariable ["group_id", _queryid, true];
 		_group setVariable ["group_owner", _queryowner, true];
+		_group setVariable ["group_permissions", [_queryDeposit, _queryWithdraw], true];
 		_group setGroupIdGlobal [_queryname];
+
+		if !(_queryRanks isEqualTo _ranks) then {
+			_group setVariable ["group_ranks", _queryRanks, true];
+		};
 
 		if (_queryBank > 0) then {
 			_group setVariable ["group_viewablefunds", _queryBank, true];
@@ -50,6 +58,8 @@ if (isNull _group) then {
 		if (_queryPremium) then {
 			_group setVariable ["group_premium", _queryPremium, true];
 		};
+
+		_unit setUnitRank (_ranks select _queryRank);
 	};
 
 	false breakOut "fn_queryPlayerInfo";

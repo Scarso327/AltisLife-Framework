@@ -10,4 +10,13 @@ class CfgGroups {
     	MaxLength = 30;
 		Blacklisted[] = { "Altis Police Contabulary", "National Health Service", "Highways Agency", "Civilian" };
 	};
+
+	ranks[] = {
+		"PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"
+	};
+
+	class Permissions {
+		deposit = 3;
+		withdraw = 3;
+	};
 };

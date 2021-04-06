@@ -405,15 +405,20 @@ class CfgFunctions {
 
 		class Group {
 			file = "Functions\Group";
+			class initGroups {};
 			class joinGroup {};
 			class inGroup {};
 			class isGroup {};
 			class getGroupById {};
 			class getGroupName {};
+			class getGroupRank {};
 			class groupId {};
 			class groupFunds {};
-			class initGroups {};
+			class groupPermissions {};
+			class groupRanks {};
 			class isGroupPremium {};
+			class rankName {};
+			class canGroupRank {};
 		};
 
 		class NLR {

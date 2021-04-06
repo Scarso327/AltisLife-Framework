@@ -17,4 +17,8 @@ if (_group isEqualType 0) then {
 if (isNull _unit || { isNull _group }) exitWith { false };
 
 [_unit] joinSilent _group;
+
+private _ranks = [_group] call ULP_fnc_groupRanks;
+_unit setUnitRank (_ranks select ((count _ranks) - 1));
+
 true

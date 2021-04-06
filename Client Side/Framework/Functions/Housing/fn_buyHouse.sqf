@@ -32,7 +32,7 @@ if (_house getVariable ["blacklisted", false]) exitWith {
 };
 
 private _limit = getNumber (missionConfigFile >> "CfgHousing" >> "houseLimit");
-if (["LandLord"] call ULP_fnc_hasPerk) then {_limit = _limit + 1};
+if (["LandLord"] call ULP_fnc_hasPerk) then { _limit = _limit + 1 };
 if ((count ([_house] call ULP_fnc_ownedHouses)) >= _limit) exitWith {
 	hint format ["You have already reached the limit of %1 for owned houses...", _limit];
 };

@@ -249,6 +249,26 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class IntelligentBanker { // TODO
+		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		displayName = "Intelligent Banker";
+		description = "Decreases your wire transfer costs by %1%2.";
+		removalMultiplier = 1;
+		class Leveling {
+			maxLevel = 4;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "25 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			level = 23;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class FirstAider { // TODO
 		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "First Aider";

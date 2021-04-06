@@ -25,7 +25,7 @@ class CfgVirtualItems {
 	class Apple {
 		displayName = "Bag of Apples";
 		icon = "Data\Icons\apple.paa";
-		buyPrice = 0;
+		buyPrice = 90;
 		sellPrice = 51;
 		weight = 1;
 		class Settings {
@@ -69,7 +69,7 @@ class CfgVirtualItems {
 	class Peach {
 		displayName = "Bag of Peaches";
 		icon = "Data\Icons\peach.paa";
-		buyPrice = 0;
+		buyPrice = 102;
 		sellPrice = 51;
 		weight = 1;
 		class Settings {

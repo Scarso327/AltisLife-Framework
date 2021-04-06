@@ -187,6 +187,20 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class MatesRates {
+		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		displayName = "Mates Rates";
+		description = "Decreases garage retrieval fees by 50%.";
+		removalMultiplier = 6;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 17;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class SlightofHand { // TODO
 		icon = "Data\UI\Perks\slightOfHand.paa";
 		displayName = "Slight of Hand";

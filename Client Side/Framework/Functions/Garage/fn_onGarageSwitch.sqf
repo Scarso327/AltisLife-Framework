@@ -44,6 +44,8 @@ private _retrievalPrice = [
 	(_list lbValue _index)
 ] select (_impound);
 
+if (["MatesRates"] call ULP_fnc_hasPerk) then { _retrievalPrice = _retrievalPrice * 0.5 };
+
 _itemData set [3, _retrievalPrice];
 _itemData set [4, _index];
 _display setVariable ["selected", _itemData];

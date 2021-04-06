@@ -35,5 +35,6 @@ missionNamespace setVariable ["ULP_LastDispute", time + 5];
 	hint format ["You have disputed %1", name _player];
 
 	[getPlayerUID player, "Dispute", [getPlayerUID _player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
-	["Home"] call ULP_fnc_setScreen;
 }, false, true] call ULP_fnc_selectPlayer;
+
+["Home"] call ULP_fnc_setScreen;

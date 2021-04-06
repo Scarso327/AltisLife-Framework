@@ -153,6 +153,20 @@ class CfgPerks {
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
+	class IDForger {
+		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		displayName = "ID Forger";
+		description = "Allows you to forge fake IDs.";
+		removalMultiplier = 3;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 15;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class EcoDriver { // TODO
 		icon = "Data\UI\Perks\ecoDriver.paa";
 		displayName = "Eco Driver";

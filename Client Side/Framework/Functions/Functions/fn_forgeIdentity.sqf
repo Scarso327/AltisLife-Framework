@@ -5,7 +5,7 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_forgeIdentity";
 
-if !([player, ["Civilian"]] call ULP_fnc_isFaction) exitWith {
+if !([player, ["Civilian"]] call ULP_fnc_isFaction || { ["IDForger"] call ULP_fnc_hasPerk }) exitWith {
 	hint "Only civilians can forge identity cards...";
 };
 

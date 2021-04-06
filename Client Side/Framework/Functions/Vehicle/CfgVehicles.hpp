@@ -522,7 +522,7 @@ class CfgVehicles {
 	class C_Van_02_service_F : C_Van_02_vehicle_F {};
 
 	class B_CTRG_LSV_01_light_F : Base {
-		buyPrice = 0;
+		buyPrice = 580000;
 		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
@@ -567,10 +567,10 @@ class CfgVehicles {
 			};
 		};
 	};
-	class B_T_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 0; };
+	class B_T_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 675000; };
 
 	class O_LSV_02_unarmed_F : Base {
-		buyPrice = 0;
+		buyPrice = 800000;
 		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
@@ -598,7 +598,7 @@ class CfgVehicles {
 	};
 
 	class B_MRAP_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 9800000;
 		virtualSpace = 65;
 		garageLimit = 1;
 		garageDelay = 15;
@@ -621,7 +621,7 @@ class CfgVehicles {
 	};
 
 	class O_MRAP_02_F : Base {
-		buyPrice = 0;
+		buyPrice = 7500000;
 		virtualSpace = 65;
 		garageLimit = 2;
 		garageDelay = 15;
@@ -662,7 +662,7 @@ class CfgVehicles {
 	};
 
 	class I_MRAP_03_F : Base {
-		buyPrice = 0;
+		buyPrice = 5750000;
 		virtualSpace = 65;
 		garageLimit = 2;
 		garageDelay = 15;
@@ -713,7 +713,7 @@ class CfgVehicles {
 	};
 
 	class C_Van_01_transport_F : Base {
-		buyPrice = 0;
+		buyPrice = 190500;
 		virtualSpace = 100;
 		garageLimit = 3;
 		class Textures {
@@ -748,13 +748,14 @@ class CfgVehicles {
 		};
 	};
 	class C_Van_01_box_F : C_Van_01_transport_F {
-		buyPrice = 0;
+		buyPrice = 245000;
 		virtualSpace = 150;
 		garageLimit = 3;
 	};
 	class C_Van_01_fuel_F : Base {
-		buyPrice = 0;
+		buyPrice = 210500;
 		virtualSpace = 120;
+		garageLimit = 3;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -780,7 +781,7 @@ class CfgVehicles {
 	};
 
 	class I_Truck_02_transport_F : Base {
-		buyPrice = 0;
+		buyPrice = 505000;
 		virtualSpace = 280;
 		garageLimit = 2;
 		class Textures {
@@ -805,22 +806,22 @@ class CfgVehicles {
 		buyPrice = 0;
 	};
 	class I_Truck_02_covered_F : I_Truck_02_transport_F {
-		buyPrice = 350;
-		virtualSpace = 0;
+		buyPrice = 560000;
+		virtualSpace = 350;
 	};
 	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {
 		buyPrice = 0;
 	};
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
-		buyPrice = 200;
-		virtualSpace = 0;
+		buyPrice = 435000;
+		virtualSpace = 200;
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
 		buyPrice = 0;
 	};
 
 	class O_Truck_03_transport_F : Base {
-		buyPrice = 0;
+		buyPrice = 615500;
 		virtualSpace = 370;
 		garageLimit = 2;
 		class Textures {
@@ -843,19 +844,19 @@ class CfgVehicles {
 		};
 	};
 	class O_Truck_03_covered_F : O_Truck_03_transport_F {
-		buyPrice = 410;
-		virtualSpace = 0;
+		buyPrice = 670500;
+		virtualSpace = 410;
 	};
 	class O_Truck_03_ammo_F : O_Truck_03_transport_F {
-		buyPrice = 0;
+		buyPrice = 710000;
 		virtualSpace = 460;
 	};
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
-		buyPrice = 0;
+		buyPrice = 590500;
 		virtualSpace = 350;
 	};
 	class O_Truck_03_device_F : O_Truck_03_transport_F {
-		buyPrice = 0;
+		buyPrice = 1150000;
 		virtualSpace = 150;
 	};
 
@@ -923,7 +924,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_cargo_F : B_Truck_01_mover_F {
-		buyPrice = 0;
+		buyPrice = 690500;
 		virtualSpace = 450;
 		class Textures {
 			class Sand : BaseTexture {
@@ -947,7 +948,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_transport_F : B_Truck_01_mover_F {
-		buyPrice = 0;
+		buyPrice = 795000;
 		virtualSpace = 535;
 		class Textures {
 			class Sand : BaseTexture {
@@ -969,7 +970,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_covered_F : B_Truck_01_mover_F {
-		buyPrice = 0;
+		buyPrice = 865000;
 		virtualSpace = 590;
 		class Textures {
 			class Sand : BaseTexture {
@@ -993,7 +994,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_ammo_F : B_Truck_01_mover_F {
-		buyPrice = 0;
+		buyPrice = 905000;
 		virtualSpace = 650;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1015,7 +1016,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
-		buyPrice = 0;
+		buyPrice = 880000;
 		virtualSpace = 500;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1037,7 +1038,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_box_F : Base {
-		buyPrice = 0;
+		buyPrice = 995000;
 		virtualSpace = 800;
 		garageLimit = 3;
 		garageDelay = 30;
@@ -1468,14 +1469,14 @@ class CfgVehicles {
 
 	// PLANES --------------------------------------------------------------------------------------
 	class C_Plane_Civil_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 1256000;
 		virtualSpace = 5;
 		garageLimit = 2;
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
 	class B_T_VTOL_01_infantry_F : Base {
-		buyPrice = 0;
+		buyPrice = 75500000;
 		virtualSpace = 175;
 		garageLimit = 1;
 		retrievalPerc = 0.01;
@@ -1485,28 +1486,23 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher_Triples" } };
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
-		buyPrice = 0;
+		buyPrice = 85750000;
 		virtualSpace = 225;
 	};
 
-	class O_T_VTOL_02_infantry_F : Base {
-		buyPrice = 0;
+	class O_T_VTOL_02_infantry_F : B_T_VTOL_01_infantry_F {
+		buyPrice = 115650000;
 		virtualSpace = 80;
-		garageLimit = 1;
-		retrievalPerc = 0.01;
-		chopKeepChance = 90;
-		chopPerc = 0.15;
-		chopTime = 180;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
-		buyPrice = 0;
+		buyPrice = 125530000;
 		virtualSpace = 95;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 
 	class I_Plane_Fighter_03_CAS_F : Base {
-		buyPrice = 0;
+		buyPrice = 73350000;
 		virtualSpace = 0;
 		garageLimit = 1;
 		retrievalPerc = 0.01;
@@ -1516,37 +1512,37 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher", "Twin_Cannon_20mm", "missiles_SCALPEL", "missiles_ASRAAM", "GBU12BombLauncher_Plane_Fighter_03_F" } };
 	};
 	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { 
-		buyPrice = 0; 
+		buyPrice = 75500000; 
 		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
 	class B_Plane_CAS_01_F : I_Plane_Fighter_03_CAS_F { 
-		buyPrice = 0; 
+		buyPrice = 90500000; 
 		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher", "Gatling_30mm_Plane_CAS_01_F", "Missile_AA_04_Plane_CAS_01_F", "Missile_AGM_02_Plane_CAS_01_F", "Rocket_04_HE_Plane_CAS_01_F", "Rocket_04_AP_Plane_CAS_01_F", "Bomb_04_Plane_CAS_01_F" } };
 	};
 	class B_Plane_Fighter_01_F : I_Plane_Fighter_03_CAS_F { 
-		buyPrice = 0; 
+		buyPrice = 105500000; 
 		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
 	class B_Plane_Fighter_01_Stealth_F : I_Plane_Fighter_03_CAS_F { 
-		buyPrice = 0; 
+		buyPrice = 115600000; 
 		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
 	class O_Plane_CAS_02_F : I_Plane_Fighter_03_CAS_F { 
-		buyPrice = 0; 
+		buyPrice = 86500000; 
 		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher", "Cannon_30mm_Plane_CAS_02_F", "Missile_AA_03_Plane_CAS_02_F", "Missile_AGM_01_Plane_CAS_02_F", "Rocket_03_HE_Plane_CAS_02_F", "Rocket_03_AP_Plane_CAS_02_F", "Bomb_03_Plane_CAS_02_F" } };
 	};
 	class O_Plane_Fighter_02_F : I_Plane_Fighter_03_CAS_F { 
-		buyPrice = 0;
+		buyPrice = 115500000;
 		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher", "weapon_Fighter_Gun_30mm" } };
 	};
 	class O_Plane_Fighter_02_Stealth_F : I_Plane_Fighter_03_CAS_F {
-		buyPrice = 0; 
+		buyPrice = 130500000; 
 		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher", "weapon_Fighter_Gun_30mm" } };
 	};

@@ -13,4 +13,4 @@ _this params [
 private _display = ctrlParent _list;
 if (isNull _display) exitWith {};
 
-(_display displayCtrl 3904) ctrlSetStructuredText parseText format["%1%2", "£", (_list lbValue _index)];
+(_display displayCtrl 3904) ctrlSetStructuredText parseText format["%1%2", "£", [(_list lbValue _index)] call ULP_fnc_numberText];

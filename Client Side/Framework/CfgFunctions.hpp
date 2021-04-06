@@ -6,6 +6,7 @@ class CfgFunctions {
 			file = "Functions\Achievements";
 			class achieve {};
 			class hasAchieved {};
+			class initAchievements {};
 		};
 		
 		class General {

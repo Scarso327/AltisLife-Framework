@@ -1130,20 +1130,8 @@ class CfgVehicles {
 		virtualSpace = 75;
 		class Textures {
 			class Civilian : BaseTexture {}; 
-			class Police : PoliceTexture {
-				textures[] = { "Data\Textures\Vehicles\Sea\Police\motorboat.paa" }; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
-				};
-			};
-			class Medic : MedicTexture {
-				textures[] = { "Data\Textures\Vehicles\Sea\Medic\motorboat.paa" }; 
-				class Lights : MedicLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
-				};
-			};
+			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Sea\Police\motorboat.paa" }; };
+			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Sea\Medic\motorboat.paa" }; };
 		};
 	};
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
@@ -1158,10 +1146,6 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Sea\Police\RHIB_01.paa",
 					"Data\Textures\Vehicles\Sea\Police\RHIB_02.paa"
 				}; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
-				};
 			};
 		};
 	};
@@ -1176,10 +1160,6 @@ class CfgVehicles {
 				textures[] = { 
 					"Data\Textures\Vehicles\Sea\Police\speedboat_01.paa", 
 					"Data\Textures\Vehicles\Sea\Police\speedboat_02.paa"
-				}; 
-				class Lights : PoliceLights {
-					leftPos[] = {-0.402344, 2.2793, -0.531359};
-					rightPos[] = {0.402344, 2.2793, -0.531359};
 				};
 			};
 		};

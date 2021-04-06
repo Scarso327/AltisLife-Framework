@@ -479,12 +479,12 @@ class U_Rangemaster {
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
 		class SC {
-			displayName = "Special Contable";
+			displayName = "Special Constable";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\SC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class PC {
-			displayName = "Contable";
+			displayName = "Police Constable";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PC.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};

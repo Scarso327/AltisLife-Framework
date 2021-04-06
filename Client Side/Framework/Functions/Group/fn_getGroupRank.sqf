@@ -5,4 +5,4 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_getGroupRank";
 
-(getArray (missionConfigFile >> "CfgGroups" >> "ranks") find (rank (_this param [0, player, [objNull]])))
+(rankId (_this param [0, player, [objNull]]))

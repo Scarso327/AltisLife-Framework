@@ -5,98 +5,90 @@ class CfgTitles {
 	};
 	class FirstDrink {
 		displayName = "Big Drink Man";
-		description = "123";
+		description = "Taken your first drink of alcohol";
 	};
 	class FirstDrug {
 		displayName = "Druggie";
-		description = "123";
+		description = "Taken drugs and felt the effects";
 	};
 	class GirlsBestFriend {
 		displayName = "Girl's Best Friend";
-		description = "123";
+		description = "Held a diamond in your hand";
 	};
 	class Salty {
 		displayName = "Extremely Salty";
-		description = "123";
+		description = "You've become extremely salty";
 	};
 	class Captain {
 		displayName = "Ship Captain";
-		description = "123";
+		description = "Captained the HMS Liberty";
 	};
 	class JoinRebel {
 		displayName = "Rebellious Heart";
-		description = "123";
+		description = "Joined the Rebellion";
 	};
 	class JoinStaff {
 		displayName = "Godlike Individual";
-		description = "123";
+		description = "Become the closest thing to a God";
 	};
 	class LifeSaver {
 		displayName = "Life Saver";
-		description = "123";
+		description = "Saved a life using the correct equipment";
 	};
 	class Governor {
 		displayName = "Politically Minded";
-		description = "123";
+		description = "Successfully been voted into office";
 	};
 	class Employment {
 		displayName = "Employed";
-		description = "123";
+		description = "Become employeed and started working";
 	};
 	class Convict {
 		displayName = "Convict";
-		description = "123";
+		description = "It's all gone down hill";
 	};
 	class TaskMaster {
 		displayName = "Task Master";
-		description = "123";
+		description = "Ticking off tasks constantly";
 	};
 	class Cartel {
 		displayName = "Cartel Lord";
-		description = "123";
+		description = "Siezed control of a cartel";
 	};
 	class OneMillion {
 		displayName = "Millionaire";
-		description = "123";
-	};
-	class WeekLoyalty {
-		displayName = "Loyal Soul";
-		description = "123";
-	};
-	class YearLoyalty {
-		displayName = "Literal No Life";
-		description = "123";
+		description = "Had £1,000,000 at some point";
 	};
 	class Prestige {
 		displayName = "The Prestige";
-		description = "123";
+		description = "Made the decision to start from scratch";
 	};
 	class FanGirl {
 		displayName = "Fan Girl";
-		description = "123";
+		description = "simp";
 	};
 	class Uncharted {
 		displayName = "Explorer";
-		description = "123";
+		description = "Explored beyond the mapped world";
 	};
 	class Radiation {
 		displayName = "Radiated";
-		description = "123";
+		description = "Felt the effects of radiation";
 	};
 	class Protest {
 		displayName = "Protester";
-		description = "123";
+		description = "You never know what is too much";
 	};
 	class MileHighClub {
 		displayName = "Mile High Club";
-		description = "123";
+		description = "Travelled to a very high altitude";
 	};
 	class PirateDen {
 		displayName = "Pirate";
-		description = "123";
+		description = "Found the hidden pirate's cove";
 	};
 	class Atlantis {
 		displayName = "Ocean Diver";
-		description = "123";
+		description = "Dived to a very specific place";
 	};
 };

@@ -98,3 +98,8 @@ private _total = [] call ULP_fnc_groupFunds;
 (_display displayCtrl 23066) ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>1.5%</t><br/><t size='0.9'>Balance<t align='right'>Tax</t></t>", 
 	([format["%1%2", "£", [_total] call ULP_fnc_numberText], "-"] select (_total <= 0))
 ];
+
+// Disable Buttons
+{ (_x select 0) ctrlEnable (_x select 1); } forEach [
+	[_display displayCtrl 23067, [2] call ULP_fnc_canGroupRank]
+];

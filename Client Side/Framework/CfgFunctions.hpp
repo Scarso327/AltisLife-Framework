@@ -84,6 +84,7 @@ class CfgFunctions {
 			class isUnitsInZone {};
 			class unitsInZone {};
 			class forgeIdentity {};
+			class metalDetector {};
 		};
 
 		class Clothing {

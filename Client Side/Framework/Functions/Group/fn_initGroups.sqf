@@ -43,3 +43,13 @@ scopeName "fn_initGroups";
 
 	hint _message;
 }] call ULP_fnc_addEventHandler;
+
+["GroupRankChanged", {
+	_this params [
+		["_rank", 0, [0]],
+		["_actioner", objNull, [objNull]]
+	];
+
+	_rank = [_rank] call ULP_fnc_rankName;
+	hint format ["Your rank has been set to %1", ([format["%1 by %2", _rank, name _actioner], _rank] select (isNull _actioner))];
+}] call ULP_fnc_addEventHandler;

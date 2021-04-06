@@ -18,5 +18,6 @@ class CfgGroups {
 	class Permissions {
 		deposit = 3;
 		withdraw = 3;
+		rank = 4;
 	};
 };

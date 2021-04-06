@@ -259,6 +259,7 @@ class CfgFunctions {
 			class openGroup {};
 			class group {};
 			class overview {};
+			class changeRank {};
 		};
 
 		class TabletKeys {
@@ -417,6 +418,7 @@ class CfgFunctions {
 			class getGroupById {};
 			class getGroupName {};
 			class getGroupRank {};
+			class setGroupRank {};
 			class groupId {};
 			class groupFunds {};
 			class groupPermissions {};
@@ -425,6 +427,7 @@ class CfgFunctions {
 			class rankName {};
 			class canGroupRank {};
 			class groupMembers {};
+			class isGroupMember {};
 		};
 
 		class NLR {

@@ -73,7 +73,7 @@ class GroupMemberListHeader: Life_RscListNBox {
 class GroupMemberList: Life_RscListNBox {
     idc = 23062;
 	colorBackground[] = INNER_BODY_COLOUR;
-	onLBSelChanged = "";
+	onLBSelChanged = "((ctrlParent (_this select 0)) displayCtrl 23068) lbSetCurSel ((_this select 0) lnbValue [(_this select 1), 1])";
     rowHeight = 0.09;
     sizeEx = 0.033;
     SAFEZONE_X(UI_X);
@@ -94,4 +94,23 @@ class GroupFunds : Life_RscStructuredText {
 	SAFEZONE_Y((UI_Y + UI_HEIGHT) - (0.022 * 2));
 	SAFEZONE_W(((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2));
 	SAFEZONE_H((0.022 * 2));
+};
+
+class ChangeRank : ULP_RscButtonClean {
+	idc = 23067;
+	text = "<t align = 'center'>Change Rank</t>";
+	onButtonClick = "_this call ULP_fnc_changeRank;";
+	SAFEZONE_X((UI_X + ((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) + MARGIN_X);
+	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3));
+	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
+	SAFEZONE_H(0.022);
+};
+
+class GroupRankSelectList : Life_RscCombo {
+	idc = 23068;
+	onLBSelChanged = "";
+	SAFEZONE_X((UI_X + ((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) + MARGIN_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
+	SAFEZONE_H(0.022);
 };

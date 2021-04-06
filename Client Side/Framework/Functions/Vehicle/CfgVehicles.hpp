@@ -68,6 +68,28 @@ class CfgVehicles {
 		class Lights : HatoLights {};
 	};
 
+	class BaseChromeGreen : BaseTexture {
+		displayName = "Chrome Green";
+		materials[] = { "Data\Textures\Vehicles\Global\Chrone\green.paa" };
+		locked = true;
+	};
+	class BaseChromeBlue : BaseChromeGreen {
+		displayName = "Chrome Blue";
+		materials[] = { "Data\Textures\Vehicles\Global\Chrone\blue.paa" };
+	};
+	class BaseChromeRed : BaseChromeGreen {
+		displayName = "Chrome Red";
+		materials[] = { "Data\Textures\Vehicles\Global\Chrone\red.paa" };
+	};
+	class BaseChromeSilver : BaseChromeGreen {
+		displayName = "Chrome Silver";
+		materials[] = { "Data\Textures\Vehicles\Global\Chrone\silver.paa" };
+	};
+	class BaseChromeGold : BaseChromeGreen {
+		displayName = "Chrome Gold";
+		materials[] = { "Data\Textures\Vehicles\Global\Chrone\gold.paa" };
+	};
+
 	// CARS --------------------------------------------------------------------------------------
 	class C_Kart_01_Blu_F : Base {
 		buyPrice = 0;
@@ -531,6 +553,11 @@ class CfgVehicles {
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_adds_olive_co.paa"
 				}; 
 			};
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 			class PoliceBlack : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\prowler.paa" }; 
 				class Lights : PoliceLights {
@@ -555,6 +582,11 @@ class CfgVehicles {
 				displayName = "Hex";
 				textures[] = { "\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa", }; 
 			};
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 			class PoliceBlack : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\qilin.paa" }; 
 				class Lights : PoliceLights {
@@ -621,6 +653,11 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_02.paa"
 				}; 
 			};
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -646,6 +683,11 @@ class CfgVehicles {
 				locked = true;
 				textures[] = { "Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
 			};
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -1229,6 +1271,11 @@ class CfgVehicles {
 				displayName = "Wasp";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa" };
 			}; 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
 			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
 		};

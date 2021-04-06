@@ -275,6 +275,20 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class Blackmarketer {
+		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		displayName = "Blackmarketer";
+		description = "Permits access to the Blackmarket.";
+		removalMultiplier = 10;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 26;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class QuickLearner { // TODO
 		icon = "Data\UI\Perks\quickLearner.paa";
 		displayName = "Quick Learner";

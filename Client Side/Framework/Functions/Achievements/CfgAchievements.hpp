@@ -255,6 +255,14 @@ class CfgAchievements {
 	};
 
 	// MYSTERY ---------------------------------------------------------
+	class Barrel {
+		icon = "Data\UI\Achievements\barrel.paa";
+		displayName = "The Barrel";
+		description = "Found the mysterious hidden barrel.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+	
 	class Prestige {
 		icon = "Data\UI\Achievements\prestige.paa";
 		displayName = "Prestigious";

@@ -21,6 +21,8 @@ _name = [_name] call DB_fnc_mresString;
 private _ranks = getArray (missionConfigFile >> "CfgGroups" >> "ranks");
 private _depositIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "deposit");
 private _withdrawIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "withdraw");
+private _level = ((count _ranks) - 1);
+private _members = createHashMapFromArray [[_steamid, [name _owner, _level]]];
 
 private _query = [format["SELECT id, tag, name, active FROM groups WHERE tag = '%1' OR name = '%2'",
 	_tag, _name
@@ -58,6 +60,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 
 		_group setVariable ["group_id", _queryId, true];
 		_group setVariable ["group_owner", _steamid, true];
+		_group setVariable ["group_members", _members, true];
 		_group setGroupIdGlobal [_name];
 	} else {
 		// Make sure no one is in the group still..
@@ -76,6 +79,8 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 		if !((groupId _group) isEqualTo _name) then {
 			_group setGroupIdGlobal [_name];
 		};
+
+		_group setVariable ["group_members", _members, true];
 
 		// Wipe...
 		_group setVariable ["group_ranks", nil, true];
@@ -100,10 +105,10 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 
 	_group setVariable ["group_id", _id, true];
 	_group setVariable ["group_owner", _steamid, true];
+	_group setVariable ["group_members", _members, true];
 	_group setGroupIdGlobal [_name];
 };
 
-private _level = ((count _ranks) - 1);
 _owner setUnitRank (_ranks select _level);
 
 // Update Owner's Gang ID...

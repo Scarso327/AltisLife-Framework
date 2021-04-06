@@ -255,6 +255,8 @@ class CfgFunctions {
 		class TabletGroup {
 			file = "Functions\Tablet\Group";
 			class openGroup {};
+			class group {};
+			class overview {};
 		};
 
 		class TabletKeys {
@@ -419,6 +421,7 @@ class CfgFunctions {
 			class isGroupPremium {};
 			class rankName {};
 			class canGroupRank {};
+			class groupMembers {};
 		};
 
 		class NLR {

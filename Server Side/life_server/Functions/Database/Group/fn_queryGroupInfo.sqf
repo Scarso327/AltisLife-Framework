@@ -59,6 +59,17 @@ if (isNull _group) then {
 			_group setVariable ["group_premium", _queryPremium, true];
 		};
 
+		private _members = [format ["SELECT name, pid, group_level FROM players WHERE group_id = '%1'", _groupid], 2, true] call DB_fnc_asyncCall;
+		if !(_members isEqualTo []) then {
+			private _hash = createHashMap;
+
+			{
+				_hash set [_x select 1, [_x select 0, _x select 2]];
+			} forEach _members;
+
+			_group setVariable ["group_members", _hash, true];
+		};
+
 		_unit setUnitRank (_ranks select _queryRank);
 	};
 

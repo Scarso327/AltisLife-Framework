@@ -84,7 +84,28 @@ class CfgTablet {
 	class Group : BaseScreen {
 		idc= 23005;
 		pageTitle = "Group";
-		pageIdcs[] = {};
+		pageIdcs[] = {
+			23061
+		};
+		onload = "_this call ULP_fnc_group";
+	};
+	
+	class GroupOverview : Group {
+		pageTitle = "Group - Overview";
+		pageIdcs[] = {
+			23061, 23062, 23063, 23064, 23065
+		};
+		onload = "_this call ULP_fnc_overview";
+	};
+
+	class GroupProgression : Group {
+		pageTitle = "Group - Progression";
+		onload = "";
+	};
+
+	class GroupSettings : Group {
+		pageTitle = "Group - Settings";
+		onload = "";
 	};
 
 	class Keys : BaseScreen {

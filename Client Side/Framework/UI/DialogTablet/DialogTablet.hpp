@@ -151,6 +151,7 @@ class DialogTablet {
 		#include "Screens\Market.hpp"
 		#include "Screens\Messages.hpp"
 		#include "Screens\Perks.hpp"
+		#include "Screens\Group.hpp"
 	};
 };
 

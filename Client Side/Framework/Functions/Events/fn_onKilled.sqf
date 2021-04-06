@@ -34,6 +34,10 @@ _unit removeWeapon (secondaryWeapon _unit);
 // TODO : Drop Money and Default Death Related Variables...
 [getPos _unit, getDir _unit] call ULP_fnc_createBodyBag;
 
+ULP_Inventory = createHashMap; // Wipe Inventory...
+ULP_CarryInfo set [0, 0];
+[] call ULP_fnc_saveGear;
+
 // Close bleedout script...
 if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
 	[uiNamespace getVariable "_fnc_bleedout"] call ULP_fnc_removeEachFrame;

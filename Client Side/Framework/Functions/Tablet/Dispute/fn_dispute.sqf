@@ -11,6 +11,7 @@ if (isNull _display) exitWith {};
 // Stop spam...
 if (time < (missionNamespace getVariable ["ULP_LastDispute", 0])) exitWith {
 	hint "You've disputed someone recently, please wait...";
+	["Home"] call ULP_fnc_setScreen;
 	false
 };
 missionNamespace setVariable ["ULP_LastDispute", time + 5];
@@ -34,5 +35,6 @@ missionNamespace setVariable ["ULP_LastDispute", time + 5];
 	hint format ["You have disputed %1", name _player];
 
 	[getPlayerUID player, "Dispute", [getPlayerUID _player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
-	["Home"] call ULP_fnc_setScreen;
 }, false, true] call ULP_fnc_selectPlayer;
+
+["Home"] call ULP_fnc_setScreen;

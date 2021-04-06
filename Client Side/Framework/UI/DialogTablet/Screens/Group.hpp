@@ -29,7 +29,7 @@ class GroupMemberBackground : Life_RscText {
     SAFEZONE_X(UI_X);
 	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3));
 	SAFEZONE_W(((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2));
-	SAFEZONE_H((UI_HEIGHT - 0.022) - (MARGIN_Y * 3));
+	SAFEZONE_H((UI_HEIGHT - (0.022 * 3)) - (MARGIN_Y * 4));
 };
 
 class GroupMemberHeaderBackground : Life_RscText {
@@ -79,9 +79,19 @@ class GroupMemberList: Life_RscListNBox {
     SAFEZONE_X(UI_X);
 	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3));
 	SAFEZONE_W(((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2));
-	SAFEZONE_H((UI_HEIGHT - 0.022) - (MARGIN_Y * 3));
+	SAFEZONE_H((UI_HEIGHT - (0.022 * 3)) - (MARGIN_Y * 4));
 	columns[] = { 0, 0.6 };
 	drawSideArrows = false;
 	idcLeft = -1;
 	idcRight = -1;
+};
+
+class GroupFunds : Life_RscStructuredText {
+	idc = 23066;
+	text = "<t align='left'>£1,000,000</t><t align='right'>1.5%</t><br/><t size='0.9'>Balance<t align='right'>Tax</t></t>";
+	colorBackground[] = INNER_BODY_COLOUR;
+	SAFEZONE_X(UI_X);
+	SAFEZONE_Y((UI_Y + UI_HEIGHT) - (0.022 * 2));
+	SAFEZONE_W(((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2));
+	SAFEZONE_H((0.022 * 2));
 };

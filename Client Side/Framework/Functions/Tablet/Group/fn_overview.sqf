@@ -19,6 +19,27 @@ if !(_listHeader getVariable ["setup", false]) then {
 	_listHeader getVariable ["setup", true];
 };
 
+if (_display getVariable ["funds_changed", -1] > -1) then {
+	_display setVariable ["funds_changed", (["GroupMoneyChanged", {
+		private _display = findDisplay 23000;
+		if (isNull _display) exitWith {
+			["GroupMoneyChanged", _x] call ULP_fnc_removeEventHandler;
+		};
+
+		private _toolbox = _display displayCtrl 23061;
+
+		if ((lbCurSel _toolbox) isEqualTo 0) then {
+			_this params [
+				"", "_total"
+			];
+
+			(_display displayCtrl 23066) ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>1.5%</t><br/><t size='0.9'>Balance<t align='right'>Tax</t></t>", 
+				([format["%1%2", "£", [_total] call ULP_fnc_numberText], "-"] select (_total <= 0))
+			];
+		};
+	}] call ULP_fnc_addEventHandler)];
+};
+
 {
 	private _offline = (_forEachIndex isEqualTo 1);
 
@@ -41,3 +62,8 @@ if !(_listHeader getVariable ["setup", false]) then {
 		};
 	} forEach _x;
 } forEach _members;
+
+private _total = [] call ULP_fnc_groupFunds;
+(_display displayCtrl 23066) ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>1.5%</t><br/><t size='0.9'>Balance<t align='right'>Tax</t></t>", 
+	([format["%1%2", "£", [_total] call ULP_fnc_numberText], "-"] select (_total <= 0))
+];

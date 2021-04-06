@@ -611,7 +611,7 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 	virtualSpace = 0;
 	isGas = false;
 	class Textures {
-		class U_I_ParadeUniform_01_AAF_decorated_F { 
+		class Command { 
 			displayName = "Command"; 
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
@@ -620,7 +620,7 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 			};
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
-		class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F { 
+		class Main : U_I_ParadeUniform_01_AAF_decorated_F { 
 			displayName = "Main"; 
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};

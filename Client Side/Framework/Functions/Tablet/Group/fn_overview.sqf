@@ -19,7 +19,7 @@ if !(_listHeader getVariable ["setup", false]) then {
 	_listHeader getVariable ["setup", true];
 };
 
-if (_display getVariable ["funds_changed", -1] > -1) then {
+if (_display getVariable ["funds_changed", -1] < 0) then {
 	_display setVariable ["funds_changed", (["GroupMoneyChanged", {
 		private _display = findDisplay 23000;
 		if (isNull _display) exitWith {

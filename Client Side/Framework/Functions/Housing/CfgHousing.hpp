@@ -18,7 +18,7 @@ class CfgHousing {
 				position[] = {{0, 0, 0}, 0};
 			};
 			class Garage {
-				spawnPos[] = {{0, 0, 0}, 0};
+				spawnPos[] = {{-12.019,0.273438,-0.230196}, 270};
 			};
 		};
 		class Land_i_Garage_V2_F : Land_i_Garage_V1_F {};
@@ -166,7 +166,7 @@ class CfgHousing {
 				position[] = {{-0.140137,0.405273,-1.64059}, 180};
 			};
 			class Garage {
-				spawnPos[] = {{0, 0, 0}, 0};
+				spawnPos[] = {{-12.6245,3.8877,-1.51542}, 0};
 			};
 		};
 	};

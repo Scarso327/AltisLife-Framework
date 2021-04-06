@@ -2,6 +2,8 @@ class CfgCartels {
 	class Fixed {
 		cartelTick = 1 * 60;
 		rewardTicks = 15;
+		rewardXp = 250;
+		rewardAmounts[] = { 150, 350 }; // At or below 25 players, above 25
 
 		class Northern {
 			name = "Northern Drug Cartel";

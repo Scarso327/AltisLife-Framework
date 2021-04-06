@@ -6,12 +6,16 @@
 scopeName "fn_handleGroupFunds";
 
 _this params [
-	["_unit", objNull, [objNull]],
+	["_unit", objNull, [objNull, grpNull]],
 	["_amount", 0, [0]],
 	["_add", false, [true]]
 ];
 
-private _group = group _unit;
+private _group = _unit;
+if (_group isEqualType objNull) then {
+   _group = group _unit;
+};
+
 private _groupId = [_group] call ULP_fnc_groupId;
 
 if (isNull _unit || { !([_group] call ULP_fnc_isGroup) } || { _amount < 0 }) exitWith {};
@@ -22,13 +26,17 @@ if (_add) then {
 	_funds = _funds + _amount;
 } else {
 	if (_funds < _amount) exitWith {
-		["GroupWithdraw", [format ["Your group doesn't have %1%2 to withdraw...", "£", [_amount] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+		if (isPlayer _unit) then {
+			["GroupWithdraw", [format ["Your group doesn't have %1%2 to withdraw...", "£", [_amount] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+		};
 	};
 
 	_funds = _funds - _amount;
-	["GroupWithdraw", [
-		format ["You've withdrawn %1%2 from your group funds...", "£", [_amount] call ULP_fnc_numberText], _amount, _funds
-	]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+	if (isPlayer _unit) then {
+		["GroupWithdraw", [
+			format ["You've withdrawn %1%2 from your group funds...", "£", [_amount] call ULP_fnc_numberText], _amount, _funds
+		]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+	};
 };
 
 if !((_group getVariable ["group_funds", 0]) isEqualTo _funds) then {

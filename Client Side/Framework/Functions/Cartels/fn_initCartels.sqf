@@ -25,3 +25,18 @@ if !(hasInterface) exitWith {};
 		};
 	};
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgCartels" >> "Fixed"));
+
+["CartelPayout", {
+	_this params [
+		["_cartel", "", [""]],
+		["_personal", 0, [0]],
+		["_group", 0, [0]]
+	];
+
+	if (_personal > 0) then {
+		[_personal, true, format ["Cartel Payout"]] call ULP_fnc_addMoney;
+	};
+
+	[getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardXp"), format["Held %1", _cartel]] call ULP_fnc_addXP;
+	hint format ["For holding %1 you've been paid %2%3 and your group has recieved %2%4", _cartel, "£", [_personal] call ULP_fnc_numberText, [_group] call ULP_fnc_numberText];
+}] call ULP_fnc_addEventHandler;

@@ -41,6 +41,20 @@ if ((count _owners) > 0) exitWith {
 		_group = [_owners param [0, -5]] call ULP_fnc_getGroupById;
 		if (isNull _group) exitWith { false breakOut "fn_cartelReward"; };
 
+		if (_doReward) then {
+			private _units = count playableUnits;
+			private _cut = round ((((getArray (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardAmounts") select ([_units > 25] call ULP_fnc_bool)) * _highest) * _units) / 2);
+			
+			[_group, _cut, true] call ULP_SRV_fnc_handleGroupFunds;
+
+			private _groupUnits = units _group;
+			private _memberCut = round (_cut / (count _groupUnits));
+
+			{
+				["CartelPayout", [_markerText, _memberCut, _cut]] remoteExecCall ["ULP_fnc_invokeEvent", _x];
+			} forEach _groupUnits;
+		};
+
 		_markerText = format ["%1 | %2", _markerText, [_group] call ULP_fnc_getGroupName];
 	};
 

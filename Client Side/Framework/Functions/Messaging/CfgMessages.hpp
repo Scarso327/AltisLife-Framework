@@ -36,7 +36,8 @@ class CfgMessages {
 		ignoreComms = true;
 		canReply = false;
 		sender = "Server";
-		targets = "[""ULP_Staff"", 3] call ULP_fnc_hasAccess || { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
+		targets = "0";
+		condition = "[""ULP_Staff"", 3] call ULP_fnc_hasAccess || { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 	};
 
 	class EventsAnnoucement : PublicAnnoucement {

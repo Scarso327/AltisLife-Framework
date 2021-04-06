@@ -31,7 +31,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class GovernmentBonus {
+	class GovernmentBonus { // TODO
 		icon = "Data\UI\Perks\governmentBonus.paa";
 		displayName = "Government Bonus";
 		description = "Increases your base paycheck by %1%2.";
@@ -238,8 +238,14 @@ class CfgPerks {
 	class BloodCarrier { // TODO
 		icon = "Data\UI\Perks\bloodCarrier.paa";
 		displayName = "Blood Carrier";
-		description = "Blood bags become 50% more effective.";
+		description = "Increases Blood bag effenciency by %1%2.";
 		removalMultiplier = 1.2;
+		class Leveling {
+			maxLevel = 4;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "25 * (_this select 0)";
+		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 22;
@@ -272,8 +278,14 @@ class CfgPerks {
 	class FirstAider { // TODO
 		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "First Aider";
-		description = "FirstAidKits becomes 100% effective.";
+		description = "Increase the effeciency of FirstAidKits by %1%2.";
 		removalMultiplier = 1.2;
+		class Leveling {
+			maxLevel = 5;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "5 * (_this select 0)";
+		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 24;

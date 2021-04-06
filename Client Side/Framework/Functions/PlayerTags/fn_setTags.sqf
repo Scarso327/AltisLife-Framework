@@ -40,9 +40,9 @@ if (_subtitle isEqualTo "") then {
 player setVariable ["icon", _icon, true];
 player setVariable ["subtitle", _subtitle, true];
 
-private _title = profileNamespace getVariable ["selected_title", ""];
-if (isClass (missionConfigFile >> "CfgTitles" >> _title)) then {
-	player setVariable ["title", _title, true];
+private _title = missionConfigFile >> "CfgTitles" >> (profileNamespace getVariable ["selected_title", ""]);
+if (isClass _title) then {
+	player setVariable ["title", getText (_title >> "displayName"), true];
 } else {
 	player setVariable ["title", nil, true];
 };

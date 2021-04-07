@@ -1,5 +1,6 @@
 class ItemMap {
 	price = 0;
+	reputation = false;
 	class Textures {};	
 };
 class ItemCompass : ItemMap{};
@@ -7,6 +8,7 @@ class ItemWatch : ItemMap{};
 
 class ItemGPS {
 	price = 0;
+	reputation = false;
 	class Textures {};	
 };
 class B_UavTerminal : ItemGPS{};
@@ -14,6 +16,7 @@ class ItemRadio : ItemGPS{};
 
 class Binocular {
 	price = 0;
+	reputation = false;
 	class Textures {};	
 };
 class Rangefinder : Binocular{};
@@ -21,6 +24,7 @@ class Rangefinder : Binocular{};
 class NVGoggles {
 	displayName = "Night Vision Goggles";
 	price = 0;
+	reputation = false;
 	class Textures {
         class NVGoggles {
 			displayName = "Brown";
@@ -39,12 +43,14 @@ class NVGoggles_INDEP : NVGoggles {};
 
 class ToolKit {
 	price = 0;
+	reputation = false;
 	class Textures {};	
 };
 
 class SmokeShell {
 	displayName = "Smoke Grenade";
 	price = 0;
+	reputation = false;
 	class Textures {
         class SmokeShell {
 			displayName = "White";

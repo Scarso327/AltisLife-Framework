@@ -3,6 +3,7 @@ class BaseMagazine { class Textures {}; };
 class 6Rnd_RedSignal_F {
 	displayName = "6Rnd Signal Cylinder";
 	price = 0;
+	reputation = false;
 	class Textures {
 		class 6Rnd_RedSignal_F {
 			displayName = "Red";
@@ -43,7 +44,8 @@ class 50Rnd_570x28_SMG_03 : BaseMagazine { price = 0; };
 // Rubber Bullets
 class 30Rnd_556x45_Stanag_Tracer_Green : BaseMagazine { 
 	displayName = "Rubber Bullets";
-	price = 0; 
+	price = 0;
+	reputation = false; 
 };
 
 // 5.56mm
@@ -63,6 +65,7 @@ class 30Rnd_65x39_caseless_msbs_mag : BaseMagazine { price = 0; };
 
 class 30Rnd_65x39_caseless_black_mag {
 	price = 0;
+	reputation = false;
 	class Textures {
 		class 30Rnd_65x39_caseless_black_mag {
 			displayName = "Black";
@@ -77,6 +80,7 @@ class 30Rnd_65x39_caseless_khaki_mag : 30Rnd_65x39_caseless_black_mag {};
 
 class 100Rnd_65x39_caseless_black_mag {
 	price = 0;
+	reputation = false;
 	class Textures {
 		class 100Rnd_65x39_caseless_black_mag {
 			displayName = "Black";

@@ -2,6 +2,7 @@ class V_LegStrapBag_black_F {
 	displayName = "Leg Strap";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_LegStrapBag_black_F {
 			displayName = "Black";
@@ -18,6 +19,7 @@ class V_Plain_medical_F {
 	displayName = "Identification Vest";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {};
 };
 
@@ -25,6 +27,7 @@ class V_Pocketed_black_F {
 	displayName = "Pocketed Vest";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_Pocketed_black_F {
 			displayName = "Black";
@@ -41,6 +44,7 @@ class V_Safety_yellow_F {
 	displayName = "Safety Vest";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_Safety_yellow_F {
 			displayName = "Yellow";
@@ -57,6 +61,7 @@ class V_RebreatherB {
 	displayName = "Rebreather";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_RebreatherB {
 			displayName = "Black";
@@ -73,6 +78,7 @@ class V_Rangemaster_belt {
 	displayName = "Ammo Belt";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {};
 };
 
@@ -80,6 +86,7 @@ class V_BandollierB_blk {
 	displayName = "Bandollier";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_BandollierB_blk {
 			displayName = "Black";
@@ -100,6 +107,7 @@ class V_HarnessO_brn {
 	displayName = "Combat Harness";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_HarnessO_brn {
 			displayName = "Brown";
@@ -117,6 +125,7 @@ class V_HarnessOGL_gry : V_HarnessO_brn{};
 class V_TacVestIR_blk {
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {};
 };
 
@@ -124,6 +133,7 @@ class V_Chestrig_blk {
 	displayName = "Chest Rig";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_Chestrig_blk {
 			displayName = "Black";
@@ -142,6 +152,7 @@ class V_TacChestrig_cbr_F {
 	displayName = "Tactical Rig";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_TacChestrig_cbr_F {
 			displayName = "Coyote";
@@ -157,6 +168,7 @@ class V_TacChestrig_grn_F : V_TacChestrig_cbr_F{};
 class V_Press_F {
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {};
 };
 
@@ -164,6 +176,7 @@ class V_TacVest_blk {
 	displayName = "Tactical Vest";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_TacVest_blk {
 			displayName = "Black";
@@ -186,6 +199,7 @@ class V_PlateCarrier1_blk {
 	displayName = "Carrier Lite";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_PlateCarrier1_blk {
 			displayName = "Black";
@@ -206,6 +220,7 @@ class V_PlateCarrier2_blk {
 	displayName = "Carrier Rig";
 	price = 0;
 	virtualSpace = 0;
+	reputation = false;
 	class Textures {
 		class V_PlateCarrier2_blk {
 			displayName = "Black";

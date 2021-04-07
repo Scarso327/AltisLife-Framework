@@ -581,6 +581,7 @@ class CfgFunctions {
 		class Reputation {
 			file = "Functions\Reputation";
 			class initReputation {};
+			class reputationPrice {};
 		};
 	};
 

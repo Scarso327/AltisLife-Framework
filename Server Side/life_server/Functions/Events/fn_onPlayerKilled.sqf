@@ -16,6 +16,14 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 
 	if (["capture_cartel_", [_unit, _killer]] call ULP_fnc_isUnitsInZone) then {
 		[_unit, _killer] call ULP_SRV_fnc_onCartelKill;	
+	} else {
+		private _unitRep = _unit getVariable ["reputation", 0];
+
+		[_killer, missionConfigFile >> "CgReputation" >> "Types" >> (switch (true) do {
+			case (_unitRep >= 500): { "KilledHighRep" };
+			case (_unitRep > -500): { "KilledNormal" };
+			default { "KilledLowRep" };
+		})] call ULP_SRV_fnc_reputation;
 	};
 } else {
 	["Bleedout", [_unit getVariable ["realname", name _unit]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];

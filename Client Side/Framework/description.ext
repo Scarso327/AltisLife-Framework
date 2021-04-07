@@ -48,6 +48,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Processing\CfgProcessing.hpp"
 #include "Functions\Processing\CfgProcessingStores.hpp"
 #include "Functions\RandomEvents\CfgRandomEvents.hpp"
+#include "Functions\Reputation\CfgReputation.hpp"
 #include "Functions\Rewards\CfgRewards.hpp"
 #include "Functions\Robberies\CfgRobberies.hpp"
 #include "Functions\Spawn\CfgSpawns.hpp"

@@ -29,6 +29,7 @@ _session set ["Level", _level];
 _session set ["XP", _xp];
 
 _unit setVariable ["session", _session];
+_unit setVariable ["reputation", _playerData select 23];
 
 [format ["Registered %1", _uid]] call ULP_fnc_logIt;
 true

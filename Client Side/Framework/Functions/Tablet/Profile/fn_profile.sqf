@@ -21,6 +21,9 @@ _prestigeText ctrlSetStructuredText parseText format["<t size ='1' align='center
 private _levelText = _display displayCtrl 23026;
 _levelText ctrlSetStructuredText parseText format["<t size ='1' align='center'><t size ='1.25'>%1</t><br/>Level</t>", [ULP_Level] call ULP_fnc_numberText];
 
+private _repText = _display displayCtrl 23027;
+_repText ctrlSetStructuredText parseText format["<t size ='1' align='center'><t size ='1.25'>%1</t><br/>Reputation</t>", [ULP_Reputation] call ULP_fnc_numberText];
+
 switch (lbCurSel _toolbox) do {
 	case 3: { ["PlayerTag"] call ULP_fnc_setScreen; };
 	case 2: { ["Loyalty"] call ULP_fnc_setScreen; };

@@ -74,6 +74,7 @@ class CfgFunctions {
             class getSessionField {};
             class setSessionField {};
             class validateField {};
+            class reputation {};
         };
 
         class Containers {

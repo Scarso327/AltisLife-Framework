@@ -20,4 +20,6 @@ if (isNumber (_factionCfg >> "jointChannel") && { [getNumber(_factionCfg >> "joi
 };
 
 _unit setVariable ["session", nil];
+_unit setVariable ["reputation", nil];
+
 [format ["Unregistered %1", _uid]] call ULP_fnc_logIt;

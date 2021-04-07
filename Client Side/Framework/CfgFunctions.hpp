@@ -577,6 +577,11 @@ class CfgFunctions {
 			class addPerkXP {};
 			class initPerks {};
 		};
+
+		class Reputation {
+			file = "Functions\Reputation";
+			class initReputation {};
+		};
 	};
 
 	class ULP_Functions_UI {

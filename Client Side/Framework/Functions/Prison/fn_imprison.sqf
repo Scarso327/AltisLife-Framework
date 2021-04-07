@@ -24,10 +24,7 @@ if !(isClass _prison) exitWith { false };
 
 if (_duration > getNumber (_prison >> "maxDuraction")) exitWith { false };
 
-if ([player] call ULP_fnc_isRestrained) then {
-	[player, _arrester, false] call ULP_fnc_restrain;
-};
-
+[player, objNull, false] call ULP_fnc_restrain;
 private _pos = getMarkerPos getText (_prison >> "marker");
 
 _unit setPos _pos;

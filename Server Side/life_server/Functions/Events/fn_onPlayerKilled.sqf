@@ -19,7 +19,7 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 	} else {
 		private _unitRep = _unit getVariable ["reputation", 0];
 
-		[_killer, missionConfigFile >> "CgReputation" >> "Types" >> (switch (true) do {
+		[_killer, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
 			case (_unitRep >= 500): { "KilledHighRep" };
 			case (_unitRep > -500): { "KilledNormal" };
 			default { "KilledLowRep" };

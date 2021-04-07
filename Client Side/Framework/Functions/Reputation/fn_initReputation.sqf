@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_initReputation";
 
+["Initialising Reputation"] call ULP_fnc_logIt;
+
 ["ReputationChanged", {
 	_this params [
 		["_reason", "", [""]],
@@ -20,7 +22,7 @@ scopeName "fn_initReputation";
 		(["decreased", "increased"] select (ULP_Reputation > _oldReputation)), 
 		[_oldReputation] call ULP_fnc_numberText,
 		[ULP_Reputation] call ULP_fnc_numberText, 
-		getText (_cfg >> "reason")
+		_reason
 	];
 }] call ULP_fnc_addEventHandler;
 
@@ -29,7 +31,7 @@ scopeName "fn_initReputation";
 		"_unit", "_killer"
 	];
 
-	[_killer, missionConfigFile >> "CgReputation" >> "Types" >> (switch (true) do {
+	[_killer, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
 		case (ULP_Reputation >= 500): { "IncapHighRep" };
 		case (ULP_Reputation > -500): { "IncapNormal" };
 		default { "IncapLowRep" };

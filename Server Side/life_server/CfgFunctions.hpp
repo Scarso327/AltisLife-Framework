@@ -13,6 +13,7 @@ class CfgFunctions {
             class getLocalTime {};
             class getWeek {};
             class getNextId {};
+            class getDayName {};
         };
 
         class DatabasePlayer {

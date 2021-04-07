@@ -55,6 +55,14 @@ if (isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFact
 	} forEach ULP_Houses;
 };
 
+{
+	if ([configName _x, player] call ULP_fnc_ownsBase) then {
+		_item = _list lbAdd getText (_x >> "displayName");
+		_list lbSetValue [_item, 2];
+		_list lbSetData [_item, getText (_x >> "Spawn" >> "marker")];
+	};
+} forEach ("isClass (_x >> ""Spawn"")" configClasses (missionConfigFile >> "CfgBases"));
+
 _list lbSetCurSel 0;
 [_list, 0, 0] call ULP_fnc_changeSpawn;
 _list ctrlSetEventHandler ["LBSelChanged", "_this call ULP_fnc_changeSpawn;"];

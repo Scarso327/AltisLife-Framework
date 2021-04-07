@@ -17,17 +17,24 @@ if (isNull _display) exitWith {};
 private _selected = _list lbData _index;
 
 if !(_selected isEqualTo "") then {
-	if ([_list lbValue _index] call ULP_fnc_bool) then {
-		private _house = _selected call BIS_fnc_objectFromNetId;
+	switch (_list lbValue _index) do {
+		case 1: {
+			private _house = _selected call BIS_fnc_objectFromNetId;
 
-		if !(isNull _house) then {
-			_display setVariable ["spawn", _house];
-			[(_display displayCtrl 3001), [_time, 0.05, position _house]] call ULP_UI_fnc_setMapPosition;
+			if !(isNull _house) then {
+				_display setVariable ["spawn", _house];
+				[(_display displayCtrl 3001), [_time, 0.05, position _house]] call ULP_UI_fnc_setMapPosition;
+			};
 		};
-	} else {
-		private _cfg = missionConfigFile >> "CfgSpawns" >> worldName >> _selected;
-		_display setVariable ["spawn", _cfg];
+		case 2: {
+			_display setVariable ["spawn", getMarkerPos _selected];
+			[(_display displayCtrl 3001), [_time, 0.05, getMarkerPos _selected]] call ULP_UI_fnc_setMapPosition;
+		};
+		default {
+			private _cfg = missionConfigFile >> "CfgSpawns" >> worldName >> _selected;
+			_display setVariable ["spawn", _cfg];
 
-		[(_display displayCtrl 3001), [_time, 0.05, getMarkerPos getText(_cfg >> "marker")]] call ULP_UI_fnc_setMapPosition;
+			[(_display displayCtrl 3001), [_time, 0.05, getMarkerPos getText(_cfg >> "marker")]] call ULP_UI_fnc_setMapPosition;
+		};
 	};
 };

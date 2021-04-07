@@ -117,6 +117,7 @@ class CfgLicenses {
         displayName = "Blackmarket Access";
         buyPrice = 15000000;
         class Settings {};
+        conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk }";
     };
 
     // Processing Sites

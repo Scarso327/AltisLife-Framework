@@ -16,7 +16,7 @@ _this params [
 ];
 
 // Checks...
-if (isNull _target || { !(isPlayer _target) } || { (_target distance _detainer) >= 3 }) exitWith {};
+if (isNull _target || { !(isPlayer _target) } || { (_target distance _detainer) > 5 }) exitWith {};
 
 if !(local _target) exitWith {
     _this remoteExecCall ["ULP_fnc_restrain", _target];

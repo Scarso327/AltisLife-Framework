@@ -46,6 +46,12 @@ class CfgInteractions {
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [_this] call ULP_fnc_isEscorted }";
 		};
+
+		class Imprision : Unrestrain {
+			title = "Send to Prison";
+			onClick = "_this call ULP_fnc_setPrisonTime; closeDialog 0;";
+			condition = "[player] call ULP_fnc_canImprison && { [_this] call ULP_fnc_canImprisoned }";
+		};
 	};
 
 	class PersonMedical {

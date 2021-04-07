@@ -479,6 +479,7 @@ class CfgFunctions {
 			class canImprisoned {};
 			class imprison {};
 			class release {};
+			class setPrisonTIme {};
 		};
 
 		class VirtualInventory {

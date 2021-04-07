@@ -10,12 +10,15 @@ _this params [
 	["_boundaries", [0, 1], [[]]],
 	["_params", [], [[]]],
 	["_onSelect", {}, [{}]],
-	["_tablet", true, [false]]
+	["_tablet", true, [false]],
+	["_format", "[_this] call ULP_fnc_numberText", [""]],
+	["_allowManual", true, [false]]
 ];
 
 if (isNull _parent) exitWith {};
 
 private _display = _parent createDisplay "DisplaySelectNumber";
+_display setVariable ["format", _format];
 
 (_display displayCtrl 3207) ctrlShow _tablet;
 (_display displayCtrl 3208) ctrlShow !_tablet;
@@ -24,6 +27,7 @@ private _minMaxText = _display displayCtrl 3204;
 private _slider = _display displayCtrl 3205;
 private _button = _display displayCtrl 3206;
 private _input = _display displayCtrl 3209;
+_input ctrlEnable _allowManual;
 
 _slider sliderSetRange _boundaries;
 _slider sliderSetPosition 1;
@@ -51,7 +55,7 @@ _slider ctrlAddEventHandler ["SliderPosChanged", {
 
 	private _display = ctrlParent _ctrl;
 	private _input = _display displayCtrl 3209;
-	_input ctrlSetText ([_val] call ULP_fnc_numberText);
+	_input ctrlSetText (_val call compile (_display getVariable ["format", "[_this] call ULP_fnc_numberText"]));
 }];
 
 _display setVariable ["params", _params];

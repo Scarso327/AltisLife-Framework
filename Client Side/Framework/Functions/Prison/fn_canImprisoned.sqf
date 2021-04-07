@@ -12,4 +12,6 @@ _this params [
 private _cfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc_getFaction;
 if (isNull _unit || { !(isClass _cfg) }) exitWith { false };
 
-isNumber (_cfg >> "imprisoned") && { [getNumber (_cfg >> "imprisoned")] call ULP_fnc_bool }
+isNumber (_cfg >> "imprisoned") && { [getNumber (_cfg >> "imprisoned")] call ULP_fnc_bool } && {
+	[_unit] call ULP_fnc_isRestrained || { _unit isEqualTo player && { ULP_Imprisioned } }
+}

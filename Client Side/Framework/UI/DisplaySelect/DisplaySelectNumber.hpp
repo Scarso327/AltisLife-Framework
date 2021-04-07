@@ -68,6 +68,7 @@ class DisplaySelectNumber {
 		class ValueInput : life_RscEdit {
 			idc = 3209;
 			text = "";
+			colorDisabled[] = {0.95, 0.95, 0.95, 1};
 			SAFEZONE_X((UI_X + 0.1125) + MARGIN_X);
 			SAFEZONE_Y(0.456 + MARGIN_Y);
 			SAFEZONE_W(UI_WIDTH - (MARGIN_X * 2));

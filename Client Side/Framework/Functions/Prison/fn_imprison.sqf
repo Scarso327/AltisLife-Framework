@@ -11,18 +11,22 @@ if (canSuspend) exitWith {
 
 _this params [
 	["_unit", player, [objNull]],
-	["_duraction", 5 * 60, [0]],
+	["_duration", 5 * 60, [0]],
 	["_arrester", objNull, [objNull]],
 	["_update", true, [false]]
 ];
 
-if (isNull _unit || { !(isPlayer _unit) } || { !([_unit] call ULP_fnc_canImprisoned) } || { _duraction <= 0 }) exitWith { false };
+if (isNull _unit || { !(isPlayer _unit) } || { !([_unit] call ULP_fnc_canImprisoned) } || { _duration <= 0 }) exitWith { false };
 if !(local _unit) exitWith { _this remoteExecCall ["ULP_fnc_imprison", _unit]; false; };
 
 private _prison = missionConfigFile >> "CfgPrison" >> worldName;
 if !(isClass _prison) exitWith { false };
 
-if (_duraction > getNumber (_prison >> "maxDuraction")) exitWith { false };
+if (_duration > getNumber (_prison >> "maxDuraction")) exitWith { false };
+
+if ([player] call ULP_fnc_isRestrained) then {
+	[player, _arrester, false] call ULP_fnc_restrain;
+};
 
 private _pos = getMarkerPos getText (_prison >> "marker");
 
@@ -30,7 +34,7 @@ _unit setPos _pos;
 [_prison >> "PrisonLoadout"] call ULP_fnc_setCfgLoadout;
 
 ULP_Imprisioned = true;
-ULP_Prison_Time = time + _duraction;
+ULP_Prison_Time = time + _duration;
 
 ["Convict"] call ULP_fnc_achieve;
 
@@ -51,7 +55,7 @@ uiNamespace setVariable ["prison_timer", [[_unit, _pos], {
 }] call ULP_fnc_addEachFrame];
 
 if (_update) then {
-	[_unit, 7, _duraction] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	[_unit, 7, _duration] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 };
 
 if !(isNull _arrester) then {

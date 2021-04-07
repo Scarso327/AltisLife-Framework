@@ -583,6 +583,12 @@ class CfgFunctions {
 			class initReputation {};
 			class reputationPrice {};
 		};
+
+		class Bases {
+			file = "Functions\Bases";
+			class ownsBase {};
+			class initBases {};
+		};
 	};
 
 	class ULP_Functions_UI {

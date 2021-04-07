@@ -103,6 +103,11 @@ class CfgFunctions {
             class cartelReward {};
             class onCartelKill {};
         };
+
+        class Bases {
+            file = "\life_server\Functions\Bases";
+            class initBases {};
+        };
     };
 
     class MySQL_Database {

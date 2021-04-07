@@ -23,6 +23,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #define false 0
 
 #include "Configuration\CfgSettings.hpp"
+#include "Functions\Bases\CfgBases.hpp"
 #include "Functions\Cartels\CfgCartels.hpp"
 #include "Functions\Chat\CfgChat.hpp"
 #include "Functions\Clothing\CfgClothing.hpp"

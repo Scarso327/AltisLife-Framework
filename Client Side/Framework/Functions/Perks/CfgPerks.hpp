@@ -80,7 +80,7 @@ class CfgPerks {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 5;
 			prestige = 0;
-			profession[] = {};
+			profession[] = { "Repairing", 1 };
 		};
 		onActivated = "";
 	};
@@ -153,6 +153,20 @@ class CfgPerks {
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
+	class cuffCourier {
+		icon = "Data\UI\Perks\shadyTrader.paa";
+		displayName = "Cuff Courier";
+		description = "Gain the ability to reuse zip ties.";
+		removalMultiplier = 1;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 14;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class IDForger {
 		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
 		displayName = "ID Forger";
@@ -197,6 +211,46 @@ class CfgPerks {
 			level = 17;
 			prestige = 0;
 			profession[] = {};
+		};
+		onActivated = "";
+	};
+
+	class PartsCarrier { // TODO
+		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		displayName = "Parts Carrier";
+		description = "Decreases the cost of servicing an aircraft by %1%2.";
+		removalMultiplier = 2;
+		class Leveling {
+			maxLevel = 3;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "25 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 18;
+			prestige = 0;
+			profession[] = { "Repairing", 3 };
+		};
+		onActivated = "";
+	};
+
+	class ScrapDealer { // TODO
+		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		displayName = "Scrap Dealer";
+		description = "Increases the amount of money made from chopping a vehicle by %1%2.";
+		removalMultiplier = 1;
+		class Leveling {
+			maxLevel = 5;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "3 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 19;
+			prestige = 0;
+			profession[] = { "Repairing", 3 };
 		};
 		onActivated = "";
 	};

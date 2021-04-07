@@ -27,7 +27,7 @@ private _prison = missionConfigFile >> "CfgPrison" >> worldName;
 if !(isClass _prison) exitWith { false };
 
 if (_escaped) then {
-	hint "You've escape from prison";
+	hint "You've escaped from prison";
 } else {
 	getArray (_prison >> "release") params ["_pos", "_dir"];
 	_unit setPos _pos;

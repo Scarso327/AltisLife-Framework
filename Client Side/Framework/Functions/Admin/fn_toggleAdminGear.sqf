@@ -56,4 +56,5 @@ if ([player] call ULP_fnc_onDuty) then {
 player setVariable ["onduty", !([player] call ULP_fnc_onDuty), true];
 
 [] call ULP_fnc_setTags;
+["MoneyChanged", [CASH, BANK]] call ULP_fnc_invokeEvent;
 true

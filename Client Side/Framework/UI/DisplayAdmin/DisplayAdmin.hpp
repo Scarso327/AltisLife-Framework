@@ -34,7 +34,7 @@ class DisplayAdmin {
                     fade = 0.8;
                     colorBackground[] = {0, 0, 0, 0};
                     w = 15 * GUI_GRID_CENTER_W;
-                    h = 46 * GUI_GRID_CENTER_H;
+                    h = 45.5 * GUI_GRID_CENTER_H;
                 };
             };
         };

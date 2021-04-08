@@ -36,6 +36,12 @@ if ([player] call ULP_fnc_onDuty) then {
 	] select (random 2));
 	player addHeadgear "H_Cap_headphones";
 	player addGoggles "G_Goggles_VR";
+
+	player linkItem "ItemMap";
+	player linkItem "ItemGPS";
+	player linkItem "ItemCompass";
+	player linkItem "ItemWatch";
+	player linkItem "ItemRadio";
 };
 
 player setVariable ["onduty", !([player] call ULP_fnc_onDuty), true];

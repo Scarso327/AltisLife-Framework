@@ -9,6 +9,24 @@ class DisplayAdmin {
     objects[]={};
 
     class ControlsBackground {
+        class ToolboxBackground : Life_RscText {
+            idc = -1;
+            colorBackground[] = {0, 0, 0, 0.3};
+            SAFEZONE_X(0.45);
+            SAFEZONE_Y(0);
+            SAFEZONE_W(0.1);
+            SAFEZONE_H(0.022);
+        };
+
+        class MouseArea : Life_RscText {
+            idc = 603;
+            style = 0x10;
+			SAFEZONE_X(0);
+			SAFEZONE_Y(0);
+			SAFEZONE_W(1);
+			SAFEZONE_H(1);
+        };
+
         class MapView : Life_RscMapControl {
             idc = 601;
 			SAFEZONE_X(0);
@@ -36,6 +54,27 @@ class DisplayAdmin {
                     w = 15 * GUI_GRID_CENTER_W;
                     h = 45.5 * GUI_GRID_CENTER_H;
                 };
+            };
+        };
+
+        class ViewToolbox : Life_RscToolbox {
+            idc = 604;
+            style = 2;
+            colorBackground[] = NO_COLOUR;
+            colorSelectedBg[] = INNER_BODY_COLOUR;
+            SAFEZONE_X(0.45);
+            SAFEZONE_Y(0);
+            SAFEZONE_W(0.1);
+            SAFEZONE_H(0.022);
+            columns = 2;
+            fade = 0;
+            strings[] = {
+                "Camera",
+                "First Person"
+            };
+            tooltips[] = {
+                "Camera",
+                "First Person"
             };
         };
     };

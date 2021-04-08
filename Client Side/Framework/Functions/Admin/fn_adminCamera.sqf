@@ -52,6 +52,7 @@ switch (_mode) do {
 		_camera camCommit 0;
 
 		uiNamespace setVariable ["admin_camera", _camera];
+		_camera setVariable ["display", _display];
 		["SetCameraInput", [true]] call ULP_fnc_adminCamera;
 
 		private _ctrlMap = _display displayCtrl 601;
@@ -59,12 +60,32 @@ switch (_mode) do {
 		_ctrlMap ctrlAddEventHandler ["Draw", { ["mapDraw", _this] call ULP_fnc_adminCamera }];
 		_ctrlMap ctrlAddEventHandler ["MouseButtonClick", { ["mapClick", _this] call ULP_fnc_adminCamera }];
 
+		uiNamespace setVariable ["admin_camera_map", _ctrlMap];
+
+		private _ctrlMouse = _display displayCtrl 603;
+
 		_display displayAddEventHandler ["KeyDown", { ["keyDown", _this] call ULP_fnc_adminCamera }];
+		_ctrlMouse ctrlAddEventHandler ["MouseButtonDown", { ["mouseDown", _this] call ULP_fnc_adminCamera }];
+
+		uiNamespace setVariable ["admin_camera_mouse", _ctrlMouse];
+		ctrlSetFocus _ctrlMouse;
 
 		private _list = (_display displayCtrl 602) controlsGroupCtrl 101;
 		_list ctrlAddEventHandler ["MouseEnter", { ["ToggleList", [_this select 0, true]] call ULP_fnc_adminCamera; }];
 		_list ctrlAddEventHandler ["MouseExit", { ["ToggleList", [_this select 0, false]] call ULP_fnc_adminCamera; }];
 		["updateList", [_list]] call ULP_fnc_adminCamera;
+
+		_list ctrlAddEventHandler ["TreeSelChanged", {
+			_this params [ "_ctrl", "_select" ];
+
+			private _object = (_ctrl tvData _select) call BIS_fnc_objectFromNetId;
+			if (isNull _object) exitWith {};
+
+			["SetCameraTarget", [_object]] call ULP_fnc_adminCamera;
+		}];
+
+		private _ctrlToolbox = _display displayCtrl 604;
+		_ctrlToolbox ctrlAddEventHandler ["ToolboxSelChanged", { ["ViewToolboxChanged", _this] call ULP_fnc_adminCamera; }];
 
 		[false] call ULP_fnc_playerTags;
 
@@ -114,23 +135,46 @@ switch (_mode) do {
 
 		private _pos = _ctrl ctrlMapScreenToWorld [_xPos, _yPos];
 
-		if (_button isEqualTo 0) then {
-			if (_ctrlKey) then {
-				if (time < (player getVariable ["tp_cooldown", 0])) exitWith {};
-				player setVariable ["tp_cooldown", time + 1];
+		switch (_button) do {
+			case 0: {
+				if (_ctrlKey) then {
+					if (time < (player getVariable ["tp_cooldown", 0])) exitWith {};
+					player setVariable ["tp_cooldown", time + 1];
 
-				private _object = vehicle player;
-				
-				_pos set [2, ([0, (getPosATL _object) select 2] select (_object isKindOf "Air"))];
+					private _object = vehicle player;
+					
+					_pos set [2, ([0, (getPosATL _object) select 2] select (_object isKindOf "Air"))];
 
-				_object setPosATL _pos;
-				_object setVelocity [0, 0, 0];
-			} else {
-				private _camera = uiNamespace getVariable ["admin_camera", objNull];
+					_object setPosATL _pos;
+					_object setVelocity [0, 0, 0];
+				} else {
+					private _camera = uiNamespace getVariable ["admin_camera", objNull];
 
-				if !(isNull _camera) then {
-					_pos set [2, (getPos _camera) select 2];
-					_camera setPos _pos;
+					if !(isNull _camera) then {
+						_pos set [2, (getPos _camera) select 2];
+						_camera setPos _pos;
+					};
+				};
+			};
+		};
+	};
+
+	case "mouseDown": {
+		_params params [
+			"_ctrl", "_button", "_xPos", "_yPos", "", "_ctrlKey"
+		];
+
+		private _ctrlMap = (ctrlParent _ctrl) displayCtrl 601;
+		if (ctrlShown _ctrlMap) exitWith {}; // Map has it's own...
+		
+		switch (_button) do {
+			case 1: {
+				if ((uiNamespace getVariable ["admin_camera_mode", "free"]) isEqualTo "free") then {
+					private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
+
+					if !(isNull _focus) then {
+						["RestCameraTarget"] call ULP_fnc_adminCamera;
+					};
 				};
 			};
 		};
@@ -197,6 +241,10 @@ switch (_mode) do {
 
 				["SetCameraInput", [!_isShown]] call ULP_fnc_adminCamera;
 				_ctrlMap ctrlShow _isShown;
+
+				ctrlSetFocus ([(uiNamespace getVariable ["admin_camera_mouse", controlNull]), _ctrlMap] select (_isShown));
+
+				_handled = true;
 			};
 		};
 
@@ -218,6 +266,85 @@ switch (_mode) do {
 
 	case "isCameraManual": {
 		uiNamespace getVariable ['admin_camera_manual', true];
+	};
+
+	case "ChangeCameraView": {
+		_params params [
+			["_mode", "", [""]]
+		];
+
+		private _camera = uiNamespace getVariable ["admin_camera", objNull];
+		if (isNull _camera) exitWith {};
+
+		private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
+
+		switch (_mode) do {
+			case "fps": {
+				_camera cameraEffect ["Terminate", "BACK"];
+				_focus switchCamera "INTERNAL";
+
+				["RestCameraTarget"] call ULP_fnc_adminCamera;
+				["SetCameraInput", [false]] call ULP_fnc_adminCamera;
+			};
+			case "free": {
+				_camera cameraEffect ["Internal", "BACK"];
+				player switchCamera "INTERNAL";
+
+				if !(isNull _focus) then {
+					["SetCameraTarget", [_focus]] call ULP_fnc_adminCamera;
+				};
+					
+				private _ctrlMap = (_camera getVariable ["display", displayNull]) displayCtrl 601;
+				if !(ctrlShown _ctrlMap) then {
+					["SetCameraInput", [true]] call ULP_fnc_adminCamera;
+				};
+			};
+		};
+
+		uiNamespace setVariable ["admin_camera_mode", _mode];
+	};
+
+	case "RestCameraTarget": {
+		private _camera = uiNamespace getVariable ["admin_camera", objNull];
+		if (isNull _camera) exitWith {};
+
+		_camera camPrepareTarget objNull;
+		_camera camCommitPrepared 0;
+
+		uiNamespace setVariable ["admin_camera_target", objNull];
+	};
+
+	case "SetCameraTarget": {
+		_params params [
+			["_target", objNull, [objNull]]
+		];
+
+		private _camera = uiNamespace getVariable ["admin_camera", objNull];
+		if (isNull _camera) exitWith {};
+
+		_camera camPrepareTarget (vehicle _target);
+		_camera camCommitPrepared 0.5;
+
+		uiNamespace setVariable ["admin_camera_target", _target];
+	};
+
+	case "GetCameraTarget": {
+		uiNamespace getVariable ["admin_camera_target", objNull];
+	};
+
+	case "ViewToolboxChanged": {
+		_params params [
+			"_ctrl", "_index"
+		];
+
+		private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
+
+		if (isNull _focus && { _index isEqualTo 1 }) exitWith {
+			hint "You must target someone to spectate first...";
+			_ctrl lbSetCurSel 0;
+		};
+
+		["ChangeCameraView", [(["free", "fps"] select (_index isEqualTo 1))]] call ULP_fnc_adminCamera;
 	};
 
 	case "ToggleList": {

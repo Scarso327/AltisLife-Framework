@@ -27,9 +27,11 @@ switch (_mode) do {
 
 		uiNamespace setVariable ['DisplayAdmin', _display];
 
-		if !([player] call ULP_fnc_onDuty) then {
-			[true] call ULP_fnc_toggleAdminGear;
-		};
+		// Put On-Duty
+		if !([player] call ULP_fnc_onDuty) then { [true] call ULP_fnc_toggleAdminGear; };
+
+		// Make Invisible
+		if !(isObjectHidden player) then { [player, true] remoteExecCall ["ULP_SRV_fnc_hidePlayer", RSERV]; };
 
 		_ui = findDisplay 600;
 

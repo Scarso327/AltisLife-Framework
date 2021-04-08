@@ -61,19 +61,19 @@ switch (_code) do {
     };
 
     case F1: {
-        if (_shift && { !_ctrlKey } && { !_alt }) then {
+        if ([] call ULP_fnc_isStaff && { _shift } && { !_ctrlKey } && { !_alt }) then {
             [] call ULP_fnc_toggleAdminGear;
         };
     };
 
     case F2: {
-        if (_shift && { !_ctrlKey } && { !_alt }) then {
+        if ([] call ULP_fnc_isStaff && { _shift } && { !_ctrlKey } && { !_alt }) then {
             (findDisplay 46) createDisplay "DisplayAdmin";
         };
     };
 
     case F3: {
-        if ([player] call ULP_fnc_onDuty && { _shift } && { !_ctrlKey } && { !_alt }) then {
+        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { _shift } && { !_ctrlKey } && { !_alt }) then {
             if (time < (player getVariable ["admin_invis_cooldown", 0])) exitWith {
                 hint "You've recently changed your visibility, please wait before trying again...";
                 false

@@ -15,7 +15,7 @@ _this params [
 	["_params", [], [[], "", 0]]
 ];
 
-if !([] call ULP_fnc_isSaff) exitWith { false };
+if !([] call ULP_fnc_isStaff) exitWith { false };
 
 switch (_mode) do {
 	case "Load": {

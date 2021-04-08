@@ -638,11 +638,36 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_02.paa"
 				}; 
 			};
-			class ChromeGreen : BaseChromeGreen {};
-			class ChromeBlue : BaseChromeBlue {};
-			class ChromeRed : BaseChromeRed {};
-			class ChromeSilver : BaseChromeSilver {};
-			class ChromeGold : BaseChromeGold {};
+			class ChromeGreen : BaseChromeGreen {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrone\green.paa",
+					"Data\Textures\Vehicles\Global\Chrone\green.paa"
+				};
+			};
+			class ChromeBlue : BaseChromeBlue {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrone\blue.paa",
+					"Data\Textures\Vehicles\Global\Chrone\blue.paa"
+				};
+			};
+			class ChromeRed : BaseChromeRed {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrone\red.paa",
+					"Data\Textures\Vehicles\Global\Chrone\red.paa"
+				};
+			};
+			class ChromeSilver : BaseChromeSilver {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrone\silver.paa",
+					"Data\Textures\Vehicles\Global\Chrone\silver.paa"  
+				};
+			};
+			class ChromeGold : BaseChromeGold {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrone\gold.paa",
+					"Data\Textures\Vehicles\Global\Chrone\gold.paa"  
+				};
+			};
 		};
 	};
 

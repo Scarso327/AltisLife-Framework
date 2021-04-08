@@ -825,3 +825,43 @@ class U_C_CBRN_Suit_01_Blue_F : U_C_CBRN_Suit_01_White_F {};
 class U_B_CBRN_Suit_01_MTP_F : U_C_CBRN_Suit_01_White_F {};
 class U_B_CBRN_Suit_01_Wdl_F : U_C_CBRN_Suit_01_White_F {};
 class U_I_CBRN_Suit_01_AAF_F : U_C_CBRN_Suit_01_White_F {};
+
+class U_C_Protagonist_VR {
+	displayName = "Staff Suits";
+	price = 0;
+	reputation = false;
+	virtualSpace = 0;
+	isGas = true;
+	class Textures {
+		class U_C_Protagonist_VR { 
+			displayName = "Purple"; 
+			condition = "true";
+		};
+		class Black : U_C_Protagonist_VR {
+			displayName = "Black"; 
+			textures[] = { "\A3\Characters_F\Common\Data\basicbody_black_co.paa" };
+		};
+		class Gray : U_C_Protagonist_VR { 
+			displayName = "Gray"; 
+			textures[] = { "\A3\Characters_F\Common\Data\basicbody_grey_co.paa" };
+		};
+		class U_O_Protagonist_VR : U_C_Protagonist_VR { displayName = "Red"; };
+		class U_B_Protagonist_VR : U_C_Protagonist_VR { displayName = "Blue"; };
+		class DullBlue : U_C_Protagonist_VR { 
+			displayName = "Dull Blue"; 
+			textures[] = { "\A3\Characters_F\Common\Data\basicbody_blue_co.paa" };
+		};
+		class U_I_Protagonist_VR : U_C_Protagonist_VR { displayName = "Green"; };
+		class DullGreen : U_C_Protagonist_VR { 
+			displayName = "Dull Green"; 
+			textures[] = { "\A3\Characters_F\Common\Data\basicbody_green_co.paa" };
+		};
+		class Brown : U_C_Protagonist_VR { 
+			displayName = "Brown"; 
+			textures[] = { "\A3\Characters_F\Common\Data\basicbody_brown_co.paa" };
+		};
+	};
+};
+class U_O_Protagonist_VR : U_C_Protagonist_VR {};
+class U_B_Protagonist_VR : U_C_Protagonist_VR {};
+class U_I_Protagonist_VR : U_C_Protagonist_VR {};

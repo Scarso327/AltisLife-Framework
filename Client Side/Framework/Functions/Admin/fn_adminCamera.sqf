@@ -80,7 +80,7 @@ switch (_mode) do {
 		};
 
 		if !((count allPlayers) isEqualTo (count (uiNamespace getVariable ["list_players", []]))) then {
-			["updateList", [(_this displayCtrl 602) controlsGroupCtrl 101]] call ULP_fnc_adminCamera;
+			["updateList", [(_display displayCtrl 602) controlsGroupCtrl 101]] call ULP_fnc_adminCamera;
 		};
 	};
 

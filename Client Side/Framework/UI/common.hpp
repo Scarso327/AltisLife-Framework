@@ -310,6 +310,8 @@ class Life_RscLine: Life_RscText {
 class Life_RscTree {
     type = CT_TREE;
     style = ST_SINGLE;
+    x = 0;
+    y = 0;
     font = "RobotoCondensed";
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     hiddenTexture = "\a3\3DEN\Data\Controls\ctrlTree\hiddenTexture_ca.paa";

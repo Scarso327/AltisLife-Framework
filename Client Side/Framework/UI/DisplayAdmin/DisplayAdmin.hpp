@@ -8,6 +8,17 @@ class DisplayAdmin {
 	onUnload=" [""Unload"", _this] call ULP_fnc_adminCamera;";
     objects[]={};
 
-    class ControlsBackground {};
+    class ControlsBackground {
+        class MapView : Life_RscMapControl {
+            idc = 601;
+			SAFEZONE_X(0);
+			SAFEZONE_Y(0);
+			SAFEZONE_W(1);
+			SAFEZONE_H(1);
+            maxSatelliteAlpha = 0.75;
+            alphaFadeStartScale = 1.15;
+            alphaFadeEndScale = 1.29;
+        };
+    };
     class Controls {};
 };

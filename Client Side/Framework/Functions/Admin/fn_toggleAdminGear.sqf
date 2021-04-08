@@ -5,10 +5,14 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_toggleAdminGear";
 
+_this params [
+	["_force", false, [true]]
+]
+
 if (isDowned(player) || { !([] call ULP_fnc_isSaff) }) exitWith { false };
 
 // Stop spam...
-if (time < (player getVariable ["admin_cooldown", 0])) exitWith {
+if (!(_force) && { time < (player getVariable ["admin_cooldown", 0]) }) exitWith {
 	hint "You've changed into admin gear recently, please wait before trying again...";
 	false
 };

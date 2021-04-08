@@ -24,7 +24,7 @@ switch (_mode) do {
 		uiNamespace setVariable ['DisplayAdmin', _display];
 
 		if !([player] call ULP_fnc_onDuty) then {
-			[] call ULP_fnc_toggleAdminGear;
+			[true] call ULP_fnc_toggleAdminGear;
 		};
 
 		_ui = findDisplay 600;

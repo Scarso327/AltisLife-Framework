@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_saveGear";
 
+if ([player] call ULP_fnc_onDuty) exitWith { false };
+
 private _yItems = [];
 
 {
@@ -30,3 +32,5 @@ ULP_Gear = [
         [backpackContainer player] call _fnc_getCurTexture
     ]
 ];
+
+true

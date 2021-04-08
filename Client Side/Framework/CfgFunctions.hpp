@@ -2,6 +2,15 @@ class CfgFunctions {
 	class ULP_Functions {
 		tag = "ULP";
 
+		class Admin {
+			file = "Functions\Admin";
+			class isStaff {};
+			class adminCamera {};
+			class onDuty {};
+			class toggleAdminGear {};
+			class inCamera {};
+		};
+
 		class Achievements {
 			file = "Functions\Achievements";
 			class achieve {};

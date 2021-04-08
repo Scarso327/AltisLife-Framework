@@ -44,6 +44,12 @@ class CfgTags {
 			condition = "true";
 		};
 
+		class Admin {
+			icon = "Data\Tags\logo.paa";
+			subtitle = "Staff On-Duty";
+			condition = "false";
+		};
+
 		// Altis Police Constabulary
 		class PoliceCC {
 			icon = "Data\Tags\Ranks\Police\CC.paa";

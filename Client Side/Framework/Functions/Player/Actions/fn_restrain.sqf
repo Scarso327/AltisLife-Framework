@@ -23,7 +23,7 @@ if !(local _target) exitWith {
 };
 
 if (_restrain) then {
-	if (isNull _detainer) exitWith {};
+	if (isNull _detainer || { [_target] call ULP_fnc_onDuty }) exitWith {};
 	if ([_target] call ULP_fnc_isRestrained) exitWith {}; // Already restrained...
 	_target setVariable ["restrained", _detainer, true];
 	
@@ -34,7 +34,7 @@ if (_restrain) then {
 	if ([] call ULP_fnc_isEscorting) then { detach ULP_Escort; ULP_Escort = nil; };
 
 	[_target, {
-		if (!(alive player) || { !([player] call ULP_fnc_isRestrained) }) exitWith {
+		if (!(alive _this) || { !([_this] call ULP_fnc_isRestrained) } || { [_this] call ULP_fnc_onDuty }) exitWith {
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 			[_this] call ULP_fnc_restrain;
 		};

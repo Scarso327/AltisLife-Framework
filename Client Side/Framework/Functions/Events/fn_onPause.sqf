@@ -21,20 +21,23 @@ with missionNamespace do {
 
 	private _abortDelay = time + getNumber(missionConfigFile >> "CfgSettings" >> "abort_delay");
 	
-	_abortButton ctrlEnable false;
 	_abortButton ctrlSetEventHandler["ButtonClick", "with missionNamespace do { [] call ULP_fnc_syncPlayerInfo; [""Abort"", true, false] call BIS_fnc_endMission; }; true"];
 
-	[[_abortButton, _abortDelay], {
-		_this params ["_abortButton", "_abortDelay"];
-		
-		if (isNull _abortButton) exitWith { [_thisEventHandler] call ULP_fnc_removeEachFrame; };
+	if !([] call ULP_fnc_isStaff) then {
+		_abortButton ctrlEnable false;
 
-		if (time < _abortDelay) then {
-			_abortButton ctrlSetText format["ABORT (%1)", [_abortDelay - time, "SS.MS"] call BIS_fnc_secondsToString];
-		} else {
-			_abortButton ctrlSetText "ABORT";
-			_abortButton ctrlEnable true;
-            [_thisEventHandler] call ULP_fnc_removeEachFrame;
-		};
-    }] call ULP_fnc_addEachFrame;
+		[[_abortButton, _abortDelay], {
+			_this params ["_abortButton", "_abortDelay"];
+			
+			if (isNull _abortButton) exitWith { [_thisEventHandler] call ULP_fnc_removeEachFrame; };
+
+			if (time < _abortDelay) then {
+				_abortButton ctrlSetText format["ABORT (%1)", [_abortDelay - time, "SS.MS"] call BIS_fnc_secondsToString];
+			} else {
+				_abortButton ctrlSetText "ABORT";
+				_abortButton ctrlEnable true;
+				[_thisEventHandler] call ULP_fnc_removeEachFrame;
+			};
+		}] call ULP_fnc_addEachFrame;
+	};
 };

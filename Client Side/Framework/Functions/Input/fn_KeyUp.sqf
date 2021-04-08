@@ -59,6 +59,18 @@ switch (_code) do {
             hint format["You %1 your earplugs", ["remove", "put in"] select (ULP_FadeSound)];
         };
     };
+
+    case F1: {
+        if (_shift && { !_ctrlKey } && { !_alt }) then {
+            [] call ULP_fnc_toggleAdminGear;
+        };
+    };
+
+    case F2: {
+        if (_shift && { !_ctrlKey } && { !_alt }) then {
+            (findDisplay 46) createDisplay "DisplayAdmin";
+        };
+    };
 };
 
 _handled

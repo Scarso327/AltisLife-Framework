@@ -33,6 +33,11 @@ if (isClass _tagCfg) then {
 	} count ((configProperties [(missionConfigFile >> "CfgFactions" >> _faction >> "Whitelisting"), format["isArray (missionConfigFile >> ""CfgTags"" >> ""Tags"" >> ""Whitelisting"" >> ""%1"" >> (configName _x))", _faction]]) apply { (configName _x) });
 };
 
+if ([player] call ULP_fnc_onDuty) then {
+	_icon = getText(missionConfigFile >> "CfgTags" >> "Icons" >> "Admin" >> "icon");
+	_subtitle = getText(missionConfigFile >> "CfgTags" >> "Icons" >> "Admin" >> "subtitle");
+};
+
 if (_subtitle isEqualTo "") then {
 	_subtitle = getText(missionConfigFile >> "CfgFactions" >> _faction >> "displayName");
 };
@@ -41,7 +46,7 @@ player setVariable ["icon", _icon, true];
 player setVariable ["subtitle", _subtitle, true];
 
 private _title = missionConfigFile >> "CfgTitles" >> (profileNamespace getVariable ["selected_title", ""]);
-if (isClass _title) then {
+if (isClass _title && { !([player] call ULP_fnc_onDuty) }) then {
 	player setVariable ["title", getText (_title >> "displayName"), true];
 } else {
 	player setVariable ["title", nil, true];

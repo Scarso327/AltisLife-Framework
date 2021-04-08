@@ -76,6 +76,7 @@ class CfgFunctions {
             class setSessionField {};
             class validateField {};
             class reputation {};
+            class hidePlayer {};
         };
 
         class Containers {

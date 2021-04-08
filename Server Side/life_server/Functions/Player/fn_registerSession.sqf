@@ -18,7 +18,7 @@ if (isNumber (_factionCfg >> "jointChannel") && { [getNumber(_factionCfg >> "joi
 	["Joint", _unit] call ULP_SRV_fnc_addRadio;
 };
 
-_playerData params ["", "", "", "_cash", "_bank", "", "", "", "", "", "", "", "", "_prestige", "_level", "_xp", ""];
+_playerData params ["", "", "", "_cash", "_bank", "", "", "_adminlevel", "", "", "", "", "", "_prestige", "_level", "_xp", ""];
 
 private _session = createHashMap;
 _session set ["SteamID", _uid];
@@ -30,6 +30,10 @@ _session set ["XP", _xp];
 
 _unit setVariable ["session", _session];
 _unit setVariable ["reputation", _playerData select 23];
+
+if (_adminlevel > 0) then {
+	_unit setVariable ["srv_is_admin", true];
+};
 
 [format ["Registered %1", _uid]] call ULP_fnc_logIt;
 true

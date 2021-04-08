@@ -27,6 +27,9 @@ if ([player] call ULP_fnc_onDuty) then {
 
 	[] call ULP_fnc_loadGear;
 
+	if (isObjectHidden player) then {
+		[player, false] remoteExecCall ["ULP_SRV_fnc_hidePlayer", RSERV];
+	};
 } else {
 	[] call ULP_fnc_saveGear;
 	[] call ULP_fnc_stripGear;

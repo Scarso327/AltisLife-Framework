@@ -38,6 +38,7 @@
 #define SPACE 57
 #define F1 59
 #define F2 60
+#define F3 61
 #define NUMENTER 156
 #define LWINDOWS 219
 #define RWINDOWS 220

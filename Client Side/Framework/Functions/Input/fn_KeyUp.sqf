@@ -71,6 +71,18 @@ switch (_code) do {
             (findDisplay 46) createDisplay "DisplayAdmin";
         };
     };
+
+    case F3: {
+        if ([player] call ULP_fnc_onDuty && { _shift } && { !_ctrlKey } && { !_alt }) then {
+            if (time < (player getVariable ["admin_invis_cooldown", 0])) exitWith {
+                hint "You've recently changed your visibility, please wait before trying again...";
+                false
+            };
+            player setVariable ["admin_invis_cooldown", time + 2];
+
+            [player, !(isObjectHidden player)] remoteExecCall ["ULP_SRV_fnc_hidePlayer", RSERV];
+        };
+    };
 };
 
 _handled

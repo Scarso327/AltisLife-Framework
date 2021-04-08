@@ -20,5 +20,23 @@ class DisplayAdmin {
             alphaFadeEndScale = 1.29;
         };
     };
-    class Controls {};
+    class Controls {
+        class LeftList : Life_RscControlsGroupNoScrollbars {
+            idc = 602;
+			SAFEZONE_X(0);
+			SAFEZONE_Y(0);
+			SAFEZONE_W(0.2);
+			SAFEZONE_H(1);
+
+            class Controls {
+                class PlayerList : Life_RscTree {
+                    idc = 101;
+                    fade = 0.8;
+                    colorBackground[] = {0, 0, 0, 0};
+                    w = 15 * GUI_GRID_CENTER_W;
+                    h = 46 * GUI_GRID_CENTER_H;
+                };
+            };
+        };
+    };
 };

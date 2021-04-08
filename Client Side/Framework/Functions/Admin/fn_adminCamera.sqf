@@ -6,9 +6,13 @@
 #include "..\..\dikCodes.hpp"
 scopeName "fn_adminCamera";
 
+if (canSuspend) exitWith {
+    [ULP_fnc_adminCamera, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_mode", "", [""]],
-	["_params", [], [[]]]
+	["_params", [], [[], "", 0]]
 ];
 
 if !([] call ULP_fnc_isSaff) exitWith { false };
@@ -55,7 +59,29 @@ switch (_mode) do {
 
 		_display displayAddEventHandler ["KeyDown", { ["keyDown", _this] call ULP_fnc_adminCamera }];
 
+		private _list = (_display displayCtrl 602) controlsGroupCtrl 101;
+		_list ctrlAddEventHandler ["MouseEnter", { ["ToggleList", [_this select 0, true]] call ULP_fnc_adminCamera; }];
+		_list ctrlAddEventHandler ["MouseExit", { ["ToggleList", [_this select 0, false]] call ULP_fnc_adminCamera; }];
+		["updateList", [_list]] call ULP_fnc_adminCamera;
+
 		[false] call ULP_fnc_playerTags;
+
+		uiNamespace setVariable ["admin_each_frame", ([_display, { ["eachFrame", [_this, _thisEventHandler]] call ULP_fnc_adminCamera; }] call ULP_fnc_addEachFrame)];
+	};
+
+	case "eachFrame": {
+		_params params [
+			["_display", displayNull, [displayNull]],
+			["_id", -1, [0]]
+		];
+
+		if (isNull _display) exitWith {
+			[_id] call ULP_fnc_removeEachFrame;
+		};
+
+		if !((count allPlayers) isEqualTo (count (uiNamespace getVariable ["list_players", []]))) then {
+			["updateList", [(_this displayCtrl 602) controlsGroupCtrl 101]] call ULP_fnc_adminCamera;
+		};
 	};
 
 	case "mapDraw": {
@@ -106,6 +132,34 @@ switch (_mode) do {
 				};
 			};
 		};
+	};
+
+	case "updateList": {
+		_params params [
+			["_ctrl", controlNull, [controlNull]]
+		];
+
+		tvClear _ctrl;
+
+		private _players = [];
+
+		{
+			private _cfg = _x;
+			private _parent = _ctrl tvAdd [[], getText(_cfg >> "displayName")];
+			_ctrl tvSetPicture [[_parent], "\a3\ui_f_curator\data\Displays\RscDisplayCurator\side_west_ca.paa"];
+			_ctrl tvSetPictureColor [[_parent], getArray(_cfg >> "colour")];
+
+			{
+				_players pushBackUnique _x;
+
+				private _member = _ctrl tvAdd [[_parent], [_x] call ULP_fnc_getName];
+				_ctrl tvSetData [[_parent, _member], _x call BIS_fnc_netId];
+				_ctrl tvSetPicture [[_parent, _member], [getText(configFile >> "CfgVehicles" >> typeOf _x >> "icon")] call BIS_fnc_textureVehicleIcon];
+				_ctrl tvSetPictureColor [[_parent, _member], getArray(_cfg >> "colour")];
+			} forEach ([configName _x] call ULP_fnc_allMembers);
+		} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgFactions"));
+
+		uiNamespace setVariable ["list_players", _players];
 	};
 
 	case "keyDown": {
@@ -164,12 +218,31 @@ switch (_mode) do {
 		uiNamespace getVariable ['admin_camera_manual', true];
 	};
 
+	case "ToggleList": {
+		_params params [
+			["_ctrl", controlNull, [controlNull]],
+			["_enter", true, [false]]
+		];
+
+		if (_enter) then {
+			_ctrl ctrlSetBackgroundColor [0, 0, 0, 0.6];
+			_ctrl ctrlSetFade 0;
+			_ctrl ctrlCommit 0.2;
+		} else {
+			_ctrl ctrlSetBackgroundColor [0, 0, 0, 0];
+			_ctrl ctrlSetFade 0.8;
+			_ctrl ctrlCommit 0.2;
+		};
+	};
+
 	case "Unload": {
 		private _camera = uiNamespace getVariable ["admin_camera", objNull];
 		if !(isNull _camera) then {
 			_camera cameraEffect ["terminate", "back"];
 			camDestroy _camera;
 		};
+
+		[uiNamespace getVariable ["admin_each_frame", -1]] call ULP_fnc_removeEachFrame;
 
 		uiNamespace setVariable ['DisplayAdmin', nil];
 		player switchCamera "INTERNAL";

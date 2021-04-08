@@ -7,7 +7,7 @@ scopeName "fn_toggleAdminGear";
 
 _this params [
 	["_force", false, [true]]
-]
+];
 
 if (isDowned(player) || { !([] call ULP_fnc_isSaff) }) exitWith { false };
 

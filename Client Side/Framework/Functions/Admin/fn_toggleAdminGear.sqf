@@ -19,6 +19,9 @@ if (!(_force) && { time < (player getVariable ["admin_cooldown", 0]) }) exitWith
 player setVariable ["admin_cooldown", time + 3];
 
 if ([player] call ULP_fnc_onDuty) then {
+	CASH = ULP_NormalCash;
+	BANK = ULP_NormalBank;
+
 	ULP_Inventory = createHashMap; // Wipe Inventory...
 	ULP_CarryInfo set [0, 0];
 
@@ -27,6 +30,9 @@ if ([player] call ULP_fnc_onDuty) then {
 } else {
 	[] call ULP_fnc_saveGear;
 	[] call ULP_fnc_stripGear;
+
+	ULP_NormalCash = CASH;
+	ULP_NormalBank = BANK;
 
 	ULP_Inventory = createHashMap; // Wipe Inventory...
 	ULP_CarryInfo set [0, 0];

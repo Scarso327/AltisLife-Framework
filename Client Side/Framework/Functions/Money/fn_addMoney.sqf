@@ -20,14 +20,18 @@ if (_amount <= 0) exitWith { false };
 
 if (_isBank) then {
 	BANK = BANK + _amount;
-	[player, 2, [BANK, _amount, true, _transaction]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	if !([player] call ULP_fnc_onDuty) then {
+		[player, 2, [BANK, _amount, true, _transaction]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	};
 
 	if !(_transaction isEqualTo "Paycheck") then {
 		[_amount, 0, _transaction] call ULP_fnc_logTransaction;
 	};
 } else {
 	CASH = CASH + _amount;
-	[player, 1, [CASH, _amount, true, _transaction]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	if !([player] call ULP_fnc_onDuty) then {
+		[player, 1, [CASH, _amount, true, _transaction]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	};
 };
 
 ["MoneyChanged", [CASH, BANK]] call ULP_fnc_invokeEvent;

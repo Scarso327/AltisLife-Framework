@@ -562,6 +562,21 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
+	class PanicButton {
+		displayName = "Panic Button";
+		icon = "Data\Icons\panicButton.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 1;
+		class Settings {
+			onMarket = false;
+			isIllegal = true;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+
 	class Ziptie {
 		displayName = "Ziptie";
 		icon = "Data\Icons\ziptie.paa";

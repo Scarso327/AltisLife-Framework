@@ -12,11 +12,16 @@ _this params [
 	["_trader", objNull, [objNull]],
 	["_title", "", [""]],
 	["_store", "", [""]],
-	["_cfg", "", [""]]
+	["_cfg", "", [""]],
+	["_condition", "", [""]]
 ];
 
 private _cfgCondition = missionConfigFile >> "CfgStores" >> _cfg >> _store;
 if (isNull _trader || { _title isEqualTo "" } || { !(isClass _cfgCondition) }) exitWith {};
 _cfgCondition = getText(_cfgCondition >> "condition");
+
+if !(_condition isEqualTo "") then {
+	_cfgCondition = _condition;
+};
 
 _trader addAction [format["%1", _title], { [(_this select 3) select 0, (_this select 3) select 1] call ULP_fnc_openStore }, [_store, _cfg], 1.5, true, true, "", _cfgCondition, 3];

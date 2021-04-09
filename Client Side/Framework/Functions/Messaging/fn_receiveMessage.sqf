@@ -34,4 +34,8 @@ if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([ge
 	hint format ["You received a message from %1: %2", _name, _message];
 };
 
+if (isText (_type >> "onRecieved")) then {
+	[[_sender select 1] call ULP_fnc_playerByUID, _message] call compile getText (_type >> "onRecieved");
+};
+
 ["MessageReceived", _messages] call ULP_fnc_invokeEvent;

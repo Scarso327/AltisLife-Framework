@@ -574,6 +574,9 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 		};
+		class Events {
+			onUse = "[] call ULP_fnc_panic;";
+		};
 		conditions = "true";
 	};
 

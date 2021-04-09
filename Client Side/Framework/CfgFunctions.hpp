@@ -114,6 +114,7 @@ class CfgFunctions {
 			file = "Functions\Items\Scripts";
 			class addSustenance {};
 			class disguiseIdentity {};
+			class panic {};
 		};
 
 		class Input {

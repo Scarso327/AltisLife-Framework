@@ -308,6 +308,8 @@ class CfgFunctions {
 			class personalGoals {};
 			class nameTags {};
 			class updateTagPreview {};
+			class getTagRGB {};
+			class resetTagRGB {};
 		};
 
 		class TabletPerks {

@@ -145,19 +145,75 @@ class PlayerTitle : Life_RscStructuredText {
 
 class TitleList : Life_RscCombo {
 	idc = 23056;
-	onLBSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, ""."", """", """", getText (missionConfigFile >> ""CfgTitles"" >> (_ctrl lbData _index) >> ""displayName"")] call ULP_fnc_updateTagPreview;";
+	onLBSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, ""."", """", """", getText (missionConfigFile >> ""CfgTitles"" >> (_ctrl lbData _index) >> ""displayName""), """"] call ULP_fnc_updateTagPreview;";
 	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
 	SAFEZONE_Y((UI_Y + UI_HEIGHT) - (BUTTON_H + (BUTTON_H / 2)));
 	SAFEZONE_W((UI_WIDTH / 4));
 	SAFEZONE_H(BUTTON_H);
 };
 
- class IconList : Life_RscTree {
+class IconList : Life_RscTree {
 	idc = 23069;
-	onTreeSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, (_ctrl tvData _index), """", """", """"] call ULP_fnc_updateTagPreview;";
+	onTreeSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, (_ctrl tvData _index), """", """", """", """"] call ULP_fnc_updateTagPreview;";
 	colorBackground[] = FOOTER_COLOUR;
     SAFEZONE_X(UI_X + MARGIN_X);
 	SAFEZONE_Y(UI_Y + (MARGIN_Y * 9));
 	SAFEZONE_W((UI_WIDTH / 2));
-	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 10));
+	SAFEZONE_H(((UI_HEIGHT - (MARGIN_Y * 10)) - (UI_HEIGHT / 4)) - MARGIN_Y);
+};
+
+class TagColourBackground : Life_RscText {
+	idc = 23071;
+	text = "";
+	colorBackground[] = FOOTER_COLOUR;
+    SAFEZONE_X(UI_X + MARGIN_X);
+	SAFEZONE_Y((((UI_Y + UI_HEIGHT) - MARGIN_Y) - (UI_HEIGHT / 4)) + 0.022);
+	SAFEZONE_W((UI_WIDTH / 2));
+	SAFEZONE_H((UI_HEIGHT / 4) - 0.022);
+};
+
+class TagColourHeader : TagColourBackground {
+	idc = 23070;
+	text = "Name Colouring";
+	colorBackground[] = {0, 0, 0, 1};
+	SAFEZONE_Y(((UI_Y + UI_HEIGHT) - MARGIN_Y) - (UI_HEIGHT / 4));
+	SAFEZONE_H(0.022);
+};
+
+#define BASE_HEIGHT (((UI_HEIGHT / 4) - 0.022) - (MARGIN_Y * 2))
+#define SLIDER_HEIGHT VERTICAL_GRID_H(BASE_HEIGHT, 3)
+
+class RedColourBar : life_RscXSliderH {
+	idc = 23072;
+	color[] = { 0.675, 0.067, 0, 0.7 };
+	colorActive[] = { 0.675, 0.067, 0, 1 };
+	onSliderPosChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, ""."", [player] call ULP_fnc_getName, """", """", [_display] call ULP_fnc_getTagRGB] call ULP_fnc_updateTagPreview;";
+    SAFEZONE_X(UI_X + (MARGIN_X * 2));
+	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 0));
+	SAFEZONE_W((UI_WIDTH / 2) - (MARGIN_X * 2));
+	SAFEZONE_H(SLIDER_HEIGHT);
+};
+
+class GreenColourBar : RedColourBar {
+	idc = 23073;
+	color[] = { 0.098, 0.318, 0.165, 0.7 };
+	colorActive[] = { 0.098, 0.318, 0.165, 1 };
+	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 1));
+};
+
+class BlueColourBar : RedColourBar {
+	idc = 23074;
+	color[] = { 0.141, 0.235, 0.565, 0.7 };
+	colorActive[] = { 0.141, 0.235, 0.565, 1 };
+	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 2));
+};
+
+class ResetTagColour: ULP_RscButtonIcon {
+	idc = 23075;
+	text = "\a3\ui_f_curator\Data\CfgCurator\waypointCycle_ca.paa";
+	onButtonClick = "[ctrlParent (_this select 0)] call ULP_fnc_resetTagRGB;";
+    SAFEZONE_X(((UI_X + MARGIN_X) + (UI_WIDTH / 2))) - 0.022 * safezoneH;
+	SAFEZONE_Y(((UI_Y + UI_HEIGHT) - MARGIN_Y) - (UI_HEIGHT / 4));
+	w = 0.022 * safezoneH;
+	SAFEZONE_H(0.022);
 };

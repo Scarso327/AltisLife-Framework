@@ -13,6 +13,12 @@ if !(_profile_icon isEqualTo "") then {
 
 	if !(call compile getText (_cfg >> "condition")) then {
 		profileNamespace setVariable ["selected_icon", nil];
-		saveProfileNamespace;
 	};
 };
+
+private _colour = profileNamespace getVariable ["selected_name_colour", ""];
+if ([] call ULP_fnc_donatorLevel < 1 && { !(_colour isEqualTo ([player] call ULP_fnc_getTagColour)) }) then {
+	profileNamespace setVariable ["selected_name_colour", nil];
+};
+
+saveProfileNamespace;

@@ -56,3 +56,12 @@ if (isClass _title && { !([player] call ULP_fnc_onDuty) }) then {
 } else {
 	player setVariable ["title", nil, true];
 };
+
+private _colour = profileNamespace getVariable ["selected_name_colour", ""];
+if !(_colour isEqualTo "") then {
+	if (_colour isEqualTo ([player] call ULP_fnc_getTagColour)) then {
+		player setVariable ["colour", nil, true];
+	} else {
+		player setVariable ["colour", _colour, true];
+	};
+};

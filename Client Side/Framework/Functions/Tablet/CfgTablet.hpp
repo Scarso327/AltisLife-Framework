@@ -57,10 +57,10 @@ class CfgTablet {
 	class PlayerTag : Profile {
 		pageTitle = "Profile - Player Tag";
 		pageIdcs[] = {
-			23024, 23025, 23026, 23027, 23028, 23029, 23053, 23054, 23055, 23056, 23057, 23058, 23069
+			23024, 23025, 23026, 23027, 23028, 23029, 23053, 23054, 23055, 23056, 23057, 23058, 23069, 23070, 23071, 23072, 23073, 23074, 23075
 		};
 		onload = "_this call ULP_fnc_nameTags";
-		onUnload = "private _ctrl = _this displayCtrl 23056; profileNamespace setVariable['selected_title', (_ctrl lbData (lbCurSel _ctrl))]; _ctrl = _this displayCtrl 23069; profileNamespace setVariable['selected_icon', (_ctrl tvData (tvCurSel _ctrl))]; saveProfileNamespace; [] call ULP_fnc_setTags;";
+		onUnload = "private _colour = _this getVariable [""color_selected"", """"]; if !(_colour isEqualTo """") then { profileNamespace setVariable['selected_name_colour', _colour]; }; private _ctrl = _this displayCtrl 23056; profileNamespace setVariable['selected_title', (_ctrl lbData (lbCurSel _ctrl))]; _ctrl = _this displayCtrl 23069; profileNamespace setVariable['selected_icon', (_ctrl tvData (tvCurSel _ctrl))]; saveProfileNamespace; [] call ULP_fnc_setTags;";
 	};
 
 	class Inventory : BaseScreen {

@@ -63,4 +63,20 @@ tvClear _iconList;
 
 _iconList tvAdd [[], "Clear Icon"];
 
+(profileNamespace getVariable["selected_name_colour", [player] call ULP_fnc_getTagColour]) params [ "_r", "_g", "_b" ];
+
+{
+	_x params [ "_ctrl", "_val" ];
+
+	_ctrl sliderSetRange [0, 100];
+	_ctrl sliderSetSpeed [1, 1, 1];
+	_ctrl sliderSetPosition (round(_val * 100));
+} forEach [
+	[(_display displayCtrl 23072), _r],
+	[(_display displayCtrl 23073), _g],
+	[(_display displayCtrl 23074), _b]
+];
+
+_display setVariable ["color_selected", [_r,_g,_b,1]];
+
 [_display] call ULP_fnc_updateTagPreview;

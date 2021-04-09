@@ -1,6 +1,6 @@
 class CfgTags {
-	baseColour[] = { 1, 1, 1 };
-	friendColour[] = { 0, 0.901, 0.074 };
+	baseColour[] = { 1, 1, 1, 1 };
+	friendColour[] = { 0, 0.901, 0.074, 1 };
 
 	class Tags {
 		class Whitelisting {

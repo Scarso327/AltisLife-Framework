@@ -168,7 +168,7 @@ class CfgPerks {
 	};
 
 	class IDForger {
-		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		icon = "Data\UI\Perks\idForger.paa";
 		displayName = "ID Forger";
 		description = "Allows you to forge fake IDs.";
 		removalMultiplier = 3;
@@ -202,7 +202,7 @@ class CfgPerks {
 	};
 
 	class MatesRates {
-		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		icon = "Data\UI\Perks\matesRates.paa";
 		displayName = "Mates Rates";
 		description = "Decreases garage retrieval fees by 50%.";
 		removalMultiplier = 6;
@@ -216,7 +216,7 @@ class CfgPerks {
 	};
 
 	class PartsCarrier { // TODO
-		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		icon = "Data\UI\Perks\partsCarrier.paa";
 		displayName = "Parts Carrier";
 		description = "Decreases the cost of servicing an aircraft by %1%2.";
 		removalMultiplier = 2;
@@ -236,7 +236,7 @@ class CfgPerks {
 	};
 
 	class ScrapDealer { // TODO
-		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		icon = "Data\UI\Perks\scrapDealer.paa";
 		displayName = "Scrap Dealer";
 		description = "Increases the amount of money made from chopping a vehicle by %1%2.";
 		removalMultiplier = 1;
@@ -276,7 +276,7 @@ class CfgPerks {
 	};
 
 	class VehicleCollector {
-		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		icon = "Data\UI\Perks\vehicleCollector.paa";
 		displayName = "Vehicle Collector";
 		description = "Increases the garage limit of each vehicle type by 1.";
 		removalMultiplier = 10;
@@ -310,7 +310,7 @@ class CfgPerks {
 	};
 
 	class IntelligentBanker { // TODO
-		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		icon = "Data\UI\Perks\intelligentBanker.paa";
 		displayName = "Intelligent Banker";
 		description = "Decreases your wire transfer costs by %1%2.";
 		removalMultiplier = 1;
@@ -390,7 +390,7 @@ class CfgPerks {
 	};
 
 	class Blackmarketer {
-		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		icon = "Data\UI\Perks\blackmarketer.paa";
 		displayName = "Blackmarketer";
 		description = "Permits access to the Blackmarket.";
 		removalMultiplier = 10;
@@ -418,7 +418,7 @@ class CfgPerks {
 	};
 
 	class LandLord {
-		icon = "Data\UI\Perks\shadyTrader.paa"; // ICON
+		icon = "Data\UI\Perks\landLord.paa";
 		displayName = "Land Lord";
 		description = "Allows you to purchase an additional property.";
 		removalMultiplier = 4;

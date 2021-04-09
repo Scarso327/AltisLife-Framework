@@ -100,7 +100,7 @@ class CfgLicenses {
 
     class Hunting : BaseLicense {
         displayName = "Hunting Certificate";
-        buyPrice = 14000;
+        buyPrice = 140000;
         class Settings {
             isVisible = true;
             isRemovable = true;

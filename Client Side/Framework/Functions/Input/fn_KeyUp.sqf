@@ -82,6 +82,7 @@ switch (_code) do {
             player setVariable ["admin_invis_cooldown", time + 2];
 
             [player, !(isObjectHidden player)] remoteExecCall ["ULP_SRV_fnc_hidePlayer", RSERV];
+            [getPlayerUID player, "Admin", ["AdminInvisibility", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
         };
     };
 };

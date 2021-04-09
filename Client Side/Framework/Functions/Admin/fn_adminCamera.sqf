@@ -92,6 +92,8 @@ switch (_mode) do {
 		[false] call ULP_fnc_playerTags;
 
 		uiNamespace setVariable ["admin_each_frame", ([_display, { ["eachFrame", [_this, _thisEventHandler]] call ULP_fnc_adminCamera; }] call ULP_fnc_addEachFrame)];
+
+		[getPlayerUID player, "Admin", ["AdminCamera", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	};
 
 	case "eachFrame": {
@@ -172,6 +174,8 @@ switch (_mode) do {
 
 					_object setPosATL _pos;
 					_object setVelocity [0, 0, 0];
+
+					[getPlayerUID player, "Admin", ["AdminTeleport", serverTime, [getPlayerUID player, _pos]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 				} else {
 					private _camera = uiNamespace getVariable ["admin_camera", objNull];
 
@@ -243,7 +247,7 @@ switch (_mode) do {
 		switch (_code) do {
 			case SPACE: {
 				if !(["Teleport"] call ULP_fnc_checkPower) exitWith {};
-				
+
 				if (_ctrlKey) then {
 					if (time < (player getVariable ["tp_cooldown", 0])) exitWith {};
 					player setVariable ["tp_cooldown", time + 1];
@@ -257,6 +261,8 @@ switch (_mode) do {
 
 					_object setPosATL _pos;
 					_object setVelocity [0, 0, 0];
+
+					[getPlayerUID player, "Admin", ["AdminTeleport", serverTime, [getPlayerUID player, _pos]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 					_handled = true;
 				};

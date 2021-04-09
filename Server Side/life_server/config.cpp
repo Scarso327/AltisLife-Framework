@@ -53,6 +53,7 @@ class CfgPatches {
                 params = 3;
             };
 
+            class Admin : Executed {};
             class House : Executed {};
             class Bleedout : Spawn {};
             class Misc {};

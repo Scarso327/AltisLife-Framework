@@ -56,4 +56,8 @@ player setVariable ["onduty", !([player] call ULP_fnc_onDuty), true];
 
 [] call ULP_fnc_setTags;
 ["MoneyChanged", [CASH, BANK]] call ULP_fnc_invokeEvent;
+
+if !(_force) then {
+	[getPlayerUID player, "Admin", ["AdminSuit", serverTime, [(["Left", "Entered"] select ([player] call ULP_fnc_onDuty))]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+};
 true

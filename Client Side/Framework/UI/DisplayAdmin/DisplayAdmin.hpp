@@ -9,15 +9,6 @@ class DisplayAdmin {
     objects[]={};
 
     class ControlsBackground {
-        class ToolboxBackground : Life_RscText {
-            idc = -1;
-            colorBackground[] = {0, 0, 0, 0.3};
-            SAFEZONE_X(0.45);
-            SAFEZONE_Y(0);
-            SAFEZONE_W(0.1);
-            SAFEZONE_H(0.022);
-        };
-
         class MouseArea : Life_RscText {
             idc = 603;
             style = 0x10;
@@ -25,6 +16,15 @@ class DisplayAdmin {
 			SAFEZONE_Y(0);
 			SAFEZONE_W(1);
 			SAFEZONE_H(1);
+        };
+        
+        class ToolboxBackground : Life_RscText {
+            idc = -1;
+            colorBackground[] = {0, 0, 0, 0.3};
+            SAFEZONE_X(0.45);
+            SAFEZONE_Y(0);
+            SAFEZONE_W(0.1);
+            SAFEZONE_H(0.022);
         };
 
         class MapView : Life_RscMapControl {

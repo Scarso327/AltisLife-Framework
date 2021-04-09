@@ -37,9 +37,6 @@ switch (_mode) do {
 
 		private _camera = "camcurator" camCreate (eyePos player);
 
-		cameraEffectEnableHUD true;
-		showCinemaBorder false;
-
 		_camera cameraEffect ["INTERNAL", "BACK"];
 		_camera setPosASL (eyePos player);
 		_camera setDir (getDirVisual player);
@@ -51,9 +48,14 @@ switch (_mode) do {
 		_camera camCommand "surfaceSpeed off";
 		_camera camCommit 0;
 
+		cameraEffectEnableHUD true;
+		showCinemaBorder false;
+		
 		uiNamespace setVariable ["admin_camera", _camera];
 		_camera setVariable ["display", _display];
 		["SetCameraInput", [true]] call ULP_fnc_adminCamera;
+
+		uiNamespace setVariable ["admin_esp", (addMissionEventHandler ["Draw3D", { ["draw3d"] call ULP_fnc_adminCamera }])];
 
 		private _ctrlMap = _display displayCtrl 601;
 		_ctrlMap ctrlShow false;
@@ -126,6 +128,27 @@ switch (_mode) do {
 				"a3\3den\Data\Cfg3DEN\Camera\cameratexture_ca.paa", [0, 0, 0, 1], getPos _camera, 26, 26, getDir _camera, '', 0, 0.03, 'TahomaB', 'center'
 			];
 		};
+	};
+
+	case "draw3d": {
+		private _camera = uiNamespace getVariable ["admin_camera", objNull];
+		if (isNull _camera) exitWith {};
+
+		{
+			private _dist = (_x distance _camera);
+
+			if (_dist <= 2000) then {
+				private _colour = [0.9, 0.9, 0.9, 1];
+				private _iconColour = getArray (missionConfigFile >> "CfgFactions" >> ([_x] call ULP_fnc_getFaction) >> "colour");
+
+				private _pos = [_x modelToWorldVisual (_x selectionPosition "spine3"), (vehicle _x) modelToWorldVisual [0,0,0]] select !(isNull objectParent _x);
+				
+				{ _x set [3, linearConversion [2000 / 1.2, 2000, _dist, 1, 0, true]]; } forEach [_color, _nameColor];
+
+				drawIcon3D [ "\a3\ui_f\data\IGUI\Cfg\Cursors\select_ca.paa", _iconColour, _pos, 0.9, 0.9, 0 ];
+				drawIcon3D [ "", _colour, _pos, 1, 1, 0, [_x] call ULP_fnc_getName, 0, 0.027, "RobotoCondensedBold" ];
+			};
+		} forEach playableUnits;
 	};
 
 	case "mapClick": {
@@ -301,6 +324,7 @@ switch (_mode) do {
 			};
 		};
 
+		cameraEffectEnableHUD true;
 		uiNamespace setVariable ["admin_camera_mode", _mode];
 	};
 
@@ -371,6 +395,7 @@ switch (_mode) do {
 			camDestroy _camera;
 		};
 
+		removeMissionEventHandler ["Draw3D", (uiNamespace getVariable ["admin_esp", -1])];
 		[uiNamespace getVariable ["admin_each_frame", -1]] call ULP_fnc_removeEachFrame;
 
 		uiNamespace setVariable ['DisplayAdmin', nil];

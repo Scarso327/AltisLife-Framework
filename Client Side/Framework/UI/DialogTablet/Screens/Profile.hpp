@@ -106,7 +106,7 @@ class PreviewText : Life_RscStructuredText {
 
 class PlayerIcon : Life_RscPictureKeepAspect {
 	idc = 23053;
-	text = "Data\Tags\Ranks\Police\SI.paa";
+	text = "";
 	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
 	SAFEZONE_Y(((UI_Y + (MARGIN_Y * 2)) + (UI_HEIGHT / 2)) - (BUTTON_H * 2));
 	SAFEZONE_W((UI_WIDTH / 4));
@@ -115,7 +115,7 @@ class PlayerIcon : Life_RscPictureKeepAspect {
 
 class PlayerName : Life_RscStructuredText {
 	idc = 23054;
-	text = "<t align='center'>Jack Williams</t>";
+	text = "<t align='center'>Player Name</t>";
 	size = 0.045;
 	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
 	SAFEZONE_Y(((UI_Y + (MARGIN_Y * 2)) + (UI_HEIGHT / 2)));
@@ -125,7 +125,7 @@ class PlayerName : Life_RscStructuredText {
 
 class PlayerSubtitle : Life_RscStructuredText {
 	idc = 23055;
-	text = "<t align='center'>Civilian</t>";
+	text = "<t align='center'>Subtitle</t>";
 	size = 0.04;
 	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
 	SAFEZONE_Y(((UI_Y + (MARGIN_Y * 2)) + (UI_HEIGHT / 2)) + BUTTON_H);
@@ -135,7 +135,7 @@ class PlayerSubtitle : Life_RscStructuredText {
 
 class PlayerTitle : Life_RscStructuredText {
 	idc = 23058;
-	text = "";
+	text = "<t align='center'>Title</t>";
 	size = 0.04;
 	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
 	SAFEZONE_Y(((UI_Y + (MARGIN_Y * 2)) + (UI_HEIGHT / 2)) + (BUTTON_H * 2));

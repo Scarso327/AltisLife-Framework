@@ -21,4 +21,6 @@ _this params [
 } && { !([player] call ULP_fnc_isRestrained)
 } && { !([player] call ULP_fnc_isSurrendered)
 } && { !([player] call ULP_fnc_isKnocked)
-} && { [player] call ULP_fnc_getFaction in ["Police"] }
+} && { [player] call ULP_fnc_getFaction in ["Police"]
+} && { [player] call ULP_fnc_isStaff 
+} && { [player] call ULP_fnc_onDuty }

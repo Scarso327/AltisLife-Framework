@@ -15,7 +15,7 @@ _this params [
 	["_params", [], [[], "", 0]]
 ];
 
-if !([] call ULP_fnc_isStaff) exitWith { false };
+if !([] call ULP_fnc_isStaff || { ["Camera"] call ULP_fnc_checkPower }) exitWith { false };
 
 switch (_mode) do {
 	case "Load": {

@@ -15,7 +15,7 @@ _this params [
 	["_params", [], [[], "", 0]]
 ];
 
-if !([] call ULP_fnc_isStaff) exitWith { false };
+if !([] call ULP_fnc_isStaff || { ["Camera"] call ULP_fnc_checkPower }) exitWith { false };
 
 switch (_mode) do {
 	case "Load": {
@@ -156,6 +156,8 @@ switch (_mode) do {
 			"_ctrl", "_button", "_xPos", "_yPos", "", "_ctrlKey"
 		];
 
+		if !(["Teleport"] call ULP_fnc_checkPower) exitWith {};
+
 		private _pos = _ctrl ctrlMapScreenToWorld [_xPos, _yPos];
 
 		switch (_button) do {
@@ -240,6 +242,8 @@ switch (_mode) do {
 		
 		switch (_code) do {
 			case SPACE: {
+				if !(["Teleport"] call ULP_fnc_checkPower) exitWith {};
+				
 				if (_ctrlKey) then {
 					if (time < (player getVariable ["tp_cooldown", 0])) exitWith {};
 					player setVariable ["tp_cooldown", time + 1];

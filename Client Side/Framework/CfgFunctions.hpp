@@ -9,6 +9,7 @@ class CfgFunctions {
 			class onDuty {};
 			class toggleAdminGear {};
 			class inCamera {};
+			class checkPower {};
 		};
 
 		class Achievements {

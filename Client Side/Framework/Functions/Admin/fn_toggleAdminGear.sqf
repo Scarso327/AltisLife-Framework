@@ -9,7 +9,7 @@ _this params [
 	["_force", false, [true]]
 ];
 
-if (isDowned(player) || { !([] call ULP_fnc_isSaff) }) exitWith { false };
+if (isDowned(player) || { !([] call ULP_fnc_isSaff) } || { !(["Suit"] call ULP_fnc_checkPower) }) exitWith { false };
 
 // Stop spam...
 if (!(_force) && { time < (player getVariable ["admin_cooldown", 0]) }) exitWith {

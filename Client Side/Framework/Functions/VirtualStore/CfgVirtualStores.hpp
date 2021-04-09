@@ -11,6 +11,7 @@ class CfgVirtualStores {
 			class FuelCan {};
 			class Breathalyser {};
 			class GPSTracker {};
+			class PanicButton {};
 			class Stinger {};
 			class Lockpick {};
 			class BoltCutter {};
@@ -32,7 +33,7 @@ class CfgVirtualStores {
 			class Tea {};
 			class Redbull {};
 			class FuelCan {};
-			class Breathalyser {};
+			class PanicButton {};
 			class Lockpick {};
 			class BoltCutter {};
 			class Painkillers {};

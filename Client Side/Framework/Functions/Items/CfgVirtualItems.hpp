@@ -567,7 +567,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\panicButton.paa";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 1;
+		weight = 0;
 		class Settings {
 			onMarket = false;
 			isIllegal = true;
@@ -1491,8 +1491,8 @@ class CfgVirtualItems {
 		sellPrice = -1;
 		weight = 0;
 		class Settings {
-			onMarket = true;
-			isIllegal = true;
+			onMarket = false;
+			isIllegal = false;
 			isSavable = true;
 			isScripted = true;
 		};

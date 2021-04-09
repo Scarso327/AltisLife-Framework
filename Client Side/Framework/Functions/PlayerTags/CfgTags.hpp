@@ -313,7 +313,7 @@ class CfgTags {
 			displayName = "O";
 		};
 		class P : Alligator  {
-			icon = "Data\Tags\Donator\FlLettersags\p.paa";
+			icon = "Data\Tags\Donator\Letters\p.paa";
 			displayName = "P";
 		};
 		class Q : Alligator  {

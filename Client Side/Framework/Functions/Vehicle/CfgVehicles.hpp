@@ -84,8 +84,9 @@ class CfgVehicles {
 
 	// CARS --------------------------------------------------------------------------------------
 	class C_Kart_01_Blu_F : Base {
-		buyPrice = 0;
+		buyPrice = 2500;
 		virtualSpace = 0;
+		garageLimit = 1;
 	};
 	class C_Kart_01_Fuel_F : C_Kart_01_Blu_F{};
     class C_Kart_01_Red_F : C_Kart_01_Blu_F{};
@@ -97,7 +98,7 @@ class CfgVehicles {
     class C_Kart_01_yellow_F : C_Kart_01_Blu_F{};
 
 	class C_Quadbike_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 11300;
 		virtualSpace = 15;
 		class Textures {
 			class Black : BaseTexture {
@@ -124,7 +125,7 @@ class CfgVehicles {
 	};
 
 	class C_Hatchback_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 21450;
 		virtualSpace = 25;
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
@@ -149,6 +150,20 @@ class CfgVehicles {
 				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_ANPR.paa" }; 
 				class Lights : PoliceColour {
+					leftPos[] = {14918.6,15010.6,2.00029};
+					rightPos[] = {14917.6,15010.6,1.95768};
+				};
+			};
+			class Medic : MedicTexture { 
+				textures[] = { "Data\Textures\Vehicles\Land\Medic\hatchback.paa" }; 
+				class Lights : MedicColour {
+					leftPos[] = {14918.6,15010.6,2.00029};
+					rightPos[] = {14917.6,15010.6,1.95768};
+				};
+			};
+			class Hato : HatoTexture { 
+				textures[] = { "Data\Textures\Vehicles\Land\Hato\hatchback.paa" }; 
+				class Lights : HatoColour {
 					leftPos[] = {14918.6,15010.6,2.00029};
 					rightPos[] = {14917.6,15010.6,1.95768};
 				};
@@ -243,26 +258,12 @@ class CfgVehicles {
 				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 			};
-			class Medic : MedicTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Medic\hatchback.paa" }; 
-				class Lights : MedicColour {
-					leftPos[] = {14918.6,15010.6,2.00029};
-					rightPos[] = {14917.6,15010.6,1.95768};
-				};
-			};
-			class Hato : HatoTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Hato\hatchback.paa" }; 
-				class Lights : HatoColour {
-					leftPos[] = {14918.6,15010.6,2.00029};
-					rightPos[] = {14917.6,15010.6,1.95768};
-				};
-			};
 		};
 	};
-	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 0; };
+	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 276500; };
 
 	class C_Offroad_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 42800;
 		virtualSpace = 60;
 		class Textures {
 			class White : BaseTexture {
@@ -307,12 +308,12 @@ class CfgVehicles {
 			};
 		};
 	};
-	class B_G_Offroad_01_armed_F : C_Offroad_01_F { buyPrice = 0; };
+	class B_G_Offroad_01_armed_F : C_Offroad_01_F { buyPrice = 4280000; };
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
 	class C_IDAP_Offroad_01_F : C_Offroad_01_F {};
 
 	class C_Offroad_01_covered_F : Base {
-		buyPrice = 0;
+		buyPrice = 49100;
 		virtualSpace = 75;
 		class Textures {
 			class Black : BaseTexture {
@@ -333,10 +334,10 @@ class CfgVehicles {
 			};
 		};
 	};
-	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 0; };
+	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 54450; };
 
 	class C_Offroad_01_repair_F : Base {
-		buyPrice = 0;
+		buyPrice = 132400;
 		virtualSpace = 65;
 		class Textures {
 			class Hato : HatoTexture { 
@@ -347,9 +348,16 @@ class CfgVehicles {
 	};
 
 	class C_Offroad_02_unarmed_F : Base {
-		buyPrice = 0;
+		buyPrice = 38750;
 		virtualSpace = 55;
 		class Textures {
+			class Medic : MedicTexture { 
+				textures[] = { "Data\Textures\Vehicles\Land\Medic\MB4.paa" }; 
+				class Lights : MedicColour {
+					leftPos[] = {0.757324,1.83252,-0.379596};
+					rightPos[] = {-0.844727,1.82861,-0.379596};
+				};
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa" }; 
@@ -375,20 +383,13 @@ class CfgVehicles {
 				locked = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Civilian\MB4_WD\ridge.paa" }; 
 			};
-			class Medic : MedicTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Medic\MB4.paa" }; 
-				class Lights : MedicColour {
-					leftPos[] = {0.757324,1.83252,-0.379596};
-					rightPos[] = {-0.844727,1.82861,-0.379596};
-				};
-			};
 		};
 	};
-	class C_IDAP_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F { buyPrice = 0; };
-	class I_C_Offroad_02_LMG_F : C_Offroad_02_unarmed_F { buyPrice = 0; };
+	class C_IDAP_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F {};
+	class I_C_Offroad_02_LMG_F : C_Offroad_02_unarmed_F { buyPrice = 670300; };
 
 	class C_SUV_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 71200;
 		virtualSpace = 45;
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
@@ -417,6 +418,20 @@ class CfgVehicles {
 					rightPos[] = {14923.8,15011.1,2.66146};
 				}; 
 			};
+			class Medic : MedicTexture { 
+				textures[] = { "Data\Textures\Vehicles\Land\Medic\SUV.paa" }; 
+				class Lights : MedicColour {
+					leftPos[] = {14924.6,15011.1,2.66146};
+					rightPos[] = {14923.8,15011.1,2.66146};
+				};
+			};
+			class Hato : HatoTexture { 
+				textures[] = { "Data\Textures\Vehicles\Land\Hato\SUV.paa" }; 
+				class Lights : HatoColour {
+					leftPos[] = {14924.6,15011.1,2.66146};
+					rightPos[] = {14923.8,15011.1,2.66146};
+				};
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				factions[] = { "Civilian", "Police" }; 
@@ -441,27 +456,32 @@ class CfgVehicles {
 				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" };
 			};
-			class Medic : MedicTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Medic\SUV.paa" }; 
-				class Lights : MedicColour {
-					leftPos[] = {14924.6,15011.1,2.66146};
-					rightPos[] = {14923.8,15011.1,2.66146};
-				};
-			};
-			class Hato : HatoTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Hato\SUV.paa" }; 
-				class Lights : HatoColour {
-					leftPos[] = {14924.6,15011.1,2.66146};
-					rightPos[] = {14923.8,15011.1,2.66146};
-				};
-			};
 		};
 	};
 
 	class C_Van_02_transport_F : Base {
-		buyPrice = 0;
+		buyPrice = 88000;
 		virtualSpace = 90;
 		class Textures {
+			class PoliceWhite : PoliceTexture { 
+				displayName = "Public Order";
+				textures[] = { "Data\Textures\Vehicles\Land\Police\van.paa" }; 
+			};
+			class PoliceUnmarked : PoliceWhite {
+				displayName = "Unmarked"; 
+				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess";
+				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
+			};
+			class Medic : MedicTexture { 
+				displayName = "Ambulance"; 
+				conditions = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
+				textures[] = { "Data\Textures\Vehicles\Land\Medic\van.paa" }; 
+			};
+			class Hato : HatoTexture { 
+				displayName = "HATO"; 
+				conditions = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
+				textures[] = { "Data\Textures\Vehicles\Land\Hato\van.paa" }; 
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
@@ -482,24 +502,13 @@ class CfgVehicles {
 				displayName = "Press";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_AAN_CO.paa" }; 
 			};
-			class PoliceWhite : PoliceTexture { 
-				displayName = "Public Order";
-				textures[] = { "Data\Textures\Vehicles\Land\Police\van.paa" }; 
-			};
-			class PoliceUnmarked : PoliceWhite {
-				displayName = "Unmarked"; 
-				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess";
-				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
-			};
-			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Land\Medic\van.paa" }; };
-			class Hato : HatoTexture { textures[] = { "Data\Textures\Vehicles\Land\Hato\van.paa" }; };
 		};
 	};
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
 	class C_Van_02_medevac_F : C_Van_02_transport_F {};
 	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {};
 	class C_Van_02_vehicle_F : C_Van_02_transport_F {
-		buyPrice = 0;
+		buyPrice = 96650;
 		virtualSpace = 110;
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
@@ -511,6 +520,13 @@ class CfgVehicles {
 		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
+			class Police : PoliceTexture { 
+				textures[] = { "Data\Textures\Vehicles\Land\Police\prowler.paa" }; 
+				class Lights : PoliceColour {
+					leftPos[] = {14913,15010.4,3.42215};
+					rightPos[] = {14911.6,15010.4,3.42215};
+				};
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { 
@@ -543,13 +559,6 @@ class CfgVehicles {
 			class ChromeRed : BaseChromeRed {};
 			class ChromeSilver : BaseChromeSilver {};
 			class ChromeGold : BaseChromeGold {};
-			class PoliceBlack : PoliceTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Police\prowler.paa" }; 
-				class Lights : PoliceColour {
-					leftPos[] = {14913,15010.4,3.42215};
-					rightPos[] = {14911.6,15010.4,3.42215};
-				};
-			};
 		};
 	};
 	class B_T_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 675000; };
@@ -559,6 +568,13 @@ class CfgVehicles {
 		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
+			class Police : PoliceTexture { 
+				textures[] = { "Data\Textures\Vehicles\Land\Police\qilin.paa" }; 
+				class Lights : PoliceColour {
+					leftPos[] = {14907.3,15010.4,3.05463};
+					rightPos[] = {14905.8,15010.4,3.06133};
+				};
+			};
 			class Black : BaseTexture { 
 				displayName = "Black";
 				textures[] = { "\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_01_black_CO.paa", }; 
@@ -572,13 +588,6 @@ class CfgVehicles {
 			class ChromeRed : BaseChromeRed {};
 			class ChromeSilver : BaseChromeSilver {};
 			class ChromeGold : BaseChromeGold {};
-			class PoliceBlack : PoliceTexture { 
-				textures[] = { "Data\Textures\Vehicles\Land\Police\qilin.paa" }; 
-				class Lights : PoliceColour {
-					leftPos[] = {14907.3,15010.4,3.05463};
-					rightPos[] = {14905.8,15010.4,3.06133};
-				};
-			};
 		};
 	};
 
@@ -592,7 +601,7 @@ class CfgVehicles {
 		chopKeepChance = 95;
 		chopTime = 300;
 		class Textures {
-			class PoliceBlack : PoliceTexture {
+			class Police : PoliceTexture {
 				textures[] = {
 					"Data\Textures\Vehicles\Land\Police\hunter_01.paa",
 					"Data\Textures\Vehicles\Land\Police\hunter_02.paa"
@@ -703,7 +712,7 @@ class CfgVehicles {
 
 	// TRUCKS --------------------------------------------------------------------------------------
 	class C_Tractor_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 23150;
 		virtualSpace = 10;
 		garageLimit = 3;
 		class Textures {
@@ -812,23 +821,17 @@ class CfgVehicles {
 			}; 
 		};
 	};
-	class C_IDAP_Truck_02_transport_F : I_Truck_02_transport_F {
-		buyPrice = 0;
-	};
+	class C_IDAP_Truck_02_transport_F : I_Truck_02_transport_F {};
 	class I_Truck_02_covered_F : I_Truck_02_transport_F {
 		buyPrice = 560000;
 		virtualSpace = 350;
 	};
-	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {
-		buyPrice = 0;
-	};
+	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {};
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 435000;
 		virtualSpace = 200;
 	};
-	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
-		buyPrice = 0;
-	};
+	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {};
 
 	class O_Truck_03_transport_F : Base {
 		buyPrice = 615500;
@@ -871,26 +874,10 @@ class CfgVehicles {
 	};
 
 	class B_Truck_01_mover_F : Base {
-		buyPrice = 0;
+		buyPrice = 334000;
 		virtualSpace = 10;
 		garageLimit = 2;
 		class Textures {
-			class Sand : BaseTexture {
-				displayName = "Sand"; 
-				textures[] = { 
-					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
-					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
-					"\a3\soft_f_beta\truck_01\data\truck_01_mprimer_co.paa"
-				 }; 
-			};
-			class Olive : BaseTexture { 
-				displayName = "Olive";
-				textures[] = { 
-					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_olive_co.paa",
-					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_olive_co.paa",
-					"\a3\soft_f_beta\truck_01\data\truck_01_mprimer_olive_co.paa"
-				};
-			}; 
 			class Hato : HatoTexture { 
 				displayName = "HATO";
 				textures[] = { 
@@ -902,27 +889,9 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_flatbed_F : B_Truck_01_mover_F {
-		buyPrice = 0;
+		buyPrice = 376000;
 		virtualSpace = 10;
 		class Textures {
-			class Sand : BaseTexture {
-				displayName = "Sand"; 
-				textures[] = { 
-					"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa",
-					"\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa",
-					"\a3\soft_f_enoch\truck_01\data\truck_01_ammo_co.paa",
-					"\a3\soft_f_enoch\truck_01\data\truck_01_cargo_co.paa"
-				 }; 
-			};
-			class Olive : BaseTexture { 
-				displayName = "Olive";
-				textures[] = { 
-					"\a3\soft_f_exp\truck_01\data\truck_01_ext_01_olive_co.paa",
-					"\a3\soft_f_exp\truck_01\data\truck_01_ext_02_olive_co.paa",
-					"\a3\soft_f_enoch\truck_01\data\truck_01_ammo_pacific_co.paa",
-					"\a3\soft_f_enoch\truck_01\data\truck_01_cargo_pacific_co.paa"
-				};
-			}; 
 			class Hato : HatoTexture { 
 				displayName = "HATO";
 				textures[] = { 
@@ -1090,7 +1059,7 @@ class CfgVehicles {
 
 	// BOATS --------------------------------------------------------------------------------------
 	class C_Scooter_Transport_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 14300;
 		virtualSpace = 5;
 		class Textures {
 			class Black : BaseTexture {
@@ -1146,12 +1115,12 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat : Base {
-		buyPrice = 0;
+		buyPrice = 4150;
 		virtualSpace = 50;
 	};
 
 	class C_Boat_Civil_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 153200;
 		virtualSpace = 75;
 		class Textures {
 			class Civilian : BaseTexture {}; 
@@ -1162,7 +1131,7 @@ class CfgVehicles {
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
 	class C_Boat_Transport_02_F : Base {
-		buyPrice = 0;
+		buyPrice = 297600;
 		virtualSpace = 150;
 		class Textures {
 			class Civilian : BaseTexture {}; 
@@ -1176,9 +1145,13 @@ class CfgVehicles {
 	};
 
 	class B_Boat_Armed_01_minigun_F : Base {
-		buyPrice = 0;
+		buyPrice = 14360500;
 		virtualSpace = 80;
 		garageLimit = 1;
+		repairTime = 15;
+		crushTime = 30;
+		chopKeepChance = 85;
+		chopTime = 120;
 		turrets[] = { { "GMG_40mm" } };
 		class Textures {
 			class Police : PoliceTexture {
@@ -1191,18 +1164,18 @@ class CfgVehicles {
 	};
 
 	class B_SDV_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 389500;
 		virtualSpace = 5;
 	};
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
 	class B_UAV_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 98700;
 		virtualSpace = 0;
 	};
 	
 	class C_Heli_Light_01_civil_F : Base {
-		buyPrice = 0;
+		buyPrice = 565000;
 		virtualSpace = 5;
 		garageLimit = 2;
 		class Textures {
@@ -1271,10 +1244,10 @@ class CfgVehicles {
 			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
 		};
 	};
-	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 0; };
+	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 780000; };
 
 	class O_Heli_Light_02_unarmed_F : Base {
-		buyPrice = 0;
+		buyPrice = 2350000;
 		virtualSpace = 25;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
@@ -1297,7 +1270,7 @@ class CfgVehicles {
 	};
 
 	class I_Heli_light_03_unarmed_F : Base {
-		buyPrice = 0;
+		buyPrice = 2130000;
 		virtualSpace = 20;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
@@ -1317,12 +1290,13 @@ class CfgVehicles {
 		};
 	};
 	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {
+		buyPrice = 23450000;
 		garageLimit = 1;
 		turrets[] = { { "M134_minigun", "missiles_DAR", "CMFlareLauncher" } };
 	};
 
 	class B_Heli_Transport_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
 		turrets[] = { { "LMG_Minigun_Transport", "LMG_Minigun_Transport2", "CMFlareLauncher" } };
@@ -1335,7 +1309,7 @@ class CfgVehicles {
 	};
 
 	class I_Heli_Transport_02_F : Base {
-		buyPrice = 0;
+		buyPrice = 13240000;
 		virtualSpace = 55;
 		garageLimit = 1;
 		chopKeepChance = 85;
@@ -1368,12 +1342,10 @@ class CfgVehicles {
 			};
 		};
 	};
-	class C_IDAP_Heli_Transport_02_F : I_Heli_Transport_02_F {
-		buyPrice = 0;
-	};
+	class C_IDAP_Heli_Transport_02_F : I_Heli_Transport_02_F {};
 
 	class O_Heli_Transport_04_black_F : Base {
-		buyPrice = 0;
+		buyPrice = 11350000;
 		virtualSpace = 0;
 		garageLimit = 1;
 		chopKeepChance = 85;
@@ -1382,27 +1354,27 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 0;
+		buyPrice = 11176500;
 		virtualSpace = 0;
 	};
 	class O_Heli_Transport_04_covered_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 0;
+		buyPrice = 12670000;
 		virtualSpace = 35;
 	};
 	class O_Heli_Transport_04_box_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 0;
+		buyPrice = 28900500;
 		virtualSpace = 70;
 	};
 	class O_Heli_Transport_04_ammo_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 0;
+		buyPrice = 29460000;
 		virtualSpace = 80;
 	};
 	class O_Heli_Transport_04_fuel_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 0;
+		buyPrice = 13640000;
 		virtualSpace = 50;
 	};
 	class O_Heli_Transport_04_medevac_black_F : Base {
-		buyPrice = 0;
+		buyPrice = 11983000;
 		virtualSpace = 40;
 		garageLimit = 1;
 		chopKeepChance = 100;
@@ -1422,7 +1394,7 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Transport_03_unarmed_F : Base {
-		buyPrice = 0;
+		buyPrice = 33400750;
 		virtualSpace = 100;
 		garageLimit = 1;
 		chopKeepChance = 95;
@@ -1448,13 +1420,18 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Attack_01_F : Base {
-		buyPrice = 0;
+		buyPrice = 146560000;
 		virtualSpace = 0;
 		garageLimit = 1;
 		chopKeepChance = 97;
 		chopPerc = 0.20;
 		chopTime = 600;
 		turrets[] = { { "CMFlareLauncher", "gatling_20mm", "missiles_DAGR", "missiles_ASRAAM" } };
+	};
+	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
+		buyPrice = 212340000;
+		virtualSpace = 30;
+		turrets[] = { { "CMFlareLauncher", "gatling_30mm", "missiles_SCALPEL", "rockets_Skyfire", "Laserdesignator_mounted" } };
 	};
 
 	// PLANES --------------------------------------------------------------------------------------

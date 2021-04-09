@@ -33,15 +33,15 @@ class CfgVehicleStores {
 			};
 			class B_T_LSV_01_unarmed_black_F {
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
-				class Textures { class PoliceBlack {}; };
+				class Textures { class Police {}; };
 			};
 			class O_LSV_02_unarmed_F {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
-				class Textures { class PoliceBlack {}; };
+				class Textures { class Police {}; };
 			};
 			class B_MRAP_01_F {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
-				class Textures { class PoliceBlack {}; };
+				class Textures { class Police {}; };
 			};
 		};
 	};
@@ -220,8 +220,22 @@ class CfgVehicleStores {
 			class C_Offroad_01_comms_F {};
 			class C_Offroad_02_unarmed_F {};
 			class C_SUV_01_F {};
-			class C_Van_02_transport_F {};
-			class C_Van_02_vehicle_F {};
+			class C_Van_02_transport_F {
+				class Textures { 
+					class Black {}; 
+					class White {}; 
+					class Red {}; 
+					class Orange {}; 
+				};
+			};
+			class C_Van_02_vehicle_F {
+				class Textures { 
+					class Black {}; 
+					class White {}; 
+					class Red {}; 
+					class Orange {}; 
+				};
+			};
 		};
 	};
 
@@ -241,8 +255,6 @@ class CfgVehicleStores {
 			class O_Truck_03_ammo_F {};
 			class O_Truck_03_fuel_F {};
 			class O_Truck_03_device_F {};
-			class B_Truck_01_mover_F {};
-			class B_Truck_01_flatbed_F {};
 			class B_Truck_01_cargo_F {};
 			class B_Truck_01_transport_F {};
 			class B_Truck_01_covered_F {};

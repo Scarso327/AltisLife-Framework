@@ -38,4 +38,29 @@ private _selected = 0;
 
 _titleDropdown lbSetCurSel _selected;
 
+private _iconList = _display displayCtrl 23069;
+tvClear _iconList;
+
+{
+	private _cfg = _x;
+	private _category = _iconList tvAdd [[], configName _cfg];
+
+	{
+		private _iconCfg = missionConfigFile >> "CfgTags" >> "Icons" >> _x;
+		if (isClass _iconCfg && { call compile getText (_iconCfg >> "condition") }) then {
+			private _path = getText (_iconCfg >> "icon");
+
+			private _icon = _iconList tvAdd [[_category], getText (_iconCfg >> "displayName")];
+			_iconList tvSetData [[_category, _icon], configName _iconCfg];
+			_iconList tvSetPicture [[_category, _icon], _path];
+
+			if (_path isEqualTo (player getVariable ["icon", ""])) then {
+				_iconList tvSetCurSel [_category, _icon];
+			};
+		};
+	} forEach (getArray (_cfg >> "icons"));
+} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgTags" >> "Categories"));
+
+_iconList tvAdd [[], "Clear Icon"];
+
 [_display] call ULP_fnc_updateTagPreview;

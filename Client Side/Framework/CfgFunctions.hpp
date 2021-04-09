@@ -212,6 +212,7 @@ class CfgFunctions {
 			class setTags {};
 			class getTagColour {};
 			class getTagPos {};
+			class initTags {};
 		};
 
 		class Licenses {

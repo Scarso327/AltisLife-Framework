@@ -145,9 +145,19 @@ class PlayerTitle : Life_RscStructuredText {
 
 class TitleList : Life_RscCombo {
 	idc = 23056;
-	onLBSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, [player] call ULP_fnc_getName, player getVariable [""subtitle"", """"], getText (missionConfigFile >> ""CfgTitles"" >> (_ctrl lbData _index) >> ""displayName"")] call ULP_fnc_updateTagPreview;";
+	onLBSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, ""."", """", """", getText (missionConfigFile >> ""CfgTitles"" >> (_ctrl lbData _index) >> ""displayName"")] call ULP_fnc_updateTagPreview;";
 	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
 	SAFEZONE_Y((UI_Y + UI_HEIGHT) - (BUTTON_H + (BUTTON_H / 2)));
 	SAFEZONE_W((UI_WIDTH / 4));
 	SAFEZONE_H(BUTTON_H);
+};
+
+ class IconList : Life_RscTree {
+	idc = 23069;
+	onTreeSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, (_ctrl tvData _index), """", """", """"] call ULP_fnc_updateTagPreview;";
+	colorBackground[] = FOOTER_COLOUR;
+    SAFEZONE_X(UI_X + MARGIN_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 9));
+	SAFEZONE_W((UI_WIDTH / 2));
+	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 10));
 };

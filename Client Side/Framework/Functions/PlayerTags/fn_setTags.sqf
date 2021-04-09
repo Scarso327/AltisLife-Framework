@@ -42,6 +42,11 @@ if (_subtitle isEqualTo "") then {
 	_subtitle = getText(missionConfigFile >> "CfgFactions" >> _faction >> "displayName");
 };
 
+private _profile_icon = profileNamespace getVariable ["selected_icon", ""];
+if (_icon isEqualTo "" && { !(_profile_icon isEqualTo "") }) then {
+	_icon = getText(missionConfigFile >> "CfgTags" >> "Icons" >> _profile_icon >> "icon");
+};
+
 player setVariable ["icon", _icon, true];
 player setVariable ["subtitle", _subtitle, true];
 

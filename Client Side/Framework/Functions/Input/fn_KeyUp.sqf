@@ -67,13 +67,14 @@ switch (_code) do {
     };
 
     case F2: {
-        if ([] call ULP_fnc_isStaff && { _shift } && { !_ctrlKey } && { !_alt }) then {
+        if ([] call ULP_fnc_isStaff && { ["Camera", false] call ULP_fnc_checkPower } && { _shift } && { !_ctrlKey } && { !_alt }) then {
             (findDisplay 46) createDisplay "DisplayAdmin";
+            _handled = true;
         };
     };
 
     case F3: {
-        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { _shift } && { !_ctrlKey } && { !_alt }) then {
+        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Invis", false] call ULP_fnc_checkPower } && { _shift } && { !_ctrlKey } && { !_alt }) then {
             if (time < (player getVariable ["admin_invis_cooldown", 0])) exitWith {
                 hint "You've recently changed your visibility, please wait before trying again...";
                 false

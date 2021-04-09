@@ -58,7 +58,7 @@ class CfgInteractions {
 			title = "Admin Heal";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "(_this select 0) setDamage 0; hint format[""You've healed this player using admin powers...""]; closeDialog 0;";
-			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { (damage _this) > 0 }";
+			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { (damage _this) > 0 } && { [""Heal"", false] call ULP_fnc_checkPower }";
 		};
 	};
 
@@ -187,13 +187,13 @@ class CfgInteractions {
 			title = "Admin Repair";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "(_this select 0) setDamage 0; hint format[""You've repaired this vehicle using admin powers...""];";
-			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }";
+			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Vehicle"", false] call ULP_fnc_checkPower }";
 		};
 		class AdminRefuel {
 			title = "Admin Refuel";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "if ((count (units (_this select 0))) > 0) exitWith { hint ""No one can be in the vehicle while its refueled..""; }; [(_this select 0), 1] remoteExecCall [""ULP_fnc_setFuel"", (_this select 0)]; hint format[""You've refueled this vehicle using admin powers...""];";
-			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }";
+			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Vehicle"", false] call ULP_fnc_checkPower }";
 		};
 	};
 };

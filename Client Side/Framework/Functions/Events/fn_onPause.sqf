@@ -23,7 +23,7 @@ with missionNamespace do {
 	
 	_abortButton ctrlSetEventHandler["ButtonClick", "with missionNamespace do { [] call ULP_fnc_syncPlayerInfo; [""Abort"", true, false] call BIS_fnc_endMission; }; true"];
 
-	if !([] call ULP_fnc_isStaff) then {
+	if !(["Disconnect", false] call ULP_fnc_checkPower) then {
 		_abortButton ctrlEnable false;
 
 		[[_abortButton, _abortDelay], {

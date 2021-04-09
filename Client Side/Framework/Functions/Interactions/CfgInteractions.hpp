@@ -52,6 +52,14 @@ class CfgInteractions {
 			onClick = "_this call ULP_fnc_setPrisonTime; closeDialog 0;";
 			condition = "[player] call ULP_fnc_canImprison && { [_this] call ULP_fnc_canImprisoned }";
 		};
+
+		// Admin Commands...
+		class AdminHeal {
+			title = "Admin Heal";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "(_this select 0) setDamage 0; hint format[""You've healed this player using admin powers...""];";
+			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }";
+		};
 	};
 
 	class PersonMedical {

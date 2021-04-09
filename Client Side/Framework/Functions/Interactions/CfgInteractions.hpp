@@ -57,8 +57,8 @@ class CfgInteractions {
 		class AdminHeal {
 			title = "Admin Heal";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
-			onClick = "(_this select 0) setDamage 0; hint format[""You've healed this player using admin powers...""];";
-			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }";
+			onClick = "(_this select 0) setDamage 0; hint format[""You've healed this player using admin powers...""]; closeDialog 0;";
+			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { (damage _this) > 0 }";
 		};
 	};
 

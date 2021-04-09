@@ -145,7 +145,7 @@ class PlayerTitle : Life_RscStructuredText {
 
 class TitleList : Life_RscCombo {
 	idc = 23056;
-	onLBSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, [""_name"", [player] call ULP_fnc_getName, [""""]], [""_subtitle"", player getVariable [""subtitle"", """"], [""""]], getText (missionConfigFile >> ""CfgTitles"" >> (_ctrl lbData _index) >> ""displayName"")] call ULP_fnc_updateTagPreview;";
+	onLBSelChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, [player] call ULP_fnc_getName, player getVariable [""subtitle"", """"], getText (missionConfigFile >> ""CfgTitles"" >> (_ctrl lbData _index) >> ""displayName"")] call ULP_fnc_updateTagPreview;";
 	SAFEZONE_X((UI_X + UI_WIDTH) - ((UI_WIDTH / 4) + ((UI_WIDTH / 4) / 2)));
 	SAFEZONE_Y((UI_Y + UI_HEIGHT) - (BUTTON_H + (BUTTON_H / 2)));
 	SAFEZONE_W((UI_WIDTH / 4));

@@ -148,5 +148,64 @@ class CfgTags {
 			subtitle = "Student";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 		};
+
+		// Donator
+
+		/// Animals
+		class Alligator  {
+			icon = "Data\Tags\Donator\Animals\alligator.paa";
+			subtitle = "Alligator";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class Elephant : Alligator  {
+			icon = "Data\Tags\Donator\Animals\elephant.paa";
+			subtitle = "Elephant";
+		};
+		class Flamingo : Alligator  {
+			icon = "Data\Tags\Donator\Animals\flamingo.paa";
+			subtitle = "Flamingo";
+		};
+		class Octopus : Alligator  {
+			icon = "Data\Tags\Donator\Animals\octopus.paa";
+			subtitle = "Octopus";
+		};
+		class Pig : Alligator  {
+			icon = "Data\Tags\Donator\Animals\pig.paa";
+			subtitle = "Pig";
+		};
+		class Turtle : Alligator  {
+			icon = "Data\Tags\Donator\Animals\turtle.paa";
+			subtitle = "Turtle";
+		};
+		class Unicorn : Alligator  {
+			icon = "Data\Tags\Donator\Animals\unicorn.paa";
+			subtitle = "Unicorn";
+		};
+
+		/// Flags
+
+		/// Letters
+
+		/// Movies
+
+		/// Other
+	};
+
+	class Categories {
+		class Animals {
+			icons[] = { "Alligator", "Elephant", "Flamingo", "Octopus", "Pig", "Turtle", "Unicorn" };
+		};
+		class Flags {
+			icons[] = {};
+		};
+		class Letters {
+			icons[] = {};
+		};
+		class Movies {
+			icons[] = {};
+		};
+		class Other {
+			icons[] = {};
+		};
 	};
 };

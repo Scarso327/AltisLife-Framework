@@ -601,6 +601,11 @@ class CfgFunctions {
 			class ownsBase {};
 			class initBases {};
 		};
+
+		class Donator {
+			file = "Functions\Donator";
+			class donatorLevel {};	
+		};
 	};
 
 	class ULP_Functions_UI {

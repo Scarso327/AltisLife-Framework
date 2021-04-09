@@ -149,46 +149,349 @@ class CfgTags {
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
-		// Donator
-
+		// Civilian Donators
 		/// Animals
 		class Alligator  {
 			icon = "Data\Tags\Donator\Animals\alligator.paa";
-			subtitle = "Alligator";
+			displayName = "Alligator";
 			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
 		class Elephant : Alligator  {
 			icon = "Data\Tags\Donator\Animals\elephant.paa";
-			subtitle = "Elephant";
+			displayName = "Elephant";
 		};
 		class Flamingo : Alligator  {
 			icon = "Data\Tags\Donator\Animals\flamingo.paa";
-			subtitle = "Flamingo";
+			displayName = "Flamingo";
 		};
 		class Octopus : Alligator  {
 			icon = "Data\Tags\Donator\Animals\octopus.paa";
-			subtitle = "Octopus";
+			displayName = "Octopus";
 		};
 		class Pig : Alligator  {
 			icon = "Data\Tags\Donator\Animals\pig.paa";
-			subtitle = "Pig";
+			displayName = "Pig";
 		};
 		class Turtle : Alligator  {
 			icon = "Data\Tags\Donator\Animals\turtle.paa";
-			subtitle = "Turtle";
+			displayName = "Turtle";
 		};
 		class Unicorn : Alligator  {
 			icon = "Data\Tags\Donator\Animals\unicorn.paa";
-			subtitle = "Unicorn";
+			displayName = "Unicorn";
 		};
 
 		/// Flags
+		class Canada : Alligator  {
+			icon = "Data\Tags\Donator\Flags\canada.paa";
+			displayName = "Canada";
+		};
+		class Denmark : Alligator  {
+			icon = "Data\Tags\Donator\Flags\denmark.paa";
+			displayName = "Denmark";
+		};
+		class England : Alligator  {
+			icon = "Data\Tags\Donator\Flags\england.paa";
+			displayName = "England";
+		};
+		class Finland : Alligator  {
+			icon = "Data\Tags\Donator\Flags\finland.paa";
+			displayName = "Finland";
+		};
+		class France : Alligator  {
+			icon = "Data\Tags\Donator\Flags\france.paa";
+			displayName = "France";
+		};
+		class Germany : Alligator  {
+			icon = "Data\Tags\Donator\Flags\germany.paa";
+			displayName = "Germany";
+		};
+		class Greece : Alligator  {
+			icon = "Data\Tags\Donator\Flags\greece.paa";
+			displayName = "Greece";
+		};
+		class LGBT : Alligator  {
+			icon = "Data\Tags\Donator\Flags\lgbt.paa";
+			displayName = "LGBT";
+		};
+		class Netherlands : Alligator  {
+			icon = "Data\Tags\Donator\Flags\netherlands.paa";
+			displayName = "Netherlands";
+		};
+		class NorthKorea : Alligator  {
+			icon = "Data\Tags\Donator\Flags\northkorea.paa";
+			displayName = "North Korea";
+		};
+		class Norway : Alligator  {
+			icon = "Data\Tags\Donator\Flags\norway.paa";
+			displayName = "Norway";
+		};
+		class Scotland : Alligator  {
+			icon = "Data\Tags\Donator\Flags\scotland.paa";
+			displayName = "Scotland";
+		};
+		class Spain : Alligator  {
+			icon = "Data\Tags\Donator\Flags\spain.paa";
+			displayName = "Spain";
+		};
+		class Sweden : Alligator  {
+			icon = "Data\Tags\Donator\Flags\sweden.paa";
+			displayName = "Sweden";
+		};
+		class UK : Alligator  {
+			icon = "Data\Tags\Donator\Flags\unitedKingdom.paa";
+			displayName = "UK";
+		};
+		class USA : Alligator  {
+			icon = "Data\Tags\Donator\Flags\usa.paa";
+			displayName = "USA";
+		};
+		class USSR : Alligator  {
+			icon = "Data\Tags\Donator\Flags\ussr.paa";
+			displayName = "USSR";
+		};
 
 		/// Letters
+		class A : Alligator  {
+			icon = "Data\Tags\Donator\Letters\a.paa";
+			displayName = "A";
+		};
+		class B : Alligator  {
+			icon = "Data\Tags\Donator\Letters\b.paa";
+			displayName = "B";
+		};
+		class C : Alligator  {
+			icon = "Data\Tags\Donator\Letters\c.paa";
+			displayName = "C";
+		};
+		class D : Alligator  {
+			icon = "Data\Tags\Donator\Letters\d.paa";
+			displayName = "D";
+		};
+		class E : Alligator  {
+			icon = "Data\Tags\Donator\Letters\e.paa";
+			displayName = "E";
+		};
+		class F : Alligator  {
+			icon = "Data\Tags\Donator\Letters\f.paa";
+			displayName = "F";
+		};
+		class G : Alligator  {
+			icon = "Data\Tags\Donator\Letters\g.paa";
+			displayName = "G";
+		};
+		class H : Alligator  {
+			icon = "Data\Tags\Donator\Letters\h.paa";
+			displayName = "H";
+		};
+		class I : Alligator  {
+			icon = "Data\Tags\Donator\Letters\i.paa";
+			displayName = "I";
+		};
+		class J : Alligator  {
+			icon = "Data\Tags\Donator\Letters\j.paa";
+			displayName = "J";
+		};
+		class K : Alligator  {
+			icon = "Data\Tags\Donator\Letters\k.paa";
+			displayName = "K";
+		};
+		class L : Alligator  {
+			icon = "Data\Tags\Donator\Letters\l.paa";
+			displayName = "L";
+		};
+		class M : Alligator  {
+			icon = "Data\Tags\Donator\Letters\m.paa";
+			displayName = "M";
+		};
+		class N : Alligator  {
+			icon = "Data\Tags\Donator\Letters\n.paa";
+			displayName = "N";
+		};
+		class O : Alligator  {
+			icon = "Data\Tags\Donator\Letters\o.paa";
+			displayName = "O";
+		};
+		class P : Alligator  {
+			icon = "Data\Tags\Donator\FlLettersags\p.paa";
+			displayName = "P";
+		};
+		class Q : Alligator  {
+			icon = "Data\Tags\Donator\Letters\q.paa";
+			displayName = "Q";
+		};
+		class R : Alligator  {
+			icon = "Data\Tags\Donator\Letters\r.paa";
+			displayName = "R";
+		};
+		class S : Alligator  {
+			icon = "Data\Tags\Donator\Letters\s.paa";
+			displayName = "S";
+		};
+		class T : Alligator  {
+			icon = "Data\Tags\Donator\Letters\t.paa";
+			displayName = "T";
+		};
+		class U : Alligator  {
+			icon = "Data\Tags\Donator\Letters\u.paa";
+			displayName = "U";
+		};
+		class V : Alligator  {
+			icon = "Data\Tags\Donator\Letters\v.paa";
+			displayName = "V";
+		};
+		class W : Alligator  {
+			icon = "Data\Tags\Donator\Letters\w.paa";
+			displayName = "W";
+		};
+		class X : Alligator  {
+			icon = "Data\Tags\Donator\Letters\x.paa";
+			displayName = "X";
+		};
+		class Y : Alligator  {
+			icon = "Data\Tags\Donator\Letters\y.paa";
+			displayName = "Y";
+		};
+		class Z : Alligator  {
+			icon = "Data\Tags\Donator\Letters\z.paa";
+			displayName = "Z";
+		};
 
 		/// Movies
+		class Avatar : Alligator  {
+			icon = "Data\Tags\Donator\Movies\avatar.paa";
+			displayName = "Avatar";
+		};
+		class C3PO : Alligator  {
+			icon = "Data\Tags\Donator\Movies\C3PO.paa";
+			displayName = "C3PO";
+		};
+		class Disney : Alligator  {
+			icon = "Data\Tags\Donator\Movies\disney.paa";
+			displayName = "Disney";
+		};
+		class Flash : Alligator  {
+			icon = "Data\Tags\Donator\Movies\flash.paa";
+			displayName = "Flash";
+		};
+		class Joker : Alligator  {
+			icon = "Data\Tags\Donator\Movies\joker.paa";
+			displayName = "Joker";
+		};
+		class Morty : Alligator  {
+			icon = "Data\Tags\Donator\Movies\morty.paa";
+			displayName = "Morty";
+		};
+		class Pennywise : Alligator  {
+			icon = "Data\Tags\Donator\Movies\pennywise.paa";
+			displayName = "Pennywise";
+		};
+		class Pixar : Alligator  {
+			icon = "Data\Tags\Donator\Movies\pixar.paa";
+			displayName = "Pixar";
+		};
+		class Rick : Alligator  {
+			icon = "Data\Tags\Donator\Movies\rick.paa";
+			displayName = "Rick";
+		};
+		class StarTrek : Alligator  {
+			icon = "Data\Tags\Donator\Movies\startrek.paa";
+			displayName = "StarTrek";
+		};
+		class Superman : Alligator  {
+			icon = "Data\Tags\Donator\Movies\superman.paa";
+			displayName = "Superman";
+		};
 
 		/// Other
+		class Alien : Alligator  {
+			icon = "Data\Tags\Donator\Other\alien.paa";
+			displayName = "Alien";
+		};
+		class Astronaut : Alligator  {
+			icon = "Data\Tags\Donator\Other\astronaut.paa";
+			displayName = "Astronaut";
+		};
+		class Commet : Alligator  {
+			icon = "Data\Tags\Donator\Other\commet.paa";
+			displayName = "Commet";
+		};
+		class Crown : Alligator  {
+			icon = "Data\Tags\Donator\Other\crown.paa";
+			displayName = "Crown";
+		};
+		class Diamond : Alligator  {
+			icon = "Data\Tags\Donator\Other\diamond.paa";
+			displayName = "Diamond";
+		};
+		class DNA : Alligator  {
+			icon = "Data\Tags\Donator\Other\dna.paa";
+			displayName = "DNA";
+		};
+		class Doughnut : Alligator  {
+			icon = "Data\Tags\Donator\Other\doughnut.paa";
+			displayName = "Doughnut";
+		};
+		class Eggplant : Alligator  {
+			icon = "Data\Tags\Donator\Other\eggplant.paa";
+			displayName = "Eggplant";
+		};
+		class Fighter : Alligator  {
+			icon = "Data\Tags\Donator\Other\fighter.paa";
+			displayName = "Fighter";
+		};
+		class Hamburger : Alligator  {
+			icon = "Data\Tags\Donator\Other\hamburger.paa";
+			displayName = "Hamburger";
+		};
+		class Heart : Alligator  {
+			icon = "Data\Tags\Donator\Other\heart.paa";
+			displayName = "Heart";
+		};
+		class Mars : Alligator  {
+			icon = "Data\Tags\Donator\Other\mars.paa";
+			displayName = "Mars";
+		};
+		class Moon : Alligator  {
+			icon = "Data\Tags\Donator\Other\moon.paa";
+			displayName = "Moon";
+		};
+		class Salt : Alligator  {
+			icon = "Data\Tags\Donator\Other\salt.paa";
+			displayName = "Salt";
+		};
+		class Satellite : Alligator  {
+			icon = "Data\Tags\Donator\Other\satellite.paa";
+			displayName = "Satellite";
+		};
+		class Saturn : Alligator  {
+			icon = "Data\Tags\Donator\Other\saturn.paa";
+			displayName = "Saturn";
+		};
+		class Server : Alligator  {
+			icon = "Data\Tags\Donator\Other\server.paa";
+			displayName = "Server";
+		};
+		class Shuttle : Alligator  {
+			icon = "Data\Tags\Donator\Other\shuttle.paa";
+			displayName = "Shuttle";
+		};
+		class Skull : Alligator  {
+			icon = "Data\Tags\Donator\Other\skull.paa";
+			displayName = "Skull";
+		};
+		class UN : Alligator  {
+			icon = "Data\Tags\Donator\Other\UN.paa";
+			displayName = "UN";
+		};
+		class Weed : Alligator  {
+			icon = "Data\Tags\Donator\Other\weed.paa";
+			displayName = "Weed";
+		};
+		class World : Alligator  {
+			icon = "Data\Tags\Donator\Other\world.paa";
+			displayName = "World";
+		};
 	};
 
 	class Categories {
@@ -196,16 +499,16 @@ class CfgTags {
 			icons[] = { "Alligator", "Elephant", "Flamingo", "Octopus", "Pig", "Turtle", "Unicorn" };
 		};
 		class Flags {
-			icons[] = {};
+			icons[] = { "Canada", "Denmark", "England", "Finland", "Germany", "Greece", "LGBT", "Netherlands", "NorthKorea", "Norway", "Scotland", "Spain", "Sweden", "UK", "USA", "USSR" };
 		};
 		class Letters {
-			icons[] = {};
+			icons[] = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
 		};
 		class Movies {
-			icons[] = {};
+			icons[] = { "Avatar", "C3PO", "Disney", "Flash", "Joker", "Morty", "Pennywise", "Pixar", "Rick", "StarTrek", "Superman" };
 		};
 		class Other {
-			icons[] = {};
+			icons[] = { "Alien", "Astronaut", "Commet", "Crown", "Diamond", "DNA", "Doughnut", "Eggplant", "Fighter", "Hamburger", "Heart", "Mars", "Moon", "Salt", "Satellite", "Saturn", "Server", "Shuttle", "Skull", "UN", "Weed", "World" };
 		};
 	};
 };

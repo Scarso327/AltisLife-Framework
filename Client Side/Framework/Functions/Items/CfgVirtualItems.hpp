@@ -1488,8 +1488,8 @@ class CfgVirtualItems {
 		sellPrice = -1;
 		weight = 0;
 		class Settings {
-			onMarket = true;
-			isIllegal = true;
+			onMarket = false;
+			isIllegal = false;
 			isSavable = true;
 			isScripted = true;
 		};

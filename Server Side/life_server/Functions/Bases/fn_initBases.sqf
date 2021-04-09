@@ -19,22 +19,20 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 
 	private _owner = -1;
 
-	if ([getNumber (_x >> "includeBidding")] call ULP_fnc_bool) then {
-		private _query = [format ["SELECT value FROM settings WHERE setting = 'base_owner_%1'", configName _x], 2] call DB_fnc_asyncCall;
-		_query params [
-			["_queryOwner", -2, [0, ""]]
-		];
+	private _query = [format ["SELECT value FROM settings WHERE setting = 'base_owner_%1'", configName _x], 2] call DB_fnc_asyncCall;
+	_query params [
+		["_queryOwner", -2, [0, ""]]
+	];
 
-		if (_queryOwner isEqualTo -2) then {
-			// Insert...
-			[format ["INSERT INTO settings (setting, value) VALUES ('base_owner_%1', '-1');",  configName _x], 1] call DB_fnc_asyncCall;
+	if (_queryOwner isEqualTo -2) then {
+		// Insert...
+		[format ["INSERT INTO settings (setting, value) VALUES ('base_owner_%1', '-1');",  configName _x], 1] call DB_fnc_asyncCall;
+	} else {
+		if ([getNumber (_x >> "includeBidding")] call ULP_fnc_bool && { missionNamespace getVariable ["ULP_SRV_BaseBidding", false] }) then {
+			[format ["UPDATE settings SET value = '-1' WHERE setting = 'base_owner_%1'",  configName _x], 1] call DB_fnc_asyncCall;
 		} else {
-			if (missionNamespace getVariable ["ULP_SRV_BaseBidding", false]) then {
-				[format ["UPDATE settings SET value = '-1' WHERE setting = 'base_owner_%1'",  configName _x], 1] call DB_fnc_asyncCall;
-			} else {
-				if (_queryOwner isEqualType "") then { _queryOwner = parseNumber _queryOwner; };
-				_owner = _queryOwner;
-			};
+			if (_queryOwner isEqualType "") then { _queryOwner = parseNumber _queryOwner; };
+			_owner = _queryOwner;
 		};
 	};
 

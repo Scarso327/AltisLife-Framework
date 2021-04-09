@@ -41,9 +41,8 @@ if ([player] call ULP_fnc_onDuty) then {
 	ULP_CarryInfo set [0, 0];
 
 	player forceAddUniform ([
-		"U_I_Protagonist_VR", "U_B_Protagonist_VR", "U_O_Protagonist_VR"
-	] select (random 2));
-	player addHeadgear "H_Cap_headphones";
+		"U_C_Protagonist_VR", "U_B_Protagonist_VR", "U_O_Protagonist_VR", "U_I_Protagonist_VR"
+	] select (random 3));
 	player addGoggles "G_Goggles_VR";
 
 	player linkItem "ItemMap";

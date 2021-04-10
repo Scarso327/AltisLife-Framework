@@ -109,6 +109,11 @@ class CfgFunctions {
             file = "\life_server\Functions\Bases";
             class initBases {};
         };
+
+        class Gathering {
+            file = "\life_server\Functions\Gathering";
+            class initGathering {};
+        };
     };
 
     class MySQL_Database {

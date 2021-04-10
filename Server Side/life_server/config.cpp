@@ -58,6 +58,8 @@ class CfgPatches {
             class Bleedout : Spawn {};
             class Misc {};
         };
+
+        #include "Functions\Gathering\CfgGathering.hpp"
     };
 };
 

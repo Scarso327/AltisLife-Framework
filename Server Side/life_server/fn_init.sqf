@@ -105,6 +105,7 @@ if !(ULP_SRV_Setting_Week isEqualTo ([] call ULP_SRV_fnc_getWeek)) then { _routi
 [] call ULP_SRV_fnc_initEvents;
 (ULP_SRV_Date select 3) call ULP_SRV_fnc_initBases;
 [] call ULP_SRV_fnc_initHousing;
+[] call ULP_SRV_fnc_initGathering;
 [] call ULP_SRV_fnc_initCartels;
 [] call ULP_SRV_fnc_initServerEvents;
 

@@ -27,9 +27,11 @@ private _lastVal = 0;
 
 		if (_lastVal isEqualTo _val) exitWith {};
 
+		_ui setVariable [_type, _val];
+
+		_val = _val max 1;
 		_text ctrlSetStructuredText parseText format["<t><img image='Data\UI\%1.paa' size='0.8'/></t><t align='right'>%2%3</t>", _type, _val, "%"];
 		_bar progressSetPosition (_val / 100);
-		_ui setVariable [_type, _val];
 	};
 } forEach [
 	[_food, "food", missionNamespace getVariable ["ULP_Survival_Hunger", 1]],

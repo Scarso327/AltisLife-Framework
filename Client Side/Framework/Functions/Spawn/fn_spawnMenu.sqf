@@ -7,6 +7,23 @@ scopeName "fn_spawnMenu";
 
 if (ULP_Imprisioned && { [player, ULP_Prison_Time, objNull, false] call ULP_fnc_imprison }) exitWith {
 	cutText [ "", "BLACK IN" ];
+
+	if (ULP_FirstSpawn) then {
+		ULP_FirstSpawn = false;
+
+		if (["EnableWelcome"] call ULP_fnc_getOption isEqualTo 1) then {
+			[
+				3, [],
+				{ [] call ULP_UI_fnc_screenCredits; }
+			] call ULP_fnc_waitExecute;
+		};
+	} else {
+		[false] call ULP_fnc_initPlayer;
+	};
+
+	if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
+		[] call ULP_UI_fnc_openHUD;
+	};
 };
 
 disableSerialization;

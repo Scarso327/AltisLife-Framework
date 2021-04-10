@@ -244,6 +244,7 @@ class CfgFunctions {
 			file = "Functions\Gathering";
 			class gather {};
 			class getGatherZone {};
+			class catchFish {};
 		};
 
 		class Tablet {

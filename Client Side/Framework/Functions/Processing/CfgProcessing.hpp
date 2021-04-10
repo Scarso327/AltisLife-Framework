@@ -2,6 +2,7 @@ class CfgProcessing {
 	class BaseProcess {
 		processTime = 60;
 		factions[] = { "Civilian", "Police", "Medic", "Hato" };
+		hidden[] = {};
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Processing", 1, 100 };

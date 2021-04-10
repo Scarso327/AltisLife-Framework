@@ -6,6 +6,7 @@ class CfgGathering {
 		actionTitle = "Gathering";
 		gatherTime = 3;
 		factions[] = { "Civilian" };
+		hidden[] = {};
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Gathering", 1, 100 };
@@ -49,16 +50,19 @@ class CfgGathering {
 	};
 
 	class Weed : BaseGather {
+		hidden[] = { "Police" };
 		areas[] = { { "weed_field", 20 } };
 		items[] = { { "UnprocessedWeed", 100 } };
 	};
 
 	class Heroin : BaseGather {
+		hidden[] = { "Police" };
 		areas[] = { { "heroin_field", 20 } };
 		items[] = { { "UnprocessedHeroin", 100 } };
 	};
 
 	class Cocaine : BaseGather {
+		hidden[] = { "Police" };
 		areas[] = { { "cocaine_field", 20 } };
 		items[] = { { "UnprocessedCocaine", 100 } };
 	};

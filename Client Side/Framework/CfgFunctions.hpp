@@ -246,6 +246,7 @@ class CfgFunctions {
 			class gather {};
 			class getGatherZone {};
 			class catchFish {};
+			class initGathering {};
 		};
 
 		class Tablet {

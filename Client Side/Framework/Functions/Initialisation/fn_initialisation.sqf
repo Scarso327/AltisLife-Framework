@@ -93,6 +93,7 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 [] call ULP_fnc_initReputation;
 [] call ULP_fnc_initAchievements;
 [] call ULP_fnc_initGroups;
+[] call ULP_fnc_initGathering;
 [] call ULP_fnc_initMissions;
 [] call ULP_fnc_initPerks;
 [] call ULP_fnc_initBases;

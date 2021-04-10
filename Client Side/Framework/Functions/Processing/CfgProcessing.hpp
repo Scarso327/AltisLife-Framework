@@ -25,6 +25,11 @@ class CfgProcessing {
 		items[] = { { "CookedOrnate", 1 } };
 	};
 
+	class Mackerel : Cooking {
+		materials[] = { { "Mackerel_F_Raw", 1 } };
+		items[] = { { "CookedMackerel", 1 } };
+	};
+
 	class Tuna : Cooking {
 		materials[] = { { "Tuna_F_Raw", 1 } };
 		items[] = { { "CookedTuna", 1 } };

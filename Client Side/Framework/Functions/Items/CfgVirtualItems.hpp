@@ -1379,6 +1379,36 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
+	class Mackerel_F_Raw {
+		displayName = "Raw Mackerel";
+		icon = "Data\Icons\fish.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 2;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = false;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+
+	class CookedMackerel {
+		displayName = "Cooked Mackerel";
+		icon = "Data\Icons\fish.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 2;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+
 	class Tuna_F_Raw {
 		displayName = "Raw Tuna";
 		icon = "Data\Icons\fish.paa";

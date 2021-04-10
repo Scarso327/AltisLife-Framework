@@ -159,6 +159,8 @@ class CfgVirtualStores {
 			class CookedSalema {};
 			class Ornate_random_F_Raw {};
 			class CookedOrnate {};
+			class Mackerel_F_Raw {};
+			class CookedMackerel {};
 			class Tuna_F_Raw {};
 			class CookedTuna {};
 			class Mullet_F_Raw {};

@@ -12,7 +12,7 @@ class CfgProcessingStores {
 
 	class PublicCookhouse : Base {
 		title = "Public Cookhouse";
-		processes[] = { "Salema", "Ornate", "Tuna", "Mullet", "Catshark" };
+		processes[] = { "Salema", "Ornate", "Mackerel", "Tuna", "Mullet", "Catshark" };
 	};
 
 	class Schnapps : Base {

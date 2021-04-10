@@ -181,7 +181,7 @@ class TagColourHeader : TagColourBackground {
 };
 
 #define BASE_HEIGHT (((UI_HEIGHT / 4) - 0.022) - (MARGIN_Y * 2))
-#define SLIDER_HEIGHT VERTICAL_GRID_H(BASE_HEIGHT, 3)
+#define SLIDER_HEIGHT VERTICAL_GRID_H(BASE_HEIGHT, 3, (MARGIN_Y / 2))
 
 class RedColourBar : life_RscXSliderH {
 	idc = 23072;
@@ -189,7 +189,7 @@ class RedColourBar : life_RscXSliderH {
 	colorActive[] = { 0.675, 0.067, 0, 1 };
 	onSliderPosChanged = "_this params [ ""_ctrl"", ""_index"" ]; private _display = ctrlParent _ctrl; if (isNull _display) exitWith {}; [_display, ""."", [player] call ULP_fnc_getName, """", """", [_display] call ULP_fnc_getTagRGB] call ULP_fnc_updateTagPreview;";
     SAFEZONE_X(UI_X + (MARGIN_X * 2));
-	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 0));
+	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 0, (MARGIN_Y / 2)));
 	SAFEZONE_W((UI_WIDTH / 2) - (MARGIN_X * 2));
 	SAFEZONE_H(SLIDER_HEIGHT);
 };
@@ -198,14 +198,14 @@ class GreenColourBar : RedColourBar {
 	idc = 23073;
 	color[] = { 0.098, 0.318, 0.165, 0.7 };
 	colorActive[] = { 0.098, 0.318, 0.165, 1 };
-	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 1));
+	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 1, (MARGIN_Y / 2)));
 };
 
 class BlueColourBar : RedColourBar {
 	idc = 23074;
 	color[] = { 0.141, 0.235, 0.565, 0.7 };
 	colorActive[] = { 0.141, 0.235, 0.565, 1 };
-	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 2));
+	SAFEZONE_Y(VERTICAL_GRID_Y((((UI_Y + UI_HEIGHT) + 0.022) - (UI_HEIGHT / 4)), SLIDER_HEIGHT, 2, (MARGIN_Y / 2)));
 };
 
 class ResetTagColour: ULP_RscButtonIcon {

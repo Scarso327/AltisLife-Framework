@@ -15,8 +15,8 @@
 #define HORIZONTAL_GRID_X(x, width, itemNumber) (x + (width * itemNumber)) + (MARGIN_X * itemNumber)
 #define HORIZONTAL_GRID_W(width, items) (((width - (MARGIN_X * (items - 1))) / items))
 
-#define VERTICAL_GRID_Y(y, height, itemNumber) (y + (height * itemNumber)) + (MARGIN_Y * itemNumber)
-#define VERTICAL_GRID_H(height, items) (((height - (MARGIN_Y * (items - 1))) / items))
+#define VERTICAL_GRID_Y(y, height, itemNumber, margin) (y + (height * itemNumber)) + (margin * itemNumber)
+#define VERTICAL_GRID_H(height, items, margin) (((height - (margin * (items - 1))) / items))
 
 #define BUTTON_H 0.022
 

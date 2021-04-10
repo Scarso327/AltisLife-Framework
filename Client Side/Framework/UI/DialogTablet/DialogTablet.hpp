@@ -3,7 +3,7 @@
 #define UI_WIDTH 0.402187
 #define UI_HEIGHT 0.451
 #define TABLET_BUTTON_W HORIZONTAL_GRID_W(UI_WIDTH, 5)
-#define TABLET_BUTTON_H VERTICAL_GRID_H(UI_HEIGHT, 3)
+#define TABLET_BUTTON_H VERTICAL_GRID_H(UI_HEIGHT, 3, MARGIN_Y)
 
 class DialogTablet {
     idd = 23000;
@@ -49,7 +49,7 @@ class DialogTablet {
 			text = "<br/><br/><br/><img image='\a3\ui_f\data\GUI\Rsc\RscDisplayMain\menu_singleplayer_ca.paa' align='center' size='7' color='#808080'/><br/><t align = 'center'>Profile</t>";
 			onButtonClick = "[""Profile""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 1));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 0));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 0, MARGIN_Y));
 			SAFEZONE_W(((TABLET_BUTTON_W * 2) + MARGIN_X));
 			SAFEZONE_H(((TABLET_BUTTON_H * 2) + MARGIN_Y));
 		};
@@ -59,7 +59,7 @@ class DialogTablet {
 			text = "<br/><img image='\a3\ui_f_curator\Data\RscCommon\RscAttributeInventory\filter_10_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Inventory</t>";
 			onButtonClick = "[""Inventory""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 3));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 0));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 0, MARGIN_Y));
 			SAFEZONE_W(((TABLET_BUTTON_W * 2) + MARGIN_X));
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
@@ -69,7 +69,7 @@ class DialogTablet {
 			text = "<br/><img image='\a3\3den\data\Cfg3DEN\Comment\texture_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Messaging</t>";
 			onButtonClick = "[""Messaging""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 3));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 1));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 1, MARGIN_Y));
 			SAFEZONE_W(((TABLET_BUTTON_W * 2) + MARGIN_X));
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
@@ -79,7 +79,7 @@ class DialogTablet {
 			text = "<br/><img image='\a3\ui_f\data\GUI\Rsc\RscDisplayMain\menu_multiplayer_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Group</t>";
 			onButtonClick = "[] call ULP_fnc_openGroup;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 0));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 0));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 0, MARGIN_Y));
 			SAFEZONE_W(TABLET_BUTTON_W);
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
@@ -89,7 +89,7 @@ class DialogTablet {
 			text = "<br/><img image='data\ui\keys.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Keys</t>";
 			onButtonClick = "[""Keys""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 0));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 1));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 1, MARGIN_Y));
 			SAFEZONE_W(TABLET_BUTTON_W);
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
@@ -99,7 +99,7 @@ class DialogTablet {
 			text = "<br/><img image='data\ui\dispute.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Dispute</t>";
 			onButtonClick = "[""Dispute""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 0));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2, MARGIN_Y));
 			SAFEZONE_W(TABLET_BUTTON_W);
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
@@ -109,7 +109,7 @@ class DialogTablet {
 			text = "<br/><img image='\a3\3den\data\Displays\Display3DEN\ToolBar\vert_ATL_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Market</t>";
 			onButtonClick = "[""Market""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 1));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2, MARGIN_Y));
 			SAFEZONE_W(TABLET_BUTTON_W);
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
@@ -119,7 +119,7 @@ class DialogTablet {
 			text = "<br/><br/><img image='\a3\ui_f_curator\Data\CfgMPGameTypes\zsc_ca.paa' align='center' size='3' color='#808080'/><br/><t align = 'center'>Community Goals</t>";
 			onButtonClick = "[""Goals""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 2));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2, MARGIN_Y));
 			SAFEZONE_W(TABLET_BUTTON_W);
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
@@ -129,7 +129,7 @@ class DialogTablet {
 			text = "<br/><br/><img image='\a3\ui_f_curator\Data\RscCommon\RscAttributePunishmentAnimation\PushupsLegs.paa' align='center' size='3' color='#808080'/><br/><t align = 'center'>Perks</t>";
 			onButtonClick = "[""Perks""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 3));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2, MARGIN_Y));
 			SAFEZONE_W(TABLET_BUTTON_W);
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};
@@ -139,7 +139,7 @@ class DialogTablet {
 			text = "<br/><img image='\a3\ui_f\data\GUI\Rsc\RscDisplayMain\menu_options_ca.paa' align='center' size='4' color='#808080'/><br/><t align = 'center'>Settings</t>";
 			onButtonClick = "[""Settings""] call ULP_fnc_setScreen;";
 			SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, TABLET_BUTTON_W, 4));
-			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2));
+			SAFEZONE_Y(VERTICAL_GRID_Y(UI_Y, TABLET_BUTTON_H, 2, MARGIN_Y));
 			SAFEZONE_W(TABLET_BUTTON_W);
 			SAFEZONE_H(TABLET_BUTTON_H);
 		};

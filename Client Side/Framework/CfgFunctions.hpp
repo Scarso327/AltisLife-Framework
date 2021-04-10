@@ -238,6 +238,7 @@ class CfgFunctions {
 			class stripGear {};
 			class getInventory {};
 			class setCfgLoadout {};
+			class compatibleItems {};
 		};
 		
 		class Gathering {

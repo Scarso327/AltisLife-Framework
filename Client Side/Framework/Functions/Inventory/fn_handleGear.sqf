@@ -27,4 +27,4 @@ private _container = (_item call {
 
 if (isNull _container) exitWith { false };
 
-[backpackContainer player, _item, _itemType, _itemCategory] call ULP_fnc_addContainer
+[_container, _item, _itemType, _itemCategory] call ULP_fnc_addContainer

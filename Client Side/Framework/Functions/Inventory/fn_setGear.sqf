@@ -13,7 +13,23 @@ _this params [
 ];
 
 if (_itemType isEqualTo "Magazine") then {
+	{
+		_x params [ "_wep", "_mags" ];
 
+		if (!(_wep isEqualTo "" && { (count _mags) > 0 }) && { (_item in ([_wep, true, false] call ULP_fnc_compatibleItems)) }) then {
+			switch (_forEachIndex) do {
+				case 0: { player addPrimaryWeaponItem _item; };
+				case 1: { player addSecondaryWeaponItem _item; };
+				case 2: { player addHandgunItem _item; };
+			};
+
+			true breakOut "fn_setGear";
+		};
+	} forEach [
+		[primaryWeapon player, primaryWeaponMagazine player],
+		[secondaryWeapon player, secondaryWeaponMagazine player],
+		[handgunWeapon player, handgunMagazine player]
+	];
 } else {
 	switch (_itemCategory) do {
 		case "AssaultRifle";
@@ -108,7 +124,17 @@ if (_itemType isEqualTo "Magazine") then {
 		case "AccessoryPointer";
 		case "AccessoryMuzzle";
 		case "AccessoryBipod": {
-			// TODO
+			{
+				if (!(_x isEqualTo "") && { (_item in ([_x, false, true] call ULP_fnc_compatibleItems)) }) then {
+					switch (_forEachIndex) do {
+						case 0: { player addPrimaryWeaponItem _item; };
+						case 1: { player addSecondaryWeaponItem _item; };
+						case 2: { player addHandgunItem _item; };
+					};
+
+					true breakOut "fn_setGear";
+				};
+			} forEach [primaryWeapon player, secondaryWeapon player, handgunWeapon player];
 		};
 	};
 };

@@ -24,7 +24,19 @@ switch (_itemType) do {
 		}) breakOut "fn_canFitGear";
 	};
 	case "Magazine": {
-		// TODO
+		{
+			_x params [ "_wep", "_mags" ];
+
+			if (!(_wep isEqualTo "") && { _mags isEqualTo [] }) exitWith {
+				(_item in ([_wep, true, false] call ULP_fnc_compatibleItems)) breakOut "fn_canFitGear";
+			};
+		} forEach [
+			[primaryWeapon player, primaryWeaponMagazine player],
+			[secondaryWeapon player, secondaryWeaponMagazine player],
+			[handgunWeapon player, handgunMagazine player]
+		];
+
+		false breakOut "fn_canFitGear";
 	};
 	case "Item": {
 		switch (_itemCategory) do {
@@ -32,7 +44,19 @@ switch (_itemType) do {
 			case "AccessoryPointer";
 			case "AccessorySights";
 			case "AccessoryBipod": {
-				// TODO
+				{
+					_x params [ "_wep", "_attachments" ];
+
+					if !(_wep isEqualTo "" && { (count (_attachments param [1, []] param [(["AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "AccessoryBipod"] find _itemCategory)])) > 0 }) exitWith {
+						(_item in ([_wep, false, true] call ULP_fnc_compatibleItems)) breakOut "fn_canFitGear";
+					};
+				} forEach [
+					[primaryWeapon player, primaryWeaponItems player],
+					[secondaryWeapon player, secondaryWeaponItems player],
+					[handgunWeapon player, handgunItems player]
+				];
+
+				false breakOut "fn_canFitGear";
 			};
 			case "Watch";
 			case "Map";

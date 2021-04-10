@@ -20,4 +20,18 @@ class CfgGroups {
 		withdraw = 3;
 		rank = 4;
 	};
+
+	class Types {
+		class Criminal {
+			displayName = "Criminal";
+		};
+
+		class Corporate {
+			displayName = "Company";
+		};
+
+		class Party {
+			displayName = "Political Party";
+		};
+	};
 };

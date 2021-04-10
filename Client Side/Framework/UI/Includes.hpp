@@ -7,7 +7,7 @@
 #include "DialogVehicleStore\DialogVehicleStore.hpp"
 #include "DialogGarage\DialogGarage.hpp"
 #include "DialogInteractions\DialogInteractions.hpp"
-#include "DisplaySelect\DisplayInputGroupInfo.hpp"
+#include "DisplaySelect\DisplayGroupCreation.hpp"
 #include "DisplaySelect\DisplaySelectPlayer.hpp"
 #include "DialogLicenses\DialogLicenses.hpp"
 #include "DialogProcessing\DialogProcessing.hpp"

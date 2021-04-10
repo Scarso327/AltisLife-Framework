@@ -155,15 +155,15 @@ class CfgVirtualStores {
 		storeName = "Fish Market";
 		conditions = "true";
 		class Items {
-			class RawSalema {};
+			class Salema_F_Raw {};
 			class CookedSalema {};
-			class RawOrnate {};
+			class Ornate_random_F_Raw {};
 			class CookedOrnate {};
-			class RawTuna {};
+			class Tuna_F_Raw {};
 			class CookedTuna {};
-			class RawMullet {};
+			class Mullet_F_Raw {};
 			class CookedMullet {};
-			class RawCatshark {};
+			class CatShark_F_Raw {};
 			class CookedCatshark {};
 		};
 	};

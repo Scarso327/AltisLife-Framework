@@ -16,27 +16,27 @@ class CfgProcessing {
 	};
 
 	class Salema : Cooking {
-		materials[] = { { "RawSalema", 1 } };
+		materials[] = { { "Salema_F_Raw", 1 } };
 		items[] = { { "CookedSalema", 1 } };
 	};
 
 	class Ornate : Cooking {
-		materials[] = { { "RawOrnate", 1 } };
+		materials[] = { { "Ornate_random_F_Raw", 1 } };
 		items[] = { { "CookedOrnate", 1 } };
 	};
 
 	class Tuna : Cooking {
-		materials[] = { { "RawTuna", 1 } };
+		materials[] = { { "Tuna_F_Raw", 1 } };
 		items[] = { { "CookedTuna", 1 } };
 	};
 
 	class Mullet : Cooking {
-		materials[] = { { "RawMullet", 1 } };
+		materials[] = { { "Mullet_F_Raw", 1 } };
 		items[] = { { "CookedMullet", 1 } };
 	};
 
 	class Catshark : Cooking {
-		materials[] = { { "RawCatshark", 1 } };
+		materials[] = { { "CatShark_F_Raw", 1 } };
 		items[] = { { "CookedCatshark", 1 } };
 	};
 

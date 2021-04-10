@@ -1319,7 +1319,7 @@ class CfgVirtualItems {
 	};
 
 	// Animals
-	class RawSalema {
+	class Salema_F_Raw {
 		displayName = "Raw Salema";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
@@ -1349,7 +1349,7 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
-	class RawOrnate {
+	class Ornate_random_F_Raw {
 		displayName = "Raw Ornate";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
@@ -1379,7 +1379,7 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
-	class RawTuna {
+	class Tuna_F_Raw {
 		displayName = "Raw Tuna";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
@@ -1409,7 +1409,7 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
-	class RawMullet {
+	class Mullet_F_Raw {
 		displayName = "Raw Mullet";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
@@ -1439,7 +1439,7 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
-	class RawCatshark {
+	class CatShark_F_Raw {
 		displayName = "Raw Catshark";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;

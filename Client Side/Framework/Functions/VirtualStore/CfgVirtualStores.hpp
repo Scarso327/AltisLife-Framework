@@ -301,4 +301,13 @@ class CfgVirtualStores {
 			class Ecstasy {};
 		};
 	};
+
+	class Prison {
+		storeName = "Prison";
+		conditions = "ULP_Imprisioned";
+		class Items {
+			class Pickaxe {};
+			class Rock {};
+		};
+	};
 };

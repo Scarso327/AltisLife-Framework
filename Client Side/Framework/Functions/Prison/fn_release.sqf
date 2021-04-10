@@ -40,5 +40,10 @@ if (_escaped) then {
 ULP_Prison_Time = 0;
 ULP_Imprisioned = false;
 
+if !(isNil "ULP_Prison_SellEvent") then {
+	["", ULP_Prison_SellEvent] call ULP_fnc_removeEventHandler;
+	ULP_Prison_SellEvent = nil;
+};
+
 [_unit, 7, 0] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 true

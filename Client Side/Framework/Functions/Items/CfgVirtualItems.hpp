@@ -1318,6 +1318,21 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
+	class Rock {
+		displayName = "Rock";
+		icon = "Data\Icons\ecstasy.paa";
+		buyPrice = -1;
+		sellPrice = 0;
+		weight = 3;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = false;
+			isScripted = false;
+		};
+		conditions = "ULP_Imprisioned";
+	};
+
 	// Animals
 	class Salema_F_Raw {
 		displayName = "Raw Salema";

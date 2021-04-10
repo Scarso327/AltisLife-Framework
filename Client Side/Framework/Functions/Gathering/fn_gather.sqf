@@ -9,7 +9,7 @@ _this params [
 	["_zone", configNull, [configNull]]
 ];
 
-if (isNull _zone || { !([player] call ULP_fnc_getFaction in getArray (_zone >> "factions")) }) exitWith { false };
+if (isNull _zone || { !([player] call ULP_fnc_getFaction in getArray (_zone >> "factions")) } || { !(call compile getText (_zone >> "condition")) }) exitWith { false };
 
 private _reqItems = getArray (_zone >> "reqItems");
 {

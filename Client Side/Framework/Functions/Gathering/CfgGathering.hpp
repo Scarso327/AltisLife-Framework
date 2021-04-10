@@ -10,6 +10,7 @@ class CfgGathering {
 		reqLicenses[] = {};
 		profession[] = { "Gathering", 1, 100 };
 		leveling[] = { 1, "Gathering", 100 }; // Amount, Reason, Chance
+		condition = "true";
 	};
 
 	class BaseMine : BaseGather {
@@ -107,5 +108,12 @@ class CfgGathering {
 		areas[] = { { "uranium_mine", 20 } };
 		items[] = { { "UraniumOre", 100 } };
 		gatherTime = 5;
+	};
+
+	class Rock : BaseMine {
+		areas[] = { { "hm_prison_altis", 20 } };
+		items[] = { { "Rock", 100 } };
+		gatherTime = 3;
+		condition = "ULP_Imprisioned";
 	};
 };

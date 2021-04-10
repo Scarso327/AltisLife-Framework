@@ -33,6 +33,14 @@ _unit setPos _pos;
 ULP_Imprisioned = true;
 ULP_Prison_Time = time + _duration;
 
+ULP_Prison_SellEvent = ["SoldVirtualItem", {
+	_this params [
+		"_item", "_total"
+	];
+
+	ULP_Prison_Time = ULP_Prison_Time - (1.25 * _total);
+}] call ULP_fnc_addEventHandler;
+
 ["Convict"] call ULP_fnc_achieve;
 
 ["RscFiringDrillTime", "PLAIN", 3] call ULP_UI_fnc_createLayer;

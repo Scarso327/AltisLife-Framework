@@ -7,7 +7,7 @@ class DisplayConfirm {
     idd = 4300;
     movingEnable = 0;
     enableSimulation = 0;
-	onUnload = "_this call { private _params = ((_this select 0) getVariable ""params""); _params append [(_this select 0)]; if ((_this select 1) isEqualTo 1) then { ((_this select 0) getVariable ""params"") call ((_this select 0) getVariable ""onSelect""); }; };";
+	onUnload = "_this call { private _params = ((_this select 0) getVariable ""params""); _params append [(_this select 0)]; if ((_this select 1) isEqualTo 1) then { ((_this select 0) getVariable ""params"") call ((_this select 0) getVariable ""onSelect""); } else { ((_this select 0) getVariable ""params"") call ((_this select 0) getVariable ""onNo""); }; };";
 
     class ControlsBackground {
 		class TabletBackground : Life_RscBackground {

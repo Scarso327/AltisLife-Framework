@@ -114,3 +114,13 @@ class GroupRankSelectList : Life_RscCombo {
 	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
 	SAFEZONE_H(0.022);
 };
+
+class DisbandGroup : ULP_RscButtonClean {
+	idc = 23076;
+	text = "<t align = 'center'>Disband Group</t>";
+	onButtonClick = "[] call ULP_fnc_disbandGroup;";
+	SAFEZONE_X((UI_X + UI_WIDTH) - ((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2));
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
+	SAFEZONE_H(0.022);
+};

@@ -445,6 +445,7 @@ class CfgFunctions {
 			class canGroupRank {};
 			class groupMembers {};
 			class isGroupMember {};
+			class disbandGroup {};
 		};
 
 		class NLR {

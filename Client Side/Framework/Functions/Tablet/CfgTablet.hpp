@@ -93,7 +93,7 @@ class CfgTablet {
 	class GroupOverview : Group {
 		pageTitle = "Group - Overview";
 		pageIdcs[] = {
-			23061, 23062, 23063, 23064, 23065, 23066, 23067, 23068
+			23061, 23062, 23063, 23064, 23065, 23066, 23067, 23068, 23076
 		};
 		onload = "_this call ULP_fnc_overview";
 		onUnload = "[""GroupMembersChanged"", (_this getVariable [""members_changed"", -1])] call ULP_fnc_removeEventHandler; _this setVariable [""members_changed"", nil]; [""GroupMoneyChanged"", (_this getVariable [""funds_changed"", -1])] call ULP_fnc_removeEventHandler; _this setVariable [""funds_changed"", nil];";

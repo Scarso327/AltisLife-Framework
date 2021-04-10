@@ -39,6 +39,7 @@ class CfgFunctions {
             class createGroup {};
             class queryGroupInfo {};
             class handleGroupFunds {};
+            class disbandGroup {};
         };
 
         class DatabaseHousing {

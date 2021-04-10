@@ -12,7 +12,8 @@ _this params [
 	["_message", "Yes or no?", [""]],
 	["_params", [], [[]]],
 	["_onYes", {}, [{}]],
-	["_tablet", true, [false]]
+	["_tablet", true, [false]],
+	["_onNo", {}, [{}]]
 ];
 
 if (isNull _parent) exitWith {};
@@ -30,3 +31,4 @@ private _display = _parent createDisplay "DisplayConfirm";
 
 _display setVariable ["params", _params];
 _display setVariable ["onSelect", _onYes];
+_display setVariable ["onNo", _onNo];

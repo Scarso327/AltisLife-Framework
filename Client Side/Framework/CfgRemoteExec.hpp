@@ -102,5 +102,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_hidePlayer {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_disbandGroup {
+            allowedTargets = SERVER;
+        };
     };
 };

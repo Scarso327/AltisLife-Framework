@@ -210,10 +210,6 @@ class CfgTags {
 			icon = "Data\Tags\Donator\Flags\greece.paa";
 			displayName = "Greece";
 		};
-		class LGBT : Alligator  {
-			icon = "Data\Tags\Donator\Flags\lgbt.paa";
-			displayName = "LGBT";
-		};
 		class Netherlands : Alligator  {
 			icon = "Data\Tags\Donator\Flags\netherlands.paa";
 			displayName = "Netherlands";

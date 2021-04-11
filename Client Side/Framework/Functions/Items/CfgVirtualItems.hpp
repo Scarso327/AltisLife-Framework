@@ -1547,4 +1547,28 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
+
+	// Archaeology  Items
+	class CommonMap {
+		displayName = "Common Map";
+		icon = "Data\Icons\turtle.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 1;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+	class UncommonMap : CommonMap {
+		displayName = "Uncommon Map";
+		class Settings : Settings {};
+	};
+	class RareMap : CommonMap {
+		displayName = "Rare Map";
+		class Settings : Settings {};
+	};
 };

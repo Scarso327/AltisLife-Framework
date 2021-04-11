@@ -1,7 +1,7 @@
 class CfgDebriefing {
     class Abort {
         title = "Aborted";
-        subtitle = "Thansk For Playing!";
+        subtitle = "Thanks For Playing!";
         description = "Your data has been synced and you've returned to the lobby.";
         pictureBackground = "";
         picture = "";

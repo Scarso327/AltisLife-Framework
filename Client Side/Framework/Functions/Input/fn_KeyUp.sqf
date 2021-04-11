@@ -91,6 +91,24 @@ switch (_code) do {
             [getPlayerUID player, "Admin", ["AdminInvisibility", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
         };
     };
+
+    case U : {
+        if (_shift && { _ctrlKey } && { !_alt } && { [] call ULP_fnc_isUndercover }) then {
+            if (time < (player getVariable ["uc_cooldown", 0])) exitWith {
+                hint "You've changed your identity recently, please wait before trying again...";
+            };
+            player setVariable ["uc_cooldown", time + 3];
+
+            if ([player, ["Civilian"]] call ULP_fnc_isFaction) then {
+                [player, "Police"] call ULP_fnc_setFaction;
+            } else {
+                [player, "Civilian"] call ULP_fnc_setFaction;
+            };
+
+            [] call ULP_fnc_setTags;
+            _handled = true;
+        };
+    };
 };
 
 _handled

@@ -106,6 +106,24 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 
-[] call ULP_fnc_spawnMenu;
+if (isNil "ULP_UCLevels") then {
+	[] call ULP_fnc_spawnMenu;
+} else {
+	ULP_UCLevels params [ "_cop", "_uc" ];
+
+	[
+		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Side Selection", ["Police", "Civilian"],
+		"Are you playing as civilian or undercover police?", [_cop, _uc],
+		{	
+			_this params [ "_cop", "_uc" ];
+
+			missionNamespace setVariable ["ULP_IsUndercover", compileFinal "true"];
+			missionNamespace setVariable ["Police_Main", compileFinal (str _cop)];
+			missionNamespace setVariable ["Police_UC", compileFinal (str _uc)];
+			
+			[] call ULP_fnc_spawnMenu;
+		}, false, { [] call ULP_fnc_spawnMenu; }
+	] call ULP_fnc_confirm;
+};
 
 [format["Initialisation Lasted %1s", diag_tickTime - _startTime]] call ULP_fnc_logIt;

@@ -1384,14 +1384,14 @@ class ULP_ctrlOption : Life_RscControlsGroupNoScrollbars {
         };
         class OptionsList : Life_RscCombo {
             idc = 102;
-            x = ((32 - (32 / 3)) - 1.2) * GUI_GRID_CENTER_W;
+            x = ((32 - (32 / 3)) - 1.45) * GUI_GRID_CENTER_W;
             w = (32 / 3) * GUI_GRID_CENTER_W;
             h = SIZE_M * GUI_GRID_H;
         };
         class OptionReset: ULP_RscButtonIcon {
             idc = 103;
             text = "\a3\ui_f_curator\Data\CfgCurator\waypointCycle_ca.paa";
-            x = (32 - 1) * GUI_GRID_CENTER_W;
+            x = (32 - 1.25) * GUI_GRID_CENTER_W;
             w = SIZE_M * GUI_GRID_W;
             h = SIZE_M * GUI_GRID_H;
         };

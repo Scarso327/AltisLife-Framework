@@ -127,5 +127,5 @@ private _lastCtrlPos = ctrlPosition controlNull;
 
 			_lastCtrlPos set [1, (ctrlPosition _optionCtrl) # 1]; // Update Y...
 		};
-	} forEach ("isClass _x" configClasses _category);
+	} forEach ("call compile getText (_x >> ""condition"")" configClasses _category);
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgOptions"));

@@ -614,6 +614,12 @@ class CfgFunctions {
 			file = "Functions\Donator";
 			class donatorLevel {};	
 		};
+
+		class Indicators {
+			file = "Functions\Indicators";
+			class groupIndicators {};
+			class getIndicatorColour {};
+		};
 	};
 
 	class ULP_Functions_UI {

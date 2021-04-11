@@ -103,6 +103,7 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 ["Initialising Player"] call ULP_fnc_logIt;
 [] call ULP_fnc_initPlayer;
 [[["EnablePlayerTags", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_playerTags;
+[[["EnableIndicators", "Indicators"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_groupIndicators;
 
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 

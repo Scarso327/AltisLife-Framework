@@ -34,6 +34,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Group\CfgGroups.hpp"
 #include "Functions\Housing\CfgHousing.hpp"
 #include "Functions\HUD\CfgStatusIcons.hpp"
+#include "Functions\Indicators\CfgIndicators.hpp"
 #include "Functions\Interactions\CfgInteractions.hpp"
 #include "Functions\Items\CfgItems.hpp"
 #include "Functions\Items\CfgVirtualItems.hpp"

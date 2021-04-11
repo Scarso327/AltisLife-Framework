@@ -91,9 +91,8 @@ player addEventHandler ["Take", { _this call ULP_fnc_onTake }];
 		};
 		case "HUD_EnableXPBar": { [(_newSetting isEqualTo 1)] call ULP_UI_fnc_updateXpHud; };
 		case "HUD_EnablePlayerTags": { [(_newSetting isEqualTo 1)] call ULP_fnc_playerTags };
+		case "Indicators_EnableIndicators": { [(_newSetting isEqualTo 1)] call ULP_fnc_playerTags };
 		case "Audio_EffectsFade": { if (ULP_FadeSound) then { 0 fadeSound _newSetting; }; };
 		case "Audio_MusicFade": { if (ULP_FadeSound) then { 0 fadeMusic _newSetting; }; };
 	};
-
-	// [format["Setting Changed (%1, %2, %3 -> %4)", _option, _category, _lastSetting, _newSetting]] call ULP_fnc_logIt;
 }] call ULP_fnc_addEventHandler;

@@ -90,6 +90,7 @@ switch (_mode) do {
 		_ctrlToolbox ctrlAddEventHandler ["ToolboxSelChanged", { ["ViewToolboxChanged", _this] call ULP_fnc_adminCamera; }];
 
 		[false] call ULP_fnc_playerTags;
+		[false] call ULP_fnc_groupIndicators;
 
 		uiNamespace setVariable ["admin_each_frame", ([_display, { ["eachFrame", [_this, _thisEventHandler]] call ULP_fnc_adminCamera; }] call ULP_fnc_addEachFrame)];
 
@@ -412,5 +413,6 @@ switch (_mode) do {
 		player switchCamera "INTERNAL";
 
 		[[["EnablePlayerTags", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_playerTags;
+		[[["EnableIndicators", "Indicators"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_groupIndicators;
 	};
 };

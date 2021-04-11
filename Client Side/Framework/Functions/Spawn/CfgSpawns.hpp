@@ -32,6 +32,13 @@ class CfgSpawns {
             marker = "apc_spawn_kavala";
             icon = "Data\UI\Spawns\kavala.paa";
         };
+        class KavalaStationNCA : Civilian {
+            displayName = "NCA Frontline Headquarters";
+            marker = "apc_spawn_nca";
+            icon = "Data\UI\Spawns\kavala.paa";
+            radius = 1;
+            conditions = "[] call ULP_fnc_isUndercover";
+        };
         class AthiraStation : Police {
             displayName = "Athira Station";
             marker = "apc_spawn_athira";
@@ -46,6 +53,13 @@ class CfgSpawns {
             displayName = "Agios Station";
             marker = "apc_spawn_agios";
             icon = "Data\UI\Spawns\agios.paa";
+        };
+        class UndercoverHeadquarters : Civilian {
+            displayName = "NCA Covert Headquarters";
+            marker = "apc_spawn_uc";
+            icon = "Data\UI\Spawns\neochori.paa";
+            radius = 1;
+            conditions = "[] call ULP_fnc_isUndercover";
         };
 
         // National Health Service

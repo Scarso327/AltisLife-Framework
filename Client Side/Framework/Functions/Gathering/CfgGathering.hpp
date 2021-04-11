@@ -10,7 +10,7 @@ class CfgGathering {
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Gathering", 1, 100 };
-		leveling[] = { 1, "Gathering", 100 }; // Amount, Reason, Chance
+		leveling[] = { 1, "Gathering", 100 };
 		condition = "true";
 	};
 
@@ -34,11 +34,13 @@ class CfgGathering {
 	};
 
 	class Coral : BaseGather {
+		hidden[] = { "Police" };
 		areas[] = { { "coral_field", 20 } };
 		items[] = { { "Coral", 100 } };
 	};
 
 	class Corn : BaseGather {
+		hidden[] = { "Police" };
 		areas[] = { { "corn_field", 20 } };
 		items[] = { { "Corn", 100 } };
 		gatherTime = 2;
@@ -109,13 +111,14 @@ class CfgGathering {
 	};
 
 	class Uranium : BaseMine {
+		hidden[] = { "Police" };
 		areas[] = { { "uranium_mine", 20 } };
 		items[] = { { "UraniumOre", 100 } };
 		gatherTime = 5;
 	};
 
 	class Rock : BaseMine {
-		areas[] = { { "hm_prison_altis", 20 } };
+		areas[] = { { "hmp_rocks", 2 } };
 		items[] = { { "Rock", 100 } };
 		gatherTime = 3;
 		condition = "ULP_Imprisioned";

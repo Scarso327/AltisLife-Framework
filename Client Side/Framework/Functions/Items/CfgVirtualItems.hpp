@@ -1548,10 +1548,10 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
-	// Archaeology  Items
+	// Archaeology Items
 	class CommonMap {
 		displayName = "Common Map";
-		icon = "Data\Icons\turtle.paa";
+		icon = "Data\Icons\map.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 1;
@@ -1574,10 +1574,25 @@ class CfgVirtualItems {
 
 	class SurveyingEquipment {
 		displayName = "Surveying Equipment";
-		icon = "Data\Icons\turtle.paa";
+		icon = "Data\Icons\surveyingEquipment.paa";
 		buyPrice = 0;
 		sellPrice = 0;
 		weight = 3;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+
+	class ArchaeologistsEquipment {
+		displayName = "Archaeologists' Equipment";
+		icon = "Data\Icons\archaeologistsEquipment.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 2;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;

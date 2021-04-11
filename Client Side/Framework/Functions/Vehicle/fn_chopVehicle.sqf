@@ -89,7 +89,7 @@ if (_near isEqualTo []) exitWith {
 					getNumber (_cfg >> "chopKeepChance")
 				] select (isNumber (_cfg >> "chopKeepChance")));
 				
-				if ((["UncertainPersonality", 0] call ULP_fnc_activatePerk) > _chance) then {
+				if ((["UncertainMind", 0] call ULP_fnc_activatePerk) > _chance) then {
 					[_owner, player, _id] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
 					hint format["You've claimed %1 as your own vehicle, it is now in your garage.", _name];
 					breakOut "_fnc_onChopped";

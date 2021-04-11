@@ -431,9 +431,9 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class UncertainPersonality {
-		icon = "Data\UI\Perks\uncertainPersonality.paa";
-		displayName = "Uncertain Personality";
+	class UncertainMind {
+		icon = "Data\UI\Perks\uncertainPerson.paa";
+		displayName = "Uncertain Person";
 		description = "Gain the chance of keeping a vehicle when chopping.";
 		removalMultiplier = 2;
 		class Requirements {

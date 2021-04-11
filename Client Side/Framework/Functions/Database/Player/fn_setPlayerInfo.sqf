@@ -77,7 +77,14 @@ player setDamage (_stats select 2);
 switch (configName _factionCfg) do {
 	case "Civilian": {
 		ULP_Imprisioned = _bool;
-		ULP_Prison_Time = (_playerData select 25);
+		ULP_Prison_Time = _playerData select 25;
+
+		// Handle undercover...
+		private _copLevel = _playerData select 26;
+		private _ucLevel = _playerData select 27;
+		if (_copLevel > 0 && { _ucLevel > 0 }) then {
+			ULP_UCLevels = [_copLevel, _ucLevel];
+		};
 	};
 };
 

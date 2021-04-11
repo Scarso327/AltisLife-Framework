@@ -139,6 +139,7 @@ class CfgFunctions {
 			class canRestrain {};
 			class getName {};
 			class playerByUID {};
+			class isUndercover {};
 		};
 
 		class PlayerActions {

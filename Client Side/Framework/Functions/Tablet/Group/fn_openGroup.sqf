@@ -24,20 +24,21 @@ if ([] call ULP_fnc_isGroup) then {
 			_this params [
 				["_display", displayNull, [displayNull]],
 				["_tagText", "", [""]],
-				["_nameText", "", [""]]
+				["_nameText", "", [""]],
+				["_type", "", [""]]
 			];
 			
 			private _cfg = missionConfigFile >> "CfgGroups";
-			private _min = 0;
-			private _max = 0;
-			private _length = 0;
+			if !(isClass (_cfg >> "Types" >> _type)) exitWith {
+				hint "The selected group type doesn't exist...";
+			};
 
 			{
 				_x params ["_text", "_cfgSettings"];
 
-				_min = getNumber (_cfgSettings >> "MinLength");
-				_max = getNumber (_cfgSettings >> "MaxLength");
-				_length = count _text;
+				private _min = getNumber (_cfgSettings >> "MinLength");
+				private _max = getNumber (_cfgSettings >> "MaxLength");
+				private _length = count _text;
 
 				switch (true) do {
 					case (_length < _min): {
@@ -60,7 +61,7 @@ if ([] call ULP_fnc_isGroup) then {
 
 			ULP_Group_Creating = true;
 
-			[player, _tagText, _nameText] remoteExecCall ["ULP_SRV_fnc_createGroup", RSERV];
+			[player, _tagText, _nameText, _type] remoteExecCall ["ULP_SRV_fnc_createGroup", RSERV];
 			true
 		}
 	] call ULP_fnc_inputGroupInfo;

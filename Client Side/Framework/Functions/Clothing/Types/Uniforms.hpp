@@ -282,6 +282,15 @@ class U_IG_Guerilla3_1 : U_IG_Guerilla1_1{};
 class U_IG_Guerilla3_2 : U_IG_Guerilla1_1{};
 class U_IG_leader : U_IG_Guerilla1_1{};
 
+class U_C_HunterBody_grn {
+	displayName = "Hunting Clothes";
+	price = 0;
+	reputation = false;
+	virtualSpace = 0;
+	isGas = false;
+	class Textures {};
+};
+
 class U_C_E_LooterJacket_01_F {
 	displayName = "Looter Clothes";
 	price = 0;

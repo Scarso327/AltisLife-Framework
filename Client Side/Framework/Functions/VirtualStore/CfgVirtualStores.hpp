@@ -310,4 +310,13 @@ class CfgVirtualStores {
 			class Rock {};
 		};
 	};
+
+	class Archaeology {
+		storeName = "Altis Archaeologists";
+		class Items {
+			class CommonMap {};
+			class SurveyingEquipment {};
+			class ArchaeologistsEquipment {};
+		};
+	};
 };

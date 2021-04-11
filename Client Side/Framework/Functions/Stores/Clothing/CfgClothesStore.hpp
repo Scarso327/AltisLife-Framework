@@ -424,7 +424,85 @@ class CfgClothesStore {
 					class B_ViperHarness_oli_F : B_ViperHarness_khk_F {};
 				};
 			};
+		};
+	};
+
+	class Archaeology {
+		storeName = "Archaeologist Clothing Store";
+		condition = "true";
+		class Uniforms {
+			class U_IG_Guerilla2_1 {
+				class Textures {
+					class U_IG_Guerilla3_1 {};
+				};
+			};
+			class U_C_HunterBody_grn {};
+		};
+
+		class Headgear {
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_Hat_Safari_sand_F {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+		};
+
+		class Facewear {
+			class G_Aviator {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+		};
+
+		class Vests {
+			class V_LegStrapBag_black_F {};
+			class V_Pocketed_black_F {};
+		};
+
+		class Backpacks {
+			class B_LegStrapBag_black_F {};
+			class B_Messenger_Black_F {};
 			class B_Bergen_mcamo_F {};
+		};
+	};
+
+	class Hunting {
+		storeName = "Hunting Clothing Store";
+		condition = "[""Hunting""] call ULP_fnc_hasLicense";
+		class Uniforms {
+			class U_IG_Guerilla2_1 {
+				class Textures {
+					class U_IG_Guerilla3_1 {};
+				};
+			};
+			class U_C_HunterBody_grn {};
+		};
+
+		class Headgear {
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_Hat_Safari_sand_F {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+		};
+
+		class Facewear {
+			class G_Aviator {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+		};
+
+		class Vests {
+			class V_LegStrapBag_black_F {};
+			class V_Pocketed_black_F {};
+		};
+
+		class Backpacks {
+			class B_LegStrapBag_black_F {};
+			class B_AssaultPack_blk {};
+			class B_FieldPack_blk {};
+			class B_Kitbag_cbr {};
+			class B_TacticalPack_blk {};
+			class B_Carryall_cbr {};
 		};
 	};
 
@@ -739,7 +817,6 @@ class CfgClothesStore {
 			class B_ViperLightHarness_oli_F {};
 			class B_ViperHarness_khk_F {};
 			class B_ViperHarness_oli_F {};
-			class B_Bergen_mcamo_F {};
 			class B_Parachute {};
 		};
 	};

@@ -1571,4 +1571,19 @@ class CfgVirtualItems {
 		displayName = "Rare Map";
 		class Settings : Settings {};
 	};
+
+	class SurveyingEquipment {
+		displayName = "Surveying Equipment";
+		icon = "Data\Icons\turtle.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 3;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
 };

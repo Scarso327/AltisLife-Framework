@@ -137,7 +137,7 @@ class CfgMissions {
 				name = "HM Treasury";
 			};
 			class HMPrisonAltis {
-				pos = "hmp_altis";
+				pos = "hm_prison_altis";
 				name = "HM Prison Altis";
 			};
 			class PoliceEvidenceStorage {

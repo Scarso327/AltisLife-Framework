@@ -17,3 +17,4 @@
 #include "DisplaySelect\DisplayInput.hpp"
 #include "DisplaySelect\DisplaySelectObject.hpp"
 #include "DisplayAdmin\DisplayAdmin.hpp"
+#include "DialogMoves\DialogMoves.hpp"

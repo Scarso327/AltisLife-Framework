@@ -45,6 +45,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Map\CfgMaps.hpp"
 #include "Functions\Messaging\CfgMessages.hpp"
 #include "Functions\Missions\CfgMissions.hpp"
+#include "Functions\Moves\CfgMoves.hpp"
 #include "Functions\Options\CfgOptions.hpp"
 #include "Functions\Perks\CfgPerks.hpp"
 #include "Functions\PlayerTags\CfgTags.hpp"

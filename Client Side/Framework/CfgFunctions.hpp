@@ -628,6 +628,11 @@ class CfgFunctions {
 			class surveySite {};
 			class digSite {};
 		};
+
+		class Moves {
+			file = "Functions\Moves";
+			class movesMenu {};
+		};
 	};
 
 	class ULP_Functions_UI {

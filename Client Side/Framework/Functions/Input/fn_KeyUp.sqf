@@ -23,6 +23,24 @@ switch (_code) do {
 		case SPACE: {  }; // Request Medic (Space, TODO)
     };
 
+    case THREE: {
+        [] call ULP_fnc_movesMenu;
+    };
+
+    case FOUR: {
+        if (isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) }) then {
+            private _move = switch (true) do {
+                case (_shift): { "gestureHiC" };
+                case (_ctrlKey) : { "gestureHiB" };
+                case (_alt): { "gesturenod" };
+                default { "" };
+            };
+            
+            if (_move isEqualTo "") exitWith {};
+            player playActionNow _move;
+        };
+    };
+
     case _interactionKey: {
         if !([] call ULP_UI_fnc_isProgress) then {
             _this call ULP_fnc_actionKeyDown;

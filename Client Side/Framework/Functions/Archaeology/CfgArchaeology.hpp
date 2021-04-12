@@ -4,7 +4,7 @@ class CfgArchaeology {
 		surveyTimes = 1;
 		give[] = { 2, 3 }; // How many unique items should be given...
 		rewards[] = {
-			{ 0.70, { "OldCoin", 5 } },
+			{ 0, { "OldCoin", 5 } },
 			{ 0.73, { "BrokenPot", 1 } },
 			{ 0.74, { "BluntStoneKnife", 1 } },
 			{ 0.75, { "FossilisedBone", 3 } },
@@ -27,9 +27,9 @@ class CfgArchaeology {
 		surveyTimes = 2;
 		give[] = { 4, 5 };
 		rewards[] = {
+			{ 0, { "OldCoin", 8 } },
 			{ 0.65, { "AncientAmber", 3 } },
 			{ 0.68, { "StrongMetalRing", 4 } },
-			{ 0.70, { "OldCoin", 8 } },
 			{ 0.73, { "BrokenPot", 1 } },
 			{ 0.75, { "FossilisedBone", 4 } },
 			{ 0.76, { "BluntStoneKnife", 2 } },
@@ -50,9 +50,9 @@ class CfgArchaeology {
 		surveyTimes = 3;
 		give[] = { 7, 8 };
 		rewards[] = {
+			{ 0, { "OldCoin", 17 } },
 			{ 0.60, { "BluntStoneKnife", 3 } },
 			{ 0.63, { "BrokenPot", 1 } },
-			{ 0.65, { "OldCoin", 17 } },
 			{ 0.67, { "FossilisedBone", 7 } },
 			{ 0.68, { "UnidentifiedSkull", 3 } },
 			{ 0.70, { "PetrifiedShield", 2 } },

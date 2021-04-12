@@ -115,6 +115,7 @@ class CfgFunctions {
 			class addSustenance {};
 			class disguiseIdentity {};
 			class panic {};
+			class healAction {};
 		};
 
 		class Input {
@@ -140,6 +141,7 @@ class CfgFunctions {
 			class getName {};
 			class playerByUID {};
 			class isUndercover {};
+			class canHeal {};
 		};
 
 		class PlayerActions {

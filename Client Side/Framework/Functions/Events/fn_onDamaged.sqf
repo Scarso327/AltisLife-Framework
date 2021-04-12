@@ -37,7 +37,7 @@ if (!(isNull (objectParent _unit)) && { (vehicle _unit) isKindOf "LandVehicle" }
 if !(isNull _source) then {
 	private _isRubber = ((currentWeapon _source) in getArray(missionConfigFile >> "CfgSettings" >> "rubberWeapons") && { _projectile in getArray(missionConfigFile >> "CfgSettings" >> "rubberBullets") });
 	if ((currentWeapon _source) in getArray(missionConfigFile >> "CfgSettings" >> "taserWeapons") || { _isRubber }) exitWith {
-		if ((_unit distance _source) <= 50) then {
+		if ((_unit distance _source) <= ([50, 100] select (_isRubber))) then {
 			[_source, !_isRubber, _isRubber] call ULP_fnc_onKnocked;
 		};
 

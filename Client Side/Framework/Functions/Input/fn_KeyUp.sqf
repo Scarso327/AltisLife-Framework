@@ -24,6 +24,10 @@ switch (_code) do {
     };
 
     case THREE: {
+        [] call ULP_fnc_movesMenu;
+    };
+
+    case FOUR: {
         if (isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) }) then {
             private _move = switch (true) do {
                 case (_shift): { "gestureHiC" };

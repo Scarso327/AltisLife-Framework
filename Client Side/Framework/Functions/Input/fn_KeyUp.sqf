@@ -25,11 +25,15 @@ switch (_code) do {
 
     case THREE: {
         if (isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) }) then {
-            player playActionNow (switch (true) do {
+            private _move = switch (true) do {
                 case (_shift): { "gestureHiC" };
                 case (_ctrlKey) : { "gestureHiB" };
                 case (_alt): { "gesturenod" };
-            });
+                default { "" };
+            };
+            
+            if (_move isEqualTo "") exitWith {};
+            player playActionNow _move;
         };
     };
 

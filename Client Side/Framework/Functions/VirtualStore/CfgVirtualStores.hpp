@@ -302,10 +302,12 @@ class CfgVirtualStores {
 		};
 	};
 
-	class Prison {
-		storeName = "Prison";
+	class HMP {
+		storeName = "HMP Market";
 		conditions = "ULP_Imprisioned";
 		class Items {
+			class RationPack {};
+			class Water {};
 			class Pickaxe {};
 			class Rock {};
 		};

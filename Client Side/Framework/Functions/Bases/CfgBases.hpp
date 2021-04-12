@@ -12,7 +12,7 @@ class CfgBases {
 		};
 	};
 
-	class South : NorthEast {
+	class South : North {
 		displayName = "South Base";
 		position[] = {{12295.3,8872.94,0.00119019}, 289.015};
 		class Spawn {

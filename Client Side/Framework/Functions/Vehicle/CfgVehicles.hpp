@@ -1550,8 +1550,16 @@ class CfgVehicles {
 		virtualSpace = 1000;
 	};
 
+	class CargoNet_01_box_F : Land_WoodenCrate_01_F {
+		virtualSpace = 3000;
+	};
+
 	class Land_Cargo20_white_F : Land_WoodenCrate_01_F {
 		virtualSpace = 5000;
+	};
+
+	class Land_Cargo20_grey_F : Land_WoodenCrate_01_F {
+		virtualSpace = 20000;
 	};
 
 	// SOUNDS --------------------------------------------------------------------------------------

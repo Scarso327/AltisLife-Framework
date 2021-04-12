@@ -42,4 +42,6 @@ if !(hasInterface) exitWith {};
 	if ([["Cartels", "NotifyPayment"] call ULP_fnc_getOption] call ULP_fnc_bool) then {
 		hint format ["For holding %1 you've been paid %2%3 and your group has recieved %2%4", _cartel, "£", [_personal] call ULP_fnc_numberText, [_group] call ULP_fnc_numberText];
 	};
+
+	["CartelLord"] call ULP_fnc_achieve;
 }] call ULP_fnc_addEventHandler;

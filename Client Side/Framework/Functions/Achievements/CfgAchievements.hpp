@@ -56,6 +56,15 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	class Archaeologist {
+		icon = "Data\UI\Achievements\archaeologist.paa"; // ICON
+		displayName = "Archaeologist";
+		description = "Carried out your first archaeological dig.";
+		onUnlocked = "[""Archaeologist""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
 	// TODO
 	class JoinRebel {
 		icon = "Data\UI\Achievements\joinRebel.paa";
@@ -75,7 +84,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TO DO
 	class JoinStaff {
 		icon = "Data\UI\Achievements\staff.paa";
 		displayName = "Staff Team";
@@ -85,11 +93,74 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class JoinAPC {
 		icon = "Data\UI\Achievements\APC.paa";
 		displayName = "Constable";
 		description = "Joined the Altis Police Constabulary.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinRTA {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "College Instructor";
+		description = "Joined the College of Policing.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinNPAS {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Police Pilot";
+		description = "Joined the APC's NPAS.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinSCO19 {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Firearms Officer";
+		description = "Joined the APC's SCO19.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinNCA {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Intelligence Officer";
+		description = "Joined the APC's NCA.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinMPU {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Police Marine";
+		description = "Joined the APC's MPU.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinRPU {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Pursuit Specialist";
+		description = "Joined the APC's RPU.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinSFO {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Confused AFO";
+		description = "Trained as a Police SFO.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinUC {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Secret Constable";
+		description = "Joined the APC's UC Division.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -103,7 +174,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class FirstArrest {
 		icon = "Data\UI\Achievements\firstArrest.paa";
 		displayName = "Law Enforcer";
@@ -112,11 +182,26 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class JoinNHS {
 		icon = "Data\UI\Achievements\NHS.paa";
 		displayName = "Paramedic";
 		description = "Joined the National Health Service.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinHR {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Desk Worker";
+		description = "Joined the NHS Human Resources Dept.";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class JoinAA {
+		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		displayName = "Air Saviour";
+		description = "Joined the Altis Air Ambulance.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -131,7 +216,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
 	class JoinHATO {
 		icon = "Data\UI\Achievements\HATO.paa";
 		displayName = "Traffic Officer";
@@ -185,6 +269,15 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
+	class SuccessfulRobber {
+		icon = "Data\UI\Achievements\convict.paa"; // ICON
+		displayName = "Successful Robber";
+		description = "Successfully carried out a site robbery.";
+		onUnlocked = "[""SuccessfulRobber""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 10, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
 	class TaskMaster {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Tasks_ca.paa";
 		displayName = "Task Master";
@@ -194,11 +287,10 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
-	class Cartel {
+	class CartelLord {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Miss_icon_ca.paa";
 		displayName = "Cartel Lord";
-		description = "Sucessfully capture a cartel.";
+		description = "Sucessfully recieved a payout from a cartel.";
 		onUnlocked = "[""Cartel""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;

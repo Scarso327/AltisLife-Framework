@@ -39,5 +39,6 @@ private _max = getNumber (_prison >> "maxDuraction");
 		[_target, _duraction, player] remoteExecCall ["ULP_fnc_imprison", _target];
 
 		hint format["You have arrested %1 for %2", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString];
+		["FirstArrest"] call ULP_fnc_achieve;
 	}, false, "[_this, ""MM:SS""] call BIS_fnc_secondsToString", false
 ] call ULP_fnc_selectNumber;

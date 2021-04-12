@@ -23,6 +23,10 @@ class CfgTitles {
 		displayName = "Ship Captain";
 		description = "Captained the HMS Liberty";
 	};
+	class Archaeologist {
+		displayName = "Archaeologist";
+		description = "Carried out your first archaeological dig";
+	};
 	class JoinRebel {
 		displayName = "Rebellious Heart";
 		description = "Joined the Rebellion";
@@ -46,6 +50,10 @@ class CfgTitles {
 	class Convict {
 		displayName = "Convict";
 		description = "It's all gone down hill";
+	};
+	class SuccessfulRobber {
+		displayName = "Successful Robber";
+		description = "Successfully carried out a site robbery";
 	};
 	class TaskMaster {
 		displayName = "Task Master";

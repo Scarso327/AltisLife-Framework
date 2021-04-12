@@ -58,6 +58,7 @@ _marker setMarkerSize [0.8, 0.8];
 	getArray (_cfg >> "leveling") call ULP_fnc_addXP;
 
 	hint format["You have robbed this store for £%1", [_money] call ULP_fnc_numberText];
+	["SuccessfulRobber"] call ULP_fnc_achieve;
 
 	_object setVariable["timeout", time + (getNumber (_cfg >> "timeout")), true];
 	_object setVariable["robber", nil, true];

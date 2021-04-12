@@ -59,6 +59,8 @@ private _time = _base + (random _random);
 	{ [_x, _y, false, true] call ULP_fnc_handleItem; } forEach _given;
 	[format["Archaeology%1", configName _cfg]] call ULP_fnc_finishMission;
 	hint format ["You have finished digging and found %1", _given];
+
+	["Archaeologist"] call ULP_fnc_achieve;
 	
 	ULP_Archaeology = nil;
 	ULP_Archaeology_Digging = false;

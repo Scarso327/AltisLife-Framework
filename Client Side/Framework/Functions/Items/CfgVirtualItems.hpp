@@ -927,7 +927,7 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 
-	class MakredGold {
+	class MarkedGold {
 		displayName = "Marked Gold";
 		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;

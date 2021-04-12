@@ -84,6 +84,12 @@ class CfgSettings {
     class Identity {
         nameLength = 24;
     };
+
+    class Gates {
+        class Land_BarGate_F { anim = "Door_1_rot"; };
+        class Land_ConcreteWall_01_m_gate_F { anim = "Door_1_move"; };
+        class Land_ConcreteWall_01_l_gate_F : Land_ConcreteWall_01_m_gate_F {};
+    };
 };
 
 #include "CfgSurvival.hpp"

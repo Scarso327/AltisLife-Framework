@@ -127,6 +127,22 @@ switch (_code) do {
             _handled = true;
         };
     };
+
+    case P : {
+        private _veh = vehicle player;
+
+        if ([_veh] call ULP_fnc_vehRemoteGate) then {
+            if !(_shift && { _ctrlKey } && { _alt } && { _veh isEqualTo player }) then {
+                {
+                    private _anim = getText(missionConfigFile >> "CfgSettings" >> "Gates" >> (typeOf _x) >> "anim");
+
+                    if ([player, (_x getVariable ["gate_factions", []])] call ULP_fnc_isFaction) then {
+                        _x animate [_anim, ([1, 0] select ((_x animationPhase _anim) isEqualTo 1))];
+                    };
+                } forEach (nearestObjects [player, (("isClass _x" configClasses (missionConfigFile >> "CfgSettings" >> "Gates")) apply { configName _x }), 15]);
+            };
+        };
+    };
 };
 
 _handled

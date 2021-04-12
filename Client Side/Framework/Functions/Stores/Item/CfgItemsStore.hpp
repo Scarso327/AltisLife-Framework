@@ -150,7 +150,7 @@ class CfgItemsStore {
 			class ItemCompass : FactionBase {};
 			class ItemWatch : FactionBase {};
 			class ItemGPS : FactionBase {};
-			class B_UavTerminal : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
+			class B_UavTerminal : FactionBase { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
 			class ToolKit : FactionBase {};

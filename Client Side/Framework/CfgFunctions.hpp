@@ -583,6 +583,7 @@ class CfgFunctions {
 			file = "Functions\Cartels";
 			class initCartels {};
 			class cartelHud {};
+			class ownsCartel {};
 		};
 
 		class Perks {

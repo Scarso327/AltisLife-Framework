@@ -394,6 +394,7 @@ class CfgVehicles {
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";
+				remoteGates = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_white.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {14924.6,15011.1,2.66146};

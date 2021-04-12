@@ -380,6 +380,7 @@ class CfgFunctions {
 			class clearCargo {};
 			class unlockTexture {};
 			class isTextureUnlocked {};
+			class vehRemoteGate {};
 		};
 
 		class VehicleEvents {

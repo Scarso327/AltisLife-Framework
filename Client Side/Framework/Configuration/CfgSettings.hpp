@@ -7,7 +7,7 @@ class CfgSettings {
     total_maxWeight = 24;
 
     sync_delay = 5 * 60;
-    abort_delay = 1; // TEMP
+    abort_delay = 10;
 
     starting_bank = 100000;
     paycheck_period = 15;

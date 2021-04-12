@@ -176,9 +176,125 @@ class CfgMissions {
 		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Common""; ULP_SurveyTotal = 0; [""CommonMap"", 1, true] call ULP_fnc_handleItem;";
 		onFinished = "";
 		class Locations {
-			class KavalaSquare {
-				pos = "civ_spawn_kavala";
-				name = "Kavala Square";
+			class dig_site_01 {
+				pos = "dig_site_01";
+				name = "Zaros";
+			};
+			class dig_site_02 {
+				pos = "dig_site_02";
+				name = "Zaros";
+			};
+			class dig_site_03 {
+				pos = "dig_site_03";
+				name = "Zaros";
+			};
+			class dig_site_04 {
+				pos = "dig_site_04";
+				name = "Zaros";
+			};
+			class dig_site_05 {
+				pos = "dig_site_05";
+				name = "Zaros";
+			};
+			class dig_site_06 {
+				pos = "dig_site_06";
+				name = "Zaros";
+			};
+			class dig_site_07 {
+				pos = "dig_site_07";
+				name = "Zaros";
+			};
+			class dig_site_08 {
+				pos = "dig_site_08";
+				name = "Zaros";
+			};
+			class dig_site_09 {
+				pos = "dig_site_09";
+				name = "Zaros";
+			};
+			class dig_site_10 {
+				pos = "dig_site_10";
+				name = "Alikampos";
+			};
+			class dig_site_11 {
+				pos = "dig_site_11";
+				name = "Kore";
+			};
+			class dig_site_12 {
+				pos = "dig_site_12";
+				name = "Syrta";
+			};
+			class dig_site_13 {
+				pos = "dig_site_13";
+				name = "Abdera";
+			};
+			class dig_site_14 {
+				pos = "dig_site_14";
+				name = "Galati";
+			};
+			class dig_site_15 {
+				pos = "dig_site_15";
+				name = "Galati";
+			};
+			class dig_site_16 {
+				pos = "dig_site_16";
+				name = "Galati";
+			};
+			class dig_site_17 {
+				pos = "dig_site_17";
+				name = "Telos";
+			};
+			class dig_site_18 {
+				pos = "dig_site_18";
+				name = "Anthrakia";
+			};
+			class dig_site_19 {
+				pos = "dig_site_19";
+				name = "Charkia";
+			};
+			class dig_site_20 {
+				pos = "dig_site_20";
+				name = "Dorida";
+			};
+			class dig_site_21 {
+				pos = "dig_site_21";
+				name = "Dorida";
+			};
+			class dig_site_22 {
+				pos = "dig_site_22";
+				name = "Dorida";
+			};
+			class dig_site_23 {
+				pos = "dig_site_23";
+				name = "Dorida";
+			};
+			class dig_site_24 {
+				pos = "dig_site_24";
+				name = "Chalkeia";
+			};
+			class dig_site_25 {
+				pos = "dig_site_25";
+				name = "Pyrgos";
+			};
+			class dig_site_26 {
+				pos = "dig_site_26";
+				name = "Pyrgos";
+			};
+			class dig_site_27 {
+				pos = "dig_site_27";
+				name = "Pyrgos";
+			};
+			class dig_site_28 {
+				pos = "dig_site_28";
+				name = "Oreokastro";
+			};
+			class dig_site_29 {
+				pos = "dig_site_29";
+				name = "Oreokastro";
+			};
+			class dig_site_30 {
+				pos = "dig_site_30";
+				name = "Therisa";
 			};
 		};
 		class Rewards {
@@ -197,12 +313,7 @@ class CfgMissions {
 	class ArchaeologyUncommon : ArchaeologyCommon {
 		name = "Uncommon Archaeology Sites";
 		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Uncommon""; ULP_SurveyTotal = 0; [""UncommonMap"", 1, true] call ULP_fnc_handleItem;";
-		class Locations {
-			class AltisGallery {
-				pos = "altis_gallery";
-				name = "Altis Gallery";
-			};
-		};
+		class Locations : Locations {};
 		class Rewards : Rewards {};
 		class Messages : Messages {};
 	};
@@ -210,12 +321,7 @@ class CfgMissions {
 	class ArchaeologyRare : ArchaeologyCommon {
 		name = "Rare Archaeology Sites";
 		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Rare""; ULP_SurveyTotal = 0; [""RareMap"", 1, true] call ULP_fnc_handleItem;";
-		class Locations {
-			class HMPrisonAltis {
-				pos = "hmp_altis";
-				name = "HM Prison Altis";
-			};
-		};
+		class Locations : Locations {};
 		class Rewards : Rewards {};
 		class Messages : Messages {};
 	};

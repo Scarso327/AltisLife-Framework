@@ -169,6 +169,29 @@ class CfgHousing {
 				spawnPos[] = {{-12.6245,3.8877,-1.51542}, 0};
 			};
 		};
+
+		// GROUP SPECIFIC
+		class Land_Cargo_Tower_V1_F : BaseHouse {
+			price = 34896000;
+			breakIn = 20 * 60;
+			spawnPos[] = {15171.1,15339,12.8876};
+			
+			class Storage {
+				object = "CargoNet_01_box_F";
+				position[] = {{15171.1,15338,12.8852}, 0};
+			};
+		};
+
+		class Land_MilOffices_V1_F : BaseHouse {
+			price = 83350000;
+			breakIn = 15 * 60;
+			spawnPos[] = {15177.2,15386.7,3.29152};
+			
+			class Storage {
+				object = "Land_Cargo20_grey_F";
+				position[] = {{15193.8,15391.7,3.28908}, 0};
+			};
+		};
 	};
 
 	class Upgrades {};

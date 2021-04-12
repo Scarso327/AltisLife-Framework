@@ -35,7 +35,7 @@ private _time = _base + (random _random);
 	
 	ULP_SurveyTotal = ULP_SurveyTotal + 1;
 
-	private _pos = [(taskDestination _task), 0, 100] call BIS_fnc_findSafePos;
+	private _pos = [(taskDestination _task), 0, 50] call BIS_fnc_findSafePos;
 	if (_pos isEqualTo []) then { _pos = taskDestination _task; };
 
 	if (ULP_SurveyTotal >= getNumber (_cfg >> "surveyTimes")) then {

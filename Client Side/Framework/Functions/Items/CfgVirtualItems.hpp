@@ -1620,7 +1620,7 @@ class CfgVirtualItems {
 	/// Common Rewards
 	class OldCoin {
 		displayName = "Old Coin";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\oldCoin.paa";
 		buyPrice = -1;
 		sellPrice = 0;
 		weight = 1;
@@ -1634,87 +1634,87 @@ class CfgVirtualItems {
 	};
 	class BrokenPot : OldCoin {
 		displayName = "Broken Pot";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\brokenPot.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class BluntStoneKnife : OldCoin {
 		displayName = "Blunt Stone Knife";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\bluntStoneKnife.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class FossilisedBone : OldCoin {
 		displayName = "Fossilised Bone";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\fossilisedBone.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class UnidentifiedSkull : OldCoin {
 		displayName = "Unidentified Skull";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\unidentifiedSkull.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	/// Uncommon Rewards
 	class PetrifiedShield : OldCoin {
 		displayName = "Petrified Shield";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\petrifiedShield.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class WeatheredSculpture : OldCoin {
 		displayName = "Weathered Sculpture";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\weatheredSculpture.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class AncientAmber : OldCoin {
 		displayName = "Ancient Amber";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\ancientAmber.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class RegliousTotem : OldCoin {
 		displayName = "Reglious Totem";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\regliousTotem.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class StrongMetalRing : OldCoin {
 		displayName = "Strong Metal Ring";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\strongMetalRing.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	/// Rare Rewards
 	class EmeraldAmulet : OldCoin {
 		displayName = "Emerald Amulet";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\emeraldAmulet.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class AncientLedger : OldCoin {
 		displayName = "Ancient Ledger";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\ancientLedger.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class HandSmoothedRunestone : OldCoin {
 		displayName = "Hand-Smoothed Runestone";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\handSmoothedRunestone.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
-	class JeweledNeckless : OldCoin {
-		displayName = "Jeweled Neckless";
-		icon = "Data\Icons\map.paa";
+	class JeweledNecklace : OldCoin {
+		displayName = "Jeweled Necklace";
+		icon = "Data\Icons\jeweledNecklace.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};
 	class BrokenTimepiece : OldCoin {
 		displayName = "Broken Timepiece";
-		icon = "Data\Icons\map.paa";
+		icon = "Data\Icons\brokenTimepiece.paa";
 		sellPrice = 0;
 		class Settings : Settings {};
 	};

@@ -319,4 +319,25 @@ class CfgVirtualStores {
 			class ArchaeologistsEquipment {};
 		};
 	};
+
+	class Artifact {
+		storeName = "Artifact Trader";
+		class Items {
+			class OldCoin {};
+			class BrokenPot {};
+			class BluntStoneKnife {};
+			class FossilisedBone {};
+			class UnidentifiedSkull {};
+			class PetrifiedShield {};
+			class WeatheredSculpture {};
+			class AncientAmber {};
+			class RegliousTotem {};
+			class StrongMetalRing {};
+			class EmeraldAmulet {};
+			class AncientLedger {};
+			class HandSmoothedRunestone {};
+			class JeweledNecklace {};
+			class BrokenTimepiece {};
+		};
+	};
 };

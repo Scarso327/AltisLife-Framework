@@ -93,6 +93,7 @@ class CfgProcessingStores {
 	class Purifier : Base {
 		title = "Drugs Purifier";
 		processes[] = { "PurifiedWeed", "PurifiedHeroin", "PurifiedCocaine", "PurifiedMeth", "PurifiedMoonshine" };
+		condition = "[""Northern""] call ULP_fnc_ownsCartel";
 	};
 
 	class MultiDrug : Base {

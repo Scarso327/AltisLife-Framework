@@ -181,6 +181,8 @@ class CfgHousing {
 				position[] = {{15171.1,15338,12.8852}, 0};
 			};
 		};
+		class Land_i_House_Big_01_V2_F : Land_Cargo_Tower_V1_F {};
+		class Land_i_House_Big_01_V3_F : Land_Cargo_Tower_V1_F {};
 
 		class Land_MilOffices_V1_F : BaseHouse {
 			price = 83350000;

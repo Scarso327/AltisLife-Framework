@@ -3,10 +3,77 @@ class CfgCameras {
 		class HMP {
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 			class Cameras {
-				class Enterance {
-					name = "Prison Enterance";
-					position[] = {12337.7, 14376.2, 4.39872};
-					target[] = {0, 0, 0};
+				class CarPark {
+					name = "HMP Car Park";
+					position[] = {12337.519,14376.288,4.363};
+					target[] = {12351.6,14368.9,0};
+				};
+				class Lobby {
+					name = "HMP Lobby";
+					position[] = {12328.3,14372.3,4.43624};
+					target[] = {12338,14369.9,0};
+				};
+				class MainHall {
+					name = "HMP Main Hall";
+					position[] = {12341.158,14366.455,4.105};
+					target[] = {12336.4,14345.1,0};
+				};
+				class Yard {
+					name = "HMP Yard";
+					position[] = {12333.9,14337.6,5.12775};
+					target[] = {12324.5,14345.4,0};
+				};
+			};
+		};
+
+		class HMSLiberty {
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+			class Cameras {
+				class ForwardDeck {
+					name = "Forward Deck";
+					position[] = {14051.4,11509.1,26.7665};
+					target[] = {14050.8,11541.9,0};
+				};
+				class LandingDeck {
+					name = "Landing Deck";
+					position[] = {14058,11404.9,51.6275};
+					target[] = {14059.3,11390,0};
+				};
+				class MainHangar {
+					name = "Main Hangar";
+					position[] = {14059.2,11440.9,33.7622};
+					target[] = {14059.6,11420.2,0};
+				};
+				class MainHallway {
+					name = "Main Hallway";
+					position[] = {14053.4,11478.8,19.9895};
+					target[] = {14056.8,11463.7,0};
+				};
+				class CommandDeck {
+					name = "Command Deck";
+					position[] = {14045.3,11499.8,28.8083};
+					target[] = {14052.9,11502.3,0};
+				};
+			};
+		};
+
+		class EvidenceStorage {
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+			class Cameras {
+				class Entrance {
+					name = "Site Entrance";
+					position[] = {3248.53,12451.2,5.08133};
+					target[] = {3232.38,12469,0};
+				};
+				class NorthBuilding {
+					name = "North Building";
+					position[] = {3248.09,12474.2,4.63247};
+					target[] = {3266.84,12467,0};
+				};
+				class SouthBuilding {
+					name = "HMP Main Hall";
+					position[] = {3286,12441.7,4.30197};
+					target[] = {3265.56,12449.4,0};
 				};
 			};
 		};

@@ -63,3 +63,5 @@ private _time = _base + (random _random);
 	ULP_Archaeology = nil;
 	ULP_Archaeology_Digging = false;
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
+
+closeDialog 0;

@@ -51,3 +51,5 @@ private _time = _base + (random _random);
 
 	_task setSimpleTaskDestination _pos;
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
+
+closeDialog 0;

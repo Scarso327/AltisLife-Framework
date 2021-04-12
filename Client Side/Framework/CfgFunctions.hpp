@@ -642,6 +642,11 @@ class CfgFunctions {
 			class handleCamera {};
 			class addCameras {};
 		};
+
+		class LootTable {
+			file = "Functions\LootTable";
+			class getLoot {};
+		};
 	};
 
 	class ULP_Functions_UI {

@@ -43,6 +43,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Leveling\CfgProgression.hpp"
 #include "Functions\Licenses\CfgLicenses.hpp"
 #include "Functions\Licenses\CfgLicenseStores.hpp"
+#include "Functions\LootTable\CfgLoot.hpp"
 #include "Functions\Map\CfgMaps.hpp"
 #include "Functions\Messaging\CfgMessages.hpp"
 #include "Functions\Missions\CfgMissions.hpp"

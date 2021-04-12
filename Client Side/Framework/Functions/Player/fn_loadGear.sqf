@@ -44,6 +44,6 @@ player setUnitLoadout _pItems;
     };
 }] call ULP_fnc_waitExecute;
 
-ULP_CarryInfo set [1, ([LIFE_SETTINGS(getNumber,"total_maxWeight"), LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",(backpack player),"maximumload") / 4)] select ((backpack player) isEqualTo ""))];
+ULP_CarryInfo set [1, ([LIFE_SETTINGS(getNumber,"total_maxWeight"), LIFE_SETTINGS(getNumber,"total_maxWeight") + round(getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload") / 4)] select ((backpack player) isEqualTo ""))];
 
 { [(_x select 0), (_x select 1), false, true] call ULP_fnc_handleItem } count _yItems;

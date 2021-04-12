@@ -10,7 +10,7 @@ class CfgMessages {
 		canReply = true;
 		sender = "%1";
 		targets = "";
-		condition = "true"; // TODO
+		condition = "true";
 	};
 
 	class Reply : Message {
@@ -46,6 +46,13 @@ class CfgMessages {
 		sender = "Events Team";
 		targets = "0";
 		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess || { [""ULP_Event"", 1] call ULP_fnc_hasAccess }";
+	};
+
+	class OpenAirBroadcast : PublicAnnoucement {
+		displayName = "Open Air Broadcast";
+		sender = "Altis Police Constabulary";
+		targets = "(allPlayers select { !(isNull (objectParent _x)) && { (vehicle _x) isKindOf 'Air'} })";
+		condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 	};
 
 	class Dispute : Message {

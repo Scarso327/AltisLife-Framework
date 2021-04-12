@@ -23,6 +23,16 @@ switch (_code) do {
 		case SPACE: {  }; // Request Medic (Space, TODO)
     };
 
+    case THREE: {
+        if (isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) }) then {
+            player playActionNow (switch (true) do {
+                case (_shift): { "gestureHiC" };
+                case (_ctrlKey) : { "gestureHiB" };
+                case (_alt): { "gesturenod" };
+            });
+        };
+    };
+
     case _interactionKey: {
         if !([] call ULP_UI_fnc_isProgress) then {
             _this call ULP_fnc_actionKeyDown;

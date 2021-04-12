@@ -64,6 +64,8 @@ class CfgSettings {
 
     doesntThreaten[] = { "", "Binocular", "Rangefinder", "hgun_Pistol_Signal_F" };
     taserWeapons[] = { "hgun_P07_F", "hgun_P07_blk_F" };
+    rubberWeapons[] = {};
+    rubberBullets[] = {};
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
     threatLevels[] = { "Low", "Moderate", "Substantial", "Severe", "Critical" };
     

@@ -32,9 +32,15 @@ _task setTaskState "Succeeded";
 private _message = format["Completed a %1", getText (_typeCfg >> "name")];
 
 [_reward, false, _message] call ULP_fnc_addMoney;
-[getNumber (_typeCfg >> "Rewards" >> "xpReward"), _message] call ULP_fnc_addXP;
 
-hint format [getText (_typeCfg >> "Messages" >> "onFinished"), [_reward] call ULP_fnc_numberText];
+private _xp = getNumber (_typeCfg >> "Rewards" >> "xpReward");
+if (_xp > 0) then { [_xp, _message] call ULP_fnc_addXP; };
+
+private _msg = getText (_typeCfg >> "Messages" >> "onFinished");
+if !(_msg isEqualTo "") then {
+	hint format [getText (_typeCfg >> "Messages" >> "onFinished"), [_reward] call ULP_fnc_numberText];
+};
+
 ULP_Missions deleteAt _type;
 
 [3, _task, { player removeSimpleTask _this; }] call ULP_fnc_waitExecute;

@@ -620,6 +620,13 @@ class CfgFunctions {
 			class groupIndicators {};
 			class getIndicatorColour {};
 		};
+		
+		class Archaeology {
+			file = "Functions\Archaeology";
+			class getSite {};
+			class surveySite {};
+			class digSite {};
+		};
 	};
 
 	class ULP_Functions_UI {

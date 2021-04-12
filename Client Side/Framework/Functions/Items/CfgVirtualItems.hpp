@@ -1561,15 +1561,24 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 		};
+		class Events {
+			onUse = "[""Common""] call ULP_fnc_getSite;";
+		};
 		conditions = "true";
 	};
 	class UncommonMap : CommonMap {
 		displayName = "Uncommon Map";
 		class Settings : Settings {};
+		class Events {
+			onUse = "[""Uncommon""] call ULP_fnc_getSite;";
+		};
 	};
 	class RareMap : CommonMap {
 		displayName = "Rare Map";
 		class Settings : Settings {};
+		class Events {
+			onUse = "[""Rare""] call ULP_fnc_getSite;";
+		};
 	};
 
 	class SurveyingEquipment {
@@ -1583,6 +1592,9 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+		};
+		class Events {
+			onUse = "[ULP_Archaeology] call ULP_fnc_surveySite;";
 		};
 		conditions = "true";
 	};
@@ -1598,6 +1610,9 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+		};
+		class Events {
+			onUse = "[ULP_Archaeology] call ULP_fnc_digSite;";
 		};
 		conditions = "true";
 	};

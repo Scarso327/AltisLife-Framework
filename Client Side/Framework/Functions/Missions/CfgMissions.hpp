@@ -167,4 +167,56 @@ class CfgMissions {
 			onFinished = "You have successfully completed you patrol assignment, you have been paid a bonus of £%1";
 		};
 	};
+
+	class ArchaeologyCommon {
+		name = "Common Archaeology Sites";
+		description = "You need to use surveying equipment at the marked location...";
+		factions[] = { "Civilian" };
+		eachFrame = "";
+		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Common""; ULP_SurveyTotal = 0; [""CommonMap"", 1, true] call ULP_fnc_handleItem;";
+		onFinished = "";
+		class Locations {
+			class KavalaSquare {
+				pos = "civ_spawn_kavala";
+				name = "Kavala Square";
+			};
+		};
+		class Rewards {
+			moneyReward = 0;
+			xpReward = 0;
+		};
+		class Messages {
+			onFinishWithoutMission = "You can't survey this location as you haven't been assigned it...";
+			onAlreadyHas = "You must survey your assigned location before getting another...";
+			onNoLocations = "There are no suvery locations available, please try again later...";
+			onAssigned = "An Archaeological Site has been marked on your map near %1";
+			onFinished = "";
+		};
+	};
+
+	class ArchaeologyUncommon : ArchaeologyCommon {
+		name = "Uncommon Archaeology Sites";
+		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Uncommon""; ULP_SurveyTotal = 0; [""UncommonMap"", 1, true] call ULP_fnc_handleItem;";
+		class Locations {
+			class AltisGallery {
+				pos = "altis_gallery";
+				name = "Altis Gallery";
+			};
+		};
+		class Rewards : Rewards {};
+		class Messages : Messages {};
+	};
+
+	class ArchaeologyRare : ArchaeologyCommon {
+		name = "Rare Archaeology Sites";
+		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Rare""; ULP_SurveyTotal = 0; [""RareMap"", 1, true] call ULP_fnc_handleItem;";
+		class Locations {
+			class HMPrisonAltis {
+				pos = "hmp_altis";
+				name = "HM Prison Altis";
+			};
+		};
+		class Rewards : Rewards {};
+		class Messages : Messages {};
+	};
 };

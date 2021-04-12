@@ -633,6 +633,12 @@ class CfgFunctions {
 			file = "Functions\Moves";
 			class movesMenu {};
 		};
+
+		class Camera {
+			file = "Functions\Camera";
+			class handleCamera {};
+			class addCameras {};
+		};
 	};
 
 	class ULP_Functions_UI {

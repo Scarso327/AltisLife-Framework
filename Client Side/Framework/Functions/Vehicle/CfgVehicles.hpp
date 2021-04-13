@@ -84,6 +84,7 @@ class CfgVehicles {
 
 	// CARS --------------------------------------------------------------------------------------
 	class C_Kart_01_Blu_F : Base {
+		description = "Kart is a small four-wheeled vehicle propelled by gravity, gas or electricity. This gas powered kart is used for recreational racing in outdoor or indoor amusement parks. It has 4-stroke engine offering up to 20 hp and should not be operated by drivers under 18 years old.";
 		buyPrice = 2500;
 		virtualSpace = 0;
 		garageLimit = 1;
@@ -98,6 +99,7 @@ class CfgVehicles {
     class C_Kart_01_yellow_F : C_Kart_01_Blu_F{};
 
 	class C_Quadbike_01_F : Base {
+		description = "A Quadbike is an all-terrain vehicle with low-pressure tires and handlebars for steering. The military uses quad bikes for reconnaissance and to access terrain difficult for heavier vehicles.";
 		buyPrice = 11300;
 		virtualSpace = 15;
 		class Textures {
@@ -125,6 +127,7 @@ class CfgVehicles {
 	};
 
 	class C_Hatchback_01_F : Base {
+		description = "A four-seat hatchback car mass-produced in the Far East to satisfy increasing demand for family cars. Economical operation, enhanced safety and a roomy trunk made these cars widely popular in the whole of Europe. Also comes in a sporty version.";
 		buyPrice = 21450;
 		virtualSpace = 25;
 		class Textures {
@@ -263,6 +266,7 @@ class CfgVehicles {
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 276500; };
 
 	class C_Offroad_01_F : Base {
+		description = "	The 4x4 pickup by Generic Motors is a perfect choice for farmers and hunters. The durable chassis and powerful engine have been designed to withstand anything from the cratered highways of Central Europe to the rugged terrain of the Mediterranean. The armed version is fitted either with a .50 caliber heavy machine gun or an anti-tank recoilless rifle. It provides the combination of mobility and firepower to many paramilitary and guerilla forces in local conflicts around the globe. Specialized versions, which sport a hard rear cover and rack-mounted communications equipment, are in use by law enforcement, national park rangers, and armed forces. These vehicles feature a large floodlight, loudspeakers, and long-range antennas.";
 		buyPrice = 42800;
 		virtualSpace = 60;
 		class Textures {
@@ -311,11 +315,14 @@ class CfgVehicles {
 	class B_G_Offroad_01_armed_F : C_Offroad_01_F { buyPrice = 4280000; };
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
 	class C_IDAP_Offroad_01_F : C_Offroad_01_F {};
-
-	class C_Offroad_01_covered_F : Base {
+	class C_Offroad_01_covered_F : C_Offroad_01_F {
 		buyPrice = 49100;
 		virtualSpace = 75;
 		class Textures {
+			class Hato : HatoTexture { 
+				displayName = "HATO"; 
+				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = {
@@ -335,19 +342,10 @@ class CfgVehicles {
 		};
 	};
 	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 54450; };
-
-	class C_Offroad_01_repair_F : Base {
-		buyPrice = 132400;
-		virtualSpace = 65;
-		class Textures {
-			class Hato : HatoTexture { 
-				displayName = "HATO"; 
-				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
-			};
-		};
-	};
+	class C_Offroad_01_repair_F : C_Offroad_01_covered_F { buyPrice = 132400; };
 
 	class C_Offroad_02_unarmed_F : Base {
+		description = "The MB 4WD is a modern four-wheel drive off-road vehicle with a distinctive construction. The vehicle was produced in the US and exists in a number of different editions. Thanks to the powerful engine, durable chassis and great maneuverability, this vehicle can handle difficult terrains from dry deserts to humid jungles or artic wastelands.";
 		buyPrice = 38750;
 		virtualSpace = 55;
 		class Textures {
@@ -389,6 +387,7 @@ class CfgVehicles {
 	class I_C_Offroad_02_LMG_F : C_Offroad_02_unarmed_F { buyPrice = 670300; };
 
 	class C_SUV_01_F : Base {
+		description = "A full-size luxury crossover SUV, not particularly suitable for off-road but with good on-road ability. Its powerful engine and 4x4 contribute to the enjoyable rides in higher speeds.";
 		buyPrice = 71200;
 		virtualSpace = 45;
 		class Textures {
@@ -461,6 +460,7 @@ class CfgVehicles {
 	};
 
 	class C_Van_02_transport_F : Base {
+		description = "The standard van can be used for a huge variety of practical purposes. This particular model features a long load length and excellent roof height, allowing for the transport of passengers, cargo, or even some smaller vehicles. Several aftermarket exterior components, such as a ladder, protective guards and a roof rack, can be fitted where appropriate. Specialized variants are used for emergency healthcare, patient evacuation and various utility services.";
 		buyPrice = 88000;
 		virtualSpace = 90;
 		class Textures {
@@ -517,6 +517,7 @@ class CfgVehicles {
 	class C_Van_02_service_F : C_Van_02_vehicle_F {};
 
 	class B_CTRG_LSV_01_light_F : Base {
+		description = "The Prowler is a light strike vehicle (LSV). That means it’s agile, lightly armored and uses speed, maneuverability, and off-road mobility to avoid threats. Two configurations of Prowler exist. The armed variant is equipped with two machine guns. The front seated position carries .338 SPMG medium machine gun, while the top turret is equipped with a .50 cal heavy machine gun. With this arsenal, the Prowler is ideal for quick hit and run missions. The unarmed variant is stripped of all guns, but the back part of the vehicle is opened and has reserve seats for two additional soldiers.";
 		buyPrice = 580000;
 		virtualSpace = 50;
 		garageLimit = 3;
@@ -565,6 +566,7 @@ class CfgVehicles {
 	class B_T_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 675000; };
 
 	class O_LSV_02_unarmed_F : Base {
+		description = "An agile, lightly protected vehicle for 5-6 soldiers – depending on the configuration. Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is highly adaptable to severe, rugged and restrictive terrains while providing off-road, cross-country mobility under all types of weather conditions. CSAT Pacific forces primarily use the unarmed variant and the armed variant fitted with a 6.5 mm minigun.";
 		buyPrice = 800000;
 		virtualSpace = 50;
 		garageLimit = 3;
@@ -593,6 +595,7 @@ class CfgVehicles {
 	};
 
 	class B_MRAP_01_F : Base {
+		description = "The Hunter is a Mine-Resistant Ambush Protected (MRAP) vehicle manufactured by US arms factories to provide troops with enhanced protection. The armored hull can withstand light weapons and protects the crew against landmines and improvised explosive devices. Even though the heavy armor and powerful engine cause increased fuel consumption, it has been favored by frontline troops over the light vehicles for its easy maintenance and good protection level.";
 		buyPrice = 9800000;
 		virtualSpace = 65;
 		garageLimit = 1;
@@ -616,6 +619,7 @@ class CfgVehicles {
 	};
 
 	class O_MRAP_02_F : Base {
+		description = "The Ifrit is a new Mine-Resistant Ambush Protected (MRAP) vehicle designed and manufactured in Russia. Its strengths lie in reliability in extreme weather conditions and crew protection, but its manufacturing costs are somewhat higher compared to other MRAPs.";
 		buyPrice = 7500000;
 		virtualSpace = 65;
 		garageLimit = 2;
@@ -682,6 +686,7 @@ class CfgVehicles {
 	};
 
 	class I_MRAP_03_F : Base {
+		description = "The Strider is a medium all-terrain vehicle with amphibious capability and enhanced crew protection, designed for reconnaissance and troop transport roles. It has been adopted by most of the AAF as a replacement for the older medium troop transports of the past decade. The unarmed version is fitted with an observation periscope package with thermal imaging and a laser marker.";
 		buyPrice = 5750000;
 		virtualSpace = 65;
 		garageLimit = 2;
@@ -713,6 +718,7 @@ class CfgVehicles {
 
 	// TRUCKS --------------------------------------------------------------------------------------
 	class C_Tractor_01_F : Base {
+		description = "Found in farm barns across the globe, the common tractor is a reliable high torque engineering vehicle, used for towing trailers and many other agricultural tasks. This 2WD tractor with a diesel engine has proven itself reliable since the eighties. With solid maintenance and the occasional lick of fresh paint, this old workhorse has been in use by several generations of farmers to date.";
 		buyPrice = 23150;
 		virtualSpace = 10;
 		garageLimit = 3;
@@ -733,6 +739,7 @@ class CfgVehicles {
 	};
 
 	class C_Van_01_transport_F : Base {
+		description = "The civilian 4x4 truck is a highly customizable truck with off-road capabilities preferred by the civilian population. It builds on retro design, but utilizes a modern engine and electronics. Most common track setups are boxed, cistern and pick-up set.";
 		buyPrice = 190500;
 		virtualSpace = 100;
 		garageLimit = 3;
@@ -770,12 +777,10 @@ class CfgVehicles {
 	class C_Van_01_box_F : C_Van_01_transport_F {
 		buyPrice = 245000;
 		virtualSpace = 150;
-		garageLimit = 3;
 	};
-	class C_Van_01_fuel_F : Base {
+	class C_Van_01_fuel_F : C_Van_01_transport_F {
 		buyPrice = 210500;
 		virtualSpace = 120;
-		garageLimit = 3;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -801,6 +806,7 @@ class CfgVehicles {
 	};
 
 	class I_Truck_02_transport_F : Base {
+		description = "The Zamak heavy truck is a 6x6 vehicle used for transport, repair and utility. Fitted with a powerful V8 engine, these trucks are reliable even in harsh conditions.";
 		buyPrice = 505000;
 		virtualSpace = 280;
 		garageLimit = 2;
@@ -835,6 +841,7 @@ class CfgVehicles {
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {};
 
 	class O_Truck_03_transport_F : Base {
+		description = "The Tempest is a 6x6 mine resistant standard transport truck for the CSAT army. Its primary role is to carry troops and cargo under armor. The modular design of the truck allows several transport versions: cargo, refuel, medical, repair and ammo resupply.";
 		buyPrice = 615500;
 		virtualSpace = 370;
 		garageLimit = 2;
@@ -875,6 +882,7 @@ class CfgVehicles {
 	};
 
 	class B_Truck_01_mover_F : Base {
+		description = "	The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. It servers as a standard heavy transport vehicle for BLUFOR armies. There are several versions covering the basic transport functions: cargo, refuel, medical, repair, and ammo resupply.";
 		buyPrice = 334000;
 		virtualSpace = 10;
 		garageLimit = 2;
@@ -1060,6 +1068,7 @@ class CfgVehicles {
 
 	// BOATS --------------------------------------------------------------------------------------
 	class C_Scooter_Transport_01_F : Base {
+		description = "";
 		buyPrice = 14300;
 		virtualSpace = 5;
 		class Textures {
@@ -1116,11 +1125,13 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat : Base {
+		description = "";
 		buyPrice = 4150;
 		virtualSpace = 50;
 	};
 
 	class C_Boat_Civil_01_F : Base {
+		description = "";
 		buyPrice = 153200;
 		virtualSpace = 75;
 		class Textures {
@@ -1132,6 +1143,7 @@ class CfgVehicles {
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
 	class C_Boat_Transport_02_F : Base {
+		description = "";
 		buyPrice = 297600;
 		virtualSpace = 150;
 		class Textures {
@@ -1146,6 +1158,7 @@ class CfgVehicles {
 	};
 
 	class B_Boat_Armed_01_minigun_F : Base {
+		description = "";
 		buyPrice = 14360500;
 		virtualSpace = 80;
 		garageLimit = 1;
@@ -1165,21 +1178,26 @@ class CfgVehicles {
 	};
 
 	class B_SDV_01_F : Base {
+		description = "";
 		buyPrice = 389500;
 		virtualSpace = 5;
 	};
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
 	class B_UAV_01_F : Base {
+		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance. Darters are agile, silent and hard to detect. The ability to hover in one place and use the camera to observe a location is invaluable in setting ambushes.";
 		buyPrice = 98700;
 		virtualSpace = 0;
 	};
 	
 	class C_Heli_Light_01_civil_F : Base {
+		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War. It now exists in several variants used by both military and civilian transport. The M-900 is a civilian version. Closed cabin and comfortable interior provides space for two passengers.";
 		buyPrice = 565000;
 		virtualSpace = 5;
 		garageLimit = 2;
 		class Textures {
+			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
+			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
 			class TotalRed : BaseTexture {
 				displayName = "Total Red"; 
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa" }; 
@@ -1241,18 +1259,22 @@ class CfgVehicles {
 			class ChromeRed : BaseChromeRed {};
 			class ChromeSilver : BaseChromeSilver {};
 			class ChromeGold : BaseChromeGold {};
-			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
-			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
 		};
 	};
-	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 780000; };
+	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { 
+		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War, it now exists in several variants fielded by both militaries and the civilian populace. The MH-9 Hummingbird is mostly used as a special forces troop transport with its two outboard benches.";
+		buyPrice = 780000; 
+	};
 
 	class O_Heli_Light_02_unarmed_F : Base {
+		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force. The helicopter was intended to replace the Mi-8 and can be used for reconnaissance, transporting a full squad with combat gear and special operations.";
 		buyPrice = 2350000;
 		virtualSpace = 25;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
+			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
+			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_CO.paa" }; 
@@ -1265,17 +1287,20 @@ class CfgVehicles {
 				displayName = "White / Blue";
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa" };
 			}; 
-			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
-			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
 		};
 	};
 
 	class I_Heli_light_03_unarmed_F : Base {
+		description = "The WY-55 Hellcat is a multipurpose military helicopter, most suited for anti-surface, battlefield utility with limited transport capability. It replaces its predecessor, the Super Lynx, with improved maneuverability, durability, and protection. The armed version is fitted with twin miniguns and unguided rockets. Its also fitted with a thermal camera that can be controlled by the co-pilot.";
 		buyPrice = 2130000;
 		virtualSpace = 20;
 		garageLimit = 1;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
+			class Police : PoliceTexture {
+				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
+				turrets[] = { { "missiles_DAR", "CMFlareLauncher" } };
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "#(rgb,8,8,3)color(0.03,0.03,0.03,1)" }; 
@@ -1284,38 +1309,40 @@ class CfgVehicles {
 				displayName = "Green"; 
 				textures[] = { "\a3\air_f_epb\Heli_Light_03\data\Heli_Light_03_base_CO.paa" }; 
 			};
-			class Police : PoliceTexture {
-				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
-				turrets[] = { { "missiles_DAR", "CMFlareLauncher" } };
-			};
 		};
 	};
 	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {
 		buyPrice = 23450000;
-		garageLimit = 1;
 		turrets[] = { { "M134_minigun", "missiles_DAR", "CMFlareLauncher" } };
 	};
 
 	class B_Heli_Transport_01_F : Base {
+		description = "The UH-80 Ghost Hawk is a BLUFOR medium-lift utility helicopter with stealth design. The Ghost Hawk was developed for special operations with a focus on deployment and extraction of troops undetected by enemy radar. Some pilots say the stealth design hindered the versatility of the helicopter compared to its predecessor, the UH-60. Nevertheless, the Ghost Hawk is now used as a primary transport helicopter in the BLUFOR army.";
 		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
 		turrets[] = { { "LMG_Minigun_Transport", "LMG_Minigun_Transport2", "CMFlareLauncher" } };
 		class Textures {
+			class Police : BaseTexture { turrets[] = { { "CMFlareLauncher" } }; };
 			class Civilian : BaseTexture {};
-			class Police : BaseTexture {
-				turrets[] = { { "CMFlareLauncher" } };
-			};
 		};
 	};
 
 	class I_Heli_Transport_02_F : Base {
+		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport used by the AAF. It can carry up to 16 soldiers plus crew. Besides the transport version, many other versions of the Mohawk exist, serving effectively in evac, anti-submarine warfare, or armed air support roles. Upgrades from its predecessor consist of more powerful engines and construction changes fully utilizing modern materials.";
 		buyPrice = 13240000;
 		virtualSpace = 55;
 		garageLimit = 1;
 		chopKeepChance = 85;
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
+			class Medic : MedicTexture {
+				textures[] = { 
+					"Data\Textures\Vehicles\Air\Medic\mohawk_01.paa",
+					"Data\Textures\Vehicles\Air\Medic\mohawk_02.paa",
+					"Data\Textures\Vehicles\Air\Medic\mohawk_03.paa"
+				}; 
+			};
 			class Ion : BaseTexture {
 				displayName = "Ion"; 
 				textures[] = { 
@@ -1334,18 +1361,12 @@ class CfgVehicles {
 					"\a3\air_f_beta\heli_transport_02\data\heli_transport_02_int_02_co.paa" 
 				}; 
 			};
-			class Medic : MedicTexture {
-				textures[] = { 
-					"Data\Textures\Vehicles\Air\Medic\mohawk_01.paa",
-					"Data\Textures\Vehicles\Air\Medic\mohawk_02.paa",
-					"Data\Textures\Vehicles\Air\Medic\mohawk_03.paa"
-				}; 
-			};
 		};
 	};
 	class C_IDAP_Heli_Transport_02_F : I_Heli_Transport_02_F {};
 
 	class O_Heli_Transport_04_black_F : Base {
+		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles. It can transport cargo, troops, and provide battlefield supplies (ammunition, fuel, repair facilities, and medical equipment). The helicopter can also transport light vehicles thanks to its sling loading capabilities.";
 		buyPrice = 11350000;
 		virtualSpace = 0;
 		garageLimit = 1;
@@ -1374,14 +1395,9 @@ class CfgVehicles {
 		buyPrice = 13640000;
 		virtualSpace = 50;
 	};
-	class O_Heli_Transport_04_medevac_black_F : Base {
+	class O_Heli_Transport_04_medevac_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11983000;
 		virtualSpace = 40;
-		garageLimit = 1;
-		chopKeepChance = 100;
-		chopPerc = 0.20;
-		chopTime = 60;
-		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Medic : MedicTexture {
 				textures[] = { 
@@ -1395,6 +1411,7 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Transport_03_unarmed_F : Base {
+		description = "A twin-engine, tandem rotor heavy-lift helicopter. It is a modernized version of the CH-47 Chinook and its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
 		virtualSpace = 100;
 		garageLimit = 1;
@@ -1421,6 +1438,7 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Attack_01_F : Base {
+		description = "A two-seat reconnaissance and target designation helicopter used to seek targets for gunships. Even though the construction dates back some time and the program faced cancellation in the first years of the 21st century, the project was finished successfully and the Blackfoot became the first attack helicopter to field stealth technology, which was even applied to the main rotor. The Blackfoot is extremely fast, agile and hard to detect even by contemporary sensors. However it is slowly becoming outdated.";
 		buyPrice = 146560000;
 		virtualSpace = 0;
 		garageLimit = 1;
@@ -1430,6 +1448,7 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher", "gatling_20mm", "missiles_DAGR", "missiles_ASRAAM" } };
 	};
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
+		description = "A multipurpose successor to the Mi-24, the Mi-48 Kajman (BLUFOR designation «Hornet») is a large gunship and attack helicopter with troop transport capacity for 8 passengers. The front part of the helicopter is based on the Mi-28 attack helicopter, the coaxial rotor providing increased stability is taken from the Ka-52 and the passenger transport capacity is the same as the Mi-24.";
 		buyPrice = 212340000;
 		virtualSpace = 30;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm", "missiles_SCALPEL", "rockets_Skyfire", "Laserdesignator_mounted" } };
@@ -1437,6 +1456,7 @@ class CfgVehicles {
 
 	// PLANES --------------------------------------------------------------------------------------
 	class C_Plane_Civil_01_F : Base {
+		description = "Caesar BTT is a single-engine, fixed-gear, low-wing general aviation aircraft built from composite materials. The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m). It is used by civilians and smaller shipping companies all around the world.";
 		buyPrice = 1256000;
 		virtualSpace = 5;
 		garageLimit = 2;
@@ -1444,6 +1464,7 @@ class CfgVehicles {
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
 	class B_T_VTOL_01_infantry_F : Base {
+		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL (Vertical Take-Off and Landing) technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways. It also provides unparalleled maneuverability with its unique ability to perform pylon turns or merely hover in place. The huge internal storage allows for transportation of vehicles up to the size and weight of AMV-7 Marshall APC in the vehicle transport variant or up to 32 fully armed soldiers with supplies in the infantry transport variant. The storage space of the gunship variant is fully occupied by automated weapon stations and carried ammunition.";
 		buyPrice = 75500000;
 		virtualSpace = 175;
 		garageLimit = 1;
@@ -1459,6 +1480,7 @@ class CfgVehicles {
 	};
 
 	class O_T_VTOL_02_infantry_F : B_T_VTOL_01_infantry_F {
+		description = "By far the largest CSAT joint development project to date was long troubled by the conflicting requirements of the participating armies who demanded an aircraft with VTOL capabilities. The planned budget was vastly exceeded several times and development was years behind schedule. The program eventually became one of the most expensive in military procurement history and despite a great deal of information remains classified and is often compared to the older F-35 program. The final solution was based upon the most promising prototype designed in Xi'an which was able to meet most of the requirements with satisfactory results. High running and maintenance costs remains a huge issue that plagues the reputation of the otherwise extremely progressive aircraft with many unique features and top-notch bleeding-edge technologies.";
 		buyPrice = 115650000;
 		virtualSpace = 80;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
@@ -1470,6 +1492,7 @@ class CfgVehicles {
 	};
 
 	class I_Plane_Fighter_03_CAS_F : Base {
+		description = "The A-143 Buzzard is a single seat, light, multipurpose combat aircraft able to carry a wide range of equipment and weaponry. Possessing seven hard-points, three are located under each wing with one mounted under the fuselage.";
 		buyPrice = 73350000;
 		virtualSpace = 0;
 		garageLimit = 1;
@@ -1480,57 +1503,59 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher", "Twin_Cannon_20mm", "missiles_SCALPEL", "missiles_ASRAAM", "GBU12BombLauncher_Plane_Fighter_03_F" } };
 	};
 	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { 
+		description = "The A-149 Gryphon is a fourth-generation, single-seat, single-engine, and all-weather tactical fighter jet. The aircraft was designed as a multi-role platform at an affordable cost, and unlike some of the larger air-superiority jets, it can also perform well in low-altitude flight. Despite its aging platform, the A-149 has still been upgraded with the newest sensors and weapons systems.";
 		buyPrice = 75500000; 
-		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
 	class B_Plane_CAS_01_F : I_Plane_Fighter_03_CAS_F { 
+		description = "	The A-164 Wipeout is a single-seat aircraft used for close air support and air interdiction. The life-cycle of its predecessor, the A-10, ended in 2030 and the need for replacement grew more important with the rising tension in the Pacific. A limited development budget did not allow for a fresh start, instead the concept of the A-10 was improved with better shape, engines and armaments.";
 		buyPrice = 90500000; 
-		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher", "Gatling_30mm_Plane_CAS_01_F", "Missile_AA_04_Plane_CAS_01_F", "Missile_AGM_02_Plane_CAS_01_F", "Rocket_04_HE_Plane_CAS_01_F", "Rocket_04_AP_Plane_CAS_01_F", "Bomb_04_Plane_CAS_01_F" } };
 	};
 	class B_Plane_Fighter_01_F : I_Plane_Fighter_03_CAS_F { 
+		description = "The F/A-181 Black Wasp II is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet. The aircraft was designed primarily as an air-superiority fighter, but also has ground attack capabilities. Its additional external hardpoints enable the aircraft to carry a wide variety of weapons configurations. The Black Wasp is fitted with the required equipment for carrier operations.";
 		buyPrice = 105500000; 
-		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
-	class B_Plane_Fighter_01_Stealth_F : I_Plane_Fighter_03_CAS_F { 
+	class B_Plane_Fighter_01_Stealth_F : B_Plane_Fighter_01_F { 
 		buyPrice = 115600000; 
-		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
 	class O_Plane_CAS_02_F : I_Plane_Fighter_03_CAS_F { 
+		description = "The To-199 Neophron is a new addition to CSAT air forces. An agile single-seat aircraft is used for close air support but can also take down air threats. It cannot carry as much payload as NATO's A-164 and has to rearm more often, but it can take-off from even the roughest terrain, not being as dependent on air bases or aircraft carriers.";
 		buyPrice = 86500000; 
-		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher", "Cannon_30mm_Plane_CAS_02_F", "Missile_AA_03_Plane_CAS_02_F", "Missile_AGM_01_Plane_CAS_02_F", "Rocket_03_HE_Plane_CAS_02_F", "Rocket_03_AP_Plane_CAS_02_F", "Bomb_03_Plane_CAS_02_F" } };
 	};
 	class O_Plane_Fighter_02_F : I_Plane_Fighter_03_CAS_F { 
+		description = "The To-201 Shikra is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet. The aircraft was designed by a CSAT and Russian joint syndicate with the goal to build a highly agile and maneuverable air-superiority fighter.";
 		buyPrice = 115500000;
-		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher", "weapon_Fighter_Gun_30mm" } };
 	};
-	class O_Plane_Fighter_02_Stealth_F : I_Plane_Fighter_03_CAS_F {
+	class O_Plane_Fighter_02_Stealth_F : O_Plane_Fighter_02_F {
 		buyPrice = 130500000; 
-		virtualSpace = 0;
 		turrets[] = { { "CMFlareLauncher", "weapon_Fighter_Gun_30mm" } };
 	};
 
 	// CONTAINERS --------------------------------------------------------------------------------------
 	class B_Slingload_01_Cargo_F : Base {
+		description = "";
 		buyPrice = 0;
 		virtualSpace = 250;
 		garageLimit = 1;
 	};
 	class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {
+		description = "";
 		buyPrice = 0;
 		virtualSpace = 100;
 	};
 
 	class Land_Pod_Heli_Transport_04_box_black_F : B_Slingload_01_Cargo_F {
+		description = "";
 		buyPrice = 0;
 		virtualSpace = 125;
 	};
 	class Land_Pod_Heli_Transport_04_fuel_black_F : B_Slingload_01_Cargo_F {
+		description = "";
 		buyPrice = 0;
 		virtualSpace = 50;
 	};

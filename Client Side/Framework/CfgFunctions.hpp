@@ -116,6 +116,7 @@ class CfgFunctions {
 			class disguiseIdentity {};
 			class panic {};
 			class healAction {};
+			class boltcut {};
 		};
 
 		class Input {

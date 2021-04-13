@@ -18,9 +18,19 @@ private _display = findDisplay 46;
 if (_message isEqualTo "" || { isNull _display }) exitWith { false };
 
 private _message = _display ctrlCreate [(["ULP_Notification", "ULP_NotificationNoHeader"] select (_header isEqualTo "")), -1];
-(_message controlsGroupCtrl 102) ctrlSetStructuredText parseText _text;
+private _ctrlText = _message controlsGroupCtrl 102;
+_ctrlText ctrlSetStructuredText parseText _text;
+
+private _height = ctrlTextHeight _ctrlText;
+
+if !(_header isEqualTo "") then {
+	_height = _height + ((ctrlPosition (_message controlsGroupCtrl 101)) select 1);
+};
+
+_ctrlText ctrlSetPositionH (ctrlTextHeight _ctrlText);
+_ctrlText ctrlCommit 0;
+_message ctrlSetPositionH _height;
 _message ctrlSetPositionY (0.5 * safeZoneH + safeZoneY);
-_message ctrlSetPositionH (ctrlTextHeight _message);
 _message ctrlSetFade 1;
 _message ctrlCommit 0;
 

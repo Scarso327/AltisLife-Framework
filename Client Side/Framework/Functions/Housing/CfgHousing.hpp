@@ -5,6 +5,7 @@ class CfgHousing {
 	class Houses {
 		// GARAGES
 		class Land_i_Garage_V1_F {
+			icon = "";
 			price = 3500000;
 			sellMultiplier = 0.4;
 			breakIn = 3 * 60;
@@ -25,6 +26,7 @@ class CfgHousing {
 
 		// HOUSES
 		class BaseHouse {
+			icon = "";
 			sellMultiplier = 0.4;
 			breakIn = 5 * 60;
 			canShare = true;

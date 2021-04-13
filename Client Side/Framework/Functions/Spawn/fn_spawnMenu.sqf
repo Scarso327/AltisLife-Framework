@@ -63,20 +63,33 @@ private _icon = "";
 if (isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Housing")) then {
 	{
 		private _cfg = [typeOf _x] call ULP_fnc_vehicleCfg;
+		private _houseCfg = missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _x);
 
-		if ([getNumber (missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _x) >> "canSpawn")] call ULP_fnc_bool) then {
+		if ([getNumber (_houseCfg >> "canSpawn")] call ULP_fnc_bool) then {
+			private _icon = getText (_houseCfg >> "icon");
+
 			_item = _list lbAdd (_x getVariable ["building_name", (_cfg param [3, "House"])]);;
 			_list lbSetValue [_item, 1];
 			_list lbSetData [_item, _x call BIS_fnc_netId];
+
+			if !(_icon isEqualTo "") then {
+				_list lbSetPicture [_item, _icon];
+			};
 		};
 	} forEach ULP_Houses;
 };
 
 {
 	if ([configName _x, player] call ULP_fnc_ownsBase) then {
+		private _icon = getText (_x >> "icon");
+
 		_item = _list lbAdd getText (_x >> "displayName");
 		_list lbSetValue [_item, 2];
 		_list lbSetData [_item, getText (_x >> "Spawn" >> "marker")];
+
+		if !(_icon isEqualTo "") then {
+			_list lbSetPicture [_item, _icon];
+		};
 	};
 } forEach ("isClass (_x >> ""Spawn"")" configClasses (missionConfigFile >> "CfgBases"));
 

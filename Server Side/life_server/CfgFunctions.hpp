@@ -115,6 +115,11 @@ class CfgFunctions {
             file = "\life_server\Functions\Gathering";
             class initGathering {};
         };
+
+        class Mail {
+            file = "\life_server\Functions\Mail";
+            class addMail {};
+        };
     };
 
     class MySQL_Database {

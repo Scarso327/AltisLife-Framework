@@ -67,7 +67,7 @@ if (ULP_FirstSpawn) then {
 	if (["Police_Main", 1] call ULP_fnc_hasAccess) then { ["JoinAPC"] call ULP_fnc_achieve; };
 	if (["Police_RTA", 1] call ULP_fnc_hasAccess) then { ["JoinRTA"] call ULP_fnc_achieve; };
 	if (["Police_NPAS", 1] call ULP_fnc_hasAccess) then { ["JoinNPAS"] call ULP_fnc_achieve; };
-	if (["Police_SCO19", 1] call ULP_fnc_hasAccess) then { ["JoinSCO19"] call ULP_fnc_achieve; };
+	if (["Police_SCO", 1] call ULP_fnc_hasAccess) then { ["JoinSCO19"] call ULP_fnc_achieve; };
 	if (["Police_NCA", 1] call ULP_fnc_hasAccess) then { ["JoinNCA"] call ULP_fnc_achieve; };
 	if (["Police_MPU", 1] call ULP_fnc_hasAccess) then { ["JoinMPU"] call ULP_fnc_achieve; };
 	if (["Police_RPU", 1] call ULP_fnc_hasAccess) then { ["JoinRPU"] call ULP_fnc_achieve; };

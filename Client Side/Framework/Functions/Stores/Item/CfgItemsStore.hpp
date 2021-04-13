@@ -30,7 +30,7 @@ class CfgItemsStore {
 				class textures { class arifle_SPAR_01_blk_F {}; };
 			};
 			class arifle_SPAR_02_blk_F : FactionBase {
-				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 7] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 7] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_SPAR_02_blk_F {}; };
 			};
 			class arifle_CTAR_blk_F : FactionBase {
@@ -42,11 +42,11 @@ class CfgItemsStore {
 				class textures { class arifle_CTARS_blk_F {}; };
 			};
 			class arifle_MX_Black_F : FactionBase {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_MX_Black_F {}; };
 			};
 			class arifle_MXM_Black_F : FactionBase {
-				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
+				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_MXM_Black_F {}; };
 			}; 
 			class arifle_MX_SW_Black_F : FactionBase {
@@ -54,15 +54,15 @@ class CfgItemsStore {
 				class textures { class arifle_MX_SW_Black_F {}; };
 			};
 			class arifle_MSBS65_black_F : FactionBase {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_MSBS65_black_F {}; };
 			};
 			class arifle_Katiba_C_F : FactionBase {
-				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
+				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_Katiba_C_F {}; };
 			};
 			class arifle_ARX_blk_F : FactionBase {
-				condition = "[""Police_Main"", 7] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 6] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
+				condition = "[""Police_Main"", 7] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 6] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_ARX_blk_F {}; };
 			};
 			class arifle_SPAR_03_blk_F : FactionBase {
@@ -150,7 +150,7 @@ class CfgItemsStore {
 			class ItemCompass : FactionBase {};
 			class ItemWatch : FactionBase {};
 			class ItemGPS : FactionBase {};
-			class B_UavTerminal : FactionBase { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_SCO19"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
+			class B_UavTerminal : FactionBase { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
 			class ToolKit : FactionBase {};

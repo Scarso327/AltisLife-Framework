@@ -99,6 +99,26 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class SpeedyLocksmith { // TODO
+		icon = "Data\UI\Perks\speedyLocksmith.paa";
+		displayName = "Speedy Locksmith";
+		description = "Increases your lockpicking speed by %1%2.";
+		removalMultiplier = 1.3;
+		class Leveling {
+			maxLevel = 3;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "20 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			level = 7;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class WideTraveller {
 		icon = "Data\UI\Perks\wideTraveller.paa";
 		displayName = "Wide Traveller";
@@ -107,6 +127,20 @@ class CfgPerks {
 		class Requirements {
 			factions[] = { "Civilian" };
 			level = 8;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
+	class CompletedCV {
+		icon = "Data\UI\Perks\wideTraveller.paa"; // ICON
+		displayName = "Completed CV";
+		description = "Allows you to get employed at various job sites.";
+		removalMultiplier = 3;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 9;
 			prestige = 0;
 			profession[] = {};
 		};
@@ -131,6 +165,46 @@ class CfgPerks {
 			profession[] = {};
 		};
 		onActivated = "_params + (_params * (_bonus / 100))";
+	};
+
+	class RapidSurveyor { // TODO
+		icon = "Data\UI\Perks\speedyLocksmith.paa"; // ICON
+		displayName = "Rapid Surveyor";
+		description = "Increases your surveying speed on dig sites speed by %1%2.";
+		removalMultiplier = 1;
+		class Leveling {
+			maxLevel = 4;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "15 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 11;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
+	class BoltCutter { // TODO
+		icon = "Data\UI\Perks\speedyLocksmith.paa"; // ICON
+		displayName = "Bolt Cutter";
+		description = "Increases your bolt cutting speed by %1%2.";
+		removalMultiplier = 1.3;
+		class Leveling {
+			maxLevel = 2;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "25 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			level = 12;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
 	};
 
 	class ShadyTrader {
@@ -343,26 +417,6 @@ class CfgPerks {
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 24;
-			prestige = 0;
-			profession[] = {};
-		};
-		onActivated = "";
-	};
-
-	class SpeedyLocksmith { // TODO
-		icon = "Data\UI\Perks\speedyLocksmith.paa";
-		displayName = "Speedy Locksmith";
-		description = "Increases your lockpicking speed by %1%2.";
-		removalMultiplier = 1.3;
-		class Leveling {
-			maxLevel = 3;
-			xpLevel = 100;
-			xpMultipler = 2;
-			levelCalculation = "20 * (_this select 0)";
-		};
-		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
-			level = 25;
 			prestige = 0;
 			profession[] = {};
 		};

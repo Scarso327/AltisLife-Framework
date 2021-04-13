@@ -17,94 +17,68 @@ class CfgLicenses {
         };
     };
 
-    class Trucking : BaseLicense {
+    class Trucking : Driving {
         displayName = "Trucking Licence";
         buyPrice = 60000;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
     };
 
-    class Boating : BaseLicense {
+    class Boating : Driving {
         displayName = "Boating Licence";
         buyPrice = 6500;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
     };
 
-    class Piloting : BaseLicense {
+    class Piloting : Driving {
         displayName = "Piloting Licence";
         buyPrice = 320000;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
     };
 
-    class Home : BaseLicense {
+    class Home : Driving {
         displayName = "Homeowner's Approval";
         buyPrice = 3000000;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
     };
 
-    class Taxi : BaseLicense {
+    class Taxi : Driving {
         displayName = "Taxi Altis Worker";
         buyPrice = 35000;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
+        conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
-    class Solicitor : BaseLicense {
+    class Solicitor : Driving {
         displayName = "Altis Solicitors";
         buyPrice = 1700000;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
+        conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
-    class News : BaseLicense {
+    class News : Driving {
         displayName = "AAN World News Reporter";
         buyPrice = 700000;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
+        conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
-    class IDAP : BaseLicense {
+    class IDAP : Driving {
         displayName = "IDAP Volunteer";
         buyPrice = 0;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
+        conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
-    class Handgun : BaseLicense {
+    class Handgun : Driving {
         displayName = "Handgun Certificate";
         buyPrice = 65000;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
     };
 
-    class Hunting : BaseLicense {
+    class Hunting : Driving {
         displayName = "Hunting Certificate";
         buyPrice = 140000;
-        class Settings {
-            isVisible = true;
-            isRemovable = true;
-        };
+        class Settings : Settings {};
     };
 
     class Rebel : BaseLicense {

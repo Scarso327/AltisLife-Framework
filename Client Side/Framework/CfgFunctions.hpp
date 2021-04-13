@@ -456,6 +456,7 @@ class CfgFunctions {
 			class groupMembers {};
 			class isGroupMember {};
 			class disbandGroup {};
+			class groupTax {};
 		};
 
 		class NLR {

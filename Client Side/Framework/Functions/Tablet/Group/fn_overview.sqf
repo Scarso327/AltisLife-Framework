@@ -33,8 +33,8 @@ if (_display getVariable ["funds_changed", -1] < 0) then {
 				"", "_total"
 			];
 
-			(_display displayCtrl 23066) ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>1.5%</t><br/><t size='0.9'>Balance<t align='right'>Tax</t></t>", 
-				([format["%1%2", "£", [_total] call ULP_fnc_numberText], "-"] select (_total <= 0))
+			(_display displayCtrl 23066) ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>%2%3</t><br/><t size='0.9'>Balance<t align='right'>Tax</t></t>", 
+				([format["%1%2", "£", [_total] call ULP_fnc_numberText], "-"] select (_total <= 0)), [] call ULP_fnc_groupTax, "%"
 			];
 		};
 	}] call ULP_fnc_addEventHandler)];
@@ -95,8 +95,8 @@ lbClear _rankList;
 _rankList lbSetCurSel 0;
 
 private _total = [] call ULP_fnc_groupFunds;
-(_display displayCtrl 23066) ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>1.5%</t><br/><t size='0.9'>Balance<t align='right'>Tax</t></t>", 
-	([format["%1%2", "£", [_total] call ULP_fnc_numberText], "-"] select (_total <= 0))
+(_display displayCtrl 23066) ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align='right'>%2%3</t><br/><t size='0.9'>Balance<t align='right'>Tax</t></t>", 
+	([format["%1%2", "£", [_total] call ULP_fnc_numberText], "-"] select (_total <= 0)), [] call ULP_fnc_groupTax, "%"
 ];
 
 // Disable Buttons

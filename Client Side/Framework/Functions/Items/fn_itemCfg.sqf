@@ -51,6 +51,32 @@ if (!(isNull _internalCfg) && { isClass (_internalCfg >> "Textures") }) then {
 	_textures = ("true" configClasses (_internalCfg >> "Textures"));
 };
 
+private _price = ([
+	0, // No defined price...
+	([
+		getNumber (_internalCfg >> "price"), // Reputation isn't added...
+		[getNumber (_internalCfg >> "price")] call ULP_fnc_reputationPrice // Reputation is added...
+	] select ([getNumber (_internalCfg >> "reputation")] call ULP_fnc_bool))
+] select (isNumber (_internalCfg >> "price")));
+
+// Cartels...
+if (_class isEqualTo "CfgWeapons") then {
+	{
+		private _object = missionNamespace getVariable [format["ULP_SRV_Cartel_%1", configName _x], objNull];
+
+		if !(isNull _object) then {
+			private _owner = (_object getVariable ["owner", []]) param [0, grpNull];
+			if (!(isNull _owner) && { isClass (_x >> "Arms") } && { (_owner isEqualTo (group player)) }) then {
+				_price = switch (getNumber( _armaCfg >> "type" )) do {
+					case 1: { _price - (_price * getNumber (_x >> "Arms" >> "primaryDiscount")) };
+					case 2: { _price - (_price * getNumber (_x >> "Arms" >> "secondaryDiscount")) };
+					default { _price };
+				};
+			};
+		};
+	} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgCartels" >> "Fixed"));
+};
+
 [
 	_class,
 	_armaCfg,
@@ -58,6 +84,6 @@ if (!(isNull _internalCfg) && { isClass (_internalCfg >> "Textures") }) then {
 	_item,
 	getText (([_armaCfg, _internalCfg] select (isText (_internalCfg >> "picture"))) >> "picture"),
 	getText (([_armaCfg, _internalCfg] select (isText (_internalCfg >> "displayName"))) >> "displayName"),
-	([0, ([getNumber (_internalCfg >> "price"), [getNumber (_internalCfg >> "price")] call ULP_fnc_reputationPrice] select ([getNumber (_internalCfg >> "reputation")] call ULP_fnc_bool))] select (isNumber (_internalCfg >> "price"))),
+	_price,
 	_textures
 ]

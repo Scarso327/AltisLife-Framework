@@ -15,7 +15,10 @@ class CfgFactions {
 				payMulti = 0.1;
 				required = 1;
 			};
-			class RTA { queryIndex = 26; };
+			class RTA {
+				queryIndex = 26;
+				payMulti = 0.025;
+			};
 			class NPAS { queryIndex = 27; };
 			class SCO { queryIndex = 28; };
 			class NCA { queryIndex = 29; };
@@ -66,7 +69,10 @@ class CfgFactions {
 				required = 1;
 			};
 			class AA { queryIndex = 26; };
-			class HR { queryIndex = 27; };
+			class HR {
+				queryIndex = 27;
+				payMulti = 0.025;
+			};
 		};
 
 		class DatabaseInfo {

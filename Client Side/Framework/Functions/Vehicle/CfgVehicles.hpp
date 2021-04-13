@@ -127,7 +127,7 @@ class CfgVehicles {
 	};
 
 	class C_Hatchback_01_F : Base {
-		description = "A four-seat hatchback car mass-produced in the Far East to satisfy increasing demand for family cars. Economical operation, enhanced safety and a roomy trunk made these cars widely popular in the whole of Europe. Also comes in a sporty version.";
+		description = "A four-seat hatchback car mass-produced in the Far East to satisfy increasing demand for family cars. Also comes in a sporty version.";
 		buyPrice = 21450;
 		virtualSpace = 25;
 		class Textures {
@@ -266,7 +266,7 @@ class CfgVehicles {
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 276500; };
 
 	class C_Offroad_01_F : Base {
-		description = "The 4x4 pickup by Generic Motors is a perfect choice for farmers and hunters. The durable chassis and powerful engine have been designed to withstand anything from the cratered highways of Central Europe to the rugged terrain of the Mediterranean. The armed version is fitted either with a .50 caliber heavy machine gun or an anti-tank recoilless rifle. It provides the combination of mobility and firepower to many paramilitary and guerilla forces in local conflicts around the globe. Specialized versions, which sport a hard rear cover and rack-mounted communications equipment, are in use by law enforcement, national park rangers, and armed forces. These vehicles feature a large floodlight, loudspeakers, and long-range antennas.";
+		description = "The 4x4 pickup by Generic Motors has a durable chassis and powerful engine and has been designed to withstand the rugged terrain of the Mediterranean.";
 		buyPrice = 42800;
 		virtualSpace = 60;
 		class Textures {
@@ -345,7 +345,7 @@ class CfgVehicles {
 	class C_Offroad_01_repair_F : C_Offroad_01_covered_F { buyPrice = 132400; };
 
 	class C_Offroad_02_unarmed_F : Base {
-		description = "The MB 4WD is a modern four-wheel drive off-road vehicle with a distinctive construction. The vehicle was produced in the US and exists in a number of different editions. Thanks to the powerful engine, durable chassis and great maneuverability, this vehicle can handle difficult terrains from dry deserts to humid jungles or artic wastelands.";
+		description = "The MB 4WD is a modern four-wheel drive off-road vehicle with a distinctive construction, powerful engine, durable chassis and great maneuverability.";
 		buyPrice = 38750;
 		virtualSpace = 55;
 		class Textures {
@@ -460,7 +460,7 @@ class CfgVehicles {
 	};
 
 	class C_Van_02_transport_F : Base {
-		description = "The standard van can be used for a huge variety of practical purposes. This particular model features a long load length and excellent roof height, allowing for the transport of passengers, cargo, or even some smaller vehicles. Several aftermarket exterior components, such as a ladder, protective guards and a roof rack, can be fitted where appropriate. Specialized variants are used for emergency healthcare, patient evacuation and various utility services.";
+		description = "The van can be used for a variety of practical purposes. Featuring a long load length and excellent roof height, allowing for the transport of passengers, cargo and smaller vehicles.";
 		buyPrice = 88000;
 		virtualSpace = 90;
 		class Textures {
@@ -517,7 +517,7 @@ class CfgVehicles {
 	class C_Van_02_service_F : C_Van_02_vehicle_F {};
 
 	class B_CTRG_LSV_01_light_F : Base {
-		description = "The Prowler is a light strike vehicle (LSV). That means it’s agile, lightly armored and uses speed, maneuverability, and off-road mobility to avoid threats. Two configurations of Prowler exist. The armed variant is equipped with two machine guns. The front seated position carries .338 SPMG medium machine gun, while the top turret is equipped with a .50 cal heavy machine gun. With this arsenal, the Prowler is ideal for quick hit and run missions. The unarmed variant is stripped of all guns, but the back part of the vehicle is opened and has reserve seats for two additional soldiers.";
+		description = "The Prowler is agile, lightly armored and uses speed, maneuverability, and off-road mobility to avoid threats.";
 		buyPrice = 580000;
 		virtualSpace = 50;
 		garageLimit = 3;
@@ -566,7 +566,7 @@ class CfgVehicles {
 	class B_T_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 675000; };
 
 	class O_LSV_02_unarmed_F : Base {
-		description = "An agile, lightly protected vehicle for 5-6 soldiers – depending on the configuration. Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is highly adaptable to severe, rugged and restrictive terrains while providing off-road, cross-country mobility under all types of weather conditions. CSAT Pacific forces primarily use the unarmed variant and the armed variant fitted with a 6.5 mm minigun.";
+		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
 		buyPrice = 800000;
 		virtualSpace = 50;
 		garageLimit = 3;
@@ -595,7 +595,7 @@ class CfgVehicles {
 	};
 
 	class B_MRAP_01_F : Base {
-		description = "The Hunter is a Mine-Resistant Ambush Protected (MRAP) vehicle manufactured by US arms factories to provide troops with enhanced protection. The armored hull can withstand light weapons and protects the crew against landmines and improvised explosive devices. Even though the heavy armor and powerful engine cause increased fuel consumption, it has been favored by frontline troops over the light vehicles for its easy maintenance and good protection level.";
+		description = "The Hunter is a MRAP vehicle with an armored hull that can withstand light weapons and offers a powerful engine.";
 		buyPrice = 9800000;
 		virtualSpace = 65;
 		garageLimit = 1;
@@ -619,7 +619,7 @@ class CfgVehicles {
 	};
 
 	class O_MRAP_02_F : Base {
-		description = "The Ifrit is a new Mine-Resistant Ambush Protected (MRAP) vehicle designed and manufactured in Russia. Its strengths lie in reliability in extreme weather conditions and crew protection, but its manufacturing costs are somewhat higher compared to other MRAPs.";
+		description = "The Ifrit is a MRAP vehicle designed and manufactured in Russia. Its strengths lie in reliability in extreme weather conditions and crew protection.";
 		buyPrice = 7500000;
 		virtualSpace = 65;
 		garageLimit = 2;
@@ -686,7 +686,7 @@ class CfgVehicles {
 	};
 
 	class I_MRAP_03_F : Base {
-		description = "The Strider is a medium all-terrain vehicle with amphibious capability and enhanced crew protection, designed for reconnaissance and troop transport roles. It has been adopted by most of the AAF as a replacement for the older medium troop transports of the past decade. The unarmed version is fitted with an observation periscope package with thermal imaging and a laser marker.";
+		description = "The Strider is a medium all-terrain vehicle with amphibious capability and enhanced crew protection, designed for reconnaissance and troop transport roles.";
 		buyPrice = 5750000;
 		virtualSpace = 65;
 		garageLimit = 2;
@@ -718,7 +718,7 @@ class CfgVehicles {
 
 	// TRUCKS --------------------------------------------------------------------------------------
 	class C_Tractor_01_F : Base {
-		description = "Found in farm barns across the globe, the common tractor is a reliable high torque engineering vehicle, used for towing trailers and many other agricultural tasks. This 2WD tractor with a diesel engine has proven itself reliable since the eighties. With solid maintenance and the occasional lick of fresh paint, this old workhorse has been in use by several generations of farmers to date.";
+		description = "Found in farm barns across the globe, the common tractor is a reliable high torque engineering vehicle, used for towing trailers and many other agricultural tasks.";
 		buyPrice = 23150;
 		virtualSpace = 10;
 		garageLimit = 3;
@@ -739,7 +739,7 @@ class CfgVehicles {
 	};
 
 	class C_Van_01_transport_F : Base {
-		description = "The civilian 4x4 truck is a highly customizable truck with off-road capabilities preferred by the civilian population. It builds on retro design, but utilizes a modern engine and electronics. Most common track setups are boxed, cistern and pick-up set.";
+		description = "The civilian 4x4 truck is a highly customizable truck with off-road capabilities. It builds on retro design, but utilizes a modern engine and electronics.";
 		buyPrice = 190500;
 		virtualSpace = 100;
 		garageLimit = 3;
@@ -806,7 +806,7 @@ class CfgVehicles {
 	};
 
 	class I_Truck_02_transport_F : Base {
-		description = "The Zamak heavy truck is a 6x6 vehicle used for transport, repair and utility. Fitted with a powerful V8 engine, these trucks are reliable even in harsh conditions.";
+		description = "The Zamak heavy truck is a 6x6 vehicle used for transport and utility. Fitted with a powerful V8 engine, these trucks are reliable even in harsh conditions.";
 		buyPrice = 505000;
 		virtualSpace = 280;
 		garageLimit = 2;
@@ -841,7 +841,7 @@ class CfgVehicles {
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {};
 
 	class O_Truck_03_transport_F : Base {
-		description = "The Tempest is a 6x6 mine resistant standard transport truck for the CSAT army. Its primary role is to carry troops and cargo under armor. The modular design of the truck allows several transport versions: cargo, refuel, medical, repair and ammo resupply.";
+		description = "The Tempest is a 6x6 mine resistant standard transport truck. The modular design of the truck allows several transport versions.";
 		buyPrice = 615500;
 		virtualSpace = 370;
 		garageLimit = 2;
@@ -882,7 +882,7 @@ class CfgVehicles {
 	};
 
 	class B_Truck_01_mover_F : Base {
-		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. It servers as a standard heavy transport vehicle for BLUFOR armies. There are several versions covering the basic transport functions: cargo, refuel, medical, repair, and ammo resupply.";
+		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. There are several versions covering the basic transport functions.";
 		buyPrice = 334000;
 		virtualSpace = 10;
 		garageLimit = 2;
@@ -1068,7 +1068,7 @@ class CfgVehicles {
 
 	// BOATS --------------------------------------------------------------------------------------
 	class C_Scooter_Transport_01_F : Base {
-		description = "A Personal WaterCraft of sit-down type. This small-hulled craft driven by a jet-propulsion system offers seats for 3 people. Its powerful engine and great maneuverability make this craft a lot of fun to drive. And of course this water transport vehicle is perfectly suited for military use as well.";
+		description = "A Personal WaterCraft of sit-down type. Its powerful engine and great maneuverability make this craft a lot of fun to drive.";
 		buyPrice = 14300;
 		virtualSpace = 5;
 		class Textures {
@@ -1125,13 +1125,13 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat : Base {
-		description = "An inflatable boat, often nicknamed 'rubber duck', is a lightweight boat constructed from tubes containing pressurized gas. Inflatables typically come in lengths between 2 to 7 meters. Due to their speed, weight and portability, inflatable boats are used in diverse roles such as lifeguard and rescue boats and even more often in the military as landing craft.";
+		description = "An inflatable boat, often nicknamed 'rubber duck', is a lightweight boat constructed from tubes containing pressurized gas.";
 		buyPrice = 4150;
 		virtualSpace = 50;
 	};
 
 	class C_Boat_Civil_01_F : Base {
-		description = "The luxury motorboat is an engine powered boat used by the Police and Altis' richest. Its speed and maneuverability is almost on par with military speedboat.";
+		description = "The luxury motorboat is an engine powered boat used by the Police and Altis' richest.";
 		buyPrice = 153200;
 		virtualSpace = 75;
 		class Textures {
@@ -1143,7 +1143,7 @@ class CfgVehicles {
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
 	class C_Boat_Transport_02_F : Base {
-		description = "The Naval Special Warfare Rigid Hull Inflatable Boat is a fast, high-buoyancy all weather boat designed to transport a fully equipped team of eight-men and three crew members. It is also fully transportable by C-130 Hercules.";
+		description = "The Naval Special Warfare Rigid Hull Inflatable Boat is a fast, high-buoyancy all weather boat designed to transport a fully equipped team of eight-men and three crew members.";
 		buyPrice = 297600;
 		virtualSpace = 150;
 		class Textures {
@@ -1158,7 +1158,7 @@ class CfgVehicles {
 	};
 
 	class B_Boat_Armed_01_minigun_F : Base {
-		description = "This V shaped boat with two powerful jet impellers excels in speed and maneuverability. It is used by both BLUFOR and OPFOR as a coastline guard boat and for special operations. The speedboat has a front-facing, remote controlled GMG turret. The OPFOR version is commonly equipped with a HMG in the rear, while BLUFOR speedboats are armed with a minigun.";
+		description = "This boat excels in speed and maneuverability and is used as a coastline guard boat and for special operations.";
 		buyPrice = 14360500;
 		virtualSpace = 80;
 		garageLimit = 1;
@@ -1178,20 +1178,20 @@ class CfgVehicles {
 	};
 
 	class B_SDV_01_F : Base {
-		description = "The SDV is a manned submersible vehicle used to transport teams of divers over long distances under water. Its construction is based on the SEALs Delivery Vehicle from the early 21st century, but the engine and maneuverability have been increased rapidly. Divers drive the SDV while exposed to water and breathing from the vehicle's compressed air supply or using their own SCUBA gear. The SDV can take up to four passengers, but can be operated by just one person. It also contains a small compartment to store additional equipment.";
+		description = "The SDV is a manned submersible vehicle used to transport teams of divers over long distances under water.ply or using their own SCUBA gear.";
 		buyPrice = 389500;
 		virtualSpace = 5;
 	};
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
 	class B_UAV_01_F : Base {
-		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance. Darters are agile, silent and hard to detect. The ability to hover in one place and use the camera to observe a location is invaluable in setting ambushes.";
+		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
 		buyPrice = 98700;
 		virtualSpace = 0;
 	};
 	
 	class C_Heli_Light_01_civil_F : Base {
-		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War. It now exists in several variants used by both military and civilian transport. The M-900 is a civilian version. Closed cabin and comfortable interior provides space for two passengers.";
+		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
 		buyPrice = 565000;
 		virtualSpace = 5;
 		garageLimit = 2;
@@ -1261,13 +1261,10 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
-	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { 
-		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War, it now exists in several variants fielded by both militaries and the civilian populace. The MH-9 Hummingbird is mostly used as a special forces troop transport with its two outboard benches.";
-		buyPrice = 780000; 
-	};
+	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 780000; };
 
 	class O_Heli_Light_02_unarmed_F : Base {
-		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force. The helicopter was intended to replace the Mi-8 and can be used for reconnaissance, transporting a full squad with combat gear and special operations.";
+		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
 		buyPrice = 2350000;
 		virtualSpace = 25;
 		garageLimit = 1;
@@ -1291,7 +1288,7 @@ class CfgVehicles {
 	};
 
 	class I_Heli_light_03_unarmed_F : Base {
-		description = "The WY-55 Hellcat is a multipurpose military helicopter, most suited for anti-surface, battlefield utility with limited transport capability. It replaces its predecessor, the Super Lynx, with improved maneuverability, durability, and protection. The armed version is fitted with twin miniguns and unguided rockets. Its also fitted with a thermal camera that can be controlled by the co-pilot.";
+		description = "The WY-55 Hellcat is a multipurpose helicopter, most suited for utility and limited transport.";
 		buyPrice = 2130000;
 		virtualSpace = 20;
 		garageLimit = 1;
@@ -1317,7 +1314,7 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Transport_01_F : Base {
-		description = "The UH-80 Ghost Hawk is a BLUFOR medium-lift utility helicopter with stealth design. The Ghost Hawk was developed for special operations with a focus on deployment and extraction of troops undetected by enemy radar. Some pilots say the stealth design hindered the versatility of the helicopter compared to its predecessor, the UH-60. Nevertheless, the Ghost Hawk is now used as a primary transport helicopter in the BLUFOR army.";
+		description = "The UH-80 Ghost Hawk is a medium-lift utility helicopter with stealth design.";
 		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
@@ -1329,7 +1326,7 @@ class CfgVehicles {
 	};
 
 	class I_Heli_Transport_02_F : Base {
-		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport used by the AAF. It can carry up to 16 soldiers plus crew. Besides the transport version, many other versions of the Mohawk exist, serving effectively in evac, anti-submarine warfare, or armed air support roles. Upgrades from its predecessor consist of more powerful engines and construction changes fully utilizing modern materials.";
+		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
 		buyPrice = 13240000;
 		virtualSpace = 55;
 		garageLimit = 1;
@@ -1366,7 +1363,7 @@ class CfgVehicles {
 	class C_IDAP_Heli_Transport_02_F : I_Heli_Transport_02_F {};
 
 	class O_Heli_Transport_04_black_F : Base {
-		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles. It can transport cargo, troops, and provide battlefield supplies (ammunition, fuel, repair facilities, and medical equipment). The helicopter can also transport light vehicles thanks to its sling loading capabilities.";
+		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
 		virtualSpace = 0;
 		garageLimit = 1;
@@ -1438,7 +1435,7 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Attack_01_F : Base {
-		description = "A two-seat reconnaissance and target designation helicopter used to seek targets for gunships. Even though the construction dates back some time and the program faced cancellation in the first years of the 21st century, the project was finished successfully and the Blackfoot became the first attack helicopter to field stealth technology, which was even applied to the main rotor. The Blackfoot is extremely fast, agile and hard to detect even by contemporary sensors. However it is slowly becoming outdated.";
+		description = "A two-seat reconnaissance and target designation helicopter used to seek targets for gunships.";
 		buyPrice = 146560000;
 		virtualSpace = 0;
 		garageLimit = 1;
@@ -1448,7 +1445,7 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher", "gatling_20mm", "missiles_DAGR", "missiles_ASRAAM" } };
 	};
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
-		description = "A multipurpose successor to the Mi-24, the Mi-48 Kajman (BLUFOR designation «Hornet») is a large gunship and attack helicopter with troop transport capacity for 8 passengers. The front part of the helicopter is based on the Mi-28 attack helicopter, the coaxial rotor providing increased stability is taken from the Ka-52 and the passenger transport capacity is the same as the Mi-24.";
+		description = "A multipurpose successor to the Mi-24, the Mi-48 Kajman (designated 'Hornet') is a large gunship and attack helicopter with troop transport capacity for 8 passengers";
 		buyPrice = 212340000;
 		virtualSpace = 30;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm", "missiles_SCALPEL", "rockets_Skyfire", "Laserdesignator_mounted" } };
@@ -1456,7 +1453,7 @@ class CfgVehicles {
 
 	// PLANES --------------------------------------------------------------------------------------
 	class C_Plane_Civil_01_F : Base {
-		description = "Caesar BTT is a single-engine, fixed-gear, low-wing general aviation aircraft built from composite materials. The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m). It is used by civilians and smaller shipping companies all around the world.";
+		description = "The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m).";
 		buyPrice = 1256000;
 		virtualSpace = 5;
 		garageLimit = 2;
@@ -1464,7 +1461,7 @@ class CfgVehicles {
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
 	class B_T_VTOL_01_infantry_F : Base {
-		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL (Vertical Take-Off and Landing) technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways. It also provides unparalleled maneuverability with its unique ability to perform pylon turns or merely hover in place. The huge internal storage allows for transportation of vehicles up to the size and weight of AMV-7 Marshall APC in the vehicle transport variant or up to 32 fully armed soldiers with supplies in the infantry transport variant. The storage space of the gunship variant is fully occupied by automated weapon stations and carried ammunition.";
+		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";
 		buyPrice = 75500000;
 		virtualSpace = 175;
 		garageLimit = 1;
@@ -1480,7 +1477,7 @@ class CfgVehicles {
 	};
 
 	class O_T_VTOL_02_infantry_F : B_T_VTOL_01_infantry_F {
-		description = "By far the largest CSAT joint development project to date was long troubled by the conflicting requirements of the participating armies who demanded an aircraft with VTOL capabilities. The planned budget was vastly exceeded several times and development was years behind schedule. The program eventually became one of the most expensive in military procurement history and despite a great deal of information remains classified and is often compared to the older F-35 program. The final solution was based upon the most promising prototype designed in Xi'an which was able to meet most of the requirements with satisfactory results. High running and maintenance costs remains a huge issue that plagues the reputation of the otherwise extremely progressive aircraft with many unique features and top-notch bleeding-edge technologies.";
+		description = "The most promising prototype built by CSAT engineers presents an extremely progressive design with many unique features and top-notch bleeding-edge technologies.";
 		buyPrice = 115650000;
 		virtualSpace = 80;
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
@@ -1492,7 +1489,7 @@ class CfgVehicles {
 	};
 
 	class I_Plane_Fighter_03_CAS_F : Base {
-		description = "The A-143 Buzzard is a single seat, light, multipurpose combat aircraft able to carry a wide range of equipment and weaponry. Possessing seven hard-points, three are located under each wing with one mounted under the fuselage.";
+		description = "The A-143 Buzzard is a single seat, light, multipurpose combat aircraft able to carry a wide range of equipment and weaponry.";
 		buyPrice = 73350000;
 		virtualSpace = 0;
 		garageLimit = 1;
@@ -1503,17 +1500,17 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher", "Twin_Cannon_20mm", "missiles_SCALPEL", "missiles_ASRAAM", "GBU12BombLauncher_Plane_Fighter_03_F" } };
 	};
 	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { 
-		description = "The A-149 Gryphon is a fourth-generation, single-seat, single-engine, and all-weather tactical fighter jet. The aircraft was designed as a multi-role platform at an affordable cost, and unlike some of the larger air-superiority jets, it can also perform well in low-altitude flight. Despite its aging platform, the A-149 has still been upgraded with the newest sensors and weapons systems.";
+		description = "The A-149 Gryphon is a fourth-generation, single-seat, single-engine, and all-weather tactical fighter jet.";
 		buyPrice = 75500000; 
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
 	class B_Plane_CAS_01_F : I_Plane_Fighter_03_CAS_F { 
-		description = "The A-164 Wipeout is a single-seat aircraft used for close air support and air interdiction. The life-cycle of its predecessor, the A-10, ended in 2030 and the need for replacement grew more important with the rising tension in the Pacific. A limited development budget did not allow for a fresh start, instead the concept of the A-10 was improved with better shape, engines and armaments.";
+		description = "The A-164 Wipeout is a single-seat aircraft used for close air support and air interdiction.";
 		buyPrice = 90500000; 
 		turrets[] = { { "CMFlareLauncher", "Gatling_30mm_Plane_CAS_01_F", "Missile_AA_04_Plane_CAS_01_F", "Missile_AGM_02_Plane_CAS_01_F", "Rocket_04_HE_Plane_CAS_01_F", "Rocket_04_AP_Plane_CAS_01_F", "Bomb_04_Plane_CAS_01_F" } };
 	};
 	class B_Plane_Fighter_01_F : I_Plane_Fighter_03_CAS_F { 
-		description = "The F/A-181 Black Wasp II is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet. The aircraft was designed primarily as an air-superiority fighter, but also has ground attack capabilities. Its additional external hardpoints enable the aircraft to carry a wide variety of weapons configurations. The Black Wasp is fitted with the required equipment for carrier operations.";
+		description = "The F/A-181 Black Wasp II is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet.";
 		buyPrice = 105500000; 
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
@@ -1522,12 +1519,12 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
 	class O_Plane_CAS_02_F : I_Plane_Fighter_03_CAS_F { 
-		description = "The To-199 Neophron is a new addition to CSAT air forces. An agile single-seat aircraft is used for close air support but can also take down air threats. It cannot carry as much payload as NATO's A-164 and has to rearm more often, but it can take-off from even the roughest terrain, not being as dependent on air bases or aircraft carriers.";
+		description = "The To-199 Neophron is a new addition to CSAT air forces. An agile single-seat aircraft is used for close air support but can also take down air threats.";
 		buyPrice = 86500000; 
 		turrets[] = { { "CMFlareLauncher", "Cannon_30mm_Plane_CAS_02_F", "Missile_AA_03_Plane_CAS_02_F", "Missile_AGM_01_Plane_CAS_02_F", "Rocket_03_HE_Plane_CAS_02_F", "Rocket_03_AP_Plane_CAS_02_F", "Bomb_03_Plane_CAS_02_F" } };
 	};
 	class O_Plane_Fighter_02_F : I_Plane_Fighter_03_CAS_F { 
-		description = "The To-201 Shikra is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet. The aircraft was designed by a CSAT and Russian joint syndicate with the goal to build a highly agile and maneuverable air-superiority fighter.";
+		description = "The To-201 Shikra is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet.";
 		buyPrice = 115500000;
 		turrets[] = { { "CMFlareLauncher", "weapon_Fighter_Gun_30mm" } };
 	};

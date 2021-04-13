@@ -35,7 +35,7 @@ _info ctrlSetStructuredText parseText format ["
 <t align = 'left' size = '1'><br/>Buy Price <t align='right'>%4</t></t>
 <t align = 'left' size = '1'><br/>Sell Price <t align='right'>%5</t></t>
 <t align = 'left' size = '1'><br/>Weight <t align='right'>%6</t></t>", 
-getText(_cfg >> "icon"), getText(_cfg >> "displayName"), "DESCRIPTION TODO", 
+getText(_cfg >> "icon"), getText(_cfg >> "displayName"), getText(_cfg >> "description"), 
 ([format["£%1", [_buyPrice] call ULP_fnc_numberText], "-"] select (_buyPrice isEqualTo -1)), 
 ([format["£%1", [_sellPrice] call ULP_fnc_numberText], "-"] select (_sellPrice isEqualTo -1)),
 [getNumber (_cfg >> "weight")] call ULP_fnc_numberText];

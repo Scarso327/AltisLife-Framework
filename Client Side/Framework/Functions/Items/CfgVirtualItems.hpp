@@ -383,6 +383,7 @@ class CfgVirtualItems {
 		sellPrice = 172500;
 		weight = 4;
 		class Settings : Settings {};
+		class Events { onUse = "[] call ULP_fnc_boltcut;"; };
 	};
 	class HackingDevice : Stinger {
 		displayName = "Hacking Device";

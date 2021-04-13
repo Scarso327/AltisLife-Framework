@@ -64,6 +64,7 @@ if (isNull _cfg) exitWith { false };
 		["OnSpawnAirdrop", [
 			"<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>The supplies have been dropped! The location has been marked on your map."
 		]] remoteExecCall ["ULP_fnc_invokeEvent", -2];
+		]] remoteExecCall ["ULP_fnc_invokeEvent", -2, "AirdropSpawn"];
 
 		[
 			{ ((getPos (_this select 0) select 2) <= 1) || { isNil "_this select 1" } }, [_crate, _para, _area, _marker], {
@@ -74,6 +75,8 @@ if (isNull _cfg) exitWith { false };
 
 				[
 					{ isNull (_this select 0) }, _this, {
+						remoteExecCall ["", "AirdropSpawn"]; // Remove JIP
+
 						deleteMarker (_this select 2);
 						deleteMarker (_this select 3);
 

@@ -521,12 +521,26 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
-	class GalleryPiece : StollenCargo {
-		displayName = "Gallery Piece";
-		description = "";
+	class SmallGalleryPiece : StollenCargo {
+		displayName = "Small Gallery Piece";
+		description = "A piece of art commonly stored in the Altis Gallery.";
 		icon = "Data\Icons\galleryPiece.paa";
 		sellPrice = 365000;
-		weight = 7;
+		weight = 6;
+		class Settings : Settings {};
+	};
+	class MediumGalleryPiece : SmallGalleryPiece {
+		displayName = "Medium Gallery Piece";
+		icon = "Data\Icons\galleryPiece.paa";
+		sellPrice = 496000;
+		weight = 9;
+		class Settings : Settings {};
+	};
+	class LargeGalleryPiece : SmallGalleryPiece {
+		displayName = "Large Gallery Piece";
+		icon = "Data\Icons\galleryPiece.paa";
+		sellPrice = 732500;
+		weight = 13;
 		class Settings : Settings {};
 	};
 	class MarkedGold : StollenCargo {

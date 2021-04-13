@@ -280,7 +280,9 @@ class CfgVirtualStores {
 		storeName = "Art Dealer";
 		conditions = "true";
 		class Items {
-			class GalleryPiece {};
+			class SmallGalleryPiece {};
+			class MediumGalleryPiece {};
+			class LargeGalleryPiece {};
 		};
 	};
 

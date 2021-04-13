@@ -116,6 +116,11 @@ class CfgFunctions {
             class initGathering {};
         };
 
+        class Loot {
+            file = "\life_server\Functions\Loot";
+            class giveLoot {};
+        };
+
         class Mail {
             file = "\life_server\Functions\Mail";
             class addMail {};

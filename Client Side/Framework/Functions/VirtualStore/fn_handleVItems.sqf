@@ -28,7 +28,7 @@ if !(isClass _curSel) exitWith { hint "You need to select an item first..."; };
 
 private _buyPrice = _list lnbValue [(lnbCurSelRow _list), 1];
 private _sellPrice = _list lnbValue [(lnbCurSelRow _list), 2];
-private _gangTax = parseNumber (_list lnbData [(lnbCurSelRow _list), 2]);
+(parseSimpleArray (_list lnbData [(lnbCurSelRow _list), 2])) params [ "_gangTax", "_cartels" ];
 private _amount = 1;
 
 if (_remove) then {
@@ -46,7 +46,7 @@ if (_remove) then {
 };
 
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _amount], [_curSel, _remove, _buyPrice, _sellPrice, _gangTax],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _amount], [_curSel, _remove, _buyPrice, _sellPrice, _gangTax, _cartels],
 	{
 		_this params [
 			["_cfg", configNull, [configNull]],
@@ -54,6 +54,7 @@ if (_remove) then {
 			["_buyPrice", 0, [0]],
 			["_sellPrice", 0, [0]],
 			["_gangTax", 0, [0]],
+			["_cartels", [], [[]]],
 			["_display", displayNull, [displayNull]],
 			["_value", 1, [0]]
 		];
@@ -71,6 +72,13 @@ if (_remove) then {
 			if ([configName _cfg, _value, true] call ULP_fnc_handleItem) then {
 				["SoldVirtualItem", [configName _cfg, _value, _sellPrice, [getNumber (_cfg >> "Settings" >> "isIllegal")] call ULP_fnc_bool]] call ULP_fnc_invokeEvent;
 				[_sellPrice, false, format["Sold %1 %2(s)", _value, _name]] call ULP_fnc_addMoney;
+
+				{
+					_x params [ "_group", "_price" ];
+					if ([_group] call ULP_fnc_isGroup) then {
+						[_group, round (_price * _value), true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
+					};
+				} forEach _cartels;
 
 				if ([] call ULP_fnc_isGroup && { _gangTax > 0 }) then {
 					[group player, _gangTax, true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];

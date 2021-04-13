@@ -12,7 +12,7 @@ class CfgCartels {
 			zoneRadius = 50;
 			kosRadius = 300;
 			class Drug {
-				extraPay = 0.2;
+				extraPay = 1.2;
 				saleTax = 0.05;
 			};
 		};
@@ -24,7 +24,7 @@ class CfgCartels {
 			zoneRadius = 75;
 			kosRadius = 0;
 			class Drug {
-				extraPay = 0.1;
+				extraPay = 1.1;
 				saleTax = 0.125;
 			};
 		};
@@ -48,7 +48,7 @@ class CfgCartels {
 			zoneRadius = 40;
 			kosRadius = 0;
 			class Drug {
-				extraPay = 0.1;
+				extraPay = 1.1;
 				saleTax = 0.05;
 			};
 			class Arms {

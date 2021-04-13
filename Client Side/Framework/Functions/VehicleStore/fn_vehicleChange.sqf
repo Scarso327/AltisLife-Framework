@@ -69,7 +69,7 @@ _settings ctrlSetStructuredText parseText format ["
 <br/><br/><br/>
 <img image = '%1' align='center' size='3.5' /> <br/>
 <t align = 'center' size = '1.5'>%2</t><br/>
-<t align = 'left' size = '1'><br/>%3</t>", _picture, _name, "DESCRIPTION TODO"];
+<t align = 'left' size = '1'><br/>%3</t>", _picture, _name, getText(_missionCfg >> "description")];
 
 _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Buy Price <t align='right'>%1</t></t>
 <t align = 'left' size = '1'><br/>Retrieval Price <t align='right'>%2</t></t>

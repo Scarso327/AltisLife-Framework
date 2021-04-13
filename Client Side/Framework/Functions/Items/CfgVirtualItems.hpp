@@ -317,7 +317,7 @@ class CfgVirtualItems {
 		weight = 3;
 		class Settings : Settings {};
 	};
-	class Breathalyser {
+	class Breathalyser : Pickaxe {
 		displayName = "Breathalyser";
 		description = "";
 		icon = "Data\Icons\breathalyser.paa";
@@ -326,7 +326,7 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class PanicButton {
+	class PanicButton : Pickaxe {
 		displayName = "Panic Button";
 		description = "";
 		icon = "Data\Icons\panicButton.paa";
@@ -336,7 +336,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_panic;"; };
 	};
-	class Ziptie {
+	class Ziptie : Pickaxe {
 		displayName = "Ziptie";
 		description = "";
 		icon = "Data\Icons\ziptie.paa";
@@ -345,7 +345,7 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class Blindfold {
+	class Blindfold : Pickaxe {
 		displayName = "Blindfold";
 		description = "";
 		icon = "Data\Icons\blindfold.paa";

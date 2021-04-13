@@ -135,7 +135,7 @@ class CfgVirtualItems {
 	// Regular Drinks
 	class Water {
 		displayName = "Water";
-		description = "";
+		description = "A regular drink used to keep you hydrated.";
 		icon = "Data\Icons\bottle.paa";
 		buyPrice = 10;
 		sellPrice = 5;
@@ -301,7 +301,7 @@ class CfgVirtualItems {
 	// General Items
 	class Identification {
 		displayName = "%1's ID";
-		description = "";
+		description = "A card containing a person's identifity. However, these are easily forged.";
 		icon = "Data\Icons\identification.paa";
 		buyPrice = 75000;
 		sellPrice = -1;
@@ -321,7 +321,7 @@ class CfgVirtualItems {
 
 	class Pickaxe {
 		displayName = "Pickaxe";
-		description = "";
+		description = "A simple tool used for harvesting minerals.";
 		icon = "Data\Icons\pickaxe.paa";
 		buyPrice = 1200;
 		sellPrice = 600;
@@ -336,15 +336,21 @@ class CfgVirtualItems {
 	};
 	class Shovel : Pickaxe {
 		displayName = "Shovel";
-		description = "";
 		icon = "Data\Icons\shovel.paa";
 		buyPrice = 1100;
 		sellPrice = 550;
 		class Settings : Settings {};
 	};
+	class Extractor : Pickaxe {
+		displayName = "Extractor";
+		icon = "Data\Icons\extractor.paa";
+		buyPrice = 1950;
+		sellPrice = 975;
+		class Settings : Settings {};
+	};
 	class FishingNet : Pickaxe {
 		displayName = "Fishing Net";
-		description = "";
+		description = "A net designed to be deployed from a boat and catch fish.";
 		icon = "Data\Icons\fishingNet.paa";
 		buyPrice = 750;
 		sellPrice = 375;
@@ -352,7 +358,7 @@ class CfgVirtualItems {
 	};
 	class FuelCan : Pickaxe {
 		displayName = "Fuel Can";
-		description = "";
+		description = "This can be used to refuel your vehicle anywhere.";
 		icon = "Data\Icons\fuelCan.paa";
 		buyPrice = 3000;
 		sellPrice = 1500;
@@ -361,7 +367,7 @@ class CfgVirtualItems {
 	};
 	class Breathalyser : Pickaxe {
 		displayName = "Breathalyser";
-		description = "";
+		description = "Used to determin whether or not someone is under the influence.";
 		icon = "Data\Icons\breathalyser.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -370,7 +376,7 @@ class CfgVirtualItems {
 	};
 	class PanicButton : Pickaxe {
 		displayName = "Panic Button";
-		description = "";
+		description = "When pressed this will alert the police that you require immedate assistance.";
 		icon = "Data\Icons\panicButton.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -380,7 +386,7 @@ class CfgVirtualItems {
 	};
 	class Ziptie : Pickaxe {
 		displayName = "Ziptie";
-		description = "";
+		description = "A tool used to retain others.";
 		icon = "Data\Icons\ziptie.paa";
 		buyPrice = 13500;
 		sellPrice = 6750;
@@ -389,7 +395,7 @@ class CfgVirtualItems {
 	};
 	class Blindfold : Pickaxe {
 		displayName = "Blindfold";
-		description = "";
+		description = "A tool used to blindfold others.";
 		icon = "Data\Icons\blindfold.paa";
 		buyPrice = 17000;
 		sellPrice = 8500;
@@ -398,7 +404,7 @@ class CfgVirtualItems {
 	};
 	class Stinger {
 		displayName = "Stinger";
-		description = "";
+		description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
 		icon = "Data\Icons\stinger.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -411,7 +417,7 @@ class CfgVirtualItems {
 	};
 	class Lockpick : Stinger {
 		displayName = "Lockpick";
-		description = "";
+		description = "A tool used to pick the locks of vehicles and handcuffs.";
 		icon = "Data\Icons\lockpick.paa";
 		buyPrice = 2500;
 		sellPrice = 1250;
@@ -420,6 +426,7 @@ class CfgVirtualItems {
 	};
 	class BoltCutter : Stinger {
 		displayName = "Bolt Cutter";
+		description = "A tool used to cut strong locks found on properties, airdrops and strong doors.";
 		icon = "Data\Icons\boltCutter.paa";
 		buyPrice = 345000;
 		sellPrice = 172500;
@@ -429,7 +436,7 @@ class CfgVirtualItems {
 	};
 	class HackingDevice : Stinger {
 		displayName = "Hacking Device";
-		description = "";
+		description = "A tool used to hack various systems and malicously gain access to said systems.";
 		icon = "Data\Icons\hackingDevice.paa";
 		buyPrice = 475000;
 		sellPrice = 237500;
@@ -438,7 +445,7 @@ class CfgVirtualItems {
 	};
 	class ExplosiveCharge : Stinger {
 		displayName = "Explosive Charge";
-		description = "";
+		description = "A tool used to destroy fortified locks.";
 		icon = "Data\Icons\explosiveCharge.paa";
 		buyPrice = 750000;
 		sellPrice = 375000;
@@ -447,7 +454,7 @@ class CfgVirtualItems {
 	};
 	class IndustrialDrill : Stinger {
 		displayName = "Industrial Drill";
-		description = "";
+		description = "A tool used to break fortified locks.";
 		icon = "Data\Icons\industrialDrill.paa";
 		buyPrice = 600000;
 		sellPrice = 300000;
@@ -458,7 +465,7 @@ class CfgVirtualItems {
 	// Medical Equipment
 	class Painkillers {
 		displayName = "Painkillers";
-		description = "";
+		description = "Two pills that restore a small amount of health.";
 		icon = "Data\Icons\painkillers.paa";
 		buyPrice = 6000;
 		sellPrice = 3000;
@@ -473,7 +480,7 @@ class CfgVirtualItems {
 	};
 	class Bandage : Painkillers {
 		displayName = "Bandage";
-		description = "";
+		description = "Used to quickly heal minor wounds.";
 		icon = "Data\Icons\bandage.paa";
 		buyPrice = 8500;
 		sellPrice = 4250;
@@ -481,7 +488,7 @@ class CfgVirtualItems {
 	};
 	class BloodBag : Painkillers {
 		displayName = "Blood Bag";
-		description = "";
+		description = "Used to prevent an incapacitated person from bleeding out.";
 		icon = "Data\Icons\bloodbag.paa";
 		buyPrice = 10000;
 		sellPrice = 5000;
@@ -489,15 +496,14 @@ class CfgVirtualItems {
 	};
 	class FirstAidKit : Painkillers {
 		displayName = "First Aid Kit";
-		description = "";
+		description = "A kit containing various medical tools that can provide assistance.";
 		icon = "Data\Icons\firstAidKit.paa";
 		buyPrice = 15000;
 		sellPrice = 7500;
 		class Settings : Settings {};
 	};
-	class MediKit : Painkillers {
+	class MediKit : FirstAidKit {
 		displayName = "MediKit";
-		description = "";
 		icon = "Data\Icons\mediKit.paa";
 		buyPrice = 180000;
 		sellPrice = 90000;
@@ -545,7 +551,7 @@ class CfgVirtualItems {
 	};
 	class MarkedGold : StollenCargo {
 		displayName = "Marked Gold";
-		description = "";
+		description = "A marked gold bar that is commonly stored in the HM Treasury.";
 		icon = "Data\Icons\ingot.paa";
 		sellPrice = -1;
 		weight = 16;
@@ -553,13 +559,13 @@ class CfgVirtualItems {
 	};
 	class UnmarkedGold : MarkedGold {
 		displayName = "Unmarked Gold";
-		description = "";
+		description = "An marked gold bar that has been debranded by a Goldsmith.";
 		sellPrice = 700000;
 		class Settings : Settings {};
 	};
 	class EncryptedServerFiles : StollenCargo {
 		displayName = "Encrypted Server Files";
-		description = "";
+		description = "Various server files taken from the HMS Liberty's command deck.";
 		icon = "Data\Icons\ingot.paa"; // ICON
 		sellPrice = 1780500;
 		weight = 6;
@@ -569,7 +575,7 @@ class CfgVirtualItems {
 	// Legal Unprocessed
 	class Tobacco {
 		displayName = "Tobacco";
-		description = "";
+		description = "A common leaf that can be processed into cigarettes or cigars.";
 		icon = "Data\Icons\tobacco.paa";
 		buyPrice = -1;
 		sellPrice = -1;
@@ -584,7 +590,7 @@ class CfgVirtualItems {
 	};
 	class Rock : Tobacco {
 		displayName = "Rock";
-		description = "";
+		description = "A simple rock commonly gathered from the HMP Yard.";
 		icon = "Data\Icons\ore.paa";
 		buyPrice = -1;
 		sellPrice = 3;
@@ -594,7 +600,7 @@ class CfgVirtualItems {
 	};
 	class CopperOre : Tobacco {
 		displayName = "Copper Ore";
-		description = "";
+		description = "Ore collected from a mineral mine.";
 		icon = "Data\Icons\ore.paa";
 		weight = 3;
 		class Settings : Settings {};
@@ -602,7 +608,6 @@ class CfgVirtualItems {
 	class SilverOre : CopperOre {
 		displayName = "Silver Ore";
 		icon = "Data\Icons\ore.paa";
-		weight = 3;
 		class Settings : Settings {};
 	};
 	class IronOre : CopperOre {
@@ -612,37 +617,35 @@ class CfgVirtualItems {
 	};
 	class Sand : Tobacco {
 		displayName = "Sand";
-		description = "";
+		description = "Grains of sand that can be processed into glass.";
 		icon = "Data\Icons\sand.paa";
 		weight = 2;
 		class Settings : Settings {};
 	};
 	class UnrefinedSalt : Tobacco {
 		displayName = "Unrefined Salt";
-		description = "";
+		description = "Salt gathered from the salt flats.";
 		icon = "Data\Icons\saltUnrefined.paa";
 		weight = 3;
 		class Settings : Settings {};
 	};
 	class UnprocessedOil : Tobacco {
 		displayName = "Unrefinded Oil";
-		description = "";
+		description = "Unrefinded oil extracted from an oil well.";
 		icon = "Data\Icons\oilUnrefinded.paa";
 		weight = 6;
 		class Settings : Settings {};
 	};
-	class UncutDiamond : Tobacco {
+	class UncutDiamond : CopperOre {
 		displayName = "Diamond Ore";
-		description = "";
 		icon = "Data\Icons\ore.paa";
-		weight = 3;
 		class Settings : Settings {};
 	};
 
 	// Legal Processed
 	class Cigarette {
 		displayName = "Cigarette";
-		description = "";
+		description = "A roll of tobacco that can be sold or smoked.";
 		icon = "Data\Icons\cigarette.paa";
 		buyPrice = 5700;
 		sellPrice = 2850;
@@ -657,7 +660,6 @@ class CfgVirtualItems {
 	};
 	class Cigar : Cigarette {
 		displayName = "Cigar";
-		description = "";
 		icon = "Data\Icons\cigar.paa";
 		buyPrice = 6720;
 		sellPrice = 3360;
@@ -665,7 +667,7 @@ class CfgVirtualItems {
 	};
 	class Coal : Cigarette {
 		displayName = "Coal";
-		description = "";
+		description = "A simple lump of coal that can be sold at the Coal Plant.";
 		icon = "Data\Icons\ore.paa";
 		buyPrice = -1;
 		sellPrice = 2400;
@@ -674,7 +676,7 @@ class CfgVirtualItems {
 	};
 	class CopperBar : Cigarette {
 		displayName = "Copper Bar";
-		description = "";
+		description = "A processed metal bar.";
 		icon = "Data\Icons\ingot.paa";
 		sellPrice = 1900;
 		weight = 2;
@@ -695,7 +697,7 @@ class CfgVirtualItems {
 	};
 	class Glass : CopperBar {
 		displayName = "Glass";
-		description = "";
+		description = "Strong glass that is ready to be sold.";
 		icon = "Data\Icons\glass.paa";
 		sellPrice = 2450;
 		weight = 1;
@@ -703,14 +705,14 @@ class CfgVirtualItems {
 	};
 	class RefindedSalt : CopperBar {
 		displayName = "Refinded Salt";
-		description = "";
+		description = "Refinded salt that is ready to be sold.";
 		icon = "Data\Icons\saltRefined.paa";
 		sellPrice = 3200;
 		class Settings : Settings {};
 	};
 	class ProcessedOil : CopperBar {
 		displayName = "Refinded Oil";
-		description = "";
+		description = "Refinded oil that remains completely flammable.";
 		icon = "Data\Icons\oilRefinded.paa";
 		sellPrice = 9850;
 		weight = 4;
@@ -718,7 +720,7 @@ class CfgVirtualItems {
 	};
 	class CutDiamond : CopperBar {
 		displayName = "Cut Diamond";
-		description = "";
+		description = "A finely cut diamond that women appear to love.";
 		icon = "Data\Icons\diamond.paa";
 		sellPrice = 6100;
 		class Settings : Settings {};
@@ -727,7 +729,6 @@ class CfgVirtualItems {
 	// Illegal Unprocessed
 	class UraniumOre : CopperOre {
 		displayName = "Uranium Ore";
-		description = "";
 		icon = "Data\Icons\ore.paa";
 		weight = 8;
 		class Settings {
@@ -739,14 +740,14 @@ class CfgVirtualItems {
 	};
 	class Corn : UraniumOre {
 		displayName = "Corn";
-		description = "";
+		description = "An item that remain illegal due to the popularity of moonshine.";
 		icon = "Data\Icons\corn.paa";
 		weight = 2;
 		class Settings : Settings {};
 	};
 	class EphedrineBarrel : CopperOre {
 		displayName = "Ephedrine Barrel";
-		description = "";
+		description = "The base material in making crystal meth.";
 		icon = "Data\Icons\methUnprocessed.paa";
 		buyPrice = 6050;
 		weight = 12;
@@ -759,7 +760,7 @@ class CfgVirtualItems {
 	};
 	class UnprocessedWeed : UraniumOre {
 		displayName = "Unprocessed Weed";
-		description = "";
+		description = "A drug useless until processed.";
 		icon = "Data\Icons\weedUnprocessed.paa";
 		weight = 4;
 		class Settings : Settings {};
@@ -780,7 +781,7 @@ class CfgVirtualItems {
 	// Illegal Processed
 	class Coral {
 		displayName = "Coral";
-		description = "";
+		description = "Coral gathered from the coral reef near Kavala.";
 		icon = "Data\Icons\coral.paa";
 		buyPrice = -1;
 		sellPrice = 6700;
@@ -795,7 +796,7 @@ class CfgVirtualItems {
 	};
 	class ProcessedWeed : Coral {
 		displayName = "Processed Weed";
-		description = "";
+		description = "Processed drugs that can be used or sold/bought at a drug dealer.";
 		icon = "Data\Icons\weedProcessed.paa";
 		buyPrice = 6680;
 		sellPrice = 3340;
@@ -849,7 +850,7 @@ class CfgVirtualItems {
 	};
 	class UraniumBar : ProcessedWeed {
 		displayName = "Uranium Bar";
-		description = "";
+		description = "An extremely dangeous mineral processed from a radiation zone.";
 		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
 		sellPrice = 28650;
@@ -860,7 +861,7 @@ class CfgVirtualItems {
 	// Illegal Purified
 	class PurifiedWeed {
 		displayName = "Purified Weed";
-		description = "";
+		description = "The highest quaility drugs on Altis made for an increased profit.";
 		icon = "Data\Icons\weedProcessed.paa";
 		buyPrice = 8016;
 		sellPrice = 4008;
@@ -909,7 +910,7 @@ class CfgVirtualItems {
 	// Raw Fish
 	class Salema_F_Raw {
 		displayName = "Raw Salema";
-		description = "";
+		description = "Raw fish that can be sold at a fish market or cooked at a public cookhouse.";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = -1;
 		sellPrice = 0;
@@ -962,7 +963,7 @@ class CfgVirtualItems {
 	// Cooked Fish
 	class CookedSalema {
 		displayName = "Cooked Salema";
-		description = "";
+		description = "Cooked fish that can be sold at a fish market.";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -1009,7 +1010,7 @@ class CfgVirtualItems {
 	// Archaeology Items
 	class CommonMap {
 		displayName = "Common Map";
-		description = "";
+		description = "A map containing various known artifact sites across Altis.";
 		icon = "Data\Icons\map.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -1036,7 +1037,7 @@ class CfgVirtualItems {
 
 	class SurveyingEquipment {
 		displayName = "Surveying Equipment";
-		description = "";
+		description = "Equipmented used to survay a dig site to locate artifacts.";
 		icon = "Data\Icons\surveyingEquipment.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -1052,7 +1053,7 @@ class CfgVirtualItems {
 	};
 	class ArchaeologistsEquipment : SurveyingEquipment {
 		displayName = "Archaeologists' Equipment";
-		description = "";
+		description = "Equipment used to carefully dig up artifacts from dig sites.";
 		icon = "Data\Icons\archaeologistsEquipment.paa";
 		buyPrice = 0;
 		sellPrice = 0;
@@ -1064,7 +1065,7 @@ class CfgVirtualItems {
 	/// Common Rewards
 	class OldCoin {
 		displayName = "Old Coin";
-		description = "";
+		description = "Artifact collected from dig sites and sold at Altis Archaeologists.";
 		icon = "Data\Icons\oldCoin.paa";
 		buyPrice = -1;
 		sellPrice = 0;

@@ -1068,7 +1068,7 @@ class CfgVehicles {
 
 	// BOATS --------------------------------------------------------------------------------------
 	class C_Scooter_Transport_01_F : Base {
-		description = "";
+		description = "	A Personal WaterCraft of sit-down type. This small-hulled craft driven by a jet-propulsion system offers seats for 3 people. Its powerful engine and great maneuverability make this craft a lot of fun to drive. And of course this water transport vehicle is perfectly suited for military use as well.";
 		buyPrice = 14300;
 		virtualSpace = 5;
 		class Textures {
@@ -1125,13 +1125,13 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat : Base {
-		description = "";
+		description = "An inflatable boat, often nicknamed 'rubber duck', is a lightweight boat constructed from tubes containing pressurized gas. Inflatables typically come in lengths between 2 to 7 meters. Due to their speed, weight and portability, inflatable boats are used in diverse roles such as lifeguard and rescue boats and even more often in the military as landing craft.";
 		buyPrice = 4150;
 		virtualSpace = 50;
 	};
 
 	class C_Boat_Civil_01_F : Base {
-		description = "";
+		description = "The luxury motorboat is an engine powered boat used by the Police and Altis' richest. Its speed and maneuverability is almost on par with military speedboat.";
 		buyPrice = 153200;
 		virtualSpace = 75;
 		class Textures {
@@ -1143,7 +1143,7 @@ class CfgVehicles {
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
 	class C_Boat_Transport_02_F : Base {
-		description = "";
+		description = "	The Naval Special Warfare Rigid Hull Inflatable Boat is a fast, high-buoyancy all weather boat designed to transport a fully equipped team of eight-men and three crew members. It is also fully transportable by C-130 Hercules.";
 		buyPrice = 297600;
 		virtualSpace = 150;
 		class Textures {
@@ -1158,7 +1158,7 @@ class CfgVehicles {
 	};
 
 	class B_Boat_Armed_01_minigun_F : Base {
-		description = "";
+		description = "	This V shaped boat with two powerful jet impellers excels in speed and maneuverability. It is used by both BLUFOR and OPFOR as a coastline guard boat and for special operations. The speedboat has a front-facing, remote controlled GMG turret. The OPFOR version is commonly equipped with a HMG in the rear, while BLUFOR speedboats are armed with a minigun.";
 		buyPrice = 14360500;
 		virtualSpace = 80;
 		garageLimit = 1;
@@ -1178,7 +1178,7 @@ class CfgVehicles {
 	};
 
 	class B_SDV_01_F : Base {
-		description = "";
+		description = "The SDV is a manned submersible vehicle used to transport teams of divers over long distances under water. Its construction is based on the SEALs Delivery Vehicle from the early 21st century, but the engine and maneuverability have been increased rapidly. Divers drive the SDV while exposed to water and breathing from the vehicle's compressed air supply or using their own SCUBA gear. The SDV can take up to four passengers, but can be operated by just one person. It also contains a small compartment to store additional equipment.";
 		buyPrice = 389500;
 		virtualSpace = 5;
 	};

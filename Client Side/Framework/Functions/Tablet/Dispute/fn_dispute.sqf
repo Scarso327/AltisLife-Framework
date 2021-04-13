@@ -14,7 +14,6 @@ if (time < (missionNamespace getVariable ["ULP_LastDispute", 0])) exitWith {
 	["Home"] call ULP_fnc_setScreen;
 	false
 };
-missionNamespace setVariable ["ULP_LastDispute", time + 5];
 
 [ (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), ["Police", "Medic", "Civilian"], [_display], {
 	_this params [
@@ -30,6 +29,8 @@ missionNamespace setVariable ["ULP_LastDispute", time + 5];
 	if (isNull _player) exitWith {
 		hint "You didn't select anyone to dispute...";
 	};
+	
+	missionNamespace setVariable ["ULP_LastDispute", time + 5];
 	
 	[missionConfigFile >> "CfgMessages" >> "Dispute", format ["%1 would like you to come onto teamspeak to discuss a situation...", name player], _player] call ULP_fnc_sendMessage;
 	hint format ["You have disputed %1", name _player];

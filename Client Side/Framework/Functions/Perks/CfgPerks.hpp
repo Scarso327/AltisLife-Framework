@@ -485,6 +485,26 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class rapidStorer { // TODO
+		icon = "Data\UI\Perks\rapidStorer.paa";
+		displayName = "Rapid Storer";
+		description = "Decreases the time it takes to store a vehicle by %1%2.";
+		removalMultiplier = 1;
+		class Leveling {
+			maxLevel = 3;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "10 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 29;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "";
+	};
+
 	class UncertainMind {
 		icon = "Data\UI\Perks\uncertainPerson.paa";
 		displayName = "Uncertain Person";

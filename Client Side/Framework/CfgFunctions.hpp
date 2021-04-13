@@ -100,6 +100,7 @@ class CfgFunctions {
 			class unitsInZone {};
 			class forgeIdentity {};
 			class metalDetector {};
+			class hint {};
 		};
 
 		class Clothing {

@@ -1647,3 +1647,43 @@ class ULP_CartelHud : Life_RscControlsGroupNoScrollbars {
         };
     };
 };
+
+class ULP_Notification : Life_RscControlsGroupNoScrollbars {
+    SAFEZONE_X(0.86);
+    SAFEZONE_Y(0.09);
+    SAFEZONE_W(0.14);
+    h = 1.75 * GUI_GRID_CENTER_H;
+
+    class Controls {
+        class Header : Life_RscStructuredText {
+            idc = 101;
+            text = "<t size='0.75'>Header</t>";
+            colorBackground[] = HEADER_COLOUR_SOLID;
+            w = 11 * GUI_GRID_CENTER_W;
+            h = 0.75 * GUI_GRID_CENTER_H;
+        };
+        class Body : Header {
+            idc = 102;
+            style = "0x10";
+            text = "This is a notification";
+            colorBackground[] = {0.1, 0.1, 0.1, 0.8};
+            y = 0.75 * GUI_GRID_CENTER_H;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+    };
+};
+
+class ULP_NotificationNoHeader : ULP_Notification {
+    h = 1 * GUI_GRID_CENTER_H;
+
+    class Controls {
+        class Body : Life_RscStructuredText {
+            idc = 102;
+            style = "0x10";
+            text = "This is a notification";
+            colorBackground[] = {0.1, 0.1, 0.1, 0.8};
+            w = 11 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+    };
+};

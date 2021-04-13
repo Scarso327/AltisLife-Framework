@@ -10,7 +10,7 @@ class CfgLoot {
 
 		class RidgeJeep {
 			chance = 0.90;
-			class MB4_Ridge {
+			class C_Offroad_02_unarmed_F {
 				amount = 0; // Amount 0 on vehicle means just unlock the texture...
 				texture = "Ridge";
 			};

@@ -5,7 +5,7 @@ class CfgHousing {
 	class Houses {
 		// GARAGES
 		class Land_i_Garage_V1_F {
-			icon = "";
+			icon = "Data\UI\Spawns\garage.paa";
 			price = 3500000;
 			sellMultiplier = 0.4;
 			breakIn = 3 * 60;
@@ -26,7 +26,7 @@ class CfgHousing {
 
 		// HOUSES
 		class BaseHouse {
-			icon = "";
+			icon = "Data\UI\Spawns\house.paa";
 			sellMultiplier = 0.4;
 			breakIn = 5 * 60;
 			canShare = true;
@@ -137,6 +137,7 @@ class CfgHousing {
 		class Land_i_House_Big_01_V3_F : Land_i_House_Big_01_V1_F {};
 
 		class Land_LightHouse_F : BaseHouse {
+			icon = "Data\UI\Spawns\lighthouse.paa";
 			price = 660000000;
 			spawnPos[] = {0.598145,-2.52051,-11.5156};
 			
@@ -147,6 +148,7 @@ class CfgHousing {
 		};
 
 		class C_Boat_Civil_04_F : BaseHouse {
+			icon = "Data\UI\Spawns\boat.paa";
 			price = 760000000;
 			canShare = false;
 			spawnPos[] = {-2.46826,-7.74512,-7.68176};
@@ -159,6 +161,7 @@ class CfgHousing {
 
 		// WAREHOUSES
 		class Land_i_Shed_Ind_F : BaseHouse {
+			icon = "Data\UI\Spawns\warehouse.paa";
 			price = 17500000;
 			breakIn = 10 * 60;
 			spawnPos[] = {5.79297,3.77783,-1.68354};
@@ -174,6 +177,7 @@ class CfgHousing {
 
 		// GROUP SPECIFIC
 		class Land_Cargo_Tower_V1_F : BaseHouse {
+			icon = "Data\UI\Spawns\dmt.paa";
 			price = 34896000;
 			breakIn = 20 * 60;
 			spawnPos[] = {15171.1,15339,12.8876};
@@ -187,6 +191,7 @@ class CfgHousing {
 		class Land_Cargo_Tower_V3_F : Land_Cargo_Tower_V1_F {};
 
 		class Land_MilOffices_V1_F : BaseHouse {
+			icon = "Data\UI\Spawns\office.paa";
 			price = 83350000;
 			breakIn = 15 * 60;
 			spawnPos[] = {15177.2,15386.7,3.29152};

@@ -4,7 +4,7 @@ class CfgBases {
 	Restart[] = {20, 24};
 
 	class North {
-		icon = "";
+		icon = "Data\UI\Spawns\base.paa";
 		displayName = "North Base";
 		position[] = {{12044.9, 10492.4, -0.303827}, 0};
 		includeBidding = true;
@@ -14,7 +14,6 @@ class CfgBases {
 	};
 
 	class South : North {
-		icon = "";
 		displayName = "South Base";
 		position[] = {{12295.3,8872.94,0.00119019}, 289.015};
 		class Spawn {

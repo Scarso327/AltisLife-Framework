@@ -256,6 +256,48 @@ class CfgVirtualItems {
 		class Events : Events {};
 	};
 
+	// XP Rewards
+	class TinyXPReward {
+		displayName = "Tiny XP Reward";
+		description = "A bottle that, when used, will provide valuable experience.";
+		icon = "Data\Icons\xpReward.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 0;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		class Events { onUse = "[(_this select 1), ""Reward"", 100] call ULP_fnc_addXP; hint ""You have been reward 100 XP"";" };
+		conditions = "true";
+	};
+	class SmallXPReward : TinyXPReward {
+		displayName = "Small XP Reward";
+		icon = "Data\Icons\xpReward.paa";
+		class Settings : Settings {};
+		class Events { onUse = "[(_this select 1), ""Reward"", 500] call ULP_fnc_addXP; hint ""You have been reward 500 XP"";" };
+	};
+	class MediumXPReward : TinyXPReward {
+		displayName = "Medium XP Reward";
+		icon = "Data\Icons\xpReward.paa";
+		class Settings : Settings {};
+		class Events { onUse = "[(_this select 1), ""Reward"", 1000] call ULP_fnc_addXP; hint ""You have been reward 1000 XP"";" };
+	};
+	class LargeXPReward : TinyXPReward {
+		displayName = "Large XP Reward";
+		icon = "Data\Icons\xpReward.paa";
+		class Settings : Settings {};
+		class Events { onUse = "[(_this select 1), ""Reward"", 5000] call ULP_fnc_addXP; hint ""You have been reward 5000 XP"";" };
+	};
+	class HugeXPReward : TinyXPReward {
+		displayName = "Huge XP Reward";
+		icon = "Data\Icons\xpReward.paa";
+		class Settings : Settings {};
+		class Events { onUse = "[(_this select 1), ""Reward"", 10000] call ULP_fnc_addXP; hint ""You have been reward 10000 XP"";" };
+	};
+
 	// General Items
 	class Identification {
 		displayName = "%1's ID";

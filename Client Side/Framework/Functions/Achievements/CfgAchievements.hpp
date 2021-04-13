@@ -57,7 +57,7 @@ class CfgAchievements {
 	};
 
 	class Archaeologist {
-		icon = "Data\UI\Achievements\archaeologist.paa"; // ICON
+		icon = "Data\UI\Achievements\archaeologist.paa";
 		displayName = "Archaeologist";
 		description = "Carried out your first archaeological dig.";
 		onUnlocked = "[""Archaeologist""] call ULP_fnc_unlockTitle;";
@@ -67,7 +67,7 @@ class CfgAchievements {
 
 	// TODO
 	class JoinRebel {
-		icon = "Data\UI\Achievements\joinRebel.paa";
+		icon = "Data\UI\Achievements\rebel.paa";
 		displayName = "The Rebellion";
 		description = "Joined the Rebellion. Hope.";
 		onUnlocked = "[""JoinRebel""] call ULP_fnc_unlockTitle;";
@@ -102,7 +102,7 @@ class CfgAchievements {
 	};
 
 	class JoinRTA {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\RTA.paa";
 		displayName = "College Instructor";
 		description = "Joined the College of Policing.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -110,7 +110,7 @@ class CfgAchievements {
 	};
 
 	class JoinNPAS {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\NPAS.paa";
 		displayName = "Police Pilot";
 		description = "Joined the APC's NPAS.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -118,7 +118,7 @@ class CfgAchievements {
 	};
 
 	class JoinSCO19 {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\SCO.paa";
 		displayName = "Firearms Officer";
 		description = "Joined the APC's SCO19.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -126,7 +126,7 @@ class CfgAchievements {
 	};
 
 	class JoinNCA {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\NCA.paa";
 		displayName = "Intelligence Officer";
 		description = "Joined the APC's NCA.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -134,7 +134,7 @@ class CfgAchievements {
 	};
 
 	class JoinMPU {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\MPU.paa";
 		displayName = "Police Marine";
 		description = "Joined the APC's MPU.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -142,7 +142,7 @@ class CfgAchievements {
 	};
 
 	class JoinRPU {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\RPU.paa";
 		displayName = "Pursuit Specialist";
 		description = "Joined the APC's RPU.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -150,7 +150,7 @@ class CfgAchievements {
 	};
 
 	class JoinSFO {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\SFO.paa";
 		displayName = "Confused AFO";
 		description = "Trained as a Police SFO.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -158,7 +158,7 @@ class CfgAchievements {
 	};
 
 	class JoinUC {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\UC.paa";
 		displayName = "Secret Constable";
 		description = "Joined the APC's UC Division.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -191,7 +191,7 @@ class CfgAchievements {
 	};
 
 	class JoinHR {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\HR.paa";
 		displayName = "Desk Worker";
 		description = "Joined the NHS Human Resources Dept.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -199,7 +199,7 @@ class CfgAchievements {
 	};
 
 	class JoinAA {
-		icon = "Data\UI\Achievements\APC.paa"; // ICON
+		icon = "Data\UI\Achievements\AA.paa";
 		displayName = "Air Saviour";
 		description = "Joined the Altis Air Ambulance.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -270,7 +270,7 @@ class CfgAchievements {
 	};
 
 	class SuccessfulRobber {
-		icon = "Data\UI\Achievements\convict.paa"; // ICON
+		icon = "Data\UI\Achievements\successfulRobber.paa";
 		displayName = "Successful Robber";
 		description = "Successfully carried out a site robbery.";
 		onUnlocked = "[""SuccessfulRobber""] call ULP_fnc_unlockTitle;";

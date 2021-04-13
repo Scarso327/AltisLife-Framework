@@ -49,6 +49,7 @@ if (isNull _cfg) exitWith { false };
 
 		// Crate...
 		private _crate = createVehicle ["O_CargoNet_01_ammo_F", position _para, [], 0, "NONE"];
+		_crate setVariable ["locked", true, true];
 		_crate attachTo [_para, [0, 0, -1.3]];
 		_crate allowDamage false;
 
@@ -59,11 +60,8 @@ if (isNull _cfg) exitWith { false };
 		clearMagazineCargoGlobal _crate;
 		clearItemCargoGlobal _crate;
 
-		// TODO : Loot table??
-
 		["OnSpawnAirdrop", [
-			"<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>The supplies have been dropped! The location has been marked on your map."
-		]] remoteExecCall ["ULP_fnc_invokeEvent", -2];
+			_crate, "<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>The supplies have been dropped! The location has been marked on your map."
 		]] remoteExecCall ["ULP_fnc_invokeEvent", -2, "AirdropSpawn"];
 
 		[

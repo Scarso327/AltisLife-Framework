@@ -8,6 +8,11 @@ class CfgFunctions {
 			class init {};
 		};
 
+        class Airdrop {
+            file = "\life_server\Functions\Airdrop";
+            class claimAirdrop {};
+        };
+
         class DatabaseMain {
             file = "\life_server\Functions\Database";
             class getLocalTime {};

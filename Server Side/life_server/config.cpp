@@ -53,6 +53,7 @@ class CfgPatches {
                 params = 3;
             };
 
+            class Loot : Spawn {};
             class Group : Executed {};
             class Admin : Executed {};
             class House : Executed {};

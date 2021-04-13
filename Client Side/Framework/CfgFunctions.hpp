@@ -12,6 +12,11 @@ class CfgFunctions {
 			class checkPower {};
 		};
 
+		class Airdrop {
+			file = "Functions\Airdrop";
+			class onAirdropSpawn {};
+		};
+
 		class Achievements {
 			file = "Functions\Achievements";
 			class achieve {};

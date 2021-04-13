@@ -14,7 +14,8 @@ class CfgRandomEvents {
 		RandomAddition = 20 * 60;
 		class Events {
 			class OnWarning { code = "_this params [[""_message"", """", [""""]]]; hint parseText _message;"; };
-			class OnSpawn { code = "_this params [[""_message"", """", [""""]]]; hint parseText _message;"; };
+			class OnSpawn { code = "_this call ULP_fnc_onAirdropSpawn;"; };
+			class OnClaimed { code = "_this params [[""_message"", """", [""""]]]; hint parseText _message;"; };
 		};
 		class ServerFunctions {
 			onSpawn = "_this call ULP_SRV_fnc_airdrop;";
@@ -90,8 +91,8 @@ class CfgRandomEvents {
 		Cooldown = 40 * 60;
 		RandomAddition = 30 * 60;
 		class Events : Events {
-			class OnSpawn : OnSpawn {};
-			class OnClaimed : OnSpawn {};
+			class OnSpawn : OnWarning {};
+			class OnClaimed : OnWarning {};
 		};
 		class ServerFunctions : ServerFunctions {
 			onSpawn = "_this call ULP_SRV_fnc_shipwreck;";

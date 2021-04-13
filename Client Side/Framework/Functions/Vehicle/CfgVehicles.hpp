@@ -266,7 +266,7 @@ class CfgVehicles {
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 276500; };
 
 	class C_Offroad_01_F : Base {
-		description = "	The 4x4 pickup by Generic Motors is a perfect choice for farmers and hunters. The durable chassis and powerful engine have been designed to withstand anything from the cratered highways of Central Europe to the rugged terrain of the Mediterranean. The armed version is fitted either with a .50 caliber heavy machine gun or an anti-tank recoilless rifle. It provides the combination of mobility and firepower to many paramilitary and guerilla forces in local conflicts around the globe. Specialized versions, which sport a hard rear cover and rack-mounted communications equipment, are in use by law enforcement, national park rangers, and armed forces. These vehicles feature a large floodlight, loudspeakers, and long-range antennas.";
+		description = "The 4x4 pickup by Generic Motors is a perfect choice for farmers and hunters. The durable chassis and powerful engine have been designed to withstand anything from the cratered highways of Central Europe to the rugged terrain of the Mediterranean. The armed version is fitted either with a .50 caliber heavy machine gun or an anti-tank recoilless rifle. It provides the combination of mobility and firepower to many paramilitary and guerilla forces in local conflicts around the globe. Specialized versions, which sport a hard rear cover and rack-mounted communications equipment, are in use by law enforcement, national park rangers, and armed forces. These vehicles feature a large floodlight, loudspeakers, and long-range antennas.";
 		buyPrice = 42800;
 		virtualSpace = 60;
 		class Textures {
@@ -882,7 +882,7 @@ class CfgVehicles {
 	};
 
 	class B_Truck_01_mover_F : Base {
-		description = "	The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. It servers as a standard heavy transport vehicle for BLUFOR armies. There are several versions covering the basic transport functions: cargo, refuel, medical, repair, and ammo resupply.";
+		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. It servers as a standard heavy transport vehicle for BLUFOR armies. There are several versions covering the basic transport functions: cargo, refuel, medical, repair, and ammo resupply.";
 		buyPrice = 334000;
 		virtualSpace = 10;
 		garageLimit = 2;
@@ -1068,7 +1068,7 @@ class CfgVehicles {
 
 	// BOATS --------------------------------------------------------------------------------------
 	class C_Scooter_Transport_01_F : Base {
-		description = "	A Personal WaterCraft of sit-down type. This small-hulled craft driven by a jet-propulsion system offers seats for 3 people. Its powerful engine and great maneuverability make this craft a lot of fun to drive. And of course this water transport vehicle is perfectly suited for military use as well.";
+		description = "A Personal WaterCraft of sit-down type. This small-hulled craft driven by a jet-propulsion system offers seats for 3 people. Its powerful engine and great maneuverability make this craft a lot of fun to drive. And of course this water transport vehicle is perfectly suited for military use as well.";
 		buyPrice = 14300;
 		virtualSpace = 5;
 		class Textures {
@@ -1143,7 +1143,7 @@ class CfgVehicles {
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
 	class C_Boat_Transport_02_F : Base {
-		description = "	The Naval Special Warfare Rigid Hull Inflatable Boat is a fast, high-buoyancy all weather boat designed to transport a fully equipped team of eight-men and three crew members. It is also fully transportable by C-130 Hercules.";
+		description = "The Naval Special Warfare Rigid Hull Inflatable Boat is a fast, high-buoyancy all weather boat designed to transport a fully equipped team of eight-men and three crew members. It is also fully transportable by C-130 Hercules.";
 		buyPrice = 297600;
 		virtualSpace = 150;
 		class Textures {
@@ -1158,7 +1158,7 @@ class CfgVehicles {
 	};
 
 	class B_Boat_Armed_01_minigun_F : Base {
-		description = "	This V shaped boat with two powerful jet impellers excels in speed and maneuverability. It is used by both BLUFOR and OPFOR as a coastline guard boat and for special operations. The speedboat has a front-facing, remote controlled GMG turret. The OPFOR version is commonly equipped with a HMG in the rear, while BLUFOR speedboats are armed with a minigun.";
+		description = "This V shaped boat with two powerful jet impellers excels in speed and maneuverability. It is used by both BLUFOR and OPFOR as a coastline guard boat and for special operations. The speedboat has a front-facing, remote controlled GMG turret. The OPFOR version is commonly equipped with a HMG in the rear, while BLUFOR speedboats are armed with a minigun.";
 		buyPrice = 14360500;
 		virtualSpace = 80;
 		garageLimit = 1;
@@ -1508,7 +1508,7 @@ class CfgVehicles {
 		turrets[] = { { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA" } };
 	};
 	class B_Plane_CAS_01_F : I_Plane_Fighter_03_CAS_F { 
-		description = "	The A-164 Wipeout is a single-seat aircraft used for close air support and air interdiction. The life-cycle of its predecessor, the A-10, ended in 2030 and the need for replacement grew more important with the rising tension in the Pacific. A limited development budget did not allow for a fresh start, instead the concept of the A-10 was improved with better shape, engines and armaments.";
+		description = "The A-164 Wipeout is a single-seat aircraft used for close air support and air interdiction. The life-cycle of its predecessor, the A-10, ended in 2030 and the need for replacement grew more important with the rising tension in the Pacific. A limited development budget did not allow for a fresh start, instead the concept of the A-10 was improved with better shape, engines and armaments.";
 		buyPrice = 90500000; 
 		turrets[] = { { "CMFlareLauncher", "Gatling_30mm_Plane_CAS_01_F", "Missile_AA_04_Plane_CAS_01_F", "Missile_AGM_02_Plane_CAS_01_F", "Rocket_04_HE_Plane_CAS_01_F", "Rocket_04_AP_Plane_CAS_01_F", "Bomb_04_Plane_CAS_01_F" } };
 	};

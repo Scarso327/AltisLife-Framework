@@ -29,4 +29,4 @@ _info ctrlSetStructuredText parsetext format ["
 <img image = '%1' align='center' size='4.5' /> <br/>
 <t align = 'center' size = '1.5'>%2</t><br/>
 <br/>
-<t align = 'left' size = '1'><br/>%3 </t>", getText(_cfg >> "icon"), _name, "DESCRIPTION TODO"];
+<t align = 'left' size = '1'><br/>%3 </t>", getText(_cfg >> "icon"), _name, getText(_cfg >> "description")];

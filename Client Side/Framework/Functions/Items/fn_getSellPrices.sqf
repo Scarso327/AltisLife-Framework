@@ -24,7 +24,12 @@ if (_sellPrice > 0) then {
 		_sellPrice = ["ShadyTrader", _sellPrice, false] call ULP_fnc_activatePerk;
 	};
 
-	// TODO : Group Tax...
+	if ([] call ULP_fnc_isGroup) then {
+		_gangTax = _sellPrice * ([] call ULP_fnc_groupTax);
+		if (_gangTax > 0) then {
+			_sellPrice = _sellPrice - _gangTax;
+		};
+	};
 
 	// If the sell price is higher than buy, make sell 95% of buy...
 	if (_sellPrice > _buyPrice && { _buyPrice > 0 }) then { _sellPrice = _buyPrice * 0.95; };

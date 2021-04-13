@@ -28,6 +28,7 @@ if !(isClass _curSel) exitWith { hint "You need to select an item first..."; };
 
 private _buyPrice = _list lnbValue [(lnbCurSelRow _list), 1];
 private _sellPrice = _list lnbValue [(lnbCurSelRow _list), 2];
+private _gangTax = parseNumber (_list lnbData [(lnbCurSelRow _list), 2]);
 private _amount = 1;
 
 if (_remove) then {
@@ -45,13 +46,14 @@ if (_remove) then {
 };
 
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _amount], [_curSel, _remove, _buyPrice, _sellPrice],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _amount], [_curSel, _remove, _buyPrice, _sellPrice, _gangTax],
 	{
 		_this params [
 			["_cfg", configNull, [configNull]],
 			["_remove", false, [true]],
 			["_buyPrice", 0, [0]],
 			["_sellPrice", 0, [0]],
+			["_gangTax", 0, [0]],
 			["_display", displayNull, [displayNull]],
 			["_value", 1, [0]]
 		];
@@ -61,6 +63,7 @@ if (_remove) then {
 
 		_buyPrice = _buyPrice * _value;
 		_sellPrice = _sellPrice * _value;
+		_gangTax = _gangTax * _value;
 
 		private _name = getText(_cfg >> "displayName");
 
@@ -68,7 +71,13 @@ if (_remove) then {
 			if ([configName _cfg, _value, true] call ULP_fnc_handleItem) then {
 				["SoldVirtualItem", [configName _cfg, _value, _sellPrice, [getNumber (_cfg >> "Settings" >> "isIllegal")] call ULP_fnc_bool]] call ULP_fnc_invokeEvent;
 				[_sellPrice, false, format["Sold %1 %2(s)", _value, _name]] call ULP_fnc_addMoney;
-				hint format["You have sold %1 %2(s) for £%3...", _value, _name, [_sellPrice] call ULP_fnc_numberText];
+
+				if ([] call ULP_fnc_isGroup && { _gangTax > 0 }) then {
+					[group player, _gangTax, true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
+					hint format["You have sold %1 %2(s) for £%3 and £%4 was taken as tax by your group...", _value, _name, [_sellPrice] call ULP_fnc_numberText, [_gangTax] call ULP_fnc_numberText];
+				} else {
+					hint format["You have sold %1 %2(s) for £%3...", _value, _name, [_sellPrice] call ULP_fnc_numberText];
+				};
 			} else {
 				hint format["You don't have %1 %2(s) to sell...", _value, _name];
 			};

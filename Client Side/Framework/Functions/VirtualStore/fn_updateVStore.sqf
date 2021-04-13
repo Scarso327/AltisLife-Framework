@@ -38,7 +38,7 @@ private _sellPrice = -1;
 		_sellPrice = getNumber (_cfg >> "sellPrice");
 
 		([_buyPrice, _sellPrice, !([getNumber (_cfg >> "Settings" >> "isIllegal")] call ULP_fnc_bool)] call ULP_fnc_getSellPrices) params [
-			["_sellPrice", _sellPrice, [0]]
+			["_sellPrice", _sellPrice, [0]], ["_gangTax", 0, [0]]
 		];
 
 		private _row = _list lnbAddRow [
@@ -54,6 +54,7 @@ private _sellPrice = -1;
 
 		_list lnbSetData [[_row, 0], _itemClass];
 		_list lnbSetValue [[_row, 1], _buyPrice];
+		_list lnbSetData [[_row, 2], str _gangTax];
 		_list lnbSetValue [[_row, 2], _sellPrice];
 		_list lnbSetValue [[_row, 3], _itemCount];
 	};

@@ -134,7 +134,7 @@ class CfgPerks {
 	};
 
 	class CompletedCV {
-		icon = "Data\UI\Perks\wideTraveller.paa"; // ICON
+		icon = "Data\UI\Perks\completedCV.paa";
 		displayName = "Completed CV";
 		description = "Allows you to get employed at various job sites.";
 		removalMultiplier = 3;
@@ -168,7 +168,7 @@ class CfgPerks {
 	};
 
 	class RapidSurveyor { // TODO
-		icon = "Data\UI\Perks\speedyLocksmith.paa"; // ICON
+		icon = "Data\UI\Perks\rapidSurveyor.paa";
 		displayName = "Rapid Surveyor";
 		description = "Increases your surveying speed on dig sites speed by %1%2.";
 		removalMultiplier = 1;
@@ -188,7 +188,7 @@ class CfgPerks {
 	};
 
 	class BoltCutter { // TODO
-		icon = "Data\UI\Perks\speedyLocksmith.paa"; // ICON
+		icon = "Data\UI\Perks\boltCutter.paa";
 		displayName = "Bolt Cutter";
 		description = "Increases your bolt cutting speed by %1%2.";
 		removalMultiplier = 1.3;

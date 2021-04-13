@@ -127,7 +127,7 @@ class CfgAchievements {
 
 	class JoinNCA {
 		icon = "Data\UI\Achievements\NCA.paa";
-		displayName = "Intelligence Officer";
+		displayName = "Intel Officer";
 		description = "Joined the APC's NCA.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;

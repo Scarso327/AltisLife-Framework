@@ -19,17 +19,11 @@ class CfgVehicleStores {
 			};
 			class B_GEN_Van_02_transport_F {
 				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
-				class Textures {
-					class PoliceWhite {};
-					class PoliceUnmarked {};
-				};
+				class Textures {};
 			};
 			class B_GEN_Van_02_vehicle_F {
 				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
-				class Textures {
-					class PoliceWhite {};
-					class PoliceUnmarked {};
-				};
+				class Textures {};
 			};
 			class B_T_LSV_01_unarmed_black_F {
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";

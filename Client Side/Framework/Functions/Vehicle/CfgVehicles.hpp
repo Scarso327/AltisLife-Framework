@@ -479,11 +479,6 @@ class CfgVehicles {
 				displayName = "Public Order";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\van.paa" }; 
 			};
-			class PoliceUnmarked : PoliceWhite {
-				displayName = "Unmarked"; 
-				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess";
-				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
-			};
 			class Medic : MedicTexture { 
 				displayName = "Ambulance"; 
 				conditions = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
@@ -496,18 +491,26 @@ class CfgVehicles {
 			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
+				factions[] = { "Civilian", "Police" }; 
+				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
 			};
 			class White : BaseTexture { 
 				displayName = "White";
+				factions[] = { "Civilian", "Police" }; 
+				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_white_CO.paa" }; 
 			};
 			class Red : BaseTexture { 
 				displayName = "Red";
+				factions[] = { "Civilian", "Police" }; 
+				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Red_CO.paa" }; 
 			};
 			class Orange : BaseTexture { 
 				displayName = "Orange";
+				factions[] = { "Civilian", "Police" }; 
+				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Orange_CO.paa" }; 
 			};
 			class Press : BaseTexture { 

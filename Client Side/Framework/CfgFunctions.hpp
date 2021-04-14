@@ -388,6 +388,7 @@ class CfgFunctions {
 			class unlockTexture {};
 			class isTextureUnlocked {};
 			class vehRemoteGate {};
+			class canANPR {};
 		};
 
 		class VehicleEvents {

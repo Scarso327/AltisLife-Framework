@@ -143,6 +143,34 @@ switch (_code) do {
             };
         };
     };
+
+    case NUMSLASH : {
+        private _veh = vehicle player;
+        
+        if ([_veh] call ULP_fnc_canANPR) then {
+            if (_shift && { !_ctrlKey } && { !_alt } && { _veh isKindOf "LandVehicle" }) then {
+                if (time < (_veh getVariable ["anpr_delay", 0])) exitWith {};
+                _veh setVariable ["anpr_delay", time + 3];
+
+                private _cars = (nearestObjects [_veh, ["Car"], 100]) select {
+                    !(_veh isEqualTo _x) && { alive _x }
+                };
+
+                private _vehicle = _cars param [0, objNull];
+                if (isNull _vehicle) exitWith {};
+
+                [format ["<t color='#316dff' size='1.5' align='center'>ANPR</t><br/><t color='#f9f2f2' size='1' align='center'>Requesting DVLA Information....</t>"]] call ULP_fnc_hint;
+                [1, [_vehicle], {
+                    _this params [ "_vehicle" ];
+
+                    [format [
+                        "<t color='#316dff' size='1.5' align='center'>ANPR</t><br/><t color='#119b0c' size='1px' align='center'>Type:</t><t size='1' align='center'> %1</t><br/><t color='#119b0c' size='1px' align='center'>Owner:</t><t size='1' align='center'> %2</t><br/><t color='#119b0c' size='1px' align='center'>Speed:</t><t size='1' align='center'> %3 km/h</t>", 
+                        ([typeOf _vehicle] call ULP_fnc_itemCfg) param [5, "Vehicle"], ((_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, "Unknown"]), round (speed _vehicle)
+                    ]] call ULP_fnc_hint;
+                }] call ULP_fnc_waitExecute;
+            };
+        };
+    };
 };
 
 _handled

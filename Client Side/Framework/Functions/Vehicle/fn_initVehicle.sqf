@@ -38,9 +38,7 @@ if (isClass _vehActions) then {
 	private _actions = [];
 
 	{
-		private _action = (_vehicle addAction ["", getText (_x >> "actionCode"), getArray (_x >> "params"), getNumber (_x >> "priority"), true, true, "", getText (_x >> "condition"), getNumber (_x >> "radius")]);
-		_vehicle setUserActionText [_action, getText (_x >> "actionTitle")];
-		_actions pushBackUnique _action;
+		_actions pushBackUnique (_vehicle addAction [getText (_x >> "actionTitle"), getText (_x >> "actionCode"), getArray (_x >> "params"), getNumber (_x >> "priority"), true, true, "", getText (_x >> "condition"), getNumber (_x >> "radius")]);
 	} forEach ("isClass _x" configClasses _vehActions);
 
 	if ((count _actions) > 0) then {

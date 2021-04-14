@@ -656,6 +656,11 @@ class CfgFunctions {
 			file = "Functions\LootTable";
 			class getLoot {};
 		};
+
+		class PNC {
+			file = "Functions\PNC";
+			class openPNC {};
+		};
 	};
 
 	class ULP_Functions_UI {

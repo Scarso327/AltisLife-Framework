@@ -29,3 +29,19 @@ if (local _vehicle) then {
 
 _vehicle addEventHandler ["Killed", { _this call ULP_fnc_onVehicleKilled }];
 _vehicle addEventHandler ["Deleted", { _this call ULP_fnc_onVehicleDeleted }];
+
+private _vehActions = missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Textures" >> (_vehicle getVariable ["texture", ""]) >> "Actions";
+
+if (isClass _vehActions) then {
+	{ _vehicle removeAction _x; } forEach (_vehicle getVariable ["vehicle_actions", []]);
+
+	private _actions = [];
+
+	{
+		_actions pushBackUnique (_vehicle addAction [getText (_x >> "actionTitle"), getText (_x >> "actionCode"), getArray (_x >> "params"), getNumber (_x >> "priority"), true, true, "", getText (_x >> "condition"), getNumber (_x >> "radius")]);
+	} forEach ("isClass _x" configClasses _vehActions);
+
+	if ((count _actions) > 0) then {
+		_vehicle setVariable ["vehicle_actions", _actions];
+	};
+};

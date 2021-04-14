@@ -12,7 +12,7 @@ _this params [
 private _display = ctrlParent _ctrl;
 private _storeCfg = _display getVariable ["curStore", configNull];
 
-if (!(isClass (_storeCfg)) || { isNull _display }) exitWith { ["Texture Failure!", "Cart Notification"] call ULP_fnc_hint; };
+if (!(isClass (_storeCfg)) || { isNull _display }) exitWith { systemChat "Texture Failure" };
 
 // Switching picture...
 private _texture = _ctrl lbData _index;

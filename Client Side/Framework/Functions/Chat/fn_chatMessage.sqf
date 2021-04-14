@@ -16,5 +16,5 @@ if !(isClass _cfg || { (count _params) isEqualTo getNumber (_cfg >> "params") })
 private _msg = [getText (_cfg >> "message")];
 _msg append _params;
 
-[format _msg] call ULP_fnc_hint;
+systemChat format _msg;
 true

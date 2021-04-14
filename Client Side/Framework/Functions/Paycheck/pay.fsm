@@ -49,7 +49,7 @@ class FSM
                 {
                         name = "Split";
                         itemno = 2;
-                        init = /*%FSM<STATEINIT""">*/"[format [""You will receive your next paycheck in %1 minutes."",(getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period""))], ""Payment Notification""] call ULP_fnc_hint;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"systemChat format [""You will receive your next paycheck in %1 minutes."",(getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period""))];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -62,10 +62,10 @@ class FSM
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(time - _lastcheck) > ((getNumber(missionConfigFile >> ""CfgSettings"" >> ""paycheck_period"")) * 60)"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"if (!alive player) then {" \n
-                                         "    [""You have missed a paycheck because you were incapacitated..."", ""Payment Notification""] call ULP_fnc_hint;" \n
+                                         "    systemChat ""You have missed a paycheck because you were incapacitated."";" \n
                                          "} else {" \n
                                          "	[(call ULP_Paycheck), true, ""Paycheck""] call ULP_fnc_addMoney;" \n
-                                         "	[format [""You have received a paycheck of £%1."",[(call ULP_Paycheck)] call ULP_fnc_numberText], ""Payment Notification""] call ULP_fnc_hint;" \n
+                                         "	systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck)] call ULP_fnc_numberText];" \n
                                          "};" \n
                                          "" \n
                                          "_lastcheck = time;" \n

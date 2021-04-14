@@ -13,6 +13,10 @@ if (time < (player getVariable ["pnc_cd", 0])) exitWith {
 	["You've been locked out of the PNC temporarily..."] call ULP_fnc_hint;
 };
 
+if ([player] call ULP_fnc_isRestrained) exitWith {
+	["You cannot access this while restrained!"] call ULP_fnc_hint;
+};
+
 if (createDialog "DialogPNC") then {
 	private _display = findDisplay 4700;
 

@@ -45,3 +45,7 @@ if (isClass _vehActions) then {
 		_vehicle setVariable ["vehicle_actions", _actions];
 	};
 };
+
+if (isNumber (missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle) >> "enableRope")) then {
+	_vehicle enableRopeAttach ([getNumber (missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle) >> "enableRope")] call ULP_fnc_bool);
+};

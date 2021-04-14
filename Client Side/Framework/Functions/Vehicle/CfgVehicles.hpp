@@ -912,6 +912,7 @@ class CfgVehicles {
 		buyPrice = 334000;
 		virtualSpace = 10;
 		garageLimit = 2;
+		enableRope = false;
 		class Textures {
 			class Hato : HatoTexture { 
 				displayName = "HATO";

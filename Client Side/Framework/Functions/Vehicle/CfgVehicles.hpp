@@ -769,6 +769,7 @@ class CfgVehicles {
 		buyPrice = 190500;
 		virtualSpace = 100;
 		garageLimit = 3;
+		enableRope = false;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -836,6 +837,7 @@ class CfgVehicles {
 		buyPrice = 505000;
 		virtualSpace = 280;
 		garageLimit = 2;
+		enableRope = false;
 		class Textures {
 			class Orange : BaseTexture {
 				displayName = "Orange"; 
@@ -871,6 +873,7 @@ class CfgVehicles {
 		buyPrice = 615500;
 		virtualSpace = 370;
 		garageLimit = 2;
+		enableRope = false;
 		class Textures {
 			class BrownHex : BaseTexture {
 				displayName = "Brown Hex"; 

@@ -25,7 +25,7 @@ profileNamespace setVariable ["ULP_Messages", _messages];
 saveProfileNamespace;
 
 if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([getNumber (_type >> "ignoreStreamer")] call ULP_fnc_bool) }) then {
-	["You received a message and it's contents have been hidden due to your settings.", "Phone Notification"] call ULP_fnc_hint;
+	["You received a message and it's contents have been hidden.", "Phone Notification"] call ULP_fnc_hint;
 } else {
 	_sender params [
 		["_name", "", [""]]

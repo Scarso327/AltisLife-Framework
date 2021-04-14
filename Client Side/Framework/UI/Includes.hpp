@@ -18,3 +18,4 @@
 #include "DisplaySelect\DisplaySelectObject.hpp"
 #include "DisplayAdmin\DisplayAdmin.hpp"
 #include "DialogMoves\DialogMoves.hpp"
+#include "DialogPNC\DialogPNC.hpp"

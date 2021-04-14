@@ -400,6 +400,16 @@ class CfgVehicles {
 					leftPos[] = {14924.6,15011.1,2.66146};
 					rightPos[] = {14923.8,15011.1,2.66146};
 				};
+				class Actions {
+					class PNC {
+						actionTitle = "<t color='#3266A8'>[APC]</t> Police National Computer";
+						actionCode = "[] call ULP_fnc_openPNC";
+						params[] = {};
+						priority = 1;
+						condition = "!(isNull (objectParent _this)) && { _target isEqualTo (vehicle _this) }";
+						radius = 3;
+					};
+				};
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";

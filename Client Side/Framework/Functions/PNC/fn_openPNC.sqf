@@ -5,7 +5,13 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_openPNC";
 
-if (time < (player getVariable ["pnc_cd", 0])) exitWith {};
+if (canSuspend) exitWith {
+    [ULP_fnc_openPNC, _this] call ULP_fnc_directCall;
+};
+
+if (time < (player getVariable ["pnc_cd", 0])) exitWith {
+	["You've been locked out of the pnc temporarily..."] call ULP_fnc_hint;
+};
 
 if (createDialog "DialogPNC") then {
 	private _display = findDisplay 4700;

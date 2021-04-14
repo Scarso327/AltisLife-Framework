@@ -19,7 +19,7 @@ private _near = _location nearEntities [["Air"], 15];
 private _vehicle = _near param [(_near findIf { [player, _x] call ULP_fnc_isVehicleOwner }), objNull];
 
 if (isNil "_vehicle" || { isNull _vehicle } || { !(alive _vehicle) }) exitWith {
-	hint "No air vehicles near stand to service...";
+	["No air vehicles near stand to service!"] call ULP_fnc_hint;
 };
 
 private _cfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
@@ -40,7 +40,7 @@ if (isNumber (_missionCfg >> "serviceCost")) then {
 };
 
 if (CASH < _cost) exitWith {
-	hint format ["You can't afford to pay %1%2 to service this vehicle...", "£", [_cost] call ULP_fnc_numberText];
+	[format ["You can't afford to pay %1%2 to service this vehicle!", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
 };
 
 if !([format["Servicing %1", _name], _time, [_location, _vehicle, _name, _cost], {
@@ -49,17 +49,17 @@ if !([format["Servicing %1", _name], _time, [_location, _vehicle, _name, _cost],
 	_this params [ "_location", "_vehicle", "_name", "_cost" ];
 
 	if (isNull _vehicle || { !(alive _vehicle) } || { (_location distance _vehicle) > 15 }) exitWith {
-		hint format["You failed to service the %1 as it's either beyond repair or isn't near the stand...", _name];
+		[format ["You failed to service the %1 as it's either beyond repair or isn't near the stand!", _name]] call ULP_fnc_hint;
 	};
 
 	if ([_cost] call ULP_fnc_removeMoney) exitWith {
-		hint format ["You can't afford to pay %1%2 to service this vehicle...", "£", [_cost] call ULP_fnc_numberText];
+		[format ["You can't afford to pay %1%2 to service this vehicle.!", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	};
 
 	[_vehicle, 1] remoteExecCall ["ULP_fnc_setFuel", _vehicle];
 	_vehicle setDamage 0;
 
-	hint format["You've serviced %1...", _name];
+	[format ["You've serviced %1.", _name]] call ULP_fnc_hint;
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
-	hint "You can't service a vehicle while performing another action...";
+	["You can't service a vehicle while performing another action!"] call ULP_fnc_hint;
 };

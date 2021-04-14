@@ -20,6 +20,6 @@ private _list = _display displayCtrl 3903;
 private _curSel = lbCurSel _list;
 
 if ([(_list lbData _curSel), (_list lbValue _curSel)] call ULP_fnc_addLicense) then {
-	hint "You've bought this license.";
+	["You've bought this license."] call ULP_fnc_hint;
 	[] call ULP_fnc_listLicenses;
 };

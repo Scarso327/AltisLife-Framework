@@ -15,7 +15,7 @@ private _cfg = missionConfigFile >> "CfgAdmin" >> "Power" >> _power;
 private _hasAccess = (isClass _cfg && { call compile getText (_cfg >> "condition") });
 
 if (!(_hasAccess) && { _hint } && { isText (_cfg >> "message") }) then {
-	hint getText (_cfg >> "message");
+	[getText (_cfg >> "message")] call ULP_fnc_hint;
 };
 
 _hasAccess

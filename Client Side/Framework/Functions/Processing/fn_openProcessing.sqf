@@ -13,7 +13,7 @@ private _cfg = missionConfigFile >> "CfgProcessingStores" >> _store;
 if (dialog || { !(isClass _cfg) }) exitWith {};
 
 if !(call compile getText(_cfg >> "condition")) exitWith {
-	hint "You don't have access to this site...";
+	["You don't have access to this site!"] call ULP_fnc_hint;
 };
 
 if (createDialog "DialogProcessing") then {

@@ -46,7 +46,7 @@ _level = (_level max 0) min _max;
 _xp = (_xp max 0) min _requirement;
 
 if (_previousLevel < _level) then {
-	hint "You leveled up a perk";
+	["You leveled up a perk!"] call ULP_fnc_hint;
 };
 
 ULP_Perks set [_perk, [_level, _xp]];

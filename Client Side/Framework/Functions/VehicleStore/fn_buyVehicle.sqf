@@ -32,7 +32,7 @@ private _texture = _texList lbData (lbCurSel _texList);
 private _textureCfg = _missionCfg >> "Textures" >> _texture;
 if (isClass _textureCfg) then {
 	if !([configName _missionCfg, _texture] call ULP_fnc_isTextureUnlocked) then {
-		hint format ["The texture %1 is currently locked, you'll have to unlock it before you can use it...", getText (_textureCfg >> "displayName")];
+		[format ["The texture %1 is currently locked, you'll have to unlock it before you can use it!", getText (_textureCfg >> "displayName")]] call ULP_fnc_hint;
 		breakOut "fn_buyVehicle";
 	};
 };
@@ -49,7 +49,7 @@ private _spawn = {
 } forEach _spawns;
 
 if (isNil "_spawn") exitWith {
-	hint "There are no available spawn points...";
+	["There are no available spawn points!"] call ULP_fnc_hint;
 };
 
 if ([_buyPrice, false, format ["Purchased %1", _name]] call ULP_fnc_removeMoney) exitWith {
@@ -69,15 +69,7 @@ if ([_buyPrice, false, format ["Purchased %1", _name]] call ULP_fnc_removeMoney)
 					"", "", "", ["_name", "Unknown", [""]], "", "", "", "", ""
 				];
 
-				hint ([
-					format ["Your purchase was unable to be made as you've reached the max garagable limit for %1 of %2", _name, [_limit] call ULP_fnc_numberText],
-					format ["You've been refunded %1%2 for %3 as you've reached the max garagable limit of %4...", 
-						"£", 
-						[_price] call ULP_fnc_numberText, 
-						_name, 
-						[_limit] call ULP_fnc_numberText
-					]
-				] select (_price > 0));
+				[([format ["Your purchase was unable to be made as you've reached the max garagable limit for %1 of %2", _name, [_limit] call ULP_fnc_numberText], format ["You've been refunded %1%2 for %3 as you've reached the max garagable limit of %4...", "£", [_price] call ULP_fnc_numberText, _name, [_limit] call ULP_fnc_numberText]] select (_price > 0))] call ULP_fnc_hint;
 			};
 
 			_params call ULP_fnc_createVehicle;
@@ -92,4 +84,4 @@ if ([_buyPrice, false, format ["Purchased %1", _name]] call ULP_fnc_removeMoney)
 	closeDialog 0;
 };
 
-hint format["You can't afford to pay for this vehicle. You need £%1.", [_buyPrice] call ULP_fnc_numberText];
+[format["You can't afford to pay for this vehicle. You need £%1.", [_buyPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;

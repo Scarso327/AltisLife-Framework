@@ -15,7 +15,7 @@ if (!(isClass _cfg) || { ULP_Archaeology_Digging }) exitWith { false };
 private _type = format ["Archaeology%1", _rarity];
 
 if !(_type in ULP_Missions) exitWith {
-	hint format ["You need to claim an archaeology site before you can survery one..."];
+	["You need to claim an archaeology site before you can survery one."] call ULP_fnc_hint;
 };
 
 (ULP_Missions get _type) params [
@@ -23,7 +23,7 @@ if !(_type in ULP_Missions) exitWith {
 ];
 
 if ((player distance (taskDestination _task)) > 5) exitWith {
-	hint "You need to be inside your assigned archaeology site to begin surveying...";
+	["You need to be inside your assigned archaeology site to begin surveying."] call ULP_fnc_hint;
 };
 
 (getArray (_cfg >> "surveyTime")) params [ "_base", "_random" ];
@@ -43,10 +43,10 @@ private _time = _base + (random _random);
 			"You have found a good dig spot and now need to use your archaeology equipment to see what you can find.", "Start Digging the Archeology Site", ""
 		];
 
-		hint format ["You've surveyed a %1 archeology site and found a dig site...", configName _cfg];
+		[format ["You've surveyed a %1 archeology site and found a dig site.", configName _cfg]] call ULP_fnc_hint;
 		ULP_Archaeology_Digging = true;
 	} else {
-		hint format ["You've surveyed a %1 archeology site and found a better area to search...", configName _cfg];
+		[format ["You've surveyed a %1 archeology site and found a better area to search...", configName _cfg]] call ULP_fnc_hint;
 	};
 
 	_task setSimpleTaskDestination _pos;

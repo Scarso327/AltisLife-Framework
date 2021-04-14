@@ -15,7 +15,7 @@ private _cfg = missionConfigFile >> "CfgStores" >> "CfgVirtualStores" >> _store;
 if !(isClass (_cfg)) exitWith {};
 
 if !(call compile getText(_cfg >> "conditions") || { [player, getArray(_cfg >> "factions")] call ULP_fnc_isFaction }) exitWith {
-	hint "You don't have access to this store...";
+	["You don't have access to this store!"] call ULP_fnc_hint;
 };
 
 if (createDialog "DialogVirtualStore") then {

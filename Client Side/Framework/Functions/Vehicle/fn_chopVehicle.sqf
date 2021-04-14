@@ -16,7 +16,7 @@ _this params [
 ];
 
 if !([player, ["Civilian"]] call ULP_fnc_isFaction) exitWith {
-	hint "Only civilians can access this...";
+	["Only civilians can access this!"] call ULP_fnc_hint;
 };
 
 private _near = ((_trader nearEntities [["Car", "Air", "Ship"], 15]) select {
@@ -25,7 +25,7 @@ private _near = ((_trader nearEntities [["Car", "Air", "Ship"], 15]) select {
 });
 
 if (_near isEqualTo []) exitWith {
-	hint "There are no vehicles nearby to chop...";
+	["There are no vehicles nearby to chop!"] call ULP_fnc_hint;
 };
 
 [(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), (_near apply { 
@@ -43,7 +43,7 @@ if (_near isEqualTo []) exitWith {
 	private _list = _display displayCtrl 4509;
 
 	private _vehicle = (_list lbData (lbCurSel _list)) call BIS_fnc_objectFromNetId;
-	if (isNull _vehicle) exitWith { hint "You didn't select a vehicle to chop..."; };
+	if (isNull _vehicle) exitWith { ["You didn't select a vehicle to chop!"] call ULP_fnc_hint; };
 
 	private _cfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
 	if (isNull _vehicle || { _cfg isEqualTo [] }) exitWith {};
@@ -66,7 +66,7 @@ if (_near isEqualTo []) exitWith {
 		_this params [ "_vehicle", "_cfg", "_name", "_payMore", "_allowKeep" ];
 
 		if (isNull _vehicle || { !(alive _vehicle) }) exitWith {
-			hint format["You failed to chop the %1 as it's been destroyed..."];
+			[format["You failed to chop the %1 as it's been destroyed."]] call ULP_fnc_hint;
 		};
 
 		private _chopValue = getNumber (_cfg >> "buyPrice") * ([
@@ -91,7 +91,7 @@ if (_near isEqualTo []) exitWith {
 				
 				if ((["UncertainMind", 0] call ULP_fnc_activatePerk) > _chance) then {
 					[_owner, player, _id] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
-					hint format["You've claimed %1 as your own vehicle, it is now in your garage.", _name];
+					[format["You've claimed %1 as your own vehicle, it is now in your garage.", _name]] call ULP_fnc_hint;
 					breakOut "_fnc_onChopped";
 				};
 			};
@@ -100,8 +100,8 @@ if (_near isEqualTo []) exitWith {
 		};
 
 		[_chopValue, false, format["Chopped %1", _name]] call ULP_fnc_addMoney;
-		hint format["You've chopped %1 for %2%3", _name, "£", [_chopValue] call ULP_fnc_numberText];
+		[format["You've chopped %1 for %2%3.", _name, "£", [_chopValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
-		hint "You can't chop a vehicle while performing another action...";
+		["You can't chop a vehicle while performing another action!"] call ULP_fnc_hint;
 	};
 }, false] call ULP_fnc_selectObject;

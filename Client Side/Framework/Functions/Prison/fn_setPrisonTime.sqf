@@ -16,6 +16,7 @@ if !(isClass _prison) exitWith { false };
 
 if !([player] call ULP_fnc_canImprison || { [_target] call ULP_fnc_canImprisoned }) exitWith {
 	hint "You're unable to send anyone to prison from here...";
+	["You're unable to send anyone to prison from here!"] call ULP_fnc_hint;
 };
 
 private _max = getNumber (_prison >> "maxDuraction");
@@ -32,13 +33,13 @@ private _max = getNumber (_prison >> "maxDuraction");
 		];
 
 		if (_duraction > _max) exitWith {
-			hint format ["You can only arrest someone for a max of %1", [_max, "MM:SS"] call BIS_fnc_secondsToString];
+			[format ["You can only sentence someone for a max of %1", [_max, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
 		};
 
 		detach _target;
 		[_target, _duraction, player] remoteExecCall ["ULP_fnc_imprison", _target];
 
-		hint format["You have arrested %1 for %2", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString];
+		[format["You have sentenced %1 for %2", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
 		["FirstArrest"] call ULP_fnc_achieve;
 	}, false, "[_this, ""MM:SS""] call BIS_fnc_secondsToString", false
 ] call ULP_fnc_selectNumber;

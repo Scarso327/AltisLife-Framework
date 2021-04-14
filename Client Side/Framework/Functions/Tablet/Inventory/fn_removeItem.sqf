@@ -17,11 +17,11 @@ if (isNull _display || { isNull _list }) exitWith {};
 
 private _list = _display displayCtrl 23016;
 private _curSel = missionConfigFile >> "CfgVirtualItems" >> (_list lbData (lbCurSel _list));
-if !(isClass _curSel) exitWith { hint "You need to select an item first..."; };
+if !(isClass _curSel) exitWith { ["You need to select an item first!"] call ULP_fnc_hint; };
 
 private _amount = [configName _curSel] call ULP_fnc_hasItem;
 if (_amount isEqualTo -1) exitWith {
-	hint "You don't have any of these items to remove...";
+	["You don't have any of these items to remove!"] call ULP_fnc_hint;
 };
 
 if ([getNumber (_curSel >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
@@ -38,10 +38,10 @@ if ([getNumber (_curSel >> "Settings" >> "isScripted")] call ULP_fnc_bool) then 
 			if (isNull _display || { isNull _cfg }) exitWith {};
 
 			if ([configName _cfg, _data, true] call ULP_fnc_handleItem) then {
-				hint format["You have removed %1 from your inventory...", _name];
+				[format["You have removed %1 from your inventory!", _name]] call ULP_fnc_hint;
 				_display call ULP_fnc_inventory;
 			} else {
-				hint "You don't have this item to remove...";
+				["You don't have this item to remove!"] call ULP_fnc_hint;
 			};
 		}, false
 	] call ULP_fnc_confirm;
@@ -59,10 +59,10 @@ if ([getNumber (_curSel >> "Settings" >> "isScripted")] call ULP_fnc_bool) then 
 			if (isNull _display || { isNull _cfg }) exitWith {};
 
 			if ([configName _cfg, _value, true] call ULP_fnc_handleItem) then {
-				hint format["You have removed %1 %2(s) from your inventory...", _value, getText(_cfg >> "displayName")];
+				[format["You have removed %1 %2(s) from your inventory.", _value, getText(_cfg >> "displayName")]] call ULP_fnc_hint;
 				_display call ULP_fnc_inventory;
 			} else {
-				hint "You don't have that many of this item...";
+				["You don't have that many of this item!"] call ULP_fnc_hint;
 			};
 		}
 	] call ULP_fnc_selectNumber;

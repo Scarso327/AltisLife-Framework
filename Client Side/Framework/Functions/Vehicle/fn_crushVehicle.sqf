@@ -18,11 +18,11 @@ _cfg params [
 
 if !(isClass _missionCfg) exitWith {};
 if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
-	hint "Only Police can crush vehicles...";
+	["Only Police can crush vehicles!"] call ULP_fnc_hint;
 };
 
 if !((crew _vehicle) isEqualTo []) exitWith {
-	hint "No one can be in the vehicle while you crush it...";
+	["No one can be in the vehicle while you crush it!"] call ULP_fnc_hint;
 };
 
 private _time = getNumber (missionConfigFile >> "CfgSettings" >> "Police" >> "crushTime");
@@ -36,7 +36,7 @@ if !([format["Crushing %1", _name], _time, [_vehicle, _name, _fee], {
 	_this params [ "_vehicle", "_name", "_fee" ];
 
 	if (isNull _vehicle || { !((crew _vehicle) isEqualTo []) }) exitWith {
-		hint format["You failed to crush this vehicle as either someone was in it or it's already been removed..."];
+		[format["You failed to crush this vehicle as either someone was in it or it's already been removed!"]] call ULP_fnc_hint;
 	};
 
 	private _id = _vehicle getVariable ["vehicle_id", -1];
@@ -47,9 +47,9 @@ if !([format["Crushing %1", _name], _time, [_vehicle, _name, _fee], {
 	deleteVehicle _vehicle;
 	["FirstCrush"] call ULP_fnc_achieve;
 
-	hint "Vehicle has been crushed.";
+	["Vehicle has been crushed!"] call ULP_fnc_hint;
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
-	hint "You can't crush a vehicle while performing another action...";
+	["You can't crush a vehicle while performing another action!"] call ULP_fnc_hint;
 };
 
 closeDialog 0;

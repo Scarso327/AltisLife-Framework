@@ -14,7 +14,7 @@ diag_log _this;
 
 if (isNull _airdrop) exitWith {};
 
-hint parseText _message;
+[parseText _message] call ULP_fnc_hint;
 
 _airdrop addAction [
 	"Claim Airdrop", {
@@ -24,7 +24,7 @@ _airdrop addAction [
 			_this params [ "_airdrop", "_actionId" ];
 
 			_airdrop removeAction _actionId;
-			hint "Claiming Airdrop...";
+			["Claiming Airdrop..."] call ULP_fnc_hint;
 
 			[player, _airdrop] remoteExecCall ["ULP_SRV_fnc_claimAirdrop", RSERV];
 		}, {}] call ULP_UI_fnc_startProgress;

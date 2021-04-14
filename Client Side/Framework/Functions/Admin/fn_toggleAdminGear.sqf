@@ -13,7 +13,7 @@ if (isDowned(player) || { !([] call ULP_fnc_isSaff) } || { !(["Suit"] call ULP_f
 
 // Stop spam...
 if (!(_force) && { time < (player getVariable ["admin_cooldown", 0]) }) exitWith {
-	hint "You've changed into admin gear recently, please wait before trying again...";
+	["You've changed into admin gear recently, please wait before trying again."] call ULP_fnc_hint;
 	false
 };
 player setVariable ["admin_cooldown", time + 3];

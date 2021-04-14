@@ -12,7 +12,7 @@ scopeName "fn_initGroups";
 		["_groupId", -1, [0]]
 	];
 	
-	hint "Your group has been created...";
+	["Your group has been created."] call ULP_fnc_hint;
 	ULP_Group_Creating = false;
 
 	[] call ULP_fnc_setTags; // Update my tags...
@@ -24,7 +24,7 @@ scopeName "fn_initGroups";
 		["_reason", "Unknown", [""]]
 	];
 
-	hint _reason;
+	[_reason] call ULP_fnc_hint;
 	ULP_Group_Creating = false;
 
 	[format["Group Creation Failed (%1)", _reason]] call ULP_fnc_logIt;
@@ -41,7 +41,7 @@ scopeName "fn_initGroups";
 		[_amount, false, format ["Group Funds"]] call ULP_fnc_addMoney;
 	};
 
-	hint _message;
+	[_message] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupRankChanged", {
@@ -51,10 +51,10 @@ scopeName "fn_initGroups";
 	];
 
 	_rank = [_rank] call ULP_fnc_rankName;
-	hint format ["Your rank has been set to %1", ([format["%1 by %2", _rank, name _actioner], _rank] select (isNull _actioner))];
+	[format ["Your rank has been set to %1", ([format["%1 by %2!", _rank, name _actioner], _rank] select (isNull _actioner))]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupDisbanded", {
-	hint format ["%1 has disbanded the group...", name (_this param [0, objNull])];
+	[format ["%1 has disbanded the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;

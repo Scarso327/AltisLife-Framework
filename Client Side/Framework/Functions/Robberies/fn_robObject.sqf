@@ -19,16 +19,16 @@ private _timeout = getNumber (_cfg >> "timeout");
 private _objectTimeout = _object getVariable "timeout";
 
 if (!isNil "ULP_Robbery_Timeout" && { time < ULP_Robbery_Timeout }) exitWith {
-	hint format["You have attempted or successfully robbed a store within the last %1 minutes", round (_personalTimeout / 60)];
+	[format["You have attempted or successfully robbed a store within the last %1 minutes!", round (_personalTimeout / 60)]] call ULP_fnc_hint;
 };
-if (!isNil "_objectTimeout" && { time < _objectTimeout }) exitWith { hint format["This store was robbed within the last %1 minutes", round (_timeout / 60)]; };
+if (!isNil "_objectTimeout" && { time < _objectTimeout }) exitWith { [format["This store was robbed within the last %1 minutes!", round (_timeout / 60)]] call ULP_fnc_hint; };
 
 private _condition = getText (_cfg >> "condition");
 private _onFail = getText (_cfg >> "onFail");
 if !(call compile _condition) exitWith { call compile _onFail; };
 
-if !(isNull (_object getVariable ["robber", objNull])) exitWith { hint "This store is currently being robbed and so can't be robbed by you..."; };
-if ((currentWeapon player) in getArray(missionConfigFile >> "CfgSettings" >> "doesntThreaten")) exitWith { hint "You require a threatening weapon to rob this store..."; };
+if !(isNull (_object getVariable ["robber", objNull])) exitWith { ["This store is currently being robbed and so can't be robbed by you!"] call ULP_fnc_hint; };
+if ((currentWeapon player) in getArray(missionConfigFile >> "CfgSettings" >> "doesntThreaten")) exitWith { ["You require a threatening weapon to rob this store!"] call ULP_fnc_hint; };
 
 ULP_Robbery_Timeout = time + _personalTimeout;
 _object setVariable ["robber", player, true];
@@ -57,8 +57,7 @@ _marker setMarkerSize [0.8, 0.8];
 
 	getArray (_cfg >> "leveling") call ULP_fnc_addXP;
 
-	hint format["You have robbed this store for £%1", [_money] call ULP_fnc_numberText];
-	["SuccessfulRobber"] call ULP_fnc_achieve;
+	[format["You have robbed this store for £%1.", [_money] call ULP_fnc_numberText]] call ULP_fnc_achieve;
 
 	_object setVariable["timeout", time + (getNumber (_cfg >> "timeout")), true];
 	_object setVariable["robber", nil, true];

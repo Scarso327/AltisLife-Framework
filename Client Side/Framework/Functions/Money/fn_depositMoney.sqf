@@ -19,12 +19,12 @@ if (isNull _display) exitWith {};
 private _group = _display getVariable ["group", false];
 
 if (_group && { !([0] call ULP_fnc_canGroupRank) }) exitWith {
-	hint "You don't have permission to deposit group funds...";
+	["You don't have permission to deposit group funds!"] call ULP_fnc_hint;
 };
 
 private _amount = CASH;
 if (_amount <= 0) exitWith {
-	hint "You don't have anything to deposit...";
+	["You don't have anything to deposit!"] call ULP_fnc_hint;
 };
 
 [
@@ -37,7 +37,7 @@ if (_amount <= 0) exitWith {
 		];
 
 		if (_value > CASH) exitWith {
-			hint format["You don't have %1%2 to deposit...", "£", [_value] call ULP_fnc_numberText];
+			[format["You don't have %1%2 to deposit!", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 
 		if ([_value, false] call ULP_fnc_removeMoney) then {
@@ -47,7 +47,7 @@ if (_amount <= 0) exitWith {
 				[_value, true, "Bank Deposit"] call ULP_fnc_addMoney;
 			};
 
-			hint format["You have deposited %1%2", "£", [_value] call ULP_fnc_numberText];
+			[format["You have deposited %1%2.", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 	}, false
 ] call ULP_fnc_selectNumber;

@@ -19,7 +19,7 @@ if (_onItemBuy isEqualTo "") exitWith {};
 
 private _cartList = _display displayCtrl 3107;
 if ((lbSize _cartList) isEqualTo 0) exitWith {
-	hint "You must add something to your cart before you check out...";
+	["You must add something to your cart before you check out!"] call ULP_fnc_hint;
 };
 
 _ctrl ctrlEnable false;
@@ -28,7 +28,7 @@ private _override = cbChecked (_display displayCtrl 3114);
 private _cartValue = _display getVariable "cartValue";
 
 if (CASH < _cartValue) then {
-	hint "You can't afford these items...";
+	["You can't afford these items!"] call ULP_fnc_hint;
 } else {
 	private _itemsBought = 0;
 	for "_i" from 0 to ((lbSize _cartList) - 1) do {
@@ -66,9 +66,9 @@ if (CASH < _cartValue) then {
 			[_ctrl, 1] call ULP_fnc_switchInventory;
 		};
 
-		hint format["You've bought these items for £%1", [_cartValue] call ULP_fnc_numberText];
+		[format["You've bought these items for £%1.", [_cartValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	} else {
-		hint "You don't have enough space for these items...";
+		["You don't have enough space for these items!"] call ULP_fnc_hint;
 	};
 };
 

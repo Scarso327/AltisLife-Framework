@@ -13,7 +13,7 @@ private _cfg = missionConfigFile >> "CfgLicenseStores" >> _store;
 if (dialog || { !(isClass _cfg) }) exitWith {};
 
 if !(call compile getText(_cfg >> "conditions")) exitWith {
-	hint "You don't have access to this store...";
+	["You don't have access to this store!"] call ULP_fnc_hint;
 };
 
 if (createDialog "DialogLicenses") then {

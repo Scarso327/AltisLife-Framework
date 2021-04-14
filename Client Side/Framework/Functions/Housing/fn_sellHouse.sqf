@@ -22,7 +22,7 @@ if !(_cfg isEqualTo []) then {
 			if (isNull _house) exitWith {};
 
 			if (_house getVariable ["selling", false]) exitWith {
-				hint "This house is already being sold...";
+				["This house is already being sold!"] call ULP_fnc_hint;
 			};
 
 			_house setVariable ["selling", true];
@@ -37,12 +37,12 @@ if !(_cfg isEqualTo []) then {
 				];
 
 				if (_success) then { [_money, true, "House Sold"] call ULP_fnc_addMoney; };
-				hint _message;
+				[_message] call ULP_fnc_hint;
 
 				_house setVariable ["selling", nil];
 			}, true] call ULP_fnc_addEventHandler;
 
-			hint "Selling House...";
+			["Selling House..."] call ULP_fnc_hint;
 			[getPlayerUID player, _house] remoteExecCall ["ULP_SRV_fnc_sellHouse", RSERV];
 		}, false
 	] call ULP_fnc_confirm;

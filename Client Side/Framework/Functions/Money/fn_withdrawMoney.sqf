@@ -19,12 +19,12 @@ if (isNull _display) exitWith {};
 private _group = _display getVariable ["group", false];
 
 if (_group && { !([1] call ULP_fnc_canGroupRank) }) exitWith {
-	hint "You don't have permission to withdraw from group funds...";
+	["You don't have permission to withdraw from group funds!"] call ULP_fnc_hint;
 };
 
 private _amount = ([BANK, [] call ULP_fnc_groupFunds] select (_group));
 if (_amount <= 0) exitWith {
-	hint "You don't have anything to withdraw...";
+	["You don't have anything to withdraw!"] call ULP_fnc_hint;
 };
 
 [
@@ -37,16 +37,16 @@ if (_amount <= 0) exitWith {
 		];
 
 		if (_group) then {
-			hint format ["Attempting to withdraw %1%2...", "£", [_value] call ULP_fnc_numberText];
+			[format ["Attempting to withdraw %1%2...", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			[player, _value] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
 		} else {
 			if (_value > BANK) exitWith {
-				hint format["You don't have %1%2 to withdraw...", "£", [_value] call ULP_fnc_numberText];
+				[format["You don't have %1%2 to withdraw!", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 
 			if ([_value, true, "Bank Withdrawal"] call ULP_fnc_removeMoney) then {
 				[_value] call ULP_fnc_addMoney;
-				hint format["You have withdrawn %1%2", "£", [_value] call ULP_fnc_numberText];
+				[format["You have withdrawn %1%2.", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 		};
 	}, false

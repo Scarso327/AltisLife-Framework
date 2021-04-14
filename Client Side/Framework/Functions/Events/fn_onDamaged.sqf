@@ -47,7 +47,7 @@ if !(isNull _source) then {
 	if (_projectile isEqualTo "" && { (vehicle _source) isKindOf "LandVehicle" }) then {
 		if (isPlayer _source) then {
 			if !(diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2) then {
-				hint format ["You have just been ran over by %1", name _source];
+				[format ["You have just been ran over by %1!", name _source]] call ULP_fnc_hint;
 			};
 			_unit setVariable ["vdmVar", diag_tickTime];
 		};

@@ -16,9 +16,6 @@ if (isNull _incapUi) exitWith {};
 
 private _increase = getNumber (missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BloodBagIncrease");
 
-hint ([
-	format ["%1 has administered you blood and so your bleedout has been extended...", name _medic],
-	"You have received more blood and so your bleedout has been extended..."
-] select (isNull _medic));
+[[format ["%1 has administered you blood and so your bleedout has been extended...", name _medic], "You have received more blood and so your bleedout has been extended..."] select (isNull _medic)] call ULP_fnc_hint;
 
 _incapUi setVariable ["endTime", (_incapUi getVariable ["endTime", time + 10]) + _increase];

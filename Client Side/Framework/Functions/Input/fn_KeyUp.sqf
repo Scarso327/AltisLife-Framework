@@ -80,7 +80,7 @@ switch (_code) do {
             0 fadeSound ([1, ["EffectsFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
             0 fadeMusic ([1, ["MusicFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
 
-            hint format["You %1 your earplugs", ["remove", "put in"] select (ULP_FadeSound)];
+            [format["You %1 your earplugs", ["remove", "put in"] select (ULP_FadeSound)]] call ULP_fnc_hint;
         };
     };
 
@@ -100,7 +100,7 @@ switch (_code) do {
     case F3: {
         if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Invis", false] call ULP_fnc_checkPower } && { _shift } && { !_ctrlKey } && { !_alt }) then {
             if (time < (player getVariable ["admin_invis_cooldown", 0])) exitWith {
-                hint "You've recently changed your visibility, please wait before trying again...";
+                ["You've recently changed your visibility, please wait before trying again..."] call ULP_fnc_hint;
                 false
             };
             player setVariable ["admin_invis_cooldown", time + 2];
@@ -113,7 +113,7 @@ switch (_code) do {
     case U : {
         if (_shift && { _ctrlKey } && { !_alt } && { [] call ULP_fnc_isUndercover }) then {
             if (time < (player getVariable ["uc_cooldown", 0])) exitWith {
-                hint "You've changed your identity recently, please wait before trying again...";
+                ["You've changed your identity recently, please wait before trying again..."] call ULP_fnc_hint;
             };
             player setVariable ["uc_cooldown", time + 3];
 

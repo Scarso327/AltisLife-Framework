@@ -18,11 +18,11 @@ _cfg params [
 
 if !(isClass _missionCfg) exitWith {};
 if !([player, ["Police", "Hato"]] call ULP_fnc_isFaction) exitWith {
-	hint "Only Police & HATO can impound vehicles...";
+	["Only Police and HATO can impound vehicles"] call ULP_fnc_hint;
 };
 
 if !((crew _vehicle) isEqualTo []) exitWith {
-	hint "No one can be in the vehicle while you impound it...";
+	["No one can be in the vehicle while you impound it!"] call ULP_fnc_hint;
 };
 
 private _time = getNumber (missionConfigFile >> "CfgSettings" >> "Police" >> "impoundTime");
@@ -31,7 +31,7 @@ if (isNumber (_missionCfg >> "impoundTime")) then {
 };
 
 if ((_vehicle getVariable ["vehicle_id", -1]) < 0) exitWith {
-	hint "Rentals can't be impounded";
+	["Rentals can't be impounded!"] call ULP_fnc_hint;
 };
 
 [
@@ -48,22 +48,22 @@ if ((_vehicle getVariable ["vehicle_id", -1]) < 0) exitWith {
 			_this params [ "_vehicle", "_name", "_fee" ];
 
 			if (isNull _vehicle || { !((crew _vehicle) isEqualTo []) }) exitWith {
-				hint format["You failed to impound this vehicle as either someone was in it or it's already been removed..."];
+				[format["You failed to impound this vehicle as either someone was in it or it's already been removed!"]] call ULP_fnc_hint;
 			};
 
 			private _id = _vehicle getVariable ["vehicle_id", -1];
 
 			if (_id < 0) exitWith {
-				hint "Rentals can't be impounded";
+				["Rentals can't be impounded!"] call ULP_fnc_hint;
 			};
 
 			["FirstImpound"] call ULP_fnc_achieve;
 
-			hint format["You've requested an impounded for %1 with a fee of %2%3...", _name, "£", [_fee] call ULP_fnc_numberText];
+			[format["You've requested an impounded for %1 with a fee of %2%3.", _name, "£", [_fee] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			["VehicleStored", { hint "Vehicle has been impounded."; }, true] call ULP_fnc_addEventHandler;
 			[_vehicle, _fee] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
 		}, {}] call ULP_UI_fnc_startProgress) exitWith {
-			hint "You can't impound a vehicle while performing another action...";
+			["You can't impound a vehicle while performing another action!"] call ULP_fnc_hint;
 		};
 
 		closeDialog 0;

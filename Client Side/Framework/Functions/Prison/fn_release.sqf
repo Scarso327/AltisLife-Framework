@@ -27,13 +27,13 @@ private _prison = missionConfigFile >> "CfgPrison" >> worldName;
 if !(isClass _prison) exitWith { false };
 
 if (_escaped) then {
-	hint "You've escaped from prison";
+	["You've escaped from prison!"] call ULP_fnc_hint;
 } else {
 	getArray (_prison >> "release") params ["_pos", "_dir"];
 	_unit setPos _pos;
 	_unit setDir _dir;
 
-	hint "You've served your time and been released";
+	["You've served your sentence and been released!"] call ULP_fnc_hint;
 	[_prison >> "ReleaseLoadout"] call ULP_fnc_setCfgLoadout;
 };
 

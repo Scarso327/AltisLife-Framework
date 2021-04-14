@@ -37,7 +37,7 @@ private _spawn = {
 } forEach _spawns;
 
 if (isNil "_spawn") exitWith {
-	hint "There are no available spawn points...";
+	["There are no available spawn points!"] call ULP_fnc_hint;
 };
 
 if ([_price, true, (["Garage Retrieval Fees", "Vehicle Impound Fees"] select (_impound))] call ULP_fnc_removeMoney) exitWith {
@@ -47,4 +47,4 @@ if ([_price, true, (["Garage Retrieval Fees", "Vehicle Impound Fees"] select (_i
 	[_id] remoteExecCall ["ULP_SRV_fnc_retrieveVehicle", RSERV];
 };
 
-hint format["You can't afford to retrieve this vehicle. You need £%1.", [_price] call ULP_fnc_numberText];
+[format["You can't afford to retrieve this vehicle. You need £%1.", [_price] call ULP_fnc_numberText]] call ULP_fnc_hint;

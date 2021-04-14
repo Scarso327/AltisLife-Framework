@@ -42,5 +42,5 @@ _vehicle allowDammage true;
 ULP_Keys pushBackUnique _vehicle;
 
 if (_hint) then {
-	hint "Your vehicle is now ready...";
+	["Your vehicle is now ready..."] call ULP_fnc_hint;
 };

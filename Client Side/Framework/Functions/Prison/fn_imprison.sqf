@@ -64,7 +64,7 @@ if (_update) then {
 };
 
 if !(isNull _arrester) then {
-	hint format["You've been arrested for %1 by %2", [_duration, "MM:SS"] call BIS_fnc_secondsToString, name _arrester];
+	[format["You've been sentenced for %1 by %2", [_duration, "MM:SS"] call BIS_fnc_secondsToString, name _arrester]] call ULP_fnc_hint;
 };
 
 true

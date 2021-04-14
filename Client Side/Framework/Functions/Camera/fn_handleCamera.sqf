@@ -14,7 +14,7 @@ _this params [
 if (isNull _screen) exitWith { false };
 
 if (isNull (_screen getVariable ["camera", objNull])) then {
-	if !(isPiPEnabled) exitWith { hint "This system requires PiP to be enabled in your video settings..."; false breakOut "fn_handleCamera"; };
+	if !(isPiPEnabled) exitWith { ["This system requires PiP to be enabled in your video settings!"] call ULP_fnc_hint; false breakOut "fn_handleCamera"; };
 
 	private _cfg = missionConfigFile >> "CfgCameras" >> worldName >> _location;
 	if !(isClass _cfg || { call compile getText (_cfg >> "condition") }) exitWith { false breakOut "fn_handleCamera"; };

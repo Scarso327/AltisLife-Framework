@@ -15,13 +15,13 @@ if (dialog) exitWith {};
 private _cfg = missionConfigFile >> "CfgVehicleStores" >> _store;
 if (isClass _cfg && { [player, getArray (_cfg >> "factions")] call ULP_fnc_isFaction }) then {
 	if !(call compile getText(_cfg >> "conditions")) exitWith {
-		hint "You don't have access to this store...";
+		["You don't have access to this store!"] call ULP_fnc_hint;
 	};
 
 	private _licenses = getArray (_cfg >> "licenses");
 	{
 		if !([_x] call ULP_fnc_hasLicense) exitWith {
-			hint format["You need these licenses to access this store: %1...", _licenses];
+			[format["You need these licenses to access this store: %1!", _licenses]] call ULP_fnc_hint;
 			breakOut "fn_vehicleStore";
 		};
 

@@ -270,32 +270,32 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 		};
-		class Events { onUse = "[(_this select 1), ""Reward"", 100] call ULP_fnc_addXP; hint ""You have been reward 100 XP"";"; };
+		class Events { onUse = "if ([100, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
 		conditions = "true";
 	};
 	class SmallXPReward : TinyXPReward {
 		displayName = "Small XP Reward";
 		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
-		class Events { onUse = "[(_this select 1), ""Reward"", 500] call ULP_fnc_addXP; hint ""You have been reward 500 XP"";"; };
+		class Events { onUse = "if ([500, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
 	};
 	class MediumXPReward : TinyXPReward {
 		displayName = "Medium XP Reward";
 		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
-		class Events { onUse = "[(_this select 1), ""Reward"", 1000] call ULP_fnc_addXP; hint ""You have been reward 1000 XP"";"; };
+		class Events { onUse = "if ([1000, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
 	};
 	class LargeXPReward : TinyXPReward {
 		displayName = "Large XP Reward";
 		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
-		class Events { onUse = "[(_this select 1), ""Reward"", 5000] call ULP_fnc_addXP; hint ""You have been reward 5000 XP"";"; };
+		class Events { onUse = "if ([5000, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
 	};
 	class HugeXPReward : TinyXPReward {
 		displayName = "Huge XP Reward";
 		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
-		class Events { onUse = "[(_this select 1), ""Reward"", 10000] call ULP_fnc_addXP; hint ""You have been reward 10000 XP"";"; };
+		class Events { onUse = "if ([10000, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
 	};
 
 	// General Items
@@ -314,7 +314,7 @@ class CfgVirtualItems {
 		};
 		class Events {
 			onUse = "_this call ULP_fnc_disguiseIdentity;";
-			onRemove = "if ((player getVariable [""name"", """"]) isEqualTo (_this select 1)) then { player setVariable [""name"", nil, true]; hint ""You've lost the ID card you were disguising yourself with...""; };";
+			onRemove = "if ((player getVariable [""name"", """"]) isEqualTo (_this select 1)) then { player setVariable [""name"", nil, true]; [""You've lost the ID card you were disguising yourself with!""] call ULP_fnc_hint; };";
 		};
 		conditions = "true";
 	};

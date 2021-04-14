@@ -15,7 +15,7 @@ private _category = _valueCtrl getVariable ["category", ""];
 private _option = _valueCtrl getVariable ["option", ""];
 private _resetCtrl = _valueCtrl getVariable ["resetCtrl", controlNull];
 
-if (_category isEqualTo "" || { _option isEqualTo "" } || { isNull _resetCtrl }) exitWith { hint "An error occured while changing settings..."; };
+if (_category isEqualTo "" || { _option isEqualTo "" } || { isNull _resetCtrl }) exitWith { ["An error occured while changing settings!"] call ULP_fnc_hint; };
 
 private _previous = [_option, _category, _default] call ULP_fnc_getOption;
 

@@ -6,11 +6,11 @@
 scopeName "fn_openGroup";
 
 if !(isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Groups")) exitWith {
-	hint "You don't have access to this...";
+	["You don't have access to this!"] call ULP_fnc_hint;
 };
 
 if (ULP_Group_Creating) exitWith {
-	hint "You can't currently access this application as it's processing a previous creation request...";
+	["You can't currently access this application as it's processing a previous creation request!"] call ULP_fnc_hint;
 };
 
 if ([] call ULP_fnc_isGroup) then {
@@ -30,7 +30,7 @@ if ([] call ULP_fnc_isGroup) then {
 			
 			private _cfg = missionConfigFile >> "CfgGroups";
 			if !(isClass (_cfg >> "Types" >> _type)) exitWith {
-				hint "The selected group type doesn't exist...";
+				["The selected group type doesn't exist!"] call ULP_fnc_hint;
 			};
 
 			{
@@ -42,15 +42,15 @@ if ([] call ULP_fnc_isGroup) then {
 
 				switch (true) do {
 					case (_length < _min): {
-						hint format["Your group's %1 must be %2 or more in length...", configName _cfgSettings, _min];
+						[format["Your group's %1 must be %2 or more in length!", configName _cfgSettings, _min]] call ULP_fnc_hint;
 						false breakOut "fn_creationCheck";
 					};
 					case (_length > _max): {
-						hint format["Your group's %1 must be %2 or shorter in length...", configName _cfgSettings, _max];
+						[format["Your group's %1 must be %2 or shorter in length!", configName _cfgSettings, _max]] call ULP_fnc_hint;
 						false breakOut "fn_creationCheck";
 					};
 					case (_text in getArray (_cfgSettings >> "Blacklisted")): {
-						hint format["Your group's %1 is blacklisted and can't be used...", configName _cfgSettings];
+						[format["Your group's %1 is blacklisted and can't be used!", configName _cfgSettings]] call ULP_fnc_hint;
 						false breakOut "fn_creationCheck";
 					};
 				};

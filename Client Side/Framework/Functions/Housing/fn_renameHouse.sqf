@@ -18,19 +18,19 @@ _this params [
 if (isNull _house) exitWith { false };
 
 if !([_house, player, false] call ULP_fnc_isHouseOwner) exitWith {
-	hint "Only the house owner can change the house name...";
+	["Only the house owner can change the house name!"] call ULP_fnc_hint;
 	false
 };
 
 // Stop spam...
 if (time < (_house getVariable ["building_last_renamed", 0])) exitWith {
-	hint "You've changed the renamed this house recently, please wait...";
+	["You've changed the renamed this house recently, please wait..."] call ULP_fnc_hint;
 	false
 };
 _house setVariable ["building_last_renamed", time + 5];
 
 if (_house getVariable ["selling", false]) exitWith {
-	hint "This house is being sold...";
+	["This house is being sold..."] call ULP_fnc_hint;
 	false
 };
 
@@ -49,15 +49,15 @@ if (_house getVariable ["selling", false]) exitWith {
 		if (isNull _house) exitWith {};
 
 		if (_house getVariable ["selling", false]) exitWith {
-			hint "This house is already being sold...";
+			["This house is already being sold!"] call ULP_fnc_hint;
 		};
 
 		if ((count _name) > getNumber (missionConfigFile >> "CfgHousing" >> "nameLength")) exitWith {
-			hint "This name is too long...";
+			["This name is too long!"] call ULP_fnc_hint;
 		};
 
 		if ((_house getVariable ["building_name", ""]) isEqualTo _name) exitWith {
-			hint "You can't set the house name to the same as it's current value...";
+			["You can't set the house name to the same as it's current value!"] call ULP_fnc_hint;
 		};
 
 		_house setVariable ["building_name", ([_name, nil] select (_name isEqualTo "")), true];
@@ -73,7 +73,7 @@ if (_house getVariable ["selling", false]) exitWith {
 		};
 
 		[_house getVariable ["building_id", -1], _name] remoteExecCall ["ULP_SRV_fnc_setHouseName", RSERV];
-		hint format ["You've renamed this house to %1", _name];
+		[format ["You've renamed this house to %1.", _name]] call ULP_fnc_hint;
 
 		(_fnc select 0) call (_fnc select 1);
 	}, false

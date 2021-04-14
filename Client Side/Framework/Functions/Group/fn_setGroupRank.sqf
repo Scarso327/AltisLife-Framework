@@ -15,7 +15,7 @@ if (_unit isEqualType objNull && { isNull _unit} || { _unit isEqualTo "" } || { 
 
 // Stop spam...
 if (time < (_group getVariable ["rank_cooldown", 0])) exitWith {
-	hint "You've changed this person's rank recently, please wait before trying again...";
+	["You've changed this person's rank recently, please wait before trying again."] call ULP_fnc_hint;
 	false
 };
 _group setVariable ["rank_cooldown", time + 3];

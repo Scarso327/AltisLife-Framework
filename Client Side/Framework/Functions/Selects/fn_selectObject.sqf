@@ -17,7 +17,7 @@ _this params [
 if (isNull _parent) exitWith {};
 
 if (_objects isEqualTo []) exitWith {
-	hint "There is nothing available to select...";
+	["There is nothing available to select..."] call ULP_fnc_hint;
 	_display closeDisplay 0;
 };
 

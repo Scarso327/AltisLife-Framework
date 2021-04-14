@@ -20,21 +20,21 @@ if !([_house] call ULP_fnc_isHouse ||
 	{ [_house] call ULP_fnc_isHouseOwned } ||
 	{ (count _objectCfg) > 0 }
 ) exitWith {
-	hint "This house can't be bought...";
+	["This house can't be bought!"] call ULP_fnc_hint;
 };
 
 if !(["Home"] call ULP_fnc_hasLicense) exitWith {
-	hint "You require home owner's approval to buy a house...";
+	["You require homeowner's approval to buy a house."] call ULP_fnc_hint;
 };
 
 if (_house getVariable ["blacklisted", false]) exitWith {
-	hint "This house is blacklisted...";
+	["This house is blacklisted."] call ULP_fnc_hint;
 };
 
 private _limit = getNumber (missionConfigFile >> "CfgHousing" >> "houseLimit");
 if (["LandLord"] call ULP_fnc_hasPerk) then { _limit = _limit + 1 };
 if ((count ([_house] call ULP_fnc_ownedHouses)) >= _limit) exitWith {
-	hint format ["You have already reached the limit of %1 for owned houses...", _limit];
+	[format ["You have already reached the limit of %1 for owned properties.", _limit]] call ULP_fnc_hint;
 };
 
 private _money = getNumber (missionConfigFile >> "CfgHousing" >> "houses" >> (typeOf _house) >> "price");
@@ -53,7 +53,7 @@ _objectCfg params [ "", "", "", "_name" ];
 		if (isNull _house) exitWith {};
 
 		if (_house getVariable ["buying", false]) exitWith {
-			hint "This house is already being bought...";
+			["This house is already being bought!"] call ULP_fnc_hint;
 		};
 
 		_house setVariable ["buying", true];
@@ -73,17 +73,17 @@ _objectCfg params [ "", "", "", "_name" ];
 				[_money, true, "House Purchase Failed"] call ULP_fnc_addMoney;
 			};
 
-			hint _message;
+			[_message] call ULP_fnc_hint;
 
 			_house setVariable ["buying", nil];
 		}, true] call ULP_fnc_addEventHandler;
 
 		if ([_money, true, "Bought House"] call ULP_fnc_removeMoney) then {
-			hint "Buying House...";
+			["Buying House..."] call ULP_fnc_hint;
 			["BuyHouse"] call ULP_fnc_achieve;
 			[player, _house, _money] remoteExecCall ["ULP_SRV_fnc_buyHouse", RSERV];
 		} else {
-			hint format ["You can't afford %1%2 to buy this house...", "£", [_money] call ULP_fnc_numberText];
+			[format ["You can't afford %1%2 to buy this property!", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 	}, false
 ] call ULP_fnc_confirm;

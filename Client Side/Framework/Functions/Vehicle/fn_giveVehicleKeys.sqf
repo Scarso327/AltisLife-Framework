@@ -21,14 +21,14 @@ if (isNull _unit || { !(isPlayer _unit) } || { (player distance _unit) > 5 }) ex
 	];
 
 	if ((player distance _unit) > 5) exitWith {
-		hint "You're not close enough to give this person keys...";
+		["You're not close enough to give this person keys!"] call ULP_fnc_hint;
 	};
 
 	if (isNull _display) exitWith {};
 	private _list = _display displayCtrl 4509;
 
 	private _vehicle = (_list lbData (lbCurSel _list)) call BIS_fnc_objectFromNetId;
-	if (isNull _vehicle) exitWith { hint "You didn't select a vehicle to chop..."; };
+	if (isNull _vehicle) exitWith { ["You didn't select a vehicle to chop!"] call ULP_fnc_hint; };
 
 	private _cfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
 	if (isNull _vehicle || { _cfg isEqualTo [] }) exitWith {};
@@ -40,5 +40,5 @@ if (isNull _unit || { !(isPlayer _unit) } || { (player distance _unit) > 5 }) ex
 	if !(isClass _missionCfg) exitWith {};
 
 	["KeysGiven", [_vehicle, player]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
-	hint format ["You have given %1 keys to %2", name _unit, _name];
+	[format ["You have given %1 keys to %2.", name _unit, _name]] call ULP_fnc_hint;
 }, false] call ULP_fnc_selectObject;

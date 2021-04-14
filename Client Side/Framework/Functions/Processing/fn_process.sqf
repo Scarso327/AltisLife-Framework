@@ -15,7 +15,7 @@ if !(isClass _cfg || { !([player] call ULP_fnc_getFaction in getArray (_cfg >> "
 private _reqItems = getArray (_cfg >> "reqItems");
 {
 	if ([_x] call ULP_fnc_hasItem isEqualTo -1) exitWith {
-		hint format["You need these items to process here: %1...", _reqItems];
+		[format["You need these items to process here: %1!", _reqItems]] call ULP_fnc_hint;
 		false breakOut "fn_process";
 	};
 
@@ -25,7 +25,7 @@ private _reqItems = getArray (_cfg >> "reqItems");
 private _reqLicenses = getArray (_cfg >> "reqItems");
 {
 	if !([_x] call ULP_fnc_hasLicense) exitWith {
-		hint format["You need these licenses to process here: %1...", _reqLicenses];
+		[format["You need these licenses to process here: %1!", _reqLicenses]] call ULP_fnc_hint;
 		false breakOut "fn_process";
 	};
 
@@ -38,7 +38,7 @@ if (_items isEqualTo [] || { _materials isEqualTo [] }) exitWith { false };
 
 {
     if ([_x select 0] call ULP_fnc_hasItem < _x select 1) exitWith {
-        hint format["You are missing the required materials to process here: %1...", _materials];
+		[format["You are missing the required materials to process here: %1!", _materials]] call ULP_fnc_hint;
 		false breakOut "fn_process";
     };
 } forEach _materials;
@@ -77,7 +77,7 @@ if !(_profession isEqualTo []) then {
 		[(_x select 0), (_x select 1) * _conversion] call ULP_fnc_handleItem;
 	} forEach _items;
 
-	hint "You've successfully processed your materials";
+	["You've successfully processed your materials!"] call ULP_fnc_hint;
 
 	if !(_profession isEqualTo []) then { _profession call ULP_fnc_increaseProfession; };
 	if !(_leveling isEqualTo []) then { _leveling call ULP_fnc_addXP; };

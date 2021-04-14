@@ -375,7 +375,7 @@ switch (_mode) do {
 		private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
 
 		if (isNull _focus && { _index isEqualTo 1 }) exitWith {
-			hint "You must target someone to spectate first...";
+			["You must target someone to spectate first..."] call ULP_fnc_hint;
 			_ctrl lbSetCurSel 0;
 		};
 

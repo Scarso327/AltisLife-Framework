@@ -40,7 +40,7 @@ _cfg params [ "", "", "", "_name" ];
 
 	private _player = (_list tvData (tvCurSel _list)) call BIS_fnc_objectFromNetId;
 	if (isNull _player) exitWith {
-		hint "You didn't select anyone...";
+		["You didn't select anyone!"] call ULP_fnc_hint;
 	};
 	
 	private _list = _display displayCtrl 3501;
@@ -50,5 +50,5 @@ _cfg params [ "", "", "", "_name" ];
 	[_list, 0] call ULP_fnc_onGarageSwitch;
 
 	[player, _player, _vehId] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
-	hint format ["You transfered your %1 to %2", _name, name _player];
+	[format ["You transfered your %1 to %2.", _name, name _player]] call ULP_fnc_hint;
 }, false, false] call ULP_fnc_selectPlayer;

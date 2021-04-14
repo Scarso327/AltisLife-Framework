@@ -19,7 +19,7 @@ player addEventHandler ["Take", { _this call ULP_fnc_onTake }];
 	if (isNull _vehicle) exitWith {};
 
 	if (((ULP_Keys pushBackUnique _vehicle) > -1) && { !(isNull _giver) }) then {
-		hint format ["%1 has given you keys to %2...", name _giver, ([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "something"]];
+		[format ["%1 has given you keys to %2...", name _giver, ([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "something"]]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
 

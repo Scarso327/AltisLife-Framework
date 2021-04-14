@@ -14,7 +14,7 @@ if (isNull _zone || { !([player] call ULP_fnc_getFaction in getArray (_zone >> "
 private _reqItems = getArray (_zone >> "reqItems");
 {
 	if ([_x] call ULP_fnc_hasItem isEqualTo -1) exitWith {
-		hint format["This zone requires these items to gather: %1...", _reqItems];
+		[format["This zone requires these items to gather: %1!", _reqItems]] call ULP_fnc_hint;
 		false breakOut "fn_gather";
 	};
 
@@ -24,7 +24,7 @@ private _reqItems = getArray (_zone >> "reqItems");
 private _reqLicenses = getArray (_zone >> "reqLicenses");
 {
 	if !([_x] call ULP_fnc_hasLicense) exitWith {
-		hint format["You need these licenses to gather here: %1...", _reqLicenses];
+		[format["You need these licenses to gather here: %1!", _reqLicenses]] call ULP_fnc_hint;
 		false breakOut "fn_gather";
 	};
 
@@ -44,7 +44,7 @@ ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
 
 private _total = floor ((_maxWeight - _carryWeight) / getNumber(_item >> "weight"));
 if (_total isEqualTo 0) exitWith {
-	hint "Your inventory is full";
+	["Your inventory is full!"] call ULP_fnc_hint;
 	false
 };
 
@@ -64,7 +64,7 @@ if !(_profession isEqualTo []) then {
 
 	[configName _item, _total] call ULP_fnc_handleItem;
 
-	hint format["You've gathered %1 %2(s)", _total, getText(_item >> "displayName")];
+	[format["You've gathered %1 %2(s).", _total, getText(_item >> "displayName")]] call ULP_fnc_hint;
 	["GatheredVirtualItem", [configName _item, _total]] call ULP_fnc_invokeEvent;
 
 	if !(_profession isEqualTo []) then { _profession call ULP_fnc_increaseProfession; };

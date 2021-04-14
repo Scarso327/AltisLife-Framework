@@ -74,7 +74,7 @@ if (createDialog "DialogInventory") exitWith {
 		};
 
 		if ((_container distance player) > 10) exitWith {
-			hint "You're too far from the container to access it...";
+			["You're too far from the container to access it!"] call ULP_fnc_hint;
 			closeDialog 0;
 
 			[_container, player] remoteExecCall ["ULP_SRV_fnc_unregisterCargoUser", RSERV];

@@ -19,7 +19,7 @@ if (isNull _display) exitWith {};
 private _group = (_index isEqualTo 1);
 
 if (_group && { !([] call ULP_fnc_isGroup) }) exitWith {
-	hint "You need to be in a group to access this...";
+	["You need to be in a group to access this!"] call ULP_fnc_hint;
 	_ctrl lbSetCurSel 0;
 	[_ctrl, 0] call ULP_fnc_switchBank;
 };

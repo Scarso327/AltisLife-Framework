@@ -19,19 +19,19 @@ if (isNull _display) exitWith {};
 private _container = _display getVariable ["container", objNull];
 if (isNull _container || { !([_container] call ULP_fnc_isCargoUser) }) exitWith {
 	_ctrl ctrlEnable false;
-	hint "You must be the registered cargo user to take or put items into this container";
+	["You must be the registered cargo user to take or put items into this container!"] call ULP_fnc_hint;
 };
 
 private _containerList = _display displayCtrl 4204;
 
 private _item = _containerList lnbData [(lnbCurSelRow _containerList), 0];
 if (_item isEqualTo "") exitWith {
-	hint "You need to selected something to put into this container...";
+	["You need to selected something to put into this container!"] call ULP_fnc_hint;
 };
 
 private _count = ULP_Inventory getOrDefault [_item, 0];
 if (_count <= 0) exitWith {
-	hint "You don't have any of this item to put in this container...";
+	["You don't have any of this item to put in this container!"] call ULP_fnc_hint;
 };
 
 [
@@ -51,15 +51,15 @@ if (_count <= 0) exitWith {
 
 		if ([_container, _item, _value] call ULP_fnc_addToCargo) then {
 			if ([_item, _value, true] call ULP_fnc_handleItem) then {
-				hint format["You have put %1 %2(s) into this container...", _value, _name];
+				[format["You have put %1 %2(s) into this container.", _value, _name]] call ULP_fnc_hint;
 				[_display, 0] call ULP_fnc_updateInventory;
 				[_display, 1] call ULP_fnc_updateInventory;
 			} else {
 				[_container, _item, _value] call ULP_fnc_removeFromCargo;
-				hint format["You don't have %1 %2(s) to put in this container...", _value, _name];
+				[format["You don't have %1 %2(s) to put in this container!", _value, _name]] call ULP_fnc_hint;
 			};
 		} else {
-			hint format["This container doesn't have enough space to take %1 %2(s)...", _value, _name];
+			[format["This container doesn't have enough space to take %1 %2(s)!", _value, _name]] call ULP_fnc_hint;
 		};
 	}, false
 ] call ULP_fnc_selectNumber;

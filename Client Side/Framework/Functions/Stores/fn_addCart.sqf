@@ -24,7 +24,7 @@ if (isNull _itemList || { isNull _cartList } || { isNull _textList }) exitWith {
 private _curItem = lbCurSel _itemList;
 
 if (_curItem isEqualTo -1) exitWith {
-	hint "You must select an item to add to your cart...";
+	["You must select an item to add to your cart!"] call ULP_fnc_hint;
 };
 
 private _data = _itemList lbData _curItem;

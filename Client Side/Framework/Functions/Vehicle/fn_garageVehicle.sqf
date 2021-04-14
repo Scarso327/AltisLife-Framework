@@ -24,7 +24,7 @@ if (isNumber (_missionCfg >> "garageDelay")) then {
 };
 
 if !((crew _vehicle) isEqualTo []) exitWith {
-	hint "No one can be in the vehicle while you store it...";
+	["No one can be in the vehicle while you store it!"] call ULP_fnc_hint;
 };
 
 if !([format["Storing %1", _name], _time, [_vehicle, _name], {
@@ -33,7 +33,7 @@ if !([format["Storing %1", _name], _time, [_vehicle, _name], {
 	_this params [ "_vehicle", "_name" ];
 
 	if (isNull _vehicle || { !((crew _vehicle) isEqualTo []) }) exitWith {
-		hint format["You failed to store this vehicle as either someone was in it or it's already been removed..."];
+		[format["You failed to store this vehicle as either someone was in it or it's already been removed!"]] call ULP_fnc_hint;
 	};
 
 	private _id = _vehicle getVariable ["vehicle_id", -1];
@@ -42,10 +42,10 @@ if !([format["Storing %1", _name], _time, [_vehicle, _name], {
 		[_vehicle] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
 	} else {
 		deleteVehicle _vehicle;
-		hint "Vehicle has been stored.";
+		["Vehicle has been stored."] call ULP_fnc_hint;
 	};
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
-	hint "You can't garage a vehicle while performing another action...";
+	["You can't garage a vehicle while performing another action!"] call ULP_fnc_hint;
 };
 
 closeDialog 0;

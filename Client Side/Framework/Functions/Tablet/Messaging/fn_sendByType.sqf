@@ -16,13 +16,13 @@ private _msgCtrl = _display displayCtrl 23037;
 private _list = _display displayCtrl 23038;
 
 private _type = missionConfigFile >> "CfgMessages" >> (_list lbData (lbCurSel _list));
-if !(isClass _type) exitWith { hint "You must select a message type first..."; false };
+if !(isClass _type) exitWith { ["You must select a message type first!"] call ULP_fnc_hint; false };
 
 private _targets = getText (_type >> "targets");
 private _message = [ctrlText _msgCtrl] call ULP_fnc_stripString;
 
 if (_message isEqualTo "" || { (count _message) > getNumber (missionConfigFile >> "CfgMessages" >> "length") }) exitWith {
-	hint "You need to type a message you want to send...";
+	["You need to type a message you want to send!"] call ULP_fnc_hint;
 };
 
 if (_targets isEqualTo "") then {
@@ -38,7 +38,7 @@ if (_targets isEqualTo "") then {
 
 		private _player = (_list tvData (tvCurSel _list)) call BIS_fnc_objectFromNetId;
 		if (isNull _player) exitWith {
-			hint "You didn't select anyone...";
+			["You didn't select anyone!"] call ULP_fnc_hint;
 		};
 
 		[_type, _message, _player] call ULP_fnc_sendMessage;

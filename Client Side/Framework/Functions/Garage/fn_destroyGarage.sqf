@@ -38,4 +38,4 @@ _vehicleCfg params [
 	"", "_missionCfg", "_picture", "_name"
 ];
 
-hint format ["You have destroyed your %1 (%2)", _name, getText(_missionCfg >> "Textures" >> _texture >> "displayName")];
+[format ["You have destroyed your %1 (%2)", _name, getText(_missionCfg >> "Textures" >> _texture >> "displayName")]] call ULP_fnc_hint;

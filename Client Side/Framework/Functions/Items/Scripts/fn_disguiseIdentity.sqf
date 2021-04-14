@@ -12,17 +12,17 @@ _this params [
 
 // Stop spam...
 if (time < (player getVariable ["last_disguised", 0])) exitWith {
-	hint "You've disguised yourself recently, please wait...";
+	["You've disguised yourself recently, please wait..."] call ULP_fnc_hint;
 	false
 };
 player setVariable ["last_disguised", time + 3];
 
 if (_identity isEqualTo (name player) || { ((player getVariable ["name", name player]) isEqualTo _identity) }) then {
 	player setVariable ["name", nil, true];
-	hint "You've returned your public identity to normal...";
+	["You've returned your public identity to normal."] call ULP_fnc_hint;
 } else {
 	player setVariable ["name", _identity, true];
-	hint format ["You've changed your public identity to %1", _identity];
+	[format ["You've changed your public identity to %1.", _identity]] call ULP_fnc_hint;
 };
 
 true

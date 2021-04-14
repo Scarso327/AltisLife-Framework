@@ -13,7 +13,7 @@ private _owner = (_vehicle getVariable ["vehicle_owners", createHashMap]) getOrD
 
 if (_owner isEqualType false) exitWith {
 	deleteVehicle _vehicle;
-	hint "Vehicle was cleaned up as it was likely spawned in.";
+	["Vehicle was cleaned up as it was likely spawned in..."] call ULP_fnc_hint;
 };
 
-hint parseText format ["<t color='#FF0000'><t size='1.7'>Vehicle Registration</t></t><br/><t color='#FFD700'><t size='1.5'>Owner</t></t><br/> %1", _owner];
+[parseText format ["<t color='#FF0000'><t size='1.7'>Vehicle Registration</t></t><br/><t color='#FFD700'><t size='1.5'>Owner</t></t><br/> %1", _owner]] call ULP_fnc_hint;

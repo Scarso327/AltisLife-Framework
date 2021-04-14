@@ -11,8 +11,8 @@ _this params [
 
 if (isNull _unit || { !(alive _unit) }) exitWith {};
 
-if ((0 max (["BloodBag"] call ULP_fnc_hasItem)) < 1) exitWith { hint "You need a bloodbag to administer blood..."; };
-if !(isDowned(_unit)) exitWith { hint "You can only administer blood to injured players"; };
+if ((0 max (["BloodBag"] call ULP_fnc_hasItem)) < 1) exitWith { ["You need a bloodbag to administer blood!"] call ULP_fnc_hint; };
+if !(isDowned(_unit)) exitWith { ["You can only administer blood to injured players!"] call ULP_fnc_hint; };
 
 private _name = [_unit] call ULP_fnc_getName;
 
@@ -25,15 +25,15 @@ if !([format["Administering Blood to %1", _name], _time, [_unit, _name], {
 	_this params [ "_unit", "_name" ];
 
 	if (isNull _unit || { !(alive _unit) } || { !(isDowned(_unit)) } || { (0 max (["BloodBag"] call ULP_fnc_hasItem)) < 1 }) exitWith {
-		hint "You either lost your bloodbag or the patient you were treating has died...";
+		["You either lost your bloodbag or the patient you were treating has died..."] call ULP_fnc_hint;
 	};
 
 	["BloodBag", 1, true] call ULP_fnc_handleItem;
-	hint format ["You have administered blood into %1", _name];
+	[format ["You have administered blood to %1.", _name]] call ULP_fnc_hint;
 
 	[player] remoteExecCall ["ULP_fnc_receivedBlood", _unit];
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
-	hint "You can't administer blood while performing another action...";
+	["You can't administer blood while performing another action..."] call ULP_fnc_hint;
 };
 
 closeDialog 0;

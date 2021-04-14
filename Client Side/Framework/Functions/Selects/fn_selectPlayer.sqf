@@ -44,7 +44,7 @@ private _tree = _display displayCtrl 3809;
 } forEach _factions;
 
 if (_factions isEqualTo [] || { !_someoneAdded }) exitWith {
-	hint "There is no one available to select...";
+	["There is no one available to select..."] call ULP_fnc_hint;
 	_display closeDisplay 0;
 };
 

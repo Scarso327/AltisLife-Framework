@@ -18,7 +18,7 @@ _cfg params [
 
 if !(isClass _missionCfg) exitWith {};
 if !("ToolKit" in (items player)) exitWith {
-	hint "You require a tool kit to repair a vehicle...";
+	["You require a tool kit to repair a vehicle!"] call ULP_fnc_hint;
 };
 
 private _time = 40;
@@ -37,20 +37,20 @@ if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 	_this params [ "_vehicle", "_name" ];
 
 	if (isNull _vehicle || { !(alive _vehicle) } || { !("ToolKit" in (items player)) }) exitWith {
-		hint format["You failed to repair the %1 as it's either beyond repair or you didn't have the correct tools..."];
+		[format["You failed to repair the %1 as it's either beyond repair or you didn't have the correct tools."]] call ULP_fnc_hint;
 	};
 
 	player removeItem "Toolkit";
 
 	_vehicle setDamage 0;
-	hint format["You've repaired %1 using a toolkit...", _name];
+	[format["You've repaired %1 using a toolkit.", _name]] call ULP_fnc_hint;
 
 	if (time >= (_vehicle getVariable ["ProfessionCooldown", time - 120])) then {
 		["Repairing", 1, 40] call ULP_fnc_increaseProfession;
 		_vehicle setVariable ["ProfessionCooldown", time + 120];
 	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
-	hint "You can't repair a vehicle while performing another action...";
+	["You can't repair a vehicle while performing another action!"] call ULP_fnc_hint;
 };
 
 closeDialog 0;

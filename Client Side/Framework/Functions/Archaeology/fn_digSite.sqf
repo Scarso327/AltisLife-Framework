@@ -15,7 +15,7 @@ if !(isClass _cfg || { ULP_Archaeology_Digging }) exitWith { false };
 private _type = format ["Archaeology%1", _rarity];
 
 if !(_type in ULP_Missions) exitWith {
-	hint format ["You don't currently have an assigned archaeology site..."];
+	["You don't currently have an assigned archaeology site..."] call ULP_fnc_hint;
 };
 
 (ULP_Missions get _type) params [
@@ -23,7 +23,7 @@ if !(_type in ULP_Missions) exitWith {
 ];
 
 if ((player distance (taskDestination _task)) > 5) exitWith {
-	hint "You need to get closer to your dig spot...";
+	["You need to get closer to your dig spot."] call ULP_fnc_hint;
 };
 
 (getArray (_cfg >> "surveyTime")) params [ "_base", "_random" ];
@@ -58,7 +58,7 @@ private _time = _base + (random _random);
 
 	{ [_x, _y, false, true] call ULP_fnc_handleItem; } forEach _given;
 	[format["Archaeology%1", configName _cfg]] call ULP_fnc_finishMission;
-	hint format ["You have finished digging and found %1", _given];
+	[format ["You have finished digging and found %1", _given]] call ULP_fnc_hint;
 
 	["Archaeologist"] call ULP_fnc_achieve;
 	

@@ -38,5 +38,5 @@ _type = missionConfigFile >> "CfgRewards" >> "Types" >> _type;
 if !(isClass _type) exitWith { false };
 
 _value = ([_reward, _value] call compile getText (_type >> "onRewarded"));
-hint format [getText (_type >> "message"), _value, _reason];
+[format [getText (_type >> "message"), _value, _reason]] call ULP_fnc_hint;
 true

@@ -14,13 +14,13 @@ private _typeCfg = missionConfigFile >> "CfgMissions" >> _type;
 if !(isClass _typeCfg) exitWith {};
 
 if (_type in ULP_Missions) exitWith {
-	hint getText (_typeCfg >> "Messages" >> "onAlreadyHas");
+	[getText (_typeCfg >> "Messages" >> "onAlreadyHas")] call ULP_fnc_hint;
 };
 
 private _location = selectRandom (("isClass _x" configClasses (_typeCfg >> "Locations")) select { !((configName _x) isEqualTo _mission) });
 
 if (isNil "_location" || { _location isEqualTo [] }) exitWith {
-	hint getText (_typeCfg >> "Messages" >> "onNoLocations");
+	[getText (_typeCfg >> "Messages" >> "onNoLocations")] call ULP_fnc_hint;
 };
 
 private _pos = switch (true) do {
@@ -53,4 +53,4 @@ if !(_onClaimed isEqualTo "") then {
 private _reward = round (getNumber (_typeCfg >> "Rewards" >> "moneyReward") * (player distance _pos));
 
 ULP_Missions set [_type, [_task, _reward, _eachFrame]];
-hint format [getText (_typeCfg >> "Messages" >> "onAssigned"), _locName];
+[format [getText (_typeCfg >> "Messages" >> "onAssigned"), _locName]] call ULP_fnc_hint;

@@ -20,11 +20,11 @@ scopeName "fn_addNLREachFrame";
 	if ((player distance _pos) <= _nlrDistance && { ULP_Respawned }) exitWith {
 		_this pushBack time;
 
-		hint "You have entered your NLR zone!";
+		["You have entered your NLR zone!"] call ULP_fnc_hint;
 
 		[
 			{ (player distance (_this select 0)) > (_this select 4) }, _this, {
-				hint "You have left your NLR zone!";
+				["You have left your NLR zone!"] call ULP_fnc_hint;
 
 				_this set [5, ((_this select 5) + (time - (_this select 6)))];
 				_this deleteAt 6;

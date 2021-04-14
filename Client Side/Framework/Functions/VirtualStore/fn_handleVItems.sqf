@@ -24,7 +24,7 @@ if (isNull _display) exitWith {};
 private _list = _display displayCtrl 3303;
 
 private _curSel = missionConfigFile >> "CfgVirtualItems" >> (_list lnbData [(lnbCurSelRow _list), 0]);
-if !(isClass _curSel) exitWith { hint "You need to select an item first..."; };
+if !(isClass _curSel) exitWith { ["You need to select an item first!"] call ULP_fnc_hint; };
 
 private _buyPrice = _list lnbValue [(lnbCurSelRow _list), 1];
 private _sellPrice = _list lnbValue [(lnbCurSelRow _list), 2];
@@ -34,13 +34,13 @@ private _amount = 1;
 if (_remove) then {
 	_amount = [configName _curSel] call ULP_fnc_hasItem;
 	if (_amount isEqualTo -1) exitWith {
-		hint "You don't have any of these items to sell...";
+		["You don't have any of these items to sell!"] call ULP_fnc_hint;
 		false breakOut "fn_buyVItems";
 	};
 } else {
 	_amount = [getNumber(_curSel >> "weight")] call ULP_fnc_getMaxQuantity;
 	if (_amount isEqualTo 0) exitWith {
-		hint "You don't have enough inventory space...";
+		["You don't have enough inventory space!"] call ULP_fnc_hint;
 		false breakOut "fn_buyVItems";
 	};
 };
@@ -82,23 +82,23 @@ if (_remove) then {
 
 				if ([] call ULP_fnc_isGroup && { _gangTax > 0 }) then {
 					[group player, _gangTax, true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
-					hint format["You have sold %1 %2(s) for £%3 and £%4 was taken as tax by your group...", _value, _name, [_sellPrice] call ULP_fnc_numberText, [_gangTax] call ULP_fnc_numberText];
+					[format["You have sold %1 %2(s) for £%3 and £%4 was taken as tax by your group!", _value, _name, [_sellPrice] call ULP_fnc_numberText, [_gangTax] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				} else {
-					hint format["You have sold %1 %2(s) for £%3...", _value, _name, [_sellPrice] call ULP_fnc_numberText];
+					[format["You have sold %1 %2(s) for £%3!", _value, _name, [_sellPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				};
 			} else {
-				hint format["You don't have %1 %2(s) to sell...", _value, _name];
+				[format["You don't have %1 %2(s) to sell!", _value, _name]] call ULP_fnc_hint;
 			};
 		} else {
 			if ([_buyPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) then {
 				if ([configName _cfg, _value, false] call ULP_fnc_handleItem) then {
-					hint format["You have bought %1 %2(s) for £%3...", _value, _name, [_buyPrice] call ULP_fnc_numberText];
+					[format["You have bought %1 %2(s) for £%3!", _value, _name, [_buyPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				} else {
 					[_buyPrice, false] call ULP_fnc_addMoney; // Give them the money back, they didn't get what they paid for...
-					hint "You don't have enough inventory space...";
+					["You don't have enough inventory space!"] call ULP_fnc_hint;
 				};
 			} else {
-				hint format["You can't afford £%1 for %2 %3(s)...", [_buyPrice] call ULP_fnc_numberText, _value, _name];
+				[format["You can't afford £%1 for %2 %3(s)!", [_buyPrice] call ULP_fnc_numberText, _value, _name]] call ULP_fnc_hint;
 			};
 		};
 	}, false

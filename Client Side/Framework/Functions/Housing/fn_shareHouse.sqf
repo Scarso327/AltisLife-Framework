@@ -16,19 +16,19 @@ _this params [
 if (isNull _house) exitWith { false };
 
 if !([_house, player, false] call ULP_fnc_isHouseOwner) exitWith {
-	hint "Only the house owner can change whether the house is shared or not...";
+	["Only the house owner can change whether the house is shared or not!"] call ULP_fnc_hint;
 	false
 };
 
 // Stop spam...
 if (time < (_house getVariable ["building_last_shared", 0])) exitWith {
-	hint "You've changed the shared status of this house recently, please wait...";
+	["You've changed the shared status of this house recently, please wait..."] call ULP_fnc_hint;
 	false
 };
 _house setVariable ["building_last_shared", time + 5];
 
 if (_house getVariable ["selling", false]) exitWith {
-	hint "This house is being sold...";
+	["This house is being sold!"] call ULP_fnc_hint;
 	false
 };
 
@@ -47,5 +47,5 @@ private _event = ([
 });
 
 [_house getVariable ["building_id", -1], _shared] remoteExecCall ["ULP_SRV_fnc_setHouseShared", RSERV];
-hint format ["This house is %1 shared with your group...", ["no longer", "now"] select (_shared)];
+[format ["This house is %1 shared with your group.", ["no longer", "now"] select (_shared)]] call ULP_fnc_hint;
 true

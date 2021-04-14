@@ -1,6 +1,6 @@
 class B_LegStrapBag_black_F {
 	displayName = "Leg Strap";
-	price = 0;
+	price = 850;
 	reputation = false;
 	virtualSpace = 12;
 	class Textures {
@@ -17,7 +17,7 @@ class B_LegStrapBag_olive_F : B_LegStrapBag_black_F{};
 
 class B_Messenger_Black_F {
 	displayName = "Messenger Bag";
-	price = 0;
+	price = 1035;
 	reputation = false;
 	virtualSpace = 15;
 	class Textures {
@@ -36,7 +36,7 @@ class B_Messenger_Olive_F : B_Messenger_Black_F{};
 class B_Messenger_IDAP_F : B_Messenger_Black_F{};
 
 class B_SCBA_01_F {
-	price = 0;
+	price = 5000;
 	reputation = false;
 	virtualSpace = 0;
 	class Textures {};
@@ -44,7 +44,7 @@ class B_SCBA_01_F {
 
 class B_AssaultPack_blk {
 	displayName = "Assault Pack";
-	price = 0;
+	price = 1320;
 	reputation = false;
 	virtualSpace = 19;
 	class Textures {
@@ -67,7 +67,7 @@ class B_AssaultPack_wdl_F : B_AssaultPack_blk{};
 
 class B_FieldPack_blk {
 	displayName = "Field Pack";
-	price = 0;
+	price = 2450;
 	reputation = false;
 	virtualSpace = 22;
 	class Textures {
@@ -88,7 +88,7 @@ class B_FieldPack_green_F : B_FieldPack_blk{};
 
 class B_Kitbag_cbr {
 	displayName = "Kitbag";
-	price = 0;
+	price = 2980;
 	reputation = false;
 	virtualSpace = 24;
 	class Textures {
@@ -109,7 +109,7 @@ class B_Kitbag_mcamo : B_Kitbag_cbr{};
 
 class B_TacticalPack_blk {
 	displayName = "Tactical Pack";
-	price = 0;
+	price = 3320;
 	reputation = false;
 	virtualSpace = 26;
 	class Textures {
@@ -126,7 +126,7 @@ class B_TacticalPack_rgr : B_TacticalPack_blk{};
 
 class B_CivilianBackpack_01_Everyday_Black_F {
 	displayName = "Civilian Pack";
-	price = 0;
+	price = 3000;
 	reputation = false;
 	virtualSpace = 25;
 	class Textures {
@@ -149,7 +149,7 @@ class B_CivilianBackpack_01_Sport_Red_F : B_CivilianBackpack_01_Everyday_Black_F
 
 class B_Carryall_cbr {
 	displayName = "Carryall";
-	price = 0;
+	price = 4100;
 	reputation = false;
 	virtualSpace = 30;
 	class Textures {
@@ -175,7 +175,7 @@ class B_Carryall_wdl_F : B_Carryall_cbr{};
 
 class B_ViperLightHarness_blk_F {
 	displayName = "Light Viper Harness";
-	price = 0;
+	price = 3690;
 	reputation = false;
 	virtualSpace = 24;
 	class Textures {
@@ -192,7 +192,7 @@ class B_ViperLightHarness_oli_F : B_ViperLightHarness_blk_F{};
 
 class B_ViperHarness_blk_F {
 	displayName = "Viper Harness";
-	price = 0;
+	price = 3820;
 	reputation = false;
 	virtualSpace = 27;
 	class Textures {
@@ -209,7 +209,7 @@ class B_ViperHarness_oli_F : B_ViperHarness_blk_F{};
 
 class B_Bergen_mcamo_F {
 	displayName = "Bergen";
-	price = 0;
+	price = 6300;
 	reputation = false;
 	virtualSpace = 40;
 	class Textures {
@@ -225,7 +225,7 @@ class B_Bergen_dgtl_F : B_Bergen_mcamo_F{};
 class B_Bergen_hex_F : B_Bergen_mcamo_F{};
 
 class B_Parachute {
-	price = 0;
+	price = 7000;
 	reputation = false;
 	virtualSpace = 0;
 	class Textures {};

@@ -528,7 +528,12 @@ class CfgClothesStore {
 		class Uniforms {
 			class U_C_Man_casual_6_F {};
 			class U_C_man_sport_1_F {};
-			class U_B_Wetsuit {};
+			class U_B_Wetsuit {
+				class Textures {
+					class U_B_Wetsuit {};
+					class U_I_Wetsuit : U_B_Wetsuit {};
+				};
+			};
 		};
 
 		class Headgear {
@@ -716,7 +721,6 @@ class CfgClothesStore {
 			class U_C_E_LooterJacket_01_F {};
 			class U_O_R_Gorka_01_black_F {};
 			class U_I_C_Soldier_Para_1_F {};
-			class U_B_Wetsuit {};
 			class U_B_survival_uniform { condition = "[""Blackmarket""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk }"; };
 			class U_B_CombatUniform_mcam {};
 			class U_B_GhillieSuit {};

@@ -50,7 +50,7 @@ class ToolKit {
 class SmokeShell {
 	displayName = "Smoke Grenade";
 	price = 13450;
-	reputation = false;
+	reputation = true;
 	class Textures {
         class SmokeShell {
 			displayName = "White";

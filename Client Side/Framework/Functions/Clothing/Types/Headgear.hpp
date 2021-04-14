@@ -1,6 +1,6 @@
 class H_HeadBandage_clean_F {
 	displayName = "Bandage";
-	price = 0;
+	price = 2;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -10,7 +10,7 @@ class H_HeadBandage_stained_F : H_HeadBandage_clean_F{};
 class H_HeadBandage_bloody_F : H_HeadBandage_clean_F{};
 
 class H_WirelessEarpiece_F {
-	price = 0;
+	price = 14;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -19,7 +19,7 @@ class H_WirelessEarpiece_F {
 
 class H_Bandanna_gry {
 	displayName = "Bandanna";
-	price = 0;
+	price = 10;
 	reputation = false;
 	class Textures {
 		class H_Bandanna_gry {
@@ -52,7 +52,7 @@ class H_Bandanna_surfer_grn : H_Bandanna_gry{};
 
 class H_Cap_blk {
 	displayName = "Cap";
-	price = 0;
+	price = 30;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -103,7 +103,7 @@ class H_Cap_Orange_IDAP_F : H_Cap_blk{};
 
 class H_MilCap_gry {
 	displayName = "Military Cap";
-	price = 0;
+	price = 45;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -115,7 +115,7 @@ class H_MilCap_wdl : H_MilCap_gry{};
 
 class H_Hat_grey {
 	displayName = "Hat";
-	price = 0;
+	price = 60;
 	reputation = false;
 	class Textures {
 		class H_Hat_grey {
@@ -141,6 +141,7 @@ class H_StrawHat_dark : H_Hat_grey{};
 
 class H_Hat_Safari_sand_F : H_Hat_grey {
 	displayName = "Safari Hat";
+	price = 65;
 	class Textures {
 		class H_Hat_Safari_sand_F {
 			displayName = "Sand";
@@ -153,7 +154,7 @@ class H_Hat_Safari_olive_F : H_Hat_Safari_sand_F{};
 
 class H_Watchcap_blk {
 	displayName = "Beanie";
-	price = 0;
+	price = 80;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -173,7 +174,7 @@ class H_Watchcap_camo : H_Watchcap_blk{};
 
 class H_Booniehat_khk {
 	displayName = "Bonniehat";
-	price = 0;
+	price = 95;
 	reputation = false;
 	class Textures {
 		class H_Booniehat_khk {
@@ -198,7 +199,7 @@ class H_Booniehat_wdl : H_Booniehat_khk{};
 
 class H_Beret_blk {
 	displayName = "Beret";
-	price = 0;
+	price = 2800;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -209,14 +210,17 @@ class H_Beret_blk {
 		};
 		class H_Beret_gen_F : H_Beret_blk {
 			displayName = "Police Command";
+			price = 8900;
 			condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_RTA"", 3] call ULP_fnc_hasAccess }";
 		};
 		class H_Beret_EAF_01_F : H_Beret_blk {
 			displayName = "Spec. Command";
+			price = 7450;
 			condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess || { [""Police_NCA"", 4] call ULP_fnc_hasAccess } || { [""Police_MPU"", 3] call ULP_fnc_hasAccess } || { [""Police_RPU"", 3] call ULP_fnc_hasAccess }";
 		};
 		class H_Beret_CSAT_01_F : H_Beret_blk {
 			displayName = "Command Beret";
+			price = 14850;
 			condition = "[""Medic_Main"", 7] call ULP_fnc_hasAccess";
 		};
 	};
@@ -227,7 +231,7 @@ class H_Beret_CSAT_01_F : H_Beret_blk{};
 
 class H_ParadeDressCap_01_LDF_F {
 	displayName = "Parade Cap";
-	price = 0;
+	price = 105;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -236,7 +240,7 @@ class H_ParadeDressCap_01_LDF_F {
 
 class H_ShemagOpen_khk {
 	displayName = "Shemag";
-	price = 0;
+	price = 700;
 	reputation = false;
 	isMask = true;
 	isNV = false;
@@ -247,7 +251,7 @@ class H_Shemag_olive : H_ShemagOpen_khk{};
 
 class H_EarProtectors_black_F {
 	displayName = "Ear Protectors";
-	price = 0;
+	price = 240;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -279,7 +283,7 @@ class H_HeadSet_yellow_F : H_EarProtectors_black_F{};
 
 class H_Construction_basic_black_F {
 	displayName = "Hard Hat";
-	price = 0;
+	price = 850;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -314,7 +318,7 @@ class H_Construction_basic_vrana_F : H_Construction_basic_black_F{};
 class H_Construction_headset_vrana_F : H_Construction_basic_black_F{};
 
 class H_Helmet_Skate {
-	price = 0;
+	price = 1900;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -323,7 +327,7 @@ class H_Helmet_Skate {
 
 class H_RacingHelmet_1_black_F {
 	displayName = "Racing Helmet";
-	price = 0;
+	price = 4500;
 	reputation = false;
 	isMask = true;
 	isNV = false;
@@ -357,7 +361,7 @@ class H_RacingHelmet_1_F : H_RacingHelmet_1_black_F{};
 
 class H_PASGT_basic_blue_press_F {
 	displayName = "Press Helmet";
-	price = 0;
+	price = 19500;
 	reputation = false;
 	isMask = false;
 	isNV = false;
@@ -377,7 +381,7 @@ class H_PASGT_basic_olive_F : H_PASGT_basic_blue_press_F{};
 
 class H_PilotHelmetHeli_B {
 	displayName = "Flight Helmet";
-	price = 0;
+	price = 39400;
 	reputation = false;
 	isMask = true;
 	isNV = true;
@@ -393,8 +397,8 @@ class H_CrewHelmetHeli_B : H_PilotHelmetHeli_B{};
 
 class H_HelmetB_light {
 	displayName = "Light Combat Helment";
-	price = 0;
-	reputation = false;
+	price = 27800;
+	reputation = true;
 	class Textures {
 		class H_HelmetB_light {
 			displayName = "Green";
@@ -417,8 +421,8 @@ class H_HelmetB_light_wdl : H_HelmetB_light{};
 
 class H_HelmetB {
 	displayName = "Combat Helment";
-	price = 0;
-	reputation = false;
+	price = 37600;
+	reputation = true;
 	isMask = false;
 	isNV = false;
 	class Textures {
@@ -447,8 +451,8 @@ class H_HelmetB_plain_wdl : H_HelmetB{};
 
 class H_HelmetSpecB {
 	displayName = "Enhanced Combat Helment";
-	price = 0;
-	reputation = false;
+	price = 78500;
+	reputation = true;
 	isMask = false;
 	isNV = false;
 	class Textures {
@@ -473,8 +477,8 @@ class H_HelmetSpecB_wdl : H_HelmetSpecB{};
 
 class H_HelmetB_TI_arid_F {
 	displayName = "Stealth Combat Helment";
-	price = 0;
-	reputation = false;
+	price = 55000;
+	reputation = true;
 	isMask = true;
 	isNV = false;
 	class Textures {};

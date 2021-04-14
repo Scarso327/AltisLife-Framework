@@ -160,7 +160,7 @@ class CfgAchievements {
 	class JoinUC {
 		icon = "Data\UI\Achievements\UC.paa";
 		displayName = "Secret Constable";
-		description = "Joined the APC's UC Division.";
+		description = "Joined the APC's UC.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};

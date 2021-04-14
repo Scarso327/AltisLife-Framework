@@ -12,7 +12,7 @@ _this params [
 private _display = ctrlParent _ctrl;
 private _storeCfg = _display getVariable ["curStore", configNull];
 
-if (!(isClass (_storeCfg)) || { isNull _display }) exitWith { systemChat "Item Failure" };
+if (!(isClass (_storeCfg)) || { isNull _display }) exitWith { ["Item Failure!", "Cart Notification"] call ULP_fnc_hint; };
 
 private _data = _ctrl lbData _index;
 if (_data isEqualTo "") exitWith {};

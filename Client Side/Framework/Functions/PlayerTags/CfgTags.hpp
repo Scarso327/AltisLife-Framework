@@ -34,6 +34,15 @@ class CfgTags {
 					"MedicCMO"
 				};
 			};
+
+			class Hato {
+				Main[] = {
+					"HatoTO",
+					"HatoTO",
+					"HatoSTO",
+					"HatoOM"
+				};
+			};
 		};
 	};
 
@@ -147,6 +156,23 @@ class CfgTags {
 			icon = "Data\Tags\Ranks\Medic\STU.paa";
 			subtitle = "Student";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
+		};
+
+		// Highways Agency
+		class HatoOM {
+			icon = "Data\Tags\Ranks\Medic\CMO.paa"; // ICON
+			subtitle = "Operations Manager";
+			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 3] call ULP_fnc_hasAccess }";
+		};
+		class HatoSTO {
+			icon = "Data\Tags\Ranks\Medic\DOO.paa"; // ICON
+			subtitle = "Senior Traffic Officer";
+			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 2] call ULP_fnc_hasAccess }";
+		};
+		class HatoTO {
+			icon = "Data\Tags\Ranks\Medic\CST.paa"; // ICON
+			subtitle = "Traffic Officer";
+			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
 		// Civilian Donators

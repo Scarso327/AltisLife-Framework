@@ -201,6 +201,16 @@ class CfgHousing {
 				position[] = {{15193.8,15391.7,3.28908}, 0};
 			};
 		};
+		class Land_Offices_01_V1_F : Land_MilOffices_V1_F {
+			price = 41455000;
+			breakIn = 5 * 60;
+			spawnPos[] = {15177.2,15461.1,7.97687};
+			
+			class Storage {
+				object = "C_IDAP_supplyCrate_F";
+				position[] = {{15183.3,15467.3,7.97443}, 0};
+			};
+		};
 	};
 
 	class Upgrades {};

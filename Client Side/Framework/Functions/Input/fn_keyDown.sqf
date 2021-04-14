@@ -105,14 +105,14 @@ if (isDowned(player)) then {
                             private _sirens = getArray (_vehSiren >> "SFX");
 
                             if !(_sirens isEqualTo []) then {
-                                titleText["Sirens On", "PLAIN"];
+                                ["Siren On!"] call ULP_fnc_hint;
                                 [_veh, _sirens select 0] call ULP_fnc_vehicleSiren;
                             };
                         };
                     } else {
                         ULP_sirenDelay = time + 2;
 
-                        titleText["Sirens Off", "PLAIN"];
+                        ["Siren Off!"] call ULP_fnc_hint;
                         [_veh, "", false] call ULP_fnc_vehicleSiren;
                     };
 
@@ -131,7 +131,7 @@ if (isDowned(player)) then {
                         private _timeout = ULP_lightDelay;
 
                         if (isNil "_timeout" || { time > _timeout }) then {
-                            titleText["Lights On", "PLAIN"];
+                            ["Emergency Lights On!"] call ULP_fnc_hint;
                             [_veh, 
                                 [getArray(_vehLights >> "leftPos"), getArray(_vehLights >> "leftColour")],
                                 [getArray(_vehLights >> "rightPos"), getArray(_vehLights >> "rightColour")]
@@ -140,7 +140,7 @@ if (isDowned(player)) then {
                     } else {
                         ULP_lightDelay = time + 2;
 
-                        titleText["Lights Off", "PLAIN"];
+                        ["Emergency Lights Off!"] call ULP_fnc_hint;
                         [_veh, [], [], false] remoteExecCall ["ULP_fnc_vehicleLights"];
                     };
 
@@ -169,12 +169,12 @@ if (isDowned(player)) then {
                                 _veh setVariable [format ["bis_disabled_Door_%1",_door], 1, true];
                                 _veh animate [format["door_%1_rot",_door],0];
 
-                                systemChat "You've locked this door.";
+                                ["Property Door Locked!"] call ULP_fnc_hint;
                             } else {
                                 _veh setVariable [format ["bis_disabled_Door_%1", _door], 0, true];
                                 _veh animate [format["door_%1_rot", _door], 1];
 
-                                systemChat "You've unlocked this door.";
+                                ["Property Door Unlocked!"] call ULP_fnc_hint;
                             };
                         };
 
@@ -184,12 +184,12 @@ if (isDowned(player)) then {
                             [_veh, 0] remoteExecCall ["ULP_fnc_lock", _veh];
                             [_veh, "unlockCarSound", 50, 1] remoteExecCall ["ULP_fnc_say3D"];
 
-                            systemChat "You've unlocked this vehicle.";
+                            ["Vehicle Doors Unlocked!"] call ULP_fnc_hint;
                         } else {
                             [_veh, 2] remoteExecCall ["ULP_fnc_lock", _veh];
                             [_veh, "lockCarSound", 50, 1] remoteExecCall ["ULP_fnc_say3D"];
 
-                            systemChat "You've locked this vehicle.";
+                            ["Vehicle Doors Unlocked!"] call ULP_fnc_hint;
                         };
 
                         _handled = true;

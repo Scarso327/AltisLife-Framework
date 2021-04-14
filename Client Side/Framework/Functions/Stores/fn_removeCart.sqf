@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _display = ctrlParent _ctrl;
-if (isNull _display) exitWith { systemChat "Cart Ctrl Failure" };
+if (isNull _display) exitWith { ["Cart Ctrl Failure!", "Cart Notification"] call ULP_fnc_hint; };
 
 // Update information to list as this was called from button...
 if (_index isEqualTo -1) then {

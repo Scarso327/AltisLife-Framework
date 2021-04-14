@@ -1,15 +1,3 @@
-class Weight : Life_RscStructuredText {
-	idc = 23015;
-	style = 2;
-	text = "<t align='right' valign='middle'>Weight : 0/0</t>";
-	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-	colorBackground[] = NO_COLOUR;
-	SAFEZONE_X(UI_X);
-	SAFEZONE_Y(UI_Y);
-	SAFEZONE_W(UI_WIDTH - MARGIN_X);
-	SAFEZONE_H(MARGIN_Y * 2);
-};
-
 class InventoryPages : Life_RscToolbox {
 	idc = 23014;
 	style = 2;

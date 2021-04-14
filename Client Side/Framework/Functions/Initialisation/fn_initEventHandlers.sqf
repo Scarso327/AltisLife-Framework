@@ -9,6 +9,7 @@ player addEventHandler ["Reloaded", { _this call ULP_fnc_onReloaded }];
 player addEventHandler ["GetInMan", { _this call ULP_fnc_onGetIn }];
 player addEventHandler ["GetOutMan", { _this call ULP_fnc_onGetOut }];
 player addEventHandler ["Take", { _this call ULP_fnc_onTake }];
+player addEventHandler ["Put", { _this call ULP_fnc_onPut }];
 
 ["KeysGiven", {
 	_this params [

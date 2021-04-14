@@ -12,7 +12,7 @@ _display setVariable ["preScreen", "Home"];
 
 ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
 
-[(_display displayCtrl 23015), format["%1/%2", _carryWeight, _maxWeight], "right"] call ULP_UI_fnc_setVAlignText;
+(_display displayCtrl 23001) ctrlSetStructuredText parseText format["<t align='left'>Inventory</t><t align='right'>%1/%2</t>", _carryWeight, _maxWeight];
 
 private _toolbox = _display displayCtrl 23014;
 

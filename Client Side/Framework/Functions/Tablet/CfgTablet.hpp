@@ -67,7 +67,7 @@ class CfgTablet {
 		idc= 23003;
 		pageTitle = "Inventory";
 		pageIdcs[] = {
-			23014, 23015, 23016, 23017, 23018, 23019
+			23014, 23016, 23017, 23018, 23019
 		};
 		onload = "_this call ULP_fnc_inventory";
 	};

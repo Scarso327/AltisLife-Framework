@@ -60,6 +60,7 @@ class CfgFunctions {
 			class onFired {};
 			class onReloaded {};
 			class onTake {};
+			class onPut {};
 		};
 
 		class Utility {
@@ -249,6 +250,7 @@ class CfgFunctions {
 			class getInventory {};
 			class setCfgLoadout {};
 			class compatibleItems {};
+			class maxCarry {};
 		};
 		
 		class Gathering {

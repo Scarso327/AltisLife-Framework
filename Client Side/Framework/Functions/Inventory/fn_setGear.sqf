@@ -84,6 +84,7 @@ if (_itemType isEqualTo "Magazine") then {
 				}] call ULP_fnc_waitUntilExecute;
 			};
 
+			[] call ULP_fnc_maxCarry;
 			true breakOut "fn_setGear";
 		};
 		case "Uniform": {
@@ -104,6 +105,7 @@ if (_itemType isEqualTo "Magazine") then {
 				}] call ULP_fnc_waitUntilExecute;
 			};
 
+			[] call ULP_fnc_maxCarry;
 			true breakOut "fn_setGear";
 		};
 		case "Vest": {
@@ -118,6 +120,7 @@ if (_itemType isEqualTo "Magazine") then {
 
 			if !(_items isEqualTo []) then { [_items] call ULP_fnc_addItems; };
 
+			[] call ULP_fnc_maxCarry;
 			true breakOut "fn_setGear";
 		};
 		case "AccessorySights";

@@ -20,4 +20,6 @@ if (isNull _unit || { _item isEqualTo "" }) exitWith { true };
 	if !(_texture isEqualTo "") then {
 		[_object, _objectContainer, _texture] call ULP_fnc_setTextures;
 	};
-} Foreach [[_unit, uniformContainer _unit], [unitBackpack _unit, backpackContainer _unit]];
+} forEach [[_unit, uniformContainer _unit], [unitBackpack _unit, backpackContainer _unit]];
+
+[] call ULP_fnc_maxCarry;

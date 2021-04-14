@@ -126,6 +126,10 @@ switch (_code) do {
             [] call ULP_fnc_setTags;
             _handled = true;
         };
+
+        if ([] call ULP_fnc_isStaff && { ([player] call ULP_fnc_isRestrained) } && { [player] call ULP_fnc_onDuty } && { ["Restrain", false] call ULP_fnc_checkPower } && { _ctrlKey } && { !_shift } && { !_alt }) then {
+            [player, objNull, false] call ULP_fnc_restrain;
+        };
     };
 
     case P : {

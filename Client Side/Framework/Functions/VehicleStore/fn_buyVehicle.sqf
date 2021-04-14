@@ -52,8 +52,9 @@ if (isNil "_spawn") exitWith {
 	["There are no available spawn points!"] call ULP_fnc_hint;
 };
 
-if ([_buyPrice, false, format ["Purchased %1", _name]] call ULP_fnc_removeMoney) exitWith {
-	private _faction = [player] call ULP_fnc_getFaction;
+private _faction = [player] call ULP_fnc_getFaction;
+
+if ([_faction, "vehicles"] call ULP_fnc_factionFree || { [_buyPrice, false, format ["Purchased %1", _name]] call ULP_fnc_removeMoney }) exitWith {
 
 	if ([_faction, "vehicles"] call ULP_fnc_factionPresistant) then {
 		["VehicleBought", {

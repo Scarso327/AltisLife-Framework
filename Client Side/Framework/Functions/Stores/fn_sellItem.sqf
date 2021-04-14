@@ -9,6 +9,10 @@ _this params [
 	"_ctrl"
 ];
 
+if ([[player] call ULP_fnc_getFaction, "vehicles"] call ULP_fnc_factionFree) exitWith {
+	hint "Your gear is covered by the government and so you're unable to sell anything...";
+};
+
 private _display = ctrlParent _ctrl;
 if (isNull _display) exitWith {};
 

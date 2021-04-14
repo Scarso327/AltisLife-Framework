@@ -80,6 +80,7 @@ class CfgFunctions {
 			class hasAccess {};
 			class setLoadout {};
 			class factionPresistant {};
+			class factionFree {};
 			class allMembers {};
 			class onlineFaction {};
 			class canResetLoadout {};

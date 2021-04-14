@@ -41,6 +41,11 @@ class CfgFactions {
 			vehicles = false;
 		};
 
+		class Free {
+			physical = true;
+			vehicles = true;
+		};
+
 		class Loadout {
 			canRestLoadout = true;
 			class Uniforms {
@@ -88,6 +93,11 @@ class CfgFactions {
 			vehicles = false;
 		};
 
+		class Free {
+			physical = true;
+			vehicles = true;
+		};
+
 		class Loadout {
 			canRestLoadout = true;
 			class Uniforms {
@@ -128,6 +138,11 @@ class CfgFactions {
 
 		class Persistance {
 			vehicles = false;
+		};
+
+		class Free {
+			physical = true;
+			vehicles = true;
 		};
 
 		class Loadout {

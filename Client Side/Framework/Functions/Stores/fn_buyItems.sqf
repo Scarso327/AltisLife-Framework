@@ -27,7 +27,7 @@ _ctrl ctrlEnable false;
 private _override = cbChecked (_display displayCtrl 3114);
 private _cartValue = _display getVariable "cartValue";
 
-if (CASH < _cartValue) then {
+if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) && { CASH < _cartValue }) then {
 	["You can't afford these items!"] call ULP_fnc_hint;
 } else {
 	private _itemsBought = 0;
@@ -57,7 +57,9 @@ if (CASH < _cartValue) then {
 		_cartList lbSetCurSel -1;
 
 		// Pay for it and wipe total value...
-		CASH = CASH - _cartValue;
+		if !([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) then {
+			[_cartValue] call ULP_fnc_removeMoney;
+		};
 		_display setVariable ["cartValue", 0];
 		[] call ULP_fnc_syncPlayerInfo;
 

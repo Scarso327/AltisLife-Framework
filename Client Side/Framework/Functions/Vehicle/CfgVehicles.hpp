@@ -407,7 +407,7 @@ class CfgVehicles {
 						params[] = {};
 						priority = 1;
 						condition = "!(isNull (objectParent _this)) && { _target isEqualTo (vehicle _this) }";
-						radius = 3;
+						radius = 7;
 					};
 				};
 			};

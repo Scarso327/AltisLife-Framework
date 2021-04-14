@@ -14,12 +14,12 @@ _this params [
 
 private _display = findDisplay _idd;
 
-if (isNull _display) exitWith { systemChat "Cart Failure" };
+if (isNull _display) exitWith { ["Cart Failure!"] call ULP_fnc_hint; };
 
 private _itemList = _display displayCtrl _itemIdc;
 private _cartList = _display displayCtrl _cartIdc;
 private _textList = _display displayCtrl _textIdc;
-if (isNull _itemList || { isNull _cartList } || { isNull _textList }) exitWith { systemChat "Cart Ctrl Failure" };
+if (isNull _itemList || { isNull _cartList } || { isNull _textList }) exitWith { ["Cart Ctrl Failure!", "Cart Notification"] call ULP_fnc_hint; };
 
 private _curItem = lbCurSel _itemList;
 

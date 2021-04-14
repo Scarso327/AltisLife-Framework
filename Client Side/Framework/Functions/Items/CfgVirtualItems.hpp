@@ -365,7 +365,7 @@ class CfgVirtualItems {
 		weight = 3;
 		class Settings : Settings {};
 	};
-	class Breathalyser : Pickaxe {
+	class Breathalyser : Pickaxe { // TODO
 		displayName = "Breathalyser";
 		description = "Used to determin whether or not someone is under the influence.";
 		icon = "Data\Icons\breathalyser.paa";
@@ -384,7 +384,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_panic;"; };
 	};
-	class Ziptie : Pickaxe {
+	class Ziptie : Pickaxe { // TODO
 		displayName = "Ziptie";
 		description = "A tool used to retain others.";
 		icon = "Data\Icons\ziptie.paa";
@@ -393,7 +393,7 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class Blindfold : Pickaxe {
+	class Blindfold : Pickaxe { // TODO
 		displayName = "Blindfold";
 		description = "A tool used to blindfold others.";
 		icon = "Data\Icons\blindfold.paa";
@@ -402,7 +402,7 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class Stinger {
+	class Stinger { // TODO
 		displayName = "Stinger";
 		description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
 		icon = "Data\Icons\stinger.paa";
@@ -434,7 +434,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_boltcut;"; };
 	};
-	class HackingDevice : Stinger {
+	class HackingDevice : Stinger { // TODO
 		displayName = "Hacking Device";
 		description = "A tool used to hack various systems and malicously gain access to said systems.";
 		icon = "Data\Icons\hackingDevice.paa";
@@ -443,7 +443,7 @@ class CfgVirtualItems {
 		weight = 3;
 		class Settings : Settings {};
 	};
-	class ExplosiveCharge : Stinger {
+	class ExplosiveCharge : Stinger { // TODO
 		displayName = "Explosive Charge";
 		description = "A tool used to destroy fortified locks.";
 		icon = "Data\Icons\explosiveCharge.paa";
@@ -452,7 +452,7 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 	};
-	class IndustrialDrill : Stinger {
+	class IndustrialDrill : Stinger { // TODO
 		displayName = "Industrial Drill";
 		description = "A tool used to break fortified locks.";
 		icon = "Data\Icons\industrialDrill.paa";
@@ -463,7 +463,7 @@ class CfgVirtualItems {
 	};
 
 	// Medical Equipment
-	class Painkillers {
+	class Painkillers { // TODO (Will give health immedately after use)
 		displayName = "Painkillers";
 		description = "Two pills that restore a small amount of health.";
 		icon = "Data\Icons\painkillers.paa";
@@ -478,7 +478,7 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
-	class Bandage : Painkillers {
+	class Bandage : Painkillers { // TODO (Will give health after a VERY qucik progress)
 		displayName = "Bandage";
 		description = "Used to quickly heal minor wounds.";
 		icon = "Data\Icons\bandage.paa";

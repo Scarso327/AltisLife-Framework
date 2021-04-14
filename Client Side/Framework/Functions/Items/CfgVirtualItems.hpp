@@ -553,7 +553,7 @@ class CfgVirtualItems {
 		displayName = "Marked Gold";
 		description = "A marked gold bar that is commonly stored in the HM Treasury.";
 		icon = "Data\Icons\ingot.paa";
-		sellPrice = -1;
+		sellPrice = 250000;
 		weight = 16;
 		class Settings : Settings {};
 	};

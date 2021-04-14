@@ -270,32 +270,32 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 		};
-		class Events { onUse = "if ([100, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
+		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [100, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 		conditions = "true";
 	};
 	class SmallXPReward : TinyXPReward {
 		displayName = "Small XP Reward";
 		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
-		class Events { onUse = "if ([500, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
+		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [500, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
 	class MediumXPReward : TinyXPReward {
 		displayName = "Medium XP Reward";
 		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
-		class Events { onUse = "if ([1000, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
+		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [1000, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
 	class LargeXPReward : TinyXPReward {
 		displayName = "Large XP Reward";
 		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
-		class Events { onUse = "if ([5000, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
+		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [5000, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
 	class HugeXPReward : TinyXPReward {
 		displayName = "Huge XP Reward";
 		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
-		class Events { onUse = "if ([10000, ""Used XP Reward""] call ULP_fnc_addXP) then { [(_this select 1), 1, true] call ULP_fnc_handleItem; };"; };
+		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [10000, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
 
 	// General Items

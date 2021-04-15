@@ -6,7 +6,7 @@
 scopeName "fn_openGarage";
 
 _this params [
-	["_types", ["Car", "Air", "Ship"], [[]]],
+	["_types", ["Car", "Helicopter", "Plane", "Ship"], [[]]],
 	["_spawns", [], [[]]],
 	["_impound", false, [true]]
 ];

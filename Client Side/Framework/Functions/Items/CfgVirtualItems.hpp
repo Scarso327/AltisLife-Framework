@@ -332,6 +332,10 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 		};
+		class Deconstruction {
+			blueprints[] = { "B_Pickaxe" };
+			materials[] = { {"IronBar", 3}, {"Wood", 2} };
+		};
 		conditions = "true";
 	};
 	class Shovel : Pickaxe {
@@ -595,6 +599,15 @@ class CfgVirtualItems {
 			isScripted = false;
 		};
 		conditions = "true";
+	};
+	class Wood : Tobacco {
+		displayName = "Wood";
+		description = "A simple piece of wood commonly found in crafting recipies.";
+		icon = "Data\Icons\wood.paa";
+		buyPrice = -1;
+		sellPrice = 6;
+		weight = 2;
+		class Settings : Settings {};
 	};
 	class Rock : Tobacco {
 		displayName = "Rock";

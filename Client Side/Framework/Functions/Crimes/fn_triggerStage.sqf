@@ -28,6 +28,7 @@ if !(call compile getText (_stageCfg >> "condition")) exitWith {
 };
 
 private _onStart = getText (_stageCfg >> "onStarted");
+private _eachFrame = getText (_stageCfg >> "onEachFrame");
 
 if ([getText (_stageCfg >> "displayName"), getNumber (_stageCfg >> "time"), [_stageCfg, _location], { (player distance (_this select 1)) <= 5 }, {
 	_this params [ "_stageCfg" ];
@@ -38,6 +39,6 @@ if ([getText (_stageCfg >> "displayName"), getNumber (_stageCfg >> "time"), [_st
 	};
 
 	call compile getText (_stageCfg >> "onCompleted");
-}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) then  {
+}, {}, ["GRAB", "CROUCH"], (compile _eachFrame)] call ULP_UI_fnc_startProgress) then  {
 	call compile _onStart;
 };

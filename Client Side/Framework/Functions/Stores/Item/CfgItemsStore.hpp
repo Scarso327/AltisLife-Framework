@@ -128,7 +128,7 @@ class CfgItemsStore {
 			class 30Rnd_45ACP_Mag_SMG_01 : FactionBase {};
 			class 9Rnd_45ACP_Mag : FactionBase {};
 			class 50Rnd_570x28_SMG_03 : FactionBase {};
-			class 30Rnd_556x45_Stanag_Tracer_Green : FactionBase { displayName = "Rubber Bullet Magazine" };
+			class 30Rnd_556x45_Stanag_Tracer_Green : FactionBase { displayName = "Rubber Bullet Magazine"; };
 			class 20Rnd_556x45_UW_mag : FactionBase {};
 			class 30Rnd_556x45_Stanag : FactionBase {};
 			class 150Rnd_556x45_Drum_Mag_F : FactionBase { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 7] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };

@@ -564,12 +564,19 @@ class CfgVirtualItems {
 		sellPrice = 700000;
 		class Settings : Settings {};
 	};
-	class EncryptedServerFiles : StolenCargo {
-		displayName = "Encrypted Server Files";
-		description = "Various server files taken from the HMS Liberty's command deck.";
+	class EncryptedDrive : StolenCargo {
+		displayName = "Encrypted Drive";
+		description = "An encrypted drive containing secrect files taken from the HMS Liberty's command deck.";
 		icon = "Data\Icons\ingot.paa"; // ICON
-		sellPrice = 1780500;
-		weight = 6;
+		sellPrice = 400000;
+		weight = 8;
+		class Settings : Settings {};
+	};
+	class DecryptedDrive : EncryptedDrive {
+		displayName = "Decrypted Drive";
+		description = "An Decrypted drive containing secrect files taken from the HMS Liberty's command deck.";
+		icon = "Data\Icons\ingot.paa"; // ICON
+		sellPrice = 1000000;
 		class Settings : Settings {};
 	};
 

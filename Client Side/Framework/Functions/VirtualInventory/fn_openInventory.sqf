@@ -13,7 +13,16 @@ _this params [
 	["_container", objNull, [objNull]]
 ];
 
+(_container call BIS_fnc_objectType) params ["", "_type"];
+
+// Inventory Checks...
 if (isNull _container || { !alive _container } || { !([_container] call ULP_fnc_hasInventory) } || { dialog } || { [] call ULP_UI_fnc_isProgress }) exitWith { false };
+
+// Access Checks...
+if ((_type in ["Car", "Helicopter", "Plane", "Ship"] && { !(_container in ULP_Keys) }) || { _container getVariable ["locked", false] } || { !(_container getVariable ["drilled", true]) }) exitWith {
+	["You don't have access to this container..."] call ULP_fnc_hint;
+	false
+};
 
 if (createDialog "DialogInventory") exitWith {
 	private _display = findDisplay 4200;

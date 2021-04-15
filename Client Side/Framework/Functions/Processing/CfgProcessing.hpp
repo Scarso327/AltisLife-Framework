@@ -1,5 +1,6 @@
 class CfgProcessing {
 	class BaseProcess {
+		processTitle = "Processing";
 		processTime = 60;
 		factions[] = { "Civilian", "Police", "Medic", "Hato" };
 		hidden[] = {};
@@ -93,16 +94,14 @@ class CfgProcessing {
 	};
 
 	// Processing
-	class Processing : BaseProcess { processTitle = "Processing"; };
-
-	class SchnapsApple : Processing {
+	class SchnapsApple : BaseProcess {
 		processTime = 40;
 		materials[] = { { "FreshApple", 2 } };
 		items[] = { { "Schnapps", 1 } };
 		reqLicenses[] = {};
 	};
 
-	class SchnapsPeach : Processing {
+	class SchnapsPeach : BaseProcess {
 		processTime = 40;
 		materials[] = { { "FreshPeach", 2 } };
 		items[] = { { "Schnapps", 1 } };
@@ -207,5 +206,13 @@ class CfgProcessing {
 		processTime = 120;
 		materials[] = { { "UnmarkedGold", 1 } };
 		items[] = { { "MarkedGold", 1 } };
+	};
+
+	// Decrypting
+	class Secrets : BaseProcess {
+		processTitle = "Decrypting";
+		processTime = 180;
+		materials[] = { { "EncryptedDrive", 1 } };
+		items[] = { { "DecryptedDrive", 1 } };
 	};
 };

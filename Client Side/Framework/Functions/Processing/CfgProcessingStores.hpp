@@ -6,8 +6,14 @@ class CfgProcessingStores {
 
 	class Gold : Base {
 		title = "Goldsmith";
-		factions[] = { "Civilian", "Police", "Medic", "Hato" };
+		factions[] = { "Civilian", "Police" };
 		processes[] = { "Gold" };
+	};
+
+	class Decrypter : Base {
+		title = "Decrypter";
+		factions[] = { "Civilian", "Police" };
+		processes[] = { "Secrets" };
 	};
 
 	class PublicCookhouse : Base {

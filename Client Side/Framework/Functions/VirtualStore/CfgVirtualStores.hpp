@@ -268,6 +268,15 @@ class CfgVirtualStores {
 		};
 	};
 
+	class Secrets {
+		storeName = "Secrets Buyer";
+		conditions = "true";
+		class Items {
+			class EncryptedDrive {};
+			class DecryptedDrive {};
+		};
+	};
+
 	class Dispensary {
 		storeName = "Meth Dispensary";
 		conditions = "true";

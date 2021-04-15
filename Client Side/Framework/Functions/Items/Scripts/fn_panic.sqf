@@ -18,7 +18,7 @@ player setVariable ["panic_cooldown", time + 60];
 private _cfg = missionConfigFile >> "CfgMessages" >> "Panic";
 private _targets = getText (_cfg >> "targets");
 
-[_cfg, format ["%1 has pressed their panic button! They are in need of immediate help.", name player], _targets] call ULP_fnc_sendMessage;
+[_cfg, "A panic button has pressed! Immediate assistance is required.", _targets] call ULP_fnc_sendMessage;
 ["You have pressed your panic button, the police have been alerted!"] call ULP_fnc_hint;
 
 [player, "Backup", 100, 1] remoteExecCall ["ULP_fnc_say3D"];

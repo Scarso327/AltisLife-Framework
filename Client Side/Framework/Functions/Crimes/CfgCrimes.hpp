@@ -11,6 +11,7 @@ class CfgCrimes {
 					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Vault Security System at HM Treasury is being tampered with!""], _targets] call ULP_fnc_sendMessage; [""You have begun disabling the vault security, police has been notified!""] call ULP_fnc_hint;"; // Notify Police...
 					onCompleted = "[""HMTreasury"", 1] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the vault security system...""] call ULP_fnc_hint;"; // Call to fill vaults, allow vaults to be drilled...
 					onEachFrame = "";
+					onProgressStop = "";
 					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 10) : { ""There must be at least 10 police officers to start this crime..."" }; case ([""HackingDevice""] call ULP_fnc_hasItem < 1) : { ""You need a hacking device to perform this action..."" }; default { ""Vault Security has already been disabled..."" }; })] call ULP_fnc_hint;";
 					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false]) && { [""HackingDevice""] call ULP_fnc_hasItem > 0 } && { (count [""Police""] call ULP_fnc_allMembers) >= 10 }";
 				};
@@ -61,6 +62,41 @@ class CfgCrimes {
 				class MarkedGold {
 					amount = 20;
 					extra = "((count playableUnits) / 4) + ((time / 2) / 240)"; // Scripted extra...
+				};
+			};
+		};
+		class HMSLiberty {
+			title = "HMS Liberty";
+			factions[] = { "Civilian" };
+			cooldown = 1000;
+			class Stages {
+				class Hack {
+					displayName = "Disabling Server Security";
+					time = 480;
+					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""Systems on HM Liberty are being tampered with!""], _targets] call ULP_fnc_sendMessage; [""You have begun disabling the server's security systems, police has been notified!""] call ULP_fnc_hint;";
+					onCompleted = "[""HMSLiberty"", 1, hms_liberty_server] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
+					onEachFrame = "hms_liberty_server animateSource [""server_move_source"", (_this / 100)];";
+					onProgressStop = "hms_liberty_server animateSource [""server_move_source"", 0]";
+					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 10) : { ""There must be at least 10 police officers to start this crime..."" }; case ([""HackingDevice""] call ULP_fnc_hasItem < 1) : { ""You need a hacking device to perform this action..."" }; default { ""Server Security has already been disabled..."" }; })] call ULP_fnc_hint;";
+					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false]) && { [""HackingDevice""] call ULP_fnc_hasItem > 0 }";
+				};
+			};
+			class Buildings {
+				class Ship {
+					classname = "Land_Destroyer_01_interior_02_F";
+					position[] = {14054.8, 11509.4, -2.1181};
+					class BreakIn {
+						breakIn = 360;
+						onBreakIn = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The bridge of the HMS Liberty has been illegally accessed!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
+						onFail = "[""There must be at least 10 police officers to start this crime...""] call ULP_fnc_hint;";
+						condition = "true";
+					};
+				};
+			};
+			class Items {
+				class EncryptedDrive {
+					amount = 8;
+					extra = "(random 24) max 1"; // Scripted extra...
 				};
 			};
 		};

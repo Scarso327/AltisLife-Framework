@@ -7,7 +7,8 @@ scopeName "fn_toggleVaults";
 
 _this params [
 	["_crime", "", [""]],
-	["_state", 0, [0]]
+	["_state", 0, [0]],
+	["_overrideVault", objNull, [objNull]]
 ];
 
 private _cfg = missionConfigFile >> "CfgCrimes" >> worldName >> _crime;
@@ -27,33 +28,42 @@ if (_state isEqualTo 1) then {
 	missionNamespace setVariable [format ["ULP_SRV_Crime_%1", _crime], nil, true];
 };
 
-{
-	private _building = _x;
-
+if (isNull _overrideVault) then {
 	{
-		_building animate [format["door_%1_rot", _forEachIndex], _state];
-	} forEach ([_building] call ULP_fnc_getBuildingDoors);
+		private _building = _x;
 
-	private _vaults = _building getVariable ["vaults", []];
-
-	// Populate or remove loot...
-	if !(_vaults isEqualTo []) then {
 		{
-			_x params [ "_vault", "_perc" ];
+			_building animate [format["door_%1_rot", _forEachIndex], _state];
+		} forEach ([_building] call ULP_fnc_getBuildingDoors);
 
-			if (_loot isEqualTo []) then {
-				_vault setVariable ["ULP_VirtualCargo", nil, true];
-			} else {
-				private _items = [];
+		private _vaults = _building getVariable ["vaults", []];
 
-				{
-					_x params [ "_item", "_amount" ];
-					_items pushBack [_item, round (_amount * _perc)];
-				} forEach _loot;
+		// Populate or remove loot...
+		if !(_vaults isEqualTo []) then {
+			{
+				_x params [ "_vault", "_perc" ];
 
-				_vault setVariable ["ULP_VirtualCargo", (createHashMapFromArray _items), true];
-			};
-		} forEach _vaults;
+				if (_loot isEqualTo []) then {
+					_vault setVariable ["ULP_VirtualCargo", nil, true];
+				} else {
+					private _items = [];
+
+					{
+						_x params [ "_item", "_amount" ];
+						_items pushBack [_item, round (_amount * _perc)];
+					} forEach _loot;
+
+					_vault setVariable ["ULP_VirtualCargo", (createHashMapFromArray _items), true];
+				};
+			} forEach _vaults;
+		};
+	} forEach (_info get "VaultBuildings");
+} else {
+	if (_loot isEqualTo []) then {
+		_overrideVault setVariable ["ULP_VirtualCargo", nil, true];
+	} else {
+		_overrideVault setVariable ["ULP_VirtualCargo", (createHashMapFromArray _loot), true];
 	};
-} forEach (_info get "VaultBuildings");
+};
+
 true

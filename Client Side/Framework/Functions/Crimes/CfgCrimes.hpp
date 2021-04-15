@@ -23,7 +23,7 @@ class CfgCrimes {
 						breakIn = 240;
 						onBreakIn = "if ((random 1) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A Security Office at HM Treasury has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
 						onFail = "[""There must be at least 10 police officers to start this crime...""] call ULP_fnc_hint;";
-						condition = "true";
+						condition = "(count [""Police""] call ULP_fnc_allMembers) >= 10 || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] }";
 					};
 				};
 				class MilitaryOfficeTwo : MilitaryOfficeOne { position[] = {16216.4, 17071.3, 0.0516109}; };

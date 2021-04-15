@@ -114,6 +114,15 @@ class CfgInteractions {
 		};
 	};
 
+	class Vault {
+		class Repair {
+			title = "Repair Vault";
+			factions[] = { "Police" };
+			onClick = "[""Repairing Vault"", 60, _this, { (player distance (_this select 0)) <= 5 }, { private _object = _this select 0; [""You have successfully reapired the lock!""] call ULP_fnc_hint; _object setVariable [""drilled"", false, true]; }, {}, [""GRAB"", ""CROUCH""]] call ULP_UI_fnc_startProgress;";
+			condition = "_this getVariable [""drilled"", true]";
+		};
+	};
+
 	class Vehicle {
 
 		class Repair {

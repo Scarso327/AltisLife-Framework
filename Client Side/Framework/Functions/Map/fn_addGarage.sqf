@@ -11,7 +11,7 @@ scopeName "fn_addGarage";
 
 _this params [
 	["_trader", objNull, [objNull]],
-	["_types", ["Car", "Air", "Ship"], [[]]],
+	["_types", ["Car", "Helicopter", "Plane", "Ship"], [[]]],
 	["_pos", [], [[]]],
 	["_includeGarage", true, [false]],
 	["_includeStore", true, [false]],

@@ -15,6 +15,7 @@ private _startTime = _ui getVariable ["start", time];
 private _endTime = _ui getVariable ["end", _startTime + 5];
 private _params = _ui getVariable ["params", []];
 private _condition = _ui getVariable ["condition", { true }];
+private _eachframe = _ui getVariable ["eachframe", {}];
 private _anim = _ui getVariable ["anim", ""];
 
 if (!(_params call _condition) || { !alive player } || { isDowned(player) }) exitWith {
@@ -22,6 +23,8 @@ if (!(_params call _condition) || { !alive player } || { isDowned(player) }) exi
 };
 
 private _progress = ((time - _startTime) / (_endTime - _startTime)) * 100;
+
+_progress call _eachframe;
 
 _ctrlProgress progressSetPosition _progress / 100;
 _ctrlProgressText ctrlSetText format["%1%2", floor _progress, "%"];

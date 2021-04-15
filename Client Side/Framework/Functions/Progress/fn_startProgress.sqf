@@ -12,7 +12,8 @@ _this params [
 	["_condition", {}, [{}]],
 	["_success", {}, [{}]],
 	["_fail", {}, [{}]],
-	["_anim", ["", toUpper (stance player)], [[]]]
+	["_anim", ["", toUpper (stance player)], [[]]],
+	["_eachframe", {}, [{}]]
 ];
 
 if ([] call ULP_UI_fnc_isProgress) exitWith {
@@ -31,6 +32,7 @@ if (["RscProgress", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	_ui setVariable ["condition", _condition];
 	_ui setVariable ["success", _success];
 	_ui setVariable ["fail", _fail];
+	_ui setVariable ["eachframe", _eachframe];
 	_ui setVariable ["stance", _anim select 1];
 	_ui setVariable ["anim", (_anim call ULP_fnc_getAnim)];
 

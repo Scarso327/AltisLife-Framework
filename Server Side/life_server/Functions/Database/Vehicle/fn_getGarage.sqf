@@ -8,7 +8,7 @@ scopeName "fn_getGarage";
 _this params [
 	["_steamid", "", [""]],
 	["_faction", "", [""]],
-	["_types", ["Car", "Air", "Ship"], [[]]],
+	["_types", ["Car", "Helicopter", "Plane", "Ship"], [[]]],
 	["_impounded", false, [true]]
 ];
 

@@ -39,6 +39,6 @@ if ([getText (_stageCfg >> "displayName"), getNumber (_stageCfg >> "time"), [_st
 	};
 
 	call compile getText (_stageCfg >> "onCompleted");
-}, {}, ["GRAB", "CROUCH"], (compile _eachFrame)] call ULP_UI_fnc_startProgress) then  {
+}, (compile getText (_stageCfg >> "onProgressStop")), ["GRAB", "CROUCH"], (compile _eachFrame)] call ULP_UI_fnc_startProgress) then  {
 	call compile _onStart;
 };

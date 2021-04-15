@@ -14,4 +14,7 @@ _this params [
 ];
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
-isClass  _containerCfg && { (getNumber (_containerCfg >> "virtualSpace") > 0) || isNumber (_containerCfg >> "tempStorage") }
+
+isClass  _containerCfg && 
+{ (getNumber (_containerCfg >> "virtualSpace") > 0) || isNumber (_containerCfg >> "tempStorage") } && 
+{ (count (_container getVariable ["ULP_VirtualCargo", []])) > 0 || !([getNumber (_containerCfg >> "requireItems")] call ULP_fnc_bool) }

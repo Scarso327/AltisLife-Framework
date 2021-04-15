@@ -17,43 +17,50 @@ class CfgRewards {
 			default = "XP";
 			
 			class MB4_Ridge {
-				chance = 0.95; // Chance 1 - VAL so this is 5% chance
+				chance = 0.95;
 				type = "TEXTURE";
-				fallback[] = { 100000, 200000 }; // Money to be given if they already have this texture
+				fallback[] = { 100000, 200000 };
 				value[] = { "C_Offroad_02_unarmed_F", "Ridge" };
 			};
 
 			class Money {
 				chance = 0.80;
 				type = "CASH";
-				value[] = { 50000, 150000 }; // VAL_1 + (random VAL_2);
+				value[] = { 50000, 150000 };
 			};
 
 			class XP {
 				type = "XP";
-				value[] = { 300, 500 }; // VAL_1 + (random VAL_2);
+				value[] = { 300, 500 };
 			};
 		};
 
 		class Advanced {
 			default = "XP";
-			
-			class Truck_Aldsa {
-				chance = 0.95; // Chance 1 - VAL so this is 5% chance
+
+			class MB4_Ridge {
+				chance = 0.95;
 				type = "TEXTURE";
-				fallback[] = { 150000, 300000 }; // Money to be given if they already have this texture
-				value[] = { "C_Van_01_transport_F", "Aldsa" };
+				fallback[] = { 100000, 200000 };
+				value[] = { "C_Offroad_02_unarmed_F", "Ridge" };
+			};
+			
+			class Offroad_Ridge {
+				chance = 0.80;
+				type = "TEXTURE";
+				fallback[] = { 150000, 300000 };
+				value[] = { "C_Offroad_01_F", "Ridge" };
 			};
 
 			class Money {
-				chance = 0.80;
+				chance = 0.70;
 				type = "CASH";
-				value[] = { 80000, 150000 }; // VAL_1 + (random VAL_2);
+				value[] = { 80000, 150000 };
 			};
 
 			class XP {
 				type = "XP";
-				value[] = { 500, 1000 }; // VAL_1 + (random VAL_2);
+				value[] = { 500, 1000 };
 			};
 		};
 
@@ -61,35 +68,35 @@ class CfgRewards {
 			default = "XP";
 			
 			class HEMTT_Ridge {
-				chance = 0.95; // Chance 1 - VAL so this is 5% chance
+				chance = 0.95;
 				type = "TEXTURE";
-				fallback[] = { 200000, 450000 }; // Money to be given if they already have this texture
+				fallback[] = { 200000, 450000 };
 				value[] = { "B_Truck_01_box_F", "Ridge" };
 			};
 
 			class Ifrit_Oil {
-				chance = 0.90; // Chance 1 - VAL so this is 5% chance
+				chance = 0.90;
 				type = "TEXTURE";
-				fallback[] = { 200000, 450000 }; // Money to be given if they already have this texture
+				fallback[] = { 200000, 450000 };
 				value[] = { "O_MRAP_02_F", "Oil" };
 			};
 
 			class Strider_Asiimov {
-				chance = 0.85; // Chance 1 - VAL so this is 5% chance
+				chance = 0.85;
 				type = "TEXTURE";
-				fallback[] = { 200000, 450000 }; // Money to be given if they already have this texture
+				fallback[] = { 200000, 450000 };
 				value[] = { "I_MRAP_03_F", "Asiimov" };
 			};
 
 			class Money {
 				chance = 0.45;
 				type = "CASH";
-				value[] = { 100000, 250000 }; // VAL_1 + (random VAL_2);
+				value[] = { 100000, 250000 };
 			};
 
 			class XP {
 				type = "XP";
-				value[] = { 750, 1500 }; // VAL_1 + (random VAL_2);
+				value[] = { 750, 1500 };
 			};
 		};
 	};

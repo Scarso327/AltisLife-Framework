@@ -4,7 +4,7 @@ class CfgSettings {
     framework_version = "5.0.0";
     local_version = "1.0.0";
 
-    total_maxWeight = 24;
+    total_maxWeight = 5;
 
     sync_delay = 5 * 60;
     abort_delay = 10;

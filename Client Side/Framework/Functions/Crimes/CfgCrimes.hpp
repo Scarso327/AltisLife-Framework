@@ -54,7 +54,7 @@ class CfgCrimes {
 					position[] = {16023.7, 17031.4, 0};
 					vaults[] = { { "Land_CargoBox_V1_F", {6.24316, 5.4707, -3.1177}, 0.16 } };
 				};
-				class VaultFour : VaultTwo { position[] = {16146.8, 16951.2, 0}; };
+				class VaultFour : VaultTwo { position[] = {16151.8, 17044.7, 0}; };
 				class VaultSix : VaultTwo { position[] = {16076.4, 16917.9, 0}; };
 			};
 			class Items {

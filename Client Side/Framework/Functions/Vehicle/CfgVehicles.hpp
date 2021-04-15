@@ -1604,6 +1604,8 @@ class CfgVehicles {
 	class C_IDAP_supplyCrate_F : Land_WoodenCrate_01_F { virtualSpace = 8500; };
 	class Land_Cargo20_grey_F : Land_WoodenCrate_01_F { virtualSpace = 20000; };
 
+	class Land_CargoBox_V1_F : Land_Bodybag_01_black_F {};
+
 	// SOUNDS --------------------------------------------------------------------------------------
 	class Police_One {
 		sound = "Police_One";

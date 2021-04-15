@@ -125,6 +125,7 @@ class CfgFunctions {
 			class panic {};
 			class healAction {};
 			class boltcut {};
+			class drill {};
 		};
 
 		class Input {
@@ -663,6 +664,11 @@ class CfgFunctions {
 		class PNC {
 			file = "Functions\PNC";
 			class openPNC {};
+		};
+
+		class Crimes {
+			file = "Functions\Crimes";
+			class triggerStage {};
 		};
 	};
 

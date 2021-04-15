@@ -108,5 +108,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_claimAirdrop {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_toggleVaults {
+            allowedTargets = SERVER;
+        };
     };
 };

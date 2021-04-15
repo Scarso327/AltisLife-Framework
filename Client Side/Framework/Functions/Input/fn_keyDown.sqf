@@ -164,7 +164,7 @@ if (isDowned(player)) then {
                 if ((player distance _veh) <= 10 && { _veh in ULP_Keys || { _veh in ULP_Houses } }) then {
                     if ([_veh] call ULP_fnc_isHouse) then {
                         private _door = [_veh] call ULP_fnc_getNearestDoor;
-                        if (_door > 0) then {
+                        if (_door > -1) then {
                             if ((_veh getVariable [format ["bis_disabled_Door_%1",_door], 0]) isEqualTo 0) then {
                                 _veh setVariable [format ["bis_disabled_Door_%1",_door], 1, true];
                                 _veh animate [format["door_%1_rot",_door],0];

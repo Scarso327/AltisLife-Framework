@@ -434,7 +434,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_boltcut;"; };
 	};
-	class HackingDevice : Stinger { // TODO
+	class HackingDevice : Stinger {
 		displayName = "Hacking Device";
 		description = "A tool used to hack various systems and malicously gain access to said systems.";
 		icon = "Data\Icons\hackingDevice.paa";
@@ -452,7 +452,7 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 	};
-	class IndustrialDrill : Stinger { // TODO
+	class IndustrialDrill : Stinger {
 		displayName = "Industrial Drill";
 		description = "A tool used to break fortified locks.";
 		icon = "Data\Icons\industrialDrill.paa";
@@ -460,6 +460,7 @@ class CfgVirtualItems {
 		sellPrice = 300000;
 		weight = 4;
 		class Settings : Settings {};
+		class Events { onUse = "[] call ULP_fnc_drill;"; };
 	};
 
 	// Medical Equipment

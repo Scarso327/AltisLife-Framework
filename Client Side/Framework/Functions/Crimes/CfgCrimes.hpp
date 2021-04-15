@@ -1,0 +1,4 @@
+class CfgCrimes {
+	class Altis {
+	};
+};

@@ -130,6 +130,12 @@ class CfgFunctions {
             file = "\life_server\Functions\Mail";
             class addMail {};
         };
+
+        class Crimes {
+            file = "\life_server\Functions\Crimes";
+            class initCrimes {};
+            class toggleVaults {};
+        };
     };
 
     class MySQL_Database {

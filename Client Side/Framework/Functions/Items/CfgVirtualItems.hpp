@@ -567,7 +567,7 @@ class CfgVirtualItems {
 	class EncryptedDrive : StolenCargo {
 		displayName = "Encrypted Drive";
 		description = "An encrypted drive containing secrect files taken from the HMS Liberty's command deck.";
-		icon = "Data\Icons\ingot.paa"; // ICON
+		icon = "Data\Icons\drive.paa";
 		sellPrice = 400000;
 		weight = 8;
 		class Settings : Settings {};
@@ -575,7 +575,7 @@ class CfgVirtualItems {
 	class DecryptedDrive : EncryptedDrive {
 		displayName = "Decrypted Drive";
 		description = "An Decrypted drive containing secrect files taken from the HMS Liberty's command deck.";
-		icon = "Data\Icons\ingot.paa"; // ICON
+		icon = "Data\Icons\drive.paa";
 		sellPrice = 1000000;
 		class Settings : Settings {};
 	};

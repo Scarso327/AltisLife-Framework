@@ -513,9 +513,9 @@ class CfgVirtualItems {
 	};
 
 	// Misc. Run Items
-	class StollenCargo {
-		displayName = "StollenCargo";
-		description = "Sealed cargo crates filled with stollen goods.";
+	class StolenCargo {
+		displayName = "StolenCargo";
+		description = "Sealed cargo crates filled with stolen goods.";
 		icon = "Data\Icons\crate.paa";
 		buyPrice = -1;
 		sellPrice = 98500;
@@ -528,7 +528,7 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
-	class SmallGalleryPiece : StollenCargo {
+	class SmallGalleryPiece : StolenCargo {
 		displayName = "Small Gallery Piece";
 		description = "A piece of art commonly stored in the Altis Gallery.";
 		icon = "Data\Icons\galleryPiece.paa";
@@ -550,7 +550,7 @@ class CfgVirtualItems {
 		weight = 13;
 		class Settings : Settings {};
 	};
-	class MarkedGold : StollenCargo {
+	class MarkedGold : StolenCargo {
 		displayName = "Marked Gold";
 		description = "A marked gold bar that is commonly stored in the HM Treasury.";
 		icon = "Data\Icons\ingot.paa";
@@ -564,7 +564,7 @@ class CfgVirtualItems {
 		sellPrice = 700000;
 		class Settings : Settings {};
 	};
-	class EncryptedServerFiles : StollenCargo {
+	class EncryptedServerFiles : StolenCargo {
 		displayName = "Encrypted Server Files";
 		description = "Various server files taken from the HMS Liberty's command deck.";
 		icon = "Data\Icons\ingot.paa"; // ICON

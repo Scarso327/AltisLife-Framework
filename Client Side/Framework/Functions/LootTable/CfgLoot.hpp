@@ -1,5 +1,5 @@
 class CfgLoot {
-	class VehicleTemplates {
+	class VehicleTextures {
 		class ChromeRedIfrit {
 			chance = 0.99;
 			class O_MRAP_02_F {
@@ -7,6 +7,7 @@ class CfgLoot {
 				texture = "ChromeRed";
 			};
 		};
+
 		class ChromeRedStrider {
 			chance = 0.98;
 			class I_MRAP_03_F {
@@ -14,6 +15,7 @@ class CfgLoot {
 				texture = "ChromeRed";
 			};
 		};
+
 		class ChromeBlueIfrit {
 			chance = 0.96;
 			class O_MRAP_02_F {
@@ -21,6 +23,7 @@ class CfgLoot {
 				texture = "ChromeBlue";
 			};
 		};
+		
 		class ChromeBlueStrider {
 			chance = 0.94;
 			class I_MRAP_03_F {
@@ -28,6 +31,7 @@ class CfgLoot {
 				texture = "ChromeBlue";
 			};
 		};
+
 		class ChromeGreenIfrit {
 			chance = 0.91;
 			class O_MRAP_02_F {
@@ -35,6 +39,7 @@ class CfgLoot {
 				texture = "ChromeGreen";
 			};
 		};
+
 		class ChromeGreenStrider {
 			chance = 0.88;
 			class I_MRAP_03_F {
@@ -42,20 +47,23 @@ class CfgLoot {
 				texture = "ChromeGreen";
 			};
 		};
-		class ChromeBlueHummingbird {
+
+		class ChromeRedHummingbird {
 			chance = 0.84;
+			class C_Heli_Light_01_civil_F {
+				amount = 0;
+				texture = "ChromeRed";
+			};
+		};
+
+		class ChromeBlueHummingbird {
+			chance = 0.80;
 			class C_Heli_Light_01_civil_F {
 				amount = 0;
 				texture = "ChromeBlue";
 			};
 		};
-		class ChromeGreenHummingbird {
-			chance = 0.80;
-			class C_Heli_Light_01_civil_F {
-				amount = 0;
-				texture = "ChromeGreen";
-			};
-		};
+		
 		class ChromeGreenHummingbird {
 			chance = 0.74;
 			class C_Heli_Light_01_civil_F {
@@ -63,9 +71,16 @@ class CfgLoot {
 				texture = "ChromeGreen";
 			};
 		};
+
+		class ExperienceBundle {
+			chance = 0;
+			class SmallXPReward { amount = 3; };
+			class MediumXPReward { amount = 2; };
+			class LargeXPReward { amount = 1; };
+		};
 	};
 
-	class Weapons {
+	class GeneralItems {
 		class Cyrus {
 			chance = 0.99;
 			class srifle_DMR_05_tan_f { amount = 1; };
@@ -109,6 +124,12 @@ class CfgLoot {
 			class 200Rnd_556x45_Box_F { amount = 2; };
 		};
 
+		class SmokersPack {
+			chance = 74;
+			class Cigarette { amount = 82; };
+			class Cigar { amount = 67; };
+		};
+
 		class ImportedWeapons {
 			chance = 0.68;
 			class SMG_03C_khaki { amount = 2; };
@@ -124,8 +145,26 @@ class CfgLoot {
 			class srifle_DMR_01_F { amount = 1; };
 		};
 
+		class ArtifactBag {
+			chance = 0.58;
+			class RareMap { amount = 2; };
+			class OldCoin { amount = 6; };
+			class BrokenPot { amount = 1; };
+			class BluntStoneKnife { amount = 2; };
+			class PetrifiedShield { amount = 1; };
+			class WeatheredSculpture { amount = 1; };
+			class AncientAmber { amount = 4; };
+			class RegliousTotem { amount = 1; };
+			class StrongMetalRing { amount = 2; };
+			class EmeraldAmulet { amount = 1; };
+			class AncientLedger { amount = 1; };
+			class HandSmoothedRunestone { amount = 2; };
+			class JeweledNecklace { amount = 1; };
+			class BrokenTimepiece { amount = 1; };
+		};
+
 		class RandomAttachments {
-			chance = 0.55;
+			chance = 0.51;
 			class acc_flashlight { amount = 3; };
 			class acc_pointer_IR { amount = 2; };
 			class optic_Aco { amount = 4; };
@@ -166,6 +205,19 @@ class CfgLoot {
 			class 7Rnd_408_Mag { amount = 1; };
 		};
 
+		class StolenGold {
+			chance = 0.42;
+			class MarkedGold { amount = 7; };
+		};
+
+		class MineralCrate {
+			chance = 37;
+			class Coal { amount = 102; };
+			class CopperBar { amount = 74; };
+			class SilverBar { amount = 71; };
+			class IronBar { amount = 55; };
+		};
+
 		class HuntersPack {
 			chance = 0.31;
 			class sgun_HunterShotgun_01_F { amount = 1; };
@@ -183,8 +235,23 @@ class CfgLoot {
 			class muzzle_snds_acp { amount = 1; };
 		};
 
-		class SDAR {
+		class BootleggerCrate {
+			chance = 0.20;
+			class Gin { amount = 42; };
+			class Whiskey { amount = 39; };
+			class Moonshine { amount = 26; };
+			class PurifiedMoonshine { amount = 34; };
+		};
+
+		class MedicalEquipment {
 			chance = 0.18;
+			class Painkillers { amount = 197; };
+			class Bandage { amount = 131; };
+			class BloodBag { amount = 34; };
+		};
+
+		class SDAR {
+			chance = 0.17;
 			class arifle_SDAR_F { amount = 1; };
 			class 20Rnd_556x45_UW_mag { amount = 9; };
 		};
@@ -198,77 +265,6 @@ class CfgLoot {
 			class 16Rnd_9x21_Mag { amount = 6; };
 			class 30Rnd_9x21_Mag { amount = 2; };
 			class 9Rnd_45ACP_Mag { amount = 4; };
-		};
-	};
-
-	class VirtualItems {
-		class ArtifactBag {
-			chance = 0.75;
-			class RareMap { amount = 2; };
-			class OldCoin { amount = 6; };
-			class BrokenPot { amount = 1; };
-			class BluntStoneKnife { amount = 2; };
-			class PetrifiedShield { amount = 1; };
-			class WeatheredSculpture { amount = 1; };
-			class AncientAmber { amount = 4; };
-			class RegliousTotem { amount = 1; };
-			class StrongMetalRing { amount = 2; };
-			class EmeraldAmulet { amount = 1; };
-			class AncientLedger { amount = 1; };
-			class HandSmoothedRunestone { amount = 2; };
-			class JeweledNecklace { amount = 1; };
-			class BrokenTimepiece { amount = 1; };
-		};
-
-		class StolenGold {
-			chance = 0.55;
-			class MarkedGold { amount = 7; };
-		};
-
-		class BootleggerCrate {
-			chance = 0.30;
-			class Gin { amount = 42; };
-			class Whiskey { amount = 39; };
-			class Moonshine { amount = 26; };
-			class PurifiedMoonshine { amount = 34; };
-		};
-
-		class MineralCrate {
-			chance = 0;
-			class Coal { amount = 102; };
-			class CopperBar { amount = 74; };
-			class SilverBar { amount = 71; };
-			class IronBar { amount = 55; };
-		};
-
-		class SmokersPack {
-			chance = 0;
-			class Cigarette { amount = 82; };
-			class Cigar { amount = 67; };
-		};
-
-		class FishCrate {
-			chance = 0;
-			class Salema_F_Raw { amount = 23; };
-			class Ornate_random_F_Raw { amount = 14; };
-			class Mackerel_F_Raw { amount = 12; };
-			class Tuna_F_Raw { amount = 5; };
-			class Mullet_F_Raw { amount = 7; };
-			class CatShark_F_Raw { amount = 3; };
-		};
-
-		class StolenPoliceEquipment {
-			chance = 0;
-			class Breathalyser { amount = 2; };
-			class PanicButton { amount = 6; };
-			class Stinger { amount = 4; };
-		};
-
-		class MedicalEquipment {
-			chance = 0;
-			class Painkillers { amount = 197; };
-			class Bandage { amount = 131; };
-			class BloodBag { amount = 34; };
 		};
 
 		class ExperienceBundle {

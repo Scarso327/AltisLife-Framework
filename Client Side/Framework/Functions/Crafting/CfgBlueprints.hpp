@@ -1,11 +1,7 @@
 class CfgBlueprints {
-	defaultUnlocks[] = { 
-		{ "Archaeology", "B_CommonMap" },
-		{ "Archaeology", "B_UncommonMap" },
-		{ "Archaeology", "B_RareMap" }  
-	};
-
 	class Tools {
+		displayName = "Tools";
+
 		class B_Pickaxe {
 			icon = "Data\Icons\pickaxe.paa";
 			displayName = "Pickaxe";
@@ -62,6 +58,8 @@ class CfgBlueprints {
 	};
 
 	class MedicalEquipment {
+		displayName = "Medical Equipment";
+
 		class B_FirstAidKit {
 			icon = "Data\Icons\firstAidKit.paa";
 			displayName = "First Aid Kit";
@@ -81,6 +79,8 @@ class CfgBlueprints {
 	};
 
 	class Archaeology {
+		displayName = "Archaeology";
+		
 		class B_CommonMap {
 			icon = "Data\Icons\map.paa";
 			displayName = "Common Map";

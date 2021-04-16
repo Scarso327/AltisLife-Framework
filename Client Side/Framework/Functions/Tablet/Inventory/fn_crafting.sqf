@@ -15,23 +15,18 @@ _info ctrlSetStructuredText parseText "";
 tvClear _tree;
 
 {
-	private _cfg = missionConfigFile >> "CfgBlueprints" >> _x;
+	private _section = ULP_Blueprints getOrDefault [configName _x, []];
+	private _type = _tree tvAdd [[], getText (_x >> "displayName")];
+	_tree tvSetData [[_type], configName _x];
 
-	if (isClass _cfg) then {
-		private _type = _tree tvAdd [[], _x];
-		_tree tvSetData [[_type], configName _cfg];
-
-		{
-			private _itemCfg = _cfg >> _x;
-
-			if (isClass _itemCfg) then {
-				private _item = _tree tvAdd [[_type], getText (_itemCfg >> "displayName")];
-				_tree tvSetData [[_type, _item], configName _itemCfg];
-				_tree tvSetPicture [[_type, _item], getText (_itemCfg >> "icon")];
-			};
-		} forEach _y;
-	};
-} forEach ULP_Blueprints;
+	{
+		if ([getNumber (_x >> "isDefault")] call ULP_fnc_bool || { (configName _x) in _section }) then {
+			private _item = _tree tvAdd [[_type], getText (_x >> "displayName")];
+			_tree tvSetData [[_type, _item], configName _x];
+			_tree tvSetPicture [[_type, _item], getText (_x >> "icon")];
+		};
+	} forEach ("isClass _x" configClasses (_x));
+} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgBlueprints"));
 
 _tree tvSetCurSel [0,0];
 [_tree, [0,0]] call ULP_fnc_bpLbChange;

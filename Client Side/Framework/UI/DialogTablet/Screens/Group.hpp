@@ -115,16 +115,6 @@ class GroupRankSelectList : Life_RscCombo {
 	SAFEZONE_H(0.022);
 };
 
-class DisbandGroup : ULP_RscButtonClean {
-	idc = 23076;
-	text = "<t align = 'center'>Disband Group</t>";
-	onButtonClick = "[] call ULP_fnc_disbandGroup;";
-	SAFEZONE_X((UI_X + UI_WIDTH) - ((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2));
-	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
-	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
-	SAFEZONE_H(0.022);
-};
-
 class TransferOwnership : ChangeRank {
 	idc = 23079;
 	text = "<t align = 'center'>Transfer Ownership</t>";
@@ -137,4 +127,21 @@ class Kick : ChangeRank {
 	text = "<t align = 'center'>Kick</t>";
 	onButtonClick = "_this call ULP_fnc_kickMember;";
 	SAFEZONE_Y((UI_Y + (0.022 * 3)) + (MARGIN_Y * 3) + ((MARGIN_Y / 2) * 2));
+};
+
+class LeaveGroup : ULP_RscButtonClean {
+	idc = 23081;
+	text = "<t align = 'center'>Leave Group</t>";
+	onButtonClick = "[] call ULP_fnc_leaveGroup;";
+	SAFEZONE_X((UI_X + UI_WIDTH) - ((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2));
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
+	SAFEZONE_H(0.022);
+};
+
+class DisbandGroup : LeaveGroup {
+	idc = 23076;
+	text = "<t align = 'center'>Disband Group</t>";
+	onButtonClick = "[] call ULP_fnc_disbandGroup;";
+	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3) + (MARGIN_Y / 2));
 };

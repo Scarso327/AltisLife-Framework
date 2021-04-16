@@ -101,5 +101,7 @@ if (_remove) then {
 				[format["You can't afford £%1 for %2 %3(s)!", [_buyPrice] call ULP_fnc_numberText, _value, _name]] call ULP_fnc_hint;
 			};
 		};
+
+		[_display] call ULP_fnc_updateVStore;
 	}, false
 ] call ULP_fnc_selectNumber;

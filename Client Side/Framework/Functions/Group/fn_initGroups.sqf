@@ -54,6 +54,11 @@ scopeName "fn_initGroups";
 	[format ["Your rank has been set to %1", ([format["%1 by %2!", _rank, name _actioner], _rank] select (isNull _actioner))]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;
 
+["GroupKicked", {
+	[format ["%1 has kicked you from the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
+	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
+}] call ULP_fnc_addEventHandler;
+
 ["GroupDisbanded", {
 	[format ["%1 has disbanded the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;

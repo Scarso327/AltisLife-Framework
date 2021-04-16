@@ -64,10 +64,8 @@ player addEventHandler ["InventoryOpened", { _this call ULP_fnc_InventoryOpened 
 	];
 
 	private _marker = _house getVariable ["building_marker", ""];
-	diag_log (getMarkerPos _marker);
 	if !(_marker isEqualTo "") then {
 		private _name = _house getVariable ["building_name", ""];
-		diag_log _name;
 
 		if !(_name isEqualTo (markerText _marker)) then {
 			_marker setMarkerTextLocal _name;

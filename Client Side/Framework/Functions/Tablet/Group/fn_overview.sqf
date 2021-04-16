@@ -43,8 +43,6 @@ if (_display getVariable ["funds_changed", -1] < 0) then {
 if (_display getVariable ["members_changed", -1] < 0) then {
 	_display setVariable ["members_changed", (["GroupMembersChanged", {
 		private _display = findDisplay 23000;
-		diag_log _display;
-		diag_log _this;
 		
 		if (isNull _display) exitWith {
 			["GroupMembersChanged", _x] call ULP_fnc_removeEventHandler;

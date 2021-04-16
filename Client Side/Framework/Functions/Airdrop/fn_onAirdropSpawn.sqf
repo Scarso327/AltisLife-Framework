@@ -10,8 +10,6 @@ _this params [
 	["_message", "", [""]]
 ];
 
-diag_log _this;
-
 if (isNull _airdrop) exitWith {};
 
 [parseText _message] call ULP_fnc_hint;

@@ -4,9 +4,11 @@
 */
 scopeName "fn_removeEachFrame";
 
-if !(_this params [
+_this params [
 	["_index", -1, [0]]
-]) exitWith { false };
+];
+
+if (_index < 0) exitWith { false };
 
 ULP_eachFrameEvents deleteAt _index;
 true

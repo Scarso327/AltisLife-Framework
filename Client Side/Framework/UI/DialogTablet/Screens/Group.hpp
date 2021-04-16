@@ -124,3 +124,17 @@ class DisbandGroup : ULP_RscButtonClean {
 	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
 	SAFEZONE_H(0.022);
 };
+
+class TransferOwnership : ChangeRank {
+	idc = 23079;
+	text = "<t align = 'center'>Transfer Ownership</t>";
+	onButtonClick = "";
+	SAFEZONE_Y((UI_Y + (0.022 * 2)) + (MARGIN_Y * 3) + ((MARGIN_Y / 2)));
+};
+
+class Kick : ChangeRank {
+	idc = 23080;
+	text = "<t align = 'center'>Kick</t>";
+	onButtonClick = "_this call ULP_fnc_kickMember;";
+	SAFEZONE_Y((UI_Y + (0.022 * 3)) + (MARGIN_Y * 3) + ((MARGIN_Y / 2) * 2));
+};

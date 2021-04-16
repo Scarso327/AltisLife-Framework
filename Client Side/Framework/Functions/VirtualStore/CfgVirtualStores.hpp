@@ -64,6 +64,7 @@ class CfgVirtualStores {
 			class FishingNet {};
 			class FuelCan {};
 			class Lockpick {};
+			class Toolbox {};
 		};
 	};
 

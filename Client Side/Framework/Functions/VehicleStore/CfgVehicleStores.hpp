@@ -352,7 +352,7 @@ class CfgVehicleStores {
 
 	class Blackmarket : Base {
 		storeName = "Blackmarket";
-		conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk }";
+		conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk } && { [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		class Vehicles {
 			class C_Quadbike_01_F {};
 			class C_Offroad_01_F {};

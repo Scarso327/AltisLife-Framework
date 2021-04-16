@@ -28,10 +28,32 @@ class CfgGroups {
 			displayName = "Criminal";
 
 			class Perks {
-				class Hideout {
+				class Hideout { // TODO
 					displayName = "Capture Hideout";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
 					description = "You have the ability to capture gang hideouts.";
 					level = 1;
+				};
+
+				class Blackmarket {
+					displayName = "Access Blackmarket";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "You have the ability to access the Blackmarket.";
+					level = 2;
+				};
+
+				class Governor { // TODO
+					displayName = "Governorship";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Your members have the ability to run for governor.";
+					level = 4;
+				};
+
+				class DMT { // TODO
+					displayName = "DMT Ownership";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Your members have the ability to purchase a DMT.";
+					level = 5;
 				};
 			};
 		};
@@ -40,10 +62,39 @@ class CfgGroups {
 			displayName = "Company";
 
 			class Perks {
-				class Freight {
-					displayName = "Freight missions";
+				class Freight { // TODO
+					displayName = "Freight Missions";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
 					description = "Grants your members access to Freight Missions.";
 					level = 1;
+				};
+
+				class HEMTTs {
+					displayName = "HEMTT Trucks";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Grants your members access to all variants of the HEMTT Transports.";
+					level = 2;
+				};
+
+				class GoalContributions { // TODO
+					displayName = "Goal Contributions";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Your members have an increased contribution to community goals.";
+					level = 3;
+				};
+
+				class Governor { // TODO
+					displayName = "Governorship";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Your members have the ability to run for governor.";
+					level = 4;
+				};
+
+				class MilitaryOffices { // TODO
+					displayName = "Offices Ownership";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Your members have the ability to purchase an Abandonded Military Office building.";
+					level = 5;
 				};
 			};
 		};
@@ -52,10 +103,39 @@ class CfgGroups {
 			displayName = "Political Party";
 
 			class Perks {
-				class Governor {
-					displayName = "Governor";
+				class Governor { // TODO
+					displayName = "Governorship";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
 					description = "Your members have the ability to run for governor.";
 					level = 1;
+				};
+
+				class PersonalProtection { // TODO
+					displayName = "Personal Protection";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Grands your members access to become Personal Protection Officers.";
+					level = 2;
+				};
+
+				class GovernmentSafehouses { // TODO
+					displayName = "Personal Protection";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Grands your members access to various Government Safehouses.";
+					level = 3;
+				};
+
+				class OfficeBuilding { // TODO
+					displayName = "Office Ownership";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Your members have the ability to purchase an Office Building.";
+					level = 4;
+				};
+
+				class PollRigging { // TODO
+					displayName = "Poll Rigging";
+					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					description = "Your members have the ability to rig polling boothes.";
+					level = 5;
 				};
 			};
 		};

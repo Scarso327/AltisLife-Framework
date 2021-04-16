@@ -907,6 +907,7 @@ class CfgVehicles {
 		virtualSpace = 10;
 		garageLimit = 2;
 		enableRope = false;
+		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""Hato""] call ULP_fnc_isFaction }";
 		class Textures {
 			class Hato : HatoTexture { 
 				displayName = "HATO";

@@ -111,7 +111,7 @@ class CfgVirtualStores {
 
 	class Blackmarket {
 		storeName = "Blackmarket";
-		conditions = "[""Blackmarket""] call ULP_fnc_hasLicense";
+		conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk } && { [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		class Items {
 			class RationPack {};
 			class Water {};

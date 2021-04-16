@@ -147,9 +147,18 @@ class CfgGroups {
 		maxLevel = 5;
 
 		class XP {
-			class Cartel {
-				amount = 10;
-			};
+			class Cartel { amount = 10; };
+			class Popup : Cartel {};
+			class Airdrop : Cartel {};
+			class Freight { amount = 5; };
+			class Election { amount = 100; };
+			class Rigging { amount = 20; };
+			class Hideout : Cartel {};
+			class BaseBid : Election {};
+			class GoldDrives : Freight {};
+			class CommunityGoals : Freight {};
+			class MedicalAid { amount = 3; };
+			class Robbery : Freight {};
 		};
 	};
 };

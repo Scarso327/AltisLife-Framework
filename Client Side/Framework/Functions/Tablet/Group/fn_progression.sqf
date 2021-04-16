@@ -9,6 +9,8 @@ scopeName "fn_progression";
 _display = _this;
 if (isNull _display) exitWith {};
 
+(_display displayCtrl 23001) ctrlSetStructuredText parseText format["<t align='left'>Group - %1 Progression</t>", ((group player) getVariable ["group_type", "Group"])];
+
 private _xp = [] call ULP_fnc_groupXP;
 private _required = [(([] call ULP_fnc_groupLevel) + 1), missionConfigFile >> "CfgGroups" >> "Leveling"] call ULP_fnc_getRequiredXP;
 

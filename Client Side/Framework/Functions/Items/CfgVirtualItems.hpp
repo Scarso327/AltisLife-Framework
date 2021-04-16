@@ -335,7 +335,7 @@ class CfgVirtualItems {
 		class Deconstruction {
 			time = 20;
 			workbench = false;
-			blueprints[] = { { "Items", "B_Pickaxe" } };
+			blueprints[] = { { "Tools", "B_Pickaxe" } };
 			materials[] = { {"IronBar", 2}, {"Wood", 1} };
 		};
 		conditions = "true";
@@ -346,6 +346,12 @@ class CfgVirtualItems {
 		buyPrice = 1180;
 		sellPrice = 590;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 20;
+			workbench = false;
+			blueprints[] = { { "Tools", "B_LuberAxe" } };
+			materials[] = { {"IronBar", 2}, {"Wood", 1} };
+		};
 	};
 	class Shovel : Pickaxe {
 		displayName = "Shovel";
@@ -353,6 +359,12 @@ class CfgVirtualItems {
 		buyPrice = 1100;
 		sellPrice = 550;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 20;
+			workbench = false;
+			blueprints[] = { { "Tools", "B_Shovel" } };
+			materials[] = { {"IronBar", 1}, {"Wood", 1} };
+		};
 	};
 	class Extractor : Pickaxe {
 		displayName = "Extractor";
@@ -360,6 +372,12 @@ class CfgVirtualItems {
 		buyPrice = 1950;
 		sellPrice = 975;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 20;
+			workbench = false;
+			blueprints[] = { { "Tools", "B_Extractor" } };
+			materials[] = { {"IronBar", 3}, {"Wood", 1} };
+		};
 	};
 	class FishingNet : Pickaxe {
 		displayName = "Fishing Net";
@@ -368,6 +386,12 @@ class CfgVirtualItems {
 		buyPrice = 750;
 		sellPrice = 375;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 30;
+			workbench = false;
+			blueprints[] = { { "Tools", "B_FishingNet" } };
+			materials[] = { {"Rope", 4} };
+		};
 	};
 	class FuelCan : Pickaxe {
 		displayName = "Fuel Can";
@@ -436,6 +460,12 @@ class CfgVirtualItems {
 		sellPrice = 1250;
 		weight = 1;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 10;
+			workbench = false;
+			blueprints[] = { { "Tools", "B_Lockpick" } };
+			materials[] = { {"Iron", 2} };
+		};
 	};
 	class BoltCutter : Stinger {
 		displayName = "Bolt Cutter";
@@ -446,6 +476,12 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_boltcut;"; };
+		class Deconstruction {
+			time = 40;
+			workbench = false;
+			blueprints[] = { { "Tools", "B_BoltCutter" } };
+			materials[] = { {"Rope", 10} };
+		};
 	};
 	class HackingDevice : Stinger {
 		displayName = "Hacking Device";
@@ -455,6 +491,12 @@ class CfgVirtualItems {
 		sellPrice = 237500;
 		weight = 3;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 120;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_HackingDevice" } };
+			materials[] = { {"Silver", 4}, {"CutDiamond", 2}, {"DecryptedDrive", 1} };
+		};
 	};
 	class ExplosiveCharge : Stinger { // TODO
 		displayName = "Explosive Charge";
@@ -625,6 +667,15 @@ class CfgVirtualItems {
 		buyPrice = -1;
 		sellPrice = 6;
 		weight = 2;
+		class Settings : Settings {};
+	};
+	class Rope : Tobacco {
+		displayName = "Rope";
+		description = "A simple piece of rope commonly found in crafting recipies.";
+		icon = "Data\Icons\rope.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 1;
 		class Settings : Settings {};
 	};
 	class Rock : Tobacco {
@@ -1065,13 +1116,34 @@ class CfgVirtualItems {
 	};
 	class UncommonMap : CommonMap {
 		displayName = "Uncommon Map";
+		buyPrice = -1;
+		sellPrice = 0;
 		class Settings : Settings {};
 		class Events { onUse = "[""Uncommon""] call ULP_fnc_getSite;"; };
 	};
-	class RareMap : CommonMap {
+	class RareMap : UncommonMap {
 		displayName = "Rare Map";
+		sellPrice = 0;
 		class Settings : Settings {};
 		class Events { onUse = "[""Rare""] call ULP_fnc_getSite;"; };
+	};
+
+	class CommonMapFragment : UncommonMap {
+		displayName = "Common Map Fragment";
+		description = "A map fragment containing uncompleted map.";
+		icon = "Data\Icons\mapFragment.paa";
+		sellPrice = 0;
+		class Settings : Settings {};
+	};
+	class UncommonMapFragment : CommonMapFragment {
+		displayName = "Uncommon Map Fragment";
+		sellPrice = 0;
+		class Settings : Settings {};
+	};
+	class RareMapFragment : CommonMapFragment {
+		displayName = "Rare Map Fragment";
+		sellPrice = 0;
+		class Settings : Settings {};
 	};
 
 	class SurveyingEquipment {

@@ -173,3 +173,14 @@ class XPText: Life_RscStructuredText {
 	SAFEZONE_W(UI_WIDTH);
 	SAFEZONE_H(MARGIN_Y * 5);
 };
+
+class LeftView : Life_RscControlsGroup {
+    idc = 23085;
+	colorBackground[] = INNER_BODY_COLOUR;
+    SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 8));
+	SAFEZONE_W(((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2));
+	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 8));
+
+    class Controls {};
+};

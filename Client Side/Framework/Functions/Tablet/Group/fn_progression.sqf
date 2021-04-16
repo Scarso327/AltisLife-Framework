@@ -3,6 +3,7 @@
 ** Description: 
 */
 #include "..\..\..\script_macros.hpp"
+#include "..\..\..\UI\gridCommon.inc"
 scopeName "fn_progression";
 
 _display = _this;
@@ -19,3 +20,42 @@ private _required = [(([] call ULP_fnc_groupLevel) + 1), missionConfigFile >> "C
 	[_required] call ULP_fnc_numberText,
 	[((([] call ULP_fnc_groupLevel) + 1) min ([missionConfigFile >> "CfgGroups" >> "Leveling"] call ULP_fnc_getMaxLevel))] call ULP_fnc_numberText
 ];
+
+private _ctrls = _display getVariable ["display_ctrls", []];
+
+if !(_ctrls isEqualTo []) then {
+	{ ctrlDelete _x; } forEach _ctrls;
+};
+
+_ctrls = [];
+
+private _ctrlGroup = _display displayCtrl 23085;
+private _lastCtrlPos = [];
+
+{
+	private _perk = _display ctrlCreate ["ULP_ctrlGroupPerk", -1, _ctrlGroup];
+
+	if !(_lastCtrlPos isEqualTo []) then {
+		_perk ctrlSetPositionY (((_lastCtrlPos # 1) + ((1 * GUI_GRID_CENTER_H) / 2)) + (_lastCtrlPos # 3));
+	};
+
+	_perk ctrlCommit 0;
+
+	private _iconCtrl = _perk controlsGroupCtrl 101;
+	_iconCtrl ctrlSetText getText (_x >> "icon");
+
+	private _nameCtrl = _perk controlsGroupCtrl 102;
+	_nameCtrl ctrlSetStructuredText parseText getText (_x >> "displayName");
+
+	private _descCtrl = _perk controlsGroupCtrl 103;
+	_descCtrl ctrlSetStructuredText parseText getText (_x >> "description");
+
+	private _overlay = _perk controlsGroupCtrl 105;
+	_overlay ctrlSetStructuredText parseText format["<br/><br/><t size='2' align='center'>Requires Level %1</t>", getNumber (_x >> "level")];
+	_overlay ctrlShow !([configName _x] call ULP_fnc_hasGroupPerk);
+
+	_lastCtrlPos = ctrlPosition _perk;
+	_ctrls pushBack _perk;
+} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgGroups" >> "Types" >> ((group player) getVariable ["group_type", ""]) >> "Perks"));
+
+_display setVariable ["display_ctrls", _ctrls];

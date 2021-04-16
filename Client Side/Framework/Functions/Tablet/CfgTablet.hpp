@@ -118,7 +118,7 @@ class CfgTablet {
 	class GroupProgression : Group {
 		pageTitle = "Group - Progression";
 		pageIdcs[] = {
-			23061, 23082, 23083, 23084
+			23061, 23082, 23083, 23084, 23085, 23086
 		};
 		onload = "_this call ULP_fnc_progression";
 	};

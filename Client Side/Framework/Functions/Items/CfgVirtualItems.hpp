@@ -518,7 +518,7 @@ class CfgVirtualItems {
 
 	// Misc. Run Items
 	class StolenCargo {
-		displayName = "StolenCargo";
+		displayName = "Stolen Cargo";
 		description = "Sealed cargo crates filled with stolen goods.";
 		icon = "Data\Icons\crate.paa";
 		buyPrice = -1;

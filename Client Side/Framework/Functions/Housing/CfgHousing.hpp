@@ -13,6 +13,7 @@ class CfgHousing {
 			canSpawn = false;
 			spawnPos[] = {0, 0, 0};
 			disabledUpgrades[] = {};
+			condition = "true";
 
 			class Storage {
 				object = "";
@@ -32,6 +33,7 @@ class CfgHousing {
 			canShare = true;
 			canSpawn = true;
 			disabledUpgrades[] = {};
+			condition = "true";
 		};
 
 		class Land_Slub_House02_F : BaseHouse {

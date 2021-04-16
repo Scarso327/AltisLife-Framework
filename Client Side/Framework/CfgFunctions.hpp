@@ -297,6 +297,7 @@ class CfgFunctions {
 			class overview {};
 			class changeRank {};
 			class kickMember {};
+			class leaveGroup {};
 		};
 
 		class TabletKeys {

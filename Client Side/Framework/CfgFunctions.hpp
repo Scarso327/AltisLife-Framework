@@ -198,14 +198,12 @@ class CfgFunctions {
 		class Stores {
 			file = "Functions\Stores";
 			class openStore {};
-			class switchInventory {};
 			class switchCategory {};
 			class addCart {};
 			class removeCart {};
 			class itemInfo {};
 			class cartInfo {};
 			class buyItems {};
-			class sellItem {};
 			class onItemClick {};
 			class onTextureSwitch {};
 		};

@@ -149,33 +149,13 @@ class DialogGenericStore {
 			SAFEZONE_H(BUTTON_H);
         };
 
-        class InvToggle : Life_RscToolbox {
-            idc = 3111;
-            style = 2;
-            colorBackground[] = NO_COLOUR;
-            colorSelectedBg[] = INNER_BODY_COLOUR;
-            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
-            SAFEZONE_Y(0.291 + MARGIN_Y);
-			SAFEZONE_W(CONTENT_W);
-			SAFEZONE_H(MARGIN_Y * 2);
-            columns = 2;
-            strings[] = {
-                "Cart",
-                "Inventory"
-            };
-            tooltips[] = {
-                "Your Cart",
-                "Your Inventory"
-            };
-        };
-
 		class CartList : Life_RscListBox {
             idc = 3107;
             colorBackground[] = INNER_BODY_COLOUR;
             SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
-            SAFEZONE_Y(0.291 + (MARGIN_Y * 3));
+            SAFEZONE_Y(0.291 + MARGIN_Y);
 			SAFEZONE_W(CONTENT_W);
-			SAFEZONE_H((BODY_HEIGHT - (MARGIN_Y * 4)) - ((BUTTON_H * 2) + (BUTTON_MARGIN_Y * 2)));
+			SAFEZONE_H((BODY_HEIGHT - (MARGIN_Y * 2)) - ((BUTTON_H + BUTTON_MARGIN_Y) * 2));
         };
 
         class CartButton : Life_RscButtonCenter {

@@ -56,8 +56,4 @@ if (createDialog "DialogGenericStore") then {
 	(_display displayCtrl 3108) ctrlSetEventHandler ["ButtonClick", "[] call ULP_fnc_addCart"];
 	(_display displayCtrl 3107) ctrlSetEventHandler ["LBDblClick", "_this call ULP_fnc_removeCart"];
 	(_display displayCtrl 3110) ctrlSetEventHandler ["ButtonClick", "_this spawn ULP_fnc_buyItems"];
-
-	private _invToolBox = _display displayCtrl 3111;
-	[_invToolBox, 0] call ULP_fnc_switchInventory;
-	_invToolBox ctrlSetEventHandler ["ToolboxSelChanged", "_this call ULP_fnc_switchInventory"];
 };

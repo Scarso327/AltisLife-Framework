@@ -330,6 +330,8 @@ class CfgVirtualStores {
 		storeName = "Altis Archaeologists";
 		class Items {
 			class CommonMap {};
+			class UncommonMap {};
+			class RareMap {};
 			class SurveyingEquipment {};
 			class ArchaeologistsEquipment {};
 		};
@@ -338,6 +340,9 @@ class CfgVirtualStores {
 	class Artifact {
 		storeName = "Artifact Trader";
 		class Items {
+			class CommonMapFragment {};
+			class UncommonMapFragment {};
+			class RareMapFragment {};
 			class OldCoin {};
 			class BrokenPot {};
 			class BluntStoneKnife {};

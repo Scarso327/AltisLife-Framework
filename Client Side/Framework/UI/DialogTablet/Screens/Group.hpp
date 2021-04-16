@@ -118,7 +118,7 @@ class GroupRankSelectList : Life_RscCombo {
 class TransferOwnership : ChangeRank {
 	idc = 23079;
 	text = "<t align = 'center'>Transfer Ownership</t>";
-	onButtonClick = "";
+	onButtonClick = "_this call ULP_fnc_transferOwner;";
 	SAFEZONE_Y((UI_Y + (0.022 * 2)) + (MARGIN_Y * 3) + ((MARGIN_Y / 2)));
 };
 

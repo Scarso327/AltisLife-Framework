@@ -298,6 +298,7 @@ class CfgFunctions {
 			class changeRank {};
 			class kickMember {};
 			class leaveGroup {};
+			class transferOwner {};
 		};
 
 		class TabletKeys {
@@ -472,6 +473,7 @@ class CfgFunctions {
 			class isGroupMember {};
 			class disbandGroup {};
 			class groupTax {};
+			class setGroupOwner {};
 			class removeMember {};
 		};
 

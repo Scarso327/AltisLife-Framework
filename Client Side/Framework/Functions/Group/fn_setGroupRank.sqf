@@ -8,14 +8,15 @@ scopeName "fn_setGroupRank";
 _this params [
 	["_group", group player, [grpNull]],
 	["_unit", player, [objNull, ""]],
-	["_rank", 0, [0]]
+	["_rank", 0, [0]],
+	["_cooldown", true, [false]]
 ];
 
 if (_unit isEqualType objNull && { isNull _unit} || { _unit isEqualTo "" } || { !([_group] call ULP_fnc_isGroup) }) exitWith { false };
 
 // Stop spam...
-if (time < (_group getVariable ["rank_cooldown", 0])) exitWith {
-	["You've changed this person's rank recently, please wait before trying again."] call ULP_fnc_hint;
+if (_cooldown && { time < (_group getVariable ["rank_cooldown", 0]) }) exitWith {
+	["You've changed someones rank recently, please wait before trying again."] call ULP_fnc_hint;
 	false
 };
 _group setVariable ["rank_cooldown", time + 3];

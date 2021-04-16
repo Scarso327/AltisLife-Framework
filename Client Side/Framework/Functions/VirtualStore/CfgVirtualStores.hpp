@@ -60,10 +60,12 @@ class CfgVirtualStores {
 			class Water {};
 			class Redbull {};
 			class Pickaxe {};
+			class LumberAxe {};
 			class Shovel {};
 			class FishingNet {};
 			class FuelCan {};
 			class Lockpick {};
+			class Toolbox {};
 		};
 	};
 

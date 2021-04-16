@@ -29,6 +29,11 @@ if (isNull _object || { (player distance _pos) > 5 } || { !(_object getVariable 
 private _time = 150;
 private _onBreakIn = "";
 
+if ([] call ULP_fnc_isGroup) then {
+	private _buff = [group player, "Boltcutting"] call ULP_fnc_groupBuff;
+	if (_buff > 0) then { _time = _time - (_time * _buff); };
+};
+
 private _breakInCfg = _object getVariable ["breakInConfig", configNull];
 if !(isNull _breakInCfg) then {
 	_time = getNumber (_breakInCfg >> "breakIn");

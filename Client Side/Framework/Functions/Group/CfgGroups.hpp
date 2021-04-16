@@ -165,12 +165,12 @@ class CfgGroups {
 	};
 
 	class Buffs {
-		class Missions {
+		class Missions { // TODO
 			displayName = "Increased Payout from Missions";
 			icon = "Data\UI\GroupBuffs\missions.paa";
-			max = 0.20;
+			max = 0.25;
 		};
-		class Lockpicking : Missions {
+		class Lockpicking : Missions { // TODO
 			displayName = "Increased Lockpicking Speed";
 			icon = "Data\UI\GroupBuffs\lockpicking.paa";
 		};

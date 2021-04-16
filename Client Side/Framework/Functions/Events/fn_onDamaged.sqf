@@ -16,9 +16,9 @@ _this params [
 
 // Get our current damage...
 private _originalDamage = [
-	_unit getHit _part,
+	_unit getHitIndex _index,
 	damage _unit
-] select (_part isEqualTo "");
+] select (_index < 0);
 
 if ([_unit] call ULP_fnc_onDuty || { [_unit] call ULP_fnc_isKnocked }) exitWith { _originalDamage };
 

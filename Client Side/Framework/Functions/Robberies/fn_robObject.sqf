@@ -56,6 +56,7 @@ _marker setMarkerSize [0.8, 0.8];
 	[_money] call ULP_fnc_addMoney;
 
 	getArray (_cfg >> "leveling") call ULP_fnc_addXP;
+	[(group player), "Robbery"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", 2];
 
 	[format["You have robbed this store for £%1.", [_money] call ULP_fnc_numberText]] call ULP_fnc_achieve;
 

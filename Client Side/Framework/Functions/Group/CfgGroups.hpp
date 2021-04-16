@@ -150,16 +150,16 @@ class CfgGroups {
 
 		class XP {
 			class Cartel { amount = 10; };
-			class Popup : Cartel {};
+			class Popup : Cartel {}; // TODO
 			class Airdrop : Cartel {};
-			class Freight { amount = 5; };
-			class Election { amount = 100; };
-			class Rigging { amount = 20; };
-			class Hideout : Cartel {};
-			class BaseBid : Election {};
-			class GoldDrives : Freight {};
-			class CommunityGoals : Freight {};
-			class MedicalAid { amount = 3; };
+			class Freight { amount = 5; }; // TODO
+			class Election { amount = 100; }; // TODO
+			class Rigging { amount = 20; }; // TODO
+			class Hideout : Cartel {}; // TODO
+			class BaseBid : Election {}; // TODO
+			class GoldDrives : Freight {}; // TODO
+			class CommunityGoals : Freight {}; // TODO
+			class MedicalAid { amount = 3; }; // TODO
 			class Robbery : Freight {};
 		};
 	};

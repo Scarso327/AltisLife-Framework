@@ -37,3 +37,5 @@ private _loot = [
 		[getPlayerUID _unit, _loot] call ULP_SRV_fnc_giveLoot
 	]
 ]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+
+[(group _unit), "Airdrop"] call ULP_SRV_fnc_addGroupXP;

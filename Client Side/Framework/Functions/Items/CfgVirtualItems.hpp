@@ -811,7 +811,7 @@ class CfgVirtualItems {
 	};
 	class UnprocessedOil : Tobacco {
 		displayName = "Unrefinded Oil";
-		description = "Unrefinded oil extracted from an oil well. This item can only be stored in liquid storage vehicles.";
+		description = "Unrefinded oil extracted from an oil well.";
 		icon = "Data\Icons\oilUnrefinded.paa";
 		weight = 6;
 		class Settings : Settings {};

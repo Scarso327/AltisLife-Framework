@@ -81,4 +81,6 @@ if (_remove) then {
 	ULP_CarryInfo set [0, _newWeight];
 };
 
+[((ULP_CarryInfo select 0) > (ULP_CarryInfo select 1))] call ULP_fnc_setOverweight;
+
 true

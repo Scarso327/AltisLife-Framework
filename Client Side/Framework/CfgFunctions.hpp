@@ -152,6 +152,7 @@ class CfgFunctions {
 			class playerByUID {};
 			class isUndercover {};
 			class canHeal {};
+			class setOverweight {};
 		};
 
 		class PlayerActions {

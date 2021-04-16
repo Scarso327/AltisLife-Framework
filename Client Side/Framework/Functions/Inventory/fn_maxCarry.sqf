@@ -15,3 +15,5 @@ private _carryWeight = getNumber (missionConfigFile >> "CfgSettings" >> "total_m
 } forEach [uniform player, vest player, backpack player];
 
 ULP_CarryInfo set [1, _carryWeight];
+
+[((ULP_CarryInfo select 0) > (ULP_CarryInfo select 1))] call ULP_fnc_setOverweight;

@@ -30,8 +30,6 @@ private _items = ("isClass _x" configClasses (_storeCfg >> ((_storeCfg call BIS_
 
 if ((count _items) isEqualTo 0) exitWith {
 	_itemList lbAdd "No Items";
-
-	// TODO : Disable Buy...
 };
 
 {

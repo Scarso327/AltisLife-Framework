@@ -98,7 +98,7 @@ class CfgGoals {
 				item = "Schnapps";
 				title = "Sell Schnapps";
 				description = "Sell Schnapps before the week's end!";
-				tiers[] = { 500, 750, 1000 };
+				tiers[] = { 1000, 2000, 3000 };
 				condition = "true";
 			};
 			class SellCigarette : SellSchnapps {

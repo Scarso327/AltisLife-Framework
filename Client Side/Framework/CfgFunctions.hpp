@@ -696,6 +696,12 @@ class CfgFunctions {
 			class deconstruct {};
 			class nearWorkbench {};
 		};
+
+		class Capture {
+			file = "Functions\Capture";
+			class capture {};
+			class ownsSite {};
+		};
 	};
 
 	class ULP_Functions_UI {

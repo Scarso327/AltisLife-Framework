@@ -27,6 +27,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Archaeology\CfgArchaeology.hpp"
 #include "Functions\Bases\CfgBases.hpp"
 #include "Functions\Camera\CfgCameras.hpp"
+#include "Functions\Capture\CfgCapture.hpp"
 #include "Functions\Cartels\CfgCartels.hpp"
 #include "Functions\Chat\CfgChat.hpp"
 #include "Functions\Clothing\CfgClothing.hpp"

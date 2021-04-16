@@ -30,6 +30,11 @@ if ((player distance (taskDestination _task)) > 5) exitWith {
 
 private _time = _base + (random _random);
 
+if ([] call ULP_fnc_isGroup) then {
+	private _buff = [group player, "Surveying"] call ULP_fnc_groupBuff;
+	if (_buff > 0) then { _time = _time - (_time * _buff); };
+};
+
 [format["Surveying %1 Archaeology Site", _rarity], _time, [_cfg, _task], { (player distance (taskDestination (_this select 1))) <= 5 }, {
 	_this params [ "_cfg", "_task" ];
 	

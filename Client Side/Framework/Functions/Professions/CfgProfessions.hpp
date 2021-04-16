@@ -20,7 +20,6 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	// TODO
 	class Gathering {
 		displayName = "Gathering";
 		icon = "Data\UI\Professions\gathering.paa";
@@ -31,7 +30,6 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	// TODO
 	class Mining {
 		displayName = "Mining";
 		icon = "Data\UI\Professions\mining.paa";
@@ -42,7 +40,6 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	// TODO
 	class Processing {
 		displayName = "Processing";
 		icon = "Data\UI\Professions\processing.paa";
@@ -53,7 +50,6 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	// TODO
 	class Cooking {
 		displayName = "Cooking";
 		icon = "Data\UI\Professions\cooking.paa";

@@ -51,7 +51,7 @@ class CfgGroups {
 					level = 4;
 				};
 
-				class DMT { // TODO
+				class DMT {
 					displayName = "DMT Ownership";
 					icon = "Data\UI\GroupPerks\DMT.paa";
 					description = "Your members have the ability to purchase a DMT.";
@@ -92,7 +92,7 @@ class CfgGroups {
 					level = 4;
 				};
 
-				class MilitaryOffices { // TODO
+				class MilitaryOffices {
 					displayName = "Offices Ownership";
 					icon = "Data\UI\GroupPerks\officeBuilding.paa";
 					description = "Your members have the ability to purchase an Abandonded Military Office building.";
@@ -126,7 +126,7 @@ class CfgGroups {
 					level = 3;
 				};
 
-				class OfficeBuilding { // TODO
+				class OfficeBuilding {
 					displayName = "Office Ownership";
 					icon = "Data\UI\GroupPerks\officeBuilding.paa";
 					description = "Your members have the ability to purchase an Office Building.";

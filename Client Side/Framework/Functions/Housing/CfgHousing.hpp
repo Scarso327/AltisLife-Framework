@@ -183,6 +183,7 @@ class CfgHousing {
 			price = 34896000;
 			breakIn = 20 * 60;
 			spawnPos[] = {15171.1,15339,12.8876};
+			condition = "[""DMT""] call ULP_fnc_hasGroupPerk";
 			
 			class Storage {
 				object = "CargoNet_01_box_F";
@@ -197,6 +198,7 @@ class CfgHousing {
 			price = 83350000;
 			breakIn = 15 * 60;
 			spawnPos[] = {15177.2,15386.7,3.29152};
+			condition = "[""MilitaryOffices""] call ULP_fnc_hasGroupPerk";
 			
 			class Storage {
 				object = "Land_Cargo20_grey_F";
@@ -207,6 +209,7 @@ class CfgHousing {
 			price = 41455000;
 			breakIn = 5 * 60;
 			spawnPos[] = {15177.2,15461.1,7.97687};
+			condition = "[""OfficeBuilding""] call ULP_fnc_hasGroupPerk";
 			
 			class Storage {
 				object = "C_IDAP_supplyCrate_F";

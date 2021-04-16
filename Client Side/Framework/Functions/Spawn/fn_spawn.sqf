@@ -62,19 +62,23 @@ if (ULP_FirstSpawn) then {
 
 	["FirstSpawn"] call ULP_fnc_achieve;
 
-	// Lewis coded from this line until the end of the block... I wanna die...
-
 	if (((call ULP_Staff) > 1) || { ((call ULP_Event) > 1) }) then { ["JoinStaff"] call ULP_fnc_achieve; };
 
-	{
-		if ((_x select 0) call ULP_fnc_hasAccess) then { [_x select 1] call ULP_fnc_achieve; };
-	} forEach [
-		(switch ([player] call ULP_fnc_getFaction) do {
-			case "Police" : { [["Police_Main", 1], "JoinAPC"], [["Police_RTA", 1], "JoinRTA"], [["Police_NPAS", 1], "JoinNPAS"], [["Police_SCO", 1], "JoinSCO19"], [["Police_NCA", 1], "JoinNCA"], [["Police_MPU", 1], "JoinMPU"], [["Police_RPU", 1], "JoinRPU"], [["Police_SFO", 1], "JoinSFO"], [["Police_UC", 1], "JoinUC"] };
-			case "Medic" : { [["Medic_Main", 1], "JoinNHS"], [["Medic_HR", 1], "JoinHR"], [["Medic_AA", 1], "JoinAA"] };
-			case "Hato" : { [["Hato_Main", 1], "JoinHATO"] };
-		})
-	];
+	if (["Police_Main", 1] call ULP_fnc_hasAccess) then { ["JoinAPC"] call ULP_fnc_achieve; };
+	if (["Police_RTA", 1] call ULP_fnc_hasAccess) then { ["JoinRTA"] call ULP_fnc_achieve; };
+	if (["Police_NPAS", 1] call ULP_fnc_hasAccess) then { ["JoinNPAS"] call ULP_fnc_achieve; };
+	if (["Police_SCO", 1] call ULP_fnc_hasAccess) then { ["JoinSCO19"] call ULP_fnc_achieve; };
+	if (["Police_NCA", 1] call ULP_fnc_hasAccess) then { ["JoinNCA"] call ULP_fnc_achieve; };
+	if (["Police_MPU", 1] call ULP_fnc_hasAccess) then { ["JoinMPU"] call ULP_fnc_achieve; };
+	if (["Police_RPU", 1] call ULP_fnc_hasAccess) then { ["JoinRPU"] call ULP_fnc_achieve; };
+	if (["Police_SFO", 1] call ULP_fnc_hasAccess) then { ["JoinSFO"] call ULP_fnc_achieve; };
+	if (["Police_UC", 1] call ULP_fnc_hasAccess) then { ["JoinUC"] call ULP_fnc_achieve; };
+
+	if (["Medic_Main", 1] call ULP_fnc_hasAccess) then { ["JoinNHS"] call ULP_fnc_achieve; };
+	if (["Medic_HR", 1] call ULP_fnc_hasAccess) then { ["JoinAA"] call ULP_fnc_achieve; };
+	if (["Medic_AA", 1] call ULP_fnc_hasAccess) then { ["JoinAA"] call ULP_fnc_achieve; };
+
+	if (["Hato_Main", 1] call ULP_fnc_hasAccess) then { ["JoinHATO"] call ULP_fnc_achieve; };
 } else {
 	[false] call ULP_fnc_initPlayer;
 };

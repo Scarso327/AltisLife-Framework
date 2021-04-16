@@ -1093,7 +1093,7 @@ class CfgVirtualItems {
 		description = "Raw fish that can be sold at a fish market or cooked at a public cookhouse.";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = -1;
-		sellPrice = 0;
+		sellPrice = 450;
 		weight = 2;
 		class Settings {
 			onMarket = false;
@@ -1105,33 +1105,33 @@ class CfgVirtualItems {
 	};
 	class Ornate_random_F_Raw : Salema_F_Raw {
 		displayName = "Raw Ornate";
-		sellPrice = 0;
+		sellPrice = 660;
 		class Settings : Settings {};
 	};
 	class Mackerel_F_Raw : Salema_F_Raw {
 		displayName = "Raw Mackerel";
-		sellPrice = 0;
+		sellPrice = 740;
 		class Settings : Settings {};
 	};
 	class Tuna_F_Raw : Salema_F_Raw {
 		displayName = "Raw Tuna";
-		sellPrice = 0;
+		sellPrice = 822;
 		class Settings : Settings {};
 	};
 	class Mullet_F_Raw : Salema_F_Raw {
 		displayName = "Raw Mullet";
-		sellPrice = 0;
+		sellPrice = 990;
 		class Settings : Settings {};
 	};
 	class CatShark_F_Raw : Salema_F_Raw {
 		displayName = "Raw Catshark";
-		sellPrice = 0;
+		sellPrice = 1237;
 		class Settings : Settings {};
 	};
 	class Turtle : Salema_F_Raw {
 		displayName = "Turtle";
 		icon = "Data\Icons\turtle.paa";
-		sellPrice = 0;
+		sellPrice = 65000;
 		class Settings {
 			onMarket = true;
 			isIllegal = true;
@@ -1145,8 +1145,8 @@ class CfgVirtualItems {
 		displayName = "Cooked Salema";
 		description = "Cooked fish that can be sold at a fish market.";
 		icon = "Data\Icons\fish.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 2250;
+		sellPrice = 1125;
 		weight = 2;
 		class Settings {
 			onMarket = true;
@@ -1158,32 +1158,32 @@ class CfgVirtualItems {
 	};
 	class CookedOrnate : CookedSalema {
 		displayName = "Cooked Ornate";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3300;
+		sellPrice = 1650;
 		class Settings : Settings {};
 	};
 	class CookedMackerel : CookedSalema {
 		displayName = "Cooked Mackerel";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3700;
+		sellPrice = 1850;
 		class Settings : Settings {};
 	};
 	class CookedTuna : CookedSalema {
 		displayName = "Cooked Tuna";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 4112;
+		sellPrice = 2056;
 		class Settings : Settings {};
 	};
 	class CookedMullet : CookedSalema {
 		displayName = "Cooked Mullet";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 4950;
+		sellPrice = 2475;
 		class Settings : Settings {};
 	};
 	class CookedCatshark : CookedSalema {
 		displayName = "Cooked Catshark";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 6187;
+		sellPrice = 3093;
 		class Settings : Settings {};
 	};
 

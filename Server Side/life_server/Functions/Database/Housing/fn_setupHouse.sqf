@@ -35,7 +35,8 @@ if (isClass (_cfg >> "Storage")) then {
 		"_pos", ["_dir", 0, [0]]
 	];
 
-	private _storage = createSimpleObject [getText (_cfg >> "Storage" >> "object"), _house modelToWorldVisualWorld _pos];
+	private _storage = createSimpleObject [getText (_cfg >> "Storage" >> "object"), getPos _house];
+	_storage setPosATL (_house modelToWorld _pos);
 	_storage setDir (getDir _house) - _dir;
 
 	_house setVariable ["building_storage", _storage];

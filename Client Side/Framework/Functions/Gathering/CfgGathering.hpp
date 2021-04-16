@@ -33,6 +33,13 @@ class CfgGathering {
 		gatherTime = 2;
 	};
 
+	class Wood : BaseGather {
+		reqItems[] = { "Axe" };
+		areas[] = { { "logging_grounds_1", 20 }, { "logging_grounds_2", 20 }, { "logging_grounds_3", 20 }, { "logging_grounds_4", 20 } };
+		items[] = { { "wood", 100 } };
+		gatherTime = 3;
+	};
+
 	class Coral : BaseGather {
 		hidden[] = { "Police" };
 		areas[] = { { "coral_field", 20 } };

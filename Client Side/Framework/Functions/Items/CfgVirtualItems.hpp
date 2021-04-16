@@ -338,6 +338,13 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
+	class LumberAxe : Pickaxe {
+		displayName = "Lumber Axe";
+		icon = "Data\Icons\lumberAxe.paa";
+		buyPrice = 1180;
+		sellPrice = 590;
+		class Settings : Settings {};
+	};
 	class Shovel : Pickaxe {
 		displayName = "Shovel";
 		icon = "Data\Icons\shovel.paa";

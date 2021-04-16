@@ -112,5 +112,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_toggleVaults {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_setGroupId {
+            allowedTargets = SERVER;
+        };
     };
 };

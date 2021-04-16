@@ -19,6 +19,8 @@ class CfgGroups {
 		deposit = 3;
 		withdraw = 3;
 		rank = 4;
+		invite = 4;
+		kick = 4;
 	};
 
 	class Types {

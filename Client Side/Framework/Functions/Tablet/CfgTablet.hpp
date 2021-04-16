@@ -18,7 +18,7 @@ class CfgTablet {
 		pageIdcs[] = {
 			23002, 23003, 23004, 23005, 23006, 23007, 23008, 23009, 23010, 23011
 		};
-		onload = "(_this displayCtrl 23001) ctrlSetStructuredText parseText format[""<t align='left'>%1</t><t align='right'>£%2</t>"", name player, [ULP_547_Bank] call ULP_fnc_numberText]";
+		onload = "[(_this getVariable [""group_check"", -1])] call ULP_fnc_removeEachFrame; (_this displayCtrl 23001) ctrlSetStructuredText parseText format[""<t align='left'>%1</t><t align='right'>£%2</t>"", name player, [ULP_547_Bank] call ULP_fnc_numberText]";
 	};
 
 	class Profile : BaseScreen {
@@ -109,7 +109,7 @@ class CfgTablet {
 	class GroupOverview : Group {
 		pageTitle = "Group - Overview";
 		pageIdcs[] = {
-			23061, 23062, 23063, 23064, 23065, 23066, 23067, 23068, 23076
+			23061, 23062, 23063, 23064, 23065, 23066, 23067, 23068, 23076, 23079, 23080
 		};
 		onload = "_this call ULP_fnc_overview";
 		onUnload = "[""GroupMembersChanged"", (_this getVariable [""members_changed"", -1])] call ULP_fnc_removeEventHandler; _this setVariable [""members_changed"", nil]; [""GroupMoneyChanged"", (_this getVariable [""funds_changed"", -1])] call ULP_fnc_removeEventHandler; _this setVariable [""funds_changed"", nil];";

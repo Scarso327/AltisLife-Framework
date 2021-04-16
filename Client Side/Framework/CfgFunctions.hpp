@@ -296,6 +296,7 @@ class CfgFunctions {
 			class group {};
 			class overview {};
 			class changeRank {};
+			class kickMember {};
 		};
 
 		class TabletKeys {
@@ -470,6 +471,7 @@ class CfgFunctions {
 			class isGroupMember {};
 			class disbandGroup {};
 			class groupTax {};
+			class removeMember {};
 		};
 
 		class NLR {

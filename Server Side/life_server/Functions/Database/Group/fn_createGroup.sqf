@@ -23,6 +23,8 @@ private _ranks = getArray (missionConfigFile >> "CfgGroups" >> "ranks");
 private _depositIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "deposit");
 private _withdrawIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "withdraw");
 private _rankIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "rank");
+private _inviteIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "invite");
+private _kickIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions" >> "kick");
 private _level = ((count _ranks) - 1);
 private _members = createHashMapFromArray [[_steamid, [name _owner, _level]]];
 
@@ -50,8 +52,8 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	};
 
 	// This gang has something matching but is also inactive, to save queries we can just update this one as ours...
-	[format["UPDATE groups SET owner = '%1', type = '%9', tag = '%2', name = '%3', ranks = '%5', deposit = '%6', withdraw = '%7', rank = '%8', bank = '0', premium = '0', active = '1' WHERE id = '%4'",
-		_steamid, _tag, _name, _queryId, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type
+	[format["UPDATE groups SET owner = '%1', type = '%9', tag = '%2', name = '%3', ranks = '%5', deposit = '%6', withdraw = '%7', rank = '%8', invite = '%9', kick = '%10', bank = '0', premium = '0', active = '1' WHERE id = '%4'",
+		_steamid, _tag, _name, _queryId, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type, _inviteIndex, _kickIndex
 	], 1] call DB_fnc_asyncCall;
 
 	private _group = [_queryId] call ULP_fnc_getGroupById;
@@ -103,8 +105,8 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 
 	// Insert...
 	[format[
-		"INSERT INTO groups (owner, type, tag, name, ranks, deposit, withdraw, rank) VALUES ('%1', '%8', '%2', '%3', '%4', '%5', '%6', '%7');", 
-		_steamid, _tag, _name, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type
+		"INSERT INTO groups (owner, type, tag, name, ranks, deposit, withdraw, rank, invite, kick) VALUES ('%1', '%8', '%2', '%3', '%4', '%5', '%6', '%7', '%9', '%10');", 
+		_steamid, _tag, _name, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type, _inviteIndex, _kickIndex
 	], 1] call DB_fnc_asyncCall;
 
 	private _group = createGroup [(side _owner), true];

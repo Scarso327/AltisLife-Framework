@@ -14,7 +14,7 @@ _this params [
 private _cfg = missionConfigFile >> "CfgGroups" >> "Buffs" >> _buff;
 if (isNull _group || { !([_group] call ULP_fnc_isGroup) } || { !(isClass _cfg) }) exitWith { false };
 
-private _current = [_group] call ULP_fnc_groupBuff;
+private _current = [_group, _buff] call ULP_fnc_groupBuff;
 private _level = ((_current + _amount) min getNumber (_cfg >> "max"));
 
 if !(_level isEqualTo _current) then {

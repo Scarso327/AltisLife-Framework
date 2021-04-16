@@ -9,7 +9,7 @@ class CfgVehicles {
 		garageLimit = 4;
 		isHouse = false;
 		conditions = "true";
-		blacklistedItems[] = {};
+		blacklistedItems[] = { "UnprocessedOil" };
 		class Textures {};
 	};
 
@@ -799,6 +799,7 @@ class CfgVehicles {
 	class C_Van_01_fuel_F : C_Van_01_transport_F {
 		buyPrice = 210500;
 		virtualSpace = 120;
+		blacklistedItems[] = {};
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -856,6 +857,7 @@ class CfgVehicles {
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 435000;
 		virtualSpace = 200;
+		blacklistedItems[] = {};
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {};
 
@@ -895,6 +897,7 @@ class CfgVehicles {
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
 		buyPrice = 590500;
 		virtualSpace = 350;
+		blacklistedItems[] = {};
 	};
 	class O_Truck_03_device_F : O_Truck_03_transport_F {
 		buyPrice = 1150000;
@@ -1027,6 +1030,7 @@ class CfgVehicles {
 	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
 		buyPrice = 880000;
 		virtualSpace = 500;
+		blacklistedItems[] = {};
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1216,7 +1220,7 @@ class CfgVehicles {
 		buyPrice = 565000;
 		virtualSpace = 5;
 		garageLimit = 2;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		class Textures {
 			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
 			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
@@ -1290,7 +1294,7 @@ class CfgVehicles {
 		buyPrice = 2350000;
 		virtualSpace = 25;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
@@ -1315,7 +1319,7 @@ class CfgVehicles {
 		buyPrice = 2130000;
 		virtualSpace = 20;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Police : PoliceTexture {
@@ -1342,7 +1346,7 @@ class CfgVehicles {
 		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "LMG_Minigun_Transport", "LMG_Minigun_Transport2", "CMFlareLauncher" } };
 		class Textures {
 			class Police : BaseTexture { turrets[] = { { "CMFlareLauncher" } }; };
@@ -1356,7 +1360,7 @@ class CfgVehicles {
 		virtualSpace = 55;
 		garageLimit = 1;
 		chopKeepChance = 85;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Medic : MedicTexture {
@@ -1393,10 +1397,10 @@ class CfgVehicles {
 		buyPrice = 11350000;
 		virtualSpace = 0;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		chopKeepChance = 85;
 		chopPerc = 0.20;
 		chopTime = 60;
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "CMFlareLauncher" } };
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
@@ -1418,6 +1422,7 @@ class CfgVehicles {
 	class O_Heli_Transport_04_fuel_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 13640000;
 		virtualSpace = 50;
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar" };
 	};
 	class O_Heli_Transport_04_medevac_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11983000;
@@ -1439,10 +1444,10 @@ class CfgVehicles {
 		buyPrice = 33400750;
 		virtualSpace = 100;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		chopKeepChance = 95;
 		chopPerc = 0.20;
 		chopTime = 300;
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Black : BaseTexture {
@@ -1467,10 +1472,10 @@ class CfgVehicles {
 		buyPrice = 146560000;
 		virtualSpace = 0;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		chopKeepChance = 97;
 		chopPerc = 0.20;
 		chopTime = 600;
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "CMFlareLauncher", "gatling_20mm", "missiles_DAGR", "missiles_ASRAAM" } };
 	};
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
@@ -1486,7 +1491,7 @@ class CfgVehicles {
 		buyPrice = 1256000;
 		virtualSpace = 5;
 		garageLimit = 2;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
@@ -1495,11 +1500,11 @@ class CfgVehicles {
 		buyPrice = 75500000;
 		virtualSpace = 175;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		retrievalPerc = 0.01;
 		chopKeepChance = 95;
 		chopPerc = 0.15;
 		chopTime = 180;
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "CMFlareLauncher_Triples" } };
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
@@ -1511,7 +1516,7 @@ class CfgVehicles {
 		description = "The most promising prototype built by CSAT engineers presents an extremely progressive design with many unique features and top-notch bleeding-edge technologies.";
 		buyPrice = 115650000;
 		virtualSpace = 80;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "UnprocessedOil" };
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
@@ -1571,22 +1576,26 @@ class CfgVehicles {
 		buyPrice = 0;
 		virtualSpace = 250;
 		garageLimit = 1;
+		blacklistedItems[] = { "UnprocessedOil" };
 	};
 	class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {
 		description = "";
 		buyPrice = 0;
 		virtualSpace = 100;
+		blacklistedItems[] = {};
 	};
 
 	class Land_Pod_Heli_Transport_04_box_black_F : B_Slingload_01_Cargo_F {
 		description = "";
 		buyPrice = 0;
 		virtualSpace = 125;
+		blacklistedItems[] = { "UnprocessedOil" };
 	};
 	class Land_Pod_Heli_Transport_04_fuel_black_F : B_Slingload_01_Cargo_F {
 		description = "";
 		buyPrice = 0;
 		virtualSpace = 50;
+		blacklistedItems[] = {};
 	};
 
 	// TEMP --------------------------------------------------------------------------------------
@@ -1594,6 +1603,7 @@ class CfgVehicles {
 		virtualSpace = 0;
 		garageLimit = 0;
 		tempStorage = true;
+		blacklistedItems[] = {};
 	};
 
 	// HOUSING --------------------------------------------------------------------------------------
@@ -1601,6 +1611,7 @@ class CfgVehicles {
 		virtualSpace = 500;
 		garageLimit = 0;
 		isHouse = true;
+		blacklistedItems[] = { "UnprocessedOil" };
 	};
 	class Land_PlasticCase_01_large_gray_F : Land_WoodenCrate_01_F { virtualSpace = 1000; };
 	class CargoNet_01_box_F : Land_WoodenCrate_01_F { virtualSpace = 3000; };

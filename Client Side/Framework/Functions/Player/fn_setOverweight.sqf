@@ -10,7 +10,7 @@ _this params [
 ];
 
 if !((isForcedWalk player) isEqualTo _overweight) then {
-	player forceWalk _isOverWeight;
-	player enableFatigue _isOverWeight;
-	player setFatigue ([0, 1] select _isOverWeight);
+	player forceWalk _overweight;
+	player enableFatigue _overweight;
+	player setFatigue ([0, 1] select _overweight);
 };

@@ -93,7 +93,7 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
 ["Checking Personal Goals..."] call ULP_fnc_logIt;
 
 if !(ULP_SRV_Setting_Day isEqualTo (ULP_SRV_Date joinString "-")) then { _routines pushBack "resetDailyGoals"; };
-if !(ULP_SRV_Setting_Week isEqualTo ([] call ULP_SRV_fnc_getWeek)) then { _routines pushBack "resetWeeklyGoals"; };
+if !(ULP_SRV_Setting_Week isEqualTo ([] call ULP_SRV_fnc_getWeek)) then { _routines append ["resetWeeklyGoals", "resetGroupBuffs"]; };
 
 ["Running Routines..."] call ULP_fnc_logIt;
 

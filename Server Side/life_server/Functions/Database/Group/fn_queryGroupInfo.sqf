@@ -20,13 +20,13 @@ private _group = [_groupid] call ULP_fnc_getGroupById;
 private _ranks = getArray (missionConfigFile >> "CfgGroups" >> "ranks");
 
 if (isNull _group) then {
-	private _query = [format["SELECT groups.id, groups.owner, groups.type, players.group_level, groups.name, groups.ranks, groups.bank, groups.tax, groups.premium, groups.deposit, groups.withdraw, groups.rank, groups.invite, groups.kick, groups.level, groups.xp FROM groups INNER JOIN players ON players.group_id = groups.id AND players.pid = '%1' WHERE (groups.owner = '%1' OR groups.id = '%2') AND groups.active='1'",
+	private _query = [format["SELECT groups.id, groups.owner, groups.type, players.group_level, groups.name, groups.ranks, groups.bank, groups.tax, groups.premium, groups.deposit, groups.withdraw, groups.rank, groups.invite, groups.kick, groups.level, groups.xp, groups.buffs FROM groups INNER JOIN players ON players.group_id = groups.id AND players.pid = '%1' WHERE (groups.owner = '%1' OR groups.id = '%2') AND groups.active='1'",
 		_steamid, _groupid
 	], 2] call DB_fnc_asyncCall;
 
 	if !(_query isEqualTo "" || { _query isEqualTo [] }) exitWith {
 		_query params [
-			"_queryId", "_queryOwner", "_queryType", "_queryRank", "_queryName", "_queryRanks", "_queryBank", "_queryTax", "_queryPremium", "_queryDeposit", "_queryWithdraw", "_queryRankPerm", "_queryInvite", "_queryKick", "_queryLevel", "_queryXp"
+			"_queryId", "_queryOwner", "_queryType", "_queryRank", "_queryName", "_queryRanks", "_queryBank", "_queryTax", "_queryPremium", "_queryDeposit", "_queryWithdraw", "_queryRankPerm", "_queryInvite", "_queryKick", "_queryLevel", "_queryXp", "_queryBuffs"
 		];
 
 		_queryRanks = [_queryRanks] call DB_fnc_mresToArray;
@@ -74,6 +74,11 @@ if (isNull _group) then {
 			} forEach _members;
 
 			_group setVariable ["group_members", _hash, true];
+		};
+		
+		_queryBuffs = [_queryBuffs] call DB_fnc_mresToArray;
+		if !(_queryBuffs isEqualTo []) then {
+			_group setVariable ["group_buffs", (createHashMapFromArray _queryBuffs), true];
 		};
 
 		_unit setUnitRank (_ranks select _queryRank);

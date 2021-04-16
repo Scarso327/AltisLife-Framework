@@ -121,5 +121,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_addGroupXP {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_addGroupBuff {
+            allowedTargets = SERVER;
+        };
     };
 };

@@ -1475,6 +1475,52 @@ class ULP_ctrlGroupPerk : ULP_ctrlProfession {
     };
 };
 
+class ULP_ctrlGroupBuff : ULP_ctrlGroupPerk {
+    h = 3 * GUI_GRID_CENTER_H;
+
+    class Controls {
+        class Background: Life_RscText {
+            idc = -1;
+            colorBackground[] = HEADER_COLOUR_SOLID;
+            w = 15.5 * GUI_GRID_CENTER_W;
+            h = 3 * GUI_GRID_CENTER_H;
+        };
+        class BuffIcon: Life_RscPictureKeepAspect {
+            idc = 101;
+            w = 3 * GUI_GRID_CENTER_W;
+            h = 3 * GUI_GRID_CENTER_H;
+        };
+        class BuffName: Life_RscStructuredText {
+            idc = 102;
+            x = 3 * GUI_GRID_CENTER_W;
+            y = 0.5 * GUI_GRID_CENTER_H;
+            w = 12.5 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+        class PercBackground: Life_RscText {
+            idc = -1;
+            colorBackground[] = FOOTER_COLOUR;
+            x = 3 * GUI_GRID_CENTER_W;
+            y = 1.75 * GUI_GRID_CENTER_H;
+            w = 12.5 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+        class XPBar : Life_RscProgress {
+            idc = 103;
+            colorBar[] = { 0.451, 0, 0.902, 1 };
+            x = 3 * GUI_GRID_CENTER_W;
+            y = 1.75 * GUI_GRID_CENTER_H;
+            w = 12.5 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+        class BuffText : BuffName {
+            idc = 104;
+            text = "<t align='center'>0%</t>";
+            y = 1.75 * GUI_GRID_CENTER_H;
+        };
+    };
+};
+
 class ULP_ctrlAchievement : Life_RscControlsGroupNoScrollbars {
     y = (1 * GUI_GRID_CENTER_H) / 2;
     x = (1 * GUI_GRID_CENTER_W) / 2;

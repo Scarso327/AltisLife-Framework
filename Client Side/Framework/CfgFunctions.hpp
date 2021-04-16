@@ -479,6 +479,7 @@ class CfgFunctions {
 			class groupXP {};
 			class groupLevel {};
 			class hasGroupPerk {};
+			class groupBuff {};
 		};
 
 		class NLR {

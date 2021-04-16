@@ -58,4 +58,32 @@ private _lastCtrlPos = [];
 	_ctrls pushBack _perk;
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgGroups" >> "Types" >> ((group player) getVariable ["group_type", ""]) >> "Perks"));
 
+_ctrlGroup = _display displayCtrl 23086;
+_lastCtrlPos = [];
+
+{
+	private _buff = _display ctrlCreate ["ULP_ctrlGroupBuff", -1, _ctrlGroup];
+
+	if !(_lastCtrlPos isEqualTo []) then {
+		_buff ctrlSetPositionY (((_lastCtrlPos # 1) + ((1 * GUI_GRID_CENTER_H) / 2)) + (_lastCtrlPos # 3));
+	};
+
+	_buff ctrlCommit 0;
+
+	private _iconCtrl = _buff controlsGroupCtrl 101;
+	_iconCtrl ctrlSetText getText (_x >> "icon");
+
+	private _nameCtrl = _buff controlsGroupCtrl 102;
+	_nameCtrl ctrlSetStructuredText parseText getText (_x >> "displayName");
+
+	private _progressCtrl = _buff controlsGroupCtrl 103;
+	_progressCtrl progressSetPosition (([group player, configName _x] call ULP_fnc_groupBuff) / getNumber (_x >> "max"));
+
+	private _textCtrl = _buff controlsGroupCtrl 104;
+	_textCtrl ctrlSetStructuredText parseText format["<t align='center'>%1%2</t>", (([group player, configName _x] call ULP_fnc_groupBuff) * 100), "%"];
+
+	_lastCtrlPos = ctrlPosition _buff;
+	_ctrls pushBack _buff;
+} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgGroups" >> "Buffs"));
+
 _display setVariable ["display_ctrls", _ctrls];

@@ -184,3 +184,14 @@ class LeftView : Life_RscControlsGroup {
 
     class Controls {};
 };
+
+class RightView : Life_RscControlsGroup {
+    idc = 23086;
+	colorBackground[] = INNER_BODY_COLOUR;
+   	SAFEZONE_X((UI_X + ((UI_WIDTH - 0.01) / 2)) + (MARGIN_X * 2));
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 8));
+	SAFEZONE_W(((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2));
+	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 8));
+
+    class Controls {};
+};

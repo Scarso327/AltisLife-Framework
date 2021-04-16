@@ -13,6 +13,7 @@ class CfgVirtualStores {
 			class GPSTracker {};
 			class PanicButton {};
 			class Stinger {};
+			class Blindfold {};
 			class Lockpick {};
 			class BoltCutter {};
 			class Painkillers {};
@@ -54,6 +55,8 @@ class CfgVirtualStores {
 			class BloodBag {};
 			class FirstAidKit {};
 			class MediKit {};
+			class Cigarette {};
+			class Cigar {};
 			class PlasticBarrier_02_yellow_F {};
 			class PlasticBarrier_02_grey_F {};
 			class PlasticBarrier_03_orange_F {};

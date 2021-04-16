@@ -41,5 +41,6 @@
 #define F3 61
 #define NUMENTER 156
 #define NUMSLASH 181
+#define DELETE 211
 #define LWINDOWS 219
 #define RWINDOWS 220

@@ -175,6 +175,14 @@ switch (_code) do {
             };
         };
     };
+
+    case DELETE : {
+        private _veh = cursorObject;
+
+        if (!(isNull _veh) && { _shift } && { !_ctrlKey } && { !_alt } && { [] call ULP_fnc_isStaff } && { [player] call ULP_fnc_onDuty } && { ["Vehicle", false] call ULP_fnc_checkPower } && { [_veh, ["LandVehicle", "Air", "Ship"]] call ULP_fnc_isKindOf }) then {
+            deleteVehicle _veh;
+        };
+    };
 };
 
 _handled

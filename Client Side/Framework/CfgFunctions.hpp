@@ -70,6 +70,7 @@ class CfgFunctions {
 			class waitUntilExecute {};
 			class stripString {};
 			class inString {};
+			class isKindOf {};
 		};
 
 		class Faction {

@@ -40,6 +40,7 @@ class CfgTags {
 					"HatoTO",
 					"HatoTO",
 					"HatoSTO",
+					"HatoIC",
 					"HatoOM"
 				};
 			};
@@ -162,6 +163,11 @@ class CfgTags {
 		class HatoOM {
 			icon = "Data\Tags\Ranks\Medic\CMO.paa"; // ICON
 			subtitle = "Operations Manager";
+			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 4] call ULP_fnc_hasAccess }";
+		};
+		class HatoIC {
+			icon = "Data\Tags\Ranks\Medic\CMO.paa"; // ICON
+			subtitle = "Incident Coordinator";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class HatoSTO {

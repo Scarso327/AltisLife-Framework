@@ -63,11 +63,6 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 		_display setVariable ["cartValue", 0];
 		[] call ULP_fnc_syncPlayerInfo;
 
-		// Update inventory view if it's visible...
-		if (ctrlShown (_display displayCtrl 3112)) then {
-			[_ctrl, 1] call ULP_fnc_switchInventory;
-		};
-
 		[format["You've bought these items for £%1.", [_cartValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	} else {
 		["You don't have enough space for these items!"] call ULP_fnc_hint;

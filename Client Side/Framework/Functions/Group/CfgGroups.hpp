@@ -30,28 +30,30 @@ class CfgGroups {
 			class Perks {
 				class Hideout { // TODO
 					displayName = "Capture Hideout";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\hideout.paa";
 					description = "You have the ability to capture gang hideouts.";
 					level = 1;
 				};
 
 				class Blackmarket {
 					displayName = "Access Blackmarket";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\blackmarket.paa";
 					description = "You have the ability to access the Blackmarket.";
 					level = 2;
 				};
 
+				// LEVEL 3 PERK
+
 				class Governor { // TODO
 					displayName = "Governorship";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
 					level = 4;
 				};
 
 				class DMT { // TODO
 					displayName = "DMT Ownership";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\DMT.paa";
 					description = "Your members have the ability to purchase a DMT.";
 					level = 5;
 				};
@@ -64,35 +66,35 @@ class CfgGroups {
 			class Perks {
 				class Freight { // TODO
 					displayName = "Freight Missions";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\freight.paa";
 					description = "Grants your members access to Freight Missions.";
 					level = 1;
 				};
 
 				class HEMTTs {
 					displayName = "HEMTT Trucks";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\HEMTTs.paa";
 					description = "Grants your members access to all variants of the HEMTT Transports.";
 					level = 2;
 				};
 
 				class GoalContributions { // TODO
 					displayName = "Goal Contributions";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\goalContributions.paa";
 					description = "Your members have an increased contribution to community goals.";
 					level = 3;
 				};
 
 				class Governor { // TODO
 					displayName = "Governorship";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
 					level = 4;
 				};
 
 				class MilitaryOffices { // TODO
 					displayName = "Offices Ownership";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\officeBuilding.paa";
 					description = "Your members have the ability to purchase an Abandonded Military Office building.";
 					level = 5;
 				};
@@ -105,35 +107,35 @@ class CfgGroups {
 			class Perks {
 				class Governor { // TODO
 					displayName = "Governorship";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
 					level = 1;
 				};
 
 				class PersonalProtection { // TODO
 					displayName = "Personal Protection";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\personalProtection.paa";
 					description = "Grands your members access to become Personal Protection Officers.";
 					level = 2;
 				};
 
 				class GovernmentSafehouses { // TODO
 					displayName = "Personal Protection";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\governmentSafehouses.paa";
 					description = "Grands your members access to various Government Safehouses.";
 					level = 3;
 				};
 
 				class OfficeBuilding { // TODO
 					displayName = "Office Ownership";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\officeBuilding.paa";
 					description = "Your members have the ability to purchase an Office Building.";
 					level = 4;
 				};
 
 				class PollRigging { // TODO
 					displayName = "Poll Rigging";
-					icon = "Data\UI\Perks\blackmarketer.paa"; // ICON
+					icon = "Data\UI\GroupPerks\pollRigging.paa";
 					description = "Your members have the ability to rig polling boothes.";
 					level = 5;
 				};
@@ -164,24 +166,29 @@ class CfgGroups {
 
 	class Buffs {
 		class Missions {
-			icon = "";
 			displayName = "Increased Payout from Missions";
+			icon = "Data\UI\GroupBuffs\missions.paa";
 			max = 0.20;
 		};
 		class Lockpicking : Missions {
 			displayName = "Increased Lockpicking Speed";
+			icon = "Data\UI\GroupBuffs\lockpicking.paa";
 		};
 		class Boltcutting : Missions {
 			displayName = "Increased Boltcutting Speed";
+			icon = "Data\UI\GroupBuffs\boltcutting.paa";
 		};
 		class Hacking : Missions {
 			displayName = "Increased Hacking Speed";
+			icon = "Data\UI\GroupBuffs\hacking.paa";
 		};
 		class Surveying : Missions {
 			displayName = "Increased Surveying Speed";
+			icon = "Data\UI\GroupBuffs\surveying.paa";
 		};
 		class Digging : Missions {
 			displayName = "Increased Digging Speed";
+			icon = "Data\UI\GroupBuffs\digging.paa";
 		};
 	};
 };

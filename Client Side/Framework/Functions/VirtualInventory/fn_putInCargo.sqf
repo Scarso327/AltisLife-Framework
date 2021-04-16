@@ -29,6 +29,10 @@ if (_item isEqualTo "") exitWith {
 	["You need to selected something to put into this container!"] call ULP_fnc_hint;
 };
 
+if (_item in getArray (missionConfigFile >> "CfgVehicles" >> (typeOf _container) >> "blacklistedItems")) exitWith {
+	["This item can't be stored in this container..."] call ULP_fnc_hint;
+};
+
 private _count = ULP_Inventory getOrDefault [_item, 0];
 if (_count <= 0) exitWith {
 	["You don't have any of this item to put in this container!"] call ULP_fnc_hint;

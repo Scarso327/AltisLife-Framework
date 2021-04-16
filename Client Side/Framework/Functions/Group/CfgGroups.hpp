@@ -161,4 +161,27 @@ class CfgGroups {
 			class Robbery : Freight {};
 		};
 	};
+
+	class Buffs {
+		class Missions {
+			icon = "";
+			displayName = "Increased Payout from Missions";
+			max = 0.20;
+		};
+		class Lockpicking : Missions {
+			displayName = "Increased Lockpicking Speed";
+		};
+		class Boltcutting : Missions {
+			displayName = "Increased Boltcutting Speed";
+		};
+		class Hacking : Missions {
+			displayName = "Increased Hacking Speed";
+		};
+		class Surveying : Missions {
+			displayName = "Increased Surveying Speed";
+		};
+		class Digging : Missions {
+			displayName = "Increased Digging Speed";
+		};
+	};
 };

@@ -1192,8 +1192,8 @@ class CfgVirtualItems {
 		displayName = "Common Map";
 		description = "A map containing various known artifact sites across Altis.";
 		icon = "Data\Icons\map.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 40000;
+		sellPrice = 20000;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -1207,13 +1207,13 @@ class CfgVirtualItems {
 	class UncommonMap : CommonMap {
 		displayName = "Uncommon Map";
 		buyPrice = -1;
-		sellPrice = 0;
+		sellPrice = 135000;
 		class Settings : Settings {};
 		class Events { onUse = "[""Uncommon""] call ULP_fnc_getSite;"; };
 	};
 	class RareMap : UncommonMap {
 		displayName = "Rare Map";
-		sellPrice = 0;
+		sellPrice = 180000;
 		class Settings : Settings {};
 		class Events { onUse = "[""Rare""] call ULP_fnc_getSite;"; };
 	};
@@ -1222,17 +1222,17 @@ class CfgVirtualItems {
 		displayName = "Common Map Fragment";
 		description = "A map fragment containing uncompleted map.";
 		icon = "Data\Icons\mapFragment.paa";
-		sellPrice = 0;
+		sellPrice = 15000;
 		class Settings : Settings {};
 	};
 	class UncommonMapFragment : CommonMapFragment {
 		displayName = "Uncommon Map Fragment";
-		sellPrice = 0;
+		sellPrice = 30000;
 		class Settings : Settings {};
 	};
 	class RareMapFragment : CommonMapFragment {
 		displayName = "Rare Map Fragment";
-		sellPrice = 0;
+		sellPrice = 45000;
 		class Settings : Settings {};
 	};
 
@@ -1240,8 +1240,8 @@ class CfgVirtualItems {
 		displayName = "Surveying Equipment";
 		description = "Equipmented used to survay a dig site to locate artifacts.";
 		icon = "Data\Icons\surveyingEquipment.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 28900;
+		sellPrice = 14450;
 		weight = 3;
 		class Settings {
 			onMarket = false;
@@ -1256,8 +1256,8 @@ class CfgVirtualItems {
 		displayName = "Archaeologists' Equipment";
 		description = "Equipment used to carefully dig up artifacts from dig sites.";
 		icon = "Data\Icons\archaeologistsEquipment.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 24500;
+		sellPrice = 12250;
 		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_digSite;"; };
@@ -1269,7 +1269,7 @@ class CfgVirtualItems {
 		description = "Artifact collected from dig sites and sold at Altis Archaeologists.";
 		icon = "Data\Icons\oldCoin.paa";
 		buyPrice = -1;
-		sellPrice = 0;
+		sellPrice = 11050;
 		weight = 1;
 		class Settings {
 			onMarket = true;
@@ -1282,87 +1282,87 @@ class CfgVirtualItems {
 	class BrokenPot : OldCoin {
 		displayName = "Broken Pot";
 		icon = "Data\Icons\brokenPot.paa";
-		sellPrice = 0;
+		sellPrice = 22100;
 		class Settings : Settings {};
 	};
 	class BluntStoneKnife : OldCoin {
 		displayName = "Blunt Stone Knife";
 		icon = "Data\Icons\bluntStoneKnife.paa";
-		sellPrice = 0;
+		sellPrice = 35700;
 		class Settings : Settings {};
 	};
 	class FossilisedBone : OldCoin {
 		displayName = "Fossilised Bone";
 		icon = "Data\Icons\fossilisedBone.paa";
-		sellPrice = 0;
+		sellPrice = 43460;
 		class Settings : Settings {};
 	};
 	class UnidentifiedSkull : OldCoin {
 		displayName = "Unidentified Skull";
 		icon = "Data\Icons\unidentifiedSkull.paa";
-		sellPrice = 0;
+		sellPrice = 87800;
 		class Settings : Settings {};
 	};
 	/// Uncommon Rewards
 	class PetrifiedShield : OldCoin {
 		displayName = "Petrified Shield";
 		icon = "Data\Icons\petrifiedShield.paa";
-		sellPrice = 0;
+		sellPrice = 96400;
 		class Settings : Settings {};
 	};
 	class WeatheredSculpture : OldCoin {
 		displayName = "Weathered Sculpture";
 		icon = "Data\Icons\weatheredSculpture.paa";
-		sellPrice = 0;
+		sellPrice = 129000;
 		class Settings : Settings {};
 	};
 	class AncientAmber : OldCoin {
 		displayName = "Ancient Amber";
 		icon = "Data\Icons\ancientAmber.paa";
-		sellPrice = 0;
+		sellPrice = 134570;
 		class Settings : Settings {};
 	};
 	class RegliousTotem : OldCoin {
 		displayName = "Reglious Totem";
 		icon = "Data\Icons\regliousTotem.paa";
-		sellPrice = 0;
+		sellPrice = 178600;
 		class Settings : Settings {};
 	};
 	class StrongMetalRing : OldCoin {
 		displayName = "Strong Metal Ring";
 		icon = "Data\Icons\strongMetalRing.paa";
-		sellPrice = 0;
+		sellPrice = 185200;
 		class Settings : Settings {};
 	};
 	/// Rare Rewards
 	class EmeraldAmulet : OldCoin {
 		displayName = "Emerald Amulet";
 		icon = "Data\Icons\emeraldAmulet.paa";
-		sellPrice = 0;
+		sellPrice = 347500;
 		class Settings : Settings {};
 	};
 	class AncientLedger : OldCoin {
 		displayName = "Ancient Ledger";
 		icon = "Data\Icons\ancientLedger.paa";
-		sellPrice = 0;
+		sellPrice = 489650;
 		class Settings : Settings {};
 	};
 	class HandSmoothedRunestone : OldCoin {
 		displayName = "Hand-Smoothed Runestone";
 		icon = "Data\Icons\handSmoothedRunestone.paa";
-		sellPrice = 0;
+		sellPrice = 372050;
 		class Settings : Settings {};
 	};
 	class JeweledNecklace : OldCoin {
 		displayName = "Jeweled Necklace";
 		icon = "Data\Icons\jeweledNecklace.paa";
-		sellPrice = 0;
+		sellPrice = 376450;
 		class Settings : Settings {};
 	};
 	class BrokenTimepiece : OldCoin {
 		displayName = "Broken Timepiece";
 		icon = "Data\Icons\brokenTimepiece.paa";
-		sellPrice = 0;
+		sellPrice = 411300;
 		class Settings : Settings {};
 	};
 };

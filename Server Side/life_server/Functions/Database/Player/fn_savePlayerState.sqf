@@ -47,7 +47,7 @@ private _query = switch (_state) do {
 	};
 	case 3: { format["professions='%1'", [_data] call DB_fnc_mresArray] };
 	case 4: { format["level = '%1', xp = '%2'", [(_data select 0), ""] call ULP_fnc_numberText, [(_data select 1), ""] call ULP_fnc_numberText]};
-	case 5: { format["professions = '""[]""', level = '1', xp = '0', prestige ='%1'", [_data, ""] call ULP_fnc_numberText] };
+	case 5: { format["blueprints = '""[]""', professions = '""[]""', level = '1', xp = '0', prestige ='%1'", [_data, ""] call ULP_fnc_numberText] };
 	case 6: { format["achievements='%1'", [_data] call DB_fnc_mresArray] };
 	case 7: { format["arrested = '%1', prison_timer = '%2'", [(_data > 0)] call ULP_fnc_bool, [_data, ""] call ULP_fnc_numberText] };
 	case 8: { format["daily_tasks='%1', weekly_tasks='%2'", [_data select 0] call DB_fnc_mresArray, [_data select 1] call DB_fnc_mresArray] };
@@ -56,6 +56,7 @@ private _query = switch (_state) do {
 	case 11: { format["%1perks='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
 	case 12: { format["group_id = '%1', group_level = '%2'", _data select 0, _data select 1] };
 	case 13: { format["reputation = '%1'", [_data, ""] call ULP_fnc_numberText]};
+	case 14: { format["blueprints='%1'", [_data] call DB_fnc_mresArray] };
 	default { "" };
 };
 

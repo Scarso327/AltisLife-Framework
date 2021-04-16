@@ -17,6 +17,14 @@ _this params [
 
 if (isNull _parent) exitWith {};
 
+private _min = _boundaries select 0;
+private _max = _boundaries select 1;
+
+if (_min isEqualTo _max) exitWith {
+	_params append [displayNull, _max];
+	_params call _onSelect;
+};
+
 private _display = _parent createDisplay "DisplaySelectNumber";
 _display setVariable ["format", _format];
 

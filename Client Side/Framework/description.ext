@@ -30,6 +30,7 @@ onPauseScript[]={ "ULP_fnc_onPause" };
 #include "Functions\Cartels\CfgCartels.hpp"
 #include "Functions\Chat\CfgChat.hpp"
 #include "Functions\Clothing\CfgClothing.hpp"
+#include "Functions\Crafting\CfgBlueprints.hpp"
 #include "Functions\Crimes\CfgCrimes.hpp"
 #include "Functions\Faction\CfgFactions.hpp"
 #include "Functions\Gathering\CfgGathering.hpp"

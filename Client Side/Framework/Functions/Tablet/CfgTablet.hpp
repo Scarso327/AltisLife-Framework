@@ -67,9 +67,25 @@ class CfgTablet {
 		idc= 23003;
 		pageTitle = "Inventory";
 		pageIdcs[] = {
-			23014, 23016, 23017, 23018, 23019
+			23014, 23015, 23016, 23017, 23018, 23019
 		};
 		onload = "_this call ULP_fnc_inventory";
+	};
+
+	class VirtualInventory : Inventory {
+		onload = "_this call ULP_fnc_virtualInventory";
+	};
+
+	class Licenses : Inventory {
+		pageTitle = "Licenses";
+		pageIdcs[] = { 23014, 23016, 23017 };
+		onload = "_this call ULP_fnc_licenses";
+	};
+
+	class Crafting : Inventory {
+		pageTitle = "Crafting";
+		pageIdcs[] = { 23014, 23017, 23077, 23078 };
+		onload = "_this call ULP_fnc_crafting";
 	};
 
 	class Messaging : BaseScreen {

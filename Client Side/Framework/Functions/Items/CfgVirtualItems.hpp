@@ -333,8 +333,10 @@ class CfgVirtualItems {
 			isScripted = false;
 		};
 		class Deconstruction {
-			blueprints[] = { "B_Pickaxe" };
-			materials[] = { {"IronBar", 3}, {"Wood", 2} };
+			time = 20;
+			workbench = false;
+			blueprints[] = { { "Items", "B_Pickaxe" } };
+			materials[] = { {"IronBar", 2}, {"Wood", 1} };
 		};
 		conditions = "true";
 	};
@@ -472,6 +474,15 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_drill;"; };
+	};
+	class Toolbox : Stinger {
+		displayName = "Toolbox";
+		description = "A box of tools used to deconstruct items into their core components.";
+		icon = "Data\Icons\toolbox.paa";
+		buyPrice = 25000;
+		sellPrice = 12500;
+		weight = 8;
+		class Settings : Settings {};
 	};
 
 	// Medical Equipment

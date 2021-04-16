@@ -19,7 +19,7 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_eventslevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_textures", "_titles", "_perks", "_reputation", "_bool"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_eventslevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_textures", "_titles", "_perks", "_reputation", "_blueprints", "_bool"];
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -77,11 +77,11 @@ player setDamage (_stats select 2);
 switch (configName _factionCfg) do {
 	case "Civilian": {
 		ULP_Imprisioned = _bool;
-		ULP_Prison_Time = _playerData select 25;
+		ULP_Prison_Time = _playerData select 26;
 
 		// Handle undercover...
-		private _copLevel = _playerData select 26;
-		private _ucLevel = _playerData select 27;
+		private _copLevel = _playerData select 27;
+		private _ucLevel = _playerData select 28;
 		if (_copLevel > 0 && { _ucLevel > 0 }) then {
 			ULP_UCLevels = [_copLevel, _ucLevel];
 		};
@@ -130,6 +130,7 @@ ULP_UnlockedTextures = _textures;
 ULP_Titles = _titles;
 ULP_Perks = _perks;
 ULP_Reputation = _reputation;
+ULP_Blueprints = _blueprints;
 
 ULP_Loaded = true; // Tells the initialisation script we're able to continue...
 InitGroupId = nil; // Only used during init as Arma doesn't seem to add us to group in time...

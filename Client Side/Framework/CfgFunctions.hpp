@@ -279,9 +279,14 @@ class CfgFunctions {
 		class TabletInventory {
 			file = "Functions\Tablet\Inventory";
 			class inventory {};
+			class virtualInventory {};
+			class licenses {};
+			class crafting {};
+			class bpLbChange {};
 			class invLbChange {};
 			class removeItem {};
 			class useItem {};
+			class craft {};
 		};
 
 		class TabletGroup {
@@ -670,6 +675,14 @@ class CfgFunctions {
 		class Crimes {
 			file = "Functions\Crimes";
 			class triggerStage {};
+		};
+
+		class Crafting {
+			file = "Functions\Crafting";
+			class hasBlueprint {};
+			class unlockBlueprint {};
+			class deconstruct {};
+			class nearWorkbench {};
 		};
 	};
 

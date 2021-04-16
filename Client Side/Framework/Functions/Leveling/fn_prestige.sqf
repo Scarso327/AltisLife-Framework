@@ -16,6 +16,7 @@ if !([] call ULP_fnc_canPrestige) exitWith {};
 _button ctrlShow false;
 
 ULP_Professions = createHashMap;
+ULP_Blueprints = createHashMap;
 ULP_Level = 1;
 ULP_XP = 0;
 ULP_Prestige = ULP_Prestige + 1;

@@ -18,7 +18,7 @@ private _factionCfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc
 private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex");
 
 private _query = [
-	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, eventslevel, donorlevel, %1licenses, %1gear, %1stats, professions, prestige, level, xp, achievements, daily_tasks, weekly_tasks, textures, titles, %1perks, reputation", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
+	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, eventslevel, donorlevel, %1licenses, %1gear, %1stats, professions, prestige, level, xp, achievements, daily_tasks, weekly_tasks, textures, titles, %1perks, reputation, blueprints", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
 	format["FROM players WHERE pid='%1'", _uid]
 ];
@@ -40,7 +40,7 @@ for "_i" from 0 to 1 step 0 do {
 		private _name = name _unit;
 
 		[
-			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, professions, hato_licenses, hato_gear, achievements, daily_tasks, weekly_tasks, textures, titles, cop_perks, med_perks, hato_perks, civ_perks) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
+			format ["INSERT INTO players (pid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, professions, hato_licenses, hato_gear, achievements, daily_tasks, weekly_tasks, textures, titles, cop_perks, med_perks, hato_perks, civ_perks, blueprints) VALUES('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
 				_uid,
 				[_name] call DB_fnc_mresString,
 				[LIFE_SETTINGS(getNumber,"starting_bank"), ""] call ULP_fnc_numberText,
@@ -55,18 +55,18 @@ for "_i" from 0 to 1 step 0 do {
 		// Player save found, time to convert data types etc...
 		private _newResult = _result;
 
-		// Playtime, Licenses, Gear, Stats, Professions, Achievements, Daily Tasks, Weekly Tasks, Textures, Titles, Perks
-		private _arraysToConvert = [5, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22];
+		// Playtime, Licenses, Gear, Stats, Professions, Achievements, Daily Tasks, Weekly Tasks, Textures, Titles, Perks, Blueprints
+		private _arraysToConvert = [5, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22, 24];
 		private _factionArrays = getArray (_factionCfg >> "DatabaseInfo" >> "arrayIndexes");
 		if !(_factionArrays isEqualTo []) then { _arraysToConvert append _factionArrays; };
 
-		// Professions, Daily Tasks, Weekly Tasks, Textures, Perks
-		private _hashmapsToCreate = [13, 18, 19, 20, 22];
+		// Professions, Daily Tasks, Weekly Tasks, Textures, Perks, Blueprints
+		private _hashmapsToCreate = [13, 18, 19, 20, 22, 24];
 		private _factionMaps = getArray (_factionCfg >> "DatabaseInfo" >> "mapIndexes");
 		if !(_factionMaps isEqualTo []) then { _arraysToConvert append _factionMaps; };
 
 		// (Blacklist / Arrest Status)
-		private _boolsToConvert = [24];
+		private _boolsToConvert = [25];
 		private _factionBools = getArray (_factionCfg >> "DatabaseInfo" >> "boolIndexes");
 		if !(_factionBools isEqualTo []) then { _arraysToConvert append _factionBools; };
 

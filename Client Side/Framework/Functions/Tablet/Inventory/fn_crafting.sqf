@@ -14,6 +14,8 @@ _info ctrlSetStructuredText parseText "";
 
 tvClear _tree;
 
+private _selected = [];
+
 {
 	private _section = ULP_Blueprints getOrDefault [configName _x, []];
 	private _type = _tree tvAdd [[], getText (_x >> "displayName")];
@@ -24,9 +26,11 @@ tvClear _tree;
 			private _item = _tree tvAdd [[_type], getText (_x >> "displayName")];
 			_tree tvSetData [[_type, _item], configName _x];
 			_tree tvSetPicture [[_type, _item], getText (_x >> "icon")];
+
+			if (_selected isEqualTo []) then { _selected = [_type, _item]; };
 		};
 	} forEach ("isClass _x" configClasses (_x));
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgBlueprints"));
 
-_tree tvSetCurSel [0,0];
-[_tree, [0,0]] call ULP_fnc_bpLbChange;
+_tree tvSetCurSel _selected;
+[_tree, _selected] call ULP_fnc_bpLbChange;

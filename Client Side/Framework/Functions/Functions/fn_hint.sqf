@@ -25,6 +25,7 @@ private _height = ctrlTextHeight _ctrlText;
 
 if !(_header isEqualTo "") then {
 	_height = _height + ((ctrlPosition (_message controlsGroupCtrl 101)) select 1);
+	(_message controlsGroupCtrl 101) ctrlSetStructuredText parseText _header;
 };
 
 _ctrlText ctrlSetPositionH (ctrlTextHeight _ctrlText);

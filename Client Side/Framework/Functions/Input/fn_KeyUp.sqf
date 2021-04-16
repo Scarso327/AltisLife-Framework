@@ -179,8 +179,13 @@ switch (_code) do {
     case DELETE : {
         private _veh = cursorObject;
 
+        if (time < (player getVariable ["delete_delay", 0])) exitWith {};
+        player setVariable ["delete_delay", time + 3];
+
         if (!(isNull _veh) && { _shift } && { !_ctrlKey } && { !_alt } && { [] call ULP_fnc_isStaff } && { [player] call ULP_fnc_onDuty } && { ["Vehicle", false] call ULP_fnc_checkPower } && { [_veh, ["LandVehicle", "Air", "Ship"]] call ULP_fnc_isKindOf }) then {
             deleteVehicle _veh;
+
+            [getPlayerUID player, "Admin", ["VehicleDelete", serverTime, [getPos _veh, _veh getVariable ["vehicle_id", -1]]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
         };
     };
 };

@@ -11,7 +11,7 @@ _this params [
 ];
 
 private _cfg = missionConfigFile >> "CfgGroups" >> "Leveling" >> "XP" >> _xp;
-if (isNull _group || { !(isClass _cfg) }) exitWith { false };
+if (isNull _group || { !([_group] call ULP_fnc_isGroup) } || { !(isClass _cfg) }) exitWith { false };
 
 private _level = [_group] call ULP_fnc_groupLevel;
 private _required = [(_level + 1), missionConfigFile >> "CfgGroups" >> "Leveling"] call ULP_fnc_getRequiredXP;

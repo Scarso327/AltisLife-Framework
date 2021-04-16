@@ -21,28 +21,12 @@ _itemArray params [
 
 player setUnitLoadout _pItems;
 
-// Ensure it's had a chance to apply the uniform before texturing...
-[ 1, [_pItems, _textures], {
-    _this params [
-        "_items", "_textures"
-    ];
+_textures params [
+    ["_uniform", "", [""]], ["_backpack", "", [""]]
+];
 
-    _textures params [
-        "_uniform", "_backpack"
-    ];
-
-    if !(_uniform isEqualTo "") then {
-        [{ (uniform player) isEqualTo (_this select 0) }, [((_items param [3, []]) param [0, ""]), _uniform], {
-            [player, uniformContainer player, (_this select 1)] call ULP_fnc_setTextures;
-        }] call ULP_fnc_waitUntilExecute;
-    };
-
-    if !(_backpack isEqualTo "") then {
-        [{ (backpack player) isEqualTo (_this select 0) }, [((_items param [5, []]) param [0, ""]), _backpack], {
-            [unitBackpack player, backpackContainer player, (_this select 1)] call ULP_fnc_setTextures;
-        }] call ULP_fnc_waitUntilExecute;
-    };
-}] call ULP_fnc_waitExecute;
+if !(_uniform isEqualTo "") then { [player, uniform player, uniformContainer player, _uniform] call ULP_fnc_setTextures; };
+if !(_backpack isEqualTo "") then { [unitBackpack player, typeOf (unitBackpack player), backpackContainer player, _backpack] call ULP_fnc_setTextures; };
 
 [] call ULP_fnc_maxCarry;
 

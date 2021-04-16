@@ -110,6 +110,7 @@ class CfgFunctions {
 		class Clothing {
 			file = "Functions\Clothing";
 			class setTextures {};
+			class applyTextures {};
 			class isGas {};
 			class isMask {};
 		};

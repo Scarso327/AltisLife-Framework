@@ -31,6 +31,7 @@ class CfgRemoteExec {
         class ULP_fnc_receiveMessage {};
         class ULP_fnc_lockForFactions {};
         class ULP_fnc_receivedBlood {};
+        class ULP_fnc_applyTextures {};
 
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;

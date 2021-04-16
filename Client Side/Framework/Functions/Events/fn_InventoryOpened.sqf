@@ -11,6 +11,12 @@ _this params [
 	["_secondaryContainer", objNull, [objNull]]
 ];
 
+private _uniform = (uniformContainer player) getVariable ["texture", ""];
+private _backpack = (backpackContainer player) getVariable ["texture", ""];
+
+if !(_uniform isEqualTo "") then { [player, uniform player, uniformContainer player, _uniform] call ULP_fnc_setTextures; };
+if !(_backpack isEqualTo "") then { [unitBackpack player, typeOf (unitBackpack player), backpackContainer player, _backpack] call ULP_fnc_setTextures; };
+
 if ([getNumber (configFile >> "CfgVehicles" >> (typeOf _container) >> "isBackpack")] call ULP_fnc_bool) exitWith {
     ["You are not allowed to look into someone's backpack!"] call ULP_fnc_hint;
     true

@@ -13,13 +13,10 @@ _this params [
 
 if (isNull _unit || { _item isEqualTo "" }) exitWith { true };
 
-{
-	_x params [ "_object", "_objectContainer" ];
-	private _texture = _objectContainer getVariable ["texture", ""];
+private _uniform = (uniformContainer _unit) getVariable ["texture", ""];
+private _backpack = (backpackContainer _unit) getVariable ["texture", ""];
 
-	if !(_texture isEqualTo "") then {
-		[_object, _objectContainer, _texture] call ULP_fnc_setTextures;
-	};
-} forEach [[_unit, uniformContainer _unit], [unitBackpack _unit, backpackContainer _unit]];
+if !(_uniform isEqualTo "") then { [_unit, uniform _unit, uniformContainer _unit, _uniform] call ULP_fnc_setTextures; };
+if !(_backpack isEqualTo "") then { [unitBackpack _unit, typeOf (unitBackpack _unit), backpackContainer _unit, _backpack] call ULP_fnc_setTextures; };
 
 [] call ULP_fnc_maxCarry;

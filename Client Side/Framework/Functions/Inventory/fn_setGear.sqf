@@ -79,9 +79,7 @@ if (_itemType isEqualTo "Magazine") then {
 			if !(_items isEqualTo []) then { [_items] call ULP_fnc_addItems; };
 
 			if !(_item isEqualTo _texture) then {
-				[{ (backpack player) isEqualTo (_this select 0) }, [_item, _texture], {
-					[unitBackpack player, uniformContainer player, (_this select 1)] call ULP_fnc_setTextures;
-				}] call ULP_fnc_waitUntilExecute;
+				[unitBackpack player, typeOf (unitBackpack player), backpackContainer player, _texture] call ULP_fnc_setTextures;
 			};
 
 			[] call ULP_fnc_maxCarry;
@@ -100,9 +98,7 @@ if (_itemType isEqualTo "Magazine") then {
 			if !(_items isEqualTo []) then { [_items] call ULP_fnc_addItems; };
 
 			if !(_item isEqualTo _texture) then {
-				[{ (uniform player) isEqualTo (_this select 0) }, [_item, _texture], {
-					[player, uniformContainer player, (_this select 1)] call ULP_fnc_setTextures;
-				}] call ULP_fnc_waitUntilExecute;
+				[player, uniform player, uniformContainer player, _texture] call ULP_fnc_setTextures;
 			};
 
 			[] call ULP_fnc_maxCarry;

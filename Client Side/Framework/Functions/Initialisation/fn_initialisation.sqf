@@ -50,15 +50,11 @@ if (isClass (_factionCfg >> "Whitelisting")) then {
 
 [{
 	{
-		{
-			_x params [ "_object", "_objectContainer" ];
-			
-			private _texture = _objectContainer getVariable ["texture", ""];
+		private _uniform = (uniformContainer _x) getVariable ["texture", ""];
+		private _backpack = (backpackContainer _x) getVariable ["texture", ""];
 
-			if !(_texture isEqualTo "") then {
-				[_object, _objectContainer, _texture] call ULP_fnc_setTextures;
-			};
-		} foreach [[_x, uniformContainer _x], [unitBackpack _x, backpackContainer _x]];
+		if !(_uniform isEqualTo "") then { [_x, uniform _x, uniformContainer _x, _uniform] call ULP_fnc_setTextures; };
+		if !(_backpack isEqualTo "") then { [unitBackpack _x, typeOf (unitBackpack _x), backpackContainer _x, _backpack] call ULP_fnc_setTextures; };
 	} forEach (allUnits select { !(_x isEqualTo player) });
 
 	{

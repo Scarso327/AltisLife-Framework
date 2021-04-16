@@ -13,6 +13,7 @@ class CfgVirtualStores {
 			class GPSTracker {};
 			class PanicButton {};
 			class Stinger {};
+			class Blindfold {};
 			class Lockpick {};
 			class BoltCutter {};
 			class Painkillers {};
@@ -20,6 +21,19 @@ class CfgVirtualStores {
 			class BloodBag {};
 			class FirstAidKit {};
 			class MediKit {};
+			class TapeSign_F {};
+			class PlasticBarrier_02_yellow_F {};
+			class PlasticBarrier_02_grey_F {};
+			class PlasticBarrier_03_orange_F {};
+			class PlasticBarrier_03_blue_F {};
+			class RoadBarrier_small_F {};
+			class RoadBarrier_F {};
+			class Land_ConcreteHedgehog_01_F {};
+			class Land_PortableLight_single_F {};
+			class Land_PortableLight_double_F {};
+			class TargetP_Inf4_F {};
+			class TargetP_Civ_F {};
+			class TargetP_Civ3_F {};
 		};
 	};
 
@@ -41,6 +55,14 @@ class CfgVirtualStores {
 			class BloodBag {};
 			class FirstAidKit {};
 			class MediKit {};
+			class PlasticBarrier_02_yellow_F {};
+			class PlasticBarrier_02_grey_F {};
+			class PlasticBarrier_03_orange_F {};
+			class PlasticBarrier_03_blue_F {};
+			class RoadBarrier_small_F {};
+			class RoadBarrier_F {};
+			class Land_PortableLight_single_F {};
+			class Land_PortableLight_double_F {};
 		};
 	};
 	class Hato : Medic {

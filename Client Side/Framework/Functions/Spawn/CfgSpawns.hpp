@@ -18,7 +18,6 @@ class CfgSpawns {
             "Land_Chapel_V2_F",
             "Land_u_House_Big_02_V1_F",
             "Land_u_House_Big_01_V1_F",
-            "Land_i_Stone_HouseBig_V1_F",
             "Land_d_Stone_HouseBig_V1_F",
             "Land_d_Stone_HouseSmall_V1_F",
             "Land_d_House_Big_01_V1_F"

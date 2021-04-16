@@ -299,6 +299,7 @@ class CfgFunctions {
 			class kickMember {};
 			class leaveGroup {};
 			class transferOwner {};
+			class progression {};
 		};
 
 		class TabletKeys {
@@ -475,6 +476,8 @@ class CfgFunctions {
 			class groupTax {};
 			class setGroupOwner {};
 			class removeMember {};
+			class groupXP {};
+			class groupLevel {};
 		};
 
 		class NLR {

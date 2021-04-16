@@ -145,3 +145,31 @@ class DisbandGroup : LeaveGroup {
 	onButtonClick = "[] call ULP_fnc_disbandGroup;";
 	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3) + (MARGIN_Y / 2));
 };
+
+class XPBarBackground : Life_RscText {
+	idc = 23082;
+	colorBackground[] = INNER_BODY_COLOUR;
+	text = "";
+	SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H(MARGIN_Y * 5);
+};
+
+class XPBar : Life_RscProgress {
+	idc = 23083;
+	colorBar[] = { 0.451, 0, 0.902, 1 };
+	SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H(MARGIN_Y * 5);
+};
+
+class XPText: Life_RscStructuredText {
+	idc = 23084;
+	text = "";
+	SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H(MARGIN_Y * 5);
+};

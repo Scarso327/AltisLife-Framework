@@ -46,6 +46,7 @@ if ((count _owners) > 0) exitWith {
 			private _cut = round ((((getArray (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardAmounts") select ([_units > 25] call ULP_fnc_bool)) * _highest) * _units) / 2);
 			
 			[_group, _cut, true] call ULP_SRV_fnc_handleGroupFunds;
+			[_group, "Cartel"] call ULP_SRV_fnc_addGroupXP;
 
 			private _groupUnits = units _group;
 			private _memberCut = round (_cut / (count _groupUnits));

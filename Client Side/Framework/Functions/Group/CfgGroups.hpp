@@ -36,4 +36,16 @@ class CfgGroups {
 			displayName = "Political Party";
 		};
 	};
+
+	class Leveling {
+		baseXp = 2500;
+		xpMultiplier = 1.35;
+		maxLevel = 5;
+
+		class XP {
+			class Cartel {
+				amount = 10;
+			};
+		};
+	};
 };

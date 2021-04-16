@@ -47,6 +47,7 @@ class CfgFunctions {
             class disbandGroup {};
             class setGroupId {};
             class setGroupOwner {};
+            class addGroupXP {};
         };
 
         class DatabaseHousing {

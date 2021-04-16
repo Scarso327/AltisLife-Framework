@@ -45,6 +45,10 @@ if !((_group getVariable ["group_funds", 0]) isEqualTo _funds) then {
 			"UPDATE groups SET bank='%2' WHERE id='%1'", 
 			[_groupId, ""] call ULP_fnc_numberText, [_funds, ""] call ULP_fnc_numberText
 		], 1] call DB_fnc_asyncCall;
+
+		if (isPlayer _unit) then {
+			[getPlayerUID _unit, "Group", ["Funds", _groupid, [_funds, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
+		};
 	};
 	
 	if (_funds < 1) then { _funds = nil; }; // Wipe the vars if it's empty...

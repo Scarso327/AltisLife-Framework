@@ -30,7 +30,14 @@ if !(call compile getText (_stageCfg >> "condition")) exitWith {
 private _onStart = getText (_stageCfg >> "onStarted");
 private _eachFrame = getText (_stageCfg >> "onEachFrame");
 
-if ([getText (_stageCfg >> "displayName"), getNumber (_stageCfg >> "time"), [_stageCfg, _location], { (player distance (_this select 1)) <= 5 }, {
+private _time = getNumber (_stageCfg >> "time");
+
+if ([] call ULP_fnc_isGroup) then {
+	private _buff = [group player, "Hacking"] call ULP_fnc_groupBuff;
+	if (_buff > 0) then { _time = _time - (_time * _buff); };
+};
+
+if ([getText (_stageCfg >> "displayName"), _time, [_stageCfg, _location], { (player distance (_this select 1)) <= 5 }, {
 	_this params [ "_stageCfg" ];
 
 	// Recheck condition...

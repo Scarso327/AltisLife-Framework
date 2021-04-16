@@ -9,6 +9,7 @@ class CfgVehicles {
 		garageLimit = 4;
 		isHouse = false;
 		conditions = "true";
+		blacklistedItems[] = {};
 		class Textures {};
 	};
 
@@ -1215,6 +1216,7 @@ class CfgVehicles {
 		buyPrice = 565000;
 		virtualSpace = 5;
 		garageLimit = 2;
+		blacklistedItems[] = { "MarkedGold" };
 		class Textures {
 			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
 			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };

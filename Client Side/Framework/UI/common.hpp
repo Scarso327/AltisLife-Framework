@@ -1456,6 +1456,25 @@ class ULP_ctrlProfession : Life_RscControlsGroupNoScrollbars {
     };
 };
 
+class ULP_ctrlGroupPerk : ULP_ctrlProfession {
+    x = 0;
+    
+    class Controls : Controls {
+        class Background : Background {};
+        class PerkIcon: ProfessionIcon {};
+        class PerkName : ProfessionName {};
+        class PerkDescription : ProfessionDescription {};
+        class Overlay : PerkName {
+            idc = 105;
+            text = "";
+            colorBackground[] = { 0.1, 0.1, 0.1, 0.9 };
+            x = 0;
+            w = 15.5 * GUI_GRID_CENTER_W;
+            h = 5 * GUI_GRID_CENTER_H;
+        };
+    };
+};
+
 class ULP_ctrlAchievement : Life_RscControlsGroupNoScrollbars {
     y = (1 * GUI_GRID_CENTER_H) / 2;
     x = (1 * GUI_GRID_CENTER_W) / 2;

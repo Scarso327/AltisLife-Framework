@@ -503,6 +503,7 @@ class CfgFunctions {
 			class logTransaction {};
 			class withdrawMoney {};
 			class depositMoney {};
+			class dropMoney {};
 		};
 
 		class Robberies {

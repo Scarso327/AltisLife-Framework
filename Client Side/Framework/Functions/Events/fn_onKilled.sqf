@@ -31,8 +31,8 @@ _unit removeWeapon (handgunWeapon _unit);
 _unit removeWeapon (secondaryWeapon _unit);
 {deleteVehicle _x;} forEach (nearestObjects [_unit, ["WeaponHolderSimulated"], 5]);
 
-// TODO : Drop Money and Default Death Related Variables...
 [getPos _unit, getDir _unit] call ULP_fnc_createBodyBag;
+[getPos _unit] call ULP_fnc_dropMoney;
 
 ULP_Inventory = createHashMap; // Wipe Inventory...
 ULP_CarryInfo set [0, 0];

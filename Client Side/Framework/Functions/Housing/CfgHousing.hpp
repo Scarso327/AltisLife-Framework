@@ -183,6 +183,7 @@ class CfgHousing {
 			price = 34896000;
 			breakIn = 20 * 60;
 			spawnPos[] = {15171.1,15339,12.8876};
+			condition = "[] call ULP_fnc_isGroup && { [""DMT""] call ULP_fnc_hasGroupPerk } && { (getPlayerUID player) isEqualTo ((group player) getVariable [""group_owner"", """"]) }";
 			
 			class Storage {
 				object = "CargoNet_01_box_F";
@@ -197,6 +198,7 @@ class CfgHousing {
 			price = 83350000;
 			breakIn = 15 * 60;
 			spawnPos[] = {15177.2,15386.7,3.29152};
+			condition = "[] call ULP_fnc_isGroup && { [""MilitaryOffices""] call ULP_fnc_hasGroupPerk } && { (getPlayerUID player) isEqualTo ((group player) getVariable [""group_owner"", """"]) }";
 			
 			class Storage {
 				object = "Land_Cargo20_grey_F";
@@ -207,7 +209,7 @@ class CfgHousing {
 			price = 41455000;
 			breakIn = 5 * 60;
 			spawnPos[] = {15177.2,15461.1,7.97687};
-			
+			condition = "[] call ULP_fnc_isGroup && { [""OfficeBuilding""] call ULP_fnc_hasGroupPerk } && { (getPlayerUID player) isEqualTo ((group player) getVariable [""group_owner"", """"]) }";
 			class Storage {
 				object = "C_IDAP_supplyCrate_F";
 				position[] = {{15183.3,15467.3,7.97443}, 0};

@@ -26,14 +26,38 @@ class CfgGroups {
 	class Types {
 		class Criminal {
 			displayName = "Criminal";
+
+			class Perks {
+				class Hideout {
+					displayName = "Capture Hideout";
+					description = "You have the ability to capture gang hideouts.";
+					level = 1;
+				};
+			};
 		};
 
 		class Corporate {
 			displayName = "Company";
+
+			class Perks {
+				class Freight {
+					displayName = "Freight missions";
+					description = "Grants your members access to Freight Missions.";
+					level = 1;
+				};
+			};
 		};
 
 		class Party {
 			displayName = "Political Party";
+
+			class Perks {
+				class Governor {
+					displayName = "Governor";
+					description = "Your members have the ability to run for governor.";
+					level = 1;
+				};
+			};
 		};
 	};
 

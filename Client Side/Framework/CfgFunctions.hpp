@@ -478,6 +478,7 @@ class CfgFunctions {
 			class removeMember {};
 			class groupXP {};
 			class groupLevel {};
+			class hasGroupPerk {};
 		};
 
 		class NLR {

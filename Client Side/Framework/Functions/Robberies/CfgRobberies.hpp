@@ -23,6 +23,17 @@ class CfgRobberies {
 		onFail = "[""There must be at least 4 officers online to rob this site!""] call ULP_fnc_hint;";
 	};
 
+	class Jewellery {
+		name = "Jewellery Store";
+		time = 8 * 60;
+		timeout = 15 * 60;
+		factions[] = { "Civilian" };
+		reward[] = { 95000, 220000 };
+		leveling[] = { { 5, 15 }, "Robbed Jewellery Store", 100 };
+		condition = "[[""Police""]] call ULP_fnc_onlineFaction < 4";
+		onFail = "[""There must be at least 4 officers online to rob this site!""] call ULP_fnc_hint;";
+	};
+
 	class RegionalBank {
 		name = "Regional Bank";
 		time = 10 * 60;

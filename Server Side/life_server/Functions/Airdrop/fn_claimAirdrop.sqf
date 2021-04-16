@@ -24,7 +24,7 @@ deleteVehicle _airdrop;
 ]] remoteExecCall ["ULP_fnc_invokeEvent", (allPlayers select { !(_x isEqualType _unit) })];
 
 private _loot = [
-	(selectRandom ["Basic"]),
+	(selectRandom ["GeneralItems"]),
 	(1 max (random 8))
 ] call ULP_fnc_getLoot;
 

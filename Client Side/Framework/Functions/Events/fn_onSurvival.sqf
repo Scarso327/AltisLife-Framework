@@ -18,6 +18,8 @@ if (alive player && { !(isDowned(player)) } && { !ULP_FirstSpawn }) then {
 	if (isNil { missionNamespace getVariable (configName _cfg) }) then {
 		missionNamespace setVariable [(configName _cfg), getNumber(_cfg >> "max")];
 	} else {
+		if ([player] call ULP_fnc_onDuty) exitWith {};
+		
 		private _var = (missionNamespace getVariable (configName _cfg));
 
 		_var = _var - getNumber(_cfg >> "decrease");

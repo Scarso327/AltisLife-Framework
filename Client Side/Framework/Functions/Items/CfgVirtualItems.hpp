@@ -576,6 +576,95 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 	};
 
+	// Placeable Items
+	class TapeSign_F { 
+		displayName = "Red-White Tape";
+		description = "A bundled up item ready to be placed.";
+		icon = "Data\Icons\roadBarrier.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 2;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+	class PlasticBarrier_02_yellow_F : TapeSign_F { 
+		displayName = "Plastic Barrier (Medium, Yellow)";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 3;
+		class Settings : Settings {};
+	};
+	class PlasticBarrier_02_grey_F : PlasticBarrier_02_yellow_F { 
+		displayName = "Plastic Barrier (Medium, Gray)";
+		class Settings : Settings {};
+	};
+	class PlasticBarrier_03_orange_F : TapeSign_F { 
+		displayName = "Plastic Barrier (Large, Orange)";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 4;
+		class Settings : Settings {};
+	};
+	class PlasticBarrier_03_blue_F : PlasticBarrier_03_orange_F { 
+		displayName = "Plastic Barrier (Large, Blue)";
+		class Settings : Settings {};
+	};
+	class RoadBarrier_small_F : TapeSign_F { 
+		displayName = "Road Barrier (Small)";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 3;
+		class Settings : Settings {};
+	};
+	class RoadBarrier_F : TapeSign_F { 
+		displayName = "Road Barrier (Large)";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 5;
+		class Settings : Settings {};
+	};
+	class Land_ConcreteHedgehog_01_F : TapeSign_F { 
+		displayName = "Create Hedgehog";
+		icon = "Data\Icons\hedgehog.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		weight = 6;
+		class Settings : Settings {};
+	};
+	class Land_PortableLight_single_F : TapeSign_F { 
+		displayName = "Portable Light (Single)";
+		icon = "Data\Icons\portableLight.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		class Settings : Settings {};
+	};
+	class Land_PortableLight_double_F : Land_PortableLight_single_F { 
+		displayName = "Portable Light (Double)";
+		buyPrice = 0;
+		sellPrice = 0;
+		class Settings : Settings {};
+	};
+	class TargetP_Inf4_F : TapeSign_F { 
+		displayName = "Pop-Up Target (Hostile)";
+		icon = "Data\Icons\popupTarget.paa";
+		buyPrice = 0;
+		sellPrice = 0;
+		class Settings : Settings {};
+	};
+	class TargetP_Civ_F : TargetP_Inf4_F { 
+		displayName = "Pop-Up Target (Friendly)";
+		class Settings : Settings {};
+	};
+	class TargetP_Civ3_F : TargetP_Inf4_F { 
+		displayName = "Pop-Up Target (Hostage)";
+		class Settings : Settings {};
+	};
+
 	// Misc. Run Items
 	class StolenCargo {
 		displayName = "Stolen Cargo";

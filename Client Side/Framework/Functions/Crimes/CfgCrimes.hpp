@@ -61,7 +61,7 @@ class CfgCrimes {
 			class Items {
 				class MarkedGold {
 					amount = 20;
-					extra = "((count playableUnits) / 4) + ((time / 2) / 240)"; // Scripted extra...
+					extra = "((count playableUnits) / 4) + ((time / 2) / 240)";
 				};
 			};
 		};
@@ -96,7 +96,42 @@ class CfgCrimes {
 			class Items {
 				class EncryptedDrive {
 					amount = 8;
-					extra = "(random 24) max 1"; // Scripted extra...
+					extra = "(random 24) max 1";
+				};
+			};
+		};
+		class PoliceEvidenceStorage {
+			title = "Police Evidence Storage";
+			factions[] = { "Civilian" };
+			cooldown = 1000;
+			class Stages {
+				class Drill {
+					displayName = "Drilling into Evidence Vault";
+					time = 600;
+					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Police Evidence Storage Vault is being illegally accessed!""], _targets] call ULP_fnc_sendMessage; [""You have begun drilling into the evidence storage vault, police has been notified!""] call ULP_fnc_hint;";
+					onCompleted = "[""PoliceEvidenceStorage"", 1, evidence_storage_vault] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
+					onEachFrame = "";
+					onProgressStop = "";
+					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 10) : { ""There must be at least 10 police officers to start this crime..."" }; case ([""IndustrialDrill""] call ULP_fnc_hasItem < 1) : { ""You need an industrial drill to perform this action..."" }; default { ""Valut security has already been disabled..."" }; })] call ULP_fnc_hint;";
+					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false]) && { [""HackingDevice""] call ULP_fnc_hasItem > 0 }";
+				};
+			};
+			class Buildings {
+				class MilitaryOffice {
+					classname = "Land_MilOffices_V1_F";
+					position[] = {3266.77, 12448.9, 0.117};
+					class BreakIn {
+						breakIn = 240;
+						onBreakIn = "if ((random 1) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A door at the Police Evidence Storage facility has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
+						onFail = "[""There must be at least 10 police officers to start this crime...""] call ULP_fnc_hint;";
+						condition = "(count [""Police""] call ULP_fnc_allMembers) >= 10 || { missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false] }";
+					};
+				};
+			};
+			class Items {
+				class SeizedContraband {
+					amount = 30;
+					extra = "((count playableUnits) / 2) + ((time / 2) / 240)";
 				};
 			};
 		};

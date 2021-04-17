@@ -682,6 +682,14 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
+	class SeizedContraband : StolenCargo {
+		displayName = "Seized Contraband";
+		description = "Contraband seized by the Police and stored in Evidence Storage.";
+		icon = "Data\Icons\seizedContraband.paa";
+		sellPrice = 237600;
+		weight = 4;
+		class Settings : Settings {};
+	};
 	class SmallGalleryPiece : StolenCargo {
 		displayName = "Small Gallery Piece";
 		description = "A piece of art commonly stored in the Altis Gallery.";

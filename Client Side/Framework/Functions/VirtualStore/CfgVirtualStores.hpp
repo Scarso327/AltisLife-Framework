@@ -301,6 +301,14 @@ class CfgVirtualStores {
 		};
 	};
 
+	class Contraband {
+		storeName = "Contraband Trader";
+		conditions = "true";
+		class Items {
+			class SeizedContraband {};
+		};
+	};
+
 	class Dispensary {
 		storeName = "Meth Dispensary";
 		conditions = "true";

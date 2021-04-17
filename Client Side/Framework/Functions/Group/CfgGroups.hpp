@@ -42,17 +42,17 @@ class CfgGroups {
 					level = 2;
 				};
 
-				class Ifrits {
-					displayName = "Ifrit Drivers";
-					icon = "Data\UI\GroupPerks\ifrits.paa";
-					description = "You have the ability to access Ifrits within the Blackmarket.";
-					level = 3;
-				};
-
 				class Governor { // TODO
 					displayName = "Governorship";
 					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
+					level = 3;
+				};
+
+				class Ifrits {
+					displayName = "Ifrit Drivers";
+					icon = "Data\UI\GroupPerks\ifrits.paa";
+					description = "You have the ability to access Ifrits within the Blackmarket.";
 					level = 4;
 				};
 
@@ -83,17 +83,17 @@ class CfgGroups {
 					level = 2;
 				};
 
-				class GoalContributions { // TODO
-					displayName = "Goal Contributions";
-					icon = "Data\UI\GroupPerks\goalContributions.paa";
-					description = "Your members have an increased contribution to community goals.";
-					level = 3;
-				};
-
 				class Governor { // TODO
 					displayName = "Governorship";
 					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
+					level = 3;
+				};
+
+				class GoalContributions { // TODO
+					displayName = "Goal Contributions";
+					icon = "Data\UI\GroupPerks\goalContributions.paa";
+					description = "Your members have an increased contribution to community goals.";
 					level = 4;
 				};
 

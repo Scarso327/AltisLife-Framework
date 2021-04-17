@@ -17,7 +17,7 @@ class CfgPerks {
 		onActivated = "_params setVariable [""seatbelt"", true]; _params";
 	};
 
-	class ImprovedMetabolism { // TODO
+	class ImprovedMetabolism {
 		icon = "Data\UI\Perks\improvedMetabolism.paa";
 		displayName = "Improved Metabolism";
 		description = "Slows your hunger and dehydration gain by 50%.";

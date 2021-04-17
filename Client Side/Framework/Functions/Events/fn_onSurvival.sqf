@@ -13,6 +13,7 @@ private _cfg = missionConfigFile >> "CfgSurvival" >> _surVar;
 if !(isClass _cfg) exitWith {};
 
 private _delay = getNumber(_cfg >> "delay");
+if (["ImprovedMetabolism"] call ULP_fnc_hasPerk) then { _delay = _delay * 1.5 };
 
 if (alive player && { !(isDowned(player)) } && { !ULP_FirstSpawn }) then {
 	if (isNil { missionNamespace getVariable (configName _cfg) }) then {

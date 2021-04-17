@@ -38,6 +38,10 @@ _marker setMarkerType "mil_warning";
 _marker setMarkerColor "ColorRed";
 _marker setMarkerSize [0.8, 0.8];
 
+private _msg = missionConfigFile >> "CfgMessages" >> "Robbery";
+private _targets = getText (_msg >> "targets");
+[_msg, format ["A robbery has been reported and is now shown on your map!"], _targets] call ULP_fnc_sendMessage;
+
 [format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg], {
 	_this params [ "_object" ];
 

@@ -51,7 +51,7 @@ class CfgPerks {
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
-	class Muscleman { // TODO
+	class Muscleman {
 		icon = "Data\UI\Perks\muscleman.paa";
 		displayName = "Muscleman";
 		description = "Increases your Item carry limit by 25%.";

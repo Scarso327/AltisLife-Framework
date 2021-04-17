@@ -13,6 +13,7 @@ private _carryWeight = getNumber (missionConfigFile >> "CfgSettings" >> "total_m
 		_carryWeight = _carryWeight + getNumber (_cfg >> "virtualSpace");
 	};
 } forEach [uniform player, vest player, backpack player];
+if (["Muscleman"] call ULP_fnc_hasPerk) then { _carryWeight = _carryWeight * 1.25 };
 
 ULP_CarryInfo set [1, _carryWeight];
 

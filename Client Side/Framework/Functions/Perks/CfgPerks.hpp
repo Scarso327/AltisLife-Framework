@@ -31,24 +31,18 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class GovernmentBonus { // TODO
+	class GovernmentBonus {
 		icon = "Data\UI\Perks\governmentBonus.paa";
 		displayName = "Government Bonus";
-		description = "Increases your base paycheck by %1%2.";
+		description = "Increases your base paycheck by 30%.";
 		removalMultiplier = 1;
-		class Leveling {
-			maxLevel = 5;
-			xpLevel = 100;
-			xpMultipler = 2;
-			levelCalculation = "10 * (_this select 0)";
-		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 3;
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "_params + (_params * (_bonus / 100))";
+		onActivated = "";
 	};
 
 	class Muscleman {

@@ -18,6 +18,7 @@ if (isClass (_faction >> "Whitelisting")) then {
 	} forEach ("isNumber(_x >> 'payMulti')" configClasses (_faction >> "Whitelisting"));
 };
 
+if (["GovernmentBonus"] call ULP_fnc_hasPerk) then { _pay = _pay * 1.3 };
 if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _pay = _pay * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "payIncrease"); };
 
 (round _pay)

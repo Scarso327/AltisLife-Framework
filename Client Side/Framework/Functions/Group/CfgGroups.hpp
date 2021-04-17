@@ -28,7 +28,7 @@ class CfgGroups {
 			displayName = "Criminal";
 
 			class Perks {
-				class Hideout { // TODO
+				class Hideout {
 					displayName = "Capture Hideout";
 					icon = "Data\UI\GroupPerks\hideout.paa";
 					description = "You have the ability to capture gang hideouts.";
@@ -36,13 +36,18 @@ class CfgGroups {
 				};
 
 				class Blackmarket {
-					displayName = "Access Blackmarket";
+					displayName = "Blackmarketer";
 					icon = "Data\UI\GroupPerks\blackmarket.paa";
 					description = "You have the ability to access the Blackmarket.";
 					level = 2;
 				};
 
-				// LEVEL 3 PERK
+				class Ifrits {
+					displayName = "Ifrit Drivers";
+					icon = "Data\UI\GroupPerks\ifrits.paa";
+					description = "You have the ability to access Ifrits within the Blackmarket.";
+					level = 3;
+				};
 
 				class Governor { // TODO
 					displayName = "Governorship";

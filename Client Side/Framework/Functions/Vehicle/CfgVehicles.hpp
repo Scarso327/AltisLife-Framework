@@ -646,6 +646,7 @@ class CfgVehicles {
 		chopKeepChance = 90;
 		chopTime = 300;
 		turrets[] = { { "SmokeLauncher" } };
+		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk";
 		class Textures {
 			class Hex : BaseTexture { 
 				displayName = "Hex";

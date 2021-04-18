@@ -18,7 +18,7 @@ if (_vehicle in ULP_Keys) exitWith {
 	["You already have keys for this vehicle"] call ULP_fnc_hint;
 };
 
-_time = round (40 + (random 25));
+private _time = round (40 + (random 25));
 
 if ([] call ULP_fnc_isGroup) then {
 	private _buff = [group player, "Lockpicking"] call ULP_fnc_groupBuff;

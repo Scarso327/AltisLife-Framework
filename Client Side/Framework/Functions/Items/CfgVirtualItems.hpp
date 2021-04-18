@@ -453,6 +453,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 		};
+		conditions = "true";
 	};
 	class VehicleClamp : Stinger {
 		displayName = "Vehicle Clamp";

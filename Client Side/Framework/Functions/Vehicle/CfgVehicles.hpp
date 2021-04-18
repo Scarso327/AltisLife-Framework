@@ -67,6 +67,7 @@ class CfgVehicles {
 
 	class HatoTexture : BaseTexture {
 		factions[] = { "Hato" };
+		remoteGates = true;
 		class Siren {
 			SFX[] = { "Police_One" };
 		};

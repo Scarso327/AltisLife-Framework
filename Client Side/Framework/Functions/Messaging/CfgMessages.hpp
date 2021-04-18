@@ -6,7 +6,7 @@ class CfgMessages {
 		displayName = "Private Message";
 		sendTo[] = { "Police", "Medic", "Civilian" };
 		ignoreStreamer = false;
-		ignoreComms = false; // TODONOW
+		ignoreComms = false;
 		canReply = true;
 		confirmSend = true;
 		sender = "%1";

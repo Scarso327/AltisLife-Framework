@@ -28,6 +28,12 @@ if !([format["Administering Blood to %1", _name], _time, [_unit, _name], {
 		["You either lost your bloodbag or the patient you were treating has died..."] call ULP_fnc_hint;
 	};
 
+	if ([] call ULP_fnc_isGroup) then {
+		if (_unit in (units (group player))) then {
+			[(group player), "MedicalAid"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
+		};
+	};
+
 	["BloodBag", 1, true] call ULP_fnc_handleItem;
 	[format ["You have administered blood to %1.", _name]] call ULP_fnc_hint;
 

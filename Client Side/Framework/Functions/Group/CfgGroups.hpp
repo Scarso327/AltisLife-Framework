@@ -160,11 +160,11 @@ class CfgGroups {
 			class Freight { amount = 5; }; // TODONOW
 			class Election { amount = 100; }; // TODONOW
 			class Rigging { amount = 20; }; // TODONOW
-			class Hideout : Cartel {}; // TODONOW
+			class Hideout : Cartel {};
 			class BaseBid : Election {}; // TODONOW
 			class GoldDrives : Freight {}; // TODONOW
 			class CommunityGoals : Freight {}; // TODONOW
-			class MedicalAid { amount = 3; }; // TODONOW
+			class MedicalAid { amount = 3; };
 			class Robbery : Freight {};
 		};
 	};

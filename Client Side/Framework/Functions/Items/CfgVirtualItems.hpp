@@ -402,7 +402,7 @@ class CfgVirtualItems {
 		weight = 3;
 		class Settings : Settings {};
 	};
-	class Breathalyser : Pickaxe { // TODO
+	class Breathalyser : Pickaxe { // TODONOW
 		displayName = "Breathalyser";
 		description = "Used to determin whether or not someone is under the influence.";
 		icon = "Data\Icons\breathalyser.paa";
@@ -421,7 +421,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_panic;"; };
 	};
-	class Ziptie : Pickaxe { // TODO
+	class Ziptie : Pickaxe {
 		displayName = "Ziptie";
 		description = "A tool used to retain others.";
 		icon = "Data\Icons\ziptie.paa";
@@ -430,7 +430,7 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class Blindfold : Pickaxe { // TODO
+	class Blindfold : Pickaxe { // TODONOW
 		displayName = "Blindfold";
 		description = "A tool used to blindfold others.";
 		icon = "Data\Icons\blindfold.paa";
@@ -440,7 +440,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		conditions = "[""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 	};
-	class Stinger { // TODO
+	class Stinger { // TODONOW
 		displayName = "Stinger";
 		description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
 		icon = "Data\Icons\stinger.paa";
@@ -509,7 +509,7 @@ class CfgVirtualItems {
 			materials[] = { {"Silver", 4}, {"CutDiamond", 2}, {"DecryptedDrive", 1} };
 		};
 	};
-	class ExplosiveCharge : Stinger { // TODO
+	class ExplosiveCharge : Stinger {
 		displayName = "Explosive Charge";
 		description = "A tool used to destroy fortified locks.";
 		icon = "Data\Icons\explosiveCharge.paa";

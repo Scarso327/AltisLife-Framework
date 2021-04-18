@@ -9,7 +9,7 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	// TODO
+	// TODONOW
 	class Fishing {
 		displayName = "Fishing";
 		icon = "Data\UI\Professions\fishing.paa";

@@ -42,7 +42,7 @@ class CfgGroups {
 					level = 2;
 				};
 
-				class Governor { // TODO
+				class Governor { // TODONOW
 					displayName = "Governorship";
 					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
@@ -83,14 +83,14 @@ class CfgGroups {
 					level = 2;
 				};
 
-				class Governor { // TODO
+				class Governor { // TODONOW
 					displayName = "Governorship";
 					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
 					level = 3;
 				};
 
-				class GoalContributions { // TODO
+				class GoalContributions { // TODONOW
 					displayName = "Goal Contributions";
 					icon = "Data\UI\GroupPerks\goalContributions.paa";
 					description = "Your members have an increased contribution to community goals.";
@@ -110,21 +110,21 @@ class CfgGroups {
 			displayName = "Political Party";
 
 			class Perks {
-				class Governor { // TODO
+				class Governor { // TODONOW
 					displayName = "Governorship";
 					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
 					level = 1;
 				};
 
-				class PersonalProtection { // TODO
+				class PersonalProtection { // TODONOW
 					displayName = "Personal Protection";
 					icon = "Data\UI\GroupPerks\personalProtection.paa";
 					description = "Grands your members access to become Personal Protection Officers.";
 					level = 2;
 				};
 
-				class GovernmentSafehouses { // TODO
+				class GovernmentSafehouses { // TODONOW
 					displayName = "Personal Protection";
 					icon = "Data\UI\GroupPerks\governmentSafehouses.paa";
 					description = "Grands your members access to various Government Safehouses.";
@@ -138,7 +138,7 @@ class CfgGroups {
 					level = 4;
 				};
 
-				class PollRigging { // TODO
+				class PollRigging { // TODONOW
 					displayName = "Poll Rigging";
 					icon = "Data\UI\GroupPerks\pollRigging.paa";
 					description = "Your members have the ability to rig polling boothes.";
@@ -155,27 +155,27 @@ class CfgGroups {
 
 		class XP {
 			class Cartel { amount = 10; };
-			class Popup : Cartel {}; // TODO
+			class Popup : Cartel {}; // TODONOW
 			class Airdrop : Cartel {};
-			class Freight { amount = 5; }; // TODO
-			class Election { amount = 100; }; // TODO
-			class Rigging { amount = 20; }; // TODO
-			class Hideout : Cartel {}; // TODO
-			class BaseBid : Election {}; // TODO
-			class GoldDrives : Freight {}; // TODO
-			class CommunityGoals : Freight {}; // TODO
-			class MedicalAid { amount = 3; }; // TODO
+			class Freight { amount = 5; }; // TODONOW
+			class Election { amount = 100; }; // TODONOW
+			class Rigging { amount = 20; }; // TODONOW
+			class Hideout : Cartel {}; // TODONOW
+			class BaseBid : Election {}; // TODONOW
+			class GoldDrives : Freight {}; // TODONOW
+			class CommunityGoals : Freight {}; // TODONOW
+			class MedicalAid { amount = 3; }; // TODONOW
 			class Robbery : Freight {};
 		};
 	};
 
 	class Buffs {
-		class Missions { // TODO
+		class Missions {
 			displayName = "Increased Payout from Missions";
 			icon = "Data\UI\GroupBuffs\missions.paa";
 			max = 0.25;
 		};
-		class Lockpicking : Missions { // TODO
+		class Lockpicking : Missions { // TODONOW
 			displayName = "Increased Lockpicking Speed";
 			icon = "Data\UI\GroupBuffs\lockpicking.paa";
 		};

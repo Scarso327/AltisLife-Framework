@@ -7,7 +7,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class FirstDrink {
 		icon = "Data\UI\Achievements\firstDrink.paa";
 		displayName = "Big Drink";
@@ -17,7 +17,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class FirstDrug {
 		icon = "Data\UI\Achievements\firstDrug.paa";
 		displayName = "Druggie";
@@ -27,7 +27,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class GirlsBestFriend {
 		icon = "Data\UI\Achievements\girlsBestFriend.paa";
 		displayName = "Girl's Best Friend";
@@ -37,7 +37,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class Salty {
 		icon = "Data\UI\Achievements\salty.paa";
 		displayName = "Extremely Salty";
@@ -65,7 +65,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class JoinRebel {
 		icon = "Data\UI\Achievements\rebel.paa";
 		displayName = "The Rebellion";
@@ -75,7 +75,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class JoinGroup {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Group Member";
@@ -165,7 +165,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class FirstTicket {
 		icon = "Data\UI\Achievements\firstTicket.paa";
 		displayName = "Ticketer";
@@ -206,7 +206,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class LifeSaver {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
 		displayName = "Life Saver";
@@ -240,7 +240,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class Governor {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Rules_ca.paa";
 		displayName = "Governor";
@@ -250,7 +250,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class Employment {
 		icon = "Data\UI\Achievements\employment.paa";
 		displayName = "Employment";
@@ -312,7 +312,7 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODO
+	// TODONOW
 	class BuyWarehouse {
 		icon = "Data\UI\Achievements\warehouse.paa";
 		displayName = "First Warehouse";
@@ -364,7 +364,7 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
-	// TODO
+	// TODONOW
 	class FanGirl {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\PilotingQuadrotor_ca.paa";
 		displayName = "Fan Girl";
@@ -383,7 +383,7 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
-	// TODO
+	// TODONOW
 	class Radiation {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Goodbye Fatherhood";

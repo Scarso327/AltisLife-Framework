@@ -132,7 +132,7 @@ class CfgInteractions {
 			condition = "true";
 		};
 
-		// TODO
+		// TODONOW
 		class Lockpick : Repair {
 			title = "Lockpick";
 			condition = "!([player, _this] call ULP_fnc_isVehicleOwner) && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
@@ -150,7 +150,7 @@ class CfgInteractions {
 			factions[] = { "Police", "Hato" };
 		};
 
-		// TODO
+		// TODONOW
 		class Search : Repair {
 			title = "Search";
 			onClick = "hint ""Hello"";";
@@ -181,10 +181,10 @@ class CfgInteractions {
 		class PulloutOccupants : Repair {
 			title = "Pullout Occupants";
 			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; };";
-			// TODO : Condition Keys or (Police or License) & canMove ! on veh
+			// TODONOW : Condition Keys or (Police or License) & canMove ! on veh
 		};
 
-		// TODO
+		// TODONOW
 		class Push : Repair {
 			title = "Push";
 			onClick = "hint ""Hello"";";

@@ -59,7 +59,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class GeneralMechanic { // TODO
+	class GeneralMechanic { // TODONOW
 		icon = "Data\UI\Perks\generalMechanic.paa";
 		displayName = "General Mechanic";
 		description = "Decreases the likelihood of breaking your toolkit by %1%2.";
@@ -79,7 +79,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class MindfulPlanner { // TODO
+	class MindfulPlanner { // TODTODONOWO
 		icon = "Data\UI\Perks\mindfulPlanner.paa";
 		displayName = "Mindful Planner";
 		description = "You will spawn with a GPS and Binoculars.";
@@ -93,7 +93,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class SpeedyLocksmith { // TODO
+	class SpeedyLocksmith { // TODONOW
 		icon = "Data\UI\Perks\speedyLocksmith.paa";
 		displayName = "Speedy Locksmith";
 		description = "Increases your lockpicking speed by %1%2.";
@@ -161,7 +161,7 @@ class CfgPerks {
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
-	class RapidSurveyor { // TODO
+	class RapidSurveyor { // TODONOW
 		icon = "Data\UI\Perks\rapidSurveyor.paa";
 		displayName = "Rapid Surveyor";
 		description = "Increases your surveying speed on dig sites speed by %1%2.";
@@ -181,7 +181,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class BoltCutter { // TODO
+	class BoltCutter { // TODONOW
 		icon = "Data\UI\Perks\boltCutter.paa";
 		displayName = "Bolt Cutter";
 		description = "Increases your bolt cutting speed by %1%2.";
@@ -249,7 +249,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class EcoDriver { // TODO
+	class EcoDriver { // TODONOW
 		icon = "Data\UI\Perks\ecoDriver.paa";
 		displayName = "Eco Driver";
 		description = "Decreases the cost of fuel per litre by %1%2.";
@@ -283,7 +283,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class PartsCarrier { // TODO
+	class PartsCarrier { // TODONOW
 		icon = "Data\UI\Perks\partsCarrier.paa";
 		displayName = "Parts Carrier";
 		description = "Decreases the cost of servicing an aircraft by %1%2.";
@@ -303,7 +303,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class ScrapDealer { // TODO
+	class ScrapDealer { // TODONOW
 		icon = "Data\UI\Perks\scrapDealer.paa";
 		displayName = "Scrap Dealer";
 		description = "Increases the amount of money made from chopping a vehicle by %1%2.";
@@ -323,7 +323,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class SlightofHand { // TODO
+	class SlightofHand { // TODONOW
 		icon = "Data\UI\Perks\slightOfHand.paa";
 		displayName = "Slight of Hand";
 		description = "Increases repacking of your magazines speed by %1%2.";
@@ -357,7 +357,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class BloodCarrier { // TODO
+	class BloodCarrier { // TODONOW
 		icon = "Data\UI\Perks\bloodCarrier.paa";
 		displayName = "Blood Carrier";
 		description = "Increases Blood bag effenciency by %1%2.";
@@ -377,7 +377,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class IntelligentBanker { // TODO
+	class IntelligentBanker { // TODONOW
 		icon = "Data\UI\Perks\intelligentBanker.paa";
 		displayName = "Intelligent Banker";
 		description = "Decreases your wire transfer costs by %1%2.";
@@ -397,7 +397,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class FirstAider { // TODO
+	class FirstAider { // TODONOW
 		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "First Aider";
 		description = "Increase the effeciency of FirstAidKits by %1%2.";
@@ -417,7 +417,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class SilentLocksmith { // TODO
+	class SilentLocksmith { // TODONOW
 		icon = "Data\UI\Perks\silentLocksmith.paa";
 		displayName = "Silent Locksmith";
 		description = "Decreases the likelihood of triggering an alarm by %1%2.";
@@ -451,7 +451,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class QuickLearner { // TODO
+	class QuickLearner { // TODONOW
 		icon = "Data\UI\Perks\quickLearner.paa";
 		displayName = "Quick Learner";
 		description = "Increases the amount of profession's XP gained by 10%.";
@@ -479,7 +479,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class rapidStorer { // TODO
+	class rapidStorer { // TODONOW
 		icon = "Data\UI\Perks\rapidStorer.paa";
 		displayName = "Rapid Storer";
 		description = "Decreases the time it takes to store a vehicle by %1%2.";

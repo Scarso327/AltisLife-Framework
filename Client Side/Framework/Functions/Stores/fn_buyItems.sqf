@@ -61,7 +61,6 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 			[_cartValue] call ULP_fnc_removeMoney;
 		};
 		_display setVariable ["cartValue", 0];
-		[] call ULP_fnc_syncPlayerInfo;
 
 		[format["You've bought these items for £%1.", [_cartValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	} else {
@@ -69,4 +68,5 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 	};
 };
 
+[] call ULP_fnc_syncPlayerInfo;
 _ctrl ctrlEnable true;

@@ -19,7 +19,10 @@ if (local _vehicle && { _engineOn }) then {
 		_clamp params [ "_finer", "_steamid", "_fine" ];
 
 		if (CASH < _fine) exitWith {
-			[format ["Your vehicle has been clamped by %1 and you can't afford the %2%3 fine...", _finer, "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			if (time >= _vehicle getVariable ["clamp_notify", 0]) then {
+				[format ["Your vehicle has been clamped by %1 and you can't afford the %2%3 fine...", _finer, "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			};
+			_vehicle setVariable ["clamp_notify", time + 3];
 		};
 
 		[

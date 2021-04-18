@@ -112,7 +112,7 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 				format [
 					"%1 has paid their fine for %2 of %3%4 and you've recieved %3%5 as a reward...",
 					_payer,
-					([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [5, ""],
+					([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, ""],
 					"£", [_fine] call ULP_fnc_numberText, [_cut] call ULP_fnc_numberText
 				]
 			] call ULP_fnc_hint;

@@ -36,7 +36,7 @@ closeDialog 0;
 			["_fine", 1, [0]]
 		];
 
-		[format["Clamping %1", (_cfg param [5, "Vehicle"])], 30, [_vehicle, _cfg, _fine], { (player distance (_this select 0)) <= 5 }, {
+		[format["Clamping %1", (_cfg param [3, "Vehicle"])], 30, [_vehicle, _cfg, _fine], { (player distance (_this select 0)) <= 5 }, {
 			_this params [
 				["_vehicle", objNull, [objNull]],
 				["_cfg", configNull, [configNull]],

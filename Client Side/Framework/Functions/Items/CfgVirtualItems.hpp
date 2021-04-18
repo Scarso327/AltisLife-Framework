@@ -336,7 +336,7 @@ class CfgVirtualItems {
 			time = 20;
 			workbench = false;
 			blueprints[] = { { "Tools", "B_Pickaxe" } };
-			materials[] = { {"IronBar", 2}, {"Wood", 1} };
+			materials[] = { {"IronBar", 1}, {"Wood", 1} };
 		};
 		conditions = "true";
 	};
@@ -350,7 +350,7 @@ class CfgVirtualItems {
 			time = 20;
 			workbench = false;
 			blueprints[] = { { "Tools", "B_LuberAxe" } };
-			materials[] = { {"IronBar", 2}, {"Wood", 1} };
+			materials[] = { {"IronBar", 1}, {"Wood", 1} };
 		};
 	};
 	class Shovel : Pickaxe {
@@ -363,7 +363,7 @@ class CfgVirtualItems {
 			time = 20;
 			workbench = false;
 			blueprints[] = { { "Tools", "B_Shovel" } };
-			materials[] = { {"IronBar", 1}, {"Wood", 1} };
+			materials[] = { {"Wood", 1} };
 		};
 	};
 	class Extractor : Pickaxe {
@@ -376,7 +376,7 @@ class CfgVirtualItems {
 			time = 20;
 			workbench = false;
 			blueprints[] = { { "Tools", "B_Extractor" } };
-			materials[] = { {"IronBar", 3}, {"Wood", 1} };
+			materials[] = { {"IronBar", 2}, {"SilverBar", 1} };
 		};
 	};
 	class FishingNet : Pickaxe {
@@ -390,7 +390,7 @@ class CfgVirtualItems {
 			time = 30;
 			workbench = false;
 			blueprints[] = { { "Tools", "B_FishingNet" } };
-			materials[] = { {"Rope", 4} };
+			materials[] = { {"Rope", 2} };
 		};
 	};
 	class FuelCan : Pickaxe {
@@ -401,6 +401,12 @@ class CfgVirtualItems {
 		sellPrice = 1500;
 		weight = 3;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 30;
+			workbench = false;
+			blueprints[] = { { "Tools", "B_FuelCan" } };
+			materials[] = { {"IronBar", 3} };
+		};
 	};
 	class Breathalyser : Pickaxe { // TODO
 		displayName = "Breathalyser";
@@ -491,7 +497,7 @@ class CfgVirtualItems {
 			time = 40;
 			workbench = false;
 			blueprints[] = { { "Tools", "B_BoltCutter" } };
-			materials[] = { {"Rope", 10} };
+			materials[] = { {"Iron", 8} };
 		};
 	};
 	class HackingDevice : Stinger {
@@ -506,7 +512,7 @@ class CfgVirtualItems {
 			time = 120;
 			workbench = true;
 			blueprints[] = { { "Tools", "B_HackingDevice" } };
-			materials[] = { {"Silver", 4}, {"CutDiamond", 2}, {"DecryptedDrive", 1} };
+			materials[] = { {"Silver", 4}, {"CutDiamond", 2} };
 		};
 	};
 	class ExplosiveCharge : Stinger { // TODO
@@ -517,16 +523,26 @@ class CfgVirtualItems {
 		sellPrice = 375000;
 		weight = 4;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 180;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_ExplosiveCharge" } };
+			materials[] = { {"ExplosiveMaterials", 4}, {"Coal", 7}, {"CutDiamond", 3} };
+		};
 	};
-	class IndustrialDrill : Stinger {
+	class IndustrialDrill : ExplosiveCharge {
 		displayName = "Industrial Drill";
-		description = "A tool used to break fortified locks.";
 		icon = "Data\Icons\industrialDrill.paa";
 		buyPrice = 600000;
 		sellPrice = 300000;
-		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_drill;"; };
+		class Deconstruction {
+			time = 180;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_IndustrialDrill" } };
+			materials[] = { {"IronBar", 8}, {"CutDiamond", 2} };
+		};
 	};
 	class Toolbox : Stinger {
 		displayName = "Toolbox";
@@ -786,6 +802,15 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
+	class DrillBit : Tobacco {
+		displayName = "Drill Bit";
+		description = "A strong drill bit commonly found in crafting recipies.";
+		icon = "Data\Icons\drillBit.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 1;
+		class Settings : Settings {};
+	};
 	class Rock : Tobacco {
 		displayName = "Rock";
 		description = "A simple rock commonly gathered from the HMP Yard.";
@@ -935,6 +960,15 @@ class CfgVirtualItems {
 			isSavable = false;
 			isScripted = false;
 		};
+	};
+	class ExplosiveMaterials : UraniumOre {
+		displayName = "Explosive Materials";
+		description = "A collection of explosive materials that are commonly found in crafting recipies.";
+		icon = "Data\Icons\explosiveMaterials.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 3;
+		class Settings : Settings {};
 	};
 	class Corn : UraniumOre {
 		displayName = "Corn";

@@ -39,6 +39,11 @@ if (_vehicle in ULP_Keys) exitWith {
 		} else {
 			["The lockpick broke while attempting to pick the lock..."] call ULP_fnc_numberText;
 		};
+
+		if ([] call ULP_fnc_isGroup) then {
+			private _buff = [group player, "Lockpicking"] call ULP_fnc_groupBuff;
+			if (_buff > 0) then { _time = _time - (_time * _buff); };
+		};
 	} else {
 		["You lost your lockpick while picking the vehicle and so couldn't finish picking..."] call ULP_fnc_numberText;
 	};

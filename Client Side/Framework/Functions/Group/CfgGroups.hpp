@@ -175,7 +175,7 @@ class CfgGroups {
 			icon = "Data\UI\GroupBuffs\missions.paa";
 			max = 0.25;
 		};
-		class Lockpicking : Missions { // TODONOW
+		class Lockpicking : Missions {
 			displayName = "Increased Lockpicking Speed";
 			icon = "Data\UI\GroupBuffs\lockpicking.paa";
 		};

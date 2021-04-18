@@ -265,7 +265,7 @@ class CfgItemsStore {
 
 	class Hideout {
 		storeName = "Criminal Hideout";
-		condition = "true"; // TODO
+		condition = "[""hideout_flag_1""] call ULP_fnc_ownsSite || { [""hideout_flag_2""] call ULP_fnc_ownsSite }";
 		class Rifles {
 			class hgun_PDW2000_F {};
 			class SMG_02_F {};

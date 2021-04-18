@@ -37,4 +37,6 @@ if (([] call ULP_fnc_groupId) isEqualTo _owner) exitWith {
 
 	_location setVariable ["site_owner_id", ([] call ULP_fnc_groupId), true];
 	[format ["You have successfully captured %1", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
+
+	[(group player), "Hideout"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress)

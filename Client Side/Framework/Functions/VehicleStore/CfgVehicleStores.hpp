@@ -99,20 +99,19 @@ class CfgVehicleStores {
 		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
+			class C_Van_02_medevac_F {
+				class Textures { class Medic {}; };
+			};
 			class C_SUV_01_F {
-				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures { class Medic {}; };
 			};
 			class C_Offroad_02_unarmed_F {
-				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures { class Medic {}; };
 			};
 			class C_Hatchback_01_sport_F {
-				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
-				class Textures { class Medic {}; };
-			};
-			class C_Van_02_medevac_F {
-				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 4] call ULP_fnc_hasAccess";
 				class Textures { class Medic {}; };
 			};
 		};
@@ -123,24 +122,20 @@ class CfgVehicleStores {
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_Heli_Light_01_civil_F {
-				class Textures {
-					class Medic {};
-				};
+				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Medic {}; };
 			};
 			class O_Heli_Light_02_unarmed_F {
-				class Textures {
-					class Medic {};
-				};
+				condition = "[""Medic_AA"", 2] call ULP_fnc_hasAccess";
+				class Textures { class Medic {}; };
 			};
 			class O_Heli_Transport_04_medevac_black_F {
-				class Textures {
-					class Medic {};
-				};
+				condition = "[""Medic_AA"", 3] call ULP_fnc_hasAccess";
+				class Textures { class Medic {}; };
 			};
 			class I_Heli_Transport_02_F {
-				class Textures {
-					class Medic {};
-				};
+				condition = "[""Medic_AA"", 3] call ULP_fnc_hasAccess";
+				class Textures { class Medic {}; };
 			};
 		};
 	};
@@ -150,7 +145,7 @@ class CfgVehicleStores {
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_Boat_Civil_01_police_F {
-				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures { class Medic {}; };
 			};
 		};
@@ -160,28 +155,24 @@ class CfgVehicleStores {
 		storeName = "HATO Vehicle Store";
 		factions[] = { "Hato" };
 		class Vehicles {
-			class C_SUV_01_F {
-				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
-				class Textures { class Hato {}; };
-			};
 			class C_Offroad_01_repair_F {
-				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
-				class Textures { class Hato {}; };
-			};
-			class C_Hatchback_01_sport_F {
-				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
 				class Textures { class Hato {}; };
 			};
 			class C_Van_02_service_F {
-				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
 				class Textures { class Hato {}; };
 			};
 			class B_Truck_01_mover_F {
-				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
 				class Textures { class Hato {}; };
 			};
 			class B_Truck_01_flatbed_F {
-				condition = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures { class Hato {}; };
+			};
+			class C_SUV_01_F {
+				condition = "[""Hato_Main"", 2] call ULP_fnc_hasAccess";
+				class Textures { class Hato {}; };
+			};
+			class C_Hatchback_01_sport_F {
+				condition = "[""Hato_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures { class Hato {}; };
 			};
 		};

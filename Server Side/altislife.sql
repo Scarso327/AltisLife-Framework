@@ -111,9 +111,9 @@ CREATE TABLE IF NOT EXISTS `logs` (
   PRIMARY KEY (`id`),
   KEY `pid` (`pid`),
   CONSTRAINT `FK_logs_players` FOREIGN KEY (`pid`) REFERENCES `players` (`pid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1256 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1257 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table altislife.logs: ~1,245 rows (approximately)
+-- Dumping data for table altislife.logs: ~1,246 rows (approximately)
 /*!40000 ALTER TABLE `logs` DISABLE KEYS */;
 INSERT INTO `logs` (`id`, `event`, `pid`, `content`, `insert`) VALUES
 	(1, 'Spawn', '76561198092567307', '"[`Kavala`,[3613.09,13177.4,0.264072]]"', '2021-04-09 11:45:05'),
@@ -1370,7 +1370,8 @@ INSERT INTO `logs` (`id`, `event`, `pid`, `content`, `insert`) VALUES
 	(1252, 'Spawn', '76561198092567307', '"[`Highways Agency`,[3274.95,12950.3,0]]"', '2021-04-18 13:16:51'),
 	(1253, 'Spawn', '76561198092567307', '"[`Kavala Hospital`,[3768.85,12974.8,-0.113386]]"', '2021-04-18 13:18:41'),
 	(1254, 'Spawn', '76561198092567307', '"[`Kavala Hospital`,[3768.85,12974.8,-0.113386]]"', '2021-04-18 13:27:00'),
-	(1255, 'Spawn', '76561198092567307', '"[`Highways Agency`,[3274.95,12950.3,0]]"', '2021-04-18 13:27:51');
+	(1255, 'Spawn', '76561198092567307', '"[`Highways Agency`,[3274.95,12950.3,0]]"', '2021-04-18 13:27:51'),
+	(1256, 'Spawn', '76561198092567307', '"[`Highways Agency`,[3274.95,12950.3,0]]"', '2021-04-18 13:28:38');
 /*!40000 ALTER TABLE `logs` ENABLE KEYS */;
 
 -- Dumping structure for table altislife.mail
@@ -1423,7 +1424,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   `cop_gear` text NOT NULL,
   `cop_stats` varchar(25) NOT NULL DEFAULT '"[100,100,0]"',
   `cop_blacklisted` tinyint(4) NOT NULL DEFAULT 0,
-  `mediclevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
+  `mediclevel` enum('0','1','2','3','4','5','6','7','8') NOT NULL DEFAULT '0',
   `aalevel` enum('0','1','2','3') NOT NULL DEFAULT '0',
   `hrlevel` enum('0','1','2','3') NOT NULL DEFAULT '0',
   `med_licenses` text NOT NULL,

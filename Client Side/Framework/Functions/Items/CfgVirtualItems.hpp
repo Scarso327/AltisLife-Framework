@@ -446,7 +446,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\stinger.paa";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 1;
+		weight = 3;
 		class Settings {
 			onMarket = false;
 			isIllegal = true;
@@ -458,6 +458,7 @@ class CfgVirtualItems {
 		displayName = "Vehicle Clamp";
 		description = "A deployable clamp used to prevent a vehicle's movement.";
 		icon = "Data\Icons\vehicleClamp.paa";
+		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
 	};

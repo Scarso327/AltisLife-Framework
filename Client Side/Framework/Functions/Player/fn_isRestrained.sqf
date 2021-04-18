@@ -9,4 +9,4 @@ if !(_this params [
 	["_object", player, [objNull]]
 ]) exitWith { false };
 
-!((_object getVariable ["restrained", sideUnknown]) isEqualTo sideUnknown)
+!(isNull (_object getVariable ["restrained", objNull]))

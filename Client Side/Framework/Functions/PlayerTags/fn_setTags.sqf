@@ -19,7 +19,7 @@ if (isClass _tagCfg) then {
 	{
 		scopeName "fn_setTags_Loop";
 		private _texs = getArray (missionConfigFile >> "CfgTags" >> "Tags" >> "Whitelisting" >> _faction >> _x);
-		private _level = (call (missionNamespace getVariable [format ["Police_%1", _x], {0}]));
+		private _level = (call (missionNamespace getVariable [format ["%1_%2", _faction, _x], {0}]));
 
 		if (_level > 0 && { _level < (count _texs) }) then {
 			private _iconCfg = missionConfigFile >> "CfgTags" >> "Icons" >> (_texs select _level);

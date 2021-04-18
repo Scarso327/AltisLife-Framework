@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _cfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
-if (isNull _vehicle || { _cfg isEqualTo [] }) exitWith { if (dialog) then { closeDialog 0; }; };
+if (isNull _vehicle || { _cfg isEqualTo [] } || { ((["VehicleClamp"] call ULP_fnc_hasItem) < 1) }) exitWith { if (dialog) then { closeDialog 0; }; };
 
 private _clamp = _vehicle getVariable ["clamp_fine", []];
 

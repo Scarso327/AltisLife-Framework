@@ -382,6 +382,7 @@ class CfgFunctions {
 			file = "Functions\Vehicle";
 			class chopVehicle {};
 			class createVehicle {};
+			class clampVehicle {};
 			class initVehicle {};
 			class skinVehicle {};
 			class vehicleCfg {};
@@ -410,6 +411,7 @@ class CfgFunctions {
 			file = "Functions\Vehicle\Events";
 			class onVehicleDeleted {};
 			class onVehicleKilled {};
+			class onVehicleEngine {};
 		};
 
 		class VehicleStore {

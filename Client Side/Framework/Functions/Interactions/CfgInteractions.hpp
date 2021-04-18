@@ -144,10 +144,9 @@ class CfgInteractions {
 			factions[] = { "Police", "Hato" };
 		};
 
-		// TODO
 		class Clamp : Repair {
 			title = "Clamp";
-			onClick = "_this call ULP_fnc_repairVehicle";
+			onClick = "_this call ULP_fnc_clampVehicle";
 			factions[] = { "Police", "Hato" };
 		};
 

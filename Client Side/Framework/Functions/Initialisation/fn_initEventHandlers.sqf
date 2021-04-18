@@ -96,3 +96,26 @@ player addEventHandler ["InventoryOpened", { _this call ULP_fnc_InventoryOpened 
 		case "Audio_MusicFade": { if (ULP_FadeSound) then { 0 fadeMusic _newSetting; }; };
 	};
 }] call ULP_fnc_addEventHandler;
+
+if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
+	["ClampFinePaid", {
+		_this params [
+			["_payer", "", [""]],
+			["_vehicle", objNull, [objNull]],
+			["_fine", 1, [0]]
+		];
+
+		private _cut = round (_fine / 2);
+
+		if ([_cut, true, format["Vehicle Fine Paid"]] call ULP_fnc_addMoney) then {
+			[
+				format [
+					"%1 has paid their fine for %2 of %3%4 and you've recieved %3%5 as a reward...",
+					_payer,
+					([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [5, ""],
+					"£", [_fine] call ULP_fnc_numberText, [_cut] call ULP_fnc_numberText
+				]
+			] call ULP_fnc_hint;
+		};
+	}] call ULP_fnc_addEventHandler;
+};

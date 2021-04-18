@@ -446,6 +446,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\stinger.paa";
 		buyPrice = 0;
 		sellPrice = 0;
+		weight = 1;
 		class Settings {
 			onMarket = false;
 			isIllegal = true;

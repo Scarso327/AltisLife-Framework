@@ -18,6 +18,10 @@ private _list = _display displayCtrl 23038;
 private _type = missionConfigFile >> "CfgMessages" >> (_list lbData (lbCurSel _list));
 if !(isClass _type) exitWith { ["You must select a message type first!"] call ULP_fnc_hint; false };
 
+if !([] call ULP_fnc_hasComms && { [getNumber (_type >> "ignoreComms")] call ULP_fnc_bool }) exitWith {
+	["You must have communication equipment to send this message..."] call ULP_fnc_hint;
+};
+
 private _targets = getText (_type >> "targets");
 private _message = [ctrlText _msgCtrl] call ULP_fnc_stripString;
 

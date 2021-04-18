@@ -156,6 +156,7 @@ class CfgFunctions {
 			class isUndercover {};
 			class canHeal {};
 			class setOverweight {};
+			class hasComms {};
 		};
 
 		class PlayerActions {

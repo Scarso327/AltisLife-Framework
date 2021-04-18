@@ -13,6 +13,8 @@ if !(isNil "ULP_Draw3d_Indicators") then { removeMissionEventHandler ["Draw3D", 
 
 if (_enable) then {
 	ULP_Draw3d_Indicators = addMissionEventHandler["Draw3D", {
+		if !([] call ULP_fnc_hasComms) exitWith {};
+
 		private _included = [];
 		private _maxDist = ["IndicatorDistance", "Indicators"] call ULP_fnc_getOption;
 
@@ -21,7 +23,7 @@ if (_enable) then {
 			private _veh = vehicle _x;
 			private _dist = _x distance player;
 
-			if (!(_veh isEqualTo (vehicle player)) && { _dist <= _maxDist }) then {
+			if (!(_veh isEqualTo (vehicle player)) && { _dist <= _maxDist } && { [_x] call ULP_fnc_hasComms }) then {
 				private _hex = [([_x] call ULP_fnc_getIndicatorColour), [0.9 , 0, 0, 0.7]] select (isDowned(_x));
 				private _text = [0.9, 0.9, 0.9, 1];
 				private _pos = [(vehicle _x) modelToWorldVisual [0,0,0], _x modelToWorldVisual (_x selectionPosition "spine3")] select (_veh isEqualTo _x);

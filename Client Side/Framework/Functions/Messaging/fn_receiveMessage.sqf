@@ -13,6 +13,10 @@ _this params [
 
 if (isNull _type || { _message isEqualTo "" } || { _sender isEqualTo [] } || { (count _message) > getNumber (missionConfigFile >> "CfgMessages" >> "length") }) exitWith {};
 
+if !([] call ULP_fnc_hasComms && { [getNumber (_type >> "ignoreComms")] call ULP_fnc_bool }) exitWith {
+	["You recieved a message but as you don't have comms you were unable to recieve it..."] call ULP_fnc_hint;
+};
+
 private _messages = + (profileNamespace getVariable ["ULP_Messages", []]);
 _messages pushBack [configName _type, _sender, _message, false];
 

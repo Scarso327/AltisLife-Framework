@@ -384,6 +384,7 @@ class CfgFunctions {
 			class chopVehicle {};
 			class createVehicle {};
 			class clampVehicle {};
+			class lockpickVehicle {};
 			class initVehicle {};
 			class skinVehicle {};
 			class vehicleCfg {};

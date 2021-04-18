@@ -453,6 +453,13 @@ class CfgVirtualItems {
 			isScripted = false;
 		};
 	};
+	class VehicleClamp : Stinger {
+		displayName = "Vehicle Clamp";
+		description = "A deployable clamp used to prevent a vehicle's movement.";
+		icon = "Data\Icons\vehicleClamp.paa";
+		class Settings : Settings {};
+		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
+	};
 	class Lockpick : Stinger {
 		displayName = "Lockpick";
 		description = "A tool used to pick the locks of vehicles and handcuffs.";

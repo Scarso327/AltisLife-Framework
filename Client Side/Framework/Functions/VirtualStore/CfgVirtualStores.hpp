@@ -16,6 +16,7 @@ class CfgVirtualStores {
 			class Blindfold {};
 			class Lockpick {};
 			class BoltCutter {};
+			class VehicleClamp {};
 			class Painkillers {};
 			class Bandage {};
 			class BloodBag {};
@@ -65,9 +66,29 @@ class CfgVirtualStores {
 			class Land_PortableLight_double_F {};
 		};
 	};
-	class Hato : Medic {
+	class Hato {
 		storeName = "HATO Market";
 		conditions = "[player, [""Hato""]] call ULP_fnc_isFaction";
+		class Items {
+			class RationPack {};
+			class Doughnut {};
+			class Coffee {};
+			class Tea {};
+			class Redbull {};
+			class FuelCan {};
+			class PanicButton {};
+			class Lockpick {};
+			class BoltCutter {};
+			class VehicleClamp {};
+			class PlasticBarrier_02_yellow_F {};
+			class PlasticBarrier_02_grey_F {};
+			class PlasticBarrier_03_orange_F {};
+			class PlasticBarrier_03_blue_F {};
+			class RoadBarrier_small_F {};
+			class RoadBarrier_F {};
+			class Land_PortableLight_single_F {};
+			class Land_PortableLight_double_F {};
+		};
 	};
 
 	class Civilian {

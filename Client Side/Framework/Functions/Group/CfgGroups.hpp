@@ -120,14 +120,14 @@ class CfgGroups {
 				class PersonalProtection { // TODONOW
 					displayName = "Personal Protection";
 					icon = "Data\UI\GroupPerks\personalProtection.paa";
-					description = "Grands your members access to become Personal Protection Officers.";
+					description = "Grants your members access to become Personal Protection Officers.";
 					level = 2;
 				};
 
 				class GovernmentSafehouses { // TODONOW
 					displayName = "Personal Protection";
 					icon = "Data\UI\GroupPerks\governmentSafehouses.paa";
-					description = "Grands your members access to various Government Safehouses.";
+					description = "Grants your members access to various Government Safehouses.";
 					level = 3;
 				};
 

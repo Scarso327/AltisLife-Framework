@@ -19,7 +19,11 @@ _this params [
 if (isNull _target || { !(isPlayer _target) } || { !(isNull _detainer) && { !([_detainer] call ULP_fnc_onDuty) } && { (_target distance _detainer) > 5 } }) exitWith { false };
 
 if !(local _target) exitWith {
-    _this remoteExecCall ["ULP_fnc_restrain", _target];
+	if ([_detainer, ["Civilian"]] call ULP_fnc_isFaction && { ["Ziptie", 1, true] call ULP_fnc_handleItem }) then {
+		_this remoteExecCall ["ULP_fnc_restrain", _target];
+	} else {
+		["You need a ziptie to restrain someone"] call ULP_fnc_hint;
+	};
 };
 
 if (_restrain) then {

@@ -1,9 +1,9 @@
 class CfgVirtualItems {
 	// Fresh Food
 	class FreshApple {
-		displayName = "Fresh Apple";
+		displayName = "Fresh Apples";
 		description = "Fresh fruit picked from local trees and sold at markets.";
-		icon = "Data\Icons\apple.paa";
+		icon = "Data\Icons\freshApples.paa";
 		buyPrice = -1;
 		sellPrice = 45;
 		weight = 1;
@@ -21,7 +21,8 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 	class FreshPeach : FreshApple {
-		displayName = "Fresh Peach";
+		displayName = "Fresh Peaches";
+		icon = "Data\Icons\freshPeaches.paa";
 		sellPrice = 51;
 		class Settings : Settings {};
 		class Sustain : Sustain {};
@@ -784,11 +785,17 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
+	class Clay : Tobacco {
+		displayName = "Clay";
+		description = "A simple material used for crafting.";
+		icon = "Data\Icons\clay.paa";
+		weight = 1;
+		class Settings : Settings {};
+	};
 	class Wood : Tobacco {
 		displayName = "Wood";
 		description = "A simple piece of wood commonly found in crafting recipies.";
 		icon = "Data\Icons\wood.paa";
-		buyPrice = -1;
 		sellPrice = 6;
 		weight = 2;
 		class Settings : Settings {};
@@ -797,8 +804,6 @@ class CfgVirtualItems {
 		displayName = "Rope";
 		description = "A simple piece of rope commonly found in crafting recipies.";
 		icon = "Data\Icons\rope.paa";
-		buyPrice = -1;
-		sellPrice = -1;
 		weight = 1;
 		class Settings : Settings {};
 	};
@@ -806,8 +811,6 @@ class CfgVirtualItems {
 		displayName = "Drill Bit";
 		description = "A strong drill bit commonly found in crafting recipies.";
 		icon = "Data\Icons\drillBit.paa";
-		buyPrice = -1;
-		sellPrice = -1;
 		weight = 1;
 		class Settings : Settings {};
 	};
@@ -815,7 +818,6 @@ class CfgVirtualItems {
 		displayName = "Rock";
 		description = "A simple rock commonly gathered from the HMP Yard.";
 		icon = "Data\Icons\ore.paa";
-		buyPrice = -1;
 		sellPrice = 3;
 		weight = 3;
 		class Settings : Settings {};
@@ -907,15 +909,18 @@ class CfgVirtualItems {
 	};
 	class SilverBar : CopperBar {
 		displayName = "Silver Bar";
-		icon = "Data\Icons\ingot.paa";
 		sellPrice = 2200;
 		class Settings : Settings {};
 	};
 	class IronBar : CopperBar {
 		displayName = "Iron Bar";
-		icon = "Data\Icons\ingot.paa";
 		sellPrice = 7350;
 		weight = 3;
+		class Settings : Settings {};
+	};
+	class SteelBar : CopperBar {
+		displayName = "Steel Bar";
+		sellPrice = 9670;
 		class Settings : Settings {};
 	};
 	class Glass : CopperBar {
@@ -965,10 +970,14 @@ class CfgVirtualItems {
 		displayName = "Explosive Materials";
 		description = "A collection of explosive materials that are commonly found in crafting recipies.";
 		icon = "Data\Icons\explosiveMaterials.paa";
-		buyPrice = -1;
-		sellPrice = -1;
 		weight = 3;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 180;
+			workbench = true;
+			blueprints[] = { { "CraftingMaterials", "B_ExplosiveMaterials" } };
+			materials[] = { {"IronBar", 32}, {"ProcessedOil", 9} };
+		};
 	};
 	class Corn : UraniumOre {
 		displayName = "Corn";
@@ -1331,16 +1340,34 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
+	class CoinBundle : OldCoin {
+		displayName = "Coin Bundle";
+		icon = "Data\Icons\coinBundle.paa";
+		sellPrice = 414375;
+		class Settings : Settings {};
+	};
 	class BrokenPot : OldCoin {
 		displayName = "Broken Pot";
 		icon = "Data\Icons\brokenPot.paa";
 		sellPrice = 22100;
 		class Settings : Settings {};
 	};
+	class RestoredPot : OldCoin {
+		displayName = "Restored Pot";
+		icon = "Data\Icons\restoredPot.paa";
+		sellPrice = 55250;
+		class Settings : Settings {};
+	};
 	class BluntStoneKnife : OldCoin {
 		displayName = "Blunt Stone Knife";
 		icon = "Data\Icons\bluntStoneKnife.paa";
 		sellPrice = 35700;
+		class Settings : Settings {};
+	};
+	class SharpStoneKnife : OldCoin {
+		displayName = "Sharp Stone Knife";
+		icon = "Data\Icons\sharpStoneKnife.paa";
+		sellPrice = 89250;
 		class Settings : Settings {};
 	};
 	class FossilisedBone : OldCoin {
@@ -1353,6 +1380,12 @@ class CfgVirtualItems {
 		displayName = "Unidentified Skull";
 		icon = "Data\Icons\unidentifiedSkull.paa";
 		sellPrice = 87800;
+		class Settings : Settings {};
+	};
+	class IdentifiedSkull : OldCoin {
+		displayName = "Identified Skull";
+		icon = "Data\Icons\unidentifiedSkull.paa";
+		sellPrice = 439000;
 		class Settings : Settings {};
 	};
 	/// Uncommon Rewards
@@ -1383,6 +1416,12 @@ class CfgVirtualItems {
 	class StrongMetalRing : OldCoin {
 		displayName = "Strong Metal Ring";
 		icon = "Data\Icons\strongMetalRing.paa";
+		sellPrice = 185200;
+		class Settings : Settings {};
+	};
+	class DiamondRing : OldCoin {
+		displayName = "Diamond Metal Ring";
+		icon = "Data\Icons\diamondRing.paa";
 		sellPrice = 185200;
 		class Settings : Settings {};
 	};

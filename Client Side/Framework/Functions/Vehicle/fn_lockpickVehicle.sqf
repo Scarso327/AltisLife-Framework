@@ -18,7 +18,14 @@ if (_vehicle in ULP_Keys) exitWith {
 	["You already have keys for this vehicle"] call ULP_fnc_hint;
 };
 
-[format["Lockpicking %1", (_cfg param [3, "Vehicle"])], 30, [_vehicle, _cfg], { (player distance (_this select 0)) <= 5 }, {
+_time = round (40 + (random 25));
+
+if ([] call ULP_fnc_isGroup) then {
+	private _buff = [group player, "Lockpicking"] call ULP_fnc_groupBuff;
+	if (_buff > 0) then { _time = _time - (_time * _buff); };
+};
+
+[format["Lockpicking %1", (_cfg param [3, "Vehicle"])], _time, [_vehicle, _cfg], { (player distance (_this select 0)) <= 5 }, {
 	_this params [
 		["_vehicle", objNull, [objNull]],
 		["_cfg", configNull, [configNull]]
@@ -38,11 +45,6 @@ if (_vehicle in ULP_Keys) exitWith {
 			ULP_Keys pushBackUnique _x;
 		} else {
 			["The lockpick broke while attempting to pick the lock..."] call ULP_fnc_numberText;
-		};
-
-		if ([] call ULP_fnc_isGroup) then {
-			private _buff = [group player, "Lockpicking"] call ULP_fnc_groupBuff;
-			if (_buff > 0) then { _time = _time - (_time * _buff); };
 		};
 	} else {
 		["You lost your lockpick while picking the vehicle and so couldn't finish picking..."] call ULP_fnc_numberText;

@@ -57,9 +57,18 @@ if (isClass (_factionCfg >> "Whitelisting")) then {
 		if !(_backpack isEqualTo "") then { [unitBackpack _x, typeOf (unitBackpack _x), backpackContainer _x, _backpack] call ULP_fnc_setTextures; };
 	} forEach (allUnits select { !(_x isEqualTo player) });
 
+	private _steamid = getPlayerUID player;
+
 	{
 		if (_x getVariable["jipReady", false]) then { [_x, true] call ULP_fnc_initVehicle; };
-		if ((getPlayerUID player) in (_x getVariable ["vehicle_owners", createHashMap])) then { ULP_Keys pushBackUnique _x; };
+
+		private _owner = _x getVariable ["vehicle_owners", createHashMap];
+
+		if (_steamid in _owner) then {
+			if (((_owner get _steamid) param [1, ""]) isEqualTo ([player] call ULP_fnc_getFaction)) then {
+				ULP_Keys pushBackUnique _x;
+			};
+		};
 	} forEach vehicles;
 }] call ULP_fnc_directCall;
 

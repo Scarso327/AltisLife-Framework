@@ -169,7 +169,7 @@ switch (_code) do {
 
                     [format [
                         "<t color='#316dff' size='1.5' align='center'>ANPR</t><br/><t color='#119b0c' size='1px' align='center'>Type:</t><t size='1' align='center'> %1</t><br/><t color='#119b0c' size='1px' align='center'>Owner:</t><t size='1' align='center'> %2</t><br/><t color='#119b0c' size='1px' align='center'>Speed:</t><t size='1' align='center'> %3 km/h</t>", 
-                        ([typeOf _vehicle] call ULP_fnc_itemCfg) param [5, "Vehicle"], ((_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, "Unknown"]), round (speed _vehicle)
+                        ([typeOf _vehicle] call ULP_fnc_itemCfg) param [5, "Vehicle"], (((_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, []]) param [0, "Unknown"]), round (speed _vehicle)
                     ]] call ULP_fnc_hint;
                 }] call ULP_fnc_waitExecute;
             };

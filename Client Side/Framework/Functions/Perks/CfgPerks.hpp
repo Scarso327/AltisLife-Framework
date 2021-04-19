@@ -479,7 +479,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class rapidStorer { // TODONOW
+	class rapidStorer {
 		icon = "Data\UI\Perks\rapidStorer.paa";
 		displayName = "Rapid Storer";
 		description = "Decreases the time it takes to store a vehicle by %1%2.";
@@ -496,7 +496,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
 	class UncertainMind {

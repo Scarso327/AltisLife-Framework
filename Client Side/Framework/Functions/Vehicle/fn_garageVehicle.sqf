@@ -18,7 +18,7 @@ _cfg params [
 
 if !(isClass _missionCfg) exitWith {};
 
-private _time = getNumber (missionConfigFile >> "CfgSettings" >> "garageDelay");
+private _time = ["rapidStorer", getNumber (missionConfigFile >> "CfgSettings" >> "garageDelay")] call ULP_fnc_activatePerk;
 if (isNumber (_missionCfg >> "garageDelay")) then {
 	_time = _time + getNumber (_missionCfg >> "garageDelay");
 };

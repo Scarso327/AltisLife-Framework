@@ -23,4 +23,4 @@ if !(_condition isEqualTo "") then {
 	_cfgCondition = _condition;
 };
 
-_trader addAction [format["%1", _title], { (_this select 3) call ULP_fnc_vehicleStore }, [_store, _pos], 1.75, true, true, "", _cfgCondition, 3];
+_trader addAction [format["%1", _title], { (_this select 3) call ULP_fnc_vehicleStore }, [_store, _pos], 1.5, true, true, "", _cfgCondition, 3];

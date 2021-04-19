@@ -33,5 +33,5 @@ if (_includeGarage) then {
 	] select (_impound))], { (_this select 3) call ULP_fnc_openGarage }, [_types, _pos, _impound], 1.5, true, true, "", _condition, 3];
 };
 if (_includeStore) then {
-	_trader addAction [format["%1 Store Vehicle", _title], { [(_this select 0), (_this select 3)] call ULP_fnc_storeVehicle }, _types, 1, true, true, "", _condition, 3];
+	_trader addAction [format["%1 Store Vehicle", _title], { [(_this select 0), (_this select 3)] call ULP_fnc_storeVehicle }, _types, 1.5, true, true, "", _condition, 3];
 };

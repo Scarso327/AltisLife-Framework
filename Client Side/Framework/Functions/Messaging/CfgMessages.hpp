@@ -7,6 +7,7 @@ class CfgMessages {
 		sendTo[] = { "Police", "Medic", "Civilian" };
 		ignoreStreamer = false;
 		ignoreComms = false;
+		alertSound = true;
 		canReply = true;
 		confirmSend = true;
 		sender = "%1";
@@ -33,6 +34,7 @@ class CfgMessages {
 	class NonEmergnecyDispatch : PoliceDispatch {
 		picture = "Data\UI\Messaging\101.paa"; // ICON
 		displayName = "Non-Emergency Dispatch";
+		alertSound = false;
 		targets = "[""Police""] call ULP_fnc_allMembers && { [""Medic""] call ULP_fnc_allMembers } && { [""Hato""] call ULP_fnc_allMembers }";
 	};
 
@@ -73,6 +75,7 @@ class CfgMessages {
 	class Panic : Dispute {
 		displayName = "Panic Button";
 		ignoreComms = false;
+		alertSound = false;
 		confirmSend = false;
 		onRecieved = "private _sender = _this select 0; if (isNull _sender || { _sender isEqualTo player }) exitWith {}; private _marker = createMarkerLocal [format[""panic_marker_%1_%2"", time, name _sender], getPos _sender]; _marker setMarkerTypeLocal ""mil_warning""; _marker setMarkerColorLocal ""colorRed""; _marker setMarkerTextLocal (name _sender); [15, _marker, { deleteMarkerLocal _this }] call ULP_fnc_waitExecute;";
 		targets = "[""Police""] call ULP_fnc_allMembers";

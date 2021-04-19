@@ -17,6 +17,13 @@ class CfgOptions {
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
 		};
 
+		class EnableMessageAlert : EnableWelcome {
+			name = "Enable Message Alert";
+			tooltip = "When enabled, you will receive a audio alert when a message is recevied.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
+		};
+
 		class NightLight : EnableWelcome {
 			name = "Ambient Night Light";
 			tooltip = "This is the level of light that will light up the map during night.";

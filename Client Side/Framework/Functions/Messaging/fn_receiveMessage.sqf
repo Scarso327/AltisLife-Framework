@@ -38,6 +38,10 @@ if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([ge
 	[format ["You received a message from %1: %2", _name, _message], "Phone Notification"] call ULP_fnc_hint;
 };
 
+if ([["EnableMessageAlert"] call ULP_fnc_getOption] call ULP_fnc_bool && { [getNumber (_type >> "alertSound")] call ULP_fnc_bool }) then {
+	[player, "messageNotification", 100, 1] remoteExecCall ["ULP_fnc_say3D"];
+};
+
 if (isText (_type >> "onRecieved")) then {
 	[[_sender select 1] call ULP_fnc_playerByUID, _message] call compile getText (_type >> "onRecieved");
 };

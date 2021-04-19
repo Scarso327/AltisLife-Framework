@@ -36,4 +36,10 @@ class CfgSounds {
         sound[] = {"\Data\Sounds\panicButton.ogg", 1.0, 1};
         titles[] = {};
     };
+
+    class messageNotification {
+        name = "messageNotification";
+        sound[] = {"\Data\Sounds\messageNotification.ogg", 1.0, 1};
+        titles[] = {};
+    };
 };

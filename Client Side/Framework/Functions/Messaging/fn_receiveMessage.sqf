@@ -28,6 +28,10 @@ if (_count > 25) then {
 profileNamespace setVariable ["ULP_Messages", _messages];
 saveProfileNamespace;
 
+if ([["EnableMessageAlert"] call ULP_fnc_getOption] call ULP_fnc_bool && { [getNumber (_type >> "alertSound")] call ULP_fnc_bool }) then {
+	[player, "messageNotification", 100, 1] remoteExecCall ["ULP_fnc_say3D"];
+};
+
 if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([getNumber (_type >> "ignoreStreamer")] call ULP_fnc_bool) }) then {
 	["You received a message and it's contents have been hidden.", "Phone Notification"] call ULP_fnc_hint;
 } else {
@@ -36,10 +40,6 @@ if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([ge
 	];
 
 	[format ["You received a message from %1: %2", _name, _message], "Phone Notification"] call ULP_fnc_hint;
-};
-
-if ([["EnableMessageAlert"] call ULP_fnc_getOption] call ULP_fnc_bool && { [getNumber (_type >> "alertSound")] call ULP_fnc_bool }) then {
-	[player, "messageNotification", 100, 1] remoteExecCall ["ULP_fnc_say3D"];
 };
 
 if (isText (_type >> "onRecieved")) then {

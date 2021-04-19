@@ -9,7 +9,7 @@ class CfgLicenseStores {
 	class Taxi {
 		title = "Taxi Altis";
 		factions[] = { "Civilian" };
-		condition = "true";
+		condition = "[""CompletedCV""] call ULP_fnc_hasPerk";
 		licenses[] = { "Taxi" };
 	};
 	class Solicitor : Taxi {
@@ -80,7 +80,7 @@ class CfgLicenseStores {
 	class Blackmarket {
 		title = "Blackmarket Access";
 		factions[] = { "Civilian" };
-		condition = "true";
+		condition = "[""Rebel""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk } && { [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		licenses[] = { "Blackmarket" };
 	};
 }; 

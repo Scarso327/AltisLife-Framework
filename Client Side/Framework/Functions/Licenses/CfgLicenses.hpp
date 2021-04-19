@@ -97,6 +97,7 @@ class CfgLicenses {
         displayName = "Rebel Access";
         description = "Purchased access to utilise rebel supplies on Altis.";
         buyPrice = 5000000;
+        onBought = "[""JoinRebel""] call ULP_fnc_achieve;";
         class Settings {};
     };
 

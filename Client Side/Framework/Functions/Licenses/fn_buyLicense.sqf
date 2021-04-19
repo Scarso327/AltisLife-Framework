@@ -19,7 +19,14 @@ if (isNull _display) exitWith {};
 private _list = _display displayCtrl 3903;
 private _curSel = lbCurSel _list;
 
-if ([(_list lbData _curSel), (_list lbValue _curSel)] call ULP_fnc_addLicense) then {
+private _license = _list lbData _curSel;
+
+if ([_license, (_list lbValue _curSel)] call ULP_fnc_addLicense) then {
+	private _cfg = missionConfigFile >> "CfgLicenses" >> _license;
+	if (isText (_cfg >> "onBought")) then {
+		call compile getText (_cfg >> "onBought");
+	};
+
 	["You've bought this license."] call ULP_fnc_hint;
 	[] call ULP_fnc_listLicenses;
 };

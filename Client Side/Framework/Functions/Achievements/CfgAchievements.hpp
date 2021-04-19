@@ -65,7 +65,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODONOW
 	class JoinRebel {
 		icon = "Data\UI\Achievements\rebel.paa";
 		displayName = "The Rebellion";

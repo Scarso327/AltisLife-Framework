@@ -29,7 +29,7 @@ profileNamespace setVariable ["ULP_Messages", _messages];
 saveProfileNamespace;
 
 if ([["EnableMessageAlert"] call ULP_fnc_getOption] call ULP_fnc_bool && { [getNumber (_type >> "alertSound")] call ULP_fnc_bool }) then {
-	[player, "messageNotification", 100, 1] remoteExecCall ["ULP_fnc_say3D"];
+	playSound "messageNotification";
 };
 
 if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([getNumber (_type >> "ignoreStreamer")] call ULP_fnc_bool) }) then {

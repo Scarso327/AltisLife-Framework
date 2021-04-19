@@ -182,15 +182,15 @@ class CfgBlueprints {
 			time = 300;
 		};
 		class B_RestoredPot : B_CoinBundle {
-			icon = "Data\Icons\map.paa";
+			icon = "Data\Icons\restoredPot.paa";
 			displayName = "Restored Pot";
 			description = "A restored artifact that can be sold at Altis Archaeologists.";
 			materials[] = { {"BrokenPot", 1}, {"Clay", 3} };
 			item = "RestoredPot";
 		};
 		class B_SharpStoneKnife : B_RestoredPot {
-			icon = "Data\Icons\map.paa";
-			displayName = "Restored Pot";
+			icon = "Data\Icons\sharpStoneKnife.paa";
+			displayName = "Sharpended Knife";
 			materials[] = { {"BluntStoneKnife", 1}, {"Rock", 1} };
 			item = "RestoredPot";
 		};

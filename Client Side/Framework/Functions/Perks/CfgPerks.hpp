@@ -222,7 +222,7 @@ class CfgPerks {
 	};
 
 	class cuffCourier {
-		icon = "Data\UI\Perks\shadyTrader.paa";
+		icon = "Data\UI\Perks\cuffCourier.paa";
 		displayName = "Cuff Courier";
 		description = "Gain the ability to reuse zip ties.";
 		removalMultiplier = 1;

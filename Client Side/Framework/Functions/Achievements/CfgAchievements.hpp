@@ -311,7 +311,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODONOW
 	class BuyWarehouse {
 		icon = "Data\UI\Achievements\warehouse.paa";
 		displayName = "First Warehouse";

@@ -73,6 +73,11 @@ _objectCfg params [ "", "", "", "_name" ];
 
 			if (_success) then {
 				[[_house]] call ULP_fnc_setupHouses;
+				
+				private _cfg = missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _house);
+				if (isText (_cfg >> "onBought")) then {
+					call compile getText (_cfg >> "onBought");
+				};
 			} else {
 				[_money, true, "House Purchase Failed"] call ULP_fnc_addMoney;
 			};

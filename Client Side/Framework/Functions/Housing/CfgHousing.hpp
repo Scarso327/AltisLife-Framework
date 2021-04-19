@@ -167,6 +167,7 @@ class CfgHousing {
 			price = 17500000;
 			breakIn = 10 * 60;
 			spawnPos[] = {5.79297,3.77783,-1.68354};
+			onBought = "[""BuyWarehouse""] call ULP_fnc_achieve;";
 			
 			class Storage {
 				object = "Land_Cargo20_white_F";

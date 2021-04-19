@@ -21,13 +21,19 @@ class CfgMessages {
 
 	class PoliceDispatch : Message {
 		picture = "Data\UI\Messaging\999.paa";
-		displayName = "Police Dispatch";
+		displayName = "APC Emergency Dispatch";
 		targets = "[""Police""] call ULP_fnc_allMembers";
 	};
 
 	class NHSDispatch : PoliceDispatch {
-		displayName = "NHS Dispatch";
+		displayName = "NHS Emergency Dispatch";
 		targets = "[""Medic""] call ULP_fnc_allMembers";
+	};
+
+	class NonEmergnecyDispatch : PoliceDispatch {
+		picture = "Data\UI\Messaging\101.paa"; // ICON
+		displayName = "Non-Emergency Dispatch";
+		targets = "[""Police""] call ULP_fnc_allMembers && { [""Medic""] call ULP_fnc_allMembers } && { [""Hato""] call ULP_fnc_allMembers }";
 	};
 
 	class PublicAnnoucement : Message {

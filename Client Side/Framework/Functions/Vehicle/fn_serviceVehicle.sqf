@@ -34,7 +34,7 @@ if (isNumber (_missionCfg >> "serviceTime")) then {
 	_time = _time + getNumber (_missionCfg >> "serviceTime");
 };
 
-private _cost = round (1000 * (_fuel / 10));
+private _cost = ["PartsCarrier", round (1000 * (_fuel / 10))] call ULP_fnc_activatePerk;
 if (isNumber (_missionCfg >> "serviceCost")) then {
 	_cost = _cost + getNumber (_missionCfg >> "serviceCost");
 };

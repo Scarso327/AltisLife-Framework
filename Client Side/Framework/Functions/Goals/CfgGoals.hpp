@@ -149,7 +149,5 @@ class CfgGoals {
 		};
 	};
 
-	class Community {
-		// TODO
-	};
+	class Community {};
 };

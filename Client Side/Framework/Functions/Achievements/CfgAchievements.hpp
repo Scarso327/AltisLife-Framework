@@ -364,7 +364,7 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
-	// TODONOW
+	// TODO
 	class FanGirl {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\PilotingQuadrotor_ca.paa";
 		displayName = "Fan Girl";
@@ -383,7 +383,7 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
-	// TODONOW
+	// TODO
 	class Radiation {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Goodbye Fatherhood";

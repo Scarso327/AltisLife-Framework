@@ -1,33 +1,18 @@
 class CfgInteractions {
-	/* GENERAL INTERACTIONS */
-	// Show ID	
-	// Show Licenses	
-	// Give Cash
-	// Give Keys
-
-	/* RESTRAINED INTERACTIONS */
-	// Put In Vehicle
-	// Feed/Hydrate
-	// Blindfold/Remove Blindfold
-	// Gag/Remove Gag
-	// Check Inventory
-	// Check vItems
-	// Check ID
-	// Check Licenses
-
-	/* POLICE INTERACTIONS */
-	// Issue Ticket
-	// Send to Prison
-
-	/* MEDIC INTERACTIONS */
-	// Revive
-
 	class Person {
 		class GiveKeys {
 			title = "Give Keys";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_giveVehicleKeys";
 			condition = "true";
+		};
+		class GiveCash : GiveKeys { // TODONOW
+			title = "Give Cash";
+			onClick = "hint ""Hello"";";
+		};
+		class ShowLicenses : GiveKeys { // TODONOW
+			title = "Show Licenses";
+			onClick = "hint ""Hello"";";
 		};
 
 		class Unrestrain {
@@ -46,7 +31,38 @@ class CfgInteractions {
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [_this] call ULP_fnc_isEscorted }";
 		};
-
+		class PutInVehicle : Unrestrain { // TODONOW
+			title = "Put In Vehicle";
+			onClick = "hint ""Hello"";";
+		};
+		class FeedHydrate : Unrestrain { // TODO
+			title = "Feed/Hydrate";
+			onClick = "hint ""Hello"";";
+		};
+		class Blindfold : Unrestrain { // TODO
+			title = "Blindfold";
+			onClick = "hint ""Hello"";";
+		};
+		class Unblindfold : Unrestrain { // TODO
+			title = "Remove Blindfold";
+			onClick = "hint ""Hello"";";
+		};
+		class InventoryCheck : Unrestrain { // TODONOW
+			title = "Check Inventory";
+			onClick = "hint ""Hello"";";
+		};
+		class vItemCheck : Unrestrain { // TODONOW
+			title = "Check vItems";
+			onClick = "hint ""Hello"";";
+		};
+		class LicenseCheck : Unrestrain { // TODONOW
+			title = "Check Licenses";
+			onClick = "hint ""Hello"";";
+		};
+		class Ticket : Unrestrain { // TODONOW
+			title = "Issue Penalty Notice";
+			onClick = "hint ""Hello"";";
+		};
 		class Imprision : Unrestrain {
 			title = "Send to Prison";
 			onClick = "_this call ULP_fnc_setPrisonTime; closeDialog 0;";
@@ -63,6 +79,9 @@ class CfgInteractions {
 	};
 
 	class PersonMedical {
+		// Revive Player
+		// Admin Revive
+
 		class AdministerBlood {
 			title = "Administer Blood";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
@@ -150,13 +169,6 @@ class CfgInteractions {
 			factions[] = { "Police", "Hato" };
 		};
 
-		// TODONOW
-		class Search : Repair {
-			title = "Search";
-			onClick = "hint ""Hello"";";
-			factions[] = { "Police" };
-		};
-
 		class Garage : Repair {
 			title = "Garage";
 			onClick = "_this call ULP_fnc_garageVehicle";
@@ -184,8 +196,7 @@ class CfgInteractions {
 			// TODONOW : Condition Keys or (Police or License) & canMove ! on veh
 		};
 
-		// TODONOW
-		class Push : Repair {
+		class Push : Repair { // TODONOW
 			title = "Push";
 			onClick = "hint ""Hello"";";
 		};

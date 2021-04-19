@@ -9,8 +9,7 @@ class CfgProfessions {
 		maxLevel = 5;
 	};
 
-	// TODONOW
-	class Fishing {
+	class Fishing { // TODONOW
 		displayName = "Fishing";
 		icon = "Data\UI\Professions\fishing.paa";
 		effectDescription = "Decreases the time it takes to catch fish by %1%2";

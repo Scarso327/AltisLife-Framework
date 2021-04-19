@@ -409,7 +409,7 @@ class CfgVirtualItems {
 			materials[] = { {"IronBar", 3} };
 		};
 	};
-	class Breathalyser : Pickaxe { // TODONOW
+	class Breathalyser : Pickaxe { // TODO
 		displayName = "Breathalyser";
 		description = "Used to determin whether or not someone is under the influence.";
 		icon = "Data\Icons\breathalyser.paa";
@@ -437,7 +437,7 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class Blindfold : Pickaxe { // TODONOW
+	class Blindfold : Pickaxe { // TODO
 		displayName = "Blindfold";
 		description = "A tool used to blindfold others.";
 		icon = "Data\Icons\blindfold.paa";

@@ -43,7 +43,7 @@ class CfgOptions {
 			values[] = { { 0, 1 }, 0.25, { 0.1, 0.1 } };
 		};
 
-		class EnableMessageAlert : EnableWelcome {
+		class EnableMessageAlert : EffectsFade {
 			name = "Enable Message Alert";
 			tooltip = "When enabled, you will receive a audio alert when a message is recevied.";
 			type = "DROPDOWN";

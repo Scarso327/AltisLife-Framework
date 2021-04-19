@@ -90,7 +90,7 @@ class CfgGroups {
 					level = 3;
 				};
 
-				class GoalContributions { // TODONOW
+				class GoalContributions { // TODO
 					displayName = "Goal Contributions";
 					icon = "Data\UI\GroupPerks\goalContributions.paa";
 					description = "Your members have an increased contribution to community goals.";
@@ -155,15 +155,15 @@ class CfgGroups {
 
 		class XP {
 			class Cartel { amount = 10; };
-			class Popup : Cartel {}; // TODONOW
+			class Popup : Cartel {}; // TODO
 			class Airdrop : Cartel {};
-			class Freight { amount = 5; }; // TODONOW
+			class Freight { amount = 5; }; // TODO
 			class Election { amount = 100; }; // TODONOW
 			class Rigging { amount = 20; }; // TODONOW
 			class Hideout : Cartel {};
 			class BaseBid : Election {}; // TODONOW
-			class GoldDrives : Freight {}; // TODONOW
-			class CommunityGoals : Freight {}; // TODONOW
+			class Contraband : Freight {}; // TODONOW
+			class CommunityGoals : Freight {}; // TODO
 			class MedicalAid { amount = 3; };
 			class Robbery : Freight {};
 		};

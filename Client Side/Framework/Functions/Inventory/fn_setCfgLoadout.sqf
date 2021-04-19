@@ -46,11 +46,11 @@ if (isClass (_class)) then {
 
 _class = _cfg >> "LinkedItems";
 if (isClass (_class)) then {
-	if (getNumber (_class >> "hasMap") isEqualTo 1) then { player linkItem "ItemMap" };
-	if (getNumber (_class >> "hasGPS") isEqualTo 1) then { player linkItem "ItemGPS" };
+	if (getNumber (_class >> "hasMap") isEqualTo 1 || { ["MindfulPlanner"] call ULP_fnc_hasPerk }) then { player linkItem "ItemMap" };
+	if (getNumber (_class >> "hasGPS") isEqualTo 1 || { ["MindfulPlanner"] call ULP_fnc_hasPerk }) then { player linkItem "ItemGPS" };
 	if (getNumber (_class >> "hasCompass") isEqualTo 1) then { player linkItem "ItemCompass" };
 	if (getNumber (_class >> "hasWatch") isEqualTo 1) then { player linkItem "ItemWatch" };
-	if (getNumber (_class >> "hasRadio") isEqualTo 1) then { player linkItem "ItemRadio" };
+	if (getNumber (_class >> "hasRadio") isEqualTo 1 || { ["MindfulPlanner"] call ULP_fnc_hasPerk }) then { player linkItem "ItemRadio" };
 };
 
 _class = _cfg >> "VirtualItems";

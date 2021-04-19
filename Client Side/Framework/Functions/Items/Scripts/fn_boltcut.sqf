@@ -44,7 +44,7 @@ if !(isNull _breakInCfg) then {
 	};
 };
 
-["Boltcutting", 150, [_object, _pos, _isDoor, _door, _onBreakIn], { (player distance (_this select 1)) <= 5 }, {
+["Boltcutting", _time, [_object, _pos, _isDoor, _door, _onBreakIn], { (player distance (_this select 1)) <= 5 }, {
 	_this params [ "_object", "_pos", "_isDoor", "_door", "_onBreakIn" ];
 
 	["You have successfully broke the lock!"] call ULP_fnc_hint;

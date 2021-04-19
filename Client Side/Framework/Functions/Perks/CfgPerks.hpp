@@ -59,7 +59,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class GeneralMechanic { // TODONOW
+	class GeneralMechanic {
 		icon = "Data\UI\Perks\generalMechanic.paa";
 		displayName = "General Mechanic";
 		description = "Decreases the likelihood of breaking your toolkit by %1%2.";
@@ -76,13 +76,13 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = { "Repairing", 1 };
 		};
-		onActivated = "";
+		onActivated = "_params + (_bonus / 100)";
 	};
 
-	class MindfulPlanner { // TODTODONOWO
+	class MindfulPlanner {
 		icon = "Data\UI\Perks\mindfulPlanner.paa";
 		displayName = "Mindful Planner";
-		description = "You will spawn with a GPS and Binoculars.";
+		description = "You will spawn with a Map, Radio and GPS.";
 		removalMultiplier = 2;
 		class Requirements {
 			factions[] = { "Civilian" };
@@ -93,7 +93,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class SpeedyLocksmith { // TODONOW
+	class SpeedyLocksmith {
 		icon = "Data\UI\Perks\speedyLocksmith.paa";
 		displayName = "Speedy Locksmith";
 		description = "Increases your lockpicking speed by %1%2.";
@@ -110,7 +110,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
 	class WideTraveller {
@@ -161,7 +161,7 @@ class CfgPerks {
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
-	class RapidSurveyor { // TODONOW
+	class RapidSurveyor {
 		icon = "Data\UI\Perks\rapidSurveyor.paa";
 		displayName = "Rapid Surveyor";
 		description = "Increases your surveying speed on dig sites speed by %1%2.";
@@ -178,10 +178,10 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
-	class BoltCutter { // TODONOW
+	class BoltCutter {
 		icon = "Data\UI\Perks\boltCutter.paa";
 		displayName = "Bolt Cutter";
 		description = "Increases your bolt cutting speed by %1%2.";
@@ -198,7 +198,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
 	class ShadyTrader {
@@ -249,7 +249,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class EcoDriver { // TODONOW
+	class EcoDriver { // TODO
 		icon = "Data\UI\Perks\ecoDriver.paa";
 		displayName = "Eco Driver";
 		description = "Decreases the cost of fuel per litre by %1%2.";
@@ -283,7 +283,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class PartsCarrier { // TODONOW
+	class PartsCarrier {
 		icon = "Data\UI\Perks\partsCarrier.paa";
 		displayName = "Parts Carrier";
 		description = "Decreases the cost of servicing an aircraft by %1%2.";
@@ -300,10 +300,10 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = { "Repairing", 3 };
 		};
-		onActivated = "";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
-	class ScrapDealer { // TODONOW
+	class ScrapDealer {
 		icon = "Data\UI\Perks\scrapDealer.paa";
 		displayName = "Scrap Dealer";
 		description = "Increases the amount of money made from chopping a vehicle by %1%2.";
@@ -320,10 +320,10 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = { "Repairing", 3 };
 		};
-		onActivated = "";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
-	class SlightofHand { // TODONOW
+	class SlightofHand { // TODO
 		icon = "Data\UI\Perks\slightOfHand.paa";
 		displayName = "Slight of Hand";
 		description = "Increases repacking of your magazines speed by %1%2.";
@@ -357,7 +357,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class BloodCarrier { // TODONOW
+	class BloodCarrier {
 		icon = "Data\UI\Perks\bloodCarrier.paa";
 		displayName = "Blood Carrier";
 		description = "Increases Blood bag effenciency by %1%2.";
@@ -374,7 +374,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
 	class IntelligentBanker { // TODONOW
@@ -397,7 +397,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class FirstAider { // TODONOW
+	class FirstAider {
 		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "First Aider";
 		description = "Increase the effeciency of FirstAidKits by %1%2.";
@@ -414,10 +414,10 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
-	class SilentLocksmith { // TODONOW
+	class SilentLocksmith { // TODO : Add to vehicle lockpicking...
 		icon = "Data\UI\Perks\silentLocksmith.paa";
 		displayName = "Silent Locksmith";
 		description = "Decreases the likelihood of triggering an alarm by %1%2.";
@@ -434,7 +434,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
 	class Blackmarketer {

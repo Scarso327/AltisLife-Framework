@@ -22,7 +22,7 @@ class CfgCrimes {
 					position[] = {16009.7, 16900.3, 0.372055};
 					class BreakIn {
 						breakIn = 240;
-						onBreakIn = "if ((random 1) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A Security Office at HM Treasury has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
+						onBreakIn = "if (([""SilentLocksmith"", (random 1)] call ULP_fnc_activatePerk) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A Security Office at HM Treasury has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
 						onFail = "[""There must be at least 10 police officers to start this crime...""] call ULP_fnc_hint;";
 						condition = "(count [""Police""] call ULP_fnc_allMembers) >= 10 || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] }";
 					};
@@ -122,7 +122,7 @@ class CfgCrimes {
 					position[] = {3266.77, 12448.9, 0.117};
 					class BreakIn {
 						breakIn = 240;
-						onBreakIn = "if ((random 1) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A door at the Police Evidence Storage facility has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
+						onBreakIn = "if (([""SilentLocksmith"", (random 1)] call ULP_fnc_activatePerk) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A door at the Police Evidence Storage facility has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
 						onFail = "[""There must be at least 10 police officers to start this crime...""] call ULP_fnc_hint;";
 						condition = "(count [""Police""] call ULP_fnc_allMembers) >= 10 || { missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false] }";
 					};

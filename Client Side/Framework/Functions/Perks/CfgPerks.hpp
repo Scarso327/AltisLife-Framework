@@ -451,7 +451,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class QuickLearner { // TODONOW
+	class QuickLearner {
 		icon = "Data\UI\Perks\quickLearner.paa";
 		displayName = "Quick Learner";
 		description = "Increases the amount of profession's XP gained by 10%.";
@@ -462,7 +462,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onActivated = "";
+		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
 	class LandLord {

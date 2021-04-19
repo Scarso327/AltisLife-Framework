@@ -78,6 +78,8 @@ if (_near isEqualTo []) exitWith {
 			_chopValue = _chopValue * 1.1;
 		};
 
+		_chopValue = ["ScrapDealer", _chopValue] call ULP_fnc_activatePerk;
+
 		private _id = _vehicle getVariable ["vehicle_id", -1];
 		private _owner = [_vehicle] call ULP_fnc_getVehicleOwner;
 		deleteVehicle _vehicle;

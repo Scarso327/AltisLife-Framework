@@ -73,6 +73,7 @@ _objectCfg params [ "", "", "", "_name" ];
 
 			if (_success) then {
 				[[_house]] call ULP_fnc_setupHouses;
+				["BuyHouse"] call ULP_fnc_achieve;
 				
 				private _cfg = missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _house);
 				if (isText (_cfg >> "onBought")) then {
@@ -89,7 +90,6 @@ _objectCfg params [ "", "", "", "_name" ];
 
 		if ([_money, true, "Bought House"] call ULP_fnc_removeMoney) then {
 			["Buying House..."] call ULP_fnc_hint;
-			["BuyHouse"] call ULP_fnc_achieve;
 			[player, _house, _money] remoteExecCall ["ULP_SRV_fnc_buyHouse", RSERV];
 		} else {
 			[format ["You can't afford %1%2 to buy this property!", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;

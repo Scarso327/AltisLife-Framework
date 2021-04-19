@@ -17,13 +17,6 @@ class CfgOptions {
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
 		};
 
-		class EnableMessageAlert : EnableWelcome {
-			name = "Enable Message Alert";
-			tooltip = "When enabled, you will receive a audio alert when a message is recevied.";
-			type = "DROPDOWN";
-			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
-		};
-
 		class NightLight : EnableWelcome {
 			name = "Ambient Night Light";
 			tooltip = "This is the level of light that will light up the map during night.";
@@ -48,6 +41,13 @@ class CfgOptions {
 			tooltip = "This is the music volume that will be used when using ear plugs.";
 			type = "SLIDER";
 			values[] = { { 0, 1 }, 0.25, { 0.1, 0.1 } };
+		};
+
+		class EnableMessageAlert : EnableWelcome {
+			name = "Enable Message Alert";
+			tooltip = "When enabled, you will receive a audio alert when a message is recevied.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
 		};
 	};
 

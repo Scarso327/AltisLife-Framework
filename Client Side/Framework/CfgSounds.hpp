@@ -31,9 +31,9 @@ class CfgSounds {
         titles[] = {};
     };
 
-    class Backup {
-        name = "backup";
-        sound[] = {"\Data\Sounds\backup.ogg", 1.0, 1};
+    class panicButton {
+        name = "panicButton";
+        sound[] = {"\Data\Sounds\panicButton.ogg", 1.0, 1};
         titles[] = {};
     };
 };

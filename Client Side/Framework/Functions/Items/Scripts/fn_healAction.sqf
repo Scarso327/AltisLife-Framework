@@ -20,7 +20,7 @@ if !([format["Healing %1", name _target], _time, [_target, _hasMedkit], { [(_thi
 
 	if !(_hasMedkit) then { ["FirstAidKit", 1, true] call ULP_fnc_handleItem; };
 
-	_target setDamage ([0.75, 0] select (_hasMedkit));
+	_target setDamage ([["FirstAider", 0.75] call ULP_fnc_activatePerk, 0] select (_hasMedkit));
 	[format ["You've healed %1!", name _target]] call ULP_fnc_hint;
 }, {}, ["GRAB", (["PRONE", "CROUCH"] select ((stance player) isEqualTo "STAND"))]] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't heal while doing something else..."] call ULP_fnc_hint;

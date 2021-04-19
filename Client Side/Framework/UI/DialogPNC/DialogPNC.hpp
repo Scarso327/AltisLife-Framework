@@ -93,10 +93,10 @@ class DialogPNC {
 					columns = 1;
 					fade = 0;
 					strings[] = {
-						"Warrents"
+						"Warrants"
 					};
 					tooltips[] = {
-						"Warrents"
+						"Warrants"
 					};
 				};
 			};

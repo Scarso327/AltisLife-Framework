@@ -41,9 +41,25 @@ if ([] call ULP_fnc_isGroup) then {
 
 	if (["Lockpick", 1, true] call ULP_fnc_handleItem) then {
 		if (0.7 <= (random 1)) then {
+			[getPlayerUID player, "Theft", "Section12", 
+				format [
+					"Vehicle: %1 (%2)", 
+					([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "Unknown"], 
+					getText (missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Textures" >> (_vehicle getVariable ["texture", ""]) >> "displayName")
+				]
+			] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+
 			[format ["You have successfully picked %1's lock and gained forged keys..."]] call ULP_fnc_hint;
 			ULP_Keys pushBackUnique _x;
 		} else {
+			[getPlayerUID player, "CriminalAttempts", "Section1", 
+				format [
+					"Attempted Lock Picking of Vehicle: %1 (%2)", 
+					([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "Unknown"], 
+					getText (missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Textures" >> (_vehicle getVariable ["texture", ""]) >> "displayName")
+				]
+			] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+
 			["The lockpick broke while attempting to pick the lock..."] call ULP_fnc_numberText;
 		};
 	} else {

@@ -63,6 +63,11 @@ class CfgFunctions {
             class setHouseName {};
         };
 
+        class DatabaseWarrants {
+            file = "\life_server\Functions\Database\Warrants";
+            class addWarrant {};
+        };
+
         class Channels {
             file = "\life_server\Functions\Channels";
             class initRadios {};

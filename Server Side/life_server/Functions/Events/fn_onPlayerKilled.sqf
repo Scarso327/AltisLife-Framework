@@ -11,6 +11,15 @@ _this params [
 
 // Notify the server...
 if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {	
+	if ([_killer, ["Civilian"]] call ULP_fnc_isFaction) then {
+		[
+			getPlayerUID _killer, 
+			"OffencesAgainstThePerson", 
+			"Section1", 
+			format ["Suspected Weapon: %1", ([currentWeapon _killer] call ULP_fnc_itemCfg) param [5, "Unknown"]]
+		] call ULP_SRV_fnc_addWarrant;
+	};
+	
 	["Executed", [_unit getVariable ["realname", name _unit], _killer getVariable ["realname", name _killer]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 	[getPlayerUID _unit, "Executed", [getPlayerUID _killer, getPos _unit, getUnitLoadout _unit]] call ULP_SRV_fnc_logPlayerEvent;
 

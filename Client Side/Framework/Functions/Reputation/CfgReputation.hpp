@@ -5,17 +5,17 @@ class CfgReputation {
 	class Types {
 		class IncapHighRep {
 			reason = "incapacitated someone with a high reputation";
-			change = -50;
+			change = -25;
 		};
 
 		class KilledHighRep {
 			reason = "killed someone with a high reputation";
-			change = -100;
+			change = -50;
 		};
 
 		class IncapNormal {
 			reason = "incapacitated someone with a neutral reputation";
-			change = -25;
+			change = -15;
 		};
 
 		class KilledNormal : IncapNormal {
@@ -24,12 +24,12 @@ class CfgReputation {
 
 		class IncapLowRep {
 			reason = "incapacitated someone with a Low reputation";
-			change = 50;
+			change = 25;
 		};
 
 		class KilledLowRep {
 			reason = "killed someone with a Low reputation";
-			change = 100;
+			change = 50;
 		};
 	};
 };

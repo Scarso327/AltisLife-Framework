@@ -206,7 +206,7 @@ class CfgInteractions {
 		class PulloutOccupants : Repair {
 			title = "Pullout Occupants";
 			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; };";
-			// TODONOW : Condition Keys or (Police or License) & canMove ! on veh
+			condition = "(speed _this) <= 4 && { _this in ULP_Keys || [""Police_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
 		class Push : Repair { // TODONOW

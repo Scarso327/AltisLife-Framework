@@ -27,7 +27,7 @@ class CfgSounds {
 
     class metalDetector {
         name = "metalDetector";
-        sound[] = {"\Data\Sounds\carUnlock.ogg", 0.75, 1}; // CHANGE
+        sound[] = {"\Data\Sounds\metalDetector.ogg", 0.75, 1}; 
         titles[] = {};
     };
 

@@ -4,7 +4,7 @@ class CfgDebriefing {
         subtitle = "Thanks For Playing!";
         description = "Your data has been synced and you've returned to the lobby.";
         pictureBackground = "";
-        picture = "\A3\ui_f\data\GUI\Cfg\Hints\Tasks_ca.paa";
+        picture = "\A3\ui_f\data\GUI\Cfg\Hints\Doors_ca.paa";
         pictureColor[] = {0,0.3,0.6,1};
     };
     class NotWhitelisted : Abort {

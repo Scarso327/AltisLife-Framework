@@ -39,8 +39,10 @@ if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 	if (isNull _vehicle || { !(alive _vehicle) } || { !("ToolKit" in (items player)) }) exitWith {
 		[format["You failed to repair the %1 as it's either beyond repair or you didn't have the correct tools."]] call ULP_fnc_hint;
 	};
-
-	player removeItem "Toolkit";
+	
+	if ((["GeneralMechanic", 0] call ULP_fnc_activatePerk) <= (random 0.99)) then {
+		player removeItem "Toolkit";
+	};
 
 	_vehicle setDamage 0;
 	[format["You've repaired %1 using a toolkit.", _name]] call ULP_fnc_hint;

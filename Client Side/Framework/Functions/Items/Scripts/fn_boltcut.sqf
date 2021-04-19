@@ -26,7 +26,7 @@ if (isNull _object || { (player distance _pos) > 5 } || { !(_object getVariable 
 	false
 };
 
-private _time = 150;
+private _time = ["BoltCutter", 150] call ULP_fnc_activatePerk;
 private _onBreakIn = "";
 
 if ([] call ULP_fnc_isGroup) then {

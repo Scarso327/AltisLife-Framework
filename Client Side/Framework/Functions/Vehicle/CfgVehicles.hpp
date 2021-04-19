@@ -76,24 +76,24 @@ class CfgVehicles {
 
 	class BaseChromeGreen : BaseTexture {
 		displayName = "Chrome Green";
-		materials[] = { "Data\Textures\Vehicles\Global\Chrone\green.paa" };
+		materials[] = { "Data\Textures\Vehicles\Global\Chrome\green.rvmat" };
 		locked = true;
 	};
 	class BaseChromeBlue : BaseChromeGreen {
 		displayName = "Chrome Blue";
-		materials[] = { "Data\Textures\Vehicles\Global\Chrone\blue.paa" };
+		materials[] = { "Data\Textures\Vehicles\Global\Chrome\blue.rvmat" };
 	};
 	class BaseChromeRed : BaseChromeGreen {
 		displayName = "Chrome Red";
-		materials[] = { "Data\Textures\Vehicles\Global\Chrone\red.paa" };
+		materials[] = { "Data\Textures\Vehicles\Global\Chrome\red.rvmat" };
 	};
 	class BaseChromeSilver : BaseChromeGreen {
 		displayName = "Chrome Silver";
-		materials[] = { "Data\Textures\Vehicles\Global\Chrone\silver.paa" };
+		materials[] = { "Data\Textures\Vehicles\Global\Chrome\silver.rvmat" };
 	};
 	class BaseChromeGold : BaseChromeGreen {
 		displayName = "Chrome Gold";
-		materials[] = { "Data\Textures\Vehicles\Global\Chrone\gold.paa" };
+		materials[] = { "Data\Textures\Vehicles\Global\Chrome\gold.rvmat" };
 	};
 
 	// CARS --------------------------------------------------------------------------------------
@@ -658,6 +658,7 @@ class CfgVehicles {
 			};
 			class GoldLine : BaseTexture { 
 				displayName = "Gold Line";
+				buyPrice = 450000;
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_01.paa",
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_02.paa"
@@ -665,6 +666,7 @@ class CfgVehicles {
 			};
 			class Oil : BaseTexture { 
 				displayName = "Oil Spill";
+				buyPrice = 315700;
 				locked = true;
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_01.paa",
@@ -673,32 +675,32 @@ class CfgVehicles {
 			};
 			class ChromeGreen : BaseChromeGreen {
 				materials[] = { 
-					"Data\Textures\Vehicles\Global\Chrone\green.paa",
-					"Data\Textures\Vehicles\Global\Chrone\green.paa"
+					"Data\Textures\Vehicles\Global\Chrome\green.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\green.rvmat"
 				};
 			};
 			class ChromeBlue : BaseChromeBlue {
 				materials[] = { 
-					"Data\Textures\Vehicles\Global\Chrone\blue.paa",
-					"Data\Textures\Vehicles\Global\Chrone\blue.paa"
+					"Data\Textures\Vehicles\Global\Chrome\blue.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\blue.rvmat"
 				};
 			};
 			class ChromeRed : BaseChromeRed {
 				materials[] = { 
-					"Data\Textures\Vehicles\Global\Chrone\red.paa",
-					"Data\Textures\Vehicles\Global\Chrone\red.paa"
+					"Data\Textures\Vehicles\Global\Chrome\red.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\red.rvmat"
 				};
 			};
 			class ChromeSilver : BaseChromeSilver {
 				materials[] = { 
-					"Data\Textures\Vehicles\Global\Chrone\silver.paa",
-					"Data\Textures\Vehicles\Global\Chrone\silver.paa"  
+					"Data\Textures\Vehicles\Global\Chrome\silver.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\silver.rvmat"  
 				};
 			};
 			class ChromeGold : BaseChromeGold {
 				materials[] = { 
-					"Data\Textures\Vehicles\Global\Chrone\gold.paa",
-					"Data\Textures\Vehicles\Global\Chrone\gold.paa"  
+					"Data\Textures\Vehicles\Global\Chrome\gold.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\gold.rvmat"  
 				};
 			};
 		};

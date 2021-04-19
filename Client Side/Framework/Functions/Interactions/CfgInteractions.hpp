@@ -10,6 +10,10 @@ class CfgInteractions {
 			title = "Give Cash";
 			onClick = "hint ""Hello"";";
 		};
+		class GiveItems : GiveKeys { // TODONOW
+			title = "Give Items";
+			onClick = "hint ""Hello"";";
+		};
 		class ShowLicenses : GiveKeys { // TODONOW
 			title = "Show Licenses";
 			onClick = "hint ""Hello"";";
@@ -47,16 +51,20 @@ class CfgInteractions {
 			title = "Remove Blindfold";
 			onClick = "hint ""Hello"";";
 		};
+		class CashCheck : Unrestrain { // TODONOW
+			title = "Check Cash"; // Provide ability to seize
+			onClick = "hint ""Hello"";";
+		};
 		class InventoryCheck : Unrestrain { // TODONOW
 			title = "Check Inventory";
 			onClick = "hint ""Hello"";";
 		};
 		class vItemCheck : Unrestrain { // TODONOW
-			title = "Check vItems";
+			title = "Check vItems"; // Provide ability to seize
 			onClick = "hint ""Hello"";";
 		};
 		class LicenseCheck : Unrestrain { // TODONOW
-			title = "Check Licenses";
+			title = "Check Licenses"; // Provide ability to seize
 			onClick = "hint ""Hello"";";
 		};
 		class Ticket : Unrestrain { // TODONOW
@@ -75,6 +83,11 @@ class CfgInteractions {
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "(_this select 0) setDamage 0; [format[""You've healed this player using admin powers...""]] call ULP_fnc_hint; [getPlayerUID player, ""Admin"", [""AdminHeal"", serverTime, [name (_this select 0)]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2]; closeDialog 0;";
 			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { (damage _this) > 0 } && { [""Heal"", false] call ULP_fnc_checkPower }";
+		};
+		class AdminCompensate : AdminHeal { // TODONOW
+			title = "Admin Compensate";
+			onClick = "[getPlayerUID player, ""Admin"", [""AdminCompensate"", serverTime, [name (_this select 0)]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2]; closeDialog 0;";
+			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { (damage _this) > 0 } && { [""Compensate"", false] call ULP_fnc_checkPower }";
 		};
 	};
 

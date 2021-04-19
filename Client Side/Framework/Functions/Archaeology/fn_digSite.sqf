@@ -28,7 +28,7 @@ if ((player distance (taskDestination _task)) > 5) exitWith {
 
 (getArray (_cfg >> "surveyTime")) params [ "_base", "_random" ];
 
-private _time = _base + (random _random);
+private _time = ["RapidSurveyor", round (_base + (random _random))] call ULP_fnc_activatePerk;
 
 if ([] call ULP_fnc_isGroup) then {
 	private _buff = [group player, "Digging"] call ULP_fnc_groupBuff;

@@ -9,6 +9,10 @@ if ([player, ["Civilian"]] call ULP_fnc_isFaction && { !([] call ULP_fnc_isGover
 	missionNamespace setVariable ["ULP_IsGovernor", compileFinal "true"];
 };
 
+if (ULP_FirstSpawn) then {
+	[] call ULP_fnc_initGathering;
+};
+
 if (ULP_Imprisioned && { [player, ULP_Prison_Time, objNull, false] call ULP_fnc_imprison }) exitWith {
 	cutText [ "", "BLACK IN" ];
 

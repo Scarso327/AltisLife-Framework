@@ -1253,8 +1253,8 @@ class CfgVirtualItems {
 		displayName = "Common Map";
 		description = "A map containing various known artifact sites across Altis.";
 		icon = "Data\Icons\map.paa";
-		buyPrice = 40000;
-		sellPrice = 20000;
+		buyPrice = 20000;
+		sellPrice = 10000;
 		weight = 1;
 		class Settings {
 			onMarket = false;

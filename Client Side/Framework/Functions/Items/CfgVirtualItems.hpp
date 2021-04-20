@@ -1338,6 +1338,12 @@ class CfgVirtualItems {
 			isScripted = false;
 		};
 		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_surveySite;"; };
+		class Deconstruction {
+			time = 120;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_SurveyingEquipment" } };
+			materials[] = { {"CopperBar", 2}, {"SilverBar", 1} };
+		};
 		conditions = "true";
 	};
 	class ArchaeologistsEquipment : SurveyingEquipment {
@@ -1349,6 +1355,12 @@ class CfgVirtualItems {
 		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_digSite;"; };
+		class Deconstruction {
+			time = 120;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_ArchaeologistsEquipment" } };
+			materials[] = { {"IronBar", 4}, {"Wood", 2}, {"Rock", 1} };
+		};
 	};
 
 	/// Common Rewards

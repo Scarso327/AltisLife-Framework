@@ -18,19 +18,19 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class B_GEN_Van_02_transport_F {
-				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class B_GEN_Van_02_vehicle_F {
-				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class B_T_LSV_01_unarmed_black_F {
-				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NCA"", 2] call ULP_fnc_hasAccess }";
 				class Textures { class Police {}; };
 			};
 			class O_LSV_02_unarmed_F {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
 				class Textures { class Police {}; };
 			};
 			class B_MRAP_01_F {

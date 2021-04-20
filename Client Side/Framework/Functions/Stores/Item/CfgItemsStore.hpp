@@ -123,7 +123,6 @@ class CfgItemsStore {
 			class optic_NVS : FactionBase { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
 		};
 		class Magazines {
-			class 16Rnd_9x21_Mag : FactionBase { displayName = "Taser Cartridge"; };
 			class 30Rnd_9x21_Mag_SMG_02 : FactionBase {};
 			class 30Rnd_45ACP_Mag_SMG_01 : FactionBase {};
 			class 9Rnd_45ACP_Mag : FactionBase {};

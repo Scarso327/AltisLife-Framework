@@ -576,6 +576,38 @@ class CfgClothesStore {
 		};
 	};
 
+	class Governor {
+		storeName = "Governor's Clothing Store";
+		condition = "[] call ULP_fnc_isGovernor";
+		class Uniforms {
+			class U_C_Man_casual_1_F {};
+			class U_OrestesBody {};
+			class U_NikosAgedBody {};
+			class U_C_FormalSuit_01_tshirt_black_F {};
+			class U_C_FormalSuit_01_black_F {};
+		};
+
+		class Headgear {
+			class H_WirelessEarpiece_F {};
+			class H_Cap_blk {};
+			class H_Hat_grey {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F {};
+			class G_Aviator {};
+			class G_Squares {};
+			class G_Spectacles {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+			class G_Lady_Blue {};
+			class G_Respirator_white_F {};
+		};
+
+		class Vests {};
+		class Backpacks {};
+	};
+
 	class Taxi {
 		storeName = "Taxi Clothing Store";
 		condition = "[""Taxi""] call ULP_fnc_hasLicense && { [""CompletedCV""] call ULP_fnc_hasPerk }";

@@ -99,8 +99,4 @@ class CfgTitles {
 		displayName = "Ocean Diver";
 		description = "Dived to a very specific place";
 	};
-	class PoliceCrimeCommissioner {
-		displayName = "Police and Crime Commissioner";
-		description = "'Elected' to ensure efficient and effective policing'";
-	};
 };

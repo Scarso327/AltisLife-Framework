@@ -1344,6 +1344,7 @@ class CfgVirtualItems {
 		displayName = "Coin Bundle";
 		icon = "Data\Icons\coinBundle.paa";
 		sellPrice = 414375;
+		weight = 6;
 		class Settings : Settings {};
 	};
 	class BrokenPot : OldCoin {

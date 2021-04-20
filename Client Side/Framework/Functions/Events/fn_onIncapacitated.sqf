@@ -82,9 +82,16 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	ULP_CanRespawn = false;
 
 	private _startTime = time;
+	private _endTime = getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BleedOutTime");
 	private _respawnPer = getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "AllowBleedoutPercentage");
-	_incapUi setVariable ["endTime", time + getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BleedOutTime")];
 	private _progressBar = _incapUi displayCtrl 9004;
+
+	// If in redzone, change bleedout...
+	if (["redzone_"] call ULP_fnc_isUnitsInZone) then {
+		_endTime = _endTime * getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "RedzonePercentage");
+	};
+
+	_incapUi setVariable ["endTime", _startTime + _endTime];
 
 	if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
 		 [uiNamespace getVariable "_fnc_bleedout"] call ULP_fnc_removeEachFrame;

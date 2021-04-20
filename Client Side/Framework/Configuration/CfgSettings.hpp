@@ -23,6 +23,7 @@ class CfgSettings {
         /* Bleed Out */
         AllowBleedoutPercentage = 0.5;
         BleedOutTime = 10 * 60;
+        RedzonePercentage = 0.2; // 20% of BleedOutTime...
 
         /* Blood */
         BloodBagIncrease = 90;

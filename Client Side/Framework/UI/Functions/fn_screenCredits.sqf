@@ -10,7 +10,7 @@ _this params [
 ];
 
 if (_credits isEqualTo []) then {
-	_credits = (("isClass _x" configClasses (missionConfigFile >> "CfgSettings" >> "CfgCredits")) apply {
+	_credits = (("call compile getText (_x >> ""condition"")" configClasses (missionConfigFile >> "CfgSettings" >> "CfgCredits")) apply {
 		[(configName _x), getArray(_x >> "items")]
 	});
 };
@@ -22,7 +22,7 @@ private _screenTime = getNumber(missionConfigFile >> "CfgSettings" >> "CfgCredit
 private _text = format ["<t size='0.40' color='#f2cb0b' align='right'>%1<br /></t><t size='0.70' color='#FFFFFF' align='right'>", _title];
 
 {
-	_text = format["%1%2<br/>", _text, _x];
+	_text = format["%1%2<br/>", _text, (call compile _x)];
 	nil
 } count _items;
 

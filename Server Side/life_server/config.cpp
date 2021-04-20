@@ -34,6 +34,12 @@ class CfgPatches {
                 constant = false;
                 global = false;
             };
+            class Governor {
+                type = "ARRAY";
+                default = "";
+                constant = false;
+                global = true;
+            };
         };
         
         class EventLogs {

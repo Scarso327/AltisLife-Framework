@@ -154,6 +154,7 @@ class CfgFunctions {
 			class getName {};
 			class playerByUID {};
 			class isUndercover {};
+			class isGovernor {};
 			class canHeal {};
 			class setOverweight {};
 			class hasComms {};

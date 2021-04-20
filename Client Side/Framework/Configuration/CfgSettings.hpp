@@ -37,16 +37,18 @@ class CfgSettings {
         screenTime = 10;
         
         class Hello {
-            title = "Hello there!";
-            items[] = {"Welcome to", "AscensionRP's Altis Life!"};
+            items[] = {"""Welcome to""", """AscensionRP's Altis Life!"""};
+            condition = "true";
         };
-        class Forums {
-            title = "Forums and Teamspeak!";
-            items[] = {"Join us:", "ascensionrp.co.uk"};
+        class Forums : Hello {
+            items[] = {"""Join us:""", """ascensionrp.co.uk"""};
         };
-        class Development {
-            title = "Development Team!";
-            items[] = {"Development Team", "Scarso and Lewis"};
+        class Development : Hello {
+            items[] = {"""Development Team""", """Scarso and Lewis"""};
+        };
+        class Governor  {
+            items[] = {"(missionNamespace getVariable [""ULP_SRV_Setting_Governor"", []]) param [0, """"]"};
+            condition = "!((missionNamespace getVariable [""ULP_SRV_Setting_Governor"", []]) isEqualTo [])";
         };
     };
 

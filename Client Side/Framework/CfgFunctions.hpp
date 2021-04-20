@@ -708,6 +708,11 @@ class CfgFunctions {
 			class capture {};
 			class ownsSite {};
 		};
+
+		class Government {
+			file = "Functions\Government";
+			class getLegislation {};	
+		};
 	};
 
 	class ULP_Functions_UI {

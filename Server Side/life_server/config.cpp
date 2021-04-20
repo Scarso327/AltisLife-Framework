@@ -36,7 +36,13 @@ class CfgPatches {
             };
             class Governor {
                 type = "ARRAY";
-                default = "";
+                default = """[]""";
+                constant = false;
+                global = true;
+            };
+            class GovernorSettings {
+                type = "HASHMAP";
+                default = """[]""";
                 constant = false;
                 global = true;
             };

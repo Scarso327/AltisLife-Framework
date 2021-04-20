@@ -80,6 +80,7 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
                     _value
                 };
                 case "ARRAY": { [_value] call DB_fnc_mresToArray };
+                case "HASHMAP" : { createHashMapFromArray ([_value] call DB_fnc_mresToArray) };
                 default { _value };
             };
 

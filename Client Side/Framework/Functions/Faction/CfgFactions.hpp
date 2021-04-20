@@ -5,7 +5,7 @@ class CfgFactions {
 	class Police {
 		displayName = "Altis Police Constabulary";
 		colour[] = { 0, 0.3, 0.6, 1 };
-		pay = 15000;
+		pay = 7500;
 		jointChannel = true;
 		imprison = true;		
 
@@ -64,7 +64,7 @@ class CfgFactions {
 	class Medic {
 		displayName = "National Health Service";
 		colour[] = { 0, 0.5, 0, 1 };
-		pay = 16000;
+		pay = 8000;
 		jointChannel = true;
 
 		class Whitelisting {
@@ -116,7 +116,7 @@ class CfgFactions {
 	class Hato {
 		displayName = "Highways Traffic Agency";
 		colour[] = { 0.7, 0.6, 0, 1 };
-		pay = 14500;
+		pay = 7250;
 		jointChannel = true;
 		
 		class Whitelisting {
@@ -163,7 +163,7 @@ class CfgFactions {
 	class Civilian {
 		displayName = "Civilian";
 		colour[] = { 0.4, 0, 0.5, 1 };
-		pay = 7500;
+		pay = 3750;
 		imprisoned = true;
 		
 		class Groups {};

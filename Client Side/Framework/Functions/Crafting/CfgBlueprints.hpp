@@ -149,7 +149,7 @@ class CfgBlueprints {
 	};
 
 	class Archaeology {
-		displayName = "Archaeology";
+		displayName = "Archaeology Finds";
 		
 		class B_CommonMap {
 			icon = "Data\Icons\map.paa";
@@ -159,7 +159,7 @@ class CfgBlueprints {
 			item = "CommonMap";
 			isDefault = true;
 			workbench = false;
-			time = 45;
+			time = 90;
 		};
 		class B_UncommonMap : B_CommonMap {
 			icon = "Data\Icons\map.paa";
@@ -179,7 +179,6 @@ class CfgBlueprints {
 			description = "A bundle of old coints gathered from dig sites and sold at Altis Archaeologists.";
 			materials[] = { {"OldCoin", 30} };
 			item = "CoinBundle";
-			time = 300;
 		};
 		class B_RestoredPot : B_CoinBundle {
 			icon = "Data\Icons\restoredPot.paa";
@@ -187,6 +186,7 @@ class CfgBlueprints {
 			description = "A restored artifact that can be sold at Altis Archaeologists.";
 			materials[] = { {"BrokenPot", 1}, {"Clay", 3} };
 			item = "RestoredPot";
+			time = 300;
 		};
 		class B_SharpStoneKnife : B_RestoredPot {
 			icon = "Data\Icons\sharpStoneKnife.paa";
@@ -199,12 +199,14 @@ class CfgBlueprints {
 			displayName = "Identified Skull";
 			materials[] = { {"UnidentifiedSkull", 1}, {"DecryptedDrive", 1} };
 			item = "IdentifiedSkull";
+			time = 420;
 		};
 		class B_DiamondRing : B_RestoredPot {
 			icon = "Data\Icons\diamondRing.paa";
 			displayName = "Diamond Ring";
 			materials[] = { {"StrongMetalRing", 1}, {"CutDiamond", 1} };
 			item = "DiamondRing";
+			time = 360;
 		};
 	};
 };

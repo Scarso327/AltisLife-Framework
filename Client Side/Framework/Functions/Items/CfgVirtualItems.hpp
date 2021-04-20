@@ -451,8 +451,8 @@ class CfgVirtualItems {
 		displayName = "Stinger";
 		description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
 		icon = "Data\Icons\stinger.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 33400;
+		sellPrice = 16700;
 		weight = 3;
 		class Settings {
 			onMarket = false;
@@ -466,6 +466,8 @@ class CfgVirtualItems {
 		displayName = "Vehicle Clamp";
 		description = "A deployable clamp used to prevent a vehicle's movement.";
 		icon = "Data\Icons\vehicleClamp.paa";
+		buyPrice = 18200;
+		sellPrice = 9700;
 		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };

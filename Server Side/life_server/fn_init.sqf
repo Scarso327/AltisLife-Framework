@@ -53,7 +53,7 @@ publicVariable "life_server_extDB_notLoaded";
 
 ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
 
-private _routines = ["resetVehicles", "deleteOldGroups", "deleteOldHouses", "sortPremiumGroups"];
+private _routines = ["resetVehicles", "deleteOldGroups", "deleteOldHouses", "deleteOldWarrants", "sortPremiumGroups"];
 
 private _timeStamp = diag_tickTime;
 ["Initialisation Started"] call ULP_fnc_logIt;

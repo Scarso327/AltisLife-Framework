@@ -86,6 +86,14 @@ class CfgBlueprints {
 			item = "fuelCan";
 			time = 30;
 		};
+		class B_Lighter : B_Pickaxe {
+			icon = "Data\Icons\lighter.paa";
+			displayName = "Lighter";
+			description = "A simple lighter used to create fire.";
+			materials[] = { {"Iron", 3}, {"ProcessedOil", 1} };
+			item = "Lighter";
+			time = 30;
+		};
 		class B_Lockpick : B_Pickaxe {
 			icon = "Data\Icons\lockpick.paa";
 			displayName = "Lockpick";

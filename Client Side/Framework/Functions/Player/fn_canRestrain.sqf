@@ -23,5 +23,5 @@ _this params [
 } && { !([player] call ULP_fnc_isKnocked)
 } && { [player, ["Police"]] call ULP_fnc_isFaction || 
 	{ [player] call ULP_fnc_onDuty && { ["Restrain", false] call ULP_fnc_checkPower } } ||
-	{ [player, ["Civilian"]] call ULP_fnc_isFaction && ((["Ziptie"] call ULP_fnc_hasItem) > 0) }
+	{ ([player, ["Civilian"]] call ULP_fnc_isFaction && { (((["Ziptie"] call ULP_fnc_hasItem) > 0) || { ["cuffCourier"] call ULP_fnc_hasPerk }) }) }
 } 

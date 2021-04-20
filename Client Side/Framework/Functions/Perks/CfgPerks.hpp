@@ -221,10 +221,10 @@ class CfgPerks {
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
-	class cuffCourier {
+	class cuffCourier { // TODONOW
 		icon = "Data\UI\Perks\cuffCourier.paa";
 		displayName = "Cuff Courier";
-		description = "Gain the ability to reuse zip ties.";
+		description = "Gain the ability to restrain without carrying zipties.";
 		removalMultiplier = 1;
 		class Requirements {
 			factions[] = { "Civilian" };

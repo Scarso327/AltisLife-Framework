@@ -62,6 +62,14 @@ private _targets = getText (_msg >> "targets");
 	getArray (_cfg >> "leveling") call ULP_fnc_addXP;
 	[(group player), "Robbery"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", 2];
 
+	[getPlayerUID player, "Theft", "Section8",
+		format [
+			"%2%3 | Suspected Weapon: %1", 
+			([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"],
+			_customName, getText (_cfg >> "name")
+		]
+	] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+
 	[format["You have robbed this store for £%1.", [_money] call ULP_fnc_numberText]] call ULP_fnc_achieve;
 
 	_object setVariable["timeout", time + (getNumber (_cfg >> "timeout")), true];

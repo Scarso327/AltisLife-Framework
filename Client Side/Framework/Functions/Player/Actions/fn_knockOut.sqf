@@ -23,6 +23,16 @@ if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith 
 	missionNamespace setVariable["ULP_KnockOut_Cooldown", time + 5];
 
 	[0.08, _target, { [player] remoteExecCall ["ULP_fnc_onKnocked", _this] }] call ULP_fnc_waitExecute;
+
+	if ([player, ["Civilian"]] call ULP_fnc_isFaction) then {
+		[getPlayerUID player, "OffencesAgainstThePerson", "Section20",
+			format [
+				"Suspected Weapon: %1", 
+				([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"]
+			]
+		] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+	};
+
 	true
 };
 

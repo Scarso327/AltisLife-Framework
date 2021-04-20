@@ -37,6 +37,15 @@ private _deathMessage = format["<t align='center' size='2'>You killed yourself</
 
 // Notify the server...
 if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {
+	if ([_killer, ["Civilian"]] call ULP_fnc_isFaction) then {
+		[getPlayerUID player, "OffencesAgainstThePerson", "Section20",
+			format [
+				"Suspected Weapon: %1", 
+				([currentWeapon _killer] call ULP_fnc_itemCfg) param [5, "Unknown"]
+			]
+		] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+	};
+
 	_deathMessage = format["<t align='center' size='2'>%1 seriously injured you</t>", name _killer];
 	["InjuredBy", [_unit getVariable ["realname", name _unit], _killer getVariable ["realname", name _killer]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 } else {

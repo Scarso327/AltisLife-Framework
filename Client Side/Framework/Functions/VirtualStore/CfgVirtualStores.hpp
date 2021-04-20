@@ -107,6 +107,7 @@ class CfgVirtualStores {
 			class Shovel {};
 			class FishingNet {};
 			class FuelCan {};
+			class Lighter {};
 			class Lockpick {};
 			class Toolbox {};
 		};
@@ -227,6 +228,7 @@ class CfgVirtualStores {
 		storeName = "Cigarette Trader";
 		conditions = "true";
 		class Items {
+			class Lighter {};
 			class Cigarette {};
 		};
 	};
@@ -235,6 +237,7 @@ class CfgVirtualStores {
 		storeName = "Cigar Trader";
 		conditions = "true";
 		class Items {
+			class Lighter {};
 			class Cigar {};
 		};
 	};

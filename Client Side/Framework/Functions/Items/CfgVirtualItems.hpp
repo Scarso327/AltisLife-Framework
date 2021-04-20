@@ -470,6 +470,21 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
 	};
+	class Lighter : Stinger {
+		displayName = "Lighter";
+		description = "A simple lighter used to create fire.";
+		icon = "Data\Icons\lighter.paa";
+		buyPrice = 890;
+		sellPrice = 445;
+		weight = 1;
+		class Settings : Settings {};
+		class Deconstruction {
+			time = 10;
+			workbench = false;
+			blueprints[] = { { "Tools", "B_Lighter" } };
+			materials[] = { {"Iron", 1} };
+		};
+	};
 	class Lockpick : Stinger {
 		displayName = "Lockpick";
 		description = "A tool used to pick the locks of vehicles and handcuffs.";

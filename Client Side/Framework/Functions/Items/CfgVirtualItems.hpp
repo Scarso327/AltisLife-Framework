@@ -451,8 +451,8 @@ class CfgVirtualItems {
 		displayName = "Stinger";
 		description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
 		icon = "Data\Icons\stinger.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 33400;
+		sellPrice = 16700;
 		weight = 3;
 		class Settings {
 			onMarket = false;
@@ -460,12 +460,24 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 		};
+		class Deconstruction {
+			time = 30;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_MakeshiftStinger" } };
+			materials[] = { {"SteelBar", 22} };
+		};
 		conditions = "true";
+	};
+	class MakeshiftStinger : Stinger {
+		displayName = "Makeshift Stinger";
+		class Settings : Settings {};
 	};
 	class VehicleClamp : Stinger {
 		displayName = "Vehicle Clamp";
 		description = "A deployable clamp used to prevent a vehicle's movement.";
 		icon = "Data\Icons\vehicleClamp.paa";
+		buyPrice = 18200;
+		sellPrice = 9700;
 		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
@@ -1326,6 +1338,12 @@ class CfgVirtualItems {
 			isScripted = false;
 		};
 		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_surveySite;"; };
+		class Deconstruction {
+			time = 120;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_SurveyingEquipment" } };
+			materials[] = { {"CopperBar", 2}, {"SilverBar", 1} };
+		};
 		conditions = "true";
 	};
 	class ArchaeologistsEquipment : SurveyingEquipment {
@@ -1337,6 +1355,12 @@ class CfgVirtualItems {
 		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_digSite;"; };
+		class Deconstruction {
+			time = 120;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_ArchaeologistsEquipment" } };
+			materials[] = { {"IronBar", 4}, {"Wood", 2}, {"Rock", 1} };
+		};
 	};
 
 	/// Common Rewards

@@ -70,13 +70,27 @@ class CfgBlueprints {
 			materials[] = { {"SteelBar", 4}, {"SilverBar", 2} };
 			item = "Extractor";
 		};
-		class B_FishingNet : B_Pickaxe {
-			icon = "Data\Icons\fishingNet.paa";
-			displayName = "Fishing Net";
-			description = "A net designed to be deployed from a boat and catch fish.";
-			materials[] = { {"Rope", 4} };
-			item = "FishingNet";
+		class B_Extractor : B_Pickaxe {
+			icon = "Data\Icons\extractor.paa";
+			displayName = "Extractor";
+			materials[] = { {"SteelBar", 4}, {"SilverBar", 2} };
+			item = "Extractor";
+		};
+		class B_SurveyingEquipment : B_Pickaxe {
+			icon = "Data\Icons\surveyingEquipment.paa";
+			displayName = "Surveying Equipment";
+			description = "Equipmented used to survay a dig site to locate artifacts.";
+			materials[] = { {"CopperBar", 4}, {"SilverBar", 2}, {"Glass", 1} };
+			item = "SurveyingEquipment";
+			workbench = true;
 			time = 40;
+		};
+		class B_ArchaeologistsEquipment : B_SurveyingEquipment {
+			icon = "Data\Icons\archaeologistsEquipment.paa";
+			displayName = "Archaeologists' Equipment";
+			description = "Equipment used to carefully dig up artifacts from dig sites.";
+			materials[] = { {"Pickaxe", 1}, {"Shovel", 1}, {"SharpStoneKnife", 1} };
+			item = "ArchaeologistsEquipment";
 		};
 		class B_FuelCan : B_Pickaxe {
 			icon = "Data\Icons\fuelCan.paa";
@@ -132,6 +146,21 @@ class CfgBlueprints {
 			displayName = "Industrial Drill";
 			materials[] = { {"SteelBar", 16}, {"CutDiamond", 4}, {"DrillBit", 1} };
 			item = "IndustrialDrill";
+		};
+	};
+
+	class PoliceEquipment {
+		displayName = "Police Equipment";
+
+		class B_MakeshiftStinger {
+			icon = "Data\Icons\stinger.paa";
+			displayName = "Stinger";
+			description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
+			materials[] = { {"SteelBar", 45}, {"Ziptie", 6} };
+			item = "MakeshiftStinger";
+			isDefault = false;
+			workbench = true;
+			time = 180;
 		};
 	};
 

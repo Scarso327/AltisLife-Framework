@@ -9,7 +9,7 @@ class CfgInteractions {
 		class Burn : Pickup {
 			title = "Burn Money";
 			onClick = "deleteVehicle (_this select 0)";
-			condition = "(_this getVariable [""ULP_MoneyStack"", 0]) > 0 && { (([""Match""] call ULP_fnc_hasItem) > 0) || (([""Lighter""] call ULP_fnc_hasItem) > 0) }";
+			condition = "(_this getVariable [""ULP_MoneyStack"", 0]) > 0 && { (([""Lighter""] call ULP_fnc_hasItem) > 0) }";
 		};
 	};
 

@@ -70,12 +70,6 @@ class CfgBlueprints {
 			materials[] = { {"SteelBar", 4}, {"SilverBar", 2} };
 			item = "Extractor";
 		};
-		class B_Extractor : B_Pickaxe {
-			icon = "Data\Icons\extractor.paa";
-			displayName = "Extractor";
-			materials[] = { {"SteelBar", 4}, {"SilverBar", 2} };
-			item = "Extractor";
-		};
 		class B_SurveyingEquipment : B_Pickaxe {
 			icon = "Data\Icons\surveyingEquipment.paa";
 			displayName = "Surveying Equipment";

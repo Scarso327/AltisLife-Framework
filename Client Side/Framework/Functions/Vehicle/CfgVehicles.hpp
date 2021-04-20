@@ -172,6 +172,85 @@ class CfgVehicles {
 					rightPos[] = {14917.6,15010.6,1.95768};
 				};
 			};
+			class UnmarkedBlack : PoliceTexture {
+				displayName = "Black";
+				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
+				class Lights : PoliceColour {
+					leftPos[] = {14918.6,15010.6,2.00029};
+					rightPos[] = {14917.6,15010.6,1.95768};
+				};
+			};
+			class UnmarkedBlackWhiteSport : UnmarkedBlack {
+				displayName = "Black/White Sport";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedGrey : UnmarkedBlack {
+				displayName = "Grey";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedWhite : UnmarkedBlack {
+				displayWhite = "White";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa" };
+				class Lights : Lights {}; 
+			};
+			class UnmarkedBeige : UnmarkedBlack {
+				displayWhite = "Beige";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedBeigeSport : UnmarkedBlack {
+				displayWhite = "Beige Sport";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedRedSport : UnmarkedBlack {
+				displayWhite = "Red Sport";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa" };
+				class Lights : Lights {}; 
+			};
+			class UnmarkedBlue : UnmarkedBlack {
+				displayWhite = "Blue";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedBlueSport : UnmarkedBlack {
+				displayWhite = "Blue Sport";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE04_CO.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedDarkBlue : UnmarkedBlack {
+				displayWhite = "Dark Blue";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedDarkBlueSport : UnmarkedBlack {
+				displayWhite = "Dark Blue Sport";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedGreen : UnmarkedBlack {
+				displayWhite = "Green";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa" };
+				class Lights : Lights {};
+			};
+			class UnmarkedGreenSport : UnmarkedBlack {
+				displayWhite = "Green Sport";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE02_CO.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedYellow : UnmarkedBlack {
+				displayWhite = "Yellow";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedOrangeSport : UnmarkedBlack {
+				displayWhite = "Orange Sport";
+				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
+				class Lights : Lights {};
+			};
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\hatchback.paa" }; 
 				class Lights : MedicColour {
@@ -188,92 +267,62 @@ class CfgVehicles {
 			};
 			class Black : BaseTexture {
 				displayName = "Black";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
 			};
 			class BlackWhiteSport : BaseTexture {
 				displayName = "Black/White Sport"; 
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa" }; 
 			};
 			class Grey : BaseTexture {
 				displayName = "Grey"; 
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa" }; 
 			};
 			class White : BaseTexture { 
 				displayName = "White";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa" }; 
 			};
 			class Beige : BaseTexture { 
 				displayName = "Beige";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa" }; 
 			};
 			class BeigeSport : BaseTexture { 
 				displayName = "Beige Sport";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa" }; 
 			};
 			class RedSport : BaseTexture { 
 				displayName = "Red Sport";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa" }; 
 			};
 			class Blue : BaseTexture { 
 				displayName = "Blue";
-				factions[] = { "Civilian", "Police" };
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa" }; 
 			};
 			class BlueSport : BaseTexture { 
 				displayName = "Blue Sport";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE04_CO.paa" }; 
 			};
 			class DarkBlue : BaseTexture { 
 				displayName = "Dark Blue";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa" }; 
 			};
 			class DarkBlueSport : BaseTexture { 
 				displayName = "Dark Blue Sport";
-				factions[] = { "Civilian", "Civilian" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa" }; 
 			};
 			class Green : BaseTexture { 
 				displayName = "Green";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa" }; 
 			};
 			class GreenSport : BaseTexture { 
 				displayName = "Green Sport";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE02_CO.paa" }; 
 			};
 			class Yellow : BaseTexture { 
 				displayName = "Yellow";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa" }; 
 			};
 			class OrangeSport : BaseTexture { 
 				displayName = "Orange Sport";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 			};
 		};
@@ -433,6 +482,30 @@ class CfgVehicles {
 					rightPos[] = {14923.8,15011.1,2.66146};
 				}; 
 			};
+			class UnmarkedBlack : PoliceTexture {
+				displayName = "Black";
+				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
+				class Lights : PoliceColour {
+					leftPos[] = {14924.6,15011.1,2.66146};
+					rightPos[] = {14923.8,15011.1,2.66146};
+				};
+			};
+			class UnmarkedSilver : UnmarkedBlack {
+				displayName = "Silver";
+				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa" }; 
+				class Lights : Lights {};
+			};
+			class UnmarkedRed : UnmarkedBlack {
+				displayName = "Red";
+				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa" };  
+				class Lights : Lights {};
+			};
+			class UnmarkedOrange : UnmarkedBlack {
+				displayName = "Orange";
+				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" }; 
+				class Lights : Lights {};
+			};
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\SUV.paa" }; 
 				class Lights : MedicColour {
@@ -449,26 +522,18 @@ class CfgVehicles {
 			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 			};
 			class Silver : BaseTexture { 
 				displayName = "Silver";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa" }; 
 			};
 			class Red : BaseTexture { 
 				displayName = "Red";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa" }; 
 			};
 			class Orange : BaseTexture { 
 				displayName = "Orange";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" };
 			};
 		};
@@ -483,6 +548,23 @@ class CfgVehicles {
 				displayName = "Public Order";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\van.paa" }; 
 			};
+			class UnmarkedBlack : PoliceTexture {
+				displayName = "Black";
+				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
+			};
+			class UnmarkedWhite : UnmarkedBlack {
+				displayName = "White";
+				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_white_CO.paa" }; 
+			};
+			class UnmarkedRed : UnmarkedBlack {
+				displayName = "Red";
+				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Red_CO.paa" }; 
+			};
+			class UnmarkedOrange : UnmarkedBlack {
+				displayName = "Orange";
+				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Orange_CO.paa" }; 
+			};
 			class Medic : MedicTexture { 
 				displayName = "Ambulance"; 
 				conditions = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
@@ -495,26 +577,18 @@ class CfgVehicles {
 			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
 			};
 			class White : BaseTexture { 
 				displayName = "White";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_white_CO.paa" }; 
 			};
 			class Red : BaseTexture { 
 				displayName = "Red";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Red_CO.paa" }; 
 			};
 			class Orange : BaseTexture { 
 				displayName = "Orange";
-				factions[] = { "Civilian", "Police" }; 
-				conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Orange_CO.paa" }; 
 			};
 			class Press : BaseTexture { 

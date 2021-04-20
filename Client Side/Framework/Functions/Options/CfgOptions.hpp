@@ -47,7 +47,7 @@ class CfgOptions {
 			name = "Enable Message Alert";
 			tooltip = "When enabled, you will receive a audio alert when a message is recevied.";
 			type = "DROPDOWN";
-			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
 	};
 

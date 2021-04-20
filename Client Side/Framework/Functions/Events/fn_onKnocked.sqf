@@ -32,7 +32,7 @@ _effectBlur ppEffectCommit 3;
 private _effectId = [[_effectBlur, {}]] call ULP_fnc_createEffect;
 
 switch (true) do {
-	case (_taser): { [player, "taserSound", 50, 1] remoteExecCall ["ULP_fnc_say3D"]; };
+	case (_taser): { [_attacker, "taserSound", 50, 1] remoteExecCall ["ULP_fnc_say3D"]; };
 	case (_rubber): {}:
 	default {
 		if !(isNull _attacker) then {

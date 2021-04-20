@@ -185,15 +185,6 @@ class DialogGenericStore {
 			SAFEZONE_H(BUTTON_H);
         };
 
-        class InvList : Life_RscListBox {
-            idc = 3112;
-            colorBackground[] = INNER_BODY_COLOUR;
-            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
-            SAFEZONE_Y(0.291 + (MARGIN_Y * 3));
-			SAFEZONE_W(CONTENT_W);
-			SAFEZONE_H((BODY_HEIGHT - (MARGIN_Y * 4)) - ((BUTTON_H * 2) + (BUTTON_MARGIN_Y * 2)));
-        };
-
         class BuyButton : Life_RscButtonCenter {
             idc = 3110;
             text = "<t align = 'center'>Buy Items</t>";

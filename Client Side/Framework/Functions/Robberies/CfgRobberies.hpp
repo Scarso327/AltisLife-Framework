@@ -8,7 +8,7 @@ class CfgRobberies {
 		factions[] = { "Civilian" };
 		reward[] = { 30000, 65000 };
 		leveling[] = { { 5, 15 }, "Robbed Fuel Station", 100 };
-		condition = "[[""Police""]] call ULP_fnc_onlineFaction < 3";
+		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 3";
 		onFail = "[""There must be at least 3 officers online to rob this site!""] call ULP_fnc_hint;";
 	};
 
@@ -19,7 +19,7 @@ class CfgRobberies {
 		factions[] = { "Civilian" };
 		reward[] = { 50000, 95000 };
 		leveling[] = { { 5, 15 }, "Robbed Supermarket", 100 };
-		condition = "[[""Police""]] call ULP_fnc_onlineFaction < 4";
+		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 4";
 		onFail = "[""There must be at least 4 officers online to rob this site!""] call ULP_fnc_hint;";
 	};
 
@@ -30,7 +30,7 @@ class CfgRobberies {
 		factions[] = { "Civilian" };
 		reward[] = { 95000, 220000 };
 		leveling[] = { { 5, 15 }, "Robbed Jewellery Store", 100 };
-		condition = "[[""Police""]] call ULP_fnc_onlineFaction < 4";
+		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 4";
 		onFail = "[""There must be at least 4 officers online to rob this site!""] call ULP_fnc_hint;";
 	};
 
@@ -41,7 +41,7 @@ class CfgRobberies {
 		factions[] = { "Civilian" };
 		reward[] = { 140000, 460000 };
 		leveling[] = { { 5, 15 }, "Robbed Fuel Station", 100 };
-		condition = "[[""Police""]] call ULP_fnc_onlineFaction < 5";
+		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 5";
 		onFail = "[""There must be at least 5 officers online to rob this site!""] call ULP_fnc_hint;";
 	};
 };

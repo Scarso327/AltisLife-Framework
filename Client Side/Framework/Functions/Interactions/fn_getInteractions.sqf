@@ -17,6 +17,7 @@ private _typeOf = typeOf _object;
 (_typeOf call BIS_fnc_objectType) params ["", "_type"];
 
 private _actions = missionConfigFile >> "CfgInteractions" >> (switch (true) do {
+	case (_typeOf in ["Land_MoneyBills_01_stack_F", "Land_MoneyBills_01_roll_F", "Land_MoneyBills_01_bunch_F"] && { (_object getVariable ["ULP_MoneyStack", 0]) > 0 }): { "Money" };
 	case (_typeOf isEqualTo "Land_CargoBox_V1_F"): { "Vault" };
 	case ([_object] call ULP_fnc_isHouse && 
 		{ isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Housing") } &&

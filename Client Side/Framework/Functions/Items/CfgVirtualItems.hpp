@@ -460,7 +460,17 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 		};
+		class Deconstruction {
+			time = 30;
+			workbench = true;
+			blueprints[] = { { "Tools", "B_MakeshiftStinger" } };
+			materials[] = { {"SteelBar", 22} };
+		};
 		conditions = "true";
+	};
+	class MakeshiftStinger : Stinger {
+		displayName = "Makeshift Stinger";
+		class Settings : Settings {};
 	};
 	class VehicleClamp : Stinger {
 		displayName = "Vehicle Clamp";

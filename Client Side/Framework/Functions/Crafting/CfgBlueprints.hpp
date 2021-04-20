@@ -135,6 +135,21 @@ class CfgBlueprints {
 		};
 	};
 
+	class PoliceEquipment {
+		displayName = "Police Equipment";
+
+		class B_MakeshiftStinger {
+			icon = "Data\Icons\stinger.paa";
+			displayName = "Stinger";
+			description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
+			materials[] = { {"SteelBar", 45}, {"Ziptie", 6} };
+			item = "MakeshiftStinger";
+			isDefault = false;
+			workbench = true;
+			time = 180;
+		};
+	};
+
 	class MedicalEquipment {
 		displayName = "Medical Equipment";
 

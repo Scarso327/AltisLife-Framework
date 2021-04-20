@@ -20,19 +20,14 @@ class CfgMessages {
 		condition = "false";
 	};
 
-	class PoliceDispatch : Message {
+	class EmergencyDispatch : Message {
 		picture = "Data\UI\Messaging\999.paa";
-		displayName = "APC Emergency Dispatch";
-		targets = "[""Police""] call ULP_fnc_allMembers";
+		displayName = "Emergency Dispatch";
+		targets = "[""Police""] call ULP_fnc_allMembers && [""Medic""] call ULP_fnc_allMembers";
 	};
 
-	class NHSDispatch : PoliceDispatch {
-		displayName = "NHS Emergency Dispatch";
-		targets = "[""Medic""] call ULP_fnc_allMembers";
-	};
-
-	class NonEmergnecyDispatch : PoliceDispatch {
-		picture = "Data\UI\Messaging\101.paa"; // ICON
+	class NonEmergnecyDispatch : EmergencyDispatch {
+		picture = "Data\UI\Messaging\101.paa";
 		displayName = "Non-Emergency Dispatch";
 		alertSound = false;
 		targets = "[""Police""] call ULP_fnc_allMembers && { [""Medic""] call ULP_fnc_allMembers } && { [""Hato""] call ULP_fnc_allMembers }";

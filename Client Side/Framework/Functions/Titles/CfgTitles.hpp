@@ -101,6 +101,6 @@ class CfgTitles {
 	};
 	class PoliceCrimeCommissioner {
 		displayName = "Police and Crime Commissioner";
-		description = "daddy";
+		description = "'Elected' to ensure efficient and effective policing'";
 	};
 };

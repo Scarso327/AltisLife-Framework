@@ -1385,7 +1385,7 @@ class CfgVirtualItems {
 	class IdentifiedSkull : OldCoin {
 		displayName = "Identified Skull";
 		icon = "Data\Icons\unidentifiedSkull.paa";
-		sellPrice = 439000;
+		sellPrice = 1439000;
 		class Settings : Settings {};
 	};
 	/// Uncommon Rewards

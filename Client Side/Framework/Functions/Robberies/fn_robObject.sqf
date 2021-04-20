@@ -42,7 +42,7 @@ private _msg = missionConfigFile >> "CfgMessages" >> "Robbery";
 private _targets = getText (_msg >> "targets");
 [_msg, format ["A robbery has been reported and is now shown on your map!"], _targets] call ULP_fnc_sendMessage;
 
-[format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg], {
+[format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg, _customName], {
 	_this params [ "_object" ];
 
 	private _robber = _object getVariable ["robber", objNull];
@@ -53,7 +53,7 @@ private _targets = getText (_msg >> "targets");
 	{ (_robber distance _object) <= 8 } && 
 	{ !(lineIntersects [eyePos _robber, eyePos _object, _robber, _object]) }
 }, {
-	_this params [ "_object", "_marker", "_cfg" ];
+	_this params [ "_object", "_marker", "_cfg", "_customName" ];
 
 	private _reward = getArray(_cfg >> "reward");
 	private _money = (_reward # 0) + round (random (_reward # 1));

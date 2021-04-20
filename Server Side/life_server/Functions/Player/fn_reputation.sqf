@@ -10,7 +10,7 @@ _this params [
 	["_cfg", configNull, [configNull]]
 ];
 
-if (isNull _unit || { isNull _cfg } || { !(isClass _cfg) }) exitWith { false };
+if (isNull _unit || { isNull _cfg } || { !(isClass _cfg) } || { ["redzone_", [_unit]] call ULP_fnc_isUnitsInZone }) exitWith { false };
 
 private _rep = _unit getVariable ["reputation", 0];
 private _newRep = round ((_rep + getNumber (_cfg >> "change")) min getNumber (missionConfigFile >> "CfgReputation" >> "Highest")) max getNumber (missionConfigFile >> "CfgReputation" >> "Lowest");

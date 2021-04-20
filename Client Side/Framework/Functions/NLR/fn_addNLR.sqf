@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_addNLR";
 
+if (["redzone_"] call ULP_fnc_isUnitsInZone) exitWith { false };
+
 _this params [
 	["_pos", [], [[]]],
 	["_endTime", time + getNumber(missionConfigFile >> "CfgSettings" >> "NLR" >> "nlrTimer"), [0]]
@@ -26,3 +28,4 @@ _nlrMarker setMarkerShapeLocal "ICON";
 _nlrMarker setMarkerColorLocal "ColorRed";
 
 [_pos, _nlrArea, _nlrMarker, _nlrName, _nlrDistance, _endTime] call ULP_fnc_addNLREachFrame;
+true

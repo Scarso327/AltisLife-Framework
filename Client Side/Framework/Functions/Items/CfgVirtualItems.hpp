@@ -1579,7 +1579,7 @@ class CfgVirtualItems {
 	class DiamondRing : OldCoin {
 		displayName = "Diamond Metal Ring";
 		icon = "Data\Icons\diamondRing.paa";
-		sellPrice = 185200;
+		sellPrice = 274800;
 		class Settings : Settings {};
 	};
 	/// Rare Rewards

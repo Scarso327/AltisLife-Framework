@@ -304,31 +304,34 @@ class CfgItemsStore {
 		storeName = "Govenor Protection Store";
 		condition = "[] call ULP_fnc_isProtection";
 		class Rifles {
-			class hgun_PDW2000_F : ItemBase {};
-			class SMG_05_F : ItemBase {};
-			class SMG_02_F : ItemBase {};
-			class SMG_01_F : ItemBase {};
+			class hgun_PDW2000_F : ItemBase { price = 60100; };
+			class SMG_05_F : ItemBase { price = 60075; };
+			class SMG_02_F : ItemBase { price = 63825; };
+			class SMG_01_F : ItemBase { price = 70125; };
 			class SMG_03C_black : ItemBase {
+				price = 67250;
 				class textures {
 					class SMG_03C_black {};
 					class SMG_03C_TR_black {};
 				};
 			};
 			class SMG_03_black : ItemBase {
+				price = 83350;
 				class textures {
 					class SMG_03_black {};
 					class SMG_03_TR_black {};
 				};
 			};
 			class arifle_SPAR_01_blk_F : ItemBase {
+				price = 127075;
 				class textures {
 					class arifle_SPAR_01_blk_F {};
 				};
 			};
 		};
 		class Pistols {
-			class hgun_Rook40_F : ItemBase {};
-			class hgun_ACPC2_F : ItemBase {};
+			class hgun_Rook40_F : ItemBase { price = 16550; };
+			class hgun_ACPC2_F : ItemBase { price = 22500; };
 		};
 		class Attachments {
 			class bipod_01_F_blk : FactionBase { 

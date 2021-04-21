@@ -1,2 +1,2 @@
 //regex
-5 "" !bis_disabled_door_[1-8] !="incap_time" !="bis_fnc_selectrespawntemplate_respawned" !="siren" !="onduty" !="surrender" !="ulp_moneystack" !="vehicle_id" !="colour" !="title" !="speaking" !="texture" !="icon" !="subtitle" !="ulp_virtualcargo" !="isincapacitated" !="killer" !="vehicle_owners" !="jipready"
+5 "" !bis_disabled_door_[1-8] !="incap_time" !="saved3deninventory" !="bis_fnc_selectrespawntemplate_respawned" !="siren" !="onduty" !="surrender" !="ulp_moneystack" !="vehicle_id" !="colour" !="title" !="speaking" !="texture" !="icon" !="subtitle" !="ulp_virtualcargo" !="isincapacitated" !="killer" !="vehicle_owners" !="jipready"

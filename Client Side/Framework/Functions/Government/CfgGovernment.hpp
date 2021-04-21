@@ -1,4 +1,6 @@
 class CfgGovernment {
+	electionInternal = 14;
+	
 	class Legislation {
 		class Tax {
 			displayName = "Island Tax Rate";

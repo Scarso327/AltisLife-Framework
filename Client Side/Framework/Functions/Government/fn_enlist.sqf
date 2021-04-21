@@ -5,6 +5,10 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_enlist";
 
+if (missionNamespace getVariable ["ULP_SRV_Setting_Election", false]) exitWith {
+	["You can't enlist for the election while it's on going..."] call ULP_fnc_hint;
+};
+
 if (!([player, ["Civilian"]] call ULP_fnc_isFaction) || { [] call ULP_fnc_isUndercover }) exitWith {
 	["You must be a civilian to enlist in the next election..."] call ULP_fnc_hint;
 };

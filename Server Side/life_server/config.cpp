@@ -46,6 +46,18 @@ class CfgPatches {
                 constant = false;
                 global = true;
             };
+            class Election {
+                type = "BOOL";
+                default = false;
+                constant = false;
+                global = true;
+            };
+            class NextElection {
+                type = "STRING";
+                default = "2021-01-01";
+                constant = false;
+                global = false;
+            };
         };
         
         class EventLogs {

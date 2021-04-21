@@ -60,27 +60,21 @@ class CfgLicenses {
         displayName = "Altis Solicitors";
         description = "Approved to operate as a solicitor on Altis.";
         buyPrice = 1700000;
-        onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
-        conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
     class News : Taxi {
         displayName = "AAN World News Reporter";
         description = "Approved to operate as a news reporter on Altis.";
         buyPrice = 700000;
-        onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
-        conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
     class IDAP : Driving {
         displayName = "IDAP Volunteer";
         description = "Volunteered yourself to work for the International Development and Aid Project.";
         buyPrice = 0;
-        onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
-        conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
     class Handgun : Driving {

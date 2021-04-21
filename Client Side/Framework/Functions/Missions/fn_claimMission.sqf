@@ -50,7 +50,7 @@ if !(_onClaimed isEqualTo "") then {
 	_pos call compile _onClaimed;
 };
 
-private _reward = getNumber (_typeCfg >> "Rewards" >> "moneyReward");
+private _reward = getNumber (_typeCfg >> "Rewards" >> "moneyReward") + (["Mission"] call ULP_fnc_getLegislation);
 
 if ([] call ULP_fnc_isGroup) then {
 	private _buff = [group player, "Missions"] call ULP_fnc_groupBuff;

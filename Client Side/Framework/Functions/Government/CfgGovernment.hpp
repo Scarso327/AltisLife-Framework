@@ -8,5 +8,13 @@ class CfgGovernment {
 			type = "NUMBER";
 			values[] = { { 2500, 7500 }, 5000 };
 		};
+		class Mission {
+			type = "NUMBER";
+			values[] = { { 0, 30 }, 15 };
+		};
+		class Service {
+			type = "NUMBER";
+			values[] = { { 500, 1500 }, 1000 };
+		};
 	};
 };

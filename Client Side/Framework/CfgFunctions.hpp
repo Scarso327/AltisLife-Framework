@@ -716,6 +716,7 @@ class CfgFunctions {
 			class openLegislation {};
 			class taxPrice {};
 			class enlist {};
+			class isProtection {};
 		};
 	};
 

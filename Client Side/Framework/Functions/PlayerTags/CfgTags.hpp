@@ -66,6 +66,12 @@ class CfgTags {
 			condition = "[] call ULP_fnc_isGovernor";
 		};
 
+		class Protection {
+			icon = "Data\Tags\protection.paa";
+			displayName = "Governor Protection";
+			condition = "[] call ULP_fnc_isProtection && { !([] call ULP_fnc_isGovernor) }";
+		};
+
 		// Altis Police Constabulary
 		class PoliceCC {
 			icon = "Data\Tags\Ranks\Police\CC.paa";

@@ -99,6 +99,16 @@ class CfgSpawns {
         };
 
         // Civilian
+        class GovernorResidence : Civilian {
+            displayName = "10 Kavala Street";
+            marker = "civ_spawn_residence";
+            icon = "Data\UI\Spawns\government.paa";
+            conditions = "[] call ULP_fnc_isGovernor || { [] call ULP_fnc_isProtection }";
+        };
+        class GovernmentOffices : GovernorResidence {
+            displayName = "Government Offices";
+            marker = "civ_spawn_government";
+        };
         class Kavala : Civilian {
             displayName = "Kavala";
             marker = "civ_spawn_kavala";

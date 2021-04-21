@@ -29,6 +29,7 @@ class CfgItemsStore {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures { class arifle_SPAR_01_blk_F {}; };
 			};
+			class arifle_SPAR_01_GL_blk_F : FactionBase {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
 				class textures { class arifle_SPAR_01_GL_blk_F {}; };
 			};
@@ -170,6 +171,13 @@ class CfgItemsStore {
 				class textures { class 100Rnd_65x39_caseless_black_mag {}; }; 
 			};
 			class 20Rnd_762x51_Mag : FactionBase {};
+			class 6Rnd_12Gauge_Slug : FactionBase {};
+			class UGL_FlareWhite_F : FactionBase {
+				class textures { class UGL_FlareWhite_F {}; }; 
+			};
+			class 1Rnd_Smoke_Grenade_shell : FactionBase {
+				class textures { class 1Rnd_Smoke_Grenade_shell {}; };
+			};
 		};
 		class Items {
 			class ItemMap : FactionBase {};

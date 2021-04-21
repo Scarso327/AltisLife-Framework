@@ -1,9 +1,11 @@
-class BaseMagazine { class Textures {}; };
+class BaseMagazine { 
+	reputation = true;
+	class Textures {}; 
+};
 
 class 6Rnd_RedSignal_F {
 	displayName = "6Rnd Signal Cylinder";
 	price = 200;
-	reputation = true;
 	class Textures {
 		class 6Rnd_RedSignal_F {
 			displayName = "Red";
@@ -42,10 +44,7 @@ class 30Rnd_545x39_Mag_F : BaseMagazine { price = 2300; };
 class 50Rnd_570x28_SMG_03 : BaseMagazine { price = 2640; };
 
 // Rubber Bullets
-class 30Rnd_556x45_Stanag_Tracer_Green : BaseMagazine { 
-	price = 210;
-	reputation = true; 
-};
+class 30Rnd_556x45_Stanag_Tracer_Green : BaseMagazine { price = 210; };
 
 // 5.56mm
 class 20Rnd_556x45_UW_mag : BaseMagazine { price = 25000; };
@@ -64,7 +63,6 @@ class 30Rnd_65x39_caseless_msbs_mag : BaseMagazine { price = 3070; };
 
 class 30Rnd_65x39_caseless_black_mag {
 	price = 3490;
-	reputation = true;
 	class Textures {
 		class 30Rnd_65x39_caseless_black_mag {
 			displayName = "Black";
@@ -79,7 +77,6 @@ class 30Rnd_65x39_caseless_khaki_mag : 30Rnd_65x39_caseless_black_mag {};
 
 class 100Rnd_65x39_caseless_black_mag {
 	price = 23600;
-	reputation = true;
 	class Textures {
 		class 100Rnd_65x39_caseless_black_mag {
 			displayName = "Black";
@@ -113,3 +110,42 @@ class 10Rnd_338_Mag : BaseMagazine { price = 67150; };
 
 // .408mm
 class 7Rnd_408_Mag : BaseMagazine { price = 79000; };
+
+// Launchable Flares
+class UGL_FlareWhite_F : BaseMagazine { 
+	price = 9850; 
+	class Textures {
+		class UGL_FlareWhite_F {
+			displayName = "White";
+			condition = "true";
+		};
+		class UGL_FlareGreen_F : UGL_FlareWhite_F { displayName = "Green"; };
+		class UGL_FlareRed_F : UGL_FlareWhite_F { displayName = "Red"; };
+		class UGL_FlareYellow_F : UGL_FlareWhite_F { displayName = "Yellow"; };
+	};
+};
+class UGL_FlareGreen_F : UGL_FlareWhite_F {};
+class UGL_FlareRed_F : UGL_FlareWhite_F {};
+class UGL_FlareYellow_F : UGL_FlareWhite_F {};
+
+// Launchable Smoke
+class 1Rnd_Smoke_Grenade_shell : BaseMagazine { 
+	price = 13200; 
+	class Textures {
+		class 1Rnd_Smoke_Grenade_shell {
+			displayName = "White";
+			condition = "true";
+		};
+		class 1Rnd_SmokeGreen_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Green"; };
+		class 1Rnd_SmokeYellow_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Yellow"; };
+		class 1Rnd_SmokePurple_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Purple"; };
+		class 1Rnd_SmokeBlue_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Blue"; };
+		class 1Rnd_SmokeOrange_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Orange"; };
+	};
+};
+class 1Rnd_SmokeRed_Grenade_shell : 1Rnd_Smoke_Grenade_shell {};
+class 1Rnd_SmokeGreen_Grenade_shell : 1Rnd_Smoke_Grenade_shell {};
+class 1Rnd_SmokeYellow_Grenade_shell : 1Rnd_Smoke_Grenade_shell {};
+class 1Rnd_SmokePurple_Grenade_shell : 1Rnd_Smoke_Grenade_shell {};
+class 1Rnd_SmokeBlue_Grenade_shell : 1Rnd_Smoke_Grenade_shell {};
+class 1Rnd_SmokeOrange_Grenade_shell : 1Rnd_Smoke_Grenade_shell {};

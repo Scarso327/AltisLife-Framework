@@ -120,6 +120,12 @@ class arifle_TRG20_F {
 };
 class arifle_TRG21_F : arifle_TRG20_F {};
 
+class arifle_TRG21_GL_F {
+	price = 268000;
+	reputation = true;
+	class Textures {};
+};
+
 class arifle_Mk20C_plain_F {
 	displayName = "Mk20C 5.56 mm";
 	price = 233350;
@@ -148,6 +154,20 @@ class arifle_Mk20_plain_F {
 };
 class arifle_Mk20_F : arifle_Mk20_plain_F {};
 
+class arifle_Mk20_GL_plain_F {
+	displayName = "Mk20C EGLM 5.56 mm";
+	price = 276400;
+	reputation = true;
+	class Textures {
+		class arifle_Mk20_GL_plain_F {
+			displayName = "Plain";
+			condition = "true";
+		};
+		class arifle_Mk20_GL_F : arifle_Mk20_GL_plain_F { displayName = "Camo"; };
+	};
+};
+class arifle_Mk20_GL_F : arifle_Mk20_GL_plain_F {};
+
 class arifle_SPAR_01_blk_F {
 	displayName = "SPAR-16 5.56 mm";
 	price = 254150;
@@ -163,6 +183,22 @@ class arifle_SPAR_01_blk_F {
 };
 class arifle_SPAR_01_khk_F : arifle_SPAR_01_blk_F {};
 class arifle_SPAR_01_snd_F : arifle_SPAR_01_blk_F {};
+
+class arifle_SPAR_01_GL_blk_F {
+	displayName = "SPAR-16 GL 5.56 mm";
+	price = 267200;
+	reputation = true;
+	class Textures {
+		class arifle_SPAR_01_GL_blk_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class arifle_SPAR_01_GL_khk_F : arifle_SPAR_01_GL_blk_F { displayName = "Khaki"; };
+		class arifle_SPAR_01_GL_snd_F : arifle_SPAR_01_GL_blk_F { displayName = "Sand"; };
+	};
+};
+class arifle_SPAR_01_GL_khk_F : arifle_SPAR_01_GL_blk_F {};
+class arifle_SPAR_01_GL_snd_F : arifle_SPAR_01_GL_blk_F {};
 
 class arifle_SPAR_02_blk_F {
 	displayName = "SPAR-16S 5.56 mm";
@@ -201,6 +237,22 @@ class arifle_CTAR_blk_F {
 };
 class arifle_CTAR_ghex_F : arifle_CTAR_blk_F {};
 class arifle_CTAR_hex_F : arifle_CTAR_blk_F {};
+
+class arifle_CTAR_GL_blk_F {
+	displayName = "CAR-95 GL 5.8 mm";
+	price = 322500;
+	reputation = true;
+	class Textures {
+		class arifle_CTAR_GL_blk_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class arifle_CTAR_GL_ghex_F : arifle_CTAR_GL_blk_F { displayName = "Green Hex"; };
+		class arifle_CTAR_GL_hex_F : arifle_CTAR_GL_blk_F { displayName = "Brown Hex"; };
+	};
+};
+class arifle_CTAR_GL_ghex_F : arifle_CTAR_GL_blk_F {};
+class arifle_CTAR_GL_hex_F : arifle_CTAR_GL_blk_F {};
 
 class arifle_CTARS_blk_F {
 	displayName = "CAR-95-1 5.8 mm";
@@ -251,6 +303,12 @@ class arifle_Katiba_C_F {
 };
 class arifle_Katiba_F : arifle_Katiba_C_F {};
 
+class arifle_Katiba_GL_F {
+	price = 388800;
+	reputation = true;
+	class Textures {};
+};
+
 class arifle_MSBS65_black_F {
 	displayName = "Promet 6.5 mm";
 	price = 298300;
@@ -268,6 +326,24 @@ class arifle_MSBS65_black_F {
 class arifle_MSBS65_F : arifle_MSBS65_black_F {};
 class arifle_MSBS65_sand_F : arifle_MSBS65_black_F {};
 class arifle_MSBS65_camo_F : arifle_MSBS65_black_F {};
+
+class arifle_MSBS65_GL_black_F {
+	displayName = "Promet GL 6.5 mm";
+	price = 345800;
+	reputation = true;
+	class Textures {
+		class arifle_MSBS65_GL_black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class arifle_MSBS65_GL_F : arifle_MSBS65_GL_black_F { displayName = "Green"; };
+		class arifle_MSBS65_GL_sand_F : arifle_MSBS65_GL_black_F { displayName = "Sand"; };
+		class arifle_MSBS65_GL_camo_F : arifle_MSBS65_GL_black_F { displayName = "Camo"; };
+	};
+};
+class arifle_MSBS65_GL_F : arifle_MSBS65_GL_black_F {};
+class arifle_MSBS65_GL_sand_F : arifle_MSBS65_GL_black_F {};
+class arifle_MSBS65_GL_camo_F : arifle_MSBS65_GL_black_F {};
 
 class arifle_MSBS65_UBS_black_F {
 	displayName = "Promet SG 6.5 mm";
@@ -336,6 +412,22 @@ class arifle_MX_Black_F {
 };
 class arifle_MX_F : arifle_MX_Black_F {};
 class arifle_MX_khk_F : arifle_MX_Black_F {};
+
+class arifle_MX_GL_Black_F {
+	displayName = "MX 3GL 6.5 mm";
+	price = 372170;
+	reputation = true;
+	class Textures {
+		class arifle_MX_GL_Black_F {
+			displayName = "Black";
+			condition = "true";
+		};
+		class arifle_MX_GL_F : arifle_MX_GL_Black_F { displayName = "Sand"; };
+		class arifle_MX_GL_khk_F : arifle_MX_GL_Black_F { displayName = "Khaki"; };
+	};
+};
+class arifle_MX_GL_F : arifle_MX_GL_Black_F {};
+class arifle_MX_GL_khk_F : arifle_MX_GL_Black_F {};
 
 class arifle_MXM_Black_F {
 	displayName = "MXM 6.5 mm";

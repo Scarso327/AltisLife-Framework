@@ -33,7 +33,7 @@ class CfgMessages {
 		displayName = "Staff Dispatch";
 		ignoreStreamer = true;
 		ignoreComms = true;
-		targets = "[] call ULP_fnc_isStaff";
+		targets = "(allPlayers select { [_x] call ULP_fnc_onDuty })";
 	};
 
 	class PoliceEmergencyDispatch : Message {

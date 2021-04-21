@@ -1,7 +1,7 @@
 class CfgCameras {
 	class Altis {
 		class HMP {
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+			condition = "true";
 			class Cameras {
 				class CarPark {
 					name = "HMP Car Park";
@@ -26,8 +26,29 @@ class CfgCameras {
 			};
 		};
 
+		class HMTreasury {
+			condition = "true";
+			class Cameras {
+				class WestEntrance {
+					name = "West Entrance";
+					position[] = {16073,16977.8,12.2223};
+					target[] = {15953.3,16996.2,0};
+				};
+				class EastEntrance {
+					name = "East Entrance";
+					position[] = {16107.4,17010.8,12.2263};
+					target[] = {16191.9,17002.9,0};
+				};
+				class FreightEntrance {
+					name = "Freight Entrance";
+					position[] = {16044.3,16871.2,12.8568};
+					target[] = {16105.3,16848.5,0};
+				};
+			};
+		};
+
 		class HMSLiberty {
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+			condition = "true";
 			class Cameras {
 				class ForwardDeck {
 					name = "Forward Deck";
@@ -58,7 +79,7 @@ class CfgCameras {
 		};
 
 		class EvidenceStorage {
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+			condition = "true";
 			class Cameras {
 				class Entrance {
 					name = "Site Entrance";

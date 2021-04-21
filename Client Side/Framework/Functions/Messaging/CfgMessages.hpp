@@ -60,7 +60,6 @@ class CfgMessages {
 		picture = "Data\UI\Messaging\eventAnnouncement.paa";
 		displayName = "Event Annoucement";
 		sender = "Events Team";
-		targets = "0";
 		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess || { [""ULP_Event"", 1] call ULP_fnc_hasAccess }";
 	};
 

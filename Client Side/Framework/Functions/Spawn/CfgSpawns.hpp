@@ -109,6 +109,7 @@ class CfgSpawns {
             displayName = "Government Offices";
             marker = "civ_spawn_government";
         };
+        
         class Kavala : Civilian {
             displayName = "Kavala";
             marker = "civ_spawn_kavala";

@@ -29,6 +29,9 @@ class CfgItemsStore {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures { class arifle_SPAR_01_blk_F {}; };
 			};
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+				class textures { class arifle_SPAR_01_GL_blk_F {}; };
+			};
 			class arifle_SPAR_02_blk_F : FactionBase {
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 7] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_SPAR_02_blk_F {}; };
@@ -37,6 +40,10 @@ class CfgItemsStore {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class textures { class arifle_CTAR_blk_F {}; };
 			};
+			class arifle_CTAR_GL_blk_F : FactionBase {
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+				class textures { class arifle_CTAR_GL_blk_F {}; };
+			};
 			class arifle_CTARS_blk_F : FactionBase {
 				condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 8] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
 				class textures { class arifle_CTARS_blk_F {}; };
@@ -44,6 +51,10 @@ class CfgItemsStore {
 			class arifle_MX_Black_F : FactionBase {
 				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_MX_Black_F {}; };
+			};
+			class arifle_MX_GL_Black_F : FactionBase {
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+				class textures { class arifle_MX_GL_Black_F {}; };
 			};
 			class arifle_MXM_Black_F : FactionBase {
 				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
@@ -57,9 +68,25 @@ class CfgItemsStore {
 				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_MSBS65_black_F {}; };
 			};
+			class arifle_MSBS65_Mark_black_F : FactionBase {
+				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
+				class textures { class arifle_MSBS65_Mark_black_F {}; };
+			};
+			class arifle_MSBS65_GL_black_F : FactionBase {
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+				class textures { class arifle_MSBS65_GL_black_F {}; };
+			};
+			class arifle_MSBS65_UBS_black_F : FactionBase {
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 3] call ULP_fnc_hasAccess }";
+				class textures { class arifle_MSBS65_UBS_black_F {}; };
+			};
 			class arifle_Katiba_C_F : FactionBase {
 				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_Katiba_C_F {}; };
+			};
+			class arifle_Katiba_GL_F : FactionBase {
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+				class textures { class arifle_Katiba_GL_F {}; };
 			};
 			class arifle_ARX_blk_F : FactionBase {
 				condition = "[""Police_Main"", 7] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 6] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess) }";
@@ -80,7 +107,7 @@ class CfgItemsStore {
 		};
 		class Pistols {
 			class hgun_P07_F : FactionBase {};
-			class hgun_ACPC2_F : FactionBase {  condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 3] call ULP_fnc_hasAccess } || { [""Police_NCA"", 4] call ULP_fnc_hasAccess } || { [""Police_NPAS"", 4] call ULP_fnc_hasAccess } || { [""Police_MPU"", 3] call ULP_fnc_hasAccess } || { [""Police_RPU"", 3] call ULP_fnc_hasAccess }"; };
+			class hgun_ACPC2_F : FactionBase {  condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess"; };
 		};
 		class Attachments {
 			class bipod_01_F_blk : FactionBase { 
@@ -153,6 +180,7 @@ class CfgItemsStore {
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
 			class ToolKit : FactionBase {};
+			class Chemlight_green {};
 			class SmokeShell : FactionBase { 
 				class textures { class SmokeShell {}; }; 
 			};
@@ -175,6 +203,7 @@ class CfgItemsStore {
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
 			class ToolKit : FactionBase {};
+			class Chemlight_green {};
 		};
 	};
 
@@ -194,6 +223,7 @@ class CfgItemsStore {
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
 			class ToolKit : FactionBase {};
+			class Chemlight_green {};
 		};
 	};
 
@@ -315,6 +345,8 @@ class CfgItemsStore {
 			class ItemRadio {};
 			class Binocular {};
 			class ToolKit {};
+			class Chemlight_green {};
+			class SmokeShell {};
 		};
 	};
 
@@ -398,6 +430,7 @@ class CfgItemsStore {
 			class NVGoggles {};
 			class Binocular {};
 			class ToolKit {};
+			class Chemlight_green {};
 			class SmokeShell {};
 		};
 	};
@@ -496,6 +529,7 @@ class CfgItemsStore {
 			class NVGoggles {};
 			class Binocular {};
 			class ToolKit {};
+			class Chemlight_green {};
 			class SmokeShell {};
 		};
 	};

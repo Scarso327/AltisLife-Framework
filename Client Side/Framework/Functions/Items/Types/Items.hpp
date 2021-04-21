@@ -47,6 +47,30 @@ class ToolKit {
 	class Textures {};	
 };
 
+class Chemlight_green {
+	displayName = "Chemlight";
+	price = 7600;
+	reputation = true;
+	class Textures {
+        class Chemlight_green {
+			displayName = "Green";
+            condition = "true";
+		};
+		class Chemlight_red : Chemlight_green {
+			displayName = "Red";
+		};
+        class Chemlight_yellow : Chemlight_green {
+			displayName = "Yellow";
+		};
+        class Chemlight_blue : Chemlight_green {
+			displayName = "Blue";
+		};
+    };	
+};
+class Chemlight_red : Chemlight_green {};
+class Chemlight_yellow : Chemlight_green {};
+class Chemlight_blue : Chemlight_green {};
+
 class SmokeShell {
 	displayName = "Smoke Grenade";
 	price = 13450;

@@ -52,6 +52,9 @@ life_server_extDB_notLoaded = false;
 publicVariable "life_server_extDB_notLoaded";
 
 ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
+private _date = ULP_SRV_Date;
+_date resize 3;
+_date = (_date joinString "-");
 
 private _routines = ["resetVehicles", "deleteOldGroups", "deleteOldHouses", "deleteOldWarrants", "sortPremiumGroups"];
 
@@ -94,7 +97,7 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
 
 ["Checking Personal Goals..."] call ULP_fnc_logIt;
 
-if !(ULP_SRV_Setting_Day isEqualTo (ULP_SRV_Date joinString "-")) then { _routines pushBack "resetDailyGoals"; };
+if !(ULP_SRV_Setting_Day isEqualTo _date) then { _routines pushBack "resetDailyGoals"; };
 if !(ULP_SRV_Setting_Week isEqualTo ([] call ULP_SRV_fnc_getWeek)) then { _routines append ["resetWeeklyGoals", "resetGroupBuffs"]; };
 
 ["Running Routines..."] call ULP_fnc_logIt;

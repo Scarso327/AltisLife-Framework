@@ -47,7 +47,7 @@ if ((count _owners) > 0) exitWith {
 			
 			[_group, _cut, true] call ULP_SRV_fnc_handleGroupFunds;
 			[_group, "Cartel"] call ULP_SRV_fnc_addGroupXP;
-			[_group, selectRandom (("isClass _x" configClasses (missionConfigFile >> "CfgGroups" >> "Buffs")) apply { configName _x })] call ULP_SRV_fnc_addGroupXP;
+			[_group, selectRandom (("isClass _x" configClasses (missionConfigFile >> "CfgGroups" >> "Buffs")) apply { configName _x })] call ULP_SRV_fnc_addGroupBuff;
 
 			private _groupUnits = units _group;
 			private _memberCut = round (_cut / (count _groupUnits));

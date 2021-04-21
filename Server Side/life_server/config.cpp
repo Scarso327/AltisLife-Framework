@@ -82,6 +82,7 @@ class CfgPatches {
             class Admin : Executed {};
             class House : Executed {};
             class Bleedout : Spawn {};
+            class Election : Dispute {};
             class Misc : Dispute {};
         };
 

@@ -72,6 +72,7 @@ class CfgFunctions {
             file = "\life_server\Functions\Database\Government";
             class saveLegislation {};
             class enlistCandidate {};
+            class handleVotes {};
         };
 
         class Channels {

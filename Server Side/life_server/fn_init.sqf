@@ -99,15 +99,20 @@ if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
 
 if (ULP_SRV_Setting_NextElection isEqualTo _date) then {
     if !(ULP_SRV_Setting_Election) then {
+        ["UPDATE settings SET value = '""[]""' WHERE setting = 'Governor'", 1] call DB_fnc_asyncCall;
         ["UPDATE settings SET value = '1' WHERE setting = 'Election'", 1] call DB_fnc_asyncCall;
         missionNamespace setVariable ["ULP_SRV_Setting_Election", true, true];
     };
 } else {
     if (ULP_SRV_Setting_Election) then {
+        [] call ULP_SRV_fnc_handleVotes;
+
         ["UPDATE settings SET value = '0' WHERE setting = 'Election'", 1] call DB_fnc_asyncCall;
         [str parseText format ["UPDATE settings SET value = DATE_FORMAT(ADDDATE(CURDATE(), INTERVAL %1 DAY), '&#37;Y-&#37;c-&#37;e') WHERE setting = 'NextElection'", getNumber (missionConfigFile >> "CfgGovernment" >> "electionInternal")], 1] call DB_fnc_asyncCall;
         
         missionNamespace setVariable ["ULP_SRV_Setting_Election", false, true];
+
+        _routines pushBack "deleteOldElection";
     };
 };
 

@@ -42,7 +42,7 @@ class CfgGroups {
 					level = 2;
 				};
 
-				class Governor { // TODONOW
+				class Governor {
 					displayName = "Governorship";
 					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
@@ -83,7 +83,7 @@ class CfgGroups {
 					level = 2;
 				};
 
-				class Governor { // TODONOW
+				class Governor {
 					displayName = "Governorship";
 					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";
@@ -110,7 +110,7 @@ class CfgGroups {
 			displayName = "Political Party";
 
 			class Perks {
-				class Governor { // TODONOW
+				class Governor {
 					displayName = "Governorship";
 					icon = "Data\UI\GroupPerks\governor.paa";
 					description = "Your members have the ability to run for governor.";

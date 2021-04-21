@@ -389,40 +389,47 @@ class U_O_Wetsuit : U_B_Wetsuit{};
 class U_I_Wetsuit : U_B_Wetsuit{};
 
 class U_Marshal {
+	displayName = "Protection Uniform";
+	price = 1700;
+	reputation = false;
+	virtualSpace = 5;
+	isGas = false;
+	class Textures {};
+};
+
+class U_C_Driver_1_black {
 	displayName = "Driver Clothes";
 	price = 450;
 	reputation = false;
 	virtualSpace = 2;
 	isGas = false;
 	class Textures {
-		class U_Marshal { 
-			displayName = "Marshall"; 
+		class U_C_Driver_1_black { 
+			displayName = "Black"; 
 			condition = "true";
 		};
-		class U_C_Driver_1_black : U_Marshal { displayName = "Black"; };
-		class U_C_Driver_1_blue : U_Marshal { displayName = "Blue"; };
-		class U_C_Driver_1_green : U_Marshal { displayName = "Green"; };
-		class U_C_Driver_1_red : U_Marshal { displayName = "Red"; };
-		class U_C_Driver_1_white : U_Marshal { displayName = "White"; };
-		class U_C_Driver_1_yellow : U_Marshal { displayName = "Yellow"; };
-		class U_C_Driver_1_orange : U_Marshal { displayName = "Orange"; };
-		class U_C_Driver_1 : U_Marshal { displayName = "Fuel"; };
-		class U_C_Driver_2 : U_Marshal { displayName = "Bluking"; };
-		class U_C_Driver_3 : U_Marshal { displayName = "Redstone"; };
-		class U_C_Driver_4 : U_Marshal { displayName = "Vrana"; };
+		class U_C_Driver_1_blue : U_C_Driver_1_black { displayName = "Blue"; };
+		class U_C_Driver_1_green : U_C_Driver_1_black { displayName = "Green"; };
+		class U_C_Driver_1_red : U_C_Driver_1_black { displayName = "Red"; };
+		class U_C_Driver_1_white : U_C_Driver_1_black { displayName = "White"; };
+		class U_C_Driver_1_yellow : U_C_Driver_1_black { displayName = "Yellow"; };
+		class U_C_Driver_1_orange : U_C_Driver_1_black { displayName = "Orange"; };
+		class U_C_Driver_1 : U_C_Driver_1_black { displayName = "Fuel"; };
+		class U_C_Driver_2 : U_C_Driver_1_black { displayName = "Bluking"; };
+		class U_C_Driver_3 : U_C_Driver_1_black { displayName = "Redstone"; };
+		class U_C_Driver_4 : U_C_Driver_1_black { displayName = "Vrana"; };
 	};
 };
-class U_C_Driver_1_black : U_Marshal{};
-class U_C_Driver_1_blue : U_Marshal{};
-class U_C_Driver_1_green : U_Marshal{};
-class U_C_Driver_1_red : U_Marshal{};
-class U_C_Driver_1_white : U_Marshal{};
-class U_C_Driver_1_yellow : U_Marshal{};
-class U_C_Driver_1_orange : U_Marshal{};
-class U_C_Driver_1 : U_Marshal{};
-class U_C_Driver_2 : U_Marshal{};
-class U_C_Driver_3 : U_Marshal{};
-class U_C_Driver_4 : U_Marshal{};
+class U_C_Driver_1_blue : U_C_Driver_1_black{};
+class U_C_Driver_1_green : U_C_Driver_1_black{};
+class U_C_Driver_1_red : U_C_Driver_1_black{};
+class U_C_Driver_1_white : U_C_Driver_1_black{};
+class U_C_Driver_1_yellow : U_C_Driver_1_black{};
+class U_C_Driver_1_orange : U_C_Driver_1_black{};
+class U_C_Driver_1 : U_C_Driver_1_black{};
+class U_C_Driver_2 : U_C_Driver_1_black{};
+class U_C_Driver_3 : U_C_Driver_1_black{};
+class U_C_Driver_4 : U_C_Driver_1_black{};
 
 class U_C_IDAP_Man_shorts_F {
 	displayName = "IDAP Clothes";

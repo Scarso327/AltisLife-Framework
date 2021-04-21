@@ -300,6 +300,88 @@ class CfgItemsStore {
 		};
 	};
 
+	class Protection {
+		storeName = "Govenor Protection Store";
+		condition = "[] call ULP_fnc_isProtection";
+		class Rifles {
+			class hgun_PDW2000_F : ItemBase {};
+			class SMG_05_F : ItemBase {};
+			class SMG_02_F : ItemBase {};
+			class SMG_01_F : ItemBase {};
+			class SMG_03C_black : ItemBase {
+				class textures {
+					class SMG_03C_black {};
+					class SMG_03C_TR_black {};
+				};
+			};
+			class SMG_03_black : ItemBase {
+				class textures {
+					class SMG_03_black {};
+					class SMG_03_TR_black {};
+				};
+			};
+			class arifle_SPAR_01_blk_F : ItemBase {
+				class textures {
+					class arifle_SPAR_01_blk_F {};
+				};
+			};
+		};
+		class Pistols {
+			class hgun_Rook40_F : ItemBase {};
+			class hgun_ACPC2_F : ItemBase {};
+		};
+		class Attachments {
+			class bipod_01_F_blk : FactionBase { 
+				class textures {
+					class bipod_01_F_blk {};
+					class bipod_02_F_blk {};
+					class bipod_03_F_blk {};
+				};
+			};
+			class acc_flashlight : FactionBase {};
+
+			// SIGHTS
+			class optic_Aco : FactionBase {};
+			class optic_Holosight : FactionBase {
+				class textures {
+					class optic_Holosight_blk_F {};
+					class optic_Holosight_smg_blk_F {};
+				};
+			};
+			class optic_Hamr : FactionBase {
+				class textures { class optic_Hamr {}; };
+			};
+			class optic_MRCO : FactionBase {};
+			class optic_Arco : FactionBase {
+				class textures { class optic_Arco_blk_F {}; };
+			};
+			class optic_ERCO_blk_F : FactionBase {};
+		};
+		class Magazines {
+			class 16Rnd_9x21_Mag {};
+			class 30Rnd_9x21_Mag {};
+			class 30Rnd_9x21_Mag_SMG_02 {};
+			class 9Rnd_45ACP_Mag {};
+			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class 50Rnd_570x28_SMG_03 {};
+			// TODO (Rubber Bullets when rewritten)
+			class 30Rnd_556x45_Stanag {};
+		};
+		class Items {
+			class ItemMap {};
+			class ItemCompass {};
+			class ItemWatch {};
+			class ItemGPS {};
+			class ItemRadio {};
+			class Binocular {};
+			class ToolKit {};
+			class Chemlight_green {};
+			class SmokeShell : FactionBase { 
+				class textures { class SmokeShellBlue {}; }; 
+			};
+		};
+	};
+
 	class Hideout {
 		storeName = "Criminal Hideout";
 		condition = "[""hideout_flag_1""] call ULP_fnc_ownsSite || { [""hideout_flag_2""] call ULP_fnc_ownsSite }";

@@ -10,7 +10,6 @@ class CfgVirtualStores {
 			class Redbull {};
 			class FuelCan {};
 			class Breathalyser {};
-			class GPSTracker {};
 			class PanicButton {};
 			class Stinger {};
 			class Blindfold {};
@@ -110,6 +109,26 @@ class CfgVirtualStores {
 			class Lighter {};
 			class Lockpick {};
 			class Toolbox {};
+		};
+	};
+
+	class Government {
+		storeName = "Government Market";
+		conditions = "[] call ULP_fnc_isGovernor || { [] call ULP_fnc_isProtection }";
+		class Items {
+			class RationPack {};
+			class Doughnut {};
+			class Coffee {};
+			class Tea {};
+			class Redbull {};
+			class FuelCan {};
+			class Ziptie {};
+			class PanicButton {};
+			class Painkillers {};
+			class Bandage {};
+			class BloodBag {};
+			class FirstAidKit {};
+			class MediKit {};
 		};
 	};
 

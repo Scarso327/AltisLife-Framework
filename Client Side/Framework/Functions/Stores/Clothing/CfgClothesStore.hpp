@@ -508,7 +508,7 @@ class CfgClothesStore {
 		storeName = "Go-Kart Clothing Store";
 		condition = "true";
 		class Uniforms {
-			class U_Marshal {};
+			class U_C_Driver_1_black {};
 		};
 
 		class Headgear {
@@ -603,6 +603,43 @@ class CfgClothesStore {
 		};
 
 		class Vests {};
+		class Backpacks {};
+	};
+
+	class Protection {
+		storeName = "Govenor Protection Clothing";
+		condition = "[] call ULP_fnc_isProtection";
+		class Uniforms {
+			class U_Marshal {};
+			class U_NikosAgedBody {};
+			class U_C_FormalSuit_01_tshirt_black_F {};
+			class U_C_FormalSuit_01_black_F {};
+		};
+
+		class Headgear {
+			class H_WirelessEarpiece_F {};
+			class H_Cap_blk {};
+			class H_Watchcap_blk {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F {};
+			class G_Aviator {};
+			class G_Squares {};
+			class G_Spectacles {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+			class G_Lady_Blue {};
+			class G_Respirator_white_F {};
+		};
+
+		class Vests {
+			class V_PlateCarrier1_blk {
+				class Textures {
+					class V_PlateCarrier1_blk {};
+				};
+			};
+		};
 		class Backpacks {};
 	};
 

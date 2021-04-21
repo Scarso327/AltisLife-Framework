@@ -21,6 +21,7 @@ if (_sellPrice > 0) then {
 
 	if (_isLegal) then {
 		_sellPrice = ["LegalTrader", _sellPrice, false] call ULP_fnc_activatePerk;
+		_sellPrice = [_sellPrice] call ULP_fnc_taxPrice;
 	} else {
 		_sellPrice = ["ShadyTrader", _sellPrice, false] call ULP_fnc_activatePerk;
 	};

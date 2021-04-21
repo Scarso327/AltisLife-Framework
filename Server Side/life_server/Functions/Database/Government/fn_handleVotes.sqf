@@ -13,7 +13,7 @@ if !(_winner isEqualTo []) then {
 
 	// Logging...
 	[format ["Election Winner: %1 (%2) with %3 votes", _name, _steamid, [_votes] call ULP_fnc_numberText]] call ULP_fnc_logIt;
-	["SYSTEM", "Election", ["Winner", _name, _steamid, [_votes, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
+	["SYSTEM", "Election", ["Winner", [_name, _steamid, [_votes, ""] call ULP_fnc_numberText]]] call ULP_SRV_fnc_logPlayerEvent;
 
 	[format ["UPDATE settings SET value = '%1' WHERE setting = 'Governor'", [[_name, _steamid]] call DB_fnc_mresArray], 1] call DB_fnc_asyncCall;
 

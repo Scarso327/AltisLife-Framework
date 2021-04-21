@@ -68,6 +68,11 @@ class CfgFunctions {
             class addWarrant {};
         };
 
+        class DatabaseGovernment {
+            file = "\life_server\Functions\Database\Government";
+            class saveLegislation {};
+        };
+
         class Channels {
             file = "\life_server\Functions\Channels";
             class initRadios {};

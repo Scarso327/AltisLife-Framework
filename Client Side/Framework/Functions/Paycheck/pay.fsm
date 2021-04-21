@@ -9,8 +9,8 @@ link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,3};
 link3[] = {3,2};
-globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-456.200378,358.065338,379.837494,-151.171021,297,884,1};
-window[] = {2,-1,-1,-1,-1,948,130,1570,130,3,315};
+globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-176.830154,78.694977,308.867096,-451.685822,297,884,1};
+window[] = {2,-1,-1,-1,-1,1052,234,1674,234,3,315};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -64,8 +64,9 @@ class FSM
                                         action=/*%FSM<ACTION""">*/"if (!alive player) then {" \n
                                          "    systemChat ""You have missed a paycheck because you were incapacitated."";" \n
                                          "} else {" \n
-                                         "	[(call ULP_Paycheck), true, ""Paycheck""] call ULP_fnc_addMoney;" \n
-                                         "	systemChat format [""You have received a paycheck of £%1."",[(call ULP_Paycheck)] call ULP_fnc_numberText];" \n
+                                         "	private _pay = round ((call ULP_Paycheck) + ([""Paychecks""] call ULP_fnc_getLegislation));" \n
+                                         "	[_pay, true, ""Paycheck""] call ULP_fnc_addMoney;" \n
+                                         "	systemChat format [""You have received a paycheck of £%1."",[_pay] call ULP_fnc_numberText];" \n
                                          "};" \n
                                          "" \n
                                          "_lastcheck = time;" \n

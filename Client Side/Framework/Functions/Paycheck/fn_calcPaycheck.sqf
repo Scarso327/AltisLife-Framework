@@ -12,8 +12,6 @@ private _pay = getNumber ([
 	_faction >> "pay"
 ] select (isClass (_faction)));
 
-_pay = _pay + (["Paychecks"] call ULP_fnc_getLegislation);
-
 if (isClass (_faction >> "Whitelisting")) then {
 	{
 		_pay = _pay + ((_pay * getNumber (_x >> "payMulti")) * (call (missionNamespace getVariable format["%1_%2", configName _faction, configName _x])));

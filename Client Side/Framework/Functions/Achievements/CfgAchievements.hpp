@@ -249,7 +249,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODONOW
 	class Employment {
 		icon = "Data\UI\Achievements\employment.paa";
 		displayName = "Employment";

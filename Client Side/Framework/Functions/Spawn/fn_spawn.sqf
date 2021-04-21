@@ -64,6 +64,8 @@ if (ULP_FirstSpawn) then {
 
 	if (((call ULP_Staff) > 1) || { ((call ULP_Event) > 1) }) then { ["JoinStaff"] call ULP_fnc_achieve; };
 
+	if ([] call ULP_fnc_isGovernor) then { ["Governor"] call ULP_fnc_achieve; };
+
 	if (["Police_Main", 1] call ULP_fnc_hasAccess) then { ["JoinAPC"] call ULP_fnc_achieve; };
 	if (["Police_RTA", 1] call ULP_fnc_hasAccess) then { ["JoinRTA"] call ULP_fnc_achieve; };
 	if (["Police_NPAS", 1] call ULP_fnc_hasAccess) then { ["JoinNPAS"] call ULP_fnc_achieve; };

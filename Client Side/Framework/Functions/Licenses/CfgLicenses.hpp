@@ -51,22 +51,25 @@ class CfgLicenses {
         displayName = "Taxi Altis Worker";
         description = "Approved to operate as a taxi driver on Altis.";
         buyPrice = 35000;
+        onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
         conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
-    class Solicitor : Driving {
+    class Solicitor : Taxi {
         displayName = "Altis Solicitors";
         description = "Approved to operate as a solicitor on Altis.";
         buyPrice = 1700000;
+        onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
         conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
-    class News : Driving {
+    class News : Taxi {
         displayName = "AAN World News Reporter";
         description = "Approved to operate as a news reporter on Altis.";
         buyPrice = 700000;
+        onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
         conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
@@ -75,6 +78,7 @@ class CfgLicenses {
         displayName = "IDAP Volunteer";
         description = "Volunteered yourself to work for the International Development and Aid Project.";
         buyPrice = 0;
+        onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
         conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };

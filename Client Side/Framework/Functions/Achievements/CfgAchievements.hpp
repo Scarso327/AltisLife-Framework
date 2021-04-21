@@ -239,7 +239,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODONOW
 	class Governor {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Rules_ca.paa";
 		displayName = "Governor";
@@ -249,7 +248,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODONOW
 	class Employment {
 		icon = "Data\UI\Achievements\employment.paa";
 		displayName = "Employment";

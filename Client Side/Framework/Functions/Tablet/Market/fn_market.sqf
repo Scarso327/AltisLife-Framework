@@ -8,6 +8,8 @@ scopeName "fn_market";
 _display = _this;
 if (isNull _display) exitWith {};
 
+(_display displayCtrl 23001) ctrlSetStructuredText parseText format["<t align='left'>Market</t><t align='right'>%1%2</t>", (["Tax", 5] call ULP_fnc_getLegislation), "%"];
+
 private _filter = _display displayCtrl 23032;
 private _list = _display displayCtrl 23033;
 lnbClear _list;

@@ -4,7 +4,7 @@ class CfgMessages {
 	class Message {
 		picture = "\a3\3den\data\Cfg3DEN\Comment\texture_ca.paa";
 		displayName = "Private Message";
-		sendTo[] = { "Police", "Medic", "Civilian" };
+		sendTo[] = { "Police", "Medic", "Hato", "Civilian" };
 		ignoreStreamer = false;
 		ignoreComms = false;
 		alertSound = true;
@@ -15,9 +15,24 @@ class CfgMessages {
 		condition = "true";
 	};
 
+	class StaffMessage : Message {
+		displayName = "Message as Staff";
+		ignoreStreamer = true;
+		ignoreComms = true;
+		sender = "Staff Member";
+	};
+
 	class Reply : Message {
 		displayName = "Reply";
 		condition = "false";
+	};
+
+	class StaffDispatch : Message {
+		picture = "Data\Tags\logo.paa";
+		displayName = "Staff Dispatch";
+		ignoreStreamer = true;
+		ignoreComms = true;
+		targets = "[] call ULP_fnc_isStaff";
 	};
 
 	class PoliceEmergencyDispatch : Message {
@@ -38,7 +53,7 @@ class CfgMessages {
 		targets = "[""Police""] call ULP_fnc_allMembers && { [""Medic""] call ULP_fnc_allMembers } && { [""Hato""] call ULP_fnc_allMembers }";
 	};
 
-	class GovernmentAnnoucement  : Message {
+	class GovernmentAnnoucement : Message {
 		picture = "Data\UI\Spawns\government.paa";
 		displayName = "HM Government";
 		ignoreStreamer = true;
@@ -51,7 +66,7 @@ class CfgMessages {
 	class PublicAnnoucement : GovernmentAnnoucement {
 		picture = "Data\UI\Messaging\publicAnnouncement.paa";
 		displayName = "Public Annoucement";
-		sender = "Server";
+		sender = "Staff Team";
 		condition = "[""ULP_Staff"", 3] call ULP_fnc_hasAccess";
 	};
 

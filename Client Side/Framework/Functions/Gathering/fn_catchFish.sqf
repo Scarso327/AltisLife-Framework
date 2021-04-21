@@ -29,6 +29,9 @@ private _name = (_typeOf splitString "_") param [0, "Fish"];
 
 if ([format["%1_Raw", _typeOf], 1] call ULP_fnc_handleItem) exitWith {
 	[format ["You've picked up a %1.", _name]] call ULP_fnc_hint;
+
+	["Fishing", 1, 40] call ULP_fnc_increaseProfession;
+
 	true
 };
 

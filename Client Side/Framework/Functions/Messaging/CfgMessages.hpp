@@ -39,21 +39,20 @@ class CfgMessages {
 	};
 
 	class GovernmentAnnoucement  : Message {
-		picture = "Data\UI\Messaging\publicAnnouncement.paa";
+		picture = "Data\UI\Spawns\government.paa";
 		displayName = "HM Government";
 		ignoreStreamer = true;
-		ignoreComms = true;
 		canReply = false;
-		sender = "Government";
+		sender = "HM Government";
 		targets = "0";
-		condition = "[] call ULP_fnc_isGovernor || { [""ULP_Staff"", 4] call ULP_fnc_hasAccess }";
+		condition = "[] call ULP_fnc_isGovernor || { [""Police_Main"", 10] call ULP_fnc_hasAccess } || { [""ULP_Staff"", 4] call ULP_fnc_hasAccess }";
 	};
 
 	class PublicAnnoucement : GovernmentAnnoucement {
 		picture = "Data\UI\Messaging\publicAnnouncement.paa";
 		displayName = "Public Annoucement";
 		sender = "Server";
-		condition = "[""ULP_Staff"", 3] call ULP_fnc_hasAccess || { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
+		condition = "[""ULP_Staff"", 3] call ULP_fnc_hasAccess";
 	};
 
 	class EventsAnnoucement : PublicAnnoucement {

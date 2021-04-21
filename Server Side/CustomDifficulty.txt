@@ -9,13 +9,13 @@ class DifficultyPresets
 			friendlyTags=0;
 			enemyTags=0;
 			detectedMines=0;
-			commands=1;
+			commands=0;
 			waypoints=2;
 			tacticalPing=0;
 			weaponInfo=2;
 			stanceIndicator=2;
 			staminaBar=0;
-			weaponCrosshair=0;
+			weaponCrosshair=1;
 			visionAid=0;
 			thirdPersonView=1;
 			cameraShake=1;

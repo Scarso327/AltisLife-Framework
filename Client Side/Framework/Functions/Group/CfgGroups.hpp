@@ -117,7 +117,7 @@ class CfgGroups {
 					level = 1;
 				};
 
-				class PersonalProtection { // TODONOW
+				class PersonalProtection {
 					displayName = "Personal Protection";
 					icon = "Data\UI\GroupPerks\personalProtection.paa";
 					description = "Grants your members access to become Personal Protection Officers.";

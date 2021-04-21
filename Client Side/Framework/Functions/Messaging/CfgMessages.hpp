@@ -20,6 +20,7 @@ class CfgMessages {
 		ignoreStreamer = true;
 		ignoreComms = true;
 		sender = "Staff Member";
+		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess";
 	};
 
 	class Reply : Message {

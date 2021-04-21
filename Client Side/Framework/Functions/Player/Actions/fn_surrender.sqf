@@ -9,13 +9,13 @@ _this params [
 	["_surrender", true, [false]]
 ];
 
-if ((player getVariable ["surrender", false]) isEqualTo _surrender) exitWith { false };
+if ((player getVariable ["surrender", false]) isEqualTo _surrender || { !(isNull (objectParent player)) }) exitWith { false };
 
 player setVariable["surrender", _surrender, true];
 
 if (_surrender) then {
 	[[], {
-        if (alive player && { !(isDowned(player)) } && { [player] call ULP_fnc_isSurrendered } && { !([player] call ULP_fnc_isRestrained) }) then {
+        if (alive player && { !(isDowned(player)) } && { [player] call ULP_fnc_isSurrendered } && { !([player] call ULP_fnc_isRestrained) } && { isNull (objectParent player) }) then {
             player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
         } else {
             player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";

@@ -147,21 +147,25 @@ class CfgSpawns {
             displayName = "Taxi Altis";
             marker = "civ_spawn_taxi";
             icon = "Data\UI\Spawns\taxi.paa";
+            conditions = "[""Taxi""] call ULP_fnc_hasLicense && { [""CompletedCV""] call ULP_fnc_hasPerk }";
         };
         class Solicitor : Civilian {
             displayName = "Altis Solicitors";
             marker = "civ_spawn_solicitor";
             icon = "Data\UI\Spawns\solicitor.paa";
+            conditions = "[""Solicitor""] call ULP_fnc_hasLicense && { [""CompletedCV""] call ULP_fnc_hasPerk }";
         };
         class News : Civilian {
             displayName = "AAN World News";
             marker = "civ_spawn_news";
             icon = "Data\UI\Spawns\news.paa";
+            conditions = "[""News""] call ULP_fnc_hasLicense && { [""CompletedCV""] call ULP_fnc_hasPerk }";
         };
         class IDAP : Civilian {
             displayName = "IDAP Camp";
             marker = "civ_spawn_idap";
             icon = "Data\UI\Spawns\idap.paa";
+            conditions = "[""IDAP""] call ULP_fnc_hasLicense && { [""CompletedCV""] call ULP_fnc_hasPerk }";
         };
     };
 

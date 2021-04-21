@@ -711,7 +711,8 @@ class CfgFunctions {
 
 		class Government {
 			file = "Functions\Government";
-			class getLegislation {};	
+			class getLegislation {};
+			class taxPrice {};
 		};
 	};
 

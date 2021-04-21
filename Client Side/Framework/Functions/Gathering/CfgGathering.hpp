@@ -34,7 +34,7 @@ class CfgGathering {
 	};
 
 	class Wood : BaseGather {
-		reqItems[] = { "Axe" };
+		reqItems[] = { "LumberAxe" };
 		areas[] = { { "logging_grounds_1", 20 }, { "logging_grounds_2", 20 }, { "logging_grounds_3", 20 }, { "logging_grounds_4", 20 } };
 		items[] = { { "wood", 100 } };
 		gatherTime = 3;

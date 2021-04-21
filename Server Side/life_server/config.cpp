@@ -70,7 +70,7 @@ class CfgPatches {
             class Admin : Executed {};
             class House : Executed {};
             class Bleedout : Spawn {};
-            class Misc {};
+            class Misc : Dispute {};
         };
 
         #include "Functions\Gathering\CfgGathering.hpp"

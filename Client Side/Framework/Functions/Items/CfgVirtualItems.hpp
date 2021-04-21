@@ -656,8 +656,8 @@ class CfgVirtualItems {
 	class MediKit : FirstAidKit {
 		displayName = "MediKit";
 		icon = "Data\Icons\mediKit.paa";
-		buyPrice = 180000;
-		sellPrice = 90000;
+		buyPrice = 28700;
+		sellPrice = 14350;
 		weight = 2;
 		class Settings : Settings {};
 	};

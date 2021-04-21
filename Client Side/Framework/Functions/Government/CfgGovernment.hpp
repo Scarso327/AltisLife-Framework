@@ -2,7 +2,7 @@ class CfgGovernment {
 	class Options {
 		class Paychecks {
 			type = "NUMBER";
-			values[] = { { 5000, 10000 }, 7500 };
+			values[] = { { 2500, 7500 }, 5000 };
 		};
 	};
 };

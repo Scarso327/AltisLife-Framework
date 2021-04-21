@@ -60,6 +60,12 @@ class CfgTags {
 			condition = "false";
 		};
 
+		class Governor {
+			icon = "Data\Tags\governor.paa";
+			displayName = "Governor";
+			condition = "[] call ULP_fnc_isGovernor";
+		};
+
 		// Altis Police Constabulary
 		class PoliceCC {
 			icon = "Data\Tags\Ranks\Police\CC.paa";
@@ -523,6 +529,9 @@ class CfgTags {
 	};
 
 	class Categories {
+		class Positions {
+			icons[] = { "Governor" };
+		};
 		class Animals {
 			icons[] = { "Alligator", "Elephant", "Flamingo", "Octopus", "Pig", "Turtle", "Unicorn" };
 		};

@@ -299,6 +299,28 @@ class CfgVirtualItems {
 		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [10000, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
 
+	// Event Triggers
+	class AirdropTrigger { // TODO
+		displayName = "Airdrop Trigger";
+		description = "An item used to trigger a specific island event.";
+		icon = "Data\Icons\airdropTrigger.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 0;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+	class ShipwreckTrigger : AirdropTrigger { // TODO
+		displayName = "Shipwreck Trigger";
+		icon = "Data\Icons\shipwreckTrigger.paa";
+		class Settings : Settings {};
+	};
+
 	// General Items
 	class Identification {
 		displayName = "%1's ID";
@@ -528,6 +550,15 @@ class CfgVirtualItems {
 			materials[] = { {"Iron", 8} };
 		};
 	};
+	class signalJammer : Stinger { // TODO (crafting)
+		displayName = "Signal Jammer";
+		description = "A tool used to jam any electronic singals within a limited radius.";
+		icon = "Data\Icons\signalJammer.paa";
+		buyPrice = 110300;
+		sellPrice = 55150;
+		weight = 2;
+		class Settings : Settings {};
+	};
 	class HackingDevice : Stinger {
 		displayName = "Hacking Device";
 		description = "A tool used to hack various systems and malicously gain access to said systems.";
@@ -720,6 +751,84 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 	};
 
+	// Farming Items (TODO - Farmers' Market, Tractor)
+	class FarmingEquipment { // TODO (crafting)
+		displayName = "Farming Equipment";
+		description = "A set of tools used for farming in specialised warehouses.";
+		icon = "Data\Icons\farmingEquipment.paa";
+		buyPrice = 8900;
+		sellPrice = 4450;
+		weight = 3;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+	class FertileSoil : FarmingEquipment { // TODO
+		displayName = "Crop Seeds";
+		description = "A small packet of seeds ready to be planted in fertile soil in a specialised warehouse.";
+		icon = "Data\Icons\fertileSoil.paa";
+		buyPrice = 1230;
+		sellPrice = 615;
+		weight = 1;
+		class Settings : Settings {};
+	};
+	class CropSeeds : FertileSoil { // TODO
+		displayName = "Crop Seeds";
+		description = "A small packet of seeds ready to be planted in fertile soil in a specialised warehouse.";
+		icon = "Data\Icons\seeds.paa";
+		buyPrice = 900;
+		sellPrice = 450;
+		class Settings : Settings {};
+	};
+
+	// Computer Components (TODO - some store for all this)
+	class MiningRig { // TODO (crafting)
+		displayName = "Mining Rig";
+		description = "A set of tools used for farming in specialised warehouses.";
+		icon = "Data\Icons\miningRig.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 4;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
+		conditions = "true";
+	};
+	class Motherboard : MiningRig { // TODO (crafting)
+		displayName = "Motherboard";
+		description = "A component used for crafting mining rigs.";
+		icon = "Data\Icons\motherboard.paa";
+		weight = 1;
+		class Settings : Settings {};
+	};
+	class CPU : Motherboard { // TODO (crafting)
+		displayName = "CPU";
+		icon = "Data\Icons\cpu.paa";
+		class Settings : Settings {};
+	};
+	class GPU : Motherboard { // TODO (crafting)
+		displayName = "GPU";
+		icon = "Data\Icons\gpu.paa";
+		class Settings : Settings {};
+	};
+	class RAM : Motherboard { // TODO (crafting)
+		displayName = "RAM";
+		icon = "Data\Icons\ram.paa";
+		class Settings : Settings {};
+	};
+	class PSU : Motherboard { // TODO (crafting)
+		displayName = "PSU";
+		icon = "Data\Icons\psu.paa";
+		class Settings : Settings {};
+	};
+
 	// Misc. Run Items
 	class StolenCargo {
 		displayName = "Stolen Cargo";
@@ -735,6 +844,14 @@ class CfgVirtualItems {
 			isScripted = false;
 		};
 		conditions = "true";
+	};
+	class FreightCargo : StolenCargo {
+		displayName = "Freight Cargo";
+		description = "Sealed cargo crates filled with freight cargo.";
+		icon = "Data\Icons\freightCargo.paa";
+		sellPrice = 45680;
+		weight = 11;
+		class Settings : Settings {};
 	};
 	class SeizedContraband : StolenCargo {
 		displayName = "Seized Contraband";

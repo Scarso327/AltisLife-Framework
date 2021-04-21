@@ -154,12 +154,12 @@ class CfgGroups {
 		maxLevel = 5;
 
 		class XP {
-			class Cartel { amount = 10; };
+			class Cartel { amount = 20; };
 			class Popup : Cartel {}; // TODO
 			class Airdrop : Cartel {};
-			class Freight { amount = 5; }; // TODO
-			class Election { amount = 100; }; // TODONOW
-			class Rigging { amount = 20; }; // TODONOW
+			class Freight { amount = 10; }; // TODO
+			class Election { amount = 500; }; // TODONOW
+			class Rigging { amount = 35; }; // TODONOW
 			class Hideout : Cartel {};
 			class BaseBid : Election {}; // TODONOW
 			class Contraband : Freight {}; // TODONOW

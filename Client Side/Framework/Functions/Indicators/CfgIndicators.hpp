@@ -3,6 +3,9 @@ class CfgIndicators {
 	alignedColour[] = { 0, 0.502, 0.502, 1 };
 
 	class Police {
+		// RTA
+		class U_B_GEN_Commander_F { colour[] = { 1, 1, 0, 1 }; };
+
 		// NPAS
 		class U_O_PilotCoveralls { colour[] = { 1, 0.647, 0, 1 }; };
 

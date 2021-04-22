@@ -223,7 +223,7 @@ class CfgBlueprints {
 			icon = "Data\Icons\sharpStoneKnife.paa";
 			displayName = "Sharpended Knife";
 			materials[] = { {"BluntStoneKnife", 1}, {"Rock", 1} };
-			item = "RestoredPot";
+			item = "SharpStoneKnife";
 		};
 		class B_IdentifiedSkull : B_RestoredPot {
 			icon = "Data\Icons\unidentifiedSkull.paa";

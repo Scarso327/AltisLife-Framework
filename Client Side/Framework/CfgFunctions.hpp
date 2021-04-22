@@ -104,7 +104,6 @@ class CfgFunctions {
 			class unitsInZone {};
 			class forgeIdentity {};
 			class metalDetector {};
-			class hint {};
 		};
 
 		class Clothing {
@@ -717,6 +716,12 @@ class CfgFunctions {
 			class taxPrice {};
 			class enlist {};
 			class isProtection {};
+		};
+		
+		class Hints {
+			file = "Functions\Hints";
+			class hint {};
+			class hintEachFrame {};
 		};
 	};
 

@@ -333,7 +333,7 @@ class U_O_R_Gorka_01_black_F {
 		class Medic {
 			displayName = "Paramedic";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class Hato {
 			displayName = "Traffic Officer";

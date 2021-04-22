@@ -26,13 +26,13 @@ if (_add) then {
 	_funds = _funds + _amount;
 } else {
 	if (_funds < _amount) exitWith {
-		if (isPlayer _unit) then {
+		if (!(_unit isEqualType grpNull) && { isPlayer _unit }) then {
 			["GroupWithdraw", [format ["Your group doesn't have %1%2 to withdraw...", "£", [_amount] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 		};
 	};
 
 	_funds = _funds - _amount;
-	if (isPlayer _unit) then {
+	if (!(_unit isEqualType grpNull) && { isPlayer _unit }) then {
 		["GroupWithdraw", [
 			format ["You've withdrawn %1%2 from your group funds...", "£", [_amount] call ULP_fnc_numberText], _amount, _funds
 		]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
@@ -46,7 +46,7 @@ if !((_group getVariable ["group_funds", 0]) isEqualTo _funds) then {
 			[_groupId, ""] call ULP_fnc_numberText, [_funds, ""] call ULP_fnc_numberText
 		], 1] call DB_fnc_asyncCall;
 
-		if (isPlayer _unit) then {
+		if (!(_unit isEqualType grpNull) && { isPlayer _unit }) then {
 			[getPlayerUID _unit, "Group", ["Funds", _groupid, [_funds, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
 		};
 	};

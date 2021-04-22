@@ -556,9 +556,9 @@ class U_Competitor {
 	};
 };
 
-class U_BG_Guerrilla_6_1 {
-	displayName = "Patrol Jumper";
-	price = 0;
+class U_B_GEN_Commander_F {
+	displayName = "College Jumper";
+	price = 230;
 	reputation = false;
 	virtualSpace = 3;
 	isGas = false;
@@ -566,13 +566,19 @@ class U_BG_Guerrilla_6_1 {
 		class COMMAND {
 			displayName = "Command";
 			textures[] = { "Data\Textures\Uniforms\Police\command.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RTA"", 3] call ULP_fnc_hasAccess }";
 		};
 		class MAIN {
 			displayName = "Main";
 			textures[] = { "Data\Textures\Uniforms\Police\main.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RTA"", 2] call ULP_fnc_hasAccess }";
 		};
+	};
+};
+
+class U_BG_Guerrilla_6_1 : U_B_GEN_Commander_F {
+	displayName = "NCA Jumper";
+	class Textures {
 		class NCA {
 			displayName = "NCA";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_main.paa" };
@@ -626,6 +632,7 @@ class U_C_FormalSuit_01_tshirt_black_F {
 		};
 	};
 };
+class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F {};
 
 class U_C_FormalSuit_01_black_F {
 	displayName = "Formal Suit";
@@ -643,9 +650,9 @@ class U_C_FormalSuit_01_black_F {
 		class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F { displayName = "Khaki"; };
 	};
 };
-class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F{};
-class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F{};
-class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F{};
+class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F {};
+class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F {};
+class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F {};
 
 class U_I_ParadeUniform_01_AAF_decorated_F {
 	displayName = "Parade Uniform";

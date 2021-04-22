@@ -67,6 +67,15 @@ switch (_mode) do {
 		private _ctrlMouse = _display displayCtrl 603;
 
 		_display displayAddEventHandler ["KeyDown", { ["keyDown", _this] call ULP_fnc_adminCamera }];
+		_display displayAddEventHandler ["KeyUp", {
+			_this params [
+				"", "", "_shift", "_ctrlKey", "_alt"
+			];
+
+			if !(_shift || { _alt }) then {
+				["SetCameraSpeed", [false]] call ULP_fnc_adminCamera;
+			};
+		}];
 		_ctrlMouse ctrlAddEventHandler ["MouseButtonDown", { ["mouseDown", _this] call ULP_fnc_adminCamera }];
 
 		uiNamespace setVariable ["admin_camera_mouse", _ctrlMouse];
@@ -282,7 +291,25 @@ switch (_mode) do {
 			};
 		};
 
+		if !(_handled) then {
+			if (_shift && { _alt } && { !_ctrlKey }) then {
+				["SetCameraSpeed", [true]] call ULP_fnc_adminCamera;
+			};
+		};
+
 		_handled
+	};
+
+	case "SetCameraSpeed": {
+		_params params [
+			["_fast", false, [true]]
+		];
+
+		private _camera = uiNamespace getVariable ["admin_camera", objNull];
+		if !(isNull _camera) then {
+			_camera camCommand format["speedDefault %1", (["0.1", "3"] select (_fast))];
+			uiNamespace setVariable ['admin_camera_speed', _fast];
+		};
 	};
 
 	case "SetCameraInput": {

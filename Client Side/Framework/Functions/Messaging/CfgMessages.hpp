@@ -20,7 +20,7 @@ class CfgMessages {
 		ignoreStreamer = true;
 		ignoreComms = true;
 		sender = "Staff Member";
-		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess";
+		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess && { [player] call ULP_fnc_onDuty }";
 	};
 
 	class Reply : Message {
@@ -29,8 +29,8 @@ class CfgMessages {
 	};
 
 	class StaffDispatch : Message {
-		picture = "Data\Tags\logo.paa";
-		displayName = "Staff Dispatch";
+		picture = "Data\UI\Messaging\staffDispatch.paa";
+		displayName = "Message Staff Team";
 		ignoreStreamer = true;
 		ignoreComms = true;
 		targets = "(allPlayers select { [_x] call ULP_fnc_onDuty })";
@@ -66,16 +66,16 @@ class CfgMessages {
 
 	class PublicAnnoucement : GovernmentAnnoucement {
 		picture = "Data\UI\Messaging\publicAnnouncement.paa";
-		displayName = "Public Annoucement";
+		displayName = "Staff Annoucement";
 		sender = "Staff Team";
-		condition = "[""ULP_Staff"", 3] call ULP_fnc_hasAccess";
+		condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }";
 	};
 
 	class EventsAnnoucement : PublicAnnoucement {
 		picture = "Data\UI\Messaging\eventAnnouncement.paa";
 		displayName = "Event Annoucement";
 		sender = "Events Team";
-		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess || { [""ULP_Event"", 1] call ULP_fnc_hasAccess }";
+		condition = "[] call ULP_fnc_isStaff || { [""ULP_Event"", 1] call ULP_fnc_hasAccess } && { [player] call ULP_fnc_onDuty }";
 	};
 
 	class OpenAirBroadcast : PublicAnnoucement {

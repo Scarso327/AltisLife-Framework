@@ -191,6 +191,7 @@ class CfgItemsStore {
 			class ToolKit : FactionBase {};
 			class Chemlight_green {};
 			class SmokeShell : FactionBase { 
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
 				class textures { class SmokeShell {}; }; 
 			};
 		};

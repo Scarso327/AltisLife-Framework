@@ -61,21 +61,21 @@ class CfgMessages {
 		canReply = false;
 		sender = "HM Government";
 		targets = "0";
-		condition = "[] call ULP_fnc_isGovernor || { [""Police_Main"", 10] call ULP_fnc_hasAccess } || { [""ULP_Staff"", 4] call ULP_fnc_hasAccess && { [player] call ULP_fnc_onDuty } }";
+		condition = "[] call ULP_fnc_isGovernor || { [""Police_Main"", 10] call ULP_fnc_hasAccess } || { [""ULP_Staff"", 4] call ULP_fnc_hasAccess }";
 	};
 
 	class PublicAnnoucement : GovernmentAnnoucement {
 		picture = "Data\UI\Messaging\publicAnnouncement.paa";
 		displayName = "Staff Annoucement";
 		sender = "Staff Team";
-		condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }";
+		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess";
 	};
 
 	class EventsAnnoucement : PublicAnnoucement {
 		picture = "Data\UI\Messaging\eventAnnouncement.paa";
 		displayName = "Event Annoucement";
 		sender = "Events Team";
-		condition = "[] call ULP_fnc_isStaff || { [""ULP_Event"", 1] call ULP_fnc_hasAccess } && { [player] call ULP_fnc_onDuty }";
+		condition = "[""ULP_Staff"", 2] call ULP_fnc_hasAccess || { [""ULP_Event"", 1] call ULP_fnc_hasAccess }";
 	};
 
 	class OpenAirBroadcast : PublicAnnoucement {

@@ -192,62 +192,62 @@ class CfgVehicles {
 				class Lights : Lights {};
 			};
 			class UnmarkedWhite : UnmarkedBlack {
-				displayWhite = "White";
+				displayName = "White";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa" };
 				class Lights : Lights {}; 
 			};
 			class UnmarkedBeige : UnmarkedBlack {
-				displayWhite = "Beige";
+				displayName = "Beige";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedBeigeSport : UnmarkedBlack {
-				displayWhite = "Beige Sport";
+				displayName = "Beige Sport";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedRedSport : UnmarkedBlack {
-				displayWhite = "Red Sport";
+				displayName = "Red Sport";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa" };
 				class Lights : Lights {}; 
 			};
 			class UnmarkedBlue : UnmarkedBlack {
-				displayWhite = "Blue";
+				displayName = "Blue";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedBlueSport : UnmarkedBlack {
-				displayWhite = "Blue Sport";
+				displayName = "Blue Sport";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE04_CO.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedDarkBlue : UnmarkedBlack {
-				displayWhite = "Dark Blue";
+				displayName = "Dark Blue";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedDarkBlueSport : UnmarkedBlack {
-				displayWhite = "Dark Blue Sport";
+				displayName = "Dark Blue Sport";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedGreen : UnmarkedBlack {
-				displayWhite = "Green";
+				displayName = "Green";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa" };
 				class Lights : Lights {};
 			};
 			class UnmarkedGreenSport : UnmarkedBlack {
-				displayWhite = "Green Sport";
+				displayName = "Green Sport";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_BASE02_CO.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedYellow : UnmarkedBlack {
-				displayWhite = "Yellow";
+				displayName = "Yellow";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa" }; 
 				class Lights : Lights {};
 			};
 			class UnmarkedOrangeSport : UnmarkedBlack {
-				displayWhite = "Orange Sport";
+				displayName = "Orange Sport";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 				class Lights : Lights {};
 			};

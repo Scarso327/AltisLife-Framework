@@ -142,7 +142,7 @@ class CfgMissions {
 			};
 			class PoliceEvidenceStorage {
 				pos = "police_evidence_storage";
-				name = "Central Athira";
+				name = "Police Evidence Storage";
 			};
 			class AltisGallery {
 				pos = "altis_gallery";

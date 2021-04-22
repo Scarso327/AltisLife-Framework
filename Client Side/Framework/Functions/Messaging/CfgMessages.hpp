@@ -61,7 +61,7 @@ class CfgMessages {
 		canReply = false;
 		sender = "HM Government";
 		targets = "0";
-		condition = "[] call ULP_fnc_isGovernor || { [""Police_Main"", 10] call ULP_fnc_hasAccess } || { [""ULP_Staff"", 4] call ULP_fnc_hasAccess }";
+		condition = "[] call ULP_fnc_isGovernor || { [""Police_Main"", 10] call ULP_fnc_hasAccess } || { [""ULP_Staff"", 4] call ULP_fnc_hasAccess && { [player] call ULP_fnc_onDuty } }";
 	};
 
 	class PublicAnnoucement : GovernmentAnnoucement {

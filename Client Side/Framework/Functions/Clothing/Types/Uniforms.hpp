@@ -333,7 +333,7 @@ class U_O_R_Gorka_01_black_F {
 		class Medic {
 			displayName = "Paramedic";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class Hato {
 			displayName = "Traffic Officer";
@@ -539,14 +539,14 @@ class U_Competitor {
 	isGas = false;
 	class Textures {
 		class DR {
-			displayName = "Doctor";
+			displayName = "Consultant";
 			textures[] = { "Data\Textures\Uniforms\Medic\main_03.paa" };
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
 		};
 		class PAR {
-			displayName = "Paramedic";
+			displayName = "Doctor";
 			textures[] = { "Data\Textures\Uniforms\Medic\main_02.paa" };
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 		class STU {
 			displayName = "Student";

@@ -446,7 +446,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\panicButton.paa";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 0;
+		weight = 1;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_panic;"; };
 	};

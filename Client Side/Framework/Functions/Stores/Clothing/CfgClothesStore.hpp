@@ -11,8 +11,8 @@ class CfgClothesStore {
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Uniforms {
 			class U_Rangemaster : FactionBase {};
-			class U_B_GEN_Commander_F : FactionBase { condition = "[""Police_RTA"", 1] call ULP_fnc_hasAcces"; };
-			class U_BG_Guerrilla_6_1 : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAcces"; };
+			class U_B_GEN_Commander_F : FactionBase { condition = "[""Police_RTA"", 1] call ULP_fnc_hasAccess"; };
+			class U_BG_Guerrilla_6_1 : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
 			class U_O_R_Gorka_01_black_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }"; };
 			class U_C_FormalSuit_01_black_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class U_I_ParadeUniform_01_AAF_decorated_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };

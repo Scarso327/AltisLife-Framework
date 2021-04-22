@@ -79,7 +79,6 @@ class CfgMessages {
 	};
 
 	class OpenAirBroadcast : PublicAnnoucement {
-		picture = "Data\UI\Messaging\openAirBroadcast.paa";
 		displayName = "Open Air Broadcast";
 		sender = "Altis Police Constabulary";
 		targets = "(allPlayers select { !(isNull (objectParent _x)) && { (vehicle _x) isKindOf 'Air'} })";

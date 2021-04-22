@@ -20,7 +20,7 @@ if !(isClass (_cfg >> "Deconstruction")) exitWith {
 	false
 };
 
-if (["ToolBox"] call ULP_fnc_hasItem < 1) exitWith {
+if (["Toolbox"] call ULP_fnc_hasItem < 1) exitWith {
 	["You need a Tool Box to descontruct items..."] call ULP_fnc_hint;
 	false
 };

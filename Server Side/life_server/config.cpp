@@ -58,6 +58,12 @@ class CfgPatches {
                 constant = false;
                 global = false;
             };
+            class BaseBidsActive {
+                type = "BOOL";
+                default = false;
+                constant = false;
+                global = false;
+            };
         };
         
         class EventLogs {
@@ -83,6 +89,7 @@ class CfgPatches {
             class House : Executed {};
             class Bleedout : Spawn {};
             class Election : Spawn {};
+            class BaseBid : Spawn {};
             class Misc : Dispute {};
         };
 

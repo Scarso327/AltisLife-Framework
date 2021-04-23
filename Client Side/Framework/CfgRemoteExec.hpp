@@ -133,5 +133,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_enlistCandidate {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_addBaseBid {
+            allowedTargets = SERVER;
+        };
     };
 };

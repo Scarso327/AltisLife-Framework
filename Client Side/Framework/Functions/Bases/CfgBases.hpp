@@ -3,6 +3,8 @@ class CfgBases {
 	Day = "Friday";
 	Restart[] = {20, 24};
 	RedzoneKillReward = 10000;
+	BidIncrement = 1000000;
+	StartingBid = 9000000; // StartingBid = BidIncrement + StartingBid
 
 	class North {
 		icon = "Data\UI\Spawns\base.paa";

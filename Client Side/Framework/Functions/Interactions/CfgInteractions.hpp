@@ -200,14 +200,14 @@ class CfgInteractions {
 			title = "Garage";
 			onClick = "_this call ULP_fnc_garageVehicle";
 			factions[] = { "Police", "Hato" };
-			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess || { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
+			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
 		class Impound : Repair {
 			title = "Impound";
 			onClick = "_this call ULP_fnc_impoundVehicle";
 			factions[] = { "Police", "Hato" };
-			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
+			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Hato_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 
 		class Scrap : Repair {
@@ -223,7 +223,12 @@ class CfgInteractions {
 			condition = "(speed _this) <= 4 && { _this in ULP_Keys || [""Police_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
-		class Push : Repair { // TODONOW
+		class Unflip : Repair { // TODONOW
+			title = "Unflip";
+			onClick = "hint ""Hello"";";
+		};
+
+		class Push : Repair { // TODONOW (for boats)
 			title = "Push";
 			onClick = "hint ""Hello"";";
 		};

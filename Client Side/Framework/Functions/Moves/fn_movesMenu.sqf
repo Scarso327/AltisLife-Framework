@@ -5,7 +5,7 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_movesMenu";
 
-if (!(alive player) || { isDowned(player) } || { !(isNull (objectParent player)) } || { [] call ULP_fnc_isRestrained } || { [] call ULP_fnc_isKnocked }) exitWith {};
+if (!(alive player) || { isDowned(player) } || { !(isNull (objectParent player)) } || { [] call ULP_fnc_isRestrained } || { [] call ULP_fnc_isKnocked } || { dialog }) exitWith {};
 
 if (createDialog "DialogMoves") then {
 	private _display = findDisplay 4600;

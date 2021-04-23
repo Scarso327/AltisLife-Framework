@@ -8,7 +8,7 @@ scopeName "fn_airdrop";
 private _cfg = _this;
 if (isNull _cfg) exitWith { false };
 
-[ { call (_this select 1) }, [_cfg, compile getText (_cfg >> "SpawnCondition")], {
+[ { call (_this select 1) }, [_cfg, compile getText ([_cfg, "SpawnCondition", "true"] call ULP_SRV_fnc_getEventParam)], {
 	private _cfg = _this select 0;
 
 	missionNamespace setVariable [format ["ULP_SRV_%1_Active", configName _cfg], true, true];
@@ -16,7 +16,7 @@ if (isNull _cfg) exitWith { false };
 	private _location = selectRandom ("isClass _x" configClasses (_cfg >> "Locations"));
 	if (isNil "_location" || { _location isEqualTo [] }) exitWith { false };
 
-	private _time = getNumber (_cfg >> "NotifyDelay");
+	private _time = getNumber ([_cfg, "NotifyDelay"] call ULP_SRV_fnc_getEventParam);
 
 	["OnWarningAirdrop", [
 		format [
@@ -81,8 +81,8 @@ if (isNull _cfg) exitWith { false };
 						private _cfg = missionConfigFile >> "CfgRandomEvents" >> "Airdrop";
 						missionNamespace setVariable [format ["ULP_SRV_%1_Active", configName _cfg], false, true];
 
-						private _delay = getNumber (_cfg >> "Cooldown");
-						_delay = _delay + (random getNumber (_cfg >> "RandomAddition"));
+						private _delay = getNumber ([_cfg, "Cooldown"] call ULP_SRV_fnc_getEventParam);
+						_delay = _delay + (random getNumber ([_cfg, "RandomAddition"] call ULP_SRV_fnc_getEventParam));
 
 						[_delay, _cfg, {
 							_this call compile getText (_this >> "ServerFunctions" >> "onCompleted");

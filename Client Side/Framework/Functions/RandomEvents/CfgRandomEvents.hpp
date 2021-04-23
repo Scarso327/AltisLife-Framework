@@ -12,6 +12,13 @@ class CfgRandomEvents {
 		SpawnDelay = 30 * 60;
 		Cooldown = 60 * 60;
 		RandomAddition = 20 * 60;
+		class BaseWars {
+			SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
+			NotifyDelay = 5 * 60;
+			SpawnDelay = 15 * 60;
+			Cooldown = 20 * 60;
+			RandomAddition = 2 * 60;
+		};
 		class Events {
 			class OnWarning { code = "_this params [[""_message"", """", [""""]]]; [parseText _message] call ULP_fnc_hint;"; };
 			class OnSpawn { code = "_this call ULP_fnc_onAirdropSpawn;"; };

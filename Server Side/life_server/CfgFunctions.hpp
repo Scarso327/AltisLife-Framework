@@ -109,6 +109,7 @@ class CfgFunctions {
 
         class ServerEvents {
             file = "\life_server\Functions\ServerEvents";
+            class getEventParam {};
             class spawnEvent {};
             class initServerEvents {};
         };
@@ -130,6 +131,7 @@ class CfgFunctions {
         class Bases {
             file = "\life_server\Functions\Bases";
             class initBases {};
+            class addBaseBid {};
         };
 
         class Gathering {

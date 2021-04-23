@@ -37,7 +37,7 @@ if (isNull _group) then {
 			false breakOut "fn_queryPlayerInfo";
 		};
 
-		private _group = createGroup [(side _unit), true];
+		private _group = createGroup [(side _unit), false];
 		[_unit] joinSilent _group;
 
 		_group setVariable ["group_id", _queryid, true];

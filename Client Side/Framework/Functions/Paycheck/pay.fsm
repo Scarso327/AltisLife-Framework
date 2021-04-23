@@ -10,7 +10,7 @@ link1[] = {1,2};
 link2[] = {2,3};
 link3[] = {3,2};
 globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-176.830154,78.694977,308.867096,-451.685822,297,884,1};
-window[] = {2,-1,-1,-1,-1,1052,234,1674,234,3,315};
+window[] = {2,-1,-1,-1,-1,896,78,1518,78,3,315};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -70,15 +70,6 @@ class FSM
                                          "};" \n
                                          "" \n
                                          "_lastcheck = time;" \n
-                                         "" \n
-                                         "//Group clean (Local)" \n
-                                         "{" \n
-                                         "    if (local _x && {(units _x isEqualTo [])}) then {" \n
-                                         "        deleteGroup _x;" \n
-                                         "    };" \n
-                                         "} forEach allGroups;" \n
-                                         "" \n
-                                         "" \n
                                          ""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

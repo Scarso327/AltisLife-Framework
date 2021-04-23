@@ -59,7 +59,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	private _group = [_queryId] call ULP_fnc_getGroupById;
 
 	if (isNull _group) then {
-		_group = createGroup [(side _owner), true];
+		_group = createGroup [(side _owner), false];
 		[_owner] joinSilent _group;
 
 		_group setVariable ["group_id", _queryId, true];
@@ -109,7 +109,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 		_steamid, _tag, _name, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type, _inviteIndex, _kickIndex
 	], 1] call DB_fnc_asyncCall;
 
-	private _group = createGroup [(side _owner), true];
+	private _group = createGroup [(side _owner), false];
 	[_owner] joinSilent _group;
 
 	_group setVariable ["group_id", _id, true];

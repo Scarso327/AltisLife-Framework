@@ -26,9 +26,11 @@ scopeName "fn_initReputation";
 		"_unit", "_killer"
 	];
 
-	[_killer, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
-		case (ULP_Reputation >= 500): { "IncapHighRep" };
-		case (ULP_Reputation > -500): { "IncapNormal" };
-		default { "IncapLowRep" };
-	})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+	if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {
+		[_killer, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
+			case (ULP_Reputation >= 500): { "IncapHighRep" };
+			case (ULP_Reputation > -500): { "IncapNormal" };
+			default { "IncapLowRep" };
+		})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+	};
 }] call ULP_fnc_addEventHandler;

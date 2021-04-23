@@ -25,7 +25,7 @@ if ([player, ["Civilian"]] call ULP_fnc_isFaction && { missionNamespace getVaria
 
 		private _reward = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillReward");
 
-		if ([_reward, false, "Gang Wars Kill"] call ULP_fnc_addMoney) then {
+		if ([_reward, true, "Gang Wars Kill"] call ULP_fnc_addMoney) then {
 			[format ["You have recieved %1%2 for killing someone in a redzone during gang wars...", "£", [_reward] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 	}] call ULP_fnc_addEventHandler;

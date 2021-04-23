@@ -207,7 +207,7 @@ class CfgVirtualItems {
 		sellPrice = 145;
 		weight = 1;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
@@ -224,7 +224,12 @@ class CfgVirtualItems {
 		icon = "Data\Icons\schnapps.paa";
 		buyPrice = 580;
 		sellPrice = 290;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+		};
 		class Sustain {
 			hunger = 0;
 			thirst = 30;
@@ -851,7 +856,12 @@ class CfgVirtualItems {
 		icon = "Data\Icons\freightCargo.paa";
 		sellPrice = 45680;
 		weight = 11;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = false;
+			isScripted = false;
+		};
 	};
 	class SeizedContraband : StolenCargo {
 		displayName = "Seized Contraband";

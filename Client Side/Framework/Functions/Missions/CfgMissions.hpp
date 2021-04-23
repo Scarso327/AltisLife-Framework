@@ -274,7 +274,7 @@ class CfgMissions {
 			};
 			class dig_site_25 {
 				pos = "dig_site_25";
-				name = "Pyrgos";
+				name = "Chalkeia";
 			};
 			class dig_site_26 {
 				pos = "dig_site_26";
@@ -282,7 +282,7 @@ class CfgMissions {
 			};
 			class dig_site_27 {
 				pos = "dig_site_27";
-				name = "Pyrgos";
+				name = "Chalkeia";
 			};
 			class dig_site_28 {
 				pos = "dig_site_28";

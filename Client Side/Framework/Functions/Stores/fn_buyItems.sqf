@@ -31,8 +31,10 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 	["You can't afford these items!"] call ULP_fnc_hint;
 } else {
 	private _itemsBought = 0;
+	private _itemsNotBought = createHashMap;
+
 	for "_i" from 0 to ((lbSize _cartList) - 1) do {
-		private _data = _cartList lbData _i; // (str [_className, _texClass])
+		private _data = _cartList lbData _i;
 		_data = parseSimpleArray _data;
 
 		_data params [
@@ -41,12 +43,13 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 
 		([_className] call ULP_fnc_itemCfg) params [
 			"_cfgName",
-			"_itemCfg" 
+			"_itemCfg", "", "", "", "_name"
 		];
 		
 		if ([_cartValue, _cartList, _className, _texClass, _cfgName, _itemCfg, _i, _override] call compile _onItemBuy) then {
 			_itemsBought = _itemsBought + 1;
 		} else {
+			_itemsNotBought set [_name, (_itemsNotBought getOrDefault [_name, 0]) + 1];
 			_cartValue = _cartValue - (_cartList lbValue _i);
 		};
 	};
@@ -62,7 +65,17 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 		};
 		_display setVariable ["cartValue", 0];
 
-		[format["You've bought these items for £%1.", [_cartValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		if ((count _itemsNotBought) isEqualTo 0) then {
+			[format["You've bought these items for £%1.", [_cartValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		} else {
+			private _message = [format["You've bought these items for £%1.<br/><br/>You didn't have space for the following items and so weren't charged for them:<br/>", [_cartValue] call ULP_fnc_numberText]];
+			
+			{
+				_message pushBack format [" - %1 (%2)", _x, [_y] call ULP_fnc_numberText];
+			} forEach _itemsNotBought;
+
+			[_message joinString "<br/>"] call ULP_fnc_hint;
+		};
 	} else {
 		["You don't have enough space for these items!"] call ULP_fnc_hint;
 	};

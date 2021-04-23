@@ -40,10 +40,8 @@ if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 		[format["You failed to repair the %1 as it's either beyond repair or you didn't have the correct tools."]] call ULP_fnc_hint;
 	};
 	
-	if !([player, ["Hato"]] call ULP_fnc_isFaction) then {
-		if ((["GeneralMechanic", 0] call ULP_fnc_activatePerk) <= (random 0.99)) then {
-			player removeItem "Toolkit";
-		};
+	if (!([player, ["Hato"]] call ULP_fnc_isFaction) && { (["GeneralMechanic", 0] call ULP_fnc_activatePerk) <= (random 0.99) }) then {
+		player removeItem "Toolkit";
 	};
 
 	_vehicle setDamage 0;

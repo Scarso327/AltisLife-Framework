@@ -257,7 +257,7 @@ class CfgClothesStore {
 			class H_Watchcap_blk {};
 			class H_Booniehat_khk {};
 			class H_Beret_blk : FactionBase { condition = "[""Medic_Main"", 7] call ULP_fnc_hasAccess"; };
-			class H_PilotHelmetHeli_B : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
+			class H_PilotHelmetHeli_B : FactionBase { condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess"; };
 		};
 
 		class Facewear {

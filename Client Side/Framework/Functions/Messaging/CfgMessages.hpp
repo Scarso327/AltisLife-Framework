@@ -49,9 +49,8 @@ class CfgMessages {
 
 	class NonEmergnecyDispatch : PoliceEmergencyDispatch {
 		picture = "Data\UI\Messaging\101.paa";
-		displayName = "Non-Emergency Dispatch";
-		alertSound = false;
-		targets = "[""Police""] call ULP_fnc_allMembers && { [""Medic""] call ULP_fnc_allMembers } && { [""Hato""] call ULP_fnc_allMembers }";
+		displayName = "HATO Non-Emergency Dispatch";
+		targets = "[""Hato""] call ULP_fnc_allMembers";
 	};
 
 	class GovernmentAnnoucement : Message {

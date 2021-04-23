@@ -206,8 +206,8 @@ class CfgInteractions {
 		class Impound : Repair {
 			title = "Impound";
 			onClick = "_this call ULP_fnc_impoundVehicle";
-			factions[] = { "Police", "Hato" };
-			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess || { [""Hato_Main"", 2] call ULP_fnc_hasAccess }";
+			factions[] = { "Police" };
+			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 		};
 
 		class Scrap : Repair {

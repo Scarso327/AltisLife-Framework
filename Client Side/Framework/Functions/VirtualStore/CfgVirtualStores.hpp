@@ -7,13 +7,13 @@ class CfgVirtualStores {
 			class Doughnut {};
 			class Coffee {};
 			class Tea {};
-			//class Redbull {};
+			class Redbull {};
 			//class FuelCan {};
 			//class Breathalyser {};
 			class PanicButton {};
 			//class Stinger {};
 			//class Blindfold {};
-			//class Lockpick {};
+			class Lockpick {};
 			class BoltCutter {};
 			class VehicleClamp {};
 			//class Painkillers {};
@@ -45,10 +45,10 @@ class CfgVirtualStores {
 			class Doughnut {};
 			class Coffee {};
 			class Tea {};
-			//class Redbull {};
+			class Redbull {};
 			//class FuelCan {};
 			class PanicButton {};
-			//class Lockpick {};
+			class Lockpick {};
 			class BoltCutter {};
 			//class Painkillers {};
 			//class Bandage {};
@@ -73,10 +73,10 @@ class CfgVirtualStores {
 			class Doughnut {};
 			class Coffee {};
 			class Tea {};
-			//class Redbull {};
+			class Redbull {};
 			//class FuelCan {};
 			class PanicButton {};
-			//class Lockpick {};
+			class Lockpick {};
 			class BoltCutter {};
 			class VehicleClamp {};
 			//class PlasticBarrier_02_yellow_F {};
@@ -119,7 +119,7 @@ class CfgVirtualStores {
 			class Doughnut {};
 			class Coffee {};
 			class Tea {};
-			//class Redbull {};
+			class Redbull {};
 			//class FuelCan {};
 			class Ziptie {};
 			class PanicButton {};
@@ -137,11 +137,11 @@ class CfgVirtualStores {
 		class Items {
 			class RationPack {};
 			class Water {};
-			//class Redbull {};
+			class Redbull {};
 			//class FuelCan {};
 			class Ziptie {};
 			//class Blindfold {};
-			//class Lockpick {};
+			class Lockpick {};
 			class BoltCutter {};
 			//class Painkillers {};
 			//class Bandage {};
@@ -155,11 +155,11 @@ class CfgVirtualStores {
 		class Items {
 			class RationPack {};
 			class Water {};
-			//class Redbull {};
+			class Redbull {};
 			class FuelCan {};
 			class Ziptie {};
 			//class Blindfold {};
-			//class Lockpick {};
+			class Lockpick {};
 			class BoltCutter {};
 			class HackingDevice {};
 			class ExplosiveCharge {};
@@ -178,7 +178,7 @@ class CfgVirtualStores {
 			class Hotdog {};
 			class Chips {};
 			class Water {};
-			//class Redbull {};
+			class Redbull {};
 		};
 	};
 

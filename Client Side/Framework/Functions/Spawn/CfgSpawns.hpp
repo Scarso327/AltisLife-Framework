@@ -72,15 +72,16 @@ class CfgSpawns {
             marker = "nhs_spawn_athira";
             icon = "Data\UI\Spawns\athira.paa";
         };
-        class PyrgosHClinic : Medic {
+        class PyrgosClinic : Medic {
             displayName = "Pyrgos Clinic";
             marker = "nhs_spawn_pyrgos";
             icon = "Data\UI\Spawns\pyrgos.paa";
         };
-        class SofiaHClinic : Medic {
-            displayName = "Sofia Clinic";
-            marker = "nhs_spawn_sofia";
-            icon = "Data\UI\Spawns\sofia.paa";
+        class AirAmbulance : Medic {
+            displayName = "Air Ambulance Station";
+            marker = "nhs_spawn_aa";
+            icon = "Data\UI\Spawns\idap.paa";
+            conditions = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
         };
 
         // Altis Police Constabulary / National Health Service

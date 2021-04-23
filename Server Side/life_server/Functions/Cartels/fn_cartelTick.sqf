@@ -26,7 +26,7 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 			private _groups = [];
 			{ _groups pushBackUnique (group _x) } forEach (_unitsInZone select {
 				!((currentWeapon _x) in getArray(missionConfigFile >> "CfgSettings" >> "doesntThreaten")) &&
-				{ [group _x] call ULP_fnc_isGroup }
+				{ [group _x] call ULP_fnc_isGroup } && { isNull (objectParent _x) }
 			});
 
 			if ((count _groups) isEqualTo 1) then {

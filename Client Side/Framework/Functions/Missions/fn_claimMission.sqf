@@ -13,6 +13,10 @@ _this params [
 private _typeCfg = missionConfigFile >> "CfgMissions" >> _type;
 if !(isClass _typeCfg) exitWith {};
 
+if !([player, getArray (_typeCfg >> "factions")] call ULP_fnc_isFaction) exitWith {
+	["Your faction can't do this mission..."] call ULP_fnc_hint;
+};
+
 if (_type in ULP_Missions) exitWith {
 	[getText (_typeCfg >> "Messages" >> "onAlreadyHas")] call ULP_fnc_hint;
 };

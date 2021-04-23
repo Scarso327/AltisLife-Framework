@@ -35,8 +35,6 @@ switch (_itemType) do {
 			[secondaryWeapon player, secondaryWeaponMagazine player],
 			[handgunWeapon player, handgunMagazine player]
 		];
-
-		false breakOut "fn_canFitGear";
 	};
 	case "Item": {
 		switch (_itemCategory) do {
@@ -55,8 +53,6 @@ switch (_itemType) do {
 					[secondaryWeapon player, secondaryWeaponItems player],
 					[handgunWeapon player, handgunItems player]
 				];
-
-				false breakOut "fn_canFitGear";
 			};
 			case "Watch";
 			case "Map";
@@ -89,4 +85,4 @@ switch (_itemType) do {
 	};
 };
 
-true
+false

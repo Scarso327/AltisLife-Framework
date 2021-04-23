@@ -71,7 +71,7 @@ class CfgPerks {
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic" };
 			level = 5;
 			prestige = 0;
 			profession[] = { "Repairing", 1 };

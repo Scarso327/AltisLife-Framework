@@ -34,6 +34,8 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 			default { "KilledLowRep" };
 		})] call ULP_SRV_fnc_reputation;
 	};
+
+	["KilledSomeone", [_unit]] remoteExecCall ["ULP_fnc_invokeEvent", _killer];
 } else {
 	["Bleedout", [_unit getVariable ["realname", name _unit]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 	[getPlayerUID _unit, "Bleedout", [getPos _unit, getUnitLoadout _unit]] call ULP_SRV_fnc_logPlayerEvent;

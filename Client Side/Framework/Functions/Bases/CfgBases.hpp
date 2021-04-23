@@ -2,6 +2,7 @@ class CfgBases {
 	// Bidding info...
 	Day = "Friday";
 	Restart[] = {20, 24};
+	RedzoneKillReward = 10000;
 
 	class North {
 		icon = "Data\UI\Spawns\base.paa";

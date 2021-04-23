@@ -52,7 +52,7 @@ life_server_extDB_notLoaded = false;
 publicVariable "life_server_extDB_notLoaded";
 
 ULP_SRV_Date = ([] call ULP_SRV_fnc_getLocalTime);
-private _date = ULP_SRV_Date;
+private _date = + (ULP_SRV_Date);
 _date resize 3;
 _date = (_date joinString "-");
 

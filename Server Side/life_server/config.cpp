@@ -62,7 +62,7 @@ class CfgPatches {
                 type = "BOOL";
                 default = false;
                 constant = false;
-                global = false;
+                global = true;
             };
         };
         

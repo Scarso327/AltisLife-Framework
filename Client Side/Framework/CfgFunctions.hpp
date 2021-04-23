@@ -648,6 +648,7 @@ class CfgFunctions {
 			file = "Functions\Bases";
 			class ownsBase {};
 			class initBases {};
+			class placeBid {};
 		};
 
 		class Donator {

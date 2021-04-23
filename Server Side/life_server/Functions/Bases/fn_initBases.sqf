@@ -12,6 +12,7 @@ private _hour = _this;
 private _newOwners = false;
 
 private _hours = getArray (missionConfigFile >> "CfgBases" >> "Restart");
+
 if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "CfgBases" >> "Day") && { _hour >= (_hours select 0) } && { _hour < (_hours select 1) }) then {
 	if !(ULP_SRV_Setting_BaseBidsActive) then {
 		["UPDATE settings SET value = '1' WHERE setting = 'BaseBidsActive'", 1] call DB_fnc_asyncCall;

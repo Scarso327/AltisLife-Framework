@@ -30,7 +30,7 @@ if (_bid > ([] call ULP_fnc_groupFunds)) exitWith {
 
 [
 	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Confirm", "Cancel"],
-	format ["Are you sure you want to place a bid of %1%2...", "£", [_bid] call ULP_fnc_numberText]], [_bid, _base],
+	format ["Are you sure you want to place a bid of %1%2...", "£", [_bid] call ULP_fnc_numberText], [_bid, _base],
 	{	
 		_this params [ "_bid", "_base" ];
 		

@@ -194,7 +194,7 @@ class CfgVirtualItems {
 			hunger = 0;
 			thirst = 50;
 		};
-		class Events { onUse = "[(_this select 0)] call ULP_fnc_addSustenance;"; };
+		class Events { onUse = "if ([(_this select 0)] call ULP_fnc_addSustenance) then { player setCustomAimCoef 0.5; [ { !(alive player) || { player getVariable [""isIncapacitated"", false] } || { diag_tickTime > (_this select 0) } }, [diag_tickTime + (3 * 60)], { player setCustomAimCoef 1; }] call ULP_fnc_waitUntilExecute; };"; };
 		conditions = "true";
 	};
 

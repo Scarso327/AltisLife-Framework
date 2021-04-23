@@ -21,7 +21,7 @@ class CfgGovernment {
 			tooltip = "This changes the amount of money extra the government give for completing jobs.";
 			type = "NUMBER";
 			format = "format [""%1%2"", ""£"", [_this] call ULP_fnc_numberText]";
-			values[] = { { 0, 30 }, 15 };
+			values[] = { { 0, 10 }, 5 };
 		};
 		class Service {
 			displayName = "Air Service Pricing";

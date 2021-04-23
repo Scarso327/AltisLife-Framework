@@ -24,6 +24,25 @@ if (_sellPrice > 0) then {
 		_sellPrice = [_sellPrice] call ULP_fnc_taxPrice;
 	} else {
 		_sellPrice = ["ShadyTrader", _sellPrice, false] call ULP_fnc_activatePerk;
+
+		{
+			private _object = missionNamespace getVariable [format["ULP_SRV_Cartel_%1", configName _x], objNull];
+
+			if !(isNull _object) then {
+				private _owner = (_object getVariable ["owner", []]) param [0, grpNull];
+				if !(isNull _owner) then {
+					if (isClass (_x >> "Drug")) then {
+						if (_owner isEqualTo (group player)) then {
+							_sellPrice = _sellPrice * getNumber (_x >> "Drug" >> "extraPay");
+						} else {
+							private _tax = _sellPrice * getNumber (_x >> "Drug" >> "saleTax");
+							_cartelTaxes pushBack [_owner, _tax];
+							_sellPrice = _sellPrice - _tax;
+						};
+					};
+				};
+			};
+		} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgCartels" >> "Fixed"));
 	};
 
 	if ([] call ULP_fnc_isGroup) then {
@@ -32,25 +51,6 @@ if (_sellPrice > 0) then {
 			_sellPrice = _sellPrice - _gangTax;
 		};
 	};
-
-	{
-		private _object = missionNamespace getVariable [format["ULP_SRV_Cartel_%1", configName _x], objNull];
-
-		if !(isNull _object) then {
-			private _owner = (_object getVariable ["owner", []]) param [0, grpNull];
-			if !(isNull _owner) then {
-				if (isClass (_x >> "Drug")) then {
-					if (_owner isEqualTo (group player)) then {
-						_sellPrice = _sellPrice * getNumber (_x >> "Drug" >> "extraPay");
-					} else {
-						private _tax = _sellPrice * getNumber (_x >> "Drug" >> "saleTax");
-						_cartelTaxes pushBack [_owner, _tax];
-						_sellPrice = _sellPrice - _tax;
-					};
-				};
-			};
-		};
-	} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgCartels" >> "Fixed"));
 
 	// If the sell price is higher than buy, make sell 95% of buy...
 	if (_sellPrice > _buyPrice && { _buyPrice > 0 }) then { _sellPrice = _buyPrice * 0.95; };

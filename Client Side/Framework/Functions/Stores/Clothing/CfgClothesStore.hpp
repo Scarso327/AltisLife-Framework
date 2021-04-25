@@ -243,6 +243,11 @@ class CfgClothesStore {
 			class U_Competitor : FactionBase {};
 			class U_O_R_Gorka_01_black_F : FactionBase {};
 			class U_O_PilotCoveralls : FactionBase { condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess"; };
+			class U_B_Wetsuit : FactionBase {
+				displayName = "Marine Wetsuit";
+				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
+				class Textures { class U_B_Wetsuit {}; };
+			};
 			class U_C_CBRN_Suit_01_White_F : FactionBase {
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures { class U_C_CBRN_Suit_01_White_F {}; };
@@ -268,7 +273,7 @@ class CfgClothesStore {
 			class G_Shades_Black : FactionBase {};
 			class G_Sport_Red : FactionBase {};
 			class G_Lady_Blue : FactionBase {};
-			class G_B_Diving : FactionBase { condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess"; };
+			class G_B_Diving : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F : FactionBase {};
 			class G_RegulatorMask_F : FactionBase { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};

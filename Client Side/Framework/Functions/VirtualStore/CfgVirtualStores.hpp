@@ -170,6 +170,12 @@ class CfgVirtualStores {
 		};
 	};
 
+	class Base : Rebel {
+		storeName = "Gang Base Market";
+		conditions = "true";
+		class Items : Items {};
+	};
+
 	class Burger {
 		storeName = "Redburger";
 		conditions = "true";

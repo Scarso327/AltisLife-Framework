@@ -628,4 +628,111 @@ class CfgItemsStore {
 			class SmokeShell {};
 		};
 	};
+
+	class Base {
+		storeName = "Gang Base";
+		condition = "true";
+		class Rifles {
+			class hgun_PDW2000_F {};
+			class SMG_02_F {};
+			class SMG_01_F {};
+			class sgun_HunterShotgun_01_sawedoff_F {};
+			class SMG_03C_black {};
+			class SMG_03_black {};
+			class arifle_AKS_F {};
+			class arifle_SDAR_F {};
+			class arifle_TRG20_F {};
+			class arifle_Mk20_plain_F {};
+			class arifle_SPAR_01_blk_F {};
+			class arifle_SPAR_02_blk_F {};
+			class LMG_03_F {};
+			class arifle_CTAR_blk_F {};
+			class arifle_CTARS_blk_F {};
+			class srifle_DMR_07_blk_F {};
+			class arifle_Katiba_C_F {};
+			class arifle_MSBS65_black_F {};
+			class arifle_MSBS65_Mark_black_F {};
+			class arifle_MXC_Black_F {};
+			class arifle_MX_Black_F {};
+			class arifle_MXM_Black_F {};
+			class arifle_MX_SW_Black_F {};
+			class arifle_ARX_blk_F {};
+			class LMG_Mk200_F {};
+			class arifle_AKM_F {};
+			class arifle_AK12_F {};
+			class srifle_DMR_01_F {};
+			class arifle_SPAR_03_blk_F {};
+			class srifle_DMR_06_hunter_F {};
+			class srifle_EBR_F {};
+			class srifle_DMR_03_F {};
+			class srifle_DMR_04_F {};
+		};
+
+		class Pistols {
+			class hgun_Pistol_01_F {};
+			class hgun_Rook40_F {};
+			class hgun_ACPC2_F {};
+			class hgun_Pistol_heavy_01_F {};
+			class hgun_Pistol_heavy_02_F {};
+		};
+
+		class Attachments {
+			class bipod_01_F_blk {};
+			class acc_flashlight {};
+			class acc_flashlight_pistol {};
+			class acc_pointer_IR {};
+			class optic_MRD {};
+			class optic_Aco {};
+			class optic_Holosight {};
+			class optic_Hamr {};
+			class optic_MRCO {};
+			class optic_Arco {};
+			class optic_ERCO_blk_F {};
+			class optic_DMS_weathered_F {};
+		};
+
+		class Magazines {
+			class 10Rnd_9x21_Mag {};
+			class 16Rnd_9x21_Mag {};
+			class 30Rnd_9x21_Mag {};
+			class 30Rnd_9x21_Mag_SMG_02 {};
+			class 9Rnd_45ACP_Mag {};
+			class 11Rnd_45ACP_Mag {};
+			class 6Rnd_45ACP_Cylinder {};
+			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class 2Rnd_12Gauge_Pellets {};
+			class 2Rnd_12Gauge_Slug {};
+			class 30Rnd_545x39_Mag_F {};
+			class 50Rnd_570x28_SMG_03 {};
+			class 20Rnd_556x45_UW_mag  {};
+			class 30Rnd_556x45_Stanag {};
+			class 150Rnd_556x45_Drum_Mag_F {};
+			class 200Rnd_556x45_Box_F {};
+			class 30Rnd_580x42_Mag_F {};
+			class 100Rnd_580x42_Mag_F {};
+			class 20Rnd_650x39_Cased_Mag_F {};
+			class 30Rnd_65x39_caseless_green {};
+			class 30Rnd_65x39_caseless_msbs_mag {};
+			class 30Rnd_65x39_caseless_black_mag {};
+			class 100Rnd_65x39_caseless_black_mag {};
+			class 200Rnd_65x39_cased_Box {};
+			class 10Rnd_762x54_Mag {};
+			class 20Rnd_762x51_Mag {};
+			class 30Rnd_762x39_Mag_F {};
+			class 10Rnd_127x54_Mag {};
+		};
+		
+		class Items {
+			class ItemMap {};
+			class ItemCompass {};
+			class ItemWatch {};
+			class ItemGPS {};
+			class ItemRadio {};
+			class NVGoggles {};
+			class Binocular {};
+			class ToolKit {};
+			class Chemlight_green {};
+			class SmokeShell {};
+		};
+	};
 };

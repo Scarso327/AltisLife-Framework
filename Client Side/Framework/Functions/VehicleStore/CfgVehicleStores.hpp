@@ -378,4 +378,40 @@ class CfgVehicleStores {
 			class O_T_VTOL_02_vehicle_F {};
 		};
 	};
+
+	class GangBase : Base {
+		storeName = "Blackmarket";
+		class Vehicles {
+			class C_Quadbike_01_F {};
+			class C_Offroad_01_F {};
+			class B_G_Offroad_01_armed_F {};
+			class C_Offroad_01_covered_F {};
+			class C_Offroad_01_comms_F {};
+			class C_Offroad_02_unarmed_F {};
+			class I_C_Offroad_02_LMG_F {};
+			class C_Van_02_transport_F {};
+			class C_Van_02_vehicle_F {};
+			class B_CTRG_LSV_01_light_F {};
+			class B_LSV_01_unarmed_black_F {};
+			class O_LSV_02_armed_black_F {};
+			class O_LSV_02_unarmed_F {};
+			class O_MRAP_02_F {};
+			class I_MRAP_03_F {};
+			class C_Van_01_transport_F {};
+			class C_Van_01_box_F {};
+			class C_Van_01_fuel_F {};
+			class B_Heli_Light_01_F {};
+			class I_Heli_light_03_unarmed_F {};
+			class B_Heli_Transport_01_F {
+				class Textures { class Civilian {}; };
+			};
+			class O_Heli_Transport_04_black_F {};
+			class O_Heli_Transport_04_bench_black_F {};
+			class O_Heli_Transport_04_covered_black_F {};
+			class O_Heli_Transport_04_box_black_F {};
+			class O_Heli_Transport_04_ammo_black_F {};
+			class O_Heli_Transport_04_fuel_black_F {};
+			class O_T_VTOL_02_infantry_F {};
+			class O_T_VTOL_02_vehicle_F {};
+		};
 };

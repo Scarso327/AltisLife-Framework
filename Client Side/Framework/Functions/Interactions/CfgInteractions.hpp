@@ -214,7 +214,7 @@ class CfgInteractions {
 			title = "Scrap";
 			onClick = "_this call ULP_fnc_crushVehicle";
 			factions[] = { "Police" };
-			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
+			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess && { [""bluezone_""] call ULP_fnc_isUnitsInZone }";
 		};
 
 		class PulloutOccupants : Repair {

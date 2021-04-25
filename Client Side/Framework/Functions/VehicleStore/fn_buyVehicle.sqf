@@ -69,7 +69,8 @@ if ([_faction, "vehicles"] call ULP_fnc_factionFree || { [_buyPrice, false, form
 				([_params select 0] call ULP_fnc_vehicleCfg) params [
 					"", "", "", ["_name", "Unknown", [""]], "", "", "", "", ""
 				];
-
+				
+				[_price, false, "Limit Refund"] call ULP_fnc_addMoney;
 				[([format ["Your purchase was unable to be made as you've reached the max garagable limit for %1 of %2", _name, [_limit] call ULP_fnc_numberText], format ["You've been refunded %1%2 for %3 as you've reached the max garagable limit of %4...", "£", [_price] call ULP_fnc_numberText, _name, [_limit] call ULP_fnc_numberText]] select (_price > 0))] call ULP_fnc_hint;
 			};
 

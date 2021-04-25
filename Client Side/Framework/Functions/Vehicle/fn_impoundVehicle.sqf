@@ -25,7 +25,7 @@ if !((crew _vehicle) isEqualTo []) exitWith {
 	["No one can be in the vehicle while you impound it!"] call ULP_fnc_hint;
 };
 
-private _time = getNumber (missionConfigFile >> "CfgSettings" >> "Police" >> "impoundTime");
+private _time = ["StreetCleaner", getNumber (missionConfigFile >> "CfgSettings" >> "Police" >> "impoundTime")] call ULP_fnc_activatePerk;
 if (isNumber (_missionCfg >> "impoundTime")) then {
 	_time = _time + getNumber (_missionCfg >> "impoundTime");
 };

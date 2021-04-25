@@ -93,6 +93,26 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class StreetCleaner {
+		icon = "Data\UI\Perks\vehicleCollector.paa";
+		displayName = "Street Cleaner";
+		description = "Increases your impounding and crushing speeds by %1%2.";
+		removalMultiplier = 1;
+		class Leveling {
+			maxLevel = 4;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "10 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Police" };
+			level = 6;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "_params - (_params * (_bonus / 100))";
+	};
+
 	class SpeedyLocksmith {
 		icon = "Data\UI\Perks\speedyLocksmith.paa";
 		displayName = "Speedy Locksmith";
@@ -482,7 +502,7 @@ class CfgPerks {
 	class rapidStorer {
 		icon = "Data\UI\Perks\rapidStorer.paa";
 		displayName = "Rapid Storer";
-		description = "Decreases the time it takes to store a vehicle by %1%2.";
+		description = "Decreases the time it takes to garage a vehicle by %1%2.";
 		removalMultiplier = 1;
 		class Leveling {
 			maxLevel = 3;
@@ -491,7 +511,7 @@ class CfgPerks {
 			levelCalculation = "10 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Police", "Hato" };
 			level = 29;
 			prestige = 0;
 			profession[] = {};

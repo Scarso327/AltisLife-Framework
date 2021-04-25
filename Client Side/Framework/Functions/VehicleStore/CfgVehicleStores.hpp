@@ -25,7 +25,7 @@ class CfgVehicleStores {
 				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
-			class B_T_LSV_01_unarmed_black_F {
+			class B_LSV_01_unarmed_black_F {
 				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NCA"", 2] call ULP_fnc_hasAccess }";
 				class Textures { class Police {}; };
 			};
@@ -355,7 +355,8 @@ class CfgVehicleStores {
 			class C_Van_02_transport_F {};
 			class C_Van_02_vehicle_F {};
 			class B_CTRG_LSV_01_light_F {};
-			class B_T_LSV_01_unarmed_black_F {};
+			class B_LSV_01_unarmed_black_F {};
+			class O_LSV_02_armed_black_F {};
 			class O_LSV_02_unarmed_F {};
 			class O_MRAP_02_F {};
 			class I_MRAP_03_F {};

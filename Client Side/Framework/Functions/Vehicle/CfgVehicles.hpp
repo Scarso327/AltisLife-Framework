@@ -655,7 +655,7 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
-	class B_T_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 675000; };
+	class B_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 675000; };
 
 	class O_LSV_02_unarmed_F : Base {
 		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
@@ -685,6 +685,7 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
+	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { buyPrice = 6590000; };
 
 	class B_MRAP_01_F : Base {
 		description = "The Hunter is a MRAP vehicle with an armored hull that can withstand light weapons and offers a powerful engine.";

@@ -347,7 +347,6 @@ class CfgVehicleStores {
 		class Vehicles {
 			class C_Quadbike_01_F {};
 			class C_Offroad_01_F {};
-			class B_G_Offroad_01_armed_F {};
 			class C_Offroad_01_covered_F {};
 			class C_Offroad_01_comms_F {};
 			class C_Offroad_02_unarmed_F {};
@@ -356,7 +355,6 @@ class CfgVehicleStores {
 			class C_Van_02_vehicle_F {};
 			class B_CTRG_LSV_01_light_F {};
 			class B_LSV_01_unarmed_black_F {};
-			class O_LSV_02_armed_black_F {};
 			class O_LSV_02_unarmed_F {};
 			class O_MRAP_02_F {};
 			class I_MRAP_03_F {};
@@ -380,7 +378,7 @@ class CfgVehicleStores {
 	};
 
 	class GangBase : Base {
-		storeName = "Blackmarket";
+		storeName = "Gang Base Vehicles";
 		class Vehicles {
 			class C_Quadbike_01_F {};
 			class C_Offroad_01_F {};

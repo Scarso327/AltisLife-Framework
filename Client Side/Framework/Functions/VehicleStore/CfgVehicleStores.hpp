@@ -412,4 +412,5 @@ class CfgVehicleStores {
 			class O_T_VTOL_02_infantry_F {};
 			class O_T_VTOL_02_vehicle_F {};
 		};
+	};
 };

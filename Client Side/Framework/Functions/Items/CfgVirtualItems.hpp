@@ -555,6 +555,13 @@ class CfgVirtualItems {
 			materials[] = { {"Iron", 8} };
 		};
 	};
+	class BigRedKey : BoltCutter {
+		displayName = "Big Red Key";
+		buyPrice = 31200;
+		sellPrice = 15600;
+		class Settings : Settings {};
+		class Events : Events {};
+	};
 	class signalJammer : Stinger { // TODO (crafting)
 		displayName = "Signal Jammer";
 		description = "A tool used to jam any electronic singals within a limited radius.";

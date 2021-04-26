@@ -14,7 +14,7 @@ class CfgVirtualStores {
 			//class Stinger {};
 			//class Blindfold {};
 			class Lockpick {};
-			class BoltCutter {};
+			class BigRedKey {};
 			class VehicleClamp {};
 			//class Painkillers {};
 			//class Bandage {};
@@ -49,7 +49,6 @@ class CfgVirtualStores {
 			//class FuelCan {};
 			class PanicButton {};
 			class Lockpick {};
-			class BoltCutter {};
 			//class Painkillers {};
 			//class Bandage {};
 			class BloodBag {};
@@ -77,7 +76,6 @@ class CfgVirtualStores {
 			//class FuelCan {};
 			class PanicButton {};
 			class Lockpick {};
-			class BoltCutter {};
 			class VehicleClamp {};
 			//class PlasticBarrier_02_yellow_F {};
 			//class PlasticBarrier_02_grey_F {};

@@ -20,10 +20,12 @@ class CfgClothesStore {
 			class U_O_PilotCoveralls : FactionBase { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class U_B_CTRG_Soldier_F : FactionBase {
 				displayName = "SCO19 Combat Uniform";
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_GhillieSuit : FactionBase {
 				displayName = "SCO19 Ghillie Suit";
+				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_Wetsuit : FactionBase {

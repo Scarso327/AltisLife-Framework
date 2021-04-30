@@ -349,11 +349,10 @@ class CfgClothesStore {
 	};
 
 	class Civilian {
-		storeName = "Civilian Clothing Store";
+		storeName = "City Clothing Store";
 		condition = "true";
 		class Uniforms {
 			class U_C_Poor_1 {};
-			class U_C_Farmer {};
 			class U_C_Mechanic_01_F {};
 			class U_C_WorkerOveralls {};
 			class U_C_Poloshirt_blue {};
@@ -384,7 +383,6 @@ class CfgClothesStore {
 			class H_Bandanna_gry {};
 			class H_Cap_blk {};
 			class H_Hat_grey {};
-			class H_Hat_Safari_sand_F {};
 			class H_Watchcap_blk {};
 			class H_Booniehat_khk {};
 			class H_EarProtectors_black_F {};
@@ -418,18 +416,62 @@ class CfgClothesStore {
 			class B_Kitbag_cbr {};
 			class B_TacticalPack_blk {};
 			class B_Carryall_cbr {};
-			class B_ViperLightHarness_khk_F {
+		};
+	};
+
+	class Outlet {
+		storeName = "Outlet Clothing Store";
+		condition = "true";
+		class Uniforms {
+			class U_C_Poor_1 {};
+			class U_C_Farmer {};
+			class U_C_Mechanic_01_F {};
+			class U_C_Poloshirt_blue {};
+			class U_C_Man_casual_6_F {};
+			class U_I_C_Soldier_Bandit_1_F {};
+			class U_I_C_Soldier_Bandit_3_F {};
+			class U_IG_Guerilla2_1 {
 				class Textures {
-					class B_ViperLightHarness_khk_F {};
-					class B_ViperLightHarness_oli_F : B_ViperLightHarness_khk_F {};
+					class U_IG_Guerilla2_1 {};
+					class U_IG_Guerilla2_2 {};
+					class U_IG_Guerilla2_3 {};
+					class U_IG_Guerilla3_1 {};
+					class U_IG_Guerilla3_2 {};
 				};
 			};
-			class B_ViperHarness_khk_F {
-				class Textures {
-					class B_ViperHarness_khk_F {};
-					class B_ViperHarness_oli_F : B_ViperHarness_khk_F {};
-				};
-			};
+			class U_C_E_LooterJacket_01_F {};
+			class U_OrestesBody {};
+		};
+
+		class Headgear {
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_Hat_Safari_sand_F {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+		};
+
+		class Facewear {
+			class G_Aviator {};
+			class G_Squares {};
+			class G_Spectacles {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+			class G_Respirator_white_F {};
+			class G_EyeProtectors_F {};
+		};
+
+		class Vests {
+			class V_LegStrapBag_black_F {};
+			class V_Pocketed_black_F {};
+		};
+
+		class Backpacks {
+			class B_LegStrapBag_black_F {};
+			class B_AssaultPack_blk {};
+			class B_FieldPack_blk {};
+			class B_Kitbag_cbr {};
+			class B_TacticalPack_blk {};
 		};
 	};
 

@@ -132,6 +132,18 @@ class CfgVirtualItems {
 		};
 		class Events : Events {};
 	};
+	class Sweetie : Bacon {
+		displayName = "Sweetie";
+		icon = "Data\Icons\sweetie.paa";
+		buyPrice = 8;
+		sellPrice = 4;
+		class Settings : Settings {};
+		class Sustain {
+			hunger = 5;
+			thirst = 0;
+		};
+		class Events : Events {};
+	};
 
 	// Regular Drinks
 	class Water {

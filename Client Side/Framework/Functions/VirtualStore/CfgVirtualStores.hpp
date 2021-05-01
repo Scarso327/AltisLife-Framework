@@ -47,6 +47,7 @@ class CfgVirtualStores {
 			class Coffee {};
 			class Tea {};
 			class Redbull {};
+			class Sweetie {};
 			class FuelCan {};
 			class PanicButton {};
 			class Lockpick {};

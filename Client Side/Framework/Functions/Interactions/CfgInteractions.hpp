@@ -179,6 +179,12 @@ class CfgInteractions {
 			condition = "true";
 		};
 
+		class Refuel : Repair {
+			title = "Refuel with Fuel Can";
+			onClick = "_this call ULP_fnc_fuelCan";
+			condition = "[""FuelCan""] call ULP_fnc_hasItem > 0";
+		};
+
 		class Lockpick : Repair {
 			title = "Lockpick";
 			onClick = "_this call ULP_fnc_lockpickVehicle";

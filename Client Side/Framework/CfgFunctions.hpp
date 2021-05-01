@@ -129,6 +129,7 @@ class CfgFunctions {
 			class boltcut {};
 			class drill {};
 			class blindfold {};
+			class fuelCan {};
 		};
 
 		class Input {

@@ -19,6 +19,11 @@ if !((getPlayerUID player) isEqualTo (_group getVariable ["group_owner", ""])) e
 	false
 };
 
+if !((ULP_Houses findIf { [_x, player, false] call ULP_fnc_isHouseOwner && { !(call compile getText (missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _x) >> "condition")) } }) isEqualTo -1) exitWith {
+	["You must sell all houses that are group dependant before you can transfer ownership!"] call ULP_fnc_hint;
+	false
+};
+
 private _memberList = _display displayCtrl 23062;
 
 private _selected = lnbCurSelRow _memberList;

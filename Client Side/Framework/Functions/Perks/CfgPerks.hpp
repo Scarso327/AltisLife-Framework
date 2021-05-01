@@ -499,6 +499,27 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class LifeSaver { // TODONOW
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
+		displayName = "Life Saver";
+		description = "Increase the speed of reviving by %1%2.";
+		removalMultiplier = 1;
+		class Leveling {
+			maxLevel = 5;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "10 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			level = 24;
+			prestige = 0;
+			profession[] = {};
+		};
+		onActivated = "_params + (_params * (_bonus / 100))";
+	};
+
+
 	class rapidStorer {
 		icon = "Data\UI\Perks\rapidStorer.paa";
 		displayName = "Rapid Storer";

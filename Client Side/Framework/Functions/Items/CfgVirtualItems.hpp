@@ -641,13 +641,35 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
-	class Bandage : Painkillers { // TODO (Will give health after a VERY qucik progress)
-		displayName = "Bandage";
-		description = "Used to quickly heal minor wounds.";
+	class Bandage : Painkillers {
+		displayName = "Generic Bandage";
+		description = "Used as a crafting supply for medical equipment.";
 		icon = "Data\Icons\bandage.paa";
 		buyPrice = 8500;
 		sellPrice = 4250;
 		class Settings : Settings {};
+	};
+	class FieldDressing : Bandage {
+		displayName = "Field Dressing";
+		description = "Fairly effective bandage that can be used for treating incapacitated people.";
+	};
+	class Packing : Bandage {
+		displayName = "Packing Bandage";
+		description = "Greatly effective bandage that can be used for treating incapacitated people.";
+		buyPrice = 10000;
+		sellPrice = 6550;
+	};
+	class QuickClot : Bandage {
+		displayName = "Quick Clot";
+		description = "Used to quickly treat but ineffectively treat incapacitated people.";
+		buyPrice = 3450;
+		sellPrice = 1250;
+	};
+	class Elastic : Bandage {
+		displayName = "Elastic Bandage";
+		description = "Extremely effective bandage that can be used for treating incapacitated people.";
+		buyPrice = 15850;
+		sellPrice = 7500;
 	};
 	class BloodBag : Painkillers {
 		displayName = "Blood Bag";

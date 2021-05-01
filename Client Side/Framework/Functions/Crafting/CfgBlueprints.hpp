@@ -161,6 +161,29 @@ class CfgBlueprints {
 	class MedicalEquipment {
 		displayName = "Medical Equipment";
 
+		class B_BandageFD {
+			icon = "Data\Icons\firstAidKit.paa";
+			displayName = "Generic Bandage";
+			description = "A generic bandage that can be used for crafting other equipment.";
+			materials[] = { {"FieldDressing", 1} };
+			item = "Bandage";
+			isDefault = true;
+			workbench = false;
+			time = 30;
+		};
+
+		class B_BandageP : B_BandageFD {
+			materials[] = { {"Packing", 1} };
+		};
+
+		class B_BandageQC : B_BandageFD {
+			materials[] = { {"QuickClot", 1} };
+		};
+
+		class B_BandageE : B_BandageFD {
+			materials[] = { {"Elastic", 1} };
+		};
+
 		class B_FirstAidKit {
 			icon = "Data\Icons\firstAidKit.paa";
 			displayName = "First Aid Kit";

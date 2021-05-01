@@ -16,11 +16,7 @@ if !(_this params [
 private _cash = + CASH;
 
 if (_cash > 0 && { [_cash, false, "Died"] call ULP_fnc_removeMoney }) exitWith {
-	private _money = createSimpleObject [(switch (true) do {
-		case (_cash <= 1000) : { "Land_MoneyBills_01_bunch_F" };
-		case (_cash <= 300000) : { "Land_MoneyBills_01_roll_F" };
-		default { "Land_MoneyBills_01_stack_F" };
-	}), AGLtoASL _pos];
+	private _money = createSimpleObject ["Land_MoneyBills_01_stack_F", AGLtoASL _pos];
 	_money setDir (random 360);
 
 	_money setVariable ["ULP_MoneyStack", _cash, true];

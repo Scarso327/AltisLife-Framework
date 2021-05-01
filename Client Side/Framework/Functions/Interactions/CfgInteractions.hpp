@@ -57,13 +57,14 @@ class CfgInteractions {
 			title = "Feed/Hydrate";
 			onClick = "hint ""Hello"";";
 		};
-		class Blindfold : Unrestrain { // TODO
+		class Blindfold : Unrestrain {
 			title = "Blindfold";
-			onClick = "hint ""Hello"";";
+			onClick = "_this call ULP_fnc_blindfold";
+			condition = "[_this] call ULP_fnc_isRestrained && { ([""Blindfold""] call ULP_fnc_hasItem) > 0 } && { !(_this getVariable [""blindfold"", false]) }";
 		};
-		class Unblindfold : Unrestrain { // TODO
+		class Unblindfold : Blindfold {
 			title = "Remove Blindfold";
-			onClick = "hint ""Hello"";";
+			condition = "[_this] call ULP_fnc_isRestrained && { _this getVariable [""blindfold"", false] }";
 		};
 		class CashCheck : Unrestrain { // TODONOW
 			title = "Check Cash"; // Provide ability to seize

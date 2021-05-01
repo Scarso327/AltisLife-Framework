@@ -128,6 +128,7 @@ class CfgFunctions {
 			class healAction {};
 			class boltcut {};
 			class drill {};
+			class blindfold {};
 		};
 
 		class Input {

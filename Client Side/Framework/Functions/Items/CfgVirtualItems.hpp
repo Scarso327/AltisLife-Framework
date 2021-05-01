@@ -661,7 +661,7 @@ class CfgVirtualItems {
 	};
 	class QuickClot : Bandage {
 		displayName = "Quick Clot";
-		description = "Used to quickly treat but ineffectively treat incapacitated people.";
+		description = "Used to quickly and ineffectively treat a incapacitated people.";
 		buyPrice = 3450;
 		sellPrice = 1250;
 	};
@@ -677,6 +677,14 @@ class CfgVirtualItems {
 		icon = "Data\Icons\bloodbag.paa";
 		buyPrice = 10000;
 		sellPrice = 5000;
+		class Settings : Settings {};
+	};
+	class Epinephrine : Painkillers {
+		displayName = "Epinephrine";
+		description = "Used to raise a person's heart rate neough to revive them.";
+		icon = "Data\Icons\injector.paa";
+		buyPrice = 12000;
+		sellPrice = 6000;
 		class Settings : Settings {};
 	};
 	class FirstAidKit : Painkillers {

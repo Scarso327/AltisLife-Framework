@@ -19,6 +19,7 @@ class CfgVirtualStores {
 			//class Painkillers {};
 			class FieldDressing {};
 			class BloodBag {};
+			class Epinephrine {};
 			class FirstAidKit {};
 			class MediKit {};
 			//class TapeSign_F {};
@@ -51,7 +52,11 @@ class CfgVirtualStores {
 			class Lockpick {};
 			//class Painkillers {};
 			class FieldDressing {};
+			class Elastic {};
+			class Packing {};
+			class QuickClot {};
 			class BloodBag {};
+			class Epinephrine {};
 			class FirstAidKit {};
 			class MediKit {};
 			//class PlasticBarrier_02_yellow_F {};
@@ -218,6 +223,7 @@ class CfgVirtualStores {
 			class Packing {};
 			class QuickClot {};
 			class BloodBag {};
+			class Epinephrine {};
 			class FirstAidKit {};
 			class MediKit {};
 		};

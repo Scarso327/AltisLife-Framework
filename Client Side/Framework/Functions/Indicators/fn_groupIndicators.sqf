@@ -32,7 +32,7 @@ if (_enable) then {
 
 				if (_veh isEqualTo _x) then {
 					_icons pushBack [ "\a3\ui_f\data\IGUI\Cfg\Cursors\select_ca.paa", _hex, _pos, .9, .9, 0 ];
-					_icons pushBack [ "", _text, _pos, 1, 1, 0, [_x] call ULP_fnc_getName, 0, 0.027, "RobotoCondensedBold" ];
+					_icons pushBack [ "", _text, _pos, 1, 1, 0, name _x, 0, 0.027, "RobotoCondensedBold" ];
 				} else {
 					if !(_veh in _included) then {
 						_icons pushBack [ "\a3\ui_f\data\IGUI\Cfg\Cursors\select_ca.paa", _hex, _pos, .9, .9, 0 ];
@@ -40,7 +40,7 @@ if (_enable) then {
 						private _unit = (crew _veh) param [0, objNull];
 						if !(isNull _unit) then {
 							private _count = ((count (crew _veh)) - 1);
-							_icons pushBack [ "", _text, _pos, 1, 1, 0, format ["%1%2", [_unit] call ULP_fnc_getName, (["", format [" (%1)", _count]] select (_count > 0))], 0, 0.027, "RobotoCondensedBold" ];
+							_icons pushBack [ "", _text, _pos, 1, 1, 0, format ["%1%2", name _unit, (["", format [" (%1)", _count]] select (_count > 0))], 0, 0.027, "RobotoCondensedBold" ];
 						};
 
 						_included pushBackUnique _veh;

@@ -28,6 +28,9 @@ private _balance = _display displayCtrl 4102;
 private _transactionList = _display displayCtrl 4105;
 lnbClear _transactionList;
 
+private _transactions = + (profileNamespace getVariable ["ULP_Transactions", []]);
+reverse _transactions;
+
 {
 	_x params ["_reason", "_in", "_out"];
 
@@ -40,7 +43,7 @@ lnbClear _transactionList;
 	_transactionList lnbSetValue [[_row, 0], _forEachIndex];
 	_transactionList lnbSetValue [[_row, 1], _in];
 	_transactionList lnbSetValue [[_row, 2], _out];
-} forEach + (profileNamespace getVariable ["ULP_Transactions", []]);
+} forEach _transactions;
 
 private _balValue = [BANK, [] call ULP_fnc_groupFunds] select (_group);
 

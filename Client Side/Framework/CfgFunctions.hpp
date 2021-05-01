@@ -519,6 +519,9 @@ class CfgFunctions {
 			class depositMoney {};
 			class dropMoney {};
 			class pickupMoney {};
+			class giveMoney {};
+			class sendMoney {};
+			class recieveMoney {};
 		};
 
 		class Robberies {

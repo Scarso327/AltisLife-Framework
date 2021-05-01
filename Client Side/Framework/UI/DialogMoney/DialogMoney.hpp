@@ -161,5 +161,15 @@ class DialogMoney {
 			SAFEZONE_W((UI_WIDTH / 4));
 			SAFEZONE_H(0.022);
 		};
+
+		class Transfer : Life_RscButtonCenter {
+			idc = 4108;
+			text = "<t align = 'center'>Transfer</t>";
+			onButtonClick = "[(findDisplay getNumber(configFile >> ""RscDisplayMission"" >> ""idd"")), [""Police"", ""Medic"", ""Hato"", ""Civilian""], [], { _this params [[""_display"", displayNull, [displayNull]]]; if (isNull _display) exitWith {}; private _list = _display displayCtrl 3809; private _unit = (_list tvData (tvCurSel _list)) call BIS_fnc_objectFromNetId; if (isNull _unit) exitWith { [""You didn't select anyone to transfer to!""] call ULP_fnc_hint; }; [0.1, [_unit], { [_this select 0, true] call ULP_fnc_giveMoney }] call ULP_fnc_waitExecute; }, false, false] call ULP_fnc_selectPlayer;";
+			SAFEZONE_X((UI_X + UI_WIDTH - ((UI_WIDTH / 4) * 3)) - (MARGIN_X * 3));
+			SAFEZONE_Y((BODY_Y + BODY_HEIGHT) + BUTTON_MARGIN_Y);
+			SAFEZONE_W((UI_WIDTH / 4));
+			SAFEZONE_H(0.022);
+		};
 	};
 };

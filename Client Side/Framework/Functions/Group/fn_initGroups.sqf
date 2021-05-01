@@ -55,7 +55,7 @@ scopeName "fn_initGroups";
 }] call ULP_fnc_addEventHandler;
 
 ["GroupOwner", {
-	[format ["%1 has transfered group ownership to you!", name (_this param [0, objNull])]] call ULP_fnc_hint;
+	[format ["%1 has transferred group ownership to you!", name (_this param [0, objNull])]] call ULP_fnc_hint;
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;
 

@@ -48,4 +48,6 @@ _balance ctrlSetStructuredText parseText format["<t align='left'>%1</t><t align=
 	([format["%1%2", "£", [_balValue] call ULP_fnc_numberText], "-"] select (_balValue <= 0)), (([] call ULP_fnc_groupTax) * 100), "%"
 ];
 
+(_display displayCtrl 4108) ctrlShow !(_group);
+
 _display setVariable ["group", _group];

@@ -691,12 +691,17 @@ class CfgVirtualItems {
 		sellPrice = 5000;
 		class Settings : Settings {};
 	};
-	class Epinephrine : Painkillers {
-		displayName = "Epinephrine";
-		description = "Used to raise a person's heart rate neough to revive them.";
+	class Morphine : Painkillers {
+		displayName = "Morphine";
+		description = "Used to raise a person's heart rate in order to revive them.";
 		icon = "Data\Icons\injector.paa";
 		buyPrice = 12000;
 		sellPrice = 6000;
+		class Settings : Settings {};
+	};
+	class Epinephrine : Morphine {
+		displayName = "Epinephrine";
+		description = "Used to lower a person's heart rate in order to revive them.";
 		class Settings : Settings {};
 	};
 	class FirstAidKit : Painkillers {
@@ -712,6 +717,15 @@ class CfgVirtualItems {
 		icon = "Data\Icons\mediKit.paa";
 		buyPrice = 28700;
 		sellPrice = 14350;
+		weight = 2;
+		class Settings : Settings {};
+	};
+	class AutomatedExternalDefibrillator : MediKit {
+		displayName = "Automated External Defibrillator";
+		description = "A portable electronic device that automatically diagnoses life-threatening cardiac arrhythmias.";
+		icon = "Data\Icons\defibrillator.paa";
+		buyPrice = 34600;
+		sellPrice = 17300;
 		weight = 2;
 		class Settings : Settings {};
 	};

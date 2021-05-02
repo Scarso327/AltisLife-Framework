@@ -967,6 +967,10 @@ class CfgVehicles {
 		buyPrice = 670500;
 		virtualSpace = 410;
 	};
+	class O_Truck_03_repair_F : O_Truck_03_transport_F {
+		buyPrice = 728000;
+		virtualSpace = 485;
+	};
 	class O_Truck_03_ammo_F : O_Truck_03_transport_F {
 		buyPrice = 710000;
 		virtualSpace = 460;
@@ -1290,6 +1294,10 @@ class CfgVehicles {
 		buyPrice = 98700;
 		virtualSpace = 0;
 	};
+	class C_UAV_06_medical_F : B_UAV_01_F {
+		description = "This commercial off-the-shelf utility drone uses 6 rotors to transport small payloads inside its external cargo case.";
+		buyPrice = 109700;
+	};
 	
 	class C_Heli_Light_01_civil_F : Base {
 		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
@@ -1425,7 +1433,7 @@ class CfgVehicles {
 		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "LMG_Minigun_Transport", "LMG_Minigun_Transport2", "CMFlareLauncher" } };
 		class Textures {
-			class Police : BaseTexture { turrets[] = { { "CMFlareLauncher" } }; };
+			class Police : PoliceTexture { turrets[] = { { "CMFlareLauncher" } }; };
 			class Civilian : BaseTexture {};
 		};
 	};

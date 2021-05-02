@@ -74,6 +74,7 @@ class CfgFactions {
 				required = 1;
 			};
 			class AA { queryIndex = 27; };
+			// class HART { queryIndex = 27; };
 			class HR {
 				queryIndex = 28;
 				payMulti = 0.025;
@@ -114,7 +115,7 @@ class CfgFactions {
 	};
 
 	class Hato {
-		displayName = "Highways Traffic Agency";
+		displayName = "Highways Agency";
 		colour[] = { 0.7, 0.6, 0, 1 };
 		pay = 7250;
 		jointChannel = true;

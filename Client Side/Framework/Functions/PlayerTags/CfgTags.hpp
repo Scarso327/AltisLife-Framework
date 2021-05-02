@@ -130,65 +130,60 @@ class CfgTags {
 		};
 
 		// National Health Service
-		class MedicCMO {
-			icon = "Data\Tags\Ranks\Medic\CMO.paa";
-			subtitle = "Chief Medical Officer";
+		class MedicDirector {
+			icon = "Data\Tags\Ranks\Medic\director.paa";
+			subtitle = "Director of Ambulance Services";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 8] call ULP_fnc_hasAccess }";
 		};
-		class MedicDOO {
-			icon = "Data\Tags\Ranks\Medic\DOO.paa";
-			subtitle = "Director of Operations";
+		class MedicDeputy {
+			icon = "Data\Tags\Ranks\Medic\deputyDirector.paa";
+			subtitle = "Deputy Director of Ambulance Services";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 7] call ULP_fnc_hasAccess }";
 		};
-		class MedicCST {
-			icon = "Data\Tags\Ranks\Medic\CST.paa";
-			subtitle = "Consultant";
+		class MedicHead {
+			icon = "Data\Tags\Ranks\Medic\head.paa";
+			subtitle = "Head of Department";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 6] call ULP_fnc_hasAccess }";
 		};
-		class MedicGP {
-			icon = "Data\Tags\Ranks\Medic\GP.paa";
-			subtitle = "General Practitioner";
+		class MedicCommander {
+			icon = "Data\Tags\Ranks\Medic\commander.paa";
+			subtitle = "Incident Commander";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
 		};
-		class MedicDR  {
-			icon = "Data\Tags\Ranks\Medic\DR.paa";
-			subtitle = "Doctor";
+		class MedicDoctor  {
+			icon = "Data\Tags\Ranks\Medic\doctor.paa";
+			subtitle = "Emergency Doctor";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
 		};
-		class MedicSPAR  {
-			icon = "Data\Tags\Ranks\Medic\SPAR.paa";
+		class MedicSenior  {
+			icon = "Data\Tags\Ranks\Medic\senior.paa";
 			subtitle = "Senior Paramedic";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
 		};
-		class MedicPAR  {
-			icon = "Data\Tags\Ranks\Medic\PAR.paa";
+		class MedicParamedic  {
+			icon = "Data\Tags\Ranks\Medic\paramedic.paa";
 			subtitle = "Paramedic";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};
-		class MedicSTU  {
-			icon = "Data\Tags\Ranks\Medic\STU.paa";
-			subtitle = "Student";
+		class MedicTechnician  {
+			subtitle = "Medical Technician";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
 		// Highways Agency
 		class HatoOM {
-			icon = "Data\Tags\Ranks\Medic\CMO.paa"; // ICON
 			subtitle = "Operations Manager";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 		class HatoIC {
-			icon = "Data\Tags\Ranks\Medic\CMO.paa"; // ICON
 			subtitle = "Incident Coordinator";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class HatoSTO {
-			icon = "Data\Tags\Ranks\Medic\DOO.paa"; // ICON
 			subtitle = "Senior Traffic Officer";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class HatoTO {
-			icon = "Data\Tags\Ranks\Medic\CST.paa"; // ICON
 			subtitle = "Traffic Officer";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
 		};

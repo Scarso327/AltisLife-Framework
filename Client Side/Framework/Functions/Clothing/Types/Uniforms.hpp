@@ -330,10 +330,25 @@ class U_O_R_Gorka_01_black_F {
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_tracksuit.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		};
-		class Medic {
+		class Paramedic {
 			displayName = "Paramedic";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
+		};
+		class Doctor {
+			displayName = "Medical Advisor";
+			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
+		};
+		class Commander {
+			displayName = "Incident Commander";
+			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
+		};
+		class HART {
+			displayName = "Hazardous Area Response";
+			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess }";
 		};
 		class Hato {
 			displayName = "Traffic Officer";

@@ -13,6 +13,8 @@ _this params [
 	["_unit", objNull, [objNull]]
 ];
 
+closeDialog 0;
+
 if ([player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isSurrendered } || { isDowned(player) } || { !(isDowned(_unit)) }) exitWith {};
 
 if (createDialog "DialogMedical") then {

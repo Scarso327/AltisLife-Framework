@@ -20,6 +20,13 @@ _vehicle setVariable ["ready", true];
 if (local _vehicle) then {
 	if (_jip) exitWith {};
 
+	if ([getNumber(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "isUAV")] call ULP_fnc_bool) then {
+        createVehicleCrew _vehicle;
+        _vehicle setSpeedMode "FULL";
+        _vehicle setVehicleRadar 0;
+		_vehicle setAutonomous false;
+    };
+
 	[_vehicle] call ULP_fnc_setVehicleAmmo;
 
 	[_vehicle] remoteExecCall ["ULP_fnc_initVehicle", -clientOwner];

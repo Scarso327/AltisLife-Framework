@@ -15,7 +15,7 @@ class CfgStatusIcons {
 	};
 
 	class RevivedRecently : Base {
-		icon = "Data\UI\overweight.paa";
+		icon = "Data\UI\reviveCooldown.paa";
 		condition = "missionNamespace getVariable [""ULP_LastRevived"", -300] > (time - 300)";
 	};
 };

@@ -13,4 +13,9 @@ class CfgStatusIcons {
 		icon = "Data\UI\overweight.paa";
 		condition = "isForcedWalk player";
 	};
+
+	class RevivedRecently : Base {
+		icon = "Data\UI\overweight.paa";
+		condition = "missionNamespace getVariable [""ULP_LastRevived"", -300] > (time - 300)";
+	};
 };

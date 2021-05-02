@@ -38,4 +38,6 @@ if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
 ULP_Respawned = false;
 ULP_CanRespawn = nil;
 
+ULP_LastRevived = time;
+
 [] call ULP_fnc_syncPlayerInfo;

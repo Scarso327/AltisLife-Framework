@@ -113,6 +113,10 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 		_endTime = _endTime * getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "RedzonePercentage");
 	};
 
+	if (missionNamespace getVariable ["ULP_LastRevived", -300] > (time - 300)) then {
+		_endTime = _endTime * ((-(((missionNamespace getVariable ["ULP_LastRevived", time]) - time) * 0.5) / 100) min 1);
+	};
+
 	_incapUi setVariable ["endTime", _startTime + _endTime];
 
 	if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {

@@ -33,21 +33,20 @@ class CfgInteractions {
 			onClick = "hint ""Hello"";";
 		};
 
-		class Unrestrain {
+		class Unrestrain : GiveKeys {
 			title = "Unrestrain";
-			factions[] = { "Police" };
 			onClick = "[_this select 0, player, false] call ULP_fnc_restrain; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty }";
 		};
 		class Escort : Unrestrain {
 			title = "Escort";
 			onClick = "[_this select 0, player, true] call ULP_fnc_escort; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { !([_this] call ULP_fnc_isEscorted) }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { !([_this] call ULP_fnc_isEscorted) }";
 		};
 		class StopEscort : Unrestrain {
 			title = "Stop Escorting";
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [_this] call ULP_fnc_isEscorted }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_isEscorted }";
 		};
 		class PutInVehicle : Unrestrain { // TODONOW
 			title = "Put In Vehicle";
@@ -60,11 +59,11 @@ class CfgInteractions {
 		class Blindfold : Unrestrain {
 			title = "Blindfold";
 			onClick = "_this call ULP_fnc_blindfold";
-			condition = "[_this] call ULP_fnc_isRestrained && { ([""Blindfold""] call ULP_fnc_hasItem) > 0 } && { !(_this getVariable [""blindfold"", false]) }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { ([""Blindfold""] call ULP_fnc_hasItem) > 0 } && { !(_this getVariable [""blindfold"", false]) }";
 		};
 		class Unblindfold : Blindfold {
 			title = "Remove Blindfold";
-			condition = "[_this] call ULP_fnc_isRestrained && { _this getVariable [""blindfold"", false] }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { _this getVariable [""blindfold"", false] }";
 		};
 		class CashCheck : Unrestrain { // TODONOW
 			title = "Check Cash"; // Provide ability to seize
@@ -132,7 +131,7 @@ class CfgInteractions {
 	class PersonEscortOnly {
 		class StopEscort {
 			title = "Stop Escorting";
-			factions[] = { "Police" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [_this] call ULP_fnc_isEscorted }";
 		};

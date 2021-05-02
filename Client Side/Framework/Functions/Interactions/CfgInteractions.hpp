@@ -107,14 +107,25 @@ class CfgInteractions {
 	};
 
 	class PersonMedical {
-		// Revive Player
-		// Admin Revive
+		class Revive {
+			title = "Open Vitals";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_openMedical";
+			condition = "true";
+		};
 
 		class AdministerBlood {
 			title = "Administer Blood";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_administerBlood";
 			condition = "(0 max ([""BloodBag""] call ULP_fnc_hasItem)) > 0";
+		};
+
+		class AdminRevive {
+			title = "Admin Revive";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "[player] remoteExecCall [""ULP_fnc_revived"", _this select 0];";
+			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Revive"", false] call ULP_fnc_checkPower }";
 		};
 	};
 

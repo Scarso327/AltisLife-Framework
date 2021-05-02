@@ -11,7 +11,7 @@ _this params [
 
 private _interactions = [];
 
-if (isNull _object || { (_object distance player) > 10 }) exitWith { _interactions };
+if (isNull _object || { !(alive _object) } || { (_object distance player) > 10 }) exitWith { _interactions };
 
 private _typeOf = typeOf _object;
 (_typeOf call BIS_fnc_objectType) params ["", "_type"];

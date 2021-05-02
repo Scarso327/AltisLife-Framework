@@ -19,8 +19,22 @@ private _interactionKey = ACT_KEY("User10", LWINDOWS);
 switch (_code) do {
     if (isDowned(player)) then {
         _handled = true;
-        case F: { if (_shift && { missionNamespace getVariable ["ULP_CanRespawn", false] }) then { player SetDammage 1; } }; // Respawn (Shift + F)...
-		case SPACE: {  }; // Request Medic (Space, TODO)
+        case F: { if (_shift && { missionNamespace getVariable ["ULP_CanRespawn", false] }) then { player SetDammage 1; } };
+		case SPACE: {
+            if ((count (["Medic"] call ULP_fnc_allMembers)) < 1) exitWith { ["There are no medics online to request assitance from..."] call ULP_fnc_hint; };
+
+            if (missionNamespace getVariable ["ULP_MedicalRequest", 0] < time) then {
+                private _cfg = missionConfigFile >> "CfgMessages" >> "MedicRequest";
+                private _targets = getText (_cfg >> "targets");
+
+                [_cfg, format ["%1 is requesting medical assistance...", profileName], _targets] call ULP_fnc_sendMessage;
+                ["You have requested medical assitances..."] call ULP_fnc_hint;
+
+                missionNamespace setVariable ["ULP_MedicalRequest", time + 30];
+            } else {
+                ["You have requested medical assitance recently, please wait before trying again..."] call ULP_fnc_hint;
+            };
+        };
     };
 
     case THREE: {

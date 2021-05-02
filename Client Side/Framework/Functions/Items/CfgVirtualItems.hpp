@@ -663,25 +663,29 @@ class CfgVirtualItems {
 	};
 	class FieldDressing : Bandage {
 		displayName = "Field Dressing";
+		icon = "Data\Icons\fieldDressing.paa";
 		description = "Fairly effective bandage that can be used for treating incapacitated people.";
 	};
 	class Packing : Bandage {
 		displayName = "Packing Bandage";
+		icon = "Data\Icons\packingBandage.paa";
 		description = "Greatly effective bandage that can be used for treating incapacitated people.";
 		buyPrice = 10000;
 		sellPrice = 6550;
 	};
-	class QuickClot : Bandage {
-		displayName = "Quick Clot";
-		description = "Used to quickly and ineffectively treat a incapacitated people.";
-		buyPrice = 3450;
-		sellPrice = 1250;
-	};
 	class Elastic : Bandage {
 		displayName = "Elastic Bandage";
+		icon = "Data\Icons\elasticBandage.paa";
 		description = "Extremely effective bandage that can be used for treating incapacitated people.";
 		buyPrice = 15850;
 		sellPrice = 7500;
+	};
+	class QuickClot : Bandage {
+		displayName = "QuikClot";
+		icon = "Data\Icons\quikClot.paa";
+		description = "Used to quickly and ineffectively treat a incapacitated people.";
+		buyPrice = 3450;
+		sellPrice = 1250;
 	};
 	class BloodBag : Painkillers {
 		displayName = "Blood Bag";

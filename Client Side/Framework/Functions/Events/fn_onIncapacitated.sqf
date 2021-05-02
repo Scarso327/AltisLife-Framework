@@ -61,14 +61,19 @@ player setVariable ["surrender", nil];
 
 private _wounds = createHashMap;
 private _possibleWounds = ("isClass _x" configClasses (missionConfigFile >> "CfgMedical" >> "Damage"));
+private _totalWounds = 0;
 
 {
+	scopeName "fn_woundLoop";
 	private _partWounds = createHashMap;
 	private _amount = (round (random getNumber (missionConfigFile >> "CfgMedical" >> "Damage" >> "amount"))) max 1;
 
 	for "_i" from 0 to _amount do {
+		if (_totalWounds >= getNumber (missionConfigFile >> "CfgMedical" >> "Damage" >> "maxWounds")) exitWith { breakOut "fn_woundLoop"; };
+
 		private _wound = selectRandom _possibleWounds;
-		_partWounds set [configName _wound, (_partWounds getOrDefault [configName _wound, 0]) + ((round (random getNumber (_wound >> "amount"))) max 1)];
+		_partWounds set [configName _wound, (_partWounds getOrDefault [configName _wound, 0]) + 1];
+		_totalWounds = _totalWounds + 1;
 	};
 
 	_wounds set [_x, _partWounds];

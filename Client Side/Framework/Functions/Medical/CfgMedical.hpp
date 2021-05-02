@@ -1,9 +1,9 @@
 class CfgMedical {
 	class Damage {
-		amount = 2;
+		amount = 3;
+		maxWounds = 7;
 
 		class Abrasion {
-			amount = 2;
 			time = 4;
 			items[] = { { "QuickClot", { 0, 0.25 } }, { "FieldDressing", { 5, 0.4 } }, { "Packing", { 5, 0.6 } }, { "Elastic", { 10, 0.85 } } };
 		};

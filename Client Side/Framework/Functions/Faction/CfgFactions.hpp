@@ -62,7 +62,7 @@ class CfgFactions {
 	};
 
 	class Medic {
-		displayName = "National Health Service";
+		displayName = "Altis Ambulance Service";
 		colour[] = { 0, 0.5, 0, 1 };
 		pay = 8000;
 		jointChannel = true;

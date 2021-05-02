@@ -1,6 +1,6 @@
 class CfgVirtualStores {
 	class Police {
-		storeName = "APC Market";
+		storeName = "Personal Equipment Store";
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};
@@ -41,7 +41,7 @@ class CfgVirtualStores {
 	};
 
 	class Medic {
-		storeName = "NHS Market";
+		storeName = "Personal Equipment Store";
 		conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};
@@ -75,7 +75,7 @@ class CfgVirtualStores {
 		};
 	};
 	class Hato {
-		storeName = "HATO Market";
+		storeName = "Personal Equipment Store";
 		conditions = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};

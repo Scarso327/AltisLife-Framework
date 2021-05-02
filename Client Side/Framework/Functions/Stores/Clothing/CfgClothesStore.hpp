@@ -3,11 +3,10 @@ class CfgClothesStore {
 	toolBoxIDC = 3102;
 	itemCfg = "CfgClothing";
 
-	class ItemBase { condition = "true"; };
-	class FactionBase : ItemBase { price = 0; };
+	class FactionBase { price = 0; };
 
 	class Police {
-		storeName = "Police Clothing Store";
+		storeName = "Personal Equipment Store";
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Uniforms {
 			class U_Rangemaster : FactionBase {};
@@ -145,7 +144,7 @@ class CfgClothesStore {
 	};
 
 	class PoliceUM {
-		storeName = "Police Unmarked Clothing Store";
+		storeName = "Personal Equipment Store";
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		class Uniforms {
 			class U_C_Mechanic_01_F : FactionBase { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
@@ -229,17 +228,18 @@ class CfgClothesStore {
 		};
 
 		class Backpacks {
-			class B_Carryall_cbr : FactionBase { 
-				displayName = "Invisible Backpack"; 
-				price = 0;
-				condition = "true";
-				class Textures { class INVIS {}; };
-			};
+			class B_LegStrapBag_black_F {};
+			class B_Messenger_Black_F {};
+			class B_AssaultPack_blk {};
+			class B_FieldPack_blk {};
+			class B_Kitbag_cbr {};
+			class B_TacticalPack_blk {};
+			class B_Carryall_cbr {};
 		};
 	};
 
 	class Medic {
-		storeName = "Medic Clothing Store";
+		storeName = "Personal Equipment Store";
 		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Uniforms {
 			class U_Competitor : FactionBase {};
@@ -306,7 +306,7 @@ class CfgClothesStore {
 	};
 
 	class Hato {
-		storeName = "HATO Clothing Store";
+		storeName = "Personal Equipment Store";
 		condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		class Uniforms {
 			class U_O_R_Gorka_01_black_F : FactionBase {};

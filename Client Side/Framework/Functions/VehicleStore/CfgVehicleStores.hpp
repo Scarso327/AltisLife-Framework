@@ -6,7 +6,7 @@ class CfgVehicleStores {
 	};
 
 	class PoliceCar : Base {
-		storeName = "Police Vehicle Store";
+		storeName = "Service Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
 			class C_SUV_01_F {
@@ -41,7 +41,7 @@ class CfgVehicleStores {
 	};
 
 	class PoliceAir : Base {
-		storeName = "Police Vehicle Store";
+		storeName = "Service Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
 			class B_UAV_01_F { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess }"; };
@@ -77,7 +77,7 @@ class CfgVehicleStores {
 	};
 
 	class PoliceBoat : Base {
-		storeName = "Police Vehicle Store";
+		storeName = "Service Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
 			class C_Boat_Civil_01_police_F {
@@ -96,7 +96,7 @@ class CfgVehicleStores {
 	};
 
 	class MedicCar : Base {
-		storeName = "Medic Vehicle Store";
+		storeName = "Service Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_Van_02_medevac_F {
@@ -118,7 +118,7 @@ class CfgVehicleStores {
 	};
 
 	class MedicAir : Base {
-		storeName = "Medic Vehicle Store";
+		storeName = "Service Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_Heli_Light_01_civil_F {
@@ -141,7 +141,7 @@ class CfgVehicleStores {
 	};
 
 	class MedicBoat : Base {
-		storeName = "Medic Vehicle Store";
+		storeName = "Service Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_Boat_Civil_01_police_F {
@@ -152,7 +152,7 @@ class CfgVehicleStores {
 	};
 
 	class HatoCar : Base {
-		storeName = "HATO Vehicle Store";
+		storeName = "Service Vehicle Store";
 		factions[] = { "Hato" };
 		class Vehicles {
 			class C_Offroad_01_repair_F {

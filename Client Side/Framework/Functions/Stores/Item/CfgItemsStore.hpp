@@ -3,11 +3,10 @@ class CfgItemsStore {
 	toolBoxIDC = 3113;
 	itemCfg = "CfgItems";
 
-	class ItemBase { condition = "true"; };
-	class FactionBase : ItemBase { price = 0; };
+	class FactionBase { price = 0; };
 
 	class Police {
-		storeName = "Police Equipment Store";
+		storeName = "Personal Equipment Store";
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Rifles {
 			// SPECIAL
@@ -197,9 +196,7 @@ class CfgItemsStore {
 		};
 	};
 
-	class Medic {
-		storeName = "Medic Equipment Store";
-		default = 4;
+	class Medic : Police {
 		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Rifles {};
 		class Pistols {};
@@ -217,24 +214,13 @@ class CfgItemsStore {
 		};
 	};
 
-	class Hato {
-		storeName = "HATO Equipment Store";
-		default = 4;
+	class Hato : Medic {
 		condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		class Rifles {};
 		class Pistols {};
 		class Attachments {};
 		class Magazines {};
-		class Items {
-			class ItemMap : FactionBase {};
-			class ItemCompass : FactionBase {};
-			class ItemWatch : FactionBase {};
-			class ItemGPS : FactionBase {};
-			class ItemRadio : FactionBase {};
-			class Rangefinder : FactionBase {};
-			class ToolKit : FactionBase {};
-			class Chemlight_green {};
-		};
+		class Items : Items {};
 	};
 
 	class Civilian {
@@ -246,13 +232,13 @@ class CfgItemsStore {
 		class Attachments {};
 		class Magazines {};
 		class Items {
-			class ItemMap : ItemBase {};
-			class ItemCompass : ItemBase {};
-			class ItemWatch : ItemBase {};
-			class ItemGPS : ItemBase {};
-			class ItemRadio : ItemBase {};
-			class Binocular : ItemBase {};
-			class ToolKit : ItemBase {};
+			class ItemMap {};
+			class ItemCompass {};
+			class ItemWatch {};
+			class ItemGPS {};
+			class ItemRadio {};
+			class Binocular {};
+			class ToolKit {};
 		};
 	};
 
@@ -261,19 +247,19 @@ class CfgItemsStore {
 		condition = "[""Handgun""] call ULP_fnc_hasLicense";
 		class Rifles {};
 		class Pistols {
-			class hgun_Pistol_01_F : ItemBase {};
-			class hgun_Rook40_F : ItemBase {};
-			class hgun_ACPC2_F : ItemBase {};
-			class hgun_Pistol_heavy_01_F : ItemBase {};
-			class hgun_Pistol_heavy_02_F : ItemBase {};
+			class hgun_Pistol_01_F {};
+			class hgun_Rook40_F {};
+			class hgun_ACPC2_F {};
+			class hgun_Pistol_heavy_01_F {};
+			class hgun_Pistol_heavy_02_F {};
 		};
 		class Attachments {};
 		class Magazines {
-			class 10Rnd_9x21_Mag : ItemBase {};
-			class 16Rnd_9x21_Mag : ItemBase {};
-			class 9Rnd_45ACP_Mag : ItemBase {};
-			class 11Rnd_45ACP_Mag : ItemBase {};
-			class 6Rnd_45ACP_Cylinder : ItemBase {};
+			class 10Rnd_9x21_Mag {};
+			class 16Rnd_9x21_Mag {};
+			class 9Rnd_45ACP_Mag {};
+			class 11Rnd_45ACP_Mag {};
+			class 6Rnd_45ACP_Cylinder {};
 		};
 		class Items {};
 	};
@@ -306,25 +292,25 @@ class CfgItemsStore {
 		storeName = "Govenor Protection Store";
 		condition = "[] call ULP_fnc_isProtection";
 		class Rifles {
-			class hgun_PDW2000_F : ItemBase { price = 60100; };
-			class SMG_05_F : ItemBase { price = 60075; };
-			class SMG_02_F : ItemBase { price = 63825; };
-			class SMG_01_F : ItemBase { price = 70125; };
-			class SMG_03C_black : ItemBase {
+			class hgun_PDW2000_F { price = 60100; };
+			class SMG_05_F { price = 60075; };
+			class SMG_02_F { price = 63825; };
+			class SMG_01_F { price = 70125; };
+			class SMG_03C_black {
 				price = 67250;
 				class textures {
 					class SMG_03C_black {};
 					class SMG_03C_TR_black {};
 				};
 			};
-			class SMG_03_black : ItemBase {
+			class SMG_03_black {
 				price = 83350;
 				class textures {
 					class SMG_03_black {};
 					class SMG_03_TR_black {};
 				};
 			};
-			class arifle_SPAR_01_blk_F : ItemBase {
+			class arifle_SPAR_01_blk_F {
 				price = 127075;
 				class textures {
 					class arifle_SPAR_01_blk_F {};
@@ -332,8 +318,8 @@ class CfgItemsStore {
 			};
 		};
 		class Pistols {
-			class hgun_Rook40_F : ItemBase { price = 16550; };
-			class hgun_ACPC2_F : ItemBase { price = 22500; };
+			class hgun_Rook40_F { price = 16550; };
+			class hgun_ACPC2_F { price = 22500; };
 		};
 		class Attachments {
 			class bipod_01_F_blk : FactionBase { 

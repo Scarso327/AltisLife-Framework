@@ -191,7 +191,7 @@ class DialogMedical {
 		class FieldDressing : Life_RscActiveText {
 			idc = 4910;
 			style = ST_KEEP_ASPECT_RATIO  + ST_CENTER + ST_PICTURE;
-			text = "Data\Icons\bandage.paa";
+			text = "Data\Icons\FieldDressing.paa";
 			tooltip = "Apply Field Dressing";
 			onButtonClick = "[_this select 0, ""FieldDressing""] call ULP_fnc_applyBandage";
 			SAFEZONE_X(HORIZONTAL_GRID_X(0.494844, BUTTON_W, 0));
@@ -202,6 +202,7 @@ class DialogMedical {
 
 		class Packing : FieldDressing {
 			idc = 4911;
+			text = "Data\Icons\packingBandage.paa";
 			tooltip = "Apply Packing Bandage";
 			onButtonClick = "[_this select 0, ""Packing""] call ULP_fnc_applyBandage";
 			SAFEZONE_X(HORIZONTAL_GRID_X(0.494844, BUTTON_W, 1));
@@ -209,13 +210,15 @@ class DialogMedical {
 
 		class QuickClot : FieldDressing {
 			idc = 4912;
-			tooltip = "Apply Quick Clot";
+			text = "Data\Icons\quikClot.paa";
+			tooltip = "Apply QuikClot";
 			onButtonClick = "[_this select 0, ""QuickClot""] call ULP_fnc_applyBandage";
 			SAFEZONE_X(HORIZONTAL_GRID_X(0.494844, BUTTON_W, 2));
 		};
 
 		class Elastic : FieldDressing {
 			idc = 4913;
+			text = "Data\Icons\elasticBandage.paa";
 			tooltip = "Apply Elastic Bandage";
 			onButtonClick = "[_this select 0, ""Elastic""] call ULP_fnc_applyBandage";
 			SAFEZONE_X(HORIZONTAL_GRID_X(0.494844, BUTTON_W, 3));

@@ -23,6 +23,6 @@ player enableAimPrecision ([getNumber (missionConfigFile >> "CfgSettings" >> "Pl
 if (_addActions) then {
 	{ player removeAction _x; } forEach ULP_PlayerActions;
 
-	ULP_PlayerActions pushBackUnique (player addAction ["<img image='\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa'/> Treat Yourself", { (_this select 3) call ULP_fnc_healAction }, player, 5, true, true, "", "isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) } && { [player] call ULP_fnc_canHeal }"]);
-	ULP_PlayerActions pushBackUnique (player addAction ["<img image='\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa'/> Treat Person", { (_this select 3) call ULP_fnc_healAction }, cursorObject, 5, true, true, "", "isNull (objectParent cursorObject) && { !([] call ULP_UI_fnc_isProgress) } && { [cursorObject] call ULP_fnc_canHeal }"]);
+	ULP_PlayerActions pushBackUnique (player addAction ["<img image='\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa'/> Treat Yourself", { player call ULP_fnc_healAction }, nil, 5, true, true, "", "isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) } && { [player] call ULP_fnc_canHeal }"]);
+	ULP_PlayerActions pushBackUnique (player addAction ["<img image='\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa'/> Treat Person", { cursorObject call ULP_fnc_healAction }, nil, 5, true, true, "", "isNull (objectParent cursorObject) && { !([] call ULP_UI_fnc_isProgress) } && { [cursorObject] call ULP_fnc_canHeal }"]);
 };

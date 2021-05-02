@@ -184,7 +184,7 @@ class CfgAchievements {
 	class JoinNHS {
 		icon = "Data\UI\Achievements\NHS.paa";
 		displayName = "Paramedic";
-		description = "Joined the National Health Service.";
+		description = "Joined the Altis Ambulance Service.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};

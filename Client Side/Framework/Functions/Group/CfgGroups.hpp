@@ -2,13 +2,13 @@ class CfgGroups {
 	class Tag {
 		MinLength = 1;
 		MaxLength = 4;
-		Blacklisted[] = { "APC", "NHS", "HATO" };
+		Blacklisted[] = { "APC", "NHS", "AAS", "HATO" };
 	};
 	
 	class Name {
 		MinLength = 6;
     	MaxLength = 30;
-		Blacklisted[] = { "Altis Police Contabulary", "National Health Service", "Highways Agency", "Civilian" };
+		Blacklisted[] = { "Altis Police Contabulary", "National Health Service", "Altis Ambulance Service", "Highways Agency", "Civilian" };
 	};
 
 	ranks[] = {

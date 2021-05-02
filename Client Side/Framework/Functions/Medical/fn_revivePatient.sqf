@@ -31,7 +31,7 @@ if ((count (_unit getVariable ["IncapacitatedWounds", createHashMap])) > 0) exit
 };
 
 if (["AutomatedExternalDefibrillator"] call ULP_fnc_hasItem < 1) exitWith {
-	["You require an AED in order to revive this patient..."] call ULP_fnc_hint;
+	["You require an defibrillator in order to revive this patient..."] call ULP_fnc_hint;
 };
 
 closeDialog 0;

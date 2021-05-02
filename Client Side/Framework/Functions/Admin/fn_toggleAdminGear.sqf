@@ -48,6 +48,8 @@ if ([player] call ULP_fnc_onDuty) then {
 	player linkItem "ItemMap";
 	player linkItem "ItemCompass";
 	player linkItem "ItemWatch";
+
+	player setDamage 0;
 };
 
 player setVariable ["onduty", !([player] call ULP_fnc_onDuty), true];

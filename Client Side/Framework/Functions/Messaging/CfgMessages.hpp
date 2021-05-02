@@ -38,12 +38,12 @@ class CfgMessages {
 
 	class PoliceEmergencyDispatch : Message {
 		picture = "Data\UI\Messaging\999.paa";
-		displayName = "APC Emergency Dispatch";
+		displayName = "Police Emergency Dispatch";
 		targets = "[""Police""] call ULP_fnc_allMembers";
 	};
 
 	class HealthEmergencyDispatch : PoliceEmergencyDispatch {
-		displayName = "NHS Emergency Dispatch";
+		displayName = "Medical Emergency Dispatch";
 		targets = "[""Medic""] call ULP_fnc_allMembers";
 	};
 

@@ -153,9 +153,14 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 		};
 
 		(_incapUi displayCtrl 9002) ctrlSetStructuredText parseText format [
-			"<t align='left' size='1'>%1</t><t align='right' size='1'>Nearest Medic: 0m</t>",
-			_incapUi getVariable ["status", "Waiting to respawn..."]
+			"<t align='left' size='1'>%1</t><t align='right' size='1'>Medics Online: %2</t>",
+			_incapUi getVariable ["status", "Waiting to respawn..."], (count (["Medic"] call ULP_fnc_allMembers))
 		];
+
+		(_incapUi displayCtrl 9005) ctrlSetStructuredText parseText ([
+			"<t align='center' size='1'>Medic Requested</t>"
+			"<t align='center' size='1'>Press <t color='#8A2BE2'>Space</t> to request a medic</t>"
+		] select (missionNamespace getVariable ["ULP_MedicalRequest", 0] < time));
     }] call ULP_fnc_addEachFrame)];
 
 	["Incapacitated", [_unit, _killer, _incapUi]] call ULP_fnc_invokeEvent;

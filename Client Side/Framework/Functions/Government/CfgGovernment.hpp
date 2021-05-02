@@ -30,5 +30,12 @@ class CfgGovernment {
 			format = "format [""%1%2"", ""£"", [_this] call ULP_fnc_numberText]";
 			values[] = { { 500, 1500 }, 1000 };
 		};
+		class Revival {
+			displayName = "Revival Fee";
+			tooltip = "This changes the amount of money paid to medics when reviving.";
+			type = "NUMBER";
+			format = "format [""%1%2"", ""£"", [_this] call ULP_fnc_numberText]";
+			values[] = { { 2500, 7500 }, 5000 };
+		};
 	};
 };

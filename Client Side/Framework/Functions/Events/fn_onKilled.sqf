@@ -53,6 +53,8 @@ if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
 ULP_Respawned = false;
 ULP_CanRespawn = nil;
 
+player setVariable ["IncapacitatedWounds", nil, true];
+
 ["Died", [_unit, _killer]] call ULP_fnc_invokeEvent;
 
 [ { ULP_Respawned }, [], {

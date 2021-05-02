@@ -499,7 +499,7 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class LifeSaver { // TODONOW
+	class LifeSaver {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
 		displayName = "Life Saver";
 		description = "Increase the speed of reviving by %1%2.";

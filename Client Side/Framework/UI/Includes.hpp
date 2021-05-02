@@ -20,3 +20,4 @@
 #include "DialogMoves\DialogMoves.hpp"
 #include "DialogPNC\DialogPNC.hpp"
 #include "DialogLegislation\DialogLegislation.hpp"
+#include "DialogMedical\DialogMedical.hpp"

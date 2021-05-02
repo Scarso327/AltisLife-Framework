@@ -59,6 +59,23 @@ player setVariable ["surrender", nil];
 [] spawn ULP_UI_fnc_closeDialogs; // Makes sure all dialogs are closed...
 [] call ULP_fnc_wipeEffects;
 
+private _wounds = createHashMap;
+private _possibleWounds = ("isClass _x" configClasses (missionConfigFile >> "CfgMedical" >> "Damage"));
+
+{
+	private _partWounds = createHashMap;
+	private _amount = (round (random getNumber (missionConfigFile >> "CfgMedical" >> "Damage" >> "amount"))) max 1;
+
+	for "_i" from 0 to _amount do {
+		private _wound = selectRandom _possibleWounds;
+		_partWounds set [configName _wound, (_partWounds getOrDefault [configName _wound, 0]) + ((round (random getNumber (_wound >> "amount"))) max 1)];
+	};
+
+	_wounds set [_x, _partWounds];
+} forEach ["Head", "Body", "RArm", "LArm", "RLeg", "LLeg"];
+
+player setVariable ["IncapacitatedWounds", _wounds, true];
+
 // Create Incapaciated screen effect...
 private _effectBlur = ppEffectCreate ["DynamicBlur", 300];
 _effectBlur ppEffectEnable true;

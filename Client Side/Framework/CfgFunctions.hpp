@@ -589,6 +589,11 @@ class CfgFunctions {
 			class createBodyBag {};
 			class administerBlood {};
 			class receivedBlood {};
+			class openMedical {};
+			class setLimb {};
+			class applyBandage {};
+			class revivePatient {};
+			class revived {};
 		};
 
 		class Housing {

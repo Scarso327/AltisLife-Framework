@@ -30,6 +30,10 @@ if ((count (_unit getVariable ["IncapacitatedWounds", createHashMap])) > 0) exit
 	["This patient still has open wounds that must be closed..."] call ULP_fnc_hint;
 };
 
+if (["AutomatedExternalDefibrillator"] call ULP_fnc_hasItem < 1) exitWith {
+	["You require an AED in order to revive this patient..."] call ULP_fnc_hint;
+};
+
 closeDialog 0;
 
 private _time = ["LifeSaver", 20] call ULP_fnc_activatePerk;

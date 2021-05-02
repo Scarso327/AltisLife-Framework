@@ -114,7 +114,7 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	};
 
 	if (missionNamespace getVariable ["ULP_LastRevived", -300] > (time - 300)) then {
-		_endTime = _endTime * ((-(((missionNamespace getVariable ["ULP_LastRevived", time]) - time) * 0.5) / 100) min 1);
+		_endTime = _endTime * (((-(((missionNamespace getVariable ["ULP_LastRevived", time]) - time) * 0.5) / 100) min 1) max 0.25);
 	};
 
 	_incapUi setVariable ["endTime", _startTime + _endTime];

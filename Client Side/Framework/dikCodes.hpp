@@ -39,6 +39,7 @@
 #define F1 59
 #define F2 60
 #define F3 61
+#define F4 62
 #define NUMENTER 156
 #define NUMSLASH 181
 #define DELETE 211

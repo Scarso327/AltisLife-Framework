@@ -98,11 +98,6 @@ class CfgInteractions {
 			onClick = "(_this select 0) setDamage 0; [format[""You've healed this player using admin powers...""]] call ULP_fnc_hint; [getPlayerUID player, ""Admin"", [""AdminHeal"", serverTime, [name (_this select 0)]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2]; closeDialog 0;";
 			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { (damage _this) > 0 } && { [""Heal"", false] call ULP_fnc_checkPower }";
 		};
-		class AdminCompensate : AdminHeal { // TODONOW
-			title = "Admin Compensate";
-			onClick = "[getPlayerUID player, ""Admin"", [""AdminCompensate"", serverTime, [name (_this select 0)]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2]; closeDialog 0;";
-			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { (damage _this) > 0 } && { [""Compensate"", false] call ULP_fnc_checkPower }";
-		};
 	};
 
 	class PersonMedical {

@@ -132,6 +132,32 @@ switch (_code) do {
         };
     };
 
+    case F4: {
+        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Compensate", false] call ULP_fnc_checkPower } && { _shift } && { !_ctrlKey } && { !_alt }) then {
+            if (time < (player getVariable ["admin_comp_cooldown", 0])) exitWith {
+                ["You've spawned money in recently, please wait before trying again..."] call ULP_fnc_hint;
+                false
+            };
+
+            [
+                (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, 3000000], [],
+                {
+                    _this params [
+                        ["_display", displayNull, [displayNull]],
+                        ["_value", 1, [0]]
+                    ];
+
+                    if ([_value, false, "Compensation"] call ULP_fnc_addMoney) then {
+                        [format ["You have spawned in %1%2", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+
+                        [getPlayerUID player, "Admin", ["AdminCompensate", _value]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+                        player setVariable ["admin_comp_cooldown", time + 5];
+                    };
+                }, false
+            ] call ULP_fnc_selectNumber;
+        };
+    };
+
     case U : {
         if (_shift && { _ctrlKey } && { !_alt } && { [] call ULP_fnc_isUndercover }) then {
             if (time < (player getVariable ["uc_cooldown", 0])) exitWith {

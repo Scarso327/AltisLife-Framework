@@ -124,7 +124,7 @@ class CfgInteractions {
 		class AdminRevive {
 			title = "Admin Revive";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
-			onClick = "[player] remoteExecCall [""ULP_fnc_revived"", _this select 0];";
+			onClick = "[player] remoteExecCall [""ULP_fnc_revived"", _this select 0]; closeDialog 0;";
 			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Revive"", false] call ULP_fnc_checkPower }";
 		};
 	};

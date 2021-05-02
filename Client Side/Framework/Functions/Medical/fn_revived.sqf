@@ -31,6 +31,10 @@ player playMoveNow "amovppnemstpsraswrfldnon";
 uiNamespace setVariable ["IncapacitatedEffect", nil];
 [] call ULP_fnc_wipeEffects;
 
+if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
+	[] call ULP_UI_fnc_openHUD;
+};
+
 ULP_Respawned = false;
 ULP_CanRespawn = nil;
 

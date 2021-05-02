@@ -156,7 +156,7 @@ class CfgTablet {
 		idc= 23009;
 		pageTitle = "Community Goals";
 		pageIdcs[] = {};
-		onLoad = "[""This app is still being developed, check back soon...""] call ULP_fnc_hint; [""Home""] call ULP_fnc_setScreen;"
+		onLoad = "[""This app is still being developed, check back soon...""] call ULP_fnc_hint; [""Home""] call ULP_fnc_setScreen;";
 	};
 
 	class Perks : BaseScreen {

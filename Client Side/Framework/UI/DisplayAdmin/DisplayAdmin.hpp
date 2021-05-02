@@ -77,5 +77,31 @@ class DisplayAdmin {
                 "First Person"
             };
         };
+
+        #define BUTTON_W HORIZONTAL_GRID_W(0.15468765468, 3)
+
+        class TPToButton : Life_RscButtonCenter {
+            idc = 605;
+            text = "<t align = 'center'>Go To</t>";
+			onButtonClick = "[""action"", [""To""]] call ULP_fnc_adminCamera;";
+            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (0.15468765468 / 2), BUTTON_W, 0));
+			SAFEZONE_Y(((1 - (BUTTON_H * 2)) - (MARGIN_Y * 2)));
+            SAFEZONE_W(BUTTON_W);
+			SAFEZONE_H(BUTTON_H);
+        };
+
+        class TPHereButton : TPToButton {
+            idc = 606;
+            text = "<t align = 'center'>Bring Here</t>";
+			onButtonClick = "[""action"", [""Here""]] call ULP_fnc_adminCamera;";
+            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (0.15468765468 / 2), BUTTON_W, 1));
+        };
+
+         class VehicleTPButton : TPToButton {
+            idc = 607;
+            text = "<t align = 'center'>Join Vehicle</t>";
+			onButtonClick = "[""action"", [""Vehicle""]] call ULP_fnc_adminCamera;";
+            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (0.15468765468 / 2), BUTTON_W, 2));
+        };
     };
 };

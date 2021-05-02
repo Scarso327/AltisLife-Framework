@@ -150,7 +150,7 @@ switch (_code) do {
                     if ([_value, false, "Compensation"] call ULP_fnc_addMoney) then {
                         [format ["You have spawned in %1%2", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 
-                        [getPlayerUID player, "Admin", ["AdminCompensate", _value]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+                        [getPlayerUID player, "Admin", ["AdminCompensate", serverTime, [_value]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
                         player setVariable ["admin_comp_cooldown", time + 5];
                     };
                 }, false

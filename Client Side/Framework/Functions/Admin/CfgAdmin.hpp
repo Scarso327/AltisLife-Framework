@@ -10,7 +10,7 @@ class CfgAdmin {
 		};
 		class Invis : Camera {};
 		class Teleport {
-			message = "You must either be Events Team L2 or an Administrator to use any teleport function...";
+			message = "You must either be Events Team L2 or an Administrator to use any teleport related function...";
 			condition = "((call ULP_Staff) > 2) || { ((call ULP_Event) > 1) }";
 		};
 		class Vehicle : Teleport {};

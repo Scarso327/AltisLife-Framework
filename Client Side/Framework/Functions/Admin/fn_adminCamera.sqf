@@ -106,6 +106,53 @@ switch (_mode) do {
 		[getPlayerUID player, "Admin", ["AdminCamera", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	};
 
+	case "action": {
+		_params params [
+			["_type", "", [""]]
+		];
+
+		if !(["Teleport"] call ULP_fnc_checkPower) exitWith {};
+
+		if (time < (player getVariable ["admin_action_cooldown", 0])) exitWith {
+			["You've recently used a command, please wait before trying again..."] call ULP_fnc_hint;
+			false
+		};
+
+		private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
+		if (isNull _focus) exitWith { ["You need to select someone to preform this action on..."] call ULP_fnc_hint; };
+		if (_focus isEqualTo player) exitWith { ["You can't preformt hese actions on yourself..."] call ULP_fnc_hint; };
+		if !(isNull (objectParent player)) exitWith { ["You need to leave the vehicle you're in before you can do this..."] call ULP_fnc_hint; };
+
+		player setVariable ["admin_action_cooldown", time + 2];
+
+		switch (_type) do {
+			case "To": {	
+				player setPos (getPos _focus);
+				[format ["You have teleported to %1", name _focus]] call ULP_fnc_hint;
+				[getPlayerUID player, "Admin", ["AdminTeleportTo", serverTime, [name _focus, getPlayerUID _focus, getPos _focus]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+			};
+			case "Here": {
+				_focus setPos (getPos player);
+				[format ["You have teleported %1 to you", name _focus]] call ULP_fnc_hint;
+				[getPlayerUID player, "Admin", ["AdminTeleportHere", serverTime, [name _focus, getPlayerUID _focus, getPos _focus]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+			};
+			case "Vehicle": {
+				if (isNull (objectParent _focus)) exitWith { [format ["%1 isn't in a vehicle...", name _focus]] call ULP_fnc_hint; };
+								
+				private _vehicle = (vehicle _focus);
+
+				if (count (crew _vehicle) >= ((([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [6, 0]) + 1)) exitWith {
+					[format ["%1's vehicle is full...", name _focus]] call ULP_fnc_hint;
+				};
+
+				player moveInCargo _vehicle;
+				player moveInGunner _vehicle;
+
+				[getPlayerUID player, "Admin", ["AdminJoinVehicle", serverTime, [name _focus, getPlayerUID _focus, getPos _focus]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+			};
+		};
+	};
+
 	case "eachFrame": {
 		_params params [
 			["_display", displayNull, [displayNull]],

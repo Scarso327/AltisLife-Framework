@@ -19,7 +19,15 @@ private _interactionKey = ACT_KEY("User10", LWINDOWS);
 switch (_code) do {
     if (isDowned(player)) then {
         _handled = true;
-        case F: { if (_shift && { missionNamespace getVariable ["ULP_CanRespawn", false] }) then { player SetDammage 1; } };
+        case F: {
+            if (_shift && {missionNamespace getVariable ["ULP_CanRespawn", false] }) then {
+                if (((["Medic"] call ULP_fnc_allMembers) findIf { (player distance _x) <= 100 }) > -1) exitWith {
+                    ["A medic is nearby, you're unable to force bleedout..."] call ULP_fnc_hint;
+                };
+
+                player SetDammage 1;
+            };
+        };
 		case SPACE: {
             if ((count (["Medic"] call ULP_fnc_allMembers)) < 1) exitWith { ["There are no medics online to request assitance from..."] call ULP_fnc_hint; };
 

@@ -167,6 +167,7 @@ class CfgFunctions {
 			class surrender {};
 			class restrain {};
 			class escort {};
+			class seizeComms {};
 		};
 
 		class Paycheck {

@@ -23,7 +23,7 @@ if !(_unit isEqualTo player) then {
 };
 
 if (local _unit) then {
-	["CommunicationsSeized", [player]] call ULP_fnc_envokeEvent;
+	["CommunicationsSeized", [player]] call ULP_fnc_invokeEvent;
 } else {
-	["CommunicationsSeized", [player]] remoteExecCall ["ULP_fnc_envokeEvent", _unit];
+	["CommunicationsSeized", [player]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 };

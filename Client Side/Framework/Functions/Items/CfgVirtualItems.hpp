@@ -484,7 +484,7 @@ class CfgVirtualItems {
 		sellPrice = 8500;
 		weight = 1;
 		class Settings : Settings {};
-		conditions = "[""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+		conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 	};
 	class Stinger {
 		displayName = "Stinger";

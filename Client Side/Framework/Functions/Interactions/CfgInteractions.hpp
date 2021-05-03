@@ -69,9 +69,10 @@ class CfgInteractions {
 			title = "Check Cash"; // Provide ability to seize
 			onClick = "hint ""Hello"";";
 		};
-		class InventoryCheck : Unrestrain { // TODONOW
+		class InventoryCheck : Unrestrain {
 			title = "Check Inventory";
-			onClick = "hint ""Hello"";";
+			onClick = "player action [""Gear"", cursorObject]; closeDialog 0;";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty }";
 		};
 		class vItemCheck : Unrestrain { // TODONOW
 			title = "Check vItems"; // Provide ability to seize
@@ -115,6 +116,7 @@ class CfgInteractions {
 			condition = "(0 max ([""BloodBag""] call ULP_fnc_hasItem)) > 0";
 		};
 
+		// Admin Commands...
 		class AdminRevive {
 			title = "Admin Revive";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };

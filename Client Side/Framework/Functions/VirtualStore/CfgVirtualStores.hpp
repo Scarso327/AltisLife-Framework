@@ -11,7 +11,7 @@ class CfgVirtualStores {
 			class FuelCan {};
 			//class Breathalyser {};
 			class PanicButton {};
-			//class Stinger {};
+			class Stinger {};
 			class Blindfold {};
 			class Lockpick {};
 			class BigRedKey {};

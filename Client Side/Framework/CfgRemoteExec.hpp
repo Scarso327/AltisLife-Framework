@@ -32,6 +32,7 @@ class CfgRemoteExec {
         class ULP_fnc_lockForFactions {};
         class ULP_fnc_receivedBlood {};
         class ULP_fnc_applyTextures {};
+        class ULP_fnc_spikeVehicle {};
 
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;
@@ -140,6 +141,9 @@ class CfgRemoteExec {
             allowedTargets = SERVER;
         };
         class ULP_SRV_fnc_addBaseBid {
+            allowedTargets = SERVER;
+        };
+        class ULP_SRV_fnc_registerStinger {
             allowedTargets = SERVER;
         };
     };

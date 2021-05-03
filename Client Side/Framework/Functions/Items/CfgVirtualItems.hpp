@@ -486,7 +486,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		conditions = "[""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 	};
-	class Stinger { // TODONOW
+	class Stinger {
 		displayName = "Stinger";
 		description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
 		icon = "Data\Icons\stinger.paa";
@@ -505,6 +505,7 @@ class CfgVirtualItems {
 			blueprints[] = { { "Tools", "B_MakeshiftStinger" } };
 			materials[] = { {"SteelBar", 22} };
 		};
+		class Events { onUse = "[] call ULP_fnc_spikeStrip;"; };
 		conditions = "true";
 	};
 	class MakeshiftStinger : Stinger {

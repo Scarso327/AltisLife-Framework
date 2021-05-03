@@ -72,7 +72,6 @@ class CfgInteractions {
 		class InventoryCheck : Unrestrain {
 			title = "Check Inventory";
 			onClick = "player action [""Gear"", cursorObject]; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty }";
 		};
 		class vItemCheck : Unrestrain { // TODONOW
 			title = "Check vItems"; // Provide ability to seize
@@ -81,6 +80,11 @@ class CfgInteractions {
 		class LicenseCheck : Unrestrain { // TODONOW
 			title = "Check Licenses"; // Provide ability to seize
 			onClick = "hint ""Hello"";";
+		};
+		class SeizeCommunications : Unrestrain {
+			title = "Seize Communications";
+			onClick = "_this call ULP_fnc_seizeComms;";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { _this getVariable [""blindfold"", false] } && { [_this] call ULP_fnc_hasComms }";
 		};
 		class Ticket : Unrestrain { // TODONOW
 			title = "Issue Penalty Notice";
@@ -109,11 +113,15 @@ class CfgInteractions {
 			condition = "true";
 		};
 
-		class AdministerBlood {
+		class AdministerBlood : Revive {
 			title = "Administer Blood";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_administerBlood";
 			condition = "(0 max ([""BloodBag""] call ULP_fnc_hasItem)) > 0";
+		};
+
+		class SeizeCommunications : Revive {
+			title = "Seize Communications";
+			onClick = "_this call ULP_fnc_seizeComms;";
 		};
 
 		// Admin Commands...

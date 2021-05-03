@@ -150,7 +150,7 @@ if (isDowned(player)) then {
         };
 
         case Y: {
-            if (!_alt && { !_ctrlKey } && { !dialog } && { !(player call ULP_fnc_isRestrained) } && { !([] call ULP_UI_fnc_isProgress) }) then {
+            if (!_alt && { !_ctrlKey } && { !dialog } && { !(player call ULP_fnc_isRestrained) } && { !(player call ULP_fnc_isKnocked) } && { !(player call ULP_fnc_isSurrendered) } && { !([] call ULP_UI_fnc_isProgress) }) then {
                 [] call ULP_fnc_openTablet;
             };
         };

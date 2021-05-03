@@ -28,13 +28,13 @@ if (_addActions) then {
 
 	if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 		ULP_PlayerActions pushBackUnique (player addAction ["Packup Stinger", {
-			private _spike = cursorObject;
-			if (isNull _spike || { (cursorObject getVariable ["spike_owner", []]) isEqualTo [] }) exitWith {};
+			private _spike = (nearestObjects [player, ["Land_Razorwire_F"], 5] select { !((_x getVariable ["spike_owner", []]) isEqualTo []) }) param [0, objNull];
+			if (isNull _spike) exitWith {};
 			
 			if (["Stinger", 1, false, true] call ULP_fnc_handleItem) then {
 				["You have packed up a stinger..."] call ULP_fnc_hint;
 				deleteVehicle _spike;
 			};
-		}, nil, 10, false, false, "", "isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) } && { (typeOf cursorObject) isEqualTo ""Land_Razorwire_F"" } && { (damage cursorObject) isEqualTo 1 } && { !((cursorObject getVariable [""spike_owner"", []]) isEqualTo []) }"]);
+		}, nil, 10, false, false, "", "isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) } && { private _spike = (nearestObjects [player, [""Land_Razorwire_F""], 5] select { !((_x getVariable [""spike_owner"", []]) isEqualTo []) }) param [0, objNull]; !(isNull _spike) && { (damage _spike) isEqualTo 1 }"]);
 	};
 };

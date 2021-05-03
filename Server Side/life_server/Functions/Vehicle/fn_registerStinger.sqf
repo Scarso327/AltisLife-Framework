@@ -16,7 +16,7 @@ if (isNull _spike) exitWith {};
 		[_thisEventHandler] call ULP_fnc_removeEachFrame;
 	};
 
-	private _vehicle = nearestObjects [getPos _this, ["Car"], 5] param [0, objNull];
+	private _vehicle = (nearestObjects [getPos _this, ["Car"], 5]) param [0, objNull];
 	if (isNull _vehicle) exitWith {};
 
 	deleteVehicle _this;

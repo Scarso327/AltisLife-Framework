@@ -23,15 +23,15 @@ class CfgTags {
 
 			class Medic {
 				Main[] = {
-					"MedicSTU",
-					"MedicSTU",
-					"MedicPAR",
-					"MedicSPAR",
-					"MedicDR",
-					"MedicGP",
-					"MedicCST",
-					"MedicDOO",
-					"MedicCMO"
+					"MedicTechnician",
+					"MedicTechnician",
+					"MedicParamedic",
+					"MedicSenior",
+					"MedicDoctor",
+					"MedicCommander",
+					"MedicHead",
+					"MedicDeputy",
+					"MedicDirector"
 				};
 			};
 

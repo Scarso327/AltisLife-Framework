@@ -135,3 +135,13 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
   		[format ["%1 has removed your blindfold...", [_unit] call ULP_fnc_getName]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
+
+["Incapacitated", {
+	if !(isNull (missionNamespace getVariable ["ULP_Spike", objNull])) then {
+		deleteVehicle ULP_Spike;
+		player removeAction (missionNamespace getVariable ["ULP_SpikePlaceAction", -1]);
+
+		ULP_SpikePlaceAction = nil;
+		ULP_Spike = nil;
+	};
+}] call ULP_fnc_addEventHandler;

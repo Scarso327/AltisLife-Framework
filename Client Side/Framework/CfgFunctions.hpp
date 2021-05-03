@@ -130,6 +130,7 @@ class CfgFunctions {
 			class drill {};
 			class blindfold {};
 			class fuelCan {};
+			class spikeStrip {};
 		};
 
 		class Input {
@@ -410,6 +411,7 @@ class CfgFunctions {
 			class isTextureUnlocked {};
 			class vehRemoteGate {};
 			class canANPR {};
+			class spikeVehicle {};
 		};
 
 		class VehicleEvents {

@@ -77,7 +77,7 @@ switch (_code) do {
     };
 
     case J: {
-        if (_shift && { !(isDowned(player)) } && { !([player] call ULP_fnc_isRestrained) } && { (["PanicButton"] call ULP_fnc_hasItem) > 0 }) then {
+        if (_shift && { !([player] call ULP_fnc_isRestrained) } && { !([player] call ULP_fnc_isKnocked) } && { !([player] call ULP_fnc_isSurrendered) } && { (["PanicButton"] call ULP_fnc_hasItem) > 0 }) then {
             [] call ULP_fnc_panic;
         };
     };

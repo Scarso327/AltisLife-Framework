@@ -158,6 +158,36 @@ switch (_code) do {
         };
     };
 
+    case F9: {
+        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Mass", false] call ULP_fnc_checkPower } && { _shift } && { _ctrlKey } && { !_alt }) then {
+            if (time < (player getVariable ["admin_mass_cooldown", 0])) exitWith {
+                ["You've recently mass healed and revived, please wait before trying again..."] call ULP_fnc_hint;
+                false
+            };
+
+            [
+                (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Yes", "No"],
+                format ["You are sure you want to mass heal and revive..."], [],
+                {	
+                    {
+                        if (isDowned(_x)) then {
+                            [player] remoteExecCall ["ULP_fnc_revived", _x];
+                        };
+
+                        if ((damage _x) >= 0.01) then {
+                            _x setDamage 0;
+                        };
+                    } forEach playableUnits;
+
+                    ["You've revived and healed everyone..."] call ULP_fnc_hint;
+
+                    [getPlayerUID player, "Admin", ["AdminMass", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+                    player setVariable ["admin_mass_cooldown", time + 15];
+                }, false
+            ] call ULP_fnc_confirm;
+        };
+    };
+
     case U : {
         if (_shift && { _ctrlKey } && { !_alt } && { [] call ULP_fnc_isUndercover }) then {
             if (time < (player getVariable ["uc_cooldown", 0])) exitWith {

@@ -18,6 +18,7 @@ class CfgAdmin {
 		class Heal : Teleport {};
 		class Restrain : Teleport {};
 		class Revive : Teleport {};
+		class Mass : Teleport {};
 		class Disconnect {
 			condition = "((call ULP_Staff) isEqualTo 5)";
 		};

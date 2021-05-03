@@ -58,6 +58,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = true;
 			};
+			virtualItems[] = { { "PanicButton", 1 } };
 		};
 	};
 
@@ -111,6 +112,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = true;
 			};
+			virtualItems[] = { { "MediKit", 1 }, { "AutomatedExternalDefibrillator", 1 } };
 		};
 	};
 
@@ -197,7 +199,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = false;
 			};
-			virtualItems[] = { { "Identification", "name player" }};
+			virtualItems[] = { { "Identification", "name player" } };
 		};
 	};
 };

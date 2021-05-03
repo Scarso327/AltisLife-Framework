@@ -22,5 +22,5 @@ if (isNull _spike) exitWith {};
 	deleteVehicle _this;
 	[_thisEventHandler] call ULP_fnc_removeEachFrame;
 	
-	[_this] remoteExecCall ["ULP_fnc_spikeVehicle", _vehicle];
+	[_vehicle, _this getVariable ["spike_owner", []]] remoteExecCall ["ULP_fnc_spikeVehicle", _vehicle];
 }] call ULP_fnc_addEachFrame;

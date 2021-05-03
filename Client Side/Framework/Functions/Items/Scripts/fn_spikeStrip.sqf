@@ -52,5 +52,5 @@ ULP_SpikePlaceAction = player addAction ["Place Stinger", {
 
 		["You have placed a stinger..."] call ULP_fnc_hint;
 		ULP_Spike = nil;
-	}, { deleteVehicle (_this select 0); }] call ULP_UI_fnc_startProgress;
+	}, { deleteVehicle (_this select 0); }, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
 }, nil, 10, false, false, "", "!(isNull (missionNamespace getVariable [""ULP_Spike"", objNull]))"];

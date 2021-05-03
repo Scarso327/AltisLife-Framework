@@ -14,7 +14,7 @@ if !(_this params [
 ]) exitWith {};
 
 if ([_medic] call ULP_fnc_onDuty) then {
-	["You were revied by an admin..."] call ULP_fnc_hint;
+	["You were revived by an admin..."] call ULP_fnc_hint;
 } else {
 	[format ["You have been revived by %1", [_medic] call ULP_fnc_getName]] call ULP_fnc_hint;
 };

@@ -461,8 +461,8 @@ class CfgVirtualItems {
 		displayName = "Panic Button";
 		description = "When pressed this will alert the police that you require immedate assistance.";
 		icon = "Data\Icons\panicButton.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 900;
+		sellPrice = 450;
 		weight = 1;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_panic;"; };

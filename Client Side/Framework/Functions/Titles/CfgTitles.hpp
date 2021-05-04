@@ -111,4 +111,8 @@ class CfgTitles {
 		displayName = "Ocean Diver";
 		description = "Dived to a very specific place";
 	};
+	class Investigator {
+		displayName = "Private Investigator";
+		description = "The College of Policing is up to something";
+	};
 };

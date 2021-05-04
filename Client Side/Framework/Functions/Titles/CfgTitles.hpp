@@ -3,6 +3,10 @@ class CfgTitles {
 		displayName = "Default";
 		varOverride = "";
 	};
+	class OldGuard {
+		displayName = "Old Guard";
+		description = "Apart of this community before this title";
+	};
 	class FirstDrink {
 		displayName = "Big Drink Man";
 		description = "Taken your first drink of alcohol";

@@ -158,6 +158,17 @@ switch (_code) do {
         };
     };
 
+    case F5: {
+        if ([] call ULP_fnc_isStaff && { ["Revive", false] call ULP_fnc_checkPower } && { isDowned(player) } && { _shift } && { !_ctrlKey } && { !_alt }) then {
+            [player] remoteExecCall ["ULP_fnc_revived", player];
+            player setDamage 0;
+
+            ["You've revived yourself..."] call ULP_fnc_hint;
+
+            [getPlayerUID player, "Admin", ["AdminSelfRevive", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+        };
+    };
+
     case F9: {
         if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Mass", false] call ULP_fnc_checkPower } && { _shift } && { _ctrlKey } && { !_alt }) then {
             if (time < (player getVariable ["admin_mass_cooldown", 0])) exitWith {
@@ -181,7 +192,7 @@ switch (_code) do {
 
                     ["You've revived and healed everyone..."] call ULP_fnc_hint;
 
-                    [getPlayerUID player, "Admin", ["AdminMass", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+                    [getPlayerUID player, "Admin", ["AdminMassRevive", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
                     player setVariable ["admin_mass_cooldown", time + 15];
                 }, false
             ] call ULP_fnc_confirm;

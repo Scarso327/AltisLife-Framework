@@ -32,9 +32,11 @@ class NVGoggles {
 		};
 		class NVGoggles_OPFOR : NVGoggles {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
         class NVGoggles_INDEP : NVGoggles {
 			displayName = "Green";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
     };	
 };
@@ -58,13 +60,10 @@ class Chemlight_green {
 		};
 		class Chemlight_red : Chemlight_green {
 			displayName = "Red";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
-        class Chemlight_yellow : Chemlight_green {
-			displayName = "Yellow";
-		};
-        class Chemlight_blue : Chemlight_green {
-			displayName = "Blue";
-		};
+        class Chemlight_yellow : Chemlight_red { displayName = "Yellow"; };
+        class Chemlight_blue : Chemlight_red { displayName = "Blue"; };
     };	
 };
 class Chemlight_red : Chemlight_green {};
@@ -82,19 +81,12 @@ class SmokeShell {
 		};
 		class SmokeShellRed : SmokeShell {
 			displayName = "Red";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
-        class SmokeShellGreen : SmokeShell {
-			displayName = "Green";
-		};
-        class SmokeShellBlue : SmokeShell {
-			displayName = "Blue";
-		};
-		class SmokeShellOrange : SmokeShell {
-			displayName = "Orange";
-		};
-        class SmokeShellPurple : SmokeShell {
-			displayName = "Purple";
-		};
+        class SmokeShellGreen : SmokeShellRed { displayName = "Green"; };
+        class SmokeShellBlue : SmokeShellRed { displayName = "Blue"; };
+		class SmokeShellOrange : SmokeShellRed { displayName = "Orange"; };
+        class SmokeShellPurple : SmokeShellRed { displayName = "Purple"; };
     };	
 };
 class SmokeShellRed : SmokeShell {};

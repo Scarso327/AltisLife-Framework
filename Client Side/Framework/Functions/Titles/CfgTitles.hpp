@@ -7,6 +7,14 @@ class CfgTitles {
 		displayName = "Old Guard";
 		description = "Apart of this community before this title";
 	};
+	class Donator {
+		displayName = "Community Donator";
+		description = "Donated £10 or more to this community";
+	};
+	class Investor {
+		displayName = "Community Investor";
+		description = "Invested £100 or more to this community";
+	};
 	class FirstDrink {
 		displayName = "Big Drink Man";
 		description = "Taken your first drink of alcohol";

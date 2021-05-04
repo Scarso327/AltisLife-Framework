@@ -46,15 +46,18 @@ class SMG_03C_black {
 	class Textures {
 		class SMG_03C_black {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class SMG_03C_TR_black : SMG_03C_black {  displayName = "Black TR"; };
+		class SMG_03C_khaki : SMG_03C_black { 
+			displayName = "Khaki"; 
 			condition = "true";
 		};
-		class SMG_03C_TR_black : SMG_03C_black { displayName = "Black TR"; };
-		class SMG_03C_khaki : SMG_03C_black { displayName = "Khaki"; };
-		class SMG_03C_TR_khaki : SMG_03C_black { displayName = "Khaki TR"; };
-		class SMG_03C_hex : SMG_03C_black { displayName = "Hex"; };
-		class SMG_03C_TR_hex : SMG_03C_black { displayName = "Hex TR"; };
-		class SMG_03C_camo : SMG_03C_black { displayName = "Camo"; };
-		class SMG_03C_TR_camo : SMG_03C_black { displayName = "Camo TR"; };
+		class SMG_03C_TR_khaki : SMG_03C_khaki { displayName = "Khaki TR"; };
+		class SMG_03C_hex : SMG_03C_khaki { displayName = "Hex"; };
+		class SMG_03C_TR_hex : SMG_03C_khaki { displayName = "Hex TR"; };
+		class SMG_03C_camo : SMG_03C_khaki { displayName = "Camo"; };
+		class SMG_03C_TR_camo : SMG_03C_khaki { displayName = "Camo TR"; };
 	};
 };
 class SMG_03C_TR_black : SMG_03C_black {};
@@ -72,15 +75,18 @@ class SMG_03_black {
 	class Textures {
 		class SMG_03_black {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class SMG_03_TR_black : SMG_03_black { displayName = "Black TR"; };
-		class SMG_03_khaki : SMG_03_black { displayName = "Khaki"; };
-		class SMG_03_TR_khaki : SMG_03_black { displayName = "Black TR"; };
-		class SMG_03_hex : SMG_03_black { displayName = "Hex"; };
-		class SMG_03_TR_hex : SMG_03_black { displayName = "Hex TR"; };
-		class SMG_03_camo : SMG_03_black { displayName = "Camo"; };
-		class SMG_03_TR_camo : SMG_03_black { displayName = "Camo TR"; };
+		class SMG_03_khaki : SMG_03_black { 
+			displayName = "Khaki"; 
+			condition = "true";
+		};
+		class SMG_03_TR_khaki : SMG_03_khaki { displayName = "Khaki TR"; };
+		class SMG_03_hex : SMG_03_khaki { displayName = "Hex"; };
+		class SMG_03_TR_hex : SMG_03_khaki { displayName = "Hex TR"; };
+		class SMG_03_camo : SMG_03_khaki { displayName = "Camo"; };
+		class SMG_03_TR_camo : SMG_03_khaki { displayName = "Camo TR"; };
 	};
 };
 class SMG_03_TR_black : SMG_03_black {};
@@ -135,7 +141,10 @@ class arifle_Mk20C_plain_F {
 			displayName = "Plain";
 			condition = "true";
 		};
-		class arifle_Mk20C_F : arifle_Mk20C_plain_F { displayName = "Camo"; };
+		class arifle_Mk20C_F : arifle_Mk20C_plain_F { 
+			displayName = "Camo"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
 	};
 };
 class arifle_Mk20C_F : arifle_Mk20C_plain_F {};
@@ -149,7 +158,10 @@ class arifle_Mk20_plain_F {
 			displayName = "Plain";
 			condition = "true";
 		};
-		class arifle_Mk20_F : arifle_Mk20_plain_F { displayName = "Camo"; };
+		class arifle_Mk20_F : arifle_Mk20_plain_F { 
+			displayName = "Camo"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
 	};
 };
 class arifle_Mk20_F : arifle_Mk20_plain_F {};
@@ -163,7 +175,10 @@ class arifle_Mk20_GL_plain_F {
 			displayName = "Plain";
 			condition = "true";
 		};
-		class arifle_Mk20_GL_F : arifle_Mk20_GL_plain_F { displayName = "Camo"; };
+		class arifle_Mk20_GL_F : arifle_Mk20_GL_plain_F { 
+			displayName = "Camo"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
 	};
 };
 class arifle_Mk20_GL_F : arifle_Mk20_GL_plain_F {};
@@ -175,10 +190,13 @@ class arifle_SPAR_01_blk_F {
 	class Textures {
 		class arifle_SPAR_01_blk_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_SPAR_01_khk_F : arifle_SPAR_01_blk_F { displayName = "Khaki"; };
-		class arifle_SPAR_01_snd_F : arifle_SPAR_01_blk_F { displayName = "Sand"; };
+		class arifle_SPAR_01_khk_F : arifle_SPAR_01_blk_F { 
+			displayName = "Khaki";
+			condition = "true"; 
+		};
+		class arifle_SPAR_01_snd_F : arifle_SPAR_01_khk_F { displayName = "Sand"; };
 	};
 };
 class arifle_SPAR_01_khk_F : arifle_SPAR_01_blk_F {};
@@ -191,10 +209,13 @@ class arifle_SPAR_01_GL_blk_F {
 	class Textures {
 		class arifle_SPAR_01_GL_blk_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_SPAR_01_GL_khk_F : arifle_SPAR_01_GL_blk_F { displayName = "Khaki"; };
-		class arifle_SPAR_01_GL_snd_F : arifle_SPAR_01_GL_blk_F { displayName = "Sand"; };
+		class arifle_SPAR_01_GL_khk_F : arifle_SPAR_01_GL_blk_F { 
+			displayName = "Khaki"; 
+			condition = "true"; 
+		};
+		class arifle_SPAR_01_GL_snd_F : arifle_SPAR_01_GL_khk_F { displayName = "Sand"; };
 	};
 };
 class arifle_SPAR_01_GL_khk_F : arifle_SPAR_01_GL_blk_F {};
@@ -207,10 +228,13 @@ class arifle_SPAR_02_blk_F {
 	class Textures {
 		class arifle_SPAR_02_blk_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_SPAR_02_khk_F : arifle_SPAR_02_blk_F { displayName = "Khaki"; };
-		class arifle_SPAR_02_snd_F : arifle_SPAR_02_blk_F { displayName = "Sand"; };
+		class arifle_SPAR_02_khk_F : arifle_SPAR_02_blk_F { 
+			displayName = "Khaki"; 
+			condition = "true"; 
+		};
+		class arifle_SPAR_02_snd_F : arifle_SPAR_02_khk_F { displayName = "Sand"; };
 	};
 };
 class arifle_SPAR_02_khk_F : arifle_SPAR_02_blk_F {};
@@ -229,10 +253,13 @@ class arifle_CTAR_blk_F {
 	class Textures {
 		class arifle_CTAR_blk_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class arifle_CTAR_ghex_F : arifle_CTAR_blk_F { 
+			displayName = "Green Hex"; 
 			condition = "true";
 		};
-		class arifle_CTAR_ghex_F : arifle_CTAR_blk_F { displayName = "Green Hex"; };
-		class arifle_CTAR_hex_F : arifle_CTAR_blk_F { displayName = "Brown Hex"; };
+		class arifle_CTAR_hex_F : arifle_CTAR_ghex_F { displayName = "Brown Hex"; };
 	};
 };
 class arifle_CTAR_ghex_F : arifle_CTAR_blk_F {};
@@ -245,10 +272,13 @@ class arifle_CTAR_GL_blk_F {
 	class Textures {
 		class arifle_CTAR_GL_blk_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_CTAR_GL_ghex_F : arifle_CTAR_GL_blk_F { displayName = "Green Hex"; };
-		class arifle_CTAR_GL_hex_F : arifle_CTAR_GL_blk_F { displayName = "Brown Hex"; };
+		class arifle_CTAR_GL_ghex_F : arifle_CTAR_GL_blk_F { 
+			displayName = "Green Hex";
+			condition = "true"; 
+		};
+		class arifle_CTAR_GL_hex_F : arifle_CTAR_GL_ghex_F { displayName = "Brown Hex"; };
 	};
 };
 class arifle_CTAR_GL_ghex_F : arifle_CTAR_GL_blk_F {};
@@ -261,10 +291,13 @@ class arifle_CTARS_blk_F {
 	class Textures {
 		class arifle_CTARS_blk_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_CTARS_ghex_F : arifle_CTARS_blk_F { displayName = "Green Hex"; };
-		class arifle_CTARS_hex_F : arifle_CTARS_blk_F { displayName = "Brown Hex"; };
+		class arifle_CTARS_ghex_F : arifle_CTARS_blk_F { 
+			displayName = "Green Hex";
+			condition = "true"; 
+		};
+		class arifle_CTARS_hex_F : arifle_CTARS_ghex_F { displayName = "Brown Hex"; };
 	};
 };
 class arifle_CTARS_ghex_F : arifle_CTARS_blk_F {};
@@ -277,10 +310,13 @@ class srifle_DMR_07_blk_F {
 	class Textures {
 		class srifle_DMR_07_blk_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class srifle_DMR_07_ghex_F : srifle_DMR_07_blk_F { 
+			displayName = "Green Hex"; 
 			condition = "true";
 		};
-		class srifle_DMR_07_ghex_F : srifle_DMR_07_blk_F { displayName = "Green Hex"; };
-		class srifle_DMR_07_hex_F : srifle_DMR_07_blk_F { displayName = "Brown Hex"; };
+		class srifle_DMR_07_hex_F : srifle_DMR_07_ghex_F { displayName = "Brown Hex"; };
 	};
 };
 class srifle_DMR_07_ghex_F : srifle_DMR_07_blk_F {};
@@ -316,11 +352,14 @@ class arifle_MSBS65_black_F {
 	class Textures {
 		class arifle_MSBS65_black_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class arifle_MSBS65_F : arifle_MSBS65_black_F { 
+			displayName = "Green"; 
 			condition = "true";
 		};
-		class arifle_MSBS65_F : arifle_MSBS65_black_F { displayName = "Green"; };
-		class arifle_MSBS65_sand_F : arifle_MSBS65_black_F { displayName = "Sand"; };
-		class arifle_MSBS65_camo_F : arifle_MSBS65_black_F { displayName = "Camo"; };
+		class arifle_MSBS65_sand_F : arifle_MSBS65_F { displayName = "Sand"; };
+		class arifle_MSBS65_camo_F : arifle_MSBS65_F { displayName = "Camo"; };
 	};
 };
 class arifle_MSBS65_F : arifle_MSBS65_black_F {};
@@ -334,11 +373,14 @@ class arifle_MSBS65_GL_black_F {
 	class Textures {
 		class arifle_MSBS65_GL_black_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class arifle_MSBS65_GL_F : arifle_MSBS65_GL_black_F { 
+			displayName = "Green"; 
 			condition = "true";
 		};
-		class arifle_MSBS65_GL_F : arifle_MSBS65_GL_black_F { displayName = "Green"; };
-		class arifle_MSBS65_GL_sand_F : arifle_MSBS65_GL_black_F { displayName = "Sand"; };
-		class arifle_MSBS65_GL_camo_F : arifle_MSBS65_GL_black_F { displayName = "Camo"; };
+		class arifle_MSBS65_GL_sand_F : arifle_MSBS65_GL_F { displayName = "Sand"; };
+		class arifle_MSBS65_GL_camo_F : arifle_MSBS65_GL_F { displayName = "Camo"; };
 	};
 };
 class arifle_MSBS65_GL_F : arifle_MSBS65_GL_black_F {};
@@ -352,11 +394,14 @@ class arifle_MSBS65_UBS_black_F {
 	class Textures {
 		class arifle_MSBS65_UBS_black_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class arifle_MSBS65_UBS_F : arifle_MSBS65_UBS_black_F { 
+			displayName = "Green"; 
 			condition = "true";
 		};
-		class arifle_MSBS65_UBS_F : arifle_MSBS65_UBS_black_F { displayName = "Green"; };
-		class arifle_MSBS65_UBS_sand_F : arifle_MSBS65_UBS_black_F { displayName = "Sand"; };
-		class arifle_MSBS65_UBS_camo_F : arifle_MSBS65_UBS_black_F { displayName = "Camo"; };
+		class arifle_MSBS65_UBS_sand_F : arifle_MSBS65_UBS_F { displayName = "Sand"; };
+		class arifle_MSBS65_UBS_camo_F : arifle_MSBS65_UBS_F { displayName = "Camo"; };
 	};
 };
 class arifle_MSBS65_UBS_F : arifle_MSBS65_UBS_black_F {};
@@ -370,11 +415,14 @@ class arifle_MSBS65_Mark_black_F {
 	class Textures {
 		class arifle_MSBS65_Mark_black_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class arifle_MSBS65_Mark_F : arifle_MSBS65_Mark_black_F { 
+			displayName = "Green"; 
 			condition = "true";
 		};
-		class arifle_MSBS65_Mark_F : arifle_MSBS65_Mark_black_F { displayName = "Green"; };
-		class arifle_MSBS65_Mark_sand_F : arifle_MSBS65_Mark_black_F { displayName = "Sand"; };
-		class arifle_MSBS65_Mark_camo_F : arifle_MSBS65_Mark_black_F { displayName = "Camo"; };
+		class arifle_MSBS65_Mark_sand_F : arifle_MSBS65_Mark_F { displayName = "Sand"; };
+		class arifle_MSBS65_Mark_camo_F : arifle_MSBS65_Mark_F { displayName = "Camo"; };
 	};
 };
 class arifle_MSBS65_Mark_F : arifle_MSBS65_Mark_black_F {};
@@ -388,10 +436,13 @@ class arifle_MXC_Black_F {
 	class Textures {
 		class arifle_MXC_Black_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_MXC_F : arifle_MXC_Black_F { displayName = "Sand"; };
-		class arifle_MXC_khk_F : arifle_MXC_Black_F { displayName = "Khaki"; };
+		class arifle_MXC_F : arifle_MXC_Black_F { 
+			displayName = "Sand";
+			condition = "true"; 
+		};
+		class arifle_MXC_khk_F : arifle_MXC_F { displayName = "Khaki"; };
 	};
 };
 class arifle_MXC_F : arifle_MXC_Black_F {};
@@ -404,9 +455,12 @@ class arifle_MX_Black_F {
 	class Textures {
 		class arifle_MX_Black_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_MX_F : arifle_MX_Black_F { displayName = "Sand"; };
+		class arifle_MX_F : arifle_MX_Black_F { 
+			displayName = "Sand"; 
+			condition = "true"; 
+		};
 		class arifle_MX_khk_F : arifle_MX_Black_F { displayName = "Khaki"; };
 	};
 };
@@ -420,10 +474,13 @@ class arifle_MX_GL_Black_F {
 	class Textures {
 		class arifle_MX_GL_Black_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_MX_GL_F : arifle_MX_GL_Black_F { displayName = "Sand"; };
-		class arifle_MX_GL_khk_F : arifle_MX_GL_Black_F { displayName = "Khaki"; };
+		class arifle_MX_GL_F : arifle_MX_GL_Black_F { 
+			displayName = "Sand";
+			condition = "true";  
+		};
+		class arifle_MX_GL_khk_F : arifle_MX_GL_F { displayName = "Khaki"; };
 	};
 };
 class arifle_MX_GL_F : arifle_MX_GL_Black_F {};
@@ -436,10 +493,13 @@ class arifle_MXM_Black_F {
 	class Textures {
 		class arifle_MXM_Black_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_MXM_F : arifle_MXM_Black_F { displayName = "Sand"; };
-		class arifle_MXM_khk_F : arifle_MXM_Black_F { displayName = "Khaki"; };
+		class arifle_MXM_F : arifle_MXM_Black_F { 
+			displayName = "Sand"; 
+			condition = "true"; 
+		};
+		class arifle_MXM_khk_F : arifle_MXM_F { displayName = "Khaki"; };
 	};
 };
 class arifle_MXM_F : arifle_MXM_Black_F {};
@@ -452,10 +512,13 @@ class arifle_MX_SW_Black_F {
 	class Textures {
 		class arifle_MX_SW_Black_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_MX_SW_F : arifle_MX_SW_Black_F { displayName = "Sand"; };
-		class arifle_MX_SW_khk_F : arifle_MX_SW_Black_F { displayName = "Khaki"; };
+		class arifle_MX_SW_F : arifle_MX_SW_Black_F { 
+			displayName = "Sand";
+			condition = "true"; 
+		};
+		class arifle_MX_SW_khk_F : arifle_MX_SW_F { displayName = "Khaki"; };
 	};
 };
 class arifle_MX_SW_F : arifle_MXM_Black_F {};
@@ -468,10 +531,13 @@ class arifle_ARX_blk_F {
 	class Textures {
 		class arifle_ARX_blk_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class arifle_ARX_ghex_F : arifle_ARX_blk_F { displayName = "Green Hex"; };
-		class arifle_ARX_hex_F : arifle_ARX_blk_F { displayName = "Brown Hex"; };
+		class arifle_ARX_ghex_F : arifle_ARX_blk_F { 
+			displayName = "Green Hex";
+			condition = "true"; 
+		};
+		class arifle_ARX_hex_F : arifle_ARX_ghex_F { displayName = "Brown Hex"; };
 	};
 };
 class arifle_ARX_ghex_F : arifle_ARX_blk_F {};
@@ -486,7 +552,10 @@ class LMG_Mk200_F {
 			displayName = "Tan";
 			condition = "true";
 		};
-		class LMG_Mk200_black_F : LMG_Mk200_F { displayName = "Black"; };
+		class LMG_Mk200_black_F : LMG_Mk200_F { 
+			displayName = "Black"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
 	};
 };
 class LMG_Mk200_black_F : LMG_Mk200_F {};
@@ -504,10 +573,13 @@ class arifle_AK12U_F {
 	class Textures {
 		class arifle_AK12U_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class arifle_AK12U_lush_F : arifle_AK12U_F { 
+			displayName = "Lush"; 
 			condition = "true";
 		};
-		class arifle_AK12U_lush_F : arifle_AK12U_F { displayName = "Lush"; };
-		class arifle_AK12U_arid_F : arifle_AK12U_F { displayName = "Arid"; };
+		class arifle_AK12U_arid_F : arifle_AK12U_lush_F { displayName = "Arid"; };
 	};
 };
 class arifle_AK12U_lush_F : arifle_AK12U_F {};
@@ -520,10 +592,13 @@ class arifle_AK12_F {
 	class Textures {
 		class arifle_AK12_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class arifle_AK12_lush_F : arifle_AK12_F { 
+			displayName = "Lush";
 			condition = "true";
 		};
-		class arifle_AK12_lush_F : arifle_AK12_F { displayName = "Lush"; };
-		class arifle_AK12_arid_F : arifle_AK12_F { displayName = "Arid"; };
+		class arifle_AK12_arid_F : arifle_AK12_lush_F { displayName = "Arid"; };
 	};
 };
 class arifle_AK12_lush_F : arifle_AK12_F {};
@@ -542,10 +617,13 @@ class arifle_SPAR_03_blk_F {
 	class Textures {
 		class arifle_SPAR_03_blk_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class arifle_SPAR_03_khk_F : arifle_SPAR_03_blk_F { 
+			displayName = "Khaki"; 
 			condition = "true";
 		};
-		class arifle_SPAR_03_khk_F : arifle_SPAR_03_blk_F { displayName = "Khaki"; };
-		class arifle_SPAR_03_snd_F : arifle_SPAR_03_blk_F { displayName = "Sand"; };
+		class arifle_SPAR_03_snd_F : arifle_SPAR_03_khk_F { displayName = "Sand"; };
 	};
 };
 class arifle_SPAR_03_khk_F : arifle_SPAR_03_blk_F {};
@@ -558,10 +636,13 @@ class srifle_DMR_06_hunter_F {
 	class Textures {
 		class srifle_DMR_06_hunter_F {
 			displayName = "Classic";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
-		class srifle_DMR_06_olive_F : srifle_DMR_06_hunter_F { displayName = "Olive"; };
-		class srifle_DMR_06_camo_F : srifle_DMR_06_hunter_F { displayName = "Camo"; };
+		class srifle_DMR_06_olive_F : srifle_DMR_06_hunter_F { 
+			displayName = "Olive";
+			condition = "true"; 
+		};
+		class srifle_DMR_06_camo_F : srifle_DMR_06_olive_F { displayName = "Camo"; };
 	};
 };
 class srifle_DMR_06_olive_F : srifle_DMR_06_hunter_F {};
@@ -579,13 +660,16 @@ class srifle_DMR_03_F {
 	reputation = true;
 	class Textures {
 		class srifle_DMR_03_F {
-			displayName = "Classic";
-			condition = "true";
+			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
-		class srifle_DMR_03_khaki_F : srifle_DMR_03_F { displayName = "Khaki"; };
-		class srifle_DMR_03_tan_F : srifle_DMR_03_F { displayName = "Sand"; };
-		class srifle_DMR_03_multicam_F : srifle_DMR_03_F { displayName = "Camo"; };
-		class srifle_DMR_03_woodland_F : srifle_DMR_03_F { displayName = "Woodland"; };
+		class srifle_DMR_03_khaki_F : srifle_DMR_03_F { 
+			displayName = "Khaki"; 
+			condition = "true"; 
+		};
+		class srifle_DMR_03_tan_F : srifle_DMR_03_khaki_F { displayName = "Sand"; };
+		class srifle_DMR_03_multicam_F : srifle_DMR_03_khaki_F { displayName = "Camo"; };
+		class srifle_DMR_03_woodland_F : srifle_DMR_03_khaki_F { displayName = "Woodland"; };
 	};
 };
 class srifle_DMR_03_khaki_F : srifle_DMR_03_F {};
@@ -606,9 +690,12 @@ class srifle_DMR_04_F {
 	class Textures {
 		class srifle_DMR_04_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class srifle_DMR_04_Tan_F : srifle_DMR_04_F { 
+			displayName = "Tan"; 
 			condition = "true";
 		};
-		class srifle_DMR_04_Tan_F : srifle_DMR_04_F { displayName = "Tan"; };
 	};
 };
 class srifle_DMR_04_Tan_F : srifle_DMR_04_F {};
@@ -620,10 +707,13 @@ class srifle_DMR_02_F {
 	class Textures {
 		class srifle_DMR_02_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class srifle_DMR_02_sniper_F : srifle_DMR_02_F { 
+			displayName = "Sand"; 
 			condition = "true";
 		};
-		class srifle_DMR_02_sniper_F : srifle_DMR_02_F { displayName = "Sand"; };
-		class srifle_DMR_02_camo_F : srifle_DMR_02_F { displayName = "Camo"; };
+		class srifle_DMR_02_camo_F : srifle_DMR_02_sniper_F { displayName = "Camo"; };
 	};
 };
 class srifle_DMR_02_sniper_F : srifle_DMR_02_F {};
@@ -636,10 +726,13 @@ class srifle_DMR_05_blk_F {
 	class Textures {
 		class srifle_DMR_02_F {
 			displayName = "Black";
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
-		class srifle_DMR_05_tan_f : srifle_DMR_02_F { displayName = "Tan"; };
-		class srifle_DMR_05_hex_F : srifle_DMR_02_F { displayName = "Hex"; };
+		class srifle_DMR_05_tan_f : srifle_DMR_02_F { 
+			displayName = "Tan";
+			condition = "true"; 
+		};
+		class srifle_DMR_05_hex_F : srifle_DMR_05_tan_f { displayName = "Hex"; };
 	};
 };
 class srifle_DMR_05_tan_f : srifle_DMR_05_blk_F {};
@@ -652,9 +745,12 @@ class srifle_LRR_F {
 	class Textures {
 		class srifle_LRR_F {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class srifle_LRR_tna_F : srifle_LRR_F { 
+			displayName = "Tropic"; 
 			condition = "true";
 		};
-		class srifle_LRR_tna_F : srifle_LRR_F { displayName = "Tropic"; };
 	};
 };
 class srifle_LRR_tna_F : srifle_LRR_F {};

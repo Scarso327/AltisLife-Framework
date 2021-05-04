@@ -66,10 +66,13 @@ class 30Rnd_65x39_caseless_black_mag {
 	class Textures {
 		class 30Rnd_65x39_caseless_black_mag {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class 30Rnd_65x39_caseless_mag : 30Rnd_65x39_caseless_black_mag { 
+			displayName = "Sand"; 
 			condition = "true";
 		};
-		class 30Rnd_65x39_caseless_mag : 30Rnd_65x39_caseless_black_mag { displayName = "Sand"; };
-		class 30Rnd_65x39_caseless_khaki_mag : 30Rnd_65x39_caseless_black_mag { displayName = "Khaki"; };
+		class 30Rnd_65x39_caseless_khaki_mag : 30Rnd_65x39_caseless_mag { displayName = "Khaki"; };
 	};
 };
 class 30Rnd_65x39_caseless_mag : 30Rnd_65x39_caseless_black_mag {};
@@ -80,10 +83,13 @@ class 100Rnd_65x39_caseless_black_mag {
 	class Textures {
 		class 100Rnd_65x39_caseless_black_mag {
 			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class 100Rnd_65x39_caseless_mag : 100Rnd_65x39_caseless_black_mag { 
+			displayName = "Sand"; 
 			condition = "true";
 		};
-		class 100Rnd_65x39_caseless_mag : 100Rnd_65x39_caseless_black_mag { displayName = "Sand"; };
-		class 100Rnd_65x39_caseless_khaki_mag : 100Rnd_65x39_caseless_black_mag { displayName = "Khaki"; };
+		class 100Rnd_65x39_caseless_khaki_mag : 100Rnd_65x39_caseless_mag { displayName = "Khaki"; };
 	};
 };
 class 100Rnd_65x39_caseless_mag : 100Rnd_65x39_caseless_black_mag {};
@@ -119,9 +125,12 @@ class UGL_FlareWhite_F : BaseMagazine {
 			displayName = "White";
 			condition = "true";
 		};
-		class UGL_FlareGreen_F : UGL_FlareWhite_F { displayName = "Green"; };
-		class UGL_FlareRed_F : UGL_FlareWhite_F { displayName = "Red"; };
-		class UGL_FlareYellow_F : UGL_FlareWhite_F { displayName = "Yellow"; };
+		class UGL_FlareGreen_F : UGL_FlareWhite_F { 
+			displayName = "Green";
+			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+		};
+		class UGL_FlareRed_F : UGL_FlareGreen_F { displayName = "Red"; };
+		class UGL_FlareYellow_F : UGL_FlareGreen_F { displayName = "Yellow"; };
 	};
 };
 class UGL_FlareGreen_F : UGL_FlareWhite_F {};
@@ -136,11 +145,14 @@ class 1Rnd_Smoke_Grenade_shell : BaseMagazine {
 			displayName = "White";
 			condition = "true";
 		};
-		class 1Rnd_SmokeGreen_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Green"; };
-		class 1Rnd_SmokeYellow_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Yellow"; };
-		class 1Rnd_SmokePurple_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Purple"; };
-		class 1Rnd_SmokeBlue_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Blue"; };
-		class 1Rnd_SmokeOrange_Grenade_shell : 1Rnd_Smoke_Grenade_shell { displayName = "Orange"; };
+		class 1Rnd_SmokeGreen_Grenade_shell : 1Rnd_Smoke_Grenade_shell { 
+			displayName = "Green";
+			condition = "[] call ULP_fnc_donatorLevel > 0";  
+		};
+		class 1Rnd_SmokeYellow_Grenade_shell : 1Rnd_SmokeGreen_Grenade_shell { displayName = "Yellow"; };
+		class 1Rnd_SmokePurple_Grenade_shell : 1Rnd_SmokeGreen_Grenade_shell { displayName = "Purple"; };
+		class 1Rnd_SmokeBlue_Grenade_shell : 1Rnd_SmokeGreen_Grenade_shell { displayName = "Blue"; };
+		class 1Rnd_SmokeOrange_Grenade_shell : 1Rnd_SmokeGreen_Grenade_shell { displayName = "Orange"; };
 	};
 };
 class 1Rnd_SmokeRed_Grenade_shell : 1Rnd_Smoke_Grenade_shell {};

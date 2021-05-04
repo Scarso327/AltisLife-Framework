@@ -579,15 +579,10 @@ class U_B_GEN_Commander_F {
 	virtualSpace = 3;
 	isGas = false;
 	class Textures {
-		class COMMAND {
-			displayName = "Command";
-			textures[] = { "Data\Textures\Uniforms\Police\command.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
-		};
-		class MAIN {
-			displayName = "Patrol";
-			textures[] = { "Data\Textures\Uniforms\Police\main.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
+		class RTA {
+			displayName = "RTA";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\RTA.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RTA"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
 };

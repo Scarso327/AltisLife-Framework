@@ -99,7 +99,7 @@ class DisplayAdmin {
 
          class VehicleTPButton : TPToButton {
             idc = 607;
-            text = "<t align = 'center'>Join Vehicle</t>";
+            text = "<t align = 'center'>Join Veh</t>";
 			onButtonClick = "[""action"", [""Vehicle""]] call ULP_fnc_adminCamera;";
             SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (0.15468765468 / 2), BUTTON_W, 2));
         };

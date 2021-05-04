@@ -225,11 +225,6 @@ class CfgBlueprints {
 			displayName = "GPU";
 			item = "GPU";
 		};
-		class B_CPU : B_Motherboard {
-			icon = "Data\Icons\cpu.paa";
-			displayName = "CPU";
-			item = "CPU";
-		};
 		class B_RAM : B_Motherboard {
 			icon = "Data\Icons\ram.paa";
 			displayName = "RAM";

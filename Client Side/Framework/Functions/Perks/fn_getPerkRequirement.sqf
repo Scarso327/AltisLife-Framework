@@ -15,7 +15,7 @@ if !(isClass _cfg) exitWith { ["Doesn't Exist", 0] };
 // Faction Check..
 private _factions = getArray (_cfg >> "Requirements" >> "factions");
 if !([player, _factions] call ULP_fnc_isFaction) exitWith {
-	["Incorrect Faction", _factions]
+	["Faction", _factions]
 };
 
 // Level Check...

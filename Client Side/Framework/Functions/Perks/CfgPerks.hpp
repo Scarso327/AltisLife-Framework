@@ -19,7 +19,7 @@ class CfgPerks {
 
 	class ImprovedMetabolism {
 		icon = "Data\UI\Perks\improvedMetabolism.paa";
-		displayName = "Improved Metabolism";
+		displayName = "Metabolism+";
 		description = "Slows your hunger and dehydration gain by 50%.";
 		removalMultiplier = 1;
 		class Requirements {
@@ -33,7 +33,7 @@ class CfgPerks {
 
 	class GovernmentBonus {
 		icon = "Data\UI\Perks\governmentBonus.paa";
-		displayName = "Government Bonus";
+		displayName = "Government Pay";
 		description = "Increases your base paycheck by 30%.";
 		removalMultiplier = 1;
 		class Requirements {

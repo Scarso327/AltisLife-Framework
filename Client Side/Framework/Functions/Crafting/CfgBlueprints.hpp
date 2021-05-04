@@ -146,14 +146,22 @@ class CfgBlueprints {
 	class PoliceEquipment {
 		displayName = "Police Equipment";
 
-		class B_MakeshiftStinger {
+		class B_PanicButton {
+			icon = "Data\Icons\panicButton.paa";
+			displayName = "Makeshift Stinger";
+			description = "When pressed this will alert the police that you require immedate assistance.";
+			materials[] = { {"CopperBar", 20}, {"SilverBar", 16}, {"Glass", 2} };
+			item = "PanicButton";
+			isDefault = false;
+			workbench = true;
+			time = 90;
+		};
+		class B_MakeshiftStinger : B_PanicButton {
 			icon = "Data\Icons\stinger.paa";
-			displayName = "Stinger";
+			displayName = "Makeshift Stinger";
 			description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
 			materials[] = { {"SteelBar", 45}, {"Ziptie", 6} };
 			item = "MakeshiftStinger";
-			isDefault = false;
-			workbench = true;
 			time = 180;
 		};
 	};
@@ -161,44 +169,76 @@ class CfgBlueprints {
 	class MedicalEquipment {
 		displayName = "Medical Equipment";
 
-		class B_BandageFD {
-			icon = "Data\Icons\firstAidKit.paa";
-			displayName = "Generic Bandage";
-			description = "A generic bandage that can be used for crafting other equipment.";
-			materials[] = { {"FieldDressing", 1} };
-			item = "Bandage";
-			isDefault = true;
-			workbench = false;
-			time = 30;
-		};
-
-		class B_BandageP : B_BandageFD {
-			materials[] = { {"Packing", 1} };
-		};
-
-		class B_BandageQC : B_BandageFD {
-			materials[] = { {"QuickClot", 1} };
-		};
-
-		class B_BandageE : B_BandageFD {
-			materials[] = { {"Elastic", 1} };
-		};
-
 		class B_FirstAidKit {
 			icon = "Data\Icons\firstAidKit.paa";
 			displayName = "First Aid Kit";
 			description = "A map containing various known artifact sites across Altis.";
 			materials[] = { {"Painkillers", 2}, {"Bandage", 4}, {"BloodBag", 1} };
 			item = "FirstAidKit";
-			isDefault = false;
+			isDefault = true;
 			workbench = true;
 			time = 120;
 		};
 		class B_MediKit : B_FirstAidKit {
 			icon = "Data\Icons\mediKit.paa";
 			displayName = "MediKit";
-			materials[] = { {"Painkillers", 5}, {"Bandage", 10}, {"BloodBag", 3} };
+			materials[] = { {"Painkillers", 5}, {"Morphine", 2}, {"Epinephrine", 1}, {"Bandage", 10}, {"BloodBag", 3} };
 			item = "MediKit";
+		};
+		class B_AutomatedExternalDefibrillator : B_FirstAidKit {
+			icon = "Data\Icons\defibrillator.paa";
+			displayName = "Automated External Defibrillator";
+			materials[] = { {"SilverBar", 6}, {"CutDiamond", 2} };
+			item = "AutomatedExternalDefibrillator";
+			time = 180;
+		};
+	};
+
+	class Electronics {
+		displayName = "Electronics";
+
+		class B_MiningRig {
+			icon = "Data\Icons\miningRig.paa";
+			ddisplayName = "Mining Rig";
+			description = "A constructed rig for mining crypto in specialised warehouses.";
+			materials[] = { {"Motherboard", 1}, {"CPU", 1}, {"GPU", 2}, {"RAM", 4}, {"PSU", 1} };
+			item = "MiningRig";
+			isDefault = false;
+			workbench = true;
+			time = 300;
+		};
+		class B_Motherboard : B_MiningRig {
+			icon = "Data\Icons\motherboard.paa";
+			displayName = "Motherboard";
+			description = "A component used for crafting mining rigs.";
+			materials[] = { {"Motherboard", 1} };
+			item = "Motherboard";
+			time = 180;
+		};
+		class B_CPU : B_Motherboard {
+			icon = "Data\Icons\cpu.paa";
+			displayName = "CPU";
+			item = "CPU";
+		};
+		class B_GPU : B_Motherboard {
+			icon = "Data\Icons\gpu.paa";
+			displayName = "GPU";
+			item = "GPU";
+		};
+		class B_CPU : B_Motherboard {
+			icon = "Data\Icons\cpu.paa";
+			displayName = "CPU";
+			item = "CPU";
+		};
+		class B_RAM : B_Motherboard {
+			icon = "Data\Icons\ram.paa";
+			displayName = "RAM";
+			item = "RAM";
+		};
+		class B_PSU : B_Motherboard {
+			icon = "Data\Icons\psu.paa";
+			displayName = "PSU";
+			item = "PSU";
 		};
 	};
 

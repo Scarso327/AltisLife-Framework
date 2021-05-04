@@ -465,6 +465,12 @@ class CfgVirtualItems {
 		sellPrice = 450;
 		weight = 1;
 		class Settings : Settings {};
+		class Deconstruction {
+			time = 60;
+			workbench = true;
+			blueprints[] = { { "PoliceEquipment", "B_PanicButton" } };
+			materials[] = { {"CopperBar", 10}, {"SilverBar", 8} };
+		};
 		class Events { onUse = "[] call ULP_fnc_panic;"; };
 	};
 	class Ziptie : Pickaxe {
@@ -861,7 +867,7 @@ class CfgVirtualItems {
 	// Computer Components (TODO - some store for all this)
 	class MiningRig { // TODO (crafting)
 		displayName = "Mining Rig";
-		description = "A set of tools used for farming in specialised warehouses.";
+		description = "A constructed rig for mining crypto in specialised warehouses.";
 		icon = "Data\Icons\miningRig.paa";
 		buyPrice = -1;
 		sellPrice = -1;

@@ -61,6 +61,7 @@ if (ULP_FirstSpawn) then {
 	};
 
 	["FirstSpawn"] call ULP_fnc_achieve;
+	["OldGuard"] call ULP_fnc_unlockTitle; // REMOVE 1 WEEK AFTER LAUNCH
 
 	if ([] call ULP_fnc_donatorLevel > 0) then { ["Donator"] call ULP_fnc_unlockTitle; };
 	if ([] call ULP_fnc_donatorLevel > 1) then { ["Investor"] call ULP_fnc_unlockTitle; };

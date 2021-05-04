@@ -98,7 +98,7 @@ class CfgVehicles {
 
 	// CARS --------------------------------------------------------------------------------------
 	class C_Kart_01_Blu_F : Base {
-		description = "Kart is a small four-wheeled vehicle propelled by gravity, gas or electricity. This gas powered kart is used for recreational racing in outdoor or indoor amusement parks. It has 4-stroke engine offering up to 20 hp and should not be operated by drivers under 18 years old.";
+		description = "Kart is a small four-wheeled vehicle propelled by gravity, gas or electricity. It has 4-stroke engine offering up to 20 hp and should not be operated by drivers under 18 years old.";
 		buyPrice = 2500;
 		virtualSpace = 0;
 		garageLimit = 1;

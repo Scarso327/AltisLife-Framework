@@ -19,7 +19,7 @@ if (isNull _unit) exitWith {};
 } forEach (assignedItems _unit + items _unit);
 
 if !(_unit isEqualTo player) then {
-	["You have seized this person's communications..."] call ULP_fnc_hint;
+	["You have destroyed this person's communications..."] call ULP_fnc_hint;
 };
 
 if (local _unit) then {

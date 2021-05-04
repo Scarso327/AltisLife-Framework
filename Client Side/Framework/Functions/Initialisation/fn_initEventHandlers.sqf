@@ -154,7 +154,7 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 	if (isNull _unit) exitWith {};
 
 	if (_unit isEqualTo player) then {
-		["You have destroyed your communications"] call ULP_fnc_hint;
+		["You have destroyed your communications. You are not longer permitted to speak outside of the direct/vehicle channel!"] call ULP_fnc_hint;
 	} else {
 		[format ["%1 has destroyed your communications. You are not longer permitted to speak outside of the direct/vehicle channel!", [_unit] call ULP_fnc_getName]] call ULP_fnc_hint;
 	};

@@ -82,7 +82,7 @@ class CfgInteractions {
 			onClick = "hint ""Hello"";";
 		};
 		class SeizeCommunications : Unrestrain {
-			title = "Seize Communications";
+			title = "Destroy Communications";
 			onClick = "_this call ULP_fnc_seizeComms;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_hasComms }";
 		};

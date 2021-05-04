@@ -1,11 +1,11 @@
 class CfgFactions {
 	defaultFaction = "Civilian";
-	fallbackPay = 1000;
+	fallbackPay = 4600;
 
 	class Police {
 		displayName = "Altis Police Constabulary";
 		colour[] = { 0, 0.3, 0.6, 1 };
-		pay = 7500;
+		pay = 14600;
 		jointChannel = true;
 		imprison = true;		
 
@@ -17,7 +17,7 @@ class CfgFactions {
 			};
 			class RTA {
 				queryIndex = 27;
-				payMulti = 0.025;
+				payMulti = 0.5;
 			};
 			class NPAS { queryIndex = 28; };
 			class SCO { queryIndex = 29; };
@@ -65,7 +65,7 @@ class CfgFactions {
 	class Medic {
 		displayName = "Altis Ambulance Service";
 		colour[] = { 0, 0.5, 0, 1 };
-		pay = 8000;
+		pay = 16800;
 		jointChannel = true;
 
 		class Whitelisting {
@@ -78,7 +78,7 @@ class CfgFactions {
 			// class HART { queryIndex = 27; };
 			class HR {
 				queryIndex = 28;
-				payMulti = 0.025;
+				payMulti = 0.5;
 			};
 		};
 
@@ -119,7 +119,7 @@ class CfgFactions {
 	class Hato {
 		displayName = "Highways Agency";
 		colour[] = { 0.7, 0.6, 0, 1 };
-		pay = 7250;
+		pay = 11200;
 		jointChannel = true;
 		
 		class Whitelisting {

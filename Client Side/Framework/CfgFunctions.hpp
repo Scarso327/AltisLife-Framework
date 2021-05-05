@@ -738,6 +738,12 @@ class CfgFunctions {
 			class hint {};
 			class hintEachFrame {};
 		};
+
+		class Markers {
+			file = "Functions\Markers";
+			class initMarkers {};
+			class mapMarkers {};
+		};
 	};
 
 	class ULP_Functions_UI {

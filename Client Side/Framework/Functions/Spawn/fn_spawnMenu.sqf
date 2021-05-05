@@ -46,6 +46,7 @@ if (isNull _display) exitWith {};
 _display displaySetEventHandler ["keyDown","_this call ULP_UI_fnc_blockEsc"];
 
 private _map = _display displayCtrl 3001;
+_map ctrlAddEventHandler ["Draw", ULP_fnc_mapMarkers];
 _map ctrlEnable false;
 
 private _list = _display displayCtrl 3002;

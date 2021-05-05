@@ -177,7 +177,7 @@ switch (_mode) do {
 			_ctrlMap drawIcon [
 				"\A3\ui_f\data\map\vehicleicons\iconman_ca.paa",
 				getArray (missionConfigFile >> "CfgFactions" >> ([_x] call ULP_fnc_getFaction) >> "colour"),
-				getPosVisual _x, 26, 26, getDirVisual _x, _x call ULP_fnc_getName, 1, 0.06, 'TahomaB', 'right'
+				getPosVisual _x, 26, 26, getDirVisual _x, [_x] call ULP_fnc_getName, 1, 0.06, 'TahomaB', 'right'
 			];
 		} forEach (allPlayers - allMissionObjects "HeadlessClient_F");
 

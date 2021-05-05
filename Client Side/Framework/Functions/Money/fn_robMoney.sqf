@@ -50,7 +50,7 @@ switch (_mode) do {
 
 	default {
 		if (_unit getVariable ["robbing", false]) exitWith {
-			[format ["You're already %1 this person...", ["robbing", "seizing"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
+			[format ["You're already %1 this person's cash...", ["robbing", "seizing"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
 		};
 		_unit setVariable ["robbing", true];
 		_unit setVariable ["robbed_by_me", time];

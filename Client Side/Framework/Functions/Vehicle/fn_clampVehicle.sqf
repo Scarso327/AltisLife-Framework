@@ -19,8 +19,8 @@ if !(_clamp isEqualTo []) exitWith {
 	false
 };
 
-if !([player, ["Police", "Hato"]] call ULP_fnc_isFaction) exitWith {
-	["You must be Police or HATO to use clamps..."] call ULP_fnc_hint;
+if !([player, ["Hato"]] call ULP_fnc_isFaction) exitWith {
+	["You must be HATO to use clamps..."] call ULP_fnc_hint;
 	false
 };
 

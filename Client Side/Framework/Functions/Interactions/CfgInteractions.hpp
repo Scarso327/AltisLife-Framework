@@ -76,7 +76,7 @@ class CfgInteractions {
 			title = "Count Cash";
 			onClick = "[0, _this] call ULP_fnc_checkMoney;";
 		};
-		class SeizeCash : Rob {
+		class SeizeCash : RobCash {
 			title = "Seize Cash";
 			factions[] = { "Police" };
 		};

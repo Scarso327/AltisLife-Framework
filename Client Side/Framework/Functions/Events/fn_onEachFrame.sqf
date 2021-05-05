@@ -40,3 +40,9 @@ if !(player getVariable["speaking", false] isEqualTo _isSpeaking) then {
 		setCurrentChannel 4;
     };
 };
+
+private _gpsVisible = visibleGPS;
+if !(_gpsVisible isEqualTo (missionNamespace getVariable ["GPSVisible", false])) then {
+	missionNamespace setVariable ["GPSVisible", _gpsVisible];
+	["GPS", [_gpsVisible]] call ULP_fnc_invokeEvent;
+};

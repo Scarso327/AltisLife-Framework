@@ -38,7 +38,7 @@ closeDialog 0;
 
 private _time = ["LifeSaver", 20] call ULP_fnc_activatePerk;
 
-[format ["Reviving %1", [_unit] call ULP_fnc_getName], _time, [_unit], { isDowned(_this select 0) && { (player distance (_this select 0)) < 5 } }, {
+[format ["Reviving %1", [_unit, true] call ULP_fnc_getName], _time, [_unit], { isDowned(_this select 0) && { (player distance (_this select 0)) < 5 } }, {
 	_this params [ "_unit" ];
 
 	if !(isDowned(_unit)) exitWith {
@@ -47,12 +47,12 @@ private _time = ["LifeSaver", 20] call ULP_fnc_activatePerk;
 
 	private _payOut = ["Revival", 5000] call ULP_fnc_getLegislation;
 
-	if ([player, ["Medic"]] call ULP_fnc_isFaction && { [_payOut, true, format ["Reviving %1", [_unit] call ULP_fnc_getName]] call ULP_fnc_addMoney }) then {
+	if ([player, ["Medic"]] call ULP_fnc_isFaction && { [_payOut, true, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addMoney }) then {
 		[format ["You have revived %1 and been paid %2%3", [_unit] call ULP_fnc_getName, "£", [_payOut] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	} else {
-		[format ["You have revived %1", [_unit] call ULP_fnc_getName]] call ULP_fnc_hint;
+		[format ["You have revived %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
 	};
 
-	[100, format ["Reviving %1", [_unit] call ULP_fnc_getName]] call ULP_fnc_addXP;
+	[100, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addXP;
 	[player] remoteExecCall ["ULP_fnc_revived", _unit];
 }, {} , ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

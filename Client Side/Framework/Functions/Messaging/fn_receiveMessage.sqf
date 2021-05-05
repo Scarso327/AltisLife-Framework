@@ -28,7 +28,7 @@ if (_count > 25) then {
 profileNamespace setVariable ["ULP_Messages", _messages];
 saveProfileNamespace;
 
-if ([["EnableMessageAlert"] call ULP_fnc_getOption] call ULP_fnc_bool && { [getNumber (_type >> "alertSound")] call ULP_fnc_bool }) then {
+if ([["EnableMessageAlert", "Audio"] call ULP_fnc_getOption] call ULP_fnc_bool && { [getNumber (_type >> "alertSound")] call ULP_fnc_bool }) then {
 	playSound "messageNotification";
 };
 

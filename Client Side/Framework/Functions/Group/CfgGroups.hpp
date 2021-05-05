@@ -1,7 +1,7 @@
 class CfgGroups {
 	class Tag {
 		MinLength = 1;
-		MaxLength = 4;
+		MaxLength = 5;
 		Blacklisted[] = { "APC", "NHS", "AAS", "HATO" };
 	};
 	

@@ -14,7 +14,7 @@ if (isNull _unit || { !(alive _unit) }) exitWith {};
 if ((0 max (["BloodBag"] call ULP_fnc_hasItem)) < 1) exitWith { ["You need a bloodbag to administer blood!"] call ULP_fnc_hint; };
 if !(isDowned(_unit)) exitWith { ["You can only administer blood to injured players!"] call ULP_fnc_hint; };
 
-private _name = [_unit] call ULP_fnc_getName;
+private _name = [_unit, true] call ULP_fnc_getName;
 
 private _time = 30;
 

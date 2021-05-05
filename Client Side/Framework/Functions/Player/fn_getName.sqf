@@ -14,7 +14,7 @@ if (_object isKindOf "Man" && { isPlayer _object }) exitWith {
 	private _name = [
 		_object getVariable ["name", name _object], 
 		"Masked Player"
-	] select ([goggles _object] call ULP_fnc_isMask || { [headgear _object] call ULP_fnc_isMask });
+	] select (_checkMask && { [goggles _object] call ULP_fnc_isMask || [headgear _object] call ULP_fnc_isMask });
 
 	if ([player, ["Police", "Hato", "Medic"]] call ULP_fnc_isFaction) then {
 		_name = format ["[%1] %2", getText (missionConfigFile >> "CfgFaction" >> ([player] call ULP_fnc_getFaction) >> "shortName"), _name];

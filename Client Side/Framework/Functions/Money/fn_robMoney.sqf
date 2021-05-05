@@ -23,11 +23,11 @@ switch (_mode) do {
 
 		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
 		
-		if (_cash > 0 && { [_cash, false, format ["Robbed %1", name _unit]] call ULP_fnc_addMoney }) then {
-			[format ["You robbed %1 for %2%3", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		if (_cash > 0 && { [_cash, false, format ["%2 %1", name _unit, ["Robbed", "Seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_addMoney }) then {
+			[format ["You %4 %1 for %2%3", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText, ["robbed", "seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
 			_unit setVariable ["robbing", nil];
 		} else {
-			[format ["%1 had no money to rob...", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
+			[format ["%1 had no money to %2...", [_unit, true] call ULP_fnc_getName, ["rob", "seize"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
 		};
 	};
 
@@ -39,8 +39,8 @@ switch (_mode) do {
 
 	case 1: {
 		private _cash = + CASH;
-		if (_cash > 0 && { [_cash, false, format ["Robbed By %1", name _unit]] call ULP_fnc_removeMoney }) then {
-			[format ["%1 has robbed you for %2%3", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		if (_cash > 0 && { [_cash, false, format ["%2 By %1", name _unit, ["Robbed", "Seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_removeMoney }) then {
+			[format ["%1 has %4 you for %2%3", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText, ["robbed", "seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
 		};
 
 		_unit setVariable ["robbed_me", time];
@@ -50,7 +50,7 @@ switch (_mode) do {
 
 	default {
 		if (_unit getVariable ["robbing", false]) exitWith {
-			["You're already robbing this person..."] call ULP_fnc_hint;
+			[format ["You're already %1 this person...", ["robbing", "seizing"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
 		};
 		_unit setVariable ["robbing", true];
 		_unit setVariable ["robbed_by_me", time];

@@ -159,7 +159,7 @@ switch (_code) do {
     };
 
     case F5: {
-        if ([] call ULP_fnc_isStaff && { ["Revive", false] call ULP_fnc_checkPower } && { isDowned(player) } && { _shift } && { !_ctrlKey } && { !_alt }) then {
+        if ([] call ULP_fnc_isStaff && { ["Medical", false] call ULP_fnc_checkPower } && { isDowned(player) } && { _shift } && { !_ctrlKey } && { !_alt }) then {
             [player] remoteExecCall ["ULP_fnc_revived", player];
             player setDamage 0;
 
@@ -170,7 +170,7 @@ switch (_code) do {
     };
 
     case F9: {
-        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Mass", false] call ULP_fnc_checkPower } && { _shift } && { _ctrlKey } && { !_alt }) then {
+        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Medical", false] call ULP_fnc_checkPower } && { _shift } && { _ctrlKey } && { !_alt }) then {
             if (time < (player getVariable ["admin_mass_cooldown", 0])) exitWith {
                 ["You've recently mass healed and revived, please wait before trying again..."] call ULP_fnc_hint;
                 false

@@ -1,26 +1,26 @@
 class CfgAdmin {
 	class Power {
+		// SUPPORT (L1)
+		// MODERATOR (L2)
 		class Suit {
-			message = "You must be Events Team L1 or a Moderator to use the suit...";
+			message = "You must be in the Events Team or a Moderator to use this ability...";
 			condition = "((call ULP_Staff) > 1) || { ((call ULP_Event) > 0) }";
 		};
-		class Camera {
-			message = "You must either be Events Team L2 or a Moderator to use the camera...";
-			condition = "((call ULP_Staff) > 1) || { ((call ULP_Event) > 1) }";
-		};
+		class Camera : Suit {};
 		class Invis : Camera {};
+
+		// ADMINISTRATOR (L3)
 		class Teleport {
-			message = "You must either be Events Team L2 or an Administrator to use any teleport related function...";
+			message = "You must be the Events Team Lead or an Administrator to use this ability...";
 			condition = "((call ULP_Staff) > 2) || { ((call ULP_Event) > 1) }";
 		};
-		class Vehicle : Teleport {};
 		class Compensate : Teleport {};
-		class Heal : Teleport {};
+		class Vehicle : Teleport {};
+		class Medical : Teleport {};
 		class Restrain : Teleport {};
-		class Revive : Teleport {};
-		class Mass : Teleport {};
-		class Disconnect {
-			condition = "((call ULP_Staff) isEqualTo 5)";
-		};
+
+		// HEAD ADMINISTRATOR (L4)
+		// COMMUNITY BOARD (L5)
+		class Disconnect { condition = "((call ULP_Staff) isEqualTo 5)"; };
 	};
 };

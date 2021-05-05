@@ -16,8 +16,11 @@ class CfgClothesStore {
 			class U_C_FormalSuit_01_black_F : FactionBase { 
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 			};
-			class U_I_ParadeUniform_01_AAF_decorated_F : FactionBase { 
+			class U_I_ParadeUniform_01_AAF_F : FactionBase { 
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
+			};
+			class U_I_ParadeUniform_01_AAF_decorated_F : FactionBase { 
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess"; 
 			};
 			class U_BG_Guerrilla_6_1 : FactionBase { 
 				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; 

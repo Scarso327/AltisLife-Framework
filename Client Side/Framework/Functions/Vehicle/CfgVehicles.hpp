@@ -997,6 +997,10 @@ class CfgVehicles {
 					"data\textures\vehicles\land\HATO\hemtt_2.paa",
 					"data\textures\vehicles\land\HATO\hemtt_primer.paa"
 				};
+				class Lights : HatoColour {
+					leftPos[] = {0.814453,5.87402,-0.947113};
+					rightPos[] = {-0.736816,5.86328,-0.947113};
+				};
 			}; 
 		};
 	};
@@ -1010,6 +1014,10 @@ class CfgVehicles {
 					"data\textures\vehicles\land\HATO\hemtt_1.paa",
 					"data\textures\vehicles\land\HATO\hemtt_2.paa",
 					"data\textures\vehicles\land\HATO\hemtt_flatbed.paa"
+				};
+				class Lights : HatoColour {
+					leftPos[] = {0.814453,5.87402,-0.947113};
+					rightPos[] = {-0.736816,5.86328,-0.947113};
 				};
 			}; 
 		};

@@ -11,8 +11,21 @@ _this params [
 ];
 
 if (_object isKindOf "Man" && { isPlayer _object }) exitWith {
-	if ([goggles _object] call ULP_fnc_isMask || { [headgear _object] call ULP_fnc_isMask }) exitWith { "Masked Player" };
-	_object getVariable ["name", name _object];
+	private _name = [
+		_object getVariable ["name", name _object], 
+		"Masked Player"
+	] select ([goggles _object] call ULP_fnc_isMask || { [headgear _object] call ULP_fnc_isMask });
+
+	if ([player, ["Police", "Hato", "Medic"]] call ULP_fnc_isFaction) then {
+		_name = format ["[%1] %2", getText (missionConfigFile >> "CfgFaction" >> ([player] call ULP_fnc_getFaction) >> "shortName"), _name];
+	} else {
+		private _tag = [] call ULP_fnc_groupTag;
+		if ([] call ULP_fnc_isGroup && { !(_tag isEqualTo "") }) then {
+			_name = format ["%1 %2", _tag, _name];
+		};
+	};
+
+	_name
 };
 
 _object getVariable ["name", ""];

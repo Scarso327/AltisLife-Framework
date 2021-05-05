@@ -63,6 +63,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 		[_owner] joinSilent _group;
 
 		_group setVariable ["group_id", _queryId, true];
+		_group setVariable ["group_tag", _tag, true];
 		_group setVariable ["group_type", _type, true];
 		_group setVariable ["group_owner", _steamid, true];
 		_group setVariable ["group_members", _members, true];
@@ -76,6 +77,9 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 		[_owner] joinSilent _group;
 		
 		// Make sure all group values match...
+		if !((_group getVariable ["group_tag", ""]) isEqualTo _tag) then {
+			_group setVariable ["group_tag", _tag, true];
+		};
 
 		if !((_group getVariable ["group_type", ""]) isEqualTo _type) then {
 			_group setVariable ["group_type", _type, true];
@@ -113,6 +117,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	[_owner] joinSilent _group;
 
 	_group setVariable ["group_id", _id, true];
+	_group setVariable ["group_tag", _tag, true];
 	_group setVariable ["group_type", _type, true];
 	_group setVariable ["group_owner", _steamid, true];
 	_group setVariable ["group_members", _members, true];

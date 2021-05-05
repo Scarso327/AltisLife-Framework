@@ -3,6 +3,7 @@ class CfgFactions {
 	fallbackPay = 1000;
 
 	class Police {
+		shortName = "Police";
 		displayName = "Altis Police Constabulary";
 		colour[] = { 0, 0.3, 0.6, 1 };
 		pay = 7500;
@@ -63,6 +64,7 @@ class CfgFactions {
 	};
 
 	class Medic {
+		shortName = "Medic";
 		displayName = "Altis Ambulance Service";
 		colour[] = { 0, 0.5, 0, 1 };
 		pay = 8000;
@@ -117,6 +119,7 @@ class CfgFactions {
 	};
 
 	class Hato {
+		shortName = "HATO";
 		displayName = "Highways Agency";
 		colour[] = { 0.7, 0.6, 0, 1 };
 		pay = 7250;
@@ -164,6 +167,7 @@ class CfgFactions {
 	};
 
 	class Civilian {
+		shortName = "Civilian";
 		displayName = "Civilian";
 		colour[] = { 0.4, 0, 0.5, 1 };
 		pay = 3750;

@@ -473,6 +473,7 @@ class CfgFunctions {
 			class getGroupRank {};
 			class setGroupRank {};
 			class groupId {};
+			class groupTag {};
 			class groupFunds {};
 			class groupPermissions {};
 			class groupRanks {};

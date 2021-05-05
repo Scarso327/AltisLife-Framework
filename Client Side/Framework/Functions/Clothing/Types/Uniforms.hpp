@@ -669,28 +669,35 @@ class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F {};
 class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F {};
 
 class U_I_ParadeUniform_01_AAF_decorated_F {
-	displayName = "Parade Uniform";
+	displayName = "Command Parade Uniform";
 	price = 790;
 	reputation = false;
 	virtualSpace = 3;
 	isGas = false;
 	class Textures {
 		class Command { 
-			displayName = "Command"; 
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
 				"Data\Textures\Uniforms\Police\parade_02.paa",
 				"Data\Textures\Uniforms\Police\parade_03.paa"
 			};
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
-		};
-		class Main : Command { 
-			displayName = "Main"; 
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
+			condition = "true";
 		};
 	};
 };
-class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F{};
+class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F {
+	displayName = "Parade Uniform";
+	class Textures {
+		class Main { 
+			textures[] = { 
+				"Data\Textures\Uniforms\Police\parade_01.paa",
+				"Data\Textures\Uniforms\Police\parade_02.paa",
+				"Data\Textures\Uniforms\Police\parade_03.paa"
+			};
+			condition = "true";
+		};
+	};
+};
 
 class U_B_survival_uniform {
 	price = 4650;

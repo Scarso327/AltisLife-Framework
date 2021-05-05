@@ -20,7 +20,7 @@ if ([player] call ULP_fnc_isRestrained) exitWith {
 if (createDialog "DialogPNC") then {
 	private _display = findDisplay 4700;
 
-	(_display displayCtrl 4701) ctrlSetStructuredText parseText format ["Police National Computer<t align='right'>Threat: %1</t>",
+	(_display displayCtrl 4701) ctrlSetStructuredText parseText format ["Police National Computer<t align='right'>Threat Level: %1</t>",
 		getArray (missionConfigFile >> "CfgSettings" >> "threatLevels") select (call (missionNamespace getVariable ["ULP_SRV_Setting_ThreatLevel", {0}]))
 	];
 

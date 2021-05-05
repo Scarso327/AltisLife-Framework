@@ -36,7 +36,7 @@ if (_on) then {
 		_x params ["_light", "_colour"];
 
 		_light setLightColor _colour;
-		_light setLightAmbient [0.1,0.1,1];
+		_light setLightAmbient _colour;
 		_light setLightAttenuation [0.1, 0, 1000, 130];
         _light setLightBrightness 0;
         _light setLightIntensity 1;

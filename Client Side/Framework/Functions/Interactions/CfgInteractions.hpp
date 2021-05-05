@@ -122,12 +122,12 @@ class CfgInteractions {
 		class SeizeCommunications : Revive {
 			title = "Seize Communications";
 			onClick = "_this call ULP_fnc_seizeComms;";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_hasComms }";
 		};
 
 		// Admin Commands...
-		class AdminRevive {
+		class AdminRevive : Revive {
 			title = "Admin Revive";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "[player] remoteExecCall [""ULP_fnc_revived"", _this select 0]; (_this select 0) setDamage 0; [format[""You've revived this player using admin powers...""]] call ULP_fnc_hint; [getPlayerUID player, ""Admin"", [""AdminRevive"", serverTime, [name (_this select 0)]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2]; closeDialog 0;";
 			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Revive"", false] call ULP_fnc_checkPower }";
 		};

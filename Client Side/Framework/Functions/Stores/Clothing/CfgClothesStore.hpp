@@ -68,9 +68,6 @@ class CfgClothesStore {
 			class H_Beret_blk : FactionBase { 
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 			};
-			class H_ParadeDressCap_01_LDF_F : FactionBase { 
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
-			};
 			class H_Watchcap_blk : FactionBase { 
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures { class H_Watchcap_blk {}; };

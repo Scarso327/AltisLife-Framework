@@ -33,8 +33,8 @@ class CfgInteractions {
 			onClick = "hint ""Hello"";";
 		};
 
-		class Rob {
-			title = "Rob Person";
+		class RobCash {
+			title = "Rob Cash";
 			factions[] = { "Medic", "Hato", "Civilian" };
 			onClick = "[0, _this] call ULP_fnc_robMoney; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isKnocked || { [_this] call ULP_fnc_isSurrendered } || { [_this] call ULP_fnc_isRestrained && (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) }";
@@ -72,9 +72,9 @@ class CfgInteractions {
 			title = "Remove Blindfold";
 			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { _this getVariable [""blindfold"", false] }";
 		};
-		class CashCheck : Unrestrain { // TODONOW
-			title = "Check Cash";
-			onClick = "hint ""Hello"";";
+		class CountCash : Unrestrain {
+			title = "Count Cash";
+			onClick = "[0, _this] call ULP_fnc_checkMoney;";
 		};
 		class SeizeCash : Rob {
 			title = "Seize Cash";

@@ -528,6 +528,8 @@ class CfgFunctions {
 			class giveMoney {};
 			class sendMoney {};
 			class recieveMoney {};
+			class robMoney {};
+			class checkMoney {}:
 		};
 
 		class Robberies {

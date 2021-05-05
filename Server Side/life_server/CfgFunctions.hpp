@@ -154,6 +154,11 @@ class CfgFunctions {
             class initCrimes {};
             class toggleVaults {};
         };
+
+        class Vehicle {
+            file = "\life_server\Functions\Vehicle";
+            class registerStinger {};
+        };
     };
 
     class MySQL_Database {

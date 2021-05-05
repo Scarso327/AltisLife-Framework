@@ -21,6 +21,7 @@ player setVariable ["admin_cooldown", time + 3];
 if ([player] call ULP_fnc_onDuty) then {
 	CASH = ULP_NormalCash;
 	BANK = ULP_NormalBank;
+	player setDamage ULP_NormalDamage;
 
 	ULP_Inventory = createHashMap; // Wipe Inventory...
 	ULP_CarryInfo set [0, 0];
@@ -36,6 +37,7 @@ if ([player] call ULP_fnc_onDuty) then {
 
 	ULP_NormalCash = CASH;
 	ULP_NormalBank = BANK;
+	ULP_NormalDamage = damage player;
 
 	ULP_Inventory = createHashMap; // Wipe Inventory...
 	ULP_CarryInfo set [0, 0];

@@ -41,7 +41,7 @@ if (isNull _group) then {
 		[_unit] joinSilent _group;
 
 		_group setVariable ["group_id", _queryid, true];
-		_group setVariable ["group_tag", _queryowner, true];
+		_group setVariable ["group_tag", _queryTag, true];
 		_group setVariable ["group_type", _queryTag, true];
 		_group setVariable ["group_owner", _queryowner, true];
 		_group setVariable ["group_permissions", [_queryDeposit, _queryWithdraw, _queryRankPerm, _queryInvite, _queryKick], true];

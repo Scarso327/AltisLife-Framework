@@ -85,8 +85,6 @@ if (ULP_FirstSpawn) then {
 	if (["Medic_AA", 1] call ULP_fnc_hasAccess) then { ["JoinAA"] call ULP_fnc_achieve; };
 
 	if (["Hato_Main", 1] call ULP_fnc_hasAccess) then { ["JoinHATO"] call ULP_fnc_achieve; };
-} else {
-	[false] call ULP_fnc_initPlayer;
 };
 
 player allowDammage true;

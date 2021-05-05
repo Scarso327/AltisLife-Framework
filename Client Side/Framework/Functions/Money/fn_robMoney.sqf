@@ -53,6 +53,7 @@ switch (_mode) do {
 			["You're already robbing this person..."] call ULP_fnc_hint;
 		};
 		_unit setVariable ["robbing", true];
+		_unit setVariable ["robbed_by_me", time];
 		
 		[1, [player]] remoteExecCall ["ULP_fnc_robMoney", _unit];
 	};

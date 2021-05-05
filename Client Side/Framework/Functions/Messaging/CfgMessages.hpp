@@ -94,9 +94,7 @@ class CfgMessages {
 
 	class MedicRequest : Dispute {
 		displayName = "Medic Request";
-		ignoreComms = false;
 		confirmSend = false;
-		onRecieved = "private _sender = _this select 0; if (isNull _sender || { _sender isEqualTo player }) exitWith {}; private _marker = createMarkerLocal [format[""revival_marker_%1_%2"", time, name _sender], getPos _sender]; _marker setMarkerTypeLocal ""mil_warning""; _marker setMarkerColorLocal ""colorRed""; _marker setMarkerTextLocal (name _sender); [15, _marker, { deleteMarkerLocal _this }] call ULP_fnc_waitExecute;";
 		targets = "[""Medic""] call ULP_fnc_allMembers";
 	};
 

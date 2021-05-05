@@ -529,7 +529,7 @@ class CfgFunctions {
 			class sendMoney {};
 			class recieveMoney {};
 			class robMoney {};
-			class checkMoney {}:
+			class checkMoney {};
 		};
 
 		class Robberies {

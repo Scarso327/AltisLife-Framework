@@ -20,8 +20,14 @@ class CfgItemsStore {
 			// SUB-MACHINE GUNS
 			class SMG_05_F : FactionBase { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; }; 
 			class SMG_01_F : FactionBase { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 9] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
-			class SMG_03C_black : FactionBase { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
-			class SMG_03_black : FactionBase { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; };
+			class SMG_03C_black : FactionBase { 
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; 
+				class textures { class SMG_03C_black {}; };
+			};
+			class SMG_03_black : FactionBase { 
+				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
+				class textures { class SMG_03_black {}; }; 
+			};
 
 			// ASSAULT RIFLES
 			class arifle_SPAR_01_blk_F : FactionBase {
@@ -368,7 +374,7 @@ class CfgItemsStore {
 			class ToolKit {};
 			class Chemlight_green {};
 			class SmokeShell : FactionBase { 
-				class textures { class SmokeShellBlue {}; }; 
+				class textures { class SmokeShell {}; }; 
 			};
 		};
 	};

@@ -27,7 +27,10 @@ class G_Squares {
 			displayName = "Clear";
 			condition = "true";
 		};
-		class G_Squares_Tinted : G_Squares { displayName = "Tinted"; };
+		class G_Squares_Tinted : G_Squares { 
+			displayName = "Tinted";
+			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+		};
 	};
 };
 class G_Squares_Tinted : G_Squares{};
@@ -43,7 +46,10 @@ class G_Spectacles {
 			displayName = "Clear";
 			condition = "true";
 		};
-		class G_Spectacles_Tinted : G_Spectacles { displayName = "Tinted"; };
+		class G_Spectacles_Tinted : G_Spectacles { 
+			displayName = "Tinted"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+		};
 	};
 };
 class G_Spectacles_Tinted : G_Spectacles{};
@@ -215,7 +221,10 @@ class G_Bandanna_aviator {
 		};
 		class G_Bandanna_shades : G_Bandanna_aviator { displayName = "Black + Shades"; };
 		class G_Bandanna_sport : G_Bandanna_aviator { displayName = "Black + Sport"; };
-		class G_Bandanna_beast : G_Bandanna_aviator { displayName = "Beast"; };
+		class G_Bandanna_beast : G_Bandanna_aviator { 
+			displayName = "Beast";
+			condition = "[] call ULP_fnc_donatorLevel > 0";  
+		};
 		class G_Bandanna_blk : G_Bandanna_aviator { displayName = "Black"; };
 		class G_Bandanna_khk : G_Bandanna_aviator{ displayName = "Khaki"; };
 		class G_Bandanna_oli : G_Bandanna_aviator{ displayName = "Olive"; };

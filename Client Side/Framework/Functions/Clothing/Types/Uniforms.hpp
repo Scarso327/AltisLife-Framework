@@ -210,18 +210,19 @@ class U_I_C_Soldier_Bandit_3_F {
 			condition = "true";
 		};
 		class Black : U_I_C_Soldier_Bandit_3_F { 
-			displayName = "Black"; 
+			displayName = "Black";
+			condition = "[] call ULP_fnc_donatorLevel > 0";  
 			textures[] = { "\A3\Characters_F_exp\Syndikat\Data\U_I_C_Soldier_Bandit_2_F_2_co.paa" };
 		};
-		class Red : U_I_C_Soldier_Bandit_3_F { 
+		class Red : Black { 
 			displayName = "Red"; 
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_6_F_1_co.paa" };
 		};
-		class Blue : U_I_C_Soldier_Bandit_3_F { 
+		class Blue : Black { 
 			displayName = "Blue"; 
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_4_F_1_co.paa" };
 		};
-		class Yellow : U_I_C_Soldier_Bandit_3_F { 
+		class Yellow : Black { 
 			displayName = "Yellow"; 
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_5_F_1_co.paa" };
 		};
@@ -578,15 +579,10 @@ class U_B_GEN_Commander_F {
 	virtualSpace = 3;
 	isGas = false;
 	class Textures {
-		class COMMAND {
-			displayName = "Command";
-			textures[] = { "Data\Textures\Uniforms\Police\command.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
-		};
-		class MAIN {
-			displayName = "Patrol";
-			textures[] = { "Data\Textures\Uniforms\Police\main.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
+		class RTA {
+			displayName = "RTA";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\RTA.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RTA"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
 };
@@ -662,7 +658,10 @@ class U_C_FormalSuit_01_black_F {
 		};
 		class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F { displayName = "Gray"; };
 		class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F { displayName = "Blue"; };
-		class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F { displayName = "Khaki"; };
+		class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F { 
+			displayName = "Khaki";
+			condition = "[] call ULP_fnc_donatorLevel > 0";  
+		};
 	};
 };
 class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F {};

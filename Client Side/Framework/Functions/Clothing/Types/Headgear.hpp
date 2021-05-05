@@ -32,10 +32,13 @@ class H_Bandanna_gry {
 		class H_Bandanna_sand : H_Bandanna_gry { displayName = "Sand"; };
 		class H_Bandanna_sgg : H_Bandanna_gry { displayName = "Sage"; };
 		class H_Bandanna_camo : H_Bandanna_gry { displayName = "Camo"; };
-		class H_Bandanna_mcamo : H_Bandanna_gry { displayName = "MTP"; };
-		class H_Bandanna_surfer : H_Bandanna_gry{ displayName = "Surfer"; };
-		class H_Bandanna_surfer_blk : H_Bandanna_gry{ displayName = "Surfer, Black"; };
-		class H_Bandanna_surfer_grn : H_Bandanna_gry{ displayName = "Surfer, Green"; };
+		class H_Bandanna_mcamo : H_Bandanna_gry { 
+			displayName = "MTP";
+			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+		};
+		class H_Bandanna_surfer : H_Bandanna_mcamo { displayName = "Surfer"; };
+		class H_Bandanna_surfer_blk : H_Bandanna_mcamo { displayName = "Surfer, Black"; };
+		class H_Bandanna_surfer_grn : H_Bandanna_mcamo { displayName = "Surfer, Green"; };
 	};
 };
 class H_Bandanna_blu : H_Bandanna_gry {};
@@ -61,19 +64,22 @@ class H_Cap_blk {
 			displayName = "Black";
 			condition = "true";
 		};
-		class H_Cap_usblack : H_Cap_blk { displayName = "US (Black)"; };
-		class H_Cap_tan_specops_US : H_Cap_blk { displayName = "US (MTP)"; };
-		class H_Cap_khaki_specops_UK : H_Cap_blk { displayName = "UK"; };
-		class H_Cap_brn_SPECOPS : H_Cap_blk { displayName = "OPFOR"; };
-		class H_Cap_blk_Raven : H_Cap_blk { displayName = "AAF"; };
-		class H_Cap_grn_BI : H_Cap_blk { displayName = "BI"; };
-		class H_Cap_blk_ION : H_Cap_blk { displayName = "ION"; };
-		class H_Cap_blk_CMMG : H_Cap_blk { displayName = "CMMG"; };
+		class H_Cap_usblack : H_Cap_blk { 
+			displayName = "US (Black)";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class H_Cap_tan_specops_US : H_Cap_usblack { displayName = "US (MTP)"; };
+		class H_Cap_khaki_specops_UK : H_Cap_usblack { displayName = "UK"; };
+		class H_Cap_brn_SPECOPS : H_Cap_usblack { displayName = "OPFOR"; };
+		class H_Cap_blk_Raven : H_Cap_usblack { displayName = "AAF"; };
+		class H_Cap_grn_BI : H_Cap_usblack { displayName = "BI"; };
+		class H_Cap_blk_ION : H_Cap_usblack { displayName = "ION"; };
+		class H_Cap_blk_CMMG : H_Cap_usblack { displayName = "CMMG"; };
 		class H_Cap_red : H_Cap_blk { displayName = "Red"; };
 		class H_Cap_blu : H_Cap_blk { displayName = "Blue"; };
 		class H_Cap_tan : H_Cap_blk { displayName = "Tan"; };
 		class H_Cap_oli : H_Cap_blk { displayName = "Olive"; };
-		class H_Cap_surfer : H_Cap_blk { displayName = "Surfer"; };
+		class H_Cap_surfer : H_Cap_usblack { displayName = "Surfer"; };
 		class H_Cap_police {
 			displayName = "Police";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
@@ -367,10 +373,13 @@ class H_RacingHelmet_1_black_F {
 		class H_RacingHelmet_1_green_F : H_RacingHelmet_1_black_F { displayName = "Green"; };
 		class H_RacingHelmet_1_orange_F : H_RacingHelmet_1_black_F { displayName = "Orange"; };
 		class H_RacingHelmet_1_yellow_F : H_RacingHelmet_1_black_F { displayName = "Yellow"; };
-		class H_RacingHelmet_4_F : H_RacingHelmet_1_black_F { displayName = "Vrana"; };
-		class H_RacingHelmet_3_F : H_RacingHelmet_1_black_F { displayName = "Redstone"; };
-		class H_RacingHelmet_2_F : H_RacingHelmet_1_black_F { displayName = "Bluking"; };
-		class H_RacingHelmet_1_F : H_RacingHelmet_1_black_F { displayName = "Fuel"; };
+		class H_RacingHelmet_4_F : H_RacingHelmet_1_black_F { 
+			displayName = "Vrana";
+			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+		};
+		class H_RacingHelmet_3_F : H_RacingHelmet_4_F { displayName = "Redstone"; };
+		class H_RacingHelmet_2_F : H_RacingHelmet_4_F { displayName = "Bluking"; };
+		class H_RacingHelmet_1_F : H_RacingHelmet_4_F { displayName = "Fuel"; };
 	};
 };
 class H_RacingHelmet_1_white_F : H_RacingHelmet_1_black_F {};
@@ -429,12 +438,15 @@ class H_HelmetB_light {
 			displayName = "Green";
 			condition = "true";
 		};
-		class H_HelmetB_light_black : H_HelmetB_light{ displayName = "Black"; };
-		class H_HelmetB_light_desert : H_HelmetB_light{ displayName = "Desert"; };
-		class H_HelmetB_light_sand : H_HelmetB_light{ displayName = "Sand"; };
-		class H_HelmetB_light_snakeskin : H_HelmetB_light{ displayName = "Snakeskin"; };
-		class H_HelmetB_light_grass : H_HelmetB_light{ displayName = "Grass"; };
-		class H_HelmetB_light_wdl : H_HelmetB_light{ displayName = "Woodland"; };
+		class H_HelmetB_light_black : H_HelmetB_light { 
+			displayName = "Black"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class H_HelmetB_light_desert : H_HelmetB_light { displayName = "Desert"; };
+		class H_HelmetB_light_sand : H_HelmetB_light { displayName = "Sand"; };
+		class H_HelmetB_light_snakeskin : H_HelmetB_light { displayName = "Snakeskin"; };
+		class H_HelmetB_light_grass : H_HelmetB_light { displayName = "Grass"; };
+		class H_HelmetB_light_wdl : H_HelmetB_light { displayName = "Woodland"; };
 	};
 };
 class H_HelmetB_light_black : H_HelmetB_light {};
@@ -455,14 +467,17 @@ class H_HelmetB {
 			displayName = "Green";
 			condition = "true";
 		};
-		class H_HelmetB_plain_blk : H_HelmetB{ displayName = "Black"; };
-		class H_HelmetB_desert : H_HelmetB{ displayName = "Desert"; };
-		class H_HelmetB_sand : H_HelmetB{ displayName = "Sand"; };
-		class H_HelmetB_snakeskin : H_HelmetB{ displayName = "Snakeskin"; };
-		class H_HelmetB_grass : H_HelmetB{ displayName = "Grass"; };
-		class H_HelmetB_camo : H_HelmetB{ displayName = "Camo"; };
-		class H_HelmetB_paint : H_HelmetB{ displayName = "Spraypaint"; };
-		class H_HelmetB_plain_wdl : H_HelmetB{ displayName = "Woodland"; };
+		class H_HelmetB_plain_blk : H_HelmetB { 
+			displayName = "Black"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class H_HelmetB_desert : H_HelmetB { displayName = "Desert"; };
+		class H_HelmetB_sand : H_HelmetB { displayName = "Sand"; };
+		class H_HelmetB_snakeskin : H_HelmetB { displayName = "Snakeskin"; };
+		class H_HelmetB_grass : H_HelmetB { displayName = "Grass"; };
+		class H_HelmetB_camo : H_HelmetB { displayName = "Camo"; };
+		class H_HelmetB_paint : H_HelmetB { displayName = "Spraypaint"; };
+		class H_HelmetB_plain_wdl : H_HelmetB { displayName = "Woodland"; };
 	};
 };
 class H_HelmetB_plain_blk : H_HelmetB {};
@@ -485,12 +500,15 @@ class H_HelmetSpecB {
 			displayName = "Green";
 			condition = "true";
 		};
-		class H_HelmetSpecB_blk : H_HelmetSpecB{ displayName = "Black"; };
-		class H_HelmetSpecB_paint2 : H_HelmetSpecB{ displayName = "Desert"; };
-		class H_HelmetSpecB_sand : H_HelmetSpecB{ displayName = "Sand"; };
-		class H_HelmetSpecB_snakeskin : H_HelmetSpecB{ displayName = "Snakeskin"; };
-		class H_HelmetSpecB_paint1 : H_HelmetSpecB{ displayName = "Grass"; };
-		class H_HelmetSpecB_wdl : H_HelmetSpecB{ displayName = "Woodland"; };
+		class H_HelmetSpecB_blk : H_HelmetSpecB { 
+			displayName = "Black"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+		};
+		class H_HelmetSpecB_paint2 : H_HelmetSpecB { displayName = "Desert"; };
+		class H_HelmetSpecB_sand : H_HelmetSpecB { displayName = "Sand"; };
+		class H_HelmetSpecB_snakeskin : H_HelmetSpecB { displayName = "Snakeskin"; };
+		class H_HelmetSpecB_paint1 : H_HelmetSpecB { displayName = "Grass"; };
+		class H_HelmetSpecB_wdl : H_HelmetSpecB { displayName = "Woodland"; };
 	};
 };
 class H_HelmetSpecB_blk : H_HelmetSpecB {};

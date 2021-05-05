@@ -1,12 +1,12 @@
 class CfgFactions {
 	defaultFaction = "Civilian";
-	fallbackPay = 1000;
+	fallbackPay = 4600;
 
 	class Police {
 		shortName = "Police";
 		displayName = "Altis Police Constabulary";
 		colour[] = { 0, 0.3, 0.6, 1 };
-		pay = 7500;
+		pay = 14600;
 		jointChannel = true;
 		imprison = true;		
 
@@ -18,7 +18,7 @@ class CfgFactions {
 			};
 			class RTA {
 				queryIndex = 27;
-				payMulti = 0.025;
+				payMulti = 0.5;
 			};
 			class NPAS { queryIndex = 28; };
 			class SCO { queryIndex = 29; };
@@ -59,7 +59,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = true;
 			};
-			virtualItems[] = { { "PanicButton", 1 } };
+			virtualItems[] = { { "Identification", "name player" }, { "PanicButton", 1 } };
 		};
 	};
 
@@ -67,7 +67,7 @@ class CfgFactions {
 		shortName = "Medic";
 		displayName = "Altis Ambulance Service";
 		colour[] = { 0, 0.5, 0, 1 };
-		pay = 8000;
+		pay = 16800;
 		jointChannel = true;
 
 		class Whitelisting {
@@ -80,7 +80,7 @@ class CfgFactions {
 			// class HART { queryIndex = 27; };
 			class HR {
 				queryIndex = 28;
-				payMulti = 0.025;
+				payMulti = 0.5;
 			};
 		};
 
@@ -114,7 +114,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = true;
 			};
-			virtualItems[] = { { "MediKit", 1 }, { "AutomatedExternalDefibrillator", 1 } };
+			virtualItems[] = { { "Identification", "name player" }, { "MediKit", 1 }, { "AutomatedExternalDefibrillator", 1 }, { "PanicButton", 1 } };
 		};
 	};
 
@@ -122,7 +122,7 @@ class CfgFactions {
 		shortName = "HATO";
 		displayName = "Highways Agency";
 		colour[] = { 0.7, 0.6, 0, 1 };
-		pay = 7250;
+		pay = 11200;
 		jointChannel = true;
 		
 		class Whitelisting {
@@ -163,6 +163,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = true;
 			};
+			virtualItems[] = { { "Identification", "name player" }, { "VehicleClamp", 1 }, { "FuelCan", 2 }, { "PanicButton", 1 } };
 		};
 	};
 

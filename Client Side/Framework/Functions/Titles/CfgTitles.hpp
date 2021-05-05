@@ -3,6 +3,18 @@ class CfgTitles {
 		displayName = "Default";
 		varOverride = "";
 	};
+	class OldGuard {
+		displayName = "Old Guard";
+		description = "Apart of this community before this title";
+	};
+	class Donator {
+		displayName = "Community Donator";
+		description = "Donated £10 or more to this community";
+	};
+	class Investor {
+		displayName = "Community Investor";
+		description = "Invested £100 or more to this community";
+	};
 	class FirstDrink {
 		displayName = "Big Drink Man";
 		description = "Taken your first drink of alcohol";
@@ -98,5 +110,9 @@ class CfgTitles {
 	class Atlantis {
 		displayName = "Ocean Diver";
 		description = "Dived to a very specific place";
+	};
+	class Investigator {
+		displayName = "Private Investigator";
+		description = "The College of Policing is up to something";
 	};
 };

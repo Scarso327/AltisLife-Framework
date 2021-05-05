@@ -77,7 +77,7 @@ switch (_code) do {
     };
 
     case J: {
-        if (_shift && { !(isDowned(player)) } && { !([player] call ULP_fnc_isRestrained) } && { (["PanicButton"] call ULP_fnc_hasItem) > 0 }) then {
+        if (_shift && { !([player] call ULP_fnc_isRestrained) } && { !([player] call ULP_fnc_isKnocked) } && { !([player] call ULP_fnc_isSurrendered) } && { (["PanicButton"] call ULP_fnc_hasItem) > 0 }) then {
             [] call ULP_fnc_panic;
         };
     };
@@ -158,8 +158,19 @@ switch (_code) do {
         };
     };
 
+    case F5: {
+        if ([] call ULP_fnc_isStaff && { ["Medical", false] call ULP_fnc_checkPower } && { isDowned(player) } && { _shift } && { !_ctrlKey } && { !_alt }) then {
+            [player] remoteExecCall ["ULP_fnc_revived", player];
+            player setDamage 0;
+
+            ["You've revived yourself..."] call ULP_fnc_hint;
+
+            [getPlayerUID player, "Admin", ["AdminSelfRevive", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+        };
+    };
+
     case F9: {
-        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Mass", false] call ULP_fnc_checkPower } && { _shift } && { _ctrlKey } && { !_alt }) then {
+        if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { ["Medical", false] call ULP_fnc_checkPower } && { _shift } && { _ctrlKey } && { !_alt }) then {
             if (time < (player getVariable ["admin_mass_cooldown", 0])) exitWith {
                 ["You've recently mass healed and revived, please wait before trying again..."] call ULP_fnc_hint;
                 false
@@ -181,7 +192,7 @@ switch (_code) do {
 
                     ["You've revived and healed everyone..."] call ULP_fnc_hint;
 
-                    [getPlayerUID player, "Admin", ["AdminMass", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+                    [getPlayerUID player, "Admin", ["AdminMassRevive", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
                     player setVariable ["admin_mass_cooldown", time + 15];
                 }, false
             ] call ULP_fnc_confirm;
@@ -259,7 +270,7 @@ switch (_code) do {
 
         if (time < (player getVariable ["delete_delay", 0])) exitWith {};
 
-        if (!(isNull _veh) && { _shift } && { !_ctrlKey } && { !_alt } && { [] call ULP_fnc_isStaff } && { [player] call ULP_fnc_onDuty } && { ["Vehicle", false] call ULP_fnc_checkPower } && { [_veh, ["LandVehicle", "Air", "Ship"]] call ULP_fnc_isKindOf }) then {
+        if (!(isNull _veh) && { !_shift } && { !_ctrlKey } && { !_alt } && { [] call ULP_fnc_isStaff } && { [player] call ULP_fnc_onDuty } && { ["Vehicle", false] call ULP_fnc_checkPower } && { [_veh, ["LandVehicle", "Air", "Ship"]] call ULP_fnc_isKindOf }) then {
             player setVariable ["delete_delay", time + 3];
             deleteVehicle _veh;
 

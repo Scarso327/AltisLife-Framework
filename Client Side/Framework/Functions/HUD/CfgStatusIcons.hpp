@@ -18,4 +18,9 @@ class CfgStatusIcons {
 		icon = "Data\UI\reviveCooldown.paa";
 		condition = "missionNamespace getVariable [""ULP_LastRevived"", -300] > (time - 300)";
 	};
+
+	class NoCommunications : Base {
+		icon = "Data\UI\noCommunications.paa";
+		condition = "!([player] call ULP_fnc_hasComms)";
+	};
 };

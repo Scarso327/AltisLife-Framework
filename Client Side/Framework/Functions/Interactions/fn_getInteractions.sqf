@@ -11,7 +11,7 @@ _this params [
 
 private _interactions = [];
 
-if (isNull _object || { !(alive _object) } || { (_object distance player) > 10 }) exitWith { _interactions };
+if (isNull _object || { !(alive _object) } || { (_object distance player) > 7 }) exitWith { _interactions };
 
 private _typeOf = typeOf _object;
 (_typeOf call BIS_fnc_objectType) params ["", "_type"];
@@ -28,7 +28,7 @@ private _actions = missionConfigFile >> "CfgInteractions" >> (switch (true) do {
 	case (isPlayer _object && { [_object] call ULP_fnc_isEscorted } && { [] call ULP_fnc_isEscorting }): { "PersonEscortOnly" };
 	case (isPlayer _object): { "Person" };
 	case (_typeOf isKindOf "Box_NATO_Equip_F"): { "EquipmentBox" };
-	case (_type in ["Car", "Helicopter", "Ship"] && { !(([_object] call ULP_fnc_getVehicleOwner) isEqualTo "") }): { "Vehicle" };
+	case (_type in ["Car", "Helicopter", "Plane", "Ship"] && { !(([_object] call ULP_fnc_getVehicleOwner) isEqualTo "") }): { "Vehicle" };
 	default { "" };
 });
 

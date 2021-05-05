@@ -52,7 +52,7 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class B_Heli_Light_01_F {
-				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class I_Heli_light_03_unarmed_F {
@@ -60,7 +60,15 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class O_Heli_Light_02_unarmed_F {
-				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess";
+				class Textures {};
+			};
+			class O_Heli_Transport_04_black_F { 
+				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; 
+				class Textures {};
+			};
+			class O_Heli_Transport_04_covered_black_F { 
+				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; 
 				class Textures {};
 			};
 			class B_Heli_Transport_03_unarmed_F { 
@@ -68,11 +76,11 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class B_Heli_Transport_01_F { 
-				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess"; 
+				condition = "[""Police_NPAS"", 4] call ULP_fnc_hasAccess"; 
 				class Textures {};
 			};
 			class I_Heli_light_03_F {
-				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Police_NPAS"", 4] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 		};

@@ -49,6 +49,9 @@ class CfgRemoteExec {
         class ULP_fnc_revived {
             allowedTargets = CLIENT;
         };
+        class ULP_fnc_robMoney {
+            allowedTargets = CLIENT;
+        };
 
         class ULP_SRV_fnc_queryPlayerInfo {
             allowedTargets = SERVER;

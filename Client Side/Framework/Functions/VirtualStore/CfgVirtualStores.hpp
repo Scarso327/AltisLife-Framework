@@ -15,7 +15,6 @@ class CfgVirtualStores {
 			class Blindfold {};
 			class Lockpick {};
 			class BigRedKey {};
-			class VehicleClamp {};
 			//class Painkillers {};
 			class FieldDressing {};
 			class BloodBag {};

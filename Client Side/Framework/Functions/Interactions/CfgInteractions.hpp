@@ -221,7 +221,7 @@ class CfgInteractions {
 		class Clamp : Repair {
 			title = "Clamp";
 			onClick = "_this call ULP_fnc_clampVehicle";
-			factions[] = { "Police", "Hato" };
+			factions[] = { "Hato" };
 		};
 
 		class Garage : Repair {

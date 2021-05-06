@@ -332,7 +332,7 @@ class CfgWarrants {
     };
 
     class Other {
-        displayName = "Other"
+        displayName = "Other";
 
         class Note {
             displayName = "Added Note";

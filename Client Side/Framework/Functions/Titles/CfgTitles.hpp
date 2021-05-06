@@ -115,4 +115,13 @@ class CfgTitles {
 		displayName = "Private Investigator";
 		description = "The College of Policing is up to something";
 	};
+
+	// Investor Titles
+	class Investor {
+		displayName = "";
+		description = "Congratulations! You spent over £100 for this...";
+	};
+	class FreddieDavis : Investor { displayName = "pick a title you dipshit"; }; // 76561198148735922
+	class BoughNoggeye : Investor { displayName = "TBD"; }; // 76561198274139057
+	class KitKnight : Investor { displayName = "Waifu"; }; // 76561199048455932
 };

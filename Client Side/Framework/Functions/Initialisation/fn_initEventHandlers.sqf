@@ -11,6 +11,7 @@ player addEventHandler ["GetOutMan", { _this call ULP_fnc_onGetOut }];
 player addEventHandler ["Take", { _this call ULP_fnc_onTake }];
 player addEventHandler ["Put", { _this call ULP_fnc_onPut }];
 player addEventHandler ["InventoryOpened", { _this call ULP_fnc_InventoryOpened }];
+player addEventHandler ["InventoryClosed", { _this call ULP_fnc_InventoryClosed }];
 
 ["KeysGiven", {
 	_this params [

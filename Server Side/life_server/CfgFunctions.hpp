@@ -61,6 +61,8 @@ class CfgFunctions {
             class sellHouse {};
             class setHouseShared {};
             class setHouseName {};
+            class getStorage {};
+            class saveStorage {};
         };
 
         class DatabaseWarrants {

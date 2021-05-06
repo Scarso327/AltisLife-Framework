@@ -62,6 +62,7 @@ class CfgFunctions {
 			class onTake {};
 			class onPut {};
 			class InventoryOpened {};
+			class InventoryClosed {};
 		};
 
 		class Utility {

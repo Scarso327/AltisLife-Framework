@@ -11,7 +11,7 @@ _this params [
 ];
 
 _params params [
-	"_id", "_owner", ["_shared", false, [true]], ["_name", "", [""]], ["_storage", [], [[]]], ["_vStorage", [], [[]]]
+	"_id", "_owner", ["_shared", false, [true]], ["_name", "", [""]], ["_pStorage", [], [[]]], ["_vStorage", [], [[]]]
 ];
 
 _house allowDamage false;
@@ -40,7 +40,9 @@ if (isClass (_cfg >> "Storage")) then {
 	_storage setDir (getDir _house) - _dir;
 
 	_house setVariable ["building_storage", _storage];
+	_storage setVariable ["building", _house, true];
 	_storage setVariable ["building_id", _id];
+	_storage setVariable ["ULP_PhysicalCargo", _pStorage];
 	_storage setVariable ["ULP_VirtualCargo", createHashMapFromArray _vStorage, true];
 	_storage setVariable ["LastStorage", []];
 };

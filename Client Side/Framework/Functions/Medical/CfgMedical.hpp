@@ -1,22 +1,43 @@
 class CfgMedical {
 	class Damage {
 		amount = 3;
-		maxWounds = 7;
+		maxWounds = 5;
 
 		class Abrasion {
 			time = 4;
-			items[] = { { "QuickClot", { 0, 0.25 } }, { "FieldDressing", { 5, 0.4 } }, { "Packing", { 5, 0.6 } }, { "Elastic", { 10, 0.85 } } };
+			items[] = { 
+				{ "FieldDressing", { 5, 1 } }, 
+				{ "Packing", { 6, 1 } }, 
+				{ "Elastic", { 3, 1 } },
+				{ "QuickClot", { 0, 0.7 } } 
+			};
 		};
-		class Laceration : Abrasion  {
-			time = 6;
-			items[] = { { "QuickClot", { 0, 0.25 } }, { "FieldDressing", { 5, 0.3 } }, { "Packing", { 7, 0.5 } }, { "Elastic", { 11, 0.75 } } };
-		};
-		class Puncture : Laceration {
-			items[] = { { "QuickClot", { 2, 0.3 } }, { "FieldDressing", { 5, 0.25 } }, { "Packing", { 5, 0.3 } }, { "Elastic", { 8, 0.6 } } };
-		};
-		class Avulsion : Abrasion {
+		class Avulsion {
 			time = 9;
-			items[] = { { "QuickClot", { 0, 0.15 } }, { "FieldDressing", { 5, 0.35 } }, { "Packing", { 5, 0.5 } }, { "Elastic", { 8, 0.65 } } };
+			items[] = { 
+				{ "FieldDressing", { 5, 0.3 } }, 
+				{ "Packing", { 6, 1 } }, 
+				{ "Elastic", { 3, 0.3 } },
+				{ "QuickClot", { 0, 0.2 } } 
+			};
+		};
+		class Laceration {
+			time = 6;
+			items[] = { 
+				{ "FieldDressing", { 5, 0.7 } }, 
+				{ "Packing", { 6, 0.3 } }, 
+				{ "Elastic", { 3, 1 } },
+				{ "QuickClot", { 0, 0.7 } } 
+			};
+		};
+		class Puncture {
+			time = 7;
+			items[] = { 
+				{ "FieldDressing", { 5, 0.5 } }, 
+				{ "Packing", { 6, 0.5 } }, 
+				{ "Elastic", { 3, 0.85 } },
+				{ "QuickClot", { 0, 0.5 } } 
+			};
 		};
 	};
 };

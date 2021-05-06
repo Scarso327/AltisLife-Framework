@@ -37,5 +37,5 @@ clearBackpackCargoGlobal _container;
 	} forEach _x;
 } forEach (_box getVariable ["ULP_PhysicalCargo", []]);
 
-_container setPos (getPos _house);
+_container setPos (getPos _box);
 ["HouseStorage", [_house, _container]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

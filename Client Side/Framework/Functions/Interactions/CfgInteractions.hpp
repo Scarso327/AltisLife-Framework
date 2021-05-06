@@ -175,7 +175,7 @@ class CfgInteractions {
 		class OpenStorage {
 			title = "Open Storage";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
-			onClick = "ULP_HouseStorageEvent = [""HouseStorage"", { _this params [ ""_house"", ""_storage"" ]; ULP_HouseStorageEvent = nil; if (isNull _house || { (player distance _house) > 5 }) exitWith {}; if (isNull _storage) exitWith { [""This house doesn't have physical storage...""] call ULP_fnc_hint; }; player action [""gear"", _storage]; }, true] call ULP_fnc_addEventHandler; [(_this select 0) getVariable [""building"", objNull]] remoteExecCall [""ULP_SRV_fnc_getStorage"", 2]; [30, [], { if ((missionNamespace getVariable [""ULP_HouseStorageEvent"", -1]) > -1) then { [ULP_HouseStorageEvent] call ULP_fnc_removeEventHandler; [""House Storage Request Timed Out..""] call ULP_fnc_hint; }; }] call ULP_fnc_waitExecute; [""Requesting Physical Storage...""] call ULP_fnc_hint; closeDialog 0;";
+			onClick = "if ((missionNamespace getVariable [""ULP_HouseStorageEvent"", -1]) > -1) exitWith { [""A request is already active...""] call ULP_fnc_hint; }; ULP_HouseStorageEvent = [""HouseStorage"", { _this params [ ""_house"", ""_storage"" ]; ULP_HouseStorageEvent = nil; if (isNull _house || { (player distance _house) > 5 }) exitWith {}; if (isNull _storage) exitWith { [""This house doesn't have physical storage...""] call ULP_fnc_hint; }; player action [""gear"", _storage]; }, true] call ULP_fnc_addEventHandler; [(_this select 0) getVariable [""building"", objNull]] remoteExecCall [""ULP_SRV_fnc_getStorage"", 2]; [""Requesting Physical Storage...""] call ULP_fnc_hint; closeDialog 0;";
 			condition = "[_this getVariable [""building"", objNull], player, false] call ULP_fnc_isHouseOwner";
 		};
 	};

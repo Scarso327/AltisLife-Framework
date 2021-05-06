@@ -132,7 +132,7 @@ class CfgTags {
 		// National Health Service
 		class MedicDirector {
 			icon = "Data\Tags\Ranks\Medic\director.paa";
-			subtitle = "Service Director";
+			subtitle = "Director";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 8] call ULP_fnc_hasAccess }";
 		};
 		class MedicDeputy {

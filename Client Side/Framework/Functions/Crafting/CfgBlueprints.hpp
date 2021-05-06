@@ -169,13 +169,42 @@ class CfgBlueprints {
 	class MedicalEquipment {
 		displayName = "Medical Equipment";
 
-		class B_FirstAidKit {
+		class B_FieldDressing {
+			icon = "Data\Icons\fieldDressing.paa";
+			displayName = "Field Dressing";
+			description = "A bandage best used for treating abrasions.";
+			materials[] = { {"Bandage", 1} };
+			item = "FieldDressing";
+			isDefault = true;
+			workbench = false;
+			time = 15;
+		};
+		class B_Packing : B_FieldDressing {
+			icon = "Data\Icons\packingBandage.paa";
+			displayName = "Packing Bandage";
+			description = "A bandage best used for treating abrasions and avulsions.";
+			materials[] = { {"Bandage", 2} };
+			item = "Packing";
+		};
+		class B_Elastic : B_FieldDressing {
+			icon = "Data\Icons\elasticBandage.paa";
+			displayName = "Elastic Bandage";
+			description = "A bandage best used for treating abrasions and lacerations.";
+			item = "Elastic";
+		};
+		class B_QuickClot : B_FieldDressing {
+			icon = "Data\Icons\quikClot.paa";
+			displayName = "QuikClot";
+			description = "A bandage best used for treating abrasions and lacersations..";
+			materials[] = { {"Bandage", 1}, {"Sand", 1} };
+			item = "Elastic";
+		};
+		class B_FirstAidKit : B_FieldDressing {
 			icon = "Data\Icons\firstAidKit.paa";
 			displayName = "First Aid Kit";
 			description = "A map containing various known artifact sites across Altis.";
 			materials[] = { {"Painkillers", 2}, {"Bandage", 4}, {"BloodBag", 1} };
 			item = "FirstAidKit";
-			isDefault = true;
 			workbench = true;
 			time = 120;
 		};

@@ -664,50 +664,50 @@ class CfgVirtualItems {
 		displayName = "Generic Bandage";
 		description = "Used as a crafting supply for medical equipment.";
 		icon = "Data\Icons\bandage.paa";
-		buyPrice = 8500;
-		sellPrice = 4250;
+		buyPrice = 850;
+		sellPrice = 425;
 		class Settings : Settings {};
 	};
 	class FieldDressing : Bandage {
 		displayName = "Field Dressing";
 		icon = "Data\Icons\fieldDressing.paa";
-		description = "Fairly effective bandage that can be used for treating incapacitated people.";
+		description = "A bandage best used for treating abrasions.";
 	};
 	class Packing : Bandage {
 		displayName = "Packing Bandage";
 		icon = "Data\Icons\packingBandage.paa";
-		description = "Greatly effective bandage that can be used for treating incapacitated people.";
-		buyPrice = 10000;
-		sellPrice = 6550;
+		description = "A bandage best used for treating abrasions and avulsions.";
+		buyPrice = 1000;
+		sellPrice = 655;
 	};
 	class Elastic : Bandage {
 		displayName = "Elastic Bandage";
 		icon = "Data\Icons\elasticBandage.paa";
-		description = "Extremely effective bandage that can be used for treating incapacitated people.";
-		buyPrice = 15850;
-		sellPrice = 7500;
+		description = "A bandage best used for treating abrasions and lacerations.";
+		buyPrice = 1585;
+		sellPrice = 750;
 	};
 	class QuickClot : Bandage {
 		displayName = "QuikClot";
 		icon = "Data\Icons\quikClot.paa";
-		description = "Used to quickly and ineffectively treat a incapacitated people.";
-		buyPrice = 3450;
-		sellPrice = 1250;
+		description = "A bandage best used for treating abrasions and lacersations..";
+		buyPrice = 345;
+		sellPrice = 125;
 	};
 	class BloodBag : Painkillers {
 		displayName = "Blood Bag";
 		description = "Used to prevent an incapacitated person from bleeding out.";
 		icon = "Data\Icons\bloodbag.paa";
-		buyPrice = 10000;
-		sellPrice = 5000;
+		buyPrice = 1000;
+		sellPrice = 500;
 		class Settings : Settings {};
 	};
 	class Morphine : Painkillers {
 		displayName = "Morphine";
 		description = "Used to raise a person's heart rate in order to revive them.";
 		icon = "Data\Icons\injector.paa";
-		buyPrice = 12000;
-		sellPrice = 6000;
+		buyPrice = 1200;
+		sellPrice = 600;
 		class Settings : Settings {};
 	};
 	class Epinephrine : Morphine {
@@ -719,8 +719,8 @@ class CfgVirtualItems {
 		displayName = "First Aid Kit";
 		description = "A kit containing various medical tools that can provide assistance.";
 		icon = "Data\Icons\firstAidKit.paa";
-		buyPrice = 15000;
-		sellPrice = 7500;
+		buyPrice = 1500;
+		sellPrice = 750;
 		class Settings : Settings {};
 	};
 	class MediKit : FirstAidKit {

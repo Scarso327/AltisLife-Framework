@@ -35,6 +35,6 @@ if (_addActions) then {
 				["You have packed up a stinger..."] call ULP_fnc_hint;
 				deleteVehicle _spike;
 			};
-		}, nil, 10, false, false, "", "isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) } && { private _spike = (nearestObjects [player, [""Land_Razorwire_F""], 5] select { !((_x getVariable [""spike_owner"", []]) isEqualTo []) }) param [0, objNull]; !(isNull _spike) && { (damage _spike) isEqualTo 1 }"]);
+		}, nil, 10, false, false, "", "isNull (objectParent player) && { !([] call ULP_UI_fnc_isProgress) } && { private _spike = (nearestObjects [player, [""Land_Razorwire_F""], 5] select { !((_x getVariable [""spike_owner"", []]) isEqualTo []) }) param [0, objNull]; (!(isNull _spike) && { (damage _spike) isEqualTo 1 })}"]);
 	};
 };

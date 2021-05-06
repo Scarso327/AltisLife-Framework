@@ -5,7 +5,7 @@
 #include "\life_server\script_macros.hpp"
 scopeName "fn_fetchWarrants";
 
-private _units = allPlayers;// ["Civilian"] call ULP_fnc_allMembers; TODONOW
+private _units = ["Civilian"] call ULP_fnc_allMembers;
 private _warrants = createHashMap;
 
 if !(_units isEqualTo []) then {

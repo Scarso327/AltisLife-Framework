@@ -53,3 +53,6 @@ private _clear = _display displayCtrl 4705;
 
 _issue ctrlShow true;
 _clear ctrlShow true;
+
+_issue ctrlEnable (["Police_Main", 3] call ULP_fnc_hasAccess);
+_clear ctrlEnable (["Police_Main", 3] call ULP_fnc_hasAccess);

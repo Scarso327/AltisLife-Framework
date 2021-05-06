@@ -21,3 +21,4 @@
 #include "DialogPNC\DialogPNC.hpp"
 #include "DialogLegislation\DialogLegislation.hpp"
 #include "DialogMedical\DialogMedical.hpp"
+#include "DisplaySelect\DisplayWarrantCreation.hpp"

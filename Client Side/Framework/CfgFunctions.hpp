@@ -362,6 +362,7 @@ class CfgFunctions {
 			file = "Functions\Selects";
 			class selectNumber {};
 			class inputGroupInfo {};
+			class inputWarrantInfo {};
 			class selectPlayer {};
 			class confirm {};
 			class enterString {};
@@ -708,6 +709,7 @@ class CfgFunctions {
 			class listCrimes {};
 			class clearWarrants {};
 			class deleteCrime {};
+			class issueWarrant {};
 		};
 
 		class Crimes {

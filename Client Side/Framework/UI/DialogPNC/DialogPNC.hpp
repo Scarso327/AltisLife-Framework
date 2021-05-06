@@ -199,7 +199,7 @@ class DialogPNC {
 		class IssueWarrant : Life_RscButtonCenter {
 			idc = 4704;
 			text = "<t align = 'center'>Issue Warrant</t>";
-			onButtonClick = "";
+			onButtonClick = "_this call ULP_fnc_issueWarrant;";
 			SAFEZONE_X((UI_X + UI_WIDTH - (UI_WIDTH / 4)) - MARGIN_X);
 			SAFEZONE_Y((BODY_Y + BODY_HEIGHT) + BUTTON_MARGIN_Y);
 			SAFEZONE_W((UI_WIDTH / 4));

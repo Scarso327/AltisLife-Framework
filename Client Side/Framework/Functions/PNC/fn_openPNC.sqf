@@ -92,7 +92,7 @@ if (createDialog "DialogPNC") then {
 
 		[_filter, _list] call BIS_fnc_initListNBoxSorting;
 
-		_display setVariable ["WarrantsRetrievedEvent", ["WarrantsRetrieved", { _this call ULP_fnc_listWarrants; }, true] call ULP_fnc_addEventHandler];
+		_display setVariable ["WarrantsRetrievedEvent", ["WarrantsRetrieved", { _this call ULP_fnc_listWarrants; }] call ULP_fnc_addEventHandler];
 		[] remoteExecCall ["ULP_SRV_fnc_fetchWarrants", RSERV];
 	};
 };

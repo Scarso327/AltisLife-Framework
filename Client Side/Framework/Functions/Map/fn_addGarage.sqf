@@ -17,7 +17,7 @@ _this params [
 	["_includeStore", true, [false]],
 	["_impound", false, [true]],
 	["_condition", "true", [""]],
-	["_title", "<t color='#B92DE0'>[CIV]</t>", [""]]
+	["_title", "<t color='#B92DE0'>[Civilian]</t>", [""]]
 ];
 
 if (isNull _trader || { _title isEqualTo "" } || { _condition isEqualTo "" }) exitWith {};

@@ -117,11 +117,11 @@ class CfgTitles {
 	};
 
 	// Investor Titles
-	class Investor {
+	class Investors {
 		displayName = "";
 		description = "Congratulations! You spent over £100 for this...";
 	};
-	class FreddieDavis : Investor { displayName = "pick a title you dipshit"; }; // 76561198148735922
-	class BoughNoggeye : Investor { displayName = "TBD"; }; // 76561198274139057
-	class KitKnight : Investor { displayName = "Waifu"; }; // 76561199048455932
+	class FreddieDavis : Investors { displayName = "pick a title you dipshit"; }; // 76561198148735922
+	class BoughNoggeye : Investors { displayName = "TBD"; }; // 76561198274139057
+	class KitKnight : Investors { displayName = "Waifu"; }; // 76561199048455932
 };

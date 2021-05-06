@@ -95,7 +95,7 @@ class CfgAchievements {
 	class JoinAPC {
 		icon = "Data\UI\Achievements\APC.paa";
 		displayName = "Constable";
-		description = "Joined the Altis Police Constabulary.";
+		description = "Joined the Altis Police.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -111,7 +111,7 @@ class CfgAchievements {
 	class JoinNPAS {
 		icon = "Data\UI\Achievements\NPAS.paa";
 		displayName = "Police Pilot";
-		description = "Joined the APC's NPAS.";
+		description = "Joined the NPAS.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -119,7 +119,7 @@ class CfgAchievements {
 	class JoinSCO19 {
 		icon = "Data\UI\Achievements\SCO.paa";
 		displayName = "Firearms Officer";
-		description = "Joined the APC's SCO19.";
+		description = "Joined the SCO19.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -127,7 +127,7 @@ class CfgAchievements {
 	class JoinNCA {
 		icon = "Data\UI\Achievements\NCA.paa";
 		displayName = "Intel Officer";
-		description = "Joined the APC's NCA.";
+		description = "Joined the NCA.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -135,7 +135,7 @@ class CfgAchievements {
 	class JoinMPU {
 		icon = "Data\UI\Achievements\MPU.paa";
 		displayName = "Police Marine";
-		description = "Joined the APC's MPU.";
+		description = "Joined the MPU.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -143,7 +143,7 @@ class CfgAchievements {
 	class JoinRPU {
 		icon = "Data\UI\Achievements\RPU.paa";
 		displayName = "Pursuit Specialist";
-		description = "Joined the APC's RPU.";
+		description = "Joined the RPU.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
@@ -159,7 +159,7 @@ class CfgAchievements {
 	class JoinUC {
 		icon = "Data\UI\Achievements\UC.paa";
 		displayName = "Secret Constable";
-		description = "Joined the APC's UC.";
+		description = "Trained as a Police Covert Officer.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};

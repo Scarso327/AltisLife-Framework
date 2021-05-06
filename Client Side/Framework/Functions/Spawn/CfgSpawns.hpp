@@ -98,7 +98,7 @@ class CfgSpawns {
             marker = "hato_spawn_kavala";
             icon = "Data\UI\Spawns\kavala.paa";
         };
-        class HatoKavala : HATO {
+        class HatoAgios : HATO {
             displayName = "Agios Facility";
             marker = "hato_spawn_agios";
             icon = "Data\UI\Spawns\agios.paa";

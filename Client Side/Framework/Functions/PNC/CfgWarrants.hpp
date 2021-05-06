@@ -328,4 +328,14 @@ class CfgWarrants {
             bounty = 50000;
         };
     };
+
+    class Other {
+        displayName = "Other"
+
+        class Note {
+            displayName = "Added Note";
+            allowManual = true;
+            bounty = 0; 
+        };
+    };
 };

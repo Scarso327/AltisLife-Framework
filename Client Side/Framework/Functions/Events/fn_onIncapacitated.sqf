@@ -55,6 +55,10 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 [] call ULP_fnc_onUnrestrained;
 player setVariable ["surrender", nil];
 
+if (visibleMap) then {
+	openMap false; 
+};
+
 [["RscHUD"] call ULP_UI_fnc_getLayer] call ULP_UI_fnc_closeHUD;
 [] spawn ULP_UI_fnc_closeDialogs; // Makes sure all dialogs are closed...
 [] call ULP_fnc_wipeEffects;

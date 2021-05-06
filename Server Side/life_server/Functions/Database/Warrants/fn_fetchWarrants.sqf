@@ -28,18 +28,18 @@ if !(_units isEqualTo []) then {
 				private _crimes = _history get _act;
 				if (_crime in _crimes) then {
 					private _list = _crimes get _crime;
-					_list pushBack [_id, _info, _insert];
+					_list set [_id, [_info, _insert]];
 					_crimes set [_crime, _list];
 				} else {
-					_crimes set [_crime, [[_id, _info, _insert]]];
+					_crimes set [_crime, createHashMapFromArray [[_id, [_info, _insert]]]];
 				};
 
 				_history set [_act, _crimes];
 			} else {
-				_history set [_act, createHashMapFromArray [[_crime, [[_id, _info, _insert]]]]];
+				_history set [_act, createHashMapFromArray [[_crime, createHashMapFromArray [[_id, [_info, _insert]]]]]];
 			};
 		} else {
-			_warrants set [_pid, createHashMapFromArray [[_act, createHashMapFromArray [[_crime, [[_id, _info, _insert]]]]]]];
+			_warrants set [_pid, createHashMapFromArray [[_act, createHashMapFromArray [[_crime, createHashMapFromArray [[_id, [_info, _insert]]]]]]]];
 		};
 	} forEach _warrants_query;
 };

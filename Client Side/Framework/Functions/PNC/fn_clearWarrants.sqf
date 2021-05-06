@@ -40,5 +40,6 @@ if (isNull _unit) exitWith {
 		_list tvDelete _path;
 
 		[getPlayerUID _unit] remoteExecCall ["ULP_SRV_fnc_clearWarrants", RSERV];
+		[format ["You have cleared %1's warrants", name _unit]] call ULP_fnc_hint;
 	}, false
 ] call ULP_fnc_confirm;

@@ -127,7 +127,7 @@ class DialogPNC {
 					x = 14 * GUI_GRID_CENTER_W;
 					y = 1 * GUI_GRID_CENTER_H;
 					w = 13.5 * GUI_GRID_CENTER_W;
-					h = 11 * GUI_GRID_CENTER_H;
+					h = 10 * GUI_GRID_CENTER_H;
 				};
 
 				class CrimeListHeader: Life_RscListNBox {
@@ -163,9 +163,9 @@ class DialogPNC {
 					x = 14 * GUI_GRID_CENTER_W;
 					y = 1 * GUI_GRID_CENTER_H;
 					w = 13.5 * GUI_GRID_CENTER_W;
-					h = 11 * GUI_GRID_CENTER_H;
+					h = 10 * GUI_GRID_CENTER_H;
 					text = "";
-					onLBSelChanged = "(((ctrlParent (_this select 0)) displayCtrl 4703) controlsGroupCtrl 107) ctrlSetStructuredText parseText ((_this select 0) lnbData [(_this select 1), 1])";
+					onLBSelChanged = "private _display = ctrlParent (_this select 0); ((_display displayCtrl 4703) controlsGroupCtrl 107) ctrlSetStructuredText parseText ((_this select 0) lnbData [(_this select 1), 1]); _display setVariable [""selected_crime_id"", ((_this select 0) lnbValue [(_this select 1), 0])];";
 					rowHeight = 0.04;
 					sizeEx = 0.038;
 					columns[] = { 0, 0.6 };
@@ -179,9 +179,19 @@ class DialogPNC {
 					style = ST_MULTI;
 					colorBackground[] = INNER_BODY_COLOUR;
 					x = 14 * GUI_GRID_CENTER_W;
-					y = 12.5 * GUI_GRID_CENTER_H;
+					y = 11.5 * GUI_GRID_CENTER_H;
 					w = 13.5 * GUI_GRID_CENTER_W;
-					h = 5 * GUI_GRID_CENTER_H;
+					h = 4 * GUI_GRID_CENTER_H;
+				};
+
+				class ClearCrime : Life_RscButtonCenter {
+					idc = 108;
+					text = "<t align = 'center'>Remove Crime</t>";
+					onButtonClick = "_this call ULP_fnc_deleteCrime;";
+					x = 14 * GUI_GRID_CENTER_W;
+					y = 16 * GUI_GRID_CENTER_H;
+					w = 13.5 * GUI_GRID_CENTER_W;
+					h = 1 * GUI_GRID_CENTER_H;
 				};
 			};
 		};

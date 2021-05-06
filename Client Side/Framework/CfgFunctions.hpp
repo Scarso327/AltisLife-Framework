@@ -707,6 +707,7 @@ class CfgFunctions {
 			class listWarrants {};
 			class listCrimes {};
 			class clearWarrants {};
+			class deleteCrime {};
 		};
 
 		class Crimes {

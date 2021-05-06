@@ -155,5 +155,11 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_fetchWarrants {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_clearWarrants {
+            allowedTargets = SERVER;
+        };
+        class ULP_SRV_fnc_deleteCrime {
+            allowedTargets = SERVER;
+        };
     };
 };

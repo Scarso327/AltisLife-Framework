@@ -25,6 +25,8 @@ private _crimes = _warrants tvData _path;
 if (_crimes isEqualTo "") exitWith {};
 (parseSimpleArray _crimes) params [ "_configName", "_crimes" ];
 
+_crimes = createHashMapFromArray _crimes;
+
 // Get crime information...
 _path resize 2;
 _display setVariable ["act_cfg_name", _warrants tvData _path];
@@ -35,7 +37,7 @@ _path resize 1;
 _display setVariable ["warrant_steam_id", _warrants tvData _path];
 
 {
-	_x params ["_id", "_info", "_date"];
+	_y params ["_info", "_date"];
 	_date params ["_year", "_month", "_day", "_hour", "_minute"];
 
 	private _row = _list lnbAddRow [
@@ -43,5 +45,5 @@ _display setVariable ["warrant_steam_id", _warrants tvData _path];
 		format ["%1/%2/%3 %4:%5", _year, _month, _day, _hour, _minute]
 	];
 	_list lnbSetData [[_row, 1], _info param [1, "No Note"]];
-	_list lnbSetValue [[_row, 0], _id];
+	_list lnbSetValue [[_row, 0], _x];
 } forEach _crimes;

@@ -29,7 +29,7 @@ private _storage = [getItemCargo _container, getMagazineCargo _container, getWea
 } forEach _storage;
 
 private _box = _container getVariable ["storage_box", objNull];
-_box setVariable [ULP_PhysicalCargo, _storage];
+_box setVariable ["ULP_PhysicalCargo", _storage];
 
 [
 	format [

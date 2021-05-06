@@ -152,5 +152,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_registerStinger {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_fetchWarrants {
+            allowedTargets = SERVER;
+        };
     };
 };

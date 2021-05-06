@@ -704,6 +704,8 @@ class CfgFunctions {
 		class PNC {
 			file = "Functions\PNC";
 			class openPNC {};
+			class listWarrants {};
+			class listCrimes {};
 		};
 
 		class Crimes {

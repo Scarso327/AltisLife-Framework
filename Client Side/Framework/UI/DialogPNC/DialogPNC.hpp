@@ -1,4 +1,4 @@
-#define UI_WIDTH 0.3
+#define UI_WIDTH 0.35
 #define UI_X 0.5 - (UI_WIDTH / 2)
 #define BODY_HEIGHT 0.400
 #define BODY_Y 0.5 - (BODY_HEIGHT / 2)
@@ -7,6 +7,7 @@ class DialogPNC {
     idd = 4700;
     movingEnable = 0;
     enableSimulation = 0;
+	onUnload = "[""WarrantsRetrievedEvent"", (_this select 0) getVariable [""WarrantsRetrieved"", -1]] call ULP_fnc_removeEventHandler;";
 
     class ControlsBackground {
 		class Header : Life_RscStructuredText {
@@ -51,7 +52,7 @@ class DialogPNC {
 				class Logo : Life_RscPictureKeepAspect {
 					idc = -1;
 					text = "Data\UI\apc.paa";
-					x = 7.5 * GUI_GRID_CENTER_W;
+					x = 9.5 * GUI_GRID_CENTER_W;
 					y = 3.25 * GUI_GRID_CENTER_H;
 					w = 8.5 * GUI_GRID_CENTER_W;
 					h = 8 * GUI_GRID_CENTER_H;
@@ -63,7 +64,7 @@ class DialogPNC {
 					text = "Enter Username";
 					colorFrame[] = {0,0,0,0};
 					colorBackground[] = {0,0,0,0.8};
-					x = 7.5 * GUI_GRID_CENTER_W;
+					x = 9.5 * GUI_GRID_CENTER_W;
 					y = 12 * GUI_GRID_CENTER_H;
 					w = 8.5 * GUI_GRID_CENTER_W;
 					h = 1 * GUI_GRID_CENTER_H;
@@ -88,7 +89,7 @@ class DialogPNC {
 					colorSelectedBg[] = INNER_BODY_COLOUR;
 					x = 0;
 					y = 0;
-					w = 11 * GUI_GRID_CENTER_W;
+					w = 13.5 * GUI_GRID_CENTER_W;
 					h = 1 * GUI_GRID_CENTER_H;
 					columns = 1;
 					fade = 0;
@@ -98,6 +99,89 @@ class DialogPNC {
 					tooltips[] = {
 						"Warrants"
 					};
+				};
+
+				class WarrantList : Life_RscTree {
+					idc = 102;
+					colorBackground[] = INNER_BODY_COLOUR;
+					x = 0;
+					onTreeSelChanged = "_this call ULP_fnc_listCrimes;";
+					y = 1 * GUI_GRID_CENTER_H;
+					w = 13.5 * GUI_GRID_CENTER_W;
+					h = 16.5 * GUI_GRID_CENTER_H;
+				};
+
+				class CrimesHeaderBackground : Life_RscText {
+					idc = 103;
+					colorBackground[] = { 0, 0, 0, 1 };
+					text = "";
+					x = 14 * GUI_GRID_CENTER_W;
+					y = 0;
+					w = 13.5 * GUI_GRID_CENTER_W;
+					h = 1 * GUI_GRID_CENTER_H;
+				};
+
+				class CrimesListBackground : CrimesHeaderBackground {
+					idc = 104;
+					colorBackground[] = INNER_BODY_COLOUR;
+					x = 14 * GUI_GRID_CENTER_W;
+					y = 1 * GUI_GRID_CENTER_H;
+					w = 13.5 * GUI_GRID_CENTER_W;
+					h = 11 * GUI_GRID_CENTER_H;
+				};
+
+				class CrimeListHeader: Life_RscListNBox {
+					idc = 105;
+					x = 14 * GUI_GRID_CENTER_W;
+					y = 0;
+					w = 13.5 * GUI_GRID_CENTER_W;
+					h = 1 * GUI_GRID_CENTER_H;
+					text = "";	
+					rowHeight = 0.04;
+					sizeEx = 0.038;
+					columns[] = { 0, 0.6 };
+					drawSideArrows = false;
+					idcLeft = -1;
+					idcRight = -1;
+					disableOverflow = 1;
+
+					class Items {
+						class Issuer {
+							text = "Issuer";
+							value = 0;
+						};
+						class Issued {
+							text = "Issued";
+							value = -1;
+							data = "data";
+						};
+					};
+				};
+
+				class CrimeList : Life_RscListNBox {
+					idc = 106;
+					x = 14 * GUI_GRID_CENTER_W;
+					y = 1 * GUI_GRID_CENTER_H;
+					w = 13.5 * GUI_GRID_CENTER_W;
+					h = 11 * GUI_GRID_CENTER_H;
+					text = "";
+					onLBSelChanged = "(((ctrlParent (_this select 0)) displayCtrl 4703) controlsGroupCtrl 107) ctrlSetStructuredText parseText ((_this select 0) lnbData [(_this select 1), 1])";
+					rowHeight = 0.04;
+					sizeEx = 0.038;
+					columns[] = { 0, 0.6 };
+					drawSideArrows = false;
+					idcLeft = -1;
+					idcRight = -1;
+				};
+
+				class CrimeNote : Life_RscStructuredText {
+					idc = 107;
+					style = ST_MULTI;
+					colorBackground[] = INNER_BODY_COLOUR;
+					x = 14 * GUI_GRID_CENTER_W;
+					y = 12.5 * GUI_GRID_CENTER_H;
+					w = 13.5 * GUI_GRID_CENTER_W;
+					h = 5 * GUI_GRID_CENTER_H;
 				};
 			};
 		};

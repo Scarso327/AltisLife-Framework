@@ -66,6 +66,7 @@ class CfgFunctions {
         class DatabaseWarrants {
             file = "\life_server\Functions\Database\Warrants";
             class addWarrant {};
+            class fetchWarrants {};
         };
 
         class DatabaseGovernment {

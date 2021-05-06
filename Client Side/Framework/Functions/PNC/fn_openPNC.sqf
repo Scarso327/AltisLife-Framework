@@ -36,8 +36,8 @@ if (createDialog "DialogPNC") then {
 	_userInput ctrlEnable false;
 	_passInput ctrlEnable false;
 
-	[_login, _main, _userInput, _passInput] spawn {
-		_this params [ "_login", "_main", "_user", "_pass" ];
+	[_display, _login, _main, _userInput, _passInput] spawn {
+		_this params [ "_display", "_login", "_main", "_user", "_pass" ];
 
 		uiSleep 0.5;
 
@@ -83,5 +83,13 @@ if (createDialog "DialogPNC") then {
 
 		_login ctrlShow false;
 		_main ctrlShow true;
+
+		private _filter = _main controlsGroupCtrl 105;
+		private _list = _main controlsGroupCtrl 106;
+
+		[_filter, _list] call BIS_fnc_initListNBoxSorting;
+
+		_display setVariable ["WarrantsRetrievedEvent", ["WarrantsRetrieved", { _this call ULP_fnc_listWarrants; }, true] call ULP_fnc_addEventHandler];
+		[] remoteExecCall ["ULP_SRV_fnc_fetchWarrants", RSERV];
 	};
 };

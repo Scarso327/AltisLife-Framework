@@ -39,7 +39,7 @@ tvClear _list;
 					private _crimeCfg = _actCfg >> _x;
 					
 					if (isClass _crimeCfg) then {
-						private _crime = _list tvAdd [[_history, _act], format ["%1 (%2)", getText (_crimeCfg >> "displayName"), [count _y] call ULP_fnc_numberText];
+						private _crime = _list tvAdd [[_history, _act], format ["%1 (%2)", getText (_crimeCfg >> "displayName"), [count _y] call ULP_fnc_numberText]];
 						_list tvSetData [[_history, _act, _crime], str [_x, _y]];
 					};
 				} forEach _y;
@@ -47,3 +47,9 @@ tvClear _list;
 		} forEach _y;
 	};
 } forEach _warrants;
+
+private _issue = _display displayCtrl 4704;
+private _clear = _display displayCtrl 4705;
+
+_issue ctrlShow true;
+_clear ctrlShow true;

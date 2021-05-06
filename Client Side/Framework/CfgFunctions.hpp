@@ -706,6 +706,7 @@ class CfgFunctions {
 			class openPNC {};
 			class listWarrants {};
 			class listCrimes {};
+			class clearWarrants {};
 		};
 
 		class Crimes {

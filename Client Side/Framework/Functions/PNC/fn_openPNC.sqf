@@ -30,6 +30,9 @@ if (createDialog "DialogPNC") then {
 	_login ctrlShow true;
 	_main ctrlShow false;
 
+	(_display displayCtrl 4704) ctrlShow false;
+	(_display displayCtrl 4705) ctrlShow false;
+
 	private _userInput = _login controlsGroupCtrl 101;
 	private _passInput = _login controlsGroupCtrl 102;
 

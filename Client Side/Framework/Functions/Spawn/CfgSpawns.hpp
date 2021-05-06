@@ -94,9 +94,14 @@ class CfgSpawns {
 
         // HATO
         class HatoKavala : HATO {
-            displayName = "Highways Agency";
+            displayName = "Kavala Facility";
             marker = "hato_spawn_kavala";
             icon = "Data\UI\Spawns\kavala.paa";
+        };
+        class HatoKavala : HATO {
+            displayName = "Agios Facility";
+            marker = "hato_spawn_agios";
+            icon = "Data\UI\Spawns\agios.paa";
         };
 
         // Civilian

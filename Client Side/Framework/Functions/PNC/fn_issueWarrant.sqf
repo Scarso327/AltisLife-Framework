@@ -67,7 +67,7 @@ if (isNull _display) exitWith {};
 				lnbClear (_group controlsGroupCtrl 106);
 				(_group controlsGroupCtrl 107) ctrlSetText "";
 				
-				[] remoteExecCall ["ULP_SRV_fnc_fetchWarrants", RSERV];
+				[0.1, [], { [] remoteExecCall ["ULP_SRV_fnc_fetchWarrants", RSERV]; }] call ULP_fnc_waitExecute;
 			};
 
 			[format ["You have issued or ammended a warrant for %1...", name _unit]] call ULP_fnc_hint;

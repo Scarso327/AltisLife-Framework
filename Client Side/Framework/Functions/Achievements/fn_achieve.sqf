@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _cfg = missionConfigFile >> "CfgProgression" >> "CfgAchievements" >> _achievement;
-if !(isClass _cfg) exitWith { false };
+if ([player] call ULP_fnc_onDuty || { !(isClass _cfg) }) exitWith { false };
 
 if ([_achievement] call ULP_fnc_hasAchieved) exitWith { false };
 

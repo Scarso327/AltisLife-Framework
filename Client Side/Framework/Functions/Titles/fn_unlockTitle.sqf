@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _cfg = missionConfigFile >> "CfgTitles" >> _title;
-if !(isClass _cfg) exitWith { false };
+if ([player] call ULP_fnc_onDuty || { !(isClass _cfg) }) exitWith { false };
 
 if ([_title] call ULP_fnc_hasTitle) exitWith { false };
 

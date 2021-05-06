@@ -13,6 +13,10 @@ _this params [
 	"_button"
 ];
 
+if ([player] call ULP_fnc_onDuty) exitWith {
+	["You can't buy licenses while on duty..."] call ULP_fnc_hint;
+};
+
 private _display = ctrlParent _button;
 if (isNull _display) exitWith {};
 

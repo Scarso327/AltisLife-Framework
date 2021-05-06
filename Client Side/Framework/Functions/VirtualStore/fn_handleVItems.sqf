@@ -21,6 +21,10 @@ disableSerialization;
 private _display = ctrlParent _ctrl;
 if (isNull _display) exitWith {};
 
+if ([player] call ULP_fnc_onDuty) exitWith {
+	["You can't sell or buy items while on duty..."] call ULP_fnc_hint;
+};
+
 private _list = _display displayCtrl 3303;
 
 private _curSel = missionConfigFile >> "CfgVirtualItems" >> (_list lnbData [(lnbCurSelRow _list), 0]);

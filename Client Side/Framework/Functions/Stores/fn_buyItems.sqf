@@ -11,6 +11,10 @@ _this params [
 
 if !(canSuspend) exitWith { _this spawn ULP_fnc_buyItems; };
 
+if ([player] call ULP_fnc_onDuty) exitWith {
+	["You can't sell or buy items while on duty..."] call ULP_fnc_hint;
+};
+
 private _display = ctrlParent _ctrl;
 if (isNull _display) exitWith {};
 

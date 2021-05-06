@@ -9,6 +9,10 @@ _this params [
 	["_building", objNull, [objNull]]
 ];
 
+if ([player] call ULP_fnc_onDuty) exitWith {
+	["You can't sell a house while on duty..."] call ULP_fnc_hint;
+};
+
 private _cfg = [typeOf _building] call ULP_fnc_vehicleCfg;
 
 if !(_cfg isEqualTo []) then {

@@ -13,6 +13,10 @@ _this params [
 	["_house", objNull, [objNull]]
 ];
 
+if ([player] call ULP_fnc_onDuty) exitWith {
+	["You can't buy a house while on duty..."] call ULP_fnc_hint;
+};
+
 private _objectCfg = [typeOf _house] call ULP_fnc_vehicleCfg;
 
 if !([_house] call ULP_fnc_isHouse || 

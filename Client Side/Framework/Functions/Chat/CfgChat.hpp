@@ -37,4 +37,10 @@ class CfgChat {
 			params = 4;
 		};
 	};
+	class Commands {
+		class Players {
+			action = "[""Total Players:"", format [""%1"", count allPlayers]]";
+			condition = "true";
+		};
+	};
 };

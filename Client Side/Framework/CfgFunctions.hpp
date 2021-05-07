@@ -585,6 +585,7 @@ class CfgFunctions {
 		class Chat {
 			file = "Functions\Chat";
 			class chatMessage {};
+			class initChat {};
 		};
 
 		class Messaging {

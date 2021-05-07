@@ -1125,7 +1125,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
-			isEventItem = false;
+			isEventItem = true;
 		};
 		conditions = "true";
 	};
@@ -1151,9 +1151,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\ingot.paa";
 		sellPrice = 1900;
 		weight = 2;
-		class Settings : Settings {
-			isEventItem = true;
-		};
+		class Settings : Settings {};
 	};
 	class SilverBar : CopperBar {
 		displayName = "Silver Bar";

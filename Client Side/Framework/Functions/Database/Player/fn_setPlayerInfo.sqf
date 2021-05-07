@@ -26,6 +26,8 @@ if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
 
 private _factionCfg = missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction; // Gets the config for our current faction...
 
+ULP_ID = _uid;
+
 // Money...
 CASH = _cash;
 BANK = _bank;

@@ -38,6 +38,7 @@ lnbClear _list;
 			_list lnbSetPicture [[_row, 0], _itemIcon];
 			if ((configName _x) isEqualTo (missionNamespace getVariable ["ULP_SRV_Setting_BuffedItem", ""])) then {
 				_list lnbSetPictureColor [[_row, 0], [1, 0.843, 0, 1]];
+				_list lnbSetTooltip [[_row, 0], "This item has increased payout..."];
 			};
 		};
 

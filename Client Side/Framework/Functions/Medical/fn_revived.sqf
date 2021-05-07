@@ -19,6 +19,8 @@ if ([_medic] call ULP_fnc_onDuty) then {
 	[format ["You have been revived by %1", [_medic, true] call ULP_fnc_getName]] call ULP_fnc_hint;
 };
 
+["Revived", [name player, [[_medic, true] call ULP_fnc_getName, "an admin"] select ([_medic] call ULP_fnc_onDuty)]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+
 player setVariable ["IncapacitatedWounds", nil, true];
 
 player setUnconscious false;

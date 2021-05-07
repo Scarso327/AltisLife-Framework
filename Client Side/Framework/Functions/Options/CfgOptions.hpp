@@ -136,4 +136,36 @@ class CfgOptions {
 			condition = "true";
 		};
 	};
+
+	class Chat {
+		title = "Chat";
+
+		class EnableMessagesIncapacitated {
+			name = "Enable Incapacitated Messages";
+			tooltip = "When enabled, incapacitated and injured messages will be display in chat.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
+			condition = "true";
+		};
+
+		class EnableMessagesBleedout : EnableMessagesIncapacitated {
+			name = "Enable Bleedout Messages";
+			tooltip = "When enabled, bleedout and executed messages will be display in chat.";
+		};
+
+		class EnableMessagesRevived : EnableMessagesIncapacitated {
+			name = "Enable Revival Messages";
+			tooltip = "When enabled, revival messages will be display in chat.";
+		};
+
+		class EnableMessagesPrisoned : EnableMessagesIncapacitated {
+			name = "Enable Prison Messages";
+			tooltip = "When enabled, prison messages will be display in chat.";
+		};
+
+		class EnableMessagesVehicle : EnableMessagesIncapacitated {
+			name = "Enable Vehicle Messages";
+			tooltip = "When enabled, garaged, impounded and crushed messages will be display in chat.";
+		};
+	};
 };

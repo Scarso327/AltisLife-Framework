@@ -48,6 +48,7 @@ if !([format["Crushing %1", _name], _time, [_vehicle, _name, _fee], {
 	["FirstCrush"] call ULP_fnc_achieve;
 
 	["Vehicle has been crushed!"] call ULP_fnc_hint;
+	["Crushed", [/* TODO */, _name, [player, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't crush a vehicle while performing another action!"] call ULP_fnc_hint;
 };

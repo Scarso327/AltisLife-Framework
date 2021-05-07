@@ -39,6 +39,8 @@ private _max = getNumber (_prison >> "maxDuraction");
 		detach _target;
 		[_target, _duraction, player] remoteExecCall ["ULP_fnc_imprison", _target];
 
+		["Prisoned", [name _target, [player, true] call ULP_fnc_getName, [_duraction, "MM"] call BIS_fnc_secondsToString]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+
 		[format["You have sentenced %1 for %2", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
 		["FirstArrest"] call ULP_fnc_achieve;
 	}, false, "[_this, ""MM:SS""] call BIS_fnc_secondsToString", false

@@ -45,6 +45,8 @@ if !([format["Storing %1", _name], _time, [_vehicle, _name], {
 		deleteVehicle _vehicle;
 		["Vehicle has been stored."] call ULP_fnc_hint;
 	};
+
+	["Garaged", [/* TODO */, _name, [player, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't garage a vehicle while performing another action!"] call ULP_fnc_hint;
 };

@@ -11,7 +11,7 @@ _this params [
 ];
 
 private _cfg = missionConfigFile >> "CfgChat" >> "Messages" >> _message;
-if !(isClass _cfg || { (count _params) isEqualTo getNumber (_cfg >> "params") }) exitWith { false };
+if !(isClass _cfg || { (count _params) isEqualTo getNumber (_cfg >> "params") } || { !(call compile getText (_cfg >> "condition")) }) exitWith { false };
 
 private _msg = [getText (_cfg >> "message")];
 _msg append _params;

@@ -62,6 +62,8 @@ if ((_vehicle getVariable ["vehicle_id", -1]) < 0) exitWith {
 			[format["You've requested an impounded for %1 with a fee of %2%3.", _name, "£", [_fee] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			["VehicleStored", { hint "Vehicle has been impounded."; }, true] call ULP_fnc_addEventHandler;
 			[_vehicle, _fee] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
+
+			["Impounded", [/* TODO */, _name, [player, true] call ULP_fnc_getName, format ["%1%2", "£", [_fee] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 		}, {}] call ULP_UI_fnc_startProgress) exitWith {
 			["You can't impound a vehicle while performing another action!"] call ULP_fnc_hint;
 		};

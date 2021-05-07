@@ -6,6 +6,7 @@
 scopeName "fn_getSellPrices";
 
 _this params [
+	["_configName", "", [""]],
 	["_buyPrice", -1, [0]],
 	["_sellPrice", -1, [0]],
 	["_isLegal", false, [true]]
@@ -17,6 +18,7 @@ private _gangTax = 0;
 private _cartelTaxes = [];
 
 if (_sellPrice > 0) then {
+	if (_configName isEqualTo (missionNamespace getVariable ["ULP_SRV_Setting_BuffedItem", ""])) then { _sellPrice = _sellPrice * getNumber(missionConfigFile >> "CfgSettings" >> "buffedSellIncrease"); };
 	if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _sellPrice = _sellPrice * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "sellIncrease"); };
 
 	if (_isLegal) then {

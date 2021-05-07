@@ -127,6 +127,16 @@ if !(ULP_SRV_Setting_Week isEqualTo ([] call ULP_SRV_fnc_getWeek)) then { _routi
     [format["CALL %1", _x], 1] call DB_fnc_asyncCall;
 } forEach _routines;
 
+["Choosing Buffed Item..."] call ULP_fnc_logIt;
+
+private _items = (("isClass _x" configClasses (missionConfigFile >> "CfgVirtualItems")) select {
+    [getNumber (_x >> "Settings" >> "isEventItem")] call ULP_fnc_bool
+});
+
+if !(_items isEqualTo []) then {
+    missionNamespace setVariable ["ULP_SRV_Setting_BuffedItem", configName (selectRandom _items), true];
+};
+
 [] call ULP_SRV_fnc_initRadios;
 [] call ULP_SRV_fnc_initEvents;
 [] call ULP_SRV_fnc_initCrimes;

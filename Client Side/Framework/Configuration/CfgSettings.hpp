@@ -12,6 +12,8 @@ class CfgSettings {
     starting_bank = 100000;
     paycheck_period = 15;
 
+    buffedSellIncrease = 1.5;
+
     class DonationRewards {
         sellIncrease = 1.25;
         profChanceIncrease = 1.30;

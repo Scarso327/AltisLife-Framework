@@ -12,6 +12,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Sustain {
 			hunger = 40;
@@ -42,6 +43,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Sustain {
 			hunger = 30;
@@ -158,6 +160,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -201,6 +204,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -223,6 +227,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -241,6 +246,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -287,6 +293,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [100, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 		conditions = "true";
@@ -329,6 +336,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -371,6 +379,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Deconstruction {
 			time = 20;
@@ -504,6 +513,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Deconstruction {
 			time = 30;
@@ -657,6 +667,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -754,6 +765,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -843,6 +855,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -877,6 +890,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -921,6 +935,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -935,6 +950,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
+			isEventItem = false;
 		};
 	};
 	class SeizedContraband : StolenCargo {
@@ -1010,6 +1026,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -1108,6 +1125,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -1133,7 +1151,9 @@ class CfgVirtualItems {
 		icon = "Data\Icons\ingot.paa";
 		sellPrice = 1900;
 		weight = 2;
-		class Settings : Settings {};
+		class Settings : Settings {
+			isEventItem = true;
+		};
 	};
 	class SilverBar : CopperBar {
 		displayName = "Silver Bar";
@@ -1192,6 +1212,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
+			isEventItem = false;
 		};
 	};
 	class ExplosiveMaterials : UraniumOre {
@@ -1225,6 +1246,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
+			isEventItem = false;
 		};
 	};
 	class UnprocessedWeed : UraniumOre {
@@ -1260,6 +1282,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -1275,6 +1298,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 	};
 	class ProcessedHeroin : ProcessedWeed {
@@ -1340,6 +1364,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -1426,6 +1451,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 	};
 
@@ -1442,6 +1468,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};
@@ -1489,6 +1516,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Events { onUse = "[""Common""] call ULP_fnc_getSite;"; };
 		conditions = "true";
@@ -1537,6 +1565,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_surveySite;"; };
 		class Deconstruction {
@@ -1577,6 +1606,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
+			isEventItem = false;
 		};
 		conditions = "true";
 	};

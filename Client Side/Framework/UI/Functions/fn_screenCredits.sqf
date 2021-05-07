@@ -22,7 +22,11 @@ private _screenTime = getNumber(missionConfigFile >> "CfgSettings" >> "CfgCredit
 private _text = format ["<t size='0.40' color='#f2cb0b' align='right'>%1<br /></t><t size='0.70' color='#FFFFFF' align='right'>", _title];
 
 {
-	_text = format["%1%2<br/>", _text, (call compile _x)];
+	private _item = _x;
+	
+	if (!(_x isEqualType []) || { call compile (_x param [1, "true"]) }) then {
+		_text = format["%1%2<br/>", _text, (call compile ([_x, _x param [0, ""]] select (_x isEqualType [])))];
+	};
 	nil
 } count _items;
 

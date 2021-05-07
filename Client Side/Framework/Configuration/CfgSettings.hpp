@@ -51,6 +51,13 @@ class CfgSettings {
             items[] = {"(missionNamespace getVariable [""ULP_SRV_Setting_Governor"", []]) param [0, """"]"};
             condition = "!((missionNamespace getVariable [""ULP_SRV_Setting_Governor"", []]) isEqualTo [])";
         };
+        class Events {
+            items[] = {
+                { """Gang Wars""", "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]" },
+                { """Elections""", "missionNamespace getVariable [""ULP_SRV_Setting_Election"", false]" }  
+            };
+            condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] || { missionNamespace getVariable [""ULP_SRV_Setting_Election"", false] }";
+        };
     };
 
     class NLR {

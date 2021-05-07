@@ -164,7 +164,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODONOW
 	class FirstTicket {
 		icon = "Data\UI\Achievements\firstTicket.paa";
 		displayName = "Ticketer";

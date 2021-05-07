@@ -48,6 +48,6 @@ if !(_cfg isEqualTo []) then {
 
 			["Selling House..."] call ULP_fnc_hint;
 			[getPlayerUID player, _house] remoteExecCall ["ULP_SRV_fnc_sellHouse", RSERV];
-		}, false
+		}, {}, false
 	] call ULP_fnc_confirm;
 };

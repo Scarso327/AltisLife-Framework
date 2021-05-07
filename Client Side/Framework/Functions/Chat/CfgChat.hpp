@@ -36,6 +36,21 @@ class CfgChat {
 			message = "%1's %2 was impounded by %3 for %4";
 			params = 4;
 		};
+		class IssuedFine : Prisoned {
+			message = "%1 has issued %2 a fine of %3";
+			condition = "[[""EnableMessagesTicket"", ""Chat""] call ULP_fnc_getOption] call ULP_fnc_bool";
+		};
+		class FinePaid : IssuedFine {
+			message = "%1 has paid a fine of %2";
+			params = 2;
+			condition = "[[""EnableMessagesTicket"", ""Chat""] call ULP_fnc_getOption] call ULP_fnc_bool";
+		};
+		class FineRefused : FinePaid {
+			message = "%1 has refused a fine of %2";
+		};
+		class FinePoor : FinePaid {
+			message = "%1 can't afford a fine of %2";
+		};
 	};
 	class Commands {
 		class Players {

@@ -47,5 +47,5 @@ if (_bid > ([] call ULP_fnc_groupFunds)) exitWith {
 
 		["Placing Bid..."] call ULP_fnc_hint;
 		[player, _bid, _base] remoteExecCall ["ULP_SRV_fnc_addBaseBid", RSERV];
-	}, false
+	}, {}, false
 ] call ULP_fnc_confirm;

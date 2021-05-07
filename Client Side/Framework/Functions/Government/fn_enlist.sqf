@@ -38,5 +38,5 @@ if ([] call ULP_fnc_isGovernor) exitWith {
 
 		["Requesting Enlistment..."] call ULP_fnc_hint;
 		[player] remoteExecCall ["ULP_SRV_fnc_enlistCandidate", RSERV];
-	}, false
+	}, {}, false
 ] call ULP_fnc_confirm;

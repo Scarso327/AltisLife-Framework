@@ -104,6 +104,7 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 [] call ULP_fnc_initBases;
 [] call ULP_fnc_initCartels;
 [] call ULP_fnc_initRandomEvents;
+[] call ULP_fnc_initPolice;
 
 ["Initialising Player"] call ULP_fnc_logIt;
 [true, true] call ULP_fnc_initPlayer;
@@ -130,7 +131,7 @@ if (isNil "ULP_UCLevels") then {
 			missionNamespace setVariable ["Police_UC", compileFinal (str _uc)];
 			
 			[] call ULP_fnc_spawnMenu;
-		}, false, { [] call ULP_fnc_spawnMenu; }
+		}, { [] call ULP_fnc_spawnMenu; }, false
 	] call ULP_fnc_confirm;
 };
 

@@ -754,6 +754,12 @@ class CfgFunctions {
 			class initMarkers {};
 			class mapMarkers {};
 		};
+
+		class Police {
+			file = "Functions\Police";
+			class initPolice {};
+			class issueTicket {};
+		};
 	};
 
 	class ULP_Functions_UI {

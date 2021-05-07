@@ -43,7 +43,7 @@ if ([getNumber (_curSel >> "Settings" >> "isScripted")] call ULP_fnc_bool) then 
 			} else {
 				["You don't have this item to remove!"] call ULP_fnc_hint;
 			};
-		}, false
+		}, {}, false
 	] call ULP_fnc_confirm;
 } else {
 	[

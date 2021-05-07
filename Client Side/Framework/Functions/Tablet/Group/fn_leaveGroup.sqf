@@ -30,7 +30,7 @@ private _name = [_group] call ULP_fnc_getGroupName;
 		} else {
 			[format ["You've failed to leave %1, please try again later...", _name]] call ULP_fnc_hint;
 		};
-	}, true
+	}, {}, true
 ] call ULP_fnc_confirm;
 
 true

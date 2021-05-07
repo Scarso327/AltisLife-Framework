@@ -194,7 +194,7 @@ switch (_code) do {
 
                     [getPlayerUID player, "Admin", ["AdminMassRevive", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
                     player setVariable ["admin_mass_cooldown", time + 15];
-                }, false
+                }, {}, false
             ] call ULP_fnc_confirm;
         };
     };

@@ -12,8 +12,8 @@ _this params [
 	["_message", "Yes or no?", [""]],
 	["_params", [], [[]]],
 	["_onYes", {}, [{}]],
-	["_tablet", true, [false]],
-	["_onNo", {}, [{}]]
+	["_onNo", {}, [{}]],
+	["_tablet", true, [false]]
 ];
 
 if (isNull _parent) exitWith {};

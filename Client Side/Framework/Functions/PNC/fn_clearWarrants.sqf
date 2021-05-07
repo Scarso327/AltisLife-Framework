@@ -41,5 +41,5 @@ if (isNull _unit) exitWith {
 
 		[getPlayerUID _unit] remoteExecCall ["ULP_SRV_fnc_clearWarrants", RSERV];
 		[format ["You have cleared %1's warrants", name _unit]] call ULP_fnc_hint;
-	}, false
+	}, {}, false
 ] call ULP_fnc_confirm;

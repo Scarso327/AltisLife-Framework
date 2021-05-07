@@ -68,7 +68,7 @@ ULP_DisbandEvent = ["GroupDisbanded", {
 			[_x] joinSilent (createGroup [side _x, true]);
 		} forEach (units _group);
 		deleteGroup _group;
-	}, true, { if !(isNil "ULP_DisbandEvent") then { ["GroupDisbanded", ULP_DisbandEvent] call ULP_fnc_removeEventHandler; ULP_DisbandEvent = nil; }; }
+	}, { if !(isNil "ULP_DisbandEvent") then { ["GroupDisbanded", ULP_DisbandEvent] call ULP_fnc_removeEventHandler; ULP_DisbandEvent = nil; }; }, true
 ] call ULP_fnc_confirm;
 
 true

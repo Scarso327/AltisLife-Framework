@@ -44,7 +44,7 @@ if (local _vehicle && { _engineOn }) then {
 				} else {
 					["You don't have enough money on you to pay the fine..."] call ULP_fnc_hint;
 				};
-			}, false, {}
+			}, {}, false
 		] call ULP_fnc_confirm;
 	};
 };

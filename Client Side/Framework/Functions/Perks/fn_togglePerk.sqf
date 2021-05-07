@@ -32,7 +32,7 @@ if ([_perk] call ULP_fnc_hasPerk) then {
 				[format ["%1 has been deactiviated for a cost of %2%3.", _name, "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				["PerksChanged", [_perk, ULP_Perks]] call ULP_fnc_invokeEvent;
 			};
-		}, true
+		}, {}, true
 	] call ULP_fnc_confirm;
 } else {
 	if !(isClass _cfg) exitWith {

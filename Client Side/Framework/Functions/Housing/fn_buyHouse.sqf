@@ -98,5 +98,5 @@ _objectCfg params [ "", "", "", "_name" ];
 		} else {
 			[format ["You can't afford %1%2 to buy this property!", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
-	}, false
+	}, {}, false
 ] call ULP_fnc_confirm;

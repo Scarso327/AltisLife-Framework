@@ -153,6 +153,11 @@ class CfgOptions {
 			tooltip = "When enabled, bleedout and executed messages will be display in chat.";
 		};
 
+		class EnableMessagesTicket : EnableMessagesIncapacitated {
+			name = "Enable Ticket Messages";
+			tooltip = "When enabled, ticket messages will be display in chat.";
+		};
+
 		class EnableMessagesRevived : EnableMessagesIncapacitated {
 			name = "Enable Revival Messages";
 			tooltip = "When enabled, revival messages will be display in chat.";

@@ -60,5 +60,5 @@ private _name = _memberList lnbData [_selected, 0];
 		} else {
 			[format ["You've transfer ownership to %1, please try again later...", _name]] call ULP_fnc_hint;
 		};
-	}, true
+	}, {}, true
 ] call ULP_fnc_confirm;

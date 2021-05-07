@@ -63,5 +63,5 @@ if (isNull _unit || { _crime isEqualTo "" } || { _crimeId isEqualTo -1 }) exitWi
 		(_group controlsGroupCtrl 107) ctrlSetText "";
 
 		[format ["You have removed a count of %1 from %2's warrant", getText (missionConfigFile >> "CfgWarrants" >> _act >> _crime >> "displayName"), name _unit]] call ULP_fnc_hint;
-	}, false
+	}, {}, false
 ] call ULP_fnc_confirm;

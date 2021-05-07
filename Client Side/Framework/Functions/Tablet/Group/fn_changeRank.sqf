@@ -57,5 +57,5 @@ private _name = _memberList lnbData [_selected, 0];
 		} else {
 			[format ["You failed to change %1's group rank, please try again later...", _name]] call ULP_fnc_hint;
 		};
-	}, true
+	}, {}, true
 ] call ULP_fnc_confirm;

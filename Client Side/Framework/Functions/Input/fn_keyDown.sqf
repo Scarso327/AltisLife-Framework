@@ -163,7 +163,7 @@ if (isDowned(player)) then {
 
                 if (ULP_Ability_Cooldown > time) exitWith {};
                 
-                if ((player distance _veh) <= 10 && { _veh in ULP_Keys || { _veh in ULP_Houses } }) then {
+                if ((player distance _veh) <= 10 && { _veh in ULP_Keys || _veh in ULP_Houses || (!([player] call ULP_fnc_isRestrained) && (_veh isEqualTo (vehicle player))) }) then {
                     if ([_veh] call ULP_fnc_isHouse) then {
                         private _door = [_veh] call ULP_fnc_getNearestDoor;
                         if (_door > -1) then {

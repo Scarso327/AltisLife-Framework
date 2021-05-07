@@ -43,7 +43,6 @@ class CfgChat {
 		class FinePaid : IssuedFine {
 			message = "%1 has paid a fine of %2";
 			params = 2;
-			condition = "[[""EnableMessagesTicket"", ""Chat""] call ULP_fnc_getOption] call ULP_fnc_bool";
 		};
 		class FineRefused : FinePaid {
 			message = "%1 has refused a fine of %2";

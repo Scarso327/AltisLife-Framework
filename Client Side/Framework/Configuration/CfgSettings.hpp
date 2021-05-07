@@ -52,6 +52,7 @@ class CfgSettings {
             condition = "!((missionNamespace getVariable [""ULP_SRV_Setting_Governor"", []]) isEqualTo [])";
         };
         class Events {
+            title = "Active Events";
             items[] = {
                 { """Gang Wars""", "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]" },
                 { """Elections""", "missionNamespace getVariable [""ULP_SRV_Setting_Election"", false]" }  

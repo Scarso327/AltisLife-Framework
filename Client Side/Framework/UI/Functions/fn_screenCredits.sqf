@@ -11,7 +11,7 @@ _this params [
 
 if (_credits isEqualTo []) then {
 	_credits = (("call compile getText (_x >> ""condition"")" configClasses (missionConfigFile >> "CfgSettings" >> "CfgCredits")) apply {
-		[(configName _x), getArray(_x >> "items")]
+		[[configName _x, getText (_x >> "title")] select (isText (_x >> "title")), getArray(_x >> "items")]
 	});
 };
 

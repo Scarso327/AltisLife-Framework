@@ -49,6 +49,13 @@ class CfgOptions {
 			type = "DROPDOWN";
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
+
+		class EnableAmbientSounds : EffectsFade {
+			name = "Enable Ambient Sounds";
+			tooltip = "When enabled, you will be able to hear ArmA's ambient sounds.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
+		};
 	};
 
 	class HUD {

@@ -250,25 +250,6 @@ class H_Beret_02 : H_Beret_blk {};
 class H_Beret_Colonel : H_Beret_blk {};
 class H_Beret_CSAT_01_F : H_Beret_blk {};
 
-class H_ParadeDressCap_01_LDF_F {
-	displayName = "Parade Cap";
-	price = 105;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	class Textures {
-		class H_ParadeDressCap_01_LDF_F {
-			displayName = "Police";
-			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
-		};
-		class H_ParadeDressCap_01_US_F : H_ParadeDressCap_01_LDF_F {
-			displayName = "Ambulance";
-			condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
-		};
-	};
-};
-class H_ParadeDressCap_01_US_F : H_ParadeDressCap_01_LDF_F {};
-
 class H_ShemagOpen_khk {
 	displayName = "Shemag";
 	price = 700;

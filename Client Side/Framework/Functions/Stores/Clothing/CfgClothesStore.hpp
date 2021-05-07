@@ -272,9 +272,6 @@ class CfgClothesStore {
 			class H_Beret_blk : FactionBase { 
 				condition = "[""Medic_Main"", 6] call ULP_fnc_hasAccess || { [""Medic_HART"", 1] call ULP_fnc_hasAccess }"; 
 			};
-			class H_ParadeDressCap_01_LDF_F : FactionBase { 
-				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; 
-			};
 			class H_PilotHelmetHeli_B : FactionBase { 
 				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess"; 
 			};

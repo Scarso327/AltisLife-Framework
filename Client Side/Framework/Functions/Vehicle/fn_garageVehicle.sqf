@@ -37,6 +37,8 @@ if !([format["Storing %1", _name], _time, [_vehicle, _name], {
 		[format["You failed to store this vehicle as either someone was in it or it's already been removed!"]] call ULP_fnc_hint;
 	};
 
+	private _owner = (_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, []];
+
 	private _id = _vehicle getVariable ["vehicle_id", -1];
 	if (_id >= 0) then {
 		["VehicleStored", { hint "Vehicle has been stored."; }, true] call ULP_fnc_addEventHandler;
@@ -46,7 +48,7 @@ if !([format["Storing %1", _name], _time, [_vehicle, _name], {
 		["Vehicle has been stored."] call ULP_fnc_hint;
 	};
 
-	["Garaged", [/* TODO */, _name, [player, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+	["Garaged", [_owner param [0, "Someone"], _name, [player, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't garage a vehicle while performing another action!"] call ULP_fnc_hint;
 };

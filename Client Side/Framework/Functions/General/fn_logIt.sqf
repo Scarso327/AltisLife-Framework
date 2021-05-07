@@ -9,4 +9,4 @@ _this params [
 	["_msg", "N/A", [""]]
 ];
 
-diag_log format["[ULP][v%1] %2", LIFE_SETTINGS(getText,"local_version"), _msg];
+diag_log format["[ULP][v%1] %2", LIFE_SETTINGS(getText,"framework_version"), _msg];

@@ -3,9 +3,15 @@ class CfgTitles {
 		displayName = "Default";
 		varOverride = "";
 	};
+
+        // Community Titles
 	class OldGuard {
 		displayName = "Old Guard";
 		description = "Apart of this community before this title";
+	};
+        class Tester {
+		displayName = "Testing, Testing...";
+		description = "Involved with beta testing this framework";
 	};
 	class Donator {
 		displayName = "Community Donator";
@@ -15,6 +21,8 @@ class CfgTitles {
 		displayName = "Community Investor";
 		description = "Invested £100 or more to this community";
 	};
+
+        // Regular Titles
 	class FirstDrink {
 		displayName = "Big Drink Man";
 		description = "Taken your first drink of alcohol";

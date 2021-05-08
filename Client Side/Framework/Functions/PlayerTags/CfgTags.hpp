@@ -150,22 +150,22 @@ class CfgTags {
 			subtitle = "Incident Commander";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
 		};
-		class MedicDoctor  {
+		class MedicDoctor {
 			icon = "Data\Tags\Ranks\Medic\doctor.paa";
 			subtitle = "Emergency Doctor";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
 		};
-		class MedicSenior  {
+		class MedicSenior {
 			icon = "Data\Tags\Ranks\Medic\senior.paa";
 			subtitle = "Senior Paramedic";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 3] call ULP_fnc_hasAccess }";
 		};
-		class MedicParamedic  {
+		class MedicParamedic {
 			icon = "Data\Tags\Ranks\Medic\paramedic.paa";
 			subtitle = "Paramedic";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};
-		class MedicTechnician  {
+		class MedicTechnician {
 			subtitle = "Medical Technician";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 		};

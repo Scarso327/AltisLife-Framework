@@ -172,18 +172,22 @@ class CfgTags {
 
 		// Highways Agency
 		class HatoOM {
+			icon = "Data\Tags\Ranks\Hato\OM.paa";
 			subtitle = "Operations Manager";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 		class HatoIC {
+			icon = "Data\Tags\Ranks\Hato\IC.paa";
 			subtitle = "Incident Coordinator";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class HatoSTO {
+			icon = "Data\Tags\Ranks\Hato\STO.paa";
 			subtitle = "Senior Traffic Officer";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class HatoTO {
+			icon = "Data\Tags\Ranks\Hato\TO.paa";
 			subtitle = "Traffic Officer";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
 		};

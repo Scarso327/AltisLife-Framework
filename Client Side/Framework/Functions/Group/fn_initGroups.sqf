@@ -15,8 +15,9 @@ scopeName "fn_initGroups";
 	["Your group has been created."] call ULP_fnc_hint;
 	ULP_Group_Creating = false;
 
-	[] call ULP_fnc_setTags; // Update my tags...
 	[format["Created Group (%1)", _groupId]] call ULP_fnc_logIt;
+
+	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupCreationFailed", {

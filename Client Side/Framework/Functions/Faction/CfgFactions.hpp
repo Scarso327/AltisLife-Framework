@@ -4,7 +4,7 @@ class CfgFactions {
 
 	class Police {
 		shortName = "Police";
-		displayName = "Altis Police Constabulary";
+		displayName = "Altis Police Service";
 		colour[] = { 0, 0.3, 0.6, 1 };
 		pay = 14600;
 		jointChannel = true;

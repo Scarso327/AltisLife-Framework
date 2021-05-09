@@ -69,7 +69,7 @@ scopeName "fn_initGroups";
 
 	[
 		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Accept", "Decline"],
-		format ["%1 has invited you to join %2, do you accept?", _name], [_group, _unit],
+		format ["%1 has invited you to join %2, do you accept?", name _unit, [_group] call ULP_fnc_getGroupName], [_group, _unit],
 		{
 			_this params [ "_group", "_unit" ];
 

@@ -732,15 +732,15 @@ class CfgVehicles {
 			class GoldLine : BaseTexture { 
 				displayName = "Gold Line";
 				buyPrice = 450000;
+				condition = "[] call ULP_fnc_donatorLevel > 0"; 
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_01.paa",
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_02.paa"
 				}; 
 			};
-			class Oil : BaseTexture { 
+			class Oil : GoldLine { 
 				displayName = "Oil Spill";
 				buyPrice = 315700;
-				locked = true;
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_01.paa",
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_02.paa"

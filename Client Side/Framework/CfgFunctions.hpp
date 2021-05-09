@@ -306,6 +306,8 @@ class CfgFunctions {
 			class leaveGroup {};
 			class transferOwner {};
 			class progression {};
+			class settings {};
+			class changeTax {};
 		};
 
 		class TabletKeys {

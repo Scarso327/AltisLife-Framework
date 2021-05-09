@@ -195,3 +195,22 @@ class RightView : Life_RscControlsGroup {
 
     class Controls {};
 };
+
+class ChangeTax : ULP_RscButtonClean {
+	idc = 23087;
+	text = "<t align = 'center'>Change Tax</t>";
+	onButtonClick = "_this call ULP_fnc_changeTax;";
+	SAFEZONE_X(UI_X);
+	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3));
+	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
+	SAFEZONE_H(0.022);
+};
+
+class GroupTaxText : Life_RscStructuredText {
+	idc = 23088;
+	text = "Group Tax (5%)";
+	SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
+	SAFEZONE_H(0.022);
+};

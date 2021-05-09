@@ -49,6 +49,7 @@ class CfgFunctions {
             class setGroupOwner {};
             class addGroupXP {};
             class addGroupBuff {};
+            class setGroupTax {};
         };
 
         class DatabaseHousing {

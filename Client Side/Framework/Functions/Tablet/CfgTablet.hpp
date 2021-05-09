@@ -125,7 +125,10 @@ class CfgTablet {
 
 	class GroupSettings : Group {
 		pageTitle = "Group - Settings";
-		onload = "";
+		pageIdcs[] = {
+			23061, 23087, 23088
+		};
+		onload = "_this call ULP_fnc_settings";
 	};
 
 	class Keys : BaseScreen {

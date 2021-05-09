@@ -167,5 +167,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_saveStorage {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_setGroupTax {
+            allowedTargets = SERVER;
+        };
     };
 };

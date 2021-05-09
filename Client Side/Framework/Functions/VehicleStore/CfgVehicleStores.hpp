@@ -365,8 +365,6 @@ class CfgVehicleStores {
 			class C_Offroad_01_comms_F {};
 			class C_Offroad_02_unarmed_F {};
 			class I_C_Offroad_02_LMG_F {};
-			class C_Van_02_transport_F {};
-			class C_Van_02_vehicle_F {};
 			class O_LSV_02_unarmed_F {};
 			class C_Van_01_transport_F {};
 			class C_Van_01_box_F {};
@@ -385,8 +383,6 @@ class CfgVehicleStores {
 			class C_Offroad_01_comms_F {};
 			class C_Offroad_02_unarmed_F {};
 			class I_C_Offroad_02_LMG_F {};
-			class C_Van_02_transport_F {};
-			class C_Van_02_vehicle_F {};
 			class B_CTRG_LSV_01_light_F {};
 			class B_LSV_01_unarmed_black_F {};
 			class O_LSV_02_unarmed_F {};
@@ -419,8 +415,6 @@ class CfgVehicleStores {
 			class C_Offroad_01_comms_F {};
 			class C_Offroad_02_unarmed_F {};
 			class I_C_Offroad_02_LMG_F {};
-			class C_Van_02_transport_F {};
-			class C_Van_02_vehicle_F {};
 			class B_CTRG_LSV_01_light_F {};
 			class B_LSV_01_unarmed_black_F {};
 			class O_LSV_02_armed_black_F {};

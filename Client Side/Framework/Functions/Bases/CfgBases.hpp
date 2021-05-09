@@ -2,7 +2,7 @@ class CfgBases {
 	// Bidding info...
 	Day = "Friday";
 	Restart[] = {20, 24};
-	RedzoneKillReward = 10000;
+	RedzoneKillReward = 15000;
 	BidIncrement = 1000000;
 	StartingBid = 9000000; // StartingBid = BidIncrement + StartingBid
 

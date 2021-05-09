@@ -210,7 +210,7 @@ class H_Beret_blk {
 	isMask = false;
 	isNV = false;
 	class Textures {
-		// Altis Police Constabulary
+		// Altis Police Service
 		class H_Beret_blk {
 			displayName = "Police Patrol";
 			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";

@@ -72,7 +72,7 @@ class CfgTags {
 			condition = "[] call ULP_fnc_isProtection && { !([] call ULP_fnc_isGovernor) }";
 		};
 
-		// Altis Police Constabulary
+		// Altis Police Service
 		class PoliceCC {
 			icon = "Data\Tags\Ranks\Police\CC.paa";
 			subtitle = "Chief Constable";
@@ -129,7 +129,7 @@ class CfgTags {
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
-		// National Health Service
+		// Altis Ambulance Service
 		class MedicDirector {
 			icon = "Data\Tags\Ranks\Medic\director.paa";
 			subtitle = "Director";

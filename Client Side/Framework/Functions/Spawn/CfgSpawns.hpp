@@ -25,7 +25,7 @@ class CfgSpawns {
     };
 
     class Altis {
-        // Altis Police Constabulary
+        // Altis Police Service
         class KavalaStation : Police {
             displayName = "Kavala Headquarters";
             marker = "apc_spawn_kavala";
@@ -61,7 +61,7 @@ class CfgSpawns {
             conditions = "[] call ULP_fnc_isUndercover";
         };
 
-        // National Health Service
+        // Altis Ambulance Service
         class KavalaHospital : Medic {
             displayName = "Kavala Hospital";
             marker = "nhs_spawn_kavala";
@@ -84,7 +84,7 @@ class CfgSpawns {
             conditions = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
         };
 
-        // Altis Police Constabulary / National Health Service
+        // Altis Police Service / Altis Ambulance Service
         class MarineStation {
             displayName = "Marine Base";
             factions[] = { "Police", "Medic" };

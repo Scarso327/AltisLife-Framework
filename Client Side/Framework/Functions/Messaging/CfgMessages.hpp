@@ -79,7 +79,7 @@ class CfgMessages {
 
 	class OpenAirBroadcast : PublicAnnoucement {
 		displayName = "Open Air Broadcast";
-		sender = "Altis Police Constabulary";
+		sender = "Altis Police Service";
 		targets = "(allPlayers select { !(isNull (objectParent _x)) && { (vehicle _x) isKindOf 'Air'} })";
 		condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 	};

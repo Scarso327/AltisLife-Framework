@@ -59,6 +59,58 @@ scopeName "fn_initGroups";
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;
 
+["GroupInvite", {
+	_this params [
+		["_group", grpNull, [grpNull]],
+		["_unit", objNull, [objNull]]
+	];
+
+	if (isNull _group || { isNull _unit }) exitWith {};
+
+	[
+		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Accept", "Decline"],
+		format ["%1 has invited you to join %2, do you accept?", _name], [_group, _unit],
+		{
+			_this params [ "_group", "_unit" ];
+
+			[_group, player] remoteExecCall ["ULP_SRV_fnc_addGroupMember", RSERV];
+		}, {
+			private _unit = _this param [1, objNull];
+			if (isNull _unit) exitWith {};
+			["GroupInviteRejected", [player]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+		}, false
+	] call ULP_fnc_confirm;
+}] call ULP_fnc_addEventHandler;
+
+["GroupInviteRejected", {
+	_this params [
+		["_unit", objNull, [objNull]]
+	];
+
+	if (isNull _unit) exitWith {};
+
+	_unit setVariable ["group_invited", nil];
+	[format ["%1 has declined the group invite you sent them!", name _unit]] call ULP_fnc_hint;
+}] call ULP_fnc_addEventHandler;
+
+["GroupJoined", {
+	_this params [
+		["_unit", objNull, [objNull]]
+	];
+
+	if (isNull _unit) exitWith {};
+	
+	if (_unit isEqualTo player) then {
+		[ { !([] call ULP_fnc_isGroup) }, [], {
+			[format ["You have joined %1", [] call ULP_fnc_getGroupName]] call ULP_fnc_hint;
+			[] call ULP_fnc_setTags;
+		}] call ULP_fnc_waitUntilExecute;
+	} else {
+		_unit setVariable ["group_invited", nil];
+		[format ["%1 has joined your group", name _unit]] call ULP_fnc_hint;
+	};
+}] call ULP_fnc_addEventHandler;
+
 ["GroupKicked", {
 	[format ["%1 has kicked you from the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;

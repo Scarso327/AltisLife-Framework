@@ -50,6 +50,7 @@ class CfgFunctions {
             class addGroupXP {};
             class addGroupBuff {};
             class setGroupTax {};
+            class addGroupMember {};
         };
 
         class DatabaseHousing {

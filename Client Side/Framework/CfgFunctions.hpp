@@ -302,6 +302,7 @@ class CfgFunctions {
 			class group {};
 			class overview {};
 			class changeRank {};
+			class inviteMember {};
 			class kickMember {};
 			class leaveGroup {};
 			class transferOwner {};

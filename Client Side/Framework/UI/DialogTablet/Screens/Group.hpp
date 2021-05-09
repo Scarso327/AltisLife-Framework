@@ -129,6 +129,13 @@ class Kick : ChangeRank {
 	SAFEZONE_Y((UI_Y + (0.022 * 3)) + (MARGIN_Y * 3) + ((MARGIN_Y / 2) * 2));
 };
 
+class Invite : ChangeRank {
+	idc = 23089;
+	text = "<t align = 'center'>Invite</t>";
+	onButtonClick = "_this call ULP_fnc_inviteMember;";
+	SAFEZONE_Y((UI_Y + (0.022 * 3)) + (MARGIN_Y * 4) + ((MARGIN_Y / 2) * 3));
+};
+
 class LeaveGroup : ULP_RscButtonClean {
 	idc = 23081;
 	text = "<t align = 'center'>Leave Group</t>";

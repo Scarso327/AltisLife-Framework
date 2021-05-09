@@ -170,5 +170,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_setGroupTax {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_addGroupMember {
+            allowedTargets = SERVER;
+        };
     };
 };

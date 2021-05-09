@@ -11,7 +11,8 @@ _this params [
 	["_params", [], [[]]],
 	["_onSelect", {}, [{}]],
 	["_self", false, [true]],
-	["_tablet", true, [false]]
+	["_tablet", true, [false]],
+	["_condition", { true }, [{}]]
 ];
 
 if (isNull _parent) exitWith {};
@@ -39,7 +40,7 @@ private _tree = _display displayCtrl 3809;
 
 				if !(_someoneAdded) then { _someoneAdded = true; };
 			};
-		} forEach ([_x] call ULP_fnc_allMembers);
+		} forEach ([_x, _condition] call ULP_fnc_allMembers);
 	};
 } forEach _factions;
 

@@ -1,5 +1,5 @@
 class CfgGroups {
-	tax[] = { 1, 25 };
+	tax[] = { 0, 25 };
 
 	class Tag {
 		MinLength = 1;

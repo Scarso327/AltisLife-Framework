@@ -27,7 +27,7 @@ if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
 		["TicketRecieved", [player, _fine]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 		["IssuedFine", [[player, true] call ULP_fnc_getName, [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_fine] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 
-		[format["You have issued %1 a penalty notice of %2", [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_fine] call ULP_fnc_numberText]]]] call ULP_fnc_hint;
+		[format["You have issued %1 a penalty notice of %2", [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_fine] call ULP_fnc_numberText]]] call ULP_fnc_hint;
 		["FirstTicket"] call ULP_fnc_achieve;
 	}, false, "format [""%1%2"", ""£"", [_this] call ULP_fnc_numberText]", false
 ] call ULP_fnc_selectNumber;

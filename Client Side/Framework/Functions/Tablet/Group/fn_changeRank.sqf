@@ -39,7 +39,7 @@ private _name = _memberList lnbData [_selected, 0];
 
 [
 	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Confirm", "Cancel"],
-	format ["Are you sure you want to change %1's rank?", _name], [_display, _selectedMember, _selectedRank, _name],
+	format ["Are you sure you want to change <t color='#B92DE0'>%1's</t> rank?", _name], [_display, _selectedMember, _selectedRank, _name],
 	{
 		_this params [ "_display", "_member", "_rank", "_name" ];
 
@@ -53,9 +53,9 @@ private _name = _memberList lnbData [_selected, 0];
 			};
 
 			_display call ULP_fnc_overview;
-			[format ["You have changed %1's rank to %2", _name, [_rank] call ULP_fnc_rankName]] call ULP_fnc_hint;
+			[format ["You have changed <t color='#B92DE0'>%1's</t> rank to <t color='#B92DE0'>%2</t>", _name, [_rank] call ULP_fnc_rankName]] call ULP_fnc_hint;
 		} else {
-			[format ["You failed to change %1's group rank, please try again later...", _name]] call ULP_fnc_hint;
+			[format ["You failed to change <t color='#B92DE0'>%1's</t> group rank, please try again later...", _name]] call ULP_fnc_hint;
 		};
 	}, {}, true
 ] call ULP_fnc_confirm;

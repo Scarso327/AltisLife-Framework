@@ -10,7 +10,7 @@ if ((["PanicButton"] call ULP_fnc_hasItem) < 1) exitWith {};
 // Stop spam...
 private _cd = player getVariable ["panic_cooldown", 0];
 if (time < _cd) exitWith {
-	[format ["You used your panic button recently and can't use it for another %1 seconds...", [_cd - time] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	[format ["You used your panic button recently and can't use it for another <t color='#B92DE0'>%1</t> seconds...", [_cd - time] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	false
 };
 player setVariable ["panic_cooldown", time + 60];

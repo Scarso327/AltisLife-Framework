@@ -57,7 +57,7 @@ ULP_DisbandEvent = ["GroupDisbanded", {
 
 [
 	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Disband", "Cancel"],
-	format ["Are you sure you want to disband %1...", [_group] call ULP_fnc_getGroupName], [_group],
+	format ["Are you sure you want to <t color='#B92DE0'>disband %1</t>...", [_group] call ULP_fnc_getGroupName], [_group],
 	{	
 		_this params [ "_group" ];
 

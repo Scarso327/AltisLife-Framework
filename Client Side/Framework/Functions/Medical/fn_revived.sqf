@@ -16,7 +16,7 @@ if !(_this params [
 if ([_medic] call ULP_fnc_onDuty) then {
 	["You were revived by an admin..."] call ULP_fnc_hint;
 } else {
-	[format ["You have been revived by %1", [_medic, true] call ULP_fnc_getName]] call ULP_fnc_hint;
+	[format ["You have been revived by <t color='#B92DE0'>%1</t>", [_medic, true] call ULP_fnc_getName]] call ULP_fnc_hint;
 };
 
 ["Revived", [name player, [[_medic, true] call ULP_fnc_getName, "an admin"] select ([_medic] call ULP_fnc_onDuty)]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];

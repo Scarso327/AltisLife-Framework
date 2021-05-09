@@ -29,7 +29,7 @@ if !([format["Refueling %1", _name], _time, [_vehicle, _name, _fuel], {
 	_this params [ "_vehicle", "_name", "_fuel" ];
 
 	if (isNull _vehicle || { !(alive _vehicle) } || { !(["FuelCan"] call ULP_fnc_hasItem > 0) }) exitWith {
-		[format["You failed to refuel the %1 as it's either extremely damaged or you lost your fuel can..."]] call ULP_fnc_hint;
+		[format["You failed to refuel the <t color='#B92DE0'>%1</t> as it's either extremely damaged or you lost your fuel can..."]] call ULP_fnc_hint;
 	};
 
 	if (["FuelCan", 1, true] call ULP_fnc_handleItem) then {
@@ -41,7 +41,7 @@ if !([format["Refueling %1", _name], _time, [_vehicle, _name, _fuel], {
 			[_vehicle, _fuel] remoteExecCall ["ULP_fnc_setFuel", _vehicle];
 		};
 
-		[format["You've refueled %1 using a fuel can...", _name]] call ULP_fnc_hint;
+		[format["You've refueled <t color='#B92DE0'>%1</t> using a fuel can...", _name]] call ULP_fnc_hint;
 	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't refuel a vehicle while performing another action!"] call ULP_fnc_hint;

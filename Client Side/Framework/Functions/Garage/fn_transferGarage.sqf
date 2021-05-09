@@ -50,5 +50,5 @@ _cfg params [ "", "", "", "_name" ];
 	[_list, 0] call ULP_fnc_onGarageSwitch;
 
 	[player, _player, _vehId] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
-	[format ["You transferred your %1 to %2.", _name, name _player]] call ULP_fnc_hint;
+	[format ["You transferred your <t color='#B92DE0'>%1</t> to <t color='#B92DE0'>%2</t>.", _name, name _player]] call ULP_fnc_hint;
 }, false, false] call ULP_fnc_selectPlayer;

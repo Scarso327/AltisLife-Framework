@@ -46,9 +46,9 @@ private _name = _memberList lnbData [_selected, 0];
 			};
 
 			_display call ULP_fnc_overview;
-			[format ["You have kicked %1 from the group", _name]] call ULP_fnc_hint;
+			[format ["You have kicked <t color='#B92DE0'>%1</t> from the group", _name]] call ULP_fnc_hint;
 		} else {
-			[format ["You've failed to kick %1, please try again later...", _name]] call ULP_fnc_hint;
+			[format ["You've failed to kick <t color='#B92DE0'>%1</t>, please try again later...", _name]] call ULP_fnc_hint;
 		};
 	}, {}, true
 ] call ULP_fnc_confirm;

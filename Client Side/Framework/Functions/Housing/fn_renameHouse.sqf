@@ -73,7 +73,7 @@ if (_house getVariable ["selling", false]) exitWith {
 		};
 
 		[_house getVariable ["building_id", -1], _name] remoteExecCall ["ULP_SRV_fnc_setHouseName", RSERV];
-		[format ["You've renamed this house to %1.", _name]] call ULP_fnc_hint;
+		[format ["You've renamed this house to <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
 
 		(_fnc select 0) call (_fnc select 1);
 	}, false

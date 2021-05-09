@@ -36,7 +36,7 @@ if (([] call ULP_fnc_groupId) isEqualTo _owner) exitWith {
 	if !([] call ULP_fnc_isGroup) exitWith { ["You must be in a group to capture this site..."] call ULP_fnc_hint; };
 
 	_location setVariable ["site_owner_id", ([] call ULP_fnc_groupId), true];
-	[format ["You have successfully captured %1", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
+	[format ["You have successfully captured <t color='#B92DE0'>%1</t>", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
 
 	[(group player), "Hideout"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress)

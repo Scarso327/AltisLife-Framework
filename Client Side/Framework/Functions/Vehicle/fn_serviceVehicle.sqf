@@ -40,7 +40,7 @@ if (isNumber (_missionCfg >> "serviceCost")) then {
 };
 
 if (CASH < _cost) exitWith {
-	[format ["You can't afford to pay %1%2 to service this vehicle!", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	[format ["You can't afford to pay <t color='#B92DE0'>%1%2</t> to service this vehicle!", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
 };
 
 if !([format["Servicing %1", _name], _time, [_location, _vehicle, _name, _cost], {
@@ -59,7 +59,7 @@ if !([format["Servicing %1", _name], _time, [_location, _vehicle, _name, _cost],
 	[_vehicle, 1] remoteExecCall ["ULP_fnc_setFuel", _vehicle];
 	_vehicle setDamage 0;
 
-	[format ["You've serviced %1.", _name]] call ULP_fnc_hint;
+	[format ["You've serviced <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't service a vehicle while performing another action!"] call ULP_fnc_hint;
 };

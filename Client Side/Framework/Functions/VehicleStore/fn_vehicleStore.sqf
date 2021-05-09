@@ -21,7 +21,7 @@ if (isClass _cfg && { [player, getArray (_cfg >> "factions")] call ULP_fnc_isFac
 	private _licenses = getArray (_cfg >> "licenses");
 	{
 		if !([_x] call ULP_fnc_hasLicense) exitWith {
-			[format["You need these licenses to access this store: %1!", _licenses]] call ULP_fnc_hint;
+			[format["You need these licenses to access this store: <t color='#B92DE0'>%1</t>!", _licenses]] call ULP_fnc_hint;
 			breakOut "fn_vehicleStore";
 		};
 

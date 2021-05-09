@@ -26,7 +26,7 @@ if (["Toolbox"] call ULP_fnc_hasItem < 1) exitWith {
 };
 
 if ([getNumber (_cfg >> "Deconstruction" >> "workbench")] call ULP_fnc_bool && { !([] call ULP_fnc_nearWorkbench) }) exitWith {
-	["To deconstruct this item you must be near a workbench"] call ULP_fnc_hint;
+	["To deconstruct this item you must be near a <t color='#B92DE0'>workbench</t>"] call ULP_fnc_hint;
 	false
 };
 
@@ -34,7 +34,7 @@ private _name = getText (_cfg >> "displayName");
 
 private _total = [_item] call ULP_fnc_hasItem;
 if (_total < 1) exitWith {
-	[format ["You don't have any %1 to deconstruct", _name]] call ULP_fnc_hint;
+	[format ["You don't have any <t color='#B92DE0'>%1</t> to deconstruct", _name]] call ULP_fnc_hint;
 	false
 };
 
@@ -58,9 +58,9 @@ if (_total < 1) exitWith {
 				{ [_x select 0, (_x select 1) * _amount, false, true] call ULP_fnc_handleItem; } forEach getArray (_cfg >> "Deconstruction" >> "materials");
 				{ _x call ULP_fnc_unlockBlueprint; } forEach getArray (_cfg >> "Deconstruction" >> "blueprints");
 
-				[format ["You've deconstructed %2 %1(s)...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format ["You've deconstructed <t color='#B92DE0'>%2 %1(s)</t>...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			} else {
-				[format ["You don't have any %2 x %1 to deconstruct...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format ["You don't have any <t color='#B92DE0'>%2</t> x <t color='#B92DE0'>%1</t> to deconstruct...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 		}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
 	}, true

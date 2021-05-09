@@ -48,9 +48,9 @@ private _time = ["LifeSaver", 20] call ULP_fnc_activatePerk;
 	private _payOut = ["Revival", 5000] call ULP_fnc_getLegislation;
 
 	if ([player, ["Medic"]] call ULP_fnc_isFaction && { [_payOut, true, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addMoney }) then {
-		[format ["You have revived %1 and been paid %2%3", [_unit] call ULP_fnc_getName, "£", [_payOut] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		[format ["You have revived <t color='#B92DE0'>%1</t> and been paid <t color='#B92DE0'>%2%3</t>", [_unit] call ULP_fnc_getName, "£", [_payOut] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	} else {
-		[format ["You have revived %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
+		[format ["You have revived <t color='#B92DE0'>%1</t>", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
 	};
 
 	[100, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addXP;

@@ -15,4 +15,4 @@ if (time <= (ULP_Last_Sync + getNumber(missionConfigFile >> "CfgSettings" >> "sy
 [] call ULP_fnc_syncPlayerInfo;
 ULP_Last_Sync = time;
 
-["Syncing player information to the server. Please wait up to 20 seconds before leaving..."] call ULP_fnc_hint;
+["Syncing player information to the server. Please wait up to <t color='#B92DE0'>20 seconds</t> before leaving..."] call ULP_fnc_hint;

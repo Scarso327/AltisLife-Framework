@@ -120,7 +120,7 @@ switch (_mode) do {
 
 		private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
 		if (isNull _focus) exitWith { ["You need to select someone to preform this action on..."] call ULP_fnc_hint; };
-		if (_focus isEqualTo player) exitWith { ["You can't preformt hese actions on yourself..."] call ULP_fnc_hint; };
+		if (_focus isEqualTo player) exitWith { ["You can't perform hese actions on yourself..."] call ULP_fnc_hint; };
 		if !(isNull (objectParent player)) exitWith { ["You need to leave the vehicle you're in before you can do this..."] call ULP_fnc_hint; };
 
 		player setVariable ["admin_action_cooldown", time + 2];
@@ -128,21 +128,21 @@ switch (_mode) do {
 		switch (_type) do {
 			case "To": {	
 				player setPos (getPos _focus);
-				[format ["You have teleported to %1", name _focus]] call ULP_fnc_hint;
+				[format ["You have teleported to <t color='#B92DE0'>%1</t>", name _focus]] call ULP_fnc_hint;
 				[getPlayerUID player, "Admin", ["AdminTeleportTo", serverTime, [name _focus, getPlayerUID _focus, getPos _focus]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 			};
 			case "Here": {
 				_focus setPos (getPos player);
-				[format ["You have teleported %1 to you", name _focus]] call ULP_fnc_hint;
+				[format ["You have teleported <t color='#B92DE0'>%1</t> to you", name _focus]] call ULP_fnc_hint;
 				[getPlayerUID player, "Admin", ["AdminTeleportHere", serverTime, [name _focus, getPlayerUID _focus, getPos _focus]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 			};
 			case "Vehicle": {
-				if (isNull (objectParent _focus)) exitWith { [format ["%1 isn't in a vehicle...", name _focus]] call ULP_fnc_hint; };
+				if (isNull (objectParent _focus)) exitWith { [format ["<t color='#B92DE0'>%1</t> isn't in a vehicle...", name _focus]] call ULP_fnc_hint; };
 								
 				private _vehicle = (vehicle _focus);
 
 				if (count (crew _vehicle) >= ((([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [6, 0]) + 1)) exitWith {
-					[format ["%1's vehicle is full...", name _focus]] call ULP_fnc_hint;
+					[format ["<t color='#B92DE0'>%1's</t> vehicle is full...", name _focus]] call ULP_fnc_hint;
 				};
 
 				player moveInCargo _vehicle;

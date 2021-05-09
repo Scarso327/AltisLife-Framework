@@ -70,7 +70,7 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 		_display setVariable ["cartValue", 0];
 
 		if ((count _itemsNotBought) isEqualTo 0) then {
-			[format["You've bought these items for £%1.", [_cartValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			[format["You've bought these items for <t color='#B92DE0'>£%1</t>.", [_cartValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		} else {
 			private _message = [format["You've bought these items for £%1.<br/><br/>You didn't have space for the following items and so weren't charged for them:<br/>", [_cartValue] call ULP_fnc_numberText]];
 			

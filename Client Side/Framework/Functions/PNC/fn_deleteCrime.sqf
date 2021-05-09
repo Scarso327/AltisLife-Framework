@@ -62,6 +62,6 @@ if (isNull _unit || { _crime isEqualTo "" } || { _crimeId isEqualTo -1 }) exitWi
 		_crimeList lnbDeleteRow (lnbCurSelRow _crimeList);
 		(_group controlsGroupCtrl 107) ctrlSetText "";
 
-		[format ["You have removed a count of %1 from %2's warrant", getText (missionConfigFile >> "CfgWarrants" >> _act >> _crime >> "displayName"), name _unit]] call ULP_fnc_hint;
+		[format ["You have removed a count of <t color='#B92DE0'>%1</t> from <t color='#B92DE0'>%2's</t> warrant", getText (missionConfigFile >> "CfgWarrants" >> _act >> _crime >> "displayName"), name _unit]] call ULP_fnc_hint;
 	}, {}, false
 ] call ULP_fnc_confirm;

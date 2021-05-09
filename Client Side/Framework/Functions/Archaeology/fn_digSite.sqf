@@ -63,7 +63,7 @@ if ([] call ULP_fnc_isGroup) then {
 
 	{ [_x, _y, false, true] call ULP_fnc_handleItem; } forEach _given;
 	[format["Archaeology%1", configName _cfg]] call ULP_fnc_finishMission;
-	[format ["You have finished digging and found %1", _given]] call ULP_fnc_hint;
+	[format ["You have finished digging and found <t color='#B92DE0'>%1</t>", _given]] call ULP_fnc_hint;
 
 	["Archaeologist"] call ULP_fnc_achieve;
 	

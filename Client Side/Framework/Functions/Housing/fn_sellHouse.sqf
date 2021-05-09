@@ -20,7 +20,7 @@ if !(_cfg isEqualTo []) then {
 
 	[
 		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Yes", "No"],
-		format ["Are you sure you want to sell %1, all stored items will be lost...", _name], [_building],
+		format ["Are you sure you want to sell <t color='#B92DE0'>%1</t>, all stored items will be lost...", _name], [_building],
 		{	
 			private _house = _this param [0, objNull];
 			if (isNull _house) exitWith {};

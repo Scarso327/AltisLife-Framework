@@ -20,7 +20,7 @@ if (local _vehicle && { _engineOn }) then {
 
 		if (CASH < _fine) exitWith {
 			if (time >= _vehicle getVariable ["clamp_notify", 0]) then {
-				[format ["Your vehicle has been clamped by %1 and you can't afford the %2%3 fine...", _finer, "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format ["Your vehicle has been clamped by <t color='#B92DE0'>%1</t> and you can't afford the <t color='#B92DE0'>%2%3</t> fine...", _finer, "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 			_vehicle setVariable ["clamp_notify", time + 3];
 		};
@@ -35,7 +35,7 @@ if (local _vehicle && { _engineOn }) then {
 					_vehicle engineOn true;
 					_vehicle setVariable ["clamp_fine", nil, true];
 
-					[format ["You have paid the fine of %1%2 and your vehicle has had the clamp removed...", "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
+					[format ["You have paid the fine of <t color='#B92DE0'>%1%2</t> and your vehicle has had the clamp removed...", "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
 
 					private _unit = [_steamid] call ULP_fnc_playerByUID;
 					if (!(isNull _unit) && { [player, ["Police", "Hato"]] call ULP_fnc_isFaction }) then {

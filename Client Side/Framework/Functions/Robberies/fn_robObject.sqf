@@ -19,7 +19,7 @@ private _timeout = getNumber (_cfg >> "timeout");
 private _objectTimeout = _object getVariable "timeout";
 
 if (!isNil "ULP_Robbery_Timeout" && { time < ULP_Robbery_Timeout }) exitWith {
-	[format["You have attempted or successfully robbed a store within the last %1 minutes!", round (_personalTimeout / 60)]] call ULP_fnc_hint;
+	[format["You have attempted or successfully robbed a store within the last <t color='#B92DE0'>%1 minutes</t>!", round (_personalTimeout / 60)]] call ULP_fnc_hint;
 };
 if (!isNil "_objectTimeout" && { time < _objectTimeout }) exitWith { [format["This store was robbed within the last %1 minutes!", round (_timeout / 60)]] call ULP_fnc_hint; };
 

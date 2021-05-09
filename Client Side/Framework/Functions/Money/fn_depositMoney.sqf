@@ -37,7 +37,7 @@ if (_amount <= 0) exitWith {
 		];
 
 		if (_value > CASH) exitWith {
-			[format["You don't have %1%2 to deposit!", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			[format["You don't have <t color='#B92DE0'>%1%2</t> to deposit!", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 
 		if ([_value, false] call ULP_fnc_removeMoney) then {
@@ -47,7 +47,7 @@ if (_amount <= 0) exitWith {
 				[_value, true, "Bank Deposit"] call ULP_fnc_addMoney;
 			};
 
-			[format["You have deposited %1%2.", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			[format["You have deposited <t color='#B92DE0'>%1%2</t>.", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 	}, false
 ] call ULP_fnc_selectNumber;

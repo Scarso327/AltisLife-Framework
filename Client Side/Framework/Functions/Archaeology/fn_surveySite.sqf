@@ -48,10 +48,10 @@ if ([] call ULP_fnc_isGroup) then {
 			"You have found a good dig spot and now need to use your archaeology equipment to see what you can find.", "Start Digging the Archeology Site", ""
 		];
 
-		[format ["You've surveyed a %1 archeology site and found a dig site.", configName _cfg]] call ULP_fnc_hint;
+		[format ["You've surveyed a <t color='#B92DE0'>%1 archeology site</t> and found a <t color='#B92DE0'>dig site</t>.", configName _cfg]] call ULP_fnc_hint;
 		ULP_Archaeology_Digging = true;
 	} else {
-		[format ["You've surveyed a %1 archeology site and found a better area to search...", configName _cfg]] call ULP_fnc_hint;
+		[format ["You've surveyed a <t color='#B92DE0'>%1 archeology site</t> and found a better area to search...", configName _cfg]] call ULP_fnc_hint;
 	};
 
 	_task setSimpleTaskDestination _pos;

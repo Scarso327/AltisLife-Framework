@@ -49,7 +49,7 @@ if ([] call ULP_fnc_isGroup) then {
 				]
 			] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 
-			[format ["You have successfully picked %1's lock and gained forged keys..."]] call ULP_fnc_hint;
+			[format ["You have successfully picked <t color='#B92DE0'>%1's</t> lock and gained forged keys..."]] call ULP_fnc_hint;
 			ULP_Keys pushBackUnique _x;
 		} else {
 			[getPlayerUID player, "CriminalAttempts", "Section1", 

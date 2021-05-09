@@ -55,7 +55,7 @@ if (_count <= 0) exitWith {
 
 		if ([_container, _item, _value] call ULP_fnc_addToCargo) then {
 			if ([_item, _value, true] call ULP_fnc_handleItem) then {
-				[format["You have put %1 %2(s) into this container.", _value, _name]] call ULP_fnc_hint;
+				[format["You have put <t color='#B92DE0'>%1 %2(s)</t> into this container.", _value, _name]] call ULP_fnc_hint;
 				[_display, 0] call ULP_fnc_updateInventory;
 				[_display, 1] call ULP_fnc_updateInventory;
 			} else {
@@ -63,7 +63,7 @@ if (_count <= 0) exitWith {
 				[format["You don't have %1 %2(s) to put in this container!", _value, _name]] call ULP_fnc_hint;
 			};
 		} else {
-			[format["This container doesn't have enough space to take %1 %2(s)!", _value, _name]] call ULP_fnc_hint;
+			[format["This container doesn't have enough space to take <t color='#B92DE0'>%1 %2(s)</t>!", _value, _name]] call ULP_fnc_hint;
 		};
 	}, false
 ] call ULP_fnc_selectNumber;

@@ -45,9 +45,9 @@ _level = (_level max 0) min _max;
 _points = (_points max 0) min _requirement;
 
 if (_previousLevel < _level) then {
-	["You leveled up a profession!"] call ULP_fnc_hint;
+	["You <t color='#B92DE0'>leveled up</t> a profession!"] call ULP_fnc_hint;
 } else {
-	["You've increased a profession!"] call ULP_fnc_hint;
+	["You've <t color='#B92DE0'>increased</t> a profession!"] call ULP_fnc_hint;
 };
 
 ULP_Professions set [_profession, [_level, _points]];

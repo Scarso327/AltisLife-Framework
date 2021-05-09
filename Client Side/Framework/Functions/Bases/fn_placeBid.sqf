@@ -25,12 +25,12 @@ if (isNull _obj) exitWith {
 private _bid = (_obj getVariable ["current_bid", getNumber (missionConfigFile >> "CfgBases" >> "StartingBid")]) + getNumber (missionConfigFile >> "CfgBases" >> "BidIncrement");
 
 if (_bid > ([] call ULP_fnc_groupFunds)) exitWith {
-	[format ["The next bid is %1%2, your group funds can't afford this...", "£", [_bid] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	[format ["The next bid is <t color='#B92DE0'>%1%2</t>, your group funds can't afford this...", "£", [_bid] call ULP_fnc_numberText]] call ULP_fnc_hint;
 };
 
 [
 	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Confirm", "Cancel"],
-	format ["Are you sure you want to place a bid of %1%2...", "£", [_bid] call ULP_fnc_numberText], [_bid, _base],
+	format ["Are you sure you want to place a bid of <t color='#B92DE0'>%1%2</t>...", "£", [_bid] call ULP_fnc_numberText], [_bid, _base],
 	{	
 		_this params [ "_bid", "_base" ];
 		

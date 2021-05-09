@@ -12,7 +12,7 @@ _this params [
 if (isNull _unit) exitWith {};
 
 {
-	if (_x in getArray(missionConfigFile >> "CfgSettings" >> "communicationDevices")) then {
+	if (_x in getArray (missionConfigFile >> "CfgSettings" >> "communicationDevices")) then {
     	_unit unassignItem _x;
     	_unit removeItem _x;
   	};

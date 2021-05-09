@@ -245,11 +245,10 @@ class CfgInteractions {
 			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
-		class Impound : Repair {
+		class Impound : Garage {
 			title = "Impound";
 			onClick = "_this call ULP_fnc_impoundVehicle";
-			factions[] = { "Police" };
-			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
+			condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess || { [""Hato_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 
 		class Scrap : Repair {

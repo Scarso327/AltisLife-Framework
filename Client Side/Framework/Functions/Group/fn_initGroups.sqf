@@ -15,8 +15,9 @@ scopeName "fn_initGroups";
 	["Your group has been created."] call ULP_fnc_hint;
 	ULP_Group_Creating = false;
 
-	[] call ULP_fnc_setTags; // Update my tags...
 	[format["Created Group (%1)", _groupId]] call ULP_fnc_logIt;
+
+	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupCreationFailed", {
@@ -66,6 +67,10 @@ scopeName "fn_initGroups";
 	];
 
 	if (isNull _group || { isNull _unit }) exitWith {};
+
+	if ([["EnableAutoDecline"] call ULP_fnc_getOption] call ULP_fnc_bool) then {
+		["GroupInviteRejected", [player]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+	};
 
 	[
 		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Accept", "Decline"],

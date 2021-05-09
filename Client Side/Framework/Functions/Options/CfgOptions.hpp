@@ -17,6 +17,13 @@ class CfgOptions {
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
 		};
 
+		class EnableAutoDecline : EnableWelcome {
+			name = "Enable Ignore Group Invites";
+			tooltip = "When enabled, group invites will automatically be declined.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
+		};
+
 		class NightLight : EnableWelcome {
 			name = "Ambient Night Light";
 			tooltip = "This is the level of light that will light up the map during night.";

@@ -10,5 +10,5 @@ _this params [
 ];
 
 (allPlayers select {
-	_x getVariable ["faction", ""] isEqualTo _faction && { _extra }
+	_x getVariable ["faction", ""] isEqualTo _faction && _extra
 })

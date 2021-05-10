@@ -23,6 +23,7 @@ private _internalCfg = ([_class, _item] call {
 	_this params ["_class", "_item"];
 	
 	switch (_class) do {
+		case "CfgMagazines";
 		case "CfgWeapons": {
 			// Vest, Headgear, Uniform
 			if (getNumber(configFile >> "CfgWeapons" >> _item >> "type") in [4096, 131072]

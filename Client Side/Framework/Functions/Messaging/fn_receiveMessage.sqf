@@ -33,7 +33,7 @@ if ([["EnableMessageAlert", "Audio"] call ULP_fnc_getOption] call ULP_fnc_bool &
 };
 
 if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([getNumber (_type >> "ignoreStreamer")] call ULP_fnc_bool) }) then {
-	["You received a message and it's contents have been hidden.", "Phone Notification"] call ULP_fnc_hint;
+	["You received a message and it's contents have been hidden."/*, "Phone Notification" TODO */] call ULP_fnc_hint;
 } else {
 	_sender params [
 		["_name", "", [""]]

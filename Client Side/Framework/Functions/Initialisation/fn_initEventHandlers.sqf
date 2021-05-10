@@ -92,7 +92,7 @@ player addEventHandler ["InventoryClosed", { _this call ULP_fnc_InventoryClosed 
 		};
 		case "HUD_EnableXPBar": { [(_newSetting isEqualTo 1)] call ULP_UI_fnc_updateXpHud; };
 		case "HUD_EnablePlayerTags": { [(_newSetting isEqualTo 1)] call ULP_fnc_playerTags };
-		case "Indicators_EnableIndicators": { [(_newSetting isEqualTo 1)] call ULP_fnc_playerTags };
+		case "Indicators_EnableIndicators": { [(_newSetting isEqualTo 1)] call ULP_fnc_groupIndicators };
 		case "Audio_EffectsFade": { if (ULP_FadeSound) then { 0 fadeSound _newSetting; }; };
 		case "Audio_MusicFade": { if (ULP_FadeSound) then { 0 fadeMusic _newSetting; }; };
 		case "Audio_EnableAmbientSounds": { enableEnvironment [true, [_newSetting] call ULP_fnc_bool]; };

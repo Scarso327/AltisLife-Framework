@@ -18,11 +18,11 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class B_GEN_Van_02_transport_F {
-				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class B_GEN_Van_02_vehicle_F {
-				condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class B_LSV_01_unarmed_black_F {

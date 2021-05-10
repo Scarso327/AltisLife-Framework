@@ -800,7 +800,7 @@ class CfgVehicles {
 			class Asiimov : BaseTexture { 
 				displayName = "Asiimov";
 				locked = true;
-				textures[] = { "Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
+				textures[] = { "Data\Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
 			};
 			class ChromeGreen : BaseChromeGreen {};
 			class ChromeBlue : BaseChromeBlue {};

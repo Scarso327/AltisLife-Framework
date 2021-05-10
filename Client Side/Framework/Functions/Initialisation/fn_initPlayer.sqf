@@ -10,9 +10,7 @@ _this params [
 	["_addActions", false, [true]]
 ];
 
-if (_setTags) then {
-	[] call ULP_fnc_setTags;
-};
+[] call ULP_fnc_setTags;
 
 player enableFatigue false;
 player enableStamina false;

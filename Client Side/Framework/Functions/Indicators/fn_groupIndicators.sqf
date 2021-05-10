@@ -13,7 +13,7 @@ if !(isNil "ULP_Draw3d_Indicators") then { removeMissionEventHandler ["Draw3D", 
 
 if (_enable) then {
 	ULP_Draw3d_Indicators = addMissionEventHandler["Draw3D", {
-		if ([] call ULP_fnc_hasComms) then {};
+		if ([] call ULP_fnc_hasComms) then {
 			private _included = [];
 			private _maxDist = ["IndicatorDistance", "Indicators"] call ULP_fnc_getOption;
 

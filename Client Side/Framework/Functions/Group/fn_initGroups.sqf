@@ -52,11 +52,11 @@ scopeName "fn_initGroups";
 	];
 
 	_rank = [_rank] call ULP_fnc_rankName;
-	[format ["Your rank has been set to %1", ([format["%1 by %2!", _rank, name _actioner], _rank] select (isNull _actioner))]] call ULP_fnc_hint;
+	[format ["Your rank has been set to <t color='#B92DE0'>%1</t>", ([format["%1 by %2!", _rank, name _actioner], _rank] select (isNull _actioner))]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupOwner", {
-	[format ["%1 has transferred group ownership to you!", name (_this param [0, objNull])]] call ULP_fnc_hint;
+	[format ["<t color='#B92DE0'>%1</t> has transferred <t color='#B92DE0'>group ownership</t> to you!", name (_this param [0, objNull])]] call ULP_fnc_hint;
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;
 
@@ -74,7 +74,7 @@ scopeName "fn_initGroups";
 
 	[
 		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Accept", "Decline"],
-		format ["%1 has invited you to join %2, do you accept?", name _unit, [_group] call ULP_fnc_getGroupName], [_group, _unit],
+		format ["<t color='#B92DE0'>%1</t> has invited you to join <t color='#B92DE0'>%2</t>, do you accept?", name _unit, [_group] call ULP_fnc_getGroupName], [_group, _unit],
 		{
 			_this params [ "_group", "_unit" ];
 
@@ -95,7 +95,7 @@ scopeName "fn_initGroups";
 	if (isNull _unit) exitWith {};
 
 	_unit setVariable ["group_invited", nil];
-	[format ["%1 has declined the group invite you sent them!", name _unit]] call ULP_fnc_hint;
+	[format ["<t color='#B92DE0'>%1</t> has declined the group invite you sent them!", name _unit]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupJoined", {
@@ -107,21 +107,21 @@ scopeName "fn_initGroups";
 	
 	if (_unit isEqualTo player) then {
 		[ { !([] call ULP_fnc_isGroup) }, [], {
-			[format ["You have joined %1", [] call ULP_fnc_getGroupName]] call ULP_fnc_hint;
+			[format ["You have <t color='#B92DE0'>joined %1</t>", [] call ULP_fnc_getGroupName]] call ULP_fnc_hint;
 			[] call ULP_fnc_setTags;
 		}] call ULP_fnc_waitUntilExecute;
 	} else {
 		_unit setVariable ["group_invited", nil];
-		[format ["%1 has joined your group", name _unit]] call ULP_fnc_hint;
+		[format ["<t color='#B92DE0'>%1</t> has joined your group", name _unit]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
 
 ["GroupKicked", {
-	[format ["%1 has kicked you from the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
+	[format ["<t color='#B92DE0'>%1</t> has kicked you from the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupDisbanded", {
-	[format ["%1 has disbanded the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
+	[format ["<t color='#B92DE0'>%1</t> has disbanded the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;

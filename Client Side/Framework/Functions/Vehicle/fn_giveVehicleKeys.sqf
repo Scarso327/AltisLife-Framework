@@ -40,5 +40,5 @@ if (isNull _unit || { !(isPlayer _unit) } || { (player distance _unit) > 5 }) ex
 	if !(isClass _missionCfg) exitWith {};
 
 	["KeysGiven", [_vehicle, player]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
-	[format ["You have given %1 keys to %2.", name _unit, _name]] call ULP_fnc_hint;
+	[format ["You have given <t color='#B92DE0'>%1</t> keys to <t color='#B92DE0'>%2</t>.", name _unit, _name]] call ULP_fnc_hint;
 }, false] call ULP_fnc_selectObject;

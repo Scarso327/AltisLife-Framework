@@ -22,7 +22,7 @@ if ([_amount, false, "Pickup"] call ULP_fnc_addMoney) exitWith {
 	player playMove "AinvPknlMstpSlayWrflDnon";
 	
 	deleteVehicle _pile;
-	[format ["You have picked up %1%2 from the floor...", "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	[format ["You have picked up <t color='#B92DE0'>%1%2</t> from the floor...", "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	true
 };
 

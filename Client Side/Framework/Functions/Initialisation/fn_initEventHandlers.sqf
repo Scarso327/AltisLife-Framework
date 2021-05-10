@@ -22,7 +22,7 @@ player addEventHandler ["InventoryClosed", { _this call ULP_fnc_InventoryClosed 
 	if (isNull _vehicle) exitWith {};
 
 	if (((ULP_Keys pushBackUnique _vehicle) > -1) && { !(isNull _giver) }) then {
-		[format ["%1 has given you keys to %2...", name _giver, ([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "something"]]] call ULP_fnc_hint;
+		[format ["<t color='#B92DE0'>%1</t> has given you keys to <t color='#B92DE0'>%2</t>...", name _giver, ([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "something"]]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
 
@@ -112,7 +112,7 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 		if ([_cut, true, format["Vehicle Fine Paid"]] call ULP_fnc_addMoney) then {
 			[
 				format [
-					"%1 has paid their fine for %2 of %3%4 and you've recieved %3%5 as a reward...",
+					"<t color='#B92DE0'>%1</t> has paid their fine for <t color='#B92DE0'>%2</t> of <t color='#B92DE0'>%3%4</t> and you've recieved <t color='#B92DE0'>%3%5</t> as a reward...",
 					_payer,
 					([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, ""],
 					"£", [_fine] call ULP_fnc_numberText, [_cut] call ULP_fnc_numberText
@@ -131,10 +131,10 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 	
 	if (player getVariable ["blindfold", false]) then {
 		cutText ["","BLACK OUT"];
-  		[format ["%1 has put a blindfold over your head...", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
+  		[format ["<t color='#B92DE0'>%1</t> has put a blindfold over your head...", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
 	} else {
 		cutText ["","BLACK IN"];
-  		[format ["%1 has removed your blindfold...", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
+  		[format ["<t color='#B92DE0'>%1</t> has removed your blindfold...", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
 
@@ -156,8 +156,8 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 	if (isNull _unit) exitWith {};
 
 	if (_unit isEqualTo player) then {
-		["You have destroyed your communications. You are not longer permitted to speak outside of the direct/vehicle channel!"] call ULP_fnc_hint;
+		["You have destroyed your communications. <t color='#B92DE0'>You are not longer permitted to speak outside of the direct/vehicle channel!</t>"] call ULP_fnc_hint;
 	} else {
-		[format ["%1 has destroyed your communications. You are not longer permitted to speak outside of the direct/vehicle channel!", [_unit] call ULP_fnc_getName]] call ULP_fnc_hint;
+		[format ["<t color='#B92DE0'>%1</t> has destroyed your communications. <t color='#B92DE0'>You are not longer permitted to speak outside of the direct/vehicle channel!</t>", [_unit] call ULP_fnc_getName]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;

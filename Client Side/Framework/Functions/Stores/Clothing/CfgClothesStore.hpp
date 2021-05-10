@@ -956,10 +956,8 @@ class CfgClothesStore {
 			class B_Kitbag_cbr {};
 			class B_TacticalPack_blk {};
 			class B_Carryall_cbr {};
-			class B_ViperLightHarness_khk_F {};
-			class B_ViperLightHarness_oli_F {};
-			class B_ViperHarness_khk_F {};
-			class B_ViperHarness_oli_F {};
+			class B_ViperLightHarness_blk_F {};
+			class B_ViperHarness_blk_F {};
 			class B_Parachute {};
 		};
 	};
@@ -1071,10 +1069,8 @@ class CfgClothesStore {
 			class B_Kitbag_cbr {};
 			class B_TacticalPack_blk {};
 			class B_Carryall_cbr {};
-			class B_ViperLightHarness_khk_F {};
-			class B_ViperLightHarness_oli_F {};
-			class B_ViperHarness_khk_F {};
-			class B_ViperHarness_oli_F {};
+			class B_ViperLightHarness_blk_F {};
+			class B_ViperHarness_blk_F {};
 			class B_Parachute {};
 		};
 	};

@@ -47,5 +47,5 @@ private _event = ([
 });
 
 [_house getVariable ["building_id", -1], _shared] remoteExecCall ["ULP_SRV_fnc_setHouseShared", RSERV];
-[format ["This house is %1 shared with your group.", ["no longer", "now"] select (_shared)]] call ULP_fnc_hint;
+[format ["This house is <t color='#B92DE0'>%1</t> shared with your group.", ["no longer", "now"] select (_shared)]] call ULP_fnc_hint;
 true

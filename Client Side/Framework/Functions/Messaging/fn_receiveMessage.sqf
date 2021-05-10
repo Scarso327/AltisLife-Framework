@@ -39,7 +39,7 @@ if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([ge
 		["_name", "", [""]]
 	];
 
-	[format ["You received a message from %1: %2", _name, _message], "Phone Notification"] call ULP_fnc_hint;
+	[format ["You received a message from <t color='#B92DE0'>%1</t>: %2", _name, _message], "Phone Notification"] call ULP_fnc_hint;
 };
 
 if (isText (_type >> "onRecieved")) then {

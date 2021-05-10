@@ -48,7 +48,7 @@ if (_restrain) then {
 		};
     }] call ULP_fnc_addEachFrame;
 
-	[format ["You've been restrained by %1.", name _detainer]] call ULP_fnc_hint;
+	[format ["You've been restrained by <t color='#B92DE0'>%1</t>.", name _detainer]] call ULP_fnc_hint;
 } else {
 	if !([_target] call ULP_fnc_isRestrained) exitWith {}; // Already restrained...
 	_target setVariable ["restrained", nil, true];
@@ -61,5 +61,5 @@ if (_restrain) then {
 		detach _target;
 	};
 	
-	[format ["You've been unrestrained %1.", ([format ["by %1", name _detainer], ""] select (isNull _detainer))]] call ULP_fnc_hint;
+	[format ["You've been unrestrained %1.", ([format ["by <t color='#B92DE0'>%1</t>", name _detainer], ""] select (isNull _detainer))]] call ULP_fnc_hint;
 };

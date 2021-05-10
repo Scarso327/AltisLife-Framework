@@ -36,7 +36,7 @@ switch (true) do {
 	case (_rubber): {}:
 	default {
 		if !(isNull _attacker) then {
-			[format ["%1 has knocked you out.", name _attacker]] call ULP_fnc_hint;
+			[format ["<t color='#B92DE0'>%1</t> has knocked you out...", name _attacker]] call ULP_fnc_hint;
 		};
 	};
 };

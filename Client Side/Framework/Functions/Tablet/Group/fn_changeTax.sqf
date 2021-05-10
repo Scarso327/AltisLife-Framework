@@ -42,7 +42,7 @@ if (time < (_group getVariable ["tax_last_changed", 0])) exitWith {
 
 		[_group, _tax] remoteExecCall ["ULP_SRV_fnc_setGroupTax", RSERV];
 
-		[format["You've changed your group's tax rate to %1", format ["%1%2", [_tax] call ULP_fnc_numberText, "%"]]] call ULP_fnc_hint;
+		[format["You've changed your group's tax rate to <t color='#B92DE0'>%1</t>", format ["%1%2", [_tax] call ULP_fnc_numberText, "%"]]] call ULP_fnc_hint;
 		_group setVariable ["tax_last_changed", time + 5];
 
 		if !(isNull _display) then {

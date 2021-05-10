@@ -29,7 +29,7 @@ if ([_perk] call ULP_fnc_hasPerk) then {
 
 			if ([_cost, true, format ["Deativating %1", _name]] call ULP_fnc_removeMoney) then {
 				ULP_Perks deleteAt _perk;
-				[format ["%1 has been deactiviated for a cost of %2%3.", _name, "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format ["<t color='#B92DE0'>%1</t> has been deactiviated for a cost of <t color='#B92DE0'>%2%3</t>.", _name, "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				["PerksChanged", [_perk, ULP_Perks]] call ULP_fnc_invokeEvent;
 			};
 		}, {}, true
@@ -42,12 +42,12 @@ if ([_perk] call ULP_fnc_hasPerk) then {
 
 	private _limit = [] call ULP_fnc_getPerkLimit;
 	if ((count ULP_Perks) >= _limit) exitWith {
-		[format ["You can't have more than %1 perks activated at once!", _limit]] call ULP_fnc_hint;
+		[format ["You can't have more than <t color='#B92DE0'>%1</t> perks activated at once!", _limit]] call ULP_fnc_hint;
 		false breakOut "fn_togglePerk";
 	};
 
 	ULP_Perks set [_perk, [1, 0]];
-	[format ["%1 has been succesfully activated!", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
+	[format ["<t color='#B92DE0'>%1</t> has been succesfully activated!", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
 	["PerksChanged", [_perk, ULP_Perks]] call ULP_fnc_invokeEvent;
 };
 

@@ -15,7 +15,7 @@ if !(isClass _cfg) exitWith { false };
 
 if (_this call ULP_fnc_hasBlueprint) exitWith { false };
 
-[format ["You've unlocked the blueprint %1", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
+[format ["You've unlocked the blueprint <t color='#B92DE0'>%1</t>", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
 
 private _blueprints = (ULP_Blueprints getOrDefault [_type, []]);
 _blueprints pushBackUnique _blueprint;

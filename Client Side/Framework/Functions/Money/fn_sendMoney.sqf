@@ -24,8 +24,8 @@ if (_amount < 1) exitWith {
 };
 
 if !([_amount, _bank, format ["%1 %2", ["Given to", "Transferred to"] select (_bank), name _unit]] call ULP_fnc_removeMoney) exitWith {
-	[format ["You don't have %1%2 to %3...", "£", [_amount] call ULP_fnc_numberText, ["give", "transfer"] select (_bank)]] call ULP_fnc_hint;
+	[format ["You don't have <t color='#B92DE0'>%1%2</t> to %3...", "£", [_amount] call ULP_fnc_numberText, ["give", "transfer"] select (_bank)]] call ULP_fnc_hint;
 };
 
 [_amount, _bank, profileName] remoteExecCall ["ULP_fnc_recieveMoney", _unit];
-[format ["You have %1 %2%3 to %4", ["given", "transferred"] select (_bank), "£", [_amount] call ULP_fnc_numberText, name _unit]] call ULP_fnc_hint;
+[format ["You have %1 <t color='#B92DE0'>%2%3</t> to <t color='#B92DE0'>%4</t>", ["given", "transferred"] select (_bank), "£", [_amount] call ULP_fnc_numberText, name _unit]] call ULP_fnc_hint;

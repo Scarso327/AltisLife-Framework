@@ -33,7 +33,7 @@ private _max = getNumber (_prison >> "maxDuraction");
 		];
 
 		if (_duraction > _max) exitWith {
-			[format ["You can only sentence someone for a max of %1", [_max, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
+			[format ["You can only sentence someone for a max of <t color='#B92DE0'>%1</t>", [_max, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
 		};
 
 		detach _target;
@@ -41,7 +41,7 @@ private _max = getNumber (_prison >> "maxDuraction");
 
 		["Prisoned", [name _target, [player, true] call ULP_fnc_getName, [_duraction, "MM"] call BIS_fnc_secondsToString]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 
-		[format["You have sentenced %1 for %2", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
+		[format["You have sentenced <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2</t>", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
 		["FirstArrest"] call ULP_fnc_achieve;
 	}, false, "[_this, ""MM:SS""] call BIS_fnc_secondsToString", false
 ] call ULP_fnc_selectNumber;

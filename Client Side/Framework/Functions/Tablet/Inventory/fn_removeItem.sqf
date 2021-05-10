@@ -59,7 +59,7 @@ if ([getNumber (_curSel >> "Settings" >> "isScripted")] call ULP_fnc_bool) then 
 			if (isNull _display || { isNull _cfg }) exitWith {};
 
 			if ([configName _cfg, _value, true] call ULP_fnc_handleItem) then {
-				[format["You have removed %1 %2(s) from your inventory.", _value, getText(_cfg >> "displayName")]] call ULP_fnc_hint;
+				[format["You have removed <t color='#B92DE0'>%1 %2(s)</t> from your inventory.", _value, getText(_cfg >> "displayName")]] call ULP_fnc_hint;
 				_display call ULP_fnc_inventory;
 			} else {
 				["You don't have that many of this item!"] call ULP_fnc_hint;

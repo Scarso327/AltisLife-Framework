@@ -27,17 +27,17 @@ if !([player, ["Civilian"]] call ULP_fnc_isFaction || { ["IDForger"] call ULP_fn
 		if ([] call ULP_fnc_isUndercover) then { _cost = 0 };
 
 		if (CASH < _cost) exitWith {
-			[format ["You need %1%2 to forge an identity card!", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			[format ["You need <t color='#B92DE0'>%1%2</t> to forge an identity card!", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 
 		if ([_cost, true, "Forged ID"] call ULP_fnc_removeMoney) then {
 			if (["Identification", _name] call ULP_fnc_handleItem) then {
-				[format ["You've recieved an identity card with the name %1.", _name]] call ULP_fnc_hint;
+				[format ["You've recieved an identity card with the name <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
 			} else {
-				[format ["You failed to recieve an identity card with the name %1.", _name]] call ULP_fnc_hint;
+				[format ["You failed to recieve an identity card with the name <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
 			};
 		} else {
-			[format ["You can't afford %1%2 to forge an identity card.", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			[format ["You can't afford <t color='#B92DE0'>%1%2</t> to forge an identity card.", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 	}, false
 ] call ULP_fnc_enterString;

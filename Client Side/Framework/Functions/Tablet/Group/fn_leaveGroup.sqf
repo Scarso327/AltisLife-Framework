@@ -23,12 +23,12 @@ private _name = [_group] call ULP_fnc_getGroupName;
 		_this params [ "_group", "_name" ];
 
 		if ([group player, player] call ULP_fnc_removeMember) then {
-			[format ["You have left %1", _name]] call ULP_fnc_hint;
+			[format ["You have <t color='#B92DE0'>left %1</t>", _name]] call ULP_fnc_hint;
 
 			["Home"] call ULP_fnc_setScreen;
 			[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 		} else {
-			[format ["You've failed to leave %1, please try again later...", _name]] call ULP_fnc_hint;
+			[format ["You've failed to leave <t color='#B92DE0'>%1</t>, please try again later...", _name]] call ULP_fnc_hint;
 		};
 	}, {}, true
 ] call ULP_fnc_confirm;

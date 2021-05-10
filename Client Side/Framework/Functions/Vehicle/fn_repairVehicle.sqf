@@ -37,7 +37,7 @@ if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 	_this params [ "_vehicle", "_name" ];
 
 	if (isNull _vehicle || { !(alive _vehicle) } || { !("ToolKit" in (items player)) }) exitWith {
-		[format["You failed to repair the %1 as it's either beyond repair or you didn't have the correct tools."]] call ULP_fnc_hint;
+		[format["You failed to repair the <t color='#B92DE0'>%1</t> as it's either beyond repair or you didn't have the correct tools."]] call ULP_fnc_hint;
 	};
 	
 	if (!([player, ["Hato"]] call ULP_fnc_isFaction) && { (["GeneralMechanic", 0] call ULP_fnc_activatePerk) <= (random 0.99) }) then {
@@ -45,7 +45,7 @@ if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 	};
 
 	_vehicle setDamage 0;
-	[format["You've repaired %1 using a toolkit.", _name]] call ULP_fnc_hint;
+	[format["You've repaired <t color='#B92DE0'>%1</t> using a toolkit.", _name]] call ULP_fnc_hint;
 
 	if (time >= (_vehicle getVariable ["ProfessionCooldown", time - 120])) then {
 		["Repairing", 1, 40] call ULP_fnc_increaseProfession;

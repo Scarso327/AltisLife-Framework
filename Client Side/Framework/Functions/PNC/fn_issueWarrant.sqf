@@ -70,7 +70,7 @@ if (isNull _display) exitWith {};
 				[0.1, [], { [] remoteExecCall ["ULP_SRV_fnc_fetchWarrants", RSERV]; }] call ULP_fnc_waitExecute;
 			};
 
-			[format ["You have issued or ammended a warrant for %1...", name _unit]] call ULP_fnc_hint;
+			[format ["You have issued or ammended a warrant for <t color='#B92DE0'>%1</t>...", name _unit]] call ULP_fnc_hint;
 		}] call ULP_fnc_inputWarrantInfo;
 	}] call ULP_fnc_waitExecute;
 }, true, false] call ULP_fnc_selectPlayer;

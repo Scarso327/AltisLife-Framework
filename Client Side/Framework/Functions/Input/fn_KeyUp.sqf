@@ -22,7 +22,7 @@ switch (_code) do {
         case F: {
             if (_shift && {missionNamespace getVariable ["ULP_CanRespawn", false] }) then {
                 if (((["Medic"] call ULP_fnc_allMembers) findIf { (player distance _x) <= 100 }) > -1) exitWith {
-                    ["A medic is nearby, you're unable to force bleedout..."] call ULP_fnc_hint;
+                    ["<t color='#B92DE0'>A medic is nearby</t>, you're unable to force bleedout..."] call ULP_fnc_hint;
                 };
 
                 player SetDammage 1;
@@ -102,7 +102,7 @@ switch (_code) do {
             0 fadeSound ([1, ["EffectsFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
             0 fadeMusic ([1, ["MusicFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
 
-            [format["You %1 your earplugs", ["remove", "put in"] select (ULP_FadeSound)]] call ULP_fnc_hint;
+            [format["You <t color='#B92DE0'>%1 your earplugs</t>", ["remove", "put in"] select (ULP_FadeSound)]] call ULP_fnc_hint;
         };
     };
 
@@ -148,7 +148,7 @@ switch (_code) do {
                     ];
 
                     if ([_value, false, "Compensation"] call ULP_fnc_addMoney) then {
-                        [format ["You have spawned in %1%2", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+                        [format ["You have spawned in <t color='#B92DE0'>%1%2</t>", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 
                         [getPlayerUID player, "Admin", ["AdminCompensate", serverTime, [_value]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
                         player setVariable ["admin_comp_cooldown", time + 5];

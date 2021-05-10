@@ -20,7 +20,7 @@ scopeName "fn_initPolice";
 		[format ["%1 has paid their penalty notice of %2%3", _name, "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		[round (_amount / 2), true, format ["%1's Fine", _name]] call ULP_fnc_addMoney;
 	} else {
-		[format ["%1 has refused to or couldn't pay their penalty notice..."]] call ULP_fnc_hint;
+		[format ["<t color='#B92DE0'>%1</t> has refused to or couldn't pay their penalty notice..."]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
 
@@ -43,7 +43,7 @@ scopeName "fn_initPolice";
 			private _name = [player, true] call ULP_fnc_getName;
 
 			if ([_amount, true, "Penalty Notice"] call ULP_fnc_removeMoney) then {
-				[format ["You have paid the fixed penalty notice of %1%2", "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format ["You have paid the fixed penalty notice of <t color='#B92DE0'>%1%2</t>", "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				["TicketPaid", [_name, _amount, true]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 				["FinePaid", [_name, format ["%1%2", "£", [_amount] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 			} else {

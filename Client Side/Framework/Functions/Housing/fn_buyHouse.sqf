@@ -32,7 +32,7 @@ if !(["Home"] call ULP_fnc_hasLicense) exitWith {
 };
 
 if (_house getVariable ["blacklisted", false]) exitWith {
-	["This house is blacklisted."] call ULP_fnc_hint;
+	["This house is <t color='#B92DE0'>blacklisted</t>."] call ULP_fnc_hint;
 };
 
 if !(call compile getText (missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _house) >> "condition")) exitWith {
@@ -42,7 +42,7 @@ if !(call compile getText (missionConfigFile >> "CfgHousing" >> "Houses" >> (typ
 private _limit = getNumber (missionConfigFile >> "CfgHousing" >> "houseLimit");
 if (["LandLord"] call ULP_fnc_hasPerk) then { _limit = _limit + 1 };
 if ((count ([_house] call ULP_fnc_ownedHouses)) >= _limit) exitWith {
-	[format ["You have already reached the limit of %1 for owned properties.", _limit]] call ULP_fnc_hint;
+	[format ["You have already reached the limit of <t color='#B92DE0'>%1</t> for owned properties.", _limit]] call ULP_fnc_hint;
 };
 
 private _money = getNumber (missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _house) >> "price");
@@ -51,7 +51,7 @@ _objectCfg params [ "", "", "", "_name" ];
 
 [
 	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Yes", "No"],
-	format ["You are sure you want to spend %1%2 on %3...", "£", [_money] call ULP_fnc_numberText, _name], [_house, _money],
+	format ["You are sure you want to spend <t color='#B92DE0'>%1%2</t> on <t color='#B92DE0'>%3</t>...", "£", [_money] call ULP_fnc_numberText, _name], [_house, _money],
 	{	
 		_this params [
 			["_house", objNull, [objNull]],
@@ -96,7 +96,7 @@ _objectCfg params [ "", "", "", "_name" ];
 			["Buying House..."] call ULP_fnc_hint;
 			[player, _house, _money] remoteExecCall ["ULP_SRV_fnc_buyHouse", RSERV];
 		} else {
-			[format ["You can't afford %1%2 to buy this property!", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			[format ["You can't afford <t color='#B92DE0'>%1%2</t> to buy this property!", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 	}, {}, false
 ] call ULP_fnc_confirm;

@@ -41,12 +41,12 @@ if (_amount <= 0) exitWith {
 			[player, _value] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
 		} else {
 			if (_value > BANK) exitWith {
-				[format["You don't have %1%2 to withdraw!", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format["You don't have <t color='#B92DE0'>%1%2</t> to withdraw!", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 
 			if ([_value, true, "Bank Withdrawal"] call ULP_fnc_removeMoney) then {
 				[_value] call ULP_fnc_addMoney;
-				[format["You have withdrawn %1%2.", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				[format["You have withdrawn <t color='#B92DE0'>%1%2</t>.", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 		};
 	}, false

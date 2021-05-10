@@ -153,7 +153,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				conditions = "[] call ULP_fnc_donatorLevel > 0";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_black.paa" }; 
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
@@ -463,7 +463,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				conditions = "[] call ULP_fnc_donatorLevel > 0";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_black.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
@@ -732,15 +732,15 @@ class CfgVehicles {
 			class GoldLine : BaseTexture { 
 				displayName = "Gold Line";
 				buyPrice = 450000;
+				condition = "[] call ULP_fnc_donatorLevel > 0"; 
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_01.paa",
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_02.paa"
 				}; 
 			};
-			class Oil : BaseTexture { 
+			class Oil : GoldLine { 
 				displayName = "Oil Spill";
 				buyPrice = 315700;
-				locked = true;
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_01.paa",
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_02.paa"
@@ -800,7 +800,7 @@ class CfgVehicles {
 			class Asiimov : BaseTexture { 
 				displayName = "Asiimov";
 				locked = true;
-				textures[] = { "Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
+				textures[] = { "Data\Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
 			};
 			class ChromeGreen : BaseChromeGreen {};
 			class ChromeBlue : BaseChromeBlue {};

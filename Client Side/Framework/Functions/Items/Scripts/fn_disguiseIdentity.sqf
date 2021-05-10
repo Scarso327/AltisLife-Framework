@@ -22,7 +22,7 @@ if (_identity isEqualTo (name player) || { ((player getVariable ["name", name pl
 	["You've returned your public identity to normal."] call ULP_fnc_hint;
 } else {
 	player setVariable ["name", _identity, true];
-	[format ["You've changed your public identity to %1.", _identity]] call ULP_fnc_hint;
+	[format ["You've changed your public identity to <t color='#B92DE0'>%1</t>.", _identity]] call ULP_fnc_hint;
 };
 
 true

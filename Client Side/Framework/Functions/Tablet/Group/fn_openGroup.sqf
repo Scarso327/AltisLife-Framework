@@ -42,15 +42,15 @@ if ([] call ULP_fnc_isGroup) then {
 
 				switch (true) do {
 					case (_length < _min): {
-						[format["Your group's %1 must be %2 or more in length!", configName _cfgSettings, _min]] call ULP_fnc_hint;
+						[format["Your group's %1 must be <t color='#B92DE0'>%2 or more</t> in length!", configName _cfgSettings, _min]] call ULP_fnc_hint;
 						false breakOut "fn_creationCheck";
 					};
 					case (_length > _max): {
-						[format["Your group's %1 must be %2 or shorter in length!", configName _cfgSettings, _max]] call ULP_fnc_hint;
+						[format["Your group's %1 must be <t color='#B92DE0'>%2 or shorter</t> in length!", configName _cfgSettings, _max]] call ULP_fnc_hint;
 						false breakOut "fn_creationCheck";
 					};
 					case (_text in getArray (_cfgSettings >> "Blacklisted")): {
-						[format["Your group's %1 is blacklisted and can't be used!", configName _cfgSettings]] call ULP_fnc_hint;
+						[format["Your group's %1 is <t color='#B92DE0'>blacklisted</t> and can't be used!", configName _cfgSettings]] call ULP_fnc_hint;
 						false breakOut "fn_creationCheck";
 					};
 				};

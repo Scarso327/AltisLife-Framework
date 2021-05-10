@@ -28,11 +28,11 @@ if (_typeOf isEqualTo "Turtle_F") then {
 private _name = (_typeOf splitString "_") param [0, "Fish"];
 
 if ([format["%1_Raw", _typeOf], 1] call ULP_fnc_handleItem) exitWith {
-	[format ["You've picked up a %1.", _name]] call ULP_fnc_hint;
+	[format ["You've picked up a <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
 
 	["Fishing", 1, 40] call ULP_fnc_increaseProfession;
 
 	true
 };
 
-[format ["You don't have enough inventory space to hold %1.", _name]] call ULP_fnc_hint;
+[format ["You don't have enough inventory space to hold <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;

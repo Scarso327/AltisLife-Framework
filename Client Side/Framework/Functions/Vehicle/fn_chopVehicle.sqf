@@ -66,7 +66,7 @@ if (_near isEqualTo []) exitWith {
 		_this params [ "_vehicle", "_cfg", "_name", "_payMore", "_allowKeep" ];
 
 		if (isNull _vehicle || { !(alive _vehicle) }) exitWith {
-			[format["You failed to chop the %1 as it's been destroyed."]] call ULP_fnc_hint;
+			[format["You failed to chop the <t color='#B92DE0'>%1</t> as it's been destroyed."]] call ULP_fnc_hint;
 		};
 
 		private _chopValue = getNumber (_cfg >> "buyPrice") * ([
@@ -93,7 +93,7 @@ if (_near isEqualTo []) exitWith {
 				
 				if ((["UncertainMind", 0] call ULP_fnc_activatePerk) > _chance) then {
 					[_owner, player, _id] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
-					[format["You've claimed %1 as your own vehicle, it is now in your garage.", _name]] call ULP_fnc_hint;
+					[format["You've claimed <t color='#B92DE0'>%1</t> as your own vehicle, it is now in your garage.", _name]] call ULP_fnc_hint;
 					breakOut "_fnc_onChopped";
 				};
 			};
@@ -102,7 +102,7 @@ if (_near isEqualTo []) exitWith {
 		};
 
 		[_chopValue, false, format["Chopped %1", _name]] call ULP_fnc_addMoney;
-		[format["You've chopped %1 for %2%3.", _name, "£", [_chopValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		[format["You've chopped <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2%3</t>.", _name, "£", [_chopValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
 		["You can't chop a vehicle while performing another action!"] call ULP_fnc_hint;
 	};

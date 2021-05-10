@@ -86,23 +86,23 @@ if (_remove) then {
 
 				if ([] call ULP_fnc_isGroup && { _gangTax > 0 }) then {
 					[group player, _gangTax, true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
-					[format["You have sold %1 %2(s) for £%3 and £%4 was taken as tax by your group!", _value, _name, [_sellPrice] call ULP_fnc_numberText, [_gangTax] call ULP_fnc_numberText]] call ULP_fnc_hint;
+					[format["You have sold <t color='#B92DE0'>%1 %2(s)</t> for <t color='#B92DE0'>£%3</t> and <t color='#B92DE0'>£%4</t> was taken as tax by your group!", _value, _name, [_sellPrice] call ULP_fnc_numberText, [_gangTax] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				} else {
-					[format["You have sold %1 %2(s) for £%3!", _value, _name, [_sellPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
+					[format["You have sold < color='#B92DE0'>%1 %2(s)</> for <t color='#B92DE0'>£%3</t>!", _value, _name, [_sellPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				};
 			} else {
-				[format["You don't have %1 %2(s) to sell!", _value, _name]] call ULP_fnc_hint;
+				[format["You don't have <t color='#B92DE0'>%1 %2(s)</t> to sell!", _value, _name]] call ULP_fnc_hint;
 			};
 		} else {
 			if ([_buyPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) then {
 				if ([configName _cfg, _value, false] call ULP_fnc_handleItem) then {
-					[format["You have bought %1 %2(s) for £%3!", _value, _name, [_buyPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
+					[format["You have bought <t color='#B92DE0'>%1 %2(s)</t> for £%3!", _value, _name, [_buyPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				} else {
 					[_buyPrice, false] call ULP_fnc_addMoney; // Give them the money back, they didn't get what they paid for...
 					["You don't have enough inventory space!"] call ULP_fnc_hint;
 				};
 			} else {
-				[format["You can't afford £%1 for %2 %3(s)!", [_buyPrice] call ULP_fnc_numberText, _value, _name]] call ULP_fnc_hint;
+				[format["You can't afford <t color='#B92DE0'>£%1</t> for <t color='#B92DE0'>%2 %3(s)</t>!", [_buyPrice] call ULP_fnc_numberText, _value, _name]] call ULP_fnc_hint;
 			};
 		};
 

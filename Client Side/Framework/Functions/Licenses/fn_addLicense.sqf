@@ -19,7 +19,7 @@ if (!isClass _license ||
 ) exitWith { false };
 
 if (!(_price isEqualTo -1) && { !([_price, false, format["Purchased %1", getText (_license >> "displayName")]] call ULP_fnc_removeMoney) }) exitWith {
-	[format["You can't afford this license. You need £%1...", [_price] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	[format["You can't afford this license. You need <t color='#B92DE0'>£%1</t>...", [_price] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	false breakOut "fn_addLicense";
 };
 

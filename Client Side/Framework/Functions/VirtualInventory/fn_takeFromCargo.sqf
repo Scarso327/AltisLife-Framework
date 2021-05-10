@@ -52,15 +52,15 @@ if (_count <= 0) exitWith {
 
 		if ([_item, _value] call ULP_fnc_handleItem) then {
 			if ([_container, _item, _value] call ULP_fnc_removeFromCargo) then {
-				[format["You have taken %1 %2(s) from this container!", _value, _name]] call ULP_fnc_hint;
+				[format["You have taken <t color='#B92DE0'>%1 %2(s)</t> from this container!", _value, _name]] call ULP_fnc_hint;
 				[_display, 0] call ULP_fnc_updateInventory;
 				[_display, 1] call ULP_fnc_updateInventory;
 			} else {
 				[_item, _value, true] call ULP_fnc_handleItem;
-				[format["This container doesn't contain %1 %2(s) to take!", _value, _name]] call ULP_fnc_hint;
+				[format["This container doesn't contain <t color='#B92DE0'>%1 %2(s)</t> to take!", _value, _name]] call ULP_fnc_hint;
 			};
 		} else {
-			[format["You don't have enough inventory space to take %1 %2(s)!", _value, _name]] call ULP_fnc_hint;
+			[format["You don't have enough inventory space to take <t color='#B92DE0'>%1 %2(s)</t>!", _value, _name]] call ULP_fnc_hint;
 		};
 	}, false
 ] call ULP_fnc_selectNumber;

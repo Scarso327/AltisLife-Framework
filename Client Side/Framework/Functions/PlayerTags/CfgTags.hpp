@@ -568,7 +568,7 @@ class CfgTags {
 			icons[] = { "Avatar", "C3PO", "Disney", "Flash", "Joker", "Morty", "Pennywise", "Pixar", "Rick", "StarTrek", "Superman" };
 		};
 		class Investor {
-			icons[] = { "FreddieDavis", "BoughNoggeye", "KitKnight" };
+			icons[] = { "FreddieDavis", "BoughNoggeye", "KitKnight", "Hector" };
 		};
 		class Other {
 			icons[] = { "Alien", "Astronaut", "Commet", "Crown", "Diamond", "DNA", "Doughnut", "Eggplant", "Fighter", "Hamburger", "Heart", "Mars", "Moon", "Salt", "Satellite", "Saturn", "Server", "Shuttle", "Skull", "UN", "Weed", "World" };

@@ -683,7 +683,10 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
-	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { buyPrice = 6590000; };
+	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { 
+		buyPrice = 6590000; 
+		garageLimit = 1;
+	};
 
 	class B_MRAP_01_F : Base {
 		description = "The Hunter is a MRAP vehicle with an armored hull that can withstand light weapons and offers a powerful engine.";

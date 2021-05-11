@@ -132,4 +132,5 @@ class CfgTitles {
 	class FreddieDavis : Investors { displayName = "pick a title you dipshit"; }; // 76561198148735922
 	class BoughNoggeye : Investors { displayName = "Iceland > UK"; }; // 76561198274139057
 	class KitKnight : Investors { displayName = "Waifu"; }; // 76561199048455932
+	class Hector : Investors { displayName = "Belle Delphine's Husband"; }; // 76561198112667237
 };

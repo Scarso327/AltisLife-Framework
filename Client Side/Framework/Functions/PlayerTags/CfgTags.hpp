@@ -443,17 +443,21 @@ class CfgTags {
 		};
 
 		// Investor
-		class FreddieDavis : Alligator  { // ICON
+		class FreddieDavis : Alligator { // ICON
 			icon = "Data\Tags\Donator\Movies\superman.paa";
 			displayName = "Freddie Davis";
 		};
-		class BoughNoggeye : Alligator  {
+		class BoughNoggeye : Alligator {
 			icon = "Data\Tags\Donator\Investor\boughNoggeye.paa";
 			displayName = "Bough Noggeye";
 		};
-		class KitKnight : Alligator  { // ICON
+		class KitKnight : Alligator { // ICON
 			icon = "Data\Tags\Donator\Movies\superman.paa";
 			displayName = "Kit Knight";
+		};
+		class Hector : Alligator {
+			icon = "Data\Tags\Donator\Investor\hector.paa";
+			displayName = "Hector";
 		};
 
 		/// Other

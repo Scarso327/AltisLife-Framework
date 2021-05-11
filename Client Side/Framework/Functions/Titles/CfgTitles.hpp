@@ -4,7 +4,7 @@ class CfgTitles {
 		varOverride = "";
 	};
 
-        // Community Titles
+    // Community Titles
 	class OldGuard {
 		displayName = "Old Guard";
 		description = "Apart of this community before this title";
@@ -22,7 +22,7 @@ class CfgTitles {
 		description = "Invested £100 or more to this community";
 	};
 
-        // Regular Titles
+    // Regular Titles
 	class FirstDrink {
 		displayName = "Big Drink Man";
 		description = "Taken your first drink of alcohol";
@@ -130,6 +130,6 @@ class CfgTitles {
 		description = "Congratulations! You spent over £100 for this...";
 	};
 	class FreddieDavis : Investors { displayName = "pick a title you dipshit"; }; // 76561198148735922
-	class BoughNoggeye : Investors { displayName = "TBD"; }; // 76561198274139057
+	class BoughNoggeye : Investors { displayName = "Iceland > UK"; }; // 76561198274139057
 	class KitKnight : Investors { displayName = "Waifu"; }; // 76561199048455932
 };

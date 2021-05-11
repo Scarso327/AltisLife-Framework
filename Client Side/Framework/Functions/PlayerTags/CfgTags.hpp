@@ -447,8 +447,8 @@ class CfgTags {
 			icon = "Data\Tags\Donator\Movies\superman.paa";
 			displayName = "Freddie Davis";
 		};
-		class BoughNoggeye : Alligator  { // ICON
-			icon = "Data\Tags\Donator\Movies\superman.paa";
+		class BoughNoggeye : Alligator  {
+			icon = "Data\Tags\Donator\Investor\boughNoggeye.paa";
 			displayName = "Bough Noggeye";
 		};
 		class KitKnight : Alligator  { // ICON

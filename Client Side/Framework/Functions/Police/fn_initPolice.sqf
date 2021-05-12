@@ -74,13 +74,13 @@ scopeName "fn_initPolice";
 
 	if (isNull _unit) exitWith {};
 
+	_unit setVariable ["licenses_requested", nil];
+
 	private _name = [_unit, true] call ULP_fnc_getName;
 
 	if (_licenses isEqualTo []) exitWith {
 		[format ["%1 has no licenses...", _name]] call ULP_fnc_hint;
 	};
-
-	_unit setVariable ["licenses_requested", nil];
 
 	if (_shown) then {
 		if (_refused) exitWith {

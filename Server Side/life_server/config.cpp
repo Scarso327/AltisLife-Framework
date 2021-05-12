@@ -70,10 +70,20 @@ class CfgPatches {
             class Dispute { 
                 params = 1;
             };
+            class Revive : Dispute {};
+            class CaptureHideout : Dispute {};
+            class SeizeComms : Dispute {};
+            class NLR : Dispute {};
 
             class Spawn {
                 params = 2;
             };
+            class Goal : Spawn {};
+            class Mission : Spawn {};
+            class Ticketed : Spawn {};
+            class Imprisoned : Spawn {};
+            class Robbery : Spawn {};
+            class Craft : Spawn {};
 
             class Money {
                 params = 5;
@@ -82,7 +92,6 @@ class CfgPatches {
             class Executed {
                 params = 3;
             };
-
             class Loot : Spawn {};
             class Group : Executed {};
             class Admin : Executed {};

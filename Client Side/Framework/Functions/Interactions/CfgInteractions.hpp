@@ -84,9 +84,9 @@ class CfgInteractions {
 			title = "Check Inventory";
 			onClick = "player action [""Gear"", cursorObject]; closeDialog 0;";
 		};
-		class vItemCheck : Unrestrain { // TODONOW
-			title = "Check vItems"; // Provide ability to seize
-			onClick = "hint ""Hello"";";
+		class vItemCheck : Unrestrain {
+			title = "Check vItems";
+			onClick = "private _unit = _this select 0; if (isNull _unit) exitWith {}; [""Attempting to open inventory...""] call ULP_fnc_hint; closeDialog 0; [_unit, true] call ULP_fnc_openInventory;";
 		};
 		class LicenseCheck : Unrestrain {
 			title = "Check Licenses";

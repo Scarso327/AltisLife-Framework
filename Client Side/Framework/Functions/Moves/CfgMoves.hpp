@@ -1,12 +1,12 @@
 class CfgMoves {
-    class Wave1 {
+    /*class Wave1 {
         displayName = "Wave #1";
         animation = "HudWave_move1";
     };
     class Wave2 {
         displayName = "Wave #2";
         animation = "HudWave_move2";
-    };
+    };*/
 
     class Aggressive {
         displayName = "Act Aggressive";
@@ -29,10 +29,10 @@ class CfgMoves {
         displayName = "Disagree and Point";
         animation = "Acts_Ambient_Disagreeing_with_pointing";
     };
-    class Dismissing {
+    /*class Dismissing {
         displayName = "Dismiss";
         animation = "Acts_Ambient_Mismissing";
-    };
+    };*/
 
     class Approximate {
         displayName = "Approximate";
@@ -84,7 +84,7 @@ class CfgMoves {
         animation = "Acts_Ambient_Facepalm_2";
     };
 
-    class Shocked {
+    /*class Shocked {
         displayName = "Act Shocked";
         animation = "Acts_ShockedUnarmed_2_Loop";
     };
@@ -106,7 +106,7 @@ class CfgMoves {
     class Dance2 {
         displayName = "Dance #2";
         animation = "Acts_Dance_02";
-    };
+    };*/
 
     class KungFu {
         displayName = "Do Kung Fu";

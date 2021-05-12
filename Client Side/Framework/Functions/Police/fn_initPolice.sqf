@@ -95,7 +95,7 @@ scopeName "fn_initPolice";
 			_x
 		}) joinString "<br/>"]] call ULP_fnc_hint;
 	} else {
-		if (createDialog "DialogseizeLicenses") then {
+		if (createDialog "DialogSeizeLicenses") then {
 			private _display = findDisplay 5100;
 			if (isNull _display) exitWith {};
 

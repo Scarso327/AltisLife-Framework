@@ -129,22 +129,22 @@ class CfgVehicleStores {
 				condition = "[""Medic_Main"", 4] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
-			class C_Offroad_01_comms_F { // TODO TEXTURE
+			/*class C_Offroad_01_comms_F { // TODO TEXTURE
 				condition = "[""Medic_Main"", 5] call ULP_fnc_hasAccess";
 				class Textures {};
-			};
+			};*/
 			class C_Offroad_02_unarmed_F {
 				condition = "[""Medic_Main"", 6] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
-			class C_Van_01_box_F { // TODO TEXTURE
+			/*class C_Van_01_box_F { // TODO TEXTURE
 				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class O_Truck_03_repair_F { // TODO TEXTURE
 				condition = "[""Medic_Main"", 7] call ULP_fnc_hasAccess";
 				class Textures {};
-			};
+			};*/
 		};
 	};
 

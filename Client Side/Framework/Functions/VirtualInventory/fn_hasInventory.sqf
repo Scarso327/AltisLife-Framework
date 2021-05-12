@@ -10,11 +10,10 @@ if (canSuspend) exitWith {
 };
 
 _this params [
-	["_container", objNull, [objNull]],
-	["_force", false, [true]]
+	["_container", objNull, [objNull]]
 ];
 
-if (_force) exitWith { true };
+if (_container getVariable ["ULP_ScriptedInventory", false]) exitWith { true };
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
 

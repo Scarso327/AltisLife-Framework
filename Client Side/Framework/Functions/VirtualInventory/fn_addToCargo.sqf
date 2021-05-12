@@ -14,12 +14,11 @@ _this params [
 	["_item", "", [""]],
 	["_data", 1, [0, [], ""]],
 	["_global", true, [false]],
-	["_ignoreLoad", false, [true]],
-	["_force", false, [true]]
+	["_ignoreLoad", false, [true]]
 ];
 
 private _vItem = missionConfigFile >> "CfgVirtualItems" >> _item;
-if (isNull _container || { !(isClass _vItem) } || { !([_container, _force] call ULP_fnc_hasInventory) }) exitWith { false };
+if (isNull _container || { !(isClass _vItem) } || { !([_container] call ULP_fnc_hasInventory) }) exitWith { false };
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
 private _cargo = _container getVariable ["ULP_VirtualCargo", createHashMap];

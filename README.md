@@ -24,6 +24,7 @@
   - [x] Private Teamspeak Channel
   - [x] Client Icon on Teamspeak
   - [x] Personel Title Ingame
+  - [x] Custom 'Hint' on Loading Screens
   - [x] Custom Donator Icon (Accessable for all Donators)
 
 # Group Donator Perks (Active for 30-Days):

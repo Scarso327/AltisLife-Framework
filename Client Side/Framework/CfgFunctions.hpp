@@ -244,6 +244,7 @@ class CfgFunctions {
 			class openLicenses {};
 			class onLicenseSwitch {};
 			class buyLicense {};
+			class seizeLicense {};
 		};
 
 		class Inventory {

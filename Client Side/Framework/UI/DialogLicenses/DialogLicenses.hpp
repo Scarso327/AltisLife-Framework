@@ -75,3 +75,33 @@ class DialogLicenses {
 		};
 	};
 };
+
+class DialogseizeLicenses : DialogLicenses {
+    idd = 5100;
+    movingEnable = 0;
+    enableSimulation = 0;
+
+    class ControlsBackground : ControlsBackground {
+		class Header : Header {
+			idc = 5101;
+			text = "Licenses";
+		};
+
+		class Body : Body {};
+		class Footer : Footer {};
+	};
+
+	class Controls : Controls {
+		class LicenseList : LicenseList {
+			idc = 5102;
+			onLBSelChanged = "";
+			SAFEZONE_H(BODY_HEIGHT - (MARGIN_Y * 2));
+		};
+
+		class Select : Select {
+			idc = 5103;
+			text = "<t align = 'center'>seize</t>";
+			onButtonClick = "_this call ULP_fnc_seizeLicense;";
+		};
+	};
+};

@@ -18,7 +18,7 @@ class CfgInteractions {
 			title = "Give Keys";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_giveVehicleKeys";
-			condition = "true";
+			condition = "!([player] call ULP_fnc_isRestrained)";
 		};
 		class GiveCash : GiveKeys {
 			title = "Give Cash";
@@ -28,9 +28,9 @@ class CfgInteractions {
 			title = "Give Items";
 			onClick = "hint ""Hello"";";
 		};
-		class ShowLicenses : GiveKeys { // TODONOW
+		class ShowLicenses : GiveKeys {
 			title = "Show Licenses";
-			onClick = "hint ""Hello"";";
+			onClick = "private _unit = _this select 0; if (isNull _unit) exitWith {}; if (time < (_unit getVariable [""licenses_shown"", 0])) exitWith { [""You've shown this person your licenses recently, please wait before trying again...""] call ULP_fnc_hint; }; _unit setVariable [""licenses_shown"", time + 5]; [""LicensesShown"", [player, ULP_Licenses, true]] remoteExecCall [""ULP_fnc_invokeEvent"", _unit]; [format [""You have shown %1 your licenses..."", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;";
 		};
 
 		class RobCash {
@@ -88,9 +88,14 @@ class CfgInteractions {
 			title = "Check vItems"; // Provide ability to seize
 			onClick = "hint ""Hello"";";
 		};
-		class LicenseCheck : Unrestrain { // TODONOW
-			title = "Check Licenses"; // Provide ability to seize
-			onClick = "hint ""Hello"";";
+		class LicenseCheck : Unrestrain {
+			title = "Check Licenses";
+			factions[] = { "Police" };
+			onClick = "private _unit = _this select 0; if (isNull _unit) exitWith {}; if (_unit getVariable [""licenses_requested"", false]) exitWith { [""You've already requested this person's licenses...""] call ULP_fnc_hint; }; _unit setVariable [""licenses_requested"", true]; [""RequestLicenses"", [player]] remoteExecCall [""ULP_fnc_invokeEvent"", _unit]; if !([_unit] call ULP_fnc_isRestrained) then { [format [""You have requested %1's licenses..."", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint; };";
+		};
+		class LicenseRequest : LicenseCheck {
+			title = "Request Licenses";
+			condition = "!([_this] call ULP_fnc_isRestrained)";
 		};
 		class SeizeCommunications : Unrestrain {
 			title = "Destroy Communications";

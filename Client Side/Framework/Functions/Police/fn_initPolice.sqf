@@ -63,3 +63,98 @@ scopeName "fn_initPolice";
 		}, false
 	] call ULP_fnc_confirm;
 }] call ULP_fnc_addEventHandler;
+
+["LicensesShown", {
+	_this params [
+		["_unit", objNull, [objNull]],
+		["_licenses", [], [[]]],
+		["_shown", false, [true]],
+		["_refused", false, [true]]
+	];
+
+	if (isNull _unit) exitWith {};
+
+	private _name = [_unit, true] call ULP_fnc_getName;
+
+	if (_licenses isEqualTo []) exitWith {
+		[format ["%1 has no licenses...", _name]] call ULP_fnc_hint;
+	};
+
+	_unit setVariable ["licenses_requested", nil];
+
+	if (_shown) then {
+		if (_refused) exitWith {
+			[format ["%1 refused to show you their liceneses...", _name]] call ULP_fnc_hint;
+		};
+
+		[format ["<t color='#FF0000'><t size='1.7'>%1</t></t><br/><t color='#FFD700'><t size='1.5'>Licenses</t></t><br/>%2", _name, (_licenses apply {
+			if (isClass (missionConfigFile >> "CfgLicenses" >> _x >> "displayName"))  exitWith {
+				getText (missionConfigFile >> "CfgLicenses" >> _x >> "displayName")
+			};
+
+			_x
+		}) joinString "<br/>"]] call ULP_fnc_hint;
+	} else {
+		if (createDialog "DialogseizeLicenses") then {
+			private _display = findDisplay 5100;
+			if (isNull _display) exitWith {};
+
+			_display setVariable ["unit", _unit];
+			
+			(_display displayCtrl 5101) ctrlSetText format ["%1's Licenses", _name];
+
+			private _list = _display displayCtrl 5102;
+			lbClear _list;
+
+			{
+				private _license = missionConfigFile >> "CfgLicenses" >> _x;
+
+				if (isClass _license) then {
+					private _item = _list lbAdd getText (_license >> "displayName");
+					_list lbSetData [_item, _x];
+				};
+			} forEach _licenses;
+		} else {
+			[format ["Something went wrong when trying to display %1's licenses...", _name]] call ULP_fnc_hint;
+		};
+	};
+}] call ULP_fnc_addEventHandler;
+
+["RequestLicenses", {
+	_this params [
+		["_unit", objNull, [objNull]]
+	];
+
+	if (isNull _unit) exitWith {};
+
+	if ([player] call ULP_fnc_isRestrained) then {
+		["LicensesShown", [player, ULP_Licenses, false]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+	} else {
+		[
+			(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Accept", "Decline"],
+			format ["%1 has requested to see your licenses, do you accept?", [_unit, true] call ULP_fnc_getName], [_unit],
+			{
+				private _unit = _this param [0, objNull];
+				if (isNull _unit) exitWith {};
+				["LicensesShown", [player, ULP_Licenses, true]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+			}, {
+				private _unit = _this param [0, objNull];
+				if (isNull _unit) exitWith {};
+				["LicensesShown", [player, ULP_Licenses, true, true]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+			}, false
+		] call ULP_fnc_confirm;
+	};
+}] call ULP_fnc_addEventHandler;
+
+["LicenseSeized", {
+	_this params [
+		["_unit", objNull, [objNull]],
+		["_license", "", [""]]
+	];
+
+	if (isNull _unit || { !([_license] call ULP_fnc_hasLicense) }) exitWith {};
+	
+	ULP_Licenses deleteAt (ULP_Licenses find _license);
+
+	[format ["%1 has seized your %2", [_unit, true] call ULP_fnc_getName, getText (missionConfigFile >> "CfgLicenses" >> _license >> "displayName")]] call ULP_fnc_hint;
+}] call ULP_fnc_addEventHandler;

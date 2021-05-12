@@ -152,6 +152,19 @@ CREATE TABLE IF NOT EXISTS `logs` (
 /*!40000 ALTER TABLE `logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `logs` ENABLE KEYS */;
 
+-- Dumping structure for table altislife.logs_queue
+CREATE TABLE IF NOT EXISTS `logs_queue` (
+  `log_id` int(11) NOT NULL,
+  `handled` tinyint(4) NOT NULL DEFAULT 0,
+  `time` timestamp NOT NULL DEFAULT current_timestamp(),
+  KEY `FK_logs_queue_logs` (`log_id`),
+  CONSTRAINT `FK_logs_queue_logs` FOREIGN KEY (`log_id`) REFERENCES `logs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table altislife.logs_queue: ~0 rows (approximately)
+/*!40000 ALTER TABLE `logs_queue` DISABLE KEYS */;
+/*!40000 ALTER TABLE `logs_queue` ENABLE KEYS */;
+
 -- Dumping structure for table altislife.mail
 CREATE TABLE IF NOT EXISTS `mail` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -371,6 +384,15 @@ CREATE TABLE IF NOT EXISTS `warrants` (
 -- Dumping data for table altislife.warrants: ~0 rows (approximately)
 /*!40000 ALTER TABLE `warrants` DISABLE KEYS */;
 /*!40000 ALTER TABLE `warrants` ENABLE KEYS */;
+
+-- Dumping structure for trigger altislife.logs_after_insert
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION';
+DELIMITER //
+CREATE TRIGGER `logs_after_insert` AFTER INSERT ON `logs` FOR EACH ROW BEGIN
+	INSERT INTO logs_queue (log_id) VALUES (NEW.id);
+END//
+DELIMITER ;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

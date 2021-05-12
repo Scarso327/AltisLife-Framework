@@ -10,8 +10,11 @@ if (canSuspend) exitWith {
 };
 
 _this params [
-	["_container", objNull, [objNull]]
+	["_container", objNull, [objNull]],
+	["_force", false, [true]]
 ];
+
+if (_force) exitWith { true };
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
 

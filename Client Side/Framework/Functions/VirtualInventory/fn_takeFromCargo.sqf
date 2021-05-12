@@ -30,18 +30,37 @@ if (_item isEqualTo "") exitWith {
 };
 
 private _cargo = _container getVariable ["ULP_VirtualCargo", createHashMap];
-private _count = _cargo getOrDefault [_item, 0];
+
+private _data = _cargo getOrDefault [_item, 0];
+
+private _count = _data;
+
+if (_count isEqualType []) then {
+	_count = 1;
+
+	private _index = _data find (_containerList lnbData [(lnbCurSelRow _containerList), 1]);
+
+	if (_index < 0) then {
+		_count = 0;
+	} else {
+		_data = _data select _index;
+	};
+} else {
+	_data = -1;
+};
+
 if (_count <= 0) exitWith {
 	["You can't take this item from the container as it doesn't contain this item!"] call ULP_fnc_hint;
 };
 
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _count], [_display, _container, _item],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _count], [_display, _container, _item, _data],
 	{
 		_this params [
 			["_display", displayNull, [displayNull]],
 			["_container", objNull, [objNull]],
 			["_item", "", [""]],
+			["_data", 1, [0, "", []]],
 			"",
 			["_value", 1, [0]]
 		];
@@ -49,6 +68,10 @@ if (_count <= 0) exitWith {
 		if (isNull _display || { _item isEqualTo "" }) exitWith {};
 
 		private _name = getText (missionConfigFile >> "CfgVirtualItems" >> _item >> "displayName");
+		if ([getNumber (missionConfigFile >> "CfgVirtualItems" >> _item >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+			_value = _data;
+			_name = format [_name, _value];
+		};
 
 		if ([_item, _value] call ULP_fnc_handleItem) then {
 			if ([_container, _item, _value] call ULP_fnc_removeFromCargo) then {

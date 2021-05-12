@@ -30,20 +30,33 @@ if (_type isEqualTo 0) then {
 
 	{
 		private _cfg = missionConfigFile >> "CfgVirtualItems" >> _x;
-		if (isClass _cfg && { !([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) }) then {
+		if (isClass _cfg) then {
 			private _itemIcon = getText (_cfg >> "icon");
 
-			private _row = _list lnbAddRow [
-				getText (_cfg >> "displayName"), 
-				[_y] call ULP_fnc_numberText
-			];
+			if ([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+				{
+					private _row = _list lnbAddRow [format [getText (_cfg >> "displayName"), _x], "-"];
 
-			if !(_itemIcon isEqualTo "") then {
-				_list lnbSetPicture [[_row, 0], _itemIcon];
+					if !(_itemIcon isEqualTo "") then {
+						_list lnbSetPicture [[_row, 0], _itemIcon];
+					};
+
+					_list lnbSetData [[_row, 0], configName _cfg];
+					_list lnbSetData [[_row, 1], _x];
+				} forEach _y;
+			} else {
+				private _row = _list lnbAddRow [
+					getText (_cfg >> "displayName"), 
+					[_y] call ULP_fnc_numberText
+				];
+
+				if !(_itemIcon isEqualTo "") then {
+					_list lnbSetPicture [[_row, 0], _itemIcon];
+				};
+
+				_list lnbSetData [[_row, 0], _x];
+				_list lnbSetValue [[_row, 1], _y];
 			};
-
-			_list lnbSetData [[_row, 0], _x];
-			_list lnbSetValue [[_row, 1], _y];
 		};
 	} forEach ULP_Inventory;
 
@@ -60,20 +73,33 @@ if (_type isEqualTo 0) then {
 
 	{
 		private _cfg = missionConfigFile >> "CfgVirtualItems" >> _x;
-		if (isClass _cfg && { !([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) }) then {
+		if (isClass _cfg) then {
 			private _itemIcon = getText (_cfg >> "icon");
 
-			private _row = _list lnbAddRow [
-				getText (_cfg >> "displayName"), 
-				[_y] call ULP_fnc_numberText
-			];
+			if ([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+				{
+					private _row = _list lnbAddRow [format [getText (_cfg >> "displayName"), _x], "-"];
 
-			if !(_itemIcon isEqualTo "") then {
-				_list lnbSetPicture [[_row, 0], _itemIcon];
+					if !(_itemIcon isEqualTo "") then {
+						_list lnbSetPicture [[_row, 0], _itemIcon];
+					};
+
+					_list lnbSetData [[_row, 0], configName _cfg];
+					_list lnbSetData [[_row, 1], _x];
+				} forEach _y;
+			} else {
+				private _row = _list lnbAddRow [
+					getText (_cfg >> "displayName"), 
+					[_y] call ULP_fnc_numberText
+				];
+
+				if !(_itemIcon isEqualTo "") then {
+					_list lnbSetPicture [[_row, 0], _itemIcon];
+				};
+
+				_list lnbSetData [[_row, 0], _x];
+				_list lnbSetValue [[_row, 1], _y];
 			};
-
-			_list lnbSetData [[_row, 0], _x];
-			_list lnbSetValue [[_row, 1], _y];
 		};
 	} forEach _inventory;
 

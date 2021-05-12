@@ -17,7 +17,13 @@ private _cargo = _container getVariable ["ULP_VirtualCargo", createHashMap];
 private _load = 0;
 
 {
-    _load = _load + (getNumber (missionConfigFile >> "CfgVirtualItems" >> _x >> "weight")) * _y;
+    private _count = _y;
+
+    if ([getNumber (missionConfigFile >> "CfgVirtualItems" >> _x >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+        _count = count _y;
+    };
+
+    _load = _load + (getNumber (missionConfigFile >> "CfgVirtualItems" >> _x >> "weight")) * _count;
 } forEach _cargo;
 
 _load

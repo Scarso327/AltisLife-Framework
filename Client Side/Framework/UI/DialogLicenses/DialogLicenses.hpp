@@ -76,7 +76,7 @@ class DialogLicenses {
 	};
 };
 
-class DialogseizeLicenses : DialogLicenses {
+class DialogSeizeLicenses : DialogLicenses {
     idd = 5100;
     movingEnable = 0;
     enableSimulation = 0;

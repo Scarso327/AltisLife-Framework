@@ -107,6 +107,8 @@ scopeName "fn_initGroups";
 	
 	if (_unit isEqualTo player) then {
 		[ { !([] call ULP_fnc_isGroup) }, [], {
+			["JoinGroup"] call ULP_fnc_achieve;
+
 			[format ["You have <t color='#B92DE0'>joined %1</t>", [] call ULP_fnc_getGroupName]] call ULP_fnc_hint;
 			[] call ULP_fnc_setTags;
 		}] call ULP_fnc_waitUntilExecute;

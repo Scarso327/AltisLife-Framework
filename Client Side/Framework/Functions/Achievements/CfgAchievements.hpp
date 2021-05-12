@@ -74,7 +74,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODONOW
 	class JoinGroup {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Group Member";
@@ -204,7 +203,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// TODONOW
 	class LifeSaver {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Injury_ca.paa";
 		displayName = "Life Saver";

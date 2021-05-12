@@ -32,7 +32,7 @@ class NVGoggles {
 		};
 		class NVGoggles_OPFOR : NVGoggles {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction } || { [player, [""Medic""]] call ULP_fnc_isFaction }";
 		};
         class NVGoggles_INDEP : NVGoggles {
 			displayName = "Green";

@@ -193,6 +193,9 @@ class CfgItemsStore {
 			class B_UavTerminal : FactionBase { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess }"; };
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
+			class NVGoggles {
+				class textures { class NVGoggles_OPFOR {}; }; 
+			};
 			class ToolKit : FactionBase {};
 			class Chemlight_green {};
 			class SmokeShell : FactionBase { 
@@ -215,6 +218,9 @@ class CfgItemsStore {
 			class ItemGPS : FactionBase {};
 			class ItemRadio : FactionBase {};
 			class Rangefinder : FactionBase {};
+			class NVGoggles {
+				class textures { class NVGoggles_OPFOR {}; }; 
+			};
 			class ToolKit : FactionBase {};
 			class Chemlight_green {};
 		};

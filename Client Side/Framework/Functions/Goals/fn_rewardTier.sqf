@@ -20,3 +20,5 @@ private _title = getText (_cfg >> "title");
 playSound "FD_Finish_F";
 
 [(_tier - 1), format["reaching tier %1 in %2...", _tier, _title]] call ULP_fnc_grantReward;
+
+[getPlayerUID player, "Goal", [_title, _tier]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

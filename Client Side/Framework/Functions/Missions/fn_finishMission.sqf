@@ -30,6 +30,7 @@ _task setTaskState "Succeeded";
 ["TaskMaster"] call ULP_fnc_achieve;
 
 private _message = format["Completed a %1", getText (_typeCfg >> "name")];
+[getPlayerUID player, "Mission", [getText (_typeCfg >> "name"), _reward]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 [_reward, false, _message] call ULP_fnc_addMoney;
 

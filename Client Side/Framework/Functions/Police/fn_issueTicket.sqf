@@ -29,5 +29,7 @@ if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
 
 		[format["You have issued <t color='#B92DE0'>%1</t> a penalty notice of <t color='#B92DE0'>%2</t>", [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_fine] call ULP_fnc_numberText]]] call ULP_fnc_hint;
 		["FirstTicket"] call ULP_fnc_achieve;
+
+		[getPlayerUID player, "Ticketed", [_unit, _fine]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	}, false, "format [""%1%2"", ""£"", [_this] call ULP_fnc_numberText]", false
 ] call ULP_fnc_selectNumber;

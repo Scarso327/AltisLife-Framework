@@ -27,3 +27,5 @@ if (local _unit) then {
 } else {
 	["CommunicationsSeized", [player]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 };
+
+[getPlayerUID player, "SeizedComms", [_unit]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

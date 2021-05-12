@@ -71,6 +71,7 @@ private _targets = getText (_msg >> "targets");
 	] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 
 	[format["You have robbed this store for £%1.", [_money] call ULP_fnc_numberText]] call ULP_fnc_achieve;
+	[getPlayerUID player, "Robbery", [_customName, _money]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 	_object setVariable["timeout", time + (getNumber (_cfg >> "timeout")), true];
 	_object setVariable["robber", nil, true];

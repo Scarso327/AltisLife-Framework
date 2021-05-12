@@ -43,5 +43,7 @@ private _max = getNumber (_prison >> "maxDuraction");
 
 		[format["You have sentenced <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2</t>", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
 		["FirstArrest"] call ULP_fnc_achieve;
+
+		[getPlayerUID player, "Imprisoned", [_target, _duration]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	}, false, "[_this, ""MM:SS""] call BIS_fnc_secondsToString", false
 ] call ULP_fnc_selectNumber;

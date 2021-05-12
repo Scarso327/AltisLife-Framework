@@ -403,6 +403,7 @@ class CfgFunctions {
 			class giveVehicleKeys {};
 			class ejectVehicleCrew {};
 			class ejectVehicleUnit {};
+			class putVehicleUnit {};
 			class repairVehicle {};
 			class garageVehicle {};
 			class serviceVehicle {};

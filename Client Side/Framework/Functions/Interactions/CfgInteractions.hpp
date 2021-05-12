@@ -55,10 +55,6 @@ class CfgInteractions {
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_isEscorted }";
 		};
-		class PutInVehicle : Unrestrain { // TODONOW
-			title = "Put In Vehicle";
-			onClick = "hint ""Hello"";";
-		};
 		class FeedHydrate : Unrestrain { // TODO
 			title = "Feed/Hydrate";
 			onClick = "hint ""Hello"";";
@@ -155,6 +151,10 @@ class CfgInteractions {
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [_this] call ULP_fnc_isEscorted }";
+		};
+		class PutInVehicle : StopEscort {
+			title = "Put In Vehicle";
+			onClick = "private _vehicle = cursorObject; if (isNull _vehicle || { !((((typeOf _vehicle) call BIS_fnc_objectType) param [1, """"]) in [""Car"", ""Helicopter"", ""Plane"", ""Ship""]) }) exitWith { [""You must take them to a vehicle to put it...""] call ULP_fnc_hint; }; if (((fullCrew _vehicle) findIf { isNull (_x param [0, objNull]) }) isEqualTo -1) exitWith { [""This vehicle has no empty seats..""] call ULP_fnc_hint; }; [_this select 0, player, false] call ULP_fnc_escort; [_vehicle, _this select 0] remoteExecCall [""ULP_fnc_putVehicleUnit"", _this select 0]; closeDialog 0; [format [""You have put %1 into a vehicle..."", [_this select 0, true] call ULP_fnc_getName]] call ULP_fnc_hint;";
 		};
 	};
 

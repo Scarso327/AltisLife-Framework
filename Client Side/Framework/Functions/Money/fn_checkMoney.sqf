@@ -31,17 +31,23 @@ switch (_mode) do {
 		};
 	};
 
-	_params params [
-		["_unit", objNull, [objNull]]
-	];
-
-	if (isNull _unit || { _unit isEqualTo player }) exitWith {};
-
 	case 1: {
+		_params params [
+			["_unit", objNull, [objNull]]
+		];
+
+		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
+		
 		[2, [player, CASH]] remoteExecCall ["ULP_fnc_checkMoney", _unit];
 	};
 
 	default {
+		_params params [
+			["_unit", objNull, [objNull]]
+		];
+
+		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
+		
 		if (_unit getVariable ["checking_money", false]) exitWith {
 			["You're already counting this person's money..."] call ULP_fnc_hint;
 		};

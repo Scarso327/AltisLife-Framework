@@ -31,13 +31,13 @@ switch (_mode) do {
 		};
 	};
 
-	_params params [
-		["_unit", objNull, [objNull]]
-	];
-
-	if (isNull _unit || { _unit isEqualTo player }) exitWith {};
-
 	case 1: {
+		_params params [
+			["_unit", objNull, [objNull]]
+		];
+
+		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
+
 		private _cash = + CASH;
 		if (_cash > 0 && { [_cash, false, format ["%2 By %1", name _unit, ["Robbed", "Seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_removeMoney }) then {
 			[format ["<t color='#B92DE0'>%1</t> has %4 you for <t color='#B92DE0'>%2%3</t>", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText, ["robbed", "seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
@@ -49,6 +49,12 @@ switch (_mode) do {
 	};
 
 	default {
+		_params params [
+			["_unit", objNull, [objNull]]
+		];
+
+		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
+		
 		if (_unit getVariable ["robbing", false]) exitWith {
 			[format ["You're already %1 this person's cash...", ["robbing", "seizing"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
 		};

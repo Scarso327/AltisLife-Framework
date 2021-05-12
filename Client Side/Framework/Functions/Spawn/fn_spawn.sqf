@@ -43,6 +43,7 @@ switch (true) do {
 	};
 };
 
+player playMoveNow (["IDLE", "STAND"] call ULP_fnc_getAnim);
 player setPosASL AGLtoASL _pos;
 player setDir _dir;
 

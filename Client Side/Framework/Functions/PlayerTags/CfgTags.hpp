@@ -443,17 +443,21 @@ class CfgTags {
 		};
 
 		// Investor
-		class FreddieDavis : Alligator  { // ICON
+		class FreddieDavis : Alligator { // ICON
 			icon = "Data\Tags\Donator\Movies\superman.paa";
 			displayName = "Freddie Davis";
 		};
-		class BoughNoggeye : Alligator  { // ICON
-			icon = "Data\Tags\Donator\Movies\superman.paa";
+		class BoughNoggeye : Alligator {
+			icon = "Data\Tags\Donator\Investor\boughNoggeye.paa";
 			displayName = "Bough Noggeye";
 		};
-		class KitKnight : Alligator  { // ICON
+		class KitKnight : Alligator { // ICON
 			icon = "Data\Tags\Donator\Movies\superman.paa";
 			displayName = "Kit Knight";
+		};
+		class Hector : Alligator {
+			icon = "Data\Tags\Donator\Investor\hector.paa";
+			displayName = "Hector";
 		};
 
 		/// Other
@@ -564,7 +568,7 @@ class CfgTags {
 			icons[] = { "Avatar", "C3PO", "Disney", "Flash", "Joker", "Morty", "Pennywise", "Pixar", "Rick", "StarTrek", "Superman" };
 		};
 		class Investor {
-			icons[] = { "FreddieDavis", "BoughNoggeye", "KitKnight" };
+			icons[] = { "FreddieDavis", "BoughNoggeye", "KitKnight", "Hector" };
 		};
 		class Other {
 			icons[] = { "Alien", "Astronaut", "Commet", "Crown", "Diamond", "DNA", "Doughnut", "Eggplant", "Fighter", "Hamburger", "Heart", "Mars", "Moon", "Salt", "Satellite", "Saturn", "Server", "Shuttle", "Skull", "UN", "Weed", "World" };

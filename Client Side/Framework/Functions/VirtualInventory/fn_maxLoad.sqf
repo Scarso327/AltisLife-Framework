@@ -14,6 +14,4 @@ _this params [
 ];
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
-if !(isClass  _containerCfg) exitWith { 0 };
-
-getNumber (_containerCfg >> "virtualSpace")
+_container getVariable ["ULP_VirtualSpace", [0, getNumber (_containerCfg >> "virtualSpace")] select (isClass  _containerCfg)];

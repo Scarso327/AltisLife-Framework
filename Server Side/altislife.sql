@@ -292,12 +292,12 @@ CREATE TABLE IF NOT EXISTS `settings` (
 INSERT INTO `settings` (`id`, `setting`, `value`) VALUES
 	(1, 'DonationGoal', '0'),
 	(2, 'ThreatLevel', '0'),
-	(3, 'Day', '2021-5-6'),
-	(4, 'Week', '18'),
+	(3, 'Day', '2021-5-12'),
+	(4, 'Week', '19'),
 	(5, 'Governor', '"[]"'),
 	(6, 'GovernorSettings', '"[]"'),
 	(7, 'Election', '0'),
-	(8, 'NextElection', '2021-5-28'),
+	(8, 'NextElection', '2021-5-29'),
 	(9, 'BaseBidsActive', '0'),
 	(10, 'base_owner_North', '-1'),
 	(11, 'base_owner_South', '-1');

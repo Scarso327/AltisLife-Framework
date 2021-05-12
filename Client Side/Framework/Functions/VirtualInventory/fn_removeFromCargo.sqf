@@ -12,7 +12,7 @@ if (canSuspend) exitWith {
 _this params [
 	["_container", objNull, [objNull]],
 	["_item", "", [""]],
-	["_count", 1, [0]],
+	["_data", 1, [0, [], ""]],
 	["_global", true, [false]]
 ];
 
@@ -22,12 +22,37 @@ if (isNull _container || { !(isClass _vItem) } || { !([_container] call ULP_fnc_
 private _cargo = _container getVariable ["ULP_VirtualCargo", createHashMap];
 
 if !(_item in _cargo) exitWith { false };
-_count = 0 max ((_cargo getOrDefault [_item, 0]) - _count);
 
-if (_count <= 0) then {
-	_cargo deleteAt _item;
+private _count = switch (typeName _data) do {
+	case "STRING": { 1 };
+	case "ARRAY": { count _data };
+	default { _data };
+};
+
+if ([getNumber (_vItem >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+	private _current = _cargo getOrDefault [_item, []];
+	_count = 0 max ((count _current) - _count);
+
+	if (_count <= 0) then {
+		_cargo deleteAt _item;
+	} else {
+
+		if (_data isEqualType "") then {
+			_current deleteAt (_current find _data);
+		} else {
+			_current = _current - _data;
+		};
+
+		_cargo set [_item, _current];
+	};
 } else {
-	_cargo set [_item, _count];
+	_count = 0 max ((_cargo getOrDefault [_item, 0]) - _count);
+
+	if (_count <= 0) then {
+		_cargo deleteAt _item;
+	} else {
+		_cargo set [_item, _count];
+	};
 };
 
 if ((count _cargo) isEqualTo 0 && { isNumber (missionConfigFile >> "CfgVehicles" >> (typeOf _container) >> "tempStorage") }) then {

@@ -13,6 +13,8 @@ _this params [
 	["_container", objNull, [objNull]]
 ];
 
+if (_container getVariable ["ULP_ScriptedInventory", false]) exitWith { true };
+
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
 
 isClass  _containerCfg && 

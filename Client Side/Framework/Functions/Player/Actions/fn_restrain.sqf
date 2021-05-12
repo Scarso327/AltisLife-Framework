@@ -37,6 +37,17 @@ if (_restrain) then {
 	if !((currentWeapon _target) isEqualTo "") then { _target action ["SwitchWeapon", _target, _target, 100]; };
 	if ([] call ULP_fnc_isEscorting) then { detach ULP_Escort; ULP_Escort = nil; };
 
+	player setVariable ["ULP_ScriptedInventory", true, true];
+	
+	{
+		[player, _x, _y, true, true] call ULP_fnc_addToCargo;
+	} forEach ULP_Inventory;
+
+	ULP_Inventory = createHashMap;
+	ULP_CarryInfo set [0, 0];
+
+	player setVariable ["ULP_VirtualSpace", ULP_CarryInfo param [1, 0], true];
+
 	[_target, {
 		if (!(alive _this) || { !([_this] call ULP_fnc_isRestrained) } || { [_this] call ULP_fnc_onDuty }) exitWith {
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
@@ -60,6 +71,21 @@ if (_restrain) then {
 	if ([_target] call ULP_fnc_isEscorted) then {
 		detach _target;
 	};
+
+	{
+		if (_y isEqualType []) then {
+			private _item = _x;
+
+			{
+				[_item, _x, false, true] call ULP_fnc_handleItem;
+			} forEach _y;
+		} else {
+			[_x, _y, false, true] call ULP_fnc_handleItem;
+		};
+	} forEach (player getVariable ["ULP_VirtualCargo", createHashMap]);
+
+	player setVariable ["ULP_VirtualSpace", nil, true];
+	player setVariable ["ULP_ScriptedInventory", nil, true];
 	
 	[format ["You've been unrestrained %1.", ([format ["by <t color='#B92DE0'>%1</t>", name _detainer], ""] select (isNull _detainer))]] call ULP_fnc_hint;
 };

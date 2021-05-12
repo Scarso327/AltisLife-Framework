@@ -53,6 +53,8 @@ private _time = ["LifeSaver", 20] call ULP_fnc_activatePerk;
 		[format ["You have revived <t color='#B92DE0'>%1</t>", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
 	};
 
+	["LifeSaver"] call ULP_fnc_achieve;
 	[100, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addXP;
+
 	[player] remoteExecCall ["ULP_fnc_revived", _unit];
 }, {} , ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

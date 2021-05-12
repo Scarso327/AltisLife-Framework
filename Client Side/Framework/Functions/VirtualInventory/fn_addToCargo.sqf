@@ -12,7 +12,7 @@ if (canSuspend) exitWith {
 _this params [
 	["_container", objNull, [objNull]],
 	["_item", "", [""]],
-	["_count", 1, [0]],
+	["_data", 1, [0, [], ""]],
 	["_global", true, [false]],
 	["_ignoreLoad", false, [true]]
 ];
@@ -23,10 +23,28 @@ if (isNull _container || { !(isClass _vItem) } || { !([_container] call ULP_fnc_
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
 private _cargo = _container getVariable ["ULP_VirtualCargo", createHashMap];
 
+private _count = switch (typeName _data) do {
+	case "STRING": { 1 };
+	case "ARRAY": { count _data };
+	default { _data };
+};
+
 if ((([_container] call ULP_fnc_currentLoad) + (getNumber (_vItem >> "weight") * _count)) > ([_container] call ULP_fnc_maxLoad) && { !_ignoreLoad }) exitWith { false };
 
-_count = (_cargo getOrDefault [_item, 0]) + _count;
-_cargo set [_item, _count];
+if ([getNumber (_vItem >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+	private _current = _cargo getOrDefault [_item, []];
+
+	if (_data isEqualType "") then {
+		_current pushBack _data;
+	} else {
+		_current append _data;
+	};
+
+	_cargo set [_item, _current];
+} else {
+	_count = (_cargo getOrDefault [_item, 0]) + _count;
+	_cargo set [_item, _count];
+};
 
 _container setVariable ["ULP_VirtualCargo", _cargo, _global];
 true

@@ -9,7 +9,7 @@ if (canSuspend) exitWith {
     [ULP_fnc_seizeLicense, _this] call ULP_fnc_directCall;
 };
 
-if ([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
+if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
 	["Only police can seize licenses..."] call ULP_fnc_hint;	
 };
 

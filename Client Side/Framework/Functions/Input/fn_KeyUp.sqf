@@ -21,7 +21,7 @@ switch (_code) do {
         _handled = true;
         case F: {
             if (_shift && {missionNamespace getVariable ["ULP_CanRespawn", false] }) then {
-                if (((["Medic"] call ULP_fnc_allMembers) findIf { (player distance _x) <= 100 }) > -1) exitWith {
+                if (((["Medic"] call ULP_fnc_allMembers) findIf { (player distance _x) <= 100 }) > -1 && { !([player, ["Medic"]] call ULP_fnc_isFaction) }) exitWith {
                     ["<t color='#B92DE0'>A medic is nearby</t>, you're unable to force bleedout..."] call ULP_fnc_hint;
                 };
 

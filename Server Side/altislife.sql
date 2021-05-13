@@ -201,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   `mpulevel` enum('0','1') NOT NULL DEFAULT '0',
   `rpulevel` enum('0','1','2') NOT NULL DEFAULT '0',
   `sfolevel` enum('0','1') NOT NULL DEFAULT '0',
-  `uclevel` enum('0','1','2','3') NOT NULL DEFAULT '0',
+  `uclevel` enum('0','1') NOT NULL DEFAULT '0',
   `cop_licenses` text NOT NULL,
   `cop_perks` text NOT NULL,
   `cop_gear` text NOT NULL,

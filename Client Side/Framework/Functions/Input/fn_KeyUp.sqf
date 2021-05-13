@@ -102,7 +102,7 @@ switch (_code) do {
             0 fadeSound ([1, ["EffectsFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
             0 fadeMusic ([1, ["MusicFade", "Audio"] call ULP_fnc_getOption] select (ULP_FadeSound));
 
-            [format["You <t color='#B92DE0'>%1 your earplugs</t>", ["remove", "put in"] select (ULP_FadeSound)]] call ULP_fnc_hint;
+            [format["You <t color='#B92DE0'>%1</t> your earplugs", ["remove", "put in"] select (ULP_FadeSound)]] call ULP_fnc_hint;
         };
     };
 

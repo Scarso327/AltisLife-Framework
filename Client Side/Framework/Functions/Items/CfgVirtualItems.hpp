@@ -805,12 +805,16 @@ class CfgVirtualItems {
 		weight = 5;
 		class Settings : Settings {};
 	};
-	class Land_ConcreteHedgehog_01_F : TapeSign_F { 
-		displayName = "Create Hedgehog";
-		icon = "Data\Icons\hedgehog.paa";
+	class RoadCone_F : TapeSign_F { 
+		displayName = "Road Cone";
+		icon = "Data\Icons\cone.paa";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 6;
+		weight = 2;
+		class Settings : Settings {};
+	};
+	class RoadCone_L_F : RoadCone_F { 
+		displayName = "Road Cone (Light)";
 		class Settings : Settings {};
 	};
 	class Land_PortableLight_single_F : TapeSign_F { 

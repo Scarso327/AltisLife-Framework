@@ -99,8 +99,8 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	class JoinRTA {
-		icon = "Data\UI\Achievements\RTA.paa";
+	class JoinCOL {
+		icon = "Data\UI\Achievements\COL.paa";
 		displayName = "College Instructor";
 		description = "Joined the College of Policing.";
 		leveling[] = { 100, "Achievement Unlocked", 100 };

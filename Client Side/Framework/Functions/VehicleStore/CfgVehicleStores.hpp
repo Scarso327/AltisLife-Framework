@@ -99,7 +99,7 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class B_Boat_Armed_01_minigun_F {
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
 				class Textures {};
 			};
 		};

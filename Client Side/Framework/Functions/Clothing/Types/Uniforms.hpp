@@ -579,9 +579,9 @@ class U_B_GEN_Commander_F {
 	virtualSpace = 3;
 	isGas = false;
 	class Textures {
-		class RTA {
-			textures[] = { "Data\Textures\Uniforms\Police\Units\RTA.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RTA"", 1] call ULP_fnc_hasAccess }";
+		class College {
+			textures[] = { "Data\Textures\Uniforms\Police\Units\COL.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_COL"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
 };

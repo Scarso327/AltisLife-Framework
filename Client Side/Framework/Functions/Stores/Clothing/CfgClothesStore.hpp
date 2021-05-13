@@ -11,7 +11,7 @@ class CfgClothesStore {
 		class Uniforms {
 			class U_Rangemaster : FactionBase {};
 			class U_B_GEN_Commander_F : FactionBase { 
-				condition = "[""Police_RTA"", 1] call ULP_fnc_hasAccess"; 
+				condition = "[""Police_COL"", 1] call ULP_fnc_hasAccess"; 
 			};
 			class U_C_FormalSuit_01_black_F : FactionBase { 
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 

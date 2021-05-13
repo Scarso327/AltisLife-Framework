@@ -16,7 +16,7 @@ class CfgFactions {
 				payMulti = 0.1;
 				required = 1;
 			};
-			class RTA {
+			class COL {
 				queryIndex = 27;
 				payMulti = 0.5;
 			};
@@ -25,13 +25,13 @@ class CfgFactions {
 			class NCA { queryIndex = 30; };
 			class MPU { queryIndex = 31; };
 			class RPU { queryIndex = 32; };
-			class AFO { queryIndex = 33; };
+			class SFO { queryIndex = 33; };
 			class UC { queryIndex = 34; };
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "cop_";
-			customQuery = ", cop_blacklisted, coplevel, rtalevel, npaslevel, scolevel, ncalevel, mpulevel, rpulevel, afolevel, uclevel";
+			customQuery = ", cop_blacklisted, coplevel, collevel, npaslevel, scolevel, ncalevel, mpulevel, rpulevel, sfolevel, uclevel";
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};

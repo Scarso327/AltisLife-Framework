@@ -497,6 +497,7 @@ class CfgFunctions {
 			class groupLevel {};
 			class hasGroupPerk {};
 			class groupBuff {};
+			class isSecurity {};
 		};
 
 		class NLR {

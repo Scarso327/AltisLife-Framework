@@ -92,10 +92,10 @@ class CfgGroups {
 					level = 3;
 				};
 
-				class GoalContributions { // TODO
-					displayName = "Goal Contributions";
-					icon = "Data\UI\GroupPerks\goalContributions.paa";
-					description = "Your members have an increased contribution to community goals.";
+				class SecurityContactors {
+					displayName = "Security Contactors";
+					icon = "Data\UI\GroupPerks\securityContactors.paa";
+					description = "Grands your members access to become Security Officers within your company.";
 					level = 4;
 				};
 

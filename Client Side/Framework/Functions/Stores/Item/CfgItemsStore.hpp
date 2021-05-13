@@ -307,6 +307,91 @@ class CfgItemsStore {
 		};
 	};
 
+	class Security {
+		storeName = "Company Security Store";
+		condition = "[] call ULP_fnc_isSecurity";
+		class Rifles {
+			class hgun_PDW2000_F { price = 60100; };
+			class SMG_05_F { price = 60075; };
+			class SMG_02_F { price = 63825; };
+			class SMG_01_F { price = 70125; };
+			class SMG_03C_black {
+				price = 67250;
+				class textures {
+					class SMG_03C_black {};
+					class SMG_03C_TR_black {};
+				};
+			};
+			class SMG_03_black {
+				price = 83350;
+				class textures {
+					class SMG_03_black {};
+					class SMG_03_TR_black {};
+				};
+			};
+			class arifle_SPAR_01_blk_F {
+				price = 127075;
+				class textures {
+					class arifle_SPAR_01_blk_F {};
+				};
+			};
+		};
+		class Pistols {
+			class hgun_Rook40_F { price = 16550; };
+			class hgun_ACPC2_F { price = 22500; };
+		};
+		class Attachments {
+			class bipod_01_F_blk { 
+				class textures {
+					class bipod_01_F_blk {};
+					class bipod_02_F_blk {};
+					class bipod_03_F_blk {};
+				};
+			};
+			class acc_flashlight {};
+
+			// SIGHTS
+			class optic_Aco {};
+			class optic_Holosight {
+				class textures {
+					class optic_Holosight_blk_F {};
+					class optic_Holosight_smg_blk_F {};
+				};
+			};
+			class optic_Hamr {
+				class textures { class optic_Hamr {}; };
+			};
+			class optic_MRCO {};
+			class optic_Arco {
+				class textures { class optic_Arco_blk_F {}; };
+			};
+			class optic_ERCO_blk_F {};
+		};
+		class Magazines {
+			class 16Rnd_9x21_Mag {};
+			class 30Rnd_9x21_Mag {};
+			class 30Rnd_9x21_Mag_SMG_02 {};
+			class 9Rnd_45ACP_Mag {};
+			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class 50Rnd_570x28_SMG_03 {};
+			// TODO (Rubber Bullets when rewritten)
+			class 30Rnd_556x45_Stanag {};
+		};
+		class Items {
+			class ItemMap {};
+			class ItemCompass {};
+			class ItemWatch {};
+			class ItemGPS {};
+			class ItemRadio {};
+			class Binocular {};
+			class ToolKit {};
+			class Chemlight_green {};
+			class SmokeShell { 
+				class textures { class SmokeShell {}; }; 
+			};
+		};
+	};
+
 	class Protection {
 		storeName = "Govenor Protection Store";
 		condition = "[] call ULP_fnc_isProtection";

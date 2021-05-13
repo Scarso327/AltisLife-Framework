@@ -28,10 +28,6 @@ class CfgSettings {
 
         /* Blood */
         BloodBagIncrease = 90;
-
-        /* Revival */
-        RevivalFee = 2500;
-        PoliceRevive = false;
     };
 
     class CfgCredits {

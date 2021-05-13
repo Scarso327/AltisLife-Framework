@@ -442,6 +442,28 @@ class CfgTags {
 			displayName = "Superman";
 		};
 
+		/// Political
+		class ConservativeUnionistParty : Alligator  {
+			icon = "Data\Tags\Donator\Political\conservativeUnionistParty.paa";
+			displayName = "Conservative and Unionist Party";
+		};
+		class LabourParty : Alligator  {
+			icon = "Data\Tags\Donator\Political\labourParty.paa";
+			displayName = "Labour Party";
+		};
+		class LiberalDemocrats : Alligator  {
+			icon = "Data\Tags\Donator\Political\liberalDemocrats.paa";
+			displayName = "Liberal Democrats";
+		};
+		class GreenParty : Alligator  {
+			icon = "Data\Tags\Donator\Political\greenparty.paa";
+			displayName = "Green Party";
+		};
+		class ReformUK : Alligator  {
+			icon = "Data\Tags\Donator\Political\reformUK.paa";
+			displayName = "ReformUK";
+		};
+
 		// Investor
 		class FreddieDavis : Alligator { // ICON
 			icon = "Data\Tags\Donator\Movies\superman.paa";
@@ -566,6 +588,9 @@ class CfgTags {
 		};
 		class Movies {
 			icons[] = { "Avatar", "C3PO", "Disney", "Flash", "Joker", "Morty", "Pennywise", "Pixar", "Rick", "StarTrek", "Superman" };
+		};
+		class Political {
+			icons[] = { "ConservativeUnionistParty", "LabourParty", "LiberalDemocrats", "GreenParty", "ReformUK" };
 		};
 		class Investor {
 			icons[] = { "FreddieDavis", "BoughNoggeye", "KitKnight", "Hector" };

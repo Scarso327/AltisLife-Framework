@@ -1533,7 +1533,7 @@ class CfgVehicles {
 	};
 
 	class B_Heli_Transport_03_unarmed_F : Base {
-		description = "A twin-engine, tandem rotor heavy-lift helicopter. It is a modernized version of the CH-47 Chinook and its primary role is the transportation of troops, vehicles and cargo.";
+		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
 		virtualSpace = 100;
 		garageLimit = 1;

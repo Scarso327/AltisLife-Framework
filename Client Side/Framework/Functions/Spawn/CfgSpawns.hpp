@@ -85,7 +85,7 @@ class CfgSpawns {
         };
 
         // Altis Police Service / Altis Ambulance Service
-        class MarineStation {
+        class MarineStation : Police {
             displayName = "Marine Base";
             factions[] = { "Police", "Medic" };
             marker = "joint_spawn_marine";

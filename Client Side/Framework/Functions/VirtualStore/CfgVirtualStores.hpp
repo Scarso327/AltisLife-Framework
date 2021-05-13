@@ -18,8 +18,8 @@ class CfgVirtualStores {
 			//class Painkillers {};
 			class FieldDressing {};
 			class BloodBag {};
-			class Morphine {};
-			class Epinephrine {};
+			//class Morphine {};
+			//class Epinephrine {};
 			class FirstAidKit {};
 			class MediKit {};
 			class AutomatedExternalDefibrillator {};
@@ -58,8 +58,8 @@ class CfgVirtualStores {
 			class Packing {};
 			class QuickClot {};
 			class BloodBag {};
-			class Morphine {};
-			class Epinephrine {};
+			//class Morphine {};
+			//class Epinephrine {};
 			class FirstAidKit {};
 			class MediKit {};
 			class AutomatedExternalDefibrillator {};
@@ -86,6 +86,13 @@ class CfgVirtualStores {
 			class PanicButton {};
 			class Lockpick {};
 			class VehicleClamp {};
+			class FieldDressing {};
+			class BloodBag {};
+			//class Morphine {};
+			//class Epinephrine {};
+			class FirstAidKit {};
+			class MediKit {};
+			class AutomatedExternalDefibrillator {};
 			//class PlasticBarrier_02_yellow_F {};
 			//class PlasticBarrier_02_grey_F {};
 			//class PlasticBarrier_03_orange_F {};

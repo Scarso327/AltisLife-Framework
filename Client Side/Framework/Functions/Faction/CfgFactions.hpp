@@ -163,7 +163,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = true;
 			};
-			virtualItems[] = { { "Identification", "name player" }, { "VehicleClamp", 1 }, { "FuelCan", 2 }, { "PanicButton", 1 } };
+			virtualItems[] = { { "Identification", "name player" }, { "PanicButton", 1 } };
 		};
 	};
 

@@ -1,6 +1,6 @@
 class CfgBases {
 	// Bidding info...
-	Day = "Friday";
+	Day = "Monday"; // TODONOW CHANGE AFTER TOMORROW
 	Restart[] = {20, 24};
 	RedzoneKillReward = 15000;
 	BidIncrement = 1000000;

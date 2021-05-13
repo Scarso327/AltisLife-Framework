@@ -1,17 +1,37 @@
-disableChannels[] = {{0,true,true},{1,true,true},{2,true,true},{6,false,true}}; 
 overviewText = "A roleplaying gamemode developed by Scarso and Lewis for AscensionRP.co.uk!";
-joinUnassigned=1;
-saving=0;
-disableRandomization[]={"All"};
+disableRandomization[]= { "All" };
+
+joinUnassigned = 1;
+saving = 0;
 unsafeCVL = 1;
 enableDebugConsole = 0;
 
 onPauseScript[]={ "ULP_fnc_onPause" };
+disableChannels[] = {{0,true,true}, {1,true,true}, {2,true,true}, {6,false,true}};
+showHUD[] = {
+	1, // Scripted HUD (same as showHUD command)
+	1, // Vehicle and unit info
+	0, // Vehicle radar
+	0, // Vehicle compass
+	1, // Tank direction indicator
+	0, // Commanding menu
+	0, // Group info bar
+	1, // HUD weapon cursors
+	1, // Vehicle display panels
+	1, // "x killed by y" systemChat messages
+	1  // force show drawIcon3D icons
+};
+
+class Header {
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 130;
+};
 
 class CfgWorlds {
 	class Any {
 		author = "Scarso and Lewis";
-		description = "AscensionRP Life";
+		description = "AscensionRP.co.uk Altis Life";
 		pictureMap = "";
 		pictureShot = "data\load.paa";
 		loadingTexts[] = { 
@@ -21,10 +41,6 @@ class CfgWorlds {
 			"Don't trust Callam" // Hector
 		};
 	};
-    
-    class Altis : Any {
-        description = "AscensionRP Altis Life";
-    };
 };
 
 #include "CfgDebriefing.hpp"

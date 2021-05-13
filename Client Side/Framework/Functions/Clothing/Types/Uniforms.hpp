@@ -707,7 +707,7 @@ class U_B_survival_uniform {
 };
 
 class U_B_CombatUniform_mcam_worn {
-	displayName = "Specialised Uniform";
+	displayName = "Traffic Uniform";
 	price = 1200;
 	reputation = true;
 	virtualSpace = 7;
@@ -717,11 +717,6 @@ class U_B_CombatUniform_mcam_worn {
 			displayName = "Traffic Uniform";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\RPU_main.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
-		};
-		class AFO {
-			displayName = "AFO Uniform";
-			textures[] = { "Data\Textures\Uniforms\Police\Units\AFO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
 		};
 	};
 };

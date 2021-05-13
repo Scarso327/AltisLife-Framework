@@ -230,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   `prison_timer` int(11) NOT NULL DEFAULT 0,
   `adminlevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
   `eventslevel` enum('0','1','2') NOT NULL DEFAULT '0',
-  `donorlevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
+  `donorlevel` enum('0','1','2') NOT NULL DEFAULT '0',
   `prestige` int(11) NOT NULL DEFAULT 0,
   `level` int(11) NOT NULL DEFAULT 1,
   `xp` int(11) NOT NULL DEFAULT 0,

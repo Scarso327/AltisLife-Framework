@@ -73,7 +73,9 @@ class CfgVehicleStores {
 			};
 			class B_Heli_Transport_03_unarmed_F { 
 				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; 
-				class Textures {};
+				class Textures {
+					class Black {};
+				};
 			};
 			class B_Heli_Transport_01_F { 
 				condition = "[""Police_NPAS"", 4] call ULP_fnc_hasAccess"; 

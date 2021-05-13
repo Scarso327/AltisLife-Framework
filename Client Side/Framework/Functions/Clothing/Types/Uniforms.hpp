@@ -675,6 +675,7 @@ class U_I_ParadeUniform_01_AAF_decorated_F {
 	isGas = false;
 	class Textures {
 		class Command { 
+			displayName = "Parade Uniform";
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
 				"Data\Textures\Uniforms\Police\parade_02.paa",
@@ -688,6 +689,7 @@ class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F {
 	displayName = "Parade Uniform";
 	class Textures {
 		class Main { 
+			displayName = "Parade Uniform";
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
 				"Data\Textures\Uniforms\Police\parade_02.paa",

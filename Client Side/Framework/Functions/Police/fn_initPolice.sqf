@@ -87,7 +87,7 @@ scopeName "fn_initPolice";
 			[format ["%1 refused to show you their liceneses...", _name]] call ULP_fnc_hint;
 		};
 
-		[format ["<t color='#FF0000'><t size='1.7'>%1</t></t><br/><t color='#FFD700'><t size='1.5'>Licenses</t></t><br/>%2", _name, (_licenses apply {
+		[format ["<t color='#FF0000'><t size='1.7' align='center'>%1</t></t><br/><t color='#FFD700'><t size='1.5' align='center'>Licenses</t></t><br/><t align='center'>%2</t>", _name, (_licenses apply {
 			if (isClass (missionConfigFile >> "CfgLicenses" >> _x >> "displayName"))  exitWith {
 				getText (missionConfigFile >> "CfgLicenses" >> _x >> "displayName")
 			};

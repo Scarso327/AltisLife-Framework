@@ -1148,6 +1148,7 @@ class CfgVehicles {
 		crushTime = 30;
 		chopKeepChance = 85;
 		chopTime = 120;
+		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk";
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 

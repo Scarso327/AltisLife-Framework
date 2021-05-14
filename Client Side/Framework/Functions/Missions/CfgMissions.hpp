@@ -81,7 +81,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 8;
+			moneyReward = 5;
 			xpReward = 150;
 		};
 		class Messages {
@@ -156,7 +156,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 5;
+			moneyReward = 2;
 			xpReward = 100;
 		};
 		class Messages {

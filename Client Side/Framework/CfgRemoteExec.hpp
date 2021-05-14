@@ -8,8 +8,6 @@ class CfgRemoteExec {
         jip = 0;
         
         class switchMove {};
-		
-		F(setunitloadout,CLIENT)
     };
 
     class Functions {
@@ -32,12 +30,7 @@ class CfgRemoteExec {
         class ULP_fnc_receivedBlood {};
         class ULP_fnc_applyTextures {};
         class ULP_fnc_spikeVehicle {};
-
-		
-		F(AH_KeyCheck,SERVER)
-        F(AH_PlayerLoad,SERVER)
-        F(AH_LogInterface,SERVER)
-        class ULP_fnc_flipVehicle {}:
+        class ULP_fnc_flipVehicle {};
 
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;
@@ -182,6 +175,15 @@ class CfgRemoteExec {
             allowedTargets = SERVER;
         };
         class ULP_SRV_fnc_addGroupMember {
+            allowedTargets = SERVER;
+        };
+        class AH_KeyCheck {
+            allowedTargets = SERVER;
+        };
+        class AH_PlayerLoad {
+            allowedTargets = SERVER;
+        };
+        class AH_LogInterface {
             allowedTargets = SERVER;
         };
     };

@@ -111,7 +111,7 @@ class CfgItemsStore {
 		};
 		class Pistols {
 			class hgun_P07_F {};
-			class hgun_ACPC2_F {  condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess"; };
+			class hgun_ACPC2_F {  condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 		class Attachments {
 			class bipod_01_F_blk { 

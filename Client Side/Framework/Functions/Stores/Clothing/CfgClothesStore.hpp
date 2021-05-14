@@ -464,6 +464,7 @@ class CfgClothesStore {
 		};
 
 		class Headgear {
+			class H_Hat_Tinfoil_F {};
 			class H_Bandanna_gry {};
 			class H_Cap_blk {};
 			class H_Hat_Safari_sand_F {};

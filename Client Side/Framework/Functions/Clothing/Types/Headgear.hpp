@@ -9,6 +9,15 @@ class H_HeadBandage_clean_F {
 class H_HeadBandage_stained_F : H_HeadBandage_clean_F {};
 class H_HeadBandage_bloody_F : H_HeadBandage_clean_F {};
 
+class H_Hat_Tinfoil_F {
+	displayName = "Tin Foil";
+	price = 4;
+	reputation = false;
+	isMask = false;
+	isNV = false;
+	class Textures {};
+};
+
 class H_WirelessEarpiece_F {
 	price = 14;
 	reputation = false;

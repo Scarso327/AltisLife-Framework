@@ -6,7 +6,7 @@ class CfgFactions {
 		shortName = "Police";
 		displayName = "Altis Police Service";
 		colour[] = { 0, 0.3, 0.6, 1 };
-		pay = 14600;
+		pay = 10200;
 		jointChannel = true;
 		imprison = true;		
 
@@ -18,7 +18,7 @@ class CfgFactions {
 			};
 			class COL {
 				queryIndex = 27;
-				payMulti = 0.5;
+				payMulti = 0.2;
 			};
 			class NPAS { queryIndex = 28; };
 			class SCO { queryIndex = 29; };
@@ -67,7 +67,7 @@ class CfgFactions {
 		shortName = "Medic";
 		displayName = "Altis Ambulance Service";
 		colour[] = { 0, 0.5, 0, 1 };
-		pay = 16800;
+		pay = 11600;
 		jointChannel = true;
 
 		class Whitelisting {
@@ -80,7 +80,7 @@ class CfgFactions {
 			class HART { queryIndex = 28; };
 			class HR {
 				queryIndex = 29;
-				payMulti = 0.5;
+				payMulti = 0.2;
 			};
 		};
 
@@ -122,13 +122,13 @@ class CfgFactions {
 		shortName = "HATO";
 		displayName = "Highways Agency";
 		colour[] = { 0.7, 0.6, 0, 1 };
-		pay = 11200;
+		pay = 10060;
 		jointChannel = true;
 		
 		class Whitelisting {
 			class Main {
 				queryIndex = 26;
-				payMulti = 0.5;
+				payMulti = 0.4;
 				required = 1;
 			};
 		};

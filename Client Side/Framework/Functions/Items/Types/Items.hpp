@@ -3,23 +3,24 @@ class ItemMap {
 	reputation = false;
 	class Textures {};	
 };
-class ItemCompass : ItemMap{};
-class ItemWatch : ItemMap{};
+class ItemCompass : ItemMap {};
+class ItemWatch : ItemMap {};
 
 class ItemGPS {
 	price = 1650;
 	reputation = false;
 	class Textures {};	
 };
-class B_UavTerminal : ItemGPS{};
-class ItemRadio : ItemGPS{};
+class B_UavTerminal : ItemGPS {};
+class C_UavTerminal : ItemGPS {};
+class ItemRadio : ItemGPS {};
 
 class Binocular {
 	price = 1050;
 	reputation = false;
 	class Textures {};	
 };
-class Rangefinder : Binocular{ price = 2430; };
+class Rangefinder : Binocular { price = 2430; };
 
 class NVGoggles {
 	displayName = "Night Vision Goggles";

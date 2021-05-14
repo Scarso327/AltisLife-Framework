@@ -1545,6 +1545,7 @@ class CfgVehicles {
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
+				factions[] = { "Civilian", "Police" };
 				textures[] = { 
 					"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_black_co.paa",
 					"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"

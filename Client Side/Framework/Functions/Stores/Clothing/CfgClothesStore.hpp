@@ -27,7 +27,7 @@ class CfgClothesStore {
 				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }"; 
 			};
 			class U_B_CombatUniform_mcam_worn { 
-				condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; 
 			};
 			class U_O_PilotCoveralls { 
 				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; 
@@ -70,7 +70,7 @@ class CfgClothesStore {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 			};
 			class H_Watchcap_blk { 
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures { class H_Watchcap_blk {}; };
 			};
 			class H_Booniehat_khk { 
@@ -137,7 +137,7 @@ class CfgClothesStore {
 				class Textures { class V_PlateCarrier1_blk {}; };
 			};
 			class V_PlateCarrier2_blk {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_AFO"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
 				class Textures { class V_PlateCarrier2_blk {}; };
 			};
 			class V_RebreatherB {

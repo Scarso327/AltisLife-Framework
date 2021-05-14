@@ -1563,7 +1563,7 @@ class CfgVirtualItems {
 
 	class SurveyingEquipment {
 		displayName = "Surveying Equipment";
-		description = "Equipmented used to survay a dig site to locate artifacts.";
+		description = "Equipment used to survey a dig site in order to locate artifacts.";
 		icon = "Data\Icons\surveyingEquipment.paa";
 		buyPrice = 28900;
 		sellPrice = 14450;

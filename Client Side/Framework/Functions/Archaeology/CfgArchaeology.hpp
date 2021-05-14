@@ -4,10 +4,10 @@ class CfgArchaeology {
 		surveyTimes = 1;
 		give[] = { 2, 3 }; 
 		rewards[] = {
-			{ 0, { "OldCoin", 5 } },
+			{ 0, { "OldCoin", 3 } },
 			{ 0.73, { "BrokenPot", 1 } },
 			{ 0.74, { "BluntStoneKnife", 1 } },
-			{ 0.75, { "FossilisedBone", 3 } },
+			{ 0.75, { "FossilisedBone", 2 } },
 			{ 0.76, { "UnidentifiedSkull", 2 } },
 			{ 0.77, { "PetrifiedShield", 1 } },
 			{ 0.78, { "WeatheredSculpture", 1 } },
@@ -30,22 +30,22 @@ class CfgArchaeology {
 		surveyTimes = 2;
 		give[] = { 4, 5 };
 		rewards[] = {
-			{ 0, { "OldCoin", 8 } },
-			{ 0.65, { "AncientAmber", 3 } },
-			{ 0.68, { "StrongMetalRing", 4 } },
+			{ 0, { "OldCoin", 4 } },
+			{ 0.65, { "AncientAmber", 2 } },
+			{ 0.68, { "StrongMetalRing", 3 } },
 			{ 0.73, { "BrokenPot", 1 } },
-			{ 0.74, { "CommonMapFragment", 4 } },
-			{ 0.75, { "FossilisedBone", 4 } },
-			{ 0.76, { "BluntStoneKnife", 2 } },
-			{ 0.77, { "UnidentifiedSkull", 3 } },
+			{ 0.74, { "CommonMapFragment", 2 } },
+			{ 0.75, { "FossilisedBone", 3 } },
+			{ 0.76, { "BluntStoneKnife", 1 } },
+			{ 0.77, { "UnidentifiedSkull", 2 } },
 			{ 0.80, { "RegliousTotem", 1 } },
-			{ 0.83, { "PetrifiedShield", 2 } },
-			{ 0.85, { "UncommonMapFragment", 3 } },
+			{ 0.83, { "PetrifiedShield", 1 } },
+			{ 0.85, { "UncommonMapFragment", 2 } },
 			{ 0.86, { "WeatheredSculpture", 1 } },
 			{ 0.88, { "EmeraldAmulet", 2 } },
 			{ 0.90, { "AncientLedger", 1 } },
 			{ 0.92, { "RareMapFragment", 1 } },
-			{ 0.93, { "HandSmoothedRunestone", 3 } },
+			{ 0.93, { "HandSmoothedRunestone", 1 } },
 			{ 0.95, { "JeweledNecklace", 2 } },
 			{ 0.97, { "BrokenTimepiece", 1 } }
 		};
@@ -56,23 +56,23 @@ class CfgArchaeology {
 		surveyTimes = 3;
 		give[] = { 7, 8 };
 		rewards[] = {
-			{ 0, { "OldCoin", 17 } },
+			{ 0, { "OldCoin", 8 } },
 			{ 0.50, { "CommonMapFragment", 6 } },
 			{ 0.60, { "BluntStoneKnife", 3 } },
 			{ 0.63, { "BrokenPot", 1 } },
-			{ 0.67, { "FossilisedBone", 7 } },
-			{ 0.68, { "UnidentifiedSkull", 3 } },
-			{ 0.69, { "UncommonMapFragment", 5 } },
+			{ 0.67, { "FossilisedBone", 3 } },
+			{ 0.68, { "UnidentifiedSkull", 1 } },
+			{ 0.69, { "UncommonMapFragment", 3 } },
 			{ 0.70, { "PetrifiedShield", 2 } },
 			{ 0.72, { "RareMapFragment", 2 } },
-			{ 0.74, { "AncientAmber", 4 } },
+			{ 0.74, { "AncientAmber", 2 } },
 			{ 0.75, { "WeatheredSculpture", 2 } },
-			{ 0.76, { "StrongMetalRing", 5 } },
-			{ 0.78, { "EmeraldAmulet", 3 } },
+			{ 0.76, { "StrongMetalRing", 3 } },
+			{ 0.78, { "EmeraldAmulet", 2 } },
 			{ 0.80, { "RegliousTotem", 2 } },
 			{ 0.85, { "AncientLedger", 1 } },
 			{ 0.88, { "JeweledNecklace", 3 } },
-			{ 0.90, { "HandSmoothedRunestone", 5 } },
+			{ 0.90, { "HandSmoothedRunestone", 2 } },
 			{ 0.95, { "BrokenTimepiece", 2 } }
 		};
 	};

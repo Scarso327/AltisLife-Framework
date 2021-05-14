@@ -241,7 +241,7 @@ switch (_code) do {
         private _veh = vehicle player;
         
         if ([_veh] call ULP_fnc_canANPR) then {
-            if (_shift && { !_ctrlKey } && { !_alt } && { _veh isKindOf "LandVehicle" }) then {
+            if (_veh isKindOf "LandVehicle") then {
                 if (time < (_veh getVariable ["anpr_delay", 0])) exitWith {};
                 _veh setVariable ["anpr_delay", time + 3];
 

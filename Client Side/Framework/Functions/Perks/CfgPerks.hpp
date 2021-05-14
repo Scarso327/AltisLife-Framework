@@ -37,7 +37,7 @@ class CfgPerks {
 		description = "Increases your base paycheck by 5%.";
 		removalMultiplier = 1;
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Hato" };
 			level = 3;
 			prestige = 0;
 			profession[] = {};

@@ -24,9 +24,9 @@ class CfgInteractions {
 			title = "Give Cash";
 			onClick = "if ([_this select 0] call ULP_fnc_giveMoney) then { closeDialog 0; };";
 		};
-		class GiveItems : GiveKeys { // TODONOW
+		class GiveItems : GiveKeys {
 			title = "Give Items";
-			onClick = "hint ""Hello"";";
+			onClick = "_this call ULP_fnc_giveVirtualItems";
 		};
 		class ShowLicenses : GiveKeys {
 			title = "Show Licenses";

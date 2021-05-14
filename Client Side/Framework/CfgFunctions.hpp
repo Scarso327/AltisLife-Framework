@@ -262,6 +262,9 @@ class CfgFunctions {
 			class setCfgLoadout {};
 			class compatibleItems {};
 			class maxCarry {};
+			class giveItem {};
+			class recieveItem {};
+			class giveVirtualItems {};
 		};
 		
 		class Gathering {

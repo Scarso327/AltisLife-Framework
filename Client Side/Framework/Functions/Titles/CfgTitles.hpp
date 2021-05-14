@@ -9,7 +9,7 @@ class CfgTitles {
 		displayName = "Old Guard";
 		description = "Apart of this community before this title";
 	};
-        class Tester {
+    class Tester {
 		displayName = "Testing, Testing...";
 		description = "Involved with beta testing this framework";
 	};

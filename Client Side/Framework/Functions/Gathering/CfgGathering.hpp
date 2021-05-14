@@ -42,7 +42,7 @@ class CfgGathering {
 
 	class Coral : BaseGather {
 		hidden[] = { "Police" };
-		areas[] = { { "coral_field", 20 } };
+		areas[] = { { "coral_reef", 20 } };
 		items[] = { { "Coral", 100 } };
 	};
 

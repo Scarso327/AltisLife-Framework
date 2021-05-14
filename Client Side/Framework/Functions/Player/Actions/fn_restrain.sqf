@@ -86,6 +86,7 @@ if (_restrain) then {
 
 	player setVariable ["ULP_VirtualSpace", nil, true];
 	player setVariable ["ULP_ScriptedInventory", nil, true];
+	player setVariable ["ULP_VirtualCargo", nil, true];
 	
 	[format ["You've been unrestrained %1.", ([format ["by <t color='#B92DE0'>%1</t>", name _detainer], ""] select (isNull _detainer))]] call ULP_fnc_hint;
 };

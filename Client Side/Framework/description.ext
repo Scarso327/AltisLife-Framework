@@ -111,6 +111,7 @@ class CfgCommands {
 #include "Functions\Titles\CfgTitles.hpp"
 #include "Functions\Vehicle\CfgVehicles.hpp"
 #include "Functions\VehicleStore\CfgVehicleStores.hpp"
+#include "AH_Dialog.hpp"
 
 class CfgServer {
     DatabaseName = "altislife";

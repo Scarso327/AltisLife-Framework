@@ -156,7 +156,7 @@ class CfgInteractions {
 		};
 		class PutInVehicle : StopEscort {
 			title = "Put In Vehicle";
-			onClick = "private _vehicle = cursorObject; if (isNull _vehicle || { !((((typeOf _vehicle) call BIS_fnc_objectType) param [1, """"]) in [""Car"", ""Helicopter"", ""Plane"", ""Ship""]) }) exitWith { [""You must take them to a vehicle to put it...""] call ULP_fnc_hint; }; if (((fullCrew _vehicle) findIf { isNull (_x param [0, objNull]) }) isEqualTo -1) exitWith { [""This vehicle has no empty seats..""] call ULP_fnc_hint; }; [_this select 0, player, false] call ULP_fnc_escort; [_vehicle, _this select 0] remoteExecCall [""ULP_fnc_putVehicleUnit"", _this select 0]; closeDialog 0; [format [""You have put %1 into a vehicle..."", [_this select 0, true] call ULP_fnc_getName]] call ULP_fnc_hint;";
+			onClick = "private _vehicle = cursorObject; if (isNull _vehicle || { !((((typeOf _vehicle) call BIS_fnc_objectType) param [1, """"]) in [""Car"", ""Helicopter"", ""Plane"", ""Ship""]) }) exitWith { [""You must take them to a vehicle to put it...""] call ULP_fnc_hint; }; if !(((fullCrew _vehicle) findIf { isNull (_x param [0, objNull]) }) isEqualTo -1) exitWith { [""This vehicle has no empty seats..""] call ULP_fnc_hint; }; [_this select 0, player, false] call ULP_fnc_escort; [_vehicle, _this select 0] remoteExecCall [""ULP_fnc_putVehicleUnit"", _this select 0]; closeDialog 0; [format [""You have put %1 into a vehicle..."", [_this select 0, true] call ULP_fnc_getName]] call ULP_fnc_hint;";
 		};
 	};
 

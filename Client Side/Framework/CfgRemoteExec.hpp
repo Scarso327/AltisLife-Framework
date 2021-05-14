@@ -16,9 +16,6 @@ class CfgRemoteExec {
         mode = 1;
         jip = 0;
 
-        // REMOVE IN PRODUCTION
-        class bis_fnc_debugconsoleexec {};
-        
         class ULP_fnc_setFuel {};
         class ULP_fnc_lock {};
         class ULP_fnc_say3D {};
@@ -35,10 +32,12 @@ class CfgRemoteExec {
         class ULP_fnc_receivedBlood {};
         class ULP_fnc_applyTextures {};
         class ULP_fnc_spikeVehicle {};
+
 		
 		F(AH_KeyCheck,SERVER)
         F(AH_PlayerLoad,SERVER)
         F(AH_LogInterface,SERVER)
+        class ULP_fnc_flipVehicle {}:
 
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;

@@ -43,6 +43,12 @@ class CfgWorlds {
 	};
 };
 
+class CfgCommands {
+    allowedHTMLLoadURIs[] += {
+        "https://fini.dev/*"
+    };
+};
+
 #include "CfgDebriefing.hpp"
 #include "CfgDisabledCommands.hpp"
 #include "CfgFunctions.hpp"

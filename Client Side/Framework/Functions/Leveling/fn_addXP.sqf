@@ -49,7 +49,7 @@ for "_i" from 0 to 1 step 0 do {
 if !(ULP_Level isEqualTo _previousLevel) then {
 	["You leveled up!"] call ULP_fnc_hint;
 } else {
-	[format["You gained <t color='#B92DE0'>%1</t> XP for <t color='#B92DE0'>%2</t>.", [_xp] call ULP_fnc_numberText, _reason]] call ULP_fnc_hint;
+	[format["You gained <t color='#B92DE0'>%1</t> XP for %2.", [_xp] call ULP_fnc_numberText, _reason]] call ULP_fnc_hint;
 };
 
 [player, 4, [ULP_Level, ULP_XP]] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];

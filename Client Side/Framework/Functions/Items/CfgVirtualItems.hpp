@@ -505,8 +505,8 @@ class CfgVirtualItems {
 		displayName = "Stinger";
 		description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
 		icon = "Data\Icons\stinger.paa";
-		buyPrice = 33400;
-		sellPrice = 16700;
+		buyPrice = 8400;
+		sellPrice = 2200;
 		weight = 3;
 		class Settings {
 			onMarket = false;

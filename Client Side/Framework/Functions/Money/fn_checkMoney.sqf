@@ -24,7 +24,7 @@ switch (_mode) do {
 		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
 		
 		if (_cash > 0) then {
-			[format ["%1 has %2%3 in cash on their person...", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			[format ["%1 has <t color='#B92DE0'>%2%3</t> in cash on their person...", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			_unit setVariable ["checking_money", nil];
 		} else {
 			[format ["%1 has no cash on them...", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;

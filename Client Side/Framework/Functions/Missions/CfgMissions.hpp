@@ -144,10 +144,6 @@ class CfgMissions {
 				pos = "police_evidence_storage";
 				name = "Police Evidence Storage";
 			};
-			class AltisGallery {
-				pos = "altis_gallery";
-				name = "Altis Gallery";
-			};
 
 			// GATHER, PROCESSING & TRADING SITES
 			class AltisMetalExports {

@@ -8,7 +8,7 @@ class CfgAchievements {
 	};
 
 	// TODONOW
-	class FirstDrink {
+	/*class FirstDrink {
 		icon = "Data\UI\Achievements\firstDrink.paa";
 		displayName = "Big Drink";
 		description = "Taken your frist drink of alcohol.";
@@ -45,7 +45,7 @@ class CfgAchievements {
 		onUnlocked = "[""Salty""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
 		isMystery = false;
-	};
+	};*/
 
 	class Captain {
 		icon = "Data\UI\Achievements\captain.paa";

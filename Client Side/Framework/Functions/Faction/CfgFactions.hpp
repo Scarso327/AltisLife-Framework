@@ -202,7 +202,7 @@ class CfgFactions {
 				hasGPS = false;
 				hasCompass = true;
 				hasWatch = true;
-				hasRadio = false;
+				hasRadio = true;
 			};
 			virtualItems[] = { { "Identification", "name player" } };
 		};

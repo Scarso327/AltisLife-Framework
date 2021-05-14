@@ -652,6 +652,7 @@ class CfgVirtualItems {
 		sellPrice = 12500;
 		weight = 8;
 		class Settings : Settings {};
+		class Events {};
 	};
 
 	// Medical Equipment

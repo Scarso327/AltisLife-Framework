@@ -659,8 +659,8 @@ class CfgVirtualItems {
 		displayName = "Painkillers";
 		description = "Two pills that restore a small amount of health.";
 		icon = "Data\Icons\painkillers.paa";
-		buyPrice = 6000;
-		sellPrice = 3000;
+		buyPrice = 800;
+		sellPrice = 400;
 		weight = 1;
 		class Settings {
 			onMarket = false;
@@ -695,7 +695,7 @@ class CfgVirtualItems {
 		displayName = "Elastic Bandage";
 		icon = "Data\Icons\elasticBandage.paa";
 		description = "A bandage best used for treating abrasions and lacerations.";
-		buyPrice = 1585;
+		buyPrice = 1085;
 		sellPrice = 750;
 	};
 	class QuickClot : Bandage {
@@ -737,8 +737,8 @@ class CfgVirtualItems {
 	class MediKit : FirstAidKit {
 		displayName = "MediKit";
 		icon = "Data\Icons\mediKit.paa";
-		buyPrice = 28700;
-		sellPrice = 14350;
+		buyPrice = 18700;
+		sellPrice = 9350;
 		weight = 2;
 		class Settings : Settings {};
 	};
@@ -746,8 +746,8 @@ class CfgVirtualItems {
 		displayName = "Automated External Defibrillator";
 		description = "A portable electronic device that automatically diagnoses life-threatening cardiac arrhythmias.";
 		icon = "Data\Icons\defibrillator.paa";
-		buyPrice = 34600;
-		sellPrice = 17300;
+		buyPrice = 22600;
+		sellPrice = 11300;
 		weight = 2;
 		class Settings : Settings {};
 	};

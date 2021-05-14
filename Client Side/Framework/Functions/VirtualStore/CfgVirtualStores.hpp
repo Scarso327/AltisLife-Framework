@@ -244,7 +244,6 @@ class CfgVirtualStores {
 			class Morphine {};
 			class Epinephrine {};
 			class FirstAidKit {};
-			class MediKit {};
 			class AutomatedExternalDefibrillator {};
 		};
 	};

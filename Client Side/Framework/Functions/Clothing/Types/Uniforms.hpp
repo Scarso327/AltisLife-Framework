@@ -540,7 +540,7 @@ class U_Rangemaster {
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class PCSO {
-			displayName = "PCSO";
+			displayName = "Police Support Officer";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PCSO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
@@ -580,6 +580,7 @@ class U_B_GEN_Commander_F {
 	isGas = false;
 	class Textures {
 		class College {
+			displayName = "College of Policing";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\COL.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_COL"", 1] call ULP_fnc_hasAccess }";
 		};

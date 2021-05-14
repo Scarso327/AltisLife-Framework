@@ -536,7 +536,6 @@ class CfgVirtualItems {
 		sellPrice = 9700;
 		weight = 4;
 		class Settings : Settings {};
-		class Events {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
 	};
 	class Lighter : Stinger {

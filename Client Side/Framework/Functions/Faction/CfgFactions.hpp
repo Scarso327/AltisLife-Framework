@@ -77,16 +77,16 @@ class CfgFactions {
 				required = 1;
 			};
 			class AA { queryIndex = 27; };
-			// class HART { queryIndex = 27; };
+			class HART { queryIndex = 28; };
 			class HR {
-				queryIndex = 28;
+				queryIndex = 29;
 				payMulti = 0.5;
 			};
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "med_";
-			customQuery = ", med_blacklisted, mediclevel, aalevel, hrlevel";
+			customQuery = ", med_blacklisted, mediclevel, aalevel, hartlevel, hrlevel";
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};

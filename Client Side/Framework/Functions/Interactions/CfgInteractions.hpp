@@ -269,15 +269,17 @@ class CfgInteractions {
 			condition = "(speed _this) <= 4 && { _this in ULP_Keys || [""Police_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
-		class Unflip : Repair { // TODONOW
+		class Unflip : Repair {
 			title = "Unflip";
-			onClick = "hint ""Hello"";";
+			onClick = "_this call ULP_fnc_flipVehicle";
 		};
 
+		/*
 		class Push : Repair { // TODONOW (for boats)
 			title = "Push";
 			onClick = "hint ""Hello"";";
 		};
+		*/
 
 		// Admin Commands...
 		class AdminRepair {

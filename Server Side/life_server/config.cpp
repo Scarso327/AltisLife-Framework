@@ -99,6 +99,7 @@ class CfgPatches {
             class Bleedout : Spawn {};
             class Election : Spawn {};
             class BaseBid : Spawn {};
+            class Cartel : Dispute {};
             class Misc : Dispute {};
         };
 

@@ -2,7 +2,7 @@ class CfgLicenseStores {
 	class DVLA {
 		title = "Driver and Vehicle Licensing Agency";
 		factions[] = { "Civilian" };
-		condition = "!([""Driving""] call ULP_fnc_hasLicense) && { !([""Trucking""] call ULP_fnc_hasLicense) } && { !([""Boating""] call ULP_fnc_hasLicense) } && { !([""Piloting""] call ULP_fnc_hasLicense) }";
+		condition = "!([""Driving""] call ULP_fnc_hasLicense) || { !([""Trucking""] call ULP_fnc_hasLicense) } || { !([""Boating""] call ULP_fnc_hasLicense) } || { !([""Piloting""] call ULP_fnc_hasLicense) }";
 		licenses[] = { "Driving", "Trucking", "Boating", "Piloting" };
 	};
 
@@ -93,7 +93,7 @@ class CfgLicenseStores {
 		licenses[] = { "Moonshine" }; 
 	};
 	class MultiDrug : Process {
-		condition = "!([""Weed""] call ULP_fnc_hasLicense) && { !([""Heroin""] call ULP_fnc_hasLicense) } && { !([""Cocaine""] call ULP_fnc_hasLicense) } && { !([""ULP_fnc_hasLicense""] call ULP_fnc_hasLicense) } && { !([""Moonshine""] call ULP_fnc_hasLicense) }";
+		condition = "!([""Weed""] call ULP_fnc_hasLicense) || { !([""Heroin""] call ULP_fnc_hasLicense) } || { !([""Cocaine""] call ULP_fnc_hasLicense) } || { !([""ULP_fnc_hasLicense""] call ULP_fnc_hasLicense) } || { !([""Moonshine""] call ULP_fnc_hasLicense) }";
 		licenses[] = { "Weed", "Heroin", "Cocaine", "Meth", "Moonshine" };
 	};
 
@@ -128,7 +128,7 @@ class CfgLicenseStores {
 	class Blackmarket {
 		title = "Blackmarket Access";
 		factions[] = { "Civilian" };
-		condition = "[""Rebel""] call ULP_fnc_hasLicense && { !([""Blackmarket""] call ULP_fnc_hasLicense) } && { [""Blackmarketer""] call ULP_fnc_hasPerk } && { [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
+		condition = "([""Rebel""] call ULP_fnc_hasLicense || !([""Blackmarket""] call ULP_fnc_hasLicense)) && { [""Blackmarketer""] call ULP_fnc_hasPerk } && { [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		licenses[] = { "Blackmarket" };
 	};
 }; 

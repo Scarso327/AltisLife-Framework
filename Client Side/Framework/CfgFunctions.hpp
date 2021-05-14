@@ -422,6 +422,7 @@ class CfgFunctions {
 			class vehRemoteGate {};
 			class canANPR {};
 			class spikeVehicle {};
+			class flipVehicle {};
 		};
 
 		class VehicleEvents {

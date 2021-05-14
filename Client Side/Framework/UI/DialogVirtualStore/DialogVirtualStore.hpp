@@ -83,13 +83,9 @@ class DialogVirtualStore {
 				};
 				class Legality {
 					text = "Buy";
-					value = -1;
-					data = "data";
 				};
 				class Weight {
 					text = "Sell";
-					value = -1;
-					data = "data";
 				};
 				class SellPrice { 
 					text = "Amount";

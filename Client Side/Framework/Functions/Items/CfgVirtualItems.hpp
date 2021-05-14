@@ -536,6 +536,7 @@ class CfgVirtualItems {
 		sellPrice = 9700;
 		weight = 4;
 		class Settings : Settings {};
+		class Events {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
 	};
 	class Lighter : Stinger {
@@ -546,6 +547,7 @@ class CfgVirtualItems {
 		sellPrice = 445;
 		weight = 1;
 		class Settings : Settings {};
+		class Events {};
 		class Deconstruction {
 			time = 10;
 			workbench = false;
@@ -561,6 +563,7 @@ class CfgVirtualItems {
 		sellPrice = 1250;
 		weight = 1;
 		class Settings : Settings {};
+		class Events {};
 		class Deconstruction {
 			time = 10;
 			workbench = false;
@@ -608,6 +611,7 @@ class CfgVirtualItems {
 		sellPrice = 237500;
 		weight = 3;
 		class Settings : Settings {};
+		class Events {};
 		class Deconstruction {
 			time = 120;
 			workbench = true;
@@ -623,6 +627,7 @@ class CfgVirtualItems {
 		sellPrice = 375000;
 		weight = 4;
 		class Settings : Settings {};
+		class Events {};
 		class Deconstruction {
 			time = 180;
 			workbench = true;

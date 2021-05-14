@@ -205,6 +205,7 @@ class CfgItemsStore {
 
 	class Medic : Police {
 		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
+		default = 4;
 		class Rifles {};
 		class Pistols {};
 		class Attachments {};

@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   `mediclevel` enum('0','1','2','3','4','5','6','7','8') NOT NULL DEFAULT '0',
   `aalevel` enum('0','1','2','3') NOT NULL DEFAULT '0',
   `hartlevel` enum('0','1','2','3') NOT NULL DEFAULT '0',
-  `hrlevel` enum('0','1','2','3') NOT NULL DEFAULT '0',
+  `hrlevel` enum('0','1','2') NOT NULL DEFAULT '0',
   `med_licenses` text NOT NULL,
   `med_perks` text NOT NULL,
   `med_gear` text NOT NULL,

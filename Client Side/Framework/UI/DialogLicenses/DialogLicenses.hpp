@@ -100,7 +100,7 @@ class DialogSeizeLicenses : DialogLicenses {
 
 		class Select : Select {
 			idc = 5103;
-			text = "<t align = 'center'>seize</t>";
+			text = "<t align = 'center'>Seize</t>";
 			onButtonClick = "_this call ULP_fnc_seizeLicense;";
 		};
 	};

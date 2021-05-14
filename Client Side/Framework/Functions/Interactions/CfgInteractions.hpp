@@ -32,6 +32,11 @@ class CfgInteractions {
 			title = "Show Licenses";
 			onClick = "private _unit = _this select 0; if (isNull _unit) exitWith {}; if (time < (_unit getVariable [""licenses_shown"", 0])) exitWith { [""You've shown this person your licenses recently, please wait before trying again...""] call ULP_fnc_hint; }; _unit setVariable [""licenses_shown"", time + 5]; [""LicensesShown"", [player, ULP_Licenses, true]] remoteExecCall [""ULP_fnc_invokeEvent"", _unit]; [format [""You have shown %1 your licenses..."", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;";
 		};
+		class Ticket : GiveKeys {
+			title = "Issue Penalty Notice";
+			factions[] = { "Police" };
+			onClick = "_this call ULP_fnc_issueTicket;";
+		};
 
 		class RobCash {
 			title = "Rob Cash";
@@ -97,10 +102,6 @@ class CfgInteractions {
 			title = "Destroy Communications";
 			onClick = "_this call ULP_fnc_seizeComms;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_hasComms }";
-		};
-		class Ticket : Unrestrain {
-			title = "Issue Penalty Notice";
-			onClick = "_this call ULP_fnc_issueTicket;";
 		};
 		class Imprision : Unrestrain {
 			title = "Send to Prison";

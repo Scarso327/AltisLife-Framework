@@ -450,6 +450,7 @@ class CfgFunctions {
 			class addMission {};
 			class isATM {};
 			class lockForFactions {};
+			class sit {};
 		};
 		
 		class Garage {

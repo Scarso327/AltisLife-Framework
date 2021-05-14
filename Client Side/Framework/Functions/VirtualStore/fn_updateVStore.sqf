@@ -37,7 +37,7 @@ private _sellPrice = -1;
 		_buyPrice = getNumber (_cfg >> "buyPrice");
 		_sellPrice = getNumber (_cfg >> "sellPrice");
 
-		([_itemClass, _sellPrice, !([getNumber (_cfg >> "Settings" >> "isIllegal")] call ULP_fnc_bool)] call ULP_fnc_getSellPrices) params [
+		([_itemClass, _buyPrice, _sellPrice, !([getNumber (_cfg >> "Settings" >> "isIllegal")] call ULP_fnc_bool)] call ULP_fnc_getSellPrices) params [
 			["_sPrice", _sellPrice, [0]], ["_gangTax", 0, [0]], ["_cartels", [], [[]]]
 		];
 

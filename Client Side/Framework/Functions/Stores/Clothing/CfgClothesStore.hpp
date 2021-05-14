@@ -326,6 +326,9 @@ class CfgClothesStore {
 		condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		class Uniforms {
 			class U_O_R_Gorka_01_black_F : FactionBase {};
+			class U_C_FormalSuit_01_black_F : FactionBase { 
+				condition = "[""Hato_Main"", 4] call ULP_fnc_hasAccess"; 
+			};
 		};
 		
 		class Headgear {

@@ -49,7 +49,7 @@ class CfgClothesStore {
 				class Textures { class MPU {}; };
 			};
 			class U_C_CBRN_Suit_01_White_F {
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess";
 				class Textures { class U_C_CBRN_Suit_01_Blue_F {}; };
 			};
 		};
@@ -105,9 +105,7 @@ class CfgClothesStore {
 				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; 
 			};
 			class G_Respirator_white_F {};
-			class G_RegulatorMask_F { 
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
-			};
+			class G_RegulatorMask_F { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; };
 			class G_Bandanna_aviator { 
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures {
@@ -152,9 +150,7 @@ class CfgClothesStore {
 				displayName = "Invisible Backpack"; 
 				class Textures { class INVIS {}; };
 			};
-			class B_SCBA_01_F { 
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
-			};
+			class B_SCBA_01_F { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; };
 		};
 	};
 

@@ -8,31 +8,14 @@ class CfgClothesStore {
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Uniforms {
 			class U_Rangemaster {};
-			class U_B_GEN_Commander_F { 
-				condition = "[""Police_COL"", 1] call ULP_fnc_hasAccess"; 
-			};
-			class U_C_FormalSuit_01_black_F { 
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
-			};
-			class U_I_ParadeUniform_01_AAF_F { 
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
-			};
-			class U_I_ParadeUniform_01_AAF_decorated_F { 
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess"; 
-			};
-			class U_BG_Guerrilla_6_1 { 
-				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; 
-			};
-			class U_O_R_Gorka_01_black_F { 
-				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }"; 
-			};
-			class U_B_CombatUniform_mcam_worn { 
-				condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; 
-			};
-			class U_O_PilotCoveralls { 
-				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; 
-			};
+			class U_B_GEN_Commander_F { condition = "[""Police_COL"", 1] call ULP_fnc_hasAccess"; };
+			class U_C_FormalSuit_01_black_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
+			class U_I_ParadeUniform_01_AAF_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
+			class U_I_ParadeUniform_01_AAF_decorated_F { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess"; };
+			class U_BG_Guerrilla_6_1 { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
 			//class U_O_R_Gorka_01_black_F { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }"; };
+			class U_B_CombatUniform_mcam_worn { condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
+			class U_O_PilotCoveralls { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class U_B_CTRG_Soldier_F {
 				displayName = "SCO19 Combat Uniform";
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
@@ -40,7 +23,7 @@ class CfgClothesStore {
 			};
 			class U_B_GhillieSuit {
 				displayName = "SCO19 Ghillie Suit";
-				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_Wetsuit {
@@ -67,9 +50,7 @@ class CfgClothesStore {
 					class H_Cap_police : H_Cap_blk {};
 				};
 			};
-			class H_Beret_blk { 
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
-			};
+			class H_Beret_blk { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class H_Watchcap_blk { 
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures { class H_Watchcap_blk {}; };
@@ -78,9 +59,7 @@ class CfgClothesStore {
 				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_MPU"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures { class H_Booniehat_khk {}; };
 			};
-			class H_PilotHelmetHeli_B { 
-				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; 
-			};
+			class H_PilotHelmetHeli_B { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class H_HelmetSpecB_blk { 
 				displayName = "Operation Helmet";
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess"; 
@@ -101,9 +80,7 @@ class CfgClothesStore {
 			class G_Shades_Black {};
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
-			class G_B_Diving { 
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; 
-			};
+			class G_B_Diving { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F {};
 			class G_RegulatorMask_F { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; };
 			class G_Bandanna_aviator { 
@@ -115,9 +92,7 @@ class CfgClothesStore {
 					class G_Bandanna_blk : G_Bandanna_aviator {};
 				};
 			};
-			class G_Balaclava_TI_blk_F { 
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess"; 
-			};
+			class G_Balaclava_TI_blk_F { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess"; };
 		};
 
 		class Vests {

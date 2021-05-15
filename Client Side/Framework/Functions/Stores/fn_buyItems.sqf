@@ -65,7 +65,7 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 
 		// Pay for it and wipe total value...
 		if !([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) then {
-			[_cartValue] call ULP_fnc_removeMoney;
+			[_cartValue, false, format ["Bought Items"]] call ULP_fnc_removeMoney;
 		};
 		_display setVariable ["cartValue", 0];
 

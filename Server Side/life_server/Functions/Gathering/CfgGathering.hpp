@@ -9,6 +9,14 @@ class CfgGathering {
 		};
 	};
 
+	class Coral {
+		positions[] = { 
+			{2887.04, 9482.74, 0}, 
+			{3924.91, 10066 0}, 
+			{6075.623, 10197.856, 0}
+		};
+	};
+
 	class Weed {
 		positions[] = { 
 			{7401.868, 12221.646, 0}, 

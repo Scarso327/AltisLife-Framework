@@ -26,7 +26,7 @@ class CfgRewards {
 			class Money {
 				chance = 0.80;
 				type = "CASH";
-				value[] = { 50000, 150000 };
+				value[] = { 80000, 175000 };
 			};
 
 			class XP {
@@ -55,7 +55,7 @@ class CfgRewards {
 			class Money {
 				chance = 0.70;
 				type = "CASH";
-				value[] = { 80000, 150000 };
+				value[] = { 10000, 250000 };
 			};
 
 			class XP {
@@ -91,7 +91,7 @@ class CfgRewards {
 			class Money {
 				chance = 0.45;
 				type = "CASH";
-				value[] = { 100000, 250000 };
+				value[] = { 200000, 450000 };
 			};
 
 			class XP {

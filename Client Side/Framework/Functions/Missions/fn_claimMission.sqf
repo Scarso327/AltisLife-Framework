@@ -54,14 +54,18 @@ if !(_onClaimed isEqualTo "") then {
 	_pos call compile _onClaimed;
 };
 
-private _reward = getNumber (_typeCfg >> "Rewards" >> "moneyReward") + (["Mission"] call ULP_fnc_getLegislation);
+private _reward = getNumber (_typeCfg >> "Rewards" >> "moneyReward");
 
-if ([] call ULP_fnc_isGroup) then {
-	private _buff = [group player, "Missions"] call ULP_fnc_groupBuff;
-	if (_buff > 0) then { _reward = _reward * (1 + _buff); };
+if (_reward > 0) then {
+	_reward = _reward + (["Mission"] call ULP_fnc_getLegislation);
+
+	if ([] call ULP_fnc_isGroup) then {
+		private _buff = [group player, "Missions"] call ULP_fnc_groupBuff;
+		if (_buff > 0) then { _reward = _reward * (1 + _buff); };
+	};
+
+	_reward = round (_reward * (player distance _pos));
 };
-
-_reward = round (_reward * (player distance _pos));
 
 ULP_Missions set [_type, [_task, _reward, _eachFrame]];
 [format [getText (_typeCfg >> "Messages" >> "onAssigned"), _locName]] call ULP_fnc_hint;

@@ -53,8 +53,15 @@ if (_count <= 0) exitWith {
 	["You can't take this item from the container as it doesn't contain this item!"] call ULP_fnc_hint;
 };
 
+ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
+private _maxCarry = floor ((_maxWeight - _carryWeight) / getNumber(missionConfigFile >> "CfgVirtualItems" >> _item >> "weight"));
+
+if (_maxCarry <= 0) exitWith {
+	["You don't have enough inventory space to fit even one of these items!"] call ULP_fnc_hint;
+};
+
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _count], [_display, _container, _item, _data],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, (_count min _maxCarry)], [_display, _container, _item, _data],
 	{
 		_this params [
 			["_display", displayNull, [displayNull]],

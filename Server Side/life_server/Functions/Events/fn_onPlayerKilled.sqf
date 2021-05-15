@@ -9,8 +9,13 @@ _this params [
 	"_unit", "_killer", "_instigator"
 ];
 
+if (alive _killer && { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) }) exitWith {};
+
 // Notify the server...
-if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {	
+if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } || { !(_killer isKindOf "Man") }) then {
+	["Bleedout", [_unit getVariable ["realname", name _unit]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+	[getPlayerUID _unit, "Bleedout", [getPos _unit, getUnitLoadout _unit]] call ULP_SRV_fnc_logPlayerEvent;
+} else {
 	if ([_killer, ["Civilian"]] call ULP_fnc_isFaction) then {
 		[
 			getPlayerUID _killer, 
@@ -36,7 +41,4 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 	};
 
 	["KilledSomeone", [_unit]] remoteExecCall ["ULP_fnc_invokeEvent", _killer];
-} else {
-	["Bleedout", [_unit getVariable ["realname", name _unit]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
-	[getPlayerUID _unit, "Bleedout", [getPos _unit, getUnitLoadout _unit]] call ULP_SRV_fnc_logPlayerEvent;
 };

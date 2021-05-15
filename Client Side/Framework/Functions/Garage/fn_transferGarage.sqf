@@ -24,7 +24,11 @@ _vehInfo params [ "_id", "_classname" ];
 private _cfg = [_classname] call ULP_fnc_vehicleCfg;
 if (_cfg isEqualTo []) exitWith {};
 
-_cfg params [ "", "", "", "_name" ];
+_cfg params [ "", "_missionCfg", "", "_name" ];
+
+if !([getNumber (_missionCfg >> "canTransfer")] call ULP_fnc_bool) exitWith {
+	["This vehicle can't be transfered"] call ULP_fnc_hint;
+};
 
 [ (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), ["Civilian"], [_display, _id, _name], {
 	_this params [

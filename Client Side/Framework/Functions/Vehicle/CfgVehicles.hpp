@@ -8,6 +8,7 @@ class CfgVehicles {
 		virtualSpace = 0;
 		garageLimit = 4;
 		isHouse = false;
+		canTransfer = true;
 		conditions = "true";
 		blacklistedItems[] = {};
 		class Textures {};
@@ -991,6 +992,7 @@ class CfgVehicles {
 		virtualSpace = 10;
 		garageLimit = 2;
 		enableRope = false;
+		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
 		class Textures {
 			class Hato : HatoTexture { 
@@ -1148,6 +1150,7 @@ class CfgVehicles {
 		crushTime = 30;
 		chopKeepChance = 85;
 		chopTime = 120;
+		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk";
 		class Textures {
 			class Sand : BaseTexture {

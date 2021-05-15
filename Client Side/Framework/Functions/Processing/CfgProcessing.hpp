@@ -56,25 +56,25 @@ class CfgProcessing {
 	class Copper : Smelting {
 		materials[] = { { "CopperOre", 1 } };
 		items[] = { { "CopperBar", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Copper" };
 	};
 
 	class Silver : Smelting {
 		materials[] = { { "SilverOre", 1 } };
 		items[] = { { "SilverBar", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Silver" };
 	};
 
 	class Iron : Smelting {
 		materials[] = { { "IronOre", 1 } };
 		items[] = { { "IronBar", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Iron" };
 	};
 
 	class Sand : Smelting {
 		materials[] = { { "Sand", 1 } };
 		items[] = { { "Glass", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Sand" };
 	};
 
 	// Refining
@@ -82,7 +82,7 @@ class CfgProcessing {
 		processTitle = "Refining";
 		materials[] = { { "UnrefinedSalt", 1 } };
 		items[] = { { "RefinedSalt", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Salt" };
 	};
 
 	// Cutting
@@ -90,7 +90,7 @@ class CfgProcessing {
 		processTitle = "Cutting";
 		materials[] = { { "UncutDiamond", 1 } };
 		items[] = { { "CutDiamond", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Diamond" };
 	};
 
 	// Processing
@@ -98,108 +98,104 @@ class CfgProcessing {
 		processTime = 40;
 		materials[] = { { "FreshApple", 2 } };
 		items[] = { { "Schnapps", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Schnapps" };
 	};
 
 	class SchnapsPeach : BaseProcess {
 		processTime = 40;
 		materials[] = { { "FreshPeach", 2 } };
 		items[] = { { "Schnapps", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Schnapps" };
 	};
 
 	class Cigarette : BaseProcess {
 		materials[] = { { "Tobacco", 1 } };
 		items[] = { { "Cigarette", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Tobacco" };
 	};
 
 	class Cigar : BaseProcess {
 		processTime = 70;
 		materials[] = { { "Tobacco", 1 } };
 		items[] = { { "Cigar", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Tobacco" };
 	};
 
 	class Weed : BaseProcess {
 		materials[] = { { "UnprocessedWeed", 1 } };
 		items[] = { { "ProcessedWeed", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Weed" };
 	};
 
 	class PurifiedWeed : BaseProcess {
 		processTime = 100;
 		materials[] = { { "ProcessedWeed", 1 } };
 		items[] = { { "PurifiedWeed", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Heroin : BaseProcess {
 		processTime = 70;
 		materials[] = { { "UnprocessedHeroin", 1 } };
 		items[] = { { "ProcessedHeroin", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Heroin" };
 	};
 
 	class PurifiedHeroin : BaseProcess {
 		processTime = 100;
 		materials[] = { { "ProcessedHeroin", 1 } };
 		items[] = { { "PurifiedHeroin", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Cocaine : BaseProcess {
 		processTime = 80;
 		materials[] = { { "UnprocessedCocaine", 1 } };
 		items[] = { { "ProcessedCocaine", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Cocaine" };
 	};
 
 	class PurifiedCocaine : BaseProcess {
 		processTime = 100;
 		materials[] = { { "ProcessedCocaine", 1 } };
 		items[] = { { "PurifiedCocaine", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Meth : BaseProcess {
 		processTime = 90;
 		materials[] = { { "EphedrineBarrel", 1 } };
 		items[] = { { "ProcessedMeth", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Meth" };
 	};
 
 	class PurifiedMeth : BaseProcess {
 		processTime = 100;
 		materials[] = { { "ProcessedMeth", 1 } };
 		items[] = { { "PurifiedMeth", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Moonshine : BaseProcess {
 		processTime = 90;
 		materials[] = { { "Corn", 1 } };
 		items[] = { { "Moonshine", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Moonshine" };
 	};
 
 	class PurifiedMoonshine : BaseProcess {
 		processTime = 100;
 		materials[] = { { "Moonshine", 1 } };
 		items[] = { { "PurifiedMoonshine", 1 } };
-		reqLicenses[] = {};
 	};
 
 	class Uranium : BaseProcess {
 		processTime = 100;
 		materials[] = { { "UraniumOre", 1 } };
 		items[] = { { "UraniumBar", 1 } };
-		reqLicenses[] = {};
+		reqLicenses[] = { "Uranium" };
 	};
 
 	class Oil : BaseProcess {
 		materials[] = { { "UnprocessedOil", 1 } };
 		items[] = { { "ProcessedOil", 1 } };
+		reqLicenses[] = { "Oil" };
 	};
 
 	class Gold : BaseProcess {

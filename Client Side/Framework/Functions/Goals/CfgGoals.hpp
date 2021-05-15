@@ -132,7 +132,7 @@ class CfgGoals {
 				description = "Sell Sand before the week's end!";
 			};
 			class SellSalt : SellSchnapps {
-				item = "RefindedSalt";
+				item = "RefinedSalt";
 				title = "Sell Salt";
 				description = "Sell Salt before the week's end!";
 			};

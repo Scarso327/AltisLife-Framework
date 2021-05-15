@@ -1186,9 +1186,9 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class RefindedSalt : CopperBar {
-		displayName = "Refinded Salt";
-		description = "Refinded salt that is ready to be sold.";
+	class RefinedSalt : CopperBar {
+		displayName = "Refined Salt";
+		description = "Refined salt that is ready to be sold.";
 		icon = "Data\Icons\saltRefined.paa";
 		sellPrice = 3200;
 		class Settings : Settings {};

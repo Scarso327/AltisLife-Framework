@@ -81,7 +81,7 @@ class CfgProcessing {
 	class Salt : BaseProcess {
 		processTitle = "Refining";
 		materials[] = { { "UnrefinedSalt", 1 } };
-		items[] = { { "RefindedSalt", 1 } };
+		items[] = { { "RefinedSalt", 1 } };
 		reqLicenses[] = {};
 	};
 

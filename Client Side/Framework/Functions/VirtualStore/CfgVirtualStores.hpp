@@ -321,7 +321,7 @@ class CfgVirtualStores {
 		storeName = "Salt Trader";
 		conditions = "true";
 		class Items {
-			class RefindedSalt {};
+			class RefinedSalt {};
 		};
 	};
 

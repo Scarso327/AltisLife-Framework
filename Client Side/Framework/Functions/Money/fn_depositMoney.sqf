@@ -40,7 +40,7 @@ if (_amount <= 0) exitWith {
 			[format["You don't have <t color='#B92DE0'>%1%2</t> to deposit!", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};
 
-		if ([_value, false] call ULP_fnc_removeMoney) then {
+		if ([_value, false, "Bank Deposit"] call ULP_fnc_removeMoney) then {
 			if (_group) then {
 				[player, _value, true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
 			} else {

@@ -45,7 +45,7 @@ if (_amount <= 0) exitWith {
 			};
 
 			if ([_value, true, "Bank Withdrawal"] call ULP_fnc_removeMoney) then {
-				[_value] call ULP_fnc_addMoney;
+				[_value, false, "Bank Withdrawal"] call ULP_fnc_addMoney;
 				[format["You have withdrawn <t color='#B92DE0'>%1%2</t>.", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 		};

@@ -1170,7 +1170,7 @@ class CfgVirtualItems {
 	class IronBar : CopperBar {
 		displayName = "Iron Bar";
 		sellPrice = 7350;
-		weight = 3;
+		weight = 2;
 		class Settings : Settings {};
 	};
 	class SteelBar : CopperBar {

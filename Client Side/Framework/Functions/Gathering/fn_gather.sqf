@@ -67,8 +67,11 @@ if !(_profession isEqualTo []) then {
 	[format["You've gathered <t color='#B92DE0'>%1 %2(s)</t>.", _total, getText(_item >> "displayName")]] call ULP_fnc_hint;
 	["GatheredVirtualItem", [configName _item, _total]] call ULP_fnc_invokeEvent;
 
-	if !(_profession isEqualTo []) then { _profession call ULP_fnc_increaseProfession; };
-	if !(_leveling isEqualTo []) then { _leveling call ULP_fnc_addXP; };
+	if (time >= (player getVariable ["GatherCooldown", time - 30])) then {
+		if !(_profession isEqualTo []) then { _profession call ULP_fnc_increaseProfession; };
+		if !(_leveling isEqualTo []) then { _leveling call ULP_fnc_addXP; };
+		player setVariable ["GatherCooldown", time + 30];
+	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
 
 true

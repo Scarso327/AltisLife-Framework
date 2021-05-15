@@ -1176,7 +1176,13 @@ class CfgVirtualItems {
 	class SteelBar : CopperBar {
 		displayName = "Steel Bar";
 		sellPrice = 9670;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+		};
 	};
 	class Glass : CopperBar {
 		displayName = "Glass";
@@ -1206,7 +1212,13 @@ class CfgVirtualItems {
 		description = "A finely cut diamond that women appear to love.";
 		icon = "Data\Icons\diamond.paa";
 		sellPrice = 6100;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+		};
 	};
 
 	// Illegal Unprocessed

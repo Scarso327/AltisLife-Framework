@@ -43,10 +43,10 @@ if (_items isEqualTo [] || { _materials isEqualTo [] }) exitWith { false };
     };
 } forEach _materials;
 
-private _profession = getArray (_zone >> "profession");
-private _leveling = getArray (_zone >> "leveling");
+private _profession = getArray (_cfg >> "profession");
+private _leveling = getArray (_cfg >> "leveling");
 
-private _time = getNumber(_zone >> "processTime");
+private _time = getNumber(_cfg >> "processTime");
 
 if !(_profession isEqualTo []) then {
 	private _profCal = [(_profession select 0)] call ULP_fnc_getProfessionCalculation;

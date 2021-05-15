@@ -23,7 +23,7 @@ lnbClear _list;
 		private _illegal = [getNumber (_x >> "Settings" >> "isIllegal")] call ULP_fnc_bool;
 		private _sellPrice = getNumber (_x >> "sellPrice");
 
-		([configName _x, _buyPrice, _sellPrice, !_illegal] call ULP_fnc_getSellPrices) params [
+		([configName _x, getNumber (_x >> "buyPrice"), _sellPrice, !_illegal] call ULP_fnc_getSellPrices) params [
 			["_sellPrice", _sellPrice, [0]]
 		];
 

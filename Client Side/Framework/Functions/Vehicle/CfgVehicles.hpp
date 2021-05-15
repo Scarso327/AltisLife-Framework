@@ -723,6 +723,7 @@ class CfgVehicles {
 		crushTime = 60;
 		chopKeepChance = 90;
 		chopTime = 300;
+		canTransfer = false;
 		turrets[] = { { "SmokeLauncher" } };
 		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk";
 		class Textures {

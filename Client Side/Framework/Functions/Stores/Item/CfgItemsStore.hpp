@@ -81,7 +81,7 @@ class CfgItemsStore {
 				class textures { class arifle_MSBS65_GL_black_F {}; };
 			};
 			class arifle_MSBS65_UBS_black_F {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
 				class textures { class arifle_MSBS65_UBS_black_F {}; };
 			};
 			class arifle_Katiba_C_F {
@@ -176,6 +176,7 @@ class CfgItemsStore {
 			};
 			class 20Rnd_762x51_Mag {};
 			class 6Rnd_12Gauge_Slug {};
+			class 6Rnd_12Gauge_Slug { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }"; };
 			class UGL_FlareWhite_F {
 				class textures { class UGL_FlareWhite_F {}; }; 
 			};

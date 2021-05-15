@@ -1685,9 +1685,9 @@ class CfgVirtualItems {
 		sellPrice = 100927;
 		class Settings : Settings {};
 	};
-	class RegliousTotem : OldCoin {
-		displayName = "Reglious Totem";
-		icon = "Data\Icons\regliousTotem.paa";
+	class ReligiousTotem : OldCoin {
+		displayName = "Religious Totem";
+		icon = "Data\Icons\religiousTotem.paa";
 		sellPrice = 133950;
 		class Settings : Settings {};
 	};

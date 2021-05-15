@@ -71,7 +71,7 @@ if (ULP_FirstSpawn) then {
 	if ([] call ULP_fnc_isGovernor) then { ["Governor"] call ULP_fnc_achieve; };
 
 	if (["Police_Main", 1] call ULP_fnc_hasAccess) then { ["JoinAPC"] call ULP_fnc_achieve; };
-	if (["Police_COL", 1] call ULP_fnc_hasAccess) then { ["JoinRTA"] call ULP_fnc_achieve; };
+	if (["Police_COL", 1] call ULP_fnc_hasAccess) then { ["JoinCOL"] call ULP_fnc_achieve; };
 	if (["Police_NPAS", 1] call ULP_fnc_hasAccess) then { ["JoinNPAS"] call ULP_fnc_achieve; };
 	if (["Police_SCO", 1] call ULP_fnc_hasAccess) then { ["JoinSCO19"] call ULP_fnc_achieve; };
 	if (["Police_NCA", 1] call ULP_fnc_hasAccess) then { ["JoinNCA"] call ULP_fnc_achieve; };
@@ -81,7 +81,7 @@ if (ULP_FirstSpawn) then {
 	if (["Police_UC", 1] call ULP_fnc_hasAccess) then { ["JoinUC"] call ULP_fnc_achieve; };
 
 	if (["Medic_Main", 1] call ULP_fnc_hasAccess) then { ["JoinNHS"] call ULP_fnc_achieve; };
-	if (["Medic_HR", 1] call ULP_fnc_hasAccess) then { ["JoinAA"] call ULP_fnc_achieve; };
+	if (["Medic_HR", 1] call ULP_fnc_hasAccess) then { ["JoinHR"] call ULP_fnc_achieve; };
 	if (["Medic_AA", 1] call ULP_fnc_hasAccess) then { ["JoinAA"] call ULP_fnc_achieve; };
 
 	if (["Hato_Main", 1] call ULP_fnc_hasAccess) then { ["JoinHATO"] call ULP_fnc_achieve; };

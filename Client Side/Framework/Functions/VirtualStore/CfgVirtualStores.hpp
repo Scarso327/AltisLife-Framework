@@ -321,7 +321,7 @@ class CfgVirtualStores {
 		storeName = "Salt Trader";
 		conditions = "true";
 		class Items {
-			class RefindedSalt {};
+			class RefinedSalt {};
 		};
 	};
 
@@ -461,7 +461,7 @@ class CfgVirtualStores {
 			class PetrifiedShield {};
 			class WeatheredSculpture {};
 			class AncientAmber {};
-			class RegliousTotem {};
+			class ReligiousTotem {};
 			class StrongMetalRing {};
 			class DiamondRing {};
 			class EmeraldAmulet {};

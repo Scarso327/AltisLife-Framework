@@ -1,7 +1,7 @@
 class CfgSettings {
     developers[] = { "76561198092567307", "76561197971322689" };
     
-    framework_version = "1.0.2";
+    framework_version = "1.0.3";
 
     total_maxWeight = 5;
 
@@ -22,9 +22,9 @@ class CfgSettings {
 
     class CfgMedical {
         /* Bleed Out */
-        AllowBleedoutPercentage = 0.5;
-        BleedOutTime = 10 * 60;
-        RedzonePercentage = 0.2; // 20% of BleedOutTime...
+        AllowBleedoutPercentage = 0.75;
+        BleedOutTime = 20 * 60;
+        RedzonePercentage = 0.1;
 
         /* Blood */
         BloodBagIncrease = 90;

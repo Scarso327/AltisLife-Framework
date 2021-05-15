@@ -42,8 +42,9 @@ class CfgGathering {
 
 	class Coral : BaseGather {
 		hidden[] = { "Police" };
-		areas[] = { { "coral_field", 20 } };
+		areas[] = { { "coral_reef", 20 } };
 		items[] = { { "Coral", 100 } };
+		leveling[] = { 2, "Gathering", 80 };
 	};
 
 	class Corn : BaseGather {
@@ -68,12 +69,14 @@ class CfgGathering {
 		hidden[] = { "Police" };
 		areas[] = { { "heroin_field", 20 } };
 		items[] = { { "UnprocessedHeroin", 100 } };
+		leveling[] = { 2, "Gathering", 100 };
 	};
 
 	class Cocaine : BaseGather {
 		hidden[] = { "Police" };
 		areas[] = { { "cocaine_field", 20 } };
 		items[] = { { "UnprocessedCocaine", 100 } };
+		leveling[] = { 2, "Gathering", 100 };
 	};
 
 	class Coal : BaseMine {
@@ -89,17 +92,20 @@ class CfgGathering {
 	class Silver : BaseMine {
 		areas[] = { { "silver_mine", 20 } };
 		items[] = { { "SilverOre", 100 } };
+		leveling[] = { 2, "Gathering", 100 };
 	};
 
 	class Iron : BaseMine {
 		areas[] = { { "iron_mine", 20 } };
 		items[] = { { "IronOre", 100 } };
+		leveling[] = { 3, "Gathering", 90 };
 	};
 
 	class Oil : BaseMine {
 		reqItems[] = { "Extractor" };
 		areas[] = { { "oil_extraction", 20 } };
 		items[] = { { "UnprocessedOil", 100 } };
+		leveling[] = { 5, "Gathering", 90 };
 	};
 
 	class Sand : BaseMine {
@@ -116,12 +122,14 @@ class CfgGathering {
 	class Diamond : BaseMine {
 		areas[] = { { "diamond_mine", 20 } };
 		items[] = { { "UncutDiamond", 100 } };
+		leveling[] = { 2, "Gathering", 100 };
 	};
 
 	class Uranium : BaseMine {
 		hidden[] = { "Police" };
 		areas[] = { { "uranium_mine", 20 } };
 		items[] = { { "UraniumOre", 100 } };
+		leveling[] = { 10, "Gathering", 70 };
 		gatherTime = 5;
 	};
 

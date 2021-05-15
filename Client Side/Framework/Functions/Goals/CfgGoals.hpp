@@ -20,6 +20,7 @@ class CfgGoals {
 				item = "Coral";
 				title = "Gather Coral";
 				description = "Gather Coral before today's end!";
+				tiers[] = { 100, 300, 500 };
 			};
 			class GatherCorn : GatherApple {
 				item = "Corn";
@@ -132,7 +133,7 @@ class CfgGoals {
 				description = "Sell Sand before the week's end!";
 			};
 			class SellSalt : SellSchnapps {
-				item = "RefindedSalt";
+				item = "RefinedSalt";
 				title = "Sell Salt";
 				description = "Sell Salt before the week's end!";
 			};

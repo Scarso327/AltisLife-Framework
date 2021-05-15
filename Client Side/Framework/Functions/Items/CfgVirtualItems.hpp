@@ -1092,6 +1092,7 @@ class CfgVirtualItems {
 	class IronOre : CopperOre {
 		displayName = "Iron Ore";
 		icon = "Data\Icons\ore.paa";
+		weight = 5;
 		class Settings : Settings {};
 	};
 	class Sand : Tobacco {
@@ -1170,13 +1171,18 @@ class CfgVirtualItems {
 	class IronBar : CopperBar {
 		displayName = "Iron Bar";
 		sellPrice = 7350;
-		weight = 3;
 		class Settings : Settings {};
 	};
 	class SteelBar : CopperBar {
 		displayName = "Steel Bar";
 		sellPrice = 9670;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+		};
 	};
 	class Glass : CopperBar {
 		displayName = "Glass";
@@ -1186,9 +1192,9 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class RefindedSalt : CopperBar {
-		displayName = "Refinded Salt";
-		description = "Refinded salt that is ready to be sold.";
+	class RefinedSalt : CopperBar {
+		displayName = "Refined Salt";
+		description = "Refined salt that is ready to be sold.";
 		icon = "Data\Icons\saltRefined.paa";
 		sellPrice = 3200;
 		class Settings : Settings {};
@@ -1206,7 +1212,13 @@ class CfgVirtualItems {
 		description = "A finely cut diamond that women appear to love.";
 		icon = "Data\Icons\diamond.paa";
 		sellPrice = 6100;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+		};
 	};
 
 	// Illegal Unprocessed
@@ -1685,9 +1697,9 @@ class CfgVirtualItems {
 		sellPrice = 100927;
 		class Settings : Settings {};
 	};
-	class RegliousTotem : OldCoin {
-		displayName = "Reglious Totem";
-		icon = "Data\Icons\regliousTotem.paa";
+	class ReligiousTotem : OldCoin {
+		displayName = "Religious Totem";
+		icon = "Data\Icons\religiousTotem.paa";
 		sellPrice = 133950;
 		class Settings : Settings {};
 	};

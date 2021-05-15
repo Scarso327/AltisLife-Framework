@@ -22,7 +22,7 @@ private _time = ["rapidStorer", getNumber (missionConfigFile >> "CfgSettings" >>
 if (isNumber (_missionCfg >> "garageDelay")) then {
 	_time = _time + getNumber (_missionCfg >> "garageDelay");
 };
-if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 0; };
+if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 5; };
 
 if !((crew _vehicle) isEqualTo []) exitWith {
 	["No one can be in the vehicle while you store it!"] call ULP_fnc_hint;

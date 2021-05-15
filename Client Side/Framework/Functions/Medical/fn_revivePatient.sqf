@@ -16,7 +16,7 @@ _this params [
 private _display = ctrlParent _ctrl;
 if (isNull _display) exitWith {};
 
-if (!([player, ["Medic"]] call ULP_fnc_isFaction) && { (count (["Medic"] call ULP_fnc_allMembers)) >= 0 }) exitWith {
+if (!([player, ["Medic"]] call ULP_fnc_isFaction) && { (count (["Medic"] call ULP_fnc_allMembers)) > 0 }) exitWith {
 	["You can't revive someone while medics are online..."] call ULP_fnc_hint;
 };
 

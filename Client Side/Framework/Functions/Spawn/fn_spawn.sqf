@@ -71,7 +71,7 @@ if (ULP_FirstSpawn) then {
 	if ([] call ULP_fnc_isGovernor) then { ["Governor"] call ULP_fnc_achieve; };
 
 	if (["Police_Main", 1] call ULP_fnc_hasAccess) then { ["JoinAPC"] call ULP_fnc_achieve; };
-	if (["Police_COL", 1] call ULP_fnc_hasAccess) then { ["JoinRTA"] call ULP_fnc_achieve; };
+	if (["Police_COL", 1] call ULP_fnc_hasAccess) then { ["JoinCOL"] call ULP_fnc_achieve; };
 	if (["Police_NPAS", 1] call ULP_fnc_hasAccess) then { ["JoinNPAS"] call ULP_fnc_achieve; };
 	if (["Police_SCO", 1] call ULP_fnc_hasAccess) then { ["JoinSCO19"] call ULP_fnc_achieve; };
 	if (["Police_NCA", 1] call ULP_fnc_hasAccess) then { ["JoinNCA"] call ULP_fnc_achieve; };

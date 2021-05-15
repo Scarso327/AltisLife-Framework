@@ -38,13 +38,13 @@ private _sellPrice = -1;
 		_sellPrice = getNumber (_cfg >> "sellPrice");
 
 		([_itemClass, _buyPrice, _sellPrice, !([getNumber (_cfg >> "Settings" >> "isIllegal")] call ULP_fnc_bool)] call ULP_fnc_getSellPrices) params [
-			["_sPrice", _sellPrice, [0]], ["_gangTax", 0, [0]], ["_cartels", [], [[]]]
+			["_sellPrice", _sellPrice, [0]], ["_gangTax", 0, [0]], ["_cartels", [], [[]]]
 		];
 
 		private _row = _list lnbAddRow [
 			_itemName, 
 			([format["£%1", [_buyPrice] call ULP_fnc_numberText], "-"] select (_buyPrice isEqualTo -1)),
-			([format["£%1", [_sPrice] call ULP_fnc_numberText], "-"] select (_sPrice isEqualTo -1)), 
+			([format["£%1", [_sellPrice] call ULP_fnc_numberText], "-"] select (_sellPrice isEqualTo -1)), 
 			[_itemCount] call ULP_fnc_numberText
 		];
 
@@ -55,7 +55,7 @@ private _sellPrice = -1;
 		_list lnbSetData [[_row, 0], _itemClass];
 		_list lnbSetValue [[_row, 1], _buyPrice];
 		_list lnbSetData [[_row, 2], str [_gangTax, _cartels]];
-		_list lnbSetValue [[_row, 2], _sPrice];
+		_list lnbSetValue [[_row, 2], _sellPrice];
 		_list lnbSetValue [[_row, 3], _itemCount];
 	};
 } forEach ("isClass _x" configClasses ((_display getVariable "curStore") >> "Items"));

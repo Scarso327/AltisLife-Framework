@@ -20,6 +20,7 @@ class CfgGoals {
 				item = "Coral";
 				title = "Gather Coral";
 				description = "Gather Coral before today's end!";
+				tiers[] = { 100, 300, 500 };
 			};
 			class GatherCorn : GatherApple {
 				item = "Corn";

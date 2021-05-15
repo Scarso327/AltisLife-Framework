@@ -32,6 +32,7 @@ class CfgClothesStore {
 			class U_O_PilotCoveralls { 
 				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; 
 			};
+			//class U_O_R_Gorka_01_black_F { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }"; };
 			class U_B_CTRG_Soldier_F {
 				displayName = "SCO19 Combat Uniform";
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";

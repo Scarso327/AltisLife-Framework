@@ -52,7 +52,7 @@ if !([format["Servicing %1", _name], _time, [_location, _vehicle, _name, _cost],
 		[format ["You failed to service the %1 as it's either beyond repair or isn't near the stand!", _name]] call ULP_fnc_hint;
 	};
 
-	if ([_cost] call ULP_fnc_removeMoney) exitWith {
+	if ([_cost, false, format ["Serviced %1", _name]] call ULP_fnc_removeMoney) exitWith {
 		[format ["You can't afford to pay %1%2 to service this vehicle.!", "£", [_cost] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	};
 

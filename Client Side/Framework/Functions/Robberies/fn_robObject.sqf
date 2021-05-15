@@ -57,7 +57,7 @@ private _targets = getText (_msg >> "targets");
 
 	private _reward = getArray(_cfg >> "reward");
 	private _money = (_reward # 0) + round (random (_reward # 1));
-	[_money] call ULP_fnc_addMoney;
+	[_money, false, format ["Robbed Store at %1 ", getPos player]] call ULP_fnc_addMoney;
 
 	getArray (_cfg >> "leveling") call ULP_fnc_addXP;
 	[(group player), "Robbery"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", 2];

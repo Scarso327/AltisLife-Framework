@@ -1155,7 +1155,7 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 	};
-	class CopperBar : Cigarette {
+	class CopperBar : Coal {
 		displayName = "Copper Bar";
 		description = "A processed metal bar.";
 		icon = "Data\Icons\ingot.paa";

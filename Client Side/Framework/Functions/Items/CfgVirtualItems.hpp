@@ -1092,6 +1092,7 @@ class CfgVirtualItems {
 	class IronOre : CopperOre {
 		displayName = "Iron Ore";
 		icon = "Data\Icons\ore.paa";
+		weight = 5;
 		class Settings : Settings {};
 	};
 	class Sand : Tobacco {
@@ -1170,7 +1171,6 @@ class CfgVirtualItems {
 	class IronBar : CopperBar {
 		displayName = "Iron Bar";
 		sellPrice = 7350;
-		weight = 2;
 		class Settings : Settings {};
 	};
 	class SteelBar : CopperBar {

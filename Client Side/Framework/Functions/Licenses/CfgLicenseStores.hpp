@@ -24,7 +24,7 @@ class CfgLicenseStores {
 	};
 	class IDAP : Taxi {
 		title = "IDAP Volunteer";
-		condition = "[""CompletedCV""] call ULP_fnc_hasPerk && { !([""IDAP""] call ULP_fnc_hasLicense) }";
+		condition = "!([""IDAP""] call ULP_fnc_hasLicense)";
 		licenses[] = { "IDAP" };
 	};
 

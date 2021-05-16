@@ -211,7 +211,7 @@ class CfgBlueprints {
 		class B_MediKit : B_FirstAidKit {
 			icon = "Data\Icons\mediKit.paa";
 			displayName = "MediKit";
-			materials[] = { {"Painkillers", 5}, {"Morphine", 2}, {"Epinephrine", 1}, {"Bandage", 10}, {"BloodBag", 3} };
+			materials[] = { {"Morphine", 2}, {"Epinephrine", 1}, {"Bandage", 10}, {"BloodBag", 3} };
 			item = "MediKit";
 		};
 		class B_AutomatedExternalDefibrillator : B_FirstAidKit {

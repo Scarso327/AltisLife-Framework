@@ -154,7 +154,7 @@ class CfgLoot {
 			class PetrifiedShield { amount = 1; };
 			class WeatheredSculpture { amount = 1; };
 			class AncientAmber { amount = 4; };
-			class RegliousTotem { amount = 1; };
+			class ReligiousTotem { amount = 1; };
 			class StrongMetalRing { amount = 2; };
 			class EmeraldAmulet { amount = 1; };
 			class AncientLedger { amount = 1; };

@@ -12,7 +12,7 @@ class CfgArchaeology {
 			{ 0.77, { "PetrifiedShield", 1 } },
 			{ 0.78, { "WeatheredSculpture", 1 } },
 			{ 0.79, { "AncientAmber", 1 } },
-			{ 0.80, { "RegliousTotem", 1 } },
+			{ 0.80, { "ReligiousTotem", 1 } },
 			{ 0.83, { "CommonMapFragment", 2 } },
 			{ 0.85, { "StrongMetalRing", 1 } },
 			{ 0.90, { "EmeraldAmulet", 1 } },

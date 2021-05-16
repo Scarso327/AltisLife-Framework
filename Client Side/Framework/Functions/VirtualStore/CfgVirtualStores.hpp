@@ -235,7 +235,7 @@ class CfgVirtualStores {
 		storeName = "Medical Supplies";
 		conditions = "true";
 		class Items {
-			//class Painkillers {};
+			class Painkillers {};
 			class Bandage {};
 			class FieldDressing {};
 			class Elastic {};

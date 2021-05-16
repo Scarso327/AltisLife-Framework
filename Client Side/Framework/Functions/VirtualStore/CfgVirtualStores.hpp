@@ -123,6 +123,7 @@ class CfgVirtualStores {
 			class Water {};
 			class Pickaxe {};
 			class LumberAxe {};
+                        class Extractor {};
 			class Shovel {};
 			//class FishingNet {};
 			class FuelCan {};

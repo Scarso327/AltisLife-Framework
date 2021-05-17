@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _cfg = missionConfigFile >> "CfgArchaeology" >> _rarity;
-if !(isClass _cfg || { !ULP_Archaeology_Digging }) exitWith { false };
+if (!(isClass _cfg) || { !ULP_Archaeology_Digging }) exitWith { false };
 
 private _type = format ["Archaeology%1", _rarity];
 

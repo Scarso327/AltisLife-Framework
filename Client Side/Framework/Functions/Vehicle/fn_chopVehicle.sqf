@@ -60,7 +60,7 @@ if (_near isEqualTo []) exitWith {
 	};
 
 	if !([format["Chopping %1", _name], _time, [_vehicle, _missionCfg, _name, _payMore, _allowKeep], {
-		!(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 5 }
+		!(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 15 }
 	}, {
 		scopeName "_fnc_onChopped";
 		_this params [ "_vehicle", "_cfg", "_name", "_payMore", "_allowKeep" ];
@@ -103,7 +103,7 @@ if (_near isEqualTo []) exitWith {
 
 		[_chopValue, false, format["Chopped %1", _name]] call ULP_fnc_addMoney;
 		[format["You've chopped <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2%3</t>.", _name, "£", [_chopValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
-	}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
+	}, { ["You must stay near the vehicle to chop it..."] call ULP_fnc_hint; }, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
 		["You can't chop a vehicle while performing another action!"] call ULP_fnc_hint;
 	};
 }, false] call ULP_fnc_selectObject;

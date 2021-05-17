@@ -14,6 +14,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params setVariable [""seatbelt"", true]; _params";
 	};
 
@@ -28,6 +29,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -42,6 +44,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -56,6 +59,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onSelected = "[] call ULP_fnc_maxCarry;";
 		onActivated = "";
 	};
 
@@ -76,6 +80,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = { "Repairing", 1 };
 		};
+		onChanged = "";
 		onActivated = "_params + (_bonus / 100)";
 	};
 
@@ -90,6 +95,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -110,6 +116,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
@@ -130,6 +137,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
@@ -144,6 +152,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -158,6 +167,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -178,6 +188,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
@@ -198,6 +209,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
@@ -218,6 +230,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
@@ -238,6 +251,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
@@ -252,6 +266,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -266,6 +281,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -286,6 +302,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -300,6 +317,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -320,6 +338,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = { "Repairing", 3 };
 		};
+		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
@@ -340,6 +359,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = { "Repairing", 3 };
 		};
+		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
@@ -360,6 +380,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -374,6 +395,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -394,6 +416,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
@@ -414,6 +437,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -434,6 +458,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
@@ -454,6 +479,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
@@ -468,6 +494,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -482,6 +509,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
@@ -496,6 +524,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "";
 	};
 
@@ -516,6 +545,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
@@ -537,6 +567,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
@@ -551,6 +582,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
+		onChanged = "";
 		onActivated = "((random 100) max 1)";
 	};
 };

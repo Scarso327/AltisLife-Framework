@@ -30,7 +30,7 @@ if ([getNumber (_cfg >> "workbench")] call ULP_fnc_bool && { !([] call ULP_fnc_n
 };
 
 private _total = selectMin (getArray (_cfg >> "materials") apply {
-	round ((([_x select 0] call ULP_fnc_hasItem) max 0) / (_x select 1))
+	floor (([_x select 0] call ULP_fnc_hasItem) / (_x select 1))
 });
 
 if (_total < 1) exitWith {

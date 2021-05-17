@@ -309,7 +309,6 @@ class CfgMissions {
 	class ArchaeologyUncommon : ArchaeologyCommon {
 		name = "Uncommon Archaeology Sites";
 		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Uncommon""; ULP_SurveyTotal = 0; [""UncommonMap"", 1, true] call ULP_fnc_handleItem;";
-		class Locations : Locations {};
 		class Rewards : Rewards {};
 		class Messages : Messages {};
 	};
@@ -317,7 +316,6 @@ class CfgMissions {
 	class ArchaeologyRare : ArchaeologyCommon {
 		name = "Rare Archaeology Sites";
 		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Rare""; ULP_SurveyTotal = 0; [""RareMap"", 1, true] call ULP_fnc_handleItem;";
-		class Locations : Locations {};
 		class Rewards : Rewards {};
 		class Messages : Messages {};
 	};

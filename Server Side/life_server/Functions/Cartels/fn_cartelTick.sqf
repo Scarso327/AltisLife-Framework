@@ -43,10 +43,10 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 					_obj setVariable ["scores", _scores, true];
 				};
 
-				[_obj, _scores, ((ULP_SRV_TotalTicks % getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardTicks")) isEqualTo 0)] call ULP_SRV_fnc_cartelReward;
-
 				[configName _config] remoteExecCall ["ULP_fnc_cartelHud", _unitsInZone];
 			};
+
+			[_obj, _scores, ((ULP_SRV_TotalTicks % getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardTicks")) isEqualTo 0)] call ULP_SRV_fnc_cartelReward;
 
 			ULP_SRV_Cartels set [_x, [_obj, _area, _scores]];
 		};

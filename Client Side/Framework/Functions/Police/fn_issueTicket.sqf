@@ -9,7 +9,7 @@ _this params [
 	["_unit", objNull, [objNull]]
 ];
 
-if (isNull _unit || { !([_unit] call ULP_fnc_isRestrained) } || { isDowned(player) } || { isDowned(_unit) }) exitWith {};
+if (isNull _unit  || { [player] call ULP_fnc_isSurrendered } || { [player] call ULP_fnc_isRestrained } || { isDowned(player) } || { isDowned(_unit) }) exitWith {};
 
 if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
 	["You must be a police officer to issue a penalty notice!"] call ULP_fnc_hint;

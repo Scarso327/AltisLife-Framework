@@ -34,8 +34,8 @@ class CfgMedical {
 			time = 7;
 			items[] = { 
 				{ "FieldDressing", { 5, 0.5 } }, 
-				{ "Packing", { 6, 0.5 } }, 
-				{ "Elastic", { 3, 0.85 } },
+				{ "Packing", { 6, 0.75 } }, 
+				{ "Elastic", { 3, 0.6 } },
 				{ "QuickClot", { 0, 0.5 } } 
 			};
 		};

@@ -52,7 +52,7 @@ class V_Safety_yellow_F {
 		};
 		class V_Safety_orange_F : V_Safety_yellow_F { 
 			displayName = "Orange";
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[player, [""Civilian""]] call ULP_fnc_isFaction && { [] call ULP_fnc_donatorLevel > 0 || { [player, [""Medic""]] call ULP_fnc_isFaction && ["Medic_HR", 1] ULP_fnc_hasAccess }"; 
 		};
 		class V_Safety_blue_F : V_Safety_orange_F { displayName = "Blue"; };
 	};

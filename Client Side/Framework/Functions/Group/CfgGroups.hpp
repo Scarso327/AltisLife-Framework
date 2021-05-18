@@ -156,7 +156,7 @@ class CfgGroups {
 		maxLevel = 5;
 
 		class XP {
-			class Cartel { amount = 20; };
+			class Cartel { amount = 10; };
 			class Popup : Cartel {}; // TODO
 			class Airdrop : Cartel {};
 			class Freight { amount = 10; }; // TODO

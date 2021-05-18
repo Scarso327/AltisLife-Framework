@@ -14,7 +14,7 @@ _this params [
 ];
 
 private _display = ctrlParent _ctrl;
-if (isNull _display) exitWith {};
+if (isNull _display || { !([player, ["Police"]] call ULP_fnc_isFaction) }) exitWith {};
 
 private _group = _display displayCtrl 4703;
 private _list = _group controlsGroupCtrl 102;

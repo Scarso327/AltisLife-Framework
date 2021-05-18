@@ -14,7 +14,7 @@ _this params [
 ];
 
 private _display = ctrlParent _ctrl;
-if (isNull _display) exitWith {};
+if (isNull _display || { !([player, ["Police"]] call ULP_fnc_isFaction) }) exitWith {};
 
 private _steamid = _display getVariable ["warrant_steam_id", ""];
 private _act = _display getVariable ["act_cfg_name", ""];

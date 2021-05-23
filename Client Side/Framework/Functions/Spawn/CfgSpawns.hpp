@@ -168,6 +168,12 @@ class CfgSpawns {
             icon = "Data\UI\Spawns\news.paa";
             conditions = "[""News""] call ULP_fnc_hasLicense";
         };
+        class Rebel : Civilian {
+            displayName = "Rebel Outpost";
+            marker = "civ_spawn_rebel";
+            icon = "Data\UI\Spawns\rebel.paa";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+        };
     };
 
     class Malden {

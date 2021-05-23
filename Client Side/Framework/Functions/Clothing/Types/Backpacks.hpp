@@ -209,7 +209,7 @@ class B_ViperHarness_oli_F : B_ViperHarness_blk_F{};
 
 class B_Bergen_mcamo_F {
 	displayName = "Bergen";
-	price = 6300;
+	price = 14300;
 	reputation = false;
 	virtualSpace = 40;
 	class Textures {

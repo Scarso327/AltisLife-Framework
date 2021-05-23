@@ -123,7 +123,7 @@ class CfgVirtualStores {
 			class Water {};
 			class Pickaxe {};
 			class LumberAxe {};
-                        class Extractor {};
+            class Extractor {};
 			class Shovel {};
 			//class FishingNet {};
 			class FuelCan {};
@@ -204,6 +204,9 @@ class CfgVirtualStores {
 			class Blindfold {};
 			class Lockpick {};
 			class BoltCutter {};
+			class HackingDevice {};
+			class ExplosiveCharge {};
+			class IndustrialDrill {};
 			//class Painkillers {};
 			class FieldDressing {};
 			class FirstAidKit {};

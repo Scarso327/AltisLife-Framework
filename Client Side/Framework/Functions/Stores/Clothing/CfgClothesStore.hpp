@@ -821,6 +821,86 @@ class CfgClothesStore {
 		};
 	};
 
+	class Hideout {
+		storeName = "Hideout Clothing Store";
+		condition = "true";
+		class Uniforms {
+			class U_C_Poor_1 {};
+			class U_C_Farmer {};
+			class U_C_Mechanic_01_F {};
+			class U_I_C_Soldier_Bandit_1_F {};
+			class U_I_C_Soldier_Bandit_3_F {};
+			class U_IG_Guerilla1_1 {};
+			class U_C_E_LooterJacket_01_F {};
+			class U_O_R_Gorka_01_black_F {};
+			class U_I_C_Soldier_Para_1_F {};
+		};
+
+		class Headgear {
+			class H_WirelessEarpiece_F {};
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+			class H_ShemagOpen_khk {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F {};
+			class G_Aviator {};
+			class G_Squares {};
+			class G_Spectacles {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+			class G_Lowprofile {};
+			class G_Combat {};
+			class G_RegulatorMask_F {};
+			class G_Blindfold_01_black_F {};
+			class G_Bandanna_aviator {};
+			class G_Balaclava_blk {};
+		};
+
+		class Vests {
+			class V_LegStrapBag_black_F {};
+			class V_Pocketed_black_F {};
+			class V_Rangemaster_belt {};
+			class V_BandollierB_cbr {};
+			class V_BandollierB_blk {
+				class Textures {
+					class V_BandollierB_cbr {};
+					class V_BandollierB_rgr {};
+				};
+			};
+			class V_HarnessO_brn {};
+			class V_Chestrig_blk {
+				class Textures {
+					class V_Chestrig_khk {};
+					class V_Chestrig_oli {};
+					class V_Chestrig_rgr {};
+				};
+			};
+			class V_TacChestrig_cbr_F {};
+			class V_TacVest_blk {
+				class Textures {
+					class V_TacVest_camo {};
+					class V_TacVest_brn {};
+					class V_TacVest_khk {};
+					class V_TacVest_oli {};
+				};
+			};
+		};
+		
+		class Backpacks {
+			class B_LegStrapBag_black_F {};
+			class B_Messenger_Black_F {};
+			class B_AssaultPack_blk {};
+			class B_FieldPack_blk {};
+			class B_Kitbag_cbr {};
+			class B_TacticalPack_blk {};
+			class B_Carryall_cbr {};
+		};
+	};
+
 	class Rebel {
 		storeName = "Rebel/Blackmarket Clothing Store";
 		condition = "[""Rebel""] call ULP_fnc_hasLicense || [""Blackmarket""] call ULP_fnc_hasLicense";

@@ -153,6 +153,23 @@ class CfgVirtualStores {
 		};
 	};
 
+	class Hideout {
+		storeName = "Hideout Market";
+		conditions = "true";
+		class Items {
+			class RationPack {};
+			class Water {};
+			class Redbull {};
+			class FuelCan {};
+			class Ziptie {};
+			class Blindfold {};
+			class Lockpick {};
+			//class Painkillers {};
+			class FieldDressing {};
+			class FirstAidKit {};
+		};
+	};
+
 	class Rebel {
 		storeName = "Rebel Market";
 		conditions = "[""Rebel""] call ULP_fnc_hasLicense";

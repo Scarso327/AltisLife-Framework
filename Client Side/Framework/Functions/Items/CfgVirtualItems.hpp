@@ -1375,8 +1375,8 @@ class CfgVirtualItems {
 		displayName = "Purified Weed";
 		description = "The highest quaility drugs on Altis made for an increased profit.";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 8016;
-		sellPrice = 4008;
+		buyPrice = 9018;
+		sellPrice = 4509;
 		weight = 3;
 		class Settings {
 			onMarket = true;
@@ -1390,32 +1390,32 @@ class CfgVirtualItems {
 	class PurifiedHeroin : PurifiedWeed {
 		displayName = "Purified Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 16992;
-		sellPrice = 8496;
+		buyPrice = 19116;
+		sellPrice = 9558;
 		weight = 4;
 		class Settings : Settings {};
 	};
 	class PurifiedCocaine : PurifiedWeed {
 		displayName = "Purified Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 27480;
-		sellPrice = 13740;
+		buyPrice = 30915;
+		sellPrice = 15457;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class PurifiedMeth : PurifiedWeed {
 		displayName = "Purified Meth";
 		icon = "Data\Icons\methProcessed.paa";
-		buyPrice = 73200;
-		sellPrice = 36600;
+		buyPrice = 82350;
+		sellPrice = 41175;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class PurifiedMoonshine : PurifiedWeed {
 		displayName = "Purified Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 16080;
-		sellPrice = 8040;
+		buyPrice = 18090;
+		sellPrice = 9045;
 		weight = 1;
 		class Settings : Settings {};
 	};

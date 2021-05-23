@@ -127,7 +127,7 @@ class CfgGroups {
 				};
 
 				class GovernmentSafehouses { // TODONOW
-					displayName = "Personal Protection";
+					displayName = "Government Safehouses";
 					icon = "Data\UI\GroupPerks\governmentSafehouses.paa";
 					description = "Grants your members access to various Government Safehouses.";
 					level = 3;

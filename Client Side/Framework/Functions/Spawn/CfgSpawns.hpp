@@ -168,12 +168,6 @@ class CfgSpawns {
             icon = "Data\UI\Spawns\news.paa";
             conditions = "[""News""] call ULP_fnc_hasLicense";
         };
-        class IDAP : Civilian {
-            displayName = "IDAP Camp";
-            marker = "civ_spawn_idap";
-            icon = "Data\UI\Spawns\idap.paa";
-            conditions = "[""IDAP""] call ULP_fnc_hasLicense";
-        };
     };
 
     class Malden {

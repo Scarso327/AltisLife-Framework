@@ -1251,7 +1251,7 @@ class CfgVirtualItems {
 		displayName = "Corn";
 		description = "An item that remain illegal due to the popularity of moonshine.";
 		icon = "Data\Icons\corn.paa";
-		weight = 2;
+		weight = 3;
 		class Settings : Settings {};
 	};
 	class EphedrineBarrel : CopperOre {
@@ -1349,7 +1349,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\moonshine.paa";
 		buyPrice = 13400;
 		sellPrice = 6700;
-		weight = 1;
+		weight = 2;
 		class Settings : Settings {};
 	};
 	class Ecstasy : ProcessedWeed {

@@ -259,7 +259,7 @@ class CfgInteractions {
 		};
 
 		class Scrap : Repair {
-			title = "Scrap";
+			title = "Crush";
 			onClick = "_this call ULP_fnc_crushVehicle";
 			factions[] = { "Police" };
 			condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess && { [""bluezone_""] call ULP_fnc_isUnitsInZone }";

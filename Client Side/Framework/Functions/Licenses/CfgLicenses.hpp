@@ -22,7 +22,7 @@ class CfgLicenses {
     class Trucking : Driving {
         displayName = "Trucking Licence";
         description = "The base requirement for purchasing a goods vehicle.";
-        buyPrice = 60000;
+        buyPrice = 95000;
         class Settings : Settings {};
     };
 
@@ -36,7 +36,7 @@ class CfgLicenses {
     class Piloting : Driving {
         displayName = "Piloting Licence";
         description = "The base requirement for purchasing a helicopter/plane.";
-        buyPrice = 320000;
+        buyPrice = 480000;
         class Settings : Settings {};
     };
 

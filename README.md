@@ -1,12 +1,12 @@
-<b>AcsensionRP</b> is a roleplaying community dedicated, solely, to entertaining our players and creating a light hearted environment for everyone. We currently aim to developing a mission file, using a <b>completely custom</b> framework. We are aiming simply to please the players - not ourselves.
+<b>Mantle Network</b> is an online community built entirely upon the needs of our player base and associated partners. Operating as the public image of our subsidiary, North London RPC, we aim to build bridges between groups who would usually remain apart. As a constantly growing collective, we are constantly forming networks with our partners and like-minded player bases, creating a well informed and relevant Network that is ready to meet the demands of people all who join. Backed by competent development and administration teams, we only move forward in supplying high quality and reliable services for our members to enjoy across all platforms.
 
 # Development Team:
   - <b>Jack Farhall</b>, jackfarhall@gmail.com
   - <b>Lewis Mackinnon</b>, lewisallanmackinnon@gmail.com
 
 # Communication Methods:
-  - Website: https://ascensionroleplay.co.uk/
-  - Discord: https://discord.gg/s6PuNums8F
+  - Website: https://mantlenetwork.co.uk/
+  - Discord: TBD
 
 # Donator Perks (Active for 30-Days):
   - [x] Cross-Platorm Titles (Forums, Teamspeak, Discord & Ingame)

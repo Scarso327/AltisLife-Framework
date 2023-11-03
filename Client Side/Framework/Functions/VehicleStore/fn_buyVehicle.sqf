@@ -77,7 +77,15 @@ if ([_faction, "vehicles"] call ULP_fnc_factionFree || { [_buyPrice, false, form
 			_params call ULP_fnc_createVehicle;
 		}, true] call ULP_fnc_addEventHandler;
 
-		[_buyPrice, getPlayerUID player, profileName, _faction, configName _missionCfg, _spawn, _texture] remoteExecCall ["ULP_SRV_fnc_createVehicle", RSERV];
+		[
+			_buyPrice, 
+			getPlayerUID player, 
+			profileName, _faction, 
+			configName _missionCfg, 
+			_spawn, 
+			_texture, 
+			["VehicleCollector"] call ULP_fnc_hasPerk
+		] remoteExecCall ["ULP_SRV_fnc_createVehicle", RSERV];
 	} else {
 		[configName _missionCfg, _spawn, _texture] call ULP_fnc_createVehicle;
 	};

@@ -18,7 +18,7 @@ scopeName "fn_initReputation";
 		ULP_Reputation = _newReputation;
 	};
 
-	[format ["Your reputation has <t color='#B92DE0'>%1</t> because you %4", (["decreased", "increased"] select (ULP_Reputation > _oldReputation)), _reason]] call ULP_fnc_hint;
+	[format ["Your reputation has <t color='#B92DE0'>%1</t> because you %2", (["decreased", "increased"] select (ULP_Reputation > _oldReputation)), _reason]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;
 
 ["Incapacitated", {

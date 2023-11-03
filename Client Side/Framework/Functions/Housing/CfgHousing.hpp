@@ -132,7 +132,7 @@ class CfgHousing {
 			
 			class Storage {
 				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{-4.03271,5.45361,-3.06737}, 180};
+				position[] = {{-4.03271,5.45361,-2.06737}, 180};
 			};
 		};
 		class Land_i_House_Big_01_V2_F : Land_i_House_Big_01_V1_F {};

@@ -13,7 +13,7 @@ class CfgClothesStore {
 			class U_I_ParadeUniform_01_AAF_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class U_I_ParadeUniform_01_AAF_decorated_F { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess"; };
 			class U_BG_Guerrilla_6_1 { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
-			//class U_O_R_Gorka_01_black_F { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }"; };
+			class U_O_R_Gorka_01_black_F { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess }"; };
 			class U_B_CombatUniform_mcam_worn { condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
 			class U_O_PilotCoveralls { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class U_B_CTRG_Soldier_F {

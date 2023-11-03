@@ -30,13 +30,13 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 			});
 
 			if ((count _groups) isEqualTo 1) then {
-				private _group = _groups param [0, grpNull, [grpNull]] getVariable ["group_id", -1];
-				if (_group isEqualTo -1) exitWith {};
+				private _groupId = _groups param [0, grpNull, [grpNull]] getVariable ["group_id", -1];
+				if (_groupId isEqualTo -1) exitWith {};
 
-				private _score = _scores getOrDefault [_group, 0];
+				private _score = _scores getOrDefault [_groupId, 0];
 				_score = _score + 1;
 
-				_scores set [_group, _score];
+				_scores set [_groupId, _score];
 
 				// Updates scores for everyone...
 				if !(_scores isEqualTo (_obj getVariable ["scores", createHashMap])) then {

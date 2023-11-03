@@ -28,11 +28,13 @@ if (_unit in (units _group)) exitWith {};
 		if ((count _unitsInZone) > 0) then {
 			_unitsInZone = [_area, allPlayers, getArray (_config >> "factions")] call ULP_fnc_unitsInZone;
 			
-			_group = _group getVariable ["group_id", -1];
-			private _score = _scores getOrDefault [_group, 0];
+			private _groupId = _group getVariable ["group_id", -1];
+			if (_groupId isEqualTo -1) exitWith {};
+
+			private _score = _scores getOrDefault [_groupId, 0];
 			_score = _score + 1;
 
-			_scores set [_group, _score];
+			_scores set [_groupId, _score];
 
 			// Updates scores for everyone...
 			if !(_scores isEqualTo (_obj getVariable ["scores", createHashMap])) then {

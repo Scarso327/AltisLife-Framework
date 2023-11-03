@@ -12,7 +12,8 @@ _this params [
 	["_faction", "", [""]],
 	["_class", "", [""]],
 	["_spawn", [[0, 0, 0], 0], [[]]],
-	["_texture", "", [""]]
+	["_texture", "", [""]],
+	["_hasVehicleCollectorPerk", false, [true]]
 ];
 
 if (_steamid isEqualTo "" || { _name isEqualTo "" } || { !(isClass (missionConfigFile >> "CfgFactions" >> _faction))}) exitWith {};
@@ -25,7 +26,8 @@ _query params [
 ];
 
 private _garageLimit = getNumber (missionConfigFile >> "CfgVehicles" >> _class >> "garageLimit");
-if (["VehicleCollector"] call ULP_fnc_hasPerk) then { _garageLimit = _garageLimit + 1 };
+if (_hasVehicleCollectorPerk) then { _garageLimit = _garageLimit + 1 };
+
 if (_vehicleCount >= _garageLimit) exitWith {
 	["VehicleBought", [[_class], true, _price, _garageLimit]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 };

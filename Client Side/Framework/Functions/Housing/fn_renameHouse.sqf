@@ -24,7 +24,7 @@ if !([_house, player, false] call ULP_fnc_isHouseOwner) exitWith {
 
 // Stop spam...
 if (time < (_house getVariable ["building_last_renamed", 0])) exitWith {
-	["You've changed the renamed this house recently, please wait..."] call ULP_fnc_hint;
+	["You've changed the name of this house recently, please wait..."] call ULP_fnc_hint;
 	false
 };
 _house setVariable ["building_last_renamed", time + 5];

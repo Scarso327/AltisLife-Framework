@@ -177,14 +177,5 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_addGroupMember {
             allowedTargets = SERVER;
         };
-        class AH_KeyCheck {
-            allowedTargets = SERVER;
-        };
-        class AH_PlayerLoad {
-            allowedTargets = SERVER;
-        };
-        class AH_LogInterface {
-            allowedTargets = SERVER;
-        };
     };
 };

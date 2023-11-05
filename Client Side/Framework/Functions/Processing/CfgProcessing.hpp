@@ -50,7 +50,7 @@ class CfgProcessing {
 	// Smelting
 	class Smelting : BaseProcess { 
 		processTitle = "Smelting";
-		profession[] = { "Smelting", 1, 100 };
+		profession[] = { "Processing", 1, 100 };
 	};
 
 	class Copper : Smelting {

@@ -95,7 +95,7 @@ class CfgGroups {
 				class SecurityContactors {
 					displayName = "Security Contactors";
 					icon = "Data\UI\GroupPerks\securityContactors.paa";
-					description = "Grands your members access to become Security Officers within your company.";
+					description = "Grants your members access to become Security Officers within your company.";
 					level = 4;
 				};
 

@@ -1,4 +1,4 @@
-overviewText = "A roleplaying gamemode developed by Scarso and Lewis for AscensionRP.co.uk!";
+overviewText = "A roleplaying gamemode developed by Scarso and Lewis for mantlenetwork.co.uk!";
 disableRandomization[]= { "All" };
 
 joinUnassigned = 1;
@@ -31,7 +31,7 @@ class Header {
 class CfgWorlds {
 	class Any {
 		author = "Scarso and Lewis";
-		description = "AscensionRP.co.uk Altis Life";
+		description = "MantleNetwork.co.uk Altis Life";
 		pictureMap = "";
 		pictureShot = "data\load.paa";
 		loadingTexts[] = { 

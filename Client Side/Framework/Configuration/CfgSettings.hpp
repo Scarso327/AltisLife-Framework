@@ -34,11 +34,11 @@ class CfgSettings {
         screenTime = 10;
         
         class Hello {
-            items[] = {"""Welcome to""", """AscensionRP's Altis Life!"""};
+            items[] = {"""Welcome to""", """Mantle Network's Altis Life!"""};
             condition = "true";
         };
         class Forums : Hello {
-            items[] = {"""Join us:""", """ascensionrp.co.uk"""};
+            items[] = {"""Join us:""", """mantlenetwork.co.uk"""};
         };
         class Development : Hello {
             items[] = {"""Development Team""", """Scarso and Lewis"""};

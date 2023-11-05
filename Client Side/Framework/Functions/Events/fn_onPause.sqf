@@ -16,7 +16,7 @@ with missionNamespace do {
 	[_saveButton] call ULP_UI_fnc_setSyncButton;
 
 	_fieldButton ctrlEnable false;
-	_fieldButton ctrlSetText "https://ascensionroleplay.co.uk/";
+	_fieldButton ctrlSetText "https://mantlenetwork.co.uk/";
 	_fieldButton ctrlSetTooltip "";
 
 	private _abortDelay = time + getNumber(missionConfigFile >> "CfgSettings" >> "abort_delay");

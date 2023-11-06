@@ -406,6 +406,7 @@ class CfgClothesStore {
 		class Backpacks {
 			class B_LegStrapBag_black_F {};
 			class B_Messenger_Black_F {};
+			class B_CivilianBackpack_01_Everyday_Black_F {};
 			class B_AssaultPack_blk {};
 			class B_FieldPack_blk {};
 			class B_Kitbag_cbr {};

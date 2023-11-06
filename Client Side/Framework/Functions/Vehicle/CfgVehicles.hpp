@@ -961,7 +961,8 @@ class CfgVehicles {
 				textures[] = { 
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa",
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa",
-					"\a3\soft_f_exp\truck_03\data\truck_03_cargo_ghex_co.paa"
+					"\a3\soft_f_exp\truck_03\data\truck_03_cargo_ghex_co.paa",
+					"\a3\soft_f_exp\truck_03\data\truck_03_cover_ghex_co.paa"
 				};
 			}; 
 		};

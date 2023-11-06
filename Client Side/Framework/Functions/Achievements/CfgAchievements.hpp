@@ -376,7 +376,6 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
-	// TODO
 	class Radiation {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Goodbye Fatherhood";

@@ -44,17 +44,17 @@ class CfgGroups {
 					level = 2;
 				};
 
-				class Governor {
-					displayName = "Governorship";
-					icon = "Data\UI\GroupPerks\governor.paa";
-					description = "Your members have the ability to run for governor.";
-					level = 3;
-				};
-
 				class Ifrits {
 					displayName = "Ifrit Drivers";
 					icon = "Data\UI\GroupPerks\ifrits.paa";
 					description = "You have the ability to access Ifrits within the Blackmarket.";
+					level = 3;
+				};
+
+				class Governor {
+					displayName = "Governorship";
+					icon = "Data\UI\GroupPerks\governor.paa";
+					description = "Your members have the ability to run for governor.";
 					level = 4;
 				};
 

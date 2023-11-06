@@ -24,4 +24,4 @@ if (isNull _display) exitWith {};
 private _colour = [_r,_g,_b,1];
 
 _display setVariable ["color_selected", _colour];
-[_display, "", [player] call ULP_fnc_getName, "", "", _colour call BIS_fnc_colorRGBAtoHTML] call ULP_fnc_updateTagPreview;
+[_display, ".", [player] call ULP_fnc_getName, "", "", _colour call BIS_fnc_colorRGBAtoHTML] call ULP_fnc_updateTagPreview;

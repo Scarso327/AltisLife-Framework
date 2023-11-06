@@ -15,7 +15,7 @@ addMissionEventHandler ["Map", {
 		if !(_display getVariable ["MAP_SETUP", false]) then {
 			_display setVariable ["MAP_SETUP", true];
 
-			(_display displayCtrl 112) ctrlSetText "ascensionroleplay.co.uk";
+			(_display displayCtrl 112) ctrlSetText "mantlenetwork.co.uk";
 		};
 
         (_display displayCtrl 51) ctrlAddEventHandler ["Draw", ULP_fnc_mapMarkers];

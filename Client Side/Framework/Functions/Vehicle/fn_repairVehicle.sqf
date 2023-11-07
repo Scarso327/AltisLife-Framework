@@ -40,7 +40,16 @@ if !([format["Repairing %1", _name], _time, [_vehicle, _name], {
 		[format["You failed to repair the <t color='#B92DE0'>%1</t> as it's either beyond repair or you didn't have the correct tools."]] call ULP_fnc_hint;
 	};
 	
-	if (!([player, ["Hato"]] call ULP_fnc_isFaction) && { (["GeneralMechanic", 0] call ULP_fnc_activatePerk) <= (random 0.99) }) then {
+	if !([player, ["Hato"]] call ULP_fnc_isFaction) then {
+
+		// No Perk - 0, L1 Perk - 0.25, L2 - .5, L3 - .75, L4 - 1
+		private _perkValue = ["GeneralMechanic", 0] call ULP_fnc_activatePerk;
+
+		// For everyone but HATO apply "General Mechanic" Perk
+		if ((1 - _perkValue) <= (random 1)) exitWith {
+			["You kept your toolkit."] call ULP_fnc_hint;
+		};
+
 		player removeItem "Toolkit";
 	};
 

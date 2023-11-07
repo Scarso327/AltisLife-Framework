@@ -295,7 +295,7 @@ DELIMITER ;
 CREATE TABLE IF NOT EXISTS `settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `setting` varchar(50) NOT NULL,
-  `value` varchar(50) NOT NULL DEFAULT '0',
+  `value` varchar(300) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `setting` (`setting`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;

@@ -107,28 +107,6 @@ class B_Kitbag_rgr : B_Kitbag_cbr{};
 class B_Kitbag_sgg : B_Kitbag_cbr{};
 class B_Kitbag_mcamo : B_Kitbag_cbr{};
 
-class B_CivilianBackpack_01_Everyday_Black_F {
-	displayName = "Everyday Backpack";
-	price = 3480;
-	reputation = false;
-	virtualSpace = 30;
-	class Textures {
-		class B_CivilianBackpack_01_Everyday_Black_F {
-			displayName = "Black";
-			condition = "true";
-		};
-		class B_CivilianBackpack_01_Everyday_Astra_F : B_CivilianBackpack_01_Everyday_Black_F { 
-			displayName = "Astra"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
-		};
-		class B_CivilianBackpack_01_Everyday_Vrana_F : B_CivilianBackpack_01_Everyday_Astra_F { displayName = "Vrana"; };
-		class B_CivilianBackpack_01_Everyday_IDAP_F : B_CivilianBackpack_01_Everyday_Astra_F { displayName = "IDAP"; };
-	};
-};
-class B_CivilianBackpack_01_Everyday_Astra_F : B_CivilianBackpack_01_Everyday_Black_F {};
-class B_CivilianBackpack_01_Everyday_Vrana_F : B_CivilianBackpack_01_Everyday_Black_F {};
-class B_CivilianBackpack_01_Everyday_IDAP_F : B_CivilianBackpack_01_Everyday_Black_F {};
-
 class B_TacticalPack_blk {
 	displayName = "Tactical Pack";
 	price = 3320;

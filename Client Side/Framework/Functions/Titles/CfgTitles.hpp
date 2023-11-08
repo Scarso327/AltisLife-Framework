@@ -119,6 +119,10 @@ class CfgTitles {
 		displayName = "Deep Sea Diver";
 		description = "Walked along the seabed";
 	};
+	class DeathWish {
+		displayName = "Death Wish";
+		description = "Traveled to the heart of the red zone";
+	};
 	class NLRPC {
 		displayName = "North London Member";
 		description = "Discovered a remnant of North London RPC";

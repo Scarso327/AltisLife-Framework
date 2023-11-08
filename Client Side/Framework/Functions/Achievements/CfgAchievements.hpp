@@ -412,6 +412,15 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
+	class DeathWish {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Targets_ca.paa";
+		displayName = "Death Wish";
+		description = "You have traveled to the heart of the red zone.";
+		onUnlocked = "[""DeathWish""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
 	class NLRPC {
 		icon = "Data\UI\Achievements\nlrpc.paa";
 		displayName = "NLRPC";

@@ -55,9 +55,11 @@ private _item = 1;
 
 	_perkCtrl ctrlCommit 0;
 
+	private _perkCfgName = configName _cfg;
+
 	private _iconCtrl = _perkCtrl controlsGroupCtrl 101;
 	_iconCtrl ctrlSetText getText (_cfg >> "icon");
-	_iconCtrl ctrlSetTooltip format [getText (_cfg >> "description"), [configName _cfg] call ULP_fnc_getPerkBonus, "%"];
+	_iconCtrl ctrlSetTooltip format [getText (_cfg >> "description"), [_perkCfgName] call ULP_fnc_getPerkBonus, "%"];
 
 	private _nameCtrl = _perkCtrl controlsGroupCtrl 102;
 	_nameCtrl ctrlSetStructuredText parseText format["<t align='center'>%1</t>",  getText (_cfg >> "displayName")];
@@ -71,17 +73,22 @@ private _item = 1;
 	_ctrlLevel ctrlShow false;
 
 	if (_state isEqualTo 2) then {
-		private _requirement = [configName _cfg] call ULP_fnc_getPerkRequirement;
+		private _requirement = [_perkCfgName] call ULP_fnc_getPerkRequirement;
 		_coverCtrl ctrlSetTooltip format ["Requires %1 %2", _requirement select 0, _requirement select 1];
 		_button ctrlEnable false;
 	} else {
 		private _maxLevel = getNumber (_cfg >> "Leveling" >> "maxLevel");
 		if (_maxLevel > 1) then {
-			_ctrlLevel ctrlSetStructuredText parseText format["<t align='center'>%1/%2</t>", (([configName _cfg] call ULP_fnc_getPerkLevel) select 0), _maxLevel];
+			([_perkCfgName] call ULP_fnc_getPerkLevel) params ["_level", "_xp"];
+
+			private _requiredXp = [_perkCfgName] call ULP_fnc_getPerkXPRequirement;
+
+			_ctrlLevel ctrlSetStructuredText parseText format["<t align='center'>%1/%2</t>", _level, _maxLevel];
+			_ctrlLevel ctrlSetTooltip format["%1 XP to next level", _requiredXp - _xp];
 			_ctrlLevel ctrlShow true;
 		};
 
-		_button ctrlSetEventHandler ["ButtonClick", format["[""%1""] call ULP_fnc_togglePerk", configName _cfg]];
+		_button ctrlSetEventHandler ["ButtonClick", format["[""%1""] call ULP_fnc_togglePerk", _perkCfgName]];
 	};
 	
 	if (_state isEqualTo 0) then {

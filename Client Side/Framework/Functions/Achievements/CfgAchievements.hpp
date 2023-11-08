@@ -403,6 +403,15 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
+	class DeepSeaDiver {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\SDV_ca.paa";
+		displayName = "Deep Sea Diver";
+		description = "You have walked along the seabed.";
+		onUnlocked = "[""DeepSeaDiver""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
 	class NLRPC {
 		icon = "Data\UI\Achievements\nlrpc.paa";
 		displayName = "NLRPC";

@@ -115,6 +115,10 @@ class CfgTitles {
 		displayName = "Mile High Club";
 		description = "Travelled to a very high altitude";
 	};
+	class DeepSeaDiver {
+		displayName = "Deep Sea Diver";
+		description = "Walked along the seabed";
+	};
 	class NLRPC {
 		displayName = "North London Member";
 		description = "Discovered a remnant of North London RPC";

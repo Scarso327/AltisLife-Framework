@@ -11,6 +11,7 @@ if (canSuspend) exitWith {
 
 private _display = _this;
 if (isNull _display) exitWith {
+	["RscHints"] call ULP_UI_fnc_destroyLayer; // Fallback to ensure the UI is removed to avoid hints becoming stuck
 	[_thisEventHandler] call ULP_fnc_removeEachFrame;
 };
 

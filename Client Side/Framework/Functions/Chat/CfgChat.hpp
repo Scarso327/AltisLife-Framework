@@ -56,7 +56,7 @@ class CfgChat {
 			action = "[""Total Players:"", format [""%1"", count allPlayers]]";
 			condition = "true";
 		};
-		class ARPID {
+		class PID {
 			action = "[""ARP ID:"", format [""%1"", [ULP_ID] call ULP_fnc_numberText]]";
 			condition = "(missionNamespace getVariable [""ULP_ID"", -1]) > -1";
 		};

@@ -57,7 +57,7 @@ class CfgAchievements {
 	};
 
 	class Archaeologist {
-		icon = "Data\UI\Achievements\archaeologist.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Waypoint_ca.paa";
 		displayName = "Archaeologist";
 		description = "Carried out your first archaeological dig.";
 		onUnlocked = "[""Archaeologist""] call ULP_fnc_unlockTitle;";
@@ -229,7 +229,7 @@ class CfgAchievements {
 	};
 
 	class FirstCrush {
-		icon = "Data\UI\Achievements\firstCrush.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Use_ca.paa";
 		displayName = "Vehicle Scrapper";
 		description = "Crushed/Chopped a vehicle for the first time.";
 		leveling[] = { 50, "Achievement Unlocked", 100 };
@@ -404,7 +404,7 @@ class CfgAchievements {
 	};
 
 	class DeepSeaDiver {
-		icon = "\A3\ui_f\data\GUI\Cfg\Hints\SDV_ca.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicDive_ca.paa";
 		displayName = "Deep Sea Diver";
 		description = "You have walked along the seabed.";
 		onUnlocked = "[""DeepSeaDiver""] call ULP_fnc_unlockTitle;";
@@ -430,7 +430,7 @@ class CfgAchievements {
 	};
 
 	class Sub {
-		icon = "Data\UI\Achievements\sub.paa";
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\SDV_ca.paa";
 		displayName = "Submarine";
 		description = "You have walked on top of the HMS Proteus.";
 		onUnlocked = "[""Sub""] call ULP_fnc_unlockTitle;";

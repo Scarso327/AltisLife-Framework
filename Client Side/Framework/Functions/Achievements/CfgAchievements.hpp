@@ -403,10 +403,28 @@ class CfgAchievements {
 		isMystery = true;
 	};
 
+	class NLRPC {
+		icon = "Data\UI\Achievements\nlrpc.paa";
+		displayName = "NLRPC";
+		description = "You have discovered a remnant of North London.";
+		onUnlocked = "[""NLRPC""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
 	class Stonehenge {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Direction_ca.paa";
 		displayName = "Stonehenge";
 		description = "You have discovered the Stonehenge on Altis.";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Sub {
+		icon = "Data\UI\Achievements\sub.paa";
+		displayName = "Submarine";
+		description = "You have walked on top of the HMS Proteus.";
+		onUnlocked = "[""Sub""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -434,6 +452,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\scarso.paa";
 		displayName = "The Workspace";
 		description = "You have discovered the workspace of Scarso.";
+		onUnlocked = "[""Scarso""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -442,6 +461,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\lewis.paa";
 		displayName = "Bushmaker";
 		description = "You have climbed the statue of Lewis 'Bushmaker' Holloway.";
+		onUnlocked = "[""Lewis""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -450,6 +470,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\oliver.paa";
 		displayName = "Nationalist";
 		description = "You have visited the metropolitan hub of the North. Home of Oliver Lawson.";
+		onUnlocked = "[""Oliver""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -458,6 +479,7 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\ace.paa";
 		displayName = "Norwegian Retreat";
 		description = "You have located the hidden retreat of Ace Boyden.";
+		onUnlocked = "[""Ace""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -466,6 +488,43 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\jetan.paa";
 		displayName = "Boat Boy";
 		description = "You have boarded the home of one Jetan Holo.";
+		onUnlocked = "[""Jetan""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Brick {
+		icon = "Data\UI\Perks\firstAider.paa";
+		displayName = "Brick Hospital";
+		description = "You have found the second home of Brick Haus.";
+		onUnlocked = "[""Brick""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class James {
+		icon = "Data\UI\Perks\improvedMetabolism.paa";
+		displayName = "Uber Eats Boat";
+		description = "You have identified James Johnson's daily food delivery.";
+		onUnlocked = "[""James""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Fulton {
+		icon = "Data\UI\GroupBuffs\hacking.paa";
+		displayName = "ONE ZERO ALPHA NOVEMBER";
+		description = "You have viewed the CPU of Fulton.";
+		onUnlocked = "[""Fulton""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Freddie {
+		icon = "Data\UI\Perks\muscleman.paa";
+		displayName = "Chicken Deboner";
+		description = "You witnessed the aftermatch of Freddie debonning a chicken.";
+		onUnlocked = "[""Freddie""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};

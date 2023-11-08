@@ -13,6 +13,10 @@ class CfgTitles {
 		displayName = "Testing, Testing...";
 		description = "Involved with beta testing this framework";
 	};
+	class Mantle {
+		displayName = "Stood on a Mantle";
+		description = "Apaart of the Mantle Network team";
+	};
 	class Donator {
 		displayName = "Community Donator";
 		description = "Donated £10 or more to this community";
@@ -111,6 +115,14 @@ class CfgTitles {
 		displayName = "Mile High Club";
 		description = "Travelled to a very high altitude";
 	};
+	class NLRPC {
+		displayName = "North London Member";
+		description = "Discovered a remnant of North London RPC";
+	};
+	class Sub {
+		displayName = "Unseen and Unhindered";
+		description = "You became unseen and unhindered on a sub";
+	};
 	class PirateDen {
 		displayName = "Pirate";
 		description = "Found the hidden pirate's cove";
@@ -123,6 +135,19 @@ class CfgTitles {
 		displayName = "Private Investigator";
 		description = "The College of Policing is up to something";
 	};
+
+	// Personal Titles
+	class Scarso {
+		displayName = "Redbull Drinker";
+		description = "You uncovered a mystery achievement";
+	};
+	class Lewis : Scarso { displayName = "Bushmaker"; };
+	class Oliver : Scarso { displayName = "Lake Lover"; };
+	class Ace : Scarso { displayName = "Norwegian"; };
+	class Brick : Scarso { displayName = "Dead Man Walking"; };
+	class James : Scarso { displayName = "Fat Man"; };
+	class Fulton : Scarso { displayName = "ONE ZERO ALPHA NOVEMBER"; };
+	class Freddie : Scarso { displayName = "Chicken Deboner"; };
 
 	// Investor Titles
 	class Investors {

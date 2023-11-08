@@ -10,4 +10,4 @@ _this params [
 	["_unit", player, [objNull]]
 ];
 
-(([group _unit] call ULP_fnc_groupPermissions) param [_index, 0, [0]] <= [_unit] call ULP_fnc_getGroupRank)
+([_unit] call ULP_fnc_isGroupOwner || { ([group _unit] call ULP_fnc_groupPermissions) param [_index, 0, [0]] <= [_unit] call ULP_fnc_getGroupRank })

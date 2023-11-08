@@ -9,7 +9,7 @@ if !([] call ULP_fnc_isGroup) exitWith { false };
 
 private _group = group player;
 
-if ((getPlayerUID player) isEqualTo (_group getVariable ["group_owner", ""])) exitWith {
+if ([] call ULP_fnc_isGroupOwner) exitWith {
 	["You must transfer the ownership to someone else before you can leave!"] call ULP_fnc_hint;
 	false
 };

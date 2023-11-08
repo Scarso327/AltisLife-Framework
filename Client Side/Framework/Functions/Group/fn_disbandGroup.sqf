@@ -9,7 +9,7 @@ if !([] call ULP_fnc_isGroup) exitWith { false };
 
 private _group = group player;
 
-if !((getPlayerUID player) isEqualTo (_group getVariable ["group_owner", ""])) exitWith {
+if !([] call ULP_fnc_isGroupOwner) exitWith {
 	["You must be the group owner to disband the group!"] call ULP_fnc_hint;
 	false
 };

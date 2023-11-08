@@ -503,6 +503,7 @@ class CfgFunctions {
 			class hasGroupPerk {};
 			class groupBuff {};
 			class isSecurity {};
+			class isGroupOwner {};
 		};
 
 		class NLR {

@@ -14,7 +14,7 @@ if (isNull _display) exitWith {};
 
 private _group = group player;
 
-if !((getPlayerUID player) isEqualTo (_group getVariable ["group_owner", ""])) exitWith {
+if !([] call ULP_fnc_isGroupOwner) exitWith {
 	["Only the owner can transfer group ownership!"] call ULP_fnc_hint;
 	false
 };

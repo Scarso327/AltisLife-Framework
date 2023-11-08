@@ -130,6 +130,40 @@ class CfgMissions {
 				pos = "abandoned_checkpoint";
 				name = "Abandoned Checkpoint";
 			};
+			class HuntingCamp {
+				pos = "hunting_camp";
+				name = "Hunting Camp";
+			};
+			class JewelleryStore {
+				pos = "jewellery_store";
+				name = "Jewellery Store";
+			};
+			class AltisArcheologists {
+				pos = "altis_archeologists";
+				name = "Altis Archeologists";
+			};
+			class Supermarket {
+				pos = "supermarket";
+				name = "Supermarket";
+			};
+			class ImpoundFacility {
+				pos = "impound_facility";
+				name = "Impound Facility";
+			};
+			class KavalaStreet {
+				pos = "10_kavala_street";
+				name = "10 Kavala Street";
+			};
+
+			// MINOR CRIME SITES
+			class WesternRegionalBank {
+				pos = "regional_bank_01";
+				name = "Western Regional Bank";
+			};
+			class EasternRegionalBank {
+				pos = "regional_bank_02";
+				name = "Eastern Regional Bank";
+			};
 
 			// MAJOR CRIME SITES
 			class HMTreasury {

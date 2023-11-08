@@ -39,12 +39,19 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 
 	if (_queryOwner isEqualTo -2) then {
 		// Insert...
-		[format ["INSERT INTO settings (setting, value) VALUES ('base_owner_%1', '-1');", configName _x], 1] call DB_fnc_asyncCall;
+		[format ["INSERT INTO settings (setting, value) VALUES ('base_owner_%1', '%2');", configName _x, getNumber(_x >> "defaultGroupOwnerId")], 1] call DB_fnc_asyncCall;
 	} else {
-		if ([getNumber (_x >> "includeBidding")] call ULP_fnc_bool && { missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false] }) then {
-			[format ["UPDATE settings SET value = '-1' WHERE setting = 'base_owner_%1'", configName _x], 1] call DB_fnc_asyncCall;
-		} else {
-			if (_newOwners && { [getNumber (_x >> "includeBidding")] call ULP_fnc_bool }) then {
+
+		// This base is part of bidding wars
+		if ([getNumber (_x >> "includeBidding")] call ULP_fnc_bool) then {
+			
+			// This base is part of bidding and bidding is active so we need to wipe current owner
+			if (missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) exitWith {
+				_queryOwner = -1;
+				[format ["UPDATE settings SET value = '-1' WHERE setting = 'base_owner_%1'", configName _x], 1] call DB_fnc_asyncCall;
+			};
+
+			if (_newOwners) then {
 				private _query = [format ["SELECT groups.id, groups.bank, base_bids.bid FROM base_bids INNER JOIN groups WHERE base_bids.base = '%1' AND base_bids.group_id = groups.id AND base_bids.bid <= groups.bank AND base_bids.active = '1' ORDER BY base_bids.bid DESC", configName _x], 2] call DB_fnc_asyncCall;
 				_query params [
 					["_id", -1, [0]], 
@@ -65,10 +72,10 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 				[format ["UPDATE settings SET value = '%2' WHERE setting = 'base_owner_%1'", configName _x, _id], 1] call DB_fnc_asyncCall;
 				_queryOwner = _id;
 			};
-
-			if (_queryOwner isEqualType "") then { _queryOwner = parseNumber _queryOwner; };
-			_owner = _queryOwner;
 		};
+
+		if (_queryOwner isEqualType "") then { _queryOwner = parseNumber _queryOwner; };
+		_owner = _queryOwner;
 	};
 
 	private _flag = createVehicle ["Flag_Syndikat_F", _pos, [], 0, "CAN_COLLIDE"];

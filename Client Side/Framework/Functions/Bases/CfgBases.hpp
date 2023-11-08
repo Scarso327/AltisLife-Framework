@@ -11,6 +11,7 @@ class CfgBases {
 		displayName = "North Base";
 		position[] = {{12044.9, 10492.4, -0.303827}, 0};
 		includeBidding = true;
+		defaultGroupOwnerId = -1;
 		class Spawn {
 			marker = "gang_base_1";
 		};

@@ -61,15 +61,18 @@ if (isDowned(player)) then {
 
         case H: {
             if (_shift && { !_ctrlKey }) then {
-                if (ULP_Holsted isEqualTo "" && { !((currentWeapon player) isEqualTo "") }) then {
-                    ULP_Holsted = (currentWeapon player);
+                private _currentWeapon = currentWeapon player;
+
+                if !(_currentWeapon isEqualTo "") exitWith {
+                    ULP_Holsted = _currentWeapon;
+
                     player action ["SwitchWeapon", player, player, 100];
                     player switchCamera cameraView;
-                } else {
-                    if (ULP_Holsted in [(primaryWeapon player), (handgunWeapon player)]) then {
-                        player selectWeapon ULP_Holsted;
-                        ULP_Holsted = "";
-                    };
+                };
+
+                if (ULP_Holsted in [(primaryWeapon player), (handgunWeapon player)]) then {
+                    player selectWeapon ULP_Holsted;
+                    ULP_Holsted = "";
                 };
             };
         };

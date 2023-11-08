@@ -57,6 +57,7 @@ private _query = switch (_state) do {
 	case 12: { format["group_id = '%1', group_level = '%2'", _data select 0, _data select 1] };
 	case 13: { format["reputation = '%1'", [_data, ""] call ULP_fnc_numberText]};
 	case 14: { format["blueprints='%1'", [_data] call DB_fnc_mresArray] };
+	case 15: { format["%1gear='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
 	default { "" };
 };
 

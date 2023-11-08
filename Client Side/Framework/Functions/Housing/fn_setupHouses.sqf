@@ -3,7 +3,7 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_isHouseOwner";
+scopeName "fn_setupHouses";
 
 _this params [
 	["_houses", [], [[]]]

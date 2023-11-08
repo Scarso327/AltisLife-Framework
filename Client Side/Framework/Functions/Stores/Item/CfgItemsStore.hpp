@@ -487,6 +487,34 @@ class CfgItemsStore {
 		};
 	};
 
+	class Safehouse {
+		storeName = "Safehouse Store";
+		condition = "[] call ULP_fnc_isProtection && { [""GovernmentSafehouses""] call ULP_fnc_hasGroupPerk }";
+		class Rifles {
+			class hgun_PDW2000_F { price = 0; };
+		};
+		class Pistols {
+			class hgun_Rook40_F { price = 0; };
+		};
+		class Attachments {};
+		class Magazines {
+			class 30Rnd_9x21_Mag {};
+		};
+		class Items {
+			class ItemMap {};
+			class ItemCompass {};
+			class ItemWatch {};
+			class ItemGPS {};
+			class ItemRadio {};
+			class Binocular {};
+			class ToolKit {};
+			class Chemlight_green {};
+			class SmokeShell { 
+				class textures { class SmokeShell {}; }; 
+			};
+		};
+	};
+
 	class Hideout {
 		storeName = "Criminal Hideout";
 		condition = "[""hideout_flag_1""] call ULP_fnc_ownsSite || { [""hideout_flag_2""] call ULP_fnc_ownsSite }";

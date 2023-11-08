@@ -104,7 +104,7 @@ class CfgSpawns {
             icon = "Data\UI\Spawns\agios.paa";
         };
 
-        // Civilian
+        // Government
         class GovernorResidence : Civilian {
             displayName = "10 Kavala Street";
             marker = "civ_spawn_residence";
@@ -115,7 +115,17 @@ class CfgSpawns {
             displayName = "Government Offices";
             marker = "civ_spawn_government";
         };
+        class KavalaSafehouse : GovernorResidence {
+            displayName = "Kavala Safehouse";
+            marker = "civ_spawn_kavSafehouse";
+            conditions = "[] call ULP_fnc_isGovernor || { [] call ULP_fnc_isProtection } && { [""GovernmentSafehouses""] call ULP_fnc_hasGroupPerk }";
+        };
+        class PyrgosSafehouse : KavalaSafehouse {
+            displayName = "Pyrgos Safehouse";
+            marker = "civ_spawn_pyrSafehouse";
+        };
         
+        // Civilian
         class Kavala : Civilian {
             displayName = "Kavala";
             marker = "civ_spawn_kavala";
@@ -168,12 +178,12 @@ class CfgSpawns {
             icon = "Data\UI\Spawns\news.paa";
             conditions = "[""News""] call ULP_fnc_hasLicense";
         };
-        /*class Rebel : Civilian {
+        class Rebel : Civilian {
             displayName = "Rebel Outpost";
             marker = "civ_spawn_rebel";
             icon = "Data\UI\Spawns\rebel.paa";
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
-        };*/
+        };
     };
 
     class Malden {

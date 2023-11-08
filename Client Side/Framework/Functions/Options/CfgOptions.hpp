@@ -137,7 +137,7 @@ class CfgOptions {
 
 		class NotifyPayment {
 			name = "Display Cartel Payments";
-			tooltip = "When enabled, you'll be told exactly how much you and the group where paid from cartels.";
+			tooltip = "When enabled, you'll be told exactly how much you and the group were paid from cartels.";
 			type = "DROPDOWN";
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 			condition = "true";

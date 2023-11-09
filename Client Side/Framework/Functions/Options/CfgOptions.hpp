@@ -124,6 +124,11 @@ class CfgOptions {
 			condition = "[player, [""Police"", ""Medic""]] call ULP_fnc_isFaction";
 		};
 
+		class EnableNamesOnIndicators : EnableIndicators {
+			name = "Enable Names on Indicators";
+			tooltip = "When enabled, group member's names with show under their hexagons.";
+		};
+
 		class IndicatorDistance : EnableIndicators {
 			name = "Indicators Distance";
 			tooltip = "This is the distance at which group indicators will be shown. (20 - 2000m)";

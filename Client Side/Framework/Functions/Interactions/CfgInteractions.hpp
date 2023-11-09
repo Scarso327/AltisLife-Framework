@@ -273,7 +273,7 @@ class CfgInteractions {
 
 		class Unflip : Repair {
 			title = "Unflip";
-			onClick = "_this call ULP_fnc_flipVehicle";
+			onClick = "[_this select 0, 0] call ULP_fnc_flipVehicle";
 		};
 
 		/*

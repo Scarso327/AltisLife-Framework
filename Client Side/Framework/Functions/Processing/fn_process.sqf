@@ -10,27 +10,21 @@ _this params [
 ];
 
 private _cfg = missionConfigFile >> "CfgProcessing" >> _process;
-if !(isClass _cfg || { !([player] call ULP_fnc_getFaction in getArray (_cfg >> "factions")) }) exitWith {};
+if !(isClass _cfg || { !([player] call ULP_fnc_getFaction in getArray (_cfg >> "factions")) }) exitWith { false };
 
-private _reqItems = getArray (_cfg >> "reqItems");
-{
-	if ([_x] call ULP_fnc_hasItem isEqualTo -1) exitWith {
-		[format["You need these items to process here: <t color='#B92DE0'>%1</t>!", _reqItems]] call ULP_fnc_hint;
-		false breakOut "fn_process";
-	};
+private _reqItems = getArray (_cfg >> "reqItems") select { ([_x] call ULP_fnc_hasItem isEqualTo -1) };
 
-	nil
-} count _reqItems;
+if ((count _reqItems) > 0) exitWith {
+	[format["You need these items to process here: <t color='#B92DE0'>%1</t>!", _reqItems]] call ULP_fnc_hint;
+	false
+};
 
-private _reqLicenses = getArray (_cfg >> "reqItems");
-{
-	if !([_x] call ULP_fnc_hasLicense) exitWith {
-		[format["You need these licenses to process here: <t color='#B92DE0'>%1</t>!", _reqLicenses]] call ULP_fnc_hint;
-		false breakOut "fn_process";
-	};
+private _reqLicenses = getArray (_cfg >> "reqLicenses") select { !([_x] call ULP_fnc_hasLicense) };
 
-	nil
-} count _reqLicenses;
+if ((count _reqLicenses) > 0) exitWith {
+	[format["You need these licenses to process here: <t color='#B92DE0'>%1</t>!", _reqLicenses]] call ULP_fnc_hint;
+	false
+};
 
 private _items = getArray (_cfg >> "items");
 private _materials = getArray (_cfg >> "materials");

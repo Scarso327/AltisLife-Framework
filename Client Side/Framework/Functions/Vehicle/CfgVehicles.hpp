@@ -52,7 +52,7 @@ class CfgVehicles {
 				params[] = {};
 				priority = 1;
 				condition = "_target isEqualTo (vehicle _this) && { ([player, [""Police""]] call ULP_fnc_isFaction) || ((driver _this) isEqualTo _target) }";
-				radius = 3;
+				radius = 25;
 			};
 		};
 	};

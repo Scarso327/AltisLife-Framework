@@ -118,7 +118,7 @@ class CfgSpawns {
         class KavalaSafehouse : GovernorResidence {
             displayName = "Kavala Safehouse";
             marker = "civ_spawn_kavSafehouse";
-            conditions = "[] call ULP_fnc_isGovernor || { [] call ULP_fnc_isProtection } && { [""GovernmentSafehouses""] call ULP_fnc_hasGroupPerk }";
+            conditions = "[] call ULP_fnc_isGovernor || { [] call ULP_fnc_isProtection && { [""GovernmentSafehouses""] call ULP_fnc_hasGroupPerk } }";
         };
         class PyrgosSafehouse : KavalaSafehouse {
             displayName = "Pyrgos Safehouse";

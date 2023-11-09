@@ -12,7 +12,7 @@ _this params [
 
 if (isNull _airdrop) exitWith {};
 
-[parseText _message] call ULP_fnc_hint;
+[_message] call ULP_fnc_hint;
 
 _airdrop addAction [
 	"Claim Airdrop", {

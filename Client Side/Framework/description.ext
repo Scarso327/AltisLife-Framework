@@ -4,7 +4,7 @@ disableRandomization[]= { "All" };
 joinUnassigned = 1;
 saving = 0;
 unsafeCVL = 1;
-enableDebugConsole = 0;
+enableDebugConsole[] = { "76561198092567307" };
 
 onPauseScript[]={ "ULP_fnc_onPause" };
 disableChannels[] = {{0,true,true}, {1,true,true}, {2,true,true}, {6,false,true}};

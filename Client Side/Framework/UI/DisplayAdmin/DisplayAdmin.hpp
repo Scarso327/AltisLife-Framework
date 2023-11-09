@@ -78,13 +78,14 @@ class DisplayAdmin {
             };
         };
 
-        #define BUTTON_W HORIZONTAL_GRID_W(0.15468765468, 3)
+        #define BUTTON_GROUP_W 0.2
+        #define BUTTON_W HORIZONTAL_GRID_W(BUTTON_GROUP_W, 4)
 
         class TPToButton : Life_RscButtonCenter {
             idc = 605;
             text = "<t align = 'center'>Go To</t>";
 			onButtonClick = "[""action"", [""To""]] call ULP_fnc_adminCamera;";
-            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (0.15468765468 / 2), BUTTON_W, 0));
+            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (BUTTON_GROUP_W / 2), BUTTON_W, 0));
 			SAFEZONE_Y(((1 - (BUTTON_H * 2)) - (MARGIN_Y * 2)));
             SAFEZONE_W(BUTTON_W);
 			SAFEZONE_H(BUTTON_H);
@@ -94,14 +95,21 @@ class DisplayAdmin {
             idc = 606;
             text = "<t align = 'center'>Bring Here</t>";
 			onButtonClick = "[""action"", [""Here""]] call ULP_fnc_adminCamera;";
-            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (0.15468765468 / 2), BUTTON_W, 1));
+            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (BUTTON_GROUP_W / 2), BUTTON_W, 1));
         };
 
-         class VehicleTPButton : TPToButton {
+        class VehicleTPButton : TPToButton {
             idc = 607;
             text = "<t align = 'center'>Join Veh</t>";
 			onButtonClick = "[""action"", [""Vehicle""]] call ULP_fnc_adminCamera;";
-            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (0.15468765468 / 2), BUTTON_W, 2));
+            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (BUTTON_GROUP_W / 2), BUTTON_W, 2));
+        };
+
+        class VehicleEjectButton : TPToButton {
+            idc = 608;
+            text = "<t align = 'center'>Eject</t>";
+			onButtonClick = "[""action"", [""Eject""]] call ULP_fnc_adminCamera;";
+            SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (BUTTON_GROUP_W / 2), BUTTON_W, 3));
         };
     };
 };

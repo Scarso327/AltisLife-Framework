@@ -68,8 +68,11 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 				[format ["Base Winner: %1 (%2) with a bid of %3", configName _x, _id, [_bid] call ULP_fnc_numberText]] call ULP_fnc_logIt;
 				["SYSTEM", "BaseBid", ["Winner", [_id,  [_newFunds, ""] call ULP_fnc_numberText, [_bid, ""] call ULP_fnc_numberText]]] call ULP_SRV_fnc_logPlayerEvent;
 
+				// Update group bank, settings, and make bids inactive
 				[format ["UPDATE groups SET bank = '%2' WHERE id = '%1'", _id, [_newFunds, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
 				[format ["UPDATE settings SET value = '%2' WHERE setting = 'base_owner_%1'", configName _x, _id], 1] call DB_fnc_asyncCall;
+				[format ["UPDATE base_bids SET active = '0' WHERE base = '%1'", configName _x], 1] call DB_fnc_asyncCall;
+
 				_queryOwner = _id;
 			};
 		};

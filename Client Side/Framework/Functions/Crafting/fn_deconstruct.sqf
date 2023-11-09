@@ -59,6 +59,8 @@ if (_total < 1) exitWith {
 				{ _x call ULP_fnc_unlockBlueprint; } forEach getArray (_cfg >> "Deconstruction" >> "blueprints");
 
 				[format ["You've deconstructed <t color='#B92DE0'>%2 %1(s)</t>...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+
+				[player, 15, ULP_Gear] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 			} else {
 				[format ["You don't have any <t color='#B92DE0'>%2</t> x <t color='#B92DE0'>%1</t> to deconstruct...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};

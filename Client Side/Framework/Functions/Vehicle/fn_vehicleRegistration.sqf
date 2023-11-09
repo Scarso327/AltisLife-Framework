@@ -16,4 +16,4 @@ if (_owner isEqualTo []) exitWith {
 	["Vehicle was cleaned up as it was likely spawned in..."] call ULP_fnc_hint;
 };
 
-[parseText format ["<t color='#FF0000'><t size='1.7'>Vehicle Registration</t></t><br/><t color='#FFD700'><t size='1.5'>Owner</t></t><br/> %1", _owner param [0, "Unknown"]]] call ULP_fnc_hint;
+[format ["<t color='#FF0000'><t size='1.7'>Vehicle Registration</t></t><br/><t color='#FFD700'><t size='1.5'>Owner</t></t><br/> %1", _owner param [0, "Unknown"]]] call ULP_fnc_hint;

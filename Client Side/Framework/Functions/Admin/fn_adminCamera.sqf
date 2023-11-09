@@ -120,22 +120,31 @@ switch (_mode) do {
 
 		private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
 		if (isNull _focus) exitWith { ["You need to select someone to preform this action on..."] call ULP_fnc_hint; };
-		if (_focus isEqualTo player) exitWith { ["You can't perform hese actions on yourself..."] call ULP_fnc_hint; };
-		if !(isNull (objectParent player)) exitWith { ["You need to leave the vehicle you're in before you can do this..."] call ULP_fnc_hint; };
 
 		player setVariable ["admin_action_cooldown", time + 2];
 
 		switch (_type) do {
+			case "Eject": {
+				if !([_focus] call ULP_fnc_ejectVehicleUnit) exitWith { [format ["<t color='#B92DE0'>%1</t> isn't in a vehicle...", name _focus]] call ULP_fnc_hint; };
+
+				[getPlayerUID player, "Admin", ["AdminEjectVehicle", serverTime, [name _focus, getPlayerUID _focus, getPos _focus]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+			};
+
+			if (_focus isEqualTo player) exitWith { ["You can't perform these actions on yourself..."] call ULP_fnc_hint; };
+			if !(isNull (objectParent player)) exitWith { ["You need to leave the vehicle you're in before you can do this..."] call ULP_fnc_hint; };
+
 			case "To": {	
 				player setPos (getPos _focus);
 				[format ["You have teleported to <t color='#B92DE0'>%1</t>", name _focus]] call ULP_fnc_hint;
 				[getPlayerUID player, "Admin", ["AdminTeleportTo", serverTime, [name _focus, getPlayerUID _focus, getPos _focus]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 			};
+
 			case "Here": {
 				_focus setPos (getPos player);
 				[format ["You have teleported <t color='#B92DE0'>%1</t> to you", name _focus]] call ULP_fnc_hint;
 				[getPlayerUID player, "Admin", ["AdminTeleportHere", serverTime, [name _focus, getPlayerUID _focus, getPos _focus]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 			};
+			
 			case "Vehicle": {
 				if (isNull (objectParent _focus)) exitWith { [format ["<t color='#B92DE0'>%1</t> isn't in a vehicle...", name _focus]] call ULP_fnc_hint; };
 								

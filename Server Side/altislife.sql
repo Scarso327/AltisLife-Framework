@@ -57,6 +57,14 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Dumping structure for procedure altislife.deleteOldBaseBids
+DELIMITER //
+CREATE PROCEDURE `deleteOldBaseBids`()
+BEGIN
+	DELETE FROM base_bids WHERE active='0';
+END//
+DELIMITER ;
+
 -- Dumping structure for procedure altislife.deleteOldGroups
 DELIMITER //
 CREATE PROCEDURE `deleteOldGroups`()

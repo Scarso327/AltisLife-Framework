@@ -80,6 +80,8 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 
 			[_message joinString "<br/>"] call ULP_fnc_hint;
 		};
+
+		[player, 15, ULP_Gear] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 	} else {
 		["You don't have enough space for these items!"] call ULP_fnc_hint;
 	};

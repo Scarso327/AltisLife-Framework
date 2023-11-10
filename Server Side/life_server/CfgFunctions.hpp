@@ -80,6 +80,8 @@ class CfgFunctions {
             class saveLegislation {};
             class enlistCandidate {};
             class handleVotes {};
+            class getCandidates {};
+            class submitVote {};
         };
 
         class Channels {

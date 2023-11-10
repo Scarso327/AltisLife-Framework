@@ -452,6 +452,7 @@ class CfgFunctions {
 			class addRobAction {};
 			class addBank {};
 			class addMission {};
+			class addPollingStation {};
 			class isATM {};
 			class lockForFactions {};
 			class sit {};
@@ -754,6 +755,8 @@ class CfgFunctions {
 			class taxPrice {};
 			class enlist {};
 			class isProtection {};
+			class openPollingStation {};
+			class vote {};
 		};
 		
 		class Hints {

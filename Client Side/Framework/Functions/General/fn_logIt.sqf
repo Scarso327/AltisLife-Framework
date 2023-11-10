@@ -6,7 +6,16 @@
 scopeName "fn_logIt";
 
 _this params [
-	["_msg", "N/A", [""]]
+	["_msg", "N/A", [""]],
+	["_isDebug", false, [true]]
 ];
 
-diag_log format["[ULP][v%1] %2", LIFE_SETTINGS(getText,"framework_version"), _msg];
+if (_isDebug && { !IS_DEBUG_MODE }) exitWith {};
+
+private _message = format["[ULP][v%1]%2 %3", LIFE_SETTINGS(getText,"framework_version"), ["", "[DEBUG]"] select (IS_DEBUG_MODE), _msg];
+
+diag_log _message;
+
+if (hasInterface && { IS_DEBUG_MODE }) then {
+	systemChat _message;
+};

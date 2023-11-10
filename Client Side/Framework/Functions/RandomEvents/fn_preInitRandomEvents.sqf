@@ -2,9 +2,9 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-scopeName "fn_initRandomEvents";
+scopeName "fn_preInitRandomEvents";
 
-["Initialising Server Events"] call ULP_fnc_logIt;
+["Pre-Initialising Server Events", true] call ULP_fnc_logIt;
 
 {
 	private _event = _x;

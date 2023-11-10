@@ -20,9 +20,9 @@ class CfgRandomEvents {
 			RandomAddition = 2 * 60;
 		};
 		class Events {
-			class OnWarning { code = "_this params [[""_message"", """", [""""]]]; [parseText _message] call ULP_fnc_hint;"; };
+			class OnWarning { code = "_this params [[""_message"", """", [""""]]]; [_message] call ULP_fnc_hint;"; };
 			class OnSpawn { code = "_this call ULP_fnc_onAirdropSpawn;"; };
-			class OnClaimed { code = "_this params [[""_message"", """", [""""]]]; [parseText _message] call ULP_fnc_hint;"; };
+			class OnClaimed { code = "_this params [[""_message"", """", [""""]]]; [_message] call ULP_fnc_hint;"; };
 		};
 		class ServerFunctions {
 			onSpawn = "_this call ULP_SRV_fnc_airdrop;";

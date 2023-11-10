@@ -16,6 +16,10 @@ if (isNull _unit || { isNull _airdrop }) exitWith {
 	};
 };
 
+if (_airdrop getVariable ["locked", false]) exitWith {
+	["OnClaimedAirdrop", ["The airdrop is still locked, you must break into it before it can be claimed..."]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+};
+
 deleteVehicle _airdrop;
 
 // Notify everyone else...

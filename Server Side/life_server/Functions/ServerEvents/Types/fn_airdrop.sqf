@@ -46,11 +46,12 @@ if (isNull _cfg) exitWith { false };
 
 		// Parachute...
 		private _para = createVehicle ["B_parachute_02_F", _pos, [], 0, "FLY"];
+		_para allowDamage false;
 
 		// Crate...
-		private _crate = createVehicle ["O_CargoNet_01_ammo_F", position _para, [], 0, "NONE"];
+		private _crate = createVehicle ["O_CargoNet_01_ammo_F", position _para, [], 0, "FLY"];
 		_crate setVariable ["locked", true, true];
-		_crate attachTo [_para, [0, 0, -1.3]];
+		_crate attachTo [_para, [0, 0, 0]];
 		_crate allowDamage false;
 
 		private _paraPos = getPosATL _para;
@@ -60,12 +61,16 @@ if (isNull _cfg) exitWith { false };
 		clearMagazineCargoGlobal _crate;
 		clearItemCargoGlobal _crate;
 
-		["OnSpawnAirdrop", [
+		private _jipId = ["OnSpawnAirdrop", [
 			_crate, "<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>The supplies have been dropped! The location has been marked on your map."
-		]] remoteExecCall ["ULP_fnc_invokeEvent", -2, "AirdropSpawn"];
+		]] remoteExecCall ["ULP_fnc_invokeEvent", -2, true];
+
+		if (isNil _result) then {
+			[format ["fn_airdrop: remoteExecCall returned '%1' result", _jipId]] call ULP_fnc_logIt;
+		};
 
 		[
-			{ ((getPos (_this select 0) select 2) <= 1) || { isNil "_this select 1" } }, [_crate, _para, _area, _marker], {
+			{ ((getPos (_this select 0) select 2) <= 1) || { isNil "_this select 1" } }, [_crate, _para, _area, _marker, _jipId], {
 				private _crate = _this select 0;
 
 				detach _crate;
@@ -73,7 +78,7 @@ if (isNull _cfg) exitWith { false };
 
 				[
 					{ isNull (_this select 0) }, _this, {
-						remoteExecCall ["", "AirdropSpawn"]; // Remove JIP
+						remoteExecCall ["", this select 4]; // Remove _jipId
 
 						deleteMarker (_this select 2);
 						deleteMarker (_this select 3);

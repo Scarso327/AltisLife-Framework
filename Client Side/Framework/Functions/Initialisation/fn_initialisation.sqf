@@ -103,7 +103,6 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 [] call ULP_fnc_initPerks;
 [] call ULP_fnc_initBases;
 [] call ULP_fnc_initCartels;
-[] call ULP_fnc_initRandomEvents;
 [] call ULP_fnc_initPolice;
 
 ["Initialising Player"] call ULP_fnc_logIt;

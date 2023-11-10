@@ -1,3 +1,5 @@
+#define IS_DEBUG_MODE false
+
 /* System Wide Stuff */
 #define CASH ULP_234_Cash
 #define BANK ULP_547_Bank

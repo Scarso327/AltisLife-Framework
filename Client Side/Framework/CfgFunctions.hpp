@@ -647,7 +647,7 @@ class CfgFunctions {
 
 		class RandomEvents {
 			file = "Functions\RandomEvents";
-			class initRandomEvents {};
+			class preInitRandomEvents { preInit=1; };
 		};
 
 		class Cartels {

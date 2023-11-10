@@ -13,9 +13,17 @@ _this params [
 	["_params", [], [[]]]
 ];
 
-private _events = missionNamespace getVariable format["ULPEvent_%1", _event];
+private _eventHandlers = missionNamespace getVariable format["ULPEvent_%1", _event];
 
-if (isNil "_events") exitWith {}; // No events...
+if (isNil "_eventHandlers") exitWith {
+	[format ["fn_invokeEvent: '%1' invoked but no handlers added", _event], true] call ULP_fnc_logIt;
+};
+
+// Info on JIP usage, the handlers must have been registered to be called. 
+// This means you must ensure when a player is JIP - the handlers are executed before JIP during initialisation.
+if (isRemoteExecutedJIP && { !(_event in getArray (missionConfigFile >> "CfgRemoteExec" >> "Functions" >> "ULP_fnc_invokeEvent" >> "validJipEvents")) }) exitWith {
+	[format ["fn_invokeEvent: '%1' invoked via JIP but isn't whitelisted", _event], true] call ULP_fnc_logIt;
+};
 
 {
 	if (_x isEqualType 0) then {
@@ -31,4 +39,4 @@ if (isNil "_events") exitWith {}; // No events...
 			[_event, _eventId] call ULP_fnc_removeEventHandler;
 		};
 	};
-} forEach + _events;
+} forEach + _eventHandlers;

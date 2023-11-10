@@ -53,7 +53,7 @@ class CfgSpawns {
             marker = "apc_spawn_agios";
             icon = "Data\UI\Spawns\agios.paa";
         };
-        class UndercoverHeadquarters : Civilian {
+        class UndercoverHeadquarters : BaseSpawn {
             displayName = "NCA Covert Headquarters";
             marker = "apc_spawn_uc";
             icon = "Data\UI\Spawns\neochori.paa";
@@ -105,7 +105,7 @@ class CfgSpawns {
         };
 
         // Government
-        class GovernorResidence : Civilian {
+        class GovernorResidence : BaseSpawn {
             displayName = "10 Kavala Street";
             marker = "civ_spawn_residence";
             icon = "Data\UI\Spawns\government.paa";
@@ -160,25 +160,25 @@ class CfgSpawns {
             conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
 
-        class Taxi : Civilian {
+        class Taxi : BaseSpawn {
             displayName = "Taxi Altis";
             marker = "civ_spawn_taxi";
             icon = "Data\UI\Spawns\taxi.paa";
             conditions = "[""Taxi""] call ULP_fnc_hasLicense";
         };
-        class Solicitor : Civilian {
+        class Solicitor : BaseSpawn {
             displayName = "Altis Solicitors";
             marker = "civ_spawn_solicitor";
             icon = "Data\UI\Spawns\solicitor.paa";
             conditions = "[""Solicitor""] call ULP_fnc_hasLicense";
         };
-        class News : Civilian {
+        class News : BaseSpawn {
             displayName = "AAN World News";
             marker = "civ_spawn_news";
             icon = "Data\UI\Spawns\news.paa";
             conditions = "[""News""] call ULP_fnc_hasLicense";
         };
-        class Rebel : Civilian {
+        class Rebel : BaseSpawn {
             displayName = "Rebel Outpost";
             marker = "civ_spawn_rebel";
             icon = "Data\UI\Spawns\rebel.paa";

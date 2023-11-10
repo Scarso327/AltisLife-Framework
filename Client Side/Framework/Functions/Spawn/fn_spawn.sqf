@@ -25,8 +25,9 @@ switch (true) do {
 		_pos = getMarkerPos getText(_spawnCfg >> "marker");
 
 		private _buildings = getArray (_spawnCfg >> "buildings");
+		private _radius = getNumber (_spawnCfg >> "radius");
 
-		if !(_buildings isEqualTo []) then {
+		if (!(_buildings isEqualTo []) && { _radius > 0 }) then {
 			_buildings = nearestObjects[_pos, _buildings, getNumber (_spawnCfg >> "radius")];
 			if !(_buildings isEqualTo []) then {
 				_pos = (selectRandom (_buildings select { !(isObjectHidden _x && { [_x] call ULP_fnc_isHouseOwned }) })) buildingPos 0;

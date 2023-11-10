@@ -28,9 +28,12 @@ switch (true) do {
 		private _radius = getNumber (_spawnCfg >> "radius");
 
 		if (!(_buildings isEqualTo []) && { _radius > 0 }) then {
-			_buildings = nearestObjects[_pos, _buildings, getNumber (_spawnCfg >> "radius")];
+			_buildings = (nearestObjects [_pos, _buildings, getNumber (_spawnCfg >> "radius")]) select {
+				!(isObjectHidden _x && { [_x] call ULP_fnc_isHouseOwned })
+			};
+
 			if !(_buildings isEqualTo []) then {
-				_pos = (selectRandom (_buildings select { !(isObjectHidden _x && { [_x] call ULP_fnc_isHouseOwned }) })) buildingPos 0;
+				_pos = (selectRandom _buildings) buildingPos 0;
 			};
 		};
 	};

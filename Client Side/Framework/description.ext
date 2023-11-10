@@ -35,10 +35,7 @@ class CfgWorlds {
 		pictureMap = "";
 		pictureShot = "data\load.paa";
 		loadingTexts[] = { 
-			"I don’t even know man just anything that you’d like there", // FreddieDavis
-			"You can do this! Don't listen to your family, you're not fat!", // BoughNoggeye
-			"Did you know rabbits are not capable of being sick. It’s diaphragm just lacks the strength to throw up.", // KitKnight
-			"Don't trust Callam" // Hector
+			
 		};
 	};
 };

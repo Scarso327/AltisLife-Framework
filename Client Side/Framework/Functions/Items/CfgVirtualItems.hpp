@@ -1270,7 +1270,7 @@ class CfgVirtualItems {
 	};
 	class UnprocessedWeed : UraniumOre {
 		displayName = "Unprocessed Weed";
-		description = "A drug useless until processed.";
+		description = "A drug, useless until processed.";
 		icon = "Data\Icons\weedUnprocessed.paa";
 		weight = 4;
 		class Settings : Settings {};

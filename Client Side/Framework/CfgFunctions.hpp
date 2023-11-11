@@ -113,6 +113,7 @@ class CfgFunctions {
 			class applyTextures {};
 			class isGas {};
 			class isMask {};
+			class preInitClothing { preInit=1; }
 		};
 
 		class Items {

@@ -25,8 +25,15 @@ _textures params [
     ["_uniform", "", [""]], ["_backpack", "", [""]]
 ];
 
-if !(_uniform isEqualTo "") then { [player, uniform player, uniformContainer player, _uniform] call ULP_fnc_setTextures; };
-if !(_backpack isEqualTo "") then { [unitBackpack player, typeOf (unitBackpack player), backpackContainer player, _backpack] call ULP_fnc_setTextures; };
+if !(_uniform isEqualTo "") then {
+    ULP_UniformTexture = _uniform;
+    [player, uniform player, uniformContainer player, _uniform] call ULP_fnc_setTextures
+};
+
+if !(_backpack isEqualTo "") then {
+    ULP_BackpackTexture = _backpack;
+    [unitBackpack player, typeOf (unitBackpack player), backpackContainer player, _backpack] call ULP_fnc_setTextures;
+};
 
 [] call ULP_fnc_maxCarry;
 

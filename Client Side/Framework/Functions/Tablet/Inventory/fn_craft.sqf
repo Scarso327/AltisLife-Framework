@@ -63,7 +63,7 @@ private _name = getText (_cfg >> "displayName");
 
 				[format ["You've constructed %2 %1(s)...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 
-				[player, 15, ULP_Gear] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+				[true] call ULP_fnc_saveGear;
 				[getPlayerUID player, "Craft", [_name, _amount]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 			};
 		}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

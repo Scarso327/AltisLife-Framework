@@ -5,6 +5,10 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_saveGear";
 
+_this params [
+    ["_syncWithDatabase", false, [true]]
+];
+
 if ([player] call ULP_fnc_onDuty) exitWith { false };
 
 private _yItems = [];
@@ -32,5 +36,9 @@ ULP_Gear = [
         [backpackContainer player] call _fnc_getCurTexture
     ]
 ];
+
+if (_syncWithDatabase) then {
+    [player, 15, ULP_Gear] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+};
 
 true

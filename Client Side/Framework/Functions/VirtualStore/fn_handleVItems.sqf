@@ -91,7 +91,7 @@ if (_remove) then {
 					[format["You have sold %1 %2(s) for <t color='#B92DE0'>£%3</t>!", _value, _name, [_sellPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				};
 
-				[player, 15, ULP_Gear] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+				[true] call ULP_fnc_saveGear;
 			} else {
 				[format["You don't have %1 %2(s) to sell!", _value, _name]] call ULP_fnc_hint;
 			};
@@ -99,7 +99,7 @@ if (_remove) then {
 			if ([_buyPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) then {
 				if ([configName _cfg, _value, false] call ULP_fnc_handleItem) then {
 					[format["You have bought %1 %2(s) for £%3!", _value, _name, [_buyPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
-					[player, 15, ULP_Gear] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+					[true] call ULP_fnc_saveGear;
 				} else {
 					[_buyPrice, false] call ULP_fnc_addMoney; // Give them the money back, they didn't get what they paid for...
 					["You don't have enough inventory space!"] call ULP_fnc_hint;

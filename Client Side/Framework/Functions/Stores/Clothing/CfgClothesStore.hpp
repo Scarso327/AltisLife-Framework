@@ -52,7 +52,7 @@ class CfgClothesStore {
 			};
 			class H_Beret_blk { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class H_Watchcap_blk { 
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures { class H_Watchcap_blk {}; };
 			};
 			class H_Booniehat_khk { 

@@ -405,6 +405,7 @@ class CfgVirtualStores {
 		storeName = "Secrets Buyer";
 		conditions = "true";
 		class Items {
+			class SpaceCapsuleDataDrive {};
 			class EncryptedDrive {};
 			class DecryptedDrive {};
 		};

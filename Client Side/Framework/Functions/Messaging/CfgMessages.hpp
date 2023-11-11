@@ -84,6 +84,11 @@ class CfgMessages {
 		condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 	};
 
+	class OpenSeaBroadcast : OpenAirBroadcast {
+		displayName = "Open Sea Broadcast";
+		targets = "(allPlayers select { !(isNull (objectParent _x)) && { (vehicle _x) isKindOf 'Ship'} })";
+	};
+
 	class Dispute : Message {
 		picture = "Data\UI\dispute.paa";
 		displayName = "Dispute";

@@ -970,6 +970,14 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 	};
+	class SpaceCapsuleDataDrive : StolenCargo {
+		displayName = "Space Capsule Date Drive";
+		description = "A data drive from a space capsule containing unknown secrets.";
+		icon = "Data\Icons\drive.paa";
+		sellPrice = 7000000;
+		weight = 10;
+		class Settings : Settings {};
+	};
 	class SmallGalleryPiece : StolenCargo {
 		displayName = "Small Gallery Piece";
 		description = "A piece of art commonly stored in the Altis Gallery.";
@@ -1270,7 +1278,7 @@ class CfgVirtualItems {
 	};
 	class UnprocessedWeed : UraniumOre {
 		displayName = "Unprocessed Weed";
-		description = "A drug useless until processed.";
+		description = "A drug, useless until processed.";
 		icon = "Data\Icons\weedUnprocessed.paa";
 		weight = 4;
 		class Settings : Settings {};

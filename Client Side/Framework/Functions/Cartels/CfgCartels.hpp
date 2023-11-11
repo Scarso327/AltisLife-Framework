@@ -62,7 +62,7 @@ class CfgCartels {
 			factions[] = { "Police", "Civilian" };
 			position[] = {20600, 20116, 0};
 			zoneRadius = 50;
-			kosRadius = 0;
+			kosRadius = 300;
 			class Drug {
 				extraPay = 1.015;
 				saleTax = 0.025;

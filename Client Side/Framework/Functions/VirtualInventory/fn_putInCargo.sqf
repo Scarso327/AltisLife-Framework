@@ -55,7 +55,13 @@ if (_count <= 0) exitWith {
 	["You don't have any of this item to put in this container!"] call ULP_fnc_hint;
 };
 
-private _maxCarry = floor ((([_container] call ULP_fnc_maxLoad) - ([_container] call ULP_fnc_currentLoad)) / getNumber(missionConfigFile >> "CfgVirtualItems" >> _item >> "weight"));
+private _itemWeight = getNumber(missionConfigFile >> "CfgVirtualItems" >> _item >> "weight");
+
+if (_itemWeight <= 0) exitWith {
+	["This item can't be stored in containers"] call ULP_fnc_hint;
+};
+
+private _maxCarry = floor ((([_container] call ULP_fnc_maxLoad) - ([_container] call ULP_fnc_currentLoad)) / _itemWeight);
 
 if (_maxCarry <= 0) exitWith {
 	["This vehicle doesn't enough inventory space to fit even one of these items!"] call ULP_fnc_hint;

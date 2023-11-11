@@ -113,7 +113,7 @@ class CfgCrimes {
 					onEachFrame = "";
 					onProgressStop = "";
 					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 10) : { ""There must be at least <t color='#B92DE0'>10 police officers</t> to start this crime..."" }; case ([""IndustrialDrill""] call ULP_fnc_hasItem < 1) : { ""You need an industrial drill to perform this action..."" }; default { ""Valut security has already been disabled..."" }; })] call ULP_fnc_hint;";
-					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false]) && { [""HackingDevice""] call ULP_fnc_hasItem > 0 }";
+					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false]) && { [""IndustrialDrill""] call ULP_fnc_hasItem > 0 }";
 				};
 			};
 			class Buildings {

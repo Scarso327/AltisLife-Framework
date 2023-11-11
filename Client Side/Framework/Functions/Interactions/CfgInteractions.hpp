@@ -230,7 +230,7 @@ class CfgInteractions {
 		class Lockpick : Repair {
 			title = "Lockpick";
 			onClick = "_this call ULP_fnc_lockpickVehicle";
-			condition = "!([player, _this] call ULP_fnc_isVehicleOwner) && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
+			condition = "!(_this in ULP_Keys) && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
 		};
 
 		class Registration : Repair {

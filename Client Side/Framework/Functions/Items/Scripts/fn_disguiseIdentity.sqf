@@ -11,7 +11,7 @@ _this params [
 ];
 
 // No active identity and this identity card is our name
-if (isNil { player getVariable "name" } && (name player) isEqualTo _identity) exitWith {};
+if (isNil { player getVariable "name" } && { (name player) isEqualTo _identity }) exitWith {};
 
 // Stop spam...
 if (time < (player getVariable ["last_disguised", 0])) exitWith {

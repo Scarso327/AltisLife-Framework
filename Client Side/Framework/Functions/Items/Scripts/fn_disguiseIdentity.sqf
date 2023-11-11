@@ -10,6 +10,9 @@ _this params [
 	["_identity", name player, [""]]
 ];
 
+// No active identity and this identity card is our name
+if (isNil { player getVariable "name" } && (name player) isEqualTo _identity) exitWith {};
+
 // Stop spam...
 if (time < (player getVariable ["last_disguised", 0])) exitWith {
 	["You've disguised yourself recently, please wait..."] call ULP_fnc_hint;

@@ -10,8 +10,7 @@ if !([player, ["Civilian"]] call ULP_fnc_isFaction || { ["IDForger"] call ULP_fn
 };
 
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Enter Identity Name", ["Complete", "Cancel"],
-	format ["Type name here...", _name], [],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Enter Identity Name", ["Complete", "Cancel"], "Type name here...", [],
 	{	
 		_this params [
 			["_name", "", [""]]

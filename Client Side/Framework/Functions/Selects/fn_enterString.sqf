@@ -26,7 +26,6 @@ private _display = _parent createDisplay "DisplayInput";
 
 private _input = _display displayCtrl 4402;
 private _placeholder = _display displayCtrl 4407;
-_input ctrlSetStructuredText parseText _message;
 
 [_input, _placeholder] call ULP_UI_fnc_placeholder;
 

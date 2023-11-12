@@ -377,7 +377,16 @@ class CfgVehicles {
 	};
 	class B_G_Offroad_01_armed_F : C_Offroad_01_F { buyPrice = 4280000; };
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
-	class C_IDAP_Offroad_01_F : C_Offroad_01_F {};
+	class C_IDAP_Offroad_01_F : C_Offroad_01_F {
+		class Textures {
+			class IDAP : BaseTexture {
+				displayName = "IDAP"; 
+				textures[] = { 
+					"\a3\soft_f_orange\Data\Offroad_01_ext_IDAP_CO.paa"
+				}; 
+			};
+		};
+	};
 	class C_Offroad_01_covered_F : C_Offroad_01_F {
 		buyPrice = 49100;
 		virtualSpace = 75;
@@ -446,7 +455,16 @@ class CfgVehicles {
 			};
 		};
 	};
-	class C_IDAP_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F {};
+	class C_IDAP_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F {
+		class Textures {
+			class IDAP : BaseTexture {
+				displayName = "IDAP"; 
+				textures[] = { 
+					"\a3\soft_f_orange\Data\Offroad_02_ext_IDAP_CO.paa"
+				}; 
+			};
+		};
+	};
 	class I_C_Offroad_02_LMG_F : C_Offroad_02_unarmed_F { buyPrice = 670300; };
 
 	class C_SUV_01_F : Base {
@@ -598,13 +616,27 @@ class CfgVehicles {
 	};
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
 	class C_Van_02_medevac_F : C_Van_02_transport_F {};
-	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {};
+	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {
+		class Textures {
+			class IDAP : BaseTexture { 
+				displayName = "IDAP";
+				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_IDAP_CO.paa" }; 
+			};
+		};
+	};
 	class C_Van_02_vehicle_F : C_Van_02_transport_F {
 		buyPrice = 96650;
 		virtualSpace = 110;
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
-	class C_IDAP_Van_02_vehicle_F : C_Van_02_vehicle_F {};
+	class C_IDAP_Van_02_vehicle_F : C_Van_02_vehicle_F {
+		class Textures {
+			class IDAP : BaseTexture { 
+				displayName = "IDAP";
+				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_IDAP_CO.paa" }; 
+			};
+		};
+	};
 	class C_Van_02_service_F : C_Van_02_vehicle_F {};
 
 	class B_CTRG_LSV_01_light_F : Base {
@@ -929,17 +961,53 @@ class CfgVehicles {
 			}; 
 		};
 	};
-	class C_IDAP_Truck_02_transport_F : I_Truck_02_transport_F {};
+	class C_IDAP_Truck_02_transport_F : I_Truck_02_transport_F {
+		class Textures {
+			class IDAP : BaseTexture {
+				displayName = "IDAP"; 
+				textures[] = { 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_int_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_kuz_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_water_IDAP_CO.paa"
+				 }; 
+			};
+		};
+	};
 	class I_Truck_02_covered_F : I_Truck_02_transport_F {
 		buyPrice = 560000;
 		virtualSpace = 350;
 	};
-	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {};
+	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {
+		class Textures {
+			class IDAP : BaseTexture {
+				displayName = "IDAP"; 
+				textures[] = { 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_int_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_kuz_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_water_IDAP_CO.paa"
+				 }; 
+			};
+		};
+	};
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 435000;
 		virtualSpace = 200;
 	};
-	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {};
+	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
+		class Textures {
+			class IDAP : BaseTexture {
+				displayName = "IDAP"; 
+				textures[] = { 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_int_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_kuz_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_water_IDAP_CO.paa"
+				 }; 
+			};
+		};
+	};
 
 	class O_Truck_03_transport_F : Base {
 		description = "The Tempest is a 6x6 mine resistant standard transport truck. The modular design of the truck allows several transport versions.";
@@ -1490,7 +1558,19 @@ class CfgVehicles {
 			};
 		};
 	};
-	class C_IDAP_Heli_Transport_02_F : I_Heli_Transport_02_F {};
+	class C_IDAP_Heli_Transport_02_F : I_Heli_Transport_02_F {
+		class Textures {
+			class IDAP : BaseTexture {
+				displayName = "IDAP"; 
+				textures[] = { 
+					"\a3\air_f_orange\heli_transport_02\data\Heli_Transport_02_1_IDAP_CO.paa",
+					"\a3\air_f_orange\heli_transport_02\data\Heli_Transport_02_2_IDAP_CO.paa",
+					"\a3\air_f_orange\heli_transport_02\data\Heli_Transport_02_3_IDAP_CO.paa",
+					"\a3\air_f_orange\heli_transport_02\data\Heli_Transport_02_int_02_IDAP_CO.paa" 
+				}; 
+			};
+		};
+	};
 
 	class O_Heli_Transport_04_black_F : Base {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";

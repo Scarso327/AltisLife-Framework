@@ -50,7 +50,7 @@ class CfgProcessing {
 	// Smelting
 	class Smelting : BaseProcess { 
 		processTitle = "Smelting";
-		profession[] = { "Processing", 1, 100 };
+		profession[] = { "Smelting", 1, 100 };
 	};
 
 	class Copper : Smelting {
@@ -91,6 +91,12 @@ class CfgProcessing {
 		materials[] = { { "UncutDiamond", 1 } };
 		items[] = { { "CutDiamond", 1 } };
 		reqLicenses[] = { "Diamond" };
+	};
+	class Plank : BaseProcess {
+		processTitle = "Cutting";
+		materials[] = { { "Wood", 1 } };
+		items[] = { { "Plank", 2 } };
+		reqLicenses[] = {};
 	};
 
 	// Processing

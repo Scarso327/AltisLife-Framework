@@ -39,6 +39,7 @@ if (_owner isEqualType ["", "", ""]) then {
 [_vehicle] call ULP_fnc_initVehicle;
 
 _vehicle allowDammage true;
+_vehicle addItemCargoGlobal ["ToolKit", 1];
 ULP_Keys pushBackUnique _vehicle;
 
 if (_hint) then {

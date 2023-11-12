@@ -144,7 +144,7 @@ class CfgCrimes {
 					displayName = "Drilling into Storage Vault";
 					time = 900;
 					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Underwater Research Facility is being illegally accessed!""], _targets] call ULP_fnc_sendMessage; [""You have begun drilling into the underwater research facility, police has been notified!""] call ULP_fnc_hint;";
-					onCompleted = "[""ResearchFacility"", 1, evidence_storage_vault] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
+					onCompleted = "[""ResearchFacility"", 1, researchFacilityCapsule] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
 					onEachFrame = "";
 					onProgressStop = "";
 					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 10) : { ""There must be at least <t color='#B92DE0'>10 police officers</t> to start this crime..."" }; case ([""IndustrialDrill""] call ULP_fnc_hasItem < 1) : { ""You need an industrial drill to perform this action..."" }; default { ""Valut security has already been disabled..."" }; })] call ULP_fnc_hint;";

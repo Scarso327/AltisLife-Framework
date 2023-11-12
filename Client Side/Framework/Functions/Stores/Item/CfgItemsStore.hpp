@@ -13,7 +13,7 @@ class CfgItemsStore {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 				class textures { class arifle_Mk20C_plain_F {}; };
 			};
-			class arifle_SDAR_F { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; };
+			class arifle_SDAR_F { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && !(missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false]) }"; };
 
 			// SUB-MACHINE GUNS
 			class SMG_05_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; }; 

@@ -93,7 +93,7 @@ class CfgVehicleStores {
 		factions[] = { "Police" };
 		class Vehicles {
 			class C_Boat_Civil_01_police_F {
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && !(missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false]) }";
+				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && { ( missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] || { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] ) } } }";
 				class Textures {};
 			};
 			class C_Boat_Transport_02_F {

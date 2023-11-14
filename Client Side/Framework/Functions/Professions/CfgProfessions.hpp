@@ -58,4 +58,24 @@ class CfgProfessions {
 		xpMultipler = 2;
 		maxLevel = 5;
 	};
+
+	class Smelting {
+		displayName = "Smelting";
+		icon = "Data\UI\Professions\smelting.paa";
+		effectDescription = "Decreases the time it takes to smelt by %1%2";
+		effectCalculation = "5 * (_this select 0)";
+		xpLevel = 100;
+		xpMultipler = 2;
+		maxLevel = 5;
+	};
+
+	class Archeology {
+		displayName = "Archeology";
+		icon = "Data\UI\Professions\archeology.paa";
+		effectDescription = "Decreases the time it takes to dig by %1%2";
+		effectCalculation = "5 * (_this select 0)";
+		xpLevel = 100;
+		xpMultipler = 2;
+		maxLevel = 5;
+	};
 };

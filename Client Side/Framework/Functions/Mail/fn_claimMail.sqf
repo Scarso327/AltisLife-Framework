@@ -118,6 +118,8 @@ if (_claimedAmount <= 0) exitWith {
 	_button ctrlEnable true;
 };
 
+[getPlayerUID player, "Mail", [_id, _type, _className, _data, _totalAmount, _claimedAmount]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+
 [format ["You claimed %1", [
 	format ["%1 of these items but couldn't carry all of them", _claimedAmount], 
 	"all of these items"

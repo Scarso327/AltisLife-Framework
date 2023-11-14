@@ -101,6 +101,10 @@ class CfgPatches {
             class BaseBid : Spawn {};
             class Cartel : Dispute {};
             class Misc : Dispute {};
+
+            class Mail {
+                params = 6;
+            };
         };
 
         #include "Functions\Gathering\CfgGathering.hpp"

@@ -48,10 +48,15 @@ switch (_mode) do {
 		_camera camCommand "surfaceSpeed off";
 		_camera camCommit 0;
 
+		camUseNVG false;
+		false setCamUseTI 0;
+		ULP_AdminCameraVision = "NORMAL";
+		
 		cameraEffectEnableHUD true;
 		showCinemaBorder false;
 		
 		uiNamespace setVariable ["admin_camera", _camera];
+
 		_camera setVariable ["display", _display];
 		["SetCameraInput", [true]] call ULP_fnc_adminCamera;
 
@@ -344,6 +349,39 @@ switch (_mode) do {
 				ctrlSetFocus ([(uiNamespace getVariable ["admin_camera_mouse", controlNull]), _ctrlMap] select (_isShown));
 
 				_handled = true;
+			};
+
+			case N: {
+				private _camera = uiNamespace getVariable ["admin_camera", objNull];
+
+				if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { !(isNull _camera) } && { !_shift } && { !_ctrlKey } && { !_alt }) then {
+					switch (ULP_AdminCameraVision) do {
+						// Thermal
+						case "NVG": {
+							ULP_AdminCameraVision = "THERMAL";
+
+							camUseNVG false;
+							true setCamUseTI 0;
+						};
+						// Normal
+						case "THERMAL": {
+							ULP_AdminCameraVision = "NORMAL";
+
+							camUseNVG false;
+							false setCamUseTI 0;
+						};
+						// NVG
+						default {
+							ULP_AdminCameraVision = "NVG";
+
+							camUseNVG true;
+							false setCamUseTI 0;
+						};
+					};
+
+					playSound ["RscDisplayCurator_visionMode", true];
+					_handled = true;
+				};
 			};
 		};
 

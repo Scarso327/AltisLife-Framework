@@ -140,7 +140,7 @@ class CfgGroups {
 					level = 4;
 				};
 
-				class PollRigging { // TODONOW
+				class PollRigging {
 					displayName = "Poll Rigging";
 					icon = "Data\UI\GroupPerks\pollRigging.paa";
 					description = "Your members have the ability to rig polling boothes.";

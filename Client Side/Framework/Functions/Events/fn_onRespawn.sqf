@@ -16,8 +16,6 @@ if !(isNull _corpse) then {
 	deleteVehicle _corpse;
 };
 
-// TODO : Reset Variables, Reset Custom Channels and Actions...
-
 _unit setUnconscious false;
 unsetKiller(_unit);
 unsetDowned(_unit);

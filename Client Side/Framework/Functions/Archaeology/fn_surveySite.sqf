@@ -35,6 +35,9 @@ if ([] call ULP_fnc_isGroup) then {
 	if (_buff > 0) then { _time = _time - (_time * _buff); };
 };
 
+private _profCal = ["Archeology"] call ULP_fnc_getProfessionCalculation;
+if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
+
 [format["Surveying %1 Archaeology Site", _rarity], _time, [_cfg, _task], { (player distance (taskDestination (_this select 1))) <= 5 }, {
 	_this params [ "_cfg", "_task" ];
 	
@@ -54,6 +57,8 @@ if ([] call ULP_fnc_isGroup) then {
 		[format ["You've surveyed a <t color='#B92DE0'>%1 archeology site</t> and found a better area to search...", configName _cfg]] call ULP_fnc_hint;
 	};
 
+	["Archeology", 1, 50] call ULP_fnc_increaseProfession;
+	
 	_task setSimpleTaskDestination _pos;
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
 

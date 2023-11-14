@@ -35,6 +35,9 @@ if ([] call ULP_fnc_isGroup) then {
 	if (_buff > 0) then { _time = _time - (_time * _buff); };
 };
 
+private _profCal = ["Archeology"] call ULP_fnc_getProfessionCalculation;
+if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
+
 [format["Digging %1 Archaeology Site", _rarity], _time, [_cfg, _task], { (player distance (taskDestination (_this select 1))) <= 5 }, {
 	_this params [ "_cfg", "_task" ];
 
@@ -64,6 +67,8 @@ if ([] call ULP_fnc_isGroup) then {
 	{ [_x, _y, false, true] call ULP_fnc_handleItem; } forEach _given;
 	[format["Archaeology%1", configName _cfg]] call ULP_fnc_finishMission;
 	[format ["You have finished digging and found <t color='#B92DE0'>%1</t>", _given]] call ULP_fnc_hint;
+
+	["Archeology", 1, 50] call ULP_fnc_increaseProfession;
 
 	["Archaeologist"] call ULP_fnc_achieve;
 	

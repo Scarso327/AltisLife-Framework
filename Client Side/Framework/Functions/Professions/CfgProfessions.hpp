@@ -72,7 +72,7 @@ class CfgProfessions {
 	class Archeology {
 		displayName = "Archeology";
 		icon = "Data\UI\Professions\archeology.paa";
-		effectDescription = "Decreases the time it takes to dig by %1%2";
+		effectDescription = "Decreases the time it takes to survey and dig by %1%2";
 		effectCalculation = "5 * (_this select 0)";
 		xpLevel = 100;
 		xpMultipler = 2;

@@ -161,7 +161,7 @@ class CfgGroups {
 			class Airdrop : Cartel {};
 			class Freight { amount = 10; }; // TODO
 			class Election { amount = 500; }; // TODONOW
-			class Rigging { amount = 35; }; // TODONOW
+			class Rigging { amount = 35; };
 			class Hideout : Cartel {};
 			class BaseBid : Election {}; // TODONOW
 			class Contraband : Freight {}; // TODONOW

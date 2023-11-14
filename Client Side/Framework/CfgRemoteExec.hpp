@@ -192,5 +192,8 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_updateMail {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_rigPollingStation {
+            allowedTargets = SERVER;
+        };
     };
 };

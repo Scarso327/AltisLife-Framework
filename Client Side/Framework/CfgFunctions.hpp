@@ -765,6 +765,7 @@ class CfgFunctions {
 			class isProtection {};
 			class openPollingStation {};
 			class vote {};
+			class rigPollingStation {};
 		};
 		
 		class Hints {

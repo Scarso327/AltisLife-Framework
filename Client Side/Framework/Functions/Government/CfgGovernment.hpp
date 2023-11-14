@@ -1,5 +1,10 @@
 class CfgGovernment {
 	electionInternal = 14;
+
+	class Rigging {
+		timeToRig = 30;
+		alreadyRiggedMultiplier = 1.5;
+	};
 	
 	class Legislation {
 		class Tax {

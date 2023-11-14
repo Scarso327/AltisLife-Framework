@@ -170,6 +170,11 @@ class CfgFunctions {
             file = "\life_server\Functions\Vehicle";
             class registerStinger {};
         };
+
+        class Government {
+            file = "\life_server\Functions\Government";
+            class rigPollingStation {};
+        };
     };
 
     class MySQL_Database {

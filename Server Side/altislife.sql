@@ -65,6 +65,14 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Dumping structure for procedure altislife.deleteOldMail
+DELIMITER //
+CREATE PROCEDURE `deleteOldMail`()
+BEGIN
+	DELETE FROM mail WHERE claimed='1';
+END//
+DELIMITER ;
+
 -- Dumping structure for procedure altislife.deleteOldGroups
 DELIMITER //
 CREATE PROCEDURE `deleteOldGroups`()
@@ -177,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `logs_queue` (
 CREATE TABLE IF NOT EXISTS `mail` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` varchar(50) NOT NULL,
-  `type` enum('Weapon','Magazine','Texture','Vehicle','Backpack','VirtualItem') NOT NULL,
+  `type` varchar(50) NOT NULL, -- Must be varchar as EXTDB doesn't support enums properly, waste of time to properly parse results
   `class` varchar(50) NOT NULL,
   `data` text NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),

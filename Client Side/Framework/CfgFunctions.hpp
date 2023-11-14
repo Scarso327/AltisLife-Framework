@@ -441,6 +441,12 @@ class CfgFunctions {
 			class switchTexture {};
 		};
 
+		class Mail {
+			file = "Functions\Mail";
+			class openMailBox {};
+			class claimMail {};
+		}
+
 		class Map {
 			file = "Functions\Map";
 			class createSimpleObject {};
@@ -454,6 +460,7 @@ class CfgFunctions {
 			class addBank {};
 			class addMission {};
 			class addPollingStation {};
+			class addMailBox {};
 			class isATM {};
 			class lockForFactions {};
 			class sit {};

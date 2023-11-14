@@ -18,7 +18,13 @@ _this params [
 
 private _key = EXTDB format ["%1:%2:%3", _mode, FETCH_CONST(life_sql_id), _statement];
 
-if (_mode isEqualTo 1) exitWith { true };
+if (_mode isEqualTo 1) exitWith {
+    if !(isNil { ULP_DebugMode }) then {
+        [format["fn_asyncCall: STATEMENT: '%1'", _statement]] call ULP_fnc_logIt;
+    };
+
+    true
+};
 
 _key = (parseSimpleArray format ["%1", _key]) select 1;
 private _result = EXTDB format ["4:%1", _key];
@@ -45,6 +51,10 @@ if (_result isEqualTo "[5]") then {
 
         if !(_loop) exitWith {};
     };
+};
+
+if !(isNil { ULP_DebugMode }) then {
+    [format["fn_asyncCall: STATEMENT: '%1' RESULT: '%2'", _statement, _result]] call ULP_fnc_logIt;
 };
 
 _result = parseSimpleArray _result;

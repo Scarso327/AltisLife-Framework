@@ -84,6 +84,13 @@ class CfgFunctions {
             class submitVote {};
         };
 
+        class DatabaseMail {
+            file = "\life_server\Functions\Database\Mail";
+            class addMail {};
+            class getMail {};
+            class updateMail {};
+        };
+
         class Channels {
             file = "\life_server\Functions\Channels";
             class initRadios {};
@@ -151,11 +158,6 @@ class CfgFunctions {
         class Loot {
             file = "\life_server\Functions\Loot";
             class giveLoot {};
-        };
-
-        class Mail {
-            file = "\life_server\Functions\Mail";
-            class addMail {};
         };
 
         class Crimes {

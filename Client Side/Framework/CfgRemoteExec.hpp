@@ -186,5 +186,11 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_addGroupMember {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_getMail {
+            allowedTargets = SERVER;
+        };
+        class ULP_SRV_fnc_updateMail {
+            allowedTargets = SERVER;
+        };
     };
 };

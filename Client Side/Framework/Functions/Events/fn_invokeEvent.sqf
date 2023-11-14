@@ -13,6 +13,8 @@ _this params [
 	["_params", [], [[]]]
 ];
 
+[format ["fn_invokeEvent: '%1' invoked with '%2'", _event, _params], true] call ULP_fnc_logIt;
+
 private _eventHandlers = missionNamespace getVariable format["ULPEvent_%1", _event];
 
 if (isNil "_eventHandlers") exitWith {

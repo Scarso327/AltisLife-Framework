@@ -23,3 +23,4 @@
 #include "DialogMedical\DialogMedical.hpp"
 #include "DisplaySelect\DisplayWarrantCreation.hpp"
 #include "DialogPollingStation\DialogPollingStation.hpp"
+#include "DialogMailBox\DialogMailBox.hpp"

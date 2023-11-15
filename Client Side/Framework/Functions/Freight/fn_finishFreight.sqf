@@ -19,8 +19,8 @@ if !("CorporateFreight" in ULP_Missions) exitWith {
 	"_expectedQuantity"
 ];
 
-if (isNull _vehicle || { !(alive _vehicle) }) exitWith {
-	["Your original vehicle has been destroyed"] call ULP_fnc_hint;
+if (isNull _vehicle || { !(alive _vehicle) } || { (player distance _vehicle) > 15 }) exitWith {
+	["Your original vehicle has been destroyed or you are too far away from it"] call ULP_fnc_hint;
 	false
 };
 

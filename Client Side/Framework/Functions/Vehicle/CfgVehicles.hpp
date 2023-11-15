@@ -10,7 +10,7 @@ class CfgVehicles {
 		isHouse = false;
 		canTransfer = true;
 		conditions = "true";
-		blacklistedItems[] = {};
+		blacklistedItems[] = { "StolenCargo", "FreightCargo" };
 		class Textures {};
 	};
 
@@ -853,6 +853,7 @@ class CfgVehicles {
 		buyPrice = 23150;
 		virtualSpace = 10;
 		garageLimit = 3;
+		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Red : BaseTexture {
 				displayName = "Red"; 
@@ -875,6 +876,7 @@ class CfgVehicles {
 		virtualSpace = 100;
 		garageLimit = 3;
 		enableRope = false;
+		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -943,6 +945,7 @@ class CfgVehicles {
 		virtualSpace = 280;
 		garageLimit = 2;
 		enableRope = false;
+		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Orange : BaseTexture {
 				displayName = "Orange"; 
@@ -1015,6 +1018,7 @@ class CfgVehicles {
 		virtualSpace = 370;
 		garageLimit = 2;
 		enableRope = false;
+		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class BrownHex : BaseTexture {
 				displayName = "Brown Hex"; 
@@ -1064,6 +1068,7 @@ class CfgVehicles {
 		enableRope = false;
 		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
+		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Hato : HatoTexture { 
 				displayName = "HATO";
@@ -1222,6 +1227,7 @@ class CfgVehicles {
 		chopTime = 120;
 		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk";
+		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1387,7 +1393,7 @@ class CfgVehicles {
 		buyPrice = 565000;
 		virtualSpace = 5;
 		garageLimit = 2;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
 			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
 			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
@@ -1462,7 +1468,7 @@ class CfgVehicles {
 		buyPrice = 2350000;
 		virtualSpace = 25;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
@@ -1487,7 +1493,7 @@ class CfgVehicles {
 		buyPrice = 2130000;
 		virtualSpace = 20;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Police : PoliceTexture {
@@ -1514,7 +1520,7 @@ class CfgVehicles {
 		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "LMG_Minigun_Transport", "LMG_Minigun_Transport2", "CMFlareLauncher" } };
 		class Textures {
 			class Police : PoliceTexture { turrets[] = { { "CMFlareLauncher" } }; };
@@ -1528,7 +1534,7 @@ class CfgVehicles {
 		virtualSpace = 55;
 		garageLimit = 1;
 		chopKeepChance = 85;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
 			class Medic : MedicTexture {
@@ -1577,7 +1583,7 @@ class CfgVehicles {
 		buyPrice = 11350000;
 		virtualSpace = 0;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		chopKeepChance = 85;
 		chopPerc = 0.20;
 		chopTime = 60;
@@ -1623,7 +1629,7 @@ class CfgVehicles {
 		buyPrice = 33400750;
 		virtualSpace = 100;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		chopKeepChance = 95;
 		chopPerc = 0.20;
 		chopTime = 300;
@@ -1652,7 +1658,7 @@ class CfgVehicles {
 		buyPrice = 146560000;
 		virtualSpace = 0;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		chopKeepChance = 97;
 		chopPerc = 0.20;
 		chopTime = 600;
@@ -1671,7 +1677,7 @@ class CfgVehicles {
 		buyPrice = 1256000;
 		virtualSpace = 5;
 		garageLimit = 2;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
@@ -1680,7 +1686,7 @@ class CfgVehicles {
 		buyPrice = 75500000;
 		virtualSpace = 175;
 		garageLimit = 1;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		retrievalPerc = 0.01;
 		chopKeepChance = 95;
 		chopPerc = 0.15;
@@ -1696,7 +1702,7 @@ class CfgVehicles {
 		description = "The most promising prototype built by CSAT engineers presents an extremely progressive design with many unique features and top-notch bleeding-edge technologies.";
 		buyPrice = 115650000;
 		virtualSpace = 80;
-		blacklistedItems[] = { "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" } };
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {

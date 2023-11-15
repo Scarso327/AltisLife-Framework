@@ -13,6 +13,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Sustain {
 			hunger = 40;
@@ -44,6 +45,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Sustain {
 			hunger = 30;
@@ -161,6 +163,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -205,6 +208,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -228,6 +232,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -247,6 +252,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Sustain {
 			hunger = 0;
@@ -294,6 +300,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [100, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 		conditions = "true";
@@ -337,6 +344,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -359,6 +367,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = true;
+			isSystemItem = false;
 		};
 		class Events {
 			onUse = "_this call ULP_fnc_disguiseIdentity;";
@@ -380,6 +389,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Deconstruction {
 			time = 20;
@@ -514,6 +524,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Deconstruction {
 			time = 30;
@@ -673,6 +684,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -771,6 +783,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -865,6 +878,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -900,6 +914,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -945,6 +960,7 @@ class CfgVirtualItems {
 			isSavable = false;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = true;
 		};
 		conditions = "true";
 	};
@@ -954,12 +970,8 @@ class CfgVirtualItems {
 		icon = "Data\Icons\freightCargo.paa";
 		sellPrice = 45680;
 		weight = 11;
-		class Settings {
-			onMarket = true;
+		class Settings : Settings {
 			isIllegal = false;
-			isSavable = false;
-			isScripted = false;
-			isEventItem = false;
 		};
 	};
 	class SeizedContraband : StolenCargo {
@@ -1044,6 +1056,7 @@ class CfgVirtualItems {
 			isSavable = false;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -1144,6 +1157,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = true;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -1190,6 +1204,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 	};
 	class Glass : CopperBar {
@@ -1226,6 +1241,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 	};
 
@@ -1240,6 +1256,7 @@ class CfgVirtualItems {
 			isSavable = false;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 	};
 	class ExplosiveMaterials : UraniumOre {
@@ -1274,6 +1291,7 @@ class CfgVirtualItems {
 			isSavable = false;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 	};
 	class UnprocessedWeed : UraniumOre {
@@ -1310,6 +1328,7 @@ class CfgVirtualItems {
 			isSavable = false;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -1326,6 +1345,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 	};
 	class ProcessedHeroin : ProcessedWeed {
@@ -1392,6 +1412,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -1441,6 +1462,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -1496,6 +1518,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};
@@ -1544,6 +1567,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Events { onUse = "[""Common""] call ULP_fnc_getSite;"; };
 		conditions = "true";
@@ -1593,6 +1617,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_surveySite;"; };
 		class Deconstruction {
@@ -1634,6 +1659,7 @@ class CfgVirtualItems {
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
+			isSystemItem = false;
 		};
 		conditions = "true";
 	};

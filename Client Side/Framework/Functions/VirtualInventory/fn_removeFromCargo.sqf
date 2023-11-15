@@ -17,7 +17,11 @@ _this params [
 ];
 
 private _vItem = missionConfigFile >> "CfgVirtualItems" >> _item;
-if (isNull _container || { !(isClass _vItem) } || { !([_container] call ULP_fnc_hasInventory) }) exitWith { false };
+
+if (isNull _container || 
+	{ !(alive _container) } || 
+	{ !(isClass _vItem) } || 
+	{ !([_container] call ULP_fnc_hasInventory) }) exitWith { false };
 
 private _cargo = _container getVariable ["ULP_VirtualCargo", createHashMap];
 

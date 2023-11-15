@@ -5,6 +5,10 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_finishMission";
 
+if (canSuspend) exitWith {
+    [ULP_fnc_finishMission, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_type", "Delivery", [""]]
 ];
@@ -22,6 +26,13 @@ if !(_type in ULP_Missions) exitWith {
 
 if ((player distance (taskDestination _task)) > 10) exitWith {
 	["You're not close enough to complete this task!"] call ULP_fnc_hint;
+};
+
+private _onFinished = getText (_typeCfg >> "onFinished");
+if !(_onFinished isEqualTo "") then {
+	if !(_reward call compile _onFinished) exitWith {
+		false breakOut "fn_finishMission";
+	};
 };
 
 if !(_eachFrame isEqualTo -1) then { [_eachFrame] call ULP_fnc_removeEachFrame; };

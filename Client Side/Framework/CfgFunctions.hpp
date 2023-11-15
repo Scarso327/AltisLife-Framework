@@ -424,6 +424,7 @@ class CfgFunctions {
 			class canANPR {};
 			class spikeVehicle {};
 			class flipVehicle {};
+			class isVehicleStationary {};
 		};
 
 		class VehicleEvents {
@@ -461,6 +462,7 @@ class CfgFunctions {
 			class addMission {};
 			class addPollingStation {};
 			class addMailBox {};
+			class addFreightMission {};
 			class isATM {};
 			class lockForFactions {};
 			class sit {};
@@ -586,6 +588,7 @@ class CfgFunctions {
 			class takeFromCargo {};
 			class putInCargo {};
 			class isCargoUser {};
+			class wipeItemFromCargo {};
 		};
 
 		class Goals {
@@ -784,6 +787,12 @@ class CfgFunctions {
 			file = "Functions\Police";
 			class initPolice {};
 			class issueTicket {};
+		};
+
+		class CorporateFreight {
+			file = "Functions\Freight";
+			class claimFreight {};
+			class finishFreight {};
 		};
 	};
 

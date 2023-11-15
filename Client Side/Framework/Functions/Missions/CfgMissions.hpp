@@ -3,6 +3,7 @@ class CfgMissions {
 		name = "Delivery Mission";
 		description = "You need to deliver the given package to %1";
 		factions[] = { "Civilian" };
+		condition = "true";
 		eachFrame = "";
 		onClaimed = "";
 		onFinished = "";
@@ -97,6 +98,7 @@ class CfgMissions {
 		name = "Patrol Mission";
 		description = "You need to patrol %1";
 		factions[] = { "Police", "Medic", "Hato" };
+		condition = "true";
 		eachFrame = "";
 		onClaimed = "[ { (player distance _this) <= 10 }, _this, { [""Patrol""] call ULP_fnc_finishMission; } ] call ULP_fnc_waitUntilExecute;";
 		onFinished = "";
@@ -202,6 +204,7 @@ class CfgMissions {
 		name = "Common Archaeology Sites";
 		description = "You need to use surveying equipment at the marked location...";
 		factions[] = { "Civilian" };
+		condition = "true";
 		eachFrame = "";
 		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Common""; ULP_SurveyTotal = 0; [""CommonMap"", 1, true] call ULP_fnc_handleItem;";
 		onFinished = "";
@@ -352,5 +355,45 @@ class CfgMissions {
 		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Rare""; ULP_SurveyTotal = 0; [""RareMap"", 1, true] call ULP_fnc_handleItem;";
 		class Rewards : Rewards {};
 		class Messages : Messages {};
+	};
+
+	class CorporateFreight {
+		name = "Corporate Freight";
+		description = "You need to deliver the given corporate freight to %1";
+		factions[] = { "Civilian" };
+		condition = "[""Freight""] call ULP_fnc_hasGroupPerk";
+		eachFrame = "";
+		onClaimed = "";
+		onFinished = "_this call ULP_fnc_finishFreight";
+		class Locations {
+			class DP1 {
+				pos = "DP_1";
+				name = "Delivery Point 1";
+			};
+			class DP2 {
+				pos = "DP_2";
+				name = "Delivery Point 2";
+			};
+			class DP3 {
+				pos = "DP_3";
+				name = "Delivery Point 3";
+			};
+			
+			class GeneralMarket1 {
+				pos = "general_market_1";
+				name = "General Market";
+			};
+		};
+		class Rewards {
+			moneyReward = 10;
+			xpReward = 250;
+		};
+		class Messages {
+			onFinishWithoutMission = "You don't have any packages to deliver here...";
+			onAlreadyHas = "You already have a corporate freight mission active, complete it before requesting another...";
+			onNoLocations = "There are currently no corporate freight missions available for pickup, please try again alter...";
+			onAssigned = "Your truck has been filled with freight, deliver it to %1";
+			onFinished = "You have successfully delivered the freight, you have been paid £%1";
+		};
 	};
 };

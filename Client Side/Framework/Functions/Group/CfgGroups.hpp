@@ -71,7 +71,7 @@ class CfgGroups {
 			displayName = "Company";
 
 			class Perks {
-				class Freight { // TODO
+				class Freight {
 					displayName = "Freight Missions";
 					icon = "Data\UI\GroupPerks\freight.paa";
 					description = "Grants your members access to Freight Missions.";
@@ -159,7 +159,7 @@ class CfgGroups {
 			class Cartel { amount = 10; };
 			class Popup : Cartel {}; // TODO
 			class Airdrop : Cartel {};
-			class Freight { amount = 10; }; // TODO
+			class Freight { amount = 10; };
 			class Election { amount = 500; }; // TODONOW
 			class Rigging { amount = 35; };
 			class Hideout : Cartel {};

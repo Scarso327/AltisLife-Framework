@@ -5,26 +5,38 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_claimMission";
 
+if (canSuspend) exitWith {
+    [ULP_fnc_claimMission, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_type", "Delivery", [""]],
 	["_mission", "DP1", [""]]
 ];
 
 private _typeCfg = missionConfigFile >> "CfgMissions" >> _type;
-if !(isClass _typeCfg) exitWith {};
+if !(isClass _typeCfg) exitWith { false };
 
 if !([player, getArray (_typeCfg >> "factions")] call ULP_fnc_isFaction) exitWith {
 	["Your faction can't do this mission..."] call ULP_fnc_hint;
+	false
+};
+
+if !(call compile getText(_typeCfg >> "conditions")) exitWith {
+	["You don't meet the requirements to do this mission..."] call ULP_fnc_hint;
+	false
 };
 
 if (_type in ULP_Missions) exitWith {
 	[getText (_typeCfg >> "Messages" >> "onAlreadyHas")] call ULP_fnc_hint;
+	false
 };
 
 private _location = selectRandom (("isClass _x" configClasses (_typeCfg >> "Locations")) select { !((configName _x) isEqualTo _mission) });
 
 if (isNil "_location" || { _location isEqualTo [] }) exitWith {
 	[getText (_typeCfg >> "Messages" >> "onNoLocations")] call ULP_fnc_hint;
+	false
 };
 
 private _pos = switch (true) do {
@@ -69,3 +81,5 @@ if (_reward > 0) then {
 
 ULP_Missions set [_type, [_task, _reward, _eachFrame]];
 [format [getText (_typeCfg >> "Messages" >> "onAssigned"), _locName]] call ULP_fnc_hint;
+
+true

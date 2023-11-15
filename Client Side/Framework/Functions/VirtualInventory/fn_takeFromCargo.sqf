@@ -29,6 +29,13 @@ if (_item isEqualTo "") exitWith {
 	["You need to selected something to take from this container!"] call ULP_fnc_hint;
 };
 
+private _vItem = missionConfigFile >> "CfgVirtualItems" >> _item;
+
+// System items are added / removed via script from vehicles
+if ([getNumber (_vItem >> "Settings" >> "isSystemItem")] call ULP_fnc_bool) exitWith {
+	["This item can't be manually moved from this container"] call ULP_fnc_hint;
+};
+
 private _cargo = _container getVariable ["ULP_VirtualCargo", createHashMap];
 
 private _data = _cargo getOrDefault [_item, 0];
@@ -54,7 +61,7 @@ if (_count <= 0) exitWith {
 };
 
 ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
-private _maxCarry = floor ((_maxWeight - _carryWeight) / getNumber(missionConfigFile >> "CfgVirtualItems" >> _item >> "weight"));
+private _maxCarry = floor ((_maxWeight - _carryWeight) / getNumber(_vItem >> "weight"));
 
 if (_maxCarry <= 0) exitWith {
 	["You don't have enough inventory space to fit even one of these items!"] call ULP_fnc_hint;

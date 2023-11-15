@@ -33,6 +33,13 @@ if (_item in getArray (missionConfigFile >> "CfgVehicles" >> (typeOf _container)
 	["This item can't be stored in this container..."] call ULP_fnc_hint;
 };
 
+private _vItem = missionConfigFile >> "CfgVirtualItems" >> _item;
+
+// System items are added / removed via script from vehicles
+if ([getNumber (_vItem >> "Settings" >> "isSystemItem")] call ULP_fnc_bool) exitWith {
+	["This item can't be manually moved to this container"] call ULP_fnc_hint;
+};
+
 private _data = ULP_Inventory getOrDefault [_item, 0];
 
 private _count = _data;
@@ -55,7 +62,7 @@ if (_count <= 0) exitWith {
 	["You don't have any of this item to put in this container!"] call ULP_fnc_hint;
 };
 
-private _itemWeight = getNumber(missionConfigFile >> "CfgVirtualItems" >> _item >> "weight");
+private _itemWeight = getNumber(_vItem >> "weight");
 
 if (_itemWeight <= 0) exitWith {
 	["This item can't be stored in containers"] call ULP_fnc_hint;

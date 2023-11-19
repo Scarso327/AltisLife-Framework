@@ -13,7 +13,7 @@ _this params [
 
 if (!(isClass _cfg) || { _param isEqualTo "" }) exitWith { _default };
 
-if !(isNil { missionNamespace getVariable "ULP_IS_DEBUG" }) then {
+if !(isNil { missionNamespace getVariable "ULP_DebugMode" }) then {
 	_cfg = _cfg >> "Debug";
 } else {
 	if (missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false] && { isClass (_cfg >> "BaseWars") }) then {

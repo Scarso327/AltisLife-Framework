@@ -133,6 +133,7 @@ class CfgFunctions {
 			class blindfold {};
 			class fuelCan {};
 			class spikeStrip {};
+			class triggerEvent {};
 		};
 
 		class Input {

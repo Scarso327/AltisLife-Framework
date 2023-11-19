@@ -1,4 +1,8 @@
 class CfgCartels {
+	class Popup {
+		duration = 15 * 60;	
+	};
+
 	class Fixed {
 		cartelTick = 1 * 60;
 		rewardTicks = 15;

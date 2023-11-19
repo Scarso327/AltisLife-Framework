@@ -198,6 +198,9 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_rigPollingStation {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_spawnEvent {
+            allowedTargets = SERVER;
+        };
 
         class bis_fnc_debugconsoleexec {};
     };

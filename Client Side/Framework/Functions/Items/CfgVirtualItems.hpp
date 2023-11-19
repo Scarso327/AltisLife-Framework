@@ -331,7 +331,7 @@ class CfgVirtualItems {
 	};
 
 	// Event Triggers
-	class AirdropTrigger { // TODO
+	class AirdropTrigger {
 		displayName = "Airdrop Trigger";
 		description = "An item used to trigger a specific island event.";
 		icon = "Data\Icons\airdropTrigger.paa";
@@ -346,12 +346,15 @@ class CfgVirtualItems {
 			isEventItem = false;
 			isSystemItem = false;
 		};
+		class Events { onUse = "[_this # 0, missionConfigFile >> ""CfgRandomEvents"" >> ""Airdrop""] call ULP_fnc_triggerEvent"; };
 		conditions = "true";
 	};
-	class ShipwreckTrigger : AirdropTrigger { // TODO
+
+	class ShipwreckTrigger : AirdropTrigger {
 		displayName = "Shipwreck Trigger";
 		icon = "Data\Icons\shipwreckTrigger.paa";
 		class Settings : Settings {};
+		class Events { onUse = "[_this # 0, missionConfigFile >> ""CfgRandomEvents"" >> ""Shipwreck""] call ULP_fnc_triggerEvent"; };
 	};
 
 	// General Items

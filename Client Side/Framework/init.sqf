@@ -4,4 +4,4 @@
 */
 #include "script_macros.hpp"
 
-if (IS_DEBUG_MODE) then { ULP_IS_DEBUG = true; };
+if (IS_DEBUG_MODE) then { ULP_DebugMode = true; };

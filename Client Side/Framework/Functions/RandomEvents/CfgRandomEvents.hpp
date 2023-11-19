@@ -2,27 +2,25 @@ class CfgRandomEvents {
 	/* TESTING SPAWN VALUES
 	SpawnCondition = "true";
 	NotifyDelay = 1 * 60;
-	SpawnDelay = 1 * 60;
 	Cooldown = 2 * 60;
 	RandomAddition = 2 * 60;*/
+
+	InitialDelay = 3 * 60;
 	
 	class Airdrop {
 		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 20";
 		NotifyDelay = 10 * 60;
-		SpawnDelay = 30 * 60;
 		Cooldown = 60 * 60;
 		RandomAddition = 20 * 60;
 		class BaseWars {
 			SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
 			NotifyDelay = 5 * 60;
-			SpawnDelay = 15 * 60;
 			Cooldown = 20 * 60;
 			RandomAddition = 2 * 60;
 		};
 		class Debug {
 			SpawnCondition = "true";
 			NotifyDelay = 2 * 60;
-			SpawnDelay = 2 * 60;
 			Cooldown = 5 * 60;
 			RandomAddition = 1 * 60;
 		};
@@ -33,7 +31,7 @@ class CfgRandomEvents {
 		};
 		class ServerFunctions {
 			onSpawn = "_this call ULP_SRV_fnc_airdrop;";
-			onCompleted = "_this call ULP_SRV_fnc_spawnEvent;";
+			onCompleted = "[_this] call ULP_SRV_fnc_spawnEvent;";
 		};
 		class Locations {
 			// Drops INSIDE redzone
@@ -101,7 +99,6 @@ class CfgRandomEvents {
 	class Shipwreck : Airdrop {
 		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
 		NotifyDelay = 10 * 60;
-		SpawnDelay = 20 * 60;
 		Cooldown = 40 * 60;
 		RandomAddition = 30 * 60;
 		class Events : Events {
@@ -148,7 +145,6 @@ class CfgRandomEvents {
 	class PopupCartel : Airdrop {
 		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
 		NotifyDelay = 10 * 60;
-		SpawnDelay = 20 * 60;
 		Cooldown = 40 * 60;
 		RandomAddition = 30 * 60;
 		class Events : Events {
@@ -156,7 +152,13 @@ class CfgRandomEvents {
 			class OnClaimed : OnWarning {};
 		};
 		class ServerFunctions : ServerFunctions {
-			onSpawn = "_this call ULP_SRV_fnc_shipwreck;";
+			onSpawn = "_this call ULP_SRV_fnc_popupCartel;";
+		};
+		class Locations {
+			class EdessaBayCommsTower {
+				position[] = {8312.28,10063.1,0.00144196};
+				radius = 250;
+			};
 		};
 	};
 };

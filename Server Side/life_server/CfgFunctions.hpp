@@ -135,6 +135,7 @@ class CfgFunctions {
             file = "\life_server\Functions\ServerEvents\Types";
             class airdrop {};
             class shipwreck {};
+            class popupCartel {};
         };
 
         class Cartels {

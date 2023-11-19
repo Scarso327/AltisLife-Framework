@@ -9,6 +9,8 @@ if (_this param [3, false] && { !isRemoteExecuted }) exitWith {
 	_this remoteExecCall ["ULP_fnc_lockForFactions", -2, true];
 };
 
+if !(hasInterface) exitWith {};
+
 [ { ULP_Loaded }, _this, {
 	_this params [
 		["_object", objNull, [objNull]],

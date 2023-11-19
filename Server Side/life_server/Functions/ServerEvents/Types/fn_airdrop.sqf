@@ -5,96 +5,101 @@
 #include "\life_server\script_macros.hpp"
 scopeName "fn_airdrop";
 
-private _cfg = _this;
+_this params [
+	["_cfg", configNull, [configNull]],
+	["_shouldLoop", true, [false]]
+];
+
 if (isNull _cfg) exitWith { false };
 
-[ { call (_this select 1) }, [_cfg, compile getText ([_cfg, "SpawnCondition", "true"] call ULP_SRV_fnc_getEventParam)], {
-	private _cfg = _this select 0;
+private _location = selectRandom ("isClass _x" configClasses (_cfg >> "Locations"));
+if (isNil "_location" || { _location isEqualTo [] }) exitWith { false };
 
-	missionNamespace setVariable [format ["ULP_SRV_%1_Active", configName _cfg], true, true];
+private _time = getNumber ([_cfg, "NotifyDelay"] call ULP_SRV_fnc_getEventParam);
 
-	private _location = selectRandom ("isClass _x" configClasses (_cfg >> "Locations"));
-	if (isNil "_location" || { _location isEqualTo [] }) exitWith { false };
+["OnWarningAirdrop", [
+	format [
+		"<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>A helicopter is dropping supplies! The location will be marked on your map in %1 minutes.",
+		round (_time / 60)
+	]
+]] remoteExecCall ["ULP_fnc_invokeEvent", -2];
 
-	private _time = getNumber ([_cfg, "NotifyDelay"] call ULP_SRV_fnc_getEventParam);
+[ _time, [_cfg, _location, _shouldLoop], {
+	_this params [
+		"_cfg", "_location", "_shouldLoop"
+	];
 
-	["OnWarningAirdrop", [
-		format [
-			"<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>A helicopter is dropping supplies! The location will be marked on your map in %1 minutes.",
-			round (_time / 60)
-		]
-	]] remoteExecCall ["ULP_fnc_invokeEvent", -2];
+	private _pos = getArray (_location >> "position");
+	private _radius = getNumber (_location >> "radius");
 
-	[ _time, [_cfg, _location], {
-		_this params [
-			"_cfg", "_location"
-		];
+	private _area = createMarker [format["airdrop_area_%1", time], _pos];
+	_area setMarkerShape "ELLIPSE";
+	_area setMarkerBrush "FDIAGONAL";
+	_area setMarkerSize [_radius, _radius];
+	_area setMarkerColor "ColorYellow";
 
-		private _pos = getArray (_location >> "position");
-		private _radius = getNumber (_location >> "radius");
+	private _marker = createMarker [format["airdrop_marker_%1", time], _pos];
+	_marker setMarkerColor "ColorRed";
+	_marker setMarkerText "Airdrop";
+	_marker setMarkerType "mil_marker";
 
-		private _area = createMarker [format["airdrop_area_%1", time], _pos];
-		_area setMarkerShape "ELLIPSE";
-		_area setMarkerBrush "FDIAGONAL";
-		_area setMarkerSize [_radius, _radius];
-		_area setMarkerColor "ColorYellow";
+	// Parachute...
+	private _para = createVehicle ["B_parachute_02_F", _pos, [], 0, "FLY"];
+	_para allowDamage false;
 
-		private _marker = createMarker [format["airdrop_marker_%1", time], _pos];
-		_marker setMarkerColor "ColorRed";
-		_marker setMarkerText "Airdrop";
-		_marker setMarkerType "mil_marker";
+	// Crate...
+	private _crate = createVehicle ["O_CargoNet_01_ammo_F", position _para, [], 0, "FLY"];
+	_crate setVariable ["locked", true, true];
+	_crate attachTo [_para, [0, 0, 0]];
+	_crate allowDamage false;
 
-		// Parachute...
-		private _para = createVehicle ["B_parachute_02_F", _pos, [], 0, "FLY"];
-		_para allowDamage false;
+	private _paraPos = getPosATL _para;
+	_para setPosATL [_paraPos select 0, _paraPos select 1, 1000];
 
-		// Crate...
-		private _crate = createVehicle ["O_CargoNet_01_ammo_F", position _para, [], 0, "FLY"];
-		_crate setVariable ["locked", true, true];
-		_crate attachTo [_para, [0, 0, 0]];
-		_crate allowDamage false;
+	clearWeaponCargoGlobal _crate;
+	clearMagazineCargoGlobal _crate;
+	clearItemCargoGlobal _crate;
 
-		private _paraPos = getPosATL _para;
-		_para setPosATL [_paraPos select 0, _paraPos select 1, 1000];
+	private _jipId = ["OnSpawnAirdrop", [
+		_crate, "<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>The supplies have been dropped! The location has been marked on your map."
+	]] remoteExecCall ["ULP_fnc_invokeEvent", -2, true];
 
-		clearWeaponCargoGlobal _crate;
-		clearMagazineCargoGlobal _crate;
-		clearItemCargoGlobal _crate;
+	if (isNil _result) then {
+		[format ["fn_airdrop: remoteExecCall returned '%1' result", _jipId]] call ULP_fnc_logIt;
+	};
 
-		private _jipId = ["OnSpawnAirdrop", [
-			_crate, "<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>The supplies have been dropped! The location has been marked on your map."
-		]] remoteExecCall ["ULP_fnc_invokeEvent", -2, true];
+	[
+		// TODO: Currently the crate looks like it never attaches, this check is likely issue. Leaving for now as it's functional
+		{ ((getPos (_this select 0) select 2) <= 1) || { isNil "_this select 1" } }, [_crate, _para, _area, _marker, _jipId, _shouldLoop], {
+			private _crate = _this select 0;
 
-		if (isNil _result) then {
-			[format ["fn_airdrop: remoteExecCall returned '%1' result", _jipId]] call ULP_fnc_logIt;
-		};
+			detach _crate;
+			_crate enableRopeAttach false;
 
-		[
-			{ ((getPos (_this select 0) select 2) <= 1) || { isNil "_this select 1" } }, [_crate, _para, _area, _marker, _jipId], {
-				private _crate = _this select 0;
+			[
+				{ isNull (_this select 0) }, _this, {
+					_this params [ "", "", "_area", "_marker", "_jipId", "_shouldLoop" ];
 
-				detach _crate;
-				_crate enableRopeAttach false;
+					remoteExecCall ["", _jipId]; // Remove _jipId
 
-				[
-					{ isNull (_this select 0) }, _this, {
-						remoteExecCall ["", this select 4]; // Remove _jipId
+					deleteMarker _area;
+					deleteMarker _marker;
 
-						deleteMarker (_this select 2);
-						deleteMarker (_this select 3);
+					if !(_shouldLoop) exitWith {};
 
-						private _cfg = missionConfigFile >> "CfgRandomEvents" >> "Airdrop";
-						missionNamespace setVariable [format ["ULP_SRV_%1_Active", configName _cfg], false, true];
+					private _cfg = missionConfigFile >> "CfgRandomEvents" >> "Airdrop";
+					missionNamespace setVariable [format ["ULP_SRV_%1_Active", configName _cfg], nil, true];
 
-						private _delay = getNumber ([_cfg, "Cooldown"] call ULP_SRV_fnc_getEventParam);
-						_delay = _delay + (random getNumber ([_cfg, "RandomAddition"] call ULP_SRV_fnc_getEventParam));
+					private _delay = getNumber ([_cfg, "Cooldown"] call ULP_SRV_fnc_getEventParam);
+					_delay = _delay + (random getNumber ([_cfg, "RandomAddition"] call ULP_SRV_fnc_getEventParam));
 
-						[_delay, _cfg, {
-							_this call compile getText (_this >> "ServerFunctions" >> "onCompleted");
-						}] call ULP_fnc_waitExecute
-					}
-				] call ULP_fnc_waitUntilExecute;
-			}
-		] call ULP_fnc_waitUntilExecute;
-	}] call ULP_fnc_waitExecute;
-} ] call ULP_fnc_waitUntilExecute;
+					[_delay, _cfg, {
+						_this call compile getText (_this >> "ServerFunctions" >> "onCompleted");
+					}] call ULP_fnc_waitExecute
+				}
+			] call ULP_fnc_waitUntilExecute;
+		}
+	] call ULP_fnc_waitUntilExecute;
+}] call ULP_fnc_waitExecute;
+
+true

@@ -7,7 +7,10 @@ scopeName "fn_initServerEvents";
 
 ["Starting Random Server Events..."] call ULP_fnc_logIt;
 
-{
-	missionNamespace setVariable [format ["ULP_SRV_%1_Active", configName _x], false, true];
-	_x call ULP_SRV_fnc_spawnEvent;
-} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgRandomEvents"));
+private _delay = getNumber(missionConfigFile >> "CfgRandomEvents" >> "InitialDelay");
+
+[_delay, [], {
+	{
+		[_x] call ULP_SRV_fnc_spawnEvent;
+	} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgRandomEvents"));
+}] call ULP_fnc_waitExecute

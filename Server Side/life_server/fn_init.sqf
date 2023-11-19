@@ -56,7 +56,7 @@ private _date = + (ULP_SRV_Date);
 _date resize 3;
 _date = (_date joinString "-");
 
-private _routines = ["resetVehicles", "deleteOldGroups", "deleteOldHouses", "deleteOldWarrants", "sortPremiumGroups", "deleteOldBaseBids"];
+private _routines = ["resetVehicles", "deleteOldGroups", "deleteOldHouses", "deleteOldWarrants", "sortPremiumGroups", "deleteOldBaseBids", "deleteOldMail"];
 
 private _timeStamp = diag_tickTime;
 ["Initialisation Started"] call ULP_fnc_logIt;

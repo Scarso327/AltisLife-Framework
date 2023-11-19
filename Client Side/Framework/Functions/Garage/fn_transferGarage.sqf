@@ -19,7 +19,7 @@ if (isNull _display) exitWith {};
 private _vehInfo = _display getVariable ["selected", []];
 if (_vehInfo isEqualTo []) exitWith {};
 
-_vehInfo params [ "_id", "_classname", "", "", "_faction" ];
+_vehInfo params [ "_id", "_classname", "", "", "", "_faction" ];
 
 private _cfg = [_classname] call ULP_fnc_vehicleCfg;
 if (_cfg isEqualTo []) exitWith {};

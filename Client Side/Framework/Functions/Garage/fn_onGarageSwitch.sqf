@@ -29,7 +29,7 @@ _itemData = parseSimpleArray _itemData;
 private _impound = _display getVariable ["impound", false];
 
 _itemData params [
-	"_id", "_classname", "_texture"
+	"_id", "_classname", "_texture", "", "_faction"
 ];
 
 private _cfg = [_classname] call ULP_fnc_vehicleCfg;
@@ -48,6 +48,7 @@ if (["MatesRates"] call ULP_fnc_hasPerk) then { _retrievalPrice = _retrievalPric
 
 _itemData set [3, _retrievalPrice];
 _itemData set [4, _index];
+_itemData set [5, _faction];
 _display setVariable ["selected", _itemData];
 
 _textureText ctrlSetStructuredText parseText format ["<t align = 'center'>%1</t>", getText(_missionCfg >> "Textures" >> _texture >> "displayName")];

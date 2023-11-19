@@ -30,9 +30,11 @@ if (isNull _cfg) exitWith { false };
 
 	["OnSpawnShipwreck", [
 		"<t color='#ff0000' size='1.5px'>Shipwreck<br/></t><t color='#ffffff' size='1px'>A sunken ship has been located! It may contain important items and it has been marked on your map!"
-	]] remoteExecCall ["ULP_fnc_invokeEvent", -2];
+	]] remoteExecCall ["ULP_fnc_invokeEvent", -2, "ShipwreckSpawn"];
 
 	[ { isNull (_this select 0) }, [_ship, _marker], {
+		remoteExecCall ["", "ShipwreckSpawn"];
+
 		deleteMarker (_this select 1);
 
 		["OnClaimedShipwreck", [

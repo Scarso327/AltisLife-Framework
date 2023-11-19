@@ -176,6 +176,11 @@ class CfgFunctions {
             file = "\life_server\Functions\Government";
             class rigPollingStation {};
         };
+
+        class Shipwreck {
+            file = "\life_server\Functions\Shipwreck";
+            class claimShipwreck {};
+        };
     };
 
     class MySQL_Database {

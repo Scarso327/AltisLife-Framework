@@ -159,6 +159,7 @@ class CfgGroups {
 			class Cartel { amount = 10; };
 			class Popup : Cartel {}; // TODO
 			class Airdrop : Cartel {};
+			class Shipwreck : Cartel {};
 			class Freight { amount = 10; };
 			class Election { amount = 500; }; // TODONOW
 			class Rigging { amount = 35; };

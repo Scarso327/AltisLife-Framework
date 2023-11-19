@@ -795,6 +795,11 @@ class CfgFunctions {
 			class claimFreight {};
 			class finishFreight {};
 		};
+
+		class Shipwreck {
+			file = "Functions\Shipwreck";
+			class onShipwreckSpawn {};
+		};
 	};
 
 	class ULP_Functions_UI {

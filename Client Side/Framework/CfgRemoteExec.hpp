@@ -25,7 +25,7 @@ class CfgRemoteExec {
         class ULP_fnc_initVehicle {};
         class ULP_fnc_vehicleLights {};
         class ULP_fnc_invokeEvent {
-            validJipEvents[] = { "OnSpawnAirdrop" };
+            validJipEvents[] = { "OnSpawnAirdrop", "OnSpawnShipwreck" };
             jip = 1; // Used for stuff like airdrops
         };
         class ULP_fnc_receiveMessage {};
@@ -127,6 +127,9 @@ class CfgRemoteExec {
             allowedTargets = SERVER;
         };
         class ULP_SRV_fnc_claimAirdrop {
+            allowedTargets = SERVER;
+        };
+        class ULP_SRV_fnc_claimShipwreck {
             allowedTargets = SERVER;
         };
         class ULP_SRV_fnc_toggleVaults {

@@ -144,4 +144,19 @@ class CfgRandomEvents {
 			class S_30 { position[] = {5201.15,8153.25,-133.185}; };
 		};
 	};
+
+	class PopupCartel : Airdrop {
+		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
+		NotifyDelay = 10 * 60;
+		SpawnDelay = 20 * 60;
+		Cooldown = 40 * 60;
+		RandomAddition = 30 * 60;
+		class Events : Events {
+			class OnSpawn : OnWarning {};
+			class OnClaimed : OnWarning {};
+		};
+		class ServerFunctions : ServerFunctions {
+			onSpawn = "_this call ULP_SRV_fnc_shipwreck;";
+		};
+	};
 };

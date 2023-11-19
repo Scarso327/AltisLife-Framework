@@ -58,7 +58,7 @@ if !([getNumber (_missionCfg >> "canTransfer")] call ULP_fnc_bool) exitWith {
 		if (isNil { player getVariable "vehicle_transfer" }) exitWith {};
 		player setVariable ["vehicle_transfer", nil];
 
-		private _message = _this param [0, "Your vehicle was successfully transferred."]
+		private _message = _this param [0, "Your vehicle was successfully transferred."];
 		[_message] call ULP_fnc_hint;
 	}, true] call ULP_fnc_addEventHandler;
 	

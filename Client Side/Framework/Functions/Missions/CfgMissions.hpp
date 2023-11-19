@@ -378,6 +378,66 @@ class CfgMissions {
 				pos = "DP_3";
 				name = "Delivery Point 3";
 			};
+			class DP4 {
+				pos = "DP_4";
+				name = "Delivery Point 4";
+			};
+			class DP5 {
+				pos = "DP_5";
+				name = "Delivery Point 5";
+			};
+			class DP6 {
+				pos = "DP_6";
+				name = "Delivery Point 6";
+			};
+			class DP7 {
+				pos = "DP_7";
+				name = "Delivery Point 7";
+			};
+			class DP8 {
+				pos = "DP_8";
+				name = "Delivery Point 8";
+			};
+			class DP9 {
+				pos = "DP_9";
+				name = "Delivery Point 9";
+			};
+			class DP10 {
+				pos = "DP_10";
+				name = "Delivery Point 10";
+			};
+			class DP11 {
+				pos = "DP_11";
+				name = "Delivery Point 11";
+			};
+			class DP12 {
+				pos = "DP_12";
+				name = "Delivery Point 12";
+			};
+			class DP13 {
+				pos = "DP_13";
+				name = "Delivery Point 13";
+			};
+			class DP14 {
+				pos = "DP_14";
+				name = "Delivery Point 14";
+			};
+			class DP15 {
+				pos = "DP_15";
+				name = "Delivery Point 15";
+			};
+			class DP16 {
+				pos = "DP_16";
+				name = "Delivery Point 16";
+			};
+			class DP17 {
+				pos = "DP_17";
+				name = "Delivery Point 17";
+			};
+			class DP18 {
+				pos = "DP_18";
+				name = "Delivery Point 18";
+			};
 			
 			class GeneralMarket1 {
 				pos = "general_market_1";

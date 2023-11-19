@@ -20,21 +20,8 @@ _this params [
 
 if (_steamid isEqualTo "" || { _name isEqualTo "" } || { !(isClass (missionConfigFile >> "CfgFactions" >> _faction))}) exitWith {};
 
-// Check Garage Limit...
-if !(_ignoreGarageLimit) then {
-	private _query = [format["SELECT count(id) FROM vehicles WHERE pid='%1' AND classname='%2' AND faction='%3' AND sold='0'", _steamid, _class, _faction], 2] call DB_fnc_asyncCall;
-
-	_query params [
-		["_vehicleCount", 0, [0]]
-	];
-
-	private _garageLimit = getNumber (missionConfigFile >> "CfgVehicles" >> _class >> "garageLimit");
-	if (_hasVehicleCollectorPerk) then { _garageLimit = _garageLimit + 1 };
-
-	if (_vehicleCount >= _garageLimit) exitWith {
-		["VehicleBought", [[_class], true, _price, _garageLimit]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
-		breakOut "fn_createVehicle";
-	};
+if ([_class, _steamid, _faction, _hasVehicleCollectorPerk, _ignoreGarageLimit] call ULP_SRV_fnc_isAtGarageLimit) exitWith {
+	["VehicleBought", [[_class], true, _price, _garageLimit]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 };
 
 (_class call BIS_fnc_objectType) params ["", "_type"];

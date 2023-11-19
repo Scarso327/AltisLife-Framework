@@ -29,7 +29,7 @@ if (isNull _cfg) exitWith { false };
 	_ship enableSimulationGlobal false;
 
 	["OnSpawnShipwreck", [
-		"<t color='#ff0000' size='1.5px'>Shipwreck<br/></t><t color='#ffffff' size='1px'>A sunken ship has been located! It may contain important items and it has been marked on your map!"
+		_ship, "<t color='#ff0000' size='1.5px'>Shipwreck<br/></t><t color='#ffffff' size='1px'>A sunken ship has been located! It may contain important items and it has been marked on your map!"
 	]] remoteExecCall ["ULP_fnc_invokeEvent", -2, "ShipwreckSpawn"];
 
 	[ { isNull (_this select 0) }, [_ship, _marker], {

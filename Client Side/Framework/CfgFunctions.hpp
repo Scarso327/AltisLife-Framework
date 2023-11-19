@@ -425,6 +425,7 @@ class CfgFunctions {
 			class spikeVehicle {};
 			class flipVehicle {};
 			class isVehicleStationary {};
+			class removeVehicleClamp {};
 		};
 
 		class VehicleEvents {

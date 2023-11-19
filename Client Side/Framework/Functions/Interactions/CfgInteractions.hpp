@@ -242,7 +242,14 @@ class CfgInteractions {
 		class Clamp : Repair {
 			title = "Clamp";
 			onClick = "_this call ULP_fnc_clampVehicle";
-			factions[] = { "Hato" };
+			factions[] = { "Police", "Hato" };
+			condition = "(_this getVariable [""clamp_fine"", []]) isEqualTo [] && { [""VehicleClamp""] call ULP_fnc_hasItem > 0 }";
+		};
+
+		class RemoveClamp : Clamp {
+			title = "Remove Clamp";
+			onClick = "_this call ULP_fnc_removeVehicleClamp";
+			condition = "!((_this getVariable [""clamp_fine"", []]) isEqualTo []) && { [""VehicleClamp""] call ULP_fnc_hasItem > 0 }";
 		};
 
 		class Garage : Repair {

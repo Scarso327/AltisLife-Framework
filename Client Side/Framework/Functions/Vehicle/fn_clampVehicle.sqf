@@ -19,8 +19,13 @@ if !(_clamp isEqualTo []) exitWith {
 	false
 };
 
-if !([player, ["Hato"]] call ULP_fnc_isFaction) exitWith {
+if !([player, ["Police", "Hato"]] call ULP_fnc_isFaction) exitWith {
 	["You must be HATO to use clamps..."] call ULP_fnc_hint;
+	false
+};
+
+if ([player, ["Police"]] call ULP_fnc_isFaction && { [["Hato"]] call ULP_fnc_onlineFaction > 0 }) exitWith {
+	["HATO are active so must be called to clamp vehicles..."] call ULP_fnc_hint;
 	false
 };
 

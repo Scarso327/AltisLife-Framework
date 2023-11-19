@@ -2,7 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-scopeName "fn_isFaction";
+scopeName "fn_onlineFaction";
 
 _this params [
 	["_factions", [], [[]]]

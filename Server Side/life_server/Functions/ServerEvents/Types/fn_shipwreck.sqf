@@ -24,7 +24,7 @@ if (isNull _cfg) exitWith { false };
 	_marker setMarkerType "mil_marker";
 	_marker setMarkerText "Shipwreck";
 
-	private _ship = createVehicle ["Land_Wreck_Traw_F", _pos, [], 0, "None"];
+	private _ship = createVehicle ["Land_Wreck_Traw_F", [_pos # 0, _pos # 1, 0], [], 0, "None"];
 	_ship allowDamage false;
 	_ship enableSimulationGlobal false;
 

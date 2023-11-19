@@ -26,5 +26,5 @@ _shipwreck addAction [
 
 			[player, _shipwreck] remoteExecCall ["ULP_SRV_fnc_claimShipwreck", RSERV];
 		}, {}] call ULP_UI_fnc_startProgress;
-	}, nil, 8, true, true, "", "", 5
+	}, nil, 8, true, true, "", "true", 20
 ];

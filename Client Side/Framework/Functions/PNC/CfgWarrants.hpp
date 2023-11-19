@@ -93,7 +93,7 @@ class CfgWarrants {
         displayName = "Offences Against the Person Act 1861";
 
         class Section1 { 
-            displayName = "Homicide"; 
+            displayName = "Murder"; 
             allowManual = true;
             bounty = 200000;
         };
@@ -104,11 +104,7 @@ class CfgWarrants {
         class Section5 : Section1 { displayName = "Manslaughter"; };
         class Section16 : Section1 { displayName = "Threats to Kill"; };
         class Section18 : Section1 { displayName = "Shooting or attempting to shoot, or wounding with intent to do harm"; };
-        class Section20 : Section1 { displayName = "Inflicting bodily injury, with or without weapon"; };
-        class Section66 : Section1 {
-            displayName = "Loitering with intent (day or night)";
-            bounty = 75000;
-        };
+        class Section20 : Section4 { displayName = "Inflicting bodily injury, with or without weapon"; };
     };
 
     class CriminalAttempts {
@@ -118,16 +114,6 @@ class CfgWarrants {
             displayName = "Attempting to Commit an Offence";
             allowManual = true;
             bounty = 30000;
-        };
-    };
-
-    class OfficialSecrets {
-        displayName = "Official Secrets Act 1989";
-
-        class Espionage { 
-            displayName = "Espionage"; 
-            allowManual = true;
-            bounty = 200000;
         };
     };
 
@@ -155,16 +141,6 @@ class CfgWarrants {
         };
     };
 
-    class CriminalLaw {
-        displayName = "Criminal Law Act 1967";
-
-        class PreventionOfCrime {
-            displayName = "Prevention of Crime";
-            allowManual = true;
-            bounty = 25000;
-        };
-    };
-
     class Theft {
         displayName = "Theft Act 1968";
 
@@ -181,17 +157,9 @@ class CfgWarrants {
             displayName = "Burglary";
             bounty = 70000;
         };
-        class Section10 : Section7 {
-            displayName = "Aggravated Burglary";
-            bounty = 125000;
-        };
         class Section12 : Section7 {
             displayName = "Taking Vehicle Without Consent";
             bounty = 75000;
-        };
-        class Section12A : Section7 {
-            displayName = "Aggravated Vehicle Taking";
-            bounty = 100000;
         };
         class Section25 : Section7 {
             displayName = "Going Equipped";
@@ -209,14 +177,6 @@ class CfgWarrants {
         };
         class Section5 : Section1 {
             displayName = "Possession of a Weapon Subject to General Prohibition";
-            bounty = 65000;
-        };
-        class Section16 : Section1 {
-            displayName = "Possession of Firearm with Intent to Injure";
-            bounty = 95000;
-        };
-        class Section16A : Section1 {
-            displayName = "Possession of Firearm with Intent to Cause Fear of Violence";
             bounty = 65000;
         };
         class Section18 : Section1 {
@@ -287,7 +247,6 @@ class CfgWarrants {
             allowManual = true;
             bounty = 200000; 
         };
-        class Section1A : Section1 { displayName = "Causing Serious Injury by Dangerous Driving";  };
         class Section2 : Section1 {
             displayName = "Dangerous Driving";
             bounty = 80000;
@@ -296,7 +255,6 @@ class CfgWarrants {
             displayName = "Careless, and inconsiderate, driving";
             bounty = 45000;
         };
-        class Section3A : Section1 { displayName = "Causing Death by Careless Driving when Under Influence"; };
         class Section4 : Section1 {
             displayName = "Driving, or being in charge, when under Influence of Drink or Drugs";
             bounty = 35000;
@@ -316,10 +274,6 @@ class CfgWarrants {
         class Section168 : Section1 {
             displayName = "Failing to Give/Or Giving False, Name or Address";
             bounty = 5000;
-        };
-        class Section170 : Section1 {
-            displayName = "Failing to Stop at an Accident";
-            bounty = 65000;
         };
         class Speeding : Section1 {
             displayName = "Speeding";

@@ -19,6 +19,13 @@ class CfgRandomEvents {
 			Cooldown = 20 * 60;
 			RandomAddition = 2 * 60;
 		};
+		class Debug {
+			SpawnCondition = "true";
+			NotifyDelay = 2 * 60;
+			SpawnDelay = 2 * 60;
+			Cooldown = 5 * 60;
+			RandomAddition = 1 * 60;
+		};
 		class Events {
 			class OnWarning { code = "_this params [[""_message"", """", [""""]]]; [_message] call ULP_fnc_hint;"; };
 			class OnSpawn { code = "_this call ULP_fnc_onAirdropSpawn;"; };

@@ -19,21 +19,21 @@ private _pos = getArray (_location >> "position");
 private _radius = getNumber (_location >> "radius");
 
 private _area = createMarker [format["capture_popup_cartel_area_%1", time], _pos];
-_zone setMarkerShape "Ellipse";
-_zone setMarkerColor "ColorYellow";
-_zone setMarkerSize [_radius, _radius];
-_zone setMarkerBrush "FDIAGONAL";
+_area setMarkerShape "Ellipse";
+_area setMarkerColor "ColorYellow";
+_area setMarkerSize [_radius, _radius];
+_area setMarkerBrush "FDIAGONAL";
 
 private _marker = createMarker [format["redzone_popup_cartel_marker_%1", time], _pos];
 _marker setMarkerType "mil_warning";
-_marker setMarkerColor "colorOPFOR";
+_marker setMarkerColor "ColorRed";
 _marker setMarkerSize [0.5, 0.5];
 _marker setMarkerText "Popup Cartel";
 
-private _obj = createSimpleObject ["A3\Weapons_f\empty.p3d", [0, 0, 0], false];
+private _obj = createSimpleObject ["A3\Weapons_f\empty.p3d", _pos, false];
 
 ["OnSpawnPopupCartel", [
-	"<t color='#ff0000' size='1.5px'>Cartel<br/></t><t color='#ffffff' size='1px'>The cartel capture zone has spawned! The location has been marked on your map."
+	_obj, _radius, "<t color='#ff0000' size='1.5px'>Cartel<br/></t><t color='#ffffff' size='1px'>The cartel capture zone has spawned! The location has been marked on your map."
 ]] remoteExecCall ["ULP_fnc_invokeEvent", -2, "PopupCartelSpawn"];
 
 private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup" >> "duration");

@@ -9,8 +9,13 @@ scopeName "fn_initServerEvents";
 
 private _delay = getNumber(missionConfigFile >> "CfgRandomEvents" >> "InitialDelay");
 
-[_delay, [], {
-	{
-		[_x] call ULP_SRV_fnc_spawnEvent;
-	} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgRandomEvents"));
-}] call ULP_fnc_waitExecute
+{
+	private _variedDelay = ([0, _delay + (random (5) * 60)] select (isNil { missionNamespace getVariable "ULP_DebugMode" }));
+
+	[format["Server Events: '%1' in '%2'", configName _x, _variedDelay]] call ULP_fnc_logIt;
+
+	// Variation to stop them all spawning at once
+	[_variedDelay, _x, {
+		[_this] call ULP_SRV_fnc_spawnEvent;
+	}] call ULP_fnc_waitExecute
+} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgRandomEvents"));

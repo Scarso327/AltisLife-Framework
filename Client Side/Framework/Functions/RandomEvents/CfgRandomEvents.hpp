@@ -148,7 +148,7 @@ class CfgRandomEvents {
 		Cooldown = 40 * 60;
 		RandomAddition = 30 * 60;
 		class Events : Events {
-			class OnSpawn : OnWarning {};
+			class OnSpawn { code = "_this call ULP_fnc_onPopupCartelSpawn;"; };
 			class OnClaimed : OnWarning {};
 		};
 		class ServerFunctions : ServerFunctions {

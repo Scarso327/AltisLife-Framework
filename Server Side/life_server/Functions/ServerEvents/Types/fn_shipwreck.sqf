@@ -19,7 +19,8 @@ private _pos = getArray (_location >> "position");
 
 private _marker = createMarker [format["shipwreck_marker_%1", time], _pos];
 _marker setMarkerColor "ColorRed";
-_marker setMarkerType "mil_marker";
+_marker setMarkerType "mil_warning";
+_marker setMarkerSize [0.5, 0.5];
 _marker setMarkerText "Shipwreck";
 
 private _ship = createVehicle ["Land_Wreck_Traw_F", [_pos # 0, _pos # 1, 0], [], 0, "None"];

@@ -41,7 +41,8 @@ private _time = getNumber ([_cfg, "NotifyDelay"] call ULP_SRV_fnc_getEventParam)
 	private _marker = createMarker [format["airdrop_marker_%1", time], _pos];
 	_marker setMarkerColor "ColorRed";
 	_marker setMarkerText "Airdrop";
-	_marker setMarkerType "mil_marker";
+	_marker setMarkerSize [0.5, 0.5];
+	_marker setMarkerType "mil_warning";
 
 	// Parachute...
 	private _para = createVehicle ["B_parachute_02_F", _pos, [], 0, "FLY"];

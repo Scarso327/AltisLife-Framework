@@ -668,6 +668,7 @@ class CfgFunctions {
 			class initCartels {};
 			class cartelHud {};
 			class ownsCartel {};
+			class onPopupCartelSpawn {}
 		};
 
 		class Perks {

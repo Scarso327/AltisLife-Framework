@@ -63,11 +63,6 @@ ULP_DisbandEvent = ["GroupDisbanded", {
 
 		[player, _group] remoteExecCall ["ULP_SRV_fnc_disbandGroup", RSERV];
 		["GroupDisbanded", [player]] remoteExecCall ["ULP_fnc_invokeEvent", (units _group)];
-
-		{
-			[_x] joinSilent (createGroup [side _x, true]);
-		} forEach (units _group);
-		deleteGroup _group;
 	}, { if !(isNil "ULP_DisbandEvent") then { ["GroupDisbanded", ULP_DisbandEvent] call ULP_fnc_removeEventHandler; ULP_DisbandEvent = nil; }; }, true
 ] call ULP_fnc_confirm;
 

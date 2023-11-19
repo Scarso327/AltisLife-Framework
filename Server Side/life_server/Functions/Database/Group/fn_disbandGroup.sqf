@@ -21,3 +21,8 @@ if (_groupid isEqualTo -1) exitWith {};
 if !(isNull _unit) then {
 	[getPlayerUID _unit, "Group", ["Disband", _groupid, [(_group getVariable ["group_funds", 0]), ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
 };
+
+{
+	[_x] joinSilent (createGroup [side _x, true]);
+} forEach (units _group);
+deleteGroup _group;

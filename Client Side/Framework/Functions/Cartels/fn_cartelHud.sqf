@@ -20,6 +20,7 @@ private _ui = ["RscHUD"] call ULP_UI_fnc_getLayer;
 if (isNull _ui) exitWith {};
 
 private _hud = _ui getVariable ["cartel_ui", controlNull];
+private _isPopup = _cartel isEqualTo "PopupCartel";
 
 switch (_mode) do {
 	case "create": {
@@ -37,6 +38,73 @@ switch (_mode) do {
 			_hud ctrlSetPositionY _y;
 			_hud ctrlSetFade 0;
 			_hud ctrlCommit 0.5;
+		};
+		
+		if (_isPopup) exitWith {
+			private _cartelObj = _this param [3, objNull, [objNull]];
+			if (isNull _cartelObj) exitWith { ["PopupCartel", "remove"] call ULP_fnc_cartelHud; };
+
+			private _ctrlProgress = _hud controlsGroupCtrl 102;
+			private _ctrlScore = _hud controlsGroupCtrl 105;
+
+			_ctrlProgress ctrlSetTextColor ATTACKING;
+			_ctrlScore ctrlSetBackgroundColor ATTACKING;
+
+			// Remove "Tick" bar as it's only used for big cartels
+			(_hud controlsGroupCtrl 106) ctrlShow false;
+			(_hud controlsGroupCtrl 107) ctrlShow false;
+
+			private _captureTime = getNumber (missionConfigFile >> "CfgCartels" >> "Popup" >> "captureTime");
+			_cartelObj setVariable ["endTime", time + _captureTime];
+
+			private _area = _cartelobj getVariable "area";
+
+			[[_cartelObj, _area, (_hud controlsGroupCtrl 103), _ctrlProgress, _ctrlScore, _captureTime], {
+				_this params [ "_cartelObj", "_area", "_ctrlStatusText", "_ctrlProgress", "_ctrlScore", "_captureTime" ];
+
+				if (isNil "_ctrlStatusText" || { isNull _ctrlStatusText }) exitWith {
+					[_thisEventHandler] call ULP_fnc_removeEachFrame;
+				};
+
+				private _status = switch (true) do {
+					case !(isNull (objectParent player)): { "IN VEHICLE" };
+					case ([player] call ULP_fnc_onDuty): { "ON DUTY" };
+					case ((currentWeapon player) in getArray(missionConfigFile >> "CfgSettings" >> "doesntThreaten")): { "UNARMED" };
+					case (count ([_area, allPlayers, ["Police", "Civilian"], { !(_this in (units (group player))) }] call ULP_fnc_unitsInZone) > 0): { "CONTESTED" };
+					default { "CAPTURING" }
+				};
+
+				_ctrlStatusText ctrlSetStructuredText parseText format ["<t align='center' size='1.25'>%1</t>", _status];
+
+				if !(_status isEqualTo "CAPTURING") then {
+					if (isNil { _cartelObj getVariable "pauseTime" }) then {
+						_cartelObj setVariable ["pauseTime", time];
+					};
+				} else {
+					private _endTime = _cartelObj getVariable "endTime";
+					private _pauseTime = _cartelObj getVariable "pauseTime";
+
+					if !(isNil "_pauseTime") then {
+						_endTime = _endTime + (time - _pauseTime); // We have to add on the time we spent not capturing
+
+						_cartelObj setVariable ["endTime", _endTime];
+						_cartelObj setVariable ["pauseTime", nil];
+					};
+
+					private _progress = (1 - ((_endTime - time) / _captureTime)) min 1;
+					_ctrlProgress progressSetPosition _progress;
+					_ctrlScore ctrlSetStructuredText parseText format ["<t align='center' size='1.5'>%1</t>", floor (_progress * 100) ];
+
+					if (_progress >= 1) then {
+						_cartelObj setVariable ["popup_winner", player, true];
+					};
+				};
+				
+				if !(isNil { _cartelObj getVariable "popup_winner" }) then {
+					["PopupCartel", "remove"] call ULP_fnc_cartelHud;
+					[_thisEventHandler] call ULP_fnc_removeEachFrame;
+				};
+			}] call ULP_fnc_addEachFrame;
 		};
 
 		[(_hud controlsGroupCtrl 107), {
@@ -65,6 +133,9 @@ switch (_mode) do {
 
 		[{ (ctrlFade _this) >= 1 }, _hud, { ctrlDelete _this; }] call ULP_fnc_waitUntilExecute;
 	};
+
+	if (_isPopup) exitWith {};
+
 	default {
 		private _object = missionNamespace getVariable [format["ULP_SRV_Cartel_%1", _cartel], objNull];
 		if (isNull _object) exitWith {

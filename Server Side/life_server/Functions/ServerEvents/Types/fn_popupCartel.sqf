@@ -31,6 +31,7 @@ _marker setMarkerSize [0.5, 0.5];
 _marker setMarkerText "Popup Cartel";
 
 private _obj = createSimpleObject ["A3\Weapons_f\empty.p3d", _pos, false];
+_obj setVariable ["area", _area, true];
 
 ["OnSpawnPopupCartel", [
 	_obj, _radius, "<t color='#ff0000' size='1.5px'>Cartel<br/></t><t color='#ffffff' size='1px'>The cartel capture zone has spawned! The location has been marked on your map."
@@ -46,17 +47,33 @@ private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup"
 	deleteMarker _marker;
 	deleteMarker _area;
 
-	(_obj getVariable ["popup_winner", []]) params [
-		["_groupId", -1, [0]],
-		["_groupName", "", [""]]
-	];
+	private _winner = _obj getVariable ["popup_winner", objNull];
+	private _hasWinner = !(isNull _winner);
 
-	private _message = ([
-		format["<t color='#ff0000' size='1.5px'>Cartel<br/></t><t color='#ffffff' size='1px'>The cartel has been captured by %1, a new one will appear soon!", _groupName],
-		"<t color='#ff0000' size='1.5px'>Cartel<br/></t><t color='#ffffff' size='1px'>The cartel was not captured and despawned, a new one will appear soon!"
-	] select (_groupId isEqualTo -1));
+	private _message = "<t color='#ff0000' size='1.5px'>Cartel<br/></t><t color='#ffffff' size='1px'>The cartel was not captured and despawned, a new one will appear soon!";
 
-	["OnClaimedPopupCartel", [ _message ]] remoteExecCall ["ULP_fnc_invokeEvent", -2];
+	private _units = [];
+
+	if (_hasWinner) then {
+		(getArray (missionConfigFile >> "CfgCartels" >> "Popup"  >> "reward")) params ["_base", "_random" ];
+
+		private _totalReward = _base + (random _random);
+		private _units = units (group _winner);
+		private _reward = floor(_totalReward / (count _units));
+
+		private _name = [_winner] call ULP_fnc_getName;
+
+		[group _winner, "Popup"] call ULP_SRV_fnc_addGroupXP;
+
+		["OnClaimedPopupCartel", [
+			format["<t color='#ff0000' size='1.5px'>Cartel<br/></t><t color='#ffffff' size='1px'>The cartel has been captured by %1 and you've recieved <t color='#B92DE0'>%2%3</t>, a new one will appear soon!", _name, "£", [_reward] call ULP_fnc_numberText],
+			_reward
+		]] remoteExecCall ["ULP_fnc_invokeEvent", _units];
+
+		_message = format["<t color='#ff0000' size='1.5px'>Cartel<br/></t><t color='#ffffff' size='1px'>The cartel has been captured by %1, a new one will appear soon!", _name];
+	};
+
+	["OnClaimedPopupCartel", [ _message ]] remoteExecCall ["ULP_fnc_invokeEvent", allUnits select { isPlayer _x && { !(_x in _units) } }];
 
 	if !(_shouldLoop) exitWith {};
 

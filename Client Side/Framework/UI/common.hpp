@@ -1689,7 +1689,7 @@ class ULP_CartelHud : Life_RscControlsGroupNoScrollbars {
 
         class ZoneScoreText : Life_RscStructuredText {
             idc = 105;
-            text = "<t align='center' size='1.5'>-1</t>";
+            text = "<t align='center' size='1.5'>0</t>";
             colorBackground[] = {0, 0.3, 0.6, 0.65};
             x = 11.75 * GUI_GRID_CENTER_W;
             w = 2 * GUI_GRID_CENTER_W;

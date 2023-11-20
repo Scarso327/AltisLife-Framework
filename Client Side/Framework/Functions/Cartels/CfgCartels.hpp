@@ -1,6 +1,8 @@
 class CfgCartels {
 	class Popup {
-		duration = 15 * 60;	
+		duration = 15 * 60;
+		captureTime = 2 * 60;
+		reward[] = { 100000, 500000 };
 	};
 
 	class Fixed {

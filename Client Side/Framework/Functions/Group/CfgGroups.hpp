@@ -157,7 +157,7 @@ class CfgGroups {
 
 		class XP {
 			class Cartel { amount = 10; };
-			class Popup : Cartel {}; // TODO
+			class Popup : Cartel {};
 			class Airdrop : Cartel {};
 			class Shipwreck : Cartel {};
 			class Freight { amount = 10; };

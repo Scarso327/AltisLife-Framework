@@ -8,6 +8,7 @@ class CfgAdmin {
 		};
 		class Camera : Suit {};
 		class Invis : Camera {};
+		class RemovePlaceable : Suit {};
 
 		// ADMINISTRATOR (L3)
 		class Teleport {

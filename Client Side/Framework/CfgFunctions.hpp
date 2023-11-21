@@ -802,6 +802,15 @@ class CfgFunctions {
 			file = "Functions\Shipwreck";
 			class onShipwreckSpawn {};
 		};
+
+		class Placeables {
+			file = "Functions\Placeables";
+			class placedObjects {};
+			class placeObject {};
+			class removeObject {};
+			class stopPlacement {};
+			class isPlaceable {};
+		};
 	};
 
 	class ULP_Functions_UI {

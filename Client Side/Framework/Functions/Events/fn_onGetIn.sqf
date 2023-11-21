@@ -22,4 +22,6 @@ if ([] call ULP_fnc_isEscorting) then {
 
 ["SecondNature", _unit] call ULP_fnc_activatePerk;
 
+[] call ULP_fnc_stopPlacement;
+
 true

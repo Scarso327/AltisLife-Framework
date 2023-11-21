@@ -535,7 +535,7 @@ class CfgVirtualItems {
 			blueprints[] = { { "Tools", "B_MakeshiftStinger" } };
 			materials[] = { {"SteelBar", 22} };
 		};
-		class Events { onUse = "[] call ULP_fnc_spikeStrip;"; };
+		class Events { onUse = "_this call ULP_fnc_spikeStrip;"; };
 		conditions = "true";
 	};
 	class MakeshiftStinger : Stinger {
@@ -788,6 +788,7 @@ class CfgVirtualItems {
 			isEventItem = false;
 			isSystemItem = false;
 		};
+		class Events { onUse = "[""TapeSign"", _this select 0] call ULP_fnc_placeObject;"; };
 		conditions = "true";
 	};
 	class PlasticBarrier_02_yellow_F : TapeSign_F { 
@@ -833,10 +834,12 @@ class CfgVirtualItems {
 		sellPrice = 0;
 		weight = 2;
 		class Settings : Settings {};
+		class Events { onUse = "[""RoadCone"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class RoadCone_L_F : RoadCone_F { 
 		displayName = "Road Cone (Light)";
 		class Settings : Settings {};
+		class Events { onUse = "[""RoadConeWithLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class Land_PortableLight_single_F : TapeSign_F { 
 		displayName = "Portable Light (Single)";
@@ -844,12 +847,14 @@ class CfgVirtualItems {
 		buyPrice = 0;
 		sellPrice = 0;
 		class Settings : Settings {};
+		class Events { onUse = "[""SinglePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class Land_PortableLight_double_F : Land_PortableLight_single_F { 
 		displayName = "Portable Light (Double)";
 		buyPrice = 0;
 		sellPrice = 0;
 		class Settings : Settings {};
+		class Events { onUse = "[""DoublePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class TargetP_Inf4_F : TapeSign_F { 
 		displayName = "Pop-Up Target (Hostile)";

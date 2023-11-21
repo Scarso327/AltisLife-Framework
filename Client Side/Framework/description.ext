@@ -87,6 +87,7 @@ class CfgWorlds {
 #include "Functions\Moves\CfgMoves.hpp"
 #include "Functions\Options\CfgOptions.hpp"
 #include "Functions\Perks\CfgPerks.hpp"
+#include "Functions\Placeables\CfgPlaceables.hpp"
 #include "Functions\PlayerTags\CfgTags.hpp"
 #include "Functions\PNC\CfgWarrants.hpp"
 #include "Functions\Prison\CfgPrison.hpp"

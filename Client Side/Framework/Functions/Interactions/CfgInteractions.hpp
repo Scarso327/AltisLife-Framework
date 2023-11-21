@@ -13,6 +13,15 @@ class CfgInteractions {
 		};
 	};
 
+	class Placeable {
+		class Remove {
+			title = "Remove Placeable";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_removeObject; closeDialog 0;";
+			condition = "[player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { [] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""RemovePlaceable"", false] call ULP_fnc_checkPower } }";
+		};
+	};
+
 	class Person {
 		class GiveKeys {
 			title = "Give Keys";

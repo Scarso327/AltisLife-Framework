@@ -139,13 +139,7 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 }] call ULP_fnc_addEventHandler;
 
 ["Incapacitated", {
-	if !(isNull (missionNamespace getVariable ["ULP_Spike", objNull])) then {
-		deleteVehicle ULP_Spike;
-		player removeAction (missionNamespace getVariable ["ULP_SpikePlaceAction", -1]);
-
-		ULP_SpikePlaceAction = nil;
-		ULP_Spike = nil;
-	};
+	[] call ULP_fnc_stopPlacement;
 }] call ULP_fnc_addEventHandler;
 
 ["CommunicationsSeized", {

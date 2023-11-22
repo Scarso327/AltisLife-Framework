@@ -45,7 +45,7 @@ if (([] call ULP_fnc_placedObjects) >= _maxPlaceables) exitWith {
 	private _object = createVehicle [_className, [0, 0, 0]];
 	_object attachTo [player, _attachPoint];
 	_object setDir _rot;
-	_object setVariable ["object_owner", [getPlayerUID player, profileName], true];
+	_object setVariable ["object_owner", [getPlayerUID player, profileName, _item], true];
 
 	ULP_PlaceableObject = _object;
 

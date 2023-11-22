@@ -14,7 +14,7 @@ if (_name isEqualTo "" || { isNil "_name" }) exitWith {
 	["You don't have a selected saved cart"] call ULP_fnc_hint;
 };
 
-private _storeCfgName = configName (_display getVariable "curStore");
+private _storeCfgName = format["%1%2", configName (_display getVariable "storeCfg"), configName (_display getVariable "curStore")];
 private _allSavedCarts = + (profileNamespace getVariable ["ULP_SavedCarts", createHashMap]);
 private _savedCarts = _allSavedCarts getOrDefault [_storeCfgName, createHashMap];
 

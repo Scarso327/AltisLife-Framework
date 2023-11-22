@@ -26,7 +26,9 @@ _textList lbSetCurSel -1;
 (_display displayCtrl 3104) ctrlSetText "";
 (_display displayCtrl 3105) ctrlSetStructuredText parseText ([] call ULP_fnc_cartInfo);
 
-private _items = ("isClass _x" configClasses (_storeCfg >> ((_storeCfg call BIS_fnc_getCfgSubClasses) select _index)));
+private _categoryCfg = (_storeCfg >> ((_storeCfg call BIS_fnc_getCfgSubClasses) select _index));
+private _categoryCfgName = configName _categoryCfg;
+private _items = ("isClass _x" configClasses _categoryCfg);
 
 if ((count _items) isEqualTo 0) exitWith {
 	_itemList lbAdd "No Items";
@@ -48,7 +50,8 @@ if ((count _items) isEqualTo 0) exitWith {
 			((_itemCfg select 7) apply { configName _x }), 
 			((_x >> "Textures") call BIS_fnc_getCfgSubClasses)
 		] select (isClass (_x >> "Textures"))),
-		isNumber(_x >> "allowDefaultTexture")
+		isNumber(_x >> "allowDefaultTexture"),
+		_categoryCfgName
 	];
 
 	private _item = _itemList lbAdd (_itemInfo select 1);

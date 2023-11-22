@@ -32,7 +32,7 @@ if (_data isEqualTo "") exitWith {};
 _data = parseSimpleArray _data;
 
 _data params [
-	"_className", "_displayName", "_picture"
+	"_className", "_displayName", "_picture", "", "", "_categoryCfgName"
 ];
 
 private _texSel = lbCurSel _textList;
@@ -54,7 +54,7 @@ private _item = _cartList lbAdd _name;
 _cartList lbSetTooltip [_item, _name];
 _cartList lbSetPicture [_item, _picture];
 _cartList lbSetValue [_item, _itemValue];
-_cartList lbSetData [_item, (str [_className, _texClass])];
+_cartList lbSetData [_item, (str [_className, _texClass, _categoryCfgName])];
 
 private _saveCartButton = _display displayCtrl 3115;
 if !(ctrlEnabled _saveCartButton) then {

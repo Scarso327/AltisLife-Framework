@@ -209,7 +209,7 @@ class DialogGenericStore {
             idc = 3116;
             text = "\a3\3den\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
             tooltip = "Open Saved Cart";
-            onButtonClick = "";
+            onButtonClick = "_this call ULP_fnc_loadSavedCart;";
             SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2) + CART_ACTION_W);
         };
 

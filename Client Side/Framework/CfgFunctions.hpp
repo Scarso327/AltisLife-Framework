@@ -220,6 +220,7 @@ class CfgFunctions {
 			class saveCart {};
 			class newSavedCart {};
 			class deleteSavedCart {};
+			class loadSavedCart {};
 		};
 
 		class StoresItem {

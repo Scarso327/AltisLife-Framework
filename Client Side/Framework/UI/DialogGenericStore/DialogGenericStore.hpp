@@ -149,13 +149,16 @@ class DialogGenericStore {
 			SAFEZONE_H(BUTTON_H);
         };
 
+        #define CART_LIST_Y (0.291 + MARGIN_Y)
+        #define CART_LIST_H ((BODY_HEIGHT - (MARGIN_Y * 2)) - ((BUTTON_H + BUTTON_MARGIN_Y) * 2))
+
 		class CartList : Life_RscListBox {
             idc = 3107;
             colorBackground[] = INNER_BODY_COLOUR;
             SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
-            SAFEZONE_Y(0.291 + MARGIN_Y);
+            SAFEZONE_Y(CART_LIST_Y);
 			SAFEZONE_W(CONTENT_W);
-			SAFEZONE_H((BODY_HEIGHT - (MARGIN_Y * 2)) - ((BUTTON_H + BUTTON_MARGIN_Y) * 2));
+			SAFEZONE_H(CART_LIST_H - BUTTON_H);
         };
 
         class CartButton : Life_RscButtonCenter {
@@ -183,6 +186,47 @@ class DialogGenericStore {
             SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - (MARGIN_Y * 2)) - BUTTON_H);
 			SAFEZONE_W(MARGIN_X * 2);
 			SAFEZONE_H(BUTTON_H);
+        };
+
+        #define CART_ACTION_W (CONTENT_W / 4)
+
+        class SaveNewCartButton: ULP_RscButtonIcon {
+            idc = 3115;
+            text = "\a3\3den\Data\Displays\Display3DEN\ToolBar\new_ca.paa";
+            tooltip = "New Cart Save";
+            onButtonClick = "_this call ULP_fnc_newSavedCart;";
+            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
+            SAFEZONE_Y((CART_LIST_Y + CART_LIST_H) - BUTTON_H);
+			SAFEZONE_W(CART_ACTION_W);
+			SAFEZONE_H(BUTTON_H);
+            offsetPressedX = 0.003;
+            tooltipColorText[] = {1,1,1,1};
+            tooltipColorBox[] = {1,1,1,1};
+            tooltipColorShade[] = {0,0,0,0.65};
+        };
+
+        class LoadCartButton : SaveNewCartButton {
+            idc = 3116;
+            text = "\a3\3den\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
+            tooltip = "Open Saved Cart";
+            onButtonClick = "";
+            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2) + CART_ACTION_W);
+        };
+
+        class SaveCartButton : LoadCartButton {
+            idc = 3117;
+            text = "\a3\3den\Data\Displays\Display3DEN\ToolBar\saveas_ca.paa";
+            tooltip = "Save Open Cart";
+            onButtonClick = "[ctrlParent (_this select 0)] call ULP_fnc_saveCart;";
+            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2) + (CART_ACTION_W * 2));
+        };
+
+        class DeleteCartButton : LoadCartButton {
+            idc = 3118;
+            text = "\a3\3den\Data\Cfg3DEN\History\deleteItems_ca.paa";
+            tooltip = "Delete Open Cart";
+            onButtonClick = "[ctrlParent (_this select 0)] call ULP_fnc_deleteSavedCart;";
+            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2) + (CART_ACTION_W * 3));
         };
 
         class BuyButton : Life_RscButtonCenter {

@@ -63,6 +63,10 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 		lbClear _cartList;
 		_cartList lbSetCurSel -1;
 
+		(_display displayCtrl 3115) ctrlEnable false;
+		(_display displayCtrl 3117) ctrlEnable false;
+		(_display displayCtrl 3118) ctrlEnable false;
+
 		// Pay for it and wipe total value...
 		if !([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) then {
 			[_cartValue, false, format ["Bought Items"]] call ULP_fnc_removeMoney;

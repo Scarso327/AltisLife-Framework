@@ -55,5 +55,10 @@ if (createDialog "DialogGenericStore") then {
 	// Cart Actions..
 	(_display displayCtrl 3108) ctrlSetEventHandler ["ButtonClick", "[] call ULP_fnc_addCart"];
 	(_display displayCtrl 3107) ctrlSetEventHandler ["LBDblClick", "_this call ULP_fnc_removeCart"];
+	(_display displayCtrl 3109) ctrlSetEventHandler ["ButtonClick", "_this call ULP_fnc_removeCart"];
 	(_display displayCtrl 3110) ctrlSetEventHandler ["ButtonClick", "_this spawn ULP_fnc_buyItems"];
+
+	(_display displayCtrl 3115) ctrlEnable false;
+	(_display displayCtrl 3117) ctrlEnable false;
+	(_display displayCtrl 3118) ctrlEnable false;
 };

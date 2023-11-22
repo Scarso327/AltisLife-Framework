@@ -217,6 +217,9 @@ class CfgFunctions {
 			class buyItems {};
 			class onItemClick {};
 			class onTextureSwitch {};
+			class saveCart {};
+			class newSavedCart {};
+			class deleteSavedCart {};
 		};
 
 		class StoresItem {

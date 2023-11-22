@@ -7,4 +7,4 @@ scopeName "fn_isPlaceable";
 
 private _object = _this param [0, objNull, [objNull]];
 
-!(isNull _object && { !(isNil { _object getVariable "object_owner" }) })
+(!(isNull _object) && { !(isNil { _object getVariable "object_owner" }) })

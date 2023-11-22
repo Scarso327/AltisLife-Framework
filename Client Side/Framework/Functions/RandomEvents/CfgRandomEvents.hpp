@@ -145,8 +145,8 @@ class CfgRandomEvents {
 	class PopupCartel : Airdrop {
 		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
 		NotifyDelay = 10 * 60;
-		Cooldown = 40 * 60;
-		RandomAddition = 30 * 60;
+		Cooldown = 25 * 60;
+		RandomAddition = 10 * 60;
 		class Events : Events {
 			class OnSpawn { code = "_this call ULP_fnc_onPopupCartelSpawn;"; };
 			class OnClaimed { code = "_this params [[""_message"", """", [""""]], [""_reward"", -1, [0]]]; [_reward, false, ""Popup Cartel""] call ULP_fnc_addMoney; [_message] call ULP_fnc_hint;"; };

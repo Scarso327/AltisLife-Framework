@@ -99,8 +99,8 @@ class CfgRandomEvents {
 	class Shipwreck : Airdrop {
 		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
 		NotifyDelay = 10 * 60;
-		Cooldown = 40 * 60;
-		RandomAddition = 30 * 60;
+		Cooldown = 15 * 60;
+		RandomAddition = 15 * 60;
 		class Events : Events {
 			class OnSpawn { code = "_this call ULP_fnc_onShipwreckSpawn;"; };
 			class OnClaimed : OnWarning {};

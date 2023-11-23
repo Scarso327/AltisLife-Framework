@@ -107,15 +107,17 @@ if (isDowned(player)) then {
                 if (_sirens isEqualTo []) exitWith {};
 
                 if (isClass _vehSiren && { (driver _veh) isEqualTo player }) then {
-                    if (isNull (_veh getVariable ["siren", objNull])) then {
-                        private _timeout = ULP_sirenDelay;
+                    private _timeout = ULP_sirenDelay;
 
+                    if (isNull (_veh getVariable ["siren", objNull])) then {
                         if (_shift && { isNil "_timeout" || { time > _timeout } }) then {
                             titleText["Sirens On", "PLAIN"];
                             [_veh, _sirens] call ULP_fnc_vehicleSiren;
                         };
                     } else {
-                        if (_ctrlKey && { !_shift }) exitWith {
+                        if (_ctrlKey && { !_shift } && { isNil "_timeout" || { time > _timeout } }) exitWith {
+                            ULP_sirenDelay = time + 1;
+                            
                             _veh setVariable ["selected_siren", (((_veh getVariable ["selected_siren", 0]) + 1) % (count _sirens))];
                             [_veh, _sirens] call ULP_fnc_vehicleSiren;
                         };

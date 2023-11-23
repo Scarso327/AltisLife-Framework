@@ -98,27 +98,34 @@ if (isDowned(player)) then {
         };
 
         case F: {
-            if (_shift && { !_alt } && { !_ctrlKey } && { !(isNull (objectParent player)) }) then {
+            if (!_alt && { !(isNull (objectParent player)) }) then {
                 private _veh = vehicle player;
                 private _vehSiren = missionConfigFile >> "CfgVehicles" >> (typeOf _veh) >> "Textures" >> (_veh getVariable ["texture", ""]) >> "Siren";
+                private _sirens = getArray (_vehSiren >> "SFX");
+                    
+                // None of this can happen without them
+                if (_sirens isEqualTo []) exitWith {};
 
                 if (isClass _vehSiren && { (driver _veh) isEqualTo player }) then {
                     if (isNull (_veh getVariable ["siren", objNull])) then {
                         private _timeout = ULP_sirenDelay;
 
-                        if (isNil "_timeout" || { time > _timeout }) then {
-                            private _sirens = getArray (_vehSiren >> "SFX");
-
-                            if !(_sirens isEqualTo []) then {
-                                titleText["Sirens On", "PLAIN"];
-                                [_veh, _sirens select 0] call ULP_fnc_vehicleSiren;
-                            };
+                        if (_shift && { isNil "_timeout" || { time > _timeout } }) then {
+                            titleText["Sirens On", "PLAIN"];
+                            [_veh, _sirens] call ULP_fnc_vehicleSiren;
                         };
                     } else {
-                        ULP_sirenDelay = time + 2;
+                        if (_ctrlKey && { !_shift }) exitWith {
+                            _veh setVariable ["selected_siren", (((_veh getVariable ["selected_siren", 0]) + 1) % (count _sirens))];
+                            [_veh, _sirens] call ULP_fnc_vehicleSiren;
+                        };
 
-                        titleText["Sirens Off", "PLAIN"];
-                        [_veh, "", false] call ULP_fnc_vehicleSiren;
+                        if (_shift) then {
+                            ULP_sirenDelay = time + 2;
+
+                            titleText["Sirens Off", "PLAIN"];
+                            [_veh, [], false] call ULP_fnc_vehicleSiren;
+                        };
                     };
 
                     _handled = true;

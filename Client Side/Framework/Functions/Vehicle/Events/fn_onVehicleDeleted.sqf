@@ -10,5 +10,5 @@ _this params [
 ];
 
 if (local _vehicle) then {
-	[_vehicle, "", false] call ULP_fnc_vehicleSiren;
+	[_vehicle, [], false] call ULP_fnc_vehicleSiren;
 };

@@ -7,6 +7,27 @@ class CfgSounds {
         titles[] = {};
     };
 
+    class Siren1 {
+        name = "siren1";
+        sound[] = {"\Data\Sounds\Sirens\siren_1.ogg", 1.0, 1};
+        titles[] = {};
+    };
+
+    class Siren2 : Siren1 {
+        name = "siren1";
+        sound[] = {"\Data\Sounds\Sirens\siren_2.ogg", 1.0, 1};
+    };
+
+    class Siren3 : Siren1 {
+        name = "siren1";
+        sound[] = {"\Data\Sounds\Sirens\siren_3.ogg", 1.0, 1};
+    };
+
+    class Siren4 : Siren1 {
+        name = "siren1";
+        sound[] = {"\Data\Sounds\Sirens\siren_4.ogg", 1.0, 1};
+    };
+
     class taserSound {
         name = "taserSound";
         sound[] = {"\Data\Sounds\taser.ogg", 0.5, 1};

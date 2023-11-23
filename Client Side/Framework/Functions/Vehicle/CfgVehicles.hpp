@@ -42,7 +42,7 @@ class CfgVehicles {
 		factions[] = { "Police" };
 		remoteGates = true;
 		class Siren {
-			SFX[] = { "Police_One" };
+			SFX[] = { "Police_One", "Police_Two", "Police_Three" };
 		};
 		class Lights : PoliceColour {};
 		class Actions {
@@ -1807,5 +1807,13 @@ class CfgVehicles {
 	// SOUNDS --------------------------------------------------------------------------------------
 	class Police_One {
 		sound = "Police_One";
+	};
+
+	class Police_Two {
+		sound = "Police_Two";
+	};
+
+	class Police_Three {
+		sound = "Police_Three";
 	};
 };

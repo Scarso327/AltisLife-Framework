@@ -3,7 +3,7 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_vehicleSiren";
+scopeName "fn_vehicleLights";
 
 _this params [
 	["_vehicle", objNull, [objNull]],

@@ -13,7 +13,7 @@ _this params [
 ];
 
 if (_role isEqualTo "driver" && { !(isNull (_vehicle getVariable["siren", objNull])) }) then {
-    [_vehicle, "", false] call ULP_fnc_vehicleSiren;
+    [_vehicle, [], false] call ULP_fnc_vehicleSiren;
 };
 
 _unit setVariable ["seatbelt", false];

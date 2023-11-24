@@ -26,6 +26,8 @@ if (isNull _object || { (player distance _pos) > 5 } || { !(_object getVariable 
 	false
 };
 
+[] spawn ULP_UI_fnc_closeDialogs;
+
 private _time = ["BoltCutter", 150] call ULP_fnc_activatePerk;
 private _onBreakIn = "";
 

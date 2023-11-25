@@ -227,7 +227,12 @@ class CfgInteractions {
 			title = "Repair";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_repairVehicle";
-			condition = "true";
+			condition = """ToolKit"" in (items player)";
+		};
+
+		class PatchTyres : Repair {
+			title = "Patch Tyres";
+			condition = "!(""ToolKit"" in (items player)) && { _this call ULP_fnc_hasTyreDamage }";
 		};
 
 		class Refuel : Repair {

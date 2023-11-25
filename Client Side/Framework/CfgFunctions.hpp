@@ -431,6 +431,7 @@ class CfgFunctions {
 			class flipVehicle {};
 			class isVehicleStationary {};
 			class removeVehicleClamp {};
+			class hasTyreDamage {};
 		};
 
 		class VehicleEvents {

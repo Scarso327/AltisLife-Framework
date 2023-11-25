@@ -19,20 +19,23 @@ if (isNull _display) exitWith { false };
 private _container = _display getVariable ["container", objNull];
 if (isNull _container) exitWith { false };
 
-private _addItem = {
-	_this params [ "_list", "_searchValue", "_x", "_y" ];
+if (_type isEqualTo 0) then {
+	ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
 
-	private _cfg = missionConfigFile >> "CfgVirtualItems" >> _x;
+	private _personalTitle = _display displayCtrl 4202;
+	_personalTitle ctrlSetStructuredText parseText format["Personal Inventory<t align='right'>%1/%2</t>", _carryWeight, _maxWeight];
 
-	if (isClass _cfg) then {
-		private _itemIcon = getText (_cfg >> "icon");
+	private _list = _display displayCtrl 4204;
+	lnbClear _list;
 
-		if ([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
-			{
-				private _displayName = format [getText (_cfg >> "displayName"), _x];
+	{
+		private _cfg = missionConfigFile >> "CfgVirtualItems" >> _x;
+		if (isClass _cfg) then {
+			private _itemIcon = getText (_cfg >> "icon");
 
-				if (((toLower _displayName) find _searchValue) > -1) then {
-					private _row = _list lnbAddRow [_displayName, "-"];
+			if ([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+				{
+					private _row = _list lnbAddRow [format [getText (_cfg >> "displayName"), _x], "-"];
 
 					if !(_itemIcon isEqualTo "") then {
 						_list lnbSetPicture [[_row, 0], _itemIcon];
@@ -40,12 +43,8 @@ private _addItem = {
 
 					_list lnbSetData [[_row, 0], configName _cfg];
 					_list lnbSetData [[_row, 1], _x];
-				};
-			} forEach _y;
-		} else {
-			private _displayName = getText (_cfg >> "displayName");
-
-			if (((toLower _displayName) find _searchValue) > -1) then {
+				} forEach _y;
+			} else {
 				private _row = _list lnbAddRow [
 					getText (_cfg >> "displayName"), 
 					[_y] call ULP_fnc_numberText
@@ -59,22 +58,6 @@ private _addItem = {
 				_list lnbSetValue [[_row, 1], _y];
 			};
 		};
-	};
-};
-
-if (_type isEqualTo 0) then {
-	ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
-
-	private _personalTitle = _display displayCtrl 4202;
-	_personalTitle ctrlSetStructuredText parseText format["Personal Inventory<t align='right'>%1/%2</t>", _carryWeight, _maxWeight];
-
-	private _list = _display displayCtrl 4204;
-	lnbClear _list;
-
-	private _searchValue = toLower (ctrlText (_display displayCtrl 4210));
-
-	{
-		[_list, _searchValue, _x, _y] call _addItem;
 	} forEach ULP_Inventory;
 
 	(_display displayCtrl 4205) ctrlEnable (((lbSize _list) > 0) && { [_container] call ULP_fnc_isCargoUser });
@@ -85,13 +68,39 @@ if (_type isEqualTo 0) then {
 	private _list = _display displayCtrl 4208;
 	lnbClear _list;
 
-	private _searchValue = toLower (ctrlText (_display displayCtrl 4211));
-
 	private _inventory = _container getVariable ["ULP_VirtualCargo", createHashMap];
 	_display setVariable ["lastInventory", _inventory];
 
 	{
-		[_list, _searchValue, _x, _y] call _addItem;
+		private _cfg = missionConfigFile >> "CfgVirtualItems" >> _x;
+		if (isClass _cfg) then {
+			private _itemIcon = getText (_cfg >> "icon");
+
+			if ([getNumber (_cfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+				{
+					private _row = _list lnbAddRow [format [getText (_cfg >> "displayName"), _x], "-"];
+
+					if !(_itemIcon isEqualTo "") then {
+						_list lnbSetPicture [[_row, 0], _itemIcon];
+					};
+
+					_list lnbSetData [[_row, 0], configName _cfg];
+					_list lnbSetData [[_row, 1], _x];
+				} forEach _y;
+			} else {
+				private _row = _list lnbAddRow [
+					getText (_cfg >> "displayName"), 
+					[_y] call ULP_fnc_numberText
+				];
+
+				if !(_itemIcon isEqualTo "") then {
+					_list lnbSetPicture [[_row, 0], _itemIcon];
+				};
+
+				_list lnbSetData [[_row, 0], _x];
+				_list lnbSetValue [[_row, 1], _y];
+			};
+		};
 	} forEach _inventory;
 
 	(_display displayCtrl 4209) ctrlEnable (((lbSize _list) > 0) && { [_container] call ULP_fnc_isCargoUser });

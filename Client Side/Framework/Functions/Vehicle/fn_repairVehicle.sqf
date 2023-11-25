@@ -34,7 +34,7 @@ if (_profession > 0) then {
 	_time = _time - (_time * (_profession / 100));
 };
 
-if !([format["%1 %2", ["Repairing", "Patching"] select (_isPatching) _name], _time, [_vehicle, _name, _isPatching], {
+if !([format["%1 %2", ["Repairing", "Patching"] select (_isPatching), _name], _time, [_vehicle, _name, _isPatching], {
 	!(isNull (_this select 0)) && { alive (_this select 0) } && { "ToolKit" in (items player) || { (_this select 2) } } && { (player distance (_this select 0)) <= 5 }
 }, {
 	_this params [ "_vehicle", "_name", "_isPatching" ];

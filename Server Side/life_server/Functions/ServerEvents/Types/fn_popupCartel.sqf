@@ -74,6 +74,8 @@ private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup"
 	};
 
 	["OnClaimedPopupCartel", [ _message ]] remoteExecCall ["ULP_fnc_invokeEvent", allUnits select { isPlayer _x && { !(_x in _units) } }];
+	
+	deleteVehicle _obj;
 
 	if !(_shouldLoop) exitWith {};
 

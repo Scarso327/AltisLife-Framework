@@ -1628,7 +1628,7 @@ class ULP_ctrlGoal : ULP_ctrlProfession {
             colorBackground[] = HEADER_COLOUR_SOLID;
             x = 5.25 * GUI_GRID_CENTER_W;
             y = 3.75 * GUI_GRID_CENTER_H;
-            w = 25.5 * GUI_GRID_CENTER_W;
+            w = 25.25 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
 
@@ -1638,7 +1638,77 @@ class ULP_ctrlGoal : ULP_ctrlProfession {
             colorBackground[] = HEADER_COLOUR_SOLID;
             x = 5.25 * GUI_GRID_CENTER_W;
             y = 3.75 * GUI_GRID_CENTER_H;
-            w = 25.5 * GUI_GRID_CENTER_W;
+            w = 25.25 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+
+        class ProgressText: ProgressBackground {
+            idc = 105;
+            colorBackground[] = {0,0,0,0};
+        };
+    };
+};
+
+class ULP_ctrlCommunityGoal : ULP_ctrlGoal {
+    w = 31 * GUI_GRID_CENTER_W;
+
+    class Controls {
+        class Background: Life_RscText {
+            idc = -1;
+            colorBackground[] = HEADER_COLOUR_SOLID;
+            w = 31 * GUI_GRID_CENTER_W;
+            h = 5 * GUI_GRID_CENTER_H;
+        };
+
+        class GoalIcon: Life_RscPictureKeepAspect {
+            idc = 101;
+            w = 5 * GUI_GRID_CENTER_W;
+            h = 5 * GUI_GRID_CENTER_H;
+        };
+
+        class GoalName: Life_RscStructuredText {
+            idc = 102;
+            x = 5 * GUI_GRID_CENTER_W;
+            w = 26 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+
+        class GoalDescription: Life_RscStructuredText {
+            idc = 103;
+            style = ST_MULTI;
+            colorBackground[] = FOOTER_COLOUR;
+            x = 5 * GUI_GRID_CENTER_W;
+            y = 1 * GUI_GRID_CENTER_H;
+            w = 26 * GUI_GRID_CENTER_W;
+            h = 4 * GUI_GRID_CENTER_H;
+        };
+
+        class ProgressBackground: Life_RscText {
+            idc = -1;
+            colorBackground[] = HEADER_COLOUR_SOLID;
+            x = 5.25 * GUI_GRID_CENTER_W;
+            y = 3.75 * GUI_GRID_CENTER_H;
+            w = 25.25 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+
+        class ProgressBar : Life_RscProgress {
+            idc = 104;
+            colorBar[] = { 0.451, 0, 0.902, 1 };
+            colorBackground[] = HEADER_COLOUR_SOLID;
+            x = 5.25 * GUI_GRID_CENTER_W;
+            y = 3.75 * GUI_GRID_CENTER_H;
+            w = 25.25 * GUI_GRID_CENTER_W;
+            h = 1 * GUI_GRID_CENTER_H;
+        };
+
+        class MyProgressBar : Life_RscProgress {
+            idc = 106;
+            colorBar[] = { 0, 0.401, 0.074, 1 };
+            colorBackground[] = HEADER_COLOUR_SOLID;
+            x = 5.25 * GUI_GRID_CENTER_W;
+            y = 3.75 * GUI_GRID_CENTER_H;
+            w = 25.25 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
 

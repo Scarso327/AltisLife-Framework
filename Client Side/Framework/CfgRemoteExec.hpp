@@ -201,6 +201,12 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_spawnEvent {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_getCommunityGoals {
+            allowedTargets = SERVER;
+        };
+        class ULP_SRV_fnc_addCommunityGoalContribution {
+            allowedTargets = SERVER;
+        };
 
         class bis_fnc_debugconsoleexec {};
     };

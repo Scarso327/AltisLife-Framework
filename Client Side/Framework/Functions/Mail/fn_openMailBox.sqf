@@ -53,6 +53,9 @@ if (createDialog "DialogMailBox") then {
 					case "VirtualItem": {
 						getText(missionConfigFile >> "CfgVirtualItems" >> _class >> "displayName") breakOut "fn_getDisplayNameForMailBox";
 					};
+					case "Money": {
+						_class breakOut "fn_getDisplayNameForMailBox";
+					};
 				};
 
 				// All others should be handled via this
@@ -68,7 +71,8 @@ if (createDialog "DialogMailBox") then {
 
 					format[["[%2] x %1", "[%2] (Texture Unlock)"] select (_amount isEqualTo 0), _amount, _textureName]
 				};
-				case (_data isEqualType 0) : { format["x %1", _data] };
+				case (_data isEqualType 0 && { _type isEqualTo "Money" }) : { format["(%1%2)", "£", [_data] call ULP_fnc_numberText] };
+				case (_data isEqualType 0) : { format["x %1", [_data] call ULP_fnc_numberText] };
 				default { _data };
 			})];
 

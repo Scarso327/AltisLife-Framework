@@ -101,6 +101,11 @@ switch (_type) do {
 
 		_data = (_totalAmount - _claimedAmount) max 0;
 	};
+	case "Money": {
+		if ([_totalAmount, false, _className] call ULP_fnc_addMoney) then {
+			_claimedAmount = _totalAmount;
+		};
+	};
 	default {
 		for "_i" from 1 to _totalAmount do {
 			if ([_className, false] call ULP_fnc_handleGear) then {

@@ -152,6 +152,7 @@ class DialogTablet {
 		#include "Screens\Messages.hpp"
 		#include "Screens\Perks.hpp"
 		#include "Screens\Group.hpp"
+		#include "Screens\CommunityGoals.hpp"
 	};
 };
 

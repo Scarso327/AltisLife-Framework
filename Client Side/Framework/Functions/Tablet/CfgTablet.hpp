@@ -158,8 +158,9 @@ class CfgTablet {
 	class Goals : BaseScreen {
 		idc= 23009;
 		pageTitle = "Community Goals";
-		pageIdcs[] = {};
-		onLoad = "[""This app is still being developed, check back soon...""] call ULP_fnc_hint; [""Home""] call ULP_fnc_setScreen;";
+		pageIdcs[] = { 23090 };
+		onLoad = "_this call ULP_fnc_communityGoals";
+		onUnload = "[""CommunityGoalsReceived"", _this getVariable [""community_goals_received"", -1]] call ULP_fnc_removeEventHandler;";
 	};
 
 	class Perks : BaseScreen {

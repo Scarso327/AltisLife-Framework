@@ -101,6 +101,7 @@ This framework has a wide range of features. We've listed a load but many more e
     - Storage (Both for virtual and phyiscal items)
   - <b>Goals</b>
     - Personal
+    - Community
   - <b>Random Events</b>
     - Airdrops
     - Popup Cartels

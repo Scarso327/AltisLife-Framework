@@ -364,6 +364,11 @@ class CfgFunctions {
 			class perks {};
 		};
 
+		class TabletCommunityGoals {
+			file = "Functions\Tablet\CommunityGoals";
+			class communityGoals {};
+		};
+
 		class Options {
 			file = "Functions\Options";
 			class setOption {};
@@ -604,6 +609,8 @@ class CfgFunctions {
 			class handlePersonalGoals {};
 			class savePersonalGoals {};
 			class rewardPersonalGoal {};
+			class initCommunityGoals {};
+			class getCommunityGoalPayout {};
 		};
 
 		class Rewards {

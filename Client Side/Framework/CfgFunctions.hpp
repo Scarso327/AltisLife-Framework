@@ -609,6 +609,8 @@ class CfgFunctions {
 			class handlePersonalGoals {};
 			class savePersonalGoals {};
 			class rewardPersonalGoal {};
+			class initCommunityGoals {};
+			class getCommunityGoalPayout {};
 		};
 
 		class Rewards {

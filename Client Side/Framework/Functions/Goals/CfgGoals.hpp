@@ -192,6 +192,94 @@ class CfgGoals {
 	};
 
 	class Community {
+		amountPerFaction[] =  { { "Police", 1 }, { "Medic", 1 }, { "Hato", 1 }, { "Civilian", 2 } };
 
+		class ArrestPeople {
+			item = ""; // For goals like these we don't provide an item, the field is still required
+			icon = "Data\UI\Goals\arrests.paa"; // Optional override
+			title = "Arrest Criminals";
+			basePayout = 50000;
+			maxPayout = 500000;
+			tiers[] = { 200, 360, 500 };
+			duration = 7; 
+			factions[] = { "Police" };
+			class Event {
+				eventType = "ArrestedSomeone";
+				getQuantity = "1";
+			};
+		};
+		
+		class GatherApple {
+			item = "FreshApple";
+			title = "Gather Apples";
+			basePayout = 1000000;
+			maxPayout = 16000000;
+			tiers[] = { 2000, 3600, 4880, 5904, 6723, 7378, 7902, 8321, 8656, 9000 };
+			duration = 14; // In days
+			factions[] = { "Civilian" };
+			class Event {
+				eventType = "GatheredVirtualItem";
+				getQuantity = "_this params [ ""_cfgItem"", ""_eventParams"" ]; _eventParams params [ ""_eventItem"", ""_eventAmount"" ];  if !(_eventItem isEqualTo _cfgItem) exitWith { 0 }; _eventAmount";
+			};
+		};
+
+		class SellSchnapps {
+			item = "Schnapps";
+			title = "Sell Schnapps";
+			basePayout = 1000000;
+			maxPayout = 16000000;
+			tiers[] = { 2000, 3600, 4880, 5904, 6723, 7378, 7902, 8321, 8656, 9000 };
+			duration = 14; // In days
+			factions[] = { "Civilian" };
+			class Event {
+				eventType = "SoldVirtualItem";
+				getQuantity = "_this params [ ""_cfgItem"", ""_eventParams"" ]; _eventParams params [ ""_eventItem"", ""_eventAmount"" ];  if !(_eventItem isEqualTo _cfgItem) exitWith { 0 }; _eventAmount";
+			};
+		};
+
+		class SellCigarette : SellSchnapps {
+			item = "Cigarette";
+			title = "Sell Cigarettes";
+		};
+
+		class SellCigar : SellSchnapps {
+			item = "Cigar";
+			title = "Sell Cigars";
+		};
+
+		class SellCopper : SellSchnapps {
+			item = "CopperBar";
+			title = "Sell Copper";
+		};
+
+		class SellSilver : SellSchnapps {
+			item = "SilverBar";
+			title = "Sell Silver";
+		};
+
+		class SellIron : SellSchnapps {
+			item = "IronBar";
+			title = "Sell Iron";
+		};
+
+		class SellSand : SellSchnapps {
+			item = "Glass";
+			title = "Sell Glass";
+		};
+
+		class SellSalt : SellSchnapps {
+			item = "RefinedSalt";
+			title = "Sell Salt";
+		};
+
+		class SellDiamond : SellSchnapps {
+			item = "CutDiamond";
+			title = "Sell Diamond";
+		};
+
+		class SellMoonshine : SellSchnapps {
+			item = "Moonshine";
+			title = "Sell Moonshine";
+		};
 	};
 };

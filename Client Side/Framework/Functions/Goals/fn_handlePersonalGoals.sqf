@@ -75,6 +75,6 @@ private _allCompleted = true;
 	};
 } forEach ["Daily", "Weekly"];
 
-if !(_allCompleted) then { [] call ULP_fnc_savePersonalGoals; };
+[] call ULP_fnc_savePersonalGoals;
 
 _allCompleted

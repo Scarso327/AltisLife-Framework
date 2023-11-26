@@ -96,6 +96,9 @@ class CfgFunctions {
             file = "\life_server\Functions\Database\CommunityGoals";
             class getCommunityGoals {};
             class initCommunityGoals {};
+            class getGoalProgress {};
+            class addCommunityGoalContribution {};
+            class addCommunityGoal {};
         };
 
         class Channels {

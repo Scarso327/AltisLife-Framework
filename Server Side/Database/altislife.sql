@@ -97,6 +97,13 @@ BEGIN
 END//
 DELIMITER ;
 
+DELIMITER //
+CREATE PROCEDURE `deleteOldCommunityGoals`()
+BEGIN
+	DELETE FROM community_goals WHERE end_date <= CURDATE();
+END//
+DELIMITER ;
+
 -- Dumping structure for table altislife.groups
 CREATE TABLE IF NOT EXISTS `groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

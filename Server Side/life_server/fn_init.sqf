@@ -145,6 +145,7 @@ if !(_items isEqualTo []) then {
 [] call ULP_SRV_fnc_initGathering;
 [] call ULP_SRV_fnc_initCartels;
 [] call ULP_SRV_fnc_initServerEvents;
+[] call ULP_SRV_fnc_initCommunityGoals;
 
 /* Map-based server side initialization. */
 

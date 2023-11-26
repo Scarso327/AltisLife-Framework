@@ -601,10 +601,9 @@ class CfgFunctions {
 		class Goals {
 			file = "Functions\Goals";
 			class initPersonalGoals {};
-			class handleGoal {};
-			class increaseGoal {};
-			class saveGoals {};
-			class rewardTier {};
+			class handlePersonalGoals {};
+			class savePersonalGoals {};
+			class rewardPersonalGoal {};
 		};
 
 		class Rewards {

@@ -50,8 +50,16 @@ private _lastCtrlPos = ctrlPosition controlNull;
 				_goal ctrlSetPositionY (((_lastCtrlPos # 1) + ((1 * GUI_GRID_CENTER_H) / 2)) + (_lastCtrlPos # 3));
 			};
 
-			private _item = missionConfigFile >> "CfgVirtualItems" >> (getText (_goalCfg >> "item"));
-			private _icon = getText (_item >> "icon");
+			private _icon = "";
+			private _item = getText (_goalCfg >> "item");
+			
+			if (isText (_goalCfg >> "icon")) then {
+				_icon = getText (_goalCfg >> "icon");
+			} else {
+				if !(_item isEqualTo "") then {
+					_icon = getText (missionConfigFile >> "CfgVirtualItems" >> (getText (_goalCfg >> "item")) >> "icon");
+				};
+			};
 
 			if !(_icon isEqualTo "") then {
 				private _iconCtrl = _goal controlsGroupCtrl 101;

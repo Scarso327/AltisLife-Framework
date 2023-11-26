@@ -50,7 +50,7 @@ private _query = switch (_state) do {
 	case 5: { format["blueprints = '""[]""', professions = '""[]""', level = '1', xp = '0', prestige ='%1'", [_data, ""] call ULP_fnc_numberText] };
 	case 6: { format["achievements='%1'", [_data] call DB_fnc_mresArray] };
 	case 7: { format["arrested = '%1', prison_timer = '%2'", [(_data > 0)] call ULP_fnc_bool, [_data, ""] call ULP_fnc_numberText] };
-	case 8: { format["daily_tasks='%1', weekly_tasks='%2'", [_data select 0] call DB_fnc_mresArray, [_data select 1] call DB_fnc_mresArray] };
+	case 8: { format["%1daily_tasks='%2', %1weekly_tasks='%3'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data select 0] call DB_fnc_mresArray, [_data select 1] call DB_fnc_mresArray] };
 	case 9: { format["textures='%1'", [_data] call DB_fnc_mresArray] };
 	case 10: { format["titles='%1'", [_data] call DB_fnc_mresArray] };
 	case 11: {

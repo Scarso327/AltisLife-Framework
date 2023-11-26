@@ -276,7 +276,10 @@ CREATE TABLE IF NOT EXISTS `players` (
 DELIMITER //
 CREATE PROCEDURE `resetDailyGoals`()
 BEGIN
-	UPDATE players SET daily_tasks = '"[]"';
+	UPDATE players SET cop_daily_tasks = '"[]"';
+  UPDATE players SET med_daily_tasks = '"[]"';
+  UPDATE players SET hato_daily_tasks = '"[]"';
+  UPDATE players SET civ_daily_tasks = '"[]"';
 	UPDATE settings SET `value`=DATE_FORMAT(CURDATE(), '%Y-%c-%e') WHERE setting = 'Day';
 END//
 DELIMITER ;
@@ -302,7 +305,10 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE `resetWeeklyGoals`()
 BEGIN
-	UPDATE players SET weekly_tasks = '"[]"';
+	UPDATE players SET cop_weekly_tasks = '"[]"';
+  UPDATE players SET med_weekly_tasks = '"[]"';
+  UPDATE players SET hato_weekly_tasks = '"[]"';
+  UPDATE players SET civ_weekly_tasks = '"[]"';
 	UPDATE settings SET `value`=WEEK(CURDATE()) WHERE setting = 'Week';
 END//
 DELIMITER ;

@@ -22,7 +22,7 @@ if !([player] call ULP_fnc_canImprison || { [_target] call ULP_fnc_canImprisoned
 private _max = getNumber (_prison >> "maxDuraction");
 
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, getNumber (_prison >> "maxDuraction")], [_target, _prison, _max],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _max], [_target, _prison, _max],
 	{
 		_this params [
 			["_target", objNull, [objNull]],
@@ -43,6 +43,8 @@ private _max = getNumber (_prison >> "maxDuraction");
 
 		[format["You have sentenced <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2</t>", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
 		["FirstArrest"] call ULP_fnc_achieve;
+
+		["ArrestedSomeone", [_target, _duraction]] call ULP_fnc_invokeEvent;
 
 		[getPlayerUID player, "Imprisoned", [_target, _duration]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	}, false, "[_this, ""MM:SS""] call BIS_fnc_secondsToString", false

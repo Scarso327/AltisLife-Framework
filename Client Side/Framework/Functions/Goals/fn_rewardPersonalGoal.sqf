@@ -3,10 +3,10 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_rewardTier";
+scopeName "fn_rewardPersonalGoal";
 
 if (canSuspend) exitWith {
-    [ULP_fnc_rewardTier, _this] call ULP_fnc_directCall;
+    [ULP_fnc_rewardPersonalGoal, _this] call ULP_fnc_directCall;
 };
 
 _this params [

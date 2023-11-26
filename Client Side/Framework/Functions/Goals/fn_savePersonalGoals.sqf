@@ -3,10 +3,10 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_saveGoals";
+scopeName "fn_savePersonalGoals";
 
 if (canSuspend) exitWith {
-    [ULP_fnc_saveGoals, _this] call ULP_fnc_directCall;
+    [ULP_fnc_savePersonalGoals, _this] call ULP_fnc_directCall;
 };
 
 private _save = [[], []];

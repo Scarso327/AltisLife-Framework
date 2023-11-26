@@ -11,7 +11,7 @@ if (canSuspend) exitWith {
 
 ["Setting Up Community Goals..."] call ULP_fnc_logIt;
 
-private _query = ["SELECT community_goals.id, community_goals.goal_cfg, DATEDIFF(community_goals.end_date, CURDATE()) as daysLeft, COALESCE((SELECT SUM(community_goal_contributions.contribution) FROM community_goal_contributions WHERE community_goal_contributions.goalId = community_goals.id), 0) AS progress FROM community_goals", 2, true] call DB_fnc_asyncCall;
+private _query = ["SELECT community_goals.id, community_goals.goal_cfg, DATEDIFF(community_goals.end_date, CURDATE()) as daysLeft, COALESCE((SELECT SUM(community_goal_contributions.contribution) FROM community_goal_contributions WHERE community_goal_contributions.goalId = community_goals.id), 0) AS progress FROM community_goals WHERE community_goals.paid = '0'", 2, true] call DB_fnc_asyncCall;
 
 if (_query isEqualTo "") exitWith { ["No goals found..."] call ULP_fnc_logIt; };
 
@@ -30,21 +30,7 @@ private _goals = (_query apply {
 
     _x params [ "_id", "_goalCfg", "", "_progress" ];
 
-    private _payout = ([_goalCfg, _progress] call ULP_fnc_getCommunityGoalPayout) param [0, 0, [0]];
-
-    private _contributions = [format ["SELECT pid, contribution FROM community_goal_contributions WHERE goalId = '%1'", [_id, ""] call ULP_fnc_numberText], 2, true] call DB_fnc_asyncCall;
-
-    if (_contributions isEqualType []) then {
-        {
-            _x params [ "_pid", "_contribution" ];
-
-            private _myPayout = floor (_payout * (_contribution / (_progress max 1))); 
-
-            if (_myPayout > 0) then {
-                [_pid, "Money", "Community Goal Payout", _myPayout] call ULP_SRV_fnc_addMail;
-            };
-        } forEach _contributions;
-    };
+    [_id, _goalCfg, _progress] call ULP_SRV_fnc_finishCommunityGoal;
 } forEach + (_goals select { (_x # 2) <= 0 });
 
 ["Deleting Old Community Goals..."] call ULP_fnc_logIt;

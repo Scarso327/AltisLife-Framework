@@ -27,3 +27,8 @@ if (canSuspend) exitWith {
 		} forEach + ((missionNamespace getVariable ["ULP_CommunityGoals", createHashMap]) getOrDefault [_event, []]);
 	}] call ULP_fnc_addEventHandler;
 } forEach (keys (missionNamespace getVariable ["ULP_CommunityGoals", createHashMap]));
+
+["CommunityGoalPaid", {
+	_this params [ "_message" ];
+	[_message] call ULP_fnc_hint;
+}] call ULP_fnc_addEventHandler;

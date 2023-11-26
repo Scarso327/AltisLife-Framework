@@ -49,3 +49,6 @@ COMMENT ''
 BEGIN
 	DELETE FROM community_goals WHERE end_date <= CURDATE();
 END
+
+ALTER TABLE `community_goals`
+	ADD COLUMN `paid` TINYINT NOT NULL DEFAULT 0 AFTER `end_date`;

@@ -99,6 +99,7 @@ class CfgFunctions {
             class getGoalProgress {};
             class addCommunityGoalContribution {};
             class addCommunityGoal {};
+            class finishCommunityGoal {};
         };
 
         class Channels {

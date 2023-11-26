@@ -23,11 +23,9 @@ private _tiers = getArray (_config >> "tiers");
 private _max = _tiers param [((count _tiers) - 1), 0, [0]]; 
 
 private _contribution = _amount - ((_amount - (_max - _progress)) max 0);
-private _complete = ((_progress + _contribution) min _max) isEqualTo _max;
 
-if (_complete) then {
-	_goalObj setVariable ["complete", true, true];
-};
+private _newProgress = ((_progress + _contribution) min _max);
+private _complete = _newProgress isEqualTo _max;
 
 private _querySafeGoalId = [_goalId, ""] call ULP_fnc_numberText;
 
@@ -46,4 +44,13 @@ if (_currentContribution isEqualTo 0) then {
 		"UPDATE community_goal_contributions SET contribution='%3' WHERE goalId = '%1' AND pid = '%2'", 
 		_querySafeGoalId, _steamId, [(_currentContribution + _contribution), ""] call ULP_fnc_numberText
 	], 1] call DB_fnc_asyncCall;
+};
+
+if (_complete) then {
+	_goalObj setVariable ["complete", true, true];
+
+	// Delay of 5 seconds is a little over kill but it ensures previous updates filter in
+	[5, [_goalId, _config, _newProgress], {
+		_this call ULP_SRV_fnc_finishCommunityGoal;
+	}] call ULP_fnc_waitExecute;
 };

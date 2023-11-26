@@ -364,6 +364,11 @@ class CfgFunctions {
 			class perks {};
 		};
 
+		class TabletCommunityGoals {
+			file = "Functions\Tablet\CommunityGoals";
+			class communityGoals {};
+		};
+
 		class Options {
 			file = "Functions\Options";
 			class setOption {};

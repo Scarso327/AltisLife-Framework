@@ -92,6 +92,12 @@ class CfgFunctions {
             class updateMail {};
         };
 
+        class DatabaseCommunityGoals {
+            file = "\life_server\Functions\Database\CommunityGoals";
+            class getCommunityGoals {};
+            class initCommunityGoals {};
+        };
+
         class Channels {
             file = "\life_server\Functions\Channels";
             class initRadios {};

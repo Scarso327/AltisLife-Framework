@@ -45,6 +45,7 @@
     - Sharing (Can provide your group with access to your houses)
   - <b>Goals</b>
     - Personal
+    - Community
   - <b>Random Events</b>
     - Airdrops
     - Popup Cartels
@@ -57,3 +58,5 @@ Currently the framework isn't suitable for running multiple servers as certain f
 
   - <b>Housing</b>
     - When houses are bought / sold they'll only be setup for one server but exist in same table allowing conflicts.
+  - <b>Community Goals</b>
+    - Progress for goals are queried on server start and then increased based on this value meaning no sync exists and overwrites can easily happen.

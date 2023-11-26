@@ -10,3 +10,50 @@
 # Communication Methods:
   - Website: https://mantlenetwork.co.uk/
   - Discord: https://mantlenetwork.co.uk/discord
+
+# Features
+
+  - <b>Non-Side Controlled Factions</b>
+    - Factions aren't decided by ArmA 3's side system allowing for, in theory, unlimited factions.
+  - <b>Progression</b>
+    - Leveling
+    - Professions
+  - <b>Crafting</b>
+  - <b>Unique Runs</b>
+    - Freight Runs
+    - Smuggling
+    - Archeology
+  - <b>Groups</b>
+    - Types
+      - Political
+      - Criminal
+      - Company
+    - Leveling
+    - Shared Buffs
+    - Ranks
+      - Permissions
+    - Offline Admin (Kick, Promote, Demote Players even while they're offline)
+  - <b>Capturable Locations</b>
+    - Static Cartels (Provides unique buffs depending on type)
+    - Criminal Hideouts
+    - Gang Bases (Weekly bidding wars)
+  - <b>Perks</b>
+    - Personal
+    - Group
+  - <b>Housing</b>
+    - Naming
+    - Sharing (Can provide your group with access to your houses)
+  - <b>Goals</b>
+    - Personal
+  - <b>Random Events</b>
+    - Airdrops
+    - Popup Cartels
+    - Shipwrecks
+  - <b>Multi Map Support</b>
+
+# Mutli Server Support
+
+Currently the framework isn't suitable for running multiple servers as certain features don't work and would introduce expliots / inconsistency. Below we've listed the features that would need work / considerations to support multiple servers. Future work will be completed to allow for this.
+
+  - <b>Housing</b>
+    - When houses are bought / sold they'll only be setup for one server but exist in same table allowing conflicts.

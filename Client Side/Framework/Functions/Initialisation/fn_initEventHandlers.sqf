@@ -155,3 +155,11 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 		[format ["<t color='#B92DE0'>%1</t> has destroyed your communications. <t color='#B92DE0'>You are not longer permitted to speak outside of the direct/vehicle channel!</t>", [_unit] call ULP_fnc_getName]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
+
+["EnteredRedzone", {
+	["<t align='center'>You've entered a <t color='#cc0001'>Combat Zone</t></t>"] call ULP_UI_fnc_zoneText;
+}] call ULP_fnc_addEventHandler;
+
+["LeftRedzone", {
+	["<t align='center'>You've left a <t color='#cc0001'>Combat Zone</t></t>"] call ULP_UI_fnc_zoneText;
+}] call ULP_fnc_addEventHandler;

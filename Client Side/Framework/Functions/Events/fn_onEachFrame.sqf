@@ -46,3 +46,13 @@ if !(_gpsVisible isEqualTo (missionNamespace getVariable ["GPSVisible", false]))
 	missionNamespace setVariable ["GPSVisible", _gpsVisible];
 	["GPS", [_gpsVisible]] call ULP_fnc_invokeEvent;
 };
+
+if ((missionNamespace getVariable ["InRedzoneCheckTime", -1]) <= time) then {
+	private _isInRedzone = ["redzone_"] call ULP_fnc_isUnitsInZone;
+	if !(_isInRedzone isEqualTo (missionNamespace getVariable ["InRedzone", false])) then {
+		missionNamespace setVariable ["InRedzone", _isInRedzone];
+		missionNamespace setVariable ["InRedzoneCheckTime", time + 3];
+
+		[["LeftRedzone", "EnteredRedzone"] select _isInRedzone, []] call ULP_fnc_invokeEvent;
+	};
+};

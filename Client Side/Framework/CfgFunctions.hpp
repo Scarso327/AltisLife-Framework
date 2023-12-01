@@ -861,6 +861,7 @@ class CfgFunctions {
 			class eachFrameHUD {};
 			class isHudShown {};
 			class updateXpHud {};
+			class zoneText {};
 		};
 	};
 };

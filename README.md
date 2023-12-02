@@ -1,8 +1,8 @@
-<b>Mantle Network</b> is an online community built entirely upon the needs of our player base and associated partners. Operating as the public image of our subsidiary, North London RPC, we aim to build bridges between groups who would usually remain apart. As a constantly growing collective, we are constantly forming networks with our partners and like-minded player bases, creating a well informed and relevant Network that is ready to meet the demands of people all who join. Backed by competent development and administration teams, we only move forward in supplying high quality and reliable services for our members to enjoy across all platforms.
+<b>Mantle Network</b> is an online community built entirely upon the needs of our player base and associated partners. Operating as the public image of our subsidiary, North London RPC, we aim to build bridges between groups who would usually remain apart. As a constantly growing collective, we are constantly forming networks with our partners and like-minded player bases, creating a well-informed and relevant Network that is ready to meet the demands of people all who join. Backed by competent development and administration teams, we only move forward in supplying high-quality and reliable services for our members to enjoy across all platforms.
 
 # Development Team:
-  - <b>Jack Farhall</b>, jackfarhall@gmail.com
-  - <b>Lewis Mackinnon</b>, lewisallanmackinnon@gmail.com
+  - <b>Jack Farhall</b>
+  - <b>Lewis Mackinnon</b>
 
 # Art Team:
   - <b>Ace Boyden</b>
@@ -19,7 +19,7 @@ This framework has a wide range of features. We've listed a load but many more e
 
   - <b>Advanced Clothing Textures</b>
     - Support for multiple textures per classname.
-    - No side dependent filters so police clothing on a civilian looks like police clothing!
+    - No side-dependent filters so police clothing on a civilian looks like police clothing!
   - <b>Queued Inventories</b>
     - Virtual inventories have a queue system allowing multiple people to view them while someone adds and takes items.
   - <b>Reputation</b>
@@ -77,8 +77,8 @@ This framework has a wide range of features. We've listed a load but many more e
       - HMS Liberty
       - Police Evidence Storage
       - Research Storage
-  - <b>Ace-Insipred Revivial System</b>
-    - Instead of clicking a button and waiting, random injuries are added that required bandages before you can be revived!
+  - <b>Ace-Insipred Revival System</b>
+    - Instead of clicking a button and waiting, random injuries are added that require bandages before you can be revived!
   - <b>Capturable Locations</b>
     - Static Cartels
       - Drug Cartels
@@ -98,7 +98,7 @@ This framework has a wide range of features. We've listed a load but many more e
   - <b>Housing</b>
     - Naming
     - Sharing (Can provide your group with access to your houses)
-    - Storage (Both for virtual and phyiscal items)
+    - Storage (Both for virtual and physical items)
   - <b>Goals</b>
     - Personal
     - Community
@@ -112,15 +112,15 @@ This framework has a wide range of features. We've listed a load but many more e
   - <b>Customisable Player Tags</b>
     - Player tags can be customised with unique icons, titles, and colours!
   - <b>Pleasing Design</b>
-    - All UI elements follow the same style and designed to be easy on the eyes and to use!
-    - Icons for everything! All following the same style.
+    - All UI elements follow the same style and are designed to be easy on the eyes and to use!
+    - Icons for everything! All follow the same style.
     - Consistent Map Markers, gathering zones, processors, stores, etc all share colours and icons depending on type and legality.
 
 </details>
 
 # Mutli Server Support
 
-Currently the framework isn't suitable for running multiple servers as certain features don't work and would introduce expliots / inconsistency. Below we've listed the features that would need work / considerations to support multiple servers. Future work will be completed to allow for this.
+Currently, the framework isn't suitable for running multiple servers as certain features don't work and would introduce exploits/inconsistency. Below we've listed the features that would need work/considerations to support multiple servers. Future work will be completed to allow for this.
 
   - <b>Housing</b>
-    - When houses are bought / sold they'll only be setup for one server but exist in same table allowing conflicts.
+    - When houses are bought/sold they'll only be set up for one server but exist in the same table allowing conflicts.

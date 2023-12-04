@@ -1,20 +1,12 @@
-<b>Mantle Network</b> is an online community built entirely upon the needs of our player base and associated partners. Operating as the public image of our subsidiary, North London RPC, we aim to build bridges between groups who would usually remain apart. As a constantly growing collective, we are constantly forming networks with our partners and like-minded player bases, creating a well-informed and relevant Network that is ready to meet the demands of people all who join. Backed by competent development and administration teams, we only move forward in supplying high-quality and reliable services for our members to enjoy across all platforms.
+# AltisLife-Framework
 
-# Development Team:
-  - <b>Jack Farhall</b>
-  - <b>Lewis Mackinnon</b>
+A feature-rich framework for developing Life RPG modes for ArmA 3.
 
-# Art Team:
-  - <b>Ace Boyden</b>
-    
-# Communication Methods:
-  - Website: https://mantlenetwork.co.uk/
-  - Discord: https://mantlenetwork.co.uk/discord
+## Description
 
-# Features
-This framework has a wide range of features. We've listed a load but many more exist!
+A highly configurable mission developed with inspiration from a variety of ArmA 3 Life Servers (End Days, PhoenixRP, Grand Theft Arma, and RPUK, just to name a few).
+
 <details>
-
 <summary>View Feature List</summary>
 
   - <b>Advanced Clothing Textures</b>
@@ -47,7 +39,7 @@ This framework has a wide range of features. We've listed a load but many more e
   - <b>Multiple Sirens</b>
     - Support for togglable sirens that stop without delay!
   - <b>Simple Identification System</b>
-    - All players spawn with an ID card they can share to officers.
+    - All players spawn with an ID card they can share with officers.
     - IDs can be forged and then used to change your displayed name.
   - <b>Unique Runs</b>
     - Freight Runs
@@ -118,9 +110,33 @@ This framework has a wide range of features. We've listed a load but many more e
 
 </details>
 
-# Mutli Server Support
+## Getting Started
 
-Currently, the framework isn't suitable for running multiple servers as certain features don't work and would introduce exploits/inconsistency. Below we've listed the features that would need work/considerations to support multiple servers. Future work will be completed to allow for this.
+### Dependencies
 
-  - <b>Housing</b>
-    - When houses are bought/sold they'll only be set up for one server but exist in the same table allowing conflicts.
+* EXTDB3 - Available in the `ServerSide/@extDB3` folder as the official repo is dead
+
+### Setting Up
+This is a very brief list of things you need to do to set up and play the mission.
+
+* You need a database that supports MySQL to run the `altislife.sql` file found in `ServerSide/Database`.
+  - If you're updating from a previous version all database changes are included in `ServerSide/Database/Migrations`.
+* A setup and ready-to-go ArmA 3 Server on at least version 2.02 for HashMap support.
+  - Startup parameters for server `-servermod=@life_server;@extDB3`
+
+
+## Help
+
+Need help? Submit an issue and a maintainer will assist when they're able.
+
+## Authors
+
+Contributors names and contact info
+
+- [@Scarso](https://twitter.com/ScarsoLP)
+- [@Lewis](https://github.com/Lewis-Development)
+- [@AceBoyden]
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details

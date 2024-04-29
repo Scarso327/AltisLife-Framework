@@ -127,7 +127,7 @@ This is a very brief list of things you need to do to set up and play the missio
 
 ## Help
 
-Need help? Submit an issue and a maintainer will assist when they're able.
+Need help? Submit an issue and a maintainer will assist when they're able. If no reply has been received within 24 hours feel free to contact "Scarso" on Discord.
 
 ## Authors
 

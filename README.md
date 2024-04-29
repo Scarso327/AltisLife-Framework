@@ -120,7 +120,7 @@ A highly configurable mission developed with inspiration from a variety of ArmA 
 This is a very brief list of things you need to do to set up and play the mission.
 
 * You need a database that supports MySQL to run the `altislife.sql` file found in `ServerSide/Database`.
-  - If you're updating from a previous version all database changes are included in `ServerSide/Database/Migrations`.
+  - If you're updating from a previous version all database changes are included in `ServerSide/Database/Migrations`. *NOTE* If you're running the development branch you should also run these as `altislife.sql` is only updated when a new release happens.
 * A setup and ready-to-go ArmA 3 Server on at least version 2.02 for HashMap support.
   - Startup parameters for server `-servermod=@life_server;@extDB3`
 

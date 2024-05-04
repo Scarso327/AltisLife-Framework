@@ -69,7 +69,7 @@ private _factionMinimums = createHashMapFromArray getArray (missionConfigFile >>
 {
     _x params [ "_id", "_goalCfg", "_daysLeft", "_progress" ];
 
-    if (isClass _goalCfg) then {
+    if (isClass _goalCfg && { _daysLeft >= 0 }) then {
         private _eventType = getText (_goalCfg >> "Event" >> "eventType");
 
         private _tiers = getArray (_goalCfg >> "tiers");

@@ -64,36 +64,38 @@ private _timeStamp = diag_tickTime;
 ["Getting Settings..."] call ULP_fnc_logIt;
 
 private _settings = ["SELECT * FROM settings", 2, true] call DB_fnc_asyncCall;
+if (_settings isEqualTo "") then { _settings = []; };
 
-if !(_settings isEqualTo "" && { _settings isEqualTo [] }) then {
-    private _cfg = configFile >> "CfgPatches" >> "ULPServer" >> "Settings";
-    {
-        _x params ["", "_name", "_value"];
+{
+    private _cfg = _x;
 
-        if (isClass (_cfg >> _name)) then {
-            _value = switch (getText (_cfg >> _name >> "type")) do {
-                case "BOOL": { [parseNumber _value] call ULP_fnc_bool };
-                CASE "NUMBER": {
-                    _value = parseNumber _value;
-                    if (isArray (_cfg >> _name >> "bounds")) exitWith {
-                        private _bounds = getArray (_cfg >> _name >> "bounds");
-                        ((_value min (_bounds # 1)) max (_bounds # 0))
-                    };
+    private _name = configName _x;
 
-                    _value
-                };
-                case "ARRAY": { [_value] call DB_fnc_mresToArray };
-                case "HASHMAP" : { createHashMapFromArray ([_value] call DB_fnc_mresToArray) };
-                default { _value };
+    // Attempt to get value from database or fallback to default
+    private _value = ((_settings select { (_x select 1) isEqualTo (configName _cfg) }) param [0, []]) param [2, getText (_x >> "default")];
+
+    _value = switch (getText (_x >> "type")) do {
+        case "BOOL": { [parseNumber _value] call ULP_fnc_bool };
+        CASE "NUMBER": {
+            _value = parseNumber _value;
+            if (isArray (_x >> "bounds")) exitWith {
+                private _bounds = getArray (_x >> "bounds");
+                ((_value min (_bounds # 1)) max (_bounds # 0))
             };
 
-            private _varName = format["ULP_SRV_Setting_%1", _name];
-
-            missionNamespace setVariable [_varName, ([_value, [_varName, true, _value] call ULP_fnc_constant] select ([getNumber(_cfg >> _name >> "constant")] call ULP_fnc_bool))
-            , [getNumber(_cfg >> _name >> "global")] call ULP_fnc_bool];
+            _value
         };
-    } forEach _settings;
-};
+        case "ARRAY": { [_value] call DB_fnc_mresToArray };
+        case "HASHMAP" : { createHashMapFromArray ([_value] call DB_fnc_mresToArray) };
+        default { _value };
+    };
+
+    private _varName = format["ULP_SRV_Setting_%1", _name];
+
+    missionNamespace setVariable [_varName, 
+        ([_value, [_varName, true, _value] call ULP_fnc_constant] select ([getNumber(_x >> "constant")] call ULP_fnc_bool)), 
+        [getNumber(_x >> "global")] call ULP_fnc_bool];
+} forEach ("isClass _x" configClasses (configFile >> "CfgPatches" >> "ULPServer" >> "Settings"));
 
 ["Checking Election Information..."] call ULP_fnc_logIt;
 

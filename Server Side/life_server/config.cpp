@@ -11,14 +11,14 @@ class CfgPatches {
         class Settings {
             class DonationGoal {
                 type = "BOOL";
-                default = false;
+                default = "0"; // Default should be in the format it would be saved in the database and use text type in config
                 constant = true;
                 global = true;
             };
             class ThreatLevel {
                 type = "NUMBER";
                 bounds[] = { 0, 4 }; // Number min / max...
-                default = 0;
+                default = "0";
                 constant = true;
                 global = true;
             };
@@ -48,7 +48,7 @@ class CfgPatches {
             };
             class Election {
                 type = "BOOL";
-                default = false;
+                default = "0";
                 constant = false;
                 global = true;
             };
@@ -60,7 +60,7 @@ class CfgPatches {
             };
             class BaseBidsActive {
                 type = "BOOL";
-                default = false;
+                default = "0";
                 constant = false;
                 global = true;
             };

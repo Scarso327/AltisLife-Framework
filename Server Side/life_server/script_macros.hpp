@@ -6,6 +6,8 @@
 #define RCLIENT -2 //Except server
 #define RANY 0 //Global
 
+#define isDowned(unit) unit getVariable ["isIncapacitated", false]
+
 #define EXTDB "extDB3" callExtension
 #define EXTDB_SETTING(TYPE,SETTING) TYPE(missionConfigFile >> "CfgServer" >> SETTING)
 #define EXTDB_FAILED(MESSAGE) \

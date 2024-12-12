@@ -22,7 +22,7 @@ if (isNull _house || { !([_house] call ULP_fnc_isHouse) } || { [_house] call ULP
 private _steamid = getPlayerUID _buyer;
 
 // Check House Limit...
-private _query = [format["SELECT count(id) FROM houses WHERE pid='%1' AND sold='0'", _steamid], 2] call DB_fnc_asyncCall;
+private _query = [format["SELECT count(`id`) FROM `houses` WHERE `pid`='%1' AND `sold`='0'", _steamid], 2] call DB_fnc_asyncCall;
 
 _query params [
 	["_count", 0, [0]]
@@ -38,8 +38,8 @@ private _id = ["houses"] call ULP_SRV_fnc_getNextId;
 
 // Insert...
 [format[
-	"INSERT INTO houses (pid, classname, pos, storage, virtualStorage) VALUES ('%1', '%2', '%3', '""[]""', '""[]""');", 
-	_steamid, (typeOf _house), [getPos _house] call DB_fnc_mresArray
+	"INSERT INTO `houses` (`id`, `pid`, `classname`, `pos`, `storage`, `virtualStorage`) VALUES ('%1', '%2', '%3', '%4', '""[]""', '""[]""');", 
+	[_id, ""] call ULP_fnc_numberText, _steamid, (typeOf _house), [getPos _house] call DB_fnc_mresArray
 ], 1] call DB_fnc_asyncCall;
 
 [_house, [_id, [_steamid, ([group _buyer] call ULP_fnc_groupId), name _buyer]]] call ULP_SRV_fnc_setupHouse;

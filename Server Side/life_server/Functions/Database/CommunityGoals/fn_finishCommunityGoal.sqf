@@ -15,7 +15,7 @@ if (_id isEqualTo -1 || { isNull _goalCfg }) exitWith {};
 
 private _payout = ([_goalCfg, _progress] call ULP_fnc_getCommunityGoalPayout) param [0, 0, [0]];
 
-private _contributions = [format ["SELECT pid, contribution FROM community_goal_contributions WHERE goalId = '%1'", [_id, ""] call ULP_fnc_numberText], 2, true] call DB_fnc_asyncCall;
+private _contributions = [format ["SELECT `pid`, `contribution` FROM `community_goal_contributions` WHERE `goalId` = '%1'", [_id, ""] call ULP_fnc_numberText], 2, true] call DB_fnc_asyncCall;
 
 if (_contributions isEqualType []) then {
 	{
@@ -30,7 +30,7 @@ if (_contributions isEqualType []) then {
 };
 
 [format[
-	"UPDATE community_goals SET paid='1' WHERE id = '%1'", 
+	"UPDATE `community_goals` SET `paid`='1' WHERE `id` = '%1'", 
 	[_id, ""] call ULP_fnc_numberText
 ], 1] call DB_fnc_asyncCall;
 

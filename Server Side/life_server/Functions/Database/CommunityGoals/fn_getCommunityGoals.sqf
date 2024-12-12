@@ -16,7 +16,7 @@ if !(_steamid isEqualTo "") then {
 
 	// TODO: Optimise down into a single query with a filter for factions
 
-	private _query = [format ["SELECT community_goals.id, community_goal_contributions.contribution FROM community_goals INNER JOIN community_goal_contributions ON community_goals.id = community_goal_contributions.goalId WHERE community_goal_contributions.pid = '%1'", _steamid], 2, true] call DB_fnc_asyncCall;
+	private _query = [format ["SELECT `community_goals`.`id`, `community_goal_contributions`.`contribution` FROM `community_goals` INNER JOIN `community_goal_contributions` ON `community_goals`.`id` = `community_goal_contributions`.`goalId` WHERE `community_goal_contributions`.`pid` = '%1'", _steamid], 2, true] call DB_fnc_asyncCall;
 
 	if !(_query isEqualType []) then { _query = []; };
 	

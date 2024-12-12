@@ -41,7 +41,7 @@ for "_i" from 0 to 1 step 0 do {
 _group setVariable ["group_progression", [_level, _xp], true];
 
 [format[
-	"UPDATE groups SET level='%2', xp='%3' WHERE id='%1'", 
+	"UPDATE `groups` SET `level`='%2', `xp`='%3' WHERE `id`='%1'", 
 	[[_group] call ULP_fnc_groupId, ""] call ULP_fnc_numberText, [_level, ""] call ULP_fnc_numberText, [_xp, ""] call ULP_fnc_numberText
 ], 1] call DB_fnc_asyncCall;
 

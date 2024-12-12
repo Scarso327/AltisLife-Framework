@@ -33,7 +33,7 @@ _box setVariable ["ULP_PhysicalCargo", _storage];
 
 [
 	format [
-		"UPDATE houses SET storage='%1' WHERE id='%2'",
+		"UPDATE `houses` SET `storage`='%1' WHERE `id`='%2'",
 		[_storage] call DB_fnc_mresArray, [_id, ""] call ULP_fnc_numberText
 	], 1
 ] call DB_fnc_asyncCall;

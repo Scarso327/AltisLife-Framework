@@ -31,8 +31,8 @@ private _id = ["vehicles"] call ULP_SRV_fnc_getNextId;
 
 // Insert...
 [format[
-	"INSERT INTO vehicles (pid, faction, classname, type, texture, active) VALUES ('%1', '%2', '%3', '%4', '%5', '%6');", 
-	_steamid, _faction, _class, _type, _texture, _active
+	"INSERT INTO `vehicles` (`id`, `pid`, `faction`, `classname`, `type`, `texture`, `active`) VALUES ('%1', '%2', '%3', '%4', '%5', '%6', '%7');", 
+	[_id, ""] call ULP_fnc_numberText, _steamid, _faction, _class, _type, _texture, _active
 ], 1] call DB_fnc_asyncCall;
 
 ["VehicleBought", [[_class, _spawn, _texture, _id]]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

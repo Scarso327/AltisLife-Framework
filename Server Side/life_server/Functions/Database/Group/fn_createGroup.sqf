@@ -28,7 +28,7 @@ private _kickIndex = getNumber (missionConfigFile >> "CfgGroups" >> "Permissions
 private _level = ((count _ranks) - 1);
 private _members = createHashMapFromArray [[_steamid, [name _owner, _level]]];
 
-private _query = [format["SELECT id, tag, name, active FROM groups WHERE tag = '%1' OR name = '%2'",
+private _query = [format["SELECT `id`, `tag`, `name`, `active` FROM `groups` WHERE `tag` = '%1' OR `name` = '%2'",
 	_tag, _name
 ], 2] call DB_fnc_asyncCall;
 
@@ -52,7 +52,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	};
 
 	// This gang has something matching but is also inactive, to save queries we can just update this one as ours...
-	[format["UPDATE groups SET owner = '%1', type = '%9', tag = '%2', name = '%3', ranks = '%5', deposit = '%6', withdraw = '%7', rank = '%8', invite = '%9', kick = '%10', level = '0', xp = '0', bank = '0', premium = '0', active = '1', buffs = '""[]""' WHERE id = '%4'",
+	[format["UPDATE `groups` SET `owner` = '%1', `type` = '%9', `tag` = '%2', `name` = '%3', `ranks` = '%5', `deposit` = '%6', `withdraw` = '%7', `rank` = '%8', `invite` = '%9', `kick` = '%10', `level` = '0', `xp` = '0', `bank` = '0', `premium` = '0', `active` = '1', `buffs` = '""[]""' WHERE `id` = '%4'",
 		_steamid, _tag, _name, _queryId, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type, _inviteIndex, _kickIndex
 	], 1] call DB_fnc_asyncCall;
 
@@ -109,8 +109,8 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 
 	// Insert...
 	[format[
-		"INSERT INTO groups (owner, type, tag, name, ranks, deposit, withdraw, rank, invite, kick, buffs) VALUES ('%1', '%8', '%2', '%3', '%4', '%5', '%6', '%7', '%9', '%10', '""[]""');", 
-		_steamid, _tag, _name, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type, _inviteIndex, _kickIndex
+		"INSERT INTO `groups` (`id`, `owner`, `type`, `tag`, `name`, `ranks`, `deposit`, `withdraw`, `rank`, `invite`, `kick`, `buffs`) VALUES ('%1', '%2', '%9', '%3', '%4', '%5', '%6', '%7', '%8', '%10', '%11', '""[]""');", 
+		[_id, ""] call ULP_fnc_numberText, _steamid, _tag, _name, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type, _inviteIndex, _kickIndex
 	], 1] call DB_fnc_asyncCall;
 
 	private _group = createGroup [(side _owner), false];
@@ -127,7 +127,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 _owner setUnitRank (_ranks select _level);
 
 // Update Owner's Gang ID...
-[format["UPDATE players SET group_id = '%1', group_level = '%3' WHERE pid = '%2'",
+[format["UPDATE `players` SET `group_id` = '%1', `group_level` = '%3' WHERE `pid` = '%2'",
 	_id, _steamid, _level
 ], 1] call DB_fnc_asyncCall;
 

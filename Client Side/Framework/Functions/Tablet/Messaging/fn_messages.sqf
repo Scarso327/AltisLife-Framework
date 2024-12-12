@@ -88,14 +88,14 @@ switch (lbCurSel _toolbox) do {
 		};
 
 		if ((_display getVariable ["MessageRecievedEvent", -1]) isEqualTo -1) then {
-			["MessageReceived", {
+			_display setVariable ["MessageRecievedEvent", (["MessageReceived", {
 				private _display = findDisplay 23000;
 				if (isNull _display && { !((lbCUrSel (_display displayCtrl 23036)) isEqualTo 1) }) exitWith {
 					[_event, _eventId] call ULP_fnc_removeEventHandler;
 				};
 
 				_display call ULP_fnc_messages;
-			}] call ULP_fnc_addEventHandler;
+			}] call ULP_fnc_addEventHandler)];
 		};
 	};
 	default {

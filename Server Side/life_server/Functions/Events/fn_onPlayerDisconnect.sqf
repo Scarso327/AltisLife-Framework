@@ -6,7 +6,7 @@
 scopeName "fn_onPlayerDisconnect";
 
 _this params [
-    ["_unit", objNull, [objNull]], "", ["_uid", "", [""]]
+    ["_unit", objNull, [objNull]]
 ];
 
 if (isNull _unit) exitWith {};

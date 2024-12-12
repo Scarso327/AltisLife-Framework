@@ -23,7 +23,7 @@ if !(_level isEqualTo _current) then {
 	_group setVariable ["group_buffs", _buffs, true];
 
 	[format[
-		"UPDATE groups SET buffs='%2' WHERE id='%1'", 
+		"UPDATE `groups` SET `buffs`='%2' WHERE `id`='%1'", 
 		[[_group] call ULP_fnc_groupId, ""] call ULP_fnc_numberText, [_buffs] call DB_fnc_mresArray
 	], 1] call DB_fnc_asyncCall;
 };

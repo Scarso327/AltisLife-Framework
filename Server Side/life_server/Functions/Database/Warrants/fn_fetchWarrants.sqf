@@ -9,7 +9,7 @@ private _units = ["Civilian"] call ULP_fnc_allMembers;
 private _warrants = createHashMap;
 
 if !(_units isEqualTo []) then {
-	private _warrants_query = [format ["SELECT * FROM warrants WHERE pid in (%1) AND active='1'", 
+	private _warrants_query = [format ["SELECT * FROM `warrants` WHERE `pid` in (%1) AND `active`='1'", 
 		(_units apply { format ["'%1'", getPlayerUID _x] }) joinString ","
 	], 2, true] call DB_fnc_asyncCall;
 

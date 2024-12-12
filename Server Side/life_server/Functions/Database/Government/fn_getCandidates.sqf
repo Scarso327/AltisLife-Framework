@@ -11,7 +11,7 @@ _this params [
 
 private _candidates = [];
 
-private _query = ["SELECT candidates.id, players.pid, candidates.name, groups.name, groups.type, groups.level FROM candidates INNER JOIN players ON players.pid = candidates.pid INNER JOIN groups ON groups.id = players.group_id WHERE candidates.active = '1' AND groups.active = '1'", 2, true] call DB_fnc_asyncCall;
+private _query = ["SELECT `candidates`.`id`, `players`.`pid`, `candidates`.`name`, `groups`.`name`, `groups`.`type`, `groups`.`level` FROM `candidates` INNER JOIN `players` ON `players`.`pid` = `candidates`.`pid` INNER JOIN `groups` ON `groups`.`id` = `players`.`group_id` WHERE `candidates`.`active` = '1' AND `groups`.`active` = '1'", 2, true] call DB_fnc_asyncCall;
 
 if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	// Filter where groups don't have correct perk

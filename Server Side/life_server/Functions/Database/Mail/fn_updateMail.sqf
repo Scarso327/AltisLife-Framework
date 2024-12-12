@@ -15,7 +15,7 @@ _this params [
 if (_mailId isEqualTo -1 || { _data isEqualTo -1 }) exitWith {};
 
 [format[
-	"UPDATE mail SET data='%2', claimed='%3' WHERE id='%1'", 
+	"UPDATE `mail` SET `data`='%2', `claimed`='%3' WHERE `id`='%1'", 
 	[_mailId, ""] call ULP_fnc_numberText, (switch (true) do {
 		case (_data isEqualType []) : { [_data] call DB_fnc_mresArray };
 		case (_data isEqualType 0) : { [_data, ""] call ULP_fnc_numberText };

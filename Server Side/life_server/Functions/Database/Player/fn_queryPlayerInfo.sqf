@@ -20,7 +20,7 @@ private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex")
 private _query = [
 	format["SELECT uid, pid, group_id, cash, bankacc, playtime, insert_time, adminlevel, eventslevel, donorlevel, %1licenses, %1gear, %1stats, professions, prestige, level, xp, achievements, daily_tasks, weekly_tasks, textures, titles, %1perks, reputation, blueprints", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
-	format["FROM players WHERE pid='%1'", _uid]
+	format["FROM `players` WHERE `pid`='%1'", _uid]
 ];
 
 _query = _query joinString " ";

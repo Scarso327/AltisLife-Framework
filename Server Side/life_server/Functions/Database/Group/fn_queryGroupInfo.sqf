@@ -20,7 +20,7 @@ private _group = [_groupid] call ULP_fnc_getGroupById;
 private _ranks = getArray (missionConfigFile >> "CfgGroups" >> "ranks");
 
 if (isNull _group) then {
-	private _query = [format["SELECT groups.id, groups.tag, groups.owner, groups.type, players.group_level, groups.name, groups.ranks, groups.bank, groups.tax, groups.premium, groups.deposit, groups.withdraw, groups.rank, groups.invite, groups.kick, groups.level, groups.xp, groups.buffs FROM groups INNER JOIN players ON players.group_id = groups.id AND players.pid = '%1' WHERE (groups.owner = '%1' OR groups.id = '%2') AND groups.active='1'",
+	private _query = [format["SELECT `groups`.`id`, `groups`.`tag`, `groups`.`owner`, `groups`.`type`, `players`.`group_level`, `groups`.`name`, `groups`.`ranks`, `groups`.`bank`, `groups`.`tax`, `groups`.`premium`, `groups`.`deposit`, `groups`.`withdraw`, `groups`.`rank`, `groups`.`invite`, `groups`.`kick`, `groups`.`level`, `groups`.`xp`, `groups`.`buffs` FROM `groups` INNER JOIN `players` ON `players`.`group_id` = `groups`.`id` AND `players`.`pid` = '%1' WHERE (`groups`.`owner` = '%1' OR `groups`.`id` = '%2') AND `groups`.`active`='1'",
 		_steamid, _groupid
 	], 2] call DB_fnc_asyncCall;
 
@@ -66,7 +66,7 @@ if (isNull _group) then {
 			_group setVariable ["group_premium", _queryPremium, true];
 		};
 
-		private _members = [format ["SELECT name, pid, group_level FROM players WHERE group_id = '%1'", _groupid], 2, true] call DB_fnc_asyncCall;
+		private _members = [format ["SELECT `name`, `pid`, `group_level` FROM `players` WHERE `group_id` = '%1'", _groupid], 2, true] call DB_fnc_asyncCall;
 		if !(_members isEqualTo []) then {
 			private _hash = createHashMap;
 

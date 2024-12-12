@@ -15,7 +15,7 @@ _settings set [_legislation, _value];
 missionNamespace setVariable ["ULP_SRV_Setting_GovernorSettings", _settings, true];
 
 [format[
-	"UPDATE settings SET value='%1' WHERE setting='GovernorSettings'", 
+	"UPDATE `settings` SET `value`='%1' WHERE `setting`='GovernorSettings'", 
 	[_settings] call DB_fnc_mresArray
 ], 1] call DB_fnc_asyncCall;
 

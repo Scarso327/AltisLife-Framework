@@ -19,6 +19,14 @@ if (isNumber (_factionCfg >> "jointChannel") && { [getNumber(_factionCfg >> "joi
 	["Joint", _unit] call ULP_SRV_removeRadio;
 };
 
+// If they were downed wipe their gear
+if (isDowned(_unit)) then {
+	private _cash = [_unit, "Cash"] call ULP_SRV_fnc_getSessionField;
+
+	[_unit, 1, [0, _cash, false, "Disconnected while dead"]] call ULP_SRV_fnc_savePlayerState; // Remove Cash
+	[_unit, 15, []] call ULP_SRV_fnc_savePlayerState; // Remove Gear
+};
+
 _unit setVariable ["session", nil];
 _unit setVariable ["reputation", nil];
 

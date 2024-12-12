@@ -16,7 +16,7 @@ private _id = _vehicle getVariable ["vehicle_id", -1];
 if (_id < 0) exitWith {};
 
 [format[
-	"UPDATE vehicles SET active='0', impound='%2' WHERE id='%1'", 
+	"UPDATE `vehicles` SET `active`='0', `impound`='%2' WHERE `id`='%1'", 
 	[_id, ""] call ULP_fnc_numberText, [_impoundFee, ""] call ULP_fnc_numberText
 ], 1] call DB_fnc_asyncCall;
 

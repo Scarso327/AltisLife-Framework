@@ -24,7 +24,7 @@ if (isNull _house || { !([_house] call ULP_fnc_isHouse) } || { !(_steamid isEqua
 	["HouseSold", [_house, false, "You don't have permission to sell this house..."]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 };
 
-[format["UPDATE houses SET sold='1' WHERE id='%1'", [(_house getVariable ["building_id", -1]), ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
+[format["UPDATE `houses` SET `sold`='1' WHERE `id`='%1'", [(_house getVariable ["building_id", -1]), ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
 
 private _cfg = missionConfigFile >> "CfgHousing" >> "houses" >> (typeOf _house);
 

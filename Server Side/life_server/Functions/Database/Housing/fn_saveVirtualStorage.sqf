@@ -23,7 +23,7 @@ if (_curStorage isEqualTo _lastStorage) exitWith { false };
 
 [
 	format [
-		"UPDATE houses SET virtualStorage='%1' WHERE id='%2'",
+		"UPDATE `houses` SET `virtualStorage`='%1' WHERE `id`='%2'",
 		[_curStorage] call DB_fnc_mresArray, [_id, ""] call ULP_fnc_numberText
 	], 1
 ] call DB_fnc_asyncCall;

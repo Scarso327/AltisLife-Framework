@@ -11,4 +11,4 @@ _this params [
 
 if (_vehicleId isEqualTo -1) exitWith {};
 
-[format["UPDATE vehicles SET sold='1' WHERE id='%1'", [_vehicleId, ""] call ULP_fnc_numberText ], 1] call DB_fnc_asyncCall;
+[format["UPDATE `vehicles` SET `sold`='1' WHERE `id`='%1'", [_vehicleId, ""] call ULP_fnc_numberText ], 1] call DB_fnc_asyncCall;

@@ -36,5 +36,5 @@ if !(isNull _riggedGroup && { ([_riggedGroup] call ULP_fnc_groupId) isEqualTo -1
 	};
 };
 
-[format["INSERT INTO votes (pid, candidate, amount) VALUES ('%1', '%2', '%3');", _steamid, _candidate select 0, _amount], 1] call DB_fnc_asyncCall;
+[format["INSERT INTO `votes` (`pid`, `candidate`, `amount`) VALUES ('%1', '%2', '%3');", _steamid, _candidate select 0, _amount], 1] call DB_fnc_asyncCall;
 ["ElectionVoteSubmitted"] remoteExecCall ["ULP_fnc_invokeEvent", _voter];

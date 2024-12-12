@@ -29,7 +29,7 @@ private _complete = _newProgress isEqualTo _max;
 
 private _querySafeGoalId = [_goalId, ""] call ULP_fnc_numberText;
 
-private _query = [format ["SELECT COALESCE(SUM(community_goal_contributions.contribution), 0) AS contributions FROM community_goal_contributions WHERE goalId = '%1' AND pid = '%2'", 
+private _query = [format ["SELECT COALESCE(SUM(`community_goal_contributions`.`contribution`), 0) AS `contributions` FROM `community_goal_contributions` WHERE `goalId` = '%1' AND `pid` = '%2'", 
 	_querySafeGoalId, _steamId], 2] call DB_fnc_asyncCall;
 
 if !(_query isEqualType []) then { _query = []; };
@@ -37,11 +37,11 @@ if !(_query isEqualType []) then { _query = []; };
 private _currentContribution = _query param [0, 0, [0]];
 
 if (_currentContribution isEqualTo 0) then {
-	[format["INSERT INTO community_goal_contributions (pid, goalId, contribution) VALUES ('%1', '%2', '%3');", 
+	[format["INSERT INTO `community_goal_contributions` (`pid`, `goalId`, `contribution`) VALUES ('%1', '%2', '%3');", 
 		_steamId, _querySafeGoalId, [_contribution, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
 } else {
 	[format[
-		"UPDATE community_goal_contributions SET contribution='%3' WHERE goalId = '%1' AND pid = '%2'", 
+		"UPDATE `community_goal_contributions` SET `contribution`='%3' WHERE `goalId` = '%1' AND `pid` = '%2'", 
 		_querySafeGoalId, _steamId, [(_currentContribution + _contribution), ""] call ULP_fnc_numberText
 	], 1] call DB_fnc_asyncCall;
 };

@@ -18,8 +18,6 @@ addMissionEventHandler ["OnUserDisconnected", {
 	// https://community.bistudio.com/wiki/getUserInfo - alt syntax
 	private _unit = _networkId getUserInfo 10;
 
-	[format ["Player Disconnected %1 %2", _networkId, _unit]] call ULP_fnc_logIt;
-
 	if (isNull _unit) exitWith {};
 
 	[_unit] call ULP_SRV_fnc_onPlayerDisconnect;

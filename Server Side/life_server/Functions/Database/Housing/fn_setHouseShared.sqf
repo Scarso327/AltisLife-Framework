@@ -15,6 +15,6 @@ if (_id < 0) exitWith {};
 _id = [_id, ""] call ULP_fnc_numberText;
 
 [format[
-	"UPDATE houses SET shared='%2' WHERE id='%1'", 
+	"UPDATE `houses` SET `shared`='%2' WHERE `id`='%1'", 
 	_id, [_shared] call ULP_fnc_bool
 ], 1] call DB_fnc_asyncCall;

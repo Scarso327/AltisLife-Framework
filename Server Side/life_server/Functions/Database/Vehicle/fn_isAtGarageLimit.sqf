@@ -17,7 +17,7 @@ if (_ignoreGarageLimit) exitWith { false };
 
 if (_className isEqualTo "" || { _steamId isEqualTo "" } || { _faction isEqualTo "" }) exitWith { true };
 
-private _query = [format["SELECT count(id) FROM vehicles WHERE pid='%1' AND classname='%2' AND faction='%3' AND sold='0'", _steamId, _className, _faction], 2] call DB_fnc_asyncCall;
+private _query = [format["SELECT count(`id`) FROM `vehicles` WHERE `pid`='%1' AND `classname`='%2' AND `faction`='%3' AND `sold`='0'", _steamId, _className, _faction], 2] call DB_fnc_asyncCall;
 
 _query params [
 	["_vehicleCount", 0, [0]]

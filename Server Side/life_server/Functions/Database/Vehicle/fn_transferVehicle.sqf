@@ -31,5 +31,5 @@ if ([_className, _newSteamId, _faction, _hasVehicleCollectorPerk, _ignoreGarageL
 
 // The SQL has some failsafes with active, sold, and impound checks. Success message will still be sent
 // even if these are hit but we should've already stopped this client side just better to be safe than sorry
-[format["UPDATE vehicles SET pid='%1' WHERE pid='%2' AND id='%3' AND active='0' AND sold='0' AND impound='0'", _newSteamId, _steamId, [_vehicleId, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
+[format["UPDATE `vehicles` SET `pid`='%1' WHERE `pid`='%2' AND `id`='%3' AND `active`='0' AND `sold`='0' AND `impound`='0'", _newSteamId, _steamId, [_vehicleId, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
 ["VehicleTransferred", []] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

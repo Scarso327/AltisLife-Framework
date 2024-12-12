@@ -17,7 +17,7 @@ _tax = _tax / 100;
 _group setVariable ["group_tax", _tax, true];
 
 // Update Group Information...
-[format["UPDATE groups SET tax = '%1' WHERE id = '%2'", 
+[format["UPDATE `groups` SET `tax` = '%1' WHERE `id` = '%2'", 
 	[_tax, ""] call ULP_fnc_numberText, 
 	[[_group] call ULP_fnc_groupId, ""] call ULP_fnc_numberText
 ], 1] call DB_fnc_asyncCall;

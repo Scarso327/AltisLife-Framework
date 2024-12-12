@@ -11,7 +11,7 @@ _this params [
 
 if (_goalId isEqualTo -1) exitWith { 0 };
 
-private _query = [format ["SELECT COALESCE(SUM(community_goal_contributions.contribution), 0) FROM community_goal_contributions WHERE goalId = '%1'", 
+private _query = [format ["SELECT COALESCE(SUM(`community_goal_contributions`.`contribution`), 0) FROM `community_goal_contributions` WHERE `goalId` = '%1'", 
 	[_goalId, ""] call ULP_fnc_numberText], 2] call DB_fnc_asyncCall;
 
 if !(_query isEqualType []) exitWith { 0 };

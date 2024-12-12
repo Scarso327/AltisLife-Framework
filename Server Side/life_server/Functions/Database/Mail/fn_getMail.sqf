@@ -11,7 +11,7 @@ _this params [
 
 private _mail = [];
 
-private _query = [format["SELECT id, pid, type, class, data FROM mail WHERE pid='%1' AND claimed='0'", _pid], 2, true] call DB_fnc_asyncCall;
+private _query = [format["SELECT `id`, `pid`, `type`, `class`, `data` FROM `mail` WHERE `pid`='%1' AND `claimed`='0'", _pid], 2, true] call DB_fnc_asyncCall;
 
 if !(_pid isEqualTo "" || { _query isEqualTo "" } || { _query isEqualTo [] }) then {
 	_mail = _query apply {

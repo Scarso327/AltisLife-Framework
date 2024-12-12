@@ -42,7 +42,7 @@ if (_add) then {
 if !((_group getVariable ["group_funds", 0]) isEqualTo _funds) then {
 	if (_groupId > 0) then {
 		[format[
-			"UPDATE groups SET bank='%2' WHERE id='%1'", 
+			"UPDATE `groups` SET bank='%2' WHERE id='%1'", 
 			[_groupId, ""] call ULP_fnc_numberText, [_funds, ""] call ULP_fnc_numberText
 		], 1] call DB_fnc_asyncCall;
 

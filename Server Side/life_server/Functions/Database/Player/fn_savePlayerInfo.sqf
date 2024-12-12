@@ -39,7 +39,7 @@ _playtime = [_playtime] call DB_fnc_mresArray;
 
 [
 	format [
-		"UPDATE players SET name='%2', cash='%3', bankacc='%4', %1gear='%5', %1licenses='%6', %1stats='%7', playtime='%8' WHERE pid='%9'",
+		"UPDATE `players` SET `name`='%2', `cash`='%3', `bankacc`='%4', `%1gear`='%5', `%1licenses`='%6', `%1stats`='%7', `playtime`='%8' WHERE `pid`='%9'",
 		getText(_faction >> "DatabaseInfo" >> "queryPrefix"), _name, _cash, _bank, _gear, _licenses, _stats, _playtime, _steamid
 	], 1
 ] call DB_fnc_asyncCall;

@@ -11,4 +11,10 @@ _this params [
 
 if (_function isEqualTo {}) exitWith { -1 };
 
-(ULP_eachFrameEvents pushBack _this)
+private _index = ULP_eachFrameEvents getOrDefault ["#lastId", -1];
+_index = _index + 1;
+
+ULP_eachFrameEvents set [_index, _this];
+ULP_eachFrameEvents set ["#lastId", _index];
+
+_index

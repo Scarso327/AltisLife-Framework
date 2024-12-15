@@ -20,11 +20,6 @@ if (isNull _display) exitWith {
 	_this call ULP_fnc_hint;
 };
 
-// Temp fix for ensuring the fn_hintEachFrame is running so our hints don't get stuck
-if (count (ULP_eachFrameEvents select { (_x # 0) isEqualTo (["RscHints"] call ULP_UI_fnc_getLayer) }) isEqualTo 0) then {
-	[_display, { _this call ULP_fnc_hintEachFrame; }] call ULP_fnc_addEachFrame;
-};
-
 private _message = _display ctrlCreate [(["ULP_Notification", "ULP_NotificationNoHeader"] select (_header isEqualTo "")), -1];
 private _ctrlText = _message controlsGroupCtrl 102;
 _ctrlText ctrlSetStructuredText parseText _text;

@@ -20,6 +20,9 @@ _faction = missionConfigFile >> "CfgFactions" >> _faction;
 
 if (_name isEqualTo "" || { _steamid isEqualTo "" } || { !(isClass (_faction)) }) exitWith {};
 
+// We don't sync all session vars as stuff like cash and money should be saved when used to avoid expliots
+[_player, "Gear", _gear] call ULP_SRV_fnc_setSessionField;
+
 _name = [_name] call DB_fnc_mresString;
 _cash = [_cash, ""] call ULP_fnc_numberText;
 _bank = [_bank, ""] call ULP_fnc_numberText;

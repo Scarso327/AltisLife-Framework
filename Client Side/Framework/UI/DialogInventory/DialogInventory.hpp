@@ -10,7 +10,7 @@ class DialogInventory {
     idd = 4200;
     movingEnable = 0;
     enableSimulation = 0;
-	onUnload = "[""RegisteredAsUser"", ((_this select 0) getVariable [""userRegisterEvent"", -1])] call ULP_fnc_removeEventHandler; [((_this select 0) getVariable [""eachframe"", -1])] call ULP_fnc_removeEachFrame; [((_this select 0) getVariable [""container"", objNull]), player] remoteExecCall [""ULP_SRV_fnc_unregisterCargoUser"", 2];";
+	onUnload = "[""RegisteredAsUser"", ((_this select 0) getVariable [""userRegisterEvent"", -1])] call ULP_fnc_removeEventHandler; [((_this select 0) getVariable [""eachframe"", -1])] call ULP_fnc_removeEachFrame; [((_this select 0) getVariable [""container"", objNull]), player] remoteExecCall [""ULP_SRV_fnc_unregisterCargoUser"", 2]; [true] call ULP_fnc_saveGear;";
 
     class ControlsBackground {
 		class Header : Life_RscStructuredText {

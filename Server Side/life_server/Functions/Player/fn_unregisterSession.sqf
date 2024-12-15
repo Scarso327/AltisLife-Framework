@@ -19,13 +19,28 @@ if (isNumber (_factionCfg >> "jointChannel") && { [getNumber(_factionCfg >> "joi
 	["Joint", _unit] call ULP_SRV_removeRadio;
 };
 
-// If they were downed wipe their gear
+// We have to assume the last saved v items is what we're saving here
+// This shouldn't cause too much of a problem as changes to a player's
+// inventory should call to save as it happens
+private _yItems = ([_unit, "Gear"] call ULP_SRV_fnc_getSessionField) param [1, [], [createHashMap, []]];
+
+private _assumedGear = [
+	(getUnitLoadout _unit),
+	_yItems,
+	[
+		[(uniformContainer _unit) getVariable ["texture", ""], ""] select ((uniform player) isEqualTo ""),
+		[(backpackContainer _unit) getVariable ["texture", ""], ""] select ((backpack player) isEqualTo "")
+	]
+];
+
 if (isDowned(_unit)) then {
 	private _cash = [_unit, "Cash"] call ULP_SRV_fnc_getSessionField;
 
 	[_unit, 1, [0, _cash, false, "Disconnected while dead"]] call ULP_SRV_fnc_savePlayerState; // Remove Cash
-	[_unit, 15, []] call ULP_SRV_fnc_savePlayerState; // Remove Gear
+	_assumedGear = []; // Remove Gear
 };
+
+[_unit, 15, _assumedGear] call ULP_SRV_fnc_savePlayerState;
 
 _unit setVariable ["session", nil];
 _unit setVariable ["reputation", nil];

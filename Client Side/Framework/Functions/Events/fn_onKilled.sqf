@@ -36,7 +36,7 @@ _unit removeWeapon (secondaryWeapon _unit);
 
 ULP_Inventory = createHashMap; // Wipe Inventory...
 ULP_CarryInfo set [0, 0];
-[] call ULP_fnc_saveGear;
+[true] call ULP_fnc_saveGear;
 
 // Close bleedout script...
 if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {

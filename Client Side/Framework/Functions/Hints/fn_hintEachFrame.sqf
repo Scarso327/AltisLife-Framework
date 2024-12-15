@@ -20,7 +20,7 @@ private _hints = + (_display getVariable ["hints", []]);
 {
 	private _hint = _x;
 
-	if (diag_tickTime > (_hint getVariable ["duraction", 0])) then {
+	if (diag_tickTime > (_hint getVariable ["duraction", 0]) || { (count _hints) >= 15 && { _forEachIndex >= 15 } }) then {
 		(ctrlPosition _hint) params ["", "_y", "", "_h"];
 
 		_hint ctrlSetPositionY (_y + _h);

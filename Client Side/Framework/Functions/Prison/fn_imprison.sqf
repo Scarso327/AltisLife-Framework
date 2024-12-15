@@ -62,7 +62,7 @@ if ((uiNamespace getVariable ["prison_timer", -1]) isEqualTo -1) then {
 		private _hasTimeElapsed = ULP_Imprisioned && (ULP_Prison_Time - time) <= 0;
 		private _hasEscaped = ULP_Imprisioned && !_hasTimeElapsed && { (_unit distance _pos) > 100 };
 
-		if (isNull _unit || { !(alive _unit) } || { !ULP_Imprisioned } || { _hasTimeElapsed } || { _hasEscaped }) exitWith {
+		if (isNull _unit || { !ULP_Imprisioned } || { _hasTimeElapsed } || { _hasEscaped }) exitWith {
 			[_unit, _hasEscaped] call ULP_fnc_release;
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};

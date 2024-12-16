@@ -28,6 +28,7 @@ if ((lbSize _list) > 0) then {
 } else {
 	_list lbAdd "No Licenses...";
 	_info ctrlSetStructuredText parseText "";
+	[_info] call ULP_UI_fnc_setToTextHeight;
 };
 
 _display setVariable ["cfg", "CfgLicenses"];

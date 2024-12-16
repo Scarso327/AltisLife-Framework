@@ -67,7 +67,7 @@ class CfgTablet {
 		idc= 23003;
 		pageTitle = "Inventory";
 		pageIdcs[] = {
-			23014, 23015, 23016, 23017, 23018, 23019
+			23014, 23015, 23016, 23017, 23018, 23019, 23091
 		};
 		onload = "_this call ULP_fnc_inventory";
 	};
@@ -78,13 +78,13 @@ class CfgTablet {
 
 	class Licenses : Inventory {
 		pageTitle = "Licenses";
-		pageIdcs[] = { 23014, 23016, 23017 };
+		pageIdcs[] = { 23014, 23016, 23017, 23091 };
 		onload = "_this call ULP_fnc_licenses";
 	};
 
 	class Crafting : Inventory {
 		pageTitle = "Crafting";
-		pageIdcs[] = { 23014, 23017, 23077, 23078 };
+		pageIdcs[] = { 23014, 23017, 23077, 23078, 23091 };
 		onload = "_this call ULP_fnc_crafting";
 	};
 

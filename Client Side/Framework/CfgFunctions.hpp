@@ -837,6 +837,7 @@ class CfgFunctions {
 			class setMapPosition {};
 			class inputLimit {};
 			class placeholder {};
+			class setToTextHeight {};
 		};
 
 		class RscLayers {

@@ -21,7 +21,7 @@ private _objectCfg = [typeOf _house] call ULP_fnc_vehicleCfg;
 
 if !([_house] call ULP_fnc_isHouse || 
 	{ isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Housing") } || 
-	{ [_house] call ULP_fnc_isHouseOwned } ||
+	{ !([_house] call ULP_fnc_isHouseOwned) } ||
 	{ (count _objectCfg) > 0 }
 ) exitWith {
 	["This house can't be bought!"] call ULP_fnc_hint;
@@ -97,6 +97,7 @@ _objectCfg params [ "", "", "", "_name" ];
 			[player, _house, _money] remoteExecCall ["ULP_SRV_fnc_buyHouse", RSERV];
 		} else {
 			[format ["You can't afford <t color='#B92DE0'>%1%2</t> to buy this property!", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			_house setVariable ["buying", nil];
 		};
 	}, {}, false
 ] call ULP_fnc_confirm;

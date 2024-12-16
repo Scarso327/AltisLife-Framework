@@ -101,6 +101,7 @@ switch (lbCurSel _toolbox) do {
 	default {
 		_sendButton ctrlSetStructuredText parseText "<t align = 'center'>Send Message</t>";
 		_sendButton ctrlSetEventHandler ["ButtonClick", "_this call ULP_fnc_sendByType;"];
+		_sendButton ctrlEnable true;
 
 		_contactList ctrlShow true;
 		_edit ctrlShow true;

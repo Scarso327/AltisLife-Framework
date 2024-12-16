@@ -29,11 +29,14 @@ private _required = [];
 } forEach getArray (_cfg >> "materials");
 
 _info ctrlSetStructuredText parsetext format [
-	"<br/><br/><img image = '%1' align='center' size='4.5' /><br/><t align = 'center' size = '1.5'>%2</t><br/><t align = 'left' size = '1'><br/>%3<br/><br/>Materials:<br/><t size='0.8'>%4</t></t>", 
+	"<br/><br/><img image = '%1' align='center' size='4.5' /><br/><t align = 'center' size = '1.5'>%2</t><br/><t align = 'left' size = '1'><br/>%3<br/><br/>Requires Workbench: %4<br/><br/>Materials:<br/><t size='0.8'>%5</t></t>", 
 	getText(_cfg >> "icon"), 
 	getText(_cfg >> "displayName"), 
 	getText(_cfg >> "description"), 
+	["No", "Yes"] select ([getNumber (_cfg >> "Deconstruction" >> "workbench")] call ULP_fnc_bool),
 	(_required joinString "<br/>")
 ];
+
+[_info] call ULP_UI_fnc_setToTextHeight;
 
 _display setVariable ["craft_cfg", _cfg];

@@ -36,14 +36,24 @@ class ItemsList : Life_RscListBox {
 	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 6));
 };
 
-class ItemInformation : Life_RscStructuredText {
-	idc = 23017;
-	text = "";
-	colorBackground[] = INNER_BODY_COLOUR;
+class ItemsView : Life_RscControlsGroup {
+    idc = 23091;
 	SAFEZONE_X(HORIZONTAL_GRID_X(UI_X, INV_SECTION_H, 1));
 	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
 	SAFEZONE_W(INV_SECTION_H);
 	SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 6));
+
+    class Controls {
+		class ItemInformation : Life_RscStructuredText {
+			idc = 23017;
+			text = "";
+			colorBackground[] = INNER_BODY_COLOUR;
+			y = 0;
+			x = 0;
+			SAFEZONE_W(INV_SECTION_H);
+			SAFEZONE_H(UI_HEIGHT - (MARGIN_Y * 6));
+		};
+	};
 };
 
 class Use : ULP_RscButtonClean {

@@ -30,3 +30,5 @@ _info ctrlSetStructuredText parsetext format ["
 <t align = 'center' size = '1.5'>%2</t><br/>
 <br/>
 <t align = 'left' size = '1'><br/>%3 </t>", getText(_cfg >> "icon"), _name, getText(_cfg >> "description")];
+
+[_info] call ULP_UI_fnc_setToTextHeight;

@@ -52,7 +52,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	};
 
 	// This gang has something matching but is also inactive, to save queries we can just update this one as ours...
-	[format["UPDATE `groups` SET `owner` = '%1', `type` = '%9', `tag` = '%2', `name` = '%3', `ranks` = '%5', `deposit` = '%6', `withdraw` = '%7', `rank` = '%8', `invite` = '%9', `kick` = '%10', `level` = '0', `xp` = '0', `bank` = '0', `premium` = '0', `active` = '1', `buffs` = '""[]""' WHERE `id` = '%4'",
+	[format["UPDATE `groups` SET `owner` = '%1', `type` = '%9', `tag` = '%2', `name` = '%3', `ranks` = '%5', `deposit` = '%6', `withdraw` = '%7', `rank` = '%8', `invite` = '%10', `kick` = '%11', `level` = '0', `xp` = '0', `bank` = '0', `premium` = '0', `active` = '1', `buffs` = '""[]""' WHERE `id` = '%4'",
 		_steamid, _tag, _name, _queryId, [_ranks] call DB_fnc_mresArray, _depositIndex, _withdrawIndex, _rankIndex, _type, _inviteIndex, _kickIndex
 	], 1] call DB_fnc_asyncCall;
 

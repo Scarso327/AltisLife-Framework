@@ -33,7 +33,7 @@ _info ctrlSetStructuredText parsetext format [
 	getText(_cfg >> "icon"), 
 	getText(_cfg >> "displayName"), 
 	getText(_cfg >> "description"), 
-	["No", "Yes"] select ([getNumber (_cfg >> "Deconstruction" >> "workbench")] call ULP_fnc_bool),
+	["No", "Yes"] select ([getNumber (_cfg >> "workbench")] call ULP_fnc_bool),
 	(_required joinString "<br/>")
 ];
 

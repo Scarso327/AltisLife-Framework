@@ -11,7 +11,8 @@ if (canSuspend) exitWith {
 };
 
 _this params [
-	["_trader", objNull, [objNull]]
+	["_trader", objNull, [objNull]],
+	["_mission", "Kavala_Freight", [""]]
 ];
 
 if (isNull _trader) exitWith {};
@@ -69,11 +70,10 @@ if (_near isEqualTo []) exitWith {
 		["A truck must be used for freight missions"] call ULP_fnc_hint;
 	};
 
-	[format["Filling %1 with Freight", _vehicleCfg param [3, "a vehicle"]], _time, [_trader, _vehicle, _maxQuantity, _item], 
+	[format["Filling %1 with Freight", _vehicleCfg param [3, "a vehicle"]], _time, [_trader, _vehicle, _maxQuantity, _item, _mission], 
 		{ (player distance (_this select 0)) <= 5 && { [(_this select 1), getPos (_this select 0)] call ULP_fnc_isVehicleStationary } }, 
 		{
-			_this params [ "_trader", "_vehicle", "_maxQuantity", "_item" ];
-
+			_this params [ "_trader", "_vehicle", "_maxQuantity", "_item", "_mission" ];
 			if (isNull _vehicle) exitWith {};
 
 			if ("CorporateFreight" in ULP_Missions) exitWith {
@@ -88,7 +88,7 @@ if (_near isEqualTo []) exitWith {
 
 			missionNamespace setVariable ["ULP_FreightVehicle", [_vehicle, _maxQuantity]];
 
-			if !(["CorporateFreight"] call ULP_fnc_claimMission) exitWith {
+			if !(["CorporateFreight", _mission] call ULP_fnc_claimMission) exitWith {
 				_cargoParams call ULP_fnc_removeFromCargo;
 			};
 		}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

@@ -367,11 +367,11 @@ class CfgMissions {
 		onFinished = "_this call ULP_fnc_finishFreight";
 		class Locations {
 			class Kavala_Freight {
-				pos = "Kavala_Freight";
+				pos = "freight_mission_1";
 				name = "Kavala Freight Yard";
 			};
 			class Sofia_Freight {
-				pos = "Sofia_Freight";
+				pos = "freight_mission_2";
 				name = "Sofia Freight Yard";
 			};
 		};

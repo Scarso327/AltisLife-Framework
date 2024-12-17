@@ -3,7 +3,7 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_selectVehicles";
+scopeName "fn_selectObject";
 
 _this params [
 	["_parent", displayNull, [displayNull]],

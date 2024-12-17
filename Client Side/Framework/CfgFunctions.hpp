@@ -807,6 +807,7 @@ class CfgFunctions {
 			file = "Functions\Freight";
 			class claimFreight {};
 			class finishFreight {};
+			class onEachFrameFreight {};
 		};
 
 		class Shipwreck {

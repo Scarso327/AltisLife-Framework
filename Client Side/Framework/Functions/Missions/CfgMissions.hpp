@@ -362,7 +362,7 @@ class CfgMissions {
 		description = "You need to deliver the given corporate freight to %1";
 		factions[] = { "Civilian" };
 		condition = "[""Freight""] call ULP_fnc_hasGroupPerk";
-		eachFrame = "";
+		eachFrame = "_this call ULP_fnc_onEachFrameFreight";
 		onClaimed = "";
 		onFinished = "_this call ULP_fnc_finishFreight";
 		class Locations {

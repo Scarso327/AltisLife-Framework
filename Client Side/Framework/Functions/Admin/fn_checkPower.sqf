@@ -10,6 +10,8 @@ _this params [
 	["_hint", true, [false]]
 ];
 
+if (isNil "ULP_Staff" || { isNil "ULP_Event" }) exitWith { false };
+
 private _cfg = missionConfigFile >> "CfgAdmin" >> "Power" >> _power;
 
 private _hasAccess = (isClass _cfg && { call compile getText (_cfg >> "condition") });

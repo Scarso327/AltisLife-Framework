@@ -15,8 +15,20 @@ private _items = [];
 
 {
 	private _itemCfg = missionConfigFile >> "CfgVirtualItems" >> _x;
-	if !([getNumber (_itemCfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
-		_items pushBack [getText (_itemCfg >> "icon"), getText (_itemCfg >> "displayName"), _x, _y];
+
+	if (isClass _itemCfg) then {
+		private _icon = getText (_itemCfg >> "icon");
+		private _displayName = getText (_itemCfg >> "displayName");
+
+		if ([getNumber (_itemCfg >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+			private _configName = _x;
+
+			{
+				_items pushBack [_icon, format [_displayName, _x], [_configName, _x], -1];
+			} forEach _y;
+		} else {
+			_items pushBack [_icon, _displayName, _x, _y];
+		};
 	};
 } forEach ULP_Inventory;
 
@@ -32,10 +44,18 @@ private _items = [];
 	private _index = lbCurSel _list;
 	if (_index isEqualTo -1) exitWith {};
 
-	[0.01, [_unit, (_list lbData _index), (_list lbValue _index)], {
+	private _value = _list lbValue _index;
+	private _data = _list lbData _index;
+
+	if (_value isEqualTo -1) then {
+		_value = 1;
+		_data = parseSimpleArray _data;
+	};
+
+	[0.01, [_unit, _data, _value], {
 		_this params [
 			["_unit", objNull, [objNull]],
-			["_item", "", [""]],
+			["_item", "", ["", []]],
 			["_count", 1, [0]]
 		];
 
@@ -44,13 +64,18 @@ private _items = [];
 			{
 				_this params [
 					["_unit", objNull, [objNull]],
-					["_item", "", [""]],
+					["_item", "", ["", []]],
 					["_display", displayNull, [displayNull]],
 					["_value", 1, [0]]
 				];
 
 				if ((player distance _unit) > 5) exitWith {
 					["You're not close enough to give this person items!"] call ULP_fnc_hint;
+				};
+
+				if (_item isEqualType []) then {
+					_value = _item param [1, []];
+					_item = _item param [0, "", [""]];
 				};
 				
 				[_unit, _item, _value] call ULP_fnc_giveItem;

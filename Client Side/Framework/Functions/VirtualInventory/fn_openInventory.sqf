@@ -79,7 +79,8 @@ if (createDialog "DialogInventory") exitWith {
 			if !(isNull _container) then {
 				[_container, player] remoteExecCall ["ULP_SRV_fnc_unregisterCargoUser", RSERV];
 			};
-
+			
+			closeDialog 0;
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};
 

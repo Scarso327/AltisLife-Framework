@@ -36,8 +36,9 @@ if (ULP_Imprisioned && { [player, ULP_Prison_Time - time, objNull, false] call U
 
 disableSerialization;
 
-if !(createDialog "DialogSpawn") exitWith {
-	["Abort", true, false] call BIS_fnc_endMission;
+if (!(createDialog "DialogSpawn") || { isNil "ULP_ID" }) exitWith {
+	["Failed to create spawn dialog or ULP_ID wasn't configured indicating failed data query"] call ULP_fnc_logIt;
+	["InitFailed", true, false] call BIS_fnc_endMission;
 };
 
 private _display = findDisplay 3000;

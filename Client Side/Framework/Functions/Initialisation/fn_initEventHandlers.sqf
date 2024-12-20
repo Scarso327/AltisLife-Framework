@@ -163,3 +163,11 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 ["LeftRedzone", {
 	["<t align='center'>You've left a <t color='#cc0001'>Combat Zone</t></t>"] call ULP_UI_fnc_zoneText;
 }] call ULP_fnc_addEventHandler;
+
+["EnteredRadiatedZone", {
+	["<t align='center'>You've entered a <t color='#cc0001'>Radiated Zone</t></t>"] call ULP_UI_fnc_zoneText;
+}] call ULP_fnc_addEventHandler;
+
+["LeftRadiatedZone", {
+	["<t align='center'>You've left a <t color='#cc0001'>Radiated Zone</t></t>"] call ULP_UI_fnc_zoneText;
+}] call ULP_fnc_addEventHandler;

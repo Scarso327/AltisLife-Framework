@@ -61,6 +61,8 @@ class CfgFunctions {
 			class onReloaded {};
 			class onTake {};
 			class onPut {};
+			class onEnterRadiatedZone {};
+			class onLeftRadiatedZone {};
 			class InventoryOpened {};
 			class InventoryClosed {};
 		};

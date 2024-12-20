@@ -40,7 +40,7 @@ for "_i" from 0 to 1 step 0 do {
 		private _name = name _unit;
 
 		[
-			format ["INSERT INTO `players` (`pid`, `name`, `cash`, `bankacc`, `aliases`, `cop_licenses`, `med_licenses`, `civ_licenses`, `civ_gear`, `cop_gear`, `med_gear`, `professions`, `hato_licenses`, `hato_gear`, `achievements`, `textures`, `titles`, `cop_perks`, `med_perks`, `hato_perks`, `civ_perks`, `blueprints`) VALUES ('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
+			format ["INSERT INTO `players` (`pid`, `name`, `cash`, `bankacc`, `aliases`, `cop_licenses`, `med_licenses`, `civ_licenses`, `civ_gear`, `cop_gear`, `med_gear`, `professions`, `hato_licenses`, `hato_gear`, `achievements`, `textures`, `titles`, `cop_perks`, `med_perks`, `hato_perks`, `civ_perks`, `blueprints`, `cop_daily_tasks`, `med_daily_tasks`, `hato_daily_tasks`, `civ_daily_tasks`, `cop_weekly_tasks`, `med_weekly_tasks`, `hato_weekly_tasks`, `civ_weekly_tasks`) VALUES ('%1', '%2', '0', '%3', '%4','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
 				_uid,
 				[_name] call DB_fnc_mresString,
 				[LIFE_SETTINGS(getNumber,"starting_bank"), ""] call ULP_fnc_numberText,

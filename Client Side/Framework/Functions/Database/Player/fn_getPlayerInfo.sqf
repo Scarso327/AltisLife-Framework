@@ -9,4 +9,11 @@ if (ULP_Loaded) exitWith {};
 
 ["Getting Player Information"] call ULP_fnc_logIt;
 
+ULP_FailedEventId = ["PlayerInformationQueryFailed", {
+	if !(isNil "ULP_ID") exitWith {}; // We already have our data set??
+
+	["Failed to create spawn dialog or ULP_ID wasn't configured indicating failed data query"] call ULP_fnc_logIt;
+	["InitFailed", true, false] call BIS_fnc_endMission;
+}, true] call ULP_fnc_addEventHandler;
+
 [player] remoteExec ["ULP_SRV_fnc_queryPlayerInfo", RSERV];

@@ -26,6 +26,11 @@ if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
 
 private _factionCfg = missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction; // Gets the config for our current faction...
 
+if !(isNil "ULP_FailedEventId") then {
+	["PlayerInformationQueryFailed", ULP_FailedEventId] call ULP_fnc_removeEventHandler;
+	missionNamespace setVariable ["ULP_FailedEventId", nil];
+};
+
 ULP_ID = _uid;
 
 // Money...

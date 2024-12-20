@@ -7,6 +7,11 @@ class CfgDebriefing {
         picture = "\A3\ui_f\data\GUI\Cfg\Hints\Doors_ca.paa";
         pictureColor[] = {1,1,1,1};
     };
+    class InitFailed : Abort {
+        title = "Unable to Join";
+        subtitle = "Player data query failed";
+        description = "Please contact a member of staff for assistance";
+    };
     class NotWhitelisted : Abort {
         title = "Unable to Join";
         subtitle = "You are not currently whitelisted";

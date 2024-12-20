@@ -115,3 +115,5 @@ if (_playerData isEqualType []) exitWith {
 };
 
 // Fail...
+[format ["Failed to query player data for %1, got back %2", _uid, _playerData]] call ULP_fnc_logIt;
+["PlayerInformationQueryFailed", []] remoteExecCall ["ULP_fnc_invokeEvent", _unit];

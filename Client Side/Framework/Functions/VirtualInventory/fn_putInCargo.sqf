@@ -63,12 +63,11 @@ if (_count <= 0) exitWith {
 };
 
 private _itemWeight = getNumber(_vItem >> "weight");
+private _maxCarry = _count;
 
-if (_itemWeight <= 0) exitWith {
-	["This item can't be stored in containers"] call ULP_fnc_hint;
+if (_itemWeight > 0) then {
+	_maxCarry = floor ((([_container] call ULP_fnc_maxLoad) - ([_container] call ULP_fnc_currentLoad)) / _itemWeight);
 };
-
-private _maxCarry = floor ((([_container] call ULP_fnc_maxLoad) - ([_container] call ULP_fnc_currentLoad)) / _itemWeight);
 
 if (_maxCarry <= 0) exitWith {
 	["This vehicle doesn't enough inventory space to fit even one of these items!"] call ULP_fnc_hint;

@@ -31,6 +31,10 @@ private _list = _display displayCtrl 4509;
 {
 	_x params ["_icon", "_name", "_data", "_value"];
 
+	if !(_data isEqualType "") then {
+		_data = str _data;
+	};
+
 	private _item = _list lbAdd _name;
 	_list lbSetData [_item, _data];
 	_list lbSetValue [_item, _value];

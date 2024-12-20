@@ -14,3 +14,7 @@ scopeName "fn_initAchievements";
 	if (_bank >= 10000000) then { ["TenMillion"] call ULP_fnc_achieve; };
 	if (_bank >= 100000000) then { ["HundredMillion"] call ULP_fnc_achieve; };
 }] call ULP_fnc_addEventHandler;
+
+["EnteredRadiatedZone", {
+	["Radiation"] call ULP_fnc_achieve;
+}] call ULP_fnc_addEventHandler;

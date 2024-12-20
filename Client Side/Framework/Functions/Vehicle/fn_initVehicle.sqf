@@ -14,6 +14,7 @@ _this params [
 	["_jip", false, [true]]
 ];
 
+private _cfg = missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle);
 if (isNull _vehicle || { _vehicle getVariable ["ready", false] }) exitWith {};
 _vehicle setVariable ["ready", true];
 
@@ -38,7 +39,7 @@ _vehicle addEventHandler ["Engine", { _this call ULP_fnc_onVehicleEngine }];
 _vehicle addEventHandler ["Killed", { _this call ULP_fnc_onVehicleKilled }];
 _vehicle addEventHandler ["Deleted", { _this call ULP_fnc_onVehicleDeleted }];
 
-private _vehActions = missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Textures" >> (_vehicle getVariable ["texture", ""]) >> "Actions";
+private _vehActions = _cfg >> "Textures" >> (_vehicle getVariable ["texture", ""]) >> "Actions";
 
 if (isClass _vehActions) then {
 	{ _vehicle removeAction _x; } forEach (_vehicle getVariable ["vehicle_actions", []]);
@@ -54,6 +55,10 @@ if (isClass _vehActions) then {
 	};
 };
 
-if (isNumber (missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle) >> "enableRope")) then {
-	_vehicle enableRopeAttach ([getNumber (missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle) >> "enableRope")] call ULP_fnc_bool);
+if (isNumber (_cfg >> "enableRope")) then {
+	_vehicle enableRopeAttach ([getNumber (_cfg >> "enableRope")] call ULP_fnc_bool);
+};
+
+if (isNumber (_cfg >> "fuelConsumptionRate")) then {
+	_vehicle setFuelConsumptionCoef getNumber (_cfg >> "fuelConsumptionRate");
 };

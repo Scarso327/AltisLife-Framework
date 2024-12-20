@@ -7,6 +7,7 @@ class CfgVehicles {
 	class Base {
 		virtualSpace = 0;
 		garageLimit = 4;
+		fuelConsumptionRate = 1.15; // 115% normal rate
 		isHouse = false;
 		canTransfer = true;
 		conditions = "true";

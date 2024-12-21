@@ -157,22 +157,18 @@ class CfgGroups {
 
 		class XP {
 			class Cartel {
-				isDynamic = false;
 				amount = 10;
 			};
 			class Popup : Cartel {};
 			class Airdrop : Cartel {};
 			class Shipwreck : Cartel {};
 			class Freight {
-				isDynamic = false;
 				amount = 10;
 			};
 			class Election {
-				isDynamic = false;
 				amount = 500;
 			}; // TODONOW
 			class Rigging {
-				isDynamic = false;
 				amount = 35;
 			};
 			class Hideout : Cartel {};
@@ -180,12 +176,10 @@ class CfgGroups {
 			class Contraband : Freight {}; // TODONOW
 			class CommunityGoals : Freight {}; // TODO
 			class MedicalAid {
-				isDynamic = false;
 				amount = 3;
 			};
 			class Robbery : Freight {};
 			class SoldLegalItems : Freight {
-				isDynamic = true;
 				amount = 10; // When dynamic this is the max amount of xp
 				amountPerItem = 0.5; // This is a unique setting for this category
 			};

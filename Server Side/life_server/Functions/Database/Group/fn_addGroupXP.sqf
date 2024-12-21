@@ -7,17 +7,26 @@ scopeName "fn_addGroupXP";
 
 _this params [
 	["_group", grpNull, [grpNull]],
-	["_xp", "", [""]]
+	["_xpCfgName", "", [""]],
+	["_xpAmount", -1, [0]]
 ];
 
-private _cfg = missionConfigFile >> "CfgGroups" >> "Leveling" >> "XP" >> _xp;
+private _cfg = missionConfigFile >> "CfgGroups" >> "Leveling" >> "XP" >> _xpCfgName;
 if (isNull _group || { !([_group] call ULP_fnc_isGroup) } || { !(isClass _cfg) }) exitWith { false };
 
 private _level = [_group] call ULP_fnc_groupLevel;
 private _required = [(_level + 1), missionConfigFile >> "CfgGroups" >> "Leveling"] call ULP_fnc_getRequiredXP;
 private _max = [missionConfigFile >> "CfgGroups" >> "Leveling"] call ULP_fnc_getMaxLevel;
 
-private _xp = round(([_group] call ULP_fnc_groupXP) + getNumber (_cfg >> "amount"));
+if (_xpAmount isEqualTo -1) then {
+	_xpAmount = getNumber (_cfg >> "amount");
+} else {
+	_xpAmount = _xpAmount min getNumber (_cfg >> "amount");
+};
+
+if (_xpAmount <= 0) exitWith { false };
+
+private _xp = round(([_group] call ULP_fnc_groupXP) + _xpAmount);
 
 private _previousLevel = [_group] call ULP_fnc_groupLevel;
 

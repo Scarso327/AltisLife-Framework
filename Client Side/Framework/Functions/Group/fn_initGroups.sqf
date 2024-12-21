@@ -57,7 +57,6 @@ scopeName "fn_initGroups";
 
 ["GroupOwner", {
 	[format ["<t color='#B92DE0'>%1</t> has transferred <t color='#B92DE0'>group ownership</t> to you!", name (_this param [0, objNull])]] call ULP_fnc_hint;
-	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupInvite", {
@@ -126,4 +125,23 @@ scopeName "fn_initGroups";
 ["GroupDisbanded", {
 	[format ["<t color='#B92DE0'>%1</t> has disbanded the group!", name (_this param [0, objNull])]] call ULP_fnc_hint;
 	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
+}] call ULP_fnc_addEventHandler;
+
+["SoldVirtualItem", {
+	_this params [ "_soldItem", "_amount", "", "_illegal" ];
+
+	private _group = group player;
+	private _itemCfg = missionConfigFile >> "CfgVirtualItems" >> _soldItem;
+
+	if !(isClass _itemCfg 
+		|| { [getNumber (_itemCfg >> "Settings" >> "isEventItem")] call ULP_fnc_bool } 
+		|| { !(_illegal) } 
+		|| { [] call ULP_fnc_isGroup } 
+		|| { (_group getVariable ["group_type", ""]) isEqualTo "Corporate" }) exitWith {};
+
+	private _xpAmountPerItem = getNumber (missionConfigFile >> "CfgGroups" >> "Leveling" >> "XP" >> "SoldLegalItems" >> "amountPerItem");
+	private _groupXp = floor (_xpAmountPerItem * _amount);
+
+	[_group, "SoldLegalItems", _groupXp] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
+	[format ["You got <t color='#B92DE0'>%1</t> Group XP for this sale", [_groupXp] call ULP_fnc_numberText]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;

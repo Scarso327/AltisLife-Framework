@@ -156,19 +156,33 @@ class CfgGroups {
 		maxLevel = 5;
 
 		class XP {
-			class Cartel { amount = 10; };
+			class Cartel {
+				amount = 10;
+			};
 			class Popup : Cartel {};
 			class Airdrop : Cartel {};
 			class Shipwreck : Cartel {};
-			class Freight { amount = 10; };
-			class Election { amount = 500; }; // TODONOW
-			class Rigging { amount = 35; };
+			class Freight {
+				amount = 10;
+			};
+			class Election {
+				amount = 500;
+			}; // TODONOW
+			class Rigging {
+				amount = 35;
+			};
 			class Hideout : Cartel {};
 			class BaseBid : Election {}; // TODONOW
 			class Contraband : Freight {}; // TODONOW
 			class CommunityGoals : Freight {}; // TODO
-			class MedicalAid { amount = 3; };
+			class MedicalAid {
+				amount = 3;
+			};
 			class Robbery : Freight {};
+			class SoldLegalItems : Freight {
+				amount = 10; // When dynamic this is the max amount of xp
+				amountPerItem = 0.25; // This is a unique setting for this category
+			};
 		};
 	};
 

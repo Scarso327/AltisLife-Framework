@@ -17,7 +17,7 @@ scopeName "fn_initGroups";
 
 	[format["Created Group (%1)", _groupId]] call ULP_fnc_logIt;
 
-	[ { !([] call ULP_fnc_isGroup) }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
+	[ { [] call ULP_fnc_isGroup }, [], { [] call ULP_fnc_setTags; }] call ULP_fnc_waitUntilExecute;
 }] call ULP_fnc_addEventHandler;
 
 ["GroupCreationFailed", {
@@ -106,7 +106,7 @@ scopeName "fn_initGroups";
 	if (isNull _unit) exitWith {};
 	
 	if (_unit isEqualTo player) then {
-		[ { !([] call ULP_fnc_isGroup) }, [], {
+		[ { [] call ULP_fnc_isGroup }, [], {
 			["JoinGroup"] call ULP_fnc_achieve;
 
 			[format ["You have <t color='#B92DE0'>joined %1</t>", [] call ULP_fnc_getGroupName]] call ULP_fnc_hint;

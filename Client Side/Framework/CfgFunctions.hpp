@@ -789,6 +789,7 @@ class CfgFunctions {
 		
 		class Hints {
 			file = "Functions\Hints";
+			class clearHints {};
 			class hint {};
 			class hintEachFrame {};
 		};

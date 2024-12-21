@@ -5,7 +5,7 @@ class RscHints {
     fadein=0;
     fadeout=0;
     onLoad="uiNamespace setVariable ['RscHints', _this select 0]; [_this select 0, { _this call ULP_fnc_hintEachFrame }] call ULP_fnc_addEachFrame;";
-	onUnload="";
+	onUnload="(_this select 0) call ULP_fnc_clearHints;";
 
     class Controls {};
 };

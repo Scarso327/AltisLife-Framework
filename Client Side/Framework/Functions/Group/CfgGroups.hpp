@@ -181,7 +181,7 @@ class CfgGroups {
 			class Robbery : Freight {};
 			class SoldLegalItems : Freight {
 				amount = 10; // When dynamic this is the max amount of xp
-				amountPerItem = 0.5; // This is a unique setting for this category
+				amountPerItem = 0.25; // This is a unique setting for this category
 			};
 		};
 	};

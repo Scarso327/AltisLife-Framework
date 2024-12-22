@@ -4,6 +4,10 @@
 */
 scopeName "fn_addEachFrame";
 
+if (canSuspend) exitWith {
+	[ULP_fnc_addEachFrame, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_params", []],
 	["_function", {}, [{}]]

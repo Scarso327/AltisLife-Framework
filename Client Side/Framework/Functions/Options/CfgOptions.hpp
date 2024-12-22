@@ -35,7 +35,7 @@ class CfgOptions {
 			name = "Enable Vehicle Chat Switch";
 			tooltip = "When enabled, entering a vehicle will automatically switch channel.";
 			type = "DROPDOWN";
-			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
 	};
 

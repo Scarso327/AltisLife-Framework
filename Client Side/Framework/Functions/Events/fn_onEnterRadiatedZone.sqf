@@ -29,10 +29,10 @@ missionNamespace setVariable ["ULP_Radiated", [[_thisTrigger], {
 	private _distance = player distance _thisTrigger;
 	private _currentDamage = damage player;
 
-	private _damage = _currentDamage + (0.01 max (1 / _distance) / 0.45 * 0.025 + (random 0.075));
+	private _damage = _currentDamage + (0.01 max (1 / _distance) / 0.6 * 0.025 + (random 0.075));
 	player setDamage _damage;
 
-	private _nextTick = 0.1 max (_distance * 0.004);
+	private _nextTick = 0.1 max (_distance * 0.008);
 	player setVariable ["lastRadTick", time + _nextTick];
 }] call ULP_fnc_addEachFrame];
 

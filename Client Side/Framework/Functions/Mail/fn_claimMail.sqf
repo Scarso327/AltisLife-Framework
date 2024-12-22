@@ -87,7 +87,7 @@ switch (_type) do {
 		private _maxQuantity = _totalAmount;
 
 		if (_weight > 0) then {
-			_maxQuantity = [_weight * _totalAmount] call ULP_fnc_getMaxQuantity;
+			_maxQuantity = [_weight] call ULP_fnc_getMaxQuantity;
 		};
 
 		_claimedAmount = _maxQuantity min _totalAmount;

@@ -52,21 +52,22 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 			};
 
 			if (_newOwners) then {
-				private _query = [format ["SELECT `groups`.id, `groups`.bank, base_bids.bid FROM base_bids INNER JOIN `groups` WHERE base_bids.base = '%1' AND base_bids.group_id = `groups`.id AND base_bids.bid <= `groups`.bank AND base_bids.active = '1' ORDER BY base_bids.bid DESC", configName _x], 2] call DB_fnc_asyncCall;
+				private _query = [format ["SELECT `groups`.`id`, `groups`.`bank`, `groups`.`owner`, `base_bids`.`bid` FROM `base_bids` INNER JOIN `groups` WHERE `base_bids`.`base` = '%1' AND `base_bids`.`group_id` = `groups`.id AND `base_bids`.`bid` <= `groups`.`bank` AND `base_bids`.`active` = '1' ORDER BY `base_bids`.`bid` DESC", configName _x], 2] call DB_fnc_asyncCall;
 				_query params [
 					["_id", -1, [0]], 
 					["_bank", 0, [0]], 
+					["_ownerId", "", [""]], 
 					["_bid", 0, [0]]
 				];
 
-				if (_id < 0 || { _bid < 1 }|| { _bank < _bid }) exitWith {};
+				if (_id < 0 || { _bid < 1 } || { _bank < _bid }) exitWith {};
 				
 				private _newFunds = _bank - _bid;
 				if (_newFunds < 0) exitWith {};
 
 				// Logging...
 				[format ["Base Winner: %1 (%2) with a bid of %3", configName _x, _id, [_bid] call ULP_fnc_numberText]] call ULP_fnc_logIt;
-				["SYSTEM", "BaseBid", ["Winner", [_id,  [_newFunds, ""] call ULP_fnc_numberText, [_bid, ""] call ULP_fnc_numberText]]] call ULP_SRV_fnc_logPlayerEvent;
+				[_ownerId, "BaseBid", ["Winner", [_id,  [_newFunds, ""] call ULP_fnc_numberText, [_bid, ""] call ULP_fnc_numberText]]] call ULP_SRV_fnc_logPlayerEvent;
 
 				// Update group bank, settings, and make bids inactive
 				[format ["UPDATE `groups` SET bank = '%2' WHERE id = '%1'", _id, [_newFunds, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;

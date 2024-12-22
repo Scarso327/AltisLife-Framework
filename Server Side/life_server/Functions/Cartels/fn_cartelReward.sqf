@@ -55,12 +55,6 @@ if ((count _owners) > 0) exitWith {
 			{
 				["CartelPayout", [_markerText, _memberCut, _cut]] remoteExecCall ["ULP_fnc_invokeEvent", _x];
 			} forEach _groupUnits;
-
-			private _groupId = [_group] call ULP_fnc_groupId;
-
-			if (_groupId > 0) then {
-				[_groupId, "Cartel", [_cut, _memberCut, (_groupUnits apply { getPlayerUID _x})]] call ULP_SRV_fnc_logPlayerEvent;
-			};
 		};
 
 		_markerText = format ["%1 | %2", _markerText, [_group] call ULP_fnc_getGroupName];

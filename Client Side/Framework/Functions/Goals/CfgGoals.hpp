@@ -8,7 +8,7 @@ class CfgGoals {
 				icon = "Data\UI\Goals\arrests.paa"; // Optional override
 				title = "Arrest Criminals";
 				description = "Arrest some criminals before today's end!";
-				tiers[] = { 5, 10, 20 };
+				tiers[] = { 1, 5, 10 };
 				factions[] = { "Police" };
 				class Event {
 					eventType = "ArrestedSomeone";

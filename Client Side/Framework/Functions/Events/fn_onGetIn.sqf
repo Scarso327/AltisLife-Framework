@@ -24,4 +24,8 @@ if ([] call ULP_fnc_isEscorting) then {
 
 [] call ULP_fnc_stopPlacement;
 
+if ([["EnableAutoChatSwitch"] call ULP_fnc_getOption] call ULP_fnc_bool && { currentChannel isEqualTo 5 }) then {
+	setCurrentChannel 4;
+};
+
 true

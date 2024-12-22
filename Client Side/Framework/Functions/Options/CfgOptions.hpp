@@ -30,6 +30,13 @@ class CfgOptions {
 			type = "SLIDER";
 			values[] = { { 0, 0.5 }, 0.5, { 0.1, 0.1 } };
 		};
+
+		class EnableAutoChatSwitch : EnableWelcome {
+			name = "Enable Vehicle Chat Switch";
+			tooltip = "When enabled, entering a vehicle will automatically switch channel.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 0 };
+		};
 	};
 
 	class Audio {

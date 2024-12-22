@@ -38,10 +38,6 @@ if !(hasInterface) exitWith {};
 private _isSpeaking = !isNull findDisplay 55;
 if !(player getVariable["speaking", false] isEqualTo _isSpeaking) then {
     player setVariable["speaking", _isSpeaking, true];
-
-    if (_isSpeaking && { inputAction "PushToTalk" > 0 } && { !isNull (objectParent player) } && { currentChannel isEqualTo 5 }) then {
-		setCurrentChannel 4;
-    };
 };
 
 private _gpsVisible = visibleGPS;

@@ -78,6 +78,9 @@ if (_class isEqualTo "CfgWeapons") then {
 	} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgCartels" >> "Fixed"));
 };
 
+private _hasDlc = (getAssetDLCInfo [_item, configFile >> _class]) param [1, true, [false]];
+private _dlcIcon = getText(configFile >> "CfgMods" >> (getText (_armaCfg >> "DLC")) >> "logo");
+
 [
 	_class,
 	_armaCfg,
@@ -86,5 +89,6 @@ if (_class isEqualTo "CfgWeapons") then {
 	getText (([_armaCfg, _internalCfg] select (isText (_internalCfg >> "picture"))) >> "picture"),
 	getText (([_armaCfg, _internalCfg] select (isText (_internalCfg >> "displayName"))) >> "displayName"),
 	_price,
-	_textures
+	_textures,
+	[_hasDlc, _dlcIcon]
 ]

@@ -36,6 +36,9 @@ if ((count _items) isEqualTo 0) exitWith {
 
 {
 	private _itemCfg = [(configName _x)] call ULP_fnc_itemCfg;
+	
+	private _dlcPicture = (_itemCfg select 8) param [1, "", [""]];
+
 	private _itemInfo = [
 		(configName _x),
 		([
@@ -51,7 +54,8 @@ if ((count _items) isEqualTo 0) exitWith {
 			((_x >> "Textures") call BIS_fnc_getCfgSubClasses)
 		] select (isClass (_x >> "Textures"))),
 		isNumber(_x >> "allowDefaultTexture"),
-		_categoryCfgName
+		_categoryCfgName,
+		_dlcPicture
 	];
 
 	private _item = _itemList lbAdd (_itemInfo select 1);
@@ -60,6 +64,10 @@ if ((count _items) isEqualTo 0) exitWith {
 	_itemList lbSetPicture [_item, (_itemInfo select 2)];
 	_itemList lbSetValue [_item, (_itemCfg select 6)];
 	_itemList lbSetData [_item, (str _itemInfo)];
+
+	if !(_dlcPicture isEqualTo "") then {
+		_itemList lbSetPictureRight[_item, _dlcPicture];
+	};
 } forEach (_items select {
 	!isText (_x >> "condition") || { call compile getText (_x >> "condition") }
 });

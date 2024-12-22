@@ -140,7 +140,7 @@ if (isDowned(player)) then {
                 private _veh = vehicle player;
                 private _vehLights = missionConfigFile >> "CfgVehicles" >> (typeOf _veh) >> "Textures" >> (_veh getVariable ["texture", ""]) >> "Lights";
 
-                if (isClass _vehLights && { (driver _veh) isEqualTo player }) then {
+                if (isClass _vehLights && { isArray (_vehLights >> "leftPos") } && { isArray (_vehLights >> "rightPos") } && { (driver _veh) isEqualTo player }) then {
                     if (isNull (_veh getVariable ["lightLoop", scriptNull])) then {
                         private _timeout = ULP_lightDelay;
 

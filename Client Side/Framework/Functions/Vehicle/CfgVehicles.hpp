@@ -39,13 +39,9 @@ class CfgVehicles {
 		conditions = "true";
 	};
 
-	class PoliceTexture : BaseTexture {
+	// Base without siren or lights (for helis)
+	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
-		remoteGates = true;
-		class Siren {
-			SFX[] = { "Police_One", "Police_Two", "Police_Three" };
-		};
-		class Lights : PoliceColour {};
 		class Actions {
 			class PNC {
 				actionTitle = "Police National Computer";
@@ -57,9 +53,21 @@ class CfgVehicles {
 			};
 		};
 	};
-	
-	class MedicTexture : BaseTexture {
+
+	// Full with sirens and lights
+	class PoliceTexture : PoliceTextureBase {
+		remoteGates = true;
+		class Siren {
+			SFX[] = { "Police_One", "Police_Two", "Police_Three" };
+		};
+		class Lights : PoliceColour {};
+	};
+
+	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
+	};
+	
+	class MedicTexture : MedicTextureBase {
 		remoteGates = true;
 		class Siren {
 			SFX[] = { "Police_One" };
@@ -1396,8 +1404,8 @@ class CfgVehicles {
 		garageLimit = 2;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
-			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
-			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
+			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
+			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
 			class TotalRed : BaseTexture {
 				displayName = "Total Red"; 
 				factions[] = { "Civilian", "Police" };
@@ -1472,8 +1480,8 @@ class CfgVehicles {
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
-			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
-			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
+			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
+			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_CO.paa" }; 
@@ -1497,7 +1505,7 @@ class CfgVehicles {
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
-			class Police : PoliceTexture {
+			class Police : PoliceTextureBase {
 				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
 				turrets[] = { { "missiles_DAR", "CMFlareLauncher" } };
 			};
@@ -1524,7 +1532,7 @@ class CfgVehicles {
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "LMG_Minigun_Transport", "LMG_Minigun_Transport2", "CMFlareLauncher" } };
 		class Textures {
-			class Police : PoliceTexture { turrets[] = { { "CMFlareLauncher" } }; };
+			class Police : PoliceTextureBase { turrets[] = { { "CMFlareLauncher" } }; };
 			class Civilian : BaseTexture {};
 		};
 	};
@@ -1538,7 +1546,7 @@ class CfgVehicles {
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = { { "CMFlareLauncher" } };
 		class Textures {
-			class Medic : MedicTexture {
+			class Medic : MedicTextureBase {
 				textures[] = { 
 					"Data\Textures\Vehicles\Air\Medic\mohawk_01.paa",
 					"Data\Textures\Vehicles\Air\Medic\mohawk_02.paa",
@@ -1614,7 +1622,7 @@ class CfgVehicles {
 		buyPrice = 11983000;
 		virtualSpace = 40;
 		class Textures {
-			class Medic : MedicTexture {
+			class Medic : MedicTextureBase {
 				textures[] = { 
 					"Data\Textures\Vehicles\Air\Medic\taru_01.paa", 
 					"Data\Textures\Vehicles\Air\Medic\taru_02.paa", 

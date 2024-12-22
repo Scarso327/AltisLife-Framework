@@ -33,8 +33,10 @@ private _index = -1;
 
 	if ((count _vehicleCfg) > 0) then {
 		_vehicleCfg params [
-			"", "_missionCfg", "_picture", "_name"
+			"", "", "_picture", "_name", "", "", "", "", "", "_dlcInfo"
 		];
+
+		private _dlcPicture = _dlcInfo param [1, "", [""]];
 
 		_index = _list lbAdd _name;
 		_list lbSetPicture[_index, _picture];
@@ -42,6 +44,10 @@ private _index = -1;
 
 		if (_impound && { _fee > 0 }) then {
 			_list lbSetValue [_index, _fee];
+		};
+
+		if !(_dlcPicture isEqualTo "") then {
+			_list lbSetPictureRight[_index, _dlcPicture];
 		};
 	};
 } forEach _vehicles;

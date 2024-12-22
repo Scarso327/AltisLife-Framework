@@ -93,11 +93,17 @@ if (_selectableCarts isEqualTo []) exitWith {
 		private _itemValue = _itemCfg select 6;
 		_cartValue = _cartValue + _itemValue;
 
+		private _dlcPicture = (_itemCfg select 8) param [1, "", [""]];
+
 		private _item = _cartList lbAdd _name;
 		_cartList lbSetTooltip [_item, _name];
 		_cartList lbSetPicture [_item, _picture];
 		_cartList lbSetValue [_item, _itemValue];
 		_cartList lbSetData [_item, (str [_className, _texture, _categoryCfgName])];
+
+		if !(_dlcPicture isEqualTo "") then {
+			_cartList lbSetPictureRight[_item, _dlcPicture];
+		};
 	} forEach _cartToLoad;
 
 	_storeDisplay setVariable ["cartValue", _cartValue];

@@ -14,6 +14,9 @@ if !(isClass _armaCfg) exitWith { [] };
 
 private _missionCfg = missionConfigFile >> "CfgVehicles" >> _vehicle;
 
+private _hasDlc = (getAssetDLCInfo [_vehicle]) param [1, true, [false]];
+private _dlcIcon = getText(configFile >> "CfgMods" >> (getText (_armaCfg >> "DLC")) >> "logo");
+
 [
   _armaCfg,
   _missionCfg,
@@ -23,5 +26,6 @@ private _missionCfg = missionConfigFile >> "CfgVehicles" >> _vehicle;
   getNumber(_armaCfg >> "armor"),
   getNumber(_armaCfg >> "transportSoldier"),
   getNumber(_armaCfg >> "enginePower"),
-  getNumber(_armaCfg >> "fuelCapacity")
+  getNumber(_armaCfg >> "fuelCapacity"),
+	[_hasDlc, _dlcIcon]
 ]

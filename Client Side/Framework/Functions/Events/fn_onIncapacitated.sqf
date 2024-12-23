@@ -109,7 +109,7 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 
 	private _startTime = time;
 	private _endTime = getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BleedOutTime");
-	private _respawnPer = getNumber(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "AllowBleedoutPercentage");
+
 	private _progressBar = _incapUi displayCtrl 9004;
 
 	// If in redzone, change bleedout...
@@ -128,11 +128,11 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	};
 
 	_incapUi setVariable ["status", "Waiting to respawn..."];
-	uiNamespace setVariable ["_fnc_bleedout", ([[_incapUi, _unit, _startTime, _respawnPer, _progressBar], {
+	uiNamespace setVariable ["_fnc_bleedout", ([[_incapUi, _unit, _startTime, _progressBar], {
 		_this params [
 			["_incapUi", displayNull, [displayNull]],
 			["_unit", objNull, [objNull]],
-			"_startTime", "_respawnPer", // Time vars...
+			"_startTime", // Time vars...
 			["_progressBar", controlNull, [controlNull]]
 		];
 
@@ -152,6 +152,11 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 
 		_progressBar progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
 
+		private _medicsOnline = count (["Medic"] call ULP_fnc_allMembers);
+		getArray(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "AllowBleedoutPercentage") params [ "_bleedOutNoMedics", "_bleedOutMedics" ];
+
+		private _respawnPer = [_bleedOutMedics, _bleedOutNoMedics] select (_medicsOnline isEqualTo 0);
+
 		if ((progressPosition _progressBar) <= _respawnPer) then {
 			if (!ULP_CanRespawn) then {
 				ULP_CanRespawn = true;
@@ -167,13 +172,13 @@ if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 
 		(_incapUi displayCtrl 9002) ctrlSetStructuredText parseText format [
 			"<t align='left' size='1'>%1</t><t align='right' size='1'>Medics Online: %2</t>",
-			_incapUi getVariable ["status", "Waiting to respawn..."], (count (["Medic"] call ULP_fnc_allMembers))
+			_incapUi getVariable ["status", "Waiting to respawn..."], _medicsOnline
 		];
 
 		(_incapUi displayCtrl 9005) ctrlSetStructuredText parseText ([
 			"<t align='center' size='1'>Medic Requested</t>",
 			"<t align='center' size='1'>Press <t color='#8A2BE2'>Space</t> to request a medic</t>"
-		] select (missionNamespace getVariable ["ULP_MedicalRequest", 0] < time));
+		] select (localNamespace getVariable ["ULP_MedicalRequest", 0] < time));
     }] call ULP_fnc_addEachFrame)];
 
 	["Incapacitated", [_unit, _killer, _incapUi]] call ULP_fnc_invokeEvent;

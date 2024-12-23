@@ -14,7 +14,7 @@ _this params [
 private _cfg = missionConfigFile >> "CfgRobberies" >> _store;
 if (isNull _object || { !(isClass _cfg) } || { !([player, getArray (_cfg >> "factions")] call ULP_fnc_isFaction) }) exitWith {};
 
-if !(lineIntersects [eyePos player, eyePos _object, player, _object]) exitWith { ["You must keep line of sight with the store"] call ULP_fnc_hint; };
+if (lineIntersects [eyePos player, eyePos _object, player, _object]) exitWith { ["You must keep line of sight with the store"] call ULP_fnc_hint; };
 
 private _personalTimeout = getNumber (missionConfigFile >> "CfgRobberies" >> "personalTimeout");
 private _timeout = getNumber (_cfg >> "timeout");

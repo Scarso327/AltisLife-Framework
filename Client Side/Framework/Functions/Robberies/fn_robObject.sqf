@@ -14,6 +14,8 @@ _this params [
 private _cfg = missionConfigFile >> "CfgRobberies" >> _store;
 if (isNull _object || { !(isClass _cfg) } || { !([player, getArray (_cfg >> "factions")] call ULP_fnc_isFaction) }) exitWith {};
 
+if !(lineIntersects [eyePos player, eyePos _object, player, _object]) exitWith { ["You must keep line of sight with the store"] call ULP_fnc_hint; };
+
 private _personalTimeout = getNumber (missionConfigFile >> "CfgRobberies" >> "personalTimeout");
 private _timeout = getNumber (_cfg >> "timeout");
 private _objectTimeout = _object getVariable "timeout";
@@ -42,7 +44,9 @@ private _msg = missionConfigFile >> "CfgMessages" >> "Robbery";
 private _targets = getText (_msg >> "targets");
 [_msg, format ["A robbery has been reported and is now shown on your map!"], _targets] call ULP_fnc_sendMessage;
 
-[format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg, _customName], {
+private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"];
+
+[format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg, _customName, _suspectedWeapon], {
 	_this params [ "_object" ];
 
 	private _robber = _object getVariable ["robber", objNull];
@@ -53,19 +57,22 @@ private _targets = getText (_msg >> "targets");
 	{ (_robber distance _object) <= 8 } && 
 	{ !(lineIntersects [eyePos _robber, eyePos _object, _robber, _object]) }
 }, {
-	_this params [ "_object", "_marker", "_cfg", "_customName" ];
+	_this params [ "_object", "_marker", "_cfg", "_customName", "_suspectedWeapon" ];
 
 	private _reward = getArray(_cfg >> "reward");
 	private _money = (_reward # 0) + round (random (_reward # 1));
 	[_money, false, format ["Robbed Store at %1 ", getPos player]] call ULP_fnc_addMoney;
 
 	getArray (_cfg >> "leveling") call ULP_fnc_addXP;
-	[(group player), "Robbery"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", 2];
+
+	if ([] call ULP_fnc_isGroup) then {
+		[(group player), "Robbery"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
+	};
 
 	[getPlayerUID player, "Theft", "Section8",
 		format [
 			"%2%3 | Suspected Weapon: %1", 
-			([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"],
+			_suspectedWeapon,
 			_customName, getText (_cfg >> "name")
 		]
 	] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
@@ -77,7 +84,15 @@ private _targets = getText (_msg >> "targets");
 	_object setVariable["robber", nil, true];
 	deleteMarker _marker;
 }, {
-	_this params [ "_object", "_marker" ];
+	_this params [ "_object", "_marker", "_cfg", "_customName", "_suspectedWeapon" ];
 	_object setVariable["robber", nil, true];
 	deleteMarker _marker;
+
+	[getPlayerUID player, "CriminalAttempts", "Section1",
+		format [
+			"Attempted Robbery of %2%3 | Suspected Weapon: %1", 
+			_suspectedWeapon,
+			_customName, getText (_cfg >> "name")
+		]
+	] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 }] call ULP_UI_fnc_startProgress;

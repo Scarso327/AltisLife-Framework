@@ -13,6 +13,8 @@ class CfgSettings {
 
     buffedSellIncrease = 1.5;
 
+    disabledDamageInGreenzone = true;
+
     class DonationRewards {
         sellIncrease = 1.25;
         profChanceIncrease = 1.30;

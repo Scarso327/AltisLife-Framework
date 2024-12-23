@@ -41,10 +41,14 @@ if !(isNull _source) then {
 			[_source, !_isRubber, _isRubber] call ULP_fnc_onKnocked;
 		};
 
-		_originalDamage;
+		_originalDamage breakOut "fn_onDamaged";
 	};
 
-	if (_projectile isEqualTo "" && { (vehicle _source) isKindOf "LandVehicle" }) then {
+	if (isPlayer _source && { [getNumber (missionConfigFile >> "CfgSettings" >> "disabledDamageInGreenzone")] call ULP_fnc_bool } && { ["greenzone_", [_unit]] call ULP_fnc_isUnitsInZone }) exitWith {
+		_originalDamage breakOut "fn_onDamaged";
+	};
+
+	if (_projectile isEqualTo "" && { (vehicle _source) isKindOf "LandVehicle" }) exitWith {
 		if (isPlayer _source) then {
 			if !(diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2) then {
 				[format ["You have just been ran over by <t color='#B92DE0'>%1</t>!", name _source]] call ULP_fnc_hint;

@@ -21,7 +21,7 @@ switch (_code) do {
         _handled = true;
         case F: {
             if (_shift && {missionNamespace getVariable ["ULP_CanRespawn", false] }) then {
-                if (((["Medic"] call ULP_fnc_allMembers) findIf { (player distance _x) <= 100 }) > -1 && { !([player, ["Medic"]] call ULP_fnc_isFaction) }) exitWith {
+                if (((["Medic"] call ULP_fnc_allMembers) findIf { !(player isEqualTo _x) && { (player distance _x) <= 300 } }) > -1) exitWith {
                     ["<t color='#B92DE0'>A medic is nearby</t>, you're unable to force bleedout..."] call ULP_fnc_hint;
                 };
 
@@ -31,14 +31,14 @@ switch (_code) do {
 		case SPACE: {
             if ((count (["Medic"] call ULP_fnc_allMembers)) < 1) exitWith { ["There are no medics online to request assitance from..."] call ULP_fnc_hint; };
 
-            if (missionNamespace getVariable ["ULP_MedicalRequest", 0] < time) then {
+            if (localNamespace getVariable ["ULP_MedicalRequest", 0] < time) then {
                 private _cfg = missionConfigFile >> "CfgMessages" >> "MedicRequest";
                 private _targets = getText (_cfg >> "targets");
 
                 [_cfg, format ["%1 is requesting medical assistance...", profileName], _targets] call ULP_fnc_sendMessage;
                 ["You have requested medical assitances..."] call ULP_fnc_hint;
 
-                missionNamespace setVariable ["ULP_MedicalRequest", time + 30];
+                localNamespace setVariable ["ULP_MedicalRequest", time + 30];
             } else {
                 ["You have requested medical assitance recently, please wait before trying again..."] call ULP_fnc_hint;
             };

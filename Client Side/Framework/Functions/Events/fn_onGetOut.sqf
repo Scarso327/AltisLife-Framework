@@ -22,4 +22,8 @@ if ([] call ULP_UI_fnc_isProgress) then {
 	[["RscProgress"] call ULP_UI_fnc_getLayer, false] call ULP_UI_fnc_endProgress;
 };
 
+if ([["EnableAutoChatSwitch"] call ULP_fnc_getOption] call ULP_fnc_bool && { currentChannel isEqualTo 4 }) then {
+	setCurrentChannel 5;
+};
+
 true

@@ -35,7 +35,7 @@ if (time < (_group getVariable ["tax_last_changed", 0])) exitWith {
 		_this params [
 			["_group", grpNull, [grpNull]],
 			["_display", displayNull, [displayNull]],
-			"", ["_tax", 1, [0]]
+			"", ["_tax", 0, [0]]
 		];
 
 		if (isNull _group) exitWith {};

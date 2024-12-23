@@ -863,9 +863,15 @@ class CfgFunctions {
 			file = "Functions\HUD";
 			class openHUD {};
 			class closeHUD {};
+		};
+
+		class RscHUD_UI {
+			file = "UI\RscHUD\Functions";
+			class onHudLoad {};
+			class onHudUnload {};
 			class eachFrameHUD {};
+			class onXPUpdateHud {};
 			class isHudShown {};
-			class updateXpHud {};
 			class zoneText {};
 		};
 	};

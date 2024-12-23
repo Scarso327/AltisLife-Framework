@@ -2,8 +2,8 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-#include "..\..\script_macros.hpp"
-scopeName "fn_updateXpHud";
+#include "..\..\..\script_macros.hpp"
+scopeName "fn_onXPUpdateHud";
 
 private _ui = ["RscHUD"] call ULP_UI_fnc_getLayer;
 if (isNull _ui) exitWith {}; 

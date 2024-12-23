@@ -2,7 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: Displays left at top of screen to indicate leaving or entering a given zone
 */
-#include "..\..\script_macros.hpp"
+#include "..\..\..\script_macros.hpp"
 scopeName "fn_zoneText";
 
 _this params [

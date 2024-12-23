@@ -3,13 +3,13 @@
 
 class RscHUD {
     name = "RscHUD";
-    idd = 500;
+    idd = -1;
     fadein=0;
     duration = 10e10;
     fadeout=0;
     movingEnable = 0;
-    onLoad="uiNamespace setVariable ['RscHUD', _this select 0]";
-	onUnload="";
+    onLoad="(_this select 0) call ULP_UI_fnc_onHudLoad;";
+	onUnload="(_this select 0) call ULP_UI_fnc_onHudUnload;";
     objects[]={};
 
     class ControlsBackground {

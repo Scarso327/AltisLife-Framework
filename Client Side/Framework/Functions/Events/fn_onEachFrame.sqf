@@ -11,7 +11,7 @@ scopeName "fn_onEachFrame";
 
 		_params call _function;
 	};
-} forEach + ULP_eachFrameEvents;
+} forEach ULP_eachFrameEvents;
 
 // Credit: Ace Mod Team (https://ace3mod.com/wiki/development/arma-3-scheduler-and-our-practices.html)
 

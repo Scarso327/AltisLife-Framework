@@ -90,7 +90,7 @@ player addEventHandler ["InventoryClosed", { _this call ULP_fnc_InventoryClosed 
 				[(["RscHUD"] call ULP_UI_fnc_getLayer)] call ULP_UI_fnc_closeHUD;
 			};
 		};
-		case "HUD_EnableXPBar": { [(_newSetting isEqualTo 1)] call ULP_UI_fnc_updateXpHud; };
+		case "HUD_EnableXPBar": { [(_newSetting isEqualTo 1)] call ULP_UI_fnc_onXPUpdateHud; };
 		case "HUD_EnablePlayerTags": { [(_newSetting isEqualTo 1)] call ULP_fnc_playerTags };
 		case "Indicators_EnableIndicators": { [(_newSetting isEqualTo 1)] call ULP_fnc_groupIndicators };
 		case "Audio_EffectsFade": { if (ULP_FadeSound) then { 0 fadeSound _newSetting; }; };

@@ -9,7 +9,10 @@ _this params [
 	"_ui", "_food", "_water", "_health"
 ];
 
-if (isNull _ui) exitWith { [_thisEventHandler] call ULP_fnc_removeEachFrame; };
+if (isNull _ui) exitWith {
+	["HUD Each Frame Removed - UI Not Found"] call ULP_fnc_logIt;
+	[_thisEventHandler] call ULP_fnc_removeEachFrame;
+};
 
 private _lastVal = 0;
 

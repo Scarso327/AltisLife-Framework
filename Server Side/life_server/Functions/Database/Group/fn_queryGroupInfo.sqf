@@ -58,7 +58,7 @@ if (isNull _group) then {
 		};
 
 		if !(_queryTax isEqualTo 0) then {
-			_group setVariable ["group_tax", _queryTax, true];
+			_group setVariable ["group_tax", _queryTax / 100, true];
 		};
 
 		_queryPremium = [_queryPremium] call ULP_fnc_bool;

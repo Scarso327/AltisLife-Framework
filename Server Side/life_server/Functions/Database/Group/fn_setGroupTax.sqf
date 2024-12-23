@@ -7,14 +7,12 @@ scopeName "fn_setGroupTax";
 
 _this params [
 	["_group", grpNull, [grpNull]],
-	["_tax", 0.01, [0]]
+	["_tax", 0, [0]]
 ];
 
 if (isNull _group || { _tax < 0 }) exitWith { false };
 
-_tax = _tax / 100;
-
-_group setVariable ["group_tax", _tax, true];
+_group setVariable ["group_tax", _tax / 100, true];
 
 // Update Group Information...
 [format["UPDATE `groups` SET `tax` = '%1' WHERE `id` = '%2'", 

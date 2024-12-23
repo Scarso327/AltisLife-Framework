@@ -251,6 +251,7 @@ class CfgInteractions {
 			title = "Registration";
 			onClick = "closeDialog 0; [(_this select 0)] call ULP_fnc_vehicleRegistration";
 			factions[] = { "Police", "Hato" };
+			condition = "true";
 		};
 
 		class Clamp : Repair {

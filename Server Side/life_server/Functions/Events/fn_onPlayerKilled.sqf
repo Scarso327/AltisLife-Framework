@@ -13,7 +13,7 @@ if (alive _killer && { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) }) 
 
 // Notify the server...
 if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } || { !(_killer isKindOf "Man") }) then {
-	["Bleedout", [_unit getVariable ["realname", name _unit]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+	["Bleedout", [[_unit] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 	[getPlayerUID _unit, "Bleedout", [getPos _unit, getUnitLoadout _unit]] call ULP_SRV_fnc_logPlayerEvent;
 } else {
 	if ([_killer, ["Civilian"]] call ULP_fnc_isFaction) then {
@@ -25,7 +25,7 @@ if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } 
 		] call ULP_SRV_fnc_addWarrant;
 	};
 	
-	["Executed", [_unit getVariable ["realname", name _unit], _killer getVariable ["realname", name _killer]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+	["Executed", [[_unit] call ULP_fnc_getName, [_killer] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 	[getPlayerUID _unit, "Executed", [getPlayerUID _killer, getPos _unit, getUnitLoadout _unit]] call ULP_SRV_fnc_logPlayerEvent;
 
 	if (["capture_cartel_", [_unit, _killer]] call ULP_fnc_isUnitsInZone) then {

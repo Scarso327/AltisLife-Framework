@@ -46,10 +46,12 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 		] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 	};
 
-	_deathMessage = format["<t align='center' size='2'>%1 seriously injured you</t>", name _killer];
-	["InjuredBy", [_unit getVariable ["realname", name _unit], _killer getVariable ["realname", name _killer]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+	private _killerName = [_killer] call ULP_fnc_getName;
+
+	_deathMessage = format["<t align='center' size='2'>%1 seriously injured you</t>", _killerName];
+	["InjuredBy", [[_unit] call ULP_fnc_getName, _killerName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 } else {
-	["Injured", [_unit getVariable ["realname", name _unit]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+	["Injured", [[_unit] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 };
 
 [] call ULP_fnc_onUnrestrained;

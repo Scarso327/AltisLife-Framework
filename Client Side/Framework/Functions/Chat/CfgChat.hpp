@@ -50,6 +50,13 @@ class CfgChat {
 		class FinePoor : FinePaid {
 			message = "%1 can't afford a fine of %2";
 		};
+		class Restrained : FinePaid {
+			message = "%1 was restrained by %2";
+			condition = "[[""EnableMessagesRestrain"", ""Chat""] call ULP_fnc_getOption] call ULP_fnc_bool";
+		};
+		class UnRestrained : Restrained {
+			message = "%1 was unrestrained by %2";
+		};
 	};
 	class Commands {
 		class Players {

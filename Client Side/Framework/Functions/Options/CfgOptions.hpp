@@ -161,7 +161,7 @@ class CfgOptions {
 
 		class EnableMessagesIncapacitated {
 			name = "Enable Incapacitated Messages";
-			tooltip = "When enabled, incapacitated and injured messages will be display in chat.";
+			tooltip = "When enabled, incapacitated and injured messages will be displayed in chat.";
 			type = "DROPDOWN";
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 			condition = "true";
@@ -169,27 +169,32 @@ class CfgOptions {
 
 		class EnableMessagesBleedout : EnableMessagesIncapacitated {
 			name = "Enable Bleedout Messages";
-			tooltip = "When enabled, bleedout and executed messages will be display in chat.";
+			tooltip = "When enabled, bleedout and executed messages will be displayed in chat.";
 		};
 
 		class EnableMessagesTicket : EnableMessagesIncapacitated {
 			name = "Enable Ticket Messages";
-			tooltip = "When enabled, ticket messages will be display in chat.";
+			tooltip = "When enabled, ticket messages will be displayed in chat.";
 		};
 
 		class EnableMessagesRevived : EnableMessagesIncapacitated {
 			name = "Enable Revival Messages";
-			tooltip = "When enabled, revival messages will be display in chat.";
+			tooltip = "When enabled, revival messages will be displayed in chat.";
 		};
 
 		class EnableMessagesPrisoned : EnableMessagesIncapacitated {
 			name = "Enable Prison Messages";
-			tooltip = "When enabled, prison messages will be display in chat.";
+			tooltip = "When enabled, prison messages will be displayed in chat.";
 		};
 
 		class EnableMessagesVehicle : EnableMessagesIncapacitated {
 			name = "Enable Vehicle Messages";
-			tooltip = "When enabled, garaged, impounded and crushed messages will be display in chat.";
+			tooltip = "When enabled, garaged, impounded and crushed messages will be displayed in chat.";
+		};
+
+		class EnableMessagesRestrain : EnableMessagesIncapacitated {
+			name = "Enable Restraint Messages";
+			tooltip = "When enabled, restraint message will be dispalyed in chat.";
 		};
 	};
 };

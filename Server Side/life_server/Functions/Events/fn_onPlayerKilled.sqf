@@ -31,13 +31,19 @@ if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } 
 	if (["capture_cartel_", [_unit, _killer]] call ULP_fnc_isUnitsInZone) then {
 		[_unit, _killer] call ULP_SRV_fnc_onCartelKill;	
 	} else {
-		private _unitRep = _unit getVariable ["reputation", 0];
+		
+		// Not Police or unarmed = hurt rep
+		private _shouldHurtRep = !(([_killer] call ULP_fnc_getFaction) isEqualTo "Police") || { (currentWeapon _unit) isEqualTo "" }
 
-		[_killer, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
-			case (_unitRep >= 500): { "KilledHighRep" };
-			case (_unitRep > -500): { "KilledNormal" };
-			default { "KilledLowRep" };
-		})] call ULP_SRV_fnc_reputation;
+		if (_shouldHurtRep) then {
+			private _unitRep = _unit getVariable ["reputation", 0];
+
+			[_killer, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
+				case (_unitRep >= 500): { "KilledHighRep" };
+				case (_unitRep > -500): { "KilledNormal" };
+				default { "KilledLowRep" };
+			})] call ULP_SRV_fnc_reputation;
+		};
 	};
 
 	["KilledSomeone", [_unit]] remoteExecCall ["ULP_fnc_invokeEvent", _killer];

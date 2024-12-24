@@ -2,15 +2,12 @@
 #define XP_WIDTH (WIDTH + (WIDTH / 4))
 
 class RscHUD {
-    name = "RscHUD";
     idd = -1;
+    onLoad = "_this call ULP_UI_fnc_onHudLoad";
+	onUnload = "_this call ULP_UI_fnc_onHudUnload";
     fadein=0;
-    duration = 10e10;
     fadeout=0;
-    movingEnable = 0;
-    onLoad="(_this select 0) call ULP_UI_fnc_onHudLoad;";
-	onUnload="(_this select 0) call ULP_UI_fnc_onHudUnload;";
-    objects[]={};
+    duration = 10e10;
 
     class ControlsBackground {
         class FoodBackground: Life_RscText {

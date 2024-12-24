@@ -5,14 +5,14 @@
 #include "..\..\..\script_macros.hpp"
 scopeName "fn_onHudLoad";
 
-private _display = _this;
+_this params [ "_display" ];
 
 if (isNull _display) exitWith {};
 
 disableSerialization;
 
-if !(isNil { uiNamespace getVariable "RscHUD" }) exitWith {
-	["Called onLoad HUD when HUD already exists?"] call ULP_fnc_logIt;
+if !(isNil { uiNamespace getVariable "RscHUD" }) then {
+	["RscHUD"] call ULP_UI_fnc_destroyLayer;
 };
 
 _display setVariable ["food", -1];

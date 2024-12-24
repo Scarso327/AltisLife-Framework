@@ -33,7 +33,7 @@ if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } 
 	} else {
 		
 		// Not Police or unarmed = hurt rep
-		private _shouldHurtRep = !(([_killer] call ULP_fnc_getFaction) isEqualTo "Police") || { (currentWeapon _unit) isEqualTo "" }
+		private _shouldHurtRep = (!([player, ["Police"]] call ULP_fnc_isFaction) || { (currentWeapon _unit) isEqualTo "" });
 
 		if (_shouldHurtRep) then {
 			private _unitRep = _unit getVariable ["reputation", 0];

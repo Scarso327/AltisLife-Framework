@@ -63,4 +63,10 @@ class CfgSounds {
         sound[] = {"\Data\Sounds\messageNotification.ogg", 1.0, 1};
         titles[] = {};
     };
+
+    class handCuff {
+        name = "handCuff";
+        sound[] = {"\Data\Sounds\handCuff.ogg", 0.5, 1};
+        titles[] = {};
+    };
 };

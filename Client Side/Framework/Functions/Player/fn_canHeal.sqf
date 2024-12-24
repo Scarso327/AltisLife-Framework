@@ -9,6 +9,19 @@ _this params [
 	["_target", player, [objNull]]
 ];
 
-(!(isNull _target) && { alive _target } && { !(isDowned(_target)) } && { isPlayer _target } && { isNull (objectParent _target) } && {
-	((["FirstAidKit"] call ULP_fnc_hasItem) > 0 && ((damage _target) > 0.25)) || ((["MediKit"] call ULP_fnc_hasItem) > 0 && ((damage _target) >= 0.01))
+(!(isNull _target) 
+	&& { isPlayer _target } 
+	&& { alive _target } 
+	&& { !(isDowned(_target)) } 
+	&& { isNull (objectParent _target) } 
+	// The target is us or do the checks again but for us
+	&& { (_target isEqualTo player) || {
+		{ alive player } 
+		&& { !(isDowned(player)) } 
+		&& { isNull (objectParent player) } 
+		&& { (player distance _target) <= 10 } 
+	} }
+	&& { !([] call ULP_UI_fnc_isProgress) } 
+	&& {
+	((["FirstAidKit"] call ULP_fnc_hasItem) > 0 && { ((damage _target) > 0.25) }) || ((["MediKit"] call ULP_fnc_hasItem) > 0 && { ((damage _target) >= 0.01) })
 })

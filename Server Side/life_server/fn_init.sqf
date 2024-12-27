@@ -149,6 +149,8 @@ if !(_items isEqualTo []) then {
 [] call ULP_SRV_fnc_initServerEvents;
 [] call ULP_SRV_fnc_initCommunityGoals;
 
+[] call ULP_SRV_fnc_handleFog;
+
 /* Map-based server side initialization. */
 
 {

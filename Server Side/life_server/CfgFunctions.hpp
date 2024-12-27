@@ -192,6 +192,11 @@ class CfgFunctions {
             file = "\life_server\Functions\Shipwreck";
             class claimShipwreck {};
         };
+
+        class Weather {
+            file = "\life_server\Functions\Weather";
+            class handleFog {};
+        };
     };
 
     class MySQL_Database {

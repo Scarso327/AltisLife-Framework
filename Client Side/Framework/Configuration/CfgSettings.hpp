@@ -108,6 +108,10 @@ class CfgSettings {
         class Land_ConcreteWall_01_m_gate_F { anim = "Door_1_move"; };
         class Land_ConcreteWall_01_l_gate_F : Land_ConcreteWall_01_m_gate_F {};
     };
+
+    class Weather {
+        maxFog = 0.1;
+    };
 };
 
 #include "CfgSurvival.hpp"

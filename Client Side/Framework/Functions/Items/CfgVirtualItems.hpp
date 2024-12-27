@@ -1344,7 +1344,7 @@ class CfgVirtualItems {
 		displayName = "Processed Weed";
 		description = "Processed drugs that can be used or sold/bought at a drug dealer.";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 6680;
+		buyPrice = 10020;
 		sellPrice = 3340;
 		weight = 3;
 		class Settings {
@@ -1359,7 +1359,7 @@ class CfgVirtualItems {
 	class ProcessedHeroin : ProcessedWeed {
 		displayName = "Processed Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 14160;
+		buyPrice = 21240;
 		sellPrice = 7080;
 		weight = 4;
 		class Settings : Settings {};
@@ -1367,7 +1367,7 @@ class CfgVirtualItems {
 	class ProcessedCocaine : ProcessedWeed {
 		displayName = "Processed Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 22900;
+		buyPrice = 34350;
 		sellPrice = 11450;
 		weight = 5;
 		class Settings : Settings {};
@@ -1375,7 +1375,7 @@ class CfgVirtualItems {
 	class ProcessedMeth : ProcessedWeed {
 		displayName = "Meth";
 		icon = "Data\Icons\methProcessed.paa";
-		buyPrice = 61000;
+		buyPrice = 91500;
 		sellPrice = 30500;
 		weight = 5;
 		class Settings : Settings {};
@@ -1383,7 +1383,7 @@ class CfgVirtualItems {
 	class Moonshine : ProcessedWeed {
 		displayName = "Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 13400;
+		buyPrice = 20100;
 		sellPrice = 6700;
 		weight = 2;
 		class Settings : Settings {};
@@ -1411,7 +1411,7 @@ class CfgVirtualItems {
 		displayName = "Purified Weed";
 		description = "The highest quaility drugs on Altis made for an increased profit.";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 9018;
+		buyPrice = 13527;
 		sellPrice = 4509;
 		weight = 3;
 		class Settings {
@@ -1427,7 +1427,7 @@ class CfgVirtualItems {
 	class PurifiedHeroin : PurifiedWeed {
 		displayName = "Purified Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 19116;
+		buyPrice = 28674;
 		sellPrice = 9558;
 		weight = 4;
 		class Settings : Settings {};
@@ -1435,7 +1435,7 @@ class CfgVirtualItems {
 	class PurifiedCocaine : PurifiedWeed {
 		displayName = "Purified Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 30915;
+		buyPrice = 46371;
 		sellPrice = 15457;
 		weight = 5;
 		class Settings : Settings {};
@@ -1443,7 +1443,7 @@ class CfgVirtualItems {
 	class PurifiedMeth : PurifiedWeed {
 		displayName = "Purified Meth";
 		icon = "Data\Icons\methProcessed.paa";
-		buyPrice = 82350;
+		buyPrice = 123525;
 		sellPrice = 41175;
 		weight = 5;
 		class Settings : Settings {};
@@ -1451,7 +1451,7 @@ class CfgVirtualItems {
 	class PurifiedMoonshine : PurifiedWeed {
 		displayName = "Purified Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 18090;
+		buyPrice = 27135;
 		sellPrice = 9045;
 		weight = 1;
 		class Settings : Settings {};

@@ -14,7 +14,10 @@ _this params [
 private _cfg = missionConfigFile >> "CfgRobberies" >> _store;
 if (isNull _object || { !(isClass _cfg) } || { !([player, getArray (_cfg >> "factions")] call ULP_fnc_isFaction) }) exitWith {};
 
-if !(lineIntersects [eyePos player, eyePos _object, player, _object]) exitWith { ["You must keep line of sight with the store"] call ULP_fnc_hint; };
+private _desk = nearestObject [_object, "Land_CashDesk_F"];
+private _intersetObject2 = [_desk, _object] select (isNull _desk);
+
+if (lineIntersects [eyePos player, eyePos _object, player, _intersetObject2]) exitWith { ["You must keep line of sight with the store"] call ULP_fnc_hint; };
 
 private _personalTimeout = getNumber (missionConfigFile >> "CfgRobberies" >> "personalTimeout");
 private _timeout = getNumber (_cfg >> "timeout");
@@ -46,8 +49,8 @@ private _targets = getText (_msg >> "targets");
 
 private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"];
 
-[format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg, _customName, _suspectedWeapon], {
-	_this params [ "_object" ];
+[format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg, _customName, _suspectedWeapon, _intersetObject2], {
+	_this params [ "_object", "", "", "", "", "_intersetObject2" ];
 
 	private _robber = _object getVariable ["robber", objNull];
 
@@ -55,7 +58,7 @@ private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [
 	{ alive _robber } && 
 	{ player isEqualTo _robber } && 
 	{ (_robber distance _object) <= 8 } && 
-	{ !(lineIntersects [eyePos _robber, eyePos _object, _robber, _object]) }
+	{ !(lineIntersects [eyePos _robber, eyePos _object, _robber, _intersetObject2]) }
 }, {
 	_this params [ "_object", "_marker", "_cfg", "_customName", "_suspectedWeapon" ];
 

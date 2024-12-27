@@ -72,6 +72,28 @@ class CfgOptions {
 		};
 	};
 
+	class ViewDistance {
+		title = "View Distances";
+
+		class FootViewDistance {
+			name = "View Distance on Foot";
+			tooltip = "This is your view distance while on foot.";
+			type = "SLIDER";
+			values[] = { { 500, 10000 }, 3000, { 1, 1 } };
+			condition = "true";
+		};
+
+		class LandViewDistance : FootViewDistance {
+			name = "View Distance in Land Vehicle";
+			tooltip = "This is your view distance while in land vehicle.";
+		};
+
+		class AirViewDistance : FootViewDistance {
+			name = "View Distance in Air Vehicle";
+			tooltip = "This is your view distance while in air vehicle.";
+		};
+	};
+
 	class HUD {
 		title = "User Interface";
 

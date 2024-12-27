@@ -26,4 +26,6 @@ if ([["EnableAutoChatSwitch"] call ULP_fnc_getOption] call ULP_fnc_bool && { cur
 	setCurrentChannel 5;
 };
 
+[] call ULP_fnc_setViewDistance;
+
 true

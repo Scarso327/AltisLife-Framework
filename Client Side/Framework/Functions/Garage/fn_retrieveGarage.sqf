@@ -25,6 +25,12 @@ _vehInfo params [
 	"_id", "_classname", "_texture", "_price"
 ];
 
+private _cfg = missionConfigFile >> "CfgVehicles" >> _classname;
+
+if !(call compile getText(_cfg >> "conditions")) exitWith {
+	["This vehicle has special requirements you no longer meet."] call ULP_fnc_hint;
+};
+
 private _spawns = _display getVariable ["spawns", []];
 
 _spawns = _spawns apply {

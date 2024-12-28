@@ -104,7 +104,7 @@ class CfgLicenses {
         description = "Purchased access to utilise blackmarket supplies on Altis.";
         buyPrice = 15000000;
         class Settings {};
-        conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk } && { [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
+        conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
     };
 
     // Processing Sites

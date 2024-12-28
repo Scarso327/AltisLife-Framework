@@ -128,7 +128,7 @@ class CfgLicenseStores {
 	class Blackmarket {
 		title = "Blackmarket Access";
 		factions[] = { "Civilian" };
-		condition = "([""Rebel""] call ULP_fnc_hasLicense || !([""Blackmarket""] call ULP_fnc_hasLicense)) && { [""Blackmarketer""] call ULP_fnc_hasPerk } && { [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
+		condition = "[""Rebel""] call ULP_fnc_hasLicense && { !([""Blackmarket""] call ULP_fnc_hasLicense) } && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		licenses[] = { "Blackmarket" };
 	};
 }; 

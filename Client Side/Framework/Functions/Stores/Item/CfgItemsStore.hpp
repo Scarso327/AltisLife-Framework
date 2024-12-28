@@ -660,7 +660,7 @@ class CfgItemsStore {
 
 	class Blackmarket {
 		storeName = "Blackmarket";
-		condition = "[""Blackmarket""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk }";
+		condition = "[""Blackmarket""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		class Rifles {
 			class hgun_PDW2000_F {};
 			class SMG_02_F {};

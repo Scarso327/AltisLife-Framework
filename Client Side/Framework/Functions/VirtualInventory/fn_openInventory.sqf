@@ -25,7 +25,7 @@ _force = ([player] call ULP_fnc_onDuty || _force);
 if (!(_force) && { (_type in ["Car", "Helicopter", "Plane", "Ship"] && !(_container in ULP_Keys) ) 
 	|| { _container getVariable ["locked", false] } 
 	|| { !(_container getVariable ["drilled", true]) }
-	|| { _container isKindOf "CAManBase" && { !([player] call ULP_fnc_onDuty) && { isNull (_container getVariable ["restrained", objNull]) || { !([group (_container getVariable ["restrained", objNull]), player] call ULP_fnc_inGroup) } } } } }) exitWith {
+	|| { _container isKindOf "CAManBase" && { isNull (_container getVariable ["restrained", objNull]) || { !([group (_container getVariable ["restrained", objNull]), player] call ULP_fnc_inGroup) } } } }) exitWith {
 	["You don't have access to this container..."] call ULP_fnc_hint;
 	false
 };

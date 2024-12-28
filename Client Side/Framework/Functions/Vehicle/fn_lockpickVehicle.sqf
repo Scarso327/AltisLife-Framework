@@ -28,7 +28,7 @@ if ([] call ULP_fnc_isGroup) then {
 [format["Lockpicking %1", (_cfg param [3, "Vehicle"])], _time, [_vehicle, _cfg], { (player distance (_this select 0)) <= 5 }, {
 	_this params [
 		["_vehicle", objNull, [objNull]],
-		["_cfg", configNull, [configNull]]
+		["_cfg", [], [[]]]
 	];
 	
 	if (isNull _vehicle || { !(alive _vehicle) }) exitWith {
@@ -60,9 +60,9 @@ if ([] call ULP_fnc_isGroup) then {
 				]
 			] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 
-			["The lockpick broke while attempting to pick the lock..."] call ULP_fnc_numberText;
+			["The lockpick broke while attempting to pick the lock..."] call ULP_fnc_hint;
 		};
 	} else {
-		["You lost your lockpick while picking the vehicle and so couldn't finish picking..."] call ULP_fnc_numberText;
+		["You lost your lockpick while picking the vehicle and so couldn't finish picking..."] call ULP_fnc_hint;
 	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

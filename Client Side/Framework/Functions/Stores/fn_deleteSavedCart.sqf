@@ -15,7 +15,7 @@ if (_name isEqualTo "" || { isNil "_name" }) exitWith {
 };
 
 private _storeCfgName = format["%1%2", configName (_display getVariable "storeCfg"), configName (_display getVariable "curStore")];
-private _allSavedCarts = + (profileNamespace getVariable ["ULP_SavedCarts", createHashMap]);
+private _allSavedCarts = + (missionProfileNamespace getVariable ["ULP_SavedCarts", createHashMap]);
 private _savedCarts = _allSavedCarts getOrDefault [_storeCfgName, createHashMap];
 
 _savedCarts deleteAt _name;
@@ -26,8 +26,8 @@ if (_savedCarts isEqualTo []) then {
 	_allSavedCarts set [_storeCfgName, _savedCarts];
 };
 
-profileNamespace setVariable ["ULP_SavedCarts", _allSavedCarts];
-saveProfileNamespace;
+missionProfileNamespace setVariable ["ULP_SavedCarts", _allSavedCarts];
+saveMissionProfileNamespace;
 
 _display setVariable ["saved_cart", nil];
 (_display displayCtrl 3117) ctrlEnable false;

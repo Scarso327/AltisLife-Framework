@@ -11,7 +11,7 @@ private _name = _this param [1, _display getVariable ["saved_cart", ""], [""]];
 if (isNull _display || { _name isEqualTo "" }  || { isNil "_name" }) exitWith { systemChat "Error occured while saving cart"; };
 
 private _storeCfgName = format["%1%2", configName (_display getVariable "storeCfg"), configName (_display getVariable "curStore")];
-private _allSavedCarts = + (profileNamespace getVariable ["ULP_SavedCarts", createHashMap]);
+private _allSavedCarts = + (missionProfileNamespace getVariable ["ULP_SavedCarts", createHashMap]);
 private _savedCarts = _allSavedCarts getOrDefault [_storeCfgName, createHashMap];
 
 private _maxCarts = getNumber (missionConfigFile >> "CfgStores" >> "maxCarts");
@@ -40,8 +40,8 @@ if (_savedCart isEqualTo []) exitWith {}; // Failsafe
 _savedCarts set [_name, _savedCart];
 _allSavedCarts set [_storeCfgName, _savedCarts];
 
-profileNamespace setVariable ["ULP_SavedCarts", _allSavedCarts];
-saveProfileNamespace;
+missionProfileNamespace setVariable ["ULP_SavedCarts", _allSavedCarts];
+saveMissionProfileNamespace;
 
 _display setVariable ["saved_cart", _name];
 (_display displayCtrl 3117) ctrlEnable true;

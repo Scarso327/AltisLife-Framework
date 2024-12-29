@@ -28,7 +28,7 @@ private _balance = _display displayCtrl 4102;
 private _transactionList = _display displayCtrl 4105;
 lnbClear _transactionList;
 
-private _transactions = + (profileNamespace getVariable ["ULP_Transactions", []]);
+private _transactions = + (missionProfileNamespace getVariable ["ULP_Transactions", []]);
 reverse _transactions;
 
 {

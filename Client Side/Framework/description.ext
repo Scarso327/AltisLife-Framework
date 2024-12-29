@@ -1,6 +1,9 @@
 overviewText = "A roleplaying gamemode developed by Scarso and Lewis for mantlenetwork.co.uk!";
 disableRandomization[]= { "All" };
 
+// Should change to something unique to your server
+missionGroup = "MantlesAltisLife";
+
 joinUnassigned = 1;
 saving = 0;
 unsafeCVL = 1;
@@ -18,7 +21,7 @@ showHUD[] = {
 	0, // Group info bar
 	1, // HUD weapon cursors
 	1, // Vehicle display panels
-	1, // "x killed by y" systemChat messages
+	0, // "x killed by y" systemChat messages
 	1  // force show drawIcon3D icons
 };
 

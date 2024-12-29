@@ -18,4 +18,4 @@ if (_default isEqualType false) then {
 	_default = [_option, _category] call ULP_fnc_getDefaultOption;
 };
 
-(profileNamespace getVariable [format["ULP_Options_%1_%2", _category, _option], _default])
+(missionProfileNamespace getVariable [format["ULP_Options_%1_%2", _category, _option], _default])

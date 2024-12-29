@@ -48,4 +48,4 @@ if !(isNull _resetCtrl) then {
 };
 
 ["OptionChanged", [_option, _category, _default, [_option, _category, _default] call ULP_fnc_getOption]] call ULP_fnc_invokeEvent;
-(profileNamespace setVariable [format["ULP_Options_%1_%2", _category, _option], _default])
+(missionProfileNamespace setVariable [format["ULP_Options_%1_%2", _category, _option], _default])

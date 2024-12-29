@@ -42,7 +42,7 @@ if (_subtitle isEqualTo "") then {
 	_subtitle = getText(missionConfigFile >> "CfgFactions" >> _faction >> "displayName");
 };
 
-private _profile_icon = profileNamespace getVariable ["selected_icon", ""];
+private _profile_icon = missionProfileNamespace getVariable ["selected_icon", ""];
 if (_icon isEqualTo "" && { !(_profile_icon isEqualTo "") }) then {
 	_icon = getText(missionConfigFile >> "CfgTags" >> "Icons" >> _profile_icon >> "icon");
 };
@@ -50,14 +50,14 @@ if (_icon isEqualTo "" && { !(_profile_icon isEqualTo "") }) then {
 player setVariable ["icon", _icon, true];
 player setVariable ["subtitle", _subtitle, true];
 
-private _title = missionConfigFile >> "CfgTitles" >> (profileNamespace getVariable ["selected_title", ""]);
+private _title = missionConfigFile >> "CfgTitles" >> (missionProfileNamespace getVariable ["selected_title", ""]);
 if (isClass _title && { !([player] call ULP_fnc_onDuty) }) then {
 	player setVariable ["title", getText (_title >> "displayName"), true];
 } else {
 	player setVariable ["title", nil, true];
 };
 
-private _colour = profileNamespace getVariable ["selected_name_colour", ""];
+private _colour = missionProfileNamespace getVariable ["selected_name_colour", ""];
 if !(_colour isEqualTo "") then {
 	if (_colour isEqualTo ([player] call ULP_fnc_getTagColour)) then {
 		player setVariable ["colour", nil, true];

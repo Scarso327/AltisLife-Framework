@@ -15,7 +15,7 @@ if (isNull _display) exitWith {};
 private _storeCfg = _display getVariable "curStore";
 private _storeCfgName = format["%1%2", configName (_display getVariable "storeCfg"), configName _storeCfg];
 
-private _allSavedCarts = + (profileNamespace getVariable ["ULP_SavedCarts", createHashMap]);
+private _allSavedCarts = + (missionProfileNamespace getVariable ["ULP_SavedCarts", createHashMap]);
 private _savedCarts = _allSavedCarts getOrDefault [_storeCfgName, createHashMap];
 
 private _selectableCarts = (keys _savedCarts) apply { ["", _x, _x, -1] };

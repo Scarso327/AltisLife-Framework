@@ -1234,6 +1234,7 @@ class CfgVehicles {
 		crushTime = 30;
 		chopKeepChance = 85;
 		chopTime = 120;
+		enableRope = false;
 		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk";
 		blacklistedItems[] = { "StolenCargo" };

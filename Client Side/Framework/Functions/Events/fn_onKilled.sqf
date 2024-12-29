@@ -38,12 +38,6 @@ ULP_Inventory = createHashMap; // Wipe Inventory...
 ULP_CarryInfo set [0, 0];
 [true] call ULP_fnc_saveGear;
 
-// Close bleedout script...
-if !(isNil { uiNamespace getVariable "_fnc_bleedout" }) then {
-	[uiNamespace getVariable "_fnc_bleedout"] call ULP_fnc_removeEachFrame;
-	uiNamespace setVariable ["_fnc_bleedout", nil];
-};
-
 // Death Screen...
 ["RscIncapacitated"] call ULP_UI_fnc_destroyLayer;
 "WaitToRespawn" cutText ["<t color='#ffffff' font='PuristaLight' size='2px'>YOU HAVE DIED</t>", "BLACK", -1, false, true];
@@ -58,7 +52,6 @@ player setVariable ["IncapacitatedWounds", nil, true];
 ["Died", [_unit, _killer]] call ULP_fnc_invokeEvent;
 
 [ { ULP_Respawned }, [], {
-	uiNamespace setVariable ["IncapacitatedEffect", nil];
 	[] call ULP_fnc_wipeEffects;
 
 	"WaitToRespawn" cutText ["", "PLAIN"];

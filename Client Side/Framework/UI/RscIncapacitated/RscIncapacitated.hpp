@@ -5,7 +5,8 @@ class RscIncapacitated {
 	movingEnable = 0;
 	fadein = 0;
 	fadeout = 0;
-  	onLoad="uiNamespace setVariable ['RscIncapacitated', _this select 0]";
+    onLoad = "_this call ULP_UI_fnc_RscIncapacitated_OnLoad";
+	onUnload = "_this call ULP_UI_fnc_RscIncapacitated_OnUnload";
   	objects[]={};
 
      class Controls {

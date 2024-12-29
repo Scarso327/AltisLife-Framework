@@ -37,7 +37,6 @@ unsetDowned(player);
 player playMoveNow "amovppnemstpsraswrfldnon";
 
 ["RscIncapacitated"] call ULP_UI_fnc_destroyLayer;
-uiNamespace setVariable ["IncapacitatedEffect", nil];
 [] call ULP_fnc_wipeEffects;
 
 if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
@@ -47,6 +46,6 @@ if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
 ULP_Respawned = false;
 ULP_CanRespawn = nil;
 
-ULP_LastRevived = time;
+localNamespace setVariable ["ULP_LastRevived", time];
 
 [] call ULP_fnc_syncPlayerInfo;

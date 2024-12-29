@@ -875,5 +875,12 @@ class CfgFunctions {
 			class isHudShown {};
 			class zoneText {};
 		};
+
+		class RscIncapacitated {
+			file = "UI\RscIncapacitated\Functions";
+			class RscIncapacitated_OnEachFrame {};
+			class RscIncapacitated_OnLoad {};
+			class RscIncapacitated_OnUnload {};
+		};
 	};
 };

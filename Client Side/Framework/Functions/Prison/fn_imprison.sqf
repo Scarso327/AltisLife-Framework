@@ -55,8 +55,8 @@ if (isNull (["RscFiringDrillTime"] call ULP_UI_fnc_getLayer)) then {
 private _display = ["RscFiringDrillTime"] call ULP_UI_fnc_getLayer;
 (_display displayCtrl 1100) ctrlSetBackgroundColor [0.1,0.1,0.1,0.85];
 
-if ((uiNamespace getVariable ["prison_timer", -1]) isEqualTo -1) then {
-	uiNamespace setVariable ["prison_timer", [[_unit, _pos], {
+if ((localNamespace getVariable ["prison_timer", -1]) isEqualTo -1) then {
+	localNamespace setVariable ["prison_timer", [[_unit, _pos], {
 		_this params ["_unit", "_pos"];
 
 		private _hasTimeElapsed = ULP_Imprisioned && (ULP_Prison_Time - time) <= 0;

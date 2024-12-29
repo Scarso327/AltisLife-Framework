@@ -4,14 +4,15 @@
 */
 scopeName "fn_onEachFrame";
 
-{
-	if (_x isEqualType 0) then {
-		_y params ["_params", "_function"];
-		private _thisEventHandler = _x;
+// See https://github.com/CBATeam/CBA_A3/wiki/Per-Frame-Handlers
 
-		_params call _function;
-	};
-} forEach ULP_eachFrameEvents;
+{
+	_x params ["_params", "_function", "_index"];
+	private _thisEventHandler = _index;
+
+	_params call _function;
+	nil
+} count ULP_eachFrameEventsHandlers;
 
 // Credit: Ace Mod Team (https://ace3mod.com/wiki/development/arma-3-scheduler-and-our-practices.html)
 

@@ -4,7 +4,9 @@
 */
 scopeName "fn_preInitVars";
 
-ULP_eachFrameEvents = createHashMap;
+ULP_eachFrameEventsHandles = [];
+ULP_eachFrameEventsHandlers = [];
+
 ULP_waitExecute = [];
 ULP_waitUntilExecute = [];
 

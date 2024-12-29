@@ -16,7 +16,7 @@ private _replyButton = _display displayCtrl 23039;
 private _textBox = _display displayCtrl 23040;
 
 private _forIndex = _ctrl lnbValue [_index, 0];
-private _messages = + (profileNamespace getVariable ["ULP_Messages", []]);
+private _messages = + (missionProfileNamespace getVariable ["ULP_Messages", []]);
 private _message = _messages param [_forIndex, []];
 
 if (_message isEqualTo []) exitWith {};
@@ -34,8 +34,8 @@ if !(_read) then {
 	_message set [3, true];
 	_messages set [_forIndex, _message];
 
-	profileNamespace setVariable ["ULP_Messages", _messages];
-	saveProfileNamespace;
+	missionProfileNamespace setVariable ["ULP_Messages", _messages];
+	saveMissionProfileNamespace;
 
 	_ctrl lnbSetPicture [[_index, 2], "\a3\3DEN\Data\Controls\ctrlCheckbox\textureChecked_ca.paa"];
 };

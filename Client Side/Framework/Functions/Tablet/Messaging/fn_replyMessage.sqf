@@ -16,7 +16,7 @@ private _inbox = _display displayCtrl 23048;
 private _row = lnbCurSelRow _inbox;
 
 private _forIndex = _inbox lnbValue [_row, 0];
-private _messages = + (profileNamespace getVariable ["ULP_Messages", []]);
+private _messages = + (missionProfileNamespace getVariable ["ULP_Messages", []]);
 private _message = _messages param [_forIndex, []];
 
 if (_message isEqualTo []) exitWith {

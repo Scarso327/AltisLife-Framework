@@ -77,7 +77,7 @@ switch (lbCurSel _toolbox) do {
 				_inboxList lnbSetValue[[_row, 2], parseNumber _read];
 				_inboxList lnbSetPicture [[_row, 2], format["\a3\3DEN\Data\Controls\ctrlCheckbox\%1_ca.paa", (["textureUnchecked", "textureChecked"] select (_read))]];
 			};
-		} forEach + (profileNamespace getVariable ["ULP_Messages", []]);
+		} forEach + (missionProfileNamespace getVariable ["ULP_Messages", []]);
 
 		if ((lbSize _inboxList) > 0) then {
 			_inboxList lbSetCurSel 0;

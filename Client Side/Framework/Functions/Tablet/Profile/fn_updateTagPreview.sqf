@@ -7,7 +7,7 @@ scopeName "fn_updateTagPreview";
 
 _this params [
 	["_display", displayNull, [displayNull]],
-	["_icon", profileNamespace getVariable ["selected_icon", "."], [""]],
+	["_icon", missionProfileNamespace getVariable ["selected_icon", "."], [""]],
 	["_name", [player] call ULP_fnc_getName, [""]],
 	["_subtitle", player getVariable ["subtitle", ""], [""]],
 	["_title", player getVariable ["title", ""], [""]],

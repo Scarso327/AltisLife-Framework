@@ -30,7 +30,7 @@ private _selected = 0;
 			_titleDropdown lbSetTooltip [_title, _tooltip];
 		};
 		
-		if ((profileNamespace getVariable ["selected_title", ""]) isEqualTo _x) then {
+		if ((missionProfileNamespace getVariable ["selected_title", ""]) isEqualTo _x) then {
 			_selected = _title;
 		};
 	};
@@ -68,7 +68,7 @@ tvClear _iconList;
 
 _iconList tvAdd [[], "Clear Icon"];
 
-(profileNamespace getVariable["selected_name_colour", [player] call ULP_fnc_getTagColour]) params [ "_r", "_g", "_b" ];
+(missionProfileNamespace getVariable["selected_name_colour", [player] call ULP_fnc_getTagColour]) params [ "_r", "_g", "_b" ];
 
 {
 	_x params [ "_ctrl", "_val" ];

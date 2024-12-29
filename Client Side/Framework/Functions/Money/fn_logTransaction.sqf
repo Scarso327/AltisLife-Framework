@@ -13,7 +13,7 @@ _this params [
 
 if (_reason isEqualTo "" || { _in <= 0 && _out <=0 }) exitWith { false };
 
-private _history = + (profileNamespace getVariable ["ULP_Transactions", []]);
+private _history = + (missionProfileNamespace getVariable ["ULP_Transactions", []]);
 _history pushBack [_reason, _in, _out];
 
 private _count = count _history;
@@ -21,8 +21,8 @@ if (_count > 100) then {
 	_history = _history select [_count - 100, 100];
 };
 
-profileNamespace setVariable ["ULP_Transactions", _history];
-saveProfileNamespace;
+missionProfileNamespace setVariable ["ULP_Transactions", _history];
+saveMissionProfileNamespace;
 
 ["TransactionsUpdated", _history] call ULP_fnc_invokeEvent;
 true

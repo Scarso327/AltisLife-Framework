@@ -38,7 +38,7 @@ switch (_code) do {
                 [_cfg, format ["%1 is requesting medical assistance...", profileName], _targets] call ULP_fnc_sendMessage;
                 ["You have requested medical assitances..."] call ULP_fnc_hint;
 
-                localNamespace setVariable ["ULP_MedicalRequest", time + 30];
+                localNamespace setVariable ["ULP_MedicalRequest", time + 180];
             } else {
                 ["You have requested medical assitance recently, please wait before trying again..."] call ULP_fnc_hint;
             };

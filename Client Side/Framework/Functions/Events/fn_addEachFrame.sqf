@@ -4,6 +4,8 @@
 */
 scopeName "fn_addEachFrame";
 
+// See https://github.com/CBATeam/CBA_A3/wiki/Per-Frame-Handlers
+
 if (canSuspend) exitWith {
 	[ULP_fnc_addEachFrame, _this] call ULP_fnc_directCall;
 };
@@ -15,10 +17,7 @@ _this params [
 
 if (_function isEqualTo {}) exitWith { -1 };
 
-private _index = ULP_eachFrameEvents getOrDefault ["#lastId", -1];
-_index = _index + 1;
-
-ULP_eachFrameEvents set [_index, _this];
-ULP_eachFrameEvents set ["#lastId", _index];
+private _index = ULP_eachFrameEventsHandles pushBack (count ULP_eachFrameEventsHandlers);
+ULP_eachFrameEventsHandlers pushBack [_params, _function, _index];
 
 _index

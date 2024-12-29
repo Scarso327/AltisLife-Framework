@@ -41,7 +41,7 @@ if !([format["Storing %1", _name], _time, [_vehicle, _name], {
 
 	private _id = _vehicle getVariable ["vehicle_id", -1];
 	if (_id >= 0) then {
-		["VehicleStored", { hint "Vehicle has been stored."; }, true] call ULP_fnc_addEventHandler;
+		["VehicleStored", { ["Vehicle has been stored."] call ULP_fnc_hint; }, true] call ULP_fnc_addEventHandler;
 		[_vehicle] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
 	} else {
 		deleteVehicle _vehicle;

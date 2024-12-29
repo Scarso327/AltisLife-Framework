@@ -15,7 +15,6 @@ private _prison = missionConfigFile >> "CfgPrison" >> worldName;
 if !(isClass _prison) exitWith { false };
 
 if !([player] call ULP_fnc_canImprison || { [_target] call ULP_fnc_canImprisoned }) exitWith {
-	hint "You're unable to send anyone to prison from here...";
 	["You're unable to send anyone to prison from here!"] call ULP_fnc_hint;
 };
 

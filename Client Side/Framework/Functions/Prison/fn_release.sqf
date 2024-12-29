@@ -18,10 +18,10 @@ if (isNull _unit || { !(isPlayer _unit) }) exitWith { false };
 if !(local _unit) exitWith { _this remoteExecCall ["ULP_fnc_release", _unit]; false; };
 
 ["RscFiringDrillTime"] call ULP_UI_fnc_destroyLayer;
-[uiNamespace getVariable ["prison_timer", -1]] call ULP_fnc_removeEachFrame;
+[localNamespace getVariable ["prison_timer", -1]] call ULP_fnc_removeEachFrame;
 
 missionNamespace setVariable ["RscFiringDrillTime_current", nil];
-uiNamespace setVariable ["prison_timer", nil];
+localNamespace setVariable ["prison_timer", nil];
 
 private _prison = missionConfigFile >> "CfgPrison" >> worldName;
 if !(isClass _prison) exitWith { false };

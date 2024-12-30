@@ -3,7 +3,7 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_isRestrained";
+scopeName "fn_isSurrendered";
 
 if !(_this params [
 	["_object", player, [objNull]]

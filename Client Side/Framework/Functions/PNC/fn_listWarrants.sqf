@@ -39,7 +39,10 @@ tvClear _list;
 					private _crimeCfg = _actCfg >> _x;
 					
 					if (isClass _crimeCfg) then {
-						private _crime = _list tvAdd [[_history, _act], format ["%1 (%2)", getText (_crimeCfg >> "displayName"), [count _y] call ULP_fnc_numberText]];
+						private _displayName = format ["%1 (%2)", getText (_crimeCfg >> "displayName"), [count _y] call ULP_fnc_numberText];
+
+						private _crime = _list tvAdd [[_history, _act], _displayName];
+						_list tvSetTooltip [[_history, _act, _crime], _displayName];
 						_list tvSetData [[_history, _act, _crime], str [_x, _y]];
 					};
 				} forEach _y;

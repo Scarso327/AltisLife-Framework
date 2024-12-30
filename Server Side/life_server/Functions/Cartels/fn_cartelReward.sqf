@@ -50,11 +50,15 @@ if ((count _owners) > 0) exitWith {
 			[_group, selectRandom (("isClass _x" configClasses (missionConfigFile >> "CfgGroups" >> "Buffs")) apply { configName _x })] call ULP_SRV_fnc_addGroupBuff;
 
 			private _groupUnits = units _group;
-			private _memberCut = round (_cut / (count _groupUnits));
+			private _totalUnitsInGroup = count _groupUnits;
+			
+			if !(_totalUnitsInGroup isEqualTo 0) then {
+				private _memberCut = round (_cut / _totalUnitsInGroup);
 
-			{
-				["CartelPayout", [_markerText, _memberCut, _cut]] remoteExecCall ["ULP_fnc_invokeEvent", _x];
-			} forEach _groupUnits;
+				{
+					["CartelPayout", [_markerText, _memberCut, _cut]] remoteExecCall ["ULP_fnc_invokeEvent", _x];
+				} forEach _groupUnits;
+			};
 		};
 
 		_markerText = format ["%1 | %2", _markerText, [_group] call ULP_fnc_getGroupName];

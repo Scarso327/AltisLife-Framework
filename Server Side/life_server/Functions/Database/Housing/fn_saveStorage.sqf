@@ -5,6 +5,10 @@
 #include "\life_server\script_macros.hpp"
 scopeName "fn_saveStorage";
 
+if (canSuspend) exitWith {
+    [ULP_SRV_fnc_saveStorage, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_container", objNull, [objNull]]
 ];
@@ -28,7 +32,6 @@ private _storage = [getItemCargo _container, getMagazineCargo _container, getWea
 	_storage set [_forEachIndex, _temp];
 } forEach _storage;
 
-private _box = _container getVariable ["storage_box", objNull];
 _box setVariable ["ULP_PhysicalCargo", _storage];
 
 [

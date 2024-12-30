@@ -17,7 +17,15 @@ _this params [
 (_container call BIS_fnc_objectType) params ["", "_type"];
 
 // Inventory Checks...
-if (isNull _container || { !alive _container } || { !([_container, _force] call ULP_fnc_hasInventory) } || { dialog } || { [] call ULP_UI_fnc_isProgress }) exitWith { false };
+if (isNull _container 
+	|| { !alive _container } 
+	|| { !([_container, _force] call ULP_fnc_hasInventory) } 
+	|| { dialog } 
+	|| { isDowned(player) } 
+	|| { [] call ULP_UI_fnc_isProgress } 
+	|| { [] call ULP_fnc_isRestrained } 
+	|| { [] call ULP_fnc_isKnocked } 
+	|| { [] call ULP_fnc_isSurrendered }) exitWith { false };
 
 _force = ([player] call ULP_fnc_onDuty || _force);
 

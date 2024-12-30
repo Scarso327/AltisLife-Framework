@@ -11,6 +11,10 @@ _this params [
 ];
 
 if (local _vehicle && { _engineOn }) then {
+	if ([player] call ULP_fnc_isRestrained) exitWIth {
+		_vehicle engineOn false;
+	};
+
 	private _clamp = _vehicle getVariable ["clamp_fine", []];
 
 	if !(_clamp isEqualTo []) then {

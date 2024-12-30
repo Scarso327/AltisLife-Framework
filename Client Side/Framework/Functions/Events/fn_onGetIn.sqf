@@ -20,6 +20,10 @@ if ([] call ULP_fnc_isEscorting) then {
 	[ULP_Escort, player, false] call ULP_fnc_escort;
 };
 
+if ([_unit] call ULP_fnc_isRestrained && { !((_unit getVariable ["restrained_in_vehicle", objNull]) isEqualTo _vehicle) }) exitWIth {
+	_unit action["eject", _vehicle];
+};
+
 ["SecondNature", _unit] call ULP_fnc_activatePerk;
 
 [] call ULP_fnc_stopPlacement;

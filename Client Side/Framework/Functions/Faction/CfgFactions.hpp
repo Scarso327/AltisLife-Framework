@@ -59,7 +59,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = true;
 			};
-			virtualItems[] = { { "Identification", "name player" }, { "PanicButton", 1 } };
+			virtualItems[] = { { "Identification", "[name player] call ULP_fnc_stripString" }, { "PanicButton", 1 } };
 		};
 	};
 

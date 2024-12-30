@@ -12,6 +12,10 @@ _this params [
 	["_turret", [], [[]]]
 ];
 
+if ([_unit] call ULP_fnc_isRestrained && { ((_unit getVariable ["restrained_in_vehicle", objNull]) isEqualTo _vehicle) }) exitWIth {
+	_unit moveInCargo _vehicle;
+};
+
 if (_role isEqualTo "driver" && { !(isNull (_vehicle getVariable["siren", objNull])) }) then {
     [_vehicle, [], false] call ULP_fnc_vehicleSiren;
 };

@@ -16,6 +16,11 @@ _this params [
 	["_gunner", objNull, [objNull]]
 ];
 
+// Protection to make sure we're happy they should be able to shoot
+if !([_unit] call ULP_fnc_canFire) exitWith {
+	deleteVehicle _projectile;
+};
+
 if (_weapon in getArray(missionConfigFile >> "CfgSettings" >> "taserWeapons") && { !ULPEvent_TaserFired }) then {
 	ULPEvent_TaserFired = true;
     _unit setAmmo [_weapon, 0];

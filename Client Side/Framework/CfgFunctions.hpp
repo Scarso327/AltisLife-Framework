@@ -147,6 +147,7 @@ class CfgFunctions {
 
 		class Player {
 			file = "Functions\Player";
+			class canFire {};
 			class loadGear {};
 			class saveGear {};
 			class isRestrained {};

@@ -653,6 +653,7 @@ class CfgFunctions {
 			class isHouseOwner {};
 			class isHouseShared {};
 			class isHouseOwned {};
+			class isHouseStorage {};
 			class ownedHouses {};
 			class buyHouse {};
 			class sellHouse {};

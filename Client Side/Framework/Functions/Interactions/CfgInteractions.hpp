@@ -228,7 +228,7 @@ class CfgInteractions {
 
 		class PatchTyres : Repair {
 			title = "Patch Tyres";
-			condition = "!(""ToolKit"" in (items player)) && { _this call ULP_fnc_hasTyreDamage }";
+			condition = "_this call ULP_fnc_hasTyreDamage";
 		};
 
 		class Refuel : Repair {

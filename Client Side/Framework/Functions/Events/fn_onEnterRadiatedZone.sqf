@@ -23,7 +23,7 @@ missionNamespace setVariable ["ULP_Radiated", [[_thisTrigger], {
 	};
 
 	if ((player getVariable ["lastRadTick", -1]) > time 
-		|| { [headgear player] call ULP_fnc_isGas && { [uniform player] call ULP_fnc_isGas } }
+		|| { [goggles player] call ULP_fnc_isGas && { [uniform player] call ULP_fnc_isGas } }
 		|| { [] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } }) exitWith {};
 
 	private _distance = player distance _thisTrigger;

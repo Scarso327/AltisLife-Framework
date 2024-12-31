@@ -292,6 +292,7 @@ class CfgInteractions {
 		class Unflip : Repair {
 			title = "Unflip";
 			onClick = "[_this select 0, 0] call ULP_fnc_flipVehicle";
+			condition = "_this in ULP_Keys || { ""ToolKit"" in (items player) }"
 		};
 
 		/*

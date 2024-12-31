@@ -10,4 +10,4 @@ _this params [
 	["_initialPosition", getPos _vehicle, [[]]]
 ];
 
-!(isEngineOn _vehicle && { (_vehicle distance _initialPosition) > 10 })
+!(isEngineOn _vehicle || { (_vehicle distance _initialPosition) > 10 })

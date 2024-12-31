@@ -22,12 +22,15 @@ if !(["Freight"] call ULP_fnc_hasGroupPerk) exitWith {
 };
 
 private _near = ((_trader nearEntities [["Car"], 10]) select {
-	!([_x] call ULP_fnc_getVehicleOwner isEqualTo "" &&
-	{ [player, _x] call ULP_fnc_isVehicleOwner })
+	[player, _x] call ULP_fnc_isVehicleOwner
 });
 
 if (_near isEqualTo []) exitWith {
-	["There are no trucks nearby"] call ULP_fnc_hint;
+	["There are no trucks you own nearby"] call ULP_fnc_hint;
+};
+
+if ("CorporateFreight" in ULP_Missions) exitWith {
+	["You can only have one freight mission at a time"] call ULP_fnc_hint;
 };
 
 [(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), (_near apply { 

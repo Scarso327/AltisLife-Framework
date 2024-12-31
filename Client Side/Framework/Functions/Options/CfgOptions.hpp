@@ -77,7 +77,7 @@ class CfgOptions {
 
 		class FootViewDistance {
 			name = "View Distance on Foot";
-			tooltip = "This is your view distance while on foot.";
+			tooltip = "This is your view distance while on foot. (500 - 10000m)";
 			type = "SLIDER";
 			values[] = { { 500, 10000 }, 3000, { 1, 1 } };
 			condition = "true";
@@ -85,12 +85,12 @@ class CfgOptions {
 
 		class LandViewDistance : FootViewDistance {
 			name = "View Distance in Land Vehicle";
-			tooltip = "This is your view distance while in land vehicle.";
+			tooltip = "This is your view distance while in land vehicle. (500 - 10000m)";
 		};
 
 		class AirViewDistance : FootViewDistance {
 			name = "View Distance in Air Vehicle";
-			tooltip = "This is your view distance while in air vehicle.";
+			tooltip = "This is your view distance while in air vehicle. (500 - 10000m)";
 		};
 	};
 

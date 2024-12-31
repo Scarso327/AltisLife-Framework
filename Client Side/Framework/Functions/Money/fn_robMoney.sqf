@@ -56,7 +56,7 @@ switch (_mode) do {
 			["_unit", objNull, [objNull]]
 		];
 
-		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
+		if (isNull _unit || { _unit isEqualTo player } || { [getNumber (missionConfigFile >> "CfgSettings" >> "disabledDamageInGreenzone")] call ULP_fnc_bool && { ["greenzone_", [_unit]] call ULP_fnc_isUnitsInZone } }) exitWith {};
 		
 		if (_unit getVariable ["robbing", false]) exitWith {
 			[format ["You're already %1 this person's cash...", ["robbing", "seizing"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;

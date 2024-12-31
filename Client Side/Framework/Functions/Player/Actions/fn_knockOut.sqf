@@ -10,13 +10,18 @@ _this params [
 ];
 
 // Checks...
-if (isNull _target || { !(isPlayer _target) } || 
-	{ _target isEqualTo player } || { (_target distance player) >= 3 } || 
-	{ isDowned(_target) } || { isDowned(player) } ||
-	{ time <= missionNamespace getVariable["ULP_KnockOut_Cooldown", 0] } ||
-	{ [player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isKnocked } || { [_target] call ULP_fnc_isKnocked } } ||
-	{ !(isNull (objectParent player)) } || { !(isNull (objectParent _target)) } ||
-	{ [_target] call ULP_fnc_onDuty }
+if (isNull _target 
+	|| { !(isPlayer _target) }
+	|| { _target isEqualTo player }
+	|| { (_target distance player) >= 3 }
+	|| { isDowned(_target) }
+	|| { isDowned(player) }
+	|| { time <= missionNamespace getVariable["ULP_KnockOut_Cooldown", 0] }
+	|| { [player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isKnocked } || { [_target] call ULP_fnc_isKnocked } }
+	|| { !(isNull (objectParent player)) }
+	|| { !(isNull (objectParent _target)) }
+	|| { [_target] call ULP_fnc_onDuty }
+	|| { [getNumber (missionConfigFile >> "CfgSettings" >> "disabledDamageInGreenzone")] call ULP_fnc_bool && { ["greenzone_", [_target]] call ULP_fnc_isUnitsInZone } }
 ) exitWith { false };
 
 if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith {

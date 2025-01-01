@@ -29,7 +29,7 @@ deleteVehicle _shipwreck;
 
 private _loot = [
 	(selectRandom ["GeneralItems"]),
-	(1 max (random 8))
+	(1 max (random 3))
 ] call ULP_fnc_getLoot;
 
 [getPlayerUID _unit, "Loot", ["Shipwreck", _loot]] call ULP_SRV_fnc_logPlayerEvent;

@@ -9,4 +9,4 @@ _this params [
 	["_container", objNull, [objNull]]
 ];
 
-!(isNull _container && { isNil { _container getVariable "building" } })
+!(isNil { _container getVariable "building" })

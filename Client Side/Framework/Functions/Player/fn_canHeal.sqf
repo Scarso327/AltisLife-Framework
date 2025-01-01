@@ -19,7 +19,7 @@ _this params [
 		alive player 
 		&& { !(isDowned(player)) } 
 		&& { isNull (objectParent player) } 
-		&& { (player distance _target) <= 10 } 
+		&& { (player distance _target) <= 3 } 
 	} }
 	&& {
 	((["FirstAidKit"] call ULP_fnc_hasItem) > 0 && { ((damage _target) > 0.25) }) || ((["MediKit"] call ULP_fnc_hasItem) > 0 && { ((damage _target) >= 0.01) })

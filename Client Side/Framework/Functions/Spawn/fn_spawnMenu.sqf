@@ -13,7 +13,7 @@ if (ULP_FirstSpawn) then {
 	[] call ULP_fnc_initGathering;
 };
 
-if (ULP_Imprisioned && { [player, ULP_Prison_Time - time, objNull, false] call ULP_fnc_imprison }) exitWith {
+if (ULP_Imprisioned && { [player, ULP_Prison_Time, objNull, false] call ULP_fnc_imprison }) exitWith {
 	cutText [ "", "BLACK IN" ];
 
 	if (ULP_FirstSpawn) then {

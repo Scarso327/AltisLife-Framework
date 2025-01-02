@@ -1226,14 +1226,14 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_box_F : Base {
-		buyPrice = 995000;
+		buyPrice = 1990000;
 		virtualSpace = 800;
-		garageLimit = 3;
-		garageDelay = 30;
-		repairTime = 15;
-		crushTime = 30;
+		garageLimit = 2;
+		garageDelay = 60;
+		repairTime = 30;
+		crushTime = 120;
 		chopKeepChance = 85;
-		chopTime = 120;
+		chopTime = 300;
 		enableRope = false;
 		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk";

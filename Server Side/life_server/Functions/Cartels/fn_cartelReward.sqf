@@ -18,6 +18,8 @@ private _owners = [];
 private _highest = 0;
 
 {
+	if (_y isEqualTo 0) exitWith {};
+
 	if (_y >= _highest) then {
 		// New highest, remove previous...
 		if (_y > _highest) then {
@@ -29,12 +31,12 @@ private _highest = 0;
 	};
 } forEach _scores;
 
-// We have a maybe contested highest score...
-if ((count _owners) > 0) exitWith {
-	private _group = grpNull;
+private _marker = _cartel getVariable ["marker", ""];
+private _markerText = getText (_config >> "name");
 
-	private _marker = _cartel getVariable ["marker", ""];
-	private _markerText = getText (_config >> "name");
+// We have a maybe contested highest score...
+if ((count _owners) > 0) then {
+	private _group = grpNull;
 	
 	// We have an uncontested highest score...
 	if ((count _owners) isEqualTo 1) then {
@@ -64,12 +66,9 @@ if ((count _owners) > 0) exitWith {
 		_markerText = format ["%1 | %2", _markerText, [_group] call ULP_fnc_getGroupName];
 	};
 
-	if !(_marker isEqualTo "") then {
-		_marker setMarkerText _markerText;
-	};
-
 	_cartel setVariable ["owner", [_group, _highest], true];
-	true
 };
 
-false
+if !(_marker isEqualTo "") then {
+	_marker setMarkerText _markerText;
+};

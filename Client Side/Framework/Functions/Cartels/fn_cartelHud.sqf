@@ -63,7 +63,6 @@ switch (_mode) do {
 				_this params [ "_cartelObj", "_area", "_ctrlStatusText", "_ctrlProgress", "_ctrlScore", "_captureTime" ];
 
 				if (isNil "_cartelObj" || { isNull _cartelObj } || { isNil "_ctrlStatusText" } || { isNull _ctrlStatusText }) exitWith {
-					["Popup Cartel has despawned, you need to be quicker next time!"] call ULP_fnc_hint;
 					["PopupCartel", "remove"] call ULP_fnc_cartelHud;
 					[_thisEventHandler] call ULP_fnc_removeEachFrame;
 				};

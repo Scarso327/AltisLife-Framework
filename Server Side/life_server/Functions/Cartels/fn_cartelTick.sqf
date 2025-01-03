@@ -36,37 +36,30 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 			if ((count _groups) isEqualTo 1) then {
 				private _groupId = _groups param [0, grpNull, [grpNull]] getVariable ["group_id", -1];
 
-				// If we don't have a group id we can't score
-				if (_groupId isEqualTo -1) exitWith {
-					private _firstUnitInZone = _unitsInZone select 0;
+				private _firstUnitInZone = _unitsInZone select 0;
 
-					// If the controlling group is the police we "neutralise" the zone
-					if ([_firstUnitInZone, ["Police"]] call ULP_fnc_isFaction) then {
-						_scores = nil; // Confidence to know this has been deleted
-						_scores = createHashMap;
+				// If the controlling group is the police we decrease all by 1
+				if ([_firstUnitInZone, ["Police"]] call ULP_fnc_isFaction && { [getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "allowPoliceNeutralise")] call ULP_fnc_bool }) then {
+					private _decreaseAmount = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "policeNeutralisePerTick");
 
-						_obj setVariable ["scores", nil, true];
+					_scores = createHashMapFromArray (_scores apply {
+						[_x, (_y - _decreaseAmount) min 0]
+					});
+				} else {
+					// If we don't have a group id we can't score
+					if (_groupId isEqualTo -1) exitWith {};
 
-						// Reset Marker
-						private _marker = _obj getVariable ["marker", ""];
-						private _markerText = getText (_config >> "name");
+					private _score = _scores getOrDefault [_groupId, 0];
+					_score = _score + 1;
 
-						_marker setMarkerText _markerText;
-
-						[configName _config] remoteExecCall ["ULP_fnc_cartelHud", _unitsInZone];
-					};
+					_scores set [_groupId, _score];
 				};
-
-				private _score = _scores getOrDefault [_groupId, 0];
-				_score = _score + 1;
-
-				_scores set [_groupId, _score];
 
 				// Updates scores for everyone...
 				if !(_scores isEqualTo (_obj getVariable ["scores", createHashMap])) then {
 					_obj setVariable ["scores", _scores, true];
 				};
-
+				
 				[configName _config] remoteExecCall ["ULP_fnc_cartelHud", _unitsInZone];
 			};
 

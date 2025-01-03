@@ -1,15 +1,17 @@
 class CfgCartels {
 	class Popup {
 		duration = 30 * 60;
-		captureTime = 5 * 60;
-		reward[] = { 100000, 300000 };
+		captureTime = 8 * 60;
+		reward[] = { 200000, 300000 };
 	};
 
 	class Fixed {
 		cartelTick = 1 * 60;
-		rewardTicks = 15;
+		rewardTicks = 20;
 		rewardXp = 100;
-		rewardAmounts[] = { 150, 350 }; // At or below 25 players, above 25
+		rewardAmounts[] = { 100, 250 }; // At or below 25 players, above 25
+		allowPoliceNeutralise = true;
+		policeNeutralisePerTick = 3;
 
 		class Northern {
 			name = "Northern Drug Cartel";

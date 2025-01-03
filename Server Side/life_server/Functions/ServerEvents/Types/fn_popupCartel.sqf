@@ -44,9 +44,6 @@ private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup"
 
 	remoteExecCall ["", "PopupCartelSpawn"];
 
-	deleteMarker _marker;
-	deleteMarker _area;
-
 	private _winner = _obj getVariable ["popup_winner", objNull];
 	private _hasWinner = !(isNull _winner);
 
@@ -58,7 +55,7 @@ private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup"
 		(getArray (missionConfigFile >> "CfgCartels" >> "Popup"  >> "reward")) params ["_base", "_random" ];
 
 		private _totalReward = _base + (random _random);
-		private _units = units (group _winner);
+		private _units = (units (group _winner)) inAreaArray _area;
 		private _reward = floor(_totalReward / (count _units));
 
 		private _name = [_winner] call ULP_fnc_getName;
@@ -75,6 +72,9 @@ private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup"
 
 	["OnClaimedPopupCartel", [ _message ]] remoteExecCall ["ULP_fnc_invokeEvent", allUnits select { isPlayer _x && { !(_x in _units) } }];
 	
+	deleteMarker _marker;
+	deleteMarker _area;
+
 	deleteVehicle _obj;
 
 	if !(_shouldLoop) exitWith {};

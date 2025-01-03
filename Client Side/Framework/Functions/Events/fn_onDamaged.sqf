@@ -11,7 +11,8 @@ _this params [
     ["_damage", 0, [0]],
     ["_source", objNull, [objNull]],
     ["_projectile", "", [""]],
-    ["_index", 0, [0]]
+    ["_index", 0, [0]],
+	["_instigator", objNull, [objNull]]
 ];
 
 // Get our current damage...
@@ -67,9 +68,11 @@ if !(isNull _source) then {
 	};
 };
 
-if (_part isEqualTo "" && { diag_tickTime  - (_unit getVariable ["vdmVar", 0]) < 1 }) exitWith { _orginalDamage };
-
 if (_damage >= 1) then {
+	private _isRagDolled = ((animationState _unit) find "unconscious") >= 0;
+
+	if (_isRagDolled && { _part isEqualTo "" } && { _projectile isEqualTo "" } && { isNull _source } && { isNull _instigator }) exitWith { _damage = _orginalDamage };
+
 	_damage = 0.99; // They're hurt... 1 or over would kill them...
 
 	// If they're already downed, kill them...

@@ -1600,6 +1600,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\mapFragment.paa";
 		sellPrice = 15000;
 		class Settings : Settings {};
+		class Events { onUse = ""; };
 	};
 	class UncommonMapFragment : CommonMapFragment {
 		displayName = "Uncommon Map Fragment";

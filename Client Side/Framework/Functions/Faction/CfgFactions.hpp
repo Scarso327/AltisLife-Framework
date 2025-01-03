@@ -8,7 +8,8 @@ class CfgFactions {
 		colour[] = { 0, 0.3, 0.6, 1 };
 		pay = 10200;
 		jointChannel = true;
-		imprison = true;		
+		imprison = true;
+		hasRedzoneNlr = true;
 
 		class Whitelisting {
 			class Main {
@@ -69,6 +70,7 @@ class CfgFactions {
 		colour[] = { 0, 0.5, 0, 1 };
 		pay = 11600;
 		jointChannel = true;
+		hasRedzoneNlr = false;
 
 		class Whitelisting {
 			class Main {
@@ -124,6 +126,7 @@ class CfgFactions {
 		colour[] = { 0.7, 0.6, 0, 1 };
 		pay = 10060;
 		jointChannel = true;
+		hasRedzoneNlr = false;
 		
 		class Whitelisting {
 			class Main {
@@ -173,6 +176,7 @@ class CfgFactions {
 		colour[] = { 0.4, 0, 0.5, 1 };
 		pay = 3750;
 		imprisoned = true;
+		hasRedzoneNlr = false;
 		
 		class Groups {};
 		class Housing {};

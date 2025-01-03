@@ -66,7 +66,7 @@ if (_restrain) then {
 	[_target, "handCuff", 50, 1] remoteExecCall ["ULP_fnc_say3D"];
 } else {
 	if !([_target] call ULP_fnc_isRestrained) exitWith {}; // Already restrained...
-	_target setVariable ["restrained_in_vehicle", nil];
+	_target setVariable ["restrained_in_vehicle", nil, true];
 	_target setVariable ["restrained", nil, true];
 
 	if (alive _target && { !(isDowned(_target)) }) then {

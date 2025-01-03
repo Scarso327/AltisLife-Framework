@@ -21,7 +21,11 @@ if ([player, ["Civilian"]] call ULP_fnc_isFaction && { missionNamespace getVaria
 			["_unit", objNull, [objNull]]
 		];
 
-		if (isNull _unit || { !(isPlayer _unit) } || { !(["redzone_"] call ULP_fnc_isUnitsInZone) }) exitWith {};
+		if (isNull _unit 
+			|| { !(isPlayer _unit) } 
+			|| { !(["redzone_"] call ULP_fnc_isUnitsInZone) } 
+			|| { (currentWeapon _unit) isEqualTo "" } 
+			|| { [group player, _unit] call ULP_fnc_inGroup }) exitWith {};
 
 		private _reward = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillReward");
 

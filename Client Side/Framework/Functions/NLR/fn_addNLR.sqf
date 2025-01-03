@@ -5,7 +5,7 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_addNLR";
 
-if (["redzone_"] call ULP_fnc_isUnitsInZone) exitWith { false };
+if (["redzone_"] call ULP_fnc_isUnitsInZone && { !([getNumber (missionConfigFile >> "CfgFactions" >> ([player] call ULP_fnc_getFaction) >> "hasRedzoneNlr")] call ULP_fnc_bool) }) exitWith { false };
 
 _this params [
 	["_pos", [], [[]]],

@@ -26,11 +26,13 @@ if (!(_texture isEqualTo "") && { isArray (_vehicleCfg >> "Textures" >> _texture
 };
 
 if (isArray _turrets) then {
-	getArray (_turrets) params [
-		["_weapons", [], [[]]],
-		["_magazines", [], [[]]]
-	];
+	{
+		_x params [ "_turretPath", "_weapons", "_magazines" ];
 
-	{ _vehicle removeWeapon _x; } forEach _weapons;
-	{ _vehicle removeMagazinesTurret [_x select 0, _x select 1]; } forEach _magazines;
+		if !(_vehicle turretLocal _turretPath) exitWith {};
+
+		{ _vehicle removeMagazinesTurret [_x, _turretPath]; } forEach _magazines;
+		{ _vehicle removeWeaponTurret [_x, _turretPath]; } forEach _weapons;
+
+	} forEach (getArray _turrets);
 };

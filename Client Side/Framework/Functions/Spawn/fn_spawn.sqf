@@ -90,7 +90,7 @@ if (ULP_FirstSpawn) then {
 
 	if (["Hato_Main", 1] call ULP_fnc_hasAccess) then { ["JoinHATO"] call ULP_fnc_achieve; };
 } else {
-	[false, false] call ULP_fnc_initPlayer;
+	[false, true] call ULP_fnc_initPlayer;
 };
 
 player allowDammage true;

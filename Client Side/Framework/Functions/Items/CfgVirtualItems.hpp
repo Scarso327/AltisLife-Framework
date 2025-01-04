@@ -1499,7 +1499,7 @@ class CfgVirtualItems {
 		sellPrice = 1237;
 		class Settings : Settings {};
 	};
-	class Turtle_Raw : Salema_F_Raw {
+	class Turtle_F_Raw : Salema_F_Raw {
 		displayName = "Turtle";
 		icon = "Data\Icons\turtle.paa";
 		sellPrice = 65000;

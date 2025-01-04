@@ -304,7 +304,7 @@ class CfgVirtualStores {
 		storeName = "Turtle Dealer";
 		conditions = "true";
 		class Items {
-			class Turtle {};
+			class Turtle_Raw {};
 		};
 	};
 	

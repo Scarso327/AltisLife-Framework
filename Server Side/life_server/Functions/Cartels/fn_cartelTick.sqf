@@ -43,7 +43,7 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 					private _decreaseAmount = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "policeNeutralisePerTick");
 
 					_scores = createHashMapFromArray (_scores apply {
-						[_x, (_y - _decreaseAmount) min 0]
+						[_x, (_y - _decreaseAmount) max 0]
 					});
 				} else {
 					// If we don't have a group id we can't score

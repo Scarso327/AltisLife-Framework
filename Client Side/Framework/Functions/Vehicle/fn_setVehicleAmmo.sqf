@@ -15,23 +15,6 @@ _vehicle setRepairCargo 0;
 
 [_vehicle] call ULP_fnc_clearCargo;
 
-// Remove all turret weapons and ammo
-private _turrets = (allTurrets [_vehicle, true]) + [[-1]];
-
-{
-	private _turretPath = _x;
-
-	if !(_vehicle turretLocal _turretPath) exitWith {};
-
-	{
-		_vehicle removeMagazinesTurret [_x, _turretPath];
-	} forEach (_vehicle magazinesTurret _turretPath);
-
-	{
-		_vehicle removeWeaponTurret [_x, _turretPath];
-	} forEach (_vehicle weaponsTurret _turretPath);
-} forEach _turrets;
-
 private _texture = _vehicle getVariable ["texture", ""];
 private _vehicleCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle);
 
@@ -40,6 +23,30 @@ if !(isClass _vehicleCfg) exitWith {};
 private _turrets = _vehicleCfg >> "turrets";
 if (!(_texture isEqualTo "") && { isArray (_vehicleCfg >> "Textures" >> _texture >> "turrets") }) then {
 	_turrets = _vehicleCfg >> "Textures" >> _texture >> "turrets";
+};
+
+private _pylons = _vehicleCfg >> "pylons";
+if (!(_texture isEqualTo "") && { isArray (_vehicleCfg >> "Textures" >> _texture >> "pylons") }) then {
+	_pylons = _vehicleCfg >> "Textures" >> _texture >> "pylons";
+};
+
+if (isArray _turrets || { isArray _pylons }) then {
+	// Remove all turret weapons and ammo
+	private _turrets = (allTurrets [_vehicle, true]) + [[-1]];
+
+	{
+		private _turretPath = _x;
+
+		if !(_vehicle turretLocal _turretPath) exitWith {};
+
+		{
+			_vehicle removeMagazinesTurret [_x, _turretPath];
+		} forEach (_vehicle magazinesTurret _turretPath);
+
+		{
+			_vehicle removeWeaponTurret [_x, _turretPath];
+		} forEach (_vehicle weaponsTurret _turretPath);
+	} forEach _turrets;
 };
 
 if (isArray _turrets) then {

@@ -1527,6 +1527,7 @@ class CfgVehicles {
 		virtualSpace = 30;
 		garageLimit = 1;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		turrets[] = {};
 		class Textures {
 			class Police : PoliceTextureBase {};
 			class Civilian : BaseTexture {};
@@ -1704,6 +1705,7 @@ class CfgVehicles {
 		buyPrice = 115650000;
 		virtualSpace = 80;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		turrets[] = {};
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
 		buyPrice = 125530000;
@@ -1720,6 +1722,7 @@ class CfgVehicles {
 		chopPerc = 0.10;
 		chopTime = 300;
 		pylons[] = { "", "", "", "", "", "", "", "", "", "", "", "", "" };
+		turrets[] = {};
 	};
 	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { 
 		description = "The A-149 Gryphon is a fourth-generation, single-seat, single-engine, and all-weather tactical fighter jet.";

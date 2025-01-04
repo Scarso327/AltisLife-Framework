@@ -765,7 +765,6 @@ class CfgVehicles {
 		chopKeepChance = 90;
 		chopTime = 300;
 		canTransfer = false;
-		turrets[] = { { { -1 },  { "SmokeLauncher" }, { "SmokeLauncherMag" } } };
 		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk";
 		class Textures {
 			class Hex : BaseTexture { 
@@ -1370,7 +1369,7 @@ class CfgVehicles {
 		crushTime = 30;
 		chopKeepChance = 85;
 		chopTime = 120;
-		turrets[] = { { { 0 },  { "GMG_40mm" },  { "96Rnd_40mm_G_belt" } } };
+		turrets[] = { { { 1 },  { "LMG_Minigun" },  { "2000Rnd_65x39_belt_Tracer_Red" } } };
 		class Textures {
 			class Police : PoliceTexture {
 				textures[] = { 
@@ -1479,7 +1478,6 @@ class CfgVehicles {
 		virtualSpace = 25;
 		garageLimit = 1;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		turrets[] = { { { -1 },  { "CMFlareLauncher" },  { "168Rnd_CMFlare_Chaff_Magazine" } } };
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
@@ -1504,11 +1502,10 @@ class CfgVehicles {
 		virtualSpace = 20;
 		garageLimit = 1;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		turrets[] = { { { -1 },  { "CMFlareLauncher" },  { "168Rnd_CMFlare_Chaff_Magazine" } } };
 		class Textures {
 			class Police : PoliceTextureBase {
 				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
-				turrets[] = { { { -1 },  { "missiles_DAR", "CMFlareLauncher" },  { "24Rnd_missiles", "168Rnd_CMFlare_Chaff_Magazine" } } };
+				turrets[] = { { { -1 },  { "M134_minigun" },  { "5000Rnd_762x51_Yellow_Belt" } } };
 			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1522,7 +1519,6 @@ class CfgVehicles {
 	};
 	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {
 		buyPrice = 23450000;
-		turrets[] = { { { -1 },  { "M134_minigun", "missiles_DAR", "CMFlareLauncher" },  { "5000Rnd_762x51_Yellow_Belt", "24Rnd_missiles", "168Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 
 	class B_Heli_Transport_01_F : Base {
@@ -1531,7 +1527,6 @@ class CfgVehicles {
 		virtualSpace = 30;
 		garageLimit = 1;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		turrets[] = { { { -1 },  { "CMFlareLauncher" },  { "168Rnd_CMFlare_Chaff_Magazine" } }, { { 1 },  { "LMG_Minigun_Transport" },  { "2000Rnd_65x39_Belt_Tracer_Red" } }, { { 2 },  { "LMG_Minigun_Transport2" },  { "2000Rnd_65x39_Belt_Tracer_Red" } } };
 		class Textures {
 			class Police : PoliceTextureBase {};
 			class Civilian : BaseTexture {};
@@ -1545,7 +1540,6 @@ class CfgVehicles {
 		garageLimit = 1;
 		chopKeepChance = 85;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		turrets[] = { { { -1 },  { "CMFlareLauncher" },  { "168Rnd_CMFlare_Chaff_Magazine" } } };
 		class Textures {
 			class Medic : MedicTextureBase {
 				textures[] = { 
@@ -1598,7 +1592,6 @@ class CfgVehicles {
 		chopKeepChance = 85;
 		chopPerc = 0.20;
 		chopTime = 60;
-		turrets[] = { { { -1 },  { "CMFlareLauncher" },  { "168Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11176500;
@@ -1644,7 +1637,6 @@ class CfgVehicles {
 		chopKeepChance = 95;
 		chopPerc = 0.20;
 		chopTime = 300;
-		turrets[] = { { { -1 },  { "CMFlareLauncher" },  { "168Rnd_CMFlare_Chaff_Magazine" } } };
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1673,14 +1665,12 @@ class CfgVehicles {
 		chopKeepChance = 97;
 		chopPerc = 0.20;
 		chopTime = 600;
-		turrets[] = { { { -1 },  { "CMFlareLauncher" },  { "168Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
 		description = "A multipurpose successor to the Mi-24, the Mi-48 Kajman (designated 'Hornet') is a large gunship and attack helicopter with troop transport capacity for 8 passengers";
 		buyPrice = 212340000;
 		virtualSpace = 30;
-		turrets[] = { { { -1 },  { "CMFlareLauncher" },  { "168Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 
 	// PLANES --------------------------------------------------------------------------------------
@@ -1703,7 +1693,6 @@ class CfgVehicles {
 		chopKeepChance = 95;
 		chopPerc = 0.15;
 		chopTime = 180;
-		turrets[] = { { { -1 },  { "CMFlareLauncher_Triples" },  { "240Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
 		buyPrice = 85750000;
@@ -1715,12 +1704,10 @@ class CfgVehicles {
 		buyPrice = 115650000;
 		virtualSpace = 80;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		turrets[] = { { { -1 },  { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" },  { "38Rnd_80mm_rockets", "8Rnd_LG_scalpel", "250Rnd_30mm_APDS_shells_Tracer_Green", "250Rnd_30mm_HE_shells_Tracer_Green", "168Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
 		buyPrice = 125530000;
 		virtualSpace = 95;
-		turrets[] = { { { -1 },  { "CMFlareLauncher", "gatling_30mm_VTOL_02", "missiles_SCALPEL", "rockets_Skyfire" },  { "38Rnd_80mm_rockets", "8Rnd_LG_scalpel", "250Rnd_30mm_APDS_shells_Tracer_Green", "250Rnd_30mm_HE_shells_Tracer_Green", "168Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 
 	class I_Plane_Fighter_03_CAS_F : Base {
@@ -1732,23 +1719,20 @@ class CfgVehicles {
 		chopKeepChance = 99;
 		chopPerc = 0.10;
 		chopTime = 300;
-		turrets[] = { { { -1 },  { "CMFlareLauncher", "Twin_Cannon_20mm", "missiles_SCALPEL", "missiles_ASRAAM", "GBU12BombLauncher_Plane_Fighter_03_F" },  { "300Rnd_20mm_shells","2Rnd_LG_scalpel","2Rnd_AAA_missiles","2Rnd_GBU12_LGB_MI10","120Rnd_CMFlare_Chaff_Magazine" } } };
+		pylons[] = { "", "", "", "", "", "", "", "", "", "", "", "", "" };
 	};
 	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { 
 		description = "The A-149 Gryphon is a fourth-generation, single-seat, single-engine, and all-weather tactical fighter jet.";
 		buyPrice = 75500000; 
-		turrets[] = { { { -1 },  { "CMFlareLauncher", "weapon_Fighter_Gun20mm_AA", "weapon_BIM9xLauncher","weapon_AGM_65Launcher","weapon_AMRAAMLauncher" },  { "magazine_Fighter04_Gun20mm_AA_x250","240Rnd_CMFlare_Chaff_Magazine","PylonMissile_Missile_BIM9X_x1","PylonMissile_Missile_BIM9X_x1","PylonRack_Missile_AGM_02_x1","PylonRack_Missile_AGM_02_x1","PylonRack_Missile_AMRAAM_C_x1","PylonRack_Missile_AMRAAM_C_x1" } } };
 	};
 	
 	class B_Plane_CAS_01_F : I_Plane_Fighter_03_CAS_F { 
 		description = "The A-164 Wipeout is a single-seat aircraft used for close air support and air interdiction.";
 		buyPrice = 90500000; 
-		turrets[] = { { { -1 },  { "CMFlareLauncher", "Gatling_30mm_Plane_CAS_01_F", "Missile_AA_04_Plane_CAS_01_F", "Missile_AGM_02_Plane_CAS_01_F", "Rocket_04_HE_Plane_CAS_01_F", "Rocket_04_AP_Plane_CAS_01_F", "Bomb_04_Plane_CAS_01_F" },  { "1000Rnd_Gatling_30mm_Plane_CAS_01_F","2Rnd_Missile_AA_04_F","6Rnd_Missile_AGM_02_F","4Rnd_Bomb_04_F","7Rnd_Rocket_04_HE_F","7Rnd_Rocket_04_AP_F","120Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 	class B_Plane_Fighter_01_F : I_Plane_Fighter_03_CAS_F { 
 		description = "The F/A-181 Black Wasp II is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet.";
 		buyPrice = 105500000; 
-		turrets[] = { { { -1 },  { "CMFlareLauncher_Singles", "weapon_Fighter_Gun20mm_AA", "weapon_AMRAAMLauncher","weapon_AGM_65Launcher","weapon_BIM9xLauncher","weapon_GBU12Launcher" },  { "magazine_Fighter01_Gun20mm_AA_x450","Laserbatteries","240Rnd_CMFlare_Chaff_Magazine","PylonRack_Missile_AMRAAM_D_x1","PylonRack_Missile_AMRAAM_D_x1","PylonRack_Missile_AGM_02_x2","PylonRack_Missile_AGM_02_x2","PylonMissile_Missile_BIM9X_x1","PylonMissile_Missile_BIM9X_x1","PylonMissile_Missile_AMRAAM_D_INT_x1","PylonMissile_Missile_AMRAAM_D_INT_x1","PylonMissile_Bomb_GBU12_x1","PylonMissile_Bomb_GBU12_x1" } } };
 	};
 	class B_Plane_Fighter_01_Stealth_F : B_Plane_Fighter_01_F { 
 		buyPrice = 115600000;
@@ -1756,12 +1740,10 @@ class CfgVehicles {
 	class O_Plane_CAS_02_F : I_Plane_Fighter_03_CAS_F { 
 		description = "The To-199 Neophron is a new addition to CSAT air forces. An agile single-seat aircraft is used for close air support but can also take down air threats.";
 		buyPrice = 86500000; 
-		turrets[] = { { { -1 },  { "CMFlareLauncher", "Cannon_30mm_Plane_CAS_02_F", "Missile_AA_03_Plane_CAS_02_F", "Missile_AGM_01_Plane_CAS_02_F", "Rocket_03_HE_Plane_CAS_02_F", "Rocket_03_AP_Plane_CAS_02_F", "Bomb_03_Plane_CAS_02_F" },  { "500Rnd_Cannon_30mm_Plane_CAS_02_F","2Rnd_Missile_AA_03_F","4Rnd_Missile_AGM_01_F","2Rnd_Bomb_03_F","20Rnd_Rocket_03_HE_F","20Rnd_Rocket_03_AP_F","Laserbatteries","120Rnd_CMFlare_Chaff_Magazine" } } };
 	};
 	class O_Plane_Fighter_02_F : I_Plane_Fighter_03_CAS_F { 
 		description = "The To-201 Shikra is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet.";
 		buyPrice = 115500000;
-		turrets[] = { { { -1 },  { "CMFlareLauncher", "weapon_Fighter_Gun_30mm", "weapon_R73Launcher","weapon_R77Launcher","weapon_KAB250Launcher" },  { "magazine_Fighter02_Gun30mm_AA_x180","240Rnd_CMFlare_Chaff_Magazine","PylonMissile_Missile_AA_R73_x1","PylonMissile_Missile_AA_R73_x1","PylonMissile_Missile_AA_R77_x1","PylonMissile_Missile_AA_R77_x1","PylonMissile_Bomb_KAB250_x1","PylonMissile_Bomb_KAB250_x1","PylonMissile_Missile_AA_R73_x1","PylonMissile_Missile_AA_R73_x1","PylonMissile_Missile_AA_R77_x1","PylonMissile_Missile_AA_R77_x1","PylonMissile_Missile_AA_R77_INT_x1","PylonMissile_Missile_AA_R77_INT_x1","PylonMissile_Bomb_KAB250_x1" } } };
 	};
 	class O_Plane_Fighter_02_Stealth_F : O_Plane_Fighter_02_F {
 		buyPrice = 130500000; 

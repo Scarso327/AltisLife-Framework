@@ -23,7 +23,7 @@ if (_action isEqualTo 0) then {
 		_time = _time + getNumber (_missionCfg >> "flipTime");
 	};
 
-	if ([format["Flipping %1", _name], _time, [_vehicle], { !(isNull (_this select 0)) }, {
+	if ([format["Flipping %1", _name], _time, [_vehicle], { !(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 5 } }, {
 		_this params [ "_vehicle" ];
 
 		if (isNull _vehicle || { (player distance _vehicle) > 5 }) exitWith {};

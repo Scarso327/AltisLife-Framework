@@ -26,7 +26,7 @@ if (ULP_Imprisioned && { [player, ULP_Prison_Time, objNull, false] call ULP_fnc_
 			] call ULP_fnc_waitExecute;
 		};
 	} else {
-		[false, false] call ULP_fnc_initPlayer;
+		[false, true] call ULP_fnc_initPlayer;
 	};
 
 	if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {

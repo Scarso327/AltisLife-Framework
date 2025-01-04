@@ -25,6 +25,10 @@ if !((crew _vehicle) isEqualTo []) exitWith {
 	["No one can be in the vehicle while you crush it!"] call ULP_fnc_hint;
 };
 
+if ((_vehicle getVariable ["vehicle_id", -1]) < 0) exitWith {
+	["Rentals can't be crushed!"] call ULP_fnc_hint;
+};
+
 private _time = ["StreetCleaner", getNumber (missionConfigFile >> "CfgSettings" >> "Police" >> "crushTime")] call ULP_fnc_activatePerk;
 if (isNumber (_missionCfg >> "crushTime")) then {
 	_time = _time + getNumber (_missionCfg >> "crushTime");

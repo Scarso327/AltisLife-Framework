@@ -365,7 +365,7 @@ class CfgMissions {
 		eachFrame = "_this call ULP_fnc_onEachFrameFreight";
 		onClaimed = "";
 		onFinished = "_this call ULP_fnc_finishFreight";
-		timeDivisionAmount = 3;
+		timeDivisionAmount = 2;
 		class Locations {
 			class Kavala_Freight {
 				pos = "freight_mission_1";

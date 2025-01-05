@@ -14,6 +14,7 @@ _this params [
 	&& { alive _target } 
 	&& { !(isDowned(_target)) } 
 	&& { isNull (objectParent _target) } 
+	&& { _target isKindOf "Man" }
 	// The target is us or do the checks again but for us
 	&& { (_target isEqualTo player) || {
 		alive player 

@@ -14,6 +14,8 @@ private _toolbox = _display displayCtrl 23021;
 private _keyList = _display displayCtrl 23022;
 lbClear _keyList;
 
+private _carView = _display displayCtrl 23092;
+
 private _houseList = _display displayCtrl 23051;
 lbClear _houseList;
 
@@ -22,6 +24,7 @@ private _houseView = _display displayCtrl 23052;
 switch (lbCurSel _toolbox) do {
 	case 1: {
 		_keyList ctrlShow false;
+		_carView ctrlShow false;
 		_houseList ctrlShow true;
 
 		{
@@ -52,6 +55,7 @@ switch (lbCurSel _toolbox) do {
 	};
 	default {
 		_keyList ctrlShow true;
+		_carView ctrlShow true;
 		_houseList ctrlShow false;
 		_houseView ctrlShow false;
 
@@ -90,8 +94,10 @@ switch (lbCurSel _toolbox) do {
 
 		if ((lbSize _keyList) > 0) then {
 			_keyList lbSetCurSel 0;
+			[_keyList, 0] call ULP_fnc_switchVehicle;
 		} else {
 			_keyList lbAdd "No Keys...";
+			_carView ctrlShow false;
 		};
 	};
 };

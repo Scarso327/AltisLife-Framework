@@ -68,6 +68,7 @@ class CfgGathering {
 		areas[] = { { "heroin_field", 20 } };
 		items[] = { { "UnprocessedHeroin", 100 } };
 		leveling[] = { 2, "Gathering", 100 };
+		gatherTime = 2;
 	};
 
 	class Cocaine : BaseGather {
@@ -75,6 +76,7 @@ class CfgGathering {
 		areas[] = { { "cocaine_field", 20 } };
 		items[] = { { "UnprocessedCocaine", 100 } };
 		leveling[] = { 2, "Gathering", 100 };
+		gatherTime = 2;
 	};
 
 	class Coal : BaseMine {

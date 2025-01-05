@@ -365,6 +365,7 @@ class CfgMissions {
 		eachFrame = "_this call ULP_fnc_onEachFrameFreight";
 		onClaimed = "";
 		onFinished = "_this call ULP_fnc_finishFreight";
+		timeDivisionAmount = 3;
 		class Locations {
 			class Kavala_Freight {
 				pos = "freight_mission_1";
@@ -376,8 +377,8 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 10;
-			xpReward = 250;
+			moneyReward = 5;
+			xpReward = 100;
 		};
 		class Messages {
 			onFinishWithoutMission = "You don't have any packages to deliver here...";

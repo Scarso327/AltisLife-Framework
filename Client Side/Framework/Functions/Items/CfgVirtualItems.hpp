@@ -976,8 +976,8 @@ class CfgVirtualItems {
 		displayName = "Freight Cargo";
 		description = "Sealed cargo crates filled with freight cargo.";
 		icon = "Data\Icons\freightCargo.paa";
-		sellPrice = 35680;
-		weight = 24;
+		sellPrice = 30250;
+		weight = 26;
 		class Settings : Settings {
 			isIllegal = false;
 		};

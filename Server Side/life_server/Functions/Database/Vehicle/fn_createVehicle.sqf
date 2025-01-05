@@ -21,7 +21,7 @@ _this params [
 if (_steamid isEqualTo "" || { _name isEqualTo "" } || { !(isClass (missionConfigFile >> "CfgFactions" >> _faction))}) exitWith {};
 
 if ([_class, _steamid, _faction, _hasVehicleCollectorPerk, _ignoreGarageLimit] call ULP_SRV_fnc_isAtGarageLimit) exitWith {
-	["VehicleBought", [[_class], true, _price, _garageLimit]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
+	["VehicleBought", [[_class], true, _price]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 };
 
 (_class call BIS_fnc_objectType) params ["", "_type"];

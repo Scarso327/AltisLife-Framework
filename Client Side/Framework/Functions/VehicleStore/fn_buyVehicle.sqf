@@ -61,17 +61,20 @@ if ([_faction, "vehicles"] call ULP_fnc_factionFree || { [_buyPrice, false, form
 			_this params [
 				["_params", [], [[]]],
 				["_limitReached", false, [true]],
-				["_price", 0, [0]],
-				["_limit", 0, [0]]
+				["_price", 0, [0]]
 			];
 
 			if (_limitReached) exitWith {
 				([_params select 0] call ULP_fnc_vehicleCfg) params [
 					"", "", "", ["_name", "Unknown", [""]], "", "", "", "", ""
 				];
+
+				private _limit = getNumber (missionConfigFile >> "CfgVehicles" >> (_params select 0) >> "garageLimit");
+				if (["VehicleCollector"] call ULP_fnc_hasPerk) then { _limit = _limit + 1 };
 				
 				[_price, false, "Limit Refund"] call ULP_fnc_addMoney;
-				[([format ["Your purchase was unable to be made as you've reached the max garagable limit for %1 of <t color='#B92DE0'>%2</t>", _name, [_limit] call ULP_fnc_numberText], format ["You've been refunded %1%2 for %3 as you've reached the max garagable limit of %4...", "£", [_price] call ULP_fnc_numberText, _name, [_limit] call ULP_fnc_numberText]] select (_price > 0))] call ULP_fnc_hint;
+				[([format ["Your purchase was unable to be made as you've reached the max garagable limit for %1 of <t color='#B92DE0'>%2</t>", _name, [_limit] call ULP_fnc_numberText], 
+					format ["You've been refunded <t color='#B92DE0'>%1%2</t> for %3 as you've reached the max garagable limit of <t color='#B92DE0'>%4</t>...", "£", [_price] call ULP_fnc_numberText, _name, [_limit] call ULP_fnc_numberText]] select (_price > 0))] call ULP_fnc_hint;
 			};
 
 			_params call ULP_fnc_createVehicle;

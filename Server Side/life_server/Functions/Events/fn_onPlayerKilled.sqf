@@ -9,7 +9,7 @@ _this params [
 	"_unit", "_killer", "_instigator"
 ];
 
-if (alive _killer && { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) }) exitWith {};
+if (_killer isKindOf "Man" && { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) }) exitWith {};
 
 // Notify the server...
 if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } || { !(_killer isKindOf "Man") }) then {

@@ -4,7 +4,7 @@ class CfgGathering {
 
 	class BaseGather {
 		actionTitle = "Gathering";
-		gatherTime = 3;
+		gatherTime = 1;
 		factions[] = { "Civilian" };
 		hidden[] = {};
 		reqItems[] = {};
@@ -16,7 +16,7 @@ class CfgGathering {
 
 	class BaseMine : BaseGather {
 		actionTitle = "Mining";
-		gatherTime = 4;
+		gatherTime = 3;
 		reqItems[] = { "Pickaxe" };
 		profession[] = { "Mining", 1, 100 };
 	};
@@ -24,20 +24,18 @@ class CfgGathering {
 	class Apple : BaseGather {
 		areas[] = { { "apple_field_1", 20 }, { "apple_field_2", 20 }, { "apple_field_3", 20 }, { "apple_field_4", 20 } };
 		items[] = { { "FreshApple", 100 } };
-		gatherTime = 2;
 	};
 
 	class Peach : BaseGather {
 		areas[] = { { "peach_field_1", 20 }, { "peach_field_2", 20 }, { "peach_field_3", 20 }, { "peach_field_4", 20 } };
 		items[] = { { "FreshPeach", 100 } };
-		gatherTime = 2;
 	};
 
 	class Wood : BaseGather {
 		reqItems[] = { "LumberAxe" };
 		areas[] = { { "logging_grounds_1", 20 }, { "logging_grounds_2", 20 }, { "logging_grounds_3", 20 }, { "logging_grounds_4", 20 } };
 		items[] = { { "wood", 100 } };
-		gatherTime = 3;
+		gatherTime = 2;
 	};
 
 	class Coral : BaseGather {
@@ -70,6 +68,7 @@ class CfgGathering {
 		areas[] = { { "heroin_field", 20 } };
 		items[] = { { "UnprocessedHeroin", 100 } };
 		leveling[] = { 2, "Gathering", 100 };
+		gatherTime = 2;
 	};
 
 	class Cocaine : BaseGather {
@@ -77,6 +76,7 @@ class CfgGathering {
 		areas[] = { { "cocaine_field", 20 } };
 		items[] = { { "UnprocessedCocaine", 100 } };
 		leveling[] = { 2, "Gathering", 100 };
+		gatherTime = 2;
 	};
 
 	class Coal : BaseMine {
@@ -130,13 +130,12 @@ class CfgGathering {
 		areas[] = { { "uranium_mine", 20 } };
 		items[] = { { "UraniumOre", 100 } };
 		leveling[] = { 10, "Gathering", 70 };
-		gatherTime = 5;
+		gatherTime = 4;
 	};
 
 	class Rock : BaseMine {
 		areas[] = { { "hmp_rocks", 2 } };
 		items[] = { { "Rock", 100 } };
-		gatherTime = 3;
 		condition = "ULP_Imprisioned";
 	};
 };

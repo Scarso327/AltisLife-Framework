@@ -384,8 +384,8 @@ class CfgMissions {
 			onFinishWithoutMission = "You don't have any packages to deliver here...";
 			onAlreadyHas = "You already have a corporate freight mission active, complete it before requesting another...";
 			onNoLocations = "There are currently no corporate freight missions available for pickup, please try again alter...";
-			onAssigned = "Your truck has been filled with freight, deliver it to %1";
-			onFinished = "You have successfully delivered the freight, you have been paid £%1";
+			onAssigned = "Your truck has been filled with freight, deliver it to <t color='#B92DE0'>%1</t>";
+			onFinished = "You have successfully delivered the freight, you have been paid <t color='#B92DE0'>£%1</t>";
 		};
 	};
 };

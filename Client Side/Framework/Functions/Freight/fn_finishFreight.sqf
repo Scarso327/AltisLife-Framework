@@ -36,6 +36,6 @@ private _secondaryReward = getNumber (missionConfigFile >> "CfgVirtualItems" >> 
 [_secondaryReward, false, "Freight Mission Cut"] call ULP_fnc_addMoney;
 [(group player), "Freight"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
 
-[format ["You've been given your cut of %1%2 for the freight and earned some group xp", "£", [_secondaryReward] call ULP_fnc_numberText]] call ULP_fnc_hint;
+[format ["You've been given your cut of <t color='#B92DE0'>%1%2</t> for the freight and earned some group xp", "£", [_secondaryReward] call ULP_fnc_numberText]] call ULP_fnc_hint;
 
 true

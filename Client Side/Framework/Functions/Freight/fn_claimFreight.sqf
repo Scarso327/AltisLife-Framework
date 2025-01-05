@@ -64,7 +64,7 @@ if ("CorporateFreight" in ULP_Missions) exitWith {
 
 	if (_maxQuantity <= 0) exitWith { ["This vehicle has no space and can't store even one freight item!"] call ULP_fnc_hint; };
 
-	private _time = (_freightItemWeight * _maxQuantity) / 8; // Divide by 8 otherwise it could take minutes
+	private _time = (_freightItemWeight * _maxQuantity) / getNumber (missionConfigFile >> "CfgMissions" >> "CorporateFreight" >> "timeDivisionAmount");
 
 	private _vehicleCfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
 

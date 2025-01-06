@@ -41,13 +41,27 @@ if !(isNull _source) then {
 	if ([_source] call ULP_fnc_isKnocked || { [_source] call ULP_fnc_isRestrained }) exitWith { _damage = _originalDamage; };
 
 	// 2. Check for Rubber / Taser as we want it to work with things like quad bikes
-	private _isRubber = ((currentWeapon _source) in getArray(missionConfigFile >> "CfgSettings" >> "rubberWeapons") && { _projectile in getArray(missionConfigFile >> "CfgSettings" >> "rubberBullets") });
-	if ((currentWeapon _source) in getArray(missionConfigFile >> "CfgSettings" >> "taserWeapons") || { _isRubber }) exitWith {
-		if ((_unit distance _source) <= ([50, 100] select (_isRubber))) then {
-			[_source, !_isRubber, _isRubber] call ULP_fnc_onKnocked;
+	private _weaponNonLethalCfg = missionConfigFile >> "CfgItems" >> (currentWeapon _source) >> "NonLethal";
+
+	if (isClass _weaponNonLethalCfg 
+		&& { !isArray (_weaponNonLethalCfg >> "projectiles") 
+			|| { _projectile in getArray (_weaponNonLethalCfg >> "projectiles") } }) exitWith {
+
+		private _hasInjuryThreshold = isNumber (_weaponNonLethalCfg >> "injuryThreshold");
+		private _hasMetInjuryThreshold = !_hasInjuryThreshold || { _damage >= getNumber (_weaponNonLethalCfg >> "injuryThreshold") };
+
+		if ((_unit distance _source) <= getNumber (_weaponNonLethalCfg >> "distance") 
+			&& { _hasMetInjuryThreshold }
+			&& { !isNumber (_weaponNonLethalCfg >> "chance")
+				|| { random 1 <= getNumber (_weaponNonLethalCfg >> "chance") } }) then {
+			[_source, false, getArray (_weaponNonLethalCfg >> "sound")] call ULP_fnc_onKnocked;
 		};
 
-		_damage = _originalDamage;
+		_damage = if !(_hasInjuryThreshold) then {
+			_originalDamage
+		} else {
+			_damage min 0.99
+		};
 	};
 
 	// 3. Now process anti vdm

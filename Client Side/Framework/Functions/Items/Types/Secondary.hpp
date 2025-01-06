@@ -20,6 +20,11 @@ class hgun_P07_F {
 	displayName = "Taser x26e";
 	price = 38700;
 	reputation = true;
+	class NonLethal {
+		distance = 50;
+		sound[] = { "taserSound", 50, 1 };
+		hasTaserReload = true;
+	};
 	class Textures {
 		class hgun_P07_F {
 			displayName = "Khaki";

@@ -21,7 +21,9 @@ if !([_unit] call ULP_fnc_canFire) exitWith {
 	deleteVehicle _projectile;
 };
 
-if (_weapon in getArray(missionConfigFile >> "CfgSettings" >> "taserWeapons") && { !ULPEvent_TaserFired }) then {
+private _weaponNonLethalCfg = missionConfigFile >> "CfgItems" >> _weapon >> "NonLethal";
+
+if (isClass _weaponNonLethalCfg && { [getNumber (_weaponNonLethalCfg >> "hasTaserReload")] call ULP_fnc_bool } && { !ULPEvent_TaserFired }) then {
 	ULPEvent_TaserFired = true;
     _unit setAmmo [_weapon, 0];
 

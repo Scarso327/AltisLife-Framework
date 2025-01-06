@@ -11,5 +11,6 @@ enableSentences false;
 enableEnvironment false;
 showHud false;
 showChat false;
+showCommandingMenu "";
 
 [] spawn ULP_fnc_initialisation;

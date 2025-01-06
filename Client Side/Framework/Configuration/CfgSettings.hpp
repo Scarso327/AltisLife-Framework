@@ -78,9 +78,6 @@ class CfgSettings {
     communicationDevices[] = { "ItemRadio", "ItemGPS", "B_UavTerminal", "O_UavTerminal", "I_UavTerminal" };
 
     doesntThreaten[] = { "", "Binocular", "Rangefinder", "hgun_Pistol_Signal_F" };
-    taserWeapons[] = { "hgun_P07_F", "hgun_P07_blk_F" };
-    rubberWeapons[] = { "arifle_Mk20C_plain_F" };
-    rubberBullets[] = { "B_556x45_Ball_Tracer_Green" };
 
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
 
@@ -88,7 +85,7 @@ class CfgSettings {
     
     class Remotes {
         class Sound {
-            maxDistance = 50;
+            maxDistance = 100;
             sounds[] = { "taserSound", "unlockCarSound", "lockCarSound", "panicButton", "handCuff" };
         };
     };

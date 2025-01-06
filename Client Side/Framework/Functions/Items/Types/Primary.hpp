@@ -136,6 +136,13 @@ class arifle_Mk20C_plain_F {
 	displayName = "Mk20C 5.56 mm";
 	price = 193350;
 	reputation = true;
+	class NonLethal {
+		distance = 200;
+		chance = 0.1;
+		injuryThreshold = 0.65;
+		projectiles[] = { "B_556x45_Ball_Tracer_Green" };
+		sound[] = {};
+	};
 	class Textures {
 		class arifle_Mk20C_plain_F {
 			displayName = "Plain";

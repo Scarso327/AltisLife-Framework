@@ -13,6 +13,8 @@ _this params [
 	["_oldMagazine", [], [[]]]
 ];
 
-if (_weapon in getArray(missionConfigFile >> "CfgSettings" >> "taserWeapons") && { !ULPEvent_TaserFired }) then {
+private _weaponNonLethalCfg = missionConfigFile >> "CfgItems" >> _weapon >> "NonLethal";
+
+if (isClass _weaponNonLethalCfg && { [getNumber (_weaponNonLethalCfg >> "hasTaserReload")] call ULP_fnc_bool } && { !ULPEvent_TaserFired }) then {
 	_unit setAmmo [_weapon, 1];
 };

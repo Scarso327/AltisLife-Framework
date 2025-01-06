@@ -17,22 +17,24 @@ if (!([getNumber (_type >> "ignoreComms")] call ULP_fnc_bool) && { !([] call ULP
 	["You recieved a message but as you don't have comms you were unable to recieve it..."] call ULP_fnc_hint;
 };
 
-private _messages = + (missionProfileNamespace getVariable ["ULP_Messages", []]);
-_messages pushBack [configName _type, _sender, _message, false];
+if ([getNumber (_type >> "saveInbox")] call ULP_fnc_bool) then {
+	private _messages = + (missionProfileNamespace getVariable ["ULP_Messages", []]);
+	_messages pushBack [configName _type, _sender, _message, false];
 
-private _count = count _messages;
-if (_count > 25) then {
-	_messages = _messages select [_count - 25, 25];
+	private _count = count _messages;
+	if (_count > 25) then {
+		_messages = _messages select [_count - 25, 25];
+	};
+
+	missionProfileNamespace setVariable ["ULP_Messages", _messages];
+	saveMissionProfileNamespace;
 };
-
-missionProfileNamespace setVariable ["ULP_Messages", _messages];
-saveMissionProfileNamespace;
 
 if ([["EnableMessageAlert", "Audio"] call ULP_fnc_getOption] call ULP_fnc_bool && { [getNumber (_type >> "alertSound")] call ULP_fnc_bool }) then {
 	playSound "messageNotification";
 };
 
-if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { !([getNumber (_type >> "ignoreStreamer")] call ULP_fnc_bool) }) then {
+if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool && { [getNumber (_type >> "saveInbox")] call ULP_fnc_bool } && { !([getNumber (_type >> "ignoreStreamer")] call ULP_fnc_bool) }) then {
 	["You received a message and it's contents have been hidden."/*, "Phone Notification" TODO */] call ULP_fnc_hint;
 } else {
 	_sender params [

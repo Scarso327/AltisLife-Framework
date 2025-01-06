@@ -397,7 +397,7 @@ class CfgAchievements {
 	class MileHighClub {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\TakeOff_ca.paa";
 		displayName = "Mile High Club";
-		description = "You have flown exactly 1-Mile or higher in the sky.";
+		description = "You have flown roughly a mile in the sky.";
 		onUnlocked = "[""MileHighClub""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
@@ -406,7 +406,7 @@ class CfgAchievements {
 	class DeepSeaDiver {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicDive_ca.paa";
 		displayName = "Deep Sea Diver";
-		description = "You have walked along the seabed.";
+		description = "You taken a dive deep into the sea.";
 		onUnlocked = "[""DeepSeaDiver""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
@@ -417,6 +417,24 @@ class CfgAchievements {
 		displayName = "Death Wish";
 		description = "You have traveled to the heart of the red zone.";
 		onUnlocked = "[""DeathWish""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Racing {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Time_trials_ca.paa";
+		displayName = "Racing Around";
+		description = "You've visted the race track.";
+		onUnlocked = "[""Racing""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 500, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Nothing {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicLook_ca.paa";
+		displayName = "Nothingness";
+		description = "You've found nothing surrounded by more nothing.";
+		onUnlocked = "[""Nothing""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};
@@ -461,6 +479,15 @@ class CfgAchievements {
 		displayName = "Atlantis";
 		description = "You have discovered Atlantis on Altis.";
 		onUnlocked = "[""Atlantis""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 3000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Spawn {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Zeus_ca.paa";
+		displayName = "Spawn";
+		description = "You have discovered the spawn of mankind.";
+		onUnlocked = "[""SpawnCamp""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 3000, "Achievement Unlocked", 100 };
 		isMystery = true;
 	};

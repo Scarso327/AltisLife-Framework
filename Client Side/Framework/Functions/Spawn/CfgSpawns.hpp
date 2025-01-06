@@ -77,6 +77,16 @@ class CfgSpawns {
             marker = "nhs_spawn_pyrgos";
             icon = "Data\UI\Spawns\pyrgos.paa";
         };
+        class AgiosClinic : Medic {
+            displayName = "Agios Clinic";
+            marker = "nhs_spawn_agios";
+            icon = "Data\UI\Spawns\agios.paa";
+        };
+        class SofiaClinic : Medic {
+            displayName = "Sofia Clinic";
+            marker = "nhs_spawn_sofia";
+            icon = "Data\UI\Spawns\sofia.paa";
+        };
         class AirAmbulance : Medic {
             displayName = "Air Ambulance Station";
             marker = "nhs_spawn_aa";

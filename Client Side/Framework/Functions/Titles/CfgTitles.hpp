@@ -139,6 +139,18 @@ class CfgTitles {
 		displayName = "Ocean Diver";
 		description = "Dived to a very specific place";
 	};
+	class SpeedDemon {
+		displayName = "Speed Demon";
+		description = "Visted the race track";
+	};
+	class Nothing {
+		displayName = "No Title";
+		description = "Found nothing and more nothing";
+	};
+	class SpawnCamp {
+		displayName = "Spawn Camper";
+		description = "You located the spawn of mankind";
+	};
 	class Investigator {
 		displayName = "Private Investigator";
 		description = "The College of Policing is up to something";

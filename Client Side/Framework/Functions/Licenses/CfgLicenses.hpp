@@ -164,7 +164,7 @@ class CfgLicenses {
 
     class Uranium : BaseLicense {
         displayName = "Uranium Processing";
-        buyPrice = 800000;
+        buyPrice = 1200000;
         class Settings {};
     };
 

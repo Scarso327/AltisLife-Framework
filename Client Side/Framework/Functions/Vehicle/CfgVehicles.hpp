@@ -6,7 +6,7 @@ class CfgVehicles {
 
 	class Base {
 		virtualSpace = 0;
-		garageLimit = 4;
+		garageLimit = 5;
 		fuelConsumptionRate = 1.15; // 115% normal rate
 		isHouse = false;
 		canTransfer = true;
@@ -109,7 +109,7 @@ class CfgVehicles {
 		description = "Kart is a small four-wheeled vehicle propelled by gravity, gas or electricity. It has 4-stroke engine offering up to 20 hp and should not be operated by drivers under 18 years old.";
 		buyPrice = 2500;
 		virtualSpace = 0;
-		garageLimit = 1;
+		garageLimit = 3;
 	};
 	class C_Kart_01_Fuel_F : C_Kart_01_Blu_F{};
     class C_Kart_01_Red_F : C_Kart_01_Blu_F{};
@@ -734,7 +734,7 @@ class CfgVehicles {
 		description = "The Hunter is a MRAP vehicle with an armored hull that can withstand light weapons and offers a powerful engine.";
 		buyPrice = 9800000;
 		virtualSpace = 65;
-		garageLimit = 1;
+		garageLimit = 2;
 		garageDelay = 15;
 		repairTime = 20;
 		crushTime = 60;
@@ -860,7 +860,7 @@ class CfgVehicles {
 		description = "Found in farm barns across the globe, the common tractor is a reliable high torque engineering vehicle, used for towing trailers and many other agricultural tasks.";
 		buyPrice = 23150;
 		virtualSpace = 10;
-		garageLimit = 3;
+		garageLimit = 2;
 		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Red : BaseTexture {
@@ -1401,7 +1401,7 @@ class CfgVehicles {
 		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
 		buyPrice = 565000;
 		virtualSpace = 5;
-		garageLimit = 2;
+		garageLimit = 4;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
@@ -1476,7 +1476,7 @@ class CfgVehicles {
 		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
 		buyPrice = 2350000;
 		virtualSpace = 25;
-		garageLimit = 1;
+		garageLimit = 2;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
@@ -1500,7 +1500,7 @@ class CfgVehicles {
 		description = "The WY-55 Hellcat is a multipurpose helicopter, most suited for utility and limited transport.";
 		buyPrice = 2130000;
 		virtualSpace = 20;
-		garageLimit = 1;
+		garageLimit = 2;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
 			class Police : PoliceTextureBase {
@@ -1538,7 +1538,7 @@ class CfgVehicles {
 		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
 		buyPrice = 13240000;
 		virtualSpace = 55;
-		garageLimit = 1;
+		garageLimit = 2;
 		chopKeepChance = 85;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
@@ -1588,7 +1588,7 @@ class CfgVehicles {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
 		virtualSpace = 0;
-		garageLimit = 1;
+		garageLimit = 2;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		chopKeepChance = 85;
 		chopPerc = 0.20;

@@ -34,7 +34,8 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 			});
 
 			if ((count _groups) isEqualTo 1) then {
-				private _groupId = _groups param [0, grpNull, [grpNull]] getVariable ["group_id", -1];
+				private _group = _groups param [0, grpNull, [grpNull]];
+				private _groupId = _group getVariable ["group_id", -1];
 
 				private _firstUnitInZone = _unitsInZone select 0;
 
@@ -49,10 +50,29 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 					// If we don't have a group id we can't score
 					if (_groupId isEqualTo -1) exitWith {};
 
+					private _maxScoreLead = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "maxScoreLead");
+
+					private _sortedScores = [_scores toArray false, [], {_x # 1}, "DESCEND"] call BIS_fnc_sortBy;
+
+					private _isWinner = ((_sortedScores param [0, []]) param [0, -1]) isEqualTo _groupId;
+					private _secondLargestScore = ((_sortedScores param [1, []]) param [1, 0]);
+
 					private _score = _scores getOrDefault [_groupId, 0];
+
+					// We're the only gang contesting so second is technically 0
+					if (_score isEqualTo _secondLargestScore) then {
+						_secondLargestScore = 0;
+					};
+
 					_score = _score + 1;
 
-					_scores set [_groupId, _score];
+					// No winner or second largest + max lead is still greater then we increment score
+					if (!_isWinner || { _score <= (_secondLargestScore + _maxScoreLead) }) then {
+						_scores set [_groupId, _score];
+					} else {
+						// If above condition isn't met we just give them some gang xp as a reward
+						[_group, "HoldingCartel"] call ULP_SRV_fnc_addGroupXP;
+					};
 				};
 
 				// Updates scores for everyone...

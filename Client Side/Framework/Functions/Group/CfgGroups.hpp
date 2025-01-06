@@ -156,6 +156,9 @@ class CfgGroups {
 		maxLevel = 5;
 
 		class XP {
+			class HoldingCartel {
+				amount = 3;
+			};
 			class Cartel {
 				amount = 10;
 			};

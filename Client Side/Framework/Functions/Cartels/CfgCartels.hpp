@@ -9,8 +9,9 @@ class CfgCartels {
 		cartelTick = 1 * 60;
 		rewardTicks = 20;
 		rewardXp = 100;
-		rewardAmounts[] = { 100, 250 }; // At or below 25 players, above 25
-		maxRewardScoreMultiplier = 100;
+		rewardAmounts[] = { 75, 150 }; // At or below 25 players, above 25
+		maxRewardScoreMultiplier = 30;
+		maxScoreLead = 5;
 		allowPoliceNeutralise = true;
 		policeNeutralisePerTick = 3;
 

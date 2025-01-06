@@ -47,6 +47,9 @@ class CfgFunctions {
 			class onEachFrame {};
 			class removeEachFrame {};
 			class removeEventHandler {};
+			class onAction {};
+			class onNextAction {};
+			class onPrevAction {};
 			class onPause {};
 			class onRestrain {};
 			class onIncapacitated {};
@@ -143,6 +146,7 @@ class CfgFunctions {
 			class keyDown {};
 			class keyUp {};
 			class actionKeyDown {};
+			class isInputBlocked {};
 		};
 
 		class Player {

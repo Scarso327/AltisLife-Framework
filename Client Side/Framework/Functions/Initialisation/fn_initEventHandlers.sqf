@@ -4,6 +4,10 @@
 */
 scopeName "fn_initEventHandlers";
 
+inGameUISetEventHandler["PrevAction", "_this call ULP_fnc_onPrevAction"];
+inGameUISetEventHandler["Action", "_this call ULP_fnc_onAction"];
+inGameUISetEventHandler["NextAction", "_this call ULP_fnc_onNextAction"];
+
 player addEventHandler ["Fired", { _this call ULP_fnc_onFired }];
 player addEventHandler ["Reloaded", { _this call ULP_fnc_onReloaded }];
 player addEventHandler ["GetInMan", { _this call ULP_fnc_onGetIn }];

@@ -56,3 +56,7 @@ if ((missionNamespace getVariable ["InRedzoneCheckTime", -1]) <= time) then {
 		[["LeftRedzone", "EnteredRedzone"] select _isInRedzone, []] call ULP_fnc_invokeEvent;
 	};
 };
+
+if (commandingMenu != "") then {
+    showCommandingMenu "";
+};

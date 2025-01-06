@@ -1257,7 +1257,7 @@ class CfgVirtualItems {
 	class UraniumOre : CopperOre {
 		displayName = "Uranium Ore";
 		icon = "Data\Icons\ore.paa";
-		weight = 8;
+		weight = 4;
 		class Settings {
 			onMarket = false;
 			isIllegal = true;
@@ -1402,7 +1402,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
 		sellPrice = 28650;
-		weight = 6;
+		weight = 3;
 		class Settings : Settings {};
 	};
 

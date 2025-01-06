@@ -1690,7 +1690,7 @@ class CfgVehicles {
 		virtualSpace = 175;
 		garageLimit = 1;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		retrievalPerc = 0.01;
+		retrievalPerc = 0.001;
 		chopKeepChance = 95;
 		chopPerc = 0.15;
 		chopTime = 180;
@@ -1717,7 +1717,7 @@ class CfgVehicles {
 		buyPrice = 73350000;
 		virtualSpace = 0;
 		garageLimit = 1;
-		retrievalPerc = 0.01;
+		retrievalPerc = 0.001;
 		chopKeepChance = 99;
 		chopPerc = 0.10;
 		chopTime = 300;

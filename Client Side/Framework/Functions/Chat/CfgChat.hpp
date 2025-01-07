@@ -8,6 +8,10 @@ class CfgChat {
 		class Bleedout : Injured {
 			message = "%1 bled out...";
 		};
+		class ReturnedToLobby : Injured {
+			message = "%1 returned to the lobby";
+			condition = "true";
+		};
 		class Executed {
 			message = "%1 was executed by %2";
 			params = 2;

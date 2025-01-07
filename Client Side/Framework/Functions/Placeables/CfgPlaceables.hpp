@@ -10,6 +10,14 @@ class CfgPlaceables {
 			onPlaced = "(_this select 0) setDamage 1; _this remoteExecCall [""ULP_SRV_fnc_registerStinger"", 2];";
 		};
 
+		class Stretcher {
+			displayName = "Stretcher";
+			className = "Land_Stretcher_01_F";
+			positioning[] = { { 0, 3, 0.5 }, 90 };
+			placementTime = 5;
+			onPlaced = "private _stretcher = _this param [0, objNull, [objNull]]; if (isNull _stretcher) exitWith {}; _stretcher allowDammage false; _stretcher enableSimulation false;";
+		};
+
 		class RoadCone {
 			displayName = "Road Cone";
 			className = "RoadCone_F";

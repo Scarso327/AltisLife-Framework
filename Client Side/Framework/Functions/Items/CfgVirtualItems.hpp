@@ -871,6 +871,12 @@ class CfgVirtualItems {
 		displayName = "Pop-Up Target (Hostage)";
 		class Settings : Settings {};
 	};
+	class Stretcher : TapeSign_F {
+		displayName = "Stretcher";
+		description = "A stretcher is a lightweight, portable frame used to carry injured or incapacitated individuals, typically in emergency or medical situations.";
+		weight = 10;
+		class Events { onUse = "[""Stretcher"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
 
 	// Farming Items (TODO - Farmers' Market, Tractor)
 	class FarmingEquipment { // TODO (crafting)

@@ -988,9 +988,11 @@ class CfgVirtualItems {
 		icon = "Data\Icons\seizedContraband.paa";
 		sellPrice = 237600;
 		weight = 4;
-		class Settings : Settings {};
+		class Settings : Settings {
+			isSystemItem = false;
+		};
 	};
-	class SpaceCapsuleDataDrive : StolenCargo {
+	class SpaceCapsuleDataDrive : SeizedContraband {
 		displayName = "Space Capsule Date Drive";
 		description = "A data drive from a space capsule containing unknown secrets.";
 		icon = "Data\Icons\drive.paa";
@@ -998,7 +1000,7 @@ class CfgVirtualItems {
 		weight = 10;
 		class Settings : Settings {};
 	};
-	class SmallGalleryPiece : StolenCargo {
+	class SmallGalleryPiece : SeizedContraband {
 		displayName = "Small Gallery Piece";
 		description = "A piece of art commonly stored in the Altis Gallery.";
 		icon = "Data\Icons\galleryPiece.paa";
@@ -1020,7 +1022,7 @@ class CfgVirtualItems {
 		weight = 13;
 		class Settings : Settings {};
 	};
-	class MarkedGold : StolenCargo {
+	class MarkedGold : SeizedContraband {
 		displayName = "Marked Gold";
 		description = "A marked gold bar that is commonly stored in the HM Treasury.";
 		icon = "Data\Icons\ingot.paa";
@@ -1034,7 +1036,7 @@ class CfgVirtualItems {
 		sellPrice = 700000;
 		class Settings : Settings {};
 	};
-	class EncryptedDrive : StolenCargo {
+	class EncryptedDrive : SeizedContraband {
 		displayName = "Encrypted Drive";
 		description = "An encrypted drive containing secrect files taken from the HMS Liberty's command deck.";
 		icon = "Data\Icons\drive.paa";

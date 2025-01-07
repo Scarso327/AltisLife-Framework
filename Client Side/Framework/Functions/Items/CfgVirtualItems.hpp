@@ -1257,7 +1257,7 @@ class CfgVirtualItems {
 	class UraniumOre : CopperOre {
 		displayName = "Uranium Ore";
 		icon = "Data\Icons\ore.paa";
-		weight = 4;
+		weight = 6;
 		class Settings {
 			onMarket = false;
 			isIllegal = true;

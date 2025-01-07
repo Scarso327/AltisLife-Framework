@@ -650,7 +650,7 @@ class CfgVehicles {
 
 	class B_CTRG_LSV_01_light_F : Base {
 		description = "The Prowler is agile, lightly armored and uses speed, maneuverability, and off-road mobility to avoid threats.";
-		buyPrice = 420000;
+		buyPrice = 580000;
 		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
@@ -1536,7 +1536,7 @@ class CfgVehicles {
 
 	class I_Heli_Transport_02_F : Base {
 		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
-		buyPrice = 11240000;
+		buyPrice = 13240000;
 		virtualSpace = 55;
 		garageLimit = 1;
 		chopKeepChance = 85;
@@ -1586,7 +1586,7 @@ class CfgVehicles {
 
 	class O_Heli_Transport_04_black_F : Base {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
-		buyPrice = 9350000;
+		buyPrice = 11350000;
 		virtualSpace = 0;
 		garageLimit = 1;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
@@ -1595,23 +1595,23 @@ class CfgVehicles {
 		chopTime = 60;
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 10176500;
+		buyPrice = 11176500;
 		virtualSpace = 0;
 	};
 	class O_Heli_Transport_04_covered_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 10670000;
+		buyPrice = 12670000;
 		virtualSpace = 35;
 	};
 	class O_Heli_Transport_04_box_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 26900500;
+		buyPrice = 28900500;
 		virtualSpace = 70;
 	};
 	class O_Heli_Transport_04_ammo_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 25460000;
+		buyPrice = 29460000;
 		virtualSpace = 80;
 	};
 	class O_Heli_Transport_04_fuel_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 12640000;
+		buyPrice = 13640000;
 		virtualSpace = 50;
 	};
 	class O_Heli_Transport_04_medevac_black_F : O_Heli_Transport_04_black_F {
@@ -1631,7 +1631,7 @@ class CfgVehicles {
 
 	class B_Heli_Transport_03_unarmed_F : Base {
 		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
-		buyPrice = 28400750;
+		buyPrice = 33400750;
 		virtualSpace = 100;
 		garageLimit = 1;
 		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };

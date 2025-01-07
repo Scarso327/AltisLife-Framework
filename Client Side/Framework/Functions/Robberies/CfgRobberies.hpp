@@ -40,7 +40,7 @@ class CfgRobberies {
 		timeout = 30 * 60;
 		factions[] = { "Civilian" };
 		reward[] = { 200000, 500000 };
-		leveling[] = { { 5, 15 }, "Robbed Fuel Station", 100 };
+		leveling[] = { { 5, 15 }, "Robbed Regional Bank", 100 };
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 5";
 		onFail = "[""There must be at least <t color='#B92DE0'>5 officers</t> online to rob this site!""] call ULP_fnc_hint;";
 	};

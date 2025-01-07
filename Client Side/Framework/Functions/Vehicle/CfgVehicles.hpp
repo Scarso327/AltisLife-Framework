@@ -699,7 +699,7 @@ class CfgVehicles {
 
 	class O_LSV_02_unarmed_F : Base {
 		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
-		buyPrice = 500000;
+		buyPrice = 800000;
 		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {

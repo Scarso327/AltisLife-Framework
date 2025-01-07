@@ -13,4 +13,5 @@ showHud false;
 showChat false;
 showCommandingMenu "";
 
+[] spawn ULP_fnc_initBriefing;
 [] spawn ULP_fnc_initialisation;

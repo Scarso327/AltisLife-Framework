@@ -485,6 +485,7 @@ class CfgFunctions {
 			class addPollingStation {};
 			class addMailBox {};
 			class addFreightMission {};
+			class initBriefing {};
 			class isATM {};
 			class lockForFactions {};
 			class sit {};

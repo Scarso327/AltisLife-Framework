@@ -21,7 +21,12 @@ with missionNamespace do {
 
 	private _abortDelay = time + getNumber(missionConfigFile >> "CfgSettings" >> "abort_delay");
 	
-	_abortButton ctrlSetEventHandler["ButtonClick", "with missionNamespace do { [] call ULP_fnc_syncPlayerInfo; [""Abort"", true, false] call BIS_fnc_endMission; }; true"];
+	_abortButton ctrlSetEventHandler["ButtonClick", "with missionNamespace do {
+		[] call ULP_fnc_syncPlayerInfo;
+		
+		[""ReturnedToLobby"", [[player] call ULP_fnc_getName]] remoteExecCall [""ULP_fnc_chatMessage"", -2];
+		[""Abort"", true, false] call BIS_fnc_endMission; 
+	}; true"];
 
 	if !(["Disconnect", false] call ULP_fnc_checkPower) then {
 		_abortButton ctrlEnable false;

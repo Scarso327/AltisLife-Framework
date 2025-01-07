@@ -7,7 +7,7 @@ class CfgCrimes {
 			class Stages {
 				class Hack {
 					displayName = "Hacking Vault Security";
-					time = 300;
+					time = 600;
 					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Vault Security System at HM Treasury is being tampered with!""], _targets] call ULP_fnc_sendMessage; [""You have begun disabling the vault security, police has been notified!""] call ULP_fnc_hint;"; // Notify Police...
 					onCompleted = "[""HMTreasury"", 1] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the vault security system...""] call ULP_fnc_hint;"; // Call to fill vaults, allow vaults to be drilled...
 					onEachFrame = "";
@@ -72,7 +72,7 @@ class CfgCrimes {
 			class Stages {
 				class Hack {
 					displayName = "Disabling Server Security";
-					time = 480;
+					time = 1200;
 					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""Systems on HM Liberty are being tampered with!""], _targets] call ULP_fnc_sendMessage; [""You have begun disabling the server's security systems, police has been notified!""] call ULP_fnc_hint;";
 					onCompleted = "[""HMSLiberty"", 1, hms_liberty_server] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
 					onEachFrame = "hms_liberty_server animateSource [""server_move_source"", (_this / 100)];";
@@ -142,7 +142,7 @@ class CfgCrimes {
 			class Stages {
 				class Drill {
 					displayName = "Drilling into Storage Vault";
-					time = 900;
+					time = 1200;
 					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Underwater Research Facility is being illegally accessed!""], _targets] call ULP_fnc_sendMessage; [""You have begun drilling into the underwater research facility, police has been notified!""] call ULP_fnc_hint;";
 					onCompleted = "[""ResearchFacility"", 1, researchFacilityCapsule] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
 					onEachFrame = "";
@@ -156,7 +156,7 @@ class CfgCrimes {
 					classname = "Land_Dome_Big_F";
 					position[] = {24842,13219.9,0};
 					class BreakIn {
-						breakIn = 240;
+						breakIn = 300;
 						onBreakIn = "if (([""SilentLocksmith"", (random 1)] call ULP_fnc_activatePerk) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A door at the underwater research facility has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
 						onFail = "[""There must be at least 10 police officers to start this crime...""] call ULP_fnc_hint;";
 						condition = "(count [""Police""] call ULP_fnc_allMembers) >= 10 || { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] }";

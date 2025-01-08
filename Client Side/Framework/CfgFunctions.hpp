@@ -651,6 +651,8 @@ class CfgFunctions {
 			class applyBandage {};
 			class revivePatient {};
 			class revived {};
+			class nearestStretcher {};
+			class toggleOnStretcher {};
 		};
 
 		class Housing {

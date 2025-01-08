@@ -21,7 +21,6 @@ if !(isNull (_object getVariable ["unitDragging", objNull])) exitWith {
 	false
 };
 
-// Ensure no ui is open for this step
 [] spawn ULP_UI_fnc_closeDialogs;
 
 _object setVariable ["unitDragging", player, true];

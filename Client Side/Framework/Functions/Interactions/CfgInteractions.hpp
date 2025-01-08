@@ -139,6 +139,20 @@ class CfgInteractions {
 			condition = "true";
 		};
 
+		class PutOnStretcher {
+			title = "Put On Stretcher";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_toggleOnStretcher; closeDialog 0;";
+			condition = "private _stretcher = [_this] call ULP_fnc_nearestStretcher; !isNull (_stretcher) && { isNull (_stretcher getVariable [""unitAttached"", objNull]) }";
+		};
+
+		class TakeOffStretcher : PutOnStretcher {
+			title = "Take Off Stretcher";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_toggleOnStretcher; closeDialog 0;";
+			condition = "private _stretcher = attachedTo player; !isNull _stretcher && { _stretcher isKindOf ""Land_Stretcher_01_F"" }";
+		};
+
 		class AdministerBlood : Revive {
 			title = "Administer Blood";
 			onClick = "_this call ULP_fnc_administerBlood";

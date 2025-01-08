@@ -13,9 +13,10 @@ class CfgPlaceables {
 		class Stretcher {
 			displayName = "Stretcher";
 			className = "Land_Stretcher_01_F";
-			positioning[] = { { 0, 3, 0.5 }, 90 };
+			positioning[] = { { 0, 1.5, 0.5 }, 90 };
 			placementTime = 5;
 			onPlaced = "private _stretcher = _this param [0, objNull, [objNull]]; if (isNull _stretcher) exitWith {}; _stretcher allowDammage false; _stretcher enableSimulation false;";
+			onRemoved = "private _attachedUnit = (_this select 0) getVariable [""unitAttached"", objNull]; if !(isNull _attachedUnit) then { detach _attachedUnit; };";
 		};
 
 		class RoadCone {

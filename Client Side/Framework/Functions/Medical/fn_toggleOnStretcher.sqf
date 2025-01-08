@@ -11,7 +11,7 @@ _this params [
 
 private _stretcher = [_unit] call ULP_fnc_nearestStretcher;
 
-if (isNull _unit || { isNull _stretcher } || { !([_stretcher] call ULP_fnc_isPlaceable) } || { !isDowned(_unit) }) exitWith { false };
+if (isNull _unit || { isNull _stretcher } || { !([_stretcher] call ULP_fnc_isPlaceable) } || { !(isDowned(_unit)) }) exitWith { false };
 
 private _attachedUnit = _stretcher getVariable ["unitAttached", objNull];
 private _isAttaching = !(_attachedUnit isEqualTo _unit);

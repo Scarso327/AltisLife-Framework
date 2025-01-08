@@ -873,7 +873,7 @@ class CfgVirtualItems {
 	};
 	class Stretcher : TapeSign_F {
 		displayName = "Stretcher";
-		description = "A stretcher is a lightweight, portable frame used to carry injured or incapacitated individuals, typically in emergency or medical situations.";
+		description = "A stretcher is a lightweight, portable frame used to carry injured or incapacitated individuals.";
 		buyPrice = 12500;
 		sellPrice = 4350;
 		weight = 5;

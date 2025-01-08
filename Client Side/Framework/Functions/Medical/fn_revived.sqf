@@ -28,6 +28,12 @@ if !(player isEqualTo _medic) then {
 	};
 };
 
+// Make sure we're no longer attached!
+private _stretcher = attachedTo player;
+if (!isNull _stretcher && { _stretcher isKindOf "Land_Stretcher_01_F" }) then {
+	[player] call ULP_fnc_toggleOnStretcher;
+};
+
 player setVariable ["IncapacitatedWounds", nil, true];
 
 player setUnconscious false;

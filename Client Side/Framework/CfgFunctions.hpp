@@ -651,6 +651,8 @@ class CfgFunctions {
 			class applyBandage {};
 			class revivePatient {};
 			class revived {};
+			class nearestStretcher {};
+			class toggleOnStretcher {};
 		};
 
 		class Housing {
@@ -830,11 +832,14 @@ class CfgFunctions {
 
 		class Placeables {
 			file = "Functions\Placeables";
+			class dragPlaceable {};
 			class placedObjects {};
 			class placeObject {};
+			class releasePlaceable {};
 			class removeObject {};
 			class stopPlacement {};
 			class isPlaceable {};
+			class isDragging {};
 		};
 	};
 

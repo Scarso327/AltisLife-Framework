@@ -874,8 +874,11 @@ class CfgVirtualItems {
 	class Stretcher : TapeSign_F {
 		displayName = "Stretcher";
 		description = "A stretcher is a lightweight, portable frame used to carry injured or incapacitated individuals, typically in emergency or medical situations.";
+		buyPrice = 12500;
+		sellPrice = 4350;
 		weight = 5;
 		class Events { onUse = "[""Stretcher"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[player, [""Police"", ""Medic""]] call ULP_fnc_isFaction || { ULP_Level >= 3 }";
 	};
 
 	// Farming Items (TODO - Farmers' Market, Tractor)

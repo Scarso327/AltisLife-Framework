@@ -143,14 +143,14 @@ class CfgInteractions {
 			title = "Put On Stretcher";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_toggleOnStretcher; closeDialog 0;";
-			condition = "private _stretcher = [_this] call ULP_fnc_nearestStretcher; !isNull (_stretcher) && { isNull (_stretcher getVariable [""unitAttached"", objNull]) }";
+			condition = "private _stretcher = [_this] call ULP_fnc_nearestStretcher; !isNull (_stretcher) && { (animationState _this) isEqualTo ""unconsciousrevivedefault"" } && { isNull (_stretcher getVariable [""unitAttached"", objNull]) }";
 		};
 
 		class TakeOffStretcher : PutOnStretcher {
 			title = "Take Off Stretcher";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_toggleOnStretcher; closeDialog 0;";
-			condition = "private _stretcher = attachedTo player; !isNull _stretcher && { _stretcher isKindOf ""Land_Stretcher_01_F"" }";
+			condition = "private _stretcher = attachedTo _this; !isNull _stretcher && { _stretcher isKindOf ""Land_Stretcher_01_F"" }";
 		};
 
 		class AdministerBlood : Revive {
@@ -307,7 +307,7 @@ class CfgInteractions {
 		class PulloutOccupants : Repair {
 			title = "Pullout Occupants";
 			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; };";
-			condition = "(speed _this) <= 4 && { _this in ULP_Keys || [""Police_Main"", 1] call ULP_fnc_hasAccess }";
+			condition = "(speed _this) <= 4 && { _this in ULP_Keys || [player, [""Police"", ""Medic""]] call ULP_fnc_isFaction }";
 		};
 
 		class Unflip : Repair {

@@ -1661,7 +1661,7 @@ class CfgVirtualItems {
 		description = "Artifact collected from dig sites and sold at Altis Archaeologists.";
 		icon = "Data\Icons\oldCoin.paa";
 		buyPrice = -1;
-		sellPrice = 8287;
+		sellPrice = 7287;
 		weight = 1;
 		class Settings {
 			onMarket = true;
@@ -1683,34 +1683,34 @@ class CfgVirtualItems {
 	class BrokenPot : OldCoin {
 		displayName = "Broken Pot";
 		icon = "Data\Icons\brokenPot.paa";
-		sellPrice = 16575;
+		sellPrice = 15575;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class RestoredPot : BrokenPot {
 		displayName = "Restored Pot";
 		icon = "Data\Icons\restoredPot.paa";
-		sellPrice = 41437;
+		sellPrice = 39437;
 		class Settings : Settings {};
 	};
 	class BluntStoneKnife : OldCoin {
 		displayName = "Blunt Stone Knife";
 		icon = "Data\Icons\bluntStoneKnife.paa";
-		sellPrice = 26775;
+		sellPrice = 24775;
 		weight = 2;
 		class Settings : Settings {};
 	};
 	class SharpStoneKnife : OldCoin {
 		displayName = "Sharp Stone Knife";
 		icon = "Data\Icons\sharpStoneKnife.paa";
-		sellPrice = 66937;
+		sellPrice = 76937;
 		weight = 2;
 		class Settings : Settings {};
 	};
 	class FossilisedBone : OldCoin {
 		displayName = "Fossilised Bone";
 		icon = "Data\Icons\fossilisedBone.paa";
-		sellPrice = 32595;
+		sellPrice = 31595;
 		weight = 3;
 		class Settings : Settings {};
 	};
@@ -1723,61 +1723,61 @@ class CfgVirtualItems {
 	class IdentifiedSkull : UnidentifiedSkull {
 		displayName = "Identified Skull";
 		icon = "Data\Icons\unidentifiedSkull.paa";
-		sellPrice = 1439000;
+		sellPrice = 1939000;
 		class Settings : Settings {};
 	};
 	/// Uncommon Rewards
 	class PetrifiedShield : OldCoin {
 		displayName = "Petrified Shield";
 		icon = "Data\Icons\petrifiedShield.paa";
-		sellPrice = 72300;
+		sellPrice = 70300;
 		weight = 9;
 		class Settings : Settings {};
 	};
 	class WeatheredSculpture : OldCoin {
 		displayName = "Weathered Sculpture";
 		icon = "Data\Icons\weatheredSculpture.paa";
-		sellPrice = 96750;
+		sellPrice = 81750;
 		weight = 7;
 		class Settings : Settings {};
 	};
 	class AncientAmber : OldCoin {
 		displayName = "Ancient Amber";
 		icon = "Data\Icons\ancientAmber.paa";
-		sellPrice = 100927;
+		sellPrice = 90927;
 		class Settings : Settings {};
 	};
 	class ReligiousTotem : OldCoin {
 		displayName = "Religious Totem";
 		icon = "Data\Icons\religiousTotem.paa";
-		sellPrice = 133950;
+		sellPrice = 97950;
 		weight = 13;
 		class Settings : Settings {};
 	};
 	class StrongMetalRing : OldCoin {
 		displayName = "Strong Metal Ring";
 		icon = "Data\Icons\strongMetalRing.paa";
-		sellPrice = 138900;
+		sellPrice = 118900;
 		class Settings : Settings {};
 	};
 	class DiamondRing : OldCoin {
 		displayName = "Diamond Metal Ring";
 		icon = "Data\Icons\diamondRing.paa";
-		sellPrice = 206100;
+		sellPrice = 246100;
 		class Settings : Settings {};
 	};
 	/// Rare Rewards
 	class EmeraldAmulet : OldCoin {
 		displayName = "Emerald Amulet";
 		icon = "Data\Icons\emeraldAmulet.paa";
-		sellPrice = 260625;
+		sellPrice = 200625;
 		weight = 2;
 		class Settings : Settings {};
 	};
 	class AncientLedger : OldCoin {
 		displayName = "Ancient Ledger";
 		icon = "Data\Icons\ancientLedger.paa";
-		sellPrice = 367237;
+		sellPrice = 237237;
 		weight = 8;
 		class Settings : Settings {};
 	};
@@ -1791,7 +1791,7 @@ class CfgVirtualItems {
 	class JeweledNecklace : OldCoin {
 		displayName = "Jeweled Necklace";
 		icon = "Data\Icons\jeweledNecklace.paa";
-		sellPrice = 282337;
+		sellPrice = 332337;
 		weight = 3;
 		class Settings : Settings {};
 	};

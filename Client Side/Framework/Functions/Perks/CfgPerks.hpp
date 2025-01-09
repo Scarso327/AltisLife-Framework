@@ -59,7 +59,7 @@ class CfgPerks {
 			prestige = 0;
 			profession[] = {};
 		};
-		onSelected = "[] call ULP_fnc_maxCarry;";
+		onChanged = "[] call ULP_fnc_maxCarry;";
 		onActivated = "";
 	};
 

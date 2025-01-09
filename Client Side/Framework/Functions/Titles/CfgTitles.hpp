@@ -85,7 +85,7 @@ class CfgTitles {
 	};
 	class Cartel {
 		displayName = "Cartel Lord";
-		description = "seized control of a cartel";
+		description = "Seized control of a cartel";
 	};
 	class OneMillion {
 		displayName = "Millionaire";

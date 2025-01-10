@@ -7,15 +7,15 @@ class CfgTitles {
     // Community Titles
 	class OldGuard {
 		displayName = "Old Guard";
-		description = "Apart of this community before this title";
+		description = "Apart of this community before this title was";
 	};
     class Tester {
 		displayName = "Testing, Testing...";
 		description = "Involved with beta testing this framework";
 	};
 	class Mantle {
-		displayName = "Stood on a Mantle";
-		description = "Apaart of the Mantle Network team";
+		displayName = "The Mantle";
+		description = "Apart of the Mantle team";
 	};
 	class Donator {
 		displayName = "Community Donator";
@@ -28,7 +28,7 @@ class CfgTitles {
 
     // Regular Titles
 	class FirstDrink {
-		displayName = "Big Drink Man";
+		displayName = "Big Drink";
 		description = "Taken your first drink of alcohol";
 	};
 	class FirstDrug {
@@ -69,7 +69,7 @@ class CfgTitles {
 	};
 	class Employment {
 		displayName = "Employed";
-		description = "Become employeed and started working";
+		description = "Become employed and started working";
 	};
 	class Convict {
 		displayName = "Convict";
@@ -80,12 +80,12 @@ class CfgTitles {
 		description = "Successfully carried out a site robbery";
 	};
 	class TaskMaster {
-		displayName = "Task Master";
+		displayName = "Taskmaster";
 		description = "Ticking off tasks constantly";
 	};
 	class Cartel {
 		displayName = "Cartel Lord";
-		description = "seized control of a cartel";
+		description = "Seized control of a cartel";
 	};
 	class OneMillion {
 		displayName = "Millionaire";
@@ -98,6 +98,22 @@ class CfgTitles {
 	class FanGirl {
 		displayName = "Fan Girl";
 		description = "simp";
+	};
+	class Carrier {
+		displayName = "Top Gun";
+		description = "Became a navy aviator and landed on the Freedom";
+	};
+	class Judge {
+		displayName = "Judge, Jury, Executioner";
+		description = "You have sat in judgement of another";
+	};
+	class CombatMedic {
+		displayName = "Combat Medic";
+		description = "Entered the heart of the redzone as a medic";
+	};
+	class Bomb {
+		displayName = "Absolute Idiot";
+		description = "Stepped on what is clearly a bomb";
 	};
 	class Uncharted {
 		displayName = "Explorer";
@@ -141,7 +157,7 @@ class CfgTitles {
 	};
 	class SpeedDemon {
 		displayName = "Speed Demon";
-		description = "Visted the race track";
+		description = "Visited the race track";
 	};
 	class Nothing {
 		displayName = "No Title";
@@ -159,14 +175,15 @@ class CfgTitles {
 	// Personal Titles
 	class Scarso {
 		displayName = "Redbull Drinker";
-		description = "You uncovered a mystery achievement";
+		description = "You uncovered a personal achievement";
 	};
 	class Lewis : Scarso { displayName = "Bushmaker"; };
 	class Oliver : Scarso { displayName = "Lake Lover"; };
 	class Ace : Scarso { displayName = "Norwegian"; };
+	class Jetan : Scarso { displayName = "Boat Boy"; };
 	class Brick : Scarso { displayName = "Dead Man Walking"; };
 	class James : Scarso { displayName = "Fat Man"; };
-	class Fulton : Scarso { displayName = "ONE ZERO ALPHA NOVEMBER"; };
+	class Fulton : Scarso { displayName = "1-0-ALPHA-NOVEMBER"; };
 	class Freddie : Scarso { displayName = "Chicken Deboner"; };
 
 	// Investor Titles

@@ -197,7 +197,7 @@ class CfgItemsStore {
 			class ItemCompass {};
 			class ItemWatch {};
 			class ItemGPS {};
-			class B_UavTerminal { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess }"; };
+			class B_UavTerminal { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess }"; };
 			class ItemRadio {};
 			class Rangefinder {};
 			class NVGoggles {

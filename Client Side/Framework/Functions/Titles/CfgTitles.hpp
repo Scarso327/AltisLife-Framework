@@ -80,7 +80,7 @@ class CfgTitles {
 		description = "Successfully carried out a site robbery";
 	};
 	class TaskMaster {
-		displayName = "Task Master";
+		displayName = "Taskmaster";
 		description = "Ticking off tasks constantly";
 	};
 	class Cartel {

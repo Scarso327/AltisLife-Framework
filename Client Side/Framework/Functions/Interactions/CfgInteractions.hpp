@@ -18,7 +18,14 @@ class CfgInteractions {
 			title = "Remove Placeable";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_removeObject; closeDialog 0;";
-			condition = "[player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { [] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""RemovePlaceable"", false] call ULP_fnc_checkPower } }";
+			condition = "isNull (_this getVariable [""unitDragging"", objNull]) && { [player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { [] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""RemovePlaceable"", false] call ULP_fnc_checkPower } } }";
+		};
+
+		class Drag {
+			title = "Drag Placeable";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "[_this select 0, ""Stretcher""] call ULP_fnc_dragPlaceable; closeDialog 0;";
+			condition = "_this isKindOf ""Land_Stretcher_01_F"" && { isNull (_this getVariable [""unitDragging"", objNull]) } && { [player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { [] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""RemovePlaceable"", false] call ULP_fnc_checkPower } } }";
 		};
 	};
 
@@ -130,6 +137,26 @@ class CfgInteractions {
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_openMedical";
 			condition = "true";
+		};
+
+		class PutOnStretcher {
+			title = "Put On Stretcher";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_toggleOnStretcher; closeDialog 0;";
+			condition = "private _stretcher = [_this] call ULP_fnc_nearestStretcher; !isNull (_stretcher) && { (animationState _this) in [""unconsciousrevivedefault"", ""deadstate""] } && { isNull (_stretcher getVariable [""unitAttached"", objNull]) }";
+		};
+
+		class TakeOffStretcher : PutOnStretcher {
+			title = "Take Off Stretcher";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "_this call ULP_fnc_toggleOnStretcher; closeDialog 0;";
+			condition = "private _stretcher = attachedTo _this; !isNull _stretcher && { _stretcher isKindOf ""Land_Stretcher_01_F"" }";
+		};
+
+		class PutInNearbyVehicle : TakeOffStretcher {
+			title = "Put In Vehicle";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			onClick = "private _vehicle = (nearestObjects[_this param [0, player, [objNull]], [""Car""], 5]) param [0, objNull]; if (isNull _vehicle || { !(_vehicle in ULP_Keys) }) exitWith { [""You must take them to a vehicle you have keys for to put it...""] call ULP_fnc_hint; }; if !(((fullCrew _vehicle) findIf { isNull (_x param [0, objNull]) }) isEqualTo -1) exitWith { [""This vehicle has no empty seats..""] call ULP_fnc_hint; }; if (_this call ULP_fnc_toggleOnStretcher) then { [_vehicle, _this select 0] remoteExecCall [""ULP_fnc_putVehicleUnit"", _this select 0]; [format [""You have put %1 into a vehicle..."", [_this select 0, true] call ULP_fnc_getName]] call ULP_fnc_hint; }; closeDialog 0;";
 		};
 
 		class AdministerBlood : Revive {
@@ -286,7 +313,7 @@ class CfgInteractions {
 		class PulloutOccupants : Repair {
 			title = "Pullout Occupants";
 			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; };";
-			condition = "(speed _this) <= 4 && { _this in ULP_Keys || [""Police_Main"", 1] call ULP_fnc_hasAccess }";
+			condition = "(speed _this) <= 4 && { _this in ULP_Keys || [player, [""Police"", ""Medic""]] call ULP_fnc_isFaction }";
 		};
 
 		class Unflip : Repair {

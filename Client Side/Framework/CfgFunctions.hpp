@@ -47,6 +47,9 @@ class CfgFunctions {
 			class onEachFrame {};
 			class removeEachFrame {};
 			class removeEventHandler {};
+			class onAction {};
+			class onNextAction {};
+			class onPrevAction {};
 			class onPause {};
 			class onRestrain {};
 			class onIncapacitated {};
@@ -143,6 +146,7 @@ class CfgFunctions {
 			class keyDown {};
 			class keyUp {};
 			class actionKeyDown {};
+			class isInputBlocked {};
 		};
 
 		class Player {
@@ -481,6 +485,7 @@ class CfgFunctions {
 			class addPollingStation {};
 			class addMailBox {};
 			class addFreightMission {};
+			class initBriefing {};
 			class isATM {};
 			class lockForFactions {};
 			class sit {};
@@ -646,6 +651,8 @@ class CfgFunctions {
 			class applyBandage {};
 			class revivePatient {};
 			class revived {};
+			class nearestStretcher {};
+			class toggleOnStretcher {};
 		};
 
 		class Housing {
@@ -825,11 +832,14 @@ class CfgFunctions {
 
 		class Placeables {
 			file = "Functions\Placeables";
+			class dragPlaceable {};
 			class placedObjects {};
 			class placeObject {};
+			class releasePlaceable {};
 			class removeObject {};
 			class stopPlacement {};
 			class isPlaceable {};
+			class isDragging {};
 		};
 	};
 

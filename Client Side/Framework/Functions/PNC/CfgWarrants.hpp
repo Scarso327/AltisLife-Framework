@@ -29,7 +29,7 @@ class CfgWarrants {
         displayName = "Public Order Act 1986";
 
         class Section1 {
-            displayName = "Rioting";
+            displayName = "Riot";
             allowManual = true;
             bounty = 75000;
         };
@@ -37,9 +37,17 @@ class CfgWarrants {
             displayName = "Violent Disorder";
             bounty = 80000;
         };
+        class Section3 : Section1 {
+            displayName = "Affray";
+            bounty = 30000;
+        };
         class Section4 : Section1 {
             displayName = "Fear or Provocation of Violence";
             bounty = 55000;
+        };
+        class Section5 : Section1 {
+            displayName = "Harassment, Alarm or Distress";
+            bounty = 15000;
         };
     };
 
@@ -50,20 +58,6 @@ class CfgWarrants {
             displayName = "Treason";
             allowManual = true;
 			bounty = 200000; 
-        };
-    };
-
-    class ProtectionFromHarassment {
-        displayName = "Protection from Harassment Act 1997";
-
-        class Section2 {
-            displayName = "Harassment";
-            allowManual = true;
-            bounty = 25000;
-        };
-        class Section2A : Section2 {
-            displayName = "Stalking";
-            bounty = 30000;
         };
     };
 
@@ -161,6 +155,14 @@ class CfgWarrants {
             displayName = "Taking Vehicle Without Consent";
             bounty = 75000;
         };
+        class Section21 : Section7 {
+            displayName = "Blackmail";
+            bounty = 20000;
+        };
+        class Section22 : Section7 {
+            displayName = "Handling Stolen Goods";
+            bounty = 30000;
+        };
         class Section25 : Section7 {
             displayName = "Going Equipped";
             bounty = 15000;
@@ -178,6 +180,14 @@ class CfgWarrants {
         class Section5 : Section1 {
             displayName = "Possession of a Weapon Subject to General Prohibition";
             bounty = 65000;
+        };
+        class Section16 : Section1 {
+            displayName = "Possession of a Firearm with Intent to Injure";
+            bounty = 80000;
+        };
+        class Section17 : Section1 {
+            displayName = "Use of a Firearm to Resist Arrest";
+            bounty = 155000;
         };
         class Section18 : Section1 {
             displayName = "Carrying a Firearm with Criminal Intent";
@@ -211,7 +221,7 @@ class CfgWarrants {
         displayName = "Misuse of Drugs Act 1971";
 
         class Section4 {
-            displayName = "Production and Supply of Controlled Drugs";
+            displayName = "Possession with Intent to Supply Controlled Drugs";
             allowManual = true;
             bounty = 150000;
         };
@@ -259,19 +269,39 @@ class CfgWarrants {
             displayName = "Driving, or being in charge, when under Influence of Drink or Drugs";
             bounty = 35000;
         };
+        class Section14 : Section1 {
+            displayName = "Failing to Wear a Seat Belt";
+            bounty = 5000;
+        };
+        class Section22 : Section1 {
+            displayName = "Leaving a Vehicle in a Dangerous Position";
+            bounty = 12000;
+        };
+        class Section25 : Section1 {
+            displayName = "Vehicle Interferance";
+            bounty = 16000;
+        };
         class Section34 : Section1 {
-            displayName = "Driving mechanically propelled vehicles elsewhere than on roads.";
+            displayName = "Driving elsewhere than on roads";
             bounty = 15000;
         };
         class Section35 : Section1 {
             displayName = "Drivers to comply with traffic directions";
             bounty = 15000;
         };
+        class Section40 : Section1 {
+            displayName = "Using a Vehicle in a Dangerous Condition";
+            bounty = 10000;
+        };
         class Section87 : Section1 {
             displayName = "Driving Otherwise than in Accordance with a Licence";
             bounty = 20000;
         };
-        class Section168 : Section1 {
+        class Section163 : Section1 {
+            displayName = "Failing to Stop for Police";
+            bounty = 65000;
+        };
+        class Section165 : Section1 {
             displayName = "Failing to Give/Or Giving False, Name or Address";
             bounty = 5000;
         };

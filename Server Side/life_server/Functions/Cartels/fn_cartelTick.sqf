@@ -58,12 +58,6 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 					private _secondLargestScore = ((_sortedScores param [1, []]) param [1, 0]);
 
 					private _score = _scores getOrDefault [_groupId, 0];
-
-					// We're the only gang contesting so second is technically 0
-					if (_score isEqualTo _secondLargestScore) then {
-						_secondLargestScore = 0;
-					};
-
 					_score = _score + 1;
 
 					// No winner or second largest + max lead is still greater then we increment score

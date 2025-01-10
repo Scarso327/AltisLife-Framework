@@ -164,6 +164,7 @@ class CfgTitles {
 	class Lewis : Scarso { displayName = "Bushmaker"; };
 	class Oliver : Scarso { displayName = "Lake Lover"; };
 	class Ace : Scarso { displayName = "Norwegian"; };
+	class Jetan : Scarso { displayName = "Boat Boy"; };
 	class Brick : Scarso { displayName = "Dead Man Walking"; };
 	class James : Scarso { displayName = "Fat Man"; };
 	class Fulton : Scarso { displayName = "1-0-ALPHA-NOVEMBER"; };

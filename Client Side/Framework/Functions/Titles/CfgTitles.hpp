@@ -99,6 +99,22 @@ class CfgTitles {
 		displayName = "Fan Girl";
 		description = "simp";
 	};
+	class Carrier {
+		displayName = "Top Gun";
+		description = "Became a navy aviator and landed on the Freedom";
+	};
+	class Judge {
+		displayName = "Judge, Jury, Executioner";
+		description = "You have sat in judgement of another";
+	};
+	class CombatMedic {
+		displayName = "Combat Medic";
+		description = "Entered the heart of the redzone as a medic";
+	};
+	class Bomb {
+		displayName = "Absolute Idiot";
+		description = "Stepped on what is clearly a bomb";
+	};
 	class Uncharted {
 		displayName = "Explorer";
 		description = "Explored beyond the mapped world";

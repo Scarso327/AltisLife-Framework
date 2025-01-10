@@ -309,7 +309,43 @@ class CfgAchievements {
 	class BuyWarehouse {
 		icon = "Data\UI\Achievements\warehouse.paa";
 		displayName = "First Warehouse";
-		description = "Bought your first warehouse.";
+		description = "Bought your first warehouse";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Carrier {
+		icon = "\A3\ui_f_jets\data\GUI\Cfg\Hints\AircraftLandCarrier_ca.paa";
+		displayName = "Floating Fortress";
+		description = "Landed on the USS Freedom";
+		onUnlocked = "[""Carrier""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Bomb {
+		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\uxo_ca.paa";
+		displayName = "You idiot";
+		description = "Who steps on what is clearly a bomb";
+		onUnlocked = "[""Bomb""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Judge {
+		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\ioac_ca.paa";
+		displayName = "Judging Others";
+		description = "You have sat in judgement of another";
+		onUnlocked = "[""Judge""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class CombatMedic {
+		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\codeofconduct3_ca.paa";
+		displayName = "Combat Medic";
+		description = "Entered the heart of the redzone as a medic";
+		onUnlocked = "[""CombatMedic""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 200, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};

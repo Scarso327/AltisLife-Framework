@@ -17,10 +17,10 @@ scopeName "fn_initPolice";
 	if (_name isEqualTo "" || { _amount < 0 }) exitWith {};
 
 	if (_paid) then {
-		[format ["%1 has paid their penalty notice of %2%3", _name, "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		[format ["<t color='#B92DE0'>%1</t> has paid their penalty notice of <t color='#B92DE0'>%2%3</t>", _name, "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		[round (_amount / 2), true, format ["%1's Fine", _name]] call ULP_fnc_addMoney;
 	} else {
-		[format ["<t color='#B92DE0'>%1</t> has refused to or couldn't pay their penalty notice..."]] call ULP_fnc_hint;
+		[format ["<t color='#B92DE0'>%1</t> has refused to or couldn't pay their penalty notice...", _name]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
 

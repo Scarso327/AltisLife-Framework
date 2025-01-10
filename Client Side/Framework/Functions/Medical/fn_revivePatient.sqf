@@ -56,6 +56,8 @@ private _time = ["LifeSaver", 20] call ULP_fnc_activatePerk;
 	["LifeSaver"] call ULP_fnc_achieve;
 	[100, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addXP;
 
+	["RevivedSomeone", [_unit]] call ULP_fnc_invokeEvent;
+
 	[player] remoteExecCall ["ULP_fnc_revived", _unit];
 	[getPlayerUID player, "Revive", [_unit]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 }, {} , ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

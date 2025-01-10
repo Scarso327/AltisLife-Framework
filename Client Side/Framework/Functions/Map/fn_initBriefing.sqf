@@ -45,3 +45,11 @@ private _licenses = configProperties [missionConfigFile >> "CfgLicenses", "isCla
 };
 
 player createDiaryRecord ["wiki", ["Licenses", format ["<br />%1", _licenses joinString "<br/>"]], taskNull, "NONE", false];
+
+player createDiarySubject ["serverinfo", "Server Info"];
+
+player createDiaryRecord ["serverinfo", ["Links", "<br />
+	<font face='PuristaSemiBold'>Website</font><br />
+	Link: <font color='#B92DE0'>https://mantlenetwork.co.uk/</font><br /><br />
+	<font face='PuristaSemiBold'>Discord</font><br />
+	Link: <font color='#B92DE0'>https://mantlenetwork.co.uk/discord</font>"], taskNull, "NONE", false];

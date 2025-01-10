@@ -284,7 +284,7 @@ class CfgAchievements {
 	class CartelLord {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Miss_icon_ca.paa";
 		displayName = "Cartel Lord";
-		description = "Sucessfully recieved a payout from a cartel";
+		description = "Successfully received a payout from a cartel";
 		onUnlocked = "[""Cartel""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;
@@ -379,7 +379,7 @@ class CfgAchievements {
 	class Radiation {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
 		displayName = "Goodbye Fatherhood";
-		description = "Experienced the effects of radation poisoning";
+		description = "Experienced the effects of radiation poisoning";
 		onUnlocked = "[""Radiation""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 200, "Achievement Unlocked", 100 };
 		isMystery = true;
@@ -424,7 +424,7 @@ class CfgAchievements {
 	class Racing {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Time_trials_ca.paa";
 		displayName = "Racing Around";
-		description = "You've visted the race track";
+		description = "You've visited the race track";
 		onUnlocked = "[""Racing""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 200, "Achievement Unlocked", 100 };
 		isMystery = true;
@@ -568,7 +568,7 @@ class CfgAchievements {
 	class Freddie {
 		icon = "Data\UI\Perks\muscleman.paa";
 		displayName = "Chicken Deboner";
-		description = "The aftermatch of Freddie debonning a chicken";
+		description = "The aftermath of Freddie debonning a chicken";
 		onUnlocked = "[""Freddie""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;

@@ -15,7 +15,7 @@ class CfgTitles {
 	};
 	class Mantle {
 		displayName = "The Mantle";
-		description = "Apaart of the Mantle team";
+		description = "Apart of the Mantle team";
 	};
 	class Donator {
 		displayName = "Community Donator";
@@ -69,7 +69,7 @@ class CfgTitles {
 	};
 	class Employment {
 		displayName = "Employed";
-		description = "Become employeed and started working";
+		description = "Become employed and started working";
 	};
 	class Convict {
 		displayName = "Convict";
@@ -141,7 +141,7 @@ class CfgTitles {
 	};
 	class SpeedDemon {
 		displayName = "Speed Demon";
-		description = "Visted the race track";
+		description = "Visited the race track";
 	};
 	class Nothing {
 		displayName = "No Title";

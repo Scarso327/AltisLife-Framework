@@ -7,15 +7,15 @@ class CfgTitles {
     // Community Titles
 	class OldGuard {
 		displayName = "Old Guard";
-		description = "Apart of this community before this title";
+		description = "Apart of this community before this title was";
 	};
     class Tester {
 		displayName = "Testing, Testing...";
 		description = "Involved with beta testing this framework";
 	};
 	class Mantle {
-		displayName = "Stood on a Mantle";
-		description = "Apaart of the Mantle Network team";
+		displayName = "The Mantle";
+		description = "Apaart of the Mantle team";
 	};
 	class Donator {
 		displayName = "Community Donator";
@@ -28,7 +28,7 @@ class CfgTitles {
 
     // Regular Titles
 	class FirstDrink {
-		displayName = "Big Drink Man";
+		displayName = "Big Drink";
 		description = "Taken your first drink of alcohol";
 	};
 	class FirstDrug {
@@ -159,14 +159,14 @@ class CfgTitles {
 	// Personal Titles
 	class Scarso {
 		displayName = "Redbull Drinker";
-		description = "You uncovered a mystery achievement";
+		description = "You uncovered a personal achievement";
 	};
 	class Lewis : Scarso { displayName = "Bushmaker"; };
 	class Oliver : Scarso { displayName = "Lake Lover"; };
 	class Ace : Scarso { displayName = "Norwegian"; };
 	class Brick : Scarso { displayName = "Dead Man Walking"; };
 	class James : Scarso { displayName = "Fat Man"; };
-	class Fulton : Scarso { displayName = "ONE ZERO ALPHA NOVEMBER"; };
+	class Fulton : Scarso { displayName = "1-0-ALPHA-NOVEMBER"; };
 	class Freddie : Scarso { displayName = "Chicken Deboner"; };
 
 	// Investor Titles

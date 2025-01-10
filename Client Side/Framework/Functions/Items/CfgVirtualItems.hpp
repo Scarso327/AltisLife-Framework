@@ -891,7 +891,7 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 	class FertileSoil : FarmingEquipment { // TODO
-		displayName = "Crop Seeds";
+		displayName = "Fertile Soil";
 		description = "A small packet of seeds ready to be planted in fertile soil in a specialised warehouse.";
 		icon = "Data\Icons\fertileSoil.paa";
 		buyPrice = 1230;

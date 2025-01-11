@@ -220,9 +220,9 @@ class CfgGoals {
 			icon = "Data\UI\Goals\arrests.paa"; // Optional override
 			title = "Arrest Criminals";
 			basePayout = 50000;
-			maxPayout = 5000000;
+			maxPayout = 500000;
 			tiers[] = { 25, 100, 200 };
-			duration = 7; 
+			duration = 14; 
 			factions[] = { "Police" };
 			class Event {
 				eventType = "ArrestedSomeone";
@@ -232,7 +232,8 @@ class CfgGoals {
 
 		class IssueTickets : ArrestPeople {
 			title = "Issue Paid Tickets";
-			tiers[] = { 1000000, 1750000, 2000000 };
+			maxPayout = 5000000;
+			tiers[] = { 5000000, 7000000, 10000000 };
 			class Event {
 				eventType = "TicketPaid";
 				getQuantity = "(_this select 1) params [ """", ""_amount"", ""_paid"" ]; if !(_paid) exitWith { 0 }; _amount";

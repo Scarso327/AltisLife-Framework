@@ -636,7 +636,7 @@ class arifle_SPAR_03_blk_F {
 class arifle_SPAR_03_khk_F : arifle_SPAR_03_blk_F {};
 class arifle_SPAR_03_snd_F : arifle_SPAR_03_blk_F {};
 
-class srifle_DMR_06_hunter_F {
+class srifle_DMR_06_olive_F {
 	displayName = "Mk14 7.62 mm";
 	price = 415000;
 	reputation = true;
@@ -652,8 +652,15 @@ class srifle_DMR_06_hunter_F {
 		class srifle_DMR_06_camo_F : srifle_DMR_06_olive_F { displayName = "Camo"; };
 	};
 };
-class srifle_DMR_06_olive_F : srifle_DMR_06_hunter_F {};
-class srifle_DMR_06_camo_F : srifle_DMR_06_hunter_F {};
+class srifle_DMR_06_camo_F : srifle_DMR_06_olive_F {};
+class srifle_DMR_06_hunter_F : srifle_DMR_06_olive_F {
+	class Textures {
+		class srifle_DMR_06_hunter_F {
+			displayName = "Classic";
+			condition = "true";
+		};
+	};
+};
 
 class srifle_EBR_F {
 	price = 460700;

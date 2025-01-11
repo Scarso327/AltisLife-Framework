@@ -46,6 +46,28 @@ private _licenses = configProperties [missionConfigFile >> "CfgLicenses", "isCla
 
 player createDiaryRecord ["wiki", ["Licenses", format ["<br />%1", _licenses joinString "<br/>"]], taskNull, "NONE", false];
 
+(getArray (missionConfigFile >> "CfgBases" >> "Restart")) params [ "_start", "_end" ];
+
+private _bidIncrement = getNumber (missionConfigFile >> "CfgBases" >> "BidIncrement");
+private _startingBid = getNumber (missionConfigFile >> "CfgBases" >> "StartingBid");
+private _initialBid = _startingBid + _bidIncrement;
+
+player createDiaryRecord ["wiki", ["Gang Bases", format["<br />Gang Wars takes place every week on <font color='#B92DE0'>%1</font> between <font color='#B92DE0'>%2</font> and <font color='#B92DE0'>%3</font>. To participate, you must be in a group, although no limit is placed on group type. The objective is to control a central flag located in the middle of each gang base, which is used for placing bids.<br /><br />The bidding starts at <font color='#B92DE0'>£%4</font>, with increments of <font color='#B92DE0'>£%5</font>. The money for the bids comes from the group's funds, and you must outbid and prevent other groups from placing higher bids to secure control of the base.<br /><br />Winning the bid grants your group full access to nearly all illegal equipment available at the base, as well as a spawn point until the next gang war. The base becomes your gang’s stronghold, providing both resources and strategic advantage for the duration of your reign.",
+	getText(missionConfigFile >> "CfgBases" >> "Day"), _start, _end, [_initialBid] call ULP_fnc_numberText, [_bidIncrement] call ULP_fnc_numberText]], taskNull, "NONE", false];
+
+player createDiarySubject ["majorcrimes", "Major Crimes"];
+
+{
+	private _crimeStages = configProperties [_x >> "Stages", "isClass _x && { isText (_x >> ""description"") }", true] apply {
+		format ["<font face='PuristaSemiBold'>%1</font><br/>%2", getText (_x >> "displayName"), getText (_x >> "description")]
+	};
+
+	player createDiaryRecord ["majorcrimes", [getText(_x >> "title"), format [
+		"<br />%1<br /><br /><font size='15' face='PuristaSemiBold'>Stages</font><br /><br />%2", 
+		getText (_x >> "description"),
+		_crimeStages joinString "<br/>"]], taskNull, "NONE", false];
+} forEach ("isClass _x && { isText (_x >> ""description"") }" configClasses (missionConfigFile >> "CfgCrimes" >> worldName));
+
 player createDiarySubject ["serverinfo", "Server Info"];
 
 player createDiaryRecord ["serverinfo", ["Links", "<br />

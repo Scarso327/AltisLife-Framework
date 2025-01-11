@@ -36,7 +36,7 @@ if (isClass (_cfg >> "Storage")) then {
 	];
 
 	private _storage = createSimpleObject [getText (_cfg >> "Storage" >> "object"), getPos _house];
-	_storage setPosATL (_house modelToWorld _pos);
+	_storage setPosASL AGLtoASL (_house modelToWorldVisual _pos);
 	_storage setDir (getDir _house) - _dir;
 
 	_house setVariable ["building_storage", _storage];

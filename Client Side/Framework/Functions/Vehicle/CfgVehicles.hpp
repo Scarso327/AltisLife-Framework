@@ -1784,16 +1784,25 @@ class CfgVehicles {
 	};
 
 	// HOUSING --------------------------------------------------------------------------------------
-	class Land_WoodenCrate_01_F : Base {
-		virtualSpace = 500;
+	class Land_PlasticCase_01_small_F : Base {
+		virtualSpace = 250;
 		garageLimit = 0;
 		isHouse = true;
 	};
-	class Land_PlasticCase_01_large_gray_F : Land_WoodenCrate_01_F { virtualSpace = 1000; };
-	class CargoNet_01_box_F : Land_WoodenCrate_01_F { virtualSpace = 3000; };
-	class Land_Cargo20_white_F : Land_WoodenCrate_01_F { virtualSpace = 5000; };
-	class C_IDAP_supplyCrate_F : Land_WoodenCrate_01_F { virtualSpace = 8500; };
-	class Land_Cargo20_grey_F : Land_WoodenCrate_01_F { virtualSpace = 20000; };
+	class Land_PlasticCase_01_medium_F : Land_PlasticCase_01_small_F {
+		virtualSpace = 1000;
+	};
+	class Land_PlasticCase_01_large_F : Land_PlasticCase_01_small_F {
+		virtualSpace = 2000;
+	};
+	class B_supplyCrate_F : Land_PlasticCase_01_small_F {
+		virtualSpace = 3000;
+	};
+	class Land_PlasticCase_01_large_gray_F : Land_PlasticCase_01_small_F { virtualSpace = 1000; };
+	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 3000; };
+	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F { virtualSpace = 5000; };
+	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 8500; };
+	class Land_Cargo20_grey_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; };
 
 	class Land_CargoBox_V1_F : Land_Bodybag_01_black_F {
 		requireItems = true;

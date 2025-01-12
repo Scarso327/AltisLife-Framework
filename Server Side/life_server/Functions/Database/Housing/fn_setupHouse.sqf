@@ -45,6 +45,7 @@ if (isClass (_cfg >> "Storage")) then {
 	_storage setVariable ["ULP_PhysicalCargo", _pStorage];
 	_storage setVariable ["ULP_VirtualCargo", createHashMapFromArray _vStorage, true];
 	_storage setVariable ["LastStorage", []];
+	_storage setVariable ["locked", true, true];
 };
 
 ULP_SRV_Houses pushBackUnique _house;

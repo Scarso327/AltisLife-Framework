@@ -1545,7 +1545,7 @@ class CfgVirtualItems {
 	class Turtle_F_Raw : Salema_F_Raw {
 		displayName = "Turtle";
 		icon = "Data\Icons\turtle.paa";
-		sellPrice = 55000;
+		sellPrice = 28500;
 		weight = 5;
 		class Settings {
 			onMarket = true;

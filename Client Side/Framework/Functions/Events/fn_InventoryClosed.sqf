@@ -20,4 +20,4 @@ _this params [
 [true] call ULP_fnc_saveGear;
 
 // Delay to ensure the time sets properly
-[1, [], { [] call ULP_fnc_maxCarry; }] call ULP_fnc_waitExecute;
+[0.1, [], { [] call ULP_fnc_maxCarry; }] call ULP_fnc_waitExecute;

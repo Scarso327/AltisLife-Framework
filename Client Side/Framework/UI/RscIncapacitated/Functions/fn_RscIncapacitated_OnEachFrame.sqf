@@ -45,13 +45,13 @@ if ((progressPosition _progressBar) <= _respawnPer) then {
 	// We've likely been administered blood so we're above the bleedout requirement and so can no longer respawn..
 	if (ULP_CanRespawn) then {
 		ULP_CanRespawn = false;
-		_display setVariable ["status", "Waiting to respawn..."];
+		_display setVariable ["status", nil];
 	};
 };
 
 _medicsCountText ctrlSetStructuredText parseText format [
 	"<t align='left' size='1'>%1</t><t align='right' size='1'>Medics Online: %2</t>",
-	_display getVariable ["status", "Waiting to respawn..."], _medicsOnline
+	_display getVariable ["status", format["Respawn at %1%2 Bleedout...", round (_respawnPer * 100), "%"]], _medicsOnline
 ];
 
 _medicalRequestedText ctrlSetStructuredText parseText ([

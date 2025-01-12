@@ -13,4 +13,5 @@ _this params [
 
 if (isNull _unit || { _item isEqualTo "" }) exitWith { true };
 
-[] call ULP_fnc_maxCarry;
+// Delay to ensure the time sets properly
+[0.1, [], { [] call ULP_fnc_maxCarry; }] call ULP_fnc_waitExecute;

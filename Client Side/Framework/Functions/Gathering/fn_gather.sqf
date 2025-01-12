@@ -43,7 +43,7 @@ if !(isClass _item) exitWith {};
 ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
 
 private _total = floor ((_maxWeight - _carryWeight) / getNumber(_item >> "weight"));
-if (_total isEqualTo 0) exitWith {
+if (_total <= 0) exitWith {
 	["Your inventory is full!"] call ULP_fnc_hint;
 	false
 };

@@ -29,7 +29,7 @@ switch (true) do {
 
 		if (!(_buildings isEqualTo []) && { _radius > 0 }) then {
 			_buildings = (nearestObjects [_pos, _buildings, getNumber (_spawnCfg >> "radius")]) select {
-				!(isObjectHidden _x && { [_x] call ULP_fnc_isHouseOwned })
+				!(isObjectHidden _x || { [_x] call ULP_fnc_isHouseOwned })
 			};
 
 			if !(_buildings isEqualTo []) then {

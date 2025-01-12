@@ -18,3 +18,6 @@ _this params [
 } forEach [_container, _secondaryContainer];
 
 [true] call ULP_fnc_saveGear;
+
+// Delay to ensure the time sets properly
+[0.1, [], { [] call ULP_fnc_maxCarry; }] call ULP_fnc_waitExecute;

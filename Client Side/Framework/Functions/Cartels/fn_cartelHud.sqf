@@ -152,7 +152,14 @@ switch (_mode) do {
 			["_highScore", 0, [0]]
 		];
 
-		private _groupScore = (_object getVariable ["scores", createHashMap]) getOrDefault [[] call ULP_fnc_groupId, 0];
+		private _scores = _object getVariable ["scores", createHashMap];
+
+		private _groupScore = _scores getOrDefault [[] call ULP_fnc_groupId, 0];
+
+		private _scoreValues = (_scores toArray true) param [1, [], [[]]];
+		_scoreValues sort false;
+
+		private _secondHighest = _scoreValues param [1, 0];
 
 		// Makes the UI mark has attacking if contested leadership...
 		if (isNull _group && { _groupScore isEqualTo _highScore }) then {
@@ -161,7 +168,8 @@ switch (_mode) do {
 
 		private _progress = 0;
 		if (_highScore > 0) then {
-			_progress = _groupScore / _highScore;
+			private _maxScoreLead = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "maxScoreLead");
+			_progress = _groupScore / (_secondHighest + _maxScoreLead);
 		};
 
 		private _ctrlProgress = _hud controlsGroupCtrl 102;
@@ -169,8 +177,14 @@ switch (_mode) do {
 
 		private _isDefending = ((progressPosition _ctrlProgress) >= 1);
 
+		private _text = switch (true) do {
+			case (_isDefending): { "DEFENDING" };
+			case (!isNull _group && { _groupScore isEqualTo _highScore }): { "SECURING" };
+			default { "ATTACKING" };
+		};
+
 		// Update Status Text...
-		(_hud controlsGroupCtrl 103) ctrlSetStructuredText parseText format ["<t align='center' size='1.25'>%1</t>", (["ATTACKING", "DEFENDING"] select _isDefending)];
+		(_hud controlsGroupCtrl 103) ctrlSetStructuredText parseText format ["<t align='center' size='1.25'>%1</t>", _text];
 
 		// Update Status Colouring...
 		private _colour = ([ATTACKING, DEFENDING] select _isDefending);
@@ -179,7 +193,7 @@ switch (_mode) do {
 		private _ctrlScore = _hud controlsGroupCtrl 105;
 		_ctrlScore ctrlSetBackgroundColor _colour;
 
-		// Update Score Text (Round the score just in case we've taken half away for the contest system...)
-		_ctrlScore ctrlSetStructuredText parseText format ["<t align='center' size='1.5'>%1</t>", round (_groupScore) ];
+		// Update Score Text
+		_ctrlScore ctrlSetStructuredText parseText format ["<t align='center' size='1.5'>%1%2</t>", floor (_progress * 100), "%" ];
 	};
 };

@@ -14,4 +14,4 @@ private _doors = (([_building] call ULP_fnc_getBuildingDoors) apply {
 	_unit distance _x
 });
 
-(_doors findIf { _x <= 2.5 })
+(_doors findIf { _x <= 2.5 }) + 1

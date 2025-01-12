@@ -160,9 +160,9 @@ class CfgOptions {
 
 		class IndicatorDistance : EnableIndicators {
 			name = "Indicators Distance";
-			tooltip = "This is the distance at which group indicators will be shown. (20 - 2000m)";
+			tooltip = "This is the distance at which group indicators will be shown. (20 - 6000m)";
 			type = "SLIDER";
-			values[] = { { 20, 2000 }, 2000, { 1, 1, 1 } };
+			values[] = { { 20, 6000 }, 2000, { 1, 1, 1 } };
 		};
 	};
 

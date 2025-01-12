@@ -41,52 +41,46 @@ class CfgHousing {
 			spawnPos[] = {1.46875,0.984863,-1.0281};
 			
 			class Storage {
-				object = "Land_WoodenCrate_01_F";
+				object = "Land_MetalCase_01_medium_F";
 				position[] = {{2.84766,2.18945,-0.980395}, 0};
 			};
 		};
 
 		class Land_i_Stone_Shed_V1_F : BaseHouse {
 			price = 1650000;
-			spawnPos[] = {-0.27002,2.06299,-0.360504};
+			spawnPos[] = {0.090332,2.4209,-0.100504};
 			
 			class Storage {
-				object = "Land_WoodenCrate_01_F";
-				position[] = {{-1.91016,3.89063,-0.362943}, 90};
+				object = "Land_PlasticCase_01_small_F";
+				position[] = {{-3.37132,3.99512,-0.102937}, 0};
 			};
 		};
 		class Land_i_Stone_Shed_V2_F : Land_i_Stone_Shed_V1_F {};
 		class Land_i_Stone_Shed_V3_F : Land_i_Stone_Shed_V1_F {};
 
+		class Land_i_Addon_02_V1_F : Land_i_Stone_Shed_V1_F {
+			price = 1950000;
+		};
+
 		class Land_i_Stone_HouseSmall_V1_F : BaseHouse {
 			price = 2100000;
-			spawnPos[] = {-5.47412,2.09326,-1.86095};
+			spawnPos[] = {-5.875,1.85156,-0.632767};
 			
 			class Storage {
-				object = "Land_WoodenCrate_01_F";
-				position[] = {{5.80176,4.75635,-1.79905}, 270};
+				object = "Land_PlasticCase_01_medium_F";
+				position[] = {{5.89418,4.7583,-0.595899}, 0};
 			};
 		};
 		class Land_i_Stone_HouseSmall_V2_F : Land_i_Stone_HouseSmall_V1_F {};
 		class Land_i_Stone_HouseSmall_V3_F : Land_i_Stone_HouseSmall_V1_F {};
 
-		class Land_i_Addon_02_V1_F : BaseHouse {
-			price = 1950000;
-			spawnPos[] = {-0.0400391,1.93896,-0.201251};
-			
-			class Storage {
-				object = "Land_WoodenCrate_01_F";
-				position[] = {{-2.8501,2.09277,-0.20369}, 0};
-			};
-		};
-
 		class Land_i_House_Small_02_V1_F : BaseHouse {
 			price = 2450000;
-			spawnPos[] = {-1.74902,-0.0688477,-1.12361};
+			spawnPos[] = {4.23022,0.202148,-0.702804};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{4.62061,-2.86719,-1.12596}, 90};
+				object = "Land_PlasticCase_01_medium_F";
+				position[] = {{7.08643,-0.105469,-0.701562}, 0};
 			};
 		};
 		class Land_i_House_Small_02_V2_F : Land_i_House_Small_02_V1_F {};
@@ -94,11 +88,11 @@ class CfgHousing {
 
 		class Land_i_House_Small_01_V1_F : BaseHouse {
 			price = 2900000;
-			spawnPos[] = {3.16797,1.87061,-1.34062};
+			spawnPos[] = {-1.41695,-1.80029,-1.04134};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{-1.13623,-3.92871,-1.34306}, 90};
+				object = "Land_PlasticCase_01_medium_F";
+				position[] = {{-1.24918,-3.88306,-1.04354}, 0};
 			};
 		};
 		class Land_i_House_Small_01_V2_F : Land_i_House_Small_01_V1_F {};
@@ -106,21 +100,21 @@ class CfgHousing {
 
 		class Land_i_House_Small_03_V1_F : BaseHouse {
 			price = 3250000;
-			spawnPos[] = {-3.26758,0.970703,-0.314249};
+			spawnPos[] = {-1.32422,-0.259766,0.00575018};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{0.559082,4.48291,-0.316688}, 270};
+				object = "Land_PlasticCase_01_medium_F";
+				position[] = {{1.21436,1.42822,0.00331211}, 0};
 			};
 		};
 
 		class Land_i_House_Big_02_V1_F : BaseHouse {
 			price = 4050000;
-			spawnPos[] = {0.442383,2.39697,-2.88253};
+			spawnPos[] = {-0.286377,3.17383,0.784062};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{4.28613,2.84229,-2.88497}, 0};
+				object = "Land_PlasticCase_01_large_F";
+				position[] = {{4.14893,0.503906,0.781623}, 0};
 			};
 		};
 		class Land_i_House_Big_02_V2_F : Land_i_House_Big_02_V1_F {};
@@ -128,11 +122,11 @@ class CfgHousing {
 
 		class Land_i_House_Big_01_V1_F : BaseHouse {
 			price = 4400000;
-			spawnPos[] = {-1.91992,-1.29736,-3.06494};
+			spawnPos[] = {-0.25415,5.96484,0.855064};
 			
 			class Storage {
-				object = "Land_PlasticCase_01_large_gray_F";
-				position[] = {{-4.03271,5.45361,-2.06737}, 180};
+				object = "B_supplyCrate_F";
+				position[] = {{3.61621,6.56787,0.852626}, 0};
 			};
 		};
 		class Land_i_House_Big_01_V2_F : Land_i_House_Big_01_V1_F {};

@@ -16,7 +16,7 @@ _this params [
 	["_eachframe", {}, [{}]]
 ];
 
-if ([] call ULP_UI_fnc_isProgress) exitWith {
+if ([] call ULP_UI_fnc_isProgress || { _duraction <= 0 }) exitWith {
 	false
 };
 

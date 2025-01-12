@@ -44,7 +44,7 @@ if (localNamespace getVariable ["ULP_LastRevived", -300] > (time - 300)) then {
 };
 
 _display setVariable ["endTime", _startTime + _endTime];
-_display setVariable ["status", "Waiting to respawn..."];
+_display setVariable ["status", nil];
 
 _display setVariable ["eachFrame", ([[_display, _startTime, _progressBar, _medicsCountText, _medicalRequestedText], ULP_UI_fnc_RscIncapacitated_OnEachFrame] call ULP_fnc_addEachFrame)];
 

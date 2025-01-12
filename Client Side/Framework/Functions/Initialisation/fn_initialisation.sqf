@@ -114,6 +114,22 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 enableEnvironment [true, [["EnableAmbientSounds", "Audio"] call ULP_fnc_getOption] call ULP_fnc_bool];
 [] call ULP_fnc_setViewDistance;
 
+showHud [
+	true, // scriptedHUD
+	true, // info
+	true, // radar
+	true, // compass
+	true, // direction
+	true, // menu
+	false, // group
+	true, // cursors
+	true, // panels
+	false, // kills
+	true  // showIcon3D
+];
+showChat true;
+showCommandingMenu "";
+
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 
 if (isNil "ULP_UCLevels") then {

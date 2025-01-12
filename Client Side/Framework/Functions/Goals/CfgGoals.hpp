@@ -17,6 +17,27 @@ class CfgGoals {
 				condition = "true";
 			};
 
+			class IssueTickets : ArrestPeople {
+				title = "Issue Paid Tickets";
+				description = "Issue tickets before today's end!";
+				tiers[] = { 25000, 100000, 250000 };
+				class Event {
+					eventType = "TicketPaid";
+					getQuantity = "(_this select 1) params [ """", ""_amount"", ""_paid"" ]; if !(_paid) exitWith { 0 }; _amount";
+				};
+			};
+
+			class RevivePeople  : ArrestPeople {
+				icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa";
+				title = "Revive People";
+				description = "Provide quality medical assistance before today's end!";
+				tiers[] = { 1, 10, 25 };
+				factions[] = { "Medic" };
+				class Event {
+					eventType = "RevivedSomeone";
+				};
+			};
+
 			class GatherApple {
 				item = "FreshApple";
 				title = "Gather Apples";
@@ -192,7 +213,7 @@ class CfgGoals {
 	};
 
 	class Community {
-		amountPerFaction[] =  { { "Police", 1 }, { "Medic", 1 }, { "Hato", 1 }, { "Civilian", 2 } };
+		amountPerFaction[] =  { { "Police", 2 }, { "Medic", 1 }, { "Hato", 1 }, { "Civilian", 2 } };
 
 		class ArrestPeople {
 			item = ""; // For goals like these we don't provide an item, the field is still required
@@ -200,11 +221,36 @@ class CfgGoals {
 			title = "Arrest Criminals";
 			basePayout = 50000;
 			maxPayout = 500000;
-			tiers[] = { 200, 360, 500 };
-			duration = 7; 
+			tiers[] = { 25, 100, 200 };
+			duration = 14; 
 			factions[] = { "Police" };
 			class Event {
 				eventType = "ArrestedSomeone";
+				getQuantity = "1";
+			};
+		};
+
+		class IssueTickets : ArrestPeople {
+			title = "Issue Paid Tickets";
+			maxPayout = 5000000;
+			tiers[] = { 5000000, 7000000, 10000000 };
+			class Event {
+				eventType = "TicketPaid";
+				getQuantity = "(_this select 1) params [ """", ""_amount"", ""_paid"" ]; if !(_paid) exitWith { 0 }; _amount";
+			};
+		};
+
+		class RevivePeople {
+			item = ""; // For goals like these we don't provide an item, the field is still required
+			icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa"; // Optional override
+			title = "Revive People";
+			basePayout = 50000;
+			maxPayout = 500000;
+			tiers[] = { 25, 100, 200 };
+			duration = 7; 
+			factions[] = { "Medic" };
+			class Event {
+				eventType = "RevivedSomeone";
 				getQuantity = "1";
 			};
 		};

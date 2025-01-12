@@ -18,7 +18,7 @@ private _isDoor = false;
 
 if (!(_object getVariable ["locked", false]) && { _door > -1 } && { (_object getVariable [format ["bis_disabled_Door_%1", _door], 0]) isEqualTo 1 }) then {
 	_isDoor = true;
-	_pos = (([_object] call ULP_fnc_getBuildingDoors) select _door);
+	_pos = (([_object] call ULP_fnc_getBuildingDoors) select (_door - 1));
 };
 
 if (isNull _object || { (player distance _pos) > 5 } || { !(_object getVariable ["locked", false]) && !_isDoor }) exitWith {

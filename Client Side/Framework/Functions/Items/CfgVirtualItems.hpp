@@ -977,8 +977,8 @@ class CfgVirtualItems {
 		description = "Sealed cargo crates filled with stolen goods.";
 		icon = "Data\Icons\crate.paa";
 		buyPrice = -1;
-		sellPrice = 98500;
-		weight = 14;
+		sellPrice = 71360;
+		weight = 24;
 		class Settings {
 			onMarket = true;
 			isIllegal = true;
@@ -1098,9 +1098,33 @@ class CfgVirtualItems {
 		displayName = "Wood";
 		description = "A simple piece of wood commonly found in crafting recipies.";
 		icon = "Data\Icons\wood.paa";
-		sellPrice = 6;
+		sellPrice = 1350;
+		sellPrice = 450;
 		weight = 2;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+	};
+	class Plank : Wood {
+		displayName = "Plank";
+		description = "A simple plank made from ordinary wood.";
+		icon = "Data\Icons\wood.paa";
+		sellPrice = 2700;
+		sellPrice = 1350;
+		weight = 2;
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
 	};
 	class Rope : Tobacco {
 		displayName = "Rope";

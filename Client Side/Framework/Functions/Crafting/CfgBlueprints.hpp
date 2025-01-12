@@ -12,6 +12,14 @@ class CfgBlueprints {
 			workbench = false;
 			time = 15;
 		};
+		class B_Plank : B_Clay {
+			icon = "Data\Icons\wood.paa";
+			displayName = "Plank";
+			description = "Processed wood.";
+			materials[] = { {"Wood", 2} };
+			item = "Wood";
+			time = 10;
+		};
 		class B_Steel : B_Clay {
 			icon = "Data\Icons\ingot.paa";
 			displayName = "Steel Bar";

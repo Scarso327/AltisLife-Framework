@@ -33,7 +33,7 @@ if (isNull _overrideVault) then {
 		private _building = _x;
 
 		{
-			_building animate [format["door_%1_rot", _forEachIndex], _state];
+			_building animate [format["door_%1_rot", _forEachIndex + 1], _state];
 		} forEach ([_building] call ULP_fnc_getBuildingDoors);
 
 		private _vaults = _building getVariable ["vaults", []];
@@ -45,6 +45,7 @@ if (isNull _overrideVault) then {
 
 				if (_loot isEqualTo []) then {
 					_vault setVariable ["ULP_VirtualCargo", nil, true];
+					_vault setVariable ["locked", true, true];
 				} else {
 					private _items = [];
 
@@ -52,6 +53,8 @@ if (isNull _overrideVault) then {
 						_x params [ "_item", "_amount" ];
 						_items pushBack [_item, round (_amount * _perc)];
 					} forEach _loot;
+
+					_vault setVariable ["locked", false, true];
 
 					_vault setVariable ["ULP_VirtualCargo", (createHashMapFromArray _items), true];
 				};

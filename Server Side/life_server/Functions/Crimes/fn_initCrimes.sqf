@@ -27,8 +27,9 @@ ULP_SRV_Crimes = createHashMap;
 			};
 
 			{
-				_building animate [format["door_%1_rot", _forEachIndex], 0];
-				_building setVariable [format ["bis_disabled_Door_%1",_forEachIndex], 1, true];
+				private _door = _forEachIndex + 1;
+				_building animate [format["door_%1_rot", _door], 0];
+				_building setVariable [format ["bis_disabled_Door_%1", _door], 1, true];
 			} forEach ([_building] call ULP_fnc_getBuildingDoors);
 
 			if (isArray (_x >> "vaults")) then {
@@ -38,7 +39,7 @@ ULP_SRV_Crimes = createHashMap;
 					_vault setPosATL (_building modelToWorld _vector);
 					_vault setDir (getDir _building);
 
-					_vault setVariable ["drilled", false, true];
+					_vault setVariable ["locked", true, true];
 
 					_vaults pushBack [_vault, _perc];
 				} forEach getArray (_x >> "vaults");

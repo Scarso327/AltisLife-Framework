@@ -6,7 +6,7 @@
 scopeName "fn_drill";
 
 private _object = cursorObject;
-if (isNull _object || { (player distance _object) > 5 } || { _object getVariable ["drilled", true] }) exitWith {
+if (isNull _object || { (player distance _object) > 5 } || { _object getVariable ["locked", false] }) exitWith {
 	["You're either not close enough to something you can drill into or it's already been opened..."] call ULP_fnc_hint;
 };
 
@@ -14,5 +14,5 @@ if (isNull _object || { (player distance _object) > 5 } || { _object getVariable
 	private _object = _this select 0;
 	
 	["You have successfully broke the lock!"] call ULP_fnc_hint;
-	_object setVariable ["drilled", nil, true];
+	_object setVariable ["locked", nil, true];
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

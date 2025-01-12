@@ -6,7 +6,7 @@ class CfgCartels {
 	};
 
 	class Fixed {
-		cartelTick = 1 * 60;
+		cartelTick = 0.05 * 60;
 		rewardTicks = 20;
 		rewardXp = 100;
 		rewardAmounts[] = { 75, 150 }; // At or below 25 players, above 25

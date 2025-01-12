@@ -14,6 +14,12 @@ _this params [
 private _config = _cartel getVariable ["config", configNull];
 if (isNull _cartel || { isNull _config } || { (count _scores) isEqualTo 0 }) exitWith { false };
 
+private _decreaseAmount = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "decreasePerRewardTick");
+
+_scores = createHashMapFromArray (_scores apply {
+	[_x, (_y - _decreaseAmount) max 0]
+});
+
 private _owners = [];
 private _highest = 0;
 
@@ -74,4 +80,9 @@ if ((count _owners) > 0) then {
 
 if !(_marker isEqualTo "") then {
 	_marker setMarkerText _markerText;
+};
+
+// Updates scores for everyone...
+if !(_scores isEqualTo (_cartel getVariable ["scores", createHashMap])) then {
+	_cartel setVariable ["scores", _scores, true];
 };

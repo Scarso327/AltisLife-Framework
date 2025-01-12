@@ -604,7 +604,7 @@ class CfgAchievements {
 	class Freddie {
 		icon = "Data\UI\Perks\muscleman.paa";
 		displayName = "Chicken Deboner";
-		description = "The aftermath of Freddie debonning a chicken";
+		description = "The aftermath of Freddie deboning a chicken";
 		onUnlocked = "[""Freddie""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;

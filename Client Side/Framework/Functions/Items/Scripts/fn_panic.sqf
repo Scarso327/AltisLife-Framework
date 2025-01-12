@@ -5,7 +5,7 @@
 #include "..\..\..\script_macros.hpp"
 scopeName "fn_panic";
 
-if ((["PanicButton"] call ULP_fnc_hasItem) < 1) exitWith {};
+if !((["PanicButton"] call ULP_fnc_hasItem) >= 1 && { [player, ["Police", "Medic", "Hato"]] call ULP_fnc_isFaction || { ["PanicButton", 1, true] call ULP_fnc_handleItem } }) exitWith { false };
 
 // Stop spam...
 private _cd = player getVariable ["panic_cooldown", 0];

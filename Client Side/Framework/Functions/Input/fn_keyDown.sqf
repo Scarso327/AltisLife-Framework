@@ -178,21 +178,15 @@ if (isDowned(player)) then {
                 if ((player distance _veh) <= 10 && { _veh in ULP_Keys || _veh in ULP_Houses || (!([player] call ULP_fnc_isRestrained) && (_veh isEqualTo (vehicle player))) }) then {
                     if ([_veh] call ULP_fnc_isHouse) then {
                         private _door = [_veh] call ULP_fnc_getNearestDoor;
+
                         if (_door > -1) then {
-                            if ((_veh getVariable [format ["bis_disabled_Door_%1",_door], 0]) isEqualTo 0) then {
-                                _veh setVariable [format ["bis_disabled_Door_%1",_door], 1, true];
-                                _veh animate [format["door_%1_rot",_door],0];
+                            private _lockDoor = parseNumber ((_veh getVariable [format ["bis_disabled_Door_%1",_door], 0]) isEqualTo 0);
 
-                                systemChat "You've locked this door.";
-                            } else {
-                                _veh setVariable [format ["bis_disabled_Door_%1", _door], 0, true];
-                                _veh animate [format["door_%1_rot", _door], 1];
+                            _veh setVariable [format ["bis_disabled_door_%1",_door], _lockDoor, true];
+                            _veh animate [format["door_%1_rot", _door], 1 - _lockDoor];
 
-                                systemChat "You've unlocked this door.";
-                            };
+                            systemChat (if (_lockDoor isEqualTo 1) then { "You've locked this door" } else { "You've unlocked this door" });
                         };
-
-                        _handled = true;
                     } else {
                         if ((locked _veh) isEqualTo 2) then {
                             [_veh, 0] remoteExecCall ["ULP_fnc_lock", _veh];
@@ -205,11 +199,10 @@ if (isDowned(player)) then {
 
                             systemChat "You've locked this vehicle.";
                         };
-
-                        _handled = true;
                     };
 
                     ULP_Ability_Cooldown = time + 1;
+                     _handled = true;
                 };
             };
         };

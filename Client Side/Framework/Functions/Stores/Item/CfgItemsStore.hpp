@@ -298,7 +298,9 @@ class CfgItemsStore {
 		condition = "[""Hunting""] call ULP_fnc_hasLicense";
 		class Rifles {
 			class sgun_HunterShotgun_01_F {};
-			class srifle_DMR_06_hunter_F {};
+			class srifle_DMR_06_olive_F {
+				class textures { class srifle_DMR_06_hunter_F {}; }; 
+			};
 		};
 		class Pistols {};
 		class Attachments {};

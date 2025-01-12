@@ -641,26 +641,16 @@ class srifle_DMR_06_olive_F {
 	price = 415000;
 	reputation = true;
 	class Textures {
-		class srifle_DMR_06_hunter_F {
-			displayName = "Classic";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
-		};
-		class srifle_DMR_06_olive_F : srifle_DMR_06_hunter_F { 
-			displayName = "Olive";
-			condition = "true"; 
+		class srifle_DMR_06_olive_F { 
+			displayName = "Olive"; 
+			condition = "true";
 		};
 		class srifle_DMR_06_camo_F : srifle_DMR_06_olive_F { displayName = "Camo"; };
+		class srifle_DMR_06_hunter_F : srifle_DMR_06_olive_F { displayName = "Classic"; };
 	};
 };
 class srifle_DMR_06_camo_F : srifle_DMR_06_olive_F {};
-class srifle_DMR_06_hunter_F : srifle_DMR_06_olive_F {
-	class Textures {
-		class srifle_DMR_06_hunter_F {
-			displayName = "Classic";
-			condition = "true";
-		};
-	};
-};
+class srifle_DMR_06_hunter_F : srifle_DMR_06_olive_F {};
 
 class srifle_EBR_F {
 	price = 460700;

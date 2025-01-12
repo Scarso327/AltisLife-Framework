@@ -11,19 +11,6 @@ enableDebugConsole[] = { "76561198092567307" };
 
 onPauseScript[]={ "ULP_fnc_onPause" };
 disableChannels[] = {{0,true,true}, {1,true,true}, {2,true,true}, {6,false,true}};
-showHUD[] = {
-	1, // Scripted HUD (same as showHUD command)
-	1, // Vehicle and unit info
-	0, // Vehicle radar
-	0, // Vehicle compass
-	1, // Tank direction indicator
-	0, // Commanding menu
-	0, // Group info bar
-	1, // HUD weapon cursors
-	1, // Vehicle display panels
-	0, // "x killed by y" systemChat messages
-	1  // force show drawIcon3D icons
-};
 
 class Header {
 	gameType = RPG;

@@ -32,6 +32,7 @@ if !([player, ["Civilian"]] call ULP_fnc_isFaction || { ["IDForger"] call ULP_fn
 		if ([_cost, true, "Forged ID"] call ULP_fnc_removeMoney) then {
 			if (["Identification", _name] call ULP_fnc_handleItem) then {
 				[format ["You've recieved an identity card with the name <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
+				["Forger"] call ULP_fnc_achieve;
 			} else {
 				[format ["You failed to recieve an identity card with the name <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
 			};

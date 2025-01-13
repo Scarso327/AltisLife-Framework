@@ -71,6 +71,7 @@ if (isNull _display || { !([player, ["Police"]] call ULP_fnc_isFaction) }) exitW
 			};
 
 			[format ["You have issued or ammended a warrant for <t color='#B92DE0'>%1</t>...", name _unit]] call ULP_fnc_hint;
+			["IssueWarrant"] call ULP_fnc_achieve;
 		}] call ULP_fnc_inputWarrantInfo;
 	}] call ULP_fnc_waitExecute;
 }, true, false] call ULP_fnc_selectPlayer;

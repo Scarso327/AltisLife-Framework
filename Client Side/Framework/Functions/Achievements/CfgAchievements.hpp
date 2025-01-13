@@ -255,7 +255,7 @@ class CfgAchievements {
 	};
 
 	class Convict {
-		icon = "Data\UI\Achievements\convict.paa";
+		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\codeofconduct4_ca.paa";
 		displayName = "Convict";
 		description = "Served at His Majesty's Pleasure";
 		onUnlocked = "[""Convict""] call ULP_fnc_unlockTitle;";
@@ -375,7 +375,6 @@ class CfgAchievements {
 		isMystery = false;
 	};
 
-	// MYSTERY ---------------------------------------------------------
 	class Barrel {
 		icon = "Data\UI\Achievements\barrel.paa";
 		displayName = "The Barrel";
@@ -526,6 +525,198 @@ class CfgAchievements {
 		onUnlocked = "[""SpawnCamp""] call ULP_fnc_unlockTitle;";
 		leveling[] = { 1000, "Achievement Unlocked", 100 };
 		isMystery = true;
+	};
+
+	class BrokenNLR {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Timing_ca.paa";
+		displayName = "Rule Breaker";
+		description = "You have broken the rules. You should be banned";
+		onUnlocked = "[""RuleBreaker""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Surrender {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Checkpoints_ca.paa";
+		displayName = "Basically French";
+		description = "You placed your hands on your head";
+		onUnlocked = "[""Frenchman""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class KnockOut {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Switch_ca.paa";
+		displayName = "Professional Boxer";
+		description = "Hit someone so hard it knocked them out";
+		onUnlocked = "[""ProfessionalBoxer""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Snoop {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Head_ca.paa";
+		displayName = "Professional Snoop";
+		description = "You clearly downloaded the mission.sqm";
+		onUnlocked = "[""Snoop""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 1000, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class SeizedComms {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\ActionMenu_ca.paa";
+		displayName = "Phone Snatcher";
+		description = "You stole someone's communications while vulnerable";
+		onUnlocked = "[""PhoneSnatcher""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Restrain {
+		icon = "Data\UI\Achievements\convict.paa";
+		displayName = "Bondage Enthusiast";
+		description = "Apparently you like to restrain people";
+		onUnlocked = "[""BondageEnthusiast""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Overweight {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Fatigue_ca.paa";
+		displayName = "Encumbered";
+		description = "You tried carrying more than you can handle";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class ClampVeh {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\ShootingBoxes_ca.paa";
+		displayName = "Traffic Warden";
+		description = "Can't park there Sir...";
+		onUnlocked = "[""TrafficWarden""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class ChopVeh {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\VehicleGetOut_CA.paa";
+		displayName = "Vehicle Chopper";
+		description = "Torn apart a vehicle for money";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class LockpickVeh {
+		icon = "\Data\UI\GroupBuffs\lockpicking.paa";
+		displayName = "Locksmith";
+		description = "Successfully broken a lock using lockpicks";
+		onUnlocked = "[""Locksmith""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class RepairVeh {
+		icon = "\Data\UI\Perks\scrapDealer.paa";
+		displayName = "Mechanic";
+		description = "You managed to repair a vehicle by yourself";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class IssueWarrant {
+		icon = "\Data\UI\Perks\completedCV.paa";
+		displayName = "Keyboard Warrior";
+		description = "Issued a warrant using the PNC";
+		onUnlocked = "[""KeyboardWarrior""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Placeables {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\BasicMove_ca.paa";
+		displayName = "World Builder";
+		description = "You've placed an object. You're basically a map dev";
+		onUnlocked = "[""WorldBuilder""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class GivenBlood {
+		icon = "\Data\UI\Perks\bloodCarrier.paa";
+		displayName = "Blood Donor";
+		description = "You've given someone blood. Not sure who's blood...";
+		onUnlocked = "[""BloodDonor""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class TakeLicense {
+		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\leaflets_ca.paa";
+		displayName = "License Thief";
+		description = "You have revoked a person's license";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Blindfold {
+		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\codeofconduct3_ca.paa";
+		displayName = "Blind Man Walking";
+		description = "Some point, by someone, you've been blindfolded";
+		onUnlocked = "[""BlindManWalking""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class DisguiseID {
+		icon = "\Data\UI\GroupPerks\blackmarketer.paa";
+		displayName = "Faceless Man";
+		description = "All men must serve. Faceless Men most of all";
+		onUnlocked = "[""FacelessMan""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class Panic {
+		icon = "\A3\ui_f\data\GUI\Cfg\Hints\NormalDamage_ca.paa";
+		displayName = "Fight or Flight";
+		description = "You've been in an absolute state of panic... or misclicked";
+		onUnlocked = "[""FightFlight""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
+		isMystery = true;
+	};
+
+	class SafetyFirst {
+		icon = "\Data\UI\Perks\secondNature.paa";
+		displayName = "Safety First";
+		description = "You put your seatbelt on in a car";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Voter {
+		icon = "\Data\UI\Perks\governmentBonus.paa";
+		displayName = "I love Democracy";
+		description = "I love Democracy... and I love the Republic";
+		leveling[] = { 100, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Forger {
+		icon = "\Data\UI\Perks\idForger.paa";
+		displayName = "White-Collar Criminal";
+		description = "You've expertly forged an ID card";
+		onUnlocked = "[""WhiteCollarCriminal""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
+		isMystery = false;
+	};
+
+	class Deconstructing {
+		icon = "\Data\UI\Perks\generalMechanic.paa";
+		displayName = "Demolition Man";
+		description = "You've broken down an item in your inventory";
+		onUnlocked = "[""DemolitionMan""] call ULP_fnc_unlockTitle;";
+		leveling[] = { 200, "Achievement Unlocked", 100 };
+		isMystery = false;
 	};
 
 	// PERSONAL ACHIEVEMENTS

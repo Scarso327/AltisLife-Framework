@@ -36,6 +36,7 @@ if !([format["Administering Blood to %1", _name], _time, [_unit, _name], {
 
 	["BloodBag", 1, true] call ULP_fnc_handleItem;
 	[format ["You have administered blood to <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
+	["GivenBlood"] call ULP_fnc_achieve;
 
 	[player, ["BloodCarrier", getNumber (missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BloodBagIncrease")] call ULP_fnc_activatePerk] remoteExecCall ["ULP_fnc_receivedBlood", _unit];
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {

@@ -81,6 +81,7 @@ if (([] call ULP_fnc_placedObjects) >= _maxPlaceables) exitWith {
 			[_object] call compile getText(_cfg >> "onPlaced");
 
 			[format["You have placed a %1...", getText(_cfg >> "displayName")]] call ULP_fnc_hint;
+			["Placeables"] call ULP_fnc_achieve;
 			[false] call ULP_fnc_stopPlacement;
 		}, {
 			[] call ULP_fnc_stopPlacement;

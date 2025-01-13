@@ -73,6 +73,7 @@ switch (_code) do {
     case _seatKey: {
         if (!(isNull (objectParent player)) && { (vehicle player) isKindOf "LandVehicle" }) then {
             player setVariable["seatbelt", !(player getVariable["seatbelt", false])];
+            ["SafetyFirst"] call ULP_fnc_achieve;
         };
     };
 

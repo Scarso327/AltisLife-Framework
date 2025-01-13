@@ -67,6 +67,7 @@ if !([format["%1 %2", ["Repairing", "Patching"] select (_isPatching), _name], _t
 	} else {
 		_vehicle setDamage 0;
 		[format["You've repaired <t color='#B92DE0'>%1</t> using a toolkit.", _name]] call ULP_fnc_hint;
+		["RepairVeh"] call ULP_fnc_achieve;
 	};
 
 	if (time >= (_vehicle getVariable ["ProfessionCooldown", time - 120])) then {

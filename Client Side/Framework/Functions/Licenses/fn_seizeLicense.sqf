@@ -33,6 +33,7 @@ private _cfg = missionConfigFile >> "CfgLicenses" >> _license;
 if ([getNumber (_cfg >> "Settings" >> "isRemovable")] call ULP_fnc_bool) then {
 	["LicenseSeized", [player, _license]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 	[format ["You have seized %1's %2", [_unit, true] call ULP_fnc_getName, getText (_cfg >> "displayName")]] call ULP_fnc_hint;
+	["TakeLicense"] call ULP_fnc_achieve;
 
 	_list lbDelete _curSel;
 } else {

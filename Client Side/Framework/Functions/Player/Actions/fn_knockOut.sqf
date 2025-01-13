@@ -28,6 +28,7 @@ if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith 
 	missionNamespace setVariable["ULP_KnockOut_Cooldown", time + 5];
 
 	[0.08, _target, { [player] remoteExecCall ["ULP_fnc_onKnocked", _this] }] call ULP_fnc_waitExecute;
+	["KnockOut"] call ULP_fnc_achieve;
 
 	if ([player, ["Civilian"]] call ULP_fnc_isFaction) then {
 		[getPlayerUID player, "OffencesAgainstThePerson", "Section20",

@@ -47,6 +47,7 @@ player setVariable ["voting", true];
 
 	if (_message isEqualTo "You have successfully cast your vote in the election...") then {
 		player setVariable ["voted", true];
+		["Voter"] call ULP_fnc_achieve;
 	};
 }, true] call ULP_fnc_addEventHandler;
 

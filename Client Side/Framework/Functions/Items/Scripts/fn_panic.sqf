@@ -20,6 +20,7 @@ private _targets = getText (_cfg >> "targets");
 
 [_cfg, "A panic button has pressed! Immediate assistance is required.", _targets] call ULP_fnc_sendMessage;
 ["You have pressed your panic button, the police have been alerted!"] call ULP_fnc_hint;
+["Panic"] call ULP_fnc_achieve;
 
 [player, "panicButton", 100, 1] remoteExecCall ["ULP_fnc_say3D"];
 

@@ -20,6 +20,8 @@ if (_surrender) then {
         } else {
             player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
             [_thisEventHandler] call ULP_fnc_removeEachFrame;
+
+            ["Surrender"] call ULP_fnc_achieve;
         };
     }] call ULP_fnc_addEachFrame;
 };

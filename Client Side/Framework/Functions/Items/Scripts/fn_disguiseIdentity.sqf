@@ -26,6 +26,7 @@ if (_identity isEqualTo (name player) || { ((player getVariable ["name", name pl
 } else {
 	player setVariable ["name", _identity, true];
 	[format ["You've changed your public identity to <t color='#B92DE0'>%1</t>.", _identity]] call ULP_fnc_hint;
+	["DisguiseID"] call ULP_fnc_achieve;
 };
 
 true

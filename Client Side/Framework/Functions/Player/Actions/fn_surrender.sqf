@@ -14,14 +14,14 @@ if ((player getVariable ["surrender", false]) isEqualTo _surrender || { !(isNull
 player setVariable["surrender", _surrender, true];
 
 if (_surrender) then {
+    ["Surrender"] call ULP_fnc_achieve;
+    
 	[[], {
         if (alive player && { !(isDowned(player)) } && { [player] call ULP_fnc_isSurrendered } && { !([player] call ULP_fnc_isRestrained) } && { isNull (objectParent player) }) then {
             player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
         } else {
             player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
             [_thisEventHandler] call ULP_fnc_removeEachFrame;
-
-            ["Surrender"] call ULP_fnc_achieve;
         };
     }] call ULP_fnc_addEachFrame;
 };

@@ -92,12 +92,6 @@ class CfgProcessing {
 		items[] = { { "CutDiamond", 1 } };
 		reqLicenses[] = { "Diamond" };
 	};
-	class Plank : BaseProcess {
-		processTitle = "Cutting";
-		materials[] = { { "Wood", 1 } };
-		items[] = { { "Plank", 2 } };
-		reqLicenses[] = {};
-	};
 
 	// Processing
 	class SchnapsApple : BaseProcess {

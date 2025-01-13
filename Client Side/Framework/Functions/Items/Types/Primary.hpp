@@ -1,29 +1,14 @@
 class hgun_PDW2000_F {
-	price = 93200;
-	reputation = true;
+	price = 83200;
+	reputation = false;
 	class Textures {};
 };
-
-class SMG_05_F {
-	price = 96700;
-	reputation = true;
-	class Textures {};
-};
-
-class SMG_02_F {
-	price = 104650;
-	reputation = true;
-	class Textures {};
-};
-
-class SMG_01_F {
-	price = 113400;
-	reputation = true;
-	class Textures {};
-};
+class SMG_05_F : hgun_PDW2000_F { price = 86700; };
+class SMG_02_F : hgun_PDW2000_F { price = 94650; };
+class SMG_01_F : hgun_PDW2000_F { price = 98400; };
 
 class sgun_HunterShotgun_01_sawedoff_F {
-	price = 134500;
+	price = 94500;
 	reputation = true;
 	class Textures {
 		class sgun_HunterShotgun_01_sawedoff_F {
@@ -33,7 +18,7 @@ class sgun_HunterShotgun_01_sawedoff_F {
 
 		class sgun_HunterShotgun_01_F : sgun_HunterShotgun_01_sawedoff_F {
 			displayName = "Full-Size";
-			price = 165400;
+			price = 111250;
 		};
 	};
 };
@@ -98,20 +83,20 @@ class SMG_03_camo : SMG_03_black {};
 class SMG_03_TR_camo : SMG_03_black {};
 
 class arifle_AKS_F {
-	price = 155000;
+	price = 117400;
 	reputation = true;
 	class Textures {};
 };
 
 class arifle_SDAR_F {
-	price = 174000;
+	price = 190500;
 	reputation = true;
 	class Textures {};
 };
 
 class arifle_TRG20_F {
 	displayName = "TRG 5.56 mm";
-	price = 180400;
+	price = 144400;
 	reputation = true;
 	class Textures {
 		class arifle_TRG20_F {
@@ -120,21 +105,21 @@ class arifle_TRG20_F {
 		};
 		class arifle_TRG21_F : arifle_TRG20_F { 
 			displayName = "TRG-21"; 
-			price = 234400;
+			price = 150200;
 		};
 	};
 };
 class arifle_TRG21_F : arifle_TRG20_F {};
 
 class arifle_TRG21_GL_F {
-	price = 188000;
+	price = 168400;
 	reputation = true;
 	class Textures {};
 };
 
 class arifle_Mk20C_plain_F {
 	displayName = "Mk20C 5.56 mm";
-	price = 193350;
+	price = 141000;
 	reputation = true;
 	class NonLethal {
 		distance = 200;
@@ -158,7 +143,7 @@ class arifle_Mk20C_F : arifle_Mk20C_plain_F {};
 
 class arifle_Mk20_plain_F {
 	displayName = "Mk20 5.56 mm";
-	price = 197350;
+	price = 146350;
 	reputation = true;
 	class Textures {
 		class arifle_Mk20_plain_F {
@@ -175,7 +160,7 @@ class arifle_Mk20_F : arifle_Mk20_plain_F {};
 
 class arifle_Mk20_GL_plain_F {
 	displayName = "Mk20C EGLM 5.56 mm";
-	price = 206400;
+	price = 170350;
 	reputation = true;
 	class Textures {
 		class arifle_Mk20_GL_plain_F {
@@ -192,7 +177,7 @@ class arifle_Mk20_GL_F : arifle_Mk20_GL_plain_F {};
 
 class arifle_SPAR_01_blk_F {
 	displayName = "SPAR-16 5.56 mm";
-	price = 224150;
+	price = 172150;
 	reputation = true;
 	class Textures {
 		class arifle_SPAR_01_blk_F {
@@ -211,7 +196,7 @@ class arifle_SPAR_01_snd_F : arifle_SPAR_01_blk_F {};
 
 class arifle_SPAR_01_GL_blk_F {
 	displayName = "SPAR-16 GL 5.56 mm";
-	price = 231200;
+	price = 196150;
 	reputation = true;
 	class Textures {
 		class arifle_SPAR_01_GL_blk_F {
@@ -230,7 +215,7 @@ class arifle_SPAR_01_GL_snd_F : arifle_SPAR_01_GL_blk_F {};
 
 class arifle_SPAR_02_blk_F {
 	displayName = "SPAR-16S 5.56 mm";
-	price = 279500;
+	price = 200500;
 	reputation = true;
 	class Textures {
 		class arifle_SPAR_02_blk_F {
@@ -248,14 +233,14 @@ class arifle_SPAR_02_khk_F : arifle_SPAR_02_blk_F {};
 class arifle_SPAR_02_snd_F : arifle_SPAR_02_blk_F {};
 
 class LMG_03_F {
-	price = 430700;
+	price = 318950;
 	reputation = true;
 	class Textures {};
 };
 
 class arifle_CTAR_blk_F {
 	displayName = "CAR-95 5.8 mm";
-	price = 257600;
+	price = 197600;
 	reputation = true;
 	class Textures {
 		class arifle_CTAR_blk_F {
@@ -274,7 +259,7 @@ class arifle_CTAR_hex_F : arifle_CTAR_blk_F {};
 
 class arifle_CTAR_GL_blk_F {
 	displayName = "CAR-95 GL 5.8 mm";
-	price = 264500;
+	price = 221600;
 	reputation = true;
 	class Textures {
 		class arifle_CTAR_GL_blk_F {
@@ -293,7 +278,7 @@ class arifle_CTAR_GL_hex_F : arifle_CTAR_GL_blk_F {};
 
 class arifle_CTARS_blk_F {
 	displayName = "CAR-95-1 5.8 mm";
-	price = 293400;
+	price = 219400;
 	reputation = true;
 	class Textures {
 		class arifle_CTARS_blk_F {
@@ -312,7 +297,7 @@ class arifle_CTARS_hex_F : arifle_CTARS_blk_F {};
 
 class srifle_DMR_07_blk_F {
 	displayName = "CMR-76 6.5 mm";
-	price = 268900;
+	price = 203900;
 	reputation = true;
 	class Textures {
 		class srifle_DMR_07_blk_F {
@@ -331,7 +316,7 @@ class srifle_DMR_07_hex_F : srifle_DMR_07_blk_F {};
 
 class arifle_Katiba_C_F {
 	displayName = "Katiba 6.5 mm";
-	price = 273580;
+	price = 233580;
 	reputation = true;
 	class Textures {
 		class arifle_Katiba_C_F {
@@ -340,21 +325,21 @@ class arifle_Katiba_C_F {
 		};
 		class arifle_Katiba_F : arifle_Katiba_C_F { 
 			displayName = "Full"; 
-			price = 285800;
+			price = 241800;
 		};
 	};
 };
 class arifle_Katiba_F : arifle_Katiba_C_F {};
 
 class arifle_Katiba_GL_F {
-	price = 308800;
+	price = 265800;
 	reputation = true;
 	class Textures {};
 };
 
 class arifle_MSBS65_black_F {
 	displayName = "Promet 6.5 mm";
-	price = 288300;
+	price = 238300;
 	reputation = true;
 	class Textures {
 		class arifle_MSBS65_black_F {
@@ -375,7 +360,7 @@ class arifle_MSBS65_camo_F : arifle_MSBS65_black_F {};
 
 class arifle_MSBS65_GL_black_F {
 	displayName = "Promet GL 6.5 mm";
-	price = 298800;
+	price = 262300;
 	reputation = true;
 	class Textures {
 		class arifle_MSBS65_GL_black_F {
@@ -396,7 +381,7 @@ class arifle_MSBS65_GL_camo_F : arifle_MSBS65_GL_black_F {};
 
 class arifle_MSBS65_UBS_black_F {
 	displayName = "Promet SG 6.5 mm";
-	price = 676150;
+	price = 298300;
 	reputation = true;
 	class Textures {
 		class arifle_MSBS65_UBS_black_F {
@@ -417,7 +402,7 @@ class arifle_MSBS65_UBS_camo_F : arifle_MSBS65_UBS_black_F {};
 
 class arifle_MSBS65_Mark_black_F {
 	displayName = "Promet MR 6.5 mm";
-	price = 304150;
+	price = 238150;
 	reputation = true;
 	class Textures {
 		class arifle_MSBS65_Mark_black_F {
@@ -438,7 +423,7 @@ class arifle_MSBS65_Mark_camo_F : arifle_MSBS65_Mark_black_F {};
 
 class arifle_MXC_Black_F {
 	displayName = "MXC 6.5 mm";
-	price = 287230;
+	price = 197230;
 	reputation = true;
 	class Textures {
 		class arifle_MXC_Black_F {
@@ -457,7 +442,7 @@ class arifle_MXC_khk_F : arifle_MXC_Black_F {};
 
 class arifle_MX_Black_F {
 	displayName = "MX 6.5 mm";
-	price = 315400;
+	price = 255400;
 	reputation = true;
 	class Textures {
 		class arifle_MX_Black_F {
@@ -495,7 +480,7 @@ class arifle_MX_GL_khk_F : arifle_MX_GL_Black_F {};
 
 class arifle_MXM_Black_F {
 	displayName = "MXM 6.5 mm";
-	price = 319800;
+	price = 279800;
 	reputation = true;
 	class Textures {
 		class arifle_MXM_Black_F {
@@ -514,7 +499,7 @@ class arifle_MXM_khk_F : arifle_MXM_Black_F {};
 
 class arifle_MX_SW_Black_F {
 	displayName = "MX SW 6.5 mm";
-	price = 377500;
+	price = 329700;
 	reputation = true;
 	class Textures {
 		class arifle_MX_SW_Black_F {
@@ -533,7 +518,7 @@ class arifle_MX_SW_khk_F : arifle_MXM_Black_F {};
 
 class arifle_ARX_blk_F {
 	displayName = "Type 115 6.5 mm";
-	price = 345600;
+	price = 300600;
 	reputation = true;
 	class Textures {
 		class arifle_ARX_blk_F {
@@ -552,7 +537,7 @@ class arifle_ARX_hex_F : arifle_ARX_blk_F {};
 
 class LMG_Mk200_F {
 	displayName = "Mk200 6.5 mm";
-	price = 510500;
+	price = 466500;
 	reputation = true;
 	class Textures {
 		class LMG_Mk200_F {
@@ -568,14 +553,14 @@ class LMG_Mk200_F {
 class LMG_Mk200_black_F : LMG_Mk200_F {};
 
 class arifle_AKM_F {
-	price = 350000;
+	price = 333500;
 	reputation = true;
 	class Textures {};
 };
 
 class arifle_AK12U_F {
 	displayName = "AKU-12 7.62 mm";
-	price = 364500;
+	price = 344500;
 	reputation = true;
 	class Textures {
 		class arifle_AK12U_F {
@@ -594,7 +579,7 @@ class arifle_AK12U_arid_F : arifle_AK12U_F {};
 
 class arifle_AK12_F {
 	displayName = "AK-12 7.62 mm";
-	price = 384500;
+	price = 360500;
 	reputation = true;
 	class Textures {
 		class arifle_AK12_F {
@@ -612,14 +597,14 @@ class arifle_AK12_lush_F : arifle_AK12_F {};
 class arifle_AK12_arid_F : arifle_AK12_F {};
 
 class srifle_DMR_01_F {
-	price = 392000;
+	price = 287600;
 	reputation = true;
 	class Textures {};
 };
 
 class arifle_SPAR_03_blk_F {
 	displayName = "SPAR-17 7.62 mm";
-	price = 425350;
+	price = 388900;
 	reputation = true;
 	class Textures {
 		class arifle_SPAR_03_blk_F {
@@ -638,7 +623,7 @@ class arifle_SPAR_03_snd_F : arifle_SPAR_03_blk_F {};
 
 class srifle_DMR_06_olive_F {
 	displayName = "Mk14 7.62 mm";
-	price = 415000;
+	price = 372000;
 	reputation = true;
 	class Textures {
 		class srifle_DMR_06_olive_F { 
@@ -646,21 +631,24 @@ class srifle_DMR_06_olive_F {
 			condition = "true";
 		};
 		class srifle_DMR_06_camo_F : srifle_DMR_06_olive_F { displayName = "Camo"; };
-		class srifle_DMR_06_hunter_F : srifle_DMR_06_olive_F { displayName = "Classic"; };
+		class srifle_DMR_06_hunter_F : srifle_DMR_06_olive_F { 
+			displayName = "Classic"; 
+			price = 361100;
+		};
 	};
 };
 class srifle_DMR_06_camo_F : srifle_DMR_06_olive_F {};
 class srifle_DMR_06_hunter_F : srifle_DMR_06_olive_F {};
 
 class srifle_EBR_F {
-	price = 460700;
+	price = 399700;
 	reputation = true;
 	class Textures {};
 };
 
 class srifle_DMR_03_F {
 	displayName = "Mk-I EMR 7.62 mm";
-	price = 498750;
+	price = 425900;
 	reputation = true;
 	class Textures {
 		class srifle_DMR_03_F {
@@ -682,14 +670,14 @@ class srifle_DMR_03_multicam_F : srifle_DMR_03_F {};
 class srifle_DMR_03_woodland_F : srifle_DMR_03_F {};
 
 class LMG_Zafir_F {
-	price = 890000;
+	price = 1235000;
 	reputation = true;
 	class Textures {};
 };
 
 class srifle_DMR_04_F {
 	displayName = "ASP-1 Kir 12.7 mm";
-	price = 1235000;
+	price = 890450;
 	reputation = true;
 	class Textures {
 		class srifle_DMR_04_F {

@@ -21,6 +21,7 @@ if (isNull _target || { !(isPlayer _target) } || { !(isNull _detainer) && { !([_
 if !(local _target) exitWith {
 	if ([player, ["Police"]] call ULP_fnc_isFaction || { ["Ziptie", 1, _restrain] call ULP_fnc_handleItem } || { ["cuffCourier"] call ULP_fnc_hasPerk } || { [_detainer] call ULP_fnc_onDuty }) then {
 		_this remoteExecCall ["ULP_fnc_restrain", _target];
+		["Retain"] call ULP_fnc_achieve;
 	} else {
 		["You need a ziptie to restrain someone"] call ULP_fnc_hint;
 	};

@@ -21,6 +21,7 @@ scopeName "fn_addNLREachFrame";
 		_this pushBack time;
 
 		["You have entered your NLR zone!"] call ULP_fnc_hint;
+		["BrokenNLR"] call ULP_fnc_achieve;
 		[getPlayerUID player, "NLR", [getPos player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 		[

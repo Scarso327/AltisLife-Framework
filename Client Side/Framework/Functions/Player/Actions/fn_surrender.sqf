@@ -14,6 +14,8 @@ if ((player getVariable ["surrender", false]) isEqualTo _surrender || { !(isNull
 player setVariable["surrender", _surrender, true];
 
 if (_surrender) then {
+    ["Surrender"] call ULP_fnc_achieve;
+    
 	[[], {
         if (alive player && { !(isDowned(player)) } && { [player] call ULP_fnc_isSurrendered } && { !([player] call ULP_fnc_isRestrained) } && { isNull (objectParent player) }) then {
             player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";

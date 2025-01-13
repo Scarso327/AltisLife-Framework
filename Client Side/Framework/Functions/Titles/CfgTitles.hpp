@@ -171,6 +171,70 @@ class CfgTitles {
 		displayName = "Private Investigator";
 		description = "The College of Policing is up to something";
 	};
+	class RuleBreaker {
+		displayName = "Rule Breaker";
+		description = "You simply broke NLR";
+	};
+	class Frenchman {
+		displayName = "Frenchman";
+		description = "You placed your hands on your head";
+	};
+	class ProfessionalBoxer {
+		displayName = "Professional Boxer";
+		description = "You placed your hands on your head";
+	};
+	class Snoop {
+		displayName = "Professional Snooper";
+		description = "You clearly downloaded the mission.sqm";
+	};
+	class PhoneSnatcher {
+		displayName = "Phone Snatcher";
+		description = "You stole someone's communications";
+	};
+	class BondageEnthusiast {
+		displayName = "Bondage Enthusiast";
+		description = "Apparently you like to restrain people";
+	};
+	class TrafficWarden {
+		displayName = "Traffic Warden";
+		description = "Applied a clamp on a vehicle";
+	};
+	class Locksmith {
+		displayName = "Locksmith";
+		description = "Successfully lockpicked something";
+	};
+	class KeyboardWarrior {
+		displayName = "Keyboard Warrior";
+		description = "Issued a warrant using the PNC";
+	};
+	class WorldBuilder {
+		displayName = "World Builder";
+		description = "You're basically a map dev";
+	};
+	class BloodDonor {
+		displayName = "Blood Donor";
+		description = "You've given someone blood";
+	};
+	class BlindManWalking {
+		displayName = "Blind Man Walking";
+		description = "Some point, by someone, you've been blindfolded";
+	};
+	class FacelessMan {
+		displayName = "Faceless Man";
+		description = "Disguised your identify with anothers";
+	};
+	class FightFlight {
+		displayName = "Fight or Flight";
+		description = "You've pressed a panic button";
+	};
+	class WhiteCollarCriminal {
+		displayName = "White-Collar Criminal";
+		description = "You've expertly forged an ID card";
+	};
+	class DemolitionMan {
+		displayName = "Demolition Man";
+		description = "You've broken down an item in your inventory";
+	};
 
 	// Personal Titles
 	class Scarso {

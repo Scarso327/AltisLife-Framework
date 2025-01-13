@@ -139,6 +139,7 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 	if (player getVariable ["blindfold", false]) then {
 		cutText ["","BLACK OUT"];
   		[format ["<t color='#B92DE0'>%1</t> has put a blindfold over your head...", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;
+		["Blindfold"] call ULP_fnc_achieve;
 	} else {
 		cutText ["","BLACK IN"];
   		[format ["<t color='#B92DE0'>%1</t> has removed your blindfold...", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint;

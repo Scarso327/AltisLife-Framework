@@ -59,6 +59,7 @@ if (_total < 1) exitWith {
 				{ _x call ULP_fnc_unlockBlueprint; } forEach getArray (_cfg >> "Deconstruction" >> "blueprints");
 
 				[format ["You've deconstructed <t color='#B92DE0'>%2 %1(s)</t>...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+				["Deconstructing"] call ULP_fnc_achieve;
 
 				[true] call ULP_fnc_saveGear;
 			} else {

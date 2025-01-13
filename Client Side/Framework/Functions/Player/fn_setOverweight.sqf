@@ -13,4 +13,6 @@ if !((isForcedWalk player) isEqualTo _overweight) then {
 	player forceWalk _overweight;
 	player enableFatigue _overweight;
 	player setFatigue ([0, 1] select _overweight);
+	
+	if (_overweight) then { ["Overweight"] call ULP_fnc_achieve; };
 };

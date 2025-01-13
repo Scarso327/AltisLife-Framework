@@ -51,6 +51,7 @@ if ([] call ULP_fnc_isGroup) then {
 
 			[format ["You have successfully picked <t color='#B92DE0'>%1's</t> lock and gained forged keys...", _cfg param [3, "vehicle"]]] call ULP_fnc_hint;
 			ULP_Keys pushBackUnique _vehicle;
+			["LockpickVeh"] call ULP_fnc_achieve;
 		} else {
 			[getPlayerUID player, "CriminalAttempts", "Section1", 
 				format [

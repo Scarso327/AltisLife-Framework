@@ -400,7 +400,7 @@ class CfgItemsStore {
 			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};
 			class 9Rnd_45ACP_Mag {};
 			class 30Rnd_45ACP_Mag_SMG_01 {};
-			class class 30Rnd_45ACP_Mag_SMG_01 {}; {};
+			class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {};
 			class 50Rnd_570x28_SMG_03 {};
 			// TODO (Rubber Bullets when rewritten)
 			class 30Rnd_556x45_Stanag {};
@@ -488,7 +488,7 @@ class CfgItemsStore {
 			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};
 			class 9Rnd_45ACP_Mag {};
 			class 30Rnd_45ACP_Mag_SMG_01 {};
-			class class 30Rnd_45ACP_Mag_SMG_01 {}; {};
+			class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {};
 			class 50Rnd_570x28_SMG_03 {};
 			// TODO (Rubber Bullets when rewritten)
 			class 30Rnd_556x45_Stanag {};
@@ -575,6 +575,7 @@ class CfgItemsStore {
 			class 9Rnd_45ACP_Mag {};
 			class 6Rnd_45ACP_Cylinder {};
 			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {};
 			class 2Rnd_12Gauge_Pellets {};
 			class 2Rnd_12Gauge_Slug {};
 			class 30Rnd_545x39_Mag_F {};

@@ -1098,7 +1098,6 @@ class CfgVirtualItems {
 		displayName = "Wood";
 		description = "A simple piece of wood commonly found in crafting recipies.";
 		icon = "Data\Icons\wood.paa";
-		sellPrice = 1350;
 		sellPrice = 450;
 		weight = 2;
 		class Settings {
@@ -1114,7 +1113,6 @@ class CfgVirtualItems {
 		displayName = "Plank";
 		description = "A simple plank made from ordinary wood.";
 		icon = "Data\Icons\wood.paa";
-		sellPrice = 2700;
 		sellPrice = 1350;
 		weight = 2;
 		class Settings {

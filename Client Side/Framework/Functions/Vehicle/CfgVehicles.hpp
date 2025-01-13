@@ -48,6 +48,7 @@ class CfgVehicles {
 		crushTime = 300;
 		chopKeepChance = 90;
 		chopTime = 180;
+		turrets[] = {};
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo",
@@ -1608,7 +1609,6 @@ class CfgVehicles {
 		class Textures {
 			class Police : PoliceTextureBase {
 				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
-				turrets[] = { { { -1 },  { "M134_minigun" },  { "5000Rnd_762x51_Yellow_Belt" } } };
 			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1623,6 +1623,11 @@ class CfgVehicles {
 	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {
 		buyPrice = 23450000;
 		garageLimit = 1;
+		class Textures : Textures {
+			class Police : Police {
+				turrets[] = { { { -1 },  { "M134_minigun" },  { "5000Rnd_762x51_Yellow_Belt" } } };
+			};
+		};
 	};
 
 	class B_Heli_Transport_01_F : BaseAir {

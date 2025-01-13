@@ -136,7 +136,7 @@ class 30Rnd_65x39_caseless_black_mag_Tracer : 30Rnd_65x39_caseless_black_mag {
 			displayName = "Sand"; 
 			condition = "true";
 		 };
-		 class 30Rnd_65x39_caseless_khaki_mag_Tracer : 200Rnd_65x39_cased_Box_Tracer_Red { displayName = "Khaki"; };
+		 class 30Rnd_65x39_caseless_khaki_mag_Tracer : 30Rnd_65x39_caseless_mag_Tracer { displayName = "Khaki"; };
 	};
 };
 class 30Rnd_65x39_caseless_mag_Tracer : 30Rnd_65x39_caseless_black_mag_Tracer {};
@@ -169,7 +169,7 @@ class 100Rnd_65x39_caseless_black_mag_tracer : 100Rnd_65x39_caseless_black_mag {
 			displayName = "Sand"; 
 			condition = "true";
 		 };
-		 class 100Rnd_65x39_caseless_khaki_mag_tracer : 200Rnd_65x39_cased_Box_Tracer_Red { displayName = "Khaki"; };
+		 class 100Rnd_65x39_caseless_khaki_mag_tracer : 100Rnd_65x39_caseless_mag_Tracer { displayName = "Khaki"; };
 	};
 };
 class 100Rnd_65x39_caseless_mag_Tracer : 100Rnd_65x39_caseless_black_mag_tracer {};

@@ -162,24 +162,38 @@ class CfgItemsStore {
 			class 30Rnd_45ACP_Mag_SMG_01 { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 9] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
 			class 9Rnd_45ACP_Mag {  };
 			class 50Rnd_570x28_SMG_03 { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
-			class 30Rnd_556x45_Stanag_Tracer_Green { 
-				displayName = "Rubber Bullet Magazine"; 
+			class 30Rnd_556x45_Stanag_Tracer_Red { 
+				displayName = "Rubber Bullet Mag"; 
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
+				class textures { class 30Rnd_556x45_Stanag_Tracer_Green {}; }; 
 			};
 			class 20Rnd_556x45_UW_mag { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; };
 			class 30Rnd_556x45_Stanag { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class 150Rnd_556x45_Drum_Mag_F { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 7] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
+			class 150Rnd_556x45_Drum_Mag_Tracer_F { condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 7] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };			
 			class 30Rnd_580x42_Mag_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
+			class 30Rnd_580x42_Mag_Tracer_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class 100Rnd_580x42_Mag_F { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { ([""Police_Main"", 9] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
+			class 100Rnd_580x42_Mag_Tracer_F { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { ([""Police_Main"", 9] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
 			class 30Rnd_65x39_caseless_green { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
+			class 30Rnd_65x39_caseless_green_mag_Tracer { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
 			class 30Rnd_65x39_caseless_msbs_mag { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
+			class 30Rnd_65x39_caseless_msbs_mag_Tracer { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
 			class 30Rnd_65x39_caseless_black_mag { 
 				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class 30Rnd_65x39_caseless_black_mag {}; }; 
 			};
+			class 30Rnd_65x39_caseless_black_mag_Tracer { 
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
+				class textures { class 30Rnd_65x39_caseless_black_mag_Tracer {}; }; 
+			};
 			class 100Rnd_65x39_caseless_black_mag {
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
 				class textures { class 100Rnd_65x39_caseless_black_mag {}; }; 
+			};
+			class 100Rnd_65x39_caseless_black_mag_tracer {
+				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
+				class textures { class 100Rnd_65x39_caseless_black_mag_tracer {}; }; 
 			};
 			class 20Rnd_762x51_Mag { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 9] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
 			class 6Rnd_12Gauge_Slug { condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }"; };
@@ -298,7 +312,9 @@ class CfgItemsStore {
 		condition = "[""Hunting""] call ULP_fnc_hasLicense";
 		class Rifles {
 			class sgun_HunterShotgun_01_F {};
-			class srifle_DMR_06_hunter_F {};
+			class srifle_DMR_06_olive_F {
+				class textures { class srifle_DMR_06_hunter_F {}; }; 
+			};
 		};
 		class Pistols {};
 		class Attachments {};
@@ -381,11 +397,14 @@ class CfgItemsStore {
 			class 16Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag_SMG_02 {};
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};
 			class 9Rnd_45ACP_Mag {};
 			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class class 30Rnd_45ACP_Mag_SMG_01 {}; {};
 			class 50Rnd_570x28_SMG_03 {};
 			// TODO (Rubber Bullets when rewritten)
 			class 30Rnd_556x45_Stanag {};
+			class 30Rnd_556x45_Stanag_Tracer_Red {};
 		};
 		class Items {
 			class ItemMap {};
@@ -466,11 +485,14 @@ class CfgItemsStore {
 			class 16Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag_SMG_02 {};
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};
 			class 9Rnd_45ACP_Mag {};
 			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class class 30Rnd_45ACP_Mag_SMG_01 {}; {};
 			class 50Rnd_570x28_SMG_03 {};
 			// TODO (Rubber Bullets when rewritten)
 			class 30Rnd_556x45_Stanag {};
+			class 30Rnd_556x45_Stanag_Tracer_Red {};
 		};
 		class Items {
 			class ItemMap {};
@@ -626,21 +648,28 @@ class CfgItemsStore {
 			class 16Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag_SMG_02 {};
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};
 			class 9Rnd_45ACP_Mag {};
 			class 11Rnd_45ACP_Mag {};
 			class 6Rnd_45ACP_Cylinder {};
 			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {};
 			class 2Rnd_12Gauge_Pellets {};
 			class 2Rnd_12Gauge_Slug {};
 			class 30Rnd_545x39_Mag_F {};
 			class 50Rnd_570x28_SMG_03 {};
 			class 20Rnd_556x45_UW_mag  {};
 			class 30Rnd_556x45_Stanag {};
+			class 30Rnd_556x45_Stanag_Tracer_Red {};
 			class 30Rnd_580x42_Mag_F {};
+			class 30Rnd_580x42_Mag_Tracer_F {};
 			class 20Rnd_650x39_Cased_Mag_F {};
 			class 30Rnd_65x39_caseless_green {};
+			class 30Rnd_65x39_caseless_green_mag_Tracer {};
 			class 30Rnd_65x39_caseless_msbs_mag {};
+			class 30Rnd_65x39_caseless_msbs_mag_Tracer {};
 			class 30Rnd_65x39_caseless_black_mag {};
+			class 30Rnd_65x39_caseless_black_mag_Tracer {};
 			class 30Rnd_762x39_Mag_F {};
 		};
 
@@ -719,25 +748,35 @@ class CfgItemsStore {
 			class 16Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag_SMG_02 {};
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};
 			class 9Rnd_45ACP_Mag {};
 			class 11Rnd_45ACP_Mag {};
 			class 6Rnd_45ACP_Cylinder {};
 			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {};
 			class 2Rnd_12Gauge_Pellets {};
 			class 2Rnd_12Gauge_Slug {};
 			class 30Rnd_545x39_Mag_F {};
 			class 50Rnd_570x28_SMG_03 {};
 			class 20Rnd_556x45_UW_mag  {};
 			class 30Rnd_556x45_Stanag {};
+			class 30Rnd_556x45_Stanag_Tracer_Red {};
 			class 150Rnd_556x45_Drum_Mag_F {};
+			class 150Rnd_556x45_Drum_Mag_Tracer_F {};
 			class 200Rnd_556x45_Box_F {};
 			class 30Rnd_580x42_Mag_F {};
+			class 30Rnd_580x42_Mag_Tracer_F {};
 			class 100Rnd_580x42_Mag_F {};
+			class 100Rnd_580x42_Mag_Tracer_F {};
 			class 20Rnd_650x39_Cased_Mag_F {};
 			class 30Rnd_65x39_caseless_green {};
+			class 30Rnd_65x39_caseless_green_mag_Tracer {};
 			class 30Rnd_65x39_caseless_msbs_mag {};
+			class 30Rnd_65x39_caseless_msbs_mag_Tracer {};
 			class 30Rnd_65x39_caseless_black_mag {};
+			class 30Rnd_65x39_caseless_black_mag_Tracer {};
 			class 100Rnd_65x39_caseless_black_mag {};
+			class 100Rnd_65x39_caseless_black_mag_tracer {};
 			class 10Rnd_762x54_Mag {};
 			class 20Rnd_762x51_Mag {};
 			class 30Rnd_762x39_Mag_F {};
@@ -824,26 +863,37 @@ class CfgItemsStore {
 			class 16Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag {};
 			class 30Rnd_9x21_Mag_SMG_02 {};
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};
 			class 9Rnd_45ACP_Mag {};
 			class 11Rnd_45ACP_Mag {};
 			class 6Rnd_45ACP_Cylinder {};
 			class 30Rnd_45ACP_Mag_SMG_01 {};
+			class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {};
 			class 2Rnd_12Gauge_Pellets {};
 			class 2Rnd_12Gauge_Slug {};
 			class 30Rnd_545x39_Mag_F {};
 			class 50Rnd_570x28_SMG_03 {};
 			class 20Rnd_556x45_UW_mag  {};
 			class 30Rnd_556x45_Stanag {};
+			class 30Rnd_556x45_Stanag_Tracer_Red {};
 			class 150Rnd_556x45_Drum_Mag_F {};
+			class 150Rnd_556x45_Drum_Mag_Tracer_F {};
 			class 200Rnd_556x45_Box_F {};
 			class 30Rnd_580x42_Mag_F {};
+			class 30Rnd_580x42_Mag_Tracer_F {};
 			class 100Rnd_580x42_Mag_F {};
+			class 100Rnd_580x42_Mag_Tracer_F {};
 			class 20Rnd_650x39_Cased_Mag_F {};
 			class 30Rnd_65x39_caseless_green {};
+			class 30Rnd_65x39_caseless_green_mag_Tracer {};
 			class 30Rnd_65x39_caseless_msbs_mag {};
+			class 30Rnd_65x39_caseless_msbs_mag_Tracer {};
 			class 30Rnd_65x39_caseless_black_mag {};
+			class 30Rnd_65x39_caseless_black_mag_Tracer {};
 			class 100Rnd_65x39_caseless_black_mag {};
+			class 100Rnd_65x39_caseless_black_mag_tracer {};
 			class 200Rnd_65x39_cased_Box {};
+			class 200Rnd_65x39_cased_Box_Tracer {};
 			class 10Rnd_762x54_Mag {};
 			class 20Rnd_762x51_Mag {};
 			class 30Rnd_762x39_Mag_F {};

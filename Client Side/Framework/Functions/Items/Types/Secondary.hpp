@@ -1,25 +1,15 @@
 class hgun_Pistol_Signal_F {
 	price = 5000;
-	reputation = true;
-	class Textures {};	
+	reputation = false;
 };
+class hgun_Pistol_01_F : hgun_Pistol_Signal_F { price = 21600; };
+class hgun_Rook40_F : hgun_Pistol_Signal_F { price = 30100; };
+class hgun_ACPC2_F : hgun_Pistol_Signal_F { price = 42000; };
+class hgun_Pistol_heavy_02_F : hgun_Pistol_Signal_F { price = 61300; };
 
-class hgun_Pistol_01_F {
-	price = 24600;
-	reputation = true;
-	class Textures {};	
-};
-
-class hgun_Rook40_F {
-	price = 33100;
-	reputation = true;
-	class Textures {};	
-};
-
-class hgun_P07_F {
+class hgun_P07_F : hgun_Pistol_Signal_F {
 	displayName = "Taser x26e";
-	price = 38700;
-	reputation = true;
+	price = 35700;
 	class NonLethal {
 		distance = 50;
 		sound[] = { "taserSound", 50, 1 };
@@ -38,15 +28,8 @@ class hgun_P07_F {
 };
 class hgun_P07_blk_F : hgun_P07_F {};
 
-class hgun_ACPC2_F {
-	price = 45000;
-	reputation = true;
-	class Textures {};	
-};
-
-class hgun_Pistol_heavy_01_F {
-	price = 49950;
-	reputation = true;
+class hgun_Pistol_heavy_01_F : hgun_Pistol_Signal_F {
+	price = 42950;
 	class Textures {
 		class hgun_Pistol_heavy_01_F {
 			displayName = "Tan";
@@ -59,9 +42,3 @@ class hgun_Pistol_heavy_01_F {
 	};	
 };
 class hgun_Pistol_heavy_01_green_F : hgun_Pistol_heavy_01_F {};
-
-class hgun_Pistol_heavy_02_F {
-	price = 62300;
-	reputation = true;
-	class Textures {};	
-};

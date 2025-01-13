@@ -48,8 +48,8 @@ class CfgVirtualItems {
 			isSystemItem = false;
 		};
 		class Sustain {
-			hunger = 30;
-			thirst = 0;
+			hunger = 20;
+			thirst = 10;
 		};
 		class Events { onUse = "[(_this select 0)] call ULP_fnc_addSustenance;"; };
 		conditions = "true";
@@ -71,7 +71,7 @@ class CfgVirtualItems {
 		sellPrice = 65;
 		class Settings : Settings {};
 		class Sustain {
-			hunger = 50;
+			hunger = 25;
 			thirst = 0;
 		};
 		class Events : Events {};
@@ -95,7 +95,7 @@ class CfgVirtualItems {
 		sellPrice = 70;
 		class Settings : Settings {};
 		class Sustain {
-			hunger = 60;
+			hunger = 40;
 			thirst = 0;
 		};
 		class Events : Events {};
@@ -107,7 +107,7 @@ class CfgVirtualItems {
 		sellPrice = 53;
 		class Settings : Settings {};
 		class Sustain {
-			hunger = 45;
+			hunger = 30;
 			thirst = 0;
 		};
 		class Events : Events {};
@@ -119,7 +119,7 @@ class CfgVirtualItems {
 		sellPrice = 162;
 		class Settings : Settings {};
 		class Sustain {
-			hunger = 80;
+			hunger = 50;
 			thirst = 0;
 		};
 		class Events : Events {};
@@ -131,7 +131,7 @@ class CfgVirtualItems {
 		sellPrice = 10;
 		class Settings : Settings {};
 		class Sustain {
-			hunger = 20;
+			hunger = 15;
 			thirst = 0;
 		};
 		class Events : Events {};
@@ -167,7 +167,7 @@ class CfgVirtualItems {
 		};
 		class Sustain {
 			hunger = 0;
-			thirst = 70;
+			thirst = 50;
 		};
 		class Events { onUse = "[(_this select 0)] call ULP_fnc_addSustenance;"; };
 		conditions = "true";
@@ -180,7 +180,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Sustain {
 			hunger = 0;
-			thirst = 60;
+			thirst = 25;
 		};
 		class Events : Events {};
 	};
@@ -212,7 +212,7 @@ class CfgVirtualItems {
 		};
 		class Sustain {
 			hunger = 0;
-			thirst = 50;
+			thirst = 30;
 		};
 		class Events { onUse = "if ([(_this select 0)] call ULP_fnc_addSustenance) then { player setCustomAimCoef 0.5; [ { !(alive player) || { player getVariable [""isIncapacitated"", false] } || { diag_tickTime > (_this select 0) } }, [diag_tickTime + (3 * 60)], { player setCustomAimCoef 1; }] call ULP_fnc_waitUntilExecute; };"; };
 		conditions = "true";
@@ -236,7 +236,7 @@ class CfgVirtualItems {
 		};
 		class Sustain {
 			hunger = 0;
-			thirst = 25;
+			thirst = 10;
 		};
 		class Events { onUse = "[(_this select 0)] call ULP_fnc_addSustenance;"; };
 		conditions = "true";
@@ -256,7 +256,7 @@ class CfgVirtualItems {
 		};
 		class Sustain {
 			hunger = 0;
-			thirst = 30;
+			thirst = 10;
 		};
 		class Events : Events {};
 		conditions = "true";
@@ -269,7 +269,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Sustain {
 			hunger = 0;
-			thirst = 25;
+			thirst = 10;
 		};
 		class Events : Events {};
 	};
@@ -281,7 +281,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Sustain {
 			hunger = 0;
-			thirst = 15;
+			thirst = 10;
 		};
 		class Events : Events {};
 	};
@@ -385,7 +385,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\pickaxe.paa";
 		buyPrice = 1200;
 		sellPrice = 600;
-		weight = 2;
+		weight = 3;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;
@@ -447,6 +447,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\fishingNet.paa";
 		buyPrice = 750;
 		sellPrice = 375;
+		weight = 4;
 		class Settings : Settings {};
 		class Deconstruction {
 			time = 30;
@@ -461,7 +462,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\fuelCan.paa";
 		buyPrice = 3000;
 		sellPrice = 1500;
-		weight = 3;
+		weight = 12;
 		class Settings : Settings {};
 		class Deconstruction {
 			time = 30;
@@ -474,8 +475,8 @@ class CfgVirtualItems {
 		displayName = "Breathalyser";
 		description = "Used to determin whether or not someone is under the influence.";
 		icon = "Data\Icons\breathalyser.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 8400;
+		sellPrice = 4200;
 		weight = 1;
 		class Settings : Settings {};
 	};
@@ -485,7 +486,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\panicButton.paa";
 		buyPrice = 900;
 		sellPrice = 450;
-		weight = 1;
+		weight = 0;
 		class Settings : Settings {};
 		class Deconstruction {
 			time = 60;
@@ -520,7 +521,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\stinger.paa";
 		buyPrice = 8400;
 		sellPrice = 2200;
-		weight = 3;
+		weight = 10;
 		class Settings {
 			onMarket = false;
 			isIllegal = true;
@@ -548,7 +549,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\vehicleClamp.paa";
 		buyPrice = 18200;
 		sellPrice = 9700;
-		weight = 4;
+		weight = 8;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
 	};
@@ -590,7 +591,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\boltCutter.paa";
 		buyPrice = 345000;
 		sellPrice = 172500;
-		weight = 4;
+		weight = 8;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_boltcut;"; };
 		class Deconstruction {
@@ -604,6 +605,7 @@ class CfgVirtualItems {
 		displayName = "Big Red Key";
 		buyPrice = 31200;
 		sellPrice = 15600;
+		weight = 14;
 		class Settings : Settings {};
 		class Events : Events {};
 	};
@@ -622,7 +624,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\hackingDevice.paa";
 		buyPrice = 475000;
 		sellPrice = 237500;
-		weight = 3;
+		weight = 1;
 		class Settings : Settings {};
 		class Events {};
 		class Deconstruction {
@@ -638,7 +640,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\explosiveCharge.paa";
 		buyPrice = 750000;
 		sellPrice = 375000;
-		weight = 4;
+		weight = 3;
 		class Settings : Settings {};
 		class Events {};
 		class Deconstruction {
@@ -653,6 +655,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\industrialDrill.paa";
 		buyPrice = 600000;
 		sellPrice = 300000;
+		weight = 16;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_drill;"; };
 		class Deconstruction {
@@ -668,7 +671,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\toolbox.paa";
 		buyPrice = 25000;
 		sellPrice = 12500;
-		weight = 8;
+		weight = 4;
 		class Settings : Settings {};
 		class Events {};
 	};
@@ -731,6 +734,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\bloodbag.paa";
 		buyPrice = 1000;
 		sellPrice = 500;
+		weight = 2;
 		class Settings : Settings {};
 	};
 	class Morphine : Painkillers {
@@ -752,6 +756,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\firstAidKit.paa";
 		buyPrice = 1500;
 		sellPrice = 750;
+		weight = 3;
 		class Settings : Settings {};
 	};
 	class MediKit : FirstAidKit {
@@ -759,7 +764,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\mediKit.paa";
 		buyPrice = 18700;
 		sellPrice = 9350;
-		weight = 2;
+		weight = 3;
 		class Settings : Settings {};
 	};
 	class AutomatedExternalDefibrillator : MediKit {
@@ -768,7 +773,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\defibrillator.paa";
 		buyPrice = 22600;
 		sellPrice = 11300;
-		weight = 2;
+		weight = 3;
 		class Settings : Settings {};
 	};
 
@@ -779,7 +784,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\roadBarrier.paa";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 2;
+		weight = 4;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;
@@ -795,7 +800,7 @@ class CfgVirtualItems {
 		displayName = "Plastic Barrier (Medium, Yellow)";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 3;
+		weight = 8;
 		class Settings : Settings {};
 	};
 	class PlasticBarrier_02_grey_F : PlasticBarrier_02_yellow_F { 
@@ -806,7 +811,7 @@ class CfgVirtualItems {
 		displayName = "Plastic Barrier (Large, Orange)";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 4;
+		weight = 12;
 		class Settings : Settings {};
 	};
 	class PlasticBarrier_03_blue_F : PlasticBarrier_03_orange_F { 
@@ -817,14 +822,14 @@ class CfgVirtualItems {
 		displayName = "Road Barrier (Small)";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 3;
+		weight = 4;
 		class Settings : Settings {};
 	};
 	class RoadBarrier_F : TapeSign_F { 
 		displayName = "Road Barrier (Large)";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 5;
+		weight = 6;
 		class Settings : Settings {};
 	};
 	class RoadCone_F : TapeSign_F { 
@@ -832,7 +837,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\cone.paa";
 		buyPrice = 0;
 		sellPrice = 0;
-		weight = 2;
+		weight = 3;
 		class Settings : Settings {};
 		class Events { onUse = "[""RoadCone"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -846,6 +851,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\portableLight.paa";
 		buyPrice = 0;
 		sellPrice = 0;
+		weight = 6;
 		class Settings : Settings {};
 		class Events { onUse = "[""SinglePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -861,6 +867,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\popupTarget.paa";
 		buyPrice = 0;
 		sellPrice = 0;
+		weight = 6;
 		class Settings : Settings {};
 	};
 	class TargetP_Civ_F : TargetP_Inf4_F { 
@@ -889,7 +896,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\farmingEquipment.paa";
 		buyPrice = 8900;
 		sellPrice = 4450;
-		weight = 3;
+		weight = 8;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;
@@ -906,7 +913,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\fertileSoil.paa";
 		buyPrice = 1230;
 		sellPrice = 615;
-		weight = 1;
+		weight = 4;
 		class Settings : Settings {};
 	};
 	class CropSeeds : FertileSoil { // TODO
@@ -970,8 +977,8 @@ class CfgVirtualItems {
 		description = "Sealed cargo crates filled with stolen goods.";
 		icon = "Data\Icons\crate.paa";
 		buyPrice = -1;
-		sellPrice = 98500;
-		weight = 14;
+		sellPrice = 71360;
+		weight = 24;
 		class Settings {
 			onMarket = true;
 			isIllegal = true;
@@ -1022,14 +1029,14 @@ class CfgVirtualItems {
 		displayName = "Medium Gallery Piece";
 		icon = "Data\Icons\galleryPiece.paa";
 		sellPrice = 496000;
-		weight = 9;
+		weight = 10;
 		class Settings : Settings {};
 	};
 	class LargeGalleryPiece : SmallGalleryPiece {
 		displayName = "Large Gallery Piece";
 		icon = "Data\Icons\galleryPiece.paa";
 		sellPrice = 732500;
-		weight = 13;
+		weight = 14;
 		class Settings : Settings {};
 	};
 	class MarkedGold : SeizedContraband {
@@ -1091,9 +1098,33 @@ class CfgVirtualItems {
 		displayName = "Wood";
 		description = "A simple piece of wood commonly found in crafting recipies.";
 		icon = "Data\Icons\wood.paa";
-		sellPrice = 6;
+		sellPrice = 1350;
+		sellPrice = 450;
 		weight = 2;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+	};
+	class Plank : Wood {
+		displayName = "Plank";
+		description = "A simple plank made from ordinary wood.";
+		icon = "Data\Icons\wood.paa";
+		sellPrice = 2700;
+		sellPrice = 1350;
+		weight = 2;
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
 	};
 	class Rope : Tobacco {
 		displayName = "Rope";
@@ -1283,7 +1314,7 @@ class CfgVirtualItems {
 		displayName = "Explosive Materials";
 		description = "A collection of explosive materials that are commonly found in crafting recipies.";
 		icon = "Data\Icons\explosiveMaterials.paa";
-		weight = 3;
+		weight = 6;
 		class Settings : Settings {};
 		class Deconstruction {
 			time = 180;
@@ -1514,7 +1545,7 @@ class CfgVirtualItems {
 	class Turtle_F_Raw : Salema_F_Raw {
 		displayName = "Turtle";
 		icon = "Data\Icons\turtle.paa";
-		sellPrice = 55000;
+		sellPrice = 28500;
 		weight = 5;
 		class Settings {
 			onMarket = true;
@@ -1581,7 +1612,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\map.paa";
 		buyPrice = 20000;
 		sellPrice = 10000;
-		weight = 2;
+		weight = 12;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;
@@ -1632,7 +1663,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\surveyingEquipment.paa";
 		buyPrice = 28900;
 		sellPrice = 14450;
-		weight = 9;
+		weight = 8;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;
@@ -1689,14 +1720,14 @@ class CfgVirtualItems {
 		displayName = "Coin Bundle";
 		icon = "Data\Icons\coinBundle.paa";
 		sellPrice = 310781;
-		weight = 6;
+		weight = 2;
 		class Settings : Settings {};
 	};
 	class BrokenPot : OldCoin {
 		displayName = "Broken Pot";
 		icon = "Data\Icons\brokenPot.paa";
 		sellPrice = 15575;
-		weight = 5;
+		weight = 4;
 		class Settings : Settings {};
 	};
 	class RestoredPot : BrokenPot {
@@ -1723,7 +1754,7 @@ class CfgVirtualItems {
 		displayName = "Fossilised Bone";
 		icon = "Data\Icons\fossilisedBone.paa";
 		sellPrice = 31595;
-		weight = 3;
+		weight = 2;
 		class Settings : Settings {};
 	};
 	class UnidentifiedSkull : OldCoin {
@@ -1743,14 +1774,14 @@ class CfgVirtualItems {
 		displayName = "Petrified Shield";
 		icon = "Data\Icons\petrifiedShield.paa";
 		sellPrice = 70300;
-		weight = 9;
+		weight = 6;
 		class Settings : Settings {};
 	};
 	class WeatheredSculpture : OldCoin {
 		displayName = "Weathered Sculpture";
 		icon = "Data\Icons\weatheredSculpture.paa";
 		sellPrice = 81750;
-		weight = 7;
+		weight = 5;
 		class Settings : Settings {};
 	};
 	class AncientAmber : OldCoin {
@@ -1763,7 +1794,7 @@ class CfgVirtualItems {
 		displayName = "Religious Totem";
 		icon = "Data\Icons\religiousTotem.paa";
 		sellPrice = 97950;
-		weight = 13;
+		weight = 2;
 		class Settings : Settings {};
 	};
 	class StrongMetalRing : OldCoin {
@@ -1783,35 +1814,34 @@ class CfgVirtualItems {
 		displayName = "Emerald Amulet";
 		icon = "Data\Icons\emeraldAmulet.paa";
 		sellPrice = 200625;
-		weight = 2;
+		weight = 1;
 		class Settings : Settings {};
 	};
 	class AncientLedger : OldCoin {
 		displayName = "Ancient Ledger";
 		icon = "Data\Icons\ancientLedger.paa";
 		sellPrice = 237237;
-		weight = 8;
+		weight = 3;
 		class Settings : Settings {};
 	};
 	class HandSmoothedRunestone : OldCoin {
 		displayName = "Hand-Smoothed Runestone";
 		icon = "Data\Icons\handSmoothedRunestone.paa";
 		sellPrice = 279037;
-		weight = 15;
+		weight = 4;
 		class Settings : Settings {};
 	};
 	class JeweledNecklace : OldCoin {
 		displayName = "Jeweled Necklace";
 		icon = "Data\Icons\jeweledNecklace.paa";
 		sellPrice = 332337;
-		weight = 3;
 		class Settings : Settings {};
 	};
 	class BrokenTimepiece : OldCoin {
 		displayName = "Broken Timepiece";
 		icon = "Data\Icons\brokenTimepiece.paa";
 		sellPrice = 308475;
-		weight = 2;
+		weight = 1;
 		class Settings : Settings {};
 	};
 };

@@ -176,7 +176,7 @@ class B_Carryall_wdl_F : B_Carryall_cbr{};
 class B_ViperLightHarness_blk_F {
 	displayName = "Light Viper Harness";
 	price = 3690;
-	reputation = false;
+	reputation = true;
 	virtualSpace = 24;
 	class Textures {
 		class B_ViperLightHarness_blk_F {
@@ -193,7 +193,7 @@ class B_ViperLightHarness_oli_F : B_ViperLightHarness_blk_F{};
 class B_ViperHarness_blk_F {
 	displayName = "Viper Harness";
 	price = 3820;
-	reputation = false;
+	reputation = true;
 	virtualSpace = 27;
 	class Textures {
 		class B_ViperHarness_blk_F {
@@ -226,7 +226,7 @@ class B_Bergen_hex_F : B_Bergen_mcamo_F{};
 
 class B_Parachute {
 	price = 7000;
-	reputation = false;
+	reputation = true;
 	virtualSpace = 0;
 	class Textures {};
 };

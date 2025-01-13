@@ -314,3 +314,13 @@ class G_Balaclava_TI_blk_F {
 	};
 };
 class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F {};
+
+class G_Goggles_VR {
+	displayName = "Staff Goggles";
+	price = 1000000;
+	reputation = false;
+	isMask = false;
+	isNV = true;
+	isGas = true;
+	class Textures {};
+};

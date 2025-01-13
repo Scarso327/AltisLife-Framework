@@ -89,7 +89,7 @@ class V_BandollierB_blk {
 	displayName = "Bandollier";
 	price = 8700;
 	virtualSpace = 10;
-	reputation = true;
+	reputation = false;
 	class Textures {
 		class V_BandollierB_blk {
 			displayName = "Black";
@@ -203,7 +203,7 @@ class V_TacVest_oli : V_TacVest_blk {};
 
 class V_PlateCarrier1_blk {
 	displayName = "Carrier Lite";
-	price = 64000;
+	price = 74000;
 	virtualSpace = 23;
 	reputation = true;
 	class Textures {
@@ -227,7 +227,7 @@ class V_PlateCarrierL_CTRG : V_PlateCarrier1_blk {};
 
 class V_PlateCarrier2_blk {
 	displayName = "Carrier Rig";
-	price = 85000;
+	price = 105000;
 	virtualSpace = 25;
 	reputation = true;
 	class Textures {

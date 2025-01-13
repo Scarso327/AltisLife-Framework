@@ -1,9 +1,9 @@
 2025-01-10
-- added: police and medic boat spawn to kavala (not marked)
-- added: air garages to all airfields
-- added: uss freedom (not marked)
-- added: judgement, combat medic and mystery achievements
-- added: several trawlers around the map
+- feat: police and medic boat spawn to kavala (not marked)
+- feat: air garages to all airfields
+- feat: uss freedom (not marked)
+- feat: judgement, combat medic and mystery achievements
+- feat: several trawlers around the map
 - fix: map markers display hierarchy
 - fix: hms liberty front gun
 - fix: captain achievement location
@@ -12,3 +12,10 @@
 - alter: multi-drug processor location
 - alter: salt mine location
 - removed: 1 turtle poaching location
+
+2025-01-13
+- feat: added additional turtle poaching location
+- alter: order of rob action on fuel stations
+- alter: southern gang base design
+- alter: turtle poaching locations
+- alter: coral reef location

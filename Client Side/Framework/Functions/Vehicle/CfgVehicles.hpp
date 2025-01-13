@@ -7,12 +7,114 @@ class CfgVehicles {
 	class Base {
 		virtualSpace = 0;
 		garageLimit = 5;
-		fuelConsumptionRate = 1.15; // 115% normal rate
+		fuelConsumptionRate = 1.25;
 		isHouse = false;
 		canTransfer = true;
 		conditions = "true";
-		blacklistedItems[] = { "StolenCargo", "FreightCargo" };
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+
+			"UnprocessedOil",
+			"ProcessedOil"
+		};
 		class Textures {};
+	};
+
+	class BaseTruck {
+		garageLimit = 2;
+		fuelConsumptionRate = 1.40;
+		enableRope = false;
+		garageDelay = 15;
+		repairTime = 15;
+		crushTime = 300;
+		chopKeepChance = 85;
+		chopTime = 120;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+
+			"UnprocessedOil",
+			"ProcessedOil"
+		};
+		class Textures {};
+	};
+
+	class BaseAir : Base {
+		garageLimit = 2;
+		fuelConsumptionRate = 1.35;
+		garageDelay = 20;
+		repairTime = 20;
+		crushTime = 300;
+		chopKeepChance = 90;
+		chopTime = 180;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+
+			"SeizedContraband",
+			"SpaceCapsuleDataDrive",
+			"SmallGalleryPiece",
+			"MediumGalleryPiece",
+			"LargeGalleryPiece",
+			"MarkedGold",
+			"UnmarkedGold",
+			"EncryptedDrive",
+			"DecryptedDrive",
+
+			"Tobacco",
+			"CopperOre",
+			"SilverOre",
+			"IronOre",
+			"Sand",
+			"UnrefinedSalt",
+			"UnprocessedOil",
+			"UncutDiamond",
+			"UraniumOre",
+			"Corn",
+			"EphedrineBarrel",
+			"UnprocessedWeed",
+			"UnprocessedHeroin",
+			"UnprocessedCocaine",
+
+			"Coral",
+			"Cigarette",
+			"Cigar",
+			"Coal",
+			"CopperBar",
+			"SilverBar",
+			"IronBar",
+			"Glass",
+			"RefinedSalt",
+			"ProcessedOil",
+			"CutDiamond",
+			"ProcessedWeed",
+			"ProcessedHeroin",
+			"ProcessedCocaine",
+			"ProcessedMeth",
+			"Moonshine",
+			"Ecstasy",
+			"UraniumBar",
+			"PurifiedWeed",
+			"PurifiedHeroin",
+			"PurifiedCocaine",
+			"PurifiedMeth",
+			"PurifiedMoonshine",
+
+			"Salema_F_Raw",
+			"Ornate_random_F_Raw",
+			"Mackerel_F_Raw",
+			"Tuna_F_Raw",
+			"Mullet_F_Raw",
+			"CatShark_F_Raw",
+			"Turtle_F_Raw",
+			"CookedSalema",
+			"CookedOrnate",
+			"CookedMackerel",
+			"CookedTuna",
+			"CookedMullet",
+			"CookedCatshark"
+		};
 	};
 
 	// LIGHTS --------------------------------------------------------------------------------------
@@ -108,8 +210,6 @@ class CfgVehicles {
 	class C_Kart_01_Blu_F : Base {
 		description = "Kart is a small four-wheeled vehicle propelled by gravity, gas or electricity. It has 4-stroke engine offering up to 20 hp and should not be operated by drivers under 18 years old.";
 		buyPrice = 2500;
-		virtualSpace = 0;
-		garageLimit = 3;
 	};
 	class C_Kart_01_Fuel_F : C_Kart_01_Blu_F{};
     class C_Kart_01_Red_F : C_Kart_01_Blu_F{};
@@ -384,7 +484,12 @@ class CfgVehicles {
 			};
 		};
 	};
-	class B_G_Offroad_01_armed_F : C_Offroad_01_F { buyPrice = 4280000; };
+	class B_G_Offroad_01_armed_F : C_Offroad_01_F { 
+		buyPrice = 4280000; 
+		virtualSpace = 20;
+		garageLimit = 1;
+		enableRope = false;
+	};
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
 	class C_IDAP_Offroad_01_F : C_Offroad_01_F {
 		class Textures {
@@ -474,7 +579,12 @@ class CfgVehicles {
 			};
 		};
 	};
-	class I_C_Offroad_02_LMG_F : C_Offroad_02_unarmed_F { buyPrice = 670300; };
+	class I_C_Offroad_02_LMG_F : C_Offroad_02_unarmed_F { 
+		buyPrice = 670300; 
+		virtualSpace = 45;
+		garageLimit = 1;
+		enableRope = false;
+	};
 
 	class C_SUV_01_F : Base {
 		description = "A full-size luxury crossover SUV, not particularly suitable for off-road but with good on-road ability. Its powerful engine and 4x4 contribute to the enjoyable rides in higher speeds.";
@@ -569,6 +679,7 @@ class CfgVehicles {
 		description = "The van can be used for a variety of practical purposes. Featuring a long load length and excellent roof height, allowing for the transport of passengers, cargo and smaller vehicles.";
 		buyPrice = 88000;
 		virtualSpace = 90;
+		enableRope = false;
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
 				displayName = "Public Order";
@@ -740,6 +851,7 @@ class CfgVehicles {
 		crushTime = 60;
 		chopKeepChance = 95;
 		chopTime = 300;
+		enableRope = false;
 		class Textures {
 			class Police : PoliceTexture {
 				textures[] = {
@@ -765,6 +877,7 @@ class CfgVehicles {
 		chopKeepChance = 90;
 		chopTime = 300;
 		canTransfer = false;
+		enableRope = false;
 		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk";
 		class Textures {
 			class Hex : BaseTexture { 
@@ -834,6 +947,7 @@ class CfgVehicles {
 		crushTime = 60;
 		chopKeepChance = 90;
 		chopTime = 300;
+		enableRope = false;
 		class Textures {
 			class Tan : BaseTexture { 
 				displayName = "Tan";
@@ -856,12 +970,10 @@ class CfgVehicles {
 	};
 
 	// TRUCKS --------------------------------------------------------------------------------------
-	class C_Tractor_01_F : Base {
+	class C_Tractor_01_F : BaseTruck {
 		description = "Found in farm barns across the globe, the common tractor is a reliable high torque engineering vehicle, used for towing trailers and many other agricultural tasks.";
 		buyPrice = 23150;
 		virtualSpace = 10;
-		garageLimit = 2;
-		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Red : BaseTexture {
 				displayName = "Red"; 
@@ -878,13 +990,10 @@ class CfgVehicles {
 		};
 	};
 
-	class C_Van_01_transport_F : Base {
+	class C_Van_01_transport_F : BaseTruck {
 		description = "The civilian 4x4 truck is a highly customizable truck with off-road capabilities. It builds on retro design, but utilizes a modern engine and electronics.";
 		buyPrice = 190500;
 		virtualSpace = 100;
-		garageLimit = 3;
-		enableRope = false;
-		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -923,6 +1032,10 @@ class CfgVehicles {
 	class C_Van_01_fuel_F : C_Van_01_transport_F {
 		buyPrice = 210500;
 		virtualSpace = 120;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo"
+		};
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -947,13 +1060,10 @@ class CfgVehicles {
 		};
 	};
 
-	class I_Truck_02_transport_F : Base {
+	class I_Truck_02_transport_F : BaseTruck {
 		description = "The Zamak heavy truck is a 6x6 vehicle used for transport and utility. Fitted with a powerful V8 engine, these trucks are reliable even in harsh conditions.";
 		buyPrice = 505000;
 		virtualSpace = 280;
-		garageLimit = 2;
-		enableRope = false;
-		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Orange : BaseTexture {
 				displayName = "Orange"; 
@@ -1005,6 +1115,10 @@ class CfgVehicles {
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 435000;
 		virtualSpace = 200;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo"
+		};
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
 		class Textures {
@@ -1020,13 +1134,10 @@ class CfgVehicles {
 		};
 	};
 
-	class O_Truck_03_transport_F : Base {
+	class O_Truck_03_transport_F : BaseTruck {
 		description = "The Tempest is a 6x6 mine resistant standard transport truck. The modular design of the truck allows several transport versions.";
 		buyPrice = 615500;
 		virtualSpace = 370;
-		garageLimit = 2;
-		enableRope = false;
-		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class BrownHex : BaseTexture {
 				displayName = "Brown Hex"; 
@@ -1062,18 +1173,20 @@ class CfgVehicles {
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
 		buyPrice = 590500;
 		virtualSpace = 350;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo"
+		};
 	};
 	class O_Truck_03_device_F : O_Truck_03_transport_F {
 		buyPrice = 1150000;
 		virtualSpace = 150;
 	};
 
-	class B_Truck_01_mover_F : Base {
+	class B_Truck_01_mover_F : BaseTruck {
 		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. There are several versions covering the basic transport functions.";
 		buyPrice = 334000;
 		virtualSpace = 10;
-		garageLimit = 2;
-		enableRope = false;
 		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
 		blacklistedItems[] = { "StolenCargo" };
@@ -1205,6 +1318,10 @@ class CfgVehicles {
 	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
 		buyPrice = 880000;
 		virtualSpace = 500;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo"
+		};
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1224,19 +1341,9 @@ class CfgVehicles {
 			}; 
 		};
 	};
-	class B_Truck_01_box_F : Base {
+	class B_Truck_01_box_F : B_Truck_01_mover_F {
 		buyPrice = 1990000;
 		virtualSpace = 800;
-		garageLimit = 2;
-		garageDelay = 60;
-		repairTime = 30;
-		crushTime = 120;
-		chopKeepChance = 85;
-		chopTime = 300;
-		enableRope = false;
-		canTransfer = false;
-		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk";
-		blacklistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1369,6 +1476,7 @@ class CfgVehicles {
 		crushTime = 30;
 		chopKeepChance = 85;
 		chopTime = 120;
+		enableRope = false;
 		turrets[] = { { { 1 },  { "LMG_Minigun" },  { "2000Rnd_65x39_belt_Tracer_Red" } } };
 		class Textures {
 			class Police : PoliceTexture {
@@ -1384,25 +1492,24 @@ class CfgVehicles {
 		description = "The SDV is a manned submersible vehicle used to transport teams of divers over long distances under water.ply or using their own SCUBA gear.";
 		buyPrice = 389500;
 		virtualSpace = 5;
+		garageLimit = 1;
 	};
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
-	class B_UAV_01_F : Base {
+	class B_UAV_01_F : BaseAir {
 		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
 		buyPrice = 98700;
-		virtualSpace = 0;
 	};
 	class C_UAV_06_medical_F : B_UAV_01_F {
 		description = "This commercial off-the-shelf utility drone uses 6 rotors to transport small payloads inside its external cargo case.";
 		buyPrice = 109700;
 	};
 	
-	class C_Heli_Light_01_civil_F : Base {
+	class C_Heli_Light_01_civil_F : BaseAir {
 		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
 		buyPrice = 565000;
 		virtualSpace = 5;
-		garageLimit = 4;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
+		garageLimit = 3;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
@@ -1472,12 +1579,10 @@ class CfgVehicles {
 	};
 	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 780000; };
 
-	class O_Heli_Light_02_unarmed_F : Base {
+	class O_Heli_Light_02_unarmed_F : BaseAir {
 		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
 		buyPrice = 2350000;
 		virtualSpace = 25;
-		garageLimit = 2;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
@@ -1496,12 +1601,10 @@ class CfgVehicles {
 		};
 	};
 
-	class I_Heli_light_03_unarmed_F : Base {
+	class I_Heli_light_03_unarmed_F : BaseAir {
 		description = "The WY-55 Hellcat is a multipurpose helicopter, most suited for utility and limited transport.";
 		buyPrice = 2130000;
 		virtualSpace = 20;
-		garageLimit = 2;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
 			class Police : PoliceTextureBase {
 				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
@@ -1519,14 +1622,14 @@ class CfgVehicles {
 	};
 	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {
 		buyPrice = 23450000;
+		garageLimit = 1;
 	};
 
-	class B_Heli_Transport_01_F : Base {
+	class B_Heli_Transport_01_F : BaseAir {
 		description = "The UH-80 Ghost Hawk is a medium-lift utility helicopter with stealth design.";
 		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = {};
 		class Textures {
 			class Police : PoliceTextureBase {};
@@ -1534,13 +1637,10 @@ class CfgVehicles {
 		};
 	};
 
-	class I_Heli_Transport_02_F : Base {
+	class I_Heli_Transport_02_F : BaseAir {
 		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
 		buyPrice = 13240000;
 		virtualSpace = 55;
-		garageLimit = 2;
-		chopKeepChance = 85;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		class Textures {
 			class Medic : MedicTextureBase {
 				textures[] = { 
@@ -1584,15 +1684,10 @@ class CfgVehicles {
 		};
 	};
 
-	class O_Heli_Transport_04_black_F : Base {
+	class O_Heli_Transport_04_black_F : BaseAir {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
-		virtualSpace = 0;
-		garageLimit = 2;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		chopKeepChance = 85;
-		chopPerc = 0.20;
-		chopTime = 60;
+		garageLimit = 1;
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11176500;
@@ -1629,15 +1724,11 @@ class CfgVehicles {
 		};
 	};
 
-	class B_Heli_Transport_03_unarmed_F : Base {
+	class B_Heli_Transport_03_unarmed_F : BaseAir {
 		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
 		virtualSpace = 100;
 		garageLimit = 1;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		chopKeepChance = 95;
-		chopPerc = 0.20;
-		chopTime = 300;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1657,15 +1748,10 @@ class CfgVehicles {
 		};
 	};
 
-	class B_Heli_Attack_01_F : Base {
+	class B_Heli_Attack_01_F : BaseAir {
 		description = "A two-seat reconnaissance and target designation helicopter used to seek targets for gunships.";
 		buyPrice = 146560000;
-		virtualSpace = 0;
 		garageLimit = 1;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
-		chopKeepChance = 97;
-		chopPerc = 0.20;
-		chopTime = 600;
 	};
 
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
@@ -1675,25 +1761,19 @@ class CfgVehicles {
 	};
 
 	// PLANES --------------------------------------------------------------------------------------
-	class C_Plane_Civil_01_F : Base {
+	class C_Plane_Civil_01_F : BaseAir {
 		description = "The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m).";
 		buyPrice = 1256000;
 		virtualSpace = 5;
-		garageLimit = 2;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
-	class B_T_VTOL_01_infantry_F : Base {
+	class B_T_VTOL_01_infantry_F : BaseAir {
 		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";
 		buyPrice = 75500000;
 		virtualSpace = 175;
 		garageLimit = 1;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		retrievalPerc = 0.001;
-		chopKeepChance = 95;
-		chopPerc = 0.15;
-		chopTime = 180;
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
 		buyPrice = 85750000;
@@ -1704,7 +1784,6 @@ class CfgVehicles {
 		description = "The most promising prototype built by CSAT engineers presents an extremely progressive design with many unique features and top-notch bleeding-edge technologies.";
 		buyPrice = 115650000;
 		virtualSpace = 80;
-		blacklistedItems[] = { "StolenCargo", "FreightCargo", "UnmarkedGold", "MarkedGold", "UraniumOre", "UraniumBar", "EphedrineBarrel" };
 		turrets[] = {};
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
@@ -1712,15 +1791,11 @@ class CfgVehicles {
 		virtualSpace = 95;
 	};
 
-	class I_Plane_Fighter_03_CAS_F : Base {
+	class I_Plane_Fighter_03_CAS_F : BaseAir {
 		description = "The A-143 Buzzard is a single seat, light, multipurpose combat aircraft able to carry a wide range of equipment and weaponry.";
 		buyPrice = 73350000;
-		virtualSpace = 0;
 		garageLimit = 1;
 		retrievalPerc = 0.001;
-		chopKeepChance = 99;
-		chopPerc = 0.10;
-		chopTime = 300;
 		pylons[] = { "", "", "", "", "", "", "", "", "", "", "", "", "" };
 		turrets[] = {};
 	};
@@ -1763,6 +1838,10 @@ class CfgVehicles {
 		description = "";
 		buyPrice = 0;
 		virtualSpace = 100;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo"
+		};
 	};
 
 	class Land_Pod_Heli_Transport_04_box_black_F : B_Slingload_01_Cargo_F {
@@ -1774,6 +1853,10 @@ class CfgVehicles {
 		description = "";
 		buyPrice = 0;
 		virtualSpace = 50;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo"
+		};
 	};
 
 	// TEMP --------------------------------------------------------------------------------------

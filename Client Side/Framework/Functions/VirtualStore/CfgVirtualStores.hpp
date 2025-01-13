@@ -131,6 +131,7 @@ class CfgVirtualStores {
 			class Lighter {};
 			class Lockpick {};
 			class Toolbox {};
+			class Plank {};
 		};
 	};
 

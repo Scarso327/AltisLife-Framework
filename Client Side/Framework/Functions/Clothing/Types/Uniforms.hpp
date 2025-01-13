@@ -627,7 +627,7 @@ class U_NikosAgedBody {
 class U_C_FormalSuit_01_tshirt_black_F {
 	displayName = "Formal Suit, T-Shirt";
 	price = 460;
-	reputation = false;
+	reputation = true;
 	virtualSpace = 2;
 	isGas = false;
 	class Textures {
@@ -648,7 +648,7 @@ class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F {};
 class U_C_FormalSuit_01_black_F {
 	displayName = "Formal Suit";
 	price = 580;
-	reputation = false;
+	reputation = true;
 	virtualSpace = 2;
 	isGas = false;
 	class Textures {
@@ -770,7 +770,7 @@ class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F{};
 
 class U_B_GhillieSuit {
 	displayName = "Half-Ghillies";
-	price = 9360;
+	price = 90360;
 	reputation = true;
 	virtualSpace = 7;
 	isGas = false;
@@ -793,7 +793,7 @@ class U_I_GhillieSuit : U_B_GhillieSuit{};
 
 class U_B_FullGhillie_ard {
 	displayName = "Full-Ghillies";
-	price = 14200;
+	price = 142000;
 	reputation = true;
 	virtualSpace = 3;
 	isGas = false;

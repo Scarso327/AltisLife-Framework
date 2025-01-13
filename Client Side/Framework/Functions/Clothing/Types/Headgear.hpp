@@ -30,6 +30,8 @@ class H_Bandanna_gry {
 	displayName = "Bandanna";
 	price = 10;
 	reputation = false;
+	isMask = false;
+	isNV = false;
 	class Textures {
 		class H_Bandanna_gry {
 			displayName = "Gray";
@@ -262,7 +264,7 @@ class H_Beret_CSAT_01_F : H_Beret_blk {};
 class H_ShemagOpen_khk {
 	displayName = "Shemag";
 	price = 700;
-	reputation = false;
+	reputation = true;
 	isMask = true;
 	isNV = false;
 	class Textures {};

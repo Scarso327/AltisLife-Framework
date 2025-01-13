@@ -46,8 +46,8 @@ class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green : 30Rnd_45ACP_Mag_SMG_01 {
 			displayName = "Green";
 			condition = "true";
 		};
-		class 30Rnd_45ACP_Mag_SMG_01_Tracer_Red : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Red"; };
-		class 30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Yellow"; };
+		class 30Rnd_45ACP_Mag_SMG_01_Tracer_Red : 30Rnd_45ACP_Mag_SMG_01_Tracer_Green { displayName = "Red"; };
+		class 30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow : 30Rnd_45ACP_Mag_SMG_01_Tracer_Green { displayName = "Yellow"; };
 	};
 };
 class 30Rnd_45ACP_Mag_SMG_01_Tracer_Red : 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {};

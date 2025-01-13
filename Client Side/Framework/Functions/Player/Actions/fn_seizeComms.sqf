@@ -20,6 +20,7 @@ if (isNull _unit) exitWith {};
 
 if !(_unit isEqualTo player) then {
 	["You have destroyed this person's communications..."] call ULP_fnc_hint;
+	["SeizedComms"] call ULP_fnc_achieve;
 };
 
 if (local _unit) then {

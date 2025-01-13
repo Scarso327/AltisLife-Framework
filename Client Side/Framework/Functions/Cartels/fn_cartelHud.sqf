@@ -161,11 +161,6 @@ switch (_mode) do {
 
 		private _secondHighest = _scoreValues param [1, 0];
 
-		// Makes the UI mark has attacking if contested leadership...
-		if (isNull _group && { _groupScore isEqualTo _highScore }) then {
-			_groupScore = (_groupScore - 0.5) max 0;
-		};
-
 		private _progress = 0;
 		if (_highScore > 0) then {
 			private _maxScoreLead = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "maxScoreLead");

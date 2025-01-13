@@ -14,7 +14,7 @@ class CfgCartels {
 		maxScoreLead = 5;
 		allowPoliceNeutralise = true;
 		policeNeutralisePerTick = 5;
-		decreasePerRewardTick = 5;
+		decreasePerRewardTick = 2;
 
 		class Northern {
 			name = "Northern Drug Cartel";

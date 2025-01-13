@@ -25,12 +25,11 @@ class CfgVehicles {
 		garageLimit = 2;
 		fuelConsumptionRate = 1.40;
 		enableRope = false;
-		garageDelay = 60;
+		garageDelay = 30;
 		repairTime = 30;
 		crushTime = 120;
-		chopKeepChance = 85;
-		chopTime = 300;
-		conditions = "true";
+		chopKeepChance = 75;
+		chopTime = 120;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo",
@@ -44,6 +43,7 @@ class CfgVehicles {
 	class BaseAir : Base {
 		garageLimit = 2;
 		fuelConsumptionRate = 1.35;
+		garageDelay = 30;
 		repairTime = 60;
 		crushTime = 120;
 		chopKeepChance = 85;

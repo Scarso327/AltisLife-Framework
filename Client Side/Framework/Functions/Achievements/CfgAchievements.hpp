@@ -583,7 +583,7 @@ class CfgAchievements {
 
 	class Overweight {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Fatigue_ca.paa";
-		displayName = "Encumbered";
+		displayName = "Over-Encumbered";
 		description = "You tried carrying more than you can handle";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
 		isMystery = false;

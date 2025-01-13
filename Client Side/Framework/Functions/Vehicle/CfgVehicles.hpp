@@ -679,6 +679,7 @@ class CfgVehicles {
 		description = "The van can be used for a variety of practical purposes. Featuring a long load length and excellent roof height, allowing for the transport of passengers, cargo and smaller vehicles.";
 		buyPrice = 88000;
 		virtualSpace = 90;
+		enableRope = false;
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
 				displayName = "Public Order";

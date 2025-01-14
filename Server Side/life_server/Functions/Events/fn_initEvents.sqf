@@ -28,7 +28,7 @@ addMissionEventHandler ["EntityKilled", {
 		"_unit", "_killer"
 	];
 
-	if (isPlayer _unit && { _unit isKindOf "Man" } && { isNull _killer || { isPlayer _killer } }) then {
+	if (isPlayer _unit && { isNull _killer || { isPlayer _killer } }) then {
 		_this call ULP_SRV_fnc_onPlayerKilled;
 	};
 }];

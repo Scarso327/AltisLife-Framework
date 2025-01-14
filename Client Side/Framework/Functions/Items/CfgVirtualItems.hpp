@@ -449,6 +449,7 @@ class CfgVirtualItems {
 		sellPrice = 375;
 		weight = 4;
 		class Settings : Settings {};
+		class Events { onUse = "[] call ULP_fnc_dropFishingNet;"; };
 		class Deconstruction {
 			time = 30;
 			workbench = false;

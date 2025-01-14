@@ -1,6 +1,17 @@
 class CfgGathering {
-	fish[] = { "Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F", "Turtle_F" };
-	turtleZones[] = { "turtle_poaching_1", "turtle_poaching_2" };
+
+	class Fishing {
+		fish[] = { "Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F", "Turtle_F" };
+		turtleZones[] = { "turtle_poaching_1", "turtle_poaching_2" };
+
+		class Nets {
+			time = 30;
+			chance = 0.9;
+			randomAmount[] = { 1, 3, 5 };
+			profession[] = { "Fishing", 1, 100 };
+			leveling[] = { 1, "Fishing", 100 };
+		};
+	};
 
 	class BaseGather {
 		actionTitle = "Gathering";

@@ -13,11 +13,11 @@ if (isNull _fish || { alive _fish }) exitWith { false };
 
 private _typeOf = typeOf _fish;
 
-if !(_typeOf in getArray (missionConfigFile >> "CfgGathering" >> "fish")) exitWith { false };
+if !(_typeOf in getArray (missionConfigFile >> "CfgGathering" >> "Fishing" >> "fish")) exitWith { false };
 
 // Check turtle zoning...
 if (_typeOf isEqualTo "Turtle_F") then {
-	private _zones = getArray (missionConfigFile >> "CfgGathering" >> "turtleZones");
+	private _zones = getArray (missionConfigFile >> "CfgGathering" >> "Fishing" >> "turtleZones");
 
 	if ((_zones findIf { (player distance (getMarkerPos _x)) <= 250 }) < 0) then {
 		["You must be within a turtle poaching zone to catch turtles!"] call ULP_fnc_hint;

@@ -126,7 +126,7 @@ class CfgVirtualStores {
 			class LumberAxe {};
             class Extractor {};
 			class Shovel {};
-			//class FishingNet {};
+			class FishingNet {};
 			class FuelCan {};
 			class Lighter {};
 			class Lockpick {};

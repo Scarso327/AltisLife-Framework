@@ -36,7 +36,7 @@ if !(_profession isEqualTo []) then {
 
 
 ["Waiting For Fish...", _time, [_zone], {
-	!isNull (objectParent player) && { (speed (vehicle player)) <= 2 || { (speed (vehicle player)) >= -2  } }
+	!isNull (objectParent player) && { (speed (vehicle player)) <= 3 } && { (speed (vehicle player)) >= -3  }
 }, {
 	private _zone = _this param [0, configNull, [configNull]];
 

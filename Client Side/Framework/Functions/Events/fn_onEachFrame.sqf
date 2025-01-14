@@ -6,9 +6,11 @@ scopeName "fn_onEachFrame";
 
 // See https://github.com/CBATeam/CBA_A3/wiki/Per-Frame-Handlers
 
+ if (diag_frameNo != ULP_nextFrameNumber) then { ULP_nextFrameNumber = diag_frameNo };
+
 {
-	_x params ["_params", "_function", "_index"];
-	private _thisEventHandler = _index;
+	_x params ["_params", "_function", "_handle"];
+	private _thisEventHandler = _handle;
 
 	_params call _function;
 	nil
@@ -24,6 +26,16 @@ for "_i" from 0 to 1 step 0 do {
 	private _exec = (ULP_waitExecute deleteAt 0);
 	(_exec select 1) call (_exec select 2);
 };
+
+diag_log format ["Buffers %1", ULP_executeNextFrameBufferA];
+{
+	(_x select 0) call (_x select 1);
+	nil
+} count ULP_executeNextFrameBufferA;
+
+ULP_executeNextFrameBufferA = ULP_executeNextFrameBufferB;
+ULP_executeNextFrameBufferB = [];
+ULP_nextFrameNumber = diag_frameNo + 1;
 
 {
 	ULP_waitUntilExecute deleteAt (ULP_waitUntilExecute find _x);

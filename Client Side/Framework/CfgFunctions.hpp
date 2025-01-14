@@ -78,6 +78,7 @@ class CfgFunctions {
 			class stripString {};
 			class inString {};
 			class isKindOf {};
+			class execNextFrame {};
 		};
 
 		class Faction {

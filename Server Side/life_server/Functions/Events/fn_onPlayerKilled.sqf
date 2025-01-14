@@ -9,8 +9,6 @@ _this params [
 	"_unit", "_killer", "_instigator"
 ];
 
-if (alive _killer && { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) }) exitWith {};
-
 // Notify the server...
 if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } || { !(_killer isKindOf "Man") }) then {
 	["Bleedout", [[_unit] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];

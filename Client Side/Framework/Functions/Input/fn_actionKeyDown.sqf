@@ -29,7 +29,7 @@ private _object = ([cursorObject, ULP_Escort] select ([] call ULP_fnc_isEscortin
 if (isNull _object) then {
 	switch (true) do {
 		case (surfaceIsWater (visiblePositionASL player)): {
-			private _fish = nearestObjects [player, getArray (missionConfigFile >> "CfgGathering" >> "fish"), 3] param [0, objNull];
+			private _fish = nearestObjects [player, getArray (missionConfigFile >> "CfgGathering" >> "Fishing" >> "fish"), 3] param [0, objNull];
 			if !(isNull _fish && { alive _fish }) then {
 				[_fish] call ULP_fnc_catchFish;
 			};

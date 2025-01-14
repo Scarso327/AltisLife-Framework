@@ -140,6 +140,7 @@ class CfgFunctions {
 			class fuelCan {};
 			class spikeStrip {};
 			class triggerEvent {};
+			class dropFishingNet {};
 		};
 
 		class Input {

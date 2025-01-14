@@ -108,7 +108,7 @@ class DialogPNC {
 					onTreeSelChanged = "_this call ULP_fnc_listCrimes;";
 					y = 1 * GUI_GRID_CENTER_H;
 					w = 13.5 * GUI_GRID_CENTER_W;
-					h = 16.5 * GUI_GRID_CENTER_H;
+					h = 16 * GUI_GRID_CENTER_H;
 				};
 
 				class CrimesHeaderBackground : Life_RscText {

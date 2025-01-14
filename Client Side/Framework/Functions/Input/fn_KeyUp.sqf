@@ -15,6 +15,7 @@ private _handled = false;
 
 private _seatKey = ACT_KEY("User1", B);
 private _interactionKey = ACT_KEY("User10", LWINDOWS);
+private _anprKey = ACT_KEY("User11", NUMSLASH);
 
 switch (_code) do {
     if (isDowned(player)) then {
@@ -238,7 +239,7 @@ switch (_code) do {
         };
     };
 
-    case NUMSLASH : {
+    case _anprKey : {
         private _veh = vehicle player;
         
         if ([_veh] call ULP_fnc_canANPR) then {

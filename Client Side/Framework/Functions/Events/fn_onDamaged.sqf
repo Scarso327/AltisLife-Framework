@@ -82,6 +82,8 @@ if !(isNull _source) then {
 	};
 };
 
+if (diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2) then { _damage = _orginalDamage };
+
 if (_damage >= 1) then {
 	private _isRagDolled = ((animationState _unit) find "unconscious") >= 0;
 

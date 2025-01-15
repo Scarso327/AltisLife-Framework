@@ -38,7 +38,7 @@ private _deathMessage = format["<t align='center' size='2'>You killed yourself</
 // Notify the server...
 if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) then {
 	if ([_killer, ["Civilian"]] call ULP_fnc_isFaction) then {
-		[getPlayerUID _killer, "OffencesAgainstThePerson", "Section20",
+		[getPlayerUID _killer, "OffencesAct", "S18",
 			format [
 				"Suspected Weapon: %1", 
 				([currentWeapon _killer] call ULP_fnc_itemCfg) param [5, "Unknown"]

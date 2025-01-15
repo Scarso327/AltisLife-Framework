@@ -31,12 +31,21 @@ if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith 
 	["KnockOut"] call ULP_fnc_achieve;
 
 	if ([player, ["Civilian"]] call ULP_fnc_isFaction) then {
-		[getPlayerUID player, "OffencesAgainstThePerson", "Section20",
-			format [
-				"Suspected Weapon: %1", 
-				([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"]
-			]
-		] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+		if !([_target, ["Civilian"]] call ULP_fnc_isFaction) then {
+			[getPlayerUID player, "OffencesAct", "S38", // Assault on Emergency Worker
+				format [
+					"Suspected Weapon: %1", 
+					([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"]
+				]
+			] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+		} else {
+			[getPlayerUID player, "OffencesAct", "S47",
+				format [
+					"Suspected Weapon: %1", 
+					([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"]
+				]
+			] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+		};
 	};
 
 	true

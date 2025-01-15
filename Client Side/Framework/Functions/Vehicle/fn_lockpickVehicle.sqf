@@ -41,7 +41,7 @@ if ([] call ULP_fnc_isGroup) then {
 
 	if (["Lockpick", 1, true] call ULP_fnc_handleItem) then {
 		if (0.7 <= (random 1)) then {
-			[getPlayerUID player, "Theft", "Section12", 
+			[getPlayerUID player, "TheftAct", "S25", 
 				format [
 					"Vehicle: %1 (%2)", 
 					([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "Unknown"], 
@@ -53,7 +53,7 @@ if ([] call ULP_fnc_isGroup) then {
 			ULP_Keys pushBackUnique _vehicle;
 			["LockpickVeh"] call ULP_fnc_achieve;
 		} else {
-			[getPlayerUID player, "CriminalAttempts", "Section1", 
+			[getPlayerUID player, "RoadsAct", "Section1", 
 				format [
 					"Attempted Lock Picking of Vehicle: %1 (%2)", 
 					([typeOf _vehicle] call ULP_fnc_vehicleCfg) param [3, "Unknown"], 

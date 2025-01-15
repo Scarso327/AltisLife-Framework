@@ -17,8 +17,8 @@ if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } 
 	if ([_killer, ["Civilian"]] call ULP_fnc_isFaction) then {
 		[
 			getPlayerUID _killer, 
-			"OffencesAgainstThePerson", 
-			"Section1", 
+			"OffencesAct", 
+			"S1", 
 			format ["Suspected Weapon: %1", ([currentWeapon _killer] call ULP_fnc_itemCfg) param [5, "Unknown"]]
 		] call ULP_SRV_fnc_addWarrant;
 	};

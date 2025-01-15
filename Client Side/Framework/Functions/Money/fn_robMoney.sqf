@@ -26,6 +26,16 @@ switch (_mode) do {
 		if (_cash > 0 && { [_cash, false, format ["%2 %1", name _unit, ["Robbed", "Seized"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_addMoney }) then {
 			[format ["You %4 %1's <t color='#B92DE0'>%2%3</t>", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText, ["robbed", "seized"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
 
+			private _shouldHurtRep = (!([player, ["Police"]] call ULP_fnc_isFaction));
+			if (_shouldHurtRep) then {
+				private _unitRep = _unit getVariable ["reputation", 0];
+				[player, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
+					case (_unitRep >= 500): { "RobHigh" };
+					case (_unitRep > -500): { "RobNorm" };
+					default { "RobLow" };
+				})] call ULP_SRV_fnc_reputation;
+			};
+
 			[getPlayerUID player, "Robbery", [name _unit, _cash]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 		} else {
 			[format ["%1 had no money to %2...", [_unit, true] call ULP_fnc_getName, ["rob", "seize"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;

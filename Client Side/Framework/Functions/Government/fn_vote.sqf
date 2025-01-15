@@ -47,6 +47,9 @@ player setVariable ["voting", true];
 
 	if (_message isEqualTo "You have successfully cast your vote in the election...") then {
 		player setVariable ["voted", true];
+
+		[player, "Vote"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+
 		["Voter"] call ULP_fnc_achieve;
 	};
 }, true] call ULP_fnc_addEventHandler;

@@ -22,10 +22,12 @@ if ([_medic] call ULP_fnc_onDuty) then {
 if !(player isEqualTo _medic) then {
 	["Revived", [name player, [[_medic, true] call ULP_fnc_getName, "an admin"] select ([_medic] call ULP_fnc_onDuty)]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 
-	// We have a high reputation so the person that revived us will get some rep in return
-	if (ULP_Reputation >= 500) then {
-		[_medic, "ReviveHighRep"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
-	};
+	private _unitRep = player getVariable ["reputation", 0];
+	[_medic, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
+		case (_unitRep >= 500): { "ReviveHigh" };
+		case (_unitRep > -500): { "ReviveNorm" };
+		default { "ReviveLow" };
+	})] call ULP_SRV_fnc_reputation;
 };
 
 // Make sure we're no longer attached!

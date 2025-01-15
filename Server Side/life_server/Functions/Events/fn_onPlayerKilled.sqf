@@ -37,9 +37,9 @@ if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } 
 			private _unitRep = _unit getVariable ["reputation", 0];
 
 			[_killer, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
-				case (_unitRep >= 500): { "KilledHighRep" };
-				case (_unitRep > -500): { "KilledNormal" };
-				default { "KilledLowRep" };
+				case (_unitRep >= 500): { "ExecuteHigh" };
+				case (_unitRep > -500): { "ExecuteNorm" };
+				default { "ExecuteLow" };
 			})] call ULP_SRV_fnc_reputation;
 		};
 	};

@@ -36,6 +36,12 @@ if !([format["Administering Blood to %1", _name], _time, [_unit, _name], {
 
 	["BloodBag", 1, true] call ULP_fnc_handleItem;
 	[format ["You have administered blood to <t color='#B92DE0'>%1</t>.", _name]] call ULP_fnc_hint;
+
+	private _unitRep = _unit getVariable ["reputation", 0];
+	if (_unitRep >= 500) then {
+		[_medic, "BloodHigh"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+	}
+	
 	["GivenBlood"] call ULP_fnc_achieve;
 
 	[player, ["BloodCarrier", getNumber (missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "BloodBagIncrease")] call ULP_fnc_activatePerk] remoteExecCall ["ULP_fnc_receivedBlood", _unit];

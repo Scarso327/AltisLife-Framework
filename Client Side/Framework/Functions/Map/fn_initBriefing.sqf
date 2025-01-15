@@ -19,7 +19,9 @@ player createDiaryRecord ["controls", ["Vehicle Controls", "<br />
 	<font face='PuristaSemiBold'>Toggle Vehicle Sirens Sound</font><br />
 	Key: <font color='#B92DE0'>Left Control + F</font><br /><br />
 	<font face='PuristaSemiBold'>Toggle Vehicle Lights On</font><br />
-	Key: <font color='#B92DE0'>Left Shift + L</font>"], taskNull, "NONE", false];
+	Key: <font color='#B92DE0'>Left Shift + L</font><br /><br />
+	<font face='PuristaSemiBold'>ANPR</font><br />
+	Key: <font color='#B92DE0'>Num /</font> or <font color='#B92DE0'>Custom Controls > User Action 11</font>"], taskNull, "NONE", false];
 
 player createDiaryRecord ["controls", ["General Controls", "<br />
 	<font face='PuristaSemiBold'>User Interaction</font><br />

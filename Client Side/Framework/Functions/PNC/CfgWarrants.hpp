@@ -209,7 +209,7 @@ class CfgWarrants {
     class RoadsAct {
         displayName = "Road Traffic Act";
 
-        class S1 { // VDM
+        class S1 {
             displayName = "Injury Dangerous Driving";
             allowManual = true;
             bounty = 200000; 

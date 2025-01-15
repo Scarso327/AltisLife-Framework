@@ -75,6 +75,13 @@ if !(isNull _source) then {
 		_unit setVariable ["vdmVar", diag_tickTime];
 
 		_damage = _originalDamage;
+
+		[getPlayerUID _source, "RoadsAct", "S1",
+			format [
+				"Vehicle: %1", 
+				([typeOf _sourceVeh] call ULP_fnc_vehicleCfg) param [3, "Unknown"], 
+			]
+		] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 	};
 
 	// 4. Finally greenzone protection, only stops being shot

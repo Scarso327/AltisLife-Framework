@@ -26,8 +26,7 @@ switch (_mode) do {
 		if (_cash > 0 && { [_cash, false, format ["%2 %1", name _unit, ["Robbed", "Seized"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_addMoney }) then {
 			[format ["You %4 %1's <t color='#B92DE0'>%2%3</t>", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText, ["robbed", "seized"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
 
-			private _shouldHurtRep = (!([player, ["Police"]] call ULP_fnc_isFaction));
-			if (_shouldHurtRep) then {
+			if !([player, ["Police"]] call ULP_fnc_isFaction) then {
 				private _unitRep = _unit getVariable ["reputation", 0];
 				[player, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
 					case (_unitRep >= 500): { "RobHigh" };

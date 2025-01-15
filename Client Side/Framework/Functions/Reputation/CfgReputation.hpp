@@ -44,7 +44,7 @@ class CfgReputation {
 		class ChopVehicle { reason = "have chopped someone's vehicle"; change = -50; };
 
 		// Government
-		class Vote { reason = "have supported democrazy by voting"; change = 50; };
-		class Rig { reason = "have tried to sabotage democrazy"; change = -100; };
+		class Vote { reason = "have supported democracy by voting"; change = 50; };
+		class Rig { reason = "have tried to sabotage democracy"; change = -100; };
 	};
 };

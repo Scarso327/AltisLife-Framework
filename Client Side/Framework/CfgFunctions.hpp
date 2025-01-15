@@ -66,6 +66,7 @@ class CfgFunctions {
 			class onPut {};
 			class onEnterRadiatedZone {};
 			class onLeftRadiatedZone {};
+			class onPassSpeedCam {};
 			class InventoryOpened {};
 			class InventoryClosed {};
 		};

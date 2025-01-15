@@ -202,6 +202,7 @@ class CfgVirtualStores {
 			class Blindfold {};
 			class Lockpick {};
 			class BoltCutter {};
+			class signalJammer {};
 			class HackingDevice {};
 			class ExplosiveCharge {};
 			class IndustrialDrill {};
@@ -223,6 +224,7 @@ class CfgVirtualStores {
 			class Blindfold {};
 			class Lockpick {};
 			class BoltCutter {};
+			class signalJammer {};
 			class HackingDevice {};
 			class ExplosiveCharge {};
 			class IndustrialDrill {};

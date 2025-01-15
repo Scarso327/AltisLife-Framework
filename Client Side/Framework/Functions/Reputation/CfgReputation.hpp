@@ -6,11 +6,11 @@ class CfgReputation {
 		// Harming Others
 		class ExecuteHigh { reason = "executed someone with a high reputation"; change = -50; };
 		class ExecuteNorm { reason = "executed someone with a normal reputation"; change = -30; };
-		class ExecuteLow { reason = "executed someone with a Low reputation"; change = -20; };
+		class ExecuteLow { reason = "executed someone with a low reputation"; change = -20; };
 
 		class IncapHigh { reason = "incapacitated someone with a high reputation"; change = -30; };
 		class IncapNorm { reason = "incapacitated someone with a neutral reputation"; change = -15; };
-		class IncapLow { reason = "incapacitated someone with a Low reputation"; change = 25; };
+		class IncapLow { reason = "incapacitated someone with a low reputation"; change = 25; };
 
 		class AssaultHigh { reason = "have assaulted someone with a high rep"; change = -10; };
 		class AssaultNorm { reason = "have assaulted someone with a normal rep"; change = -5; };

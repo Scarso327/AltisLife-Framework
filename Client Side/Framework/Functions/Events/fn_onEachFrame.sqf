@@ -27,7 +27,6 @@ for "_i" from 0 to 1 step 0 do {
 	(_exec select 1) call (_exec select 2);
 };
 
-diag_log format ["Buffers %1", ULP_executeNextFrameBufferA];
 {
 	(_x select 0) call (_x select 1);
 	nil

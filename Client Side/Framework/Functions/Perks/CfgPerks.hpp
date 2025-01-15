@@ -342,21 +342,6 @@ class CfgPerks {
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
-	class HGVDriver {
-		icon = "Data\UI\GroupPerks\HEMTTs.paa";
-		displayName = "HGV Driver";
-		description = "Unlocks the ability to purchase HEMTTs outside of a Company Group";
-		removalMultiplier = 10;
-		class Requirements {
-			factions[] = { "Civilian" };
-			level = 18;
-			prestige = 0;
-			profession[] = {};
-		};
-		onChanged = "";
-		onActivated = "";
-	};
-
 	class ScrapDealer {
 		icon = "Data\UI\Perks\scrapDealer.paa";
 		displayName = "Scrap Dealer";
@@ -448,6 +433,21 @@ class CfgPerks {
 		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			level = 23;
+			prestige = 0;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "";
+	};
+
+	class HGVDriver {
+		icon = "Data\UI\GroupPerks\HEMTTs.paa";
+		displayName = "HGV Driver";
+		description = "Unlocks the ability to purchase HEMTTs outside of a Company Group";
+		removalMultiplier = 10;
+		class Requirements {
+			factions[] = { "Civilian" };
 			level = 23;
 			prestige = 0;
 			profession[] = {};

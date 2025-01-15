@@ -21,7 +21,6 @@ _this params [
 
 	if (ULP_eachFrameEventsHandlersToRemove isEqualTo []) then {
 		[[], {
-			diag_log "Delete Handlers";
 			{
                 ULP_eachFrameEventsHandlers set [_x, objNull];
             } forEach ULP_eachFrameEventsHandlersToRemove;

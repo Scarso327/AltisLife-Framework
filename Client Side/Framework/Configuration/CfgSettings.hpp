@@ -72,6 +72,8 @@ class CfgSettings {
         clampFee[] = { 5000, 50000 };
         crushTime = 60;
     };
+
+    speedLimit: 100;
     
     garageDelay = 15;
 

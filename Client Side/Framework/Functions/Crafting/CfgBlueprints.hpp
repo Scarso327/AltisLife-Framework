@@ -127,6 +127,14 @@ class CfgBlueprints {
 			workbench = true;
 			time = 120;
 		};
+		class B_SignalJammer : B_BoltCutter {
+			icon = "Data\Icons\signalJammer.paa";
+			displayName = "Signal Jammer";
+			description = "A tool used to jam any electronic singals within a limited radius.";
+			materials[] = { {"Silver", 6}, {"CutDiamond", 1}};
+			item = "SignalJammer";
+			time = 270;
+		};
 		class B_HackingDevice : B_BoltCutter {
 			icon = "Data\Icons\hackingDevice.paa";
 			displayName = "Hacking Device";

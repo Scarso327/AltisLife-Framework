@@ -345,7 +345,7 @@ class CfgPerks {
 	class ScrapDealer {
 		icon = "Data\UI\Perks\scrapDealer.paa";
 		displayName = "Scrap Dealer";
-		description = "Increases the amount of money made from chopping a vehicle by %1%2.";
+		description = "Increases the amount of money made from chopping a vehicle by %1%2";
 		removalMultiplier = 1;
 		class Leveling {
 			maxLevel = 5;
@@ -441,6 +441,21 @@ class CfgPerks {
 		onActivated = "";
 	};
 
+	class HGVDriver {
+		icon = "Data\UI\GroupPerks\HEMTTs.paa";
+		displayName = "HGV Driver";
+		description = "Unlocks the ability to purchase HEMTTs outside of a Company Group";
+		removalMultiplier = 10;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 23;
+			prestige = 0;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "";
+	};
+
 	class FirstAider {
 		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "First Aider";
@@ -511,6 +526,21 @@ class CfgPerks {
 		};
 		onChanged = "";
 		onActivated = "_params + (_params * (_bonus / 100))";
+	};
+
+	class PersonalTank {
+		icon = "Data\UI\GroupPerks\ifrits.paa";
+		displayName = "Personal Tank";
+		description = "Unlocks the ability to purchase Ifrits outside of a Criminal Group";
+		removalMultiplier = 10;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 27;
+			prestige = 0;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "";
 	};
 
 	class LandLord {

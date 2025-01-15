@@ -879,7 +879,7 @@ class CfgVehicles {
 		chopTime = 300;
 		canTransfer = false;
 		enableRope = false;
-		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk";
+		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }";
 		class Textures {
 			class Hex : BaseTexture { 
 				displayName = "Hex";
@@ -1189,8 +1189,7 @@ class CfgVehicles {
 		buyPrice = 334000;
 		virtualSpace = 10;
 		canTransfer = false;
-		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
-		blacklistedItems[] = { "StolenCargo" };
+		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk } || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
 		class Textures {
 			class Hato : HatoTexture { 
 				displayName = "HATO";

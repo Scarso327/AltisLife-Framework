@@ -39,8 +39,7 @@ if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith 
 		] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 	};
 
-	private _shouldHurtRep = (!([player, ["Police"]] call ULP_fnc_isFaction));
-	if (_shouldHurtRep) then {
+	if !([player, ["Police"]] call ULP_fnc_isFaction) then {
 		private _unitRep = _target getVariable ["reputation", 0];
 		[player, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
 			case (_unitRep >= 500): { "AssaultHigh" };

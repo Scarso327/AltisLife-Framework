@@ -52,4 +52,5 @@ if (_isRigged) then {
 		}, true] call ULP_fnc_addEventHandler;
 
 		[_pollingStation, player] remoteExecCall ["ULP_SRV_fnc_rigPollingStation", RSERV];
+		[player, "rig"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 	}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

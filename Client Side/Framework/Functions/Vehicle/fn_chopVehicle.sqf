@@ -103,6 +103,9 @@ if (_near isEqualTo []) exitWith {
 
 		[_chopValue, false, format["Chopped %1", _name]] call ULP_fnc_addMoney;
 		[format["You've chopped <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2%3</t>.", _name, "£", [_chopValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		
+		[player, "ChopVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+		
 		["ChopVeh"] call ULP_fnc_achieve;
 	}, { ["You must stay near the vehicle to chop it..."] call ULP_fnc_hint; }, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
 		["You can't chop a vehicle while performing another action!"] call ULP_fnc_hint;

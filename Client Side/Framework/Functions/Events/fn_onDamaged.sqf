@@ -65,13 +65,14 @@ if !(isNull _source) then {
 	};
 
 	// 3. Now process anti vdm
-	if (_projectile isEqualTo "" && { (vehicle _source) isKindOf "LandVehicle" }) exitWith {
-		if (isPlayer _source) then {
-			if !(diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2) then {
-				[format ["You have just been ran over by <t color='#B92DE0'>%1</t>!", name _source]] call ULP_fnc_hint;
-			};
-			_unit setVariable ["vdmVar", diag_tickTime];
+	private _sourceVeh = vehicle _source;
+
+	if (_projectile isEqualTo "" && { _sourceVeh isKindOf "LandVehicle" } && { !(_sourceVeh isEqualTo (vehicle _unit)) }) exitWith {
+		if (isPlayer _source && { !(diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2) }) then {
+			[format ["You have just been ran over by <t color='#B92DE0'>%1</t>!", name _source]] call ULP_fnc_hint;
 		};
+
+		_unit setVariable ["vdmVar", diag_tickTime];
 
 		_damage = _originalDamage;
 	};
@@ -82,7 +83,8 @@ if !(isNull _source) then {
 	};
 };
 
-if (diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2) then { _damage = _orginalDamage };
+// Stop damage being applied if recently ran over
+if (_part isEqualTo "" && { _projectile isEqualTo "" } && { diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2 }) then { _damage = _orginalDamage };
 
 if (_damage >= 1) then {
 	private _isRagDolled = ((animationState _unit) find "unconscious") >= 0;

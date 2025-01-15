@@ -45,7 +45,7 @@ if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith 
 		[player, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
 			case (_unitRep >= 500): { "AssaultHigh" };
 			default { "AssaultNorm" };
-		})] call ULP_SRV_fnc_reputation;
+		})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 	};
 
 	true

@@ -33,7 +33,7 @@ switch (_mode) do {
 					case (_unitRep >= 500): { "RobHigh" };
 					case (_unitRep > -500): { "RobNorm" };
 					default { "RobLow" };
-				})] call ULP_SRV_fnc_reputation;
+				})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 			};
 
 			[getPlayerUID player, "Robbery", [name _unit, _cash]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

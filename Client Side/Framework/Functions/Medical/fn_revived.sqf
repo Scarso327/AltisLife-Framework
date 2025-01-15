@@ -27,7 +27,7 @@ if !(player isEqualTo _medic) then {
 		case (_unitRep >= 500): { "ReviveHigh" };
 		case (_unitRep > -500): { "ReviveNorm" };
 		default { "ReviveLow" };
-	})] call ULP_SRV_fnc_reputation;
+	})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 };
 
 // Make sure we're no longer attached!

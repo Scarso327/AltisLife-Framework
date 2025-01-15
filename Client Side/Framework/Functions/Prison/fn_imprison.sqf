@@ -50,7 +50,7 @@ private _unitRep = player getVariable ["reputation", 0];
 	case (_unitRep >= 500): { "ArrestHigh" };
 	case (_unitRep > -500): { "ArrestNorm" };
 	default { "ArrestLow" };
-})] call ULP_SRV_fnc_reputation;
+})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 
 ["Convict"] call ULP_fnc_achieve;
 

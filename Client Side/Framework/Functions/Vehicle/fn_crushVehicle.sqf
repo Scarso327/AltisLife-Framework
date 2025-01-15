@@ -51,6 +51,9 @@ if !([format["Crushing %1", _name], _time, [_vehicle, _name, _fee], {
 	private _owner = (_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, []];
 
 	deleteVehicle _vehicle;
+
+	[player, "CrushVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+
 	["FirstCrush"] call ULP_fnc_achieve;
 
 	["Vehicle has been crushed!"] call ULP_fnc_hint;

@@ -59,6 +59,8 @@ if (isNumber (_missionCfg >> "impoundTime")) then {
 
 			private _owner = (_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, []];
 
+			[player, "ImpoundVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+
 			["FirstImpound"] call ULP_fnc_achieve;
 
 			[format["You've requested an impounded for <t color='#B92DE0'>%1</t> with a fee of <t color='#B92DE0'>%2%3</t>.", _name, "£", [_fee] call ULP_fnc_numberText]] call ULP_fnc_hint;

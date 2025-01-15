@@ -45,6 +45,13 @@ if (isNil "ULP_Prison_SellEvent") then {
 	}] call ULP_fnc_addEventHandler;
 };
 
+private _unitRep = player getVariable ["reputation", 0];
+[_arrester, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
+	case (_unitRep >= 500): { "ArrestHigh" };
+	case (_unitRep > -500): { "ArrestNorm" };
+	default { "ArrestLow" };
+})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+
 ["Convict"] call ULP_fnc_achieve;
 
 if (isNull (["RscFiringDrillTime"] call ULP_UI_fnc_getLayer)) then {

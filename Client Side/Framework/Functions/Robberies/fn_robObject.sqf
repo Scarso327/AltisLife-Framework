@@ -72,7 +72,7 @@ private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [
 		[(group player), "Robbery"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
 	};
 
-	[getPlayerUID player, "Theft", "Section8",
+	[getPlayerUID player, "TheftAct", "S8",
 		format [
 			"%2%3 | Suspected Weapon: %1", 
 			_suspectedWeapon,

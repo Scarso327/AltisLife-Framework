@@ -255,7 +255,7 @@ class CfgAchievements {
 	};
 
 	class Convict {
-		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\codeofconduct4_ca.paa";
+		icon = "\A3\ui_f_orange\data\CfgHints\codeofconduct4_ca.paa";
 		displayName = "Convict";
 		description = "Served at His Majesty's Pleasure";
 		onUnlocked = "[""Convict""] call ULP_fnc_unlockTitle;";
@@ -324,7 +324,7 @@ class CfgAchievements {
 	};
 
 	class Bomb {
-		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\uxo_ca.paa";
+		icon = "\A3\ui_f_orange\data\CfgHints\uxo_ca.paa";
 		displayName = "You idiot";
 		description = "Who steps on what is clearly a bomb";
 		onUnlocked = "[""Bomb""] call ULP_fnc_unlockTitle;";
@@ -333,7 +333,7 @@ class CfgAchievements {
 	};
 
 	class Judge {
-		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\ioac_ca.paa";
+		icon = "\A3\ui_f_orange\data\CfgHints\loac_ca.paa";
 		displayName = "Judging Others";
 		description = "You have sat in judgement of another";
 		onUnlocked = "[""Judge""] call ULP_fnc_unlockTitle;";
@@ -342,7 +342,7 @@ class CfgAchievements {
 	};
 
 	class CombatMedic {
-		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\codeofconduct3_ca.paa";
+		icon = "\A3\ui_f_orange\data\CfgHints\codeofconduct3_ca.paa";
 		displayName = "Combat Medic";
 		description = "Entered the heart of the redzone as a medic";
 		onUnlocked = "[""CombatMedic""] call ULP_fnc_unlockTitle;";
@@ -607,7 +607,7 @@ class CfgAchievements {
 	};
 
 	class LockpickVeh {
-		icon = "\Data\UI\GroupBuffs\lockpicking.paa";
+		icon = "Data\UI\GroupBuffs\lockpicking.paa";
 		displayName = "Locksmith";
 		description = "Successfully broken a lock using lockpicks";
 		onUnlocked = "[""Locksmith""] call ULP_fnc_unlockTitle;";
@@ -616,7 +616,7 @@ class CfgAchievements {
 	};
 
 	class RepairVeh {
-		icon = "\Data\UI\Perks\scrapDealer.paa";
+		icon = "Data\UI\Perks\scrapDealer.paa";
 		displayName = "Mechanic";
 		description = "You managed to repair a vehicle by yourself";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -624,7 +624,7 @@ class CfgAchievements {
 	};
 
 	class IssueWarrant {
-		icon = "\Data\UI\Perks\completedCV.paa";
+		icon = "Data\UI\Perks\completedCV.paa";
 		displayName = "Keyboard Warrior";
 		description = "Issued a warrant using the PNC";
 		onUnlocked = "[""KeyboardWarrior""] call ULP_fnc_unlockTitle;";
@@ -642,7 +642,7 @@ class CfgAchievements {
 	};
 
 	class GivenBlood {
-		icon = "\Data\UI\Perks\bloodCarrier.paa";
+		icon = "Data\UI\Perks\bloodCarrier.paa";
 		displayName = "Blood Donor";
 		description = "You've given someone blood. Not sure who's blood...";
 		onUnlocked = "[""BloodDonor""] call ULP_fnc_unlockTitle;";
@@ -651,7 +651,7 @@ class CfgAchievements {
 	};
 
 	class TakeLicense {
-		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\leaflets_ca.paa";
+		icon = "\A3\ui_f_orange\data\CfgHints\leaflets_ca.paa";
 		displayName = "License Thief";
 		description = "You have revoked a person's license";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -659,7 +659,7 @@ class CfgAchievements {
 	};
 
 	class Blindfold {
-		icon = "\A3\ui_f_orange\data\GUI\Cfg\Hints\codeofconduct3_ca.paa";
+		icon = "\A3\ui_f_orange\data\CfgHints\codeofconduct3_ca.paa";
 		displayName = "Blind Man Walking";
 		description = "Some point, by someone, you've been blindfolded";
 		onUnlocked = "[""BlindManWalking""] call ULP_fnc_unlockTitle;";
@@ -668,7 +668,7 @@ class CfgAchievements {
 	};
 
 	class DisguiseID {
-		icon = "\Data\UI\GroupPerks\blackmarketer.paa";
+		icon = "Data\UI\GroupPerks\blackmarket.paa";
 		displayName = "Faceless Man";
 		description = "All men must serve. Faceless Men most of all";
 		onUnlocked = "[""FacelessMan""] call ULP_fnc_unlockTitle;";
@@ -686,7 +686,7 @@ class CfgAchievements {
 	};
 
 	class SafetyFirst {
-		icon = "\Data\UI\Perks\secondNature.paa";
+		icon = "Data\UI\Perks\secondNature.paa";
 		displayName = "Safety First";
 		description = "You put your seatbelt on in a car";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -694,7 +694,7 @@ class CfgAchievements {
 	};
 
 	class Voter {
-		icon = "\Data\UI\Perks\governmentBonus.paa";
+		icon = "Data\UI\Perks\governmentBonus.paa";
 		displayName = "I love Democracy";
 		description = "I love Democracy... and I love the Republic";
 		leveling[] = { 100, "Achievement Unlocked", 100 };
@@ -702,7 +702,7 @@ class CfgAchievements {
 	};
 
 	class Forger {
-		icon = "\Data\UI\Perks\idForger.paa";
+		icon = "Data\UI\Perks\idForger.paa";
 		displayName = "White-Collar Criminal";
 		description = "You've expertly forged an ID card";
 		onUnlocked = "[""WhiteCollarCriminal""] call ULP_fnc_unlockTitle;";
@@ -711,7 +711,7 @@ class CfgAchievements {
 	};
 
 	class Deconstructing {
-		icon = "\Data\UI\Perks\generalMechanic.paa";
+		icon = "Data\UI\Perks\generalMechanic.paa";
 		displayName = "Demolition Man";
 		description = "You've broken down an item in your inventory";
 		onUnlocked = "[""DemolitionMan""] call ULP_fnc_unlockTitle;";

@@ -35,6 +35,7 @@ class CfgGoals {
 				factions[] = { "Medic" };
 				class Event {
 					eventType = "RevivedSomeone";
+					getQuantity = "1";
 				};
 			};
 

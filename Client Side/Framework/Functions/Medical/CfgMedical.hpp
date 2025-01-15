@@ -1,7 +1,7 @@
 class CfgMedical {
 	class Damage {
-		amount = 3;
-		maxWounds = 5;
+		amount = 2;
+		maxWounds = 6;
 
 		class Abrasion {
 			time = 4;

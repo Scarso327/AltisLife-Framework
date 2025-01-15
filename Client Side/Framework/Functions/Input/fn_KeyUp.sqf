@@ -26,7 +26,7 @@ switch (_code) do {
                     ["<t color='#B92DE0'>A medic is nearby</t>, you're unable to force bleedout..."] call ULP_fnc_hint;
                 };
 
-                player SetDammage 1;
+                player SetDamage 1;
             };
         };
 		case SPACE: {

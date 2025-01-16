@@ -1508,12 +1508,7 @@ class CfgVehicles {
 		garageLimit = 3;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
-			class Medic : MedicTextureBase { 
-				textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; 
-				class Siren {
-					SFX[] = { "Police_One" };
-				};
-			};
+			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
 			class TotalRed : BaseTexture {
 				displayName = "Total Red"; 
 				factions[] = { "Civilian", "Police" };
@@ -1651,9 +1646,6 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Air\Medic\mohawk_02.paa",
 					"Data\Textures\Vehicles\Air\Medic\mohawk_03.paa"
 				}; 
-				class Siren {
-					SFX[] = { "Police_One" };
-				};
 			};
 			class Ion : BaseTexture {
 				displayName = "Ion"; 
@@ -1726,9 +1718,6 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Air\Medic\taru_03.paa", 
 					"Data\Textures\Vehicles\Air\Medic\taru_04.paa"
 				}; 
-				class Siren {
-					SFX[] = { "Police_One" };
-				};
 			};
 		};
 	};

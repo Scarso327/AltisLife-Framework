@@ -1511,8 +1511,18 @@ class CfgVehicles {
 		virtualSpace = 5;
 		garageLimit = 3;
 		class Textures {
-			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
-			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
+			class Police : PoliceTextureBase { 
+				textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; 
+				class Siren {
+					SFX[] = { "Police_One", "Police_Two", "Police_Three" };
+				};
+			};
+			class Medic : MedicTextureBase { 
+				textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; 
+				class Siren {
+					SFX[] = { "Police_One" };
+				};
+			};
 			class TotalRed : BaseTexture {
 				displayName = "Total Red"; 
 				factions[] = { "Civilian", "Police" };
@@ -1584,8 +1594,18 @@ class CfgVehicles {
 		buyPrice = 2350000;
 		virtualSpace = 25;
 		class Textures {
-			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
-			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
+			class Police : PoliceTextureBase { 
+				textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; 
+				class Siren {
+					SFX[] = { "Police_One", "Police_Two", "Police_Three" };
+				};
+			};
+			class Medic : MedicTextureBase { 
+				textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; 
+				class Siren {
+					SFX[] = { "Police_One" };
+				};
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_CO.paa" }; 
@@ -1608,6 +1628,9 @@ class CfgVehicles {
 		class Textures {
 			class Police : PoliceTextureBase {
 				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
+				class Siren {
+					SFX[] = { "Police_One", "Police_Two", "Police_Three" };
+				};
 			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1636,7 +1659,11 @@ class CfgVehicles {
 		garageLimit = 1;
 		turrets[] = {};
 		class Textures {
-			class Police : PoliceTextureBase {};
+			class Police : PoliceTextureBase {
+				class Siren {
+					SFX[] = { "Police_One", "Police_Two", "Police_Three" };
+				};
+			};
 			class Civilian : BaseTexture {};
 		};
 	};
@@ -1652,6 +1679,9 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Air\Medic\mohawk_02.paa",
 					"Data\Textures\Vehicles\Air\Medic\mohawk_03.paa"
 				}; 
+				class Siren {
+					SFX[] = { "Police_One" };
+				};
 			};
 			class Ion : BaseTexture {
 				displayName = "Ion"; 
@@ -1724,6 +1754,9 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Air\Medic\taru_03.paa", 
 					"Data\Textures\Vehicles\Air\Medic\taru_04.paa"
 				}; 
+				class Siren {
+					SFX[] = { "Police_One" };
+				};
 			};
 		};
 	};

@@ -402,7 +402,7 @@ class CfgPerks {
 	class BloodCarrier {
 		icon = "Data\UI\Perks\bloodCarrier.paa";
 		displayName = "Blood Carrier";
-		description = "Increases Blood bag effenciency by %1%2";
+		description = "Increases Blood bag efficiency by %1%2";
 		removalMultiplier = 1.2;
 		class Leveling {
 			maxLevel = 4;
@@ -459,7 +459,7 @@ class CfgPerks {
 	class FirstAider {
 		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "First Aider";
-		description = "Increase the effeciency of FirstAidKits by %1%2";
+		description = "Increase the efficiency of FirstAidKits by %1%2";
 		removalMultiplier = 1.2;
 		class Leveling {
 			maxLevel = 5;
@@ -599,6 +599,21 @@ class CfgPerks {
 		};
 		onChanged = "";
 		onActivated = "_params - (_params * (_bonus / 100))";
+	};
+
+	class SilentKiller {
+		icon = "Data\UI\Achievements\UC.paa";
+		displayName = "Silent Killer";
+		description = "Permits access to purchase sound suppressors";
+		removalMultiplier = 10;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 29;
+			prestige = 0;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "";
 	};
 
 	class UncertainMind {

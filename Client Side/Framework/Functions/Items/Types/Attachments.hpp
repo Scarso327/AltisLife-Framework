@@ -254,7 +254,7 @@ class muzzle_snds_M {
 	class Textures {
         class muzzle_snds_M {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_m_khk_F : muzzle_snds_M { 
 			displayName = "Khaki"; 
@@ -280,7 +280,7 @@ class muzzle_snds_58_blk_F {
 	class Textures {
         class muzzle_snds_58_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_58_ghex_F : muzzle_snds_58_blk_F { 
 			displayName = "Green Hex";
@@ -299,7 +299,7 @@ class muzzle_snds_H {
 	class Textures {
         class muzzle_snds_H {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_H_khk_F : muzzle_snds_H { 
 			displayName = "Khaki";
@@ -318,7 +318,7 @@ class muzzle_snds_65_TI_blk_F {
 	class Textures {
         class muzzle_snds_65_TI_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_65_TI_ghex_F : muzzle_snds_65_TI_blk_F { 
 			displayName = "Green Hex";
@@ -337,7 +337,7 @@ class muzzle_snds_B {
 	class Textures {
         class muzzle_snds_B {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_B_khk_F : muzzle_snds_B { 
 			displayName = "Khaki";

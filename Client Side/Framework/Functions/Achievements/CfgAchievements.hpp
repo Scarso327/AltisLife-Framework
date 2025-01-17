@@ -150,7 +150,7 @@ class CfgAchievements {
 	class JoinSFO {
 		icon = "Data\UI\Achievements\SFO.paa";
 		displayName = "Confused AFO";
-		description = "Trained as a Police SFO";
+		description = "Trained as a Police AFO";
 		leveling[] = { 200, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};

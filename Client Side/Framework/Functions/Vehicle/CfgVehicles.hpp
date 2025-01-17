@@ -226,6 +226,11 @@ class CfgVehicles {
 		buyPrice = 11300;
 		virtualSpace = 15;
 		class Textures {
+			class PoliceWhite : BaseTexture { 
+				displayName = "General Response";
+				textures[] = { "Data\Textures\Vehicles\Land\Police\quadbike_white.paa" }; 
+			};
+			class PoliceBlack : PoliceWhite { textures[] = { "Data\Textures\Vehicles\Land\Police\quadbike_black.paa" }; };
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_black_co.paa" }; 
@@ -264,7 +269,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[] call ULP_fnc_donatorLevel > 0";
+				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess && { [""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_black.paa" }; 
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
@@ -273,7 +278,6 @@ class CfgVehicles {
 			};
 			class PoliceANPR : PoliceWhite { 
 				displayName = "ANPR Interceptor";
-				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				anpr = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_ANPR.paa" }; 
 				class Lights : PoliceColour {
@@ -283,7 +287,7 @@ class CfgVehicles {
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
-				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
@@ -602,7 +606,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[] call ULP_fnc_donatorLevel > 0";
+				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_black.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
@@ -621,7 +625,7 @@ class CfgVehicles {
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
-				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
@@ -688,7 +692,7 @@ class CfgVehicles {
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
-				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
 			};
 			class UnmarkedWhite : UnmarkedBlack {
@@ -1382,6 +1386,10 @@ class CfgVehicles {
 		buyPrice = 14300;
 		virtualSpace = 5;
 		class Textures {
+			class Police : PoliceTextureBase {
+				displayName = "MPU"; 
+				textures[] = { "Data\Textures\Vehicles\Sea\Police\scooter.paa" }; 
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { 
@@ -1493,12 +1501,21 @@ class CfgVehicles {
 		buyPrice = 389500;
 		virtualSpace = 5;
 		garageLimit = 1;
+		class Textures {
+			class Police : PoliceTextureBase {
+				displayName = "MPU"; 
+				textures[] = { "Data\Textures\Vehicles\Sea\Police\sdv.paa" }; 
+			};
+		};
 	};
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
 	class B_UAV_01_F : BaseAir {
 		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
 		buyPrice = 98700;
+		class Textures {
+			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Sea\Police\darter.paa", }; };
+		};
 	};
 	class C_UAV_06_medical_F : B_UAV_01_F {
 		description = "This commercial off-the-shelf utility drone uses 6 rotors to transport small payloads inside its external cargo case.";
@@ -1636,7 +1653,12 @@ class CfgVehicles {
 		garageLimit = 1;
 		turrets[] = {};
 		class Textures {
-			class Police : PoliceTextureBase {};
+			class Police : PoliceTextureBase {
+				textures[] = { 
+					"Data\Textures\Vehicles\Air\Police\ghosthawk_01.paa",
+					"Data\Textures\Vehicles\Air\Police\ghosthawk_02.paa"
+				}; 
+			};
 			class Civilian : BaseTexture {};
 		};
 	};
@@ -1692,6 +1714,16 @@ class CfgVehicles {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
 		garageLimit = 1;
+		class Textures {
+			class Police : PoliceTextureBase {
+				textures[] = { 
+					"Data\Textures\Vehicles\Air\Police\taru_01.paa",
+					"Data\Textures\Vehicles\Air\Police\taru_02.paa",
+					"Data\Textures\Vehicles\Air\Police\taru_03.paa"
+				}; 
+			};
+			class Civilian : BaseTexture {};
+		};
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11176500;
@@ -1734,6 +1766,12 @@ class CfgVehicles {
 		virtualSpace = 100;
 		garageLimit = 1;
 		class Textures {
+			class Police : PoliceTextureBase {
+				textures[] = { 
+					"Data\Textures\Vehicles\Air\Police\huron_01.paa",
+					"Data\Textures\Vehicles\Air\Police\huron_02.paa"
+				}; 
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				factions[] = { "Civilian", "Police" };

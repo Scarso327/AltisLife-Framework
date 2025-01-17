@@ -10,7 +10,7 @@ class CfgBlueprints {
 			item = "Clay";
 			isDefault = true;
 			workbench = false;
-			time = 15;
+			time = 2;
 		};
 		class B_Plank : B_Clay {
 			icon = "Data\Icons\wood.paa";
@@ -18,7 +18,7 @@ class CfgBlueprints {
 			description = "Processed wood.";
 			materials[] = { {"Wood", 2} };
 			item = "Wood";
-			time = 10;
+			time = 2;
 		};
 		class B_Steel : B_Clay {
 			icon = "Data\Icons\ingot.paa";
@@ -27,6 +27,7 @@ class CfgBlueprints {
 			materials[] = { {"IronBar", 2}, {"ProcessedOil", 1} };
 			item = "SteelBar";
 			workbench = true;
+			time = 3;
 		};
 		class B_ExplosiveMaterials : B_Steel {
 			icon = "Data\Icons\explosiveMaterials.paa";
@@ -51,7 +52,7 @@ class CfgBlueprints {
 			item = "Toolbox";
 			isDefault = true;
 			workbench = false;
-			time = 60;
+			time = 40;
 		};
 		class B_Pickaxe : B_Toolbox {
 			icon = "Data\Icons\pickaxe.paa";
@@ -85,7 +86,7 @@ class CfgBlueprints {
 			materials[] = { {"CopperBar", 4}, {"SilverBar", 2}, {"Glass", 1} };
 			item = "SurveyingEquipment";
 			workbench = true;
-			time = 40;
+			time = 60;
 		};
 		class B_ArchaeologistsEquipment : B_SurveyingEquipment {
 			icon = "Data\Icons\archaeologistsEquipment.paa";
@@ -108,7 +109,7 @@ class CfgBlueprints {
 			description = "A simple lighter used to create fire.";
 			materials[] = { {"Iron", 3}, {"ProcessedOil", 1} };
 			item = "Lighter";
-			time = 30;
+			time = 20;
 		};
 		class B_Lockpick : B_Pickaxe {
 			icon = "Data\Icons\lockpick.paa";
@@ -116,7 +117,7 @@ class CfgBlueprints {
 			description = "A tool used to pick the locks of vehicles and handcuffs.";
 			materials[] = { {"Iron", 4} };
 			item = "Lockpick";
-			time = 30;
+			time = 15;
 		};
 		class B_BoltCutter : B_Pickaxe {
 			icon = "Data\Icons\boltCutter.paa";
@@ -185,7 +186,7 @@ class CfgBlueprints {
 			item = "FieldDressing";
 			isDefault = true;
 			workbench = false;
-			time = 15;
+			time = 5;
 		};
 		class B_Packing : B_FieldDressing {
 			icon = "Data\Icons\packingBandage.paa";
@@ -214,7 +215,7 @@ class CfgBlueprints {
 			materials[] = { {"Painkillers", 2}, {"Bandage", 4}, {"BloodBag", 1} };
 			item = "FirstAidKit";
 			workbench = true;
-			time = 120;
+			time = 60;
 		};
 		class B_MediKit : B_FirstAidKit {
 			icon = "Data\Icons\mediKit.paa";
@@ -227,7 +228,7 @@ class CfgBlueprints {
 			displayName = "Automated External Defibrillator";
 			materials[] = { {"SilverBar", 6}, {"CutDiamond", 2} };
 			item = "AutomatedExternalDefibrillator";
-			time = 180;
+			time = 120;
 		};
 	};
 
@@ -285,7 +286,7 @@ class CfgBlueprints {
 			item = "CommonMap";
 			isDefault = true;
 			workbench = false;
-			time = 90;
+			time = 10;
 		};
 		class B_UncommonMap : B_CommonMap {
 			icon = "Data\Icons\map.paa";
@@ -312,7 +313,7 @@ class CfgBlueprints {
 			description = "A restored artifact that can be sold at Altis Archaeologists.";
 			materials[] = { {"BrokenPot", 1}, {"Clay", 3} };
 			item = "RestoredPot";
-			time = 300;
+			time = 20;
 		};
 		class B_SharpStoneKnife : B_RestoredPot {
 			icon = "Data\Icons\sharpStoneKnife.paa";
@@ -325,14 +326,14 @@ class CfgBlueprints {
 			displayName = "Identified Skull";
 			materials[] = { {"UnidentifiedSkull", 1}, {"DecryptedDrive", 1} };
 			item = "IdentifiedSkull";
-			time = 420;
+			time = 60;
 		};
 		class B_DiamondRing : B_RestoredPot {
 			icon = "Data\Icons\diamondRing.paa";
 			displayName = "Diamond Ring";
 			materials[] = { {"StrongMetalRing", 1}, {"CutDiamond", 1} };
 			item = "DiamondRing";
-			time = 360;
+			time = 25;
 		};
 	};
 };

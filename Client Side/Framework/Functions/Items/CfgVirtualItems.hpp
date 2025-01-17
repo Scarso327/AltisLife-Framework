@@ -609,7 +609,7 @@ class CfgVirtualItems {
 		weight = 14;
 		class Settings : Settings {};
 		class Events : Events {};
-		conditions = "[player, [""Police""]] call ULP_fnc_isFaction || { ULP_Level >= 5 }";
+		conditions = "[""Police_Main"", 5] call ULP_fnc_hasAccess";
 	};
 	class signalJammer : Stinger { // TODO (crafting)
 		displayName = "Signal Jammer";

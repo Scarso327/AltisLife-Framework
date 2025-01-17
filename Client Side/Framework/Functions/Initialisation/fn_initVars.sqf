@@ -40,8 +40,5 @@ ULP_Gang_ID = -1;
 ULP_Ability_Cooldown = time;
 ULP_Effects = [];
 
-CASH = 0;
-BANK = LIFE_SETTINGS(getNumber,"starting_bank");
-
 /* Default Altis Life Variables */
 life_action_inUse = false;

@@ -6,9 +6,12 @@ class CfgVehicleStores {
 	};
 
 	class PoliceCar : Base {
-		storeName = "Service Vehicle Store";
+		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
+			class C_SUV_01_F {
+				class Textures {};
+			};
 			class C_SUV_01_F {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
@@ -18,19 +21,19 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class B_GEN_Van_02_transport_F {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess";
+				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }";
 				class Textures {};
 			};
 			class B_GEN_Van_02_vehicle_F {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess";
+				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }";
 				class Textures {};
 			};
 			class B_LSV_01_unarmed_black_F {
-				condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class O_LSV_02_unarmed_F {
-				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 6] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
 				class Textures {};
 			};
 			class B_MRAP_01_F {
@@ -41,18 +44,18 @@ class CfgVehicleStores {
 	};
 
 	class PoliceAir : Base {
-		storeName = "Service Vehicle Store";
+		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
 			class B_UAV_01_F { 
-				condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_NPAS"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess }";
+				condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess";
 			};
 			class C_Heli_Light_01_civil_F {
-				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess";
+				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class B_Heli_Light_01_F {
-				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class I_Heli_light_03_unarmed_F {
@@ -60,7 +63,7 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class O_Heli_Light_02_unarmed_F {
-				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class O_Heli_Transport_04_black_F { 
@@ -78,18 +81,18 @@ class CfgVehicleStores {
 				};
 			};
 			class B_Heli_Transport_01_F { 
-				condition = "[""Police_NPAS"", 4] call ULP_fnc_hasAccess"; 
+				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess"; 
 				class Textures {};
 			};
 			class I_Heli_light_03_F {
-				condition = "[""Police_NPAS"", 4] call ULP_fnc_hasAccess";
+				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 		};
 	};
 
 	class PoliceBoat : Base {
-		storeName = "Service Vehicle Store";
+		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
 			class C_Boat_Civil_01_police_F {
@@ -101,18 +104,18 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class B_Boat_Armed_01_minigun_F {
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
+				condition = "[""Police_MPU"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class B_SDV_01_F {
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Police_MPU"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 		};
 	};
 
 	class MedicCar : Base {
-		storeName = "Service Vehicle Store";
+		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_Van_02_medevac_F { 
@@ -155,7 +158,7 @@ class CfgVehicleStores {
 	};
 
 	class MedicAir : Base {
-		storeName = "Service Vehicle Store";
+		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_UAV_06_medical_F {
@@ -182,7 +185,7 @@ class CfgVehicleStores {
 	};
 
 	class MedicBoat : Base {
-		storeName = "Service Vehicle Store";
+		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_Boat_Civil_01_police_F {
@@ -193,7 +196,7 @@ class CfgVehicleStores {
 	};
 
 	class HatoCar : Base {
-		storeName = "Service Vehicle Store";
+		storeName = "HATO Vehicle Store";
 		factions[] = { "Hato" };
 		class Vehicles {
 			class C_Offroad_01_repair_F {

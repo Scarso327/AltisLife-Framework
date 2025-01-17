@@ -21,7 +21,9 @@ if (_player isEqualType objNull) then {
 };
 
 _faction = missionConfigFile >> "CfgFactions" >> _faction;
-if (_steamid isEqualTo "" || { _player isEqualType objNull && { !(isClass (_faction)) } }) exitWith {};
+
+// We only allow _player to be steamid if state 12 which is set group info
+if (_steamid isEqualTo "" || { _player isEqualType objNull && { !(isClass (_faction)) } } || { _player isEqualType "" && { !(_state isEqualTo 12) } }) exitWith {};
 
 private _query = switch (_state) do {
 	case 0: { format["`%1licenses`='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };

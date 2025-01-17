@@ -111,7 +111,7 @@ for "_i" from 0 to 1 step 0 do {
 };
 
 if (_playerData isEqualType []) exitWith {
-	[_playerData] remoteExecCall ["ULP_fnc_setPlayerInfo", remoteExecutedOwner];
+	[_playerData] remoteExecCall ["ULP_fnc_setPlayerInfo", _unit];
 };
 
 // Fail...

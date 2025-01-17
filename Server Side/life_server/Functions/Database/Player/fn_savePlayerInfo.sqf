@@ -6,9 +6,7 @@
 scopeName "fn_savePlayerInfo";
 
 _this params [
-	["_name", "", [""]],
-	["_steamid", "", [""]],
-	["_faction", "", [""]],
+	["_unit", objNull, [objNull]],
 	["_cash", 0, [0]],
 	["_bank", 0, [0]],
 	["_gear", [], [[]]],
@@ -16,12 +14,19 @@ _this params [
 	["_stats", [], [[]]]
 ];
 
-_faction = missionConfigFile >> "CfgFactions" >> _faction;
+if (isNull _unit) exitWith {};
 
-if (_name isEqualTo "" || { _steamid isEqualTo "" } || { !(isClass (_faction)) }) exitWith {};
+private _name = name _unit;
+private _steamid = getPlayerUID _unit;
+private _faction = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc_getFaction;
+
+if !(isClass _faction) exitWith {};
+
+if !([_unit, [_unit, "Cash"] call ULP_SRV_fnc_getSessionField, _cash] call ULP_SRV_fnc_validateField) exitWith {};
+if !([_unit, [_unit, "Bank"] call ULP_SRV_fnc_getSessionField, _bank] call ULP_SRV_fnc_validateField) exitWith {};
 
 // We don't sync all session vars as stuff like cash and money should be saved when used to avoid expliots
-[_player, "Gear", _gear] call ULP_SRV_fnc_setSessionField;
+[_unit, "Gear", _gear] call ULP_SRV_fnc_setSessionField;
 
 _name = [_name] call DB_fnc_mresString;
 _cash = [_cash, ""] call ULP_fnc_numberText;

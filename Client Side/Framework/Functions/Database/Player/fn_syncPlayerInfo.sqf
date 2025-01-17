@@ -7,7 +7,7 @@ scopeName "fn_syncPlayerInfo";
 
 if ([player] call ULP_fnc_onDuty) exitWith {};
 
-private _packet = [profileName, getPlayerUID player, [player] call ULP_fnc_getFaction, CASH, BANK];
+private _packet = [player, CASH, BANK];
 
 [] call ULP_fnc_saveGear;
 _packet pushBack ULP_Gear;

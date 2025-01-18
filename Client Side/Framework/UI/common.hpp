@@ -1368,6 +1368,18 @@ class ULP_RscButtonIconNoAnim : Life_RscButton {
 	colorBackground2[] = {0.2, 0.2, 0.2, 0.8};
 };
 
+class ULP_RscInventoryButton : ULP_RscButtonIconNoAnim {
+    text = "\A3\ui_f\data\IGUI\Cfg\Actions\reload_ca.paa";
+    tooltip = "Repack Magazines";
+    colorText[] = {1, 1, 1, 0.7};
+    colorActive[] = {1, 1, 1, 1};
+    colorBackground[] = {1, 1, 1, 0};
+    colorBackground2[] = {1, 1, 1, 0};
+    colorBackgroundActive[] = {1, 1, 1, 0};
+	colorBackgroundFocused[] = {1, 1, 1, 0};
+    colorBackgroundDisabled[] = {1, 1, 1, 0};
+};
+
 class ULP_ctrlOptionsHeader : Life_RscTextHeader {
     w = 32.25 * GUI_GRID_CENTER_W;
     h = SIZE_M * GUI_GRID_CENTER_H;

@@ -29,8 +29,8 @@ if !([_unit] call ULP_fnc_onDuty) then {
 		(getUnitLoadout _unit),
 		_yItems,
 		[
-			[(uniformContainer _unit) getVariable ["texture", ""], ""] select ((uniform player) isEqualTo ""),
-			[(backpackContainer _unit) getVariable ["texture", ""], ""] select ((backpack player) isEqualTo "")
+			[(uniformContainer _unit) getVariable ["texture", ""], ""] select ((uniform _unit) isEqualTo ""),
+			[(backpackContainer _unit) getVariable ["texture", ""], ""] select ((backpack _unit) isEqualTo "")
 		]
 	];
 

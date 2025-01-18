@@ -22,12 +22,14 @@ if ([_medic] call ULP_fnc_onDuty) then {
 if !(player isEqualTo _medic) then {
 	["Revived", [name player, [[_medic, true] call ULP_fnc_getName, "an admin"] select ([_medic] call ULP_fnc_onDuty)]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 
-	private _unitRep = player getVariable ["reputation", 0];
-	[_medic, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
-		case (_unitRep >= 500): { "ReviveHigh" };
-		case (_unitRep > -500): { "ReviveNorm" };
-		default { "ReviveLow" };
-	})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+	if !([_medic] call ULP_fnc_onDuty) then {
+		private _unitRep = player getVariable ["reputation", 0];
+		[_medic, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
+			case (_unitRep >= 500): { "ReviveHigh" };
+			case (_unitRep > -500): { "ReviveNorm" };
+			default { "ReviveLow" };
+		})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+	};
 };
 
 // Make sure we're no longer attached!

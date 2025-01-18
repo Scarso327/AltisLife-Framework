@@ -6,8 +6,6 @@ class CfgRemoteExec {
     class Commands {
         mode = 1;
         jip = 0;
-        
-        class switchMove {};
     };
 
     class Functions {
@@ -34,6 +32,7 @@ class CfgRemoteExec {
         class ULP_fnc_applyTextures {};
         class ULP_fnc_spikeVehicle {};
         class ULP_fnc_flipVehicle {};
+        class ULP_fnc_switchMove {};
 
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;

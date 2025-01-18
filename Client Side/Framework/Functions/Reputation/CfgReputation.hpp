@@ -40,8 +40,8 @@ class CfgReputation {
 
 		// Removing Vehicles
 		class ImpoundVehicle { reason = "impounded a vehicle"; change = 5; };
-		class CrushVehicle { reason = "impounded a vehicle"; change = 5; };
-		class ChopVehicle { reason = "have chopped someone's vehicle"; change = -50; };
+		class CrushVehicle { reason = "crushed a vehicle"; change = 5; };
+		class ChopVehicle { reason = "chopped someone's vehicle"; change = -50; };
 
 		// Government
 		class Vote { reason = "have supported democracy by voting"; change = 50; };

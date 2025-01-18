@@ -17,6 +17,14 @@ private _seatKey = ACT_KEY("User1", B);
 private _interactionKey = ACT_KEY("User10", LWINDOWS);
 private _anprKey = ACT_KEY("User11", NUMSLASH);
 
+if (_code in (actionKeys "NightVision") && { [goggles player] call ULP_fnc_isNightVision }) exitWith {
+
+    private _action = if ((currentVisionMode player) isEqualTo 1) then { "nvGogglesOff" } else { "nvGoggles" };
+    player action [_action, player];
+
+    _handled = true;
+};
+
 switch (_code) do {
     if (isDowned(player)) then {
         _handled = true;

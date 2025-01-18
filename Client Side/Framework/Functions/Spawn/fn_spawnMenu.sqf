@@ -95,13 +95,13 @@ if (isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFact
 
 		_item = _list lbAdd getText (_x >> "displayName");
 		_list lbSetValue [_item, 2];
-		_list lbSetData [_item, getText (_x >> "Spawn" >> "marker")];
+		_list lbSetData [_item, format ["gang_base_%1", configName _x]];
 
 		if !(_icon isEqualTo "") then {
 			_list lbSetPicture [_item, _icon];
 		};
 	};
-} forEach ("isClass (_x >> ""Spawn"")" configClasses (missionConfigFile >> "CfgBases"));
+} forEach ("isClass (_x)" configClasses (missionConfigFile >> "CfgBases"));
 
 _list lbSetCurSel 0;
 [_list, 0, 0] call ULP_fnc_changeSpawn;

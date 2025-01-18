@@ -152,6 +152,17 @@ class CfgItemsStore {
 				class textures { class optic_AMS {}; };
 			};
 			class optic_NVS { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }"; };
+			class muzzle_snds_L { condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_acp { condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_M { 
+				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess"; 
+				class textures { class muzzle_snds_M {}; };
+			};
+			class muzzle_snds_570 { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_58_blk_F { 
+				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess"; 
+				class textures { class muzzle_snds_58_blk_F {}; };
+			};
 		};
 		class Magazines {
 			class 16Rnd_9x21_Mag { 
@@ -742,6 +753,11 @@ class CfgItemsStore {
 			class optic_MRCO {};
 			class optic_Arco {};
 			class optic_ERCO_blk_F {};
+
+			class muzzle_snds_L { condition = "[""SilentKiller""] call ULP_fnc_hasPerk" };
+			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk" };
+			class muzzle_snds_M { condition = "[""SilentKiller""] call ULP_fnc_hasPerk" };
+			class muzzle_snds_570 { condition = "[""SilentKiller""] call ULP_fnc_hasPerk" };
 		};
 
 		class Magazines {
@@ -857,6 +873,11 @@ class CfgItemsStore {
 			class optic_Arco {};
 			class optic_ERCO_blk_F {};
 			class optic_DMS_weathered_F {};
+
+			class muzzle_snds_L { condition = "[""SilentKiller""] call ULP_fnc_hasPerk" };
+			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk" };
+			class muzzle_snds_M { condition = "[""SilentKiller""] call ULP_fnc_hasPerk" };
+			class muzzle_snds_570 { condition = "[""SilentKiller""] call ULP_fnc_hasPerk" };
 		};
 
 		class Magazines {

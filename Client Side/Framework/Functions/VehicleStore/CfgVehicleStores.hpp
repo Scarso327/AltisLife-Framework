@@ -10,7 +10,10 @@ class CfgVehicleStores {
 		factions[] = { "Police" };
 		class Vehicles {
 			class C_Quadbike_01_F {
-				class Textures {};
+				class Textures { 
+					class Black {}; 
+					class White {}; 
+				};
 			};
 			class C_SUV_01_F {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";

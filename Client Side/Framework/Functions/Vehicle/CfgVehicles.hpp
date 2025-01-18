@@ -226,11 +226,6 @@ class CfgVehicles {
 		buyPrice = 11300;
 		virtualSpace = 15;
 		class Textures {
-			class PoliceWhite : BaseTexture { 
-				displayName = "General Response";
-				textures[] = { "Data\Textures\Vehicles\Land\Police\quadbike_white.paa" }; 
-			};
-			class PoliceBlack : PoliceWhite { textures[] = { "Data\Textures\Vehicles\Land\Police\quadbike_black.paa" }; };
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_black_co.paa" }; 

@@ -11,6 +11,9 @@ if !(_this params [
 ]) exitWith { false };
 
 _unit switchMove _move;
-[_unit, _move] remoteExec ["switchMove", -clientOwner];
+
+if !(isRemoteExecuted) then {
+	[_unit, _move] remoteExecCall ["ULP_fnc_switchMove", -clientOwner];
+};
 
 true

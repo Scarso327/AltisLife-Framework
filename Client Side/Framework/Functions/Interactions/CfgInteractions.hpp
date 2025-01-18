@@ -59,17 +59,17 @@ class CfgInteractions {
 		class Unrestrain : GiveKeys {
 			title = "Unrestrain";
 			onClick = "[_this select 0, player, false] call ULP_fnc_restrain; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } }";
 		};
 		class Escort : Unrestrain {
 			title = "Escort";
 			onClick = "[_this select 0, player, true] call ULP_fnc_escort; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { !([_this] call ULP_fnc_isEscorted) }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { !([_this] call ULP_fnc_isEscorted) }";
 		};
 		class StopEscort : Unrestrain {
 			title = "Stop Escorting";
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_isEscorted }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { [_this] call ULP_fnc_isEscorted }";
 		};
 		class FeedHydrate : Unrestrain { // TODO
 			title = "Feed/Hydrate";
@@ -78,11 +78,11 @@ class CfgInteractions {
 		class Blindfold : Unrestrain {
 			title = "Blindfold";
 			onClick = "_this call ULP_fnc_blindfold";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { ([""Blindfold""] call ULP_fnc_hasItem) > 0 } && { !(_this getVariable [""blindfold"", false]) }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { ([""Blindfold""] call ULP_fnc_hasItem) > 0 } && { !(_this getVariable [""blindfold"", false]) }";
 		};
 		class Unblindfold : Blindfold {
 			title = "Remove Blindfold";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { _this getVariable [""blindfold"", false] }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { _this getVariable [""blindfold"", false] }";
 		};
 		class CountCash : Unrestrain {
 			title = "Count Cash";
@@ -108,7 +108,7 @@ class CfgInteractions {
 		class SeizeCommunications : Unrestrain {
 			title = "Destroy Communications";
 			onClick = "_this call ULP_fnc_seizeComms;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_hasComms }";
+			condition = "[_this] call ULP_fnc_hasComms && { [_this] call ULP_fnc_isRestrained } && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } }";
 		};
 		class Ticket {
 			title = "Issue Penalty Notice";
@@ -168,7 +168,7 @@ class CfgInteractions {
 		class SeizeCommunications : Revive {
 			title = "Seize Communications";
 			onClick = "_this call ULP_fnc_seizeComms;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_hasComms }";
+			condition = "[_this] call ULP_fnc_hasComms && { [player, [""Police""]] call ULP_fnc_isFaction || { [(_this getVariable [""IncapacitatedByGroup"", grpNull]), player] call ULP_fnc_inGroup } }";
 		};
 
 		// Admin Commands...

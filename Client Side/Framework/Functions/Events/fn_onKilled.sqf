@@ -48,6 +48,7 @@ ULP_Respawned = false;
 ULP_CanRespawn = nil;
 
 player setVariable ["IncapacitatedWounds", nil, true];
+player setVariable ["IncapacitatedByGroup", nil, true];
 
 ["Died", [_unit, _killer]] call ULP_fnc_invokeEvent;
 

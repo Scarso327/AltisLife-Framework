@@ -15,7 +15,10 @@ _this params [
 } && { isNull (objectParent _target)
 } && { (_target distance player) < 3
 } && { !([_target] call ULP_fnc_isRestrained)
-} && { [_target] call ULP_fnc_isSurrendered || [_target] call ULP_fnc_isKnocked || [player] call ULP_fnc_onDuty
+} && { (isDowned(player)) && { [player, ["Police"]] call ULP_fnc_isFaction || { [(_target getVariable ["IncapacitatedByGroup", grpNull]), player] call ULP_fnc_inGroup } }
+	|| { [_target] call ULP_fnc_isSurrendered } 
+	|| { [_target] call ULP_fnc_isKnocked }
+	|| { [player] call ULP_fnc_onDuty }
 } &&  { alive player
 } && { !(isDowned(player))
 } && { !([player] call ULP_fnc_isRestrained)

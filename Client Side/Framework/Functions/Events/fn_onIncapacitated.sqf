@@ -50,6 +50,8 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 
 	_deathMessage = format["<t align='center' size='2'>%1 seriously injured you</t>", _killerName];
 	["InjuredBy", [[_unit] call ULP_fnc_getName, _killerName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+
+	player setVariable ["IncapacitatedByGroup", group _killer, true];
 } else {
 	["Injured", [[_unit] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 };

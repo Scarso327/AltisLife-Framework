@@ -145,6 +145,7 @@ class CfgVehicles {
 	// Base without siren or lights (for helis)
 	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
+		class Siren { SFX[] = { "Police_One", "Police_Two", "Police_Three" }; };
 		class Actions {
 			class PNC {
 				actionTitle = "Police National Computer";
@@ -160,21 +161,16 @@ class CfgVehicles {
 	// Full with sirens and lights
 	class PoliceTexture : PoliceTextureBase {
 		remoteGates = true;
-		class Siren {
-			SFX[] = { "Police_One", "Police_Two", "Police_Three" };
-		};
 		class Lights : PoliceColour {};
 	};
 
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
+		class Siren { SFX[] = { "Police_One" }; };
 	};
 	
 	class MedicTexture : MedicTextureBase {
 		remoteGates = true;
-		class Siren {
-			SFX[] = { "Police_One" };
-		};
 		class Lights : MedicColour {};
 	};
 
@@ -1606,9 +1602,7 @@ class CfgVehicles {
 		buyPrice = 2130000;
 		virtualSpace = 20;
 		class Textures {
-			class Police : PoliceTextureBase {
-				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
-			};
+			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" }; };
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "#(rgb,8,8,3)color(0.03,0.03,0.03,1)" }; 

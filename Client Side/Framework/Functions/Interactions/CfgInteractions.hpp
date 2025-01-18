@@ -59,17 +59,17 @@ class CfgInteractions {
 		class Unrestrain : GiveKeys {
 			title = "Unrestrain";
 			onClick = "[_this select 0, player, false] call ULP_fnc_restrain; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } }";
 		};
 		class Escort : Unrestrain {
 			title = "Escort";
 			onClick = "[_this select 0, player, true] call ULP_fnc_escort; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { !([_this] call ULP_fnc_isEscorted) }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { !([_this] call ULP_fnc_isEscorted) }";
 		};
 		class StopEscort : Unrestrain {
 			title = "Stop Escorting";
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_isEscorted }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { [_this] call ULP_fnc_isEscorted }";
 		};
 		class FeedHydrate : Unrestrain { // TODO
 			title = "Feed/Hydrate";
@@ -78,11 +78,11 @@ class CfgInteractions {
 		class Blindfold : Unrestrain {
 			title = "Blindfold";
 			onClick = "_this call ULP_fnc_blindfold";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { ([""Blindfold""] call ULP_fnc_hasItem) > 0 } && { !(_this getVariable [""blindfold"", false]) }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { ([""Blindfold""] call ULP_fnc_hasItem) > 0 } && { !(_this getVariable [""blindfold"", false]) }";
 		};
 		class Unblindfold : Blindfold {
 			title = "Remove Blindfold";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { _this getVariable [""blindfold"", false] }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { _this getVariable [""blindfold"", false] }";
 		};
 		class CountCash : Unrestrain {
 			title = "Count Cash";
@@ -108,7 +108,7 @@ class CfgInteractions {
 		class SeizeCommunications : Unrestrain {
 			title = "Destroy Communications";
 			onClick = "_this call ULP_fnc_seizeComms;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_hasComms }";
+			condition = "[_this] call ULP_fnc_hasComms && { [_this] call ULP_fnc_isRestrained } && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } }";
 		};
 		class Ticket {
 			title = "Issue Penalty Notice";
@@ -168,7 +168,7 @@ class CfgInteractions {
 		class SeizeCommunications : Revive {
 			title = "Seize Communications";
 			onClick = "_this call ULP_fnc_seizeComms;";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) || [player] call ULP_fnc_onDuty } && { [_this] call ULP_fnc_hasComms }";
+			condition = "[_this] call ULP_fnc_hasComms && { [player, [""Police""]] call ULP_fnc_isFaction || { [(_this getVariable [""IncapacitatedByGroup"", grpNull]), player] call ULP_fnc_inGroup } }";
 		};
 
 		// Admin Commands...
@@ -215,7 +215,7 @@ class CfgInteractions {
 			title = "Open Storage";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "if ((missionNamespace getVariable [""ULP_HouseStorageEvent"", -1]) > -1) exitWith { [""A request is already active...""] call ULP_fnc_hint; }; ULP_HouseStorageEvent = [""HouseStorage"", { _this params [ ""_house"", ""_storage"" ]; ULP_HouseStorageEvent = nil; if (isNull _house || { (player distance _house) > 15 }) exitWith { [""You're too far away from the house to access the physical storage...""] call ULP_fnc_hint; }; if (isNull _storage) exitWith { [""This house doesn't have physical storage...""] call ULP_fnc_hint; }; player action [""gear"", _storage]; }, true] call ULP_fnc_addEventHandler; [(_this select 0) getVariable [""building"", objNull]] remoteExecCall [""ULP_SRV_fnc_getStorage"", 2]; [""Requesting Physical Storage...""] call ULP_fnc_hint; closeDialog 0;";
-			condition = "[_this getVariable [""building"", objNull], player, false] call ULP_fnc_isHouseOwner";
+			condition = "[_this getVariable [""building"", objNull], player, false] call ULP_fnc_isHouseOwner && { (player distance _this) <= 2 }";
 		};
 	};
 

@@ -119,6 +119,7 @@ class CfgFunctions {
 			class applyTextures {};
 			class isGas {};
 			class isMask {};
+			class isNightVision {};
 			class preInitClothing { preInit=1; }
 		};
 
@@ -280,6 +281,7 @@ class CfgFunctions {
 			class giveItem {};
 			class recieveItem {};
 			class giveVirtualItems {};
+			class repackAmmo {};
 		};
 		
 		class Gathering {

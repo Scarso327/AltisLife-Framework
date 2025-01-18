@@ -15,7 +15,7 @@ _this params [
 	["_bank", false, [true]]
 ];
 
-if (isNull _unit || { [] call ULP_fnc_isRestrained } || { [] call ULP_fnc_isSurrendered } || { isDowned(player) } || { isDowned(_unit) } || { !_bank && ((player distance _unit) > 3) }) exitWith {
+if (isNull _unit || { _unit isEqualTo player } || { [] call ULP_fnc_isRestrained } || { [] call ULP_fnc_isSurrendered } || { isDowned(player) } || { isDowned(_unit) } || { !_bank && ((player distance _unit) > 3) }) exitWith {
 	["You have to be close, unrestrained and not surrendering to give cash..."] call ULP_fnc_hint;
 };
 
@@ -27,5 +27,5 @@ if !([_amount, _bank, format ["%1 %2", ["Given to", "Transferred to"] select (_b
 	[format ["You don't have <t color='#B92DE0'>%1%2</t> to %3...", "£", [_amount] call ULP_fnc_numberText, ["give", "transfer"] select (_bank)]] call ULP_fnc_hint;
 };
 
-[_amount, _bank, profileName] remoteExecCall ["ULP_fnc_recieveMoney", _unit];
+[player, _amount, _bank] remoteExecCall ["ULP_fnc_recieveMoney", _unit];
 [format ["You have %1 <t color='#B92DE0'>%2%3</t> to %4", ["given", "transferred"] select (_bank), "£", [_amount] call ULP_fnc_numberText, name _unit]] call ULP_fnc_hint;

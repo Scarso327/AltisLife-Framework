@@ -309,11 +309,12 @@ class G_Balaclava_TI_blk_F {
 		};
 		class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F { 
 			displayName = "Black + Goggles"; 
-			isNV = true;
 		};
 	};
 };
-class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F {};
+class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F {
+	isNV = true;
+};
 
 class G_Goggles_VR {
 	displayName = "Staff Goggles";
@@ -324,3 +325,22 @@ class G_Goggles_VR {
 	isGas = true;
 	class Textures {};
 };
+
+class G_Tactical_Clear {
+	displayName = "Tactical Glasses (NVG)";
+	price = 60000;
+	reputation = true;
+	isMask = false;
+	isNV = true;
+	isGas = false;
+	class Textures {
+		class G_Tactical_Clear {
+			displayName = "Clear";
+			condition = "true";
+		};
+		class G_Tactical_Black : G_Tactical_Clear { 
+			displayName = "Black"; 
+		};
+	};
+};
+class G_Tactical_Black : G_Tactical_Clear {};

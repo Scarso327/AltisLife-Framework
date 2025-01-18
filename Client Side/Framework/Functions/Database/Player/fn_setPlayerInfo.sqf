@@ -19,7 +19,10 @@ _this params [
 
 if (_playerData isEqualType false) exitWith {}; // Fail
 
-_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_eventslevel", "_donorlevel", "_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", "_textures", "_titles", "_perks", "_reputation", "_blueprints", "_bool"];
+_playerData params ["_uid", "_steamid", "_groupid", "_cash", "_bank", "", "", "_adminlevel", "_eventslevel", "_donorlevel", 
+	"_licenses", "_gear", "_stats", "_professions", "_prestige", "_level", "_xp", "_achievements", "_daily", "_weekly", 
+	"_textures", "_titles", "_perks", "_reputation", "_blueprints", "_bool"];
+
 private _count = count _playerData;
 
 if !(_steamid isEqualTo (getPlayerUID player)) exitWith {}; // Fail
@@ -29,6 +32,13 @@ private _factionCfg = missionConfigFile >> "CfgFactions" >> [player] call ULP_fn
 if !(isNil "ULP_FailedEventId") then {
 	["PlayerInformationQueryFailed", ULP_FailedEventId] call ULP_fnc_removeEventHandler;
 	missionNamespace setVariable ["ULP_FailedEventId", nil];
+};
+
+if (!isNil "ULP_ID" || { !isNil "ULP_Staff" } || { !isNil "ULP_Event" } || { !isNil "ULP_Donator" } || { !isNil { CASH } } || { !isNil { BANK } }) exitWith {
+	ULP_Spector = ["FailedInitialVarCheck", getPlayerUID player];
+	clientOwner publicVariableClient "ULP_Spector";
+	
+	endMission "CheatCheck";
 };
 
 ULP_ID = _uid;
@@ -98,7 +108,16 @@ switch (configName _factionCfg) do {
 // Set any whitelisting values our faction may have...
 if (isClass (_factionCfg >> "Whitelisting")) then {
 	{
-		missionNamespace setVariable [format["%1_%2", configName _factionCfg, configName _x], compileFinal str(_playerData select (getNumber(_x >> "queryIndex")))];
+		private _varName = format["%1_%2", configName _factionCfg, configName _x];
+
+		if !(isNil _varName) exitWith {
+			ULP_Spector = ["FailedWhitelistedVarCheck", getPlayerUID player];
+			clientOwner publicVariableClient "ULP_Spector";
+
+			endMission "CheatCheck";
+		};
+
+		missionNamespace setVariable [_varName, compileFinal str(_playerData select (getNumber(_x >> "queryIndex")))];
 	} forEach ("isNumber(_x >> 'queryIndex')" configClasses (_factionCfg >> "Whitelisting"));
 };
 

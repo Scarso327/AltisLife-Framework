@@ -9,7 +9,7 @@ class CfgVehicleStores {
 		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
-			class C_SUV_01_F {
+			class C_Quadbike_01_F {
 				class Textures {};
 			};
 			class C_SUV_01_F {

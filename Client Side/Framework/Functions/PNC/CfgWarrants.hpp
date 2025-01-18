@@ -29,7 +29,7 @@ class CfgWarrants {
         };
     };
 
-    class TreasonAct {
+    class TerrorismAct {
         displayName = "Terrorism Act";
 
         class Membership { 

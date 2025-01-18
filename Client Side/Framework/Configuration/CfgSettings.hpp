@@ -83,6 +83,8 @@ class CfgSettings {
 
     threatLevels[] = { "Low", "Moderate", "Substantial", "Severe", "Critical" };
     
+    repackingTime = 40;
+    
     class Remotes {
         class Sound {
             maxDistance = 100;

@@ -363,7 +363,7 @@ class CfgPerks {
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
-	class SlightofHand { // TODO
+	class SlightofHand {
 		icon = "Data\UI\Perks\slightOfHand.paa";
 		displayName = "Slight of Hand";
 		description = "Increases repacking of your magazines speed by %1%2";
@@ -381,7 +381,7 @@ class CfgPerks {
 			profession[] = {};
 		};
 		onChanged = "";
-		onActivated = "";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
 	class VehicleCollector {

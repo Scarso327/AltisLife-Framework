@@ -281,6 +281,7 @@ class CfgFunctions {
 			class giveItem {};
 			class recieveItem {};
 			class giveVirtualItems {};
+			class repackAmmo {};
 		};
 		
 		class Gathering {

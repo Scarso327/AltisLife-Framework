@@ -26,7 +26,7 @@ scopeName "fn_initReputation";
 		"_unit", "_killer"
 	];
 
-	if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) } && { (_killer getVariable ["robbed_by_me", -300]) < (time - 300) } && { !([_killer, ["Police"]] call ULP_fnc_isFaction) }) then {
+	if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) } && { (_killer getVariable ["robbed_by_me", -300]) < (time - 300) } && { (currentWeapon _unit) isEqualTo "" && { !([_killer, ["Police"]] call ULP_fnc_isFaction) } }) then {
 		[_killer, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
 			case (ULP_Reputation >= 500): { "IncapHigh" };
 			case (ULP_Reputation > -500): { "IncapNorm" };

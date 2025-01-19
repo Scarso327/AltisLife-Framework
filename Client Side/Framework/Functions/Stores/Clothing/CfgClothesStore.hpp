@@ -244,12 +244,6 @@ class CfgClothesStore {
 			class H_Hat_grey {};
 			class H_Watchcap_blk {};
 			class H_Booniehat_khk {};
-			class H_Beret_blk { 
-				condition = "[""Medic_Main"", 6] call ULP_fnc_hasAccess || { [""Medic_HART"", 1] call ULP_fnc_hasAccess }"; 
-			};
-			class H_PilotHelmetHeli_B { 
-				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess"; 
-			};
 			class G_Tactical_Clear {};
 			class H_Beret_blk { condition = "[""Medic_Main"", 6] call ULP_fnc_hasAccess || { [""Medic_HART"", 1] call ULP_fnc_hasAccess }"; };
 			class H_PilotHelmetHeli_B { condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess"; };

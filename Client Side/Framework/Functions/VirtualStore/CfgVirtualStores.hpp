@@ -429,6 +429,14 @@ class CfgVirtualStores {
 		};
 	};
 
+	class WeaponParts {
+		storeName = "Weapon Parts";
+		conditions = "true";
+		class Items {
+			class WeaponParts {};
+		};
+	};
+
 	class Art {
 		storeName = "Art Dealer";
 		conditions = "true";
@@ -454,6 +462,14 @@ class CfgVirtualStores {
 			class Moonshine {};
 			class PurifiedMoonshine {};
 			class Ecstasy {};
+		};
+	};
+
+	class Weapons {
+		storeName = "Weapon Parts";
+		conditions = "[""Church""] call ULP_fnc_ownsCartel";
+		class Items {
+			class WeaponCrate {};
 		};
 	};
 

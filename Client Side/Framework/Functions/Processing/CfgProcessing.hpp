@@ -192,6 +192,13 @@ class CfgProcessing {
 		reqLicenses[] = { "Uranium" };
 	};
 
+	class Weapons : BaseProcess {
+		processTime = 80;
+		materials[] = { { "WeaponParts", 2 } };
+		items[] = { { "WeaponCrate", 1 } };
+		reqLicenses[] = { "Uranium" };
+	};
+
 	class Oil : BaseProcess {
 		materials[] = { { "UnprocessedOil", 1 } };
 		items[] = { { "ProcessedOil", 1 } };

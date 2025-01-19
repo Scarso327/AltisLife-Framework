@@ -197,4 +197,10 @@ class CfgLicenses {
         buyPrice = 1100000;
         class Settings {};
     };
+
+    class Weapons : BaseLicense {
+        displayName = "Weapons Processing";
+        buyPrice = 1350000;
+        class Settings {};
+    };
 };

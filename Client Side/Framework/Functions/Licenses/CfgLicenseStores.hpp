@@ -92,6 +92,10 @@ class CfgLicenseStores {
 		condition = "!([""Moonshine""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Moonshine" }; 
 	};
+	class Weapons : Process { 
+		condition = "!([""Weapons""] call ULP_fnc_hasLicense)";
+		licenses[] = { "Weapons" }; 
+	};
 	class MultiDrug : Process {
 		condition = "!([""Weed""] call ULP_fnc_hasLicense) || { !([""Heroin""] call ULP_fnc_hasLicense) } || { !([""Cocaine""] call ULP_fnc_hasLicense) } || { !([""ULP_fnc_hasLicense""] call ULP_fnc_hasLicense) } || { !([""Moonshine""] call ULP_fnc_hasLicense) }";
 		licenses[] = { "Weed", "Heroin", "Cocaine", "Meth", "Moonshine" };

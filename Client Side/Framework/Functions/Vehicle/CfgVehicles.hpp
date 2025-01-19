@@ -145,6 +145,7 @@ class CfgVehicles {
 	// Base without siren or lights (for helis)
 	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
+		class Siren { SFX[] = { "Police_One", "Police_Two", "Police_Three" }; };
 		class Actions {
 			class PNC {
 				actionTitle = "Police National Computer";
@@ -160,21 +161,16 @@ class CfgVehicles {
 	// Full with sirens and lights
 	class PoliceTexture : PoliceTextureBase {
 		remoteGates = true;
-		class Siren {
-			SFX[] = { "Police_One", "Police_Two", "Police_Three" };
-		};
 		class Lights : PoliceColour {};
 	};
 
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
+		class Siren { SFX[] = { "Police_One" }; };
 	};
 	
 	class MedicTexture : MedicTextureBase {
 		remoteGates = true;
-		class Siren {
-			SFX[] = { "Police_One" };
-		};
 		class Lights : MedicColour {};
 	};
 
@@ -1618,9 +1614,7 @@ class CfgVehicles {
 		buyPrice = 2130000;
 		virtualSpace = 20;
 		class Textures {
-			class Police : PoliceTextureBase {
-				textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" };
-			};
+			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" }; };
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "#(rgb,8,8,3)color(0.03,0.03,0.03,1)" }; 
@@ -1904,41 +1898,25 @@ class CfgVehicles {
 	};
 
 	// HOUSING --------------------------------------------------------------------------------------
-	class Land_PlasticCase_01_small_F : Base {
-		virtualSpace = 250;
+	class Land_PlasticCase_01_small_F : Base { // Addon House
+		virtualSpace = 500;
 		garageLimit = 0;
 		isHouse = true;
 	};
-	class Land_PlasticCase_01_medium_F : Land_PlasticCase_01_small_F {
-		virtualSpace = 1000;
-	};
-	class Land_PlasticCase_01_large_F : Land_PlasticCase_01_small_F {
-		virtualSpace = 2000;
-	};
-	class B_supplyCrate_F : Land_PlasticCase_01_small_F {
-		virtualSpace = 3000;
-	};
-	class Land_PlasticCase_01_large_gray_F : Land_PlasticCase_01_small_F { virtualSpace = 1000; };
-	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 3000; };
-	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F { virtualSpace = 5000; };
-	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 8500; };
-	class Land_Cargo20_grey_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; };
+	class Land_PlasticCase_01_medium_F : Land_PlasticCase_01_small_F { virtualSpace = 1000; }; // Small House
+	class Land_PlasticCase_01_large_F : Land_PlasticCase_01_small_F { virtualSpace = 2000; }; // Small House
+	class Land_PlasticCase_01_large_gray_F : Land_PlasticCase_01_small_F { virtualSpace = 1000; }; // Lighthouse
+	class B_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 3000; }; // Big House
+	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F { virtualSpace = 5000; }; // Warehouse / Boat
+	class Land_Cargo20_grey_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; }; // Military Offices
+	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 10000; }; // DMT
+	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 8500; }; // Office Building
 
-	class Land_CargoBox_V1_F : Land_Bodybag_01_black_F {
-		requireItems = true;
-	};
+	class Land_CargoBox_V1_F : Land_Bodybag_01_black_F { requireItems = true; };
 	class Land_PortableServer_01_black_F : Land_CargoBox_V1_F {};
 
 	// SOUNDS --------------------------------------------------------------------------------------
-	class Police_One {
-		sound = "Police_One";
-	};
-
-	class Police_Two {
-		sound = "Police_Two";
-	};
-
-	class Police_Three {
-		sound = "Police_Three";
-	};
+	class Police_One { sound = "Police_One"; };
+	class Police_Two { sound = "Police_Two"; };
+	class Police_Three { sound = "Police_Three"; };
 };

@@ -12,6 +12,10 @@ class CfgDebriefing {
         subtitle = "Player data query failed";
         description = "Please contact a member of staff for assistance";
     };
+    class CheatCheck : InitFailed {
+        title = "Unable to Join";
+        subtitle = "Failed to validate state";
+    };
     class NotWhitelisted : Abort {
         title = "Unable to Join";
         subtitle = "You are not currently whitelisted";

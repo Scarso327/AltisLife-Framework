@@ -30,7 +30,7 @@ class CfgSettings {
         RedzonePercentage = 0.1;
 
         /* Blood */
-        BloodBagIncrease = 90;
+        BloodBagIncrease = 180;
     };
 
     class CfgCredits {
@@ -82,6 +82,8 @@ class CfgSettings {
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
 
     threatLevels[] = { "Low", "Moderate", "Substantial", "Severe", "Critical" };
+    
+    repackingTime = 40;
     
     class Remotes {
         class Sound {

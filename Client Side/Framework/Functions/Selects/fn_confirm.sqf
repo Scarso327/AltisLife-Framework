@@ -13,8 +13,13 @@ _this params [
 	["_params", [], [[]]],
 	["_onYes", {}, [{}]],
 	["_onNo", {}, [{}]],
-	["_tablet", true, [false]]
+	["_tablet", true, [false]],
+	["_skip", false, [true]]
 ];
+
+if (_skip) exitWith {
+	_params call _onYes;
+};
 
 if (isNull _parent) exitWith {};
 

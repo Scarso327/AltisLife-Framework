@@ -32,9 +32,12 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 
 	private _owner = -1;
 
-	private _query = [format ["SELECT `value` FROM settings WHERE setting = 'base_owner_%1'", configName _x], 2] call DB_fnc_asyncCall;
+	private _query = [format ["SELECT `settings`.`value`, `groups`.`tag` FROM `settings` 
+		LEFT JOIN `groups` ON `groups`.`id` = `settings`.`value`
+		WHERE `settings`.`setting` = 'base_owner_%1'", configName _x], 2] call DB_fnc_asyncCall;
 	_query params [
-		["_queryOwner", -2, [0, ""]]
+		["_queryOwner", -2, [0, ""]],
+		["_groupTag", "", [""]]
 	];
 
 	if (_queryOwner isEqualTo -2) then {
@@ -52,12 +55,13 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 			};
 
 			if (_newOwners) then {
-				private _query = [format ["SELECT `groups`.`id`, `groups`.`bank`, `groups`.`owner`, `base_bids`.`bid` FROM `base_bids` INNER JOIN `groups` WHERE `base_bids`.`base` = '%1' AND `base_bids`.`group_id` = `groups`.id AND `base_bids`.`bid` <= `groups`.`bank` AND `base_bids`.`active` = '1' ORDER BY `base_bids`.`bid` DESC", configName _x], 2] call DB_fnc_asyncCall;
+				private _query = [format ["SELECT `groups`.`id`, `groups`.`bank`, `groups`.`owner`, `base_bids`.`bid`, `groups`.`tag` FROM `base_bids` INNER JOIN `groups` WHERE `base_bids`.`base` = '%1' AND `base_bids`.`group_id` = `groups`.id AND `base_bids`.`bid` <= `groups`.`bank` AND `base_bids`.`active` = '1' ORDER BY `base_bids`.`bid` DESC", configName _x], 2] call DB_fnc_asyncCall;
 				_query params [
 					["_id", -1, [0]], 
 					["_bank", 0, [0]], 
 					["_ownerId", "", [""]], 
-					["_bid", 0, [0]]
+					["_bid", 0, [0]],
+					["_tag", "", [""]]
 				];
 
 				if (_id < 0 || { _bid < 1 } || { _bank < _bid }) exitWith {};
@@ -75,6 +79,7 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 				[format ["UPDATE base_bids SET `active` = '0' WHERE base = '%1'", configName _x], 1] call DB_fnc_asyncCall;
 
 				_queryOwner = _id;
+				_groupTag = _tag;
 			};
 		};
 
@@ -89,6 +94,19 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 	
 	_flag setVariable ["cfg", _x, true];
 	_flag setVariable ["owner", _owner, true];
+
+	private _marker = createMarker [format ["gang_base_%1", configName _x], _pos];
+	_marker setMarkerType "loc_bunker";
+	_marker setMarkerColor "colorOPFOR";
+	_marker setMarkerSize [1.2, 1.2];
+
+	private _markerText = "Gang Base";
+
+	if !(_groupTag isEqualTo "") then {
+		_markerText = format["%1 | %2", _markerText, _groupTag];
+	};
+
+	_marker setMarkerText _markerText;
 
 	missionNamespace setVariable [format ["ULP_SRV_Base_%1", configName _x], _flag, true];
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgBases"));

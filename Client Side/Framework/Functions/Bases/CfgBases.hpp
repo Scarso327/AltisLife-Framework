@@ -12,16 +12,10 @@ class CfgBases {
 		position[] = {{12044.9, 10492.4, -0.303827}, 0};
 		includeBidding = true;
 		defaultGroupOwnerId = -1;
-		class Spawn {
-			marker = "gang_base_1";
-		};
 	};
 
 	class South : North {
 		displayName = "South Base";
 		position[] = {{12295.3,8872.94,0.00119019}, 289.015};
-		class Spawn {
-			marker = "gang_base_2";
-		};
 	};
 };

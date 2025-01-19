@@ -773,6 +773,7 @@ class U_B_GhillieSuit {
 	price = 90360;
 	reputation = true;
 	virtualSpace = 7;
+	isMask = true;
 	isGas = false;
 	class Textures {
 		class SCO19 {

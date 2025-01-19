@@ -1015,8 +1015,8 @@ class CfgVirtualItems {
 		displayName = "Space Capsule Date Drive";
 		description = "A data drive from a space capsule containing unknown secrets.";
 		icon = "Data\Icons\drive.paa";
-		sellPrice = 7000000;
-		weight = 10;
+		sellPrice = 20000000;
+		weight = 25;
 		class Settings : Settings {};
 	};
 	class SmallGalleryPiece : SeizedContraband {
@@ -1637,6 +1637,12 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[""Rare""] call ULP_fnc_getSite;"; };
 	};
+	class LegendaryMap : UncommonMap {
+		displayName = "Rare Map";
+		sellPrice = 250000;
+		class Settings : Settings {};
+		class Events { onUse = "[""Legendary""] call ULP_fnc_getSite;"; };
+	};
 
 	class CommonMapFragment : UncommonMap {
 		displayName = "Common Map Fragment";
@@ -1654,6 +1660,11 @@ class CfgVirtualItems {
 	class RareMapFragment : CommonMapFragment {
 		displayName = "Rare Map Fragment";
 		sellPrice = 45000;
+		class Settings : Settings {};
+	};
+	class LegendaryMapFragment : CommonMapFragment {
+		displayName = "Legendary Map Fragment";
+		sellPrice = 60000;
 		class Settings : Settings {};
 	};
 

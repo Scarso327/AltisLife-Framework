@@ -84,12 +84,12 @@ if !(isNull _source) then {
 };
 
 // Stop damage being applied if recently ran over
-if (_part isEqualTo "" && { _projectile isEqualTo "" } && { diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2 }) then { _damage = _orginalDamage };
+if (_part isEqualTo "" && { _projectile isEqualTo "" } && { diag_tickTime - (_unit getVariable ["vdmVar", 0]) < 2 }) then { _damage = _originalDamage };
 
 if (_damage >= 1) then {
 	private _isRagDolled = ((animationState _unit) find "unconscious") >= 0;
 
-	if (_isRagDolled && { _part isEqualTo "" } && { _projectile isEqualTo "" } && { isNull _source } && { isNull _instigator }) exitWith { _damage = _orginalDamage };
+	if (_isRagDolled && { _part isEqualTo "" } && { _projectile isEqualTo "" } && { isNull _source } && { isNull _instigator }) exitWith { _damage = _originalDamage };
 
 	_damage = 0.99; // They're hurt... 1 or over would kill them...
 

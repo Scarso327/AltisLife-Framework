@@ -31,7 +31,10 @@ if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith 
 	["KnockOut"] call ULP_fnc_achieve;
 
 	if ([player, ["Civilian"]] call ULP_fnc_isFaction) then {
-		[getPlayerUID player, "OffencesAgainstThePerson", "Section20",
+		private _section = 
+			if !([_target, ["Civilian"]] call ULP_fnc_isFaction) then { "S38" } else { "S47" };
+
+		[getPlayerUID player, "OffencesAct", _section, 
 			format [
 				"Suspected Weapon: %1", 
 				([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"]

@@ -43,13 +43,13 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 
 			private _isRewardTick = ((ULP_SRV_TotalTicks % getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardTicks")) isEqualTo 0);
 
-			if (_isRewardTick) then {
-				private _decayAmount = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "decreasePerRewardTick");
+			// if (_isRewardTick) then {
+			// 	private _decayAmount = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "decreasePerRewardTick");
 
-				_scores = createHashMapFromArray (_scores apply {
-					[_x, (_y - _decayAmount) max (if (_y isEqualTo _highest) then { 1 } else { 0 })]
-				});
-			};
+			// 	_scores = createHashMapFromArray (_scores apply {
+			// 		[_x, (_y - _decayAmount) max (if (_y isEqualTo _highest) then { 1 } else { 0 })]
+			// 	});
+			// };
 
 			if ((count _groups) isEqualTo 1) then {
 				private _group = _groups param [0, grpNull, [grpNull]];

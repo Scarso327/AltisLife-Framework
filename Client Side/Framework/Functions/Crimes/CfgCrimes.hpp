@@ -62,7 +62,7 @@ class CfgCrimes {
 			};
 			class Items {
 				class MarkedGold {
-					amount = 20;
+					amount = 40;
 					extra = "((count playableUnits) / 4) + ((time / 2) / 240)";
 				};
 			};
@@ -100,7 +100,7 @@ class CfgCrimes {
 			class Items {
 				class EncryptedDrive {
 					amount = 8;
-					extra = "(random 24) max 1";
+					extra = "((count playableUnits) / 4) + ((time / 4) / 240)";
 				};
 			};
 		};
@@ -182,7 +182,7 @@ class CfgCrimes {
 			class Items {
 				class SpaceCapsuleDataDrive {
 					amount = 1;
-					extra = "(random 2) max 1";
+					extra = "0";
 				};
 			};
 		};

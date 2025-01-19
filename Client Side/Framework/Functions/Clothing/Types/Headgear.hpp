@@ -400,9 +400,27 @@ class H_PASGT_basic_blue_press_F {
 	};
 };
 class H_PASGT_neckprot_blue_press_F : H_PASGT_basic_blue_press_F {};
-class H_PASGT_basic_black_F : H_PASGT_basic_blue_press_F {};
-class H_PASGT_basic_white_F : H_PASGT_basic_blue_press_F {};
+
+class H_PASGT_basic_black_F : H_PASGT_basic_blue_press_F {
+	displayName = "Basic Helmet";
+	class Textures {
+		class H_PASGT_basic_black_F {
+			displayName = "Black";
+			condition = "[""Police_COL"", 1] call ULP_fnc_hasAccess";
+		};
+		class H_PASGT_basic_blue_F : H_PASGT_basic_black_F { 
+			displayName = "Blue"; 
+			condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess";
+		};
+		class H_PASGT_basic_white_F : H_PASGT_basic_black_F { 
+			displayName = "White"; 
+			condition = "true";
+		};
+		class H_PASGT_basic_olive_F : H_PASGT_basic_white_F { displayName = "Olive"; };
+	};
+};
 class H_PASGT_basic_blue_F : H_PASGT_basic_blue_press_F {};
+class H_PASGT_basic_white_F : H_PASGT_basic_blue_press_F {};
 class H_PASGT_basic_olive_F : H_PASGT_basic_blue_press_F {};
 
 class H_PilotHelmetHeli_B {

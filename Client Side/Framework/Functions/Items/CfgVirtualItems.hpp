@@ -1014,8 +1014,8 @@ class CfgVirtualItems {
 		displayName = "Space Capsule Date Drive";
 		description = "A data drive from a space capsule containing unknown secrets.";
 		icon = "Data\Icons\drive.paa";
-		sellPrice = 7000000;
-		weight = 10;
+		sellPrice = 20000000;
+		weight = 25;
 		class Settings : Settings {};
 	};
 	class SmallGalleryPiece : SeizedContraband {

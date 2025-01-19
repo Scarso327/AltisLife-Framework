@@ -111,6 +111,20 @@ class CfgLicenseStores {
 		licenses[] = { "Handgun" };
 	};
 
+	class Security {
+		title = "Security Contractors";
+		factions[] = { "Civilian" };
+		condition = "!([""Security""] call ULP_fnc_hasLicense)";
+		licenses[] = { "Security" };
+	};
+
+	class Protection {
+		title = "Government Protection";
+		factions[] = { "Civilian" };
+		condition = "!([""Protection""] call ULP_fnc_hasLicense)";
+		licenses[] = { "Protection" };
+	};
+
 	class Hunting {
 		title = "Hutning Camp";
 		factions[] = { "Civilian" };

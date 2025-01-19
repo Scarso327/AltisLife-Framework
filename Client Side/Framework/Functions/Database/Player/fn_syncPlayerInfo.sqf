@@ -5,7 +5,7 @@
 #include "..\..\..\script_macros.hpp"
 scopeName "fn_syncPlayerInfo";
 
-if ([player] call ULP_fnc_onDuty) exitWith {};
+if (!ULP_Loaded || { [player] call ULP_fnc_onDuty }) exitWith {};
 
 private _packet = [player, CASH, BANK];
 

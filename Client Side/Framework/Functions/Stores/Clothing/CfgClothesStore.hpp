@@ -276,6 +276,7 @@ class CfgClothesStore {
 				class Textures { 
 					class V_Safety_yellow_F {};
 					class V_Safety_orange_F {};
+				};
 			};
 			class V_BandollierB_blk {
 				class Textures { class V_BandollierB_blk {}; };

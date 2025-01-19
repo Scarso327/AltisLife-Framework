@@ -685,6 +685,34 @@ class CfgClothesStore {
 		class Backpacks {};
 	};
 
+	class Security {
+		storeName = "Security Contractor Clothing";
+		condition = "[] call ULP_fnc_isSecurity";
+		class Uniforms {};
+
+		class Headgear {
+			class H_WirelessEarpiece_F {};
+			class H_Cap_blk {};
+			class H_Watchcap_blk {};
+		};
+
+		class Facewear {};
+
+		class Vests {
+			class V_TacVest_blk {
+				class Textures {
+					class V_TacVest_blk {};
+				};
+			};
+			class V_PlateCarrier1_blk {
+				class Textures {
+					class V_PlateCarrier1_blk {};
+				};
+			};
+		};
+		class Backpacks {};
+	};
+
 	class Taxi {
 		storeName = "Taxi Clothing Store";
 		condition = "[""Taxi""] call ULP_fnc_hasLicense";

@@ -80,12 +80,7 @@ class CfgClothesStore {
 			class G_Shades_Black {};
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
-			class G_Tactical_Clear {
-				class Textures {
-					class G_Tactical_Clear {};
-					class G_Tactical_Black : G_Tactical_Clear {};
-				};
-			};
+			class G_Tactical_Clear {};
 			class G_B_Diving { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && { ( missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] ) || { ( missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] ) } } }"; };
 			class G_Respirator_white_F {};
 			class G_RegulatorMask_F { condition = "[""Police_SFO"", 1] call ULP_fnc_hasAccess"; };
@@ -254,6 +249,7 @@ class CfgClothesStore {
 			class H_PilotHelmetHeli_B { 
 				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess"; 
 			};
+			class G_Tactical_Clear {};
 		};
 
 		class Facewear {
@@ -279,9 +275,9 @@ class CfgClothesStore {
 			};
 			class V_Safety_yellow_F {
 				class Textures { 
-                                       class V_Safety_yellow_F {};
-                                       class V_Safety_orange_F {};
-                                };
+					class V_Safety_yellow_F {};
+					class V_Safety_orange_F {};
+				};
 			};
 			class V_BandollierB_blk {
 				class Textures { class V_BandollierB_blk {}; };
@@ -337,6 +333,7 @@ class CfgClothesStore {
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
 			class G_Respirator_white_F {};
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {};
@@ -684,6 +681,7 @@ class CfgClothesStore {
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
 			class G_Respirator_white_F {};
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {
@@ -963,10 +961,7 @@ class CfgClothesStore {
 			class G_Lowprofile {};
 			class G_Combat {};
 			class G_Tactical_Clear {
-				class Textures {
-					class G_Tactical_Clear {};
-					class G_Tactical_Black : G_Tactical_Clear {};
-				};
+				class Textures {};
 				condition = "[""Blackmarket""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 			};
 			class G_RegulatorMask_F {};
@@ -1083,12 +1078,7 @@ class CfgClothesStore {
 			class G_Sport_Red {};
 			class G_Lowprofile {};
 			class G_Combat {};
-			class G_Tactical_Clear {
-				class Textures {
-					class G_Tactical_Clear {};
-					class G_Tactical_Black : G_Tactical_Clear {};
-				};
-			};
+			class G_Tactical_Clear {};
 			class G_RegulatorMask_F {};
 			class G_Blindfold_01_black_F {};
 			class G_Bandanna_aviator {};

@@ -197,7 +197,7 @@ class CfgInteractions {
 			title = "Buy House";
 			factions[] = { "Civilian" };
 			onClick = "_this call ULP_fnc_buyHouse;";
-			condition = "isClass (missionConfigFile >> ""CfgFactions"" >> [player] call ULP_fnc_getFaction >> ""Housing"") && { !([_this] call ULP_fnc_isHouseOwned) }";
+			condition = "isClass (missionConfigFile >> ""CfgFactions"" >> [player] call ULP_fnc_getFaction >> ""Housing"") && { !([_this] call ULP_fnc_isHouseOwned) } && { !(_this getVariable [""blacklisted"", false]) }";
 		};
 	};
 

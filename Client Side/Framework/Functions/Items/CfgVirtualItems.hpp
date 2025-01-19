@@ -1636,6 +1636,12 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[""Rare""] call ULP_fnc_getSite;"; };
 	};
+	class LegendaryMap : UncommonMap {
+		displayName = "Rare Map";
+		sellPrice = 250000;
+		class Settings : Settings {};
+		class Events { onUse = "[""Legendary""] call ULP_fnc_getSite;"; };
+	};
 
 	class CommonMapFragment : UncommonMap {
 		displayName = "Common Map Fragment";
@@ -1653,6 +1659,11 @@ class CfgVirtualItems {
 	class RareMapFragment : CommonMapFragment {
 		displayName = "Rare Map Fragment";
 		sellPrice = 45000;
+		class Settings : Settings {};
+	};
+	class LegendaryMapFragment : CommonMapFragment {
+		displayName = "Legendary Map Fragment";
+		sellPrice = 60000;
 		class Settings : Settings {};
 	};
 

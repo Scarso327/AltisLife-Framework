@@ -1,6 +1,6 @@
 class CfgHousing {
 	nameLength = 32;
-	houseLimit = 2;
+	houseLimit = 5;
 	
 	class Houses {
 		// GARAGES

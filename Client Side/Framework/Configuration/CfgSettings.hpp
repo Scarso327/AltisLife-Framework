@@ -82,6 +82,12 @@ class CfgSettings {
     allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
 
     threatLevels[] = { "Low", "Moderate", "Substantial", "Severe", "Critical" };
+
+    class NoFlyZones {
+        class HMP { displayName = "HM Prison"; };
+        class HMTreasury { displayName = "HM Treasury"; };
+        class HMSLiberty { displayName = "HMS Liberty"; };
+    };
     
     repackingTime = 40;
     

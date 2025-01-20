@@ -28,6 +28,8 @@ addMissionEventHandler ["EntityKilled", {
 		"_unit", "_killer"
 	];
 
+	if (isNull _unit || { !isServer }) exitWith {};
+
 	if (isPlayer _unit && { _unit isKindOf "Man" } && { isNull _killer || { isPlayer _killer } }) then {
 		_this call ULP_SRV_fnc_onPlayerKilled;
 	};

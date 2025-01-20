@@ -355,6 +355,7 @@ class CfgInteractions {
 		class AdminPulloutOccupants : AdminRepair {
 			title = "Admin Pullout Occupants";
 			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; }; [getPlayerUID player, ""Admin"", [""AdminPulloutOccupants"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
+			condition = "(speed _this) <= 4 && { { [] call ULP_fnc_isStaff } && { [player] call ULP_fnc_onDuty } && { [""Vehicle"", false] call ULP_fnc_checkPower } }";
 		};
 		class AdminUnflip : AdminRepair {
 			title = "Admin Unflip";

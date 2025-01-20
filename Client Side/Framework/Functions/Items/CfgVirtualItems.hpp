@@ -1367,7 +1367,7 @@ class CfgVirtualItems {
 		displayName = "Weapon Parts";
 		description = "Parts used to assemble weapons at weapons processing";
 		icon = "Data\Icons\weaponParts.paa";
-		buyPrice = 39200;
+		buyPrice = 5900;
 		weight = 6;
 		class Settings : Settings {};
 	};
@@ -1460,7 +1460,7 @@ class CfgVirtualItems {
 		description = "A crate packed with assembled weapons ready to be sold near the Church Arms Cartel";
 		icon = "Data\Icons\weaponCrate.paa";
 		buyPrice = -1;
-		sellPrice = 93400;
+		sellPrice = 58700;
 		weight = 5;
 		class Settings : Settings {};
 	};

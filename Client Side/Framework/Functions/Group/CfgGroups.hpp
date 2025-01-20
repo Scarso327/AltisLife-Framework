@@ -160,11 +160,13 @@ class CfgGroups {
 				amount = 3;
 			};
 			class Cartel {
-				amount = 10;
+				amount = 25;
 			};
-			class Popup : Cartel {};
-			class Airdrop : Cartel {};
-			class Shipwreck : Cartel {};
+			class Popup : Cartel {
+				amount = 30;
+			};
+			class Airdrop : Popup {};
+			class Shipwreck : Popup {};
 			class Freight {
 				amount = 10;
 			};

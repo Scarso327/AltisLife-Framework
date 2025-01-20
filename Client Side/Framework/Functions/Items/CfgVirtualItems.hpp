@@ -1444,7 +1444,7 @@ class CfgVirtualItems {
 		description = "An extremely dangeous mineral processed from a radiation zone.";
 		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
-		sellPrice = 28650;
+		sellPrice = 22150;
 		weight = 3;
 		class Settings : Settings {};
 	};
@@ -1486,16 +1486,16 @@ class CfgVirtualItems {
 	class PurifiedMeth : PurifiedWeed {
 		displayName = "Purified Meth";
 		icon = "Data\Icons\methProcessed.paa";
-		buyPrice = 123525;
-		sellPrice = 41175;
+		buyPrice = 111525;
+		sellPrice = 37175;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class PurifiedMoonshine : PurifiedWeed {
 		displayName = "Purified Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 27135;
-		sellPrice = 9045;
+		buyPrice = 24135;
+		sellPrice = 8045;
 		weight = 1;
 		class Settings : Settings {};
 	};

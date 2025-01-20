@@ -33,6 +33,7 @@ private _time = ["StreetCleaner", getNumber (missionConfigFile >> "CfgSettings" 
 if (isNumber (_missionCfg >> "impoundTime")) then {
 	_time = _time + getNumber (_missionCfg >> "impoundTime");
 };
+if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 5; };
 
 [
 	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), getArray (missionConfigFile >> "CfgSettings" >> "Police" >> "impoundFee"), [_vehicle, _name, _time],

@@ -332,21 +332,28 @@ class CfgInteractions {
 		// Admin Commands...
 		class AdminRepair {
 			title = "Admin Repair";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "(_this select 0) setDamage 0; [format[""You've repaired this vehicle using admin powers.""]] call ULP_fnc_hint; [getPlayerUID player, ""Admin"", [""AdminRepair"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
 			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Vehicle"", false] call ULP_fnc_checkPower }";
 		};
-		class AdminRefuel {
+		class AdminRefuel : AdminRepair {
 			title = "Admin Refuel";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "if ((count (units (_this select 0))) > 0) exitWith { [""No one can be in the vehicle while its refueled!""] call ULP_fnc_hint; }; [(_this select 0), 1] remoteExecCall [""ULP_fnc_setFuel"", (_this select 0)]; hint format[""You've refueled this vehicle using admin powers...""]; [getPlayerUID player, ""Admin"", [""AdminFuel"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
-			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Vehicle"", false] call ULP_fnc_checkPower }";
 		};
-		class AdminGarage {
+		class AdminGarage : AdminRepair {
 			title = "Admin Garage";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "_this call ULP_fnc_garageVehicle; [getPlayerUID player, ""Admin"", [""AdminGarage"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
-			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Vehicle"", false] call ULP_fnc_checkPower }";
+		};
+		class AdminImpound : AdminRepair {
+			title = "Admin Impound";
+			onClick = "_this call ULP_fnc_impoundVehicle; [getPlayerUID player, ""Admin"", [""AdminImpound"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
+		};
+		class AdminPulloutOccupants : AdminRepair {
+			title = "Admin Pullout Occupants";
+			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; }; [getPlayerUID player, ""Admin"", [""AdminPulloutOccupants"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
+		};
+		class AdminUnflip : AdminRepair {
+			title = "Admin Unflip";
+			onClick = "_this call ULP_fnc_flipVehicle; [getPlayerUID player, ""Admin"", [""AdminUnflip"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
 		};
 	};
 };

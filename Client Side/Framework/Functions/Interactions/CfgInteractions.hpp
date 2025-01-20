@@ -332,6 +332,7 @@ class CfgInteractions {
 		// Admin Commands...
 		class AdminRepair {
 			title = "Admin Repair";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "(_this select 0) setDamage 0; [format[""You've repaired this vehicle using admin powers.""]] call ULP_fnc_hint; [getPlayerUID player, ""Admin"", [""AdminRepair"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
 			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Vehicle"", false] call ULP_fnc_checkPower }";
 		};

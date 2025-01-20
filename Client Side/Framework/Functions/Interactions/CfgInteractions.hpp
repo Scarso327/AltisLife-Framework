@@ -348,6 +348,10 @@ class CfgInteractions {
 			title = "Admin Impound";
 			onClick = "_this call ULP_fnc_impoundVehicle; [getPlayerUID player, ""Admin"", [""AdminImpound"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
 		};
+		class AdminScrap : AdminRepair {
+			title = "Admin Crush";
+			onClick = "_this call ULP_fnc_crushVehicle; [getPlayerUID player, ""Admin"", [""AdminScrap"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
+		};
 		class AdminPulloutOccupants : AdminRepair {
 			title = "Admin Pullout Occupants";
 			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; }; [getPlayerUID player, ""Admin"", [""AdminPulloutOccupants"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";

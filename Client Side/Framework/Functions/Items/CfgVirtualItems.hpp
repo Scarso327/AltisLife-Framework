@@ -784,8 +784,8 @@ class CfgVirtualItems {
 		displayName = "Red-White Tape";
 		description = "A bundled up item ready to be placed.";
 		icon = "Data\Icons\roadBarrier.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 500;
+		sellPrice = 250;
 		weight = 4;
 		class Settings {
 			onMarket = false;
@@ -800,8 +800,8 @@ class CfgVirtualItems {
 	};
 	class PlasticBarrier_02_yellow_F : TapeSign_F { 
 		displayName = "Plastic Barrier (Medium, Yellow)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3100;
+		sellPrice = 1550;
 		weight = 8;
 		class Settings : Settings {};
 	};
@@ -811,8 +811,8 @@ class CfgVirtualItems {
 	};
 	class PlasticBarrier_03_orange_F : TapeSign_F { 
 		displayName = "Plastic Barrier (Large, Orange)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3500;
+		sellPrice = 1750;
 		weight = 12;
 		class Settings : Settings {};
 	};
@@ -822,53 +822,55 @@ class CfgVirtualItems {
 	};
 	class RoadBarrier_small_F : TapeSign_F { 
 		displayName = "Road Barrier (Small)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3600;
+		sellPrice = 1800;
 		weight = 4;
 		class Settings : Settings {};
 	};
 	class RoadBarrier_F : TapeSign_F { 
 		displayName = "Road Barrier (Large)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 4300;
+		sellPrice = 2150;
 		weight = 6;
 		class Settings : Settings {};
 	};
 	class RoadCone_F : TapeSign_F { 
 		displayName = "Road Cone";
 		icon = "Data\Icons\cone.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 800;
+		sellPrice = 400;
 		weight = 3;
 		class Settings : Settings {};
 		class Events { onUse = "[""RoadCone"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class RoadCone_L_F : RoadCone_F { 
 		displayName = "Road Cone (Light)";
+		buyPrice = 900;
+		sellPrice = 450;
 		class Settings : Settings {};
 		class Events { onUse = "[""RoadConeWithLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class Land_PortableLight_single_F : TapeSign_F { 
 		displayName = "Portable Light (Single)";
 		icon = "Data\Icons\portableLight.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 1500;
+		sellPrice = 750;
 		weight = 6;
 		class Settings : Settings {};
 		class Events { onUse = "[""SinglePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class Land_PortableLight_double_F : Land_PortableLight_single_F { 
 		displayName = "Portable Light (Double)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 1700;
+		sellPrice = 850;
 		class Settings : Settings {};
 		class Events { onUse = "[""DoublePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class TargetP_Inf4_F : TapeSign_F { 
 		displayName = "Pop-Up Target (Hostile)";
 		icon = "Data\Icons\popupTarget.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 1000;
+		sellPrice = 500;
 		weight = 6;
 		class Settings : Settings {};
 	};

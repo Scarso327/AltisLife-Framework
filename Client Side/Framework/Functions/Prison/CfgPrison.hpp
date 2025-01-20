@@ -4,6 +4,7 @@ class CfgPrison {
 		imprison[] = { { 12572.1, 16522.1, 0 }, 328 }; 
 		release[] = { { 12606.3, 16445.5, 0 }, 28 };
 		maxDuraction = 30 * 60;
+		adminDuraction = 180 * 60;
 
 		class PrisonLoadout {
 			class Uniforms {

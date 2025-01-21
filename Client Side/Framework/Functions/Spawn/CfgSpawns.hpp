@@ -157,17 +157,15 @@ class CfgSpawns {
             icon = "Data\UI\Spawns\sofia.paa";
             conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
-        class Agios : Civilian {
+        class Agios : Sofia {
             displayName = "Agios";
             marker = "civ_spawn_agios";
             icon = "Data\UI\Spawns\agios.paa";
-            conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
-        class Neochori : Civilian {
+        class Neochori : Sofia {
             displayName = "Neochori";
             marker = "civ_spawn_neochori";
             icon = "Data\UI\Spawns\neochori.paa";
-            conditions = "[""WideTraveller""] call ULP_fnc_hasPerk";
         };
 
         class Taxi : BaseSpawn {
@@ -193,6 +191,11 @@ class CfgSpawns {
             marker = "civ_spawn_rebel";
             icon = "Data\UI\Spawns\rebel.paa";
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+        };
+        class Blackmarket : Rebel {
+            displayName = "Blackmarket";
+            marker = "civ_spawn_blackmarket";
+            conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { { [""Blackmarketer""] call ULP_fnc_hasPerk } || { [""Blackmarket""] call ULP_fnc_hasGroupPerk } } && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
         };
     };
 

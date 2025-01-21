@@ -1195,6 +1195,18 @@ class CfgVirtualItems {
 		icon = "Data\Icons\ore.paa";
 		class Settings : Settings {};
 	};
+	class UncutBloodDiamond : CopperOre {
+		displayName = "Blood Diamond Ore";
+		icon = "Data\Icons\ore.paa";
+		class Settings : Settings {
+			onMarket = true;
+			isIllegal = true;
+			isSavable = false;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+	};
 
 	// Legal Processed
 	class Cigarette {
@@ -1291,6 +1303,20 @@ class CfgVirtualItems {
 		class Settings {
 			onMarket = true;
 			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+	};
+	class CutBloodDiamond : CutDiamond {
+		displayName = "Cut Blood Diamond";
+		description = "A finely cut diamond that women appear to love.";
+		icon = "Data\Icons\diamond.paa";
+		sellPrice = 9500;
+		class Settings {
+			onMarket = true;
+			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;

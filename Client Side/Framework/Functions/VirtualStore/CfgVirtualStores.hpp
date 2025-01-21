@@ -365,6 +365,7 @@ class CfgVirtualStores {
 		conditions = "true";
 		class Items {
 			class CutDiamond {};
+			class CutBloodDiamond {};
 		};
 	};
 

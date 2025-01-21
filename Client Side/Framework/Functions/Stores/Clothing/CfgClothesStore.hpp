@@ -247,6 +247,10 @@ class CfgClothesStore {
 			class G_Tactical_Clear {};
 			class H_Beret_blk { condition = "[""Medic_Main"", 6] call ULP_fnc_hasAccess || { [""Medic_HART"", 1] call ULP_fnc_hasAccess }"; };
 			class H_PilotHelmetHeli_B { condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess"; };
+			class H_PASGT_basic_black_F { 
+				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; 
+				class Textures { class H_PASGT_basic_olive_F {}; };
+			};
 		};
 
 		class Facewear {
@@ -274,6 +278,10 @@ class CfgClothesStore {
 			};
 			class V_BandollierB_blk {
 				class Textures { class V_BandollierB_blk {}; };
+			};
+			class V_CarrierRigKBT_01_Olive_F { 
+				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; 
+				class Textures { class V_CarrierRigKBT_01_Olive_F {}; };
 			};
 			class V_RebreatherB { 
 				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; 

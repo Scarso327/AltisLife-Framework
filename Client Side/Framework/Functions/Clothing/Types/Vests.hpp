@@ -175,6 +175,21 @@ class V_Press_F {
 	class Textures {};
 };
 
+class V_CarrierRigKBT_01_Olive_F {
+	displayName = "Modular Carrier Vest";
+	price = 38700;
+	virtualSpace = 15;
+	reputation = true;
+	class Textures {
+		class V_CarrierRigKBT_01_Olive_F {
+			displayName = "Olive";
+			condition = "true";
+		};
+		class V_CarrierRigKBT_01_EAF_F : V_CarrierRigKBT_01_Olive_F { displayName = "Geometric"; };
+	};
+};
+class V_CarrierRigKBT_01_EAF_F : V_CarrierRigKBT_01_Olive_F {};
+
 class V_TacVest_blk {
 	displayName = "Tactical Vest";
 	price = 48500;

@@ -84,13 +84,27 @@ if (_near isEqualTo []) exitWith {
 		private _owner = [_vehicle] call ULP_fnc_getVehicleOwner;
 		deleteVehicle _vehicle;
 
+		private _chance = ([
+			getNumber (missionConfigFile >> "CfgVehicles" >> "chopKeepChance"),
+			getNumber (_cfg >> "chopKeepChance")
+		] select (isNumber (_cfg >> "chopKeepChance")));
+
+		private _cartelObject = missionNamespace getVariable [format["ULP_SRV_Cartel_%1", configName _x], objNull];
+
+		{
+			if !(isNull _cartelObject) then {
+				private _cartelOwner = (_cartelObject getVariable ["owner", []]) param [0, grpNull];
+				if !(isNull _cartelOwner) then {
+					if (isClass (_x >> "Chop") && { _cartelOwner isEqualTo (group player) }) then {
+						_chopValue = _chopValue * getNumber (_x >> "Chop" >> "extraPay");
+						_chance = _chance * getNumber (_x >> "Chop" >> "keepChance");
+					};
+				};
+			};
+		} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgCartels" >> "Fixed"));
+
 		if (_id >= 0) then {
 			if (_allowKeep && { [[player] call ULP_fnc_getFaction, "vehicles"] call ULP_fnc_factionPresistant }) then {
-				private _chance = ([
-					getNumber (missionConfigFile >> "CfgVehicles" >> "chopKeepChance"),
-					getNumber (_cfg >> "chopKeepChance")
-				] select (isNumber (_cfg >> "chopKeepChance")));
-				
 				if ((["UncertainMind", 0] call ULP_fnc_activatePerk) > _chance) then {
 					[_owner, player, _id] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
 					[format["You've claimed <t color='#B92DE0'>%1</t> as your own vehicle, it is now in your garage.", _name]] call ULP_fnc_hint;

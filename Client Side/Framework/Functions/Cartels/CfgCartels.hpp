@@ -58,13 +58,13 @@ class CfgCartels {
 			position[] = {10037, 10130, 0};
 			zoneRadius = 40;
 			kosRadius = 0;
-			class Drug {
-				extraPay = 1.025;
-				saleTax = 0.05;
-			};
 			class Arms {
-				primaryDiscount = 0.05;
+				primaryDiscount = 0.01;
 				secondaryDiscount = 0.1;
+			};
+			class Chop {
+				extraPay = 0.05;
+				keepChance = 0.025;
 			};
 		};
 

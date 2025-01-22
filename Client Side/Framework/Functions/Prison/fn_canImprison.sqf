@@ -9,6 +9,8 @@ _this params [
 	["_unit", player, [objNull]]
 ];
 
+if ([player] call ULP_fnc_onDuty && { ["Imprison", false] call ULP_fnc_checkPower }) exitWith { true };
+
 private _cfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc_getFaction;
 if (isNull _unit || { !(isClass _cfg) }) exitWith { false };
 

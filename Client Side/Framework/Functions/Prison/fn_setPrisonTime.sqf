@@ -18,7 +18,12 @@ if !([player] call ULP_fnc_canImprison || { [_target] call ULP_fnc_canImprisoned
 	["You're unable to send anyone to prison from here!"] call ULP_fnc_hint;
 };
 
-private _max = getNumber (_prison >> "maxDuraction");
+private _max = 
+	if ([player] call ULP_fnc_onDuty && { ["Imprison", false] call ULP_fnc_checkPower }) then { 
+		getNumber (_prison >> "adminDuraction");
+	} else {
+		getNumber (_prison >> "maxDuraction");
+	}; 
 
 [
 	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _max], [_target, _prison, _max],
@@ -41,7 +46,18 @@ private _max = getNumber (_prison >> "maxDuraction");
 		["Prisoned", [name _target, [player, true] call ULP_fnc_getName, [_duraction, "MM"] call BIS_fnc_secondsToString]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 
 		[format["You have sentenced <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2</t>", name _target, [_duraction, "MM:SS"] call BIS_fnc_secondsToString]] call ULP_fnc_hint;
-		["FirstArrest"] call ULP_fnc_achieve;
+
+		if !([player] call ULP_fnc_onDuty) then { 
+			private _unitRep = _target getVariable ["reputation", 0];
+
+			[player, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
+				case (_unitRep >= 500): { "ArrestHigh" };
+				case (_unitRep > -500): { "ArrestNorm" };
+				default { "ArrestLow" };
+			})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+
+			["FirstArrest"] call ULP_fnc_achieve; 
+		};
 
 		["ArrestedSomeone", [_target, _duraction]] call ULP_fnc_invokeEvent;
 

@@ -1733,22 +1733,22 @@ class ULP_ctrlCommunityGoal : ULP_ctrlGoal {
 
 class ULP_CartelHud : Life_RscControlsGroupNoScrollbars {
     SAFEZONE_Y(MARGIN_Y);
-    x = ((0.5) * safezoneW + safezoneX) - ((13.75 * GUI_GRID_CENTER_W) / 2);
-    w = 13.75 * GUI_GRID_CENTER_W;
+    x = ((0.5) * safezoneW + safezoneX) - ((14.75 * GUI_GRID_CENTER_W) / 2);
+    w = 14.75 * GUI_GRID_CENTER_W;
     h = 3 * GUI_GRID_CENTER_H;
 
     class Controls {
         class BarBackground: Life_RscText {
             idc = 101;
             colorBackground[] = {0.1, 0.1, 0.1, 0.5};
-            w = 10.75 * GUI_GRID_CENTER_W;
+            w = 11.75 * GUI_GRID_CENTER_W;
             h = 1.5 * GUI_GRID_CENTER_H;
         };
 
         class ProgressBar : Life_RscProgress {
             idc = 102;
             colorBar[] = {0, 0.3, 0.6, 0.65};
-            w = 10.75 * GUI_GRID_CENTER_W;
+            w = 11.75 * GUI_GRID_CENTER_W;
             h = 1.5 * GUI_GRID_CENTER_H;
         };
 
@@ -1757,24 +1757,24 @@ class ULP_CartelHud : Life_RscControlsGroupNoScrollbars {
             text = "<t align='center' size='1.25'>ATTACKING</t>";
             colorBackground[] = {0, 0, 0, 0};
             y = 0.15 * GUI_GRID_CENTER_H;
-            w = 10.75 * GUI_GRID_CENTER_W;
+            w = 11.75 * GUI_GRID_CENTER_W;
             h = 1.5 * GUI_GRID_CENTER_H;
         };
 
         class ScoreBackground: Life_RscText {
             idc = 104;
             colorBackground[] = {0.1, 0.1, 0.1, 0.5};
-            x = 10.75 * GUI_GRID_CENTER_W;
-            w = 3 * GUI_GRID_CENTER_W;
+            x = 11.75 * GUI_GRID_CENTER_W;
+            w = 2 * GUI_GRID_CENTER_W;
             h = 1.5 * GUI_GRID_CENTER_H;
         };
 
         class ZoneScoreText : Life_RscStructuredText {
             idc = 105;
-            text = "<t align='center' size='1.5'>0%</t>";
+            text = "<t align='center' size='1.5'>0</t>";
             colorBackground[] = {0, 0.3, 0.6, 0.65};
-            x = 10.75 * GUI_GRID_CENTER_W;
-            w = 3 * GUI_GRID_CENTER_W;
+            x = 11.75 * GUI_GRID_CENTER_W;
+            w = 2 * GUI_GRID_CENTER_W;
             h = 1.5 * GUI_GRID_CENTER_H;
         };
 
@@ -1782,7 +1782,7 @@ class ULP_CartelHud : Life_RscControlsGroupNoScrollbars {
             idc = 106;
             colorBackground[] = {0.1, 0.1, 0.1, 0.5};
             y = 1.65 * GUI_GRID_CENTER_H;
-            w = 13.75 * GUI_GRID_CENTER_W;
+            w = 11.75 * GUI_GRID_CENTER_W;
             h = 0.25 * GUI_GRID_CENTER_H;
         };
 
@@ -1790,7 +1790,7 @@ class ULP_CartelHud : Life_RscControlsGroupNoScrollbars {
             idc = 107;
             colorBar[] = { 0.06, 0.06, 0.06, 0.7 };
             y = 1.65 * GUI_GRID_CENTER_H;
-            w = 13.75 * GUI_GRID_CENTER_W;
+            w = 11.75 * GUI_GRID_CENTER_W;
             h = 0.25 * GUI_GRID_CENTER_H;
         };
     };

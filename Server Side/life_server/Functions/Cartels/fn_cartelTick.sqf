@@ -33,24 +33,6 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 				{ isNull (objectParent _x) }
 			});
 
-			private _owners = [];
-
-			private _sortedScores = (_scores toArray true) param [1, [], [[]]];
-			_sortedScores sort false;
-
-			private _highest = _sortedScores param [0, 0];
-			private _secondLargestScore = _sortedScores param [1, 0];
-
-			private _isRewardTick = ((ULP_SRV_TotalTicks % getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardTicks")) isEqualTo 0);
-
-			if (_isRewardTick) then {
-				private _decayAmount = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "decreasePerRewardTick");
-
-				_scores = createHashMapFromArray (_scores apply {
-					[_x, (_y - _decayAmount) max (if (_y isEqualTo _highest) then { 1 } else { 0 })]
-				});
-			};
-
 			if ((count _groups) isEqualTo 1) then {
 				private _group = _groups param [0, grpNull, [grpNull]];
 				private _groupId = _group getVariable ["group_id", -1];
@@ -69,7 +51,11 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 					if (_groupId isEqualTo -1) exitWith {};
 
 					private _maxScoreLead = getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "maxScoreLead");
-					private _isWinner = ((_obj getVariable ["owner", []]) param [0, grpNull, [grpNull]]) isEqualTo _group;
+
+					private _sortedScores = [_scores toArray false, [], {_x # 1}, "DESCEND"] call BIS_fnc_sortBy;
+
+					private _isWinner = ((_sortedScores param [0, []]) param [0, -1]) isEqualTo _groupId;
+					private _secondLargestScore = ((_sortedScores param [1, []]) param [1, 0]);
 
 					private _score = _scores getOrDefault [_groupId, 0];
 					_score = _score + 1;
@@ -82,18 +68,16 @@ missionNamespace setVariable ["ULP_SRV_TotalTicks", (missionNamespace getVariabl
 						[_group, "HoldingCartel"] call ULP_SRV_fnc_addGroupXP;
 					};
 				};
-			};
 
-			// Updates scores for everyone...
-			if !(_scores isEqualTo (_obj getVariable ["scores", createHashMap])) then {
-				_obj setVariable ["scores", _scores, true];
-
-				if !(_unitsInZone isEqualTo []) then {
-					[configName _config] remoteExecCall ["ULP_fnc_cartelHud", _unitsInZone];
+				// Updates scores for everyone...
+				if !(_scores isEqualTo (_obj getVariable ["scores", createHashMap])) then {
+					_obj setVariable ["scores", _scores, true];
 				};
+				
+				[configName _config] remoteExecCall ["ULP_fnc_cartelHud", _unitsInZone];
 			};
 
-			[_obj, _scores, _isRewardTick] call ULP_SRV_fnc_cartelReward;
+			[_obj, _scores, ((ULP_SRV_TotalTicks % getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardTicks")) isEqualTo 0)] call ULP_SRV_fnc_cartelReward;
 
 			ULP_SRV_Cartels set [_x, [_obj, _area, _scores]];
 		};

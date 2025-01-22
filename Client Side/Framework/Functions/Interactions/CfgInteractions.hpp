@@ -139,6 +139,12 @@ class CfgInteractions {
 			condition = "true";
 		};
 
+		class Unrestrain : Revive {
+			title = "Unrestrain";
+			onClick = "[_this select 0, player, false] call ULP_fnc_restrain; closeDialog 0;";
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } }";
+		};
+
 		class PutOnStretcher {
 			title = "Put On Stretcher";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };

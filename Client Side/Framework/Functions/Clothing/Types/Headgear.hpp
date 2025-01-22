@@ -229,12 +229,12 @@ class H_Beret_blk {
 		class H_Beret_gen_F : H_Beret_blk {
 			displayName = "Police Command";
 			price = 18900;
-			condition = "[""Police_Main"", 9] call ULP_fnc_hasAccess || { [""Police_COL"", 3] call ULP_fnc_hasAccess }";
+			condition = "[""Police_Main"", 8] call ULP_fnc_hasAccess || { [""Police_COL"", 3] call ULP_fnc_hasAccess }";
 		};
 		class H_Beret_EAF_01_F : H_Beret_blk {
 			displayName = "Spec. Command";
 			price = 17450;
-			condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
+			condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess || { [""Police_NCA"", 3] call ULP_fnc_hasAccess }";
 		};
 
 		// Altis Ambulance Service

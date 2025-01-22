@@ -167,6 +167,16 @@ class CfgVehicles {
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
 		class Siren { SFX[] = { "Police_One" }; };
+		class Actions {
+			class NHSDispatcher {
+				actionTitle = "NHS Dispatcher";
+				actionCode = "[] call ULP_fnc_openMedicMap";
+				params[] = {};
+				priority = 1;
+				condition = "_target isEqualTo (vehicle _this) && { [player, [""Medic""]] call ULP_fnc_isFaction }";
+				radius = 25;
+			};
+		};
 	};
 	
 	class MedicTexture : MedicTextureBase {
@@ -260,7 +270,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[] call ULP_fnc_donatorLevel > 0";
+				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess && { [""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_black.paa" }; 
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
@@ -269,7 +279,6 @@ class CfgVehicles {
 			};
 			class PoliceANPR : PoliceWhite { 
 				displayName = "ANPR Interceptor";
-				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				anpr = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_ANPR.paa" }; 
 				class Lights : PoliceColour {
@@ -279,7 +288,7 @@ class CfgVehicles {
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
-				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
@@ -598,7 +607,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[] call ULP_fnc_donatorLevel > 0";
+				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_black.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
@@ -617,7 +626,7 @@ class CfgVehicles {
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
-				conditions = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
@@ -684,7 +693,7 @@ class CfgVehicles {
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
-				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
 			};
 			class UnmarkedWhite : UnmarkedBlack {
@@ -803,11 +812,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
-	class B_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 675000; };
+	class B_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 585000; };
 
 	class O_LSV_02_unarmed_F : Base {
 		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
-		buyPrice = 800000;
+		buyPrice = 675000;
 		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
@@ -1378,6 +1387,10 @@ class CfgVehicles {
 		buyPrice = 14300;
 		virtualSpace = 5;
 		class Textures {
+			class Police : PoliceTextureBase {
+				displayName = "MPU"; 
+				textures[] = { "Data\Textures\Vehicles\Sea\Police\scooter.paa" }; 
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { 
@@ -1489,12 +1502,21 @@ class CfgVehicles {
 		buyPrice = 389500;
 		virtualSpace = 5;
 		garageLimit = 1;
+		class Textures {
+			class Police : PoliceTextureBase {
+				displayName = "MPU"; 
+				textures[] = { "Data\Textures\Vehicles\Sea\Police\sdv.paa" }; 
+			};
+		};
 	};
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
 	class B_UAV_01_F : BaseAir {
 		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
 		buyPrice = 98700;
+		class Textures {
+			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Sea\Police\darter.paa", }; };
+		};
 	};
 	class C_UAV_06_medical_F : B_UAV_01_F {
 		description = "This commercial off-the-shelf utility drone uses 6 rotors to transport small payloads inside its external cargo case.";
@@ -1503,7 +1525,7 @@ class CfgVehicles {
 	
 	class C_Heli_Light_01_civil_F : BaseAir {
 		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
-		buyPrice = 565000;
+		buyPrice = 465000;
 		virtualSpace = 5;
 		garageLimit = 3;
 		class Textures {
@@ -1573,11 +1595,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
-	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 780000; };
+	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 580000; };
 
 	class O_Heli_Light_02_unarmed_F : BaseAir {
 		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
-		buyPrice = 2350000;
+		buyPrice = 1850000;
 		virtualSpace = 25;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
@@ -1630,7 +1652,12 @@ class CfgVehicles {
 		garageLimit = 1;
 		turrets[] = {};
 		class Textures {
-			class Police : PoliceTextureBase {};
+			class Police : PoliceTextureBase {
+				textures[] = { 
+					"Data\Textures\Vehicles\Air\Police\ghosthawk_01.paa",
+					"Data\Textures\Vehicles\Air\Police\ghosthawk_02.paa"
+				}; 
+			};
 			class Civilian : BaseTexture {};
 		};
 	};
@@ -1638,7 +1665,7 @@ class CfgVehicles {
 	class I_Heli_Transport_02_F : BaseAir {
 		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
 		buyPrice = 13240000;
-		virtualSpace = 55;
+		virtualSpace = 160;
 		class Textures {
 			class Medic : MedicTextureBase {
 				textures[] = { 
@@ -1686,6 +1713,16 @@ class CfgVehicles {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
 		garageLimit = 1;
+		class Textures {
+			class Police : PoliceTextureBase {
+				textures[] = { 
+					"Data\Textures\Vehicles\Air\Police\taru_01.paa",
+					"Data\Textures\Vehicles\Air\Police\taru_02.paa",
+					"Data\Textures\Vehicles\Air\Police\taru_03.paa"
+				}; 
+			};
+			class Civilian : BaseTexture {};
+		};
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11176500;
@@ -1697,15 +1734,15 @@ class CfgVehicles {
 	};
 	class O_Heli_Transport_04_box_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 28900500;
-		virtualSpace = 70;
+		virtualSpace = 250;
 	};
 	class O_Heli_Transport_04_ammo_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 29460000;
-		virtualSpace = 80;
+		virtualSpace = 280;
 	};
 	class O_Heli_Transport_04_fuel_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 13640000;
-		virtualSpace = 50;
+		virtualSpace = 150;
 	};
 	class O_Heli_Transport_04_medevac_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11983000;
@@ -1725,9 +1762,15 @@ class CfgVehicles {
 	class B_Heli_Transport_03_unarmed_F : BaseAir {
 		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
-		virtualSpace = 100;
+		virtualSpace = 400;
 		garageLimit = 1;
 		class Textures {
+			class Police : PoliceTextureBase {
+				textures[] = { 
+					"Data\Textures\Vehicles\Air\Police\huron_01.paa",
+					"Data\Textures\Vehicles\Air\Police\huron_02.paa"
+				}; 
+			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				factions[] = { "Civilian", "Police" };
@@ -1865,41 +1908,25 @@ class CfgVehicles {
 	};
 
 	// HOUSING --------------------------------------------------------------------------------------
-	class Land_PlasticCase_01_small_F : Base {
-		virtualSpace = 250;
+	class Land_PlasticCase_01_small_F : Base { // Addon House
+		virtualSpace = 500;
 		garageLimit = 0;
 		isHouse = true;
 	};
-	class Land_PlasticCase_01_medium_F : Land_PlasticCase_01_small_F {
-		virtualSpace = 1000;
-	};
-	class Land_PlasticCase_01_large_F : Land_PlasticCase_01_small_F {
-		virtualSpace = 2000;
-	};
-	class B_supplyCrate_F : Land_PlasticCase_01_small_F {
-		virtualSpace = 3000;
-	};
-	class Land_PlasticCase_01_large_gray_F : Land_PlasticCase_01_small_F { virtualSpace = 1000; };
-	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 3000; };
-	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F { virtualSpace = 5000; };
-	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 8500; };
-	class Land_Cargo20_grey_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; };
+	class Land_PlasticCase_01_medium_F : Land_PlasticCase_01_small_F { virtualSpace = 1000; }; // Small House
+	class Land_PlasticCase_01_large_F : Land_PlasticCase_01_small_F { virtualSpace = 2000; }; // Small House
+	class Land_PlasticCase_01_large_gray_F : Land_PlasticCase_01_small_F { virtualSpace = 1000; }; // Lighthouse
+	class B_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 3000; }; // Big House
+	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F { virtualSpace = 5000; }; // Warehouse / Boat
+	class Land_Cargo20_grey_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; }; // Military Offices
+	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 10000; }; // DMT
+	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 8500; }; // Office Building
 
-	class Land_CargoBox_V1_F : Land_Bodybag_01_black_F {
-		requireItems = true;
-	};
+	class Land_CargoBox_V1_F : Land_Bodybag_01_black_F { requireItems = true; };
 	class Land_PortableServer_01_black_F : Land_CargoBox_V1_F {};
 
 	// SOUNDS --------------------------------------------------------------------------------------
-	class Police_One {
-		sound = "Police_One";
-	};
-
-	class Police_Two {
-		sound = "Police_Two";
-	};
-
-	class Police_Three {
-		sound = "Police_Three";
-	};
+	class Police_One { sound = "Police_One"; };
+	class Police_Two { sound = "Police_Two"; };
+	class Police_Three { sound = "Police_Three"; };
 };

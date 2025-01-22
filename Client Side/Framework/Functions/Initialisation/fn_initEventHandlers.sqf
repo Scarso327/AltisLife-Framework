@@ -146,10 +146,6 @@ if ([player, ["Police", "Hato"]] call ULP_fnc_isFaction) then {
 	};
 }] call ULP_fnc_addEventHandler;
 
-["Incapacitated", {
-	[] call ULP_fnc_stopPlacement;
-}] call ULP_fnc_addEventHandler;
-
 ["CommunicationsSeized", {
 	_this params [
 		["_unit", objNull, [objNull]]

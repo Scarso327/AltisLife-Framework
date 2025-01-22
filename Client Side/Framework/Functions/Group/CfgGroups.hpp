@@ -18,11 +18,11 @@ class CfgGroups {
 	};
 
 	class Permissions {
-		deposit = 3;
+		deposit = 2;
 		withdraw = 3;
 		rank = 4;
-		invite = 4;
-		kick = 4;
+		invite = 3;
+		kick = 3;
 	};
 
 	class Types {
@@ -160,11 +160,13 @@ class CfgGroups {
 				amount = 3;
 			};
 			class Cartel {
-				amount = 10;
+				amount = 25;
 			};
-			class Popup : Cartel {};
-			class Airdrop : Cartel {};
-			class Shipwreck : Cartel {};
+			class Popup : Cartel {
+				amount = 30;
+			};
+			class Airdrop : Popup {};
+			class Shipwreck : Popup {};
 			class Freight {
 				amount = 10;
 			};

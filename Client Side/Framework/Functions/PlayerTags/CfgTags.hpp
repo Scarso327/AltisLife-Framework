@@ -108,14 +108,14 @@ class CfgTags {
 			subtitle = "Police Sergeant";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
+		class PoliceSC  {
+			icon = "Data\Tags\Ranks\Police\SC.paa";
+			subtitle = "Senior Police Constable";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 4] call ULP_fnc_hasAccess }";
+		};
 		class PolicePC  {
 			icon = "Data\Tags\Ranks\Police\PC.paa";
 			subtitle = "Police Constable";
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 4] call ULP_fnc_hasAccess }";
-		};
-		class PoliceSC  {
-			icon = "Data\Tags\Ranks\Police\SC.paa";
-			subtitle = "Special Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class PolicePPC  {

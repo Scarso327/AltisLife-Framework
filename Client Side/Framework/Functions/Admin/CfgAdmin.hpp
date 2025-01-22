@@ -19,6 +19,7 @@ class CfgAdmin {
 		class Vehicle : Teleport {};
 		class Medical : Teleport {};
 		class Restrain : Teleport {};
+		class Imprison : Teleport {};
 
 		// HEAD ADMINISTRATOR (L4)
 		// COMMUNITY BOARD (L5)

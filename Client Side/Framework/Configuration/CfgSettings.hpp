@@ -30,7 +30,7 @@ class CfgSettings {
         RedzonePercentage = 0.1;
 
         /* Blood */
-        BloodBagIncrease = 90;
+        BloodBagIncrease = 180;
     };
 
     class CfgCredits {

@@ -33,6 +33,7 @@ private _time = ["StreetCleaner", getNumber (missionConfigFile >> "CfgSettings" 
 if (isNumber (_missionCfg >> "crushTime")) then {
 	_time = _time + getNumber (_missionCfg >> "crushTime");
 };
+if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 5; };
 
 if !([format["Crushing %1", _name], _time, [_vehicle, _name, _fee], {
 	!(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 5 }

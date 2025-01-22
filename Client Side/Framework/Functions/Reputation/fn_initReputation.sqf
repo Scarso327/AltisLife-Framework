@@ -26,6 +26,8 @@ scopeName "fn_initReputation";
 		"_unit", "_killer"
 	];
 
+	if !(_unit isEqualTo player) exitWith {};
+
 	if (!isNull _killer 
 		&& { isPlayer _killer } 
 		&& { !(_killer isEqualTo _unit) } 

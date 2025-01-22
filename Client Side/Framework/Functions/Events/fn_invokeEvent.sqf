@@ -2,6 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
+#include "..\..\script_macros.hpp"
 scopeName "fn_invokeEvent";
 
 if (canSuspend) exitWith {
@@ -10,8 +11,13 @@ if (canSuspend) exitWith {
 
 _this params [
 	["_event", "", [""]],
-	["_params", [], [[]]]
+	["_params", [], [[]]],
+	["_global", false, [true]]
 ];
+
+if (_global) exitWith {
+	[_event, _params] remoteExecCall ["ULP_fnc_invokeEvent", RANY];
+};
 
 [format ["fn_invokeEvent: '%1' invoked with '%2'", _event, _params], true] call ULP_fnc_logIt;
 

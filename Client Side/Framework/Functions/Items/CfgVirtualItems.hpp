@@ -609,6 +609,7 @@ class CfgVirtualItems {
 		weight = 14;
 		class Settings : Settings {};
 		class Events : Events {};
+		conditions = "[""Police_Main"", 5] call ULP_fnc_hasAccess";
 	};
 	class signalJammer : Stinger { // TODO (crafting)
 		displayName = "Signal Jammer";
@@ -783,8 +784,8 @@ class CfgVirtualItems {
 		displayName = "Red-White Tape";
 		description = "A bundled up item ready to be placed.";
 		icon = "Data\Icons\roadBarrier.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 500;
+		sellPrice = 250;
 		weight = 4;
 		class Settings {
 			onMarket = false;
@@ -799,8 +800,8 @@ class CfgVirtualItems {
 	};
 	class PlasticBarrier_02_yellow_F : TapeSign_F { 
 		displayName = "Plastic Barrier (Medium, Yellow)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3100;
+		sellPrice = 1550;
 		weight = 8;
 		class Settings : Settings {};
 	};
@@ -810,8 +811,8 @@ class CfgVirtualItems {
 	};
 	class PlasticBarrier_03_orange_F : TapeSign_F { 
 		displayName = "Plastic Barrier (Large, Orange)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3500;
+		sellPrice = 1750;
 		weight = 12;
 		class Settings : Settings {};
 	};
@@ -821,53 +822,55 @@ class CfgVirtualItems {
 	};
 	class RoadBarrier_small_F : TapeSign_F { 
 		displayName = "Road Barrier (Small)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 3600;
+		sellPrice = 1800;
 		weight = 4;
 		class Settings : Settings {};
 	};
 	class RoadBarrier_F : TapeSign_F { 
 		displayName = "Road Barrier (Large)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 4300;
+		sellPrice = 2150;
 		weight = 6;
 		class Settings : Settings {};
 	};
 	class RoadCone_F : TapeSign_F { 
 		displayName = "Road Cone";
 		icon = "Data\Icons\cone.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 800;
+		sellPrice = 400;
 		weight = 3;
 		class Settings : Settings {};
 		class Events { onUse = "[""RoadCone"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class RoadCone_L_F : RoadCone_F { 
 		displayName = "Road Cone (Light)";
+		buyPrice = 900;
+		sellPrice = 450;
 		class Settings : Settings {};
 		class Events { onUse = "[""RoadConeWithLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class Land_PortableLight_single_F : TapeSign_F { 
 		displayName = "Portable Light (Single)";
 		icon = "Data\Icons\portableLight.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 1500;
+		sellPrice = 750;
 		weight = 6;
 		class Settings : Settings {};
 		class Events { onUse = "[""SinglePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class Land_PortableLight_double_F : Land_PortableLight_single_F { 
 		displayName = "Portable Light (Double)";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 1700;
+		sellPrice = 850;
 		class Settings : Settings {};
 		class Events { onUse = "[""DoublePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class TargetP_Inf4_F : TapeSign_F { 
 		displayName = "Pop-Up Target (Hostile)";
 		icon = "Data\Icons\popupTarget.paa";
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = 1000;
+		sellPrice = 500;
 		weight = 6;
 		class Settings : Settings {};
 	};
@@ -1014,8 +1017,8 @@ class CfgVirtualItems {
 		displayName = "Space Capsule Date Drive";
 		description = "A data drive from a space capsule containing unknown secrets.";
 		icon = "Data\Icons\drive.paa";
-		sellPrice = 7000000;
-		weight = 10;
+		sellPrice = 20000000;
+		weight = 25;
 		class Settings : Settings {};
 	};
 	class SmallGalleryPiece : SeizedContraband {
@@ -1192,6 +1195,18 @@ class CfgVirtualItems {
 		icon = "Data\Icons\ore.paa";
 		class Settings : Settings {};
 	};
+	class UncutBloodDiamond : CopperOre {
+		displayName = "Blood Diamond Ore";
+		icon = "Data\Icons\ore.paa";
+		class Settings : Settings {
+			onMarket = true;
+			isIllegal = true;
+			isSavable = false;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+	};
 
 	// Legal Processed
 	class Cigarette {
@@ -1288,6 +1303,20 @@ class CfgVirtualItems {
 		class Settings {
 			onMarket = true;
 			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+	};
+	class CutBloodDiamond : CutDiamond {
+		displayName = "Cut Blood Diamond";
+		description = "A finely cut diamond that women appear to love.";
+		icon = "Data\Icons\diamond.paa";
+		sellPrice = 9500;
+		class Settings {
+			onMarket = true;
+			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
 			isEventItem = false;
@@ -1451,7 +1480,7 @@ class CfgVirtualItems {
 		description = "An extremely dangeous mineral processed from a radiation zone.";
 		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
-		sellPrice = 28650;
+		sellPrice = 22150;
 		weight = 3;
 		class Settings : Settings {};
 	};
@@ -1502,16 +1531,16 @@ class CfgVirtualItems {
 	class PurifiedMeth : PurifiedWeed {
 		displayName = "Purified Meth";
 		icon = "Data\Icons\methProcessed.paa";
-		buyPrice = 123525;
-		sellPrice = 41175;
+		buyPrice = 111525;
+		sellPrice = 37175;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class PurifiedMoonshine : PurifiedWeed {
 		displayName = "Purified Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 27135;
-		sellPrice = 9045;
+		buyPrice = 24135;
+		sellPrice = 8045;
 		weight = 1;
 		class Settings : Settings {};
 	};
@@ -1653,6 +1682,12 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Events { onUse = "[""Rare""] call ULP_fnc_getSite;"; };
 	};
+	class LegendaryMap : UncommonMap {
+		displayName = "Rare Map";
+		sellPrice = 250000;
+		class Settings : Settings {};
+		class Events { onUse = "[""Legendary""] call ULP_fnc_getSite;"; };
+	};
 
 	class CommonMapFragment : UncommonMap {
 		displayName = "Common Map Fragment";
@@ -1670,6 +1705,11 @@ class CfgVirtualItems {
 	class RareMapFragment : CommonMapFragment {
 		displayName = "Rare Map Fragment";
 		sellPrice = 45000;
+		class Settings : Settings {};
+	};
+	class LegendaryMapFragment : CommonMapFragment {
+		displayName = "Legendary Map Fragment";
+		sellPrice = 60000;
 		class Settings : Settings {};
 	};
 

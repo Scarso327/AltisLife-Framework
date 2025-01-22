@@ -84,6 +84,22 @@ class CfgLicenses {
         class Settings : Settings {};
     };
 
+    class Security : Driving {
+        displayName = "Security Contractor";
+        description = "Certification as a Security Contractor for a company";
+        buyPrice = 350000;
+        class Settings : Settings {};
+        conditions = "[""SecurityContactors""] call ULP_fnc_hasGroupPerk";
+    };
+
+    class Protection : Driving {
+        displayName = "Protection Officer";
+        description = "Certification as a Protection Officer for a political party";
+        buyPrice = 350000;
+        class Settings : Settings {};
+        conditions = "[""PersonalProtection""] call ULP_fnc_hasGroupPerk";
+    };
+
     class Hunting : Driving {
         displayName = "Hunting Certificate";
         description = "Certification permitting the hunting of wild animals";

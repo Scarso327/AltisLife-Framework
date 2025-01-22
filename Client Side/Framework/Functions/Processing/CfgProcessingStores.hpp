@@ -92,4 +92,10 @@ class CfgProcessingStores {
 		title = "Decrypter";
 		processes[] = { "Secrets" };
 	};
+
+	class Weapons : Base {
+		title = "Weapons Processing";
+		processes[] = { "WeaponCrate" };
+		condition = "[""Church""] call ULP_fnc_ownsCartel";
+	};
 };

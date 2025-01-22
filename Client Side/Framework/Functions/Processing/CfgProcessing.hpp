@@ -90,6 +90,12 @@ class CfgProcessing {
 		items[] = { { "Moonshine", 1 } };
 		reqLicenses[] = { "Moonshine" };
 	};
+  class Weapons : BaseProcess {
+		processTime = 80;
+		materials[] = { { "WeaponParts", 2 } };
+		items[] = { { "WeaponCrate", 1 } };
+		reqLicenses[] = { "Weapons" };
+	};
 
 	// Purifing
 	class PurifiedWeed : BaseProcess {

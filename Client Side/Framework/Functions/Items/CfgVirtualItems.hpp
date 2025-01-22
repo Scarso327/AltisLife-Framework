@@ -1392,6 +1392,14 @@ class CfgVirtualItems {
 		weight = 6;
 		class Settings : Settings {};
 	};
+	class WeaponParts : UnprocessedHeroin {
+		displayName = "Weapon Parts";
+		description = "Parts used to assemble weapons at weapons processing";
+		icon = "Data\Icons\weaponParts.paa";
+		buyPrice = 5900;
+		weight = 6;
+		class Settings : Settings {};
+	};
 
 	// Illegal Processed
 	class Coral {
@@ -1474,6 +1482,15 @@ class CfgVirtualItems {
 		buyPrice = -1;
 		sellPrice = 22150;
 		weight = 3;
+		class Settings : Settings {};
+	};
+	class WeaponCrate : ProcessedWeed {
+		displayName = "Weapon Crate";
+		description = "A crate packed with assembled weapons ready to be sold near the Church Arms Cartel";
+		icon = "Data\Icons\weaponCrate.paa";
+		buyPrice = -1;
+		sellPrice = 58700;
+		weight = 5;
 		class Settings : Settings {};
 	};
 

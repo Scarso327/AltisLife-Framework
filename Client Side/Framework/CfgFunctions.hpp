@@ -659,6 +659,11 @@ class CfgFunctions {
 			class toggleOnStretcher {};
 		};
 
+		class MedicMap {
+			file = "Functions\MedicMap";
+			class openMedicMap {};
+		};
+
 		class Housing {
 			file = "Functions\Housing";
 			class setupHouses {};
@@ -899,6 +904,16 @@ class CfgFunctions {
 			class RscIncapacitated_OnEachFrame {};
 			class RscIncapacitated_OnLoad {};
 			class RscIncapacitated_OnUnload {};
+		};
+
+		class DialogMedicMap {
+			file = "UI\DialogMedicMap\Functions";
+			class DialogMedicMap_OnLoad {};
+			class DialogMedicMap_OnUnload {};
+			class DialogMedicMap_OnMapDraw {};
+			class DialogMedicMap_LoadList {};
+			class DialogMedicMap_SetAssignedMedic {};
+			class DialogMedicMap_OnListChanged {};
 		};
 	};
 };

@@ -32,9 +32,11 @@ if (time >= _endTime) exitWith {
 _progressBar progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
 
 private _medicsOnline = count (["Medic"] call ULP_fnc_allMembers);
+private _assignedMedic = player getVariable ["AssignedMedic", objNull];
+
 getArray(missionConfigFile >> "CfgSettings" >> "CfgMedical" >> "AllowBleedoutPercentage") params [ "_bleedOutNoMedics", "_bleedOutMedics" ];
 
-private _respawnPer = [_bleedOutMedics, _bleedOutNoMedics] select (_medicsOnline isEqualTo 0);
+private _respawnPer = [_bleedOutMedics, _bleedOutNoMedics] select (isNull _assignedMedic);
 
 if ((progressPosition _progressBar) <= _respawnPer) then {
 	if (!ULP_CanRespawn) then {
@@ -54,7 +56,13 @@ _medicsCountText ctrlSetStructuredText parseText format [
 	_display getVariable ["status", format["Respawn at %1%2 Bleedout...", round (_respawnPer * 100), "%"]], _medicsOnline
 ];
 
-_medicalRequestedText ctrlSetStructuredText parseText ([
-	"<t align='center' size='1'>Medic Requested</t>",
-	"<t align='center' size='1'>Press <t color='#8A2BE2'>Space</t> to request a medic</t>"
-] select (localNamespace getVariable ["ULP_MedicalRequest", 0] < time));
+_medicalRequestedText ctrlSetStructuredText parseText (switch (true) do {
+	case (!isNull _assignedMedic): {
+		private _distance = player distance _assignedMedic;
+		format ["<t align='center' size='1'>%1 is assigned to you, %2m</t>", name _assignedMedic, [_distance] call ULP_fnc_numberText]
+	};
+	case (localNamespace getVariable ["ULP_MedicalRequest", 0] < time): {
+		"<t align='center' size='1'>Press <t color='#8A2BE2'>Space</t> to request a medic</t>"
+	};
+	default { "<t align='center' size='1'>Medic Requested</t>" };
+});

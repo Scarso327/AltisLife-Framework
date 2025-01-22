@@ -167,6 +167,16 @@ class CfgVehicles {
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
 		class Siren { SFX[] = { "Police_One" }; };
+		class Actions {
+			class NHSDispatcher {
+				actionTitle = "NHS Dispatcher";
+				actionCode = "[] call ULP_fnc_openMedicMap";
+				params[] = {};
+				priority = 1;
+				condition = "_target isEqualTo (vehicle _this) && { [player, [""Medic""]] call ULP_fnc_isFaction }";
+				radius = 25;
+			};
+		};
 	};
 	
 	class MedicTexture : MedicTextureBase {

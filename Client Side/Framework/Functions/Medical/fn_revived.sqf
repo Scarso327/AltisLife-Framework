@@ -40,6 +40,7 @@ if (!isNull _stretcher && { _stretcher isKindOf "Land_Stretcher_01_F" }) then {
 
 player setVariable ["IncapacitatedWounds", nil, true];
 player setVariable ["IncapacitatedByGroup", nil, true];
+player setVariable ["AssignedMedic", nil, true];
 
 player setUnconscious false;
 unsetKiller(player);

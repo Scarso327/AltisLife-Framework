@@ -68,6 +68,7 @@ if (visibleMap) then {
 [["RscHUD"] call ULP_UI_fnc_getLayer] call ULP_UI_fnc_closeHUD;
 [] spawn ULP_UI_fnc_closeDialogs; // Makes sure all dialogs are closed...
 [] call ULP_fnc_wipeEffects;
+[] call ULP_fnc_stopPlacement;
 
 private _wounds = createHashMap;
 private _possibleWounds = ("isClass _x" configClasses (missionConfigFile >> "CfgMedical" >> "Damage"));
@@ -90,9 +91,8 @@ private _totalWounds = 0;
 } forEach ["Head", "Body", "RArm", "LArm", "RLeg", "LLeg"];
 
 player setVariable ["IncapacitatedWounds", _wounds, true];
+["Incapacitated", [_unit, _killer], true] call ULP_fnc_invokeEvent;
 
 if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
 	ULP_CanRespawn = false;
-
-	["Incapacitated", [_unit, _killer, _incapUi]] call ULP_fnc_invokeEvent;
 };

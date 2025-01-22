@@ -17,7 +17,7 @@ if !(_ctrls isEqualTo []) then {
 
 _ctrls = [];
 
-private _achievements = ("isClass _x" configClasses (missionConfigFile >> "CfgProgression" >> "CfgAchievements")) apply {
+private _achievements = ("isClass _x && { isText (_x >> ""displayName"") }" configClasses (missionConfigFile >> "CfgProgression" >> "CfgAchievements")) apply {
 	[(switch (true) do {
 		case ([configName _x] call ULP_fnc_hasAchieved) : { 0 };
 		case (getNumber (_x >> "isMystery") isEqualTo 1) : { 2 };

@@ -90,7 +90,7 @@ class CfgInteractions {
 		};
 		class SeizeCash : RobCash {
 			title = "Seize Cash";
-			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [player] call ULP_fnc_onDuty } }"
+			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [player] call ULP_fnc_onDuty } }";
 		};
 		class InventoryCheck : Unrestrain {
 			title = "Check Inventory";

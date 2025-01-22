@@ -195,7 +195,7 @@ class CfgSpawns {
         class Blackmarket : Rebel {
             displayName = "Blackmarket";
             marker = "civ_spawn_blackmarket";
-            conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { { [""Blackmarketer""] call ULP_fnc_hasPerk } || { [""Blackmarket""] call ULP_fnc_hasGroupPerk } } && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+            conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] } && { [""Blackmarketer""] call ULP_fnc_hasPerk || { [""Blackmarket""] call ULP_fnc_hasGroupPerk } }";
         };
     };
 

@@ -812,11 +812,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
-	class B_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 675000; };
+	class B_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 585000; };
 
 	class O_LSV_02_unarmed_F : Base {
 		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
-		buyPrice = 800000;
+		buyPrice = 675000;
 		virtualSpace = 50;
 		garageLimit = 3;
 		class Textures {
@@ -1525,7 +1525,7 @@ class CfgVehicles {
 	
 	class C_Heli_Light_01_civil_F : BaseAir {
 		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
-		buyPrice = 565000;
+		buyPrice = 465000;
 		virtualSpace = 5;
 		garageLimit = 3;
 		class Textures {
@@ -1595,11 +1595,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
-	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 780000; };
+	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 580000; };
 
 	class O_Heli_Light_02_unarmed_F : BaseAir {
 		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
-		buyPrice = 2350000;
+		buyPrice = 1850000;
 		virtualSpace = 25;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };

@@ -71,10 +71,10 @@ class CfgInteractions {
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } } && { [_this] call ULP_fnc_isEscorted }";
 		};
-		class FeedHydrate : Unrestrain { // TODO
-			title = "Feed/Hydrate";
-			onClick = "hint ""Hello"";";
-		};
+		// class FeedHydrate : Unrestrain { // TODO
+		// 	title = "Feed/Hydrate";
+		// 	onClick = "hint ""Hello"";";
+		// };
 		class Blindfold : Unrestrain {
 			title = "Blindfold";
 			onClick = "_this call ULP_fnc_blindfold";

@@ -66,7 +66,7 @@ if ((count _owners) > 0) then {
 			};
 		};
 
-		_markerText = format ["%1 | %2", _markerText, [_group] call ULP_fnc_groupTag];
+		_markerText = format ["%1 | %2", _markerText, [_group] call ULP_fnc_getGroupName];
 	};
 
 	_cartel setVariable ["owner", [_group, _highest], true];

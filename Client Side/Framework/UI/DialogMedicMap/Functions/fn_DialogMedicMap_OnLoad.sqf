@@ -32,17 +32,13 @@ _display setVariable ["Incapacitated", ["Incapacitated", {
 }] call ULP_fnc_addEventHandler];
 
 _display setVariable ["Died", ["Died", {
-	diag_log "on died";
 	_this params [ "_unit" ];
-
-	diag_log _unit;
 
 	private _display = uiNamespace getVariable ["DialogMedicMap", displayNull];
 	if (isNull _display) exitWith {};
 
 	private _incapacitatedPlayers = _display getVariable ["IncapacitatedPlayers", []];
 	
-	diag_log _incapacitatedPlayers;
 	if !(_unit in _incapacitatedPlayers) exitWith {};
 
 	_incapacitatedPlayers deleteAt (_incapacitatedPlayers find _unit);

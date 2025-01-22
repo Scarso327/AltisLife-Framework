@@ -1665,7 +1665,7 @@ class CfgVehicles {
 	class I_Heli_Transport_02_F : BaseAir {
 		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
 		buyPrice = 13240000;
-		virtualSpace = 55;
+		virtualSpace = 160;
 		class Textures {
 			class Medic : MedicTextureBase {
 				textures[] = { 
@@ -1734,15 +1734,15 @@ class CfgVehicles {
 	};
 	class O_Heli_Transport_04_box_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 28900500;
-		virtualSpace = 70;
+		virtualSpace = 250;
 	};
 	class O_Heli_Transport_04_ammo_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 29460000;
-		virtualSpace = 80;
+		virtualSpace = 280;
 	};
 	class O_Heli_Transport_04_fuel_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 13640000;
-		virtualSpace = 50;
+		virtualSpace = 150;
 	};
 	class O_Heli_Transport_04_medevac_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11983000;
@@ -1762,7 +1762,7 @@ class CfgVehicles {
 	class B_Heli_Transport_03_unarmed_F : BaseAir {
 		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
-		virtualSpace = 100;
+		virtualSpace = 400;
 		garageLimit = 1;
 		class Textures {
 			class Police : PoliceTextureBase {

@@ -7,7 +7,7 @@ class CfgPatches {
         requiredAddons[] = {};
         units[] = {};
         weapons[] = {};
-        serverCommandPassword = "abcd";
+        serverCommandPassword = "KqpdsYBdMstYfFt";
 
         class Settings {
             class DonationGoal {

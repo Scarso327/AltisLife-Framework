@@ -18,11 +18,11 @@ class CfgGroups {
 	};
 
 	class Permissions {
-		deposit = 3;
+		deposit = 2;
 		withdraw = 3;
 		rank = 4;
-		invite = 4;
-		kick = 4;
+		invite = 3;
+		kick = 3;
 	};
 
 	class Types {

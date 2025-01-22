@@ -167,7 +167,6 @@ class CfgItemsStore {
 		class Magazines {
 			class 16Rnd_9x21_Mag { 
 				displayName = "Taser Cartridge";
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; 
 			};
 			class 30Rnd_9x21_Mag_SMG_02 { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class 30Rnd_45ACP_Mag_SMG_01 { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };

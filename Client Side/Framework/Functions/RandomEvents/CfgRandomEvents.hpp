@@ -8,12 +8,12 @@ class CfgRandomEvents {
 	InitialDelay = 3 * 60;
 	
 	class Airdrop {
-		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 20";
+		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 30";
 		NotifyDelay = 10 * 60;
 		Cooldown = 40 * 60;
 		RandomAddition = 20 * 60;
 		class BaseWars {
-			SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
+			SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 15";
 			NotifyDelay = 5 * 60;
 			Cooldown = 20 * 60;
 			RandomAddition = 5 * 60;
@@ -97,7 +97,7 @@ class CfgRandomEvents {
 	};
 
 	class Shipwreck : Airdrop {
-		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
+		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 20";
 		NotifyDelay = 10 * 60;
 		Cooldown = 15 * 60;
 		RandomAddition = 15 * 60;
@@ -143,7 +143,7 @@ class CfgRandomEvents {
 	};
 
 	class PopupCartel : Airdrop {
-		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
+		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 20";
 		NotifyDelay = 10 * 60;
 		Cooldown = 25 * 60;
 		RandomAddition = 10 * 60;

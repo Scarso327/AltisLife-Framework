@@ -21,7 +21,7 @@ class CfgVehicles {
 		class Textures {};
 	};
 
-	class BaseTruck {
+	class BaseTruck : Base {
 		garageLimit = 2;
 		fuelConsumptionRate = 1.40;
 		enableRope = false;
@@ -62,45 +62,6 @@ class CfgVehicles {
 			"UnmarkedGold",
 			"EncryptedDrive",
 			"DecryptedDrive",
-
-			"Tobacco",
-			"CopperOre",
-			"SilverOre",
-			"IronOre",
-			"Sand",
-			"UnrefinedSalt",
-			"UnprocessedOil",
-			"UncutDiamond",
-			"UraniumOre",
-			"Corn",
-			"EphedrineBarrel",
-			"UnprocessedWeed",
-			"UnprocessedHeroin",
-			"UnprocessedCocaine",
-
-			"Coral",
-			"Cigarette",
-			"Cigar",
-			"Coal",
-			"CopperBar",
-			"SilverBar",
-			"IronBar",
-			"Glass",
-			"RefinedSalt",
-			"ProcessedOil",
-			"CutDiamond",
-			"ProcessedWeed",
-			"ProcessedHeroin",
-			"ProcessedCocaine",
-			"ProcessedMeth",
-			"Moonshine",
-			"Ecstasy",
-			"UraniumBar",
-			"PurifiedWeed",
-			"PurifiedHeroin",
-			"PurifiedCocaine",
-			"PurifiedMeth",
-			"PurifiedMoonshine",
 
 			"Salema_F_Raw",
 			"Ornate_random_F_Raw",

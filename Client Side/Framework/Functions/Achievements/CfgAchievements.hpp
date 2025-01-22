@@ -305,7 +305,7 @@ class CfgAchievements {
 		leveling[] = { 500, "Achievement Unlocked", 100 };
 		isMystery = false;
 	};
-	class JoinNH : JoinAPCS {
+	class JoinNHS : JoinAPC {
 		icon = "Data\UI\Achievements\NHS.paa";
 		displayName = "Paramedic";
 		description = "Joined the Altis Ambulance Service";

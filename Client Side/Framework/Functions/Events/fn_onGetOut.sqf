@@ -32,4 +32,9 @@ if ([["EnableAutoChatSwitch"] call ULP_fnc_getOption] call ULP_fnc_bool && { cur
 
 [] call ULP_fnc_setViewDistance;
 
+if !(cameraView isEqualTo "GUNNER" && { [goggles _unit] call ULP_fnc_isNightVision }) then {
+	private _action = if ((currentVisionMode _unit) isEqualTo 0) then { "nvGogglesOff" } else { "nvGoggles" };
+    _unit action [_action, _unit];
+};
+
 true

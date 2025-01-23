@@ -122,7 +122,7 @@ class CfgVehicleStores {
 		factions[] = { "Medic" };
 		class Vehicles {
 			class C_Van_02_medevac_F { 
-				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
 				class Textures {}; 
 			};
 			class B_GEN_Van_02_transport_F { 
@@ -134,7 +134,7 @@ class CfgVehicleStores {
 				class Textures {}; 
 			};
 			class C_SUV_01_F {
-				condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class C_Hatchback_01_sport_F {

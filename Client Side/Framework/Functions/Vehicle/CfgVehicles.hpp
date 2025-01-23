@@ -53,6 +53,8 @@ class CfgVehicles {
 			"StolenCargo",
 			"FreightCargo",
 
+			"Turtle_F_Raw",
+
 			"SeizedContraband",
 			"SpaceCapsuleDataDrive",
 			"SmallGalleryPiece",
@@ -61,21 +63,7 @@ class CfgVehicles {
 			"MarkedGold",
 			"UnmarkedGold",
 			"EncryptedDrive",
-			"DecryptedDrive",
-
-			"Salema_F_Raw",
-			"Ornate_random_F_Raw",
-			"Mackerel_F_Raw",
-			"Tuna_F_Raw",
-			"Mullet_F_Raw",
-			"CatShark_F_Raw",
-			"Turtle_F_Raw",
-			"CookedSalema",
-			"CookedOrnate",
-			"CookedMackerel",
-			"CookedTuna",
-			"CookedMullet",
-			"CookedCatshark"
+			"DecryptedDrive"
 		};
 	};
 

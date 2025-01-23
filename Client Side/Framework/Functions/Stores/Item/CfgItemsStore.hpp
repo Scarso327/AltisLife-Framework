@@ -226,6 +226,7 @@ class CfgItemsStore {
 			class ItemRadio {};
 			class Rangefinder {};
 			class NVGoggles {
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				class textures { class NVGoggles_OPFOR {}; }; 
 			};
 			class ToolKit {};
@@ -252,9 +253,6 @@ class CfgItemsStore {
 			class C_UavTerminal { condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; };
 			class ItemRadio {};
 			class Rangefinder {};
-			class NVGoggles {
-				class textures { class NVGoggles_OPFOR {}; }; 
-			};
 			class ToolKit {};
 			class Chemlight_green {};
 		};

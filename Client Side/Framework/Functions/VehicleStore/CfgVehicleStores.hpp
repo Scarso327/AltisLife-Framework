@@ -195,7 +195,7 @@ class CfgVehicleStores {
 		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
-			class C_Boat_Civil_01_police_F {
+			class C_Boat_Civil_01_F {
 				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};

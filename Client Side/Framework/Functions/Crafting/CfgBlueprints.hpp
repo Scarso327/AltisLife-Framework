@@ -17,7 +17,7 @@ class CfgBlueprints {
 			displayName = "Plank";
 			description = "Processed wood.";
 			materials[] = { {"Wood", 2} };
-			item = "Wood";
+			item = "Plank";
 			time = 2;
 		};
 		class B_Steel : B_Clay {

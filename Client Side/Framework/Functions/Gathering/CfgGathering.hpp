@@ -44,6 +44,12 @@ class CfgGathering {
 		areas[] = { { "peach_field_1", 20 }, { "peach_field_2", 20 }, { "peach_field_3", 20 }, { "peach_field_4", 20 } };
 		items[] = { { "FreshPeach", 100 } };
 	};
+	class Wood : BaseGather {
+		actionTitle = "Chopping";
+		reqItems[] = { "LumberAxe" };
+		areas[] = { { "logging_grounds_1", 20 }, { "logging_grounds_2", 20 }, { "logging_grounds_3", 20 }, { "logging_grounds_4", 20 } };
+		items[] = { { "wood", 100 } };
+	};
 	class Tobacco : BaseGather {
 		areas[] = { { "tobacco_field", 20 } };
 		items[] = { { "Tobacco", 100 } };
@@ -65,13 +71,6 @@ class CfgGathering {
 	class Cocaine : Corn {
 		areas[] = { { "cocaine_field", 20 } };
 		items[] = { { "UnprocessedCocaine", 100 } };
-	};
-
-	// Logging
-	class Wood : BaseLog {
-		reqItems[] = { "LumberAxe" };
-		areas[] = { { "logging_grounds_1", 20 }, { "logging_grounds_2", 20 }, { "logging_grounds_3", 20 }, { "logging_grounds_4", 20 } };
-		items[] = { { "wood", 100 } };
 	};
 
 	// Mining
@@ -124,6 +123,7 @@ class CfgGathering {
 		leveling[] = { 5, "Gathering", 100 };
 	};
 	class Uranium : Coral {
+		hidden[] = {};
 		areas[] = { { "uranium_mine", 20 } };
 		items[] = { { "UraniumOre", 100 } };
 		leveling[] = { 10, "Gathering", 70 };

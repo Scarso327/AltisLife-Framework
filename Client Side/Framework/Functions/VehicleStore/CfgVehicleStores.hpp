@@ -169,7 +169,7 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class C_Heli_Light_01_civil_F {
-				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class B_Heli_Light_01_F {
@@ -177,7 +177,7 @@ class CfgVehicleStores {
 				class Textures {};
 			};
 			class O_Heli_Light_02_unarmed_F {
-				condition = "[""Medic_AA"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			class O_Heli_Transport_04_medevac_black_F {

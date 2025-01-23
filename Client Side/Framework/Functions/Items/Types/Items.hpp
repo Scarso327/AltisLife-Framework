@@ -7,7 +7,7 @@ class ItemCompass : ItemMap { price = 60; };
 class ItemWatch : ItemMap { price = 1650; };
 class ItemGPS : ItemMap { price = 900; };
 class B_UavTerminal : ItemMap { price = 16500; };
-class C_UavTerminal : ItemMap { price = 16500; };
+class C_UavTerminal : C_UavTerminal {};
 class ItemRadio : ItemMap { price = 1100; };
 class ToolKit { price = 1000; };
 class Binocular { price = 850; };

@@ -249,6 +249,7 @@ class CfgItemsStore {
 			class ItemCompass {};
 			class ItemWatch {};
 			class ItemGPS {};
+			class C_UavTerminal { condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; };
 			class ItemRadio {};
 			class Rangefinder {};
 			class NVGoggles {

@@ -172,6 +172,10 @@ class CfgVehicleStores {
 				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
+			class B_Heli_Light_01_F {
+				condition = "[""Medic_AA"", 2] call ULP_fnc_hasAccess";
+				class Textures {};
+			};
 			class O_Heli_Light_02_unarmed_F {
 				condition = "[""Medic_AA"", 2] call ULP_fnc_hasAccess";
 				class Textures {};

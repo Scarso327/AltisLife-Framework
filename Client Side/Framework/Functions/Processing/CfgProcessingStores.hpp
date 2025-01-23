@@ -95,6 +95,6 @@ class CfgProcessingStores {
 
 	class Weapons : Base {
 		title = "Weapons Processing";
-		processes[] = { "WeaponCrate" };
+		processes[] = { "Weapons" };
 	};
 };

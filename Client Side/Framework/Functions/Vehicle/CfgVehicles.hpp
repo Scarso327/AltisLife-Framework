@@ -1422,8 +1422,10 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Sea\Police\RHIB_02.paa"
 				}; 
 			};
+			class Medic : MedicTexture {};
 		};
 	};
+	class C_Boat_Transport_02_F : I_C_Boat_Transport_02_F {};
 
 	class B_Boat_Armed_01_minigun_F : Base {
 		description = "This boat excels in speed and maneuverability and is used as a coastline guard boat and for special operations.";

@@ -199,6 +199,10 @@ class CfgVehicleStores {
 				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
+			class I_C_Boat_Transport_02_F {
+				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
+				class Textures {};
+			};
 		};
 	};
 

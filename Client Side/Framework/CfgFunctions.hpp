@@ -480,6 +480,7 @@ class CfgFunctions {
 			class addMarket {};
 			class addStore {};
 			class addGarage {};
+			class addGarageStore {};
 			class addVehicleStore {};
 			class addLicenseStore {};
 			class addProcessing {};

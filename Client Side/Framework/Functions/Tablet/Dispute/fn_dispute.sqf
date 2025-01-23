@@ -32,7 +32,7 @@ if (time < (missionNamespace getVariable ["ULP_LastDispute", 0])) exitWith {
 	
 	missionNamespace setVariable ["ULP_LastDispute", time + 5];
 	
-	[missionConfigFile >> "CfgMessages" >> "Dispute", format ["%1 would like for you to come onto teamspeak (mantlenetwork.co.uk) to discuss a situation...", name player], _player] call ULP_fnc_sendMessage;
+	[missionConfigFile >> "CfgMessages" >> "Dispute", format ["%1 would like for you to come onto teamspeak (ts3.mantlenetwork.co.uk) to discuss a situation", name player], _player] call ULP_fnc_sendMessage;
 	[format ["You have disputed <t color='#B92DE0'>%1</t>.", name _player]] call ULP_fnc_hint;
 
 	[getPlayerUID player, "Dispute", [getPlayerUID _player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

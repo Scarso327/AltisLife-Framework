@@ -10,10 +10,6 @@ class CfgGathering {
 		leveling[] = { 1, "Gathering", 100 };
 		condition = "true";
 	};
-	class BaseLog : BaseGather {
-		actionTitle = "Chopping";
-		reqItems[] = { "LumberAxe" };
-	};
 	class BaseMine : BaseGather {
 		actionTitle = "Mining";
 		reqItems[] = { "Pickaxe" };

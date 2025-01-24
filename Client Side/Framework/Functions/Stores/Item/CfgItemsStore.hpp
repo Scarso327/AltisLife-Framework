@@ -75,6 +75,10 @@ class CfgItemsStore {
 				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_Katiba_C_F {}; };
 			};
+			class arifle_Katiba_C_F {
+				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
+				class textures { class arifle_Katiba_C_F {}; };
+			};
 			class arifle_Katiba_GL_F {
 				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
 				class textures { class arifle_Katiba_GL_F {}; };

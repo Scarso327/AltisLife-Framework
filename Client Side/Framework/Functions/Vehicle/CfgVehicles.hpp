@@ -1484,58 +1484,57 @@ class CfgVehicles {
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
 			class TotalRed : BaseTexture {
 				displayName = "Total Red"; 
-				factions[] = { "Civilian", "Police" };
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa" }; 
 			};
-			class TotalBlue : TotalRed { 
+			class TotalBlue : BaseTexture { 
 				displayName = "Total Blue";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa" };
 			}; 
-			class Sheriff : TotalRed { 
+			class Sheriff : BaseTexture { 
 				displayName = "Sheriff";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa" };
 			}; 
-			class Blueline : TotalRed { 
+			class Blueline : BaseTexture { 
 				displayName = "Blueline";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_blueline_co.paa" };
 			}; 
-			class Elliptical : TotalRed { 
+			class Elliptical : BaseTexture { 
 				displayName = "Elliptical";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa" };
 			}; 
-			class Furious : TotalRed { 
+			class Furious : BaseTexture { 
 				displayName = "Furious";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa" };
 			}; 
-			class JeansBlue : TotalRed { 
+			class JeansBlue : BaseTexture { 
 				displayName = "Jeans Blue";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa" };
 			}; 
-			class SpeedyRedline : TotalRed { 
+			class SpeedyRedline : BaseTexture { 
 				displayName = "Speedy Redline";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa" };
 			}; 
-			class Sunset : TotalRed { 
+			class Sunset : BaseTexture { 
 				displayName = "Sunset";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa" };
 			}; 
-			class Vrana : TotalRed { 
+			class Vrana : BaseTexture { 
 				displayName = "Vrana";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa" };
 			}; 
-			class WavesBlue : TotalRed { 
+			class WavesBlue : BaseTexture { 
 				displayName = "Waves Blue";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa" };
 			}; 
-			class Shadow : TotalRed { 
+			class Shadow : BaseTexture { 
 				displayName = "Shadow";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\Heli_Light_01_ext_shadow_co.paa" };
 			}; 
-			class GrayWatcher : TotalRed { 
+			class GrayWatcher : BaseTexture { 
 				displayName = "Gray Watcher";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\Heli_Light_01_ext_graywatcher_co.paa" };
 			}; 
-			class Wasp : TotalRed { 
+			class Wasp : BaseTexture { 
 				displayName = "Wasp";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa" };
 			}; 

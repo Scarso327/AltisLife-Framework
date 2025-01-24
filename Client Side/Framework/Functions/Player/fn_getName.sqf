@@ -7,12 +7,13 @@ scopeName "fn_getName";
 
 _this params [
 	["_object", objNull, [objNull]],
-	["_checkMask", false, [true]]
+	["_checkMask", false, [true]],
+	["_force", false, [true]]
 ];
 
 if (_object isKindOf "Man" && { isPlayer _object }) exitWith {
 	private _name = switch (true) do {
-		case ([player] call ULP_fnc_onDuty): { name _object };
+		case ([player] call ULP_fnc_onDuty || { _force }): { name _object };
 		case (_checkMask && { [goggles _object] call ULP_fnc_isMask || [headgear _object] call ULP_fnc_isMask }): { "Masked Player" };
 		default { _object getVariable ["name", name _object] };
 	};

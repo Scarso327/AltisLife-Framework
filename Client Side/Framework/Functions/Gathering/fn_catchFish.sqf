@@ -19,7 +19,7 @@ if !(_typeOf in getArray (missionConfigFile >> "CfgGathering" >> "Fishing" >> "f
 if (_typeOf isEqualTo "Turtle_F") then {
 	private _zones = getArray (missionConfigFile >> "CfgGathering" >> "Fishing" >> "turtleZones");
 
-	if ((_zones findIf { (player distance (getMarkerPos _x)) <= 250 }) < 0) then {
+	if ((_zones findIf { (player distance (getMarkerPos _x)) <= 500 }) < 0) then {
 		["You must be within a turtle poaching zone to catch turtles!"] call ULP_fnc_hint;
 		false breakOut "fn_catchFish";
 	};

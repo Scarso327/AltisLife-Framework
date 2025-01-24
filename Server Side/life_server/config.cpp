@@ -75,6 +75,9 @@ class CfgPatches {
             class CaptureHideout : Dispute {};
             class SeizeComms : Dispute {};
             class NLR : Dispute {};
+            class Cartel : Dispute {};
+            class Misc : Dispute {};
+            class ReturnedToLobby : Dispute {};
 
             class Spawn {
                 params = 2;
@@ -85,6 +88,10 @@ class CfgPatches {
             class Imprisoned : Spawn {};
             class Robbery : Spawn {};
             class Craft : Spawn {};
+            class Bleedout : Spawn {};
+            class Election : Spawn {};
+            class BaseBid : Spawn {};
+            class Injured : Spawn {};
 
             class Money {
                 params = 5;
@@ -97,11 +104,7 @@ class CfgPatches {
             class Group : Executed {};
             class Admin : Executed {};
             class House : Executed {};
-            class Bleedout : Spawn {};
-            class Election : Spawn {};
-            class BaseBid : Spawn {};
-            class Cartel : Dispute {};
-            class Misc : Dispute {};
+            class InjuredBy : Executed {};
 
             class Mail {
                 params = 6;

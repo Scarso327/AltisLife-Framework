@@ -178,7 +178,7 @@ class CfgVehicles {
 
 	class C_Quadbike_01_F : Base {
 		description = "A Quadbike is an all-terrain vehicle with low-pressure tires and handlebars for steering. The military uses quad bikes for reconnaissance and to access terrain difficult for heavier vehicles.";
-		buyPrice = 11300;
+		buyPrice = 9300;
 		virtualSpace = 15;
 		class Textures {
 			class Black : BaseTexture {
@@ -206,7 +206,7 @@ class CfgVehicles {
 
 	class C_Hatchback_01_F : Base {
 		description = "A four-seat hatchback car mass-produced in the Far East to satisfy increasing demand for family cars. Also comes in a sporty version.";
-		buyPrice = 21450;
+		buyPrice = 17450;
 		virtualSpace = 25;
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
@@ -394,7 +394,7 @@ class CfgVehicles {
 
 	class C_Offroad_01_F : Base {
 		description = "The 4x4 pickup by Generic Motors has a durable chassis and powerful engine and has been designed to withstand the rugged terrain of the Mediterranean.";
-		buyPrice = 42800;
+		buyPrice = 35800;
 		virtualSpace = 60;
 		class Textures {
 			class White : BaseTexture {
@@ -460,7 +460,7 @@ class CfgVehicles {
 		buyPrice = 49100;
 		virtualSpace = 75;
 		class Textures {
-			class Hato : HatoTexture { 
+			class 39100 : HatoTexture { 
 				displayName = "HATO"; 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
 			};
@@ -482,12 +482,12 @@ class CfgVehicles {
 			};
 		};
 	};
-	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 54450; };
-	class C_Offroad_01_repair_F : C_Offroad_01_covered_F { buyPrice = 132400; };
+	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 44450; };
+	class C_Offroad_01_repair_F : C_Offroad_01_covered_F { buyPrice = 44450; };
 
 	class C_Offroad_02_unarmed_F : Base {
 		description = "The MB 4WD is a modern four-wheel drive off-road vehicle with a distinctive construction, powerful engine, durable chassis and great maneuverability.";
-		buyPrice = 38750;
+		buyPrice = 31750;
 		virtualSpace = 55;
 		class Textures {
 			class Medic : MedicTexture { 
@@ -543,7 +543,7 @@ class CfgVehicles {
 
 	class C_SUV_01_F : Base {
 		description = "A full-size luxury crossover SUV, not particularly suitable for off-road but with good on-road ability. Its powerful engine and 4x4 contribute to the enjoyable rides in higher speeds.";
-		buyPrice = 71200;
+		buyPrice = 54200;
 		virtualSpace = 45;
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
@@ -632,7 +632,7 @@ class CfgVehicles {
 
 	class C_Van_02_transport_F : Base {
 		description = "The van can be used for a variety of practical purposes. Featuring a long load length and excellent roof height, allowing for the transport of passengers, cargo and smaller vehicles.";
-		buyPrice = 88000;
+		buyPrice = 68000;
 		virtualSpace = 90;
 		enableRope = false;
 		class Textures {
@@ -700,7 +700,7 @@ class CfgVehicles {
 		};
 	};
 	class C_Van_02_vehicle_F : C_Van_02_transport_F {
-		buyPrice = 96650;
+		buyPrice = 86650;
 		virtualSpace = 110;
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
@@ -947,8 +947,8 @@ class CfgVehicles {
 
 	class C_Van_01_transport_F : BaseTruck {
 		description = "The civilian 4x4 truck is a highly customizable truck with off-road capabilities. It builds on retro design, but utilizes a modern engine and electronics.";
-		buyPrice = 190500;
-		virtualSpace = 100;
+		buyPrice = 105500;
+		virtualSpace = 125;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 

@@ -22,7 +22,7 @@ class CfgLicenses {
     class Trucking : Driving {
         displayName = "Trucking Licence";
         description = "The base requirement for purchasing a goods vehicle";
-        buyPrice = 95000;
+        buyPrice = 75000;
         class Settings : Settings {};
     };
 
@@ -36,7 +36,7 @@ class CfgLicenses {
     class Piloting : Driving {
         displayName = "Piloting Licence";
         description = "The base requirement for purchasing a helicopter/plane";
-        buyPrice = 780000;
+        buyPrice = 600000;
         class Settings : Settings {};
     };
 
@@ -80,7 +80,7 @@ class CfgLicenses {
     class Handgun : Driving {
         displayName = "Handgun Certificate";
         description = "Certification permitting the ownership of a handgun";
-        buyPrice = 95000;
+        buyPrice = 85000;
         class Settings : Settings {};
     };
 
@@ -132,13 +132,13 @@ class CfgLicenses {
 
     class Tobacco : BaseLicense {
         displayName = "Tobacco Processing";
-        buyPrice = 45000;
+        buyPrice = 30000;
         class Settings {};
     };
 
     class Copper : BaseLicense {
         displayName = "Copper Processing";
-        buyPrice = 30000;
+        buyPrice = 25000;
         class Settings {};
     };
 

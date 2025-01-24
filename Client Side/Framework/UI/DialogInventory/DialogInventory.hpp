@@ -140,6 +140,7 @@ class DialogInventory {
 			SAFEZONE_W((((UI_WIDTH - (MARGIN_X * 2)) / 2) - (MARGIN_X / 2)));
 			SAFEZONE_H((BODY_HEIGHT - (MARGIN_Y * 3)) - (BUTTON_H * 4));
 			text = "";	
+			onLBDblClick = "_this call ULP_fnc_putInCargo;";
 			rowHeight = 0.04;
 			sizeEx = 0.038;
 			columns[] = { 0, 0.6 };
@@ -184,6 +185,7 @@ class DialogInventory {
 
 		class ContainerList : PersonalList {
 			idc = 4208;
+			onLBDblClick = "_this call ULP_fnc_takeFromCargo;";
 			SAFEZONE_X(CONTAINER_X);
 		};
 

@@ -67,8 +67,8 @@ class CfgChat {
 			action = "[""Total Players:"", format [""%1"", count allPlayers]]";
 			condition = "true";
 		};
-		class Police : Players { action = "[""Total Police:"", format [""%1"", count ([""Police""] call ULP_fnc_allMembers)]]"; };
-		class Medics : Players { action = "[""Total Medics:"", format [""%1"", count ([""Medic""] call ULP_fnc_allMembers)]]"; };
+		class Police : Players { action = "[""Total Police:"", format [""%1"", [""Police""] call ULP_fnc_onlineFaction]]"; };
+		class Medics : Players { action = "[""Total Medics:"", format [""%1"", [""Medic""] call ULP_fnc_onlineFaction]]"; };
 		class Cops : Police {};
 
 		class Discord : Players { action = """Discord @ discord.gg/mantlenetwork"""; };

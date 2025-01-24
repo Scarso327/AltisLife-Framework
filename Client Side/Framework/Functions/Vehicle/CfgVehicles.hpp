@@ -1713,7 +1713,7 @@ class CfgVehicles {
 	class B_Heli_Transport_03_unarmed_F : BaseAir {
 		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
-		virtualSpace = 400;
+		virtualSpace = 500;
 		garageLimit = 1;
 		class Textures {
 			class Police : PoliceTextureBase {

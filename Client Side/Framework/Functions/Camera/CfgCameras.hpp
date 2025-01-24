@@ -5,23 +5,23 @@ class CfgCameras {
 			class Cameras {
 				class CarPark {
 					name = "HM Prison Car Park";
-					position[] = {12337.519,14376.288,4.363};
-					target[] = {12351.6,14368.9,0};
+					position[] = {12562.366,16508.592,5.007};
+					target[] = {12561.127,16487.44,0};
 				};
 				class Lobby {
 					name = "HM Prison Lobby";
-					position[] = {12328.3,14372.3,4.43624};
-					target[] = {12338,14369.9,0};
+					position[] = {12596.4,16518.6,4.18496};
+					target[] = {12595.5,16513.3,0};
 				};
-				class MainHall {
-					name = "HM Prison Main Hall";
-					position[] = {12341.158,14366.455,4.105};
-					target[] = {12336.4,14345.1,0};
+				class Yard1 {
+					name = "HM Prison Yard 1";
+					position[] = {12587.2,16530.7,8.11624};
+					target[] = {12554,16543.5,0};
 				};
-				class Yard {
-					name = "HM Prison Yard";
-					position[] = {12333.9,14337.6,5.12775};
-					target[] = {12324.5,14345.4,0};
+				class Yard2 {
+					name = "HM Prison Yard 2";
+					position[] = {12516.9,16568,7.82048};
+					target[] = {12545.7,16552.3,0};
 				};
 			};
 		};

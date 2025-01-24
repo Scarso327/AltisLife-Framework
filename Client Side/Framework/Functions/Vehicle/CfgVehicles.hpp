@@ -31,9 +31,6 @@ class CfgVehicles {
 		chopKeepChance = 85;
 		chopTime = 120;
 		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-
 			"UnprocessedOil",
 			"ProcessedOil"
 		};

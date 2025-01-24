@@ -214,6 +214,20 @@ class CfgInteractions {
 			onClick = "_this call ULP_fnc_sellHouse;";
 			condition = "[_this, player, false] call ULP_fnc_isHouseOwner";
 		};
+
+		class VehicleGarage {
+			title = "Vehicle Garage";
+			factions[] = { "Civilian" };
+			onClick = "closeDialog 0; [{ !dialog }, _this, { [[""Car""], [[_this select 0] call ULP_fnc_getHouseGarageSpawn]] call ULP_fnc_openGarage; }] call ULP_fnc_waitUntilExecute;";
+			condition = "[_this] call ULP_fnc_isHouseOwner && { [_this] call ULP_fnc_isHouseGarage }";
+		};
+
+		class StoreVehicle {
+			title = "Store Vehicle";
+			factions[] = { "Civilian" };
+			onClick = "closeDialog 0; [_this select 0, [""Car""]] call ULP_fnc_storeVehicle;";
+			condition = "[_this] call ULP_fnc_isHouseOwner && { [_this] call ULP_fnc_isHouseGarage } && { (player distance _this) <= 10 }";
+		};
 	};
 
 	class HouseStorage {

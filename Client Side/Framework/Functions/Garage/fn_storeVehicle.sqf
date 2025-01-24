@@ -24,7 +24,7 @@ if (isNil "_vehicle" || { isNull _vehicle } || { !(alive _vehicle) }) exitWith {
 };
 
 if ([[player] call ULP_fnc_getFaction, "vehicles"] call ULP_fnc_factionPresistant && { (_vehicle getVariable ["vehicle_id", -1]) >= 0  }) exitWith {
-	[format["Storing %1", ([typeOf _vehicle] call ULP_fnc_itemCfg) param [5, "Vehicle"]], 20, [_location, _vehicle], { (player distance (_this select 0)) <= 5 }, {
+	[format["Storing %1", ([typeOf _vehicle] call ULP_fnc_itemCfg) param [5, "Vehicle"]], 20, [_location, _vehicle], { (player distance (_this select 0)) <= 10 }, {
 		_this params [ "", "_vehicle" ];
 
 		["VehicleStored", { ["Vehicle has been stored."] call ULP_fnc_hint; }, true] call ULP_fnc_addEventHandler;

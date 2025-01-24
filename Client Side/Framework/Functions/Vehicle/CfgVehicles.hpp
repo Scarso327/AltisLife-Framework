@@ -1763,24 +1763,24 @@ class CfgVehicles {
 	class B_T_VTOL_01_infantry_F : BaseAir {
 		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";
 		buyPrice = 75500000;
-		virtualSpace = 175;
+		virtualSpace = 650;
 		garageLimit = 1;
 		retrievalPerc = 0.001;
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
 		buyPrice = 85750000;
-		virtualSpace = 225;
+		virtualSpace = 700;
 	};
 
 	class O_T_VTOL_02_infantry_F : B_T_VTOL_01_infantry_F {
 		description = "The most promising prototype built by CSAT engineers presents an extremely progressive design with many unique features and top-notch bleeding-edge technologies.";
 		buyPrice = 115650000;
-		virtualSpace = 80;
+		virtualSpace = 180;
 		turrets[] = {};
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
 		buyPrice = 125530000;
-		virtualSpace = 95;
+		virtualSpace = 230;
 	};
 
 	class I_Plane_Fighter_03_CAS_F : BaseAir {

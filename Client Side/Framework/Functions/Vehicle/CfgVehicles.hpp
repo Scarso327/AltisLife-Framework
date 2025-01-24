@@ -457,10 +457,10 @@ class CfgVehicles {
 		};
 	};
 	class C_Offroad_01_covered_F : C_Offroad_01_F {
-		buyPrice = 49100;
+		buyPrice = 39100;
 		virtualSpace = 75;
 		class Textures {
-			class 39100 : HatoTexture { 
+			class Hato : HatoTexture { 
 				displayName = "HATO"; 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
 			};

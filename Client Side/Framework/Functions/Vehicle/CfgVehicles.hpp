@@ -94,7 +94,7 @@ class CfgVehicles {
 	// Base without siren or lights (for helis)
 	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
-		class Siren { SFX[] = { "Police_One", "Police_Two", "Police_Three" }; };
+		class Siren { SFX[] = { "Siren_1", "Siren_2" }; };
 		class Actions {
 			class PNC {
 				actionTitle = "Police National Computer";
@@ -115,7 +115,7 @@ class CfgVehicles {
 
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
-		class Siren { SFX[] = { "Police_One" }; };
+		class Siren { SFX[] = { "Siren_4", "Siren_3" }; };
 		class Actions {
 			class NHSDispatcher {
 				actionTitle = "NHS Dispatcher";
@@ -1876,7 +1876,8 @@ class CfgVehicles {
 	class Land_PortableServer_01_black_F : Land_CargoBox_V1_F {};
 
 	// SOUNDS --------------------------------------------------------------------------------------
-	class Police_One { sound = "Police_One"; };
-	class Police_Two { sound = "Police_Two"; };
-	class Police_Three { sound = "Police_Three"; };
+	class Siren_1 { sound = "Siren_1"; };
+	class Siren_2 { sound = "Siren_2"; };
+	class Siren_3 { sound = "Siren_3"; };
+	class Siren_4 { sound = "Siren_4"; };
 };

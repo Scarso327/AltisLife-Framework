@@ -22,7 +22,8 @@ class 16Rnd_9x21_Mag : BaseMagazine { price = 136; };
 class 30Rnd_9x21_Mag : BaseMagazine { price = 272; };
 
 class 30Rnd_9x21_Mag_SMG_02 : BaseMagazine { price = 480; };
-class 30Rnd_9x21_Mag_SMG_02_Tracer_Red : 30Rnd_9x21_Mag_SMG_02 { 
+class 30Rnd_9x21_Mag_SMG_02_Tracer_Red : BaseMagazine { 
+	price = 480;
 	class Textures {
 		class 30Rnd_556x45_Stanag_Tracer_Red {
 			displayName = "Red";
@@ -40,7 +41,8 @@ class 9Rnd_45ACP_Mag : BaseMagazine { price = 132; };
 class 11Rnd_45ACP_Mag : BaseMagazine { price = 176; };
 
 class 30Rnd_45ACP_Mag_SMG_01 : BaseMagazine { price = 688; };
-class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green : 30Rnd_45ACP_Mag_SMG_01 { 
+class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green : RepMagazine { 
+	price = 688;
 	class Textures {
 		class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {
 			displayName = "Green";
@@ -74,7 +76,8 @@ class 50Rnd_570x28_SMG_03 : RepMagazine { price = 2112; };
 class 20Rnd_556x45_UW_mag : RepMagazine { price = 20000; };
 
 class 30Rnd_556x45_Stanag : RepMagazine { price = 1840; };
-class 30Rnd_556x45_Stanag_Tracer_Red : 30Rnd_556x45_Stanag { 
+class 30Rnd_556x45_Stanag_Tracer_Red : RepMagazine { 
+	price = 1840;
 	class Textures {
 		class 30Rnd_556x45_Stanag_Tracer_Red {
 			displayName = "Red";
@@ -87,27 +90,27 @@ class 30Rnd_556x45_Stanag_Tracer_Red : 30Rnd_556x45_Stanag {
 class 30Rnd_556x45_Stanag_Tracer_Yellow : 30Rnd_556x45_Stanag_Tracer_Red {};
 class 30Rnd_556x45_Stanag_Tracer_Green : 30Rnd_556x45_Stanag_Tracer_Red {};
 
-class 150Rnd_556x45_Drum_Mag_F : 30Rnd_556x45_Stanag_Tracer_Red { price = 13040; };
-class 150Rnd_556x45_Drum_Mag_Tracer_F : 150Rnd_556x45_Drum_Mag_F {};
+class 150Rnd_556x45_Drum_Mag_F : RepMagazine { price = 13040; };
+class 150Rnd_556x45_Drum_Mag_Tracer_F : RepMagazine { price = 13040; };
 
 class 200Rnd_556x45_Box_F : RepMagazine { price = 17200; };
 
 // 5.8mm
 class 30Rnd_580x42_Mag_F : RepMagazine { price = 2200; };
-class 30Rnd_580x42_Mag_Tracer_F : 30Rnd_580x42_Mag_F {};
+class 30Rnd_580x42_Mag_Tracer_F : RepMagazine { price = 2200; };
 
 class 100Rnd_580x42_Mag_F : RepMagazine { price = 15120; };
-class 100Rnd_580x42_Mag_Tracer_F : 100Rnd_580x42_Mag_F {};
+class 100Rnd_580x42_Mag_Tracer_F : RepMagazine { price = 15120; };
 
 // 6.5mm
 class 20Rnd_650x39_Cased_Mag_F : RepMagazine { price = 2240; };
 
 class 30Rnd_65x39_caseless_green : RepMagazine { price = 2240; };
-class 30Rnd_65x39_caseless_green_mag_Tracer : 30Rnd_65x39_caseless_green {};
+class 30Rnd_65x39_caseless_green_mag_Tracer : RepMagazine { price = 2240; };
 
 
 class 30Rnd_65x39_caseless_msbs_mag : RepMagazine { price = 2456; };
-class 30Rnd_65x39_caseless_msbs_mag_Tracer : 30Rnd_65x39_caseless_msbs_mag {};
+class 30Rnd_65x39_caseless_msbs_mag_Tracer : RepMagazine { price = 2456; };
 
 class 30Rnd_65x39_caseless_black_mag : RepMagazine {
 	price = 2792;
@@ -126,7 +129,8 @@ class 30Rnd_65x39_caseless_black_mag : RepMagazine {
 class 30Rnd_65x39_caseless_mag : 30Rnd_65x39_caseless_black_mag {};
 class 30Rnd_65x39_caseless_khaki_mag : 30Rnd_65x39_caseless_black_mag {};
 
-class 30Rnd_65x39_caseless_black_mag_Tracer : 30Rnd_65x39_caseless_black_mag { 
+class 30Rnd_65x39_caseless_black_mag_Tracer : RepMagazine { 
+	price = 2792;
 	class Textures {
 		class 30Rnd_65x39_caseless_black_mag_Tracer {
 			displayName = "Black";
@@ -159,7 +163,8 @@ class 100Rnd_65x39_caseless_black_mag : RepMagazine {
 class 100Rnd_65x39_caseless_mag : 100Rnd_65x39_caseless_black_mag {};
 class 100Rnd_65x39_caseless_khaki_mag : 100Rnd_65x39_caseless_black_mag {};
 
-class 100Rnd_65x39_caseless_black_mag_tracer : 100Rnd_65x39_caseless_black_mag { 
+class 100Rnd_65x39_caseless_black_mag_tracer : RepMagazine { 
+	price = 18880;
 	class Textures {
 		class 100Rnd_65x39_caseless_black_mag_tracer {
 			displayName = "Black";
@@ -176,7 +181,7 @@ class 100Rnd_65x39_caseless_mag_Tracer : 100Rnd_65x39_caseless_black_mag_tracer 
 class 100Rnd_65x39_caseless_khaki_mag_tracer : 100Rnd_65x39_caseless_black_mag_tracer {};
 
 class 200Rnd_65x39_cased_Box : RepMagazine { price = 26440; };
-class 200Rnd_65x39_cased_Box_Tracer : 200Rnd_65x39_cased_Box { 
+class 200Rnd_65x39_cased_Box_Tracer : RepMagazine { 
 	price = 26440; 
 	class Textures {
 		class 200Rnd_65x39_cased_Box_Tracer {
@@ -195,10 +200,10 @@ class 20Rnd_762x51_Mag : RepMagazine { price = 7920; };
 class 30Rnd_762x39_Mag_F : RepMagazine { price = 11520; };
 
 class 30Rnd_762x39_AK12_Mag_F : RepMagazine { price = 11824; };
-class 30Rnd_762x39_AK12_Mag_Tracer_F : 30Rnd_762x39_AK12_Mag_F {};
+class 30Rnd_762x39_AK12_Mag_Tracer_F : RepMagazine { price = 11824; };
 
 class 75Rnd_762x39_Mag_F : RepMagazine { price = 39500; };
-class 75Rnd_762x39_Mag_Tracer_F : 75Rnd_762x39_Mag_F {};
+class 75Rnd_762x39_Mag_Tracer_F : RepMagazine { price = 39500; };
 
 class 150Rnd_762x54_Box : RepMagazine { price = 48900; };
 

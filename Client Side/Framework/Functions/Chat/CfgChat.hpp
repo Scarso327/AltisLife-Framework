@@ -67,6 +67,15 @@ class CfgChat {
 			action = "[""Total Players:"", format [""%1"", count allPlayers]]";
 			condition = "true";
 		};
+		class Police : Players { action = "[""Total Police:"", format [""%1"", [""Police""] call ULP_fnc_onlineFaction]]"; };
+		class Medics : Players { action = "[""Total Medics:"", format [""%1"", [""Medic""] call ULP_fnc_onlineFaction]]"; };
+		class Cops : Police {};
+
+		class Discord : Players { action = """Discord @ discord.gg/mantlenetwork"""; };
+		class Teamspeak : Players { action = """Teamspeak @ ts3.mantlenetwork.co.uk"""; };
+		class TS : Teamspeak {};
+		class TS3 : Teamspeak {};
+
 		class PID {
 			action = "[""ARP ID:"", format [""%1"", [ULP_ID] call ULP_fnc_numberText]]";
 			condition = "(missionNamespace getVariable [""ULP_ID"", -1]) > -1";

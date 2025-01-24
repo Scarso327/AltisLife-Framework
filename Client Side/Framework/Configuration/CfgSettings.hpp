@@ -40,8 +40,8 @@ class CfgSettings {
             items[] = {"""Welcome to""", """Mantle Network's Altis Life!"""};
             condition = "true";
         };
-        class Forums : Hello {
-            items[] = {"""Join us:""", """mantlenetwork.co.uk"""};
+        class Discord : Hello {
+            items[] = {"""Join us:""", """discord.gg/mantlenetwork"""};
         };
         class Development : Hello {
             items[] = {"""Development Team""", """Scarso and Lewis"""};

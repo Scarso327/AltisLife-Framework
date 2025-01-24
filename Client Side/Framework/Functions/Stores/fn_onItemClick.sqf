@@ -19,10 +19,10 @@ if (_data isEqualTo "") exitWith {};
 _data = parseSimpleArray _data;
 
 _data params [
-	"_className", "_displayName", "_picture", "_textures", "_allowDefault"
+	"_className", "_displayName", "_picture", "_textures", "_allowDefault", "", "", "_virtualSpace"
 ];
 
-_display setVariable ["itemData", [_displayName, (_ctrl lbValue _index)]];
+_display setVariable ["itemData", [_displayName, (_ctrl lbValue _index), _virtualSpace]];
 
 (_display displayCtrl 3104) ctrlSetText _picture;
 

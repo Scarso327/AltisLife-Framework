@@ -55,7 +55,8 @@ if ((count _items) isEqualTo 0) exitWith {
 		] select (isClass (_x >> "Textures"))),
 		isNumber(_x >> "allowDefaultTexture"),
 		_categoryCfgName,
-		_dlcPicture
+		_dlcPicture,
+		getNumber ((_itemCfg select 2) >> "virtualSpace")
 	];
 
 	private _item = _itemList lbAdd (_itemInfo select 1);

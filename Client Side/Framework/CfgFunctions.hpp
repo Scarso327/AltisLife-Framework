@@ -678,6 +678,8 @@ class CfgFunctions {
 			class sellHouse {};
 			class shareHouse {};
 			class renameHouse {};
+			class isHouseGarage {};
+			class getHouseGarageSpawn {};
 		};
 
 		class Missions {

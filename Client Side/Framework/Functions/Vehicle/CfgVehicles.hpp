@@ -981,12 +981,12 @@ class CfgVehicles {
 		};
 	};
 	class C_Van_01_box_F : C_Van_01_transport_F {
-		buyPrice = 245000;
+		buyPrice = 145500;
 		virtualSpace = 150;
 	};
 	class C_Van_01_fuel_F : C_Van_01_transport_F {
-		buyPrice = 210500;
-		virtualSpace = 120;
+		buyPrice = 200000;
+		virtualSpace = 100;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -1068,8 +1068,8 @@ class CfgVehicles {
 		};
 	};
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
-		buyPrice = 435000;
-		virtualSpace = 200;
+		buyPrice = 750000;
+		virtualSpace = 300;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -1091,7 +1091,7 @@ class CfgVehicles {
 
 	class O_Truck_03_transport_F : BaseTruck {
 		description = "The Tempest is a 6x6 mine resistant standard transport truck. The modular design of the truck allows several transport versions.";
-		buyPrice = 615500;
+		buyPrice = 850550;
 		virtualSpace = 370;
 		class Textures {
 			class BrownHex : BaseTexture {
@@ -1114,33 +1114,33 @@ class CfgVehicles {
 		};
 	};
 	class O_Truck_03_covered_F : O_Truck_03_transport_F {
-		buyPrice = 670500;
+		buyPrice = 988600;
 		virtualSpace = 410;
 	};
 	class O_Truck_03_repair_F : O_Truck_03_transport_F {
-		buyPrice = 728000;
+		buyPrice = 1398000;
 		virtualSpace = 485;
 	};
 	class O_Truck_03_ammo_F : O_Truck_03_transport_F {
-		buyPrice = 710000;
+		buyPrice = 1280000;
 		virtualSpace = 460;
 	};
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
-		buyPrice = 590500;
-		virtualSpace = 350;
+		buyPrice = 1500000;
+		virtualSpace = 450;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
 		};
 	};
 	class O_Truck_03_device_F : O_Truck_03_transport_F {
-		buyPrice = 1150000;
+		buyPrice = 7200000;
 		virtualSpace = 150;
 	};
 
 	class B_Truck_01_mover_F : BaseTruck {
 		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. There are several versions covering the basic transport functions.";
-		buyPrice = 334000;
+		buyPrice = 478500;
 		virtualSpace = 10;
 		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk } || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
@@ -1160,7 +1160,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_flatbed_F : B_Truck_01_mover_F {
-		buyPrice = 376000;
+		buyPrice = 492450;
 		virtualSpace = 10;
 		class Textures {
 			class Hato : HatoTexture { 
@@ -1178,7 +1178,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_cargo_F : B_Truck_01_mover_F {
-		buyPrice = 690500;
+		buyPrice = 1170000;
 		virtualSpace = 450;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1202,7 +1202,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_transport_F : B_Truck_01_mover_F {
-		buyPrice = 795000;
+		buyPrice = 1596500;
 		virtualSpace = 535;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1224,7 +1224,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_covered_F : B_Truck_01_mover_F {
-		buyPrice = 865000;
+		buyPrice = 1834550;
 		virtualSpace = 590;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1248,7 +1248,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_ammo_F : B_Truck_01_mover_F {
-		buyPrice = 905000;
+		buyPrice = 2156000;
 		virtualSpace = 650;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1270,8 +1270,8 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
-		buyPrice = 880000;
-		virtualSpace = 500;
+		buyPrice = 3000000;
+		virtualSpace = 750;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -1296,7 +1296,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_box_F : B_Truck_01_mover_F {
-		buyPrice = 1990000;
+		buyPrice = 2610000;
 		virtualSpace = 800;
 		class Textures {
 			class Sand : BaseTexture {

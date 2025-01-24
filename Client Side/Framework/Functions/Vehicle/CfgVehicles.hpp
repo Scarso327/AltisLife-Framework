@@ -178,7 +178,7 @@ class CfgVehicles {
 
 	class C_Quadbike_01_F : Base {
 		description = "A Quadbike is an all-terrain vehicle with low-pressure tires and handlebars for steering. The military uses quad bikes for reconnaissance and to access terrain difficult for heavier vehicles.";
-		buyPrice = 11300;
+		buyPrice = 9300;
 		virtualSpace = 15;
 		class Textures {
 			class Black : BaseTexture {
@@ -206,7 +206,7 @@ class CfgVehicles {
 
 	class C_Hatchback_01_F : Base {
 		description = "A four-seat hatchback car mass-produced in the Far East to satisfy increasing demand for family cars. Also comes in a sporty version.";
-		buyPrice = 21450;
+		buyPrice = 17450;
 		virtualSpace = 25;
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
@@ -394,7 +394,7 @@ class CfgVehicles {
 
 	class C_Offroad_01_F : Base {
 		description = "The 4x4 pickup by Generic Motors has a durable chassis and powerful engine and has been designed to withstand the rugged terrain of the Mediterranean.";
-		buyPrice = 42800;
+		buyPrice = 35800;
 		virtualSpace = 60;
 		class Textures {
 			class White : BaseTexture {
@@ -460,7 +460,7 @@ class CfgVehicles {
 		buyPrice = 49100;
 		virtualSpace = 75;
 		class Textures {
-			class Hato : HatoTexture { 
+			class 39100 : HatoTexture { 
 				displayName = "HATO"; 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
 			};
@@ -482,12 +482,12 @@ class CfgVehicles {
 			};
 		};
 	};
-	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 54450; };
-	class C_Offroad_01_repair_F : C_Offroad_01_covered_F { buyPrice = 132400; };
+	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 44450; };
+	class C_Offroad_01_repair_F : C_Offroad_01_covered_F { buyPrice = 44450; };
 
 	class C_Offroad_02_unarmed_F : Base {
 		description = "The MB 4WD is a modern four-wheel drive off-road vehicle with a distinctive construction, powerful engine, durable chassis and great maneuverability.";
-		buyPrice = 38750;
+		buyPrice = 31750;
 		virtualSpace = 55;
 		class Textures {
 			class Medic : MedicTexture { 
@@ -543,7 +543,7 @@ class CfgVehicles {
 
 	class C_SUV_01_F : Base {
 		description = "A full-size luxury crossover SUV, not particularly suitable for off-road but with good on-road ability. Its powerful engine and 4x4 contribute to the enjoyable rides in higher speeds.";
-		buyPrice = 71200;
+		buyPrice = 54200;
 		virtualSpace = 45;
 		class Textures {
 			class PoliceWhite : PoliceTexture { 
@@ -632,7 +632,7 @@ class CfgVehicles {
 
 	class C_Van_02_transport_F : Base {
 		description = "The van can be used for a variety of practical purposes. Featuring a long load length and excellent roof height, allowing for the transport of passengers, cargo and smaller vehicles.";
-		buyPrice = 88000;
+		buyPrice = 68000;
 		virtualSpace = 90;
 		enableRope = false;
 		class Textures {
@@ -700,7 +700,7 @@ class CfgVehicles {
 		};
 	};
 	class C_Van_02_vehicle_F : C_Van_02_transport_F {
-		buyPrice = 96650;
+		buyPrice = 86650;
 		virtualSpace = 110;
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
@@ -947,8 +947,8 @@ class CfgVehicles {
 
 	class C_Van_01_transport_F : BaseTruck {
 		description = "The civilian 4x4 truck is a highly customizable truck with off-road capabilities. It builds on retro design, but utilizes a modern engine and electronics.";
-		buyPrice = 190500;
-		virtualSpace = 100;
+		buyPrice = 105500;
+		virtualSpace = 125;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -981,12 +981,12 @@ class CfgVehicles {
 		};
 	};
 	class C_Van_01_box_F : C_Van_01_transport_F {
-		buyPrice = 245000;
+		buyPrice = 145500;
 		virtualSpace = 150;
 	};
 	class C_Van_01_fuel_F : C_Van_01_transport_F {
-		buyPrice = 210500;
-		virtualSpace = 120;
+		buyPrice = 200000;
+		virtualSpace = 100;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -1068,8 +1068,8 @@ class CfgVehicles {
 		};
 	};
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
-		buyPrice = 435000;
-		virtualSpace = 200;
+		buyPrice = 750000;
+		virtualSpace = 300;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -1091,7 +1091,7 @@ class CfgVehicles {
 
 	class O_Truck_03_transport_F : BaseTruck {
 		description = "The Tempest is a 6x6 mine resistant standard transport truck. The modular design of the truck allows several transport versions.";
-		buyPrice = 615500;
+		buyPrice = 850550;
 		virtualSpace = 370;
 		class Textures {
 			class BrownHex : BaseTexture {
@@ -1114,33 +1114,33 @@ class CfgVehicles {
 		};
 	};
 	class O_Truck_03_covered_F : O_Truck_03_transport_F {
-		buyPrice = 670500;
+		buyPrice = 988600;
 		virtualSpace = 410;
 	};
 	class O_Truck_03_repair_F : O_Truck_03_transport_F {
-		buyPrice = 728000;
+		buyPrice = 1398000;
 		virtualSpace = 485;
 	};
 	class O_Truck_03_ammo_F : O_Truck_03_transport_F {
-		buyPrice = 710000;
+		buyPrice = 1280000;
 		virtualSpace = 460;
 	};
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
-		buyPrice = 590500;
-		virtualSpace = 350;
+		buyPrice = 1500000;
+		virtualSpace = 450;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
 		};
 	};
 	class O_Truck_03_device_F : O_Truck_03_transport_F {
-		buyPrice = 1150000;
+		buyPrice = 7200000;
 		virtualSpace = 150;
 	};
 
 	class B_Truck_01_mover_F : BaseTruck {
 		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. There are several versions covering the basic transport functions.";
-		buyPrice = 334000;
+		buyPrice = 478500;
 		virtualSpace = 10;
 		canTransfer = false;
 		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk } || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
@@ -1160,7 +1160,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_flatbed_F : B_Truck_01_mover_F {
-		buyPrice = 376000;
+		buyPrice = 492450;
 		virtualSpace = 10;
 		class Textures {
 			class Hato : HatoTexture { 
@@ -1178,7 +1178,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_cargo_F : B_Truck_01_mover_F {
-		buyPrice = 690500;
+		buyPrice = 1170000;
 		virtualSpace = 450;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1202,7 +1202,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_transport_F : B_Truck_01_mover_F {
-		buyPrice = 795000;
+		buyPrice = 1596500;
 		virtualSpace = 535;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1224,7 +1224,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_covered_F : B_Truck_01_mover_F {
-		buyPrice = 865000;
+		buyPrice = 1834550;
 		virtualSpace = 590;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1248,7 +1248,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_ammo_F : B_Truck_01_mover_F {
-		buyPrice = 905000;
+		buyPrice = 2156000;
 		virtualSpace = 650;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1270,8 +1270,8 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
-		buyPrice = 880000;
-		virtualSpace = 500;
+		buyPrice = 3000000;
+		virtualSpace = 750;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -1296,7 +1296,7 @@ class CfgVehicles {
 		};
 	};
 	class B_Truck_01_box_F : B_Truck_01_mover_F {
-		buyPrice = 1990000;
+		buyPrice = 2610000;
 		virtualSpace = 800;
 		class Textures {
 			class Sand : BaseTexture {
@@ -1712,7 +1712,7 @@ class CfgVehicles {
 	class B_Heli_Transport_03_unarmed_F : BaseAir {
 		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
-		virtualSpace = 400;
+		virtualSpace = 500;
 		garageLimit = 1;
 		class Textures {
 			class Police : PoliceTextureBase {
@@ -1762,24 +1762,24 @@ class CfgVehicles {
 	class B_T_VTOL_01_infantry_F : BaseAir {
 		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";
 		buyPrice = 75500000;
-		virtualSpace = 175;
+		virtualSpace = 650;
 		garageLimit = 1;
 		retrievalPerc = 0.001;
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
 		buyPrice = 85750000;
-		virtualSpace = 225;
+		virtualSpace = 700;
 	};
 
 	class O_T_VTOL_02_infantry_F : B_T_VTOL_01_infantry_F {
 		description = "The most promising prototype built by CSAT engineers presents an extremely progressive design with many unique features and top-notch bleeding-edge technologies.";
 		buyPrice = 115650000;
-		virtualSpace = 80;
+		virtualSpace = 180;
 		turrets[] = {};
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
 		buyPrice = 125530000;
-		virtualSpace = 95;
+		virtualSpace = 230;
 	};
 
 	class I_Plane_Fighter_03_CAS_F : BaseAir {

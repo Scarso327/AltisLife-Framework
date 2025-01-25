@@ -1462,9 +1462,6 @@ class CfgVehicles {
 	class B_UAV_01_F : BaseAir {
 		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
 		buyPrice = 98700;
-		class Textures {
-			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Sea\Police\darter.paa", }; };
-		};
 	};
 	class C_UAV_06_medical_F : B_UAV_01_F {
 		description = "This commercial off-the-shelf utility drone uses 6 rotors to transport small payloads inside its external cargo case.";
@@ -1600,10 +1597,10 @@ class CfgVehicles {
 		turrets[] = {};
 		class Textures {
 			class Police : PoliceTextureBase {
-				textures[] = { 
-					"Data\Textures\Vehicles\Air\Police\ghosthawk_01.paa",
-					"Data\Textures\Vehicles\Air\Police\ghosthawk_02.paa"
-				}; 
+				turrets[] = { 
+					{ { 1 },  { "LMG_Minigun_Transport" },  { "2000Rnd_65x39_Belt_Tracer_Red" } },
+					{ { 2 },  { "LMG_Minigun_Transport2" },  { "2000Rnd_65x39_Belt_Tracer_Red" } }
+				};
 			};
 			class Civilian : BaseTexture {};
 		};
@@ -1661,14 +1658,10 @@ class CfgVehicles {
 		buyPrice = 11350000;
 		garageLimit = 1;
 		class Textures {
-			class Police : PoliceTextureBase {
-				textures[] = { 
-					"Data\Textures\Vehicles\Air\Police\taru_01.paa",
-					"Data\Textures\Vehicles\Air\Police\taru_02.paa",
-					"Data\Textures\Vehicles\Air\Police\taru_03.paa"
-				}; 
+			class Black : BaseTexture {
+				displayName = "Black"; 
+				factions[] = { "Civilian", "Police" };
 			};
-			class Civilian : BaseTexture {};
 		};
 	};
 	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
@@ -1712,12 +1705,6 @@ class CfgVehicles {
 		virtualSpace = 500;
 		garageLimit = 1;
 		class Textures {
-			class Police : PoliceTextureBase {
-				textures[] = { 
-					"Data\Textures\Vehicles\Air\Police\huron_01.paa",
-					"Data\Textures\Vehicles\Air\Police\huron_02.paa"
-				}; 
-			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				factions[] = { "Civilian", "Police" };

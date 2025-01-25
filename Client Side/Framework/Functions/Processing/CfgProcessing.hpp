@@ -178,8 +178,9 @@ class CfgProcessing {
 	// Majors
 	class Gold : BaseProcess {
 		processTime = 120;
-		materials[] = { { "UnmarkedGold", 1 } };
-		items[] = { { "MarkedGold", 1 } };
+		processTitle = "Debranding";
+		materials[] = { { "MarkedGold", 1 } };
+		items[] = { { "UnmarkedGold", 1 } };
 	};
 	class Secrets : Gold {
 		processTitle = "Decrypting";

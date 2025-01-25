@@ -107,4 +107,46 @@ class CfgDisabledCommands
             args[] = {{},{"ARRAY"}};
         };
     };
+
+    class HINT
+    {
+        class SYNTAX1
+        {
+            targets[] = {1,1,1};
+            args[] = {{},{"STRING","TEXT"}};
+        };
+    };
+
+    class ADDFORCE
+    {
+        class SYNTAX1
+        {
+            targets[] = {1,0,1};
+            args[] = {{"OBJECT"},{"ARRAY"}};
+        };
+    };
+
+    class HINTSILENT
+    {
+        class SYNTAX1
+        {
+            targets[] = {1,0,1};
+            args[] = {{},{"STRING","TEXT"}};
+        };
+    };
+
+    class ONMAPSINGLECLICK
+    {
+        class SYNTAX1
+        {
+            targets[] = {1,0,1};
+            args[] = {{"ANY"},{"STRING","CODE"}};
+        };
+
+        class SYNTAX2
+        {
+            targets[] = {1,0,1};
+            args[] = {{},{"STRING","CODE"}};
+        };
+    };
 };

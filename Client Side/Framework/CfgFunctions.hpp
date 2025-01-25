@@ -173,6 +173,7 @@ class CfgFunctions {
 			class canHeal {};
 			class setOverweight {};
 			class hasComms {};
+			class postInitPlayer { postInit	= 1; };
 		};
 
 		class PlayerActions {

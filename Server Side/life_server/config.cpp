@@ -78,6 +78,7 @@ class CfgPatches {
             class Cartel : Dispute {};
             class Misc : Dispute {};
             class ReturnedToLobby : Dispute {};
+            class ScriptLog : Dispute {};
 
             class Spawn {
                 params = 2;

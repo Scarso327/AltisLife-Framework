@@ -29,7 +29,7 @@ _this params [
             ULP_eachFrameEventsHandlersToRemove = [];
 
             {
-                _x params [ "", "", "_handleIndex" ];
+                _x params [ "", "", "", "", "_handleIndex" ];
                 ULP_eachFrameEventsHandles set [_handleIndex, _forEachIndex];
             } forEach ULP_eachFrameEventsHandlers;
 		}] call ULP_fnc_execNextFrame;

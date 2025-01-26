@@ -12,6 +12,8 @@ _this params [
 [{
 	_this params [ "_handle" ];
 
+	if (isNil "_handle" || { _handle < 0 } || { _handle > (count ULP_eachFrameEventsHandles) }) exitWith { false };
+
 	private _index = ULP_eachFrameEventsHandles param [_handle];
 
 	if (isNil "_index") exitWith { false };

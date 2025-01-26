@@ -150,6 +150,7 @@ if !(_items isEqualTo []) then {
 [] call ULP_SRV_fnc_initCommunityGoals;
 
 [] call ULP_SRV_fnc_handleFog;
+[] call ULP_SRV_fnc_handleRain;
 
 /* Map-based server side initialization. */
 

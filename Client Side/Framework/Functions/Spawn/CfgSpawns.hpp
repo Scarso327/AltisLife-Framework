@@ -90,7 +90,7 @@ class CfgSpawns {
         class AirAmbulance : Medic {
             displayName = "Air Ambulance Station";
             marker = "nhs_spawn_aa";
-            icon = "Data\UI\Spawns\idap.paa";
+            icon = "Data\UI\Spawns\warehouse.paa";
             conditions = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
         };
 

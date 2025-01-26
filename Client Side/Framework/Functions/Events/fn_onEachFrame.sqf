@@ -9,10 +9,15 @@ scopeName "fn_onEachFrame";
  if (diag_frameNo != ULP_nextFrameNumber) then { ULP_nextFrameNumber = diag_frameNo };
 
 {
-	_x params ["_params", "_function", "_handle"];
-	private _thisEventHandler = _handle;
+	_x params [ "_params", "_function", "_delay", "_tick", "_handle" ];
 
-	_params call _function;
+	if (diag_tickTime > _tick) then {
+        _x set [3, _tick + _delay];
+        private _thisEventHandler = _handle;
+
+        _params call _function;
+    };
+
 	nil
 } count ULP_eachFrameEventsHandlers;
 

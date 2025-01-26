@@ -235,7 +235,8 @@ class CfgVehicles {
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
-				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				anpr = true;
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};

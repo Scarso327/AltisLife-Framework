@@ -7,21 +7,15 @@ class G_WirelessEarpiece_F {
 	class Textures {};
 };
 
-class G_Aviator {
+class G_Aviator : G_WirelessEarpiece_F {
+	displayName = "Aviator Glasses";
 	price = 70;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {};
 };
 
-class G_Squares {
+class G_Squares : G_WirelessEarpiece_F {
+	displayName = "Square Spectacles";
 	price = 12;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_Squares {
 			displayName = "Clear";
@@ -33,14 +27,11 @@ class G_Squares {
 		};
 	};
 };
-class G_Squares_Tinted : G_Squares{};
+class G_Squares_Tinted : G_Squares {};
 
-class G_Spectacles {
+class G_Spectacles : G_WirelessEarpiece_F {
+	displayName = "Spectacle Glasses";
 	price = 13;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_Spectacles {
 			displayName = "Clear";
@@ -52,15 +43,11 @@ class G_Spectacles {
 		};
 	};
 };
-class G_Spectacles_Tinted : G_Spectacles{};
+class G_Spectacles_Tinted : G_Spectacles {};
 
-class G_Shades_Black {
+class G_Shades_Black : G_WirelessEarpiece_F {
 	displayName = "Shades";
 	price = 25;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_Shades_Black {
 			displayName = "Black";
@@ -71,17 +58,13 @@ class G_Shades_Black {
 		class G_Shades_Blue : G_Shades_Black { displayName = "Blue"; };
 	};
 };
-class G_Shades_Red : G_Shades_Black{};
-class G_Shades_Green : G_Shades_Black{};
-class G_Shades_Blue : G_Shades_Black{};
+class G_Shades_Red : G_Shades_Black {};
+class G_Shades_Green : G_Shades_Black {};
+class G_Shades_Blue : G_Shades_Black {};
 
-class G_Sport_Red {
+class G_Sport_Red : G_WirelessEarpiece_F {
 	displayName = "Sport Shades";
 	price = 30;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_Sport_Red {
 			displayName = "Red";
@@ -94,45 +77,33 @@ class G_Sport_Red {
 		class G_Sport_checkered : G_Sport_Red { displayName = "Checkered"; };
 	};
 };
-class G_Sport_BlackWhite : G_Sport_Red{};
-class G_Sport_Blackred : G_Sport_Red{};
-class G_Sport_Blackyellow : G_Sport_Red{};
-class G_Sport_Greenblack : G_Sport_Red{};
-class G_Sport_checkered : G_Sport_Red{};
+class G_Sport_BlackWhite : G_Sport_Red {};
+class G_Sport_Blackred : G_Sport_Red {};
+class G_Sport_Blackyellow : G_Sport_Red {};
+class G_Sport_Greenblack : G_Sport_Red {};
+class G_Sport_checkered : G_Sport_Red {};
 
-class G_Lady_Blue {
+class G_Lady_Blue : G_WirelessEarpiece_F {
+	displayName = "Ladies Shades";
 	price = 18;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {};
 };
 
-class G_Lowprofile {
+class G_Lowprofile : G_WirelessEarpiece_F {
+	displayName = "Low Profile Goggles";
 	price = 760;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {};
 };
 
-class G_Combat {
+class G_Combat : G_WirelessEarpiece_F {
+	displayName = "Combat Goggles";
 	price = 890;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {};
 };
 
-class G_EyeProtectors_F {
+class G_EyeProtectors_F : G_WirelessEarpiece_F {
+	displayName = "Eye Protectors";
 	price = 470;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_EyeProtectors_F {
 			displayName = "Eye Protectors";
@@ -143,13 +114,9 @@ class G_EyeProtectors_F {
 };
 class G_EyeProtectors_Earpiece_F : G_EyeProtectors_F{};
 
-class G_B_Diving {
+class G_B_Diving : G_WirelessEarpiece_F {
 	displayName = "Diving Goggles";
 	price = 1200;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_B_Diving {
 			displayName = "Black";
@@ -159,16 +126,12 @@ class G_B_Diving {
 		class G_I_Diving : G_B_Diving { displayName = "Green"; };
 	};
 };
-class G_O_Diving : G_B_Diving{};
-class G_I_Diving : G_B_Diving{};
+class G_O_Diving : G_B_Diving {};
+class G_I_Diving : G_B_Diving {};
 
 class G_Respirator_white_F {
 	displayName = "Respirator";
 	price = 5;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = true;
 	class Textures {
 		class G_Respirator_white_F {
 			displayName = "White";
@@ -178,42 +141,56 @@ class G_Respirator_white_F {
 		class G_Respirator_yellow_F : G_Respirator_white_F { displayName = "Yellow"; };
 	};
 };
-class G_Respirator_blue_F : G_Respirator_white_F{};
-class G_Respirator_yellow_F : G_Respirator_white_F{};
+class G_Respirator_blue_F : G_Respirator_white_F {};
+class G_Respirator_yellow_F : G_Respirator_white_F {};
 
-class G_RegulatorMask_F {
+class G_RegulatorMask_F : G_WirelessEarpiece_F {
+	displayName = "Regulator Mask";
 	price = 8900;
-	reputation = false;
-	isMask = false;
-	isNV = false;
+	isMask = true;
 	isGas = true;
 	class Textures {};
 };
 
-class G_Blindfold_01_black_F {
+class G_AirPurifyingRespirator_01_F : G_RegulatorMask_F {
+	displayName = "Air Purifying Respirator";
+	price = 11200;
+	isNV = true;
+	class Textures {
+		class G_AirPurifyingRespirator_01_F {
+			displayName = "Black (Old)";
+			condition = "true";
+		};
+		class G_AirPurifyingRespirator_02_black_F : G_AirPurifyingRespirator_01_F { 
+			displayName = "Black"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class G_AirPurifyingRespirator_02_olive_F : G_AirPurifyingRespirator_02_black_F { displayName = "Olive"; };
+		class G_AirPurifyingRespirator_02_sand_F : G_AirPurifyingRespirator_02_black_F { displayName = "Sand"; };
+	};
+};
+class G_AirPurifyingRespirator_02_black_F : G_AirPurifyingRespirator_01_F {};
+class G_AirPurifyingRespirator_02_olive_F : G_AirPurifyingRespirator_01_F {};
+class G_AirPurifyingRespirator_02_sand_F : G_AirPurifyingRespirator_01_F {};
+
+class G_Blindfold_01_black_F : G_WirelessEarpiece_F {
 	displayName = "Blindfold";
 	price = 170;
-	reputation = false;
-	isMask = false;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_Blindfold_01_black_F {
 			displayName = "Black";
 			condition = "true";
 		};
-		class G_Blindfold_01_white__F : G_Blindfold_01_black_F{ displayName = "Black"; };
+		class G_Blindfold_01_white__F : G_Blindfold_01_black_F { displayName = "Black"; };
 	};
 };
-class G_Blindfold_01_white__F : G_Blindfold_01_black_F{};
+class G_Blindfold_01_white__F : G_Blindfold_01_black_F {};
 
-class G_Bandanna_aviator {
+class G_Bandanna_aviator : G_WirelessEarpiece_F {
 	displayName = "Bandanna";
 	price = 800;
 	reputation = true;
 	isMask = true;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_Bandanna_aviator {
 			displayName = "Black + Aviators";
@@ -257,13 +234,9 @@ class G_Bandanna_Syndikat1 : G_Bandanna_aviator {};
 class G_Bandanna_Syndikat2 : G_Bandanna_aviator {};
 class G_Bandanna_Vampire_01 : G_Bandanna_aviator {};
 
-class G_Balaclava_blk {
+class G_Balaclava_blk : G_Bandanna_aviator {
 	displayName = "Balaclava";
 	price = 1400;
-	reputation = true;
-	isMask = true;
-	isNV = false;
-	isGas = false;
 	class Textures {
 		class G_Balaclava_blk {
 			displayName = "Black";
@@ -295,26 +268,40 @@ class G_Balaclava_Scarecrow_01 : G_Balaclava_blk {};
 class G_Balaclava_Skull1 : G_Balaclava_blk {};
 class G_Balaclava_Tropentarn : G_Balaclava_blk {};
 
-class G_Balaclava_TI_blk_F {
+class G_Balaclava_TI_blk_F : G_Bandanna_aviator {
 	displayName = "Stealth Balaclava";
-	price = 3600;
-	reputation = true;
-	isMask = true;
-	isNV = false;
-	isGas = false;
+	price = 9600;
 	class Textures {
 		class G_Balaclava_TI_blk_F {
 			displayName = "Black";
 			condition = "true";
 		};
-		class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F { 
-			displayName = "Black + Goggles"; 
+		class G_Balaclava_TI_tna_F : G_Balaclava_TI_blk_F { displayName = "Green"; };
+		class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F { displayName = "Black + Goggles"; };
+		class G_Balaclava_TI_G_tna_F : G_Balaclava_TI_blk_F { displayName = "Green + Goggles"; };
+	};
+};
+class G_Balaclava_TI_tna_F : G_Balaclava_TI_blk_F {};
+class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F { isNV = true; };
+class G_Balaclava_TI_G_tna_F : G_Balaclava_TI_blk_F { isNV = true; };
+
+class G_Tactical_Clear : G_WirelessEarpiece_F {
+	displayName = "Full-Screen NVG";
+	price = 40000;
+	reputation = true;
+	isNV = true;
+	class Textures {
+		class G_Tactical_Clear {
+			displayName = "Clear";
+			condition = "true";
+		};
+		class G_Tactical_Black : G_Tactical_Clear { 
+			displayName = "Black"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0"; 
 		};
 	};
 };
-class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F {
-	isNV = true;
-};
+class G_Tactical_Black : G_Tactical_Clear {};
 
 class G_Goggles_VR {
 	displayName = "Staff Goggles";
@@ -325,22 +312,3 @@ class G_Goggles_VR {
 	isGas = true;
 	class Textures {};
 };
-
-class G_Tactical_Clear {
-	displayName = "Tactical Glasses (NVG)";
-	price = 60000;
-	reputation = true;
-	isMask = false;
-	isNV = true;
-	isGas = false;
-	class Textures {
-		class G_Tactical_Clear {
-			displayName = "Clear";
-			condition = "true";
-		};
-		class G_Tactical_Black : G_Tactical_Clear { 
-			displayName = "Black"; 
-		};
-	};
-};
-class G_Tactical_Black : G_Tactical_Clear {};

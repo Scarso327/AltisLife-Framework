@@ -5,8 +5,8 @@ class U_C_Poor_1 {
 	isGas = false;
 	class Textures {};
 };
-class U_C_Farmer : U_C_Poor_1{};
-class U_C_Mechanic_01_F : U_C_Poor_1{};
+class U_C_Farmer : U_C_Poor_1 {};
+class U_C_Mechanic_01_F : U_C_Poor_1 {};
 
 class U_C_Poloshirt_blue {
 	displayName = "Commoner Clothes";
@@ -26,11 +26,11 @@ class U_C_Poloshirt_blue {
 		class U_C_Poloshirt_redwhite : U_C_Poloshirt_blue { displayName = "Redwhite"; };
 	};
 };
-class U_C_Poloshirt_burgundy : U_C_Poloshirt_blue{};
-class U_C_Poloshirt_stripped : U_C_Poloshirt_blue{};
-class U_C_Poloshirt_tricolour : U_C_Poloshirt_blue{};
-class U_C_Poloshirt_salmon : U_C_Poloshirt_blue{};
-class U_C_Poloshirt_redwhite : U_C_Poloshirt_blue{};
+class U_C_Poloshirt_burgundy : U_C_Poloshirt_blue {};
+class U_C_Poloshirt_stripped : U_C_Poloshirt_blue {};
+class U_C_Poloshirt_tricolour : U_C_Poloshirt_blue {};
+class U_C_Poloshirt_salmon : U_C_Poloshirt_blue {};
+class U_C_Poloshirt_redwhite : U_C_Poloshirt_blue {};
 
 class U_C_WorkerOveralls {
 	displayName = "Worker Overalls";
@@ -237,9 +237,10 @@ class U_IG_Guerilla1_1 {
 	isGas = false;
 	class Textures {
 		class U_IG_Guerilla1_1 { 
-			displayName = "Garment"; 
+			displayName = "Garment (Brown)"; 
 			condition = "true";
 		};
+		class U_IG_Guerilla1_2_F : U_IG_Guerilla1_1 { displayName = "Garment (Olive)"; };
 		class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 { displayName = "Plain, Dark"; };
 		class U_IG_Guerilla2_2 : U_IG_Guerilla1_1 { displayName = "Pattern"; };
 		class U_IG_Guerilla2_3 : U_IG_Guerilla1_1 { displayName = "Plain, Light"; };
@@ -276,12 +277,13 @@ class U_IG_Guerilla1_1 {
 		class U_IG_leader : U_IG_Guerilla1_1 { displayName = "Uniform"; };
 	};
 };
-class U_IG_Guerilla2_1 : U_IG_Guerilla1_1{};
-class U_IG_Guerilla2_2 : U_IG_Guerilla1_1{};
-class U_IG_Guerilla2_3 : U_IG_Guerilla1_1{};
-class U_IG_Guerilla3_1 : U_IG_Guerilla1_1{};
-class U_IG_Guerilla3_2 : U_IG_Guerilla1_1{};
-class U_IG_leader : U_IG_Guerilla1_1{};
+class U_IG_Guerilla1_2_F : U_IG_Guerilla1_1 {};
+class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 {};
+class U_IG_Guerilla2_2 : U_IG_Guerilla1_1 {};
+class U_IG_Guerilla2_3 : U_IG_Guerilla1_1 {};
+class U_IG_Guerilla3_1 : U_IG_Guerilla1_1 {};
+class U_IG_Guerilla3_2 : U_IG_Guerilla1_1 {};
+class U_IG_leader : U_IG_Guerilla1_1 {};
 
 class U_C_HunterBody_grn {
 	displayName = "Hunting Clothes";
@@ -309,10 +311,10 @@ class U_C_E_LooterJacket_01_F {
 		class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Olive"; };
 	};
 };
-class U_I_L_Uniform_01_tshirt_skull_F : U_C_E_LooterJacket_01_F{};
-class U_I_L_Uniform_01_tshirt_black_F : U_C_E_LooterJacket_01_F{};
-class U_I_L_Uniform_01_tshirt_sport_F : U_C_E_LooterJacket_01_F{};
-class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F{};
+class U_I_L_Uniform_01_tshirt_skull_F : U_C_E_LooterJacket_01_F {};
+class U_I_L_Uniform_01_tshirt_black_F : U_C_E_LooterJacket_01_F {};
+class U_I_L_Uniform_01_tshirt_sport_F : U_C_E_LooterJacket_01_F {};
+class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F {};
 
 class U_O_R_Gorka_01_black_F {
 	displayName = "Tracksuit";
@@ -356,8 +358,16 @@ class U_O_R_Gorka_01_black_F {
 			textures[] = { "Data\Textures\Uniforms\Hato\tracksuit.paa" };
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		};
+		class U_O_R_Gorka_01_black_F {
+			displayName = "Black"; 
+			condition = "true";
+		};
+		class U_O_R_Gorka_01_brown_F : U_O_R_Gorka_01_black_F { displayName = "Brown"; };
+		class U_O_R_Gorka_01_camo_F : U_O_R_Gorka_01_black_F { displayName = "Camo"; };
 	};
 };
+class U_O_R_Gorka_01_brown_F : U_O_R_Gorka_01_black_F {};
+class U_O_R_Gorka_01_camo_F : U_O_R_Gorka_01_black_F {};
 
 class U_I_C_Soldier_Para_1_F {
 	displayName = "Paramilitary Clothes";
@@ -740,16 +750,23 @@ class U_B_CombatUniform_mcam {
 		class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL (Base)"; };
 		class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL (Rolled)"; };
 		class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam { displayName = "WDL (Tee)"; };
+		class U_B_T_Solider_F : U_B_CombatUniform_mcam { displayName = "Tropic (Base)"; };
+		class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam { displayName = "Tropic (Rolled)"; };
+		class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam { displayName = "Tropic (Tee)"; };
 	};
 };
-class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam{};
-class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam{};
-class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam{};
-class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam{};
-class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam{};
+class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam {};
+class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam {};
+class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam {};
+class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam {};
+class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam {};
+class U_B_T_Solider_F : U_B_CombatUniform_mcam {};
+class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam {};
+class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam {};
 
 class U_B_CTRG_Soldier_F {
-	price = 7890;
+	displayName = "Stealth Uniform";
+	price = 57890;
 	reputation = true;
 	virtualSpace = 7;
 	isGas = false;
@@ -759,14 +776,86 @@ class U_B_CTRG_Soldier_F {
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
 		};
-		class Ridge {
-			displayName = "Ridge Combat Uniform";
-			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+		class U_B_CTRG_Soldier_F {
+			displayName = "Tropic";
 			condition = "true";
+		};
+		class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F { displayName = "Arid"; };
+		class Ridge : U_B_CTRG_Soldier_F {
+			displayName = "Ridge";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
+		class KLR : U_B_CTRG_Soldier_F {
+			displayName = "KLR";
+			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
+			condition = "[31] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
-class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F{};
+class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F {};
+
+class U_B_CTRG_Soldier_3_F {
+	displayName = "Stealth Uniform (Rolled)";
+	price = 57890;
+	reputation = true;
+	virtualSpace = 7;
+	isGas = false;
+	class Textures {
+		class SCO19 {
+			displayName = "SCO19 Uniform";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+		};
+		class U_B_CTRG_Soldier_3_F { 
+			displayName = "Tropic"; 
+			condition = "true";
+		};
+		class U_B_CTRG_Soldier_3_Arid_F : U_B_CTRG_Soldier_3_F { displayName = "Arid"; };
+		class Ridge : U_B_CTRG_Soldier_3_F {
+			displayName = "Ridge";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
+		class KLR : U_B_CTRG_Soldier_3_F {
+			displayName = "KLR";
+			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
+			condition = "[31] call ULP_fnc_isGroupPremium";
+		};
+	};
+};
+class U_B_CTRG_Soldier_3_Arid_F : U_B_CTRG_Soldier_3_F {};
+
+class U_B_CTRG_Soldier_2_Arid_F {
+	displayName = "Stealth Uniform (Tee)";
+	price = 57890;
+	reputation = true;
+	virtualSpace = 7;
+	isGas = false;
+	class Textures {
+		class SCO19 {
+			displayName = "SCO19 Uniform";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 3] call ULP_fnc_hasAccess }";
+		};
+		class U_B_CTRG_Soldier_2_Arid_F { 
+			displayName = "Arid"; 
+			condition = "true";
+		};
+		class U_B_CTRG_Soldier_2_F : U_B_CTRG_Soldier_2_Arid_F { displayName = "Tropic"; };
+		class Ridge : U_B_CTRG_Soldier_2_Arid_F {
+			displayName = "Ridge";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
+		class KLR : U_B_CTRG_Soldier_F {
+			displayName = "KLR";
+			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
+			condition = "[31] call ULP_fnc_isGroupPremium";
+		};
+	};
+};
+class U_B_CTRG_Soldier_2_F : U_B_CTRG_Soldier_2_Arid_F {};
 
 class U_B_GhillieSuit {
 	displayName = "Half-Ghillies";
@@ -787,10 +876,12 @@ class U_B_GhillieSuit {
 		};
 		class U_O_GhillieSuit : U_B_GhillieSuit { displayName = "Hex"; };
 		class U_I_GhillieSuit : U_B_GhillieSuit { displayName = "Digi"; };
+		class U_B_T_Sniper_F : U_B_GhillieSuit { displayName = "Tropic"; };
 	};
 };
-class U_O_GhillieSuit : U_B_GhillieSuit{};
-class U_I_GhillieSuit : U_B_GhillieSuit{};
+class U_O_GhillieSuit : U_B_GhillieSuit {};
+class U_I_GhillieSuit : U_B_GhillieSuit {};
+class U_B_T_Sniper_F : U_B_GhillieSuit {};
 
 class U_B_FullGhillie_ard {
 	displayName = "Full-Ghillies";
@@ -805,10 +896,12 @@ class U_B_FullGhillie_ard {
 		};
 		class U_B_FullGhillie_sard : U_B_FullGhillie_ard { displayName = "Semi-Arid"; };
 		class U_B_FullGhillie_lsh : U_B_FullGhillie_ard { displayName = "Lush"; };
+		class U_B_T_FullGhillie_tna_F : U_B_FullGhillie_ard { displayName = "Jungle"; };
 	};
 };
-class U_B_FullGhillie_sard : U_B_FullGhillie_ard{};
-class U_B_FullGhillie_lsh : U_B_FullGhillie_ard{};
+class U_B_FullGhillie_sard : U_B_FullGhillie_ard {};
+class U_B_FullGhillie_lsh : U_B_FullGhillie_ard {};
+class U_B_T_FullGhillie_tna_F : U_B_FullGhillie_ard {};
 
 class U_B_HeliPilotCoveralls {
 	displayName = "Flight Clothes";
@@ -822,9 +915,11 @@ class U_B_HeliPilotCoveralls {
 			condition = "true";
 		};
 		class U_I_HeliPilotCoveralls : U_B_HeliPilotCoveralls { displayName = "Tan"; };
+		class U_I_E_Uniform_01_coveralls_F : U_B_HeliPilotCoveralls { displayName = "Geometric"; };
 	};
 };
-class U_I_HeliPilotCoveralls : U_B_HeliPilotCoveralls{};
+class U_I_HeliPilotCoveralls : U_B_HeliPilotCoveralls {};
+class U_I_E_Uniform_01_coveralls_F : U_B_HeliPilotCoveralls {};
 
 class U_O_PilotCoveralls {
 	displayName = "Flight Clothes";
@@ -861,12 +956,16 @@ class U_C_CBRN_Suit_01_White_F {
 		class U_B_CBRN_Suit_01_MTP_F : U_C_CBRN_Suit_01_White_F { displayName = "MTP"; };
 		class U_B_CBRN_Suit_01_Wdl_F : U_C_CBRN_Suit_01_White_F { displayName = "WDL"; };
 		class U_I_CBRN_Suit_01_AAF_F : U_C_CBRN_Suit_01_White_F { displayName = "DIGI"; };
+		class U_I_CBRN_Suit_01_EAF_F : U_C_CBRN_Suit_01_White_F { displayName = "LDF"; };
+		class U_I_CBRN_Suit_01_Tropic_F : U_C_CBRN_Suit_01_White_F { displayName = "Tropic"; };
 	};
 };
 class U_C_CBRN_Suit_01_Blue_F : U_C_CBRN_Suit_01_White_F {};
 class U_B_CBRN_Suit_01_MTP_F : U_C_CBRN_Suit_01_White_F {};
 class U_B_CBRN_Suit_01_Wdl_F : U_C_CBRN_Suit_01_White_F {};
 class U_I_CBRN_Suit_01_AAF_F : U_C_CBRN_Suit_01_White_F {};
+class U_I_CBRN_Suit_01_EAF_F : U_C_CBRN_Suit_01_White_F {};
+class U_I_CBRN_Suit_01_Tropic_F : U_C_CBRN_Suit_01_White_F {};
 
 class U_C_Protagonist_VR {
 	displayName = "Staff Suits";

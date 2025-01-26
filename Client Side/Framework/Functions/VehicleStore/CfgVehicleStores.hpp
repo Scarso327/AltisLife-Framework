@@ -413,7 +413,6 @@ class CfgVehicleStores {
 			class C_Van_01_fuel_F {};
 			class B_Heli_Light_01_F {};
 			class I_Heli_light_03_unarmed_F {};
-			class B_Heli_Transport_01_F {};
 			class O_Heli_Transport_04_black_F {};
 			class O_Heli_Transport_04_bench_black_F {};
 			class O_Heli_Transport_04_covered_black_F {};
@@ -446,7 +445,6 @@ class CfgVehicleStores {
 			class C_Van_01_fuel_F {};
 			class B_Heli_Light_01_F {};
 			class I_Heli_light_03_unarmed_F {};
-			class B_Heli_Transport_01_F {};
 			class O_Heli_Transport_04_black_F {};
 			class O_Heli_Transport_04_bench_black_F {};
 			class O_Heli_Transport_04_covered_black_F {};

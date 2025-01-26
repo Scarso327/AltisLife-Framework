@@ -157,7 +157,7 @@ class CfgRandomEvents {
 		class Locations {
 			class C_1 {
 				position[] = {9210.5,19276.3,0};
-				radius = 250;
+				radius = 200;
 			};
 			class C_2 : C_1 { position[] = {14206.9,21219,0}; };
 			class C_3 : C_1 { position[] = {16598.7,19040,0}; };

@@ -109,6 +109,7 @@ class CfgSettings {
     };
 
     class Weather {
+        maxRain = 0.1;
         maxFog = 0.1;
     };
 };

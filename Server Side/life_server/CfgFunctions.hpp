@@ -196,6 +196,7 @@ class CfgFunctions {
         class Weather {
             file = "\life_server\Functions\Weather";
             class handleFog {};
+            class handleRain {};
         };
     };
 

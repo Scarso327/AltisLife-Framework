@@ -14,8 +14,8 @@ class CfgCrimes {
 					onCompleted = "[""HMTreasury"", 1] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the vault security system...""] call ULP_fnc_hint;"; // Call to fill vaults, allow vaults to be drilled...
 					onEachFrame = "";
 					onProgressStop = "";
-					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 10) : { ""There must be at least <t color='#B92DE0'>10 police officers</t> to start this crime..."" }; case ([""HackingDevice""] call ULP_fnc_hasItem < 1) : { ""You need a hacking device to perform this action..."" }; default { ""Vault Security has already been disabled..."" }; })] call ULP_fnc_hint;";
-					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false]) && { [""HackingDevice""] call ULP_fnc_hasItem > 0 } && { (count ([""Police""] call ULP_fnc_allMembers)) >= 10 }";
+					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 15) : { ""There must be at least <t color='#B92DE0'>15 police officers</t> to start this crime..."" }; case ([""HackingDevice""] call ULP_fnc_hasItem < 1) : { ""You need a hacking device to perform this action..."" }; default { ""Vault Security has already been disabled..."" }; })] call ULP_fnc_hint;";
+					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false]) && { [""HackingDevice""] call ULP_fnc_hasItem > 0 } && { (count ([""Police""] call ULP_fnc_allMembers)) >= 15 }";
 				};
 			};
 			class Buildings {
@@ -25,8 +25,8 @@ class CfgCrimes {
 					class BreakIn {
 						breakIn = 240;
 						onBreakIn = "if (([""SilentLocksmith"", (random 1)] call ULP_fnc_activatePerk) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A Security Office at HM Treasury has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
-						onFail = "[""There must be at least <t color='#B92DE0'>10 police officers</t> to start this crime...""] call ULP_fnc_hint;";
-						condition = "(count ([""Police""] call ULP_fnc_allMembers)) >= 10 || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] }";
+						onFail = "[""There must be at least <t color='#B92DE0'>15 police officers</t> to start this crime...""] call ULP_fnc_hint;";
+						condition = "(count ([""Police""] call ULP_fnc_allMembers)) >= 15 || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] }";
 					};
 				};
 				class MilitaryOfficeTwo : MilitaryOfficeOne { position[] = {16216.4, 17071.3, 0.0516109}; };
@@ -81,7 +81,7 @@ class CfgCrimes {
 					onCompleted = "[""HMSLiberty"", 1, hms_liberty_server] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
 					onEachFrame = "hms_liberty_server animateSource [""server_move_source"", (_this / 100)];";
 					onProgressStop = "hms_liberty_server animateSource [""server_move_source"", 0]";
-					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 10) : { ""There must be at least <t color='#B92DE0'>10 police officers</t> to start this crime..."" }; case ([""HackingDevice""] call ULP_fnc_hasItem < 1) : { ""You need a hacking device to perform this action..."" }; default { ""Server Security has already been disabled..."" }; })] call ULP_fnc_hint;";
+					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 12) : { ""There must be at least <t color='#B92DE0'>12 police officers</t> to start this crime..."" }; case ([""HackingDevice""] call ULP_fnc_hasItem < 1) : { ""You need a hacking device to perform this action..."" }; default { ""Server Security has already been disabled..."" }; })] call ULP_fnc_hint;";
 					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false]) && { [""HackingDevice""] call ULP_fnc_hasItem > 0 }";
 				};
 			};
@@ -155,7 +155,7 @@ class CfgCrimes {
 					onCompleted = "[""ResearchFacility"", 1, researchFacilityCapsule] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
 					onEachFrame = "";
 					onProgressStop = "";
-					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 10) : { ""There must be at least <t color='#B92DE0'>10 police officers</t> to start this crime..."" }; case ([""IndustrialDrill""] call ULP_fnc_hasItem < 1) : { ""You need an industrial drill to perform this action..."" }; default { ""Valut security has already been disabled..."" }; })] call ULP_fnc_hint;";
+					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 15) : { ""There must be at least <t color='#B92DE0'>15 police officers</t> to start this crime..."" }; case ([""IndustrialDrill""] call ULP_fnc_hasItem < 1) : { ""You need an industrial drill to perform this action..."" }; default { ""Valut security has already been disabled..."" }; })] call ULP_fnc_hint;";
 					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false]) && { [""IndustrialDrill""] call ULP_fnc_hasItem > 0 }";
 				};
 			};
@@ -166,8 +166,8 @@ class CfgCrimes {
 					class BreakIn {
 						breakIn = 300;
 						onBreakIn = "if (([""SilentLocksmith"", (random 1)] call ULP_fnc_activatePerk) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A door at the underwater research facility has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
-						onFail = "[""There must be at least 10 police officers to start this crime...""] call ULP_fnc_hint;";
-						condition = "(count ([""Police""] call ULP_fnc_allMembers)) >= 10 || { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] }";
+						onFail = "[""There must be at least 15 police officers to start this crime...""] call ULP_fnc_hint;";
+						condition = "(count ([""Police""] call ULP_fnc_allMembers)) >= 15 || { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] }";
 					};
 				};
 				class InnerDome {

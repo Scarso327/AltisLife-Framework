@@ -315,21 +315,16 @@ class srifle_DMR_07_ghex_F : srifle_DMR_07_blk_F {};
 class srifle_DMR_07_hex_F : srifle_DMR_07_blk_F {};
 
 class arifle_Katiba_C_F {
-	displayName = "Katiba 6.5 mm";
 	price = 233580;
 	reputation = true;
-	class Textures {
-		class arifle_Katiba_C_F {
-			displayName = "Carbine";
-			condition = "true";
-		};
-		class arifle_Katiba_F : arifle_Katiba_C_F { 
-			displayName = "Full"; 
-			price = 241800;
-		};
-	};
+	class Textures {};
 };
-class arifle_Katiba_F : arifle_Katiba_C_F {};
+
+class arifle_Katiba_F {
+	price = 241800;
+	reputation = true;
+	class Textures {};
+};
 
 class arifle_Katiba_GL_F {
 	price = 265800;

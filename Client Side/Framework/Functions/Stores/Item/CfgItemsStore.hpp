@@ -71,18 +71,9 @@ class CfgItemsStore {
 				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
 				class textures { class arifle_MSBS65_GL_black_F {}; };
 			};
-			class arifle_Katiba_C_F {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
-				class textures { class arifle_Katiba_C_F {}; };
-			};
-			class arifle_Katiba_F {
-				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
-				class textures { class arifle_Katiba_C_F {}; };
-			};
-			class arifle_Katiba_GL_F {
-				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
-				class textures { class arifle_Katiba_GL_F {}; };
-			};
+			class arifle_Katiba_C_F { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
+			class arifle_Katiba_F { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
+			class arifle_Katiba_GL_F { condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess"; };
 			class arifle_ARX_blk_F {
 				condition = "[""Police_Main"", 7] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { ([""Police_Main"", 6] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class arifle_ARX_blk_F {}; };
@@ -627,7 +618,8 @@ class CfgItemsStore {
 			class arifle_SPAR_01_blk_F {};
 			class arifle_CTAR_blk_F {};
 			class srifle_DMR_07_blk_F {};
-			class arifle_Katiba_C_F {};
+			class arifle_Katiba_C_F {}; 
+			class arifle_Katiba_F {};
 			class arifle_MSBS65_black_F {};
 			class arifle_MSBS65_Mark_black_F {};
 			class arifle_MXC_Black_F {};
@@ -723,6 +715,7 @@ class CfgItemsStore {
 			class arifle_CTARS_blk_F {};
 			class srifle_DMR_07_blk_F {};
 			class arifle_Katiba_C_F {};
+			class arifle_Katiba_F {};
 			class arifle_MSBS65_black_F {};
 			class arifle_MSBS65_Mark_black_F {};
 			class arifle_MXC_Black_F {};
@@ -837,6 +830,7 @@ class CfgItemsStore {
 			class arifle_CTARS_blk_F {};
 			class srifle_DMR_07_blk_F {};
 			class arifle_Katiba_C_F {};
+			class arifle_Katiba_F {};
 			class arifle_MSBS65_black_F {};
 			class arifle_MSBS65_Mark_black_F {};
 			class arifle_MXC_Black_F {};

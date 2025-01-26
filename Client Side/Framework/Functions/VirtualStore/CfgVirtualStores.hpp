@@ -23,6 +23,7 @@ class CfgVirtualStores {
 			class FirstAidKit {};
 			class MediKit {};
 			class AutomatedExternalDefibrillator {};
+			class Stretcher {};
 			class TapeSign_F {};
 			//class PlasticBarrier_02_yellow_F {};
 			//class PlasticBarrier_02_grey_F {};

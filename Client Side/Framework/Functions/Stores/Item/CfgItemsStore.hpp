@@ -172,7 +172,7 @@ class CfgItemsStore {
 				class textures { class 30Rnd_556x45_Stanag_Tracer_Green {}; }; 
 			};
 			class 20Rnd_556x45_UW_mag { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] } }"; };
-			class 30Rnd_556x45_Stanag { condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess"; };
+			class 30Rnd_556x45_Stanag { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class 150Rnd_556x45_Drum_Mag_F { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
 			class 150Rnd_556x45_Drum_Mag_Tracer_F { condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };			
 			class 30Rnd_580x42_Mag_F { condition = "[""Police_Main"", 3] call ULP_fnc_hasAccess"; };

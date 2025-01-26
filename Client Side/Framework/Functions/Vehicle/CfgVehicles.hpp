@@ -45,6 +45,7 @@ class CfgVehicles {
 		crushTime = 300;
 		chopKeepChance = 90;
 		chopTime = 180;
+		retrievalPerc = 0.005;
 		turrets[] = {};
 		blacklistedItems[] = { 
 			"StolenCargo",
@@ -440,6 +441,7 @@ class CfgVehicles {
 		buyPrice = 4280000; 
 		virtualSpace = 20;
 		garageLimit = 1;
+		retrievalPerc = 0.05;
 		enableRope = false;
 	};
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
@@ -535,6 +537,7 @@ class CfgVehicles {
 		buyPrice = 670300; 
 		virtualSpace = 45;
 		garageLimit = 1;
+		retrievalPerc = 0.05;
 		enableRope = false;
 	};
 
@@ -803,6 +806,7 @@ class CfgVehicles {
 		crushTime = 60;
 		chopKeepChance = 95;
 		chopTime = 300;
+		retrievalPerc = 0.01;
 		enableRope = false;
 		class Textures {
 			class Police : PoliceTexture {
@@ -828,6 +832,7 @@ class CfgVehicles {
 		crushTime = 60;
 		chopKeepChance = 90;
 		chopTime = 300;
+		retrievalPerc = 0.01;
 		canTransfer = false;
 		enableRope = false;
 		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }";
@@ -899,6 +904,7 @@ class CfgVehicles {
 		crushTime = 60;
 		chopKeepChance = 90;
 		chopTime = 300;
+		retrievalPerc = 0.01;
 		enableRope = false;
 		class Textures {
 			class Tan : BaseTexture { 
@@ -1476,6 +1482,7 @@ class CfgVehicles {
 		buyPrice = 465000;
 		virtualSpace = 5;
 		garageLimit = 3;
+		retrievalPerc = 0.02;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
@@ -1548,6 +1555,7 @@ class CfgVehicles {
 		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
 		buyPrice = 1850000;
 		virtualSpace = 25;
+		retrievalPerc = 0.02;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
@@ -1570,6 +1578,7 @@ class CfgVehicles {
 		description = "The WY-55 Hellcat is a multipurpose helicopter, most suited for utility and limited transport.";
 		buyPrice = 2130000;
 		virtualSpace = 20;
+		retrievalPerc = 0.02;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" }; };
 			class Black : BaseTexture {
@@ -1753,6 +1762,7 @@ class CfgVehicles {
 		description = "The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m).";
 		buyPrice = 1256000;
 		virtualSpace = 5;
+		retrievalPerc = 0.02;
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
 
@@ -1761,7 +1771,7 @@ class CfgVehicles {
 		buyPrice = 75500000;
 		virtualSpace = 650;
 		garageLimit = 1;
-		retrievalPerc = 0.001;
+		retrievalPerc = 0.0025;
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
 		buyPrice = 85750000;
@@ -1783,7 +1793,7 @@ class CfgVehicles {
 		description = "The A-143 Buzzard is a single seat, light, multipurpose combat aircraft able to carry a wide range of equipment and weaponry.";
 		buyPrice = 73350000;
 		garageLimit = 1;
-		retrievalPerc = 0.001;
+		retrievalPerc = 0.0025;
 		pylons[] = { "", "", "", "", "", "", "", "", "", "", "", "", "" };
 		turrets[] = {};
 	};

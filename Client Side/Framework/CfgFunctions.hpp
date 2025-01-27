@@ -208,6 +208,7 @@ class CfgFunctions {
 			class getPlayerInfo {};
 			class setPlayerInfo {};
 			class syncPlayerInfo {};
+			class setLoggedIn {};
 		};
 
 		class Effects {

@@ -88,11 +88,12 @@ class CfgProcessingStores {
 		title = "Goldsmith";
 		processes[] = { "Gold" };
 	};
-	class Decrypter : Base {
+	class Secrets : Base {
 		title = "Decrypter";
 		processes[] = { "Secrets" };
 	};
 
+	// Weapons
 	class Weapons : Base {
 		title = "Weapons Processing";
 		processes[] = { "Weapons" };

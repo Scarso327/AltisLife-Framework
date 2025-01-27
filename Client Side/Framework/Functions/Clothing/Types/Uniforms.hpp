@@ -1,19 +1,16 @@
 class U_C_Poor_1 {
-	price = 70;
+	price = 50;
+	virtualSpace = 2;
 	reputation = false;
-	virtualSpace = 3;
 	isGas = false;
 	class Textures {};
 };
 class U_C_Farmer : U_C_Poor_1 {};
 class U_C_Mechanic_01_F : U_C_Poor_1 {};
 
-class U_C_Poloshirt_blue {
+class U_C_Poloshirt_blue : U_C_Poor_1 {
 	displayName = "Commoner Clothes";
-	price = 120;
-	reputation = false;
-	virtualSpace = 4;
-	isGas = false;
+	price = 100;
 	class Textures {
 		class U_C_Poloshirt_blue { 
 			displayName = "Blue"; 
@@ -32,21 +29,15 @@ class U_C_Poloshirt_tricolour : U_C_Poloshirt_blue {};
 class U_C_Poloshirt_salmon : U_C_Poloshirt_blue {};
 class U_C_Poloshirt_redwhite : U_C_Poloshirt_blue {};
 
-class U_C_WorkerOveralls {
+class U_C_WorkerOveralls : U_C_Poor_1 {
 	displayName = "Worker Overalls";
-	price = 130;
-	reputation = false;
-	virtualSpace = 10;
-	isGas = false;
+	price = 150;
+	virtualSpace = 4;
 	class Textures {
 		class U_C_WorkerOveralls { 
 			displayName = "Used"; 
 			condition = "true";
 		};
-		class U_C_ConstructionCoverall_Black_F : U_C_WorkerOveralls { displayName = "Black"; };
-		class U_C_ConstructionCoverall_Red_F : U_C_WorkerOveralls { displayName = "Red"; };
-		class U_C_ConstructionCoverall_Blue_F : U_C_WorkerOveralls { displayName = "Blue"; };
-		class U_C_ConstructionCoverall_Vrana_F : U_C_WorkerOveralls { displayName = "Vrana"; };
 		class White : U_C_WorkerOveralls { 
 			displayName = "White"; 
 			textures[] = { "\A3\characters_f\common\data\coveralls_grey_co.paa" };
@@ -65,17 +56,29 @@ class U_C_WorkerOveralls {
 		};
 	};
 };
-class U_C_ConstructionCoverall_Black_F : U_C_WorkerOveralls{};
-class U_C_ConstructionCoverall_Red_F : U_C_WorkerOveralls{};
-class U_C_ConstructionCoverall_Blue_F : U_C_WorkerOveralls{};
-class U_C_ConstructionCoverall_Vrana_F : U_C_WorkerOveralls{};
 
-class U_C_Man_casual_1_F {
+class U_C_ConstructionCoverall_Black_F : U_C_WorkerOveralls {
+	displayName = "Construction Overalls";
+	class Textures {
+		class U_C_ConstructionCoverall_Black_F { 
+			displayName = "Black"; 
+			condition = "true";
+		};
+		class U_C_ConstructionCoverall_Red_F : U_C_ConstructionCoverall_Black_F { displayName = "Red"; };
+		class U_C_ConstructionCoverall_Blue_F : U_C_ConstructionCoverall_Black_F { displayName = "Blue"; };
+		class U_C_ConstructionCoverall_Vrana_F : U_C_ConstructionCoverall_Black_F { 
+			displayName = "Vrana"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+	};
+};
+class U_C_ConstructionCoverall_Red_F : U_C_WorkerOveralls {};
+class U_C_ConstructionCoverall_Blue_F : U_C_WorkerOveralls {};
+class U_C_ConstructionCoverall_Vrana_F : U_C_WorkerOveralls {};
+
+class U_C_Man_casual_1_F : U_C_Poor_1 {
 	displayName = "Casual Clothes";
-	price = 125;
-	reputation = false;
-	virtualSpace = 4;
-	isGas = false;
+	price = 100;
 	class Textures {
 		class U_C_Man_casual_1_F { 
 			displayName = "Navy"; 
@@ -96,16 +99,13 @@ class U_C_Man_casual_1_F {
 class U_C_Man_casual_2_F : U_C_Man_casual_1_F{};
 class U_C_Man_casual_3_F : U_C_Man_casual_1_F{};
 
-class U_C_ArtTShirt_01_v1_F {
+class U_C_ArtTShirt_01_v1_F : U_C_Poor_1 {
 	displayName = "Casual T-Shirts";
-	price = 120;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+	price = 100;
 	class Textures {
 		class U_C_ArtTShirt_01_v1_F { 
 			displayName = "Art of War"; 
-			condition = "true";
+			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
 		class U_C_ArtTShirt_01_v2_F : U_C_ArtTShirt_01_v1_F { displayName = "Drones"; };
 		class U_C_ArtTShirt_01_v3_F : U_C_ArtTShirt_01_v1_F { displayName = "Waltham Robotics"; };
@@ -120,12 +120,9 @@ class U_C_ArtTShirt_01_v4_F : U_C_ArtTShirt_01_v1_F{};
 class U_C_ArtTShirt_01_v5_F : U_C_ArtTShirt_01_v1_F{};
 class U_C_ArtTShirt_01_v6_F : U_C_ArtTShirt_01_v1_F{};
 
-class U_C_Man_casual_6_F {
+class U_C_Man_casual_6_F : U_C_Poor_1 {
 	displayName = "Summer Clothes";
-	price = 115;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+	price = 100;
 	class Textures {
 		class U_C_Man_casual_6_F { 
 			displayName = "Red"; 
@@ -138,12 +135,9 @@ class U_C_Man_casual_6_F {
 class U_C_Man_casual_5_F : U_C_Man_casual_6_F{};
 class U_C_Man_casual_4_F : U_C_Man_casual_6_F{};
 
-class U_C_man_sport_1_F {
+class U_C_man_sport_1_F : U_C_Poor_1 {
 	displayName = "Sport Clothes";
-	price = 113;
-	reputation = false;
-	virtualSpace = 2;
-	isGas = false;
+	price = 100;
 	class Textures {
 		class U_C_man_sport_1_F { 
 			displayName = "Beach"; 
@@ -156,12 +150,9 @@ class U_C_man_sport_1_F {
 class U_C_man_sport_2_F : U_C_man_sport_1_F{};
 class U_C_man_sport_3_F : U_C_man_sport_1_F{};
 
-class U_C_Scientist {
+class U_C_Scientist : U_C_Poor_1 {
 	displayName = "Scientist Clothes";
-	price = 160;
-	reputation = false;
-	virtualSpace = 4;
-	isGas = false;
+	price = 100;
 	class Textures {
 		class U_C_Scientist { 
 			displayName = "White Overalls"; 
@@ -178,12 +169,10 @@ class U_C_Uniform_Scientist_01_formal_F : U_C_Scientist{};
 class U_C_Uniform_Scientist_02_F : U_C_Scientist{};
 class U_C_Uniform_Scientist_02_formal_F : U_C_Scientist{};
 
-class U_I_C_Soldier_Bandit_1_F {
+class U_I_C_Soldier_Bandit_1_F : U_C_Poor_1 {
 	displayName = "Banit Clothes";
-	price = 145;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+	price = 150;
+	virtualSpace = 4;
 	class Textures {
 		class U_I_C_Soldier_Bandit_1_F { 
 			displayName = "Polo Shirt"; 
@@ -198,12 +187,10 @@ class U_I_C_Soldier_Bandit_2_F : U_I_C_Soldier_Bandit_1_F{};
 class U_I_C_Soldier_Bandit_4_F : U_I_C_Soldier_Bandit_1_F{};
 class U_I_C_Soldier_Bandit_5_F : U_I_C_Soldier_Bandit_1_F{};
 
-class U_I_C_Soldier_Bandit_3_F { 
+class U_I_C_Soldier_Bandit_3_F : U_C_Poor_1 { 
 	displayName = "Casual Outfit"; 
-	price = 140;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+	price = 150;
+	virtualSpace = 4;
 	class Textures {
 		class U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Brown"; 
@@ -229,12 +216,10 @@ class U_I_C_Soldier_Bandit_3_F {
 	};
 };
 
-class U_IG_Guerilla1_1 {
+class U_IG_Guerilla1_1 : U_C_Poor_1 {
 	displayName = "Guerilla Clothes";
-	price = 170;
-	reputation = false;
-	virtualSpace = 5;
-	isGas = false;
+	price = 150;
+	virtualSpace = 4;
 	class Textures {
 		class U_IG_Guerilla1_1 { 
 			displayName = "Garment (Brown)"; 
@@ -249,28 +234,29 @@ class U_IG_Guerilla1_1 {
 		class Blackwing : U_IG_Guerilla1_1 {
 			displayName = "Blackwing";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
+			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
-		class Black : U_IG_Guerilla1_1 {
+		class Black : Blackwing {
 			displayName = "Black";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
 		};
-		class Red : U_IG_Guerilla1_1 {
+		class Red : Blackwing {
 			displayName = "Red";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_bandit_co.paa" };
 		};
-		class Blue : U_IG_Guerilla1_1 {
+		class Blue : Blackwing {
 			displayName = "Blue";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_co.paa" };
 		};
-		class Orange : U_IG_Guerilla1_1 {
+		class Orange : Blackwing {
 			displayName = "Orange";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_v3_co.paa" };
 		};
-		class Yellow : U_IG_Guerilla1_1 {
+		class Yellow : Blackwing {
 			displayName = "Yellow";
 			textures[] = { "A3\Characters_F\Civil\Data\c_cloth1_v2_co.paa" };
 		};
-		class Brown : U_IG_Guerilla1_1 {
+		class Brown : Blackwing {
 			displayName = "Brown";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_brown.paa" };
 		};
@@ -285,30 +271,28 @@ class U_IG_Guerilla3_1 : U_IG_Guerilla1_1 {};
 class U_IG_Guerilla3_2 : U_IG_Guerilla1_1 {};
 class U_IG_leader : U_IG_Guerilla1_1 {};
 
-class U_C_HunterBody_grn {
+class U_C_HunterBody_grn : U_C_Poor_1 {
 	displayName = "Hunting Clothes";
-	price = 160;
-	reputation = false;
-	virtualSpace = 7;
-	isGas = false;
+	price = 200;
+	virtualSpace = 4;
 	class Textures {};
 };
 
-class U_C_E_LooterJacket_01_F {
+class U_C_E_LooterJacket_01_F : U_C_Poor_1 {
 	displayName = "Looter Clothes";
-	price = 180;
-	reputation = false;
-	virtualSpace = 5;
-	isGas = false;
+	price = 150;
 	class Textures {
 		class U_C_E_LooterJacket_01_F { 
 			displayName = "Leather Jacket"; 
 			condition = "true";
 		};
-		class U_I_L_Uniform_01_tshirt_skull_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Skull"; };
 		class U_I_L_Uniform_01_tshirt_black_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Black"; };
 		class U_I_L_Uniform_01_tshirt_sport_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Sport"; };
 		class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Olive"; };
+		class U_I_L_Uniform_01_tshirt_skull_F : U_C_E_LooterJacket_01_F { 
+			displayName = "T-Shirt, Skull"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
 	};
 };
 class U_I_L_Uniform_01_tshirt_skull_F : U_C_E_LooterJacket_01_F {};
@@ -316,13 +300,13 @@ class U_I_L_Uniform_01_tshirt_black_F : U_C_E_LooterJacket_01_F {};
 class U_I_L_Uniform_01_tshirt_sport_F : U_C_E_LooterJacket_01_F {};
 class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F {};
 
-class U_O_R_Gorka_01_black_F {
+class U_O_R_Gorka_01_black_F : U_C_Poor_1 {
 	displayName = "Tracksuit";
-	price = 1850;
+	price = 15000;
 	reputation = true;
-	virtualSpace = 12;
-	isGas = false;
+	virtualSpace = 8;
 	class Textures {
+		// Police
 		class RPU {
 			displayName = "RPU";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\RPU_tracksuit.paa" };
@@ -333,6 +317,8 @@ class U_O_R_Gorka_01_black_F {
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_tracksuit.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		};
+
+		// Medic
 		class Paramedic {
 			displayName = "Paramedic";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
@@ -353,11 +339,15 @@ class U_O_R_Gorka_01_black_F {
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess }";
 		};*/
+
+		// Highways
 		class Hato {
 			displayName = "Traffic Officer";
 			textures[] = { "Data\Textures\Uniforms\Hato\tracksuit.paa" };
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		};
+
+		// Civilian
 		class U_O_R_Gorka_01_black_F {
 			displayName = "Black"; 
 			condition = "true";
@@ -369,12 +359,9 @@ class U_O_R_Gorka_01_black_F {
 class U_O_R_Gorka_01_brown_F : U_O_R_Gorka_01_black_F {};
 class U_O_R_Gorka_01_camo_F : U_O_R_Gorka_01_black_F {};
 
-class U_I_C_Soldier_Para_1_F {
+class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
 	displayName = "Paramilitary Clothes";
-	price = 310;
-	reputation = true;
-	virtualSpace = 4;
-	isGas = false;
+	price = 150;
 	class Textures {
 		class U_I_C_Soldier_Para_1_F { 
 			displayName = "Tee"; 
@@ -383,52 +370,76 @@ class U_I_C_Soldier_Para_1_F {
 		class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F { displayName = "Jacket"; };
 		class U_I_C_Soldier_Para_3_F : U_I_C_Soldier_Para_1_F { displayName = "Shirt"; };
 		class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F { displayName = "Tank Top"; };
-		class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F { displayName = "Shorts"; };
+		class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F { 
+			displayName = "Shorts"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
 	};
 };
-class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F{};
-class U_I_C_Soldier_Para_3_F : U_I_C_Soldier_Para_1_F{};
-class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F{};
-class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F{};
+class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F {};
+class U_I_C_Soldier_Para_3_F : U_I_C_Soldier_Para_1_F {};
+class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F {};
+class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F {};
 
-class U_B_Wetsuit {
-	displayName = "Wetsuits";
-	price = 3500;
-	reputation = false;
-	virtualSpace = 0;
-	isGas = false;
+class U_I_E_Uniform_01_F : U_O_R_Gorka_01_black_F {
+	displayName = "Geometric Clothes";
+	price = 150;
 	class Textures {
+		class U_I_E_Uniform_01_F { 
+			displayName = "Jacket"; 
+			condition = "true";
+		};
+		class U_I_E_Uniform_01_shortsleeve_F : U_I_E_Uniform_01_F { displayName = "Jacket (Rolled)"; };
+		class U_I_L_Uniform_01_camo_F : U_I_E_Uniform_01_F { displayName = "Camo"; };
+		class U_I_E_Uniform_01_sweater_F : U_I_E_Uniform_01_F { displayName = "Sweater"; };
+		class U_I_L_Uniform_01_deserter_F : U_I_E_Uniform_01_F { displayName = "T-Shirt"; };
+		class U_I_E_Uniform_01_tanktop_F : U_I_E_Uniform_01_F { displayName = "Tank Top"; };
+		class U_I_E_Uniform_01_officer_F : U_I_E_Uniform_01_F { 
+			displayName = "Officer"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+	};
+};
+class U_I_E_Uniform_01_shortsleeve_F : U_I_E_Uniform_01_F {};
+class U_I_L_Uniform_01_camo_F : U_I_E_Uniform_01_F {};
+class U_I_E_Uniform_01_sweater_F : U_I_E_Uniform_01_F {};
+class U_I_L_Uniform_01_deserter_F : U_I_E_Uniform_01_F {};
+class U_I_E_Uniform_01_tanktop_F : U_I_E_Uniform_01_F {};
+class U_I_E_Uniform_01_officer_F : U_I_E_Uniform_01_F {};
+
+class U_B_Wetsuit : U_O_R_Gorka_01_black_F {
+	displayName = "Wetsuits";
+	price = 2500;
+	virtualSpace = 0;
+	class Textures {
+		// Police
+		class MPU {
+			displayName = "MPU";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\MPU.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_MPU"", 1] call ULP_fnc_hasAccess }";
+		};
+
+		// Civilian
 		class U_B_Wetsuit { 
 			displayName = "Black"; 
 			condition = "true";
 		};
 		class U_O_Wetsuit : U_B_Wetsuit { displayName = "Brown"; };
 		class U_I_Wetsuit : U_B_Wetsuit { displayName = "Green"; };
-		class MPU {
-			displayName = "MPU";
-			textures[] = { "Data\Textures\Uniforms\Police\Units\MPU.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_MPU"", 1] call ULP_fnc_hasAccess }";
-		};
 	};
 };
 class U_O_Wetsuit : U_B_Wetsuit{};
 class U_I_Wetsuit : U_B_Wetsuit{};
 
-class U_Marshal {
+class U_Marshal : U_C_Poor_1 {
 	displayName = "Protection Uniform";
-	price = 1700;
-	reputation = false;
-	virtualSpace = 5;
-	isGas = false;
+	price = 1000;
 	class Textures {};
 };
 
-class U_C_Driver_1_black {
+class U_C_Driver_1_black : U_C_Poor_1 {
 	displayName = "Driver Clothes";
-	price = 450;
-	reputation = false;
-	virtualSpace = 2;
-	isGas = false;
+	price = 500;
 	class Textures {
 		class U_C_Driver_1_black { 
 			displayName = "Black"; 
@@ -440,10 +451,13 @@ class U_C_Driver_1_black {
 		class U_C_Driver_1_white : U_C_Driver_1_black { displayName = "White"; };
 		class U_C_Driver_1_yellow : U_C_Driver_1_black { displayName = "Yellow"; };
 		class U_C_Driver_1_orange : U_C_Driver_1_black { displayName = "Orange"; };
-		class U_C_Driver_1 : U_C_Driver_1_black { displayName = "Fuel"; };
-		class U_C_Driver_2 : U_C_Driver_1_black { displayName = "Bluking"; };
-		class U_C_Driver_3 : U_C_Driver_1_black { displayName = "Redstone"; };
-		class U_C_Driver_4 : U_C_Driver_1_black { displayName = "Vrana"; };
+		class U_C_Driver_1 : U_C_Driver_1_black { 
+			displayName = "Fuel"; 
+			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class U_C_Driver_2 : U_C_Driver_1 { displayName = "Bluking"; };
+		class U_C_Driver_3 : U_C_Driver_1 { displayName = "Redstone"; };
+		class U_C_Driver_4 : U_C_Driver_1 { displayName = "Vrana"; };
 	};
 };
 class U_C_Driver_1_blue : U_C_Driver_1_black{};
@@ -457,12 +471,9 @@ class U_C_Driver_2 : U_C_Driver_1_black{};
 class U_C_Driver_3 : U_C_Driver_1_black{};
 class U_C_Driver_4 : U_C_Driver_1_black{};
 
-class U_C_IDAP_Man_shorts_F {
+class U_C_IDAP_Man_shorts_F : U_C_Poor_1 {
 	displayName = "IDAP Clothes";
-	price = 100;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+	price = 500;
 	class Textures {
 		class U_C_IDAP_Man_shorts_F { 
 			displayName = "Polo, Shorts"; 
@@ -489,20 +500,14 @@ class U_C_IDAP_Man_Tee_F : U_C_IDAP_Man_shorts_F{
 class U_C_IDAP_Man_Jeans_F : U_C_IDAP_Man_shorts_F{};
 class U_C_IDAP_Man_TeeShorts_F : U_C_IDAP_Man_shorts_F{};
 
-class U_C_Journalist {
-	price = 145;
-	reputation = false;
-	virtualSpace = 2;
-	isGas = false;
+class U_C_Journalist : U_C_Poor_1 {
+	price = 100;
 	class Textures {};
 };
 
-class U_Rangemaster {
+class U_Rangemaster : U_C_Poor_1 {
 	displayName = "Patrol Uniform";
-	price = 160;
-	reputation = false;
-	virtualSpace = 2;
-	isGas = false;
+	price = 100;
 	class Textures {
 		class CC {
 			displayName = "Chief Constable";
@@ -550,19 +555,16 @@ class U_Rangemaster {
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class PCSO {
-			displayName = "Police Support Officer";
+			displayName = "Police Community Support Officer";
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PCSO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
 	};
 };
 
-class U_Competitor {
+class U_Competitor : U_C_Poor_1 {
 	displayName = "Response Uniform";
-	price = 160;
-	reputation = false;
-	virtualSpace = 2;
-	isGas = false;
+	price = 100;
 	class Textures {
 		class DR {
 			displayName = "Consultant";
@@ -582,12 +584,9 @@ class U_Competitor {
 	};
 };
 
-class U_B_GEN_Commander_F {
+class U_B_GEN_Commander_F : U_C_Poor_1 {
 	displayName = "Patrol Jumper";
-	price = 230;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+	price = 200;
 	class Textures {
 		class College {
 			displayName = "College of Policing";
@@ -608,44 +607,35 @@ class U_BG_Guerrilla_6_1 : U_B_GEN_Commander_F {
 	};
 };
 
-class U_OrestesBody {
-	price = 280;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+class U_OrestesBody : U_C_Poor_1 {
+	displayName = "New Look";
+	price = 1000;
 	class Textures {};
 };
 
-class U_NikosBody {
+class U_NikosBody : U_C_Poor_1 {
 	displayName = "Casual Look";
-	price = 235;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+	price = 1000;
 	class Textures {};
 };
 
-class U_NikosAgedBody {
+class U_NikosAgedBody : U_C_Poor_1 {
 	displayName = "Fine Suit";
-	price = 350;
-	reputation = false;
-	virtualSpace = 2;
-	isGas = false;
+	price = 3500;
 	class Textures {};
 };
 
-class U_C_FormalSuit_01_tshirt_black_F {
+class U_C_FormalSuit_01_tshirt_black_F : U_C_Poor_1 {
 	displayName = "Formal Suit, T-Shirt";
-	price = 460;
-	reputation = true;
-	virtualSpace = 2;
-	isGas = false;
+	price = 5000;
 	class Textures {
 		class U_C_FormalSuit_01_tshirt_black_F { 
 			displayName = "Black"; 
 			condition = "true";
 		};
 		class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F { displayName = "Gray"; };
+
+		// Group
 		class Ridge : U_C_FormalSuit_01_tshirt_gray_F {
 			displayName = "Ridge Formal Uniform";
 			textures[] = { "Data\Textures\Groups\Ridge\U_C_FormalSuit_01_tshirt_gray_F.paa" };
@@ -655,12 +645,9 @@ class U_C_FormalSuit_01_tshirt_black_F {
 };
 class U_C_FormalSuit_01_tshirt_gray_F : U_C_FormalSuit_01_tshirt_black_F {};
 
-class U_C_FormalSuit_01_black_F {
+class U_C_FormalSuit_01_black_F : U_C_Poor_1 {
 	displayName = "Formal Suit";
-	price = 580;
-	reputation = true;
-	virtualSpace = 2;
-	isGas = false;
+	price = 6000;
 	class Textures {
 		class U_C_FormalSuit_01_black_F { 
 			displayName = "Black"; 
@@ -678,12 +665,9 @@ class U_C_FormalSuit_01_gray_F : U_C_FormalSuit_01_black_F {};
 class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F {};
 class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F {};
 
-class U_I_ParadeUniform_01_AAF_decorated_F {
+class U_I_ParadeUniform_01_AAF_decorated_F : U_C_Poor_1 {
 	displayName = "Command Parade Uniform";
-	price = 790;
-	reputation = false;
-	virtualSpace = 3;
-	isGas = false;
+	price = 10000;
 	class Textures {
 		class Command { 
 			displayName = "Parade Uniform";
@@ -701,30 +685,26 @@ class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F {
 	class Textures {
 		class Main { 
 			displayName = "Parade Uniform";
+			condition = "true";
 			textures[] = { 
 				"Data\Textures\Uniforms\Police\parade_01.paa",
 				"Data\Textures\Uniforms\Police\parade_02.paa",
 				"Data\Textures\Uniforms\Police\parade_03.paa"
 			};
-			condition = "true";
 		};
 	};
 };
 
-class U_B_survival_uniform {
-	price = 4650;
+class U_B_survival_uniform : U_C_Poor_1 {
+	price = 15000;
 	reputation = true;
-	virtualSpace = 5;
-	isGas = false;
 	class Textures {};
 };
 
-class U_B_CombatUniform_mcam_worn {
+class U_B_CombatUniform_mcam_worn : U_B_survival_uniform {
 	displayName = "Traffic Uniform";
-	price = 1200;
-	reputation = true;
-	virtualSpace = 7;
-	isGas = false;
+	price = 1000;
+	virtualSpace = 4;
 	class Textures {
 		class RPU {
 			displayName = "Traffic Uniform";
@@ -734,12 +714,24 @@ class U_B_CombatUniform_mcam_worn {
 	};
 };
 
-class U_B_CombatUniform_mcam {
+class U_I_CombatUniform : U_B_survival_uniform {
+	displayName = "Combat Fatigues";
+	price = 1500;
+	virtualSpace = 4;
+	class Textures {
+		class U_I_CombatUniform { 
+			displayName = "AAF (Base)"; 
+			condition = "true";
+		};
+		class U_I_CombatUniform_shortsleeve : U_I_CombatUniform { displayName = "AAF (Rolled)"; };
+	};
+};
+class U_I_CombatUniform_shortsleeve : U_I_CombatUniform {};
+
+class U_B_CombatUniform_mcam : U_B_survival_uniform {
 	displayName = "Combat Clothes";
-	price = 1370;
-	reputation = true;
-	virtualSpace = 7;
-	isGas = false;
+	price = 1500;
+	virtualSpace = 4;
 	class Textures {
 		class U_B_CombatUniform_mcam { 
 			displayName = "MTP (Base)"; 
@@ -764,23 +756,27 @@ class U_B_T_Solider_F : U_B_CombatUniform_mcam {};
 class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam {};
 class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam {};
 
-class U_B_CTRG_Soldier_F {
+class U_B_CTRG_Soldier_F : U_B_survival_uniform {
 	displayName = "Stealth Uniform";
-	price = 57890;
-	reputation = true;
-	virtualSpace = 7;
-	isGas = false;
+	price = 45000;
+	virtualSpace = 4;
 	class Textures {
+		// Police
 		class SCO19 {
 			displayName = "SCO19 Uniform";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
 		};
+
+		// Civilian
 		class U_B_CTRG_Soldier_F {
 			displayName = "Tropic";
 			condition = "true";
 		};
 		class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F { displayName = "Arid"; };
+		class U_B_CTRG_Soldier_urb_1_F : U_B_CTRG_Soldier_F { displayName = "Urban"; };
+
+		// Group
 		class Ridge : U_B_CTRG_Soldier_F {
 			displayName = "Ridge";
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
@@ -794,24 +790,27 @@ class U_B_CTRG_Soldier_F {
 	};
 };
 class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F {};
+class U_B_CTRG_Soldier_urb_1_F : U_B_CTRG_Soldier_F {};
 
-class U_B_CTRG_Soldier_3_F {
+class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {
 	displayName = "Stealth Uniform (Rolled)";
-	price = 57890;
-	reputation = true;
-	virtualSpace = 7;
-	isGas = false;
 	class Textures {
+		// Police
 		class SCO19 {
 			displayName = "SCO19 Uniform";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
 		};
+
+		// Civilian
 		class U_B_CTRG_Soldier_3_F { 
 			displayName = "Tropic"; 
 			condition = "true";
 		};
 		class U_B_CTRG_Soldier_3_Arid_F : U_B_CTRG_Soldier_3_F { displayName = "Arid"; };
+		class U_B_CTRG_Soldier_urb_3_F : U_B_CTRG_Soldier_3_F { displayName = "Urban"; };
+
+		// Group
 		class Ridge : U_B_CTRG_Soldier_3_F {
 			displayName = "Ridge";
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
@@ -825,24 +824,27 @@ class U_B_CTRG_Soldier_3_F {
 	};
 };
 class U_B_CTRG_Soldier_3_Arid_F : U_B_CTRG_Soldier_3_F {};
+class U_B_CTRG_Soldier_urb_3_F : U_B_CTRG_Soldier_3_F {};
 
-class U_B_CTRG_Soldier_2_Arid_F {
+class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {
 	displayName = "Stealth Uniform (Tee)";
-	price = 57890;
-	reputation = true;
-	virtualSpace = 7;
-	isGas = false;
 	class Textures {
+		// Police
 		class SCO19 {
 			displayName = "SCO19 Uniform";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 3] call ULP_fnc_hasAccess }";
 		};
+
+		// Civilian
 		class U_B_CTRG_Soldier_2_Arid_F { 
 			displayName = "Arid"; 
 			condition = "true";
 		};
 		class U_B_CTRG_Soldier_2_F : U_B_CTRG_Soldier_2_Arid_F { displayName = "Tropic"; };
+		class U_B_CTRG_Soldier_urb_2_F : U_B_CTRG_Soldier_2_Arid_F { displayName = "Urban"; };
+
+		// Group
 		class Ridge : U_B_CTRG_Soldier_2_Arid_F {
 			displayName = "Ridge";
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
@@ -856,20 +858,22 @@ class U_B_CTRG_Soldier_2_Arid_F {
 	};
 };
 class U_B_CTRG_Soldier_2_F : U_B_CTRG_Soldier_2_Arid_F {};
+class U_B_CTRG_Soldier_urb_2_F : U_B_CTRG_Soldier_2_Arid_F {};
 
-class U_B_GhillieSuit {
+class U_B_GhillieSuit : U_B_survival_uniform {
 	displayName = "Half-Ghillies";
-	price = 90360;
-	reputation = true;
-	virtualSpace = 7;
+	price = 100000;
+	virtualSpace = 4;
 	isMask = true;
-	isGas = false;
 	class Textures {
+		// Police
 		class SCO19 {
 			displayName = "SCO19 Ghillie";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
 		};
+
+		// Civilian
 		class U_B_GhillieSuit { 
 			displayName = "MTP"; 
 			condition = "true";
@@ -883,12 +887,9 @@ class U_O_GhillieSuit : U_B_GhillieSuit {};
 class U_I_GhillieSuit : U_B_GhillieSuit {};
 class U_B_T_Sniper_F : U_B_GhillieSuit {};
 
-class U_B_FullGhillie_ard {
+class U_B_FullGhillie_ard : U_B_GhillieSuit {
 	displayName = "Full-Ghillies";
-	price = 142000;
-	reputation = true;
-	virtualSpace = 3;
-	isGas = false;
+	price = 150000;
 	class Textures {
 		class U_B_FullGhillie_ard { 
 			displayName = "Arid"; 
@@ -903,12 +904,10 @@ class U_B_FullGhillie_sard : U_B_FullGhillie_ard {};
 class U_B_FullGhillie_lsh : U_B_FullGhillie_ard {};
 class U_B_T_FullGhillie_tna_F : U_B_FullGhillie_ard {};
 
-class U_B_HeliPilotCoveralls {
+class U_B_HeliPilotCoveralls : U_B_survival_uniform {
 	displayName = "Flight Clothes";
-	price = 5670;
-	reputation = false;
-	virtualSpace = 8;
-	isGas = false;
+	price = 5000;
+	virtualSpace = 4;
 	class Textures {
 		class U_B_HeliPilotCoveralls { 
 			displayName = "Green"; 
@@ -921,18 +920,19 @@ class U_B_HeliPilotCoveralls {
 class U_I_HeliPilotCoveralls : U_B_HeliPilotCoveralls {};
 class U_I_E_Uniform_01_coveralls_F : U_B_HeliPilotCoveralls {};
 
-class U_O_PilotCoveralls {
+class U_O_PilotCoveralls : U_B_survival_uniform {
 	displayName = "Flight Clothes";
-	price = 17800;
-	reputation = false;
-	virtualSpace = 10;
-	isGas = false;
+	price = 20000;
+	virtualSpace = 8;
 	class Textures {
+		// Police
 		class NPAS {
 			displayName = "NPAS Uniform";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NPAS.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NPAS"", 1] call ULP_fnc_hasAccess }";
 		};
+
+		// Medic
 		class AAA {
 			displayName = "AAA Uniform";
 			textures[] = { "Data\Textures\Uniforms\Medic\aa.paa" };
@@ -941,11 +941,9 @@ class U_O_PilotCoveralls {
 	};
 };
 
-class U_C_CBRN_Suit_01_White_F {
+class U_C_CBRN_Suit_01_White_F : U_B_survival_uniform {
 	displayName = "CBRN Suits";
-	price = 85000;
-	reputation = true;
-	virtualSpace = 5;
+	price = 50000;
 	isGas = true;
 	class Textures {
 		class U_C_CBRN_Suit_01_White_F { 
@@ -956,7 +954,7 @@ class U_C_CBRN_Suit_01_White_F {
 		class U_B_CBRN_Suit_01_MTP_F : U_C_CBRN_Suit_01_White_F { displayName = "MTP"; };
 		class U_B_CBRN_Suit_01_Wdl_F : U_C_CBRN_Suit_01_White_F { displayName = "WDL"; };
 		class U_I_CBRN_Suit_01_AAF_F : U_C_CBRN_Suit_01_White_F { displayName = "DIGI"; };
-		class U_I_CBRN_Suit_01_EAF_F : U_C_CBRN_Suit_01_White_F { displayName = "LDF"; };
+		class U_I_E_CBRN_Suit_01_EAF_F : U_C_CBRN_Suit_01_White_F { displayName = "LDF"; };
 		class U_I_CBRN_Suit_01_Tropic_F : U_C_CBRN_Suit_01_White_F { displayName = "Tropic"; };
 	};
 };
@@ -964,13 +962,12 @@ class U_C_CBRN_Suit_01_Blue_F : U_C_CBRN_Suit_01_White_F {};
 class U_B_CBRN_Suit_01_MTP_F : U_C_CBRN_Suit_01_White_F {};
 class U_B_CBRN_Suit_01_Wdl_F : U_C_CBRN_Suit_01_White_F {};
 class U_I_CBRN_Suit_01_AAF_F : U_C_CBRN_Suit_01_White_F {};
-class U_I_CBRN_Suit_01_EAF_F : U_C_CBRN_Suit_01_White_F {};
+class U_I_E_CBRN_Suit_01_EAF_F : U_C_CBRN_Suit_01_White_F {};
 class U_I_CBRN_Suit_01_Tropic_F : U_C_CBRN_Suit_01_White_F {};
 
-class U_C_Protagonist_VR {
+class U_C_Protagonist_VR : U_B_survival_uniform {
 	displayName = "Staff Suits";
 	price = 1000000;
-	reputation = false;
 	virtualSpace = 100;
 	isGas = true;
 	class Textures {

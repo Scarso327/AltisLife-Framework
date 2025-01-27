@@ -22,7 +22,7 @@ if (local _vehicle && { _engineOn }) then {
 
 		_clamp params [ "_finer", "_steamid", "_fine" ];
 
-		if (CASH < _fine) exitWith {
+		if (BANK < _fine) exitWith {
 			if (time >= _vehicle getVariable ["clamp_notify", 0]) then {
 				[format ["Your vehicle has been clamped by <t color='#B92DE0'>%1</t> and you can't afford the <t color='#B92DE0'>%2%3</t> fine...", _finer, "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
@@ -35,7 +35,7 @@ if (local _vehicle && { _engineOn }) then {
 			{	
 				_this params [ "_vehicle", "_fine", "_steamid" ];
 
-				if ([_fine, false, "Vehicle Fine"] call ULP_fnc_removeMoney) then {
+				if ([_fine, true, "Vehicle Fine"] call ULP_fnc_removeMoney) then {
 					_vehicle engineOn true;
 					_vehicle setVariable ["clamp_fine", nil, true];
 

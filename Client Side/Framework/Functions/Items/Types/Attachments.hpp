@@ -71,7 +71,7 @@ class optic_Holosight_lush_F : optic_Holosight {};
 class optic_Holosight_arid_F : optic_Holosight {};
 
 class optic_ico_01_black_f {
-    displayName = "Promet Modual Sight";
+    displayName = "Promet Modular Sight";
 	price = 7800;
 	reputation = true;
 	class Textures {

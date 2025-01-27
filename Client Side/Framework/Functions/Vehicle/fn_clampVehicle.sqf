@@ -36,7 +36,7 @@ closeDialog 0;
 	{
 		_this params [
 			["_vehicle", objNull, [objNull]],
-			["_cfg", [], [[]]],
+			["_cfg", configNull, [configNull]],
 			["_display", displayNull, [displayNull]],
 			["_fine", 1, [0]]
 		];

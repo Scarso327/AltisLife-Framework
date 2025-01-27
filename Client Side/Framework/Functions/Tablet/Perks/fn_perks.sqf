@@ -59,7 +59,9 @@ private _item = 1;
 
 	private _iconCtrl = _perkCtrl controlsGroupCtrl 101;
 	_iconCtrl ctrlSetText getText (_cfg >> "icon");
-	_iconCtrl ctrlSetTooltip format [getText (_cfg >> "description"), [_perkCfgName] call ULP_fnc_getPerkBonus, "%"];
+
+	private _description = format [getText (_cfg >> "description"), [_perkCfgName] call ULP_fnc_getPerkBonus, "%"];
+	_iconCtrl ctrlSetTooltip _description;
 
 	private _nameCtrl = _perkCtrl controlsGroupCtrl 102;
 	_nameCtrl ctrlSetStructuredText parseText format["<t align='center'>%1</t>",  getText (_cfg >> "displayName")];
@@ -74,7 +76,7 @@ private _item = 1;
 
 	if (_state isEqualTo 2) then {
 		private _requirement = [_perkCfgName] call ULP_fnc_getPerkRequirement;
-		_coverCtrl ctrlSetTooltip format ["Requires %1 %2", _requirement select 0, _requirement select 1];
+		_coverCtrl ctrlSetTooltip format ["%3\nRequires %1 %2", _requirement select 0, _requirement select 1, _description];
 		_button ctrlEnable false;
 	} else {
 		private _maxLevel = getNumber (_cfg >> "Leveling" >> "maxLevel");

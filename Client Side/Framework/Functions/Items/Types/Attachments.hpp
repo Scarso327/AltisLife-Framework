@@ -70,6 +70,22 @@ class optic_Holosight_smg_khk_F : optic_Holosight {};
 class optic_Holosight_lush_F : optic_Holosight {};
 class optic_Holosight_arid_F : optic_Holosight {};
 
+class optic_ico_01_black_f {
+    displayName = "Promet Modual Sight";
+	price = 7800;
+	reputation = true;
+	class Textures {
+		class optic_ico_01_black_f {
+			displayName = "Black";
+			condition = "true";
+		};
+		class optic_ico_01_sand_f : optic_ico_01_black_f { displayName = "Sand"; };
+		class optic_ico_01_camo_f : optic_ico_01_black_f { displayName = "Camo"; };
+	};
+};
+class optic_ico_01_sand_f : optic_ico_01_black_f {};
+class optic_ico_01_camo_f : optic_ico_01_black_f {};
+
 class optic_Hamr {
     displayName = "RCO";
 	price = 7800;

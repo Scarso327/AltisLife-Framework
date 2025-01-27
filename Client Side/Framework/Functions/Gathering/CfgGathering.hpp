@@ -126,7 +126,7 @@ class CfgGathering {
 		gatherTime = 3;
 	};
 	class Rock : BaseMine {
-		areas[] = { { "hmp_rocks", 2 } };
+		areas[] = { { "hmp_rocks", 5 } };
 		items[] = { { "Rock", 100 } };
 		condition = "ULP_Imprisioned";
 	};

@@ -107,7 +107,6 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 [] call ULP_fnc_initCommunityGoals;
 
 ["Initialising Player"] call ULP_fnc_logIt;
-ULP_Ready = true;
 
 [true, true] call ULP_fnc_initPlayer;
 [] call ULP_fnc_initMarkers;

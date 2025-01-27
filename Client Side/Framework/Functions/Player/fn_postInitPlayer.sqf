@@ -7,7 +7,7 @@ scopeName "fn_postInitPlayer";
 
 if !(hasInterface) exitWith {};
 
-[{ ULP_Ready }, [], {
+[{ ULP_Loaded }, [], {
     [[], {
         private _loggedScripts = missionNamespace getVariable["ULP_SeenScripts", []];
 

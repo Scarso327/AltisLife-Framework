@@ -16,4 +16,3 @@ ULP_waitExecute = [];
 ULP_waitUntilExecute = [];
 
 ULPEvent_TaserFired = false;
-ULP_Ready = false;

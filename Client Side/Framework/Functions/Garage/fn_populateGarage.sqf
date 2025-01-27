@@ -42,7 +42,13 @@ private _index = -1;
 		_list lbSetPicture[_index, _picture];
 		_list lbSetData[_index, str [_id, _classname, _texture, _fee, _faction]];
 
-		if (_impound && { _fee > 0 }) then {
+		if (_fee > 0) then {
+			if !(_impound) then {
+				_list lbSetTooltip [_index, "Impounded"];
+				_list lbSetColor [_index, [1, 1, 1, 0.3]];
+				_list lbSetPictureColor [_index, [1, 1, 1, 0.3]];
+			};
+
 			_list lbSetValue [_index, _fee];
 		};
 

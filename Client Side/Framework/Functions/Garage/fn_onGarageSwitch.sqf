@@ -29,7 +29,7 @@ _itemData = parseSimpleArray _itemData;
 private _impound = _display getVariable ["impound", false];
 
 _itemData params [
-	"_id", "_classname", "_texture", "", "_faction"
+	"_id", "_classname", "_texture", "_impoundFee", "_faction"
 ];
 
 private _cfg = [_classname] call ULP_fnc_vehicleCfg;
@@ -68,3 +68,12 @@ _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>%8<t
 <t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%7</t></t>", 
 ([format["£%1", [_retrievalPrice] call ULP_fnc_numberText], "-"] select (_retrievalPrice < 1)),
 getNumber(_missionCfg >> "virtualSpace"), _topSpeed, _armor, _seats + 1, _power, _fuel, (["Retreival Price", "Unimpound Fee"] select (_impound))];
+
+private _actionsEnabled = (_impound || { _impoundFee isEqualTo 0 });
+
+ctrlEnable [3505, _actionsEnabled];
+
+if (ctrlVisible 3506) then {
+	ctrlEnable [3506, _actionsEnabled];
+	ctrlEnable [3507, _actionsEnabled];
+};

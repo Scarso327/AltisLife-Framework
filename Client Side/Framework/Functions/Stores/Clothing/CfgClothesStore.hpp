@@ -992,6 +992,8 @@ class CfgClothesStore {
 			class G_Balaclava_blk {};
 			class G_Balaclava_TI_blk_F {};
 			class G_Balaclava_TI_G_blk_F {};
+			class G_RegulatorMask_F {};
+			class G_AirPurifyingRespirator_01_F {};
 			class G_Tactical_Clear {};
 		};
 
@@ -1084,6 +1086,8 @@ class CfgClothesStore {
 			class G_Balaclava_blk {};
 			class G_Balaclava_TI_blk_F {};
 			class G_Balaclava_TI_G_blk_F {};
+			class G_RegulatorMask_F {};
+			class G_AirPurifyingRespirator_01_F {};
 			class G_Tactical_Clear {};
 		};
 

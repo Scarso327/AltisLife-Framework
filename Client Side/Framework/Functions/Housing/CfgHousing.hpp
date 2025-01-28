@@ -38,7 +38,7 @@ class CfgHousing {
 
 		class Land_Slub_House02_F : BaseHouse {
 			price = 4850000;
-			canSpawn = false;
+			canSpawn = true;
 			spawnPos[] = {1.46875,0.984863,-1.0281};
 			
 			class Storage {
@@ -62,7 +62,7 @@ class CfgHousing {
 		class Land_i_Addon_02_V1_F : Land_i_Stone_Shed_V1_F {
 			price = 3950000;
 			breakIn = 3 * 60;
-			canSpawn = false;
+			canSpawn = true;
 		};
 
 		class Land_i_Stone_HouseSmall_V1_F : BaseHouse {

@@ -26,7 +26,7 @@ private _objectTimeout = _object getVariable "timeout";
 if (!isNil "ULP_Robbery_Timeout" && { time < ULP_Robbery_Timeout }) exitWith {
 	[format["You have attempted or successfully robbed a store within the last <t color='#B92DE0'>%1 minutes</t>!", round (_personalTimeout / 60)]] call ULP_fnc_hint;
 };
-if (!isNil "_objectTimeout" && { time < _objectTimeout }) exitWith { [format["This store was robbed within the last %1 minutes!", round (_timeout / 60)]] call ULP_fnc_hint; };
+if (!isNil "_objectTimeout" && { serverTime < _objectTimeout }) exitWith { [format["This store was robbed within the last %1 minutes!", round (_timeout / 60)]] call ULP_fnc_hint; };
 
 private _condition = getText (_cfg >> "condition");
 private _onFail = getText (_cfg >> "onFail");
@@ -85,7 +85,7 @@ private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [
 	[format["You have robbed this store for £%1.", [_money] call ULP_fnc_numberText]] call ULP_fnc_achieve;
 	[getPlayerUID player, "Robbery", [_customName, _money]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
-	_object setVariable["timeout", time + (getNumber (_cfg >> "timeout")), true];
+	_object setVariable["timeout", serverTime + (getNumber (_cfg >> "timeout")), true];
 	_object setVariable["robber", nil, true];
 	deleteMarker _marker;
 }, {

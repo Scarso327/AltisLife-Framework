@@ -27,4 +27,39 @@ class CfgSFX
 		sounds[] = { sound0 };
 		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	};
+
+	class Siren_5
+	{
+		sound0[] = {"\Data\Sounds\Sirens\siren_5.ogg", 1, 1, 1000, 1, 0, 0, 0};
+		sounds[] = { sound0 };
+		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	};
+
+	class Siren_6
+	{
+		sound0[] = {"\Data\Sounds\Sirens\siren_6.ogg", 1, 1, 1000, 1, 0, 0, 0};
+		sounds[] = { sound0 };
+		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	};
+
+	class Siren_7
+	{
+		sound0[] = {"\Data\Sounds\Sirens\siren_7.ogg", 1, 1, 1000, 1, 0, 0, 0};
+		sounds[] = { sound0 };
+		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	};
+
+	class Siren_8
+	{
+		sound0[] = {"\Data\Sounds\Sirens\siren_8.ogg", 1, 1, 1000, 1, 0, 0, 0};
+		sounds[] = { sound0 };
+		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	};
+
+	class Siren_9
+	{
+		sound0[] = {"\Data\Sounds\Sirens\siren_9.ogg", 1, 1, 1000, 1, 0, 0, 0};
+		sounds[] = { sound0 };
+		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	};
 };

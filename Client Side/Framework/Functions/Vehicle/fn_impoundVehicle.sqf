@@ -61,6 +61,8 @@ if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 
 			private _owner = (_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, []];
 
 			[player, "ImpoundVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+			
+			[50, "Impounded Vehicle"] call ULP_fnc_addXP;
 
 			["FirstImpound"] call ULP_fnc_achieve;
 

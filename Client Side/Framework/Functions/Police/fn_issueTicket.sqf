@@ -30,6 +30,8 @@ if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
 		[format["You have issued <t color='#B92DE0'>%1</t> a penalty notice of <t color='#B92DE0'>%2</t>", [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_fine] call ULP_fnc_numberText]]] call ULP_fnc_hint;
 		
 		[player, "IssueTicket"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+
+		[25, "Issued Ticket"] call ULP_fnc_addXP;
 		
 		["FirstTicket"] call ULP_fnc_achieve;
 

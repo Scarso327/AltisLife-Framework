@@ -29,6 +29,8 @@ if ([player, ["Civilian"]] call ULP_fnc_isFaction && { missionNamespace getVaria
 
 		private _reward = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillReward");
 
+		[5, "Redzone Kill"] call ULP_fnc_addXP;
+
 		if ([_reward, true, "Gang Wars Kill"] call ULP_fnc_addMoney) then {
 			[format ["You have recieved <t color='#B92DE0'>%1%2</t> for killing someone in a redzone during gang wars...", "£", [_reward] call ULP_fnc_numberText]] call ULP_fnc_hint;
 		};

@@ -7,7 +7,7 @@ class CfgGathering {
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Gathering", 1, 100 };
-		leveling[] = { 1, "Gathering", 100 };
+		leveling[] = { 3, "Gathering", 100 };
 		condition = "true";
 	};
 	class BaseMine : BaseGather {
@@ -27,7 +27,7 @@ class CfgGathering {
 			chance = 0.9;
 			randomAmount[] = { 1, 3, 5 };
 			profession[] = { "Fishing", 1, 100 };
-			leveling[] = { 1, "Fishing", 100 };
+			leveling[] = { 2, "Fishing", 100 };
 		};
 	};
 
@@ -54,7 +54,6 @@ class CfgGathering {
 		hidden[] = { "Police" };
 		areas[] = { { "corn_field", 20 } };
 		items[] = { { "Corn", 100 } };
-		leveling[] = { 2, "Gathering", 100 };
 	};
 	class Weed : Corn {
 		areas[] = { { "weed_field", 20 } };
@@ -111,7 +110,7 @@ class CfgGathering {
 	class Diamond : BaseMine {
 		areas[] = { { "diamond_mine", 20 } };
 		items[] = { { "UncutDiamond", 100 } };
-		leveling[] = { 3, "Gathering", 100 };
+		leveling[] = { 4, "Gathering", 100 };
 	};
 	class BloodDiamond : Coral {
 		areas[] = { { "blood_diamond_mine", 20 } };

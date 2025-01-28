@@ -37,6 +37,7 @@ if (([] call ULP_fnc_groupId) isEqualTo _owner) exitWith {
 
 	_location setVariable ["site_owner_id", ([] call ULP_fnc_groupId), true];
 	[format ["You have successfully captured <t color='#B92DE0'>%1</t>", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
+	[100, "Captured Hideout"] call ULP_fnc_addXP;
 
 	[(group player), "Hideout"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
 	[getPlayerUID player, "CaptureHideout", [getText (_cfg >> "displayName")]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

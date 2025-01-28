@@ -92,7 +92,7 @@ class CfgVehicles {
 	// Base without siren or lights (for helis)
 	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
-		class Siren { SFX[] = { "Siren_1", "Siren_2" }; };
+		class Siren { SFX[] = { "Siren_1", "Siren_2", "Siren_5" }; };
 		class Actions {
 			class PNC {
 				actionTitle = "Police National Computer";
@@ -113,7 +113,7 @@ class CfgVehicles {
 
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
-		class Siren { SFX[] = { "Siren_4", "Siren_3" }; };
+		class Siren { SFX[] = { "Siren_6", "Siren_4", "Siren_3" }; };
 		class Actions {
 			class NHSDispatcher {
 				actionTitle = "NHS Dispatcher";
@@ -815,6 +815,7 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Land\Police\hunter_01.paa",
 					"Data\Textures\Vehicles\Land\Police\hunter_02.paa"
 				}; 
+				class Siren { SFX[] = { "Siren_7", "Siren_8", "Siren_9" }; };
 				class Lights : PoliceColour {
 					leftPos[] = {0.95459,-2.73975,0.559029};
 					rightPos[] = {-0.94873,-2.73975,0.557981};
@@ -1875,4 +1876,9 @@ class CfgVehicles {
 	class Siren_2 { sound = "Siren_2"; };
 	class Siren_3 { sound = "Siren_3"; };
 	class Siren_4 { sound = "Siren_4"; };
+	class Siren_5 { sound = "Siren_5"; };
+	class Siren_6 { sound = "Siren_6"; };
+	class Siren_7 { sound = "Siren_7"; };
+	class Siren_8 { sound = "Siren_8"; };
+	class Siren_9 { sound = "Siren_9"; };
 };

@@ -223,6 +223,10 @@ class CfgItemsStore {
 			class ItemRadio {};
 			class Rangefinder {};
 			class ToolKit {};
+			class NVGoggles {
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				class textures { class NVGoggles_OPFOR {}; };
+			};
 			class Chemlight_green {};
 			class SmokeShell { 
 				condition = "[""Police_Main"", 10] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";

@@ -18,8 +18,6 @@ private _owners = [];
 private _highest = 0;
 
 {
-	if (_y isEqualTo 0) exitWith {};
-
 	if (_y >= _highest) then {
 		// New highest, remove previous...
 		if (_y > _highest) then {

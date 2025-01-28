@@ -793,7 +793,6 @@ class CfgItemsStore {
 			class 10Rnd_762x54_Mag {};
 			class 20Rnd_762x51_Mag {};
 			class 30Rnd_762x39_Mag_F {};
-			class 10Rnd_127x54_Mag {};
 		};
 		
 		class Items {
@@ -919,7 +918,6 @@ class CfgItemsStore {
 			class 10Rnd_762x54_Mag {};
 			class 20Rnd_762x51_Mag {};
 			class 30Rnd_762x39_Mag_F {};
-			class 10Rnd_127x54_Mag {};
 		};
 		
 		class Items {

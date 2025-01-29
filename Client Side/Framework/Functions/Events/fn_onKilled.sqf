@@ -31,7 +31,6 @@ _unit removeWeapon (handgunWeapon _unit);
 _unit removeWeapon (secondaryWeapon _unit);
 {deleteVehicle _x;} forEach (nearestObjects [_unit, ["WeaponHolderSimulated"], 5]);
 
-[getPos _unit] call ULP_fnc_dropMoney;
 [getPos _unit, getDir _unit] call ULP_fnc_createBodyBag;
 
 ULP_Inventory = createHashMap; // Wipe Inventory...

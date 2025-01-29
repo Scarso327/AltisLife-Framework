@@ -24,4 +24,10 @@ _bodyBag setDir _dir;
     [_bodyBag, _x, _y, true, true] call ULP_fnc_addToCargo;
 } forEach _items;
 
+private _cash = + CASH;
+
+if (_cash > 0 && { [_cash, false, "Died"] call ULP_fnc_removeMoney }) then {
+	[_bodyBag, "DroppedMoney", [str _cash], true, true] call ULP_fnc_addToCargo;
+};
+
 true

@@ -24,7 +24,8 @@ if (isNull _container || { !([_container] call ULP_fnc_isCargoUser) }) exitWith 
 
 private _containerList = _display displayCtrl 4208;
 
-private _item = _containerList lnbData [(lnbCurSelRow _containerList), 0];
+private _selected = lnbCurSelRow _containerList;
+private _item = _containerList lnbData [_selected, 0];
 if (_item isEqualTo "") exitWith {
 	["You need to selected something to take from this container!"] call ULP_fnc_hint;
 };
@@ -45,7 +46,7 @@ private _count = _data;
 if (_count isEqualType []) then {
 	_count = 1;
 
-	private _index = _data find (_containerList lnbData [(lnbCurSelRow _containerList), 1]);
+	private _index = _data find (_containerList lnbData [_selected, 1]);
 
 	if (_index < 0) then {
 		_count = 0;
@@ -58,6 +59,18 @@ if (_count isEqualType []) then {
 
 if (_count <= 0) exitWith {
 	["You can't take this item from the container as it doesn't contain this item!"] call ULP_fnc_hint;
+};
+
+// Special handling
+if (_item isEqualTo "DroppedMoney") exitWith {
+	private _money = parseNumber _data;
+	
+	if ([_container, _item, _data] call ULP_fnc_removeFromCargo) then {
+		[_money, false, "Pickup"] call ULP_fnc_addMoney;
+		[format ["You have taken <t color='#B92DE0'>%1%2</t> from this container!", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
+
+		[_display, 1] call ULP_fnc_updateInventory;
+	};
 };
 
 ULP_CarryInfo params ["_carryWeight", "_maxWeight"];

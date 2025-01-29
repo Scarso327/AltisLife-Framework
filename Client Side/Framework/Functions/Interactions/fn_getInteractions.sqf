@@ -19,7 +19,6 @@ private _typeOf = typeOf _object;
 private _actions = missionConfigFile >> "CfgInteractions" >> (switch (true) do {
 	case ([_object] call ULP_fnc_isPlaceable): { "Placeable" };
 	case ([getNumber (missionConfigFile >> "CfgVehicles" >> _typeOf >> "isHouse")] call ULP_fnc_bool): { "HouseStorage" };
-	case (_typeOf isEqualTo "Land_MoneyBills_01_stack_F" && { (_object getVariable ["ULP_MoneyStack", 0]) > 0 }): { "Money" };
 	case (_typeOf isEqualTo "Land_CargoBox_V1_F"): { "Vault" };
 	case ([_object] call ULP_fnc_isHouse && 
 		{ isClass (missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction >> "Housing") } &&

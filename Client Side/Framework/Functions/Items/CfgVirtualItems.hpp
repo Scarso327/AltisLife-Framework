@@ -358,6 +358,23 @@ class CfgVirtualItems {
 	};
 
 	// General Items
+	class DroppedMoney {
+		displayName = "£%1";
+		description = "Money found in body bags dropped by the dead.";
+		icon = "Data\Icons\oldCoin.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 0;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = false;
+			isScripted = true;
+			isSystemItem = false;
+		};
+		conditions = "true";
+	};
+
 	class Identification {
 		displayName = "%1's ID";
 		description = "A card containing a person's identifity. However, these are easily forged.";

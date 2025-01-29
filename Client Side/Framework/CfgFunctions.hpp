@@ -578,8 +578,6 @@ class CfgFunctions {
 			class logTransaction {};
 			class withdrawMoney {};
 			class depositMoney {};
-			class dropMoney {};
-			class pickupMoney {};
 			class giveMoney {};
 			class sendMoney {};
 			class recieveMoney {};

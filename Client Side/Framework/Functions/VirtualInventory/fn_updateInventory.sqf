@@ -39,7 +39,7 @@ private _addItem = {
 					};
 
 					_list lnbSetData [[_row, 0], configName _cfg];
-					_list lnbSetData [[_row, 1], _x];
+					_list lnbSetData [[_row, 1], (if (_x isEqualType 0) then { str _x } else { _x })];
 				};
 			} forEach _y;
 		} else {

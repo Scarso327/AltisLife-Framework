@@ -1,18 +1,4 @@
 class CfgInteractions {
-	class Money {
-		class Pickup {
-			title = "Pickup Money";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
-			onClick = "_this call ULP_fnc_pickupMoney";
-			condition = "(_this getVariable [""ULP_MoneyStack"", 0]) > 0";
-		};
-		class Burn : Pickup {
-			title = "Burn Money";
-			onClick = "deleteVehicle (_this select 0)";
-			condition = "(_this getVariable [""ULP_MoneyStack"", 0]) > 0 && { (([""Lighter""] call ULP_fnc_hasItem) > 0) }";
-		};
-	};
-
 	class Placeable {
 		class Remove {
 			title = "Remove Placeable";

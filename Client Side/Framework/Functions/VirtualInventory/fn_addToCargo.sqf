@@ -22,7 +22,8 @@ private _vItem = missionConfigFile >> "CfgVirtualItems" >> _item;
 if (isNull _container || 
 	{ !(alive _container) } || 
 	{ !(isClass _vItem) } || 
-	{ !([_container] call ULP_fnc_hasInventory) }) exitWith { false };
+	{ !([_container] call ULP_fnc_hasInventory) } || 
+	{ !([_container] call ULP_fnc_isCargoUser) }) exitWith { false };
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
 

@@ -787,6 +787,11 @@ class U_B_CTRG_Soldier_F : U_B_survival_uniform {
 			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
 			condition = "[31] call ULP_fnc_isGroupPremium";
 		};
+		class Relic : U_B_CTRG_Soldier_F {
+			displayName = "Relic";
+			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
+			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
 class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F {};
@@ -821,6 +826,11 @@ class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {
 			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
 			condition = "[31] call ULP_fnc_isGroupPremium";
 		};
+		class Relic : U_B_CTRG_Soldier_F {
+			displayName = "Relic";
+			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
+			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
 class U_B_CTRG_Soldier_3_Arid_F : U_B_CTRG_Soldier_3_F {};
@@ -854,6 +864,11 @@ class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {
 			displayName = "KLR";
 			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
 			condition = "[31] call ULP_fnc_isGroupPremium";
+		};
+		class Relic : U_B_CTRG_Soldier_F {
+			displayName = "Relic";
+			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
+			condition = "[27] call ULP_fnc_isGroupPremium";
 		};
 	};
 };

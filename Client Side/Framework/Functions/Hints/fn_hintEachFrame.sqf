@@ -5,10 +5,6 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_hintEachFrame";
 
-if (canSuspend) exitWith {
-    [ULP_fnc_hintEachFrame, _this] call ULP_fnc_directCall;
-};
-
 private _display = _this;
 if (isNull _display) exitWith {
 	["Hint Each Frame Removed - UI Not Found"] call ULP_fnc_logIt;

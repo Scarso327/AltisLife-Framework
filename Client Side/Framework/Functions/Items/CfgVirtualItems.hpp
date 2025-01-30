@@ -1674,7 +1674,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\map.paa";
 		buyPrice = 20000;
 		sellPrice = 10000;
-		weight = 12;
+		weight = 1;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;

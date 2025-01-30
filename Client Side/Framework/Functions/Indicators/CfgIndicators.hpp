@@ -8,6 +8,8 @@ class CfgIndicators {
 
 		// SCO19
 		class U_B_CTRG_Soldier_F { colour[] = { 0.8, 0, 0, 1 }; };
+		class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {};
+		class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {};
 		class U_B_GhillieSuit : U_B_CTRG_Soldier_F {};
 
 		// NCA & RPU

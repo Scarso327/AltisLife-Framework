@@ -877,6 +877,8 @@ class CfgClothesStore {
 			class U_I_E_Uniform_01_F {};
 			class U_I_CombatUniform {};
 			class U_B_CombatUniform_mcam {};
+			class U_B_CombatUniform_mcam_vest {};
+			class U_B_CombatUniform_mcam_tshirt {};
 			class U_B_HeliPilotCoveralls {};
 		};
 
@@ -952,6 +954,9 @@ class CfgClothesStore {
 			class U_I_E_Uniform_01_F {};
 			class U_I_CombatUniform {};
 			class U_B_CombatUniform_mcam {};
+			class U_B_CombatUniform_mcam_vest {};
+			class U_B_CombatUniform_mcam_tshirt {};
+			class U_B_survival_uniform {};
 			class U_B_CTRG_Soldier_F {};
 			class U_B_CTRG_Soldier_3_F {};
 			class U_B_CTRG_Soldier_2_Arid_F {};
@@ -1046,6 +1051,9 @@ class CfgClothesStore {
 			class U_I_E_Uniform_01_F {};
 			class U_I_CombatUniform {};
 			class U_B_CombatUniform_mcam {};
+			class U_B_CombatUniform_mcam_vest {};
+			class U_B_CombatUniform_mcam_tshirt {};
+			class U_B_survival_uniform {};
 			class U_B_CTRG_Soldier_F {};
 			class U_B_CTRG_Soldier_3_F {};
 			class U_B_CTRG_Soldier_2_Arid_F {};

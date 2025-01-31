@@ -778,12 +778,12 @@ class U_B_CombatUniform_mcam : U_B_survival_uniform {
 		class KLR : U_B_CombatUniform_mcam {
 			displayName = "KLR";
 			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
+			condition = "[31] call ULP_fnc_isGroupPremium";
 		};
 		class Relic : U_B_CombatUniform_mcam {
 			displayName = "Relic";
 			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[31] call ULP_fnc_isGroupPremium";
+			condition = "[27] call ULP_fnc_isGroupPremium";
 		};
 		class Vulcan : U_B_CombatUniform_mcam {
 			displayName = "Vulcan";
@@ -815,12 +815,12 @@ class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam {
 		class KLR : U_B_CombatUniform_mcam_vest {
 			displayName = "KLR";
 			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
+			condition = "[31] call ULP_fnc_isGroupPremium";
 		};
 		class Relic : U_B_CombatUniform_mcam_vest {
 			displayName = "Relic";
 			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[31] call ULP_fnc_isGroupPremium";
+			condition = "[27] call ULP_fnc_isGroupPremium";
 		};
 		class Vulcan : U_B_CombatUniform_mcam_vest {
 			displayName = "Vulcan";
@@ -852,12 +852,12 @@ class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam {
 		class KLR : U_B_CombatUniform_mcam_tshirt {
 			displayName = "KLR";
 			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
+			condition = "[31] call ULP_fnc_isGroupPremium";
 		};
 		class Relic : U_B_CombatUniform_mcam_tshirt {
 			displayName = "Relic";
 			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[31] call ULP_fnc_isGroupPremium";
+			condition = "[27] call ULP_fnc_isGroupPremium";
 		};
 		class Vulcan : U_B_CombatUniform_mcam_tshirt {
 			displayName = "Vulcan";

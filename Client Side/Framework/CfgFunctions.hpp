@@ -280,6 +280,7 @@ class CfgFunctions {
 			class setCfgLoadout {};
 			class compatibleItems {};
 			class maxCarry {};
+			class freeCarry {};
 			class giveItem {};
 			class recieveItem {};
 			class giveVirtualItems {};

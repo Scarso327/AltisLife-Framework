@@ -46,9 +46,9 @@ if (_restrain) then {
 	} forEach ULP_Inventory;
 
 	ULP_Inventory = createHashMap;
-	ULP_CarryInfo set [0, 0];
+	ULP_CarryWeight = 0;
 
-	_target setVariable ["ULP_VirtualSpace", ULP_CarryInfo param [1, 0], true];
+	_target setVariable ["ULP_VirtualSpace", ([] call ULP_fnc_maxCarry), true];
 
 	[_target, {
 		if (!(alive _this) || { !([_this] call ULP_fnc_isRestrained) } || { [_this] call ULP_fnc_onDuty }) exitWith {

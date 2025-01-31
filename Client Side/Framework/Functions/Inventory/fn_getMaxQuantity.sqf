@@ -9,6 +9,4 @@ _this params [
 	["_weight", 0, [0]]
 ];
 
-ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
-
-( floor ((_maxWeight - _carryWeight) / _weight) max 0 )
+( floor (([] call ULP_fnc_freeCarry) / _weight) max 0 )

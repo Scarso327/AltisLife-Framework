@@ -8,9 +8,7 @@ scopeName "fn_virtualInventory";
 _display = _this;
 if (isNull _display) exitWith {};
 
-ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
-
-(_display displayCtrl 23001) ctrlSetStructuredText parseText format["<t align='left'>Inventory</t><t align='right'>%1/%2</t>", _carryWeight, _maxWeight];
+(_display displayCtrl 23001) ctrlSetStructuredText parseText format["<t align='left'>Inventory</t><t align='right'>%1/%2</t>", ULP_CarryWeight, ([] call ULP_fnc_maxCarry)];
 
 private _list = _display displayCtrl 23016;
 private _info = _display displayCtrl 23017;

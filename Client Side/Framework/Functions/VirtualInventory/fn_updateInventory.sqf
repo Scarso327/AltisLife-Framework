@@ -63,10 +63,8 @@ private _addItem = {
 };
 
 if (_type isEqualTo 0) then {
-	ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
-
 	private _personalTitle = _display displayCtrl 4202;
-	_personalTitle ctrlSetStructuredText parseText format["Personal Inventory<t align='right'>%1/%2</t>", _carryWeight, _maxWeight];
+	_personalTitle ctrlSetStructuredText parseText format["Personal Inventory<t align='right'>%1/%2</t>", ULP_CarryWeight, ([] call ULP_fnc_maxCarry)];
 
 	private _list = _display displayCtrl 4204;
 	lnbClear _list;

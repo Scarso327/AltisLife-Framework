@@ -40,9 +40,7 @@ private _weights = _resources apply { (_x select 1) / 100 };
 private _item = missionConfigFile >> "CfgVirtualItems" >> (_items selectRandomWeighted _weights);
 if !(isClass _item) exitWith {};
 
-ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
-
-private _total = floor ((_maxWeight - _carryWeight) / getNumber(_item >> "weight"));
+private _total = [getNumber(_item >> "weight")] call ULP_fnc_getMaxQuantity;
 if (_total <= 0) exitWith {
 	["Your inventory is full!"] call ULP_fnc_hint;
 	false

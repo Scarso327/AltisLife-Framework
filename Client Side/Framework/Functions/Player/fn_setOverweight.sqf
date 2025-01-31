@@ -5,9 +5,7 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_setOverweight";
 
-_this params [
-	["_overweight", false, [true]]
-];
+private _overweight = ULP_CarryWeight > ([] call ULP_fnc_maxCarry);
 
 if !((isForcedWalk player) isEqualTo _overweight) then {
 	player forceWalk _overweight;

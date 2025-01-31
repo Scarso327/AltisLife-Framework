@@ -73,12 +73,11 @@ if (_item isEqualTo "DroppedMoney") exitWith {
 	};
 };
 
-ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
 private _itemWeight = getNumber(_vItem >> "weight");
 private _maxCarry = _count;
 
 if (_itemWeight > 0) then {
-	_maxCarry = floor ((_maxWeight - _carryWeight) / _itemWeight);
+	_maxCarry = [_itemWeight] call ULP_fnc_getMaxQuantity;
 };
 
 if (_maxCarry <= 0) exitWith {

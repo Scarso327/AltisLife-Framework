@@ -22,6 +22,8 @@ if !([format["Healing %1", name _target], _time, [_target, _hasMedkit], { [(_thi
 
 	_target setDamage ([["FirstAider", 0.25] call ULP_fnc_activatePerk, 0] select (_hasMedkit));
 	[format ["You've healed <t color='#B92DE0'>%1</t>!", name _target]] call ULP_fnc_hint;
+
+	["Healed", [player]] remoteExecCall ["ULP_fnc_invokeEvent", _target];
 }, {}, ["GRAB", (["PRONE", "CROUCH"] select ((stance player) isEqualTo "STAND"))]] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't heal while doing something else..."] call ULP_fnc_hint;
 	false

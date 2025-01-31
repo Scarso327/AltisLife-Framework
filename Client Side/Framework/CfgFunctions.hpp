@@ -659,6 +659,7 @@ class CfgFunctions {
 			class revived {};
 			class nearestStretcher {};
 			class toggleOnStretcher {};
+			class preInitMedical { preInit = 1; };
 		};
 
 		class MedicMap {

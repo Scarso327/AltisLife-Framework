@@ -134,10 +134,10 @@ scopeName "fn_initGroups";
 	private _itemCfg = missionConfigFile >> "CfgVirtualItems" >> _soldItem;
 
 	if !(isClass _itemCfg 
-		|| { [getNumber (_itemCfg >> "Settings" >> "isEventItem")] call ULP_fnc_bool } 
-		|| { !(_illegal) } 
-		|| { [] call ULP_fnc_isGroup } 
-		|| { (_group getVariable ["group_type", ""]) isEqualTo "Corporate" }) exitWith {};
+		&& { [getNumber (_itemCfg >> "Settings" >> "isEventItem")] call ULP_fnc_bool } 
+		&& { !(_illegal) } 
+		&& { [] call ULP_fnc_isGroup } 
+		&& { (_group getVariable ["group_type", ""]) isEqualTo "Corporate" }) exitWith {};
 
 	private _xpAmountPerItem = getNumber (missionConfigFile >> "CfgGroups" >> "Leveling" >> "XP" >> "SoldLegalItems" >> "amountPerItem");
 	private _groupXp = floor (_xpAmountPerItem * _amount);

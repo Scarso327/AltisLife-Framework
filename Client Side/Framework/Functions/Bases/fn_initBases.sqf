@@ -12,9 +12,30 @@ if ([player, ["Civilian"]] call ULP_fnc_isFaction && { missionNamespace getVaria
 		private _flag = missionNamespace getVariable [format ["ULP_SRV_Base_%1", configName _x], objNull];
 
 		if !(isNull _flag) then {
-			_flag addAction [format["Bid on %1", getText (_x >> "displayName")], { [(_this select 3)] call ULP_fnc_placeBid }, configName _x, 1.25, true, true, "", "true", 3];
+			private _bidAction = _flag addAction [format["Bid on %1", getText (_x >> "displayName")], { [(_this select 3)] call ULP_fnc_placeBid }, configName _x, 1.25, true, true, "", "true", 3];
+			_flag setVariable ["bidAction", _bidAction];
 		};
 	} forEach ("[getNumber (_x >> ""includeBidding"")] call ULP_fnc_bool" configClasses (missionConfigFile >> "CfgBases"));
+
+	["BaseAwarded", {
+		_this params [
+			["_baseCfgName", "", [""]],
+			["_groupTag", "", [""]]
+		];
+
+		if (_baseCfgName isEqualTo "" || { _groupTag isEqualTo "" }) exitWith {};
+
+		private _flag = missionNamespace getVariable [format ["ULP_SRV_Base_%1", _baseCfgName], objNull];
+
+		if (isNull _flag) exitWith {};
+
+		_flag removeAction (_flag getVariable ["bidAction", -1]);
+
+		[format [
+			"<t color='#ff0000' size='1.5px'>Gang Wars<br/></t><t color='#ffffff' size='1px'><t color='#B92DE0'>%1</t> has won the <t color='#B92DE0'>%2</t> Gang Base.",
+			_groupTag, _baseCfgName
+		]] call ULP_fnc_hint;
+	}] call ULP_fnc_addEventHandler;
 
 	["KilledSomeone", {
 		_this params [

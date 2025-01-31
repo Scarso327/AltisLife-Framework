@@ -44,7 +44,7 @@ class CfgFunctions {
             file = "\life_server\Functions\Database\Group";
             class createGroup {};
             class queryGroupInfo {};
-            class handleGroupFunds {};
+            class updateGroupFunds {};
             class disbandGroup {};
             class setGroupId {};
             class setGroupOwner {};
@@ -52,6 +52,7 @@ class CfgFunctions {
             class addGroupBuff {};
             class setGroupTax {};
             class addGroupMember {};
+            class getGroupFunds {};
         };
 
         class DatabaseHousing {
@@ -128,6 +129,11 @@ class CfgFunctions {
             class hidePlayer {};
         };
 
+        class Group {
+            file = "\life_server\Functions\Group";
+            class handleGroupFunds {};
+        };
+
         class Containers {
             file = "\life_server\Functions\Containers";
             class registerCargoUser {};
@@ -159,6 +165,7 @@ class CfgFunctions {
         class Bases {
             file = "\life_server\Functions\Bases";
             class initBases {};
+            class awardGangBases {};
             class addBaseBid {};
         };
 

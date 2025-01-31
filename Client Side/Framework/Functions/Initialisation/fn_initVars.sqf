@@ -27,7 +27,7 @@ ULP_Houses = [];
 ULP_Keys = [];
 ULP_Inventory = createHashMap;
 ULP_Perks = createHashMap;
-ULP_CarryInfo = [0, (LIFE_SETTINGS(getNumber, "total_maxWeight"))];
+ULP_CarryWeight = 0;
 ULP_Missions = createHashMap;
 
 ULP_Prestige = 0;

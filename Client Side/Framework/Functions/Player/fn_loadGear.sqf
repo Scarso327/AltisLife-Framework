@@ -35,6 +35,4 @@ if !(_backpack isEqualTo "") then {
     [unitBackpack player, typeOf (unitBackpack player), backpackContainer player, _backpack] call ULP_fnc_setTextures;
 };
 
-[] call ULP_fnc_maxCarry;
-
 { [(_x select 0), (_x select 1), false, true] call ULP_fnc_handleItem } count _yItems;

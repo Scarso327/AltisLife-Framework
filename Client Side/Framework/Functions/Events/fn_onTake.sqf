@@ -25,6 +25,3 @@ if !(_backpack isEqualTo "") then {
     ULP_BackpackTexture = _backpack;
     [unitBackpack _unit, typeOf (unitBackpack _unit), backpackContainer _unit, _backpack] call ULP_fnc_setTextures;
 };
-
-// Delay to ensure the time sets properly
-[0.1, [], { [] call ULP_fnc_maxCarry; }] call ULP_fnc_waitExecute;

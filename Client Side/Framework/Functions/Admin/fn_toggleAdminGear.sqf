@@ -24,7 +24,7 @@ if ([player] call ULP_fnc_onDuty) then {
 	player setDamage ULP_NormalDamage;
 
 	ULP_Inventory = createHashMap; // Wipe Inventory...
-	ULP_CarryInfo set [0, 0];
+	ULP_CarryWeight = 0;
 
 	[] call ULP_fnc_loadGear;
 
@@ -40,7 +40,7 @@ if ([player] call ULP_fnc_onDuty) then {
 	ULP_NormalDamage = damage player;
 
 	ULP_Inventory = createHashMap; // Wipe Inventory...
-	ULP_CarryInfo set [0, 0];
+	ULP_CarryWeight = 0;
 
 	player forceAddUniform ([
 		"U_C_Protagonist_VR", "U_B_Protagonist_VR", "U_O_Protagonist_VR", "U_I_Protagonist_VR"

@@ -20,13 +20,11 @@ private _isItemScripted = [getNumber (_itemCfg >> "Settings" >> "isScripted")] c
 private _weight = getNumber (_itemCfg >> "weight");
 if !(_isItemScripted) then { _weight = _weight * _data; };
 
-ULP_CarryInfo params ["_carryWeight", "_maxWeight"];
-
 private _curData = [_item] call ULP_fnc_hasItem;
 if (_curData isEqualTo -1) then { _curData = 0 };
 
 if (_remove) then {
-	private _newWeight = _carryWeight - _weight;
+	private _newWeight = ULP_CarryWeight - _weight;
 	if (_isItemScripted) then {
 		if (_curData isEqualType 0) then {
 			_curData = [];
@@ -58,9 +56,9 @@ if (_remove) then {
 		[_item, _data] call compile getText (_itemCfg >> "Events" >> "onRemove");
 	};
 
-	ULP_CarryInfo set [0, _newWeight];
+	ULP_CarryWeight = _newWeight;
 } else {
-	private _newWeight = _carryWeight + _weight;
+	private _newWeight = ULP_CarryWeight + _weight;
 	if (!_ignoreCarry && { _newWeight > _maxWeight }) exitWith { false breakOut "fn_handleItem" };
 
 	if (_isItemScripted) then {
@@ -78,9 +76,9 @@ if (_remove) then {
 		ULP_Inventory set [_item, _curData + _data];
 	};
 	
-	ULP_CarryInfo set [0, _newWeight];
+	ULP_CarryWeight = _newWeight;
 };
 
-[((ULP_CarryInfo select 0) > (ULP_CarryInfo select 1))] call ULP_fnc_setOverweight;
+[] call ULP_fnc_setOverweight;
 
 true

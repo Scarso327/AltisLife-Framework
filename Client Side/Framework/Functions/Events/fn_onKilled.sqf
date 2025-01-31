@@ -34,7 +34,7 @@ _unit removeWeapon (secondaryWeapon _unit);
 [getPos _unit, getDir _unit] call ULP_fnc_createBodyBag;
 
 ULP_Inventory = createHashMap; // Wipe Inventory...
-ULP_CarryInfo set [0, 0];
+ULP_CarryWeight = 0;
 [true] call ULP_fnc_saveGear;
 
 // Death Screen...

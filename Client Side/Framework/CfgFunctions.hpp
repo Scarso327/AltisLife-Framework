@@ -815,9 +815,7 @@ class CfgFunctions {
 		
 		class Hints {
 			file = "Functions\Hints";
-			class clearHints {};
 			class hint {};
-			class hintEachFrame {};
 		};
 
 		class Markers {
@@ -919,6 +917,13 @@ class CfgFunctions {
 			class DialogMedicMap_LoadList {};
 			class DialogMedicMap_SetAssignedMedic {};
 			class DialogMedicMap_OnListChanged {};
+		};
+
+		class RscHints {
+			file = "UI\RscHints\Functions";
+			class RscHints_OnEachFrame {};
+			class RscHints_OnLoad {};
+			class RscHints_OnUnload {};
 		};
 	};
 };

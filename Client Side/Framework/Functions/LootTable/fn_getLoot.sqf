@@ -28,6 +28,7 @@ for "_i" from 1 to _lootToAdd do {
 			private _data = getNumber (_x >> "amount");
 
 			private _type = switch (true) do {
+				case (isClass (missionConfigFile >> "CfgVirtualItems" >> _cfgName)): { "VirtualItem" };
 				case (isClass (configFile >> "CfgWeapons" >> _cfgName)): { "Weapon" };
 				case (isClass (configFile >> "CfgMagazines" >> _cfgName)): { "Magazine" };
 				case (isClass (configFile >> "CfgVehicles" >> _cfgName)): {
@@ -36,7 +37,6 @@ for "_i" from 1 to _lootToAdd do {
 						"Backpack"
 					] select ([getNumber (configFile >> "CfgVehicles" >> _cfgName >> "isBackpack")] call ULP_fnc_bool))
 				};
-				case (isClass (missionConfigFile >> "CfgVirtualItems" >> _cfgName)): { "VirtualItem" };
 				default { "" };
 			};
 

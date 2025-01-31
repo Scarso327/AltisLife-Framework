@@ -698,7 +698,35 @@ class U_I_ParadeUniform_01_AAF_F : U_I_ParadeUniform_01_AAF_decorated_F {
 class U_B_survival_uniform : U_C_Poor_1 {
 	price = 15000;
 	reputation = true;
-	class Textures {};
+	class Textures {
+		// Civilian
+		class U_B_survival_uniform { 
+			displayName = "MTP"; 
+			condition = "true";
+		};
+
+		// Group
+		class Ridge : U_B_survival_uniform {
+			displayName = "Ridge";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
+		class KLR : U_B_survival_uniform {
+			displayName = "KLR";
+			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
+			condition = "[31] call ULP_fnc_isGroupPremium";
+		};
+		class Relic : U_B_survival_uniform {
+			displayName = "Relic";
+			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
+			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
+		class Vulcan : U_B_survival_uniform {
+			displayName = "Vulcan";
+			textures[] = { "Data\Textures\Groups\Vulcan\U_B_CTRG_Soldier_F.paa" };
+			condition = "[11] call ULP_fnc_isGroupPremium";
+		};
+	};
 };
 
 class U_B_CombatUniform_mcam_worn : U_B_survival_uniform {
@@ -733,27 +761,112 @@ class U_B_CombatUniform_mcam : U_B_survival_uniform {
 	price = 1500;
 	virtualSpace = 4;
 	class Textures {
+		// Civilian
 		class U_B_CombatUniform_mcam { 
+			displayName = "MTP"; 
+			condition = "true";
+		};
+		class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL"; };
+		class U_B_T_Solider_F : U_B_CombatUniform_mcam { displayName = "Tropic"; };
+
+		// Group
+		class Ridge : U_B_CombatUniform_mcam {
+			displayName = "Ridge";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
+		class KLR : U_B_CombatUniform_mcam {
+			displayName = "KLR";
+			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
+			condition = "[31] call ULP_fnc_isGroupPremium";
+		};
+		class Relic : U_B_CombatUniform_mcam {
+			displayName = "Relic";
+			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
+			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
+		class Vulcan : U_B_CombatUniform_mcam {
+			displayName = "Vulcan";
+			textures[] = { "Data\Textures\Groups\Vulcan\U_B_CTRG_Soldier_F.paa" };
+			condition = "[11] call ULP_fnc_isGroupPremium";
+		};
+	};
+};
+class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam {};
+class U_B_T_Solider_F : U_B_CombatUniform_mcam {};
+
+class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam {
+	displayName = "Combat Clothes (Rolled)";
+	class Textures {
+		// Civilian
+		class U_B_CombatUniform_mcam_vest { 
+			displayName = "MTP"; 
+			condition = "true";
+		};
+		class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam_vest { displayName = "WDL"; };
+		class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam_vest { displayName = "Tropic"; };
+
+		// Group
+		class Ridge : U_B_CombatUniform_mcam_vest {
+			displayName = "Ridge";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
+		class KLR : U_B_CombatUniform_mcam_vest {
+			displayName = "KLR";
+			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
+			condition = "[31] call ULP_fnc_isGroupPremium";
+		};
+		class Relic : U_B_CombatUniform_mcam_vest {
+			displayName = "Relic";
+			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
+			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
+		class Vulcan : U_B_CombatUniform_mcam_vest {
+			displayName = "Vulcan";
+			textures[] = { "Data\Textures\Groups\Vulcan\U_B_CTRG_Soldier_F.paa" };
+			condition = "[11] call ULP_fnc_isGroupPremium";
+		};
+	};
+};
+class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam {};
+class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam {};
+
+class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam {
+	displayName = "Combat Clothes (Tee)";
+	class Textures {
+		// Civilian
+		class U_B_CombatUniform_mcam_tshirt { 
 			displayName = "MTP (Base)"; 
 			condition = "true";
 		};
-		class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam { displayName = "MTP (Rolled)"; };
-		class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam { displayName = "MTP (Tee)"; };
-		class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL (Base)"; };
-		class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam { displayName = "WDL (Rolled)"; };
-		class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam { displayName = "WDL (Tee)"; };
-		class U_B_T_Solider_F : U_B_CombatUniform_mcam { displayName = "Tropic (Base)"; };
-		class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam { displayName = "Tropic (Rolled)"; };
-		class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam { displayName = "Tropic (Tee)"; };
+		class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam_tshirt { displayName = "WDL"; };
+		class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam_tshirt { displayName = "Tropic"; };
+
+		// Group
+		class Ridge : U_B_CombatUniform_mcam_tshirt {
+			displayName = "Ridge";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
+		class KLR : U_B_CombatUniform_mcam_tshirt {
+			displayName = "KLR";
+			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
+			condition = "[31] call ULP_fnc_isGroupPremium";
+		};
+		class Relic : U_B_CombatUniform_mcam_tshirt {
+			displayName = "Relic";
+			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
+			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
+		class Vulcan : U_B_CombatUniform_mcam_tshirt {
+			displayName = "Vulcan";
+			textures[] = { "Data\Textures\Groups\Vulcan\U_B_CTRG_Soldier_F.paa" };
+			condition = "[11] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
-class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam {};
-class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam {};
-class U_B_CombatUniform_mcam_wdl_f : U_B_CombatUniform_mcam {};
-class U_B_CombatUniform_vest_mcam_wdl_f : U_B_CombatUniform_mcam {};
 class U_B_CombatUniform_tshirt_mcam_wdL_f : U_B_CombatUniform_mcam {};
-class U_B_T_Solider_F : U_B_CombatUniform_mcam {};
-class U_B_T_Solider_SL_F : U_B_CombatUniform_mcam {};
 class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam {};
 
 class U_B_CTRG_Soldier_F : U_B_survival_uniform {
@@ -792,6 +905,11 @@ class U_B_CTRG_Soldier_F : U_B_survival_uniform {
 			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
 			condition = "[27] call ULP_fnc_isGroupPremium";
 		};
+		class Vulcan : U_B_CombatUniform_mcam {
+			displayName = "Vulcan";
+			textures[] = { "Data\Textures\Groups\Vulcan\U_B_CTRG_Soldier_F.paa" };
+			condition = "[11] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
 class U_B_CTRG_Soldier_Arid_F : U_B_CTRG_Soldier_F {};
@@ -826,10 +944,15 @@ class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {
 			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
 			condition = "[31] call ULP_fnc_isGroupPremium";
 		};
-		class Relic : U_B_CTRG_Soldier_F {
+		class Relic : U_B_CTRG_Soldier_3_F {
 			displayName = "Relic";
 			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
 			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
+		class Vulcan : U_B_CTRG_Soldier_3_F {
+			displayName = "Vulcan";
+			textures[] = { "Data\Textures\Groups\Vulcan\U_B_CTRG_Soldier_F.paa" };
+			condition = "[11] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -860,15 +983,20 @@ class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
 		};
-		class KLR : U_B_CTRG_Soldier_F {
+		class KLR : U_B_CTRG_Soldier_2_Arid_F {
 			displayName = "KLR";
 			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
 			condition = "[31] call ULP_fnc_isGroupPremium";
 		};
-		class Relic : U_B_CTRG_Soldier_F {
+		class Relic : U_B_CTRG_Soldier_2_Arid_F {
 			displayName = "Relic";
 			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
 			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
+		class Vulcan : U_B_CTRG_Soldier_2_Arid_F {
+			displayName = "Vulcan";
+			textures[] = { "Data\Textures\Groups\Vulcan\U_B_CTRG_Soldier_F.paa" };
+			condition = "[11] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -896,6 +1024,28 @@ class U_B_GhillieSuit : U_B_survival_uniform {
 		class U_O_GhillieSuit : U_B_GhillieSuit { displayName = "Hex"; };
 		class U_I_GhillieSuit : U_B_GhillieSuit { displayName = "Digi"; };
 		class U_B_T_Sniper_F : U_B_GhillieSuit { displayName = "Tropic"; };
+
+		// Group
+		class Ridge : U_B_GhillieSuit {
+			displayName = "Ridge";
+			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
+			condition = "[1] call ULP_fnc_isGroupPremium";
+		};
+		class KLR : U_B_GhillieSuit {
+			displayName = "KLR";
+			textures[] = { "Data\Textures\Groups\KLR\U_B_CTRG_Soldier_F.paa" };
+			condition = "[31] call ULP_fnc_isGroupPremium";
+		};
+		class Relic : U_B_GhillieSuit {
+			displayName = "Relic";
+			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
+			condition = "[27] call ULP_fnc_isGroupPremium";
+		};
+		class Vulcan : U_B_GhillieSuit {
+			displayName = "Vulcan";
+			textures[] = { "Data\Textures\Groups\Vulcan\U_B_CTRG_Soldier_F.paa" };
+			condition = "[11] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
 class U_O_GhillieSuit : U_B_GhillieSuit {};

@@ -12,7 +12,7 @@ _this params [
 private _display = ctrlParent _ctrl;
 if (isNull _display) exitWith {};
 
-if !([3] call ULP_fnc_canGroupRank) exitWith {
+if !(["invite"] call ULP_fnc_canGroupRank) exitWith {
 	["You don't have permissions to preform this action!"] call ULP_fnc_hint;
 };
 

@@ -334,6 +334,7 @@ class CfgFunctions {
 			class progression {};
 			class settings {};
 			class changeTax {};
+			class setRankPermission {};
 		};
 
 		class TabletKeys {

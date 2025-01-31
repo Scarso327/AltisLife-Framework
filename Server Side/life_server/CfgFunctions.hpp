@@ -53,6 +53,7 @@ class CfgFunctions {
             class setGroupTax {};
             class addGroupMember {};
             class getGroupFunds {};
+            class setGroupPermissions {};
         };
 
         class DatabaseHousing {

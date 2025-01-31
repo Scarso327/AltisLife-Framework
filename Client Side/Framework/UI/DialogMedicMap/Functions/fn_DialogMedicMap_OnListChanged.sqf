@@ -26,3 +26,5 @@ _button ctrlSetText (if (_assignedMedic isEqualTo player) then {
 } else {
 	"Assign"
 });
+
+[(_display displayCtrl 5403), [1, 0.05, getPos _unit]] call ULP_UI_fnc_setMapPosition;

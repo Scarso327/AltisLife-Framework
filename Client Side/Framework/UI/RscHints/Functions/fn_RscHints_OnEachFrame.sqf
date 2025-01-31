@@ -2,15 +2,13 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
-#include "..\..\script_macros.hpp"
-scopeName "fn_hintEachFrame";
+#include "..\..\..\script_macros.hpp"
+scopeName "fn_RscHints_OnEachFrame";
+disableSerialization;
 
-private _display = _this;
-if (isNull _display) exitWith {
-	["Hint Each Frame Removed - UI Not Found"] call ULP_fnc_logIt;
-	["RscHints"] call ULP_UI_fnc_destroyLayer; // Fallback to ensure the UI is removed to avoid hints becoming stuck
-	[_thisEventHandler] call ULP_fnc_removeEachFrame;
-};
+_this params [ "_display" ];
+
+if (isNull _display) exitWith {};
 
 private _hints = + (_display getVariable ["hints", []]);
 

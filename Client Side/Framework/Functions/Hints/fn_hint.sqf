@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_hint";
 
+if !(hasInterface) exitWith {};
+
 if (canSuspend) exitWith {
     [ULP_fnc_hint, _this] call ULP_fnc_directCall;
 };

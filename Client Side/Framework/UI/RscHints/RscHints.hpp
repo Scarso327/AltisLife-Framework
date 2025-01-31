@@ -1,11 +1,10 @@
 class RscHints {
-    name = "RscHints";
     idd = -1;
-	duration = 10e10;
+    onLoad = "_this call ULP_UI_fnc_RscHints_OnLoad";
+	onUnload = "_this call ULP_UI_fnc_RscHints_OnUnload";
     fadein=0;
     fadeout=0;
-    onLoad="uiNamespace setVariable ['RscHints', _this select 0]; [_this select 0, { _this call ULP_fnc_hintEachFrame }] call ULP_fnc_addEachFrame;";
-	onUnload="(_this select 0) call ULP_fnc_clearHints;";
+    duration = 10e10;
 
     class Controls {};
 };

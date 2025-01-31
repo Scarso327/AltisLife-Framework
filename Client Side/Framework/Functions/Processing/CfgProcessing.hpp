@@ -1,7 +1,7 @@
 class CfgProcessing {
 	class BaseProcess {
 		processTitle = "Processing";
-		processTime = 60;
+		processTime = 3;
 		factions[] = { "Civilian" };
 		hidden[] = {};
 		reqItems[] = {};
@@ -11,7 +11,7 @@ class CfgProcessing {
 	};
 	class BaseCook : BaseProcess {
 		processTitle = "Cooking";
-		processTime = 30;
+		processTime = 3;
 		profession[] = { "Cooking", 1, 100 };
 	};
 	class BaseSmelt : BaseProcess {
@@ -47,7 +47,7 @@ class CfgProcessing {
 
 	// Processing
 	class SchnapsApple : BaseProcess {
-		processTime = 40;
+		processTime = 1;
 		materials[] = { { "FreshApple", 2 } };
 		items[] = { { "Schnapps", 1 } };
 		reqLicenses[] = { "Schnapps" };
@@ -92,7 +92,7 @@ class CfgProcessing {
 	};
 	
   	class Weapons : BaseProcess {
-		processTime = 80;
+		processTime = 6;
 		materials[] = { { "WeaponParts", 2 } };
 		items[] = { { "WeaponCrate", 1 } };
 		leveling[] = { 5, "Processing", 100 };
@@ -101,7 +101,7 @@ class CfgProcessing {
 
 	// Purifing
 	class PurifiedWeed : BaseProcess {
-		processTime = 90;
+		processTime = 6;
 		processTitle = "Purifing";
 		materials[] = { { "ProcessedWeed", 1 } };
 		items[] = { { "PurifiedWeed", 1 } };
@@ -150,7 +150,7 @@ class CfgProcessing {
 		items[] = { { "UraniumBar", 1 } };
 		leveling[] = { 5, "Processing", 100 };
 		reqLicenses[] = { "Uranium" };
-		processTime = 100;
+		processTime = 10;
 	};
 
 	// Refining
@@ -182,7 +182,7 @@ class CfgProcessing {
 
 	// Majors
 	class Gold : BaseProcess {
-		processTime = 120;
+		processTime = 15;
 		processTitle = "Debranding";
 		materials[] = { { "MarkedGold", 1 } };
 		items[] = { { "UnmarkedGold", 1 } };

@@ -19,7 +19,7 @@ _this params [
 if (isNull _target || { !(isPlayer _target) } || { !(isNull _detainer) && { !([_detainer] call ULP_fnc_onDuty) } && { (_target distance _detainer) > 5 } }) exitWith { false };
 
 if !(local _target) exitWith {
-	if ([player, ["Police"]] call ULP_fnc_isFaction || { ["Ziptie", 1, _restrain] call ULP_fnc_handleItem } || { ["cuffCourier"] call ULP_fnc_hasPerk } || { [_detainer] call ULP_fnc_onDuty }) then {
+	if ([player, ["Police"]] call ULP_fnc_isFaction || { ["cuffCourier"] call ULP_fnc_hasPerk } || { [_detainer] call ULP_fnc_onDuty } || { ["Ziptie", 1, _restrain] call ULP_fnc_handleItem }) then {
 		_this remoteExecCall ["ULP_fnc_restrain", _target];
 		["Retain"] call ULP_fnc_achieve;
 	} else {

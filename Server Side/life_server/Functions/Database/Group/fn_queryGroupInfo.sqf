@@ -44,7 +44,12 @@ if (isNull _group) then {
 		_group setVariable ["group_tag", _queryTag, true];
 		_group setVariable ["group_type", _queryType, true];
 		_group setVariable ["group_owner", _queryOwner, true];
-		_group setVariable ["group_permissions", [_queryDeposit, _queryWithdraw, _queryRankPerm, _queryInvite, _queryKick], true];
+		_group setVariable ["group_permissions", createHashMapFromArray [
+			["deposit", _queryDeposit], 
+			["withdraw", _queryWithdraw], 
+			["rank", _queryRankPerm], 
+			["invite", _queryInvite], 
+			["kick", _queryKick]], true];
 		_group setVariable ["group_progression", [_queryLevel, _queryXp], true];
 		_group setGroupIdGlobal [_queryname];
 

@@ -6,8 +6,10 @@
 scopeName "fn_canGroupRank";
 
 _this params [
-	["_index", 0, [0]],
+	["_permission", "", [""]],
 	["_unit", player, [objNull]]
 ];
 
-([_unit] call ULP_fnc_isGroupOwner || { ([group _unit] call ULP_fnc_groupPermissions) param [_index, 0, [0]] <= [_unit] call ULP_fnc_getGroupRank })
+private _requiredPerm = ([group _unit] call ULP_fnc_groupPermissions) getOrDefault [_permission, 0];
+
+([_unit] call ULP_fnc_isGroupOwner || { _requiredPerm <= [_unit] call ULP_fnc_getGroupRank })

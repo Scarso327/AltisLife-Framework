@@ -18,7 +18,7 @@ if (isNull _display) exitWith {};
 
 private _group = _display getVariable ["group", false];
 
-if (_group && { !([0] call ULP_fnc_canGroupRank) }) exitWith {
+if (_group && { !(["deposit"] call ULP_fnc_canGroupRank) }) exitWith {
 	["You don't have permission to deposit group funds!"] call ULP_fnc_hint;
 };
 

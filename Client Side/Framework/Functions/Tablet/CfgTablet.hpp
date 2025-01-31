@@ -126,7 +126,7 @@ class CfgTablet {
 	class GroupSettings : Group {
 		pageTitle = "Group - Settings";
 		pageIdcs[] = {
-			23061, 23087, 23088
+			23061, 23087, 23088, 23093, 23094, 23095, 23096, 23097, 23098
 		};
 		onload = "_this call ULP_fnc_settings";
 	};

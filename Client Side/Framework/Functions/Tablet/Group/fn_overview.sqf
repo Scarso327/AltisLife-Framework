@@ -99,5 +99,5 @@ private _total = [] call ULP_fnc_groupFunds;
 
 // Disable Buttons
 { (_x select 0) ctrlEnable (_x select 1); } forEach [
-	[_display displayCtrl 23067, [2] call ULP_fnc_canGroupRank]
+	[_display displayCtrl 23067, ["rank"] call ULP_fnc_canGroupRank]
 ];

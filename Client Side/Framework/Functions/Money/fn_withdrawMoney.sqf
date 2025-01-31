@@ -18,7 +18,7 @@ if (isNull _display) exitWith {};
 
 private _group = _display getVariable ["group", false];
 
-if (_group && { !([1] call ULP_fnc_canGroupRank) }) exitWith {
+if (_group && { !(["withdraw"] call ULP_fnc_canGroupRank) }) exitWith {
 	["You don't have permission to withdraw from group funds!"] call ULP_fnc_hint;
 };
 

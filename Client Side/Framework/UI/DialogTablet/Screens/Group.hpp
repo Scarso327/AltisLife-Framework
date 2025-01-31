@@ -203,16 +203,6 @@ class RightView : Life_RscControlsGroup {
     class Controls {};
 };
 
-class ChangeTax : ULP_RscButtonClean {
-	idc = 23087;
-	text = "<t align = 'center'>Change Tax</t>";
-	onButtonClick = "_this call ULP_fnc_changeTax;";
-	SAFEZONE_X(UI_X);
-	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3));
-	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
-	SAFEZONE_H(0.022);
-};
-
 class GroupTaxText : Life_RscStructuredText {
 	idc = 23088;
 	text = "Group Tax (5%)";
@@ -220,4 +210,55 @@ class GroupTaxText : Life_RscStructuredText {
 	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
 	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
 	SAFEZONE_H(0.022);
+};
+
+class ChangeTax : ULP_RscButtonClean {
+	idc = 23087;
+	text = "<t align = 'center'>Set Tax</t>";
+	onButtonClick = "_this call ULP_fnc_changeTax;";
+	SAFEZONE_X(UI_X);
+	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3));
+	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
+	SAFEZONE_H(0.022);
+};
+
+class PermissionChangeText : GroupTaxText {
+	idc = 23094;
+	text = "Permissions";
+	SAFEZONE_Y((UI_Y + (0.022 * 2)) + (MARGIN_Y * 4));
+};
+
+class ChangeDepositRank : ChangeTax {
+	idc = 23093;
+	text = "<t align = 'center'>Set Deposit Rank</t>";
+	onButtonClick = "[_this select 0, ""deposit""] call ULP_fnc_setRankPermission;";
+	SAFEZONE_Y((UI_Y + (0.022 * 3)) + (MARGIN_Y * 4));
+};
+
+class ChangeWithdrawRank : ChangeTax {
+	idc = 23095;
+	text = "<t align = 'center'>Set Withdraw Rank</t>";
+	onButtonClick = "[_this select 0, ""withdraw""] call ULP_fnc_setRankPermission;";
+	SAFEZONE_Y((UI_Y + (0.022 * 4)) + (MARGIN_Y * 4) + ((MARGIN_Y / 2) * 1));
+};
+
+class ChangeInviteRank : ChangeTax {
+	idc = 23096;
+	text = "<t align = 'center'>Set Invite Rank</t>";
+	onButtonClick = "[_this select 0, ""invite""] call ULP_fnc_setRankPermission;";
+	SAFEZONE_Y((UI_Y + (0.022 * 5)) + (MARGIN_Y * 4) + ((MARGIN_Y / 2) * 2));
+};
+
+class ChangeKickRank : ChangeTax {
+	idc = 23097;
+	text = "<t align = 'center'>Set Kick Rank</t>";
+	onButtonClick = "[_this select 0, ""kick""] call ULP_fnc_setRankPermission;";
+	SAFEZONE_Y((UI_Y + (0.022 * 6)) + (MARGIN_Y * 4) + ((MARGIN_Y / 2) * 3));
+};
+
+class ChangeRankChangeRank : ChangeTax {
+	idc = 23098;
+	text = "<t align = 'center'>Set Promote Rank</t>";
+	onButtonClick = "[_this select 0, ""rank""] call ULP_fnc_setRankPermission;";
+	SAFEZONE_Y((UI_Y + (0.022 * 7)) + (MARGIN_Y * 4) + ((MARGIN_Y / 2) * 4));
 };

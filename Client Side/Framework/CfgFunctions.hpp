@@ -196,6 +196,7 @@ class CfgFunctions {
 			class listProcesses {};
 			class openProcessing {};
 			class selectProcess {};	
+			class calcMaxConversion {};
 		};
 
 		class Database {

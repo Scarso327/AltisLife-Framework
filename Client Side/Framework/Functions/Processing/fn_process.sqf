@@ -30,17 +30,15 @@ private _items = getArray (_cfg >> "items");
 private _materials = getArray (_cfg >> "materials");
 if (_items isEqualTo [] || { _materials isEqualTo [] }) exitWith { false };
 
-{
-    if ([_x select 0] call ULP_fnc_hasItem < _x select 1) exitWith {
-		[format["You are missing the required materials to process here: <t color='#B92DE0'>%1</t>!", _materials]] call ULP_fnc_hint;
-		false breakOut "fn_process";
-    };
-} forEach _materials;
+private _conversion = [_materials] call ULP_fnc_calcMaxConversion;
+if (_conversion <= 0) exitWith {
+	[format["You are missing the required materials to process here: <t color='#B92DE0'>%1</t>!", _materials]] call ULP_fnc_hint;
+};
 
 private _profession = getArray (_cfg >> "profession");
 private _leveling = getArray (_cfg >> "leveling");
 
-private _time = getNumber(_cfg >> "processTime");
+private _time = getNumber(_cfg >> "processTime") * _conversion;
 
 if !(_profession isEqualTo []) then {
 	private _profCal = [(_profession select 0)] call ULP_fnc_getProfessionCalculation;
@@ -50,13 +48,8 @@ if !(_profession isEqualTo []) then {
 [format["%1 Item(s)", getText(_cfg >> "processTitle")], _time, [getPos player, _items, _materials, _cfg, _profession, _leveling], { (player distance (_this select 0)) <= 5 }, {
 	_this params [ "", "_items", "_materials", "_cfg", "_profession", "_leveling" ];
 
-	private _possibleConversions = [];
-
-	{
-        _possibleConversions pushBack (floor (([_x select 0] call ULP_fnc_hasItem) / (_x select 1)));
-    } forEach _materials;
-
-    private _conversion = selectMin _possibleConversions;
+	// Redo here just in case they somehow changed something?
+    private _conversion = [_materials] call ULP_fnc_calcMaxConversion;
 	if (_conversion <= 0) exitWith {};
 
 	{
@@ -68,7 +61,7 @@ if !(_profession isEqualTo []) then {
 	} forEach _materials;
 
 	{
-		[(_x select 0), (_x select 1) * _conversion] call ULP_fnc_handleItem;
+		[(_x select 0), (_x select 1) * _conversion, false, true] call ULP_fnc_handleItem;
 	} forEach _items;
 
 	["You've successfully processed your materials!"] call ULP_fnc_hint;

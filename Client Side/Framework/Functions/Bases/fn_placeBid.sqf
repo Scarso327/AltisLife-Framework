@@ -22,6 +22,10 @@ if (isNull _obj) exitWith {
 	["An error occured while attempting to place a bid..."] call ULP_fnc_hint;
 };
 
+if !(missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) exitWith {
+	["Gang Wars isn't currently active..."] call ULP_fnc_hint;
+};
+
 private _bid = (_obj getVariable ["current_bid", getNumber (missionConfigFile >> "CfgBases" >> "StartingBid")]) + getNumber (missionConfigFile >> "CfgBases" >> "BidIncrement");
 
 if (_bid > ([] call ULP_fnc_groupFunds)) exitWith {

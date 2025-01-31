@@ -11,6 +11,8 @@ _this params [
 	["_base", "", [""]]
 ];
 
+if !(missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) exitWith {};
+
 private _obj = missionNamespace getVariable [format ["ULP_SRV_Base_%1", _base], objNull];
 private _cfg = _obj getVariable ["cfg", configNull];
 if (isNull _unit || { _bid < 1 } || { isNull _obj } || { !(isClass _cfg) }) exitWith { false };

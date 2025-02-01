@@ -1,13 +1,11 @@
 class RscProgress {
-    name = "RscProgress";
     idd = 38200;
+    onInit = "_this call ULP_UI_fnc_RscProgress_OnInit";
+    onLoad = "_this call ULP_UI_fnc_RscProgress_OnLoad";
+	onUnload = "_this call ULP_UI_fnc_RscProgress_OnUnload";
     fadein=0;
-    duration = 10e10;
     fadeout=0;
-    movingEnable = 0;
-    onLoad="uiNamespace setVariable ['RscProgress', _this select 0]";
-	onUnload="";
-    objects[]={};
+    duration = 10e10;
 
     class controlsBackground {
         class Background: Life_RscText {

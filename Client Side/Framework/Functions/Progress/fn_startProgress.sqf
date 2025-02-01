@@ -6,7 +6,7 @@
 scopeName "fn_startProgress";
 
 if (canSuspend) exitWith {
-    [ULP_fnc_startProgress, _this] call ULP_fnc_directCall;
+    [ULP_UI_fnc_startProgress, _this] call ULP_fnc_directCall;
 };
 
 private _duraction = _this param [1, 30, [0]];

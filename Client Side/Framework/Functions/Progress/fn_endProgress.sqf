@@ -6,7 +6,7 @@
 scopeName "fn_endProgress";
 
 if (canSuspend) exitWith {
-    [ULP_fnc_endProgress, _this] call ULP_fnc_directCall;
+    [ULP_UI_fnc_endProgress, _this] call ULP_fnc_directCall;
 };
 
 _this params [

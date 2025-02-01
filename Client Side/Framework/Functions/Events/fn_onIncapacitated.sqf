@@ -25,7 +25,7 @@ setKiller(_unit, _killer);
 setDowned(_unit);
 
 if ([] call ULP_UI_fnc_isProgress) then {
-	[(["RscProgress"] call ULP_UI_fnc_getLayer), false] call ULP_UI_endProgress;
+	[(["RscProgress"] call ULP_UI_fnc_getLayer), false] call ULP_UI_fnc_endProgress;
 };
 
 if ([] call ULP_fnc_isEscorting) then {

@@ -463,6 +463,7 @@ class CfgFunctions {
 			class onVehicleDeleted {};
 			class onVehicleKilled {};
 			class onVehicleEngine {};
+			class onVehicleRopeAttach {};
 		};
 
 		class VehicleStore {

@@ -22,12 +22,14 @@ if !(call compile getText (_missionCfg >> "condition")) exitWith {
 	["You don't meet the requirements for this run"] call ULP_fnc_hint;
 };
 
-private _near = ((_trader nearEntities [["Car"], 10]) select {
+(getArray (_missionCfg >> "vehicleRequirement")) params [ "_vehicles", "_distance" ];
+
+private _near = ((_trader nearEntities [_vehicles, _distance]) select {
 	[player, _x] call ULP_fnc_isVehicleOwner
 });
 
 if (_near isEqualTo []) exitWith {
-	["There are no trucks you own nearby"] call ULP_fnc_hint;
+	["There are no vehicles you own nearby"] call ULP_fnc_hint;
 };
 
 if (_missionType in ULP_Missions) exitWith {
@@ -37,11 +39,12 @@ if (_missionType in ULP_Missions) exitWith {
 [(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), (_near apply { 
 	([typeOf _x] call ULP_fnc_vehicleCfg) params [  "", "", "_picture", "_name" ]; 
 	[_picture, _name, _x call BIS_fnc_netId, 0];
-}), ["Fill", "Cancel"], [_trader, _missionCfg, _mission], {
+}), ["Fill", "Cancel"], [_trader, _missionCfg, _mission, _distance], {
 	_this params [
 		["_trader", objNull, [objNull]],
 		["_missionCfg", configNull, [configNull]],
 		["_mission", "Kavala_Freight", [""]],
+		["_distance", 10, [0]],
 		["_display", displayNull, [displayNull]]
 	];
 
@@ -55,7 +58,7 @@ if (_missionType in ULP_Missions) exitWith {
 	private _vehicle = (_list lbData (lbCurSel _list)) call BIS_fnc_objectFromNetId;
 	if (isNull _vehicle) exitWith { ["You didn't select a vehicle to fill with cargo!"] call ULP_fnc_hint; };
 
-	if !([_vehicle, getPos _trader] call ULP_fnc_isVehicleStationary) exitWith { ["Vehicle's engine must be turned off and close to the sign!"] call ULP_fnc_hint; };
+	if !([_vehicle, getPos _trader, _distance] call ULP_fnc_isVehicleStationary) exitWith { ["Vehicle's engine must be turned off and close to the sign!"] call ULP_fnc_hint; };
 
 	private _currentVehicleLoad = [_vehicle] call ULP_fnc_currentLoad;
 	private _maxVehicleLoad = [_vehicle] call ULP_fnc_maxLoad;
@@ -77,10 +80,10 @@ if (_missionType in ULP_Missions) exitWith {
 		["This vehicle can't be used for this mission"] call ULP_fnc_hint;
 	};
 
-	[format["Filling %1 with Cargo", _vehicleCfg param [3, "a vehicle"]], _time, [_trader, _vehicle, _maxQuantity, _item, _missionCfg, _mission], 
-		{ (player distance (_this select 0)) <= 5 && { [(_this select 1), getPos (_this select 0)] call ULP_fnc_isVehicleStationary } }, 
+	[format["Filling %1 with Cargo", _vehicleCfg param [3, "a vehicle"]], _time, [_trader, _vehicle, _distance, _maxQuantity, _item, _missionCfg, _mission], 
+		{ (player distance (_this select 0)) <= 5 && { [(_this select 1), getPos (_this select 0), (_this select 2)] call ULP_fnc_isVehicleStationary } }, 
 		{
-			_this params [ "_trader", "_vehicle", "_maxQuantity", "_item", "_missionCfg", "_mission" ];
+			_this params [ "_trader", "_vehicle", "", "_maxQuantity", "_item", "_missionCfg", "_mission" ];
 			if (isNull _vehicle) exitWith {};
 
 			private _missionType = configName _missionCfg;

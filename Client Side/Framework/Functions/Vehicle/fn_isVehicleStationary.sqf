@@ -7,7 +7,8 @@ scopeName "fn_isVehicleStationary";
 
 _this params [
 	["_vehicle", objNull, [objNull]],
-	["_initialPosition", getPos _vehicle, [[]]]
+	["_initialPosition", getPos _vehicle, [[]]],
+	["_distance", 10, [0]]
 ];
 
-!(isEngineOn _vehicle || { (_vehicle distance _initialPosition) > 10 })
+!(isEngineOn _vehicle || { (_vehicle distance _initialPosition) > _distance })

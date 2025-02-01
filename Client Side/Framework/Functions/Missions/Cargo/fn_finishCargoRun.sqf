@@ -31,8 +31,9 @@ _cargoInfo params [
 ];
 
 private _item = getText (_missionCfg >> "cargoItem");
+(getArray (_missionCfg >> "vehicleRequirement")) params [ "", "_distance" ];
 
-if (isNull _vehicle || { !(alive _vehicle) } || { (player distance _vehicle) > 15 }) exitWith {
+if (isNull _vehicle || { !(alive _vehicle) } || { (player distance _vehicle) > _distance }) exitWith {
 	["Your original vehicle has been destroyed or you are too far away from it"] call ULP_fnc_hint;
 	false
 };

@@ -366,6 +366,7 @@ class CfgMissions {
 		onClaimed = "";
 		onFinished = "_this call ULP_fnc_finishCargoRun";
 		timeDivisionAmount = 2;
+		vehicleRequirement[] = { { "Car" }, 10 };
 		cargoItem = "FreightCargo";
 		class Locations {
 			class Kavala_Freight {
@@ -395,6 +396,7 @@ class CfgMissions {
 		description = "You need to deliver the given stolen cargo to %1";
 		condition = "true";
 		timeDivisionAmount = 4;
+		vehicleRequirement[] = { { "Ship" }, 50 };
 		cargoItem = "StolenCargo";
 		class Locations {
 			class Sunken_Grove {

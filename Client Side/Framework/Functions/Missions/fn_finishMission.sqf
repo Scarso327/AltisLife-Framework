@@ -30,7 +30,7 @@ if ((player distance (taskDestination _task)) > 10) exitWith {
 
 private _onFinished = getText (_typeCfg >> "onFinished");
 if !(_onFinished isEqualTo "") then {
-	if !(_reward call compile _onFinished) exitWith {
+	if !([_reward, _type] call compile _onFinished) exitWith {
 		false breakOut "fn_finishMission";
 	};
 };

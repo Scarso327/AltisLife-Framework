@@ -21,6 +21,15 @@ class CfgVehicles {
 		class Textures {};
 	};
 
+	class BaseShip : Base {
+		blacklistedItems[] = { 
+			"FreightCargo",
+
+			"UnprocessedOil",
+			"ProcessedOil"
+		};
+	};
+
 	class BaseTruck : Base {
 		garageLimit = 2;
 		fuelConsumptionRate = 1.40;
@@ -1336,7 +1345,7 @@ class CfgVehicles {
 	};
 
 	// BOATS --------------------------------------------------------------------------------------
-	class C_Scooter_Transport_01_F : Base {
+	class C_Scooter_Transport_01_F : BaseShip {
 		description = "A Personal WaterCraft of sit-down type. Its powerful engine and great maneuverability make this craft a lot of fun to drive.";
 		buyPrice = 14300;
 		virtualSpace = 5;
@@ -1397,13 +1406,13 @@ class CfgVehicles {
 		};
 	};
 
-	class C_Rubberboat : Base {
+	class C_Rubberboat : BaseShip {
 		description = "An inflatable boat, often nicknamed 'rubber duck', is a lightweight boat constructed from tubes containing pressurized gas.";
 		buyPrice = 4150;
 		virtualSpace = 50;
 	};
 
-	class C_Boat_Civil_01_F : Base {
+	class C_Boat_Civil_01_F : BaseShip {
 		description = "The luxury motorboat is an engine powered boat used by the Police and Altis' richest.";
 		buyPrice = 153200;
 		virtualSpace = 75;
@@ -1415,7 +1424,7 @@ class CfgVehicles {
 	};
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
 
-	class C_Boat_Transport_02_F : Base {
+	class C_Boat_Transport_02_F : BaseShip {
 		description = "The Naval Special Warfare Rigid Hull Inflatable Boat is a fast, high-buoyancy all weather boat designed to transport a fully equipped team of eight-men and three crew members.";
 		buyPrice = 297600;
 		virtualSpace = 150;
@@ -1432,7 +1441,7 @@ class CfgVehicles {
 	};
 	class I_C_Boat_Transport_02_F : C_Boat_Transport_02_F {};
 
-	class B_Boat_Armed_01_minigun_F : Base {
+	class B_Boat_Armed_01_minigun_F : BaseShip {
 		description = "This boat excels in speed and maneuverability and is used as a coastline guard boat and for special operations.";
 		buyPrice = 14360500;
 		virtualSpace = 80;
@@ -1453,7 +1462,7 @@ class CfgVehicles {
 		};
 	};
 
-	class B_SDV_01_F : Base {
+	class B_SDV_01_F : BaseShip {
 		description = "The SDV is a manned submersible vehicle used to transport teams of divers over long distances under water.ply or using their own SCUBA gear.";
 		buyPrice = 389500;
 		virtualSpace = 5;

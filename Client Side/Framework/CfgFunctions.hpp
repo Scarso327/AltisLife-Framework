@@ -881,11 +881,10 @@ class CfgFunctions {
 			class getLayer {};
 		};
 		
-		class RscProgress {
+		class Progress {
 			file = "Functions\Progress";
 			class isProgress {};
 			class startProgress {};
-			class eachFrameProgress {};
 			class endProgress {};
 		};
 
@@ -927,6 +926,14 @@ class CfgFunctions {
 			class RscHints_OnEachFrame {};
 			class RscHints_OnLoad {};
 			class RscHints_OnUnload {};
+		};
+
+		class RscProgress {
+			file = "UI\RscProgress\Functions";
+			class RscProgress_OnEachFrame {};
+			class RscProgress_OnInit {};
+			class RscProgress_OnLoad {};
+			class RscProgress_OnUnload {};
 		};
 	};
 };

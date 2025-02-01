@@ -494,7 +494,7 @@ class CfgFunctions {
 			class addMission {};
 			class addPollingStation {};
 			class addMailBox {};
-			class addFreightMission {};
+			class addCargoMission {};
 			class initBriefing {};
 			class isATM {};
 			class lockForFactions {};
@@ -693,6 +693,13 @@ class CfgFunctions {
 			class initMissions {};
 		};
 
+		class MissionsCargo {
+			file = "Functions\Missions\Cargo";
+			class claimCargoRun {};
+			class finishCargoRun {};
+			class onEachFrameCargoRun {};
+		};
+
 		class Titles {
 			file = "Functions\Titles";
 			class hasTitle {};
@@ -830,13 +837,6 @@ class CfgFunctions {
 			file = "Functions\Police";
 			class initPolice {};
 			class issueTicket {};
-		};
-
-		class CorporateFreight {
-			file = "Functions\Freight";
-			class claimFreight {};
-			class finishFreight {};
-			class onEachFrameFreight {};
 		};
 
 		class Shipwreck {

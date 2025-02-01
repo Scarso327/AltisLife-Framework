@@ -15,24 +15,26 @@ scopeName "fn_initMissions";
 	if ((count ULP_Missions) > 0) then {
 		{
 			_y params [
-				"_task", "_reward", "_eachFrame"
+				"_task", "_reward", "_eachFrame", ["_vehicleInfo", [], [[]]]
 			];
 
 			_task setTaskState "Failed";
 			player removeSimpleTask _task;
+
+			if !(_vehicleInfo isEqualTo []) then {
+				_vehicleInfo params [ "_vehicle", "_missionType" ];
+
+				if !(isNull _vehicle) then {
+					private _cargoItem = getText (missionConfigFile >> "CfgMissions" >> _missionType >> "cargoItem");
+					private _countRemoved = [_vehicle, _cargoItem] call ULP_fnc_wipeItemFromCargo;
+
+					if (_countRemoved > 0) exitWith {
+						["You died and all the cargo was lost from your vehicle."] call ULP_fnc_hint;
+					};
+				};
+			};
 		} forEach ULP_Missions;
 
 		ULP_Missions = createHashMap;
-	};
-
-	// Handle freight vehicle
-	private _vehicle = (missionNamespace getVariable ["ULP_FreightVehicle", [objNull, 0]]) param [0, objNull];
-
-	if !(isNull _vehicle) then {
-		private _countRemoved = [_vehicle, "FreightCargo"] call ULP_fnc_wipeItemFromCargo;
-
-		if (_countRemoved > 0) exitWith {
-			["You died and all the freight was lost from your truck."] call ULP_fnc_hint;
-		};
 	};
 }] call ULP_fnc_addEventHandler;

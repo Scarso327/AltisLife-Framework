@@ -362,10 +362,11 @@ class CfgMissions {
 		description = "You need to deliver the given corporate freight to %1";
 		factions[] = { "Civilian" };
 		condition = "[""Freight""] call ULP_fnc_hasGroupPerk";
-		eachFrame = "_this call ULP_fnc_onEachFrameFreight";
+		eachFrame = "_this call ULP_fnc_onEachFrameCargoRun";
 		onClaimed = "";
-		onFinished = "_this call ULP_fnc_finishFreight";
+		onFinished = "_this call ULP_fnc_finishCargoRun";
 		timeDivisionAmount = 2;
+		cargoItem = "FreightCargo";
 		class Locations {
 			class Kavala_Freight {
 				pos = "freight_mission_1";
@@ -386,6 +387,24 @@ class CfgMissions {
 			onNoLocations = "There are currently no corporate freight missions available for pickup, please try again alter...";
 			onAssigned = "Your truck has been filled with freight, deliver it to <t color='#B92DE0'>%1</t>";
 			onFinished = "You have successfully delivered the freight, you have been paid <t color='#B92DE0'>£%1</t>";
+		};
+	};
+
+	class CriminalSmuggling : CorporateFreight {
+		name = "Cargo Smuggling";
+		description = "You need to deliver the given stolen cargo to %1";
+		condition = "true";
+		timeDivisionAmount = 4;
+		cargoItem = "StolenCargo";
+		class Locations {
+			
+		};
+		class Messages {
+			onFinishWithoutMission = "You don't have any stolen cargo to deliver here...";
+			onAlreadyHas = "You already have a criminal smuggling mission active, complete it before requesting another...";
+			onNoLocations = "There are currently no criminal smuggling missions available for pickup, please try again alter...";
+			onAssigned = "Your boat has been filled with stolen cargo, deliver it to <t color='#B92DE0'>%1</t>";
+			onFinished = "You have successfully delivered the stolen cargo, you have been paid <t color='#B92DE0'>£%1</t>";
 		};
 	};
 };

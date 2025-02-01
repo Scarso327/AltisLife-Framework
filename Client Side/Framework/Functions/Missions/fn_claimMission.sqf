@@ -58,7 +58,7 @@ if ((count ULP_Missions) isEqualTo 0) then {
 private _eachFrame = -1;
 private _onEachFrame = getText (_typeCfg >> "eachFrame");
 if !(_onEachFrame isEqualTo "") then {
-	_eachFrame = [[_location, _pos], compile _onEachFrame] call ULP_fnc_addEachFrame;
+	_eachFrame = [[_location, _pos, _type], compile _onEachFrame] call ULP_fnc_addEachFrame;
 };
 
 private _onClaimed = getText (_typeCfg >> "onClaimed");

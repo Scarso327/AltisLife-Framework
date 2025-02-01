@@ -1007,6 +1007,7 @@ class CfgVirtualItems {
 			isScripted = false;
 			isEventItem = false;
 			isSystemItem = true;
+			canSlingLoad = false;
 		};
 		conditions = "true";
 	};

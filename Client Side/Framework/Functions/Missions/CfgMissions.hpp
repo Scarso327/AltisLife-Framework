@@ -397,7 +397,22 @@ class CfgMissions {
 		timeDivisionAmount = 4;
 		cargoItem = "StolenCargo";
 		class Locations {
-			
+			class Sunken_Grove {
+				pos = "smuggling_location_1";
+				name = "Sunken Grove";
+			};
+			class Discovery_Ridge {
+				pos = "smuggling_location_2";
+				name = "Discovery Ridge";
+			};
+			class Lookout_Point {
+				pos = "smuggling_location_3";
+				name = "Lookout Point";
+			};
+		};
+		class Rewards {
+			moneyReward = 0;
+			xpReward = 150;
 		};
 		class Messages {
 			onFinishWithoutMission = "You don't have any stolen cargo to deliver here...";

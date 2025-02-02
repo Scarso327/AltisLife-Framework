@@ -17,6 +17,8 @@ _this params [
 
 if (isNull _unit || { _unit isEqualTo player } || { _amount < 1 }) exitWith {};
 
-if ([_amount, _bank, format ["Recieved from %1%2 through %3", "£", [_amount] call ULP_fnc_numberText, ["cash", "bank"] select (_bank)]] call ULP_fnc_addMoney) then {
-	[format ["%1 has %2 you <t color='#B92DE0'>%3%4</t>", name _unit, ["given", "transferred"] select (_bank), "£", [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
+private _message = format ["%1 has %2 you <t color='#B92DE0'>%3%4</t>", name _unit, ["given", "transferred"] select (_bank), "£", [_amount] call ULP_fnc_numberText];
+
+if ([_amount, _bank, _message] call ULP_fnc_addMoney) then {
+	[_message] call ULP_fnc_hint;
 };

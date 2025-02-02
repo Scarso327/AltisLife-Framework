@@ -10,7 +10,7 @@ if (isNull _display) exitWith {};
 
 // Stop spam...
 if (time < (missionNamespace getVariable ["ULP_LastDispute", 0])) exitWith {
-	["ou've disputed someone recently, please wait..."] call ULP_fnc_hint;
+	["You've disputed someone recently, please wait..."] call ULP_fnc_hint;
 	["Home"] call ULP_fnc_setScreen;
 	false
 };

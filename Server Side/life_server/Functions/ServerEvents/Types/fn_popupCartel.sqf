@@ -39,7 +39,10 @@ _obj setVariable ["area", _area, true];
 
 private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup" >> "duration");
 
-[ { isNull (_this select 0) || { !(isNil { (_this select 0) getVariable "popup_winner" }) } || { time >= (_this select 3) } }, [_obj, _marker, _area, _endTime, _shouldLoop], {
+[ { isNull (_this select 0) 
+	|| { !(isNil { (_this select 0) getVariable "popup_winner" }) } 
+	|| { time >= (_this select 3) && { ([(_this select 2), allPlayers, ["Police", "Civilian"]] call ULP_fnc_unitsInZone) isEqualTo [] } } },
+	 [_obj, _marker, _area, _endTime, _shouldLoop], {
 	_this params [ "_obj", "_marker", "_area", "", "_shouldLoop" ];
 
 	remoteExecCall ["", "PopupCartelSpawn"];

@@ -135,9 +135,8 @@ scopeName "fn_initGroups";
 
 	if !(isClass _itemCfg 
 		&& { [getNumber (_itemCfg >> "Settings" >> "isEventItem")] call ULP_fnc_bool } 
-		&& { !(_illegal) } 
 		&& { [] call ULP_fnc_isGroup } 
-		&& { (_group getVariable ["group_type", ""]) isEqualTo "Corporate" }) exitWith {};
+		&& { _illegal isEqualTo ((_group getVariable ["group_type", ""]) isEqualTo "Criminal") }) exitWith {};
 
 	private _xpAmountPerItem = getNumber (missionConfigFile >> "CfgGroups" >> "Leveling" >> "XP" >> "SoldLegalItems" >> "amountPerItem");
 	private _groupXp = floor (_xpAmountPerItem * _amount);

@@ -20,8 +20,6 @@ private _max = [missionConfigFile >> "CfgGroups" >> "Leveling"] call ULP_fnc_get
 
 if (_xpAmount isEqualTo -1) then {
 	_xpAmount = getNumber (_cfg >> "amount");
-} else {
-	_xpAmount = _xpAmount min getNumber (_cfg >> "amount");
 };
 
 if (_xpAmount <= 0) exitWith { false };

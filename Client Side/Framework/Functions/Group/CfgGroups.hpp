@@ -179,9 +179,6 @@ class CfgGroups {
 			};
 			class BaseBid : Election {}; // TODONOW
 			class CommunityGoals : Freight {}; // TODO
-			class MedicalAid {
-				amount = 3;
-			};
 			class Robbery : Freight {};
 			class SoldLegalItems : Freight {
 				amount = 0;

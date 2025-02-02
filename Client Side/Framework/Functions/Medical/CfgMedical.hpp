@@ -4,7 +4,7 @@ class CfgMedical {
 		maxWounds = 6;
 
 		class Abrasion {
-			time = 4;
+			time = 2;
 			items[] = { 
 				{ "FieldDressing", { 5, 1 } }, 
 				{ "Packing", { 6, 1 } }, 
@@ -13,7 +13,7 @@ class CfgMedical {
 			};
 		};
 		class Avulsion {
-			time = 9;
+			time = 5;
 			items[] = { 
 				{ "FieldDressing", { 5, 0.3 } }, 
 				{ "Packing", { 6, 1 } }, 
@@ -22,7 +22,7 @@ class CfgMedical {
 			};
 		};
 		class Laceration {
-			time = 6;
+			time = 3;
 			items[] = { 
 				{ "FieldDressing", { 5, 0.7 } }, 
 				{ "Packing", { 6, 0.3 } }, 
@@ -31,7 +31,7 @@ class CfgMedical {
 			};
 		};
 		class Puncture {
-			time = 7;
+			time = 4;
 			items[] = { 
 				{ "FieldDressing", { 5, 0.5 } }, 
 				{ "Packing", { 6, 0.75 } }, 

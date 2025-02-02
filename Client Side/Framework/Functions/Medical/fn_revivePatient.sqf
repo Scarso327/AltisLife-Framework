@@ -36,7 +36,7 @@ if (["AutomatedExternalDefibrillator"] call ULP_fnc_hasItem < 1) exitWith {
 
 closeDialog 0;
 
-private _time = ["LifeSaver", 20] call ULP_fnc_activatePerk;
+private _time = ["LifeSaver", 10] call ULP_fnc_activatePerk;
 
 [format ["Reviving %1", [_unit, true] call ULP_fnc_getName], _time, [_unit], { isDowned(_this select 0) && { (player distance (_this select 0)) < 5 } }, {
 	_this params [ "_unit" ];

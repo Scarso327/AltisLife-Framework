@@ -178,9 +178,9 @@ class CfgGroups {
 				amount = 35;
 			};
 			class BaseBid : Election {}; // TODONOW
-			class CommunityGoals : Freight {}; // TODO
-			class Robbery : Freight {};
-			class SoldLegalItems : Freight {
+			class CommunityGoals : CargoRun {}; // TODO
+			class Robbery : CargoRun {};
+			class SoldLegalItems : CargoRun {
 				amount = 0;
 				amountPerItem = 0.3; // This is a unique setting for this category
 			};

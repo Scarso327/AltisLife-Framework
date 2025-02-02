@@ -48,7 +48,7 @@ if !(_countRemoved isEqualTo _expectedQuantity) exitWith {
 private _secondaryReward = getNumber (missionConfigFile >> "CfgVirtualItems" >> _item >> "sellPrice") * _countRemoved;
 
 [_secondaryReward, false, "Cargo Mission Cut"] call ULP_fnc_addMoney;
-[(group player), "Freight"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
+[(group player), "CargoRun"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
 
 [format ["You've been given your cut of <t color='#B92DE0'>%1%2</t> for the cargo and earned some group xp", "£", [_secondaryReward] call ULP_fnc_numberText]] call ULP_fnc_hint;
 

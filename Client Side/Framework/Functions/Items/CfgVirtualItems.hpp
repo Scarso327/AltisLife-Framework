@@ -999,7 +999,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\crate.paa";
 		buyPrice = -1;
 		sellPrice = 71360;
-		weight = 24;
+		weight = 28;
 		class Settings {
 			onMarket = true;
 			isIllegal = true;

@@ -12,6 +12,10 @@ _this params [
 private _display = ctrlParent _ctrl;
 if (isNull _display) exitWith {};
 
+if !([] call ULP_fnc_isGroupOwner) exitWith {
+	["You must be the group owner to change these settings!"] call ULP_fnc_hint;
+};
+
 private _ranks = [] call ULP_fnc_groupRanks;
 private _selectableRanks = _ranks apply { ["", _x, _x, -1] };
 

@@ -1432,7 +1432,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
-			isEventItem = false;
+			isEventItem = true;
 			isSystemItem = false;
 		};
 		conditions = "true";
@@ -1449,7 +1449,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
-			isEventItem = false;
+			isEventItem = true;
 			isSystemItem = false;
 		};
 	};
@@ -1500,7 +1500,9 @@ class CfgVirtualItems {
 		buyPrice = -1;
 		sellPrice = 22150;
 		weight = 3;
-		class Settings : Settings {};
+		class Settings : Settings {
+			isEventItem = false;
+		};
 	};
 	class WeaponCrate : ProcessedWeed {
 		displayName = "Weapon Crate";
@@ -1509,7 +1511,9 @@ class CfgVirtualItems {
 		buyPrice = -1;
 		sellPrice = 58700;
 		weight = 5;
-		class Settings : Settings {};
+		class Settings : Settings {
+			isEventItem = false;
+		};
 	};
 
 	// Illegal Purified

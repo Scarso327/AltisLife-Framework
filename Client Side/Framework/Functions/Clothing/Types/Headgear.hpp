@@ -419,6 +419,7 @@ class H_RacingHelmet_1_F : H_RacingHelmet_1_black_F {};
 class H_PASGT_basic_black_F : H_HeadBandage_clean_F {
 	displayName = "Basic Helmet";
 	price = 10000;
+	reputation = true;
 	class Textures {
 		class H_PASGT_basic_black_F {
 			displayName = "Black";
@@ -452,6 +453,7 @@ class H_PASGT_neckprot_blue_press_F : H_PASGT_basic_black_F {};
 class H_PilotHelmetHeli_B : H_HeadBandage_clean_F {
 	displayName = "Flight Helmet";
 	price = 35000;
+	reputation = true;
 	isMask = true;
 	class Textures {
 		class H_PilotHelmetHeli_B {
@@ -484,6 +486,7 @@ class H_HelmetIA : H_HeadBandage_clean_F {
 class H_HelmetB_light : H_HelmetIA {
 	displayName = "Light Combat Helment";
 	price = 25000;
+	reputation = true;
 	class Textures {
 		class H_HelmetB_light {
 			displayName = "Green";
@@ -566,9 +569,7 @@ class H_HelmetSpecB_wdl : H_HelmetSpecB {};
 class H_HelmetB_TI_arid_F : H_HelmetB_light {
 	displayName = "Stealth Combat Helment";
 	price = 90000;
-	reputation = true;
 	isMask = true;
-	isNV = false;
 	class Textures {
 		class H_HelmetB_TI_arid_F {
 			displayName = "Arid";

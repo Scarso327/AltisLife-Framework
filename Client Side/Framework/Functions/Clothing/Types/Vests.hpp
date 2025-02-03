@@ -33,7 +33,6 @@ class V_Pocketed_black_F : V_LegStrapBag_black_F {
 	displayName = "Pocketed Vest";
 	price = 1000;
 	virtualSpace = 14;
-	reputation = false;
 	class Textures {
 		class V_Pocketed_black_F {
 			displayName = "Black";

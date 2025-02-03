@@ -136,9 +136,10 @@ class G_B_Diving : G_WirelessEarpiece_F {
 class G_O_Diving : G_B_Diving {};
 class G_I_Diving : G_B_Diving {};
 
-class G_Respirator_white_F {
+class G_Respirator_white_F : G_WirelessEarpiece_F {
 	displayName = "COVID Mask";
 	price = 5;
+	isMask = true;
 	class Textures {
 		class G_Respirator_white_F {
 			displayName = "White";
@@ -154,6 +155,7 @@ class G_Respirator_yellow_F : G_Respirator_white_F {};
 class G_RegulatorMask_F : G_WirelessEarpiece_F {
 	displayName = "Regulator Mask";
 	price = 10000;
+	reputation = true;
 	isMask = true;
 	isGas = true;
 	class Textures {};
@@ -162,6 +164,7 @@ class G_RegulatorMask_F : G_WirelessEarpiece_F {
 class G_AirPurifyingRespirator_01_F : G_RegulatorMask_F {
 	displayName = "Air Purifying Respirator";
 	price = 12500;
+	reputation = true;
 	isNV = true;
 	class Textures {
 		class G_AirPurifyingRespirator_01_F {

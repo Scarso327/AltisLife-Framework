@@ -347,6 +347,10 @@ class CfgClothesStore {
 		};
 
 		class Backpacks {
+			class B_Bergen_mcamo_F { 
+				displayName = "Invisible BIG Backpack"; 
+				class Textures { class INVIS {}; };
+			};
 			class B_Carryall_cbr { 
 				displayName = "Invisible Backpack"; 
 				class Textures { class INVIS {}; };
@@ -393,6 +397,10 @@ class CfgClothesStore {
 		class Vests {};
 
 		class Backpacks {
+			class B_Bergen_mcamo_F { 
+				displayName = "Invisible BIG Backpack"; 
+				class Textures { class INVIS {}; };
+			};
 			class B_Carryall_cbr { 
 				displayName = "Invisible Backpack"; 
 				class Textures { class INVIS {}; };

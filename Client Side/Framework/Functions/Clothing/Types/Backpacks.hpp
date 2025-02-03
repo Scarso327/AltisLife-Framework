@@ -250,7 +250,15 @@ class B_Bergen_mcamo_F : B_LegStrapBag_black_F {
 	displayName = "Bergen";
 	price = 12500;
 	virtualSpace = 40;
-	class Textures {
+	class Textures {	
+		// Factions
+		class INVIS {
+			displayName = "Invisible";
+			textures[] = { "" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction || [player, [""Medic""]] call ULP_fnc_isFaction || [player, [""Hato""]] call ULP_fnc_isFaction";
+		};
+
+		// Civilian
 		class B_Bergen_mcamo_F {
 			displayName = "MTP";
 			condition = "true";

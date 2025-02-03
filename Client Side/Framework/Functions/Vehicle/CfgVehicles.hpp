@@ -226,7 +226,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess && { [""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
+				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess && { [""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_black.paa" }; 
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
@@ -245,7 +245,7 @@ class CfgVehicles {
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
 				anpr = true;
-				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess";
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess && { [""Police_NCA"", 1] call ULP_fnc_hasAccess } }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
@@ -566,7 +566,7 @@ class CfgVehicles {
 			};
 			class PoliceBlack : PoliceWhite { 
 				displayName = "Armed Response";
-				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
+				conditions = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_black.paa" };
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
@@ -586,6 +586,7 @@ class CfgVehicles {
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
 				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				anpr = true;
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};

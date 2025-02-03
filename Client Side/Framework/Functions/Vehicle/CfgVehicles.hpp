@@ -700,7 +700,9 @@ class CfgVehicles {
 		};
 	};
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
-	class C_Van_02_medevac_F : C_Van_02_transport_F {};
+	class C_Van_02_medevac_F : C_Van_02_transport_F {
+		virtualSpace = 150;
+	};
 	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {
 		class Textures {
 			class IDAP : BaseTexture { 

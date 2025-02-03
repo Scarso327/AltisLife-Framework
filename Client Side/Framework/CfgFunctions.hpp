@@ -95,6 +95,12 @@ class CfgFunctions {
 			class canResetLoadout {};
 		};
 
+		class Factories {
+			file = "Functions\Factories";
+			class hasRequiredPower {};
+			class redirectStationPower {};
+		};
+
 		class Functions {
 			file = "Functions\Functions";
 			class getAnim {};

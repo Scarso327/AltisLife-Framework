@@ -6,9 +6,11 @@
 scopeName "fn_ownsBase";
 
 _this params [
-	["_location", objNull, [objNull]],
+	["_location", objNull, [objNull, ""]],
 	["_unit", player, [objNull]]
 ];
+
+if (_location isEqualType "") then { _location = missionNamespace getVariable [_location, objNull]; };
 
 if (isNull _location) exitWith { false };
 

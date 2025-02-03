@@ -16,13 +16,14 @@ private _disabledKeys = [];
 
 _disabledKeys append (actionKeys "tacticalView"); // Disable tactical view...
 
-if ([player] call ULP_fnc_isRestrained || { [player] call ULP_fnc_isSurrendered }) then {
+if ([] call ULP_fnc_isInputBlocked) then {
     _disabledKeys append (actionKeys "GetOver");
     _disabledKeys append (actionKeys "GetIn");
     _disabledKeys append (actionKeys "ReloadMagazine");
     _disabledKeys append (actionKeys "Fire");
     _disabledKeys append (actionKeys "SitDown");
     _disabledKeys append (actionKeys "Throw");
+    _disabledKeys append (actionKeys "Salute");
     _disabledKeys append [Q, E];
 };
 

@@ -1005,7 +1005,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
-			isEventItem = false;
+			isEventItem = true;
 			isSystemItem = true;
 			canSlingLoad = false;
 		};
@@ -1142,7 +1142,7 @@ class CfgVirtualItems {
 			isIllegal = false;
 			isSavable = true;
 			isScripted = false;
-			isEventItem = false;
+			isEventItem = true;
 			isSystemItem = false;
 		};
 	};
@@ -1281,14 +1281,7 @@ class CfgVirtualItems {
 	class SteelBar : CopperBar {
 		displayName = "Steel Bar";
 		sellPrice = 9670;
-		class Settings {
-			onMarket = true;
-			isIllegal = false;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
+		class Settings : Settings {};
 	};
 	class Glass : CopperBar {
 		displayName = "Glass";
@@ -1318,14 +1311,7 @@ class CfgVirtualItems {
 		description = "A finely cut diamond that women appear to love.";
 		icon = "Data\Icons\diamond.paa";
 		sellPrice = 6100;
-		class Settings {
-			onMarket = true;
-			isIllegal = false;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
+		class Settings : Settings {};
 	};
 	class CutBloodDiamond : CutDiamond {
 		displayName = "Cut Blood Diamond";
@@ -1337,7 +1323,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
-			isEventItem = false;
+			isEventItem = true;
 			isSystemItem = false;
 		};
 	};
@@ -1500,9 +1486,7 @@ class CfgVirtualItems {
 		buyPrice = -1;
 		sellPrice = 22150;
 		weight = 3;
-		class Settings : Settings {
-			isEventItem = false;
-		};
+		class Settings : Settings {};
 	};
 	class WeaponCrate : ProcessedWeed {
 		displayName = "Weapon Crate";
@@ -1511,9 +1495,7 @@ class CfgVirtualItems {
 		buyPrice = -1;
 		sellPrice = 58700;
 		weight = 5;
-		class Settings : Settings {
-			isEventItem = false;
-		};
+		class Settings : Settings {};
 	};
 
 	// Illegal Purified
@@ -1529,7 +1511,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
-			isEventItem = false;
+			isEventItem = true;
 			isSystemItem = false;
 		};
 		conditions = "true";
@@ -1619,7 +1601,7 @@ class CfgVirtualItems {
 			isIllegal = true;
 			isSavable = true;
 			isScripted = false;
-			isEventItem = false;
+			isEventItem = true;
 		};
 	};
 
@@ -1919,6 +1901,12 @@ class CfgVirtualItems {
 		displayName = "Broken Timepiece";
 		icon = "Data\Icons\brokenTimepiece.paa";
 		sellPrice = 308475;
+		weight = 1;
+		class Settings : Settings {};
+	};
+	class RestoredTimepiece : BrokenTimepiece {
+		displayName = "Restored Timepiece";
+		sellPrice = 464100;
 		weight = 1;
 		class Settings : Settings {};
 	};

@@ -565,6 +565,7 @@ class U_Rangemaster : U_C_Poor_1 {
 class U_Competitor : U_C_Poor_1 {
 	displayName = "Response Uniform";
 	price = 100;
+	virtualSpace = 12;
 	class Textures {
 		class DR {
 			displayName = "Consultant";

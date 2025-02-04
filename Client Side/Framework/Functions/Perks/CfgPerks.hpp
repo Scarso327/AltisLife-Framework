@@ -129,7 +129,7 @@ class CfgPerks {
 	class GovernmentBonus {
 		icon = "Data\UI\Perks\governmentBonus.paa";
 		displayName = "Government Pay";
-		description = "Increases your base paycheck by 5%";
+		description = "Increases your base paycheck by 10%";
 		removalMultiplier = 1;
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };

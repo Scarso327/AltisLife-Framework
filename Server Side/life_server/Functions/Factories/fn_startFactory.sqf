@@ -61,7 +61,9 @@ _factory setVariable ["product_order", _productCfg];
 _factory setVariable ["product_quantity", _maxPossibleQuantity min _quantity];
 _factory setVariable ["product_tick", getNumber (_productCfg >> "tickTime")];
 
-[_factory] call ULP_fnc_createFactorySound;
+private _source = createSoundSource ["Factory_Processing", getPosATL _factory, [], 0];
+_factory setVariable ["sound", _source];
+
 [_factory] call ULP_SRV_fnc_addFactoryTick;
 
 ["FactoryStarted", [format ["Your order is being processed."]]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];

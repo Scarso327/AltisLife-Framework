@@ -98,7 +98,6 @@ class CfgFunctions {
 
 		class Factories {
 			file = "Functions\Factories";
-			class createFactorySound {};
 		};
 
 		class Functions {

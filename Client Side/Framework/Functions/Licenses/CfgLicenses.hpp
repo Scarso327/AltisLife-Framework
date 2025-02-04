@@ -144,79 +144,79 @@ class CfgLicenses {
 
     class Silver : BaseLicense {
         displayName = "Silver Processing";
-        buyPrice = 35000;
+        buyPrice = 40000;
         class Settings {};
     };
 
     class Iron : BaseLicense {
         displayName = "Iron Processing";
-        buyPrice = 290000;
+        buyPrice = 500000;
         class Settings {};
     };
 
     class Salt : BaseLicense {
         displayName = "Salt Processing";
-        buyPrice = 340000;
+        buyPrice = 350000;
         class Settings {};
     };
 
     class Sand : BaseLicense {
         displayName = "Sand Processing";
-        buyPrice = 155000;
+        buyPrice = 100000;
         class Settings {};
     };
 
     class Oil : BaseLicense {
         displayName = "Oil Processing";
-        buyPrice = 565000;
+        buyPrice = 800000;
         class Settings {};
     };
 
     class Diamond : BaseLicense {
         displayName = "Diamond Processing";
-        buyPrice = 936500;
+        buyPrice = 750000;
         class Settings {};
     };
 
     class Uranium : BaseLicense {
         displayName = "Uranium Processing";
-        buyPrice = 1500000;
+        buyPrice = 1750000;
         class Settings {};
     };
 
     class Weed : BaseLicense {
         displayName = "Weed Processing";
-        buyPrice = 180000;
+        buyPrice = 150000;
         class Settings {};
     };
 
     class Heroin : BaseLicense {
         displayName = "Heroin Processing";
-        buyPrice = 495000;
+        buyPrice = 500000;
         class Settings {};
     };
 
     class Cocaine : BaseLicense {
         displayName = "Cocaine Processing";
-        buyPrice = 770000;
+        buyPrice = 800000;
         class Settings {};
     };
 
     class Meth : BaseLicense {
         displayName = "Meth Processing";
-        buyPrice = 885000;
+        buyPrice = 1000000;
         class Settings {};
     };
 
     class Moonshine : BaseLicense {
         displayName = "Moonshine Processing";
-        buyPrice = 1100000;
+        buyPrice = 1300000;
         class Settings {};
     };
 
     class Weapons : BaseLicense {
         displayName = "Weapons Processing";
-        buyPrice = 1350000;
+        buyPrice = 2000000;
         class Settings {};
     };
 };

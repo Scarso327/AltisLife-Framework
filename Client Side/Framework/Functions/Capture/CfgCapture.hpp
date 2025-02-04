@@ -33,7 +33,7 @@ class CfgCapture {
 		};
 		class EasternPowerStation : WesternPowerStation {
 			displayName = "Eastern Power Station";
-			class Marker {
+			class Marker : Marker {
 				markerName = "eastern_power_plant";
 				defaultName = "Eastern Power Station";
 			};

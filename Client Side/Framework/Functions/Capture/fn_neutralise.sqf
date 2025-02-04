@@ -6,9 +6,10 @@
 scopeName "fn_neutralise";
 
 _this params [
-	["_location", objNull, [objNull]],
-	["_capture", "", [""]]
+	["_location", objNull, [objNull]]
 ];
+
+private _capture = _location getVariable ["site", ""];
 
 private _cfg = missionConfigFile >> "CfgCapture" >> worldName >> _capture;
 if (isNull _location || { !(isClass _cfg) } || { !isNumber (_cfg >> "cooldown") }) exitWith { false };
@@ -35,7 +36,7 @@ if (_owner isEqualTo -1) exitWith {
 	[100, "Neutralised Site"] call ULP_fnc_addXP;
 
 	if (isClass (_cfg >> "Marker")) then {
-		private _marker = getText (_cfg >> "Marker" >> "markerName");
+		private _marker = _location getVariable ["marker", ""];
 		private _defaultName = getText (_cfg >> "Marker" >> "defaultName");
 
 		_marker setMarkerText _defaultName;

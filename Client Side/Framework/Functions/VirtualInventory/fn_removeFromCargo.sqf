@@ -3,10 +3,10 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_removeToCargo";
+scopeName "fn_removeFromCargo";
 
 if (canSuspend) exitWith {
-    [ULP_fnc_removeToCargo, _this] call ULP_fnc_directCall;
+    [ULP_fnc_removeFromCargo, _this] call ULP_fnc_directCall;
 };
 
 _this params [

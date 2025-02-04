@@ -72,6 +72,7 @@ class CfgFunctions {
 
 		class Utility {
 			file = "Functions\Utility";
+			class chance {};
 			class directCall {};
 			class waitExecute {};
 			class waitUntilExecute {};
@@ -97,8 +98,7 @@ class CfgFunctions {
 
 		class Factories {
 			file = "Functions\Factories";
-			class hasRequiredPower {};
-			class redirectStationPower {};
+			class createFactorySound {};
 		};
 
 		class Functions {
@@ -490,6 +490,8 @@ class CfgFunctions {
 			file = "Functions\Map";
 			class createSimpleObject {};
 			class addMarket {};
+			class addFactory {};
+			class addCapture {};
 			class addStore {};
 			class addGarage {};
 			class addGarageStore {};
@@ -813,6 +815,7 @@ class CfgFunctions {
 		class Capture {
 			file = "Functions\Capture";
 			class capture {};
+			class neutralise {};
 			class ownsSite {};
 		};
 

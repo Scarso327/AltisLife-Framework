@@ -206,6 +206,14 @@ class CfgFunctions {
             class handleFog {};
             class handleRain {};
         };
+        
+        class Factories {
+            file = "\life_server\Functions\Factories";
+            class addFactoryTick {};
+            class endFactory {};
+            class startFactory {};
+            class tickFactory {};
+        };
     };
 
     class MySQL_Database {

@@ -6,9 +6,10 @@
 scopeName "fn_capture";
 
 _this params [
-	["_location", objNull, [objNull]],
-	["_capture", "", [""]]
+	["_location", objNull, [objNull]]
 ];
+
+private _capture = _location getVariable ["site", ""];
 
 private _cfg = missionConfigFile >> "CfgCapture" >> worldName >> _capture;
 if (isNull _location || { !(isClass _cfg) }) exitWith { false };
@@ -46,7 +47,7 @@ if (serverTime < _cooldown) exitWith {
 	[100, "Captured Site"] call ULP_fnc_addXP;
 
 	if (isClass (_cfg >> "Marker")) then {
-		private _marker = getText (_cfg >> "Marker" >> "markerName");
+		private _marker = _location getVariable ["marker", ""];
 		private _defaultName = getText (_cfg >> "Marker" >> "defaultName");
 
 		_marker setMarkerText format ["%1 | %2", _defaultName, [] call ULP_fnc_groupTag];

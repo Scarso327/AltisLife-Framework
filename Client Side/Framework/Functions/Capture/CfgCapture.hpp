@@ -5,6 +5,8 @@ class CfgCapture {
 			time = 180;
 			cooldown = 180;
 			class Marker {
+				markerType = "loc_Bunker";
+				markerColour = "ColorEast";
 				markerName = "criminal_hideout_1";
 				defaultName = "Criminal Hideout";
 			};
@@ -22,6 +24,8 @@ class CfgCapture {
 			time = 180;
 			cooldown = 300;
 			class Marker {
+				markerType = "loc_Power";
+				markerColour = "ColorEast";
 				markerName = "western_power_plant";
 				defaultName = "Western Power Station";
 			};

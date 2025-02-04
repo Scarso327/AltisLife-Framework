@@ -1893,4 +1893,5 @@ class CfgVehicles {
 	class Siren_7 { sound = "Siren_7"; };
 	class Siren_8 { sound = "Siren_8"; };
 	class Siren_9 { sound = "Siren_9"; };
+	class Factory_Processing { sound = "Factory_Processing"; };
 };

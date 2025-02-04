@@ -10,16 +10,11 @@ if (canSuspend) exitWith {
 };
 
 _this params [
-	["_trader", player, [objNull]],
-	["_isSalvageFactory", false, [true]]
+	["_trader", player, [objNull]]
 ];
 
 if !([player, ["Civilian"]] call ULP_fnc_isFaction) exitWith {
 	["Only civilians can access this!"] call ULP_fnc_hint;
-};
-
-if (_isSalvageFactory && { !(["VehicleSalvage"] call ULP_fnc_hasRequiredPower) }) exitWith {
-	["There isn't enough power to use this facility!"] call ULP_fnc_hint;
 };
 
 private _near = ((_trader nearEntities [["Car", "Air", "Ship"], 15]) select {
@@ -34,10 +29,9 @@ if (_near isEqualTo []) exitWith {
 [(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), (_near apply { 
  ([typeOf _x] call ULP_fnc_vehicleCfg) params [  "", "", "_picture", "_name" ]; 
  [_picture, _name, _x call BIS_fnc_netId, 0];
-}), ["Chop", "Cancel"], [_trader, _isSalvageFactory], {
+}), ["Chop", "Cancel"], [_trader], {
 	_this params [
 		["_trader", player, [objNull]],
-		["_isSalvageFactory", false, [true]],
 		["_display", displayNull, [displayNull]]
 	];
 
@@ -61,11 +55,11 @@ if (_near isEqualTo []) exitWith {
 		_time = _time + getNumber (_missionCfg >> "chopTime");
 	};
 
-	if !([format["Chopping %1", _name], _time, [_vehicle, _missionCfg, _name, _isSalvageFactory], {
-		!(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 15 } && { ["VehicleSalvage"] call ULP_fnc_hasRequiredPower }
+	if !([format["Chopping %1", _name], _time, [_vehicle, _missionCfg, _name], {
+		!(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 15 }
 	}, {
 		scopeName "_fnc_onChopped";
-		_this params [ "_vehicle", "_cfg", "_name", "_isSalvageFactory" ];
+		_this params [ "_vehicle", "_cfg", "_name" ];
 
 		if (isNull _vehicle || { !(alive _vehicle) }) exitWith {
 			[format["You failed to chop the <t color='#B92DE0'>%1</t> as it's been destroyed."]] call ULP_fnc_hint;
@@ -76,18 +70,18 @@ if (_near isEqualTo []) exitWith {
 			getNumber (_cfg >> "chopPerc")
 		] select (isNumber (_cfg >> "chopPerc")));
 
-		if (_isSalvageFactory) then {
-			_chopValue = _chopValue * 1.1;
-		};
-
 		_chopValue = ["ScrapDealer", _chopValue] call ULP_fnc_activatePerk;
 
 		private _id = _vehicle getVariable ["vehicle_id", -1];
 		private _owner = [_vehicle] call ULP_fnc_getVehicleOwner;
 		deleteVehicle _vehicle;
 
+		[_chopValue, false, format["Chopped %1", _name]] call ULP_fnc_addMoney;
+		[player, "ChopVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+		["ChopVeh"] call ULP_fnc_achieve;
+
 		if (_id >= 0) then {
-			if (_isSalvageFactory && { [[player] call ULP_fnc_getFaction, "vehicles"] call ULP_fnc_factionPresistant }) then {
+			if ([[player] call ULP_fnc_getFaction, "vehicles"] call ULP_fnc_factionPresistant) then {
 				private _chance = ([
 					getNumber (missionConfigFile >> "CfgVehicles" >> "chopKeepChance"),
 					getNumber (_cfg >> "chopKeepChance")
@@ -95,7 +89,7 @@ if (_near isEqualTo []) exitWith {
 				
 				if ((["UncertainMind", 0] call ULP_fnc_activatePerk) > _chance) then {
 					[_owner, player, _id] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
-					[format["You've claimed <t color='#B92DE0'>%1</t> as your own vehicle, it is now in your garage.", _name]] call ULP_fnc_hint;
+					[format["You've claimed <t color='#B92DE0'>%1</t> as your own vehicle, it is now in your garage. You've been paid <t color='#B92DE0'>%2%3</t>.", _name, "£", [_chopValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
 					breakOut "_fnc_onChopped";
 				};
 			};
@@ -103,15 +97,8 @@ if (_near isEqualTo []) exitWith {
 			[_id] remoteExecCall ["ULP_SRV_fnc_destroyVehicle", RSERV];
 		};
 
-		[_chopValue, false, format["Chopped %1", _name]] call ULP_fnc_addMoney;
 		[format["You've chopped <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2%3</t>.", _name, "£", [_chopValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
-		
-		[player, "ChopVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
-		
-		["ChopVeh"] call ULP_fnc_achieve;
-	}, {
-		["You must stay near the vehicle to chop it and if at salvage it must be kept powered..."] call ULP_fnc_hint; 
-	}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
+	}, { ["You must stay near the vehicle to chop it..."] call ULP_fnc_hint; }, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {
 		["You can't chop a vehicle while performing another action!"] call ULP_fnc_hint;
 	};
 }, false] call ULP_fnc_selectObject;

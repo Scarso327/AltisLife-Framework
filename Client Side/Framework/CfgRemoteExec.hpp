@@ -209,6 +209,9 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_setGroupPermissions {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_startFactory {
+            allowedTargets = SERVER;
+        };
 
         class bis_fnc_debugconsoleexec {};
     };

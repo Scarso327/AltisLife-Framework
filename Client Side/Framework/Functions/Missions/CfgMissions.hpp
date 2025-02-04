@@ -357,6 +357,13 @@ class CfgMissions {
 		class Messages : Messages {};
 	};
 
+	class ArchaeologyLegendary : ArchaeologyCommon {
+		name = "Legendary Archaeology Sites";
+		onClaimed = "ULP_Archaeology_Digging = false; ULP_Archaeology = ""Legendary""; ULP_SurveyTotal = 0; [""LegendaryMap"", 1, true] call ULP_fnc_handleItem;";
+		class Rewards : Rewards {};
+		class Messages : Messages {};
+	};
+
 	class CorporateFreight {
 		name = "Corporate Freight";
 		description = "You need to deliver the given corporate freight to %1";

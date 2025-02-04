@@ -36,9 +36,7 @@ class CfgVehicles {
 		enableRope = false;
 		garageDelay = 15;
 		repairTime = 15;
-		crushTime = 300;
 		chopKeepChance = 85;
-		chopTime = 120;
 		blacklistedItems[] = { 
 			"UnprocessedOil",
 			"ProcessedOil"
@@ -51,9 +49,7 @@ class CfgVehicles {
 		fuelConsumptionRate = 1.35;
 		garageDelay = 20;
 		repairTime = 20;
-		crushTime = 300;
 		chopKeepChance = 90;
-		chopTime = 180;
 		retrievalPerc = 0.005;
 		turrets[] = {};
 		blacklistedItems[] = { 
@@ -452,6 +448,8 @@ class CfgVehicles {
 		virtualSpace = 20;
 		garageLimit = 1;
 		retrievalPerc = 0.05;
+		crushTime = 120;
+		chopTime = 120;
 		enableRope = false;
 	};
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
@@ -548,6 +546,8 @@ class CfgVehicles {
 		virtualSpace = 45;
 		garageLimit = 1;
 		retrievalPerc = 0.05;
+		crushTime = 60;
+		chopTime = 120;
 		enableRope = false;
 	};
 
@@ -807,6 +807,8 @@ class CfgVehicles {
 	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { 
 		buyPrice = 6590000; 
 		garageLimit = 1;
+		crushTime = 120;
+		chopTime = 120;
 	};
 
 	class B_MRAP_01_F : Base {
@@ -816,8 +818,8 @@ class CfgVehicles {
 		garageLimit = 2;
 		garageDelay = 15;
 		repairTime = 20;
-		crushTime = 60;
 		chopKeepChance = 95;
+		crushTime = 240;
 		chopTime = 300;
 		retrievalPerc = 0.01;
 		enableRope = false;
@@ -836,19 +838,11 @@ class CfgVehicles {
 		};
 	};
 
-	class O_MRAP_02_F : Base {
+	class O_MRAP_02_F : B_MRAP_01_F {
 		description = "The Ifrit is a MRAP vehicle designed and manufactured in Russia. Its strengths lie in reliability in extreme weather conditions and crew protection.";
 		buyPrice = 7500000;
 		virtualSpace = 65;
-		garageLimit = 2;
-		garageDelay = 15;
-		repairTime = 20;
-		crushTime = 60;
-		chopKeepChance = 90;
-		chopTime = 300;
-		retrievalPerc = 0.01;
 		canTransfer = false;
-		enableRope = false;
 		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }";
 		class Textures {
 			class Hex : BaseTexture { 
@@ -908,18 +902,10 @@ class CfgVehicles {
 		};
 	};
 
-	class I_MRAP_03_F : Base {
+	class I_MRAP_03_F : B_MRAP_01_F {
 		description = "The Strider is a medium all-terrain vehicle with amphibious capability and enhanced crew protection, designed for reconnaissance and troop transport roles.";
 		buyPrice = 5750000;
 		virtualSpace = 65;
-		garageLimit = 2;
-		garageDelay = 15;
-		repairTime = 20;
-		crushTime = 60;
-		chopKeepChance = 90;
-		chopTime = 300;
-		retrievalPerc = 0.01;
-		enableRope = false;
 		class Textures {
 			class Tan : BaseTexture { 
 				displayName = "Tan";
@@ -1110,6 +1096,8 @@ class CfgVehicles {
 		description = "The Tempest is a 6x6 mine resistant standard transport truck. The modular design of the truck allows several transport versions.";
 		buyPrice = 850550;
 		virtualSpace = 370;
+		crushTime = 60;
+		chopTime = 120;
 		class Textures {
 			class BrownHex : BaseTexture {
 				displayName = "Brown Hex"; 
@@ -1153,6 +1141,8 @@ class CfgVehicles {
 	class O_Truck_03_device_F : O_Truck_03_transport_F {
 		buyPrice = 7200000;
 		virtualSpace = 150;
+		crushTime = 240;
+		chopTime = 300;
 	};
 
 	class B_Truck_01_mover_F : BaseTruck {
@@ -1221,6 +1211,8 @@ class CfgVehicles {
 	class B_Truck_01_transport_F : B_Truck_01_mover_F {
 		buyPrice = 1596500;
 		virtualSpace = 535;
+		crushTime = 60;
+		chopTime = 120;
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1240,7 +1232,7 @@ class CfgVehicles {
 			}; 
 		};
 	};
-	class B_Truck_01_covered_F : B_Truck_01_mover_F {
+	class B_Truck_01_covered_F : B_Truck_01_transport_F {
 		buyPrice = 1834550;
 		virtualSpace = 590;
 		class Textures {
@@ -1264,7 +1256,7 @@ class CfgVehicles {
 			}; 
 		};
 	};
-	class B_Truck_01_ammo_F : B_Truck_01_mover_F {
+	class B_Truck_01_ammo_F : B_Truck_01_transport_F {
 		buyPrice = 2156000;
 		virtualSpace = 650;
 		class Textures {
@@ -1286,7 +1278,7 @@ class CfgVehicles {
 			}; 
 		};
 	};
-	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
+	class B_Truck_01_fuel_F : B_Truck_01_transport_F {
 		buyPrice = 3000000;
 		virtualSpace = 750;
 		blacklistedItems[] = { 
@@ -1312,9 +1304,11 @@ class CfgVehicles {
 			}; 
 		};
 	};
-	class B_Truck_01_box_F : B_Truck_01_mover_F {
+	class B_Truck_01_box_F : B_Truck_01_transport_F {
 		buyPrice = 2610000;
 		virtualSpace = 800;
+		crushTime = 120;
+		chopTime = 180;
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1590,6 +1584,8 @@ class CfgVehicles {
 		buyPrice = 2130000;
 		virtualSpace = 20;
 		retrievalPerc = 0.02;
+		crushTime = 60;
+		chopTime = 300;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" }; };
 			class Black : BaseTexture {
@@ -1617,6 +1613,8 @@ class CfgVehicles {
 		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
+		crushTime = 60;
+		chopTime = 300;
 		turrets[] = {};
 		class Textures {
 			class Police : PoliceTextureBase {
@@ -1633,6 +1631,8 @@ class CfgVehicles {
 		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
 		buyPrice = 13240000;
 		virtualSpace = 160;
+		crushTime = 60;
+		chopTime = 300;
 		class Textures {
 			class Medic : MedicTextureBase {
 				textures[] = { 
@@ -1680,6 +1680,8 @@ class CfgVehicles {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
 		garageLimit = 1;
+		crushTime = 60;
+		chopTime = 300;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1727,6 +1729,8 @@ class CfgVehicles {
 		buyPrice = 33400750;
 		virtualSpace = 500;
 		garageLimit = 1;
+		crushTime = 60;
+		chopTime = 300;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1750,6 +1754,8 @@ class CfgVehicles {
 		description = "A two-seat reconnaissance and target designation helicopter used to seek targets for gunships.";
 		buyPrice = 146560000;
 		garageLimit = 1;
+		crushTime = 60;
+		chopTime = 300;
 	};
 
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
@@ -1765,7 +1771,7 @@ class CfgVehicles {
 		virtualSpace = 5;
 		retrievalPerc = 0.02;
 	};
-	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
+	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F { buyPrice = 1375000; };
 
 	class B_T_VTOL_01_infantry_F : BaseAir {
 		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";
@@ -1773,6 +1779,8 @@ class CfgVehicles {
 		virtualSpace = 650;
 		garageLimit = 1;
 		retrievalPerc = 0.0025;
+		crushTime = 540;
+		chopTime = 900;
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
 		buyPrice = 85750000;

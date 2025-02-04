@@ -3,9 +3,8 @@ class CfgFactories {
 	colourDefault = "ColorEast";
 	colourPowered = "ColorIndependent";
 	class Altis {
-		class VehicleSalvage {
-			displayName = "Vehicle Salvage";
-			markerName = "vehicle_salavge";
+		class ComponentsFactory {
+			displayName = "Components Factory";
 			requiredPower = 1;
 			class Products {
 				class FreshPeach {

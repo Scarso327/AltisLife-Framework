@@ -4,18 +4,16 @@ class CfgGroups {
 	class Tag {
 		MinLength = 1;
 		MaxLength = 5;
-		Blacklisted[] = { "APC", "APS", "NHS", "AAS", "HATO" };
+		Blacklisted[] = { "APC", "APS", "NHS", "AAS", "HATO", "MTL", "MANTL" };
 	};
 	
 	class Name {
 		MinLength = 6;
     	MaxLength = 30;
-		Blacklisted[] = { "Altis Police Contabulary", "Altis Police Service", "Altis Police", "National Health Service", "Altis Ambulance Service", "Highways Agency", "Civilian" };
+		Blacklisted[] = { "Altis Police Contabulary", "Altis Police Service", "Altis Police", "National Health Service", "Altis Ambulance Service", "Highways Agency", "Civilian", "Mantle", "Mantle Network" };
 	};
 
-	ranks[] = {
-		"PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"
-	};
+	ranks[] = { "PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"  };
 
 	class Permissions {
 		deposit = 2;
@@ -156,27 +154,15 @@ class CfgGroups {
 		maxLevel = 5;
 
 		class XP {
-			class HoldingCartel {
-				amount = 10;
-			};
-			class Cartel {
-				amount = 25;
-			};
+			class HoldingCartel { amount = 10; };
+			class Cartel { amount = 25; };
 			class Hideout : Cartel {};
-			class Popup : Cartel {
-				amount = 50;
-			};
+			class Popup : Cartel { amount = 50; };
 			class Airdrop : Popup {};
 			class Shipwreck : Popup {};
-			class CargoRun {
-				amount = 10;
-			};
-			class Election {
-				amount = 500;
-			}; // TODONOW
-			class Rigging {
-				amount = 35;
-			};
+			class CargoRun { amount = 10; };
+			class Election { amount = 500; }; // TODONOW
+			class Rigging { amount = 35; };
 			class BaseBid : Election {}; // TODONOW
 			class CommunityGoals : CargoRun {}; // TODO
 			class Robbery : CargoRun {};

@@ -22,7 +22,7 @@ if ([] call ULP_fnc_isGovernor) then { _pay = _pay * 1.15 } else {
 	if ([] call ULP_fnc_isProtection) then { _pay = _pay * 1.05 };
 };
 
-if (["GovernmentBonus"] call ULP_fnc_hasPerk) then { _pay = _pay * 1.05 };
+if (["GovernmentBonus"] call ULP_fnc_hasPerk) then { _pay = _pay * 1.1 };
 
 if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _pay = _pay * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "payIncrease"); };
 

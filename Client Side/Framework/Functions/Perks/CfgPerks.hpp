@@ -420,27 +420,6 @@ class CfgPerks {
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
-	class IntelligentBanker { // TODONOW
-		icon = "Data\UI\Perks\intelligentBanker.paa";
-		displayName = "Intelligent Banker";
-		description = "Decreases your wire transfer costs by %1%2";
-		removalMultiplier = 1;
-		class Leveling {
-			maxLevel = 4;
-			xpLevel = 100;
-			xpMultipler = 2;
-			levelCalculation = "25 * (_this select 0)";
-		};
-		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
-			level = 23;
-			prestige = 0;
-			profession[] = {};
-		};
-		onChanged = "";
-		onActivated = "";
-	};
-
 	class HGVDriver {
 		icon = "Data\UI\GroupPerks\HEMTTs.paa";
 		displayName = "HGV Driver";

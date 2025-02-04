@@ -48,6 +48,8 @@ if (isText (_type >> "onRecieved")) then {
 	[[_sender select 1] call ULP_fnc_playerByUID, _message] call compile getText (_type >> "onRecieved");
 };
 
-[getPlayerUID _sender, "SentMessage", [_type, _message]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+if ([getNumber (_type >> "log")] call ULP_fnc_bool) then {
+	[getPlayerUID _sender, "SentMessage", [_type, _message]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+};
 
 ["MessageReceived", _messages] call ULP_fnc_invokeEvent;

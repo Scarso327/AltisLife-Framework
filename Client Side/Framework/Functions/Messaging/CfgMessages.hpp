@@ -11,6 +11,7 @@ class CfgMessages {
 		canReply = true;
 		confirmSend = true;
 		saveInbox = true;
+		log = false;
 		sender = "%1";
 		targets = "";
 		condition = "true";
@@ -83,6 +84,7 @@ class CfgMessages {
 		sender = "Altis Police Service";
 		targets = "(allPlayers select { !(isNull (objectParent _x)) && { (vehicle _x) isKindOf 'Air'} })";
 		condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
+		log = true;
 	};
 
 	class OpenSeaBroadcast : OpenAirBroadcast {

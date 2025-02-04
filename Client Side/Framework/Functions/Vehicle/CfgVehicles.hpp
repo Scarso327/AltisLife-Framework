@@ -1771,7 +1771,7 @@ class CfgVehicles {
 		virtualSpace = 5;
 		retrievalPerc = 0.02;
 	};
-	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F {};
+	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F { buyPrice = 1375000; };
 
 	class B_T_VTOL_01_infantry_F : BaseAir {
 		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";

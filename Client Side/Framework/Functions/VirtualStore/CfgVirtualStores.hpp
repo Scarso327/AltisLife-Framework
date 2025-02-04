@@ -361,12 +361,15 @@ class CfgVirtualStores {
 		};
 	};
 
-	class Diamond {
-		storeName = "Diamond Trader";
+	class Gem {
+		storeName = "Gem Trader";
 		conditions = "true";
 		class Items {
 			class CutDiamond {};
 			class CutBloodDiamond {};
+			class CutEmerald {};
+			class CutSaphire {};
+			class CutRuby {};
 		};
 	};
 
@@ -523,6 +526,7 @@ class CfgVirtualStores {
 			class HandSmoothedRunestone {};
 			class JeweledNecklace {};
 			class BrokenTimepiece {};
+			class RestoredTimepiece {};
 		};
 	};
 };

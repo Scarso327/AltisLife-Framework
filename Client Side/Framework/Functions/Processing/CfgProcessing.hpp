@@ -172,12 +172,24 @@ class CfgProcessing {
 		processTitle = "Cutting";
 		materials[] = { { "UncutDiamond", 1 } };
 		items[] = { { "CutDiamond", 1 } };
-		reqLicenses[] = { "Diamond" };
+		reqLicenses[] = { "Gem" };
 	};
 	class BloodDiamond : Diamond {
 		materials[] = { { "UncutBloodDiamond", 1 } };
 		items[] = { { "CutBloodDiamond", 1 } };
 		leveling[] = { 5, "Processing", 100 };
+	};
+	class Emerald : Diamond {
+		materials[] = { { "UncutEmerald", 1 } };
+		items[] = { { "CutEmerald", 1 } };
+	};
+	class Saphire : Diamond {
+		materials[] = { { "UncutSaphire", 1 } };
+		items[] = { { "CutSaphire", 1 } };
+	};
+	class Ruby : Diamond {
+		materials[] = { { "UncutRuby", 1 } };
+		items[] = { { "CutRuby", 1 } };
 	};
 
 	// Majors

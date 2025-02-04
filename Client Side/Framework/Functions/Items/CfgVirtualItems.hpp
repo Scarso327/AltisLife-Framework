@@ -1209,13 +1209,25 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 	};
 	class UncutDiamond : CopperOre {
-		displayName = "Diamond Ore";
-		icon = "Data\Icons\ore.paa";
+		displayName = "Uncut Diamond";
+		icon = "Data\Icons\diamond.paa";
+		class Settings : Settings {};
+	};
+	class UncutEmerald : UncutDiamond {
+		displayName = "Uncut Emerald";
+		class Settings : Settings {};
+	};
+	class UncutSaphire : UncutDiamond {
+		displayName = "Uncut Saphire";
+		class Settings : Settings {};
+	};
+	class UncutRuby : UncutDiamond {
+		displayName = "Uncut Ruby";
 		class Settings : Settings {};
 	};
 	class UncutBloodDiamond : CopperOre {
 		displayName = "Blood Diamond Ore";
-		icon = "Data\Icons\ore.paa";
+		icon = "Data\Icons\diamond.paa";
 		class Settings : Settings {
 			onMarket = true;
 			isIllegal = true;
@@ -1308,15 +1320,13 @@ class CfgVirtualItems {
 	};
 	class CutDiamond : CopperBar {
 		displayName = "Cut Diamond";
-		description = "A finely cut diamond that women appear to love.";
+		description = "A finely cut gem that women appear to love.";
 		icon = "Data\Icons\diamond.paa";
 		sellPrice = 6100;
 		class Settings : Settings {};
 	};
 	class CutBloodDiamond : CutDiamond {
 		displayName = "Cut Blood Diamond";
-		description = "A finely cut diamond that women appear to love.";
-		icon = "Data\Icons\diamond.paa";
 		sellPrice = 9500;
 		class Settings {
 			onMarket = true;
@@ -1326,6 +1336,21 @@ class CfgVirtualItems {
 			isEventItem = true;
 			isSystemItem = false;
 		};
+	};
+	class CutEmerald : CutDiamond {
+		displayName = "Cut Emerald";
+		sellPrice = 10000;
+		class Settings : Settings {};
+	};
+	class CutSaphire : CutDiamond {
+		displayName = "Cut Saphire";
+		sellPrice = 10000;
+		class Settings : Settings {};
+	};
+	class CutRuby : CutDiamond {
+		displayName = "Cut Ruby";
+		sellPrice = 10000;
+		class Settings : Settings {};
 	};
 
 	// Illegal Unprocessed

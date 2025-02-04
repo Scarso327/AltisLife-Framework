@@ -56,9 +56,9 @@ class CfgLicenseStores {
 		condition = "!([""Uranium""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Uranium" }; 
 	};
-	class Diamond : Process { 
-		condition = "!([""Diamond""] call ULP_fnc_hasLicense)";
-		licenses[] = { "Diamond" }; 
+	class Gem : Process { 
+		condition = "!([""Gem""] call ULP_fnc_hasLicense)";
+		licenses[] = { "Gem" }; 
 	};
 	class Salt : Process { 
 		condition = "!([""Salt""] call ULP_fnc_hasLicense)";

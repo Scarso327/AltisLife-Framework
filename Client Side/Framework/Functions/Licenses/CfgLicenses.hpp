@@ -172,8 +172,8 @@ class CfgLicenses {
         class Settings {};
     };
 
-    class Diamond : BaseLicense {
-        displayName = "Diamond Processing";
+    class Gem : BaseLicense {
+        displayName = "Gem Processing";
         buyPrice = 936500;
         class Settings {};
     };

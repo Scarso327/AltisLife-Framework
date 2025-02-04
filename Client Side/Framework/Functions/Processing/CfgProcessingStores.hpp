@@ -74,9 +74,9 @@ class CfgProcessingStores {
 		title = "Salt Processing";
 		processes[] = { "Salt" };
 	};
-	class Diamond : Base {
-		title = "Diamond Processing";
-		processes[] = { "Diamond", "BloodDiamond" };
+	class Gem : Base {
+		title = "Gem Processing";
+		processes[] = { "Diamond", "BloodDiamond", "Emerald", "Saphire", "Ruby" };
 	};
 	class Uranium : Base {
 		title = "Uranium Processing";

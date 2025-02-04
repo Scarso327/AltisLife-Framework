@@ -24,9 +24,9 @@ private _marker = format ["site_%1", _capture];
 
 if (isServer) then {
 	_marker = createMarker [_marker, _trader];
-    _marker setMarkerType getText (_cfg >> "Marker" >> "markerType");
-    _marker setMarkerColor getText (_cfg >> "Marker" >> "markerColour");
-    _marker setMarkerText getText (_cfg >> "Marker" >> "defaultName");
+	_marker setMarkerType getText (_cfg >> "Marker" >> "markerType");
+	_marker setMarkerColor getText (_cfg >> "Marker" >> "markerColour");
+	_marker setMarkerText getText (_cfg >> "Marker" >> "defaultName");
 };
 
 _trader setVariable ["marker", _marker];

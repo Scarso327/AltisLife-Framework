@@ -22,9 +22,9 @@ if (isServer) then {
 	_trader setVariable ["ULP_VirtualSpace", 10000, true];
 
 	_marker = createMarker [_marker, _trader];
-    _marker setMarkerType getText (missionConfigFile >> "CfgFactories" >> "markerType");
-    _marker setMarkerColor getText (missionConfigFile >> "CfgFactories" >> "colourDefault");
-    _marker setMarkerText getText (_cfg >> "displayName");
+	_marker setMarkerType getText (missionConfigFile >> "CfgFactories" >> "markerType");
+	_marker setMarkerColor getText (missionConfigFile >> "CfgFactories" >> "colourDefault");
+	_marker setMarkerText getText (_cfg >> "displayName");
 };
 
 _trader setVariable ["marker", _marker];

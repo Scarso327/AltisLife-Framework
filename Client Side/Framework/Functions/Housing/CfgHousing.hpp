@@ -29,7 +29,7 @@ class CfgHousing {
 		class BaseHouse {
 			icon = "Data\UI\Spawns\house.paa";
 			sellMultiplier = 0.25;
-			breakIn = 2 * 60;
+			breakIn = 5 * 60;
 			canShare = true;
 			canSpawn = true;
 			disabledUpgrades[] = {};
@@ -61,13 +61,11 @@ class CfgHousing {
 
 		class Land_i_Addon_02_V1_F : Land_i_Stone_Shed_V1_F {
 			price = 3950000;
-			breakIn = 3 * 60;
 			canSpawn = true;
 		};
 
 		class Land_i_Stone_HouseSmall_V1_F : BaseHouse {
 			price = 6250000;
-			breakIn = 3 * 60;
 			spawnPos[] = {-5.875,1.85156,-0.632767};
 			
 			class Storage {
@@ -80,7 +78,6 @@ class CfgHousing {
 
 		class Land_i_House_Small_02_V1_F : BaseHouse {
 			price = 6250000;
-			breakIn = 3 * 60;
 			spawnPos[] = {4.23022,0.202148,-0.702804};
 			
 			class Storage {
@@ -93,7 +90,6 @@ class CfgHousing {
 
 		class Land_i_House_Small_01_V1_F : BaseHouse {
 			price = 6250000;
-			breakIn = 3 * 60;
 			spawnPos[] = {-1.41695,-1.80029,-1.04134};
 			
 			class Storage {
@@ -106,7 +102,6 @@ class CfgHousing {
 
 		class Land_i_House_Small_03_V1_F : BaseHouse {
 			price = 6250000;
-			breakIn = 3 * 60;
 			spawnPos[] = {-1.32422,-0.259766,0.00575018};
 			
 			class Storage {
@@ -129,7 +124,6 @@ class CfgHousing {
 
 		class Land_i_House_Big_01_V1_F : BaseHouse {
 			price = 9400000;
-			breakIn = 4 * 60;
 			spawnPos[] = {-0.25415,5.96484,0.855064};
 			
 			class Storage {
@@ -143,7 +137,7 @@ class CfgHousing {
 		class Land_LightHouse_F : BaseHouse {
 			icon = "Data\UI\Spawns\lighthouse.paa";
 			price = 165000000;
-			breakIn = 5 * 60;
+			breakIn = 10 * 60;
 			canShare = false;
 			spawnPos[] = {0.598145,-2.52051,-11.5156};
 			
@@ -156,7 +150,7 @@ class CfgHousing {
 		class C_Boat_Civil_04_F : BaseHouse {
 			icon = "Data\UI\Spawns\boat.paa";
 			price = 151000000;
-			breakIn = 5 * 60;
+			breakIn = 10 * 60;
 			canShare = false;
 			spawnPos[] = {-2.46826,-7.74512,-7.68176};
 			
@@ -170,7 +164,7 @@ class CfgHousing {
 		class Land_i_Shed_Ind_F : BaseHouse {
 			icon = "Data\UI\Spawns\warehouse.paa";
 			price = 27500000;
-			breakIn = 5 * 60;
+			breakIn = 10 * 60;
 			spawnPos[] = {5.79297,3.77783,-1.68354};
 			onBought = "[""BuyWarehouse""] call ULP_fnc_achieve;";
 			
@@ -187,7 +181,7 @@ class CfgHousing {
 		class Land_Cargo_Tower_V1_F : BaseHouse {
 			icon = "Data\UI\Spawns\dmt.paa";
 			price = 104896000;
-			breakIn = 5 * 60;
+			breakIn = 15 * 60;
 			spawnPos[] = {15171.1,15339,12.8876};
 			condition = "[] call ULP_fnc_isGroup && { [""DMT""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			
@@ -202,7 +196,7 @@ class CfgHousing {
 		class Land_MilOffices_V1_F : BaseHouse {
 			icon = "Data\UI\Spawns\office.paa";
 			price = 97350000;
-			breakIn = 5 * 60;
+			breakIn = 15 * 60;
 			spawnPos[] = {15177.2,15386.7,3.29152};
 			condition = "[] call ULP_fnc_isGroup && { [""MilitaryOffices""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			
@@ -213,7 +207,7 @@ class CfgHousing {
 		};
 		class Land_Offices_01_V1_F : Land_MilOffices_V1_F {
 			price = 121455000;
-			breakIn = 5 * 60;
+			breakIn = 15 * 60;
 			spawnPos[] = {15177.2,15461.1,7.97687};
 			condition = "[] call ULP_fnc_isGroup && { [""OfficeBuilding""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			class Storage {

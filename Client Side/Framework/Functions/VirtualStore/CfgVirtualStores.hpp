@@ -492,6 +492,7 @@ class CfgVirtualStores {
 			class CommonMap {};
 			class UncommonMap {};
 			class RareMap {};
+			class LegendaryMap {};
 			class SurveyingEquipment {};
 			class ArchaeologistsEquipment {};
 		};
@@ -503,6 +504,7 @@ class CfgVirtualStores {
 			class CommonMapFragment {};
 			class UncommonMapFragment {};
 			class RareMapFragment {};
+			class LegendaryMapFragment {};
 			class OldCoin {};
 			class CoinBundle {};
 			class BrokenPot {};

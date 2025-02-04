@@ -52,7 +52,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\completedCV.paa";
 		displayName = "Completed CV";
 		description = "Allows you to get employed at various job sites";
-		removalMultiplier = 3;
+		removalMultiplier = 2;
 		class Requirements {
 			factions[] = { "Civilian" };
 			level = 3;
@@ -109,7 +109,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\bloodCarrier.paa";
 		displayName = "Blood Carrier";
 		description = "Increases Blood bag efficiency by %1%2";
-		removalMultiplier = 1.2;
+		removalMultiplier = 1;
 		class Leveling {
 			maxLevel = 4;
 			xpLevel = 100;
@@ -145,7 +145,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\mindfulPlanner.paa";
 		displayName = "Mindful Planner";
 		description = "You will spawn with a Map, Radio and GPS";
-		removalMultiplier = 2;
+		removalMultiplier = 3;
 		class Requirements {
 			factions[] = { "Civilian" };
 			level = 8;
@@ -196,7 +196,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\rapidStorer.paa";
 		displayName = "Rapid Storer";
 		description = "Decreases the time it takes to garage a vehicle by %1%2";
-		removalMultiplier = 1;
+		removalMultiplier = 2;
 		class Leveling {
 			maxLevel = 3;
 			xpLevel = 100;
@@ -217,7 +217,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\legalTrader.paa";
 		displayName = "Legal Trader";
 		description = "Increase the price you sell legal items for by %1%2";
-		removalMultiplier = 3;
+		removalMultiplier = 5;
 		class Leveling {
 			maxLevel = 3;
 			xpLevel = 100;
@@ -259,7 +259,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\ecoDriver.paa";
 		displayName = "Eco Driver";
 		description = "Decreases the cost of fuel per litre by %1%2";
-		removalMultiplier = 1;
+		removalMultiplier = 2;
 		class Leveling {
 			maxLevel = 2;
 			xpLevel = 100;
@@ -322,7 +322,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\matesRates.paa";
 		displayName = "Mates Rates";
 		description = "Decreases garage retrieval fees by 50%";
-		removalMultiplier = 6;
+		removalMultiplier = 5;
 		class Requirements {
 			factions[] = { "Civilian" };
 			level = 13;
@@ -337,7 +337,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "First Aider";
 		description = "Increase the efficiency of FirstAidKits by %1%2";
-		removalMultiplier = 1.2;
+		removalMultiplier = 3;
 		class Leveling {
 			maxLevel = 5;
 			xpLevel = 100;
@@ -358,7 +358,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\slightOfHand.paa";
 		displayName = "Slight of Hand";
 		description = "Increases repacking of your magazines speed by %1%2";
-		removalMultiplier = 1.5;
+		removalMultiplier = 1;
 		class Leveling {
 			maxLevel = 2;
 			xpLevel = 100;
@@ -379,7 +379,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\cuffCourier.paa";
 		displayName = "Cuff Courier";
 		description = "Gain the ability to restrain without carrying zipties";
-		removalMultiplier = 1;
+		removalMultiplier = 10;
 		class Requirements {
 			factions[] = { "Civilian" };
 			level = 15;
@@ -394,7 +394,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\idForger.paa";
 		displayName = "ID Forger";
 		description = "Allows you to forge fake IDs";
-		removalMultiplier = 3;
+		removalMultiplier = 10;
 		class Requirements {
 			factions[] = { "Civilian" };
 			level = 15;
@@ -409,7 +409,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\uncertainPerson.paa";
 		displayName = "Uncertain Person";
 		description = "Gain the chance of keeping a vehicle when chopping";
-		removalMultiplier = 2;
+		removalMultiplier = 10;
 		class Requirements {
 			factions[] = { "Civilian" };
 			level = 16;
@@ -424,7 +424,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\shadyTrader.paa";
 		displayName = "Shady Trader";
 		description = "Increase the price you sell illegal items for by %1%2";
-		removalMultiplier = 3;
+		removalMultiplier = 5;
 		class Leveling {
 			maxLevel = 2;
 			xpLevel = 100;
@@ -445,7 +445,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\scrapDealer.paa";
 		displayName = "Scrap Dealer";
 		description = "Increases the amount of money made from chopping a vehicle by %1%2";
-		removalMultiplier = 1;
+		removalMultiplier = 10;
 		class Leveling {
 			maxLevel = 5;
 			xpLevel = 100;
@@ -466,7 +466,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\boltCutter.paa";
 		displayName = "Bolt Cutter";
 		description = "Increases your bolt cutting speed by %1%2";
-		removalMultiplier = 1.3;
+		removalMultiplier = 1;
 		class Leveling {
 			maxLevel = 2;
 			xpLevel = 100;
@@ -502,7 +502,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\landLord.paa";
 		displayName = "Land Lord";
 		description = "Allows you to purchase an additional property";
-		removalMultiplier = 4;
+		removalMultiplier = 10;
 		class Requirements {
 			factions[] = { "Civilian" };
 			level = 23;
@@ -517,7 +517,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\silentLocksmith.paa";
 		displayName = "Silent Locksmith";
 		description = "Decreases the likelihood of triggering an alarm by %1%2";
-		removalMultiplier = 1.3;
+		removalMultiplier = 3;
 		class Leveling {
 			maxLevel = 4;
 			xpLevel = 100;
@@ -568,7 +568,7 @@ class CfgPerks {
 		icon = "Data\UI\Perks\quickLearner.paa";
 		displayName = "Quick Learner";
 		description = "Increases the amount of profession's XP gained by 10%";
-		removalMultiplier = 1.5;
+		removalMultiplier = 5;
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
 			level = 27;

@@ -25,7 +25,7 @@ class CfgCapture {
 			cooldown = 300;
 			class Marker {
 				markerType = "loc_Power";
-				markerColour = "ColorEast";
+				markerColour = "ColorIndependent";
 				markerName = "western_power_plant";
 				defaultName = "Western Power Station";
 			};

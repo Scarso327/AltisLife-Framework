@@ -15,7 +15,6 @@ class CfgFactories {
 						{ "RubberSheet", 2 },
 						{ "SteelPlate", 1 }
 					};
-					blueprints[] = { "B_Tyre" };
 				};
 				class ReinforcedTyre {
 					requiredPower = 2;
@@ -25,14 +24,12 @@ class CfgFactories {
 						{ "SteelPlate", 3 },
 						{ "FlawlessDiamond", 1 }
 					};
-					blueprints[] = { "B_ReinforcedTyre" };
 				};
 				class LightArmourPlate {
 					tickTime = 15;
 					materials[] = { 
 						{ "SteelPlate", 8 }
 					};
-					blueprints[] = { "B_LightArmourPlate" };
 				};
 				class HeavyArmourPlate {
 					requiredPower = 2;
@@ -41,7 +38,6 @@ class CfgFactories {
 						{ "SteelPlate", 24 },
 						{ "FlawlessDiamond", 4 }
 					};
-					blueprints[] = { "B_HeavyArmourPlate" };
 				};
 				class SmallCargoBed {
 					tickTime = 15;
@@ -49,7 +45,6 @@ class CfgFactories {
 						{ "Plank", 12 },
 						{ "SteelPlate", 4 }
 					};
-					blueprints[] = { "B_SmallCargoBed" };
 				};
 				class LargeCargoBed {
 					requiredPower = 2;
@@ -58,7 +53,6 @@ class CfgFactories {
 						{ "Plank", 32 },
 						{ "SteelPlate", 8 }
 					};
-					blueprints[] = { "B_LargeCargoBed" };
 				};
 				class GuidanceSystem {
 					tickTime = 20;
@@ -68,7 +62,6 @@ class CfgFactories {
 						{ "CopperPlate", 4 },
 						{ "CopperWiring", 8 }
 					};
-					blueprints[] = { "B_GuidanceSystem" };
 				};
 				class EngineComponent {
 					requiredPower = 2;
@@ -78,7 +71,6 @@ class CfgFactories {
 						{ "CopperPlate", 4 },
 						{ "PackedOil", 3 }
 					};
-					blueprints[] = { "B_EngineComponent" };
 				};
 				class BasicFlightInstruments {
 					tickTime = 30;
@@ -90,7 +82,6 @@ class CfgFactories {
 						{ "FlawlessDiamond", 1 },
 						{ "GuidanceSystem", 1 }
 					};
-					blueprints[] = { "B_BasicFlightInstruments" };
 				};
 				class AdvancedFlightInstruments {
 					requiredPower = 2;
@@ -104,7 +95,6 @@ class CfgFactories {
 						{ "GuidanceSystem", 3 },
 						{ "ReinforcedGlassPanel", 2 }
 					};
-					blueprints[] = { "B_AdvancedFlightInstruments" };
 				};
 				class SimpleVehicleComponent {
 					tickTime = 15;
@@ -112,7 +102,6 @@ class CfgFactories {
 						{ "VehicleParts", 4 },
 						{ "SteelPlate", 4 }
 					};
-					blueprints[] = { "B_SimpleVehicleComponent" };
 				};
 				class ImprovedVehicleComponent {
 					requiredPower = 2;
@@ -124,7 +113,6 @@ class CfgFactories {
 						{ "SilverPlate", 2 },
 						{ "CopperPlate", 2 }
 					};
-					blueprints[] = { "B_ImprovedVehicleComponent" };
 				};
 				class PerfectedVehicleComponent {
 					requiredPower = 2;
@@ -137,7 +125,6 @@ class CfgFactories {
 						{ "SilverPlate", 3 },
 						{ "CopperPlate", 3 }
 					};
-					blueprints[] = { "B_PerfectedVehicleComponent" };
 				};
 
 				// Vehicle Upgrades

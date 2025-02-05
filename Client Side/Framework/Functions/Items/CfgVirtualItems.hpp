@@ -2,7 +2,7 @@ class CfgVirtualItems {
 	// Fresh Food
 	class FreshApple {
 		displayName = "Fresh Apples";
-		description = "Fresh fruit picked from local trees and sold at markets.";
+		description = "Fresh fruit picked from local trees and sold at markets";
 		icon = "Data\Icons\freshApples.paa";
 		buyPrice = -1;
 		sellPrice = 45;
@@ -527,7 +527,7 @@ class CfgVirtualItems {
 	};
 	class BoltCutter : Pickaxe {
 		displayName = "Bolt Cutter";
-		description = "Used to cut strong locks found on properties, airdrops and shipwrecks";
+		description = "Used to cut locks found on properties, airdrops and shipwrecks";
 		icon = "Data\Icons\boltCutter.paa";
 		buyPrice = 345000;
 		sellPrice = 172500;
@@ -577,6 +577,7 @@ class CfgVirtualItems {
 	class IndustrialDrill : Pickaxe {
 		displayName = "Industrial Drill";
 		icon = "Data\Icons\industrialDrill.paa";
+		description = "Used to break heavily reinforced locks";
 		buyPrice = 600000;
 		sellPrice = 300000;
 		weight = 16;
@@ -596,7 +597,7 @@ class CfgVirtualItems {
 	// Medical Supplies
 	class Painkillers {
 		displayName = "Painkillers";
-		description = "Two pills that restore a small amount of health.";
+		description = "Two pills that restore a small amount of health";
 		icon = "Data\Icons\painkillers.paa";
 		buyPrice = 800;
 		sellPrice = 400;
@@ -613,7 +614,7 @@ class CfgVirtualItems {
 	};
 	class Bandage : Painkillers {
 		displayName = "Generic Bandage";
-		description = "Used as a crafting supply for medical equipment";
+		description = "Used as a crafting material for medical equipment";
 		icon = "Data\Icons\bandage.paa";
 		buyPrice = 850;
 		sellPrice = 425;
@@ -656,7 +657,7 @@ class CfgVirtualItems {
 	};
 	class Morphine : Painkillers {
 		displayName = "Morphine";
-		description = "Used to raise a person's heart rate in order to revive them";
+		description = "Used to lower a person's heart rate in order to revive them";
 		icon = "Data\Icons\injector.paa";
 		buyPrice = 1200;
 		sellPrice = 600;
@@ -664,7 +665,7 @@ class CfgVirtualItems {
 	};
 	class Epinephrine : Morphine {
 		displayName = "Epinephrine";
-		description = "Used to lower a person's heart rate in order to revive them";
+		description = "Used to raise a person's heart rate in order to revive them";
 		class Settings : Settings {};
 	};
 	class FirstAidKit : Painkillers {
@@ -686,7 +687,7 @@ class CfgVirtualItems {
 	};
 	class Defibrillator : MediKit {
 		displayName = "Defibrillator";
-		description = "A portable electronic device that automatically diagnoses life-threatening cardiac arrhythmias";
+		description = "A device that diagnoses life-threatening cardiac arrhythmias";
 		icon = "Data\Icons\defibrillator.paa";
 		buyPrice = 22600;
 		sellPrice = 11300;
@@ -971,7 +972,7 @@ class CfgVirtualItems {
 	};
 	class UnprocessedOil : CopperOre {
 		displayName = "Unrefinded Oil";
-		description = "Oil drilled with an extractor and requiring a fliud track and processing";
+		description = "Oil drilled with an extractor, requiring a fliud track and processing";
 		icon = "Data\Icons\liquid.paa";
 		weight = 6;
 		class Settings : Settings {};
@@ -1049,7 +1050,7 @@ class CfgVirtualItems {
 	};
 	class RefinedSalt : CopperBar {
 		displayName = "Refined Salt";
-		description = "Refined blocks salt ready to be sold.";
+		description = "Refined blocks salt ready to be sold";
 		icon = "Data\Icons\saltRefined.paa";
 		sellPrice = 3200;
 		class Settings : Settings {};
@@ -1064,7 +1065,7 @@ class CfgVirtualItems {
 	};
 	class CutDiamond : CopperBar {
 		displayName = "Cut Diamond";
-		description = "A finely cut diamond ready to be sold";
+		description = "A finely cut gem ready to be sold";
 		icon = "Data\Icons\gem.paa";
 		sellPrice = 6100;
 		class Settings : Settings {};
@@ -1125,7 +1126,7 @@ class CfgVirtualItems {
 	// Processed Drugs
 	class ProcessedWeed {
 		displayName = "Processed Weed";
-		description = "Drugs sold at a Drug Dealer";
+		description = "A drugs sold at a Drug Dealer";
 		icon = "Data\Icons\weedProcessed.paa";
 		buyPrice = 10020;
 		sellPrice = 3340;
@@ -1235,7 +1236,7 @@ class CfgVirtualItems {
 	// Weapons
 	class WeaponParts {
 		displayName = "Weapon Parts";
-		description = "Purchased parts that can be processed when the Church Arms Cartel is owned";
+		description = "Parts processed when the Church Arms Cartel is owned";
 		icon = "Data\Icons\weaponParts.paa";
 		buyPrice = 5900;
 		sellPrice = -1;
@@ -1252,7 +1253,7 @@ class CfgVirtualItems {
 	};
 	class WeaponCrate : WeaponParts {
 		displayName = "Weapon Crate";
-		description = "Made when the Church Arms Cartel is owned at weapons processing";
+		description = "Processed and sold when Church Arms Cartel is owned";
 		icon = "Data\Icons\weaponCrate.paa";
 		buyPrice = -1;
 		sellPrice = 58700;
@@ -1266,7 +1267,7 @@ class CfgVirtualItems {
 	// Cargo Mission Items
 	class FreightCargo {
 		displayName = "Freight Cargo";
-		description = "Crates designed only for vehicles and designated for a specific area";
+		description = "Crates designed only for vehicles containing valuables";
 		icon = "Data\Icons\freightCargo.paa";
 		buyPrice = -1;
 		sellPrice = 35680;
@@ -1334,6 +1335,7 @@ class CfgVirtualItems {
 	};
 	class Turtle_F_Raw : Salema_F_Raw {
 		displayName = "Turtle";
+		description = "Turtles shot, caught and later sold at a dealer";
 		icon = "Data\Icons\turtle.paa";
 		sellPrice = 28500;
 		weight = 5;
@@ -1489,7 +1491,6 @@ class CfgVirtualItems {
 	};
 	class ExplosiveMaterials : Clay {
 		displayName = "Explosive Materials";
-		description = "A collection of explosive materials that are commonly found in crafting recipies.";
 		icon = "Data\Icons\explosiveMaterials.paa";
 		weight = 3;
 		class Settings : Settings {};
@@ -1591,7 +1592,7 @@ class CfgVirtualItems {
 
 	class CommonMapFragment {
 		displayName = "Common Map Fragment";
-		description = "A map fragment of an incomplete map";
+		description = "A fragment of an incomplete map";
 		icon = "Data\Icons\mapFragment.paa";
 		buyPrice = -1;
 		sellPrice = 15000;

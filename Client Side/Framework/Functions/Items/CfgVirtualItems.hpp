@@ -1057,7 +1057,7 @@ class CfgVirtualItems {
 	class ProcessedOil : CopperBar {
 		displayName = "Refinded Oil";
 		description = "Refinded oil that has been barreled and ready to be sold";
-		icon = "Data\Icons\oilRefinded.paa";
+		icon = "Data\Icons\oil.paa";
 		sellPrice = 9850;
 		weight = 4;
 		class Settings : Settings {};

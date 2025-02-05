@@ -431,4 +431,32 @@ class CfgMissions {
 			onFinished = "You have successfully delivered the stolen cargo, you have been paid <t color='#B92DE0'>£%1</t>";
 		};
 	};
+
+	class CriminalSmugglingAir : CriminalSmuggling {
+		vehicleRequirement[] = { { "Plane" }, 50 };
+		timeDivisionAmount = 1;
+		class Locations {
+			class Therisa_Airfield {
+				pos = "smuggling_location_air_1";
+				name = "Therisa Airfield";
+			};
+			class Abdera_Airfield {
+				pos = "smuggling_location_air_2";
+				name = "Abdera Airfield";
+			};
+			class Selakano_Airfield {
+				pos = "smuggling_location_air_3";
+				name = "Selakano Airfield";
+			};
+			class Molos_Airfield {
+				pos = "smuggling_location_air_4";
+				name = "Molos Airfield";
+			};
+		};
+		class Rewards {
+			moneyReward = 0;
+			xpReward = 300;
+		};
+		class Messages : Messages {};
+	};
 };

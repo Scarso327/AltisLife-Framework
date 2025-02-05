@@ -1773,8 +1773,23 @@ class CfgVehicles {
 	class C_Plane_Civil_01_F : BaseAir {
 		description = "The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m).";
 		buyPrice = 1256000;
-		virtualSpace = 5;
+		virtualSpace = 112;
 		retrievalPerc = 0.02;
+		blacklistedItems[] = { 
+			"FreightCargo",
+
+			"Turtle_F_Raw",
+
+			"SeizedContraband",
+			"SpaceCapsuleDataDrive",
+			"SmallGalleryPiece",
+			"MediumGalleryPiece",
+			"LargeGalleryPiece",
+			"MarkedGold",
+			"UnmarkedGold",
+			"EncryptedDrive",
+			"DecryptedDrive"
+		};
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F { buyPrice = 1375000; };
 

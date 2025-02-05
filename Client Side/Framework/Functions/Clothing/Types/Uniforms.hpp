@@ -730,7 +730,7 @@ class U_B_survival_uniform : U_C_Poor_1 {
 		class NOHON : U_B_survival_uniform {
 			displayName = "NO HONOR";
 			textures[] = { "Data\Textures\Groups\NOHON\U_B_CTRG_Soldier_F.paa" };
-			condition = "[18] call ULP_fnc_isGroupPremium";
+			condition = "[19] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -799,7 +799,7 @@ class U_B_CombatUniform_mcam : U_B_survival_uniform {
 		class NOHON : U_B_CombatUniform_mcam {
 			displayName = "NO HONOR";
 			textures[] = { "Data\Textures\Groups\NOHON\U_B_CTRG_Soldier_F.paa" };
-			condition = "[18] call ULP_fnc_isGroupPremium";
+			condition = "[19] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -841,7 +841,7 @@ class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam {
 		class NOHON : U_B_CombatUniform_mcam_vest {
 			displayName = "NO HONOR";
 			textures[] = { "Data\Textures\Groups\NOHON\U_B_CTRG_Soldier_F.paa" };
-			condition = "[18] call ULP_fnc_isGroupPremium";
+			condition = "[19] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -883,7 +883,7 @@ class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam {
 		class NOHON : U_B_CombatUniform_mcam_tshirt {
 			displayName = "NO HONOR";
 			textures[] = { "Data\Textures\Groups\NOHON\U_B_CTRG_Soldier_F.paa" };
-			condition = "[18] call ULP_fnc_isGroupPremium";
+			condition = "[19] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -934,7 +934,7 @@ class U_B_CTRG_Soldier_F : U_B_survival_uniform {
 		class NOHON : U_B_CombatUniform_mcam {
 			displayName = "NO HONOR";
 			textures[] = { "Data\Textures\Groups\NOHON\U_B_CTRG_Soldier_F.paa" };
-			condition = "[18] call ULP_fnc_isGroupPremium";
+			condition = "[19] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -983,7 +983,7 @@ class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {
 		class NOHON : U_B_CTRG_Soldier_3_F {
 			displayName = "NO HONOR";
 			textures[] = { "Data\Textures\Groups\NOHON\U_B_CTRG_Soldier_F.paa" };
-			condition = "[18] call ULP_fnc_isGroupPremium";
+			condition = "[19] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -1032,7 +1032,7 @@ class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {
 		class NOHON : U_B_CTRG_Soldier_2_Arid_F {
 			displayName = "NO HONOR";
 			textures[] = { "Data\Textures\Groups\NOHON\U_B_CTRG_Soldier_F.paa" };
-			condition = "[18] call ULP_fnc_isGroupPremium";
+			condition = "[19] call ULP_fnc_isGroupPremium";
 		};
 	};
 };
@@ -1085,7 +1085,7 @@ class U_B_GhillieSuit : U_B_survival_uniform {
 		class NOHON : U_B_GhillieSuit {
 			displayName = "NO HONOR";
 			textures[] = { "Data\Textures\Groups\NOHON\U_B_CTRG_Soldier_F.paa" };
-			condition = "[18] call ULP_fnc_isGroupPremium";
+			condition = "[19] call ULP_fnc_isGroupPremium";
 		};
 	};
 };

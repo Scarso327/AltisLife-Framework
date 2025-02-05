@@ -204,7 +204,7 @@ class CfgFactories {
 					materials[] = { 
 						{ "CopperWiring", 5 },
 						{ "CopperPlate", 2 },
-						{ "signalJammer", 1 }
+						{ "SignalJammer", 1 }
 					};
 				};
 			};
@@ -351,7 +351,7 @@ class CfgFactories {
 						{ "LargeCargoBed", 1 }
 					};
 				};
-				class C_Heli_Light_01_civil_F : I_Truck_02_transport_F {
+				class B_Heli_Light_01_F : I_Truck_02_transport_F {
 					materials[] = { 
 						{ "VehicleParts", 6 },
 						{ "BasicFlightInstruments", 2 },

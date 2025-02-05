@@ -481,8 +481,8 @@ class CfgBlueprints {
 
 		class B_Capacitor {
 			icon = "Data\Icons\miningRig.paa";
-			ddisplayName = "Capacitor";
-			description = "A crafting component used for various electronics";
+			displayName = "Capacitor";
+			description = "A component used for crafting electronics";
 			materials[] = { {"SilverBar", 2} };
 			item = "Capacitor";
 			isDefault = true;
@@ -491,7 +491,7 @@ class CfgBlueprints {
 		};
 		class B_ElectronicCircuit : B_Capacitor {
 			icon = "Data\Icons\miningRig.paa";
-			ddisplayName = "Electronic Circuit";
+			displayName = "Electronic Circuit";
 			materials[] = { 
 				{"CopperWiring", 2}, 
 				{"CopperPlate", 1}
@@ -500,7 +500,7 @@ class CfgBlueprints {
 		};
 		class B_PrintedCircuitBoard : B_Capacitor {
 			icon = "Data\Icons\miningRig.paa";
-			ddisplayName = "Electronic Circuit";
+			displayName = "Electronic Circuit";
 			materials[] = { 
 				{"CopperBar", 2}, 
 				{"RubberSheet", 1}
@@ -510,7 +510,6 @@ class CfgBlueprints {
 		class B_Motherboard : B_Capacitor {
 			icon = "Data\Icons\motherboard.paa";
 			displayName = "Motherboard";
-			description = "A component used for more complex electronics";
 			materials[] = { 
 				{"PrintedCircuitBoard", 3},
 				{"CopperWiring", 2} 
@@ -574,6 +573,7 @@ class CfgBlueprints {
 		class B_Laptop : B_Motherboard {
 			icon = "Data\Icons\psu.paa";
 			displayName = "Laptop";
+			description = "An electronic sold at Altis Electronics";
 			materials[] = { 
 				{"CentralProcessingUnit", 1},
 				{"RandomAccessMemory", 1},
@@ -584,7 +584,7 @@ class CfgBlueprints {
 			item = "Laptop";
 			time = 15;
 		};
-		class B_Desktop : B_Motherboard {
+		class B_Desktop : B_Laptop {
 			icon = "Data\Icons\psu.paa";
 			displayName = "Desktop";
 			materials[] = { 
@@ -598,10 +598,9 @@ class CfgBlueprints {
 			item = "Desktop";
 			time = 20;
 		};
-		class B_MiningRig : B_Motherboard {
+		class B_MiningRig : B_Laptop {
 			icon = "Data\Icons\miningRig.paa";
-			ddisplayName = "Mining Rig";
-			description = "A constructed rig for mining crypto in specialised warehouses";
+			displayName = "Mining Rig";
 			materials[] = { 
 				{"CentralProcessingUnit", 1},
 				{"RandomAccessMemory", 4},
@@ -613,22 +612,21 @@ class CfgBlueprints {
 			item = "MiningRig";
 			time = 120;
 		};
-		class B_SignalJammer : B_Motherboard {
+		class B_SignalJammer : B_Laptop {
 			icon = "Data\Icons\signalJammer.paa";
-			ddisplayName = "Signal Jammer";
-			description = "A tool used to jam any electronic singals within a limited radius";
+			displayName = "Signal Jammer";
 			materials[] = { 
 				{"ElectronicCircuit", 2},
 				{"PrintedCircuitBoard", 1},
 				{"GlassPanel", 1}
 			};
-			item = "signalJammer";
+			item = "SignalJammer";
 			time = 20;
 		};
 		class B_HackingDevice : B_Motherboard {
 			icon = "Data\Icons\hackingDevice.paa";
-			ddisplayName = "Hacking Device";
-			description = "A tool used to hack various systems and malicously gain access to said systems";
+			displayName = "Hacking Device";
+			description = "A tool used to gain access to Major Crime sites";
 			materials[] = { 
 				{"ElectronicCircuit", 2},
 				{"PrintedCircuitBoard", 1},
@@ -641,8 +639,8 @@ class CfgBlueprints {
 		};
 		class B_PanicButton : B_HackingDevice {
 			icon = "Data\Icons\pPanicButton.paa";
-			ddisplayName = "Panic Button";
-			description = "When pressed this will alert the police that you require immedate assistance";
+			displayName = "Panic Button";
+			description = "A tool that will send an alert to the Police";
 			materials[] = { 
 				{"CopperWiring", 2},
 				{"SilverPlate", 2},

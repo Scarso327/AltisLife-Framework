@@ -520,7 +520,7 @@ class H_HelmetB : H_HelmetB_light {
 		};
 		class H_HelmetB_plain_blk : H_HelmetB { 
 			displayName = "Black"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class H_HelmetB_desert : H_HelmetB { displayName = "Desert"; };
 		class H_HelmetB_sand : H_HelmetB { displayName = "Sand"; };

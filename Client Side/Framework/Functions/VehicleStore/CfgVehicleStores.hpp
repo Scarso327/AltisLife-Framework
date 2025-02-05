@@ -19,6 +19,10 @@ class CfgVehicleStores {
 				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
+			class C_Offroad_02_unarmed_F {
+				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess";
+				class Textures {};
+			};
 			class C_Hatchback_01_sport_F {
 				condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				class Textures {};

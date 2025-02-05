@@ -494,6 +494,14 @@ class CfgVehicles {
 		buyPrice = 31750;
 		virtualSpace = 55;
 		class Textures {
+			class Police : PoliceTexture { 
+				displayName = "General Response";
+				textures[] = { "Data\Textures\Vehicles\Land\Police\MB4.paa" };
+				class Lights : PoliceColour {
+					leftPos[] = {0.757324,1.83252,-0.379596};
+					rightPos[] = {-0.844727,1.82861,-0.379596};
+				};
+			};
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\MB4.paa" }; 
 				class Lights : MedicColour {

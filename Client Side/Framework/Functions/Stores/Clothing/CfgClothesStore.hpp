@@ -83,12 +83,17 @@ class CfgClothesStore {
 				};
 			};
 			class H_PASGT_basic_black_F {
-				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_COL"", 1] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_MPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures {
 					class H_PASGT_basic_black_F {};
 					class H_PASGT_basic_blue_F {};
 					class H_PASGT_basic_white_F {};
 				};
+			};
+			class H_HelmetB_plain_blk { 
+				displayName = "Balistic Helmet";
+				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; 
+				class Textures { class H_HelmetB_plain_blk {}; };
 			};
 			class H_HelmetSpecB_blk { 
 				displayName = "Operation Helmet";

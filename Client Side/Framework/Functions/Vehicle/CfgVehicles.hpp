@@ -15,8 +15,7 @@ class CfgVehicles {
 			"StolenCargo",
 			"FreightCargo",
 
-			"UnprocessedOil",
-			"ProcessedOil"
+			"UnprocessedOil"
 		};
 		class Textures {};
 	};
@@ -25,8 +24,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"FreightCargo",
 
-			"UnprocessedOil",
-			"ProcessedOil"
+			"UnprocessedOil"
 		};
 	};
 
@@ -38,8 +36,7 @@ class CfgVehicles {
 		repairTime = 15;
 		chopKeepChance = 85;
 		blacklistedItems[] = { 
-			"UnprocessedOil",
-			"ProcessedOil"
+			"UnprocessedOil"
 		};
 		class Textures {};
 	};

@@ -9,13 +9,12 @@ _this params [
 	["_factory", objNull, [objNull]]
 ];
 
-private _product = _factory getVariable ["product_order", configNull];
-private _quantity =  _factory getVariable ["product_quantity", 0];
-private _tickTime = _factory getVariable ["product_tick", 30];
+(_factory getVariable ["product_order", []]) params [
+	"_product", "_requiredPower", "_quantity", "_tickTime"
+];
 
 if (isNull _factory || { _quantity <= 0 } || { _tickTime <= 0 } || { !isClass _product } || { !(_factory getVariable ["locked", false]) }) exitWith {};
 
-private _requiredPower =  _factory getVariable ["product_power", 0];
 private _factoryPower = _factory getVariable ["power", 0];
 
 if (_factoryPower < _requiredPower) exitWith {
@@ -44,6 +43,6 @@ if (_quantity isEqualTo 0) exitWith {
 	_this call ULP_SRV_fnc_endFactory;
 };
 
-_factory setVariable ["product_quantity", _quantity];
+_factory setVariable ["product_order", [_product, _requiredPower, _quantity, _tickTime], true];
 
-[_factory, _tickTime] call ULP_SRV_fnc_addFactoryTick;
+[_factory] call ULP_SRV_fnc_addFactoryTick;

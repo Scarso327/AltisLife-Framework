@@ -4,6 +4,7 @@
 #define BODY_Y 0.5 - (BODY_HEIGHT / 2)
 
 #define BLUEPRINT_LIST_W (UI_WIDTH * 0.4) - (MARGIN_X * 2)
+#define MAIN_H BODY_HEIGHT - (0.022 * 2) - (MARGIN_Y * 2)
 
 class DialogFactory {
     idd = 5500;
@@ -61,7 +62,7 @@ class DialogFactory {
 			SAFEZONE_X(UI_X + (MARGIN_X * 2) + BLUEPRINT_LIST_W);
 			SAFEZONE_Y(BODY_Y + MARGIN_Y);
 			SAFEZONE_W(UI_WIDTH + MARGIN_X - BLUEPRINT_LIST_W);
-			SAFEZONE_H(BODY_HEIGHT - (MARGIN_Y * 2));
+			SAFEZONE_H(MAIN_H);
 
 			class Controls {
 				class ItemInformation : Life_RscStructuredText {
@@ -71,8 +72,38 @@ class DialogFactory {
 					y = 0;
 					x = 0;
 					SAFEZONE_W(UI_WIDTH + MARGIN_X - BLUEPRINT_LIST_W);
-					SAFEZONE_H(BODY_HEIGHT - (MARGIN_Y * 2));
+					SAFEZONE_H(MAIN_H);
 				};
+			};
+		};
+
+		class Background: Life_RscText {
+			idc = -1;
+			colorBackground[] = {0.1,0.1,0.1,0.85};
+			SAFEZONE_X(UI_X + (MARGIN_X * 2) + BLUEPRINT_LIST_W);
+			SAFEZONE_Y(BODY_Y + MAIN_H + 0.022 + MARGIN_Y);
+			SAFEZONE_W(UI_WIDTH + MARGIN_X - BLUEPRINT_LIST_W);
+			SAFEZONE_H(0.022);
+		};
+	
+		class ProgressBar: Life_RscProgress {
+			idc = 5506;
+			SAFEZONE_X(UI_X + (MARGIN_X * 2) + BLUEPRINT_LIST_W);
+			SAFEZONE_Y(BODY_Y + MAIN_H + 0.022 + MARGIN_Y);
+			SAFEZONE_W(UI_WIDTH + MARGIN_X - BLUEPRINT_LIST_W);
+			SAFEZONE_H(0.022);
+		};
+
+		class ProgressText: Life_RscStructuredText {
+			idc = 5507;
+			text = "No current order...";
+			SAFEZONE_X(UI_X + (MARGIN_X * 2) + BLUEPRINT_LIST_W);
+			SAFEZONE_Y(BODY_Y + MAIN_H + MARGIN_Y);
+			SAFEZONE_W(UI_WIDTH + MARGIN_X - BLUEPRINT_LIST_W);
+			SAFEZONE_H(0.022);
+			class Attributes
+			{
+				align = "center";
 			};
 		};
 		

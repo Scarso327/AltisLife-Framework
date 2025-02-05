@@ -6,14 +6,23 @@
 scopeName "fn_addFactoryTick";
 
 _this params [
-	["_factory", objNull, [objNull]],
-	["_tickTime", (_factory getVariable ["product_tick", 0]), [0]]
+	["_factory", objNull, [objNull]]
 ];
+
+private _order = _factory getVariable ["product_order", []];
+private _productCfg = _order param [0, configNull, [configNull]];
+
+private _startTime = serverTime;
+private _tickEndTime = _startTime + getNumber (_productCfg >> "tickTime");
+
+_order set [3, _startTime];
+
+_factory setVariable ["product_order", _order, true];
 
 [{ isNull (_this select 0) 
 	|| { !((_this select 0) getVariable ["locked", false]) }
-	|| { ((_this select 0) getVariable ["product_power", 0]) > ((_this select 0) getVariable ["power", 0]) }
+	|| { (((_this select 0) getVariable ["product_order", []]) param [1, 99, [0]]) > ((_this select 0) getVariable ["power", 0]) }
 	|| { serverTime >= (_this select 1) } }, 
-	[_factory, (serverTime + _tickTime)], {
+	[_factory, _tickEndTime], {
 	_this call ULP_SRV_fnc_tickFactory;
 }] call ULP_fnc_waitUntilExecute;

@@ -73,10 +73,7 @@ if (_maxPossibleQuantity < _quantity) exitWith {
 	]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 };
 
-_factory setVariable ["product_order", _productCfg];
-_factory setVariable ["product_power", _requiredPower];
-_factory setVariable ["product_quantity", _maxPossibleQuantity min _quantity];
-_factory setVariable ["product_tick", getNumber (_productCfg >> "tickTime")];
+_factory setVariable ["product_order", [_productCfg, _requiredPower, _maxPossibleQuantity min _quantity, serverTime], true];
 
 private _source = createSoundSource ["Factory_Processing", getPosATL _factory, [], 0];
 _factory setVariable ["sound", _source];

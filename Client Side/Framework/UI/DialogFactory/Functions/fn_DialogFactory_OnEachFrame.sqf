@@ -10,7 +10,23 @@ _this params [ "_list" ];
 if (isNull _list) exitWith { [_thisEventHandler] call ULP_fnc_removeEachFrame; };
 
 private _display = ctrlParent _list;
+private _ctrlProgress = _display displayCtrl 5506;
+private _ctrlText = _display displayCtrl 5507;
+
 private _factory = _display getVariable ["factory", objNull];
+
+private _factoryOrder = _factory getVariable ["product_order", []];
+
+if !(_factoryOrder isEqualTo []) then {
+	_factoryOrder params [ "_productCfg", "", "_quantity", "_startTime" ];
+
+	private _itemCfg = missionConfigFile >> "CfgVirtualItems" >> configName _productCfg;
+
+	_ctrlText ctrlSetText format ["Producing %1 %2(s)", _quantity, getText (_itemCfg >> "displayName")];
+	_ctrlProgress progressSetPosition ((serverTime - _startTime) / getNumber (_productCfg >> "tickTime"));
+} else {
+	_ctrlText ctrlSetText "No current order...";
+};
 
 private _index = lbCurSel _list;
 

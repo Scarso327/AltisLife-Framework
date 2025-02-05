@@ -7,6 +7,12 @@ class CfgFactories {
 		class ComponentsFactory {
 			displayName = "Components Factory";
 			requiredPower = 1;
+			class Events {
+				onOpen = "[""DialogFactory"", _this] call ULP_UI_fnc_createDialog";
+				onStart = "_this call ULP_SRV_fnc_startComponentFactory";
+				onTick = "_this call ULP_SRV_fnc_tickComponentFactory";
+				preTickCondition = "true";
+			};
 			class Products {
 				// Vehicle Components
 				class Tyre {
@@ -200,6 +206,12 @@ class CfgFactories {
 		class SalvageYard {
 			displayName = "Salvage Yard";
 			requiredPower = 1;
+			class Events {
+				onOpen = "_this call ULP_fnc_salvageVehicle";
+				onStart = "_this call ULP_SRV_fnc_startSalvageFactory";
+				onTick = "_this call ULP_SRV_fnc_tickSalvageFactory";
+				preTickCondition = "private _vehicle = _this getVariable [""factory_vehicle"", objNull]; (!isNull _vehicle && { alive _vehicle } && { (count (crew _vehicle)) isEqualTo 0 })";
+			};
 			class Products {
 				class C_Kart_01_black_F {
 					tickTime = 400;
@@ -346,8 +358,8 @@ class CfgFactories {
 					};
 				};
 				class B_CTRG_LSV_01_light_F : I_Truck_02_transport_F {
+					requiredPower = 2;
 					materials[] = { 
-						requiredPower = 2;
 						{ "VehicleParts", 6 },
 						{ "LightArmourPlate", 1 },
 						{ "ReinforcedTyre", 1 }

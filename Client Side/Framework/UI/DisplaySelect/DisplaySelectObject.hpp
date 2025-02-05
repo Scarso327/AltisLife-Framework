@@ -74,9 +74,9 @@ class DisplaySelectObject {
 			idc = 4506;
 			text = "<t align = 'center'>Select</t>";
 			onButtonClick = "(ctrlParent (_this select 0)) closeDisplay 1;";
-			SAFEZONE_X((UI_X + UI_WIDTH - (UI_WIDTH / 4)) - MARGIN_X);
+			SAFEZONE_X((UI_X + UI_WIDTH - (UI_WIDTH / 3)) - MARGIN_X);
 			SAFEZONE_Y((BODY_Y + BODY_HEIGHT) + BUTTON_MARGIN_Y);
-			SAFEZONE_W((UI_WIDTH / 4));
+			SAFEZONE_W((UI_WIDTH / 3));
 			SAFEZONE_H(0.022);
 		};
 	};

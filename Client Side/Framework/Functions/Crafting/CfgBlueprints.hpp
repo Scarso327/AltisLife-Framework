@@ -151,7 +151,6 @@ class CfgBlueprints {
 			description = "A tool used to pick the locks of vehicles and handcuffs";
 			materials[] = { {"IronBar", 2} };
 			item = "Lockpick";
-			isDefault = false;
 			time = 4;
 		};
 		class B_Lighter : B_Lockpick {
@@ -225,6 +224,7 @@ class CfgBlueprints {
 				{"FlawlessDiamond", 1}
 			};
 			item = "BoltCutter";
+			isDefault = false;
 			workbench = true;
 			time = 45;
 		};

@@ -2086,19 +2086,19 @@ class CfgVirtualItems {
 	class ImprovedTyresUpgrade : ImprovedStorageUpgrade {
 		displayName = "Improved Tyres Upgrade";
 		description = "Increases tyre armour value by 25%";
-		icon = "Data\Icons\improvedTyresUpgrade.paa";
+		icon = "Data\Icons\tyre.paa";
 		class Settings : Settings {};
 	};
 	class performanceEngineUpgrade : ImprovedStorageUpgrade {
 		displayName = "Performance Engine Upgrade";
 		description = "Increases acceleration by 10% & top speed by 5% [Mutually exclusive with Efficient Engine]";
-		icon = "Data\Icons\performanceEngineUpgrade.paa";
+		icon = "Data\Icons\improvedEngineUpgrade.paa";
 		class Settings : Settings {};
 	};
 	class efficientEngineUpgrade : ImprovedStorageUpgrade {
 		displayName = "Efficient Engine Upgrade";
 		description = "Decreases fuel consumption by 30% [Mutually exclusive with Performance Engine]";
-		icon = "Data\Icons\efficientEngineUpgrade.paa";
+		icon = "Data\Icons\improvedEngineUpgrade.paa";
 		class Settings : Settings {};
 	};
 	class StongCasingUpgrade : ImprovedStorageUpgrade {

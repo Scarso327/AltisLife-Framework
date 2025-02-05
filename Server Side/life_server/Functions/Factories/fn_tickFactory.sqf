@@ -27,19 +27,9 @@ if !(isNull _cargoUser) exitWith {
 	_this call ULP_SRV_fnc_endFactory;
 };
 
-private _materials = getArray (_product >> "materials");
+_quantity = [_factory, _product, _quantity] call (_factory getVariable "factory_onTick");
 
-{
-	_x params ["_item", "_amount"];
-	
-	[_factory, _item, _amount, false] call ULP_fnc_removeFromCargo;
-} forEach _materials;
-
-[_factory, configName _product, 1, false, true] call ULP_fnc_addToCargo;
-
-_quantity = _quantity - 1;
-
-if (_quantity isEqualTo 0) exitWith {
+if (isNil "_quantity" || { _quantity isEqualTo 0 }) exitWith {
 	_this call ULP_SRV_fnc_endFactory;
 };
 

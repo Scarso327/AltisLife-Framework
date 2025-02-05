@@ -100,6 +100,7 @@ class CfgFunctions {
 			file = "Functions\Factories";
 			class powerFactory {};
 			class setFactoryPower {};
+			class salvageVehicle {};
 		};
 
 		class Functions {
@@ -956,6 +957,14 @@ class CfgFunctions {
 			class DialogFactory_OnLoad {};
 			class DialogFactory_OnUnload {};
 			class DialogFactory_PlaceOrder {};
+		};
+		
+		class DialogSalvageFactory {
+			file = "UI\DialogSalvageFactory\Functions";
+			class DialogSalvageFactory_OnInit {};
+			class DialogSalvageFactory_OnEachFrame {};
+			class DialogSalvageFactory_OnLoad {};
+			class DialogSalvageFactory_OnUnload {};
 		};
 	};
 };

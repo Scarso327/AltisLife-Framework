@@ -31,9 +31,6 @@ _display setVariable ["factory", _factory];
 
 private _list = _display displayCtrl 5502;
 
-private _factoryCfgName = _factory getVariable ["factory", ""];
-private _factoryCfg = missionConfigFile >> "CfgFactories" >> worldName >> _factoryCfgName;
-
 {
 	private _itemCfg = missionConfigFile >> "CfgVirtualItems" >> configName _x;
 

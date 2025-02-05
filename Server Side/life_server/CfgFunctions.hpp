@@ -214,6 +214,14 @@ class CfgFunctions {
             class startFactory {};
             class tickFactory {};
         };
+
+        class FactoriesTypes {
+            file = "\life_server\Functions\Factories\Types";
+            class startComponentFactory {};
+            class startSalvageFactory {};
+            class tickComponentFactory {};
+            class tickSalvageFactory {};
+        };
     };
 
     class MySQL_Database {

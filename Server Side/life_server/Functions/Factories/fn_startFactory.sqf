@@ -9,7 +9,7 @@ _this params [
 	["_factory", objNull, [objNull]],
 	["_unit", objNull, [objNull]],
 	["_product", "", [""]],
-	["_quantity", 0, [0]]
+	["_params", [], [[]]]
 ];
 
 private _factoryCfgName = _factory getVariable ["factory", ""];
@@ -17,7 +17,7 @@ private _factoryCfgName = _factory getVariable ["factory", ""];
 private _factoryCfg = missionConfigFile >> "CfgFactories" >> worldName >> _factoryCfgName;
 private _productCfg = _factoryCfg >> "Products" >> _product;
 
-if (isNull _factory || { isNull _unit } || { _quantity <= 0 } || { !isClass _productCfg } || { _factoryCfgName isEqualTo "" }) exitWith {};
+if (isNull _factory || { isNull _unit } || { _params isEqualTo [] } || { !isClass _productCfg } || { _factoryCfgName isEqualTo "" }) exitWith {};
 
 private _requiredPower = if (isNumber (_productCfg >> "requiredPower")) then {
 	getNumber (_productCfg >> "requiredPower")
@@ -52,28 +52,10 @@ if !(isNull _cargoUser) exitWith {
 	["FactoryStarted", ["Someone is accessing the storage so the factory can't start"]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
 };
 
-private _cargo = _factory getVariable ["ULP_VirtualCargo", createHashMap];
-private _materials = getArray (_productCfg >> "materials");
+private _totalTicks = [_factory, _unit, _productCfg, _params] call compile getText (_factoryCfg >> "Events" >> "onStart");
+if (_totalTicks isEqualTo 0) exitWith { _factory setVariable ["locked", nil, true]; };
 
-private _possibleConversions = [];
-
-{
-	_x params ["_item", "_amount"];
-
-	private _countInCargo = _cargo getOrDefault [_item, 0];
-	_possibleConversions pushBack (floor (_countInCargo / _amount));
-} forEach _materials;
-
-private _maxPossibleQuantity = selectMin _possibleConversions;
-
-if (_maxPossibleQuantity < _quantity) exitWith {
-	_factory setVariable ["locked", nil, true];
-	["FactoryStarted", [
-		format ["The factory only has enough materials to make <t color='#B92DE0'>%1</t> of that product while you requested <t color='#B92DE0'>%2</t>", _maxPossibleQuantity, _quantity]
-	]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
-};
-
-_factory setVariable ["product_order", [_productCfg, _requiredPower, _maxPossibleQuantity min _quantity, serverTime], true];
+_factory setVariable ["product_order", [_productCfg, _requiredPower, _totalTicks, serverTime], true];
 
 private _source = createSoundSource ["Factory_Processing", getPosATL _factory, [], 0];
 _factory setVariable ["sound", _source];

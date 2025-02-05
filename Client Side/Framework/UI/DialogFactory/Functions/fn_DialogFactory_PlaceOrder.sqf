@@ -57,6 +57,6 @@ if (_maxPossibleQuantity isEqualTo 0) exitWith {
 			[_this param [0, ""]] call ULP_fnc_hint; 
 		}, true] call ULP_fnc_addEventHandler; 
 		
-		[_factory, player, _product, _value] remoteExecCall ["ULP_SRV_fnc_startFactory", RSERV];
+		[_factory, player, _product, [_value]] remoteExecCall ["ULP_SRV_fnc_startFactory", RSERV];
 	}, false
 ] call ULP_fnc_selectNumber;

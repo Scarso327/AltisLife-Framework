@@ -98,6 +98,8 @@ class CfgFunctions {
 
 		class Factories {
 			file = "Functions\Factories";
+			class powerFactory {};
+			class setFactoryPower {};
 		};
 
 		class Functions {
@@ -490,6 +492,7 @@ class CfgFunctions {
 			class createSimpleObject {};
 			class addMarket {};
 			class addFactory {};
+			class addPowerStation {};
 			class addCapture {};
 			class addStore {};
 			class addGarage {};
@@ -880,6 +883,7 @@ class CfgFunctions {
 			class inputLimit {};
 			class placeholder {};
 			class setToTextHeight {};
+			class createDialog {};
 		};
 
 		class RscLayers {
@@ -942,6 +946,16 @@ class CfgFunctions {
 			class RscProgress_OnInit {};
 			class RscProgress_OnLoad {};
 			class RscProgress_OnUnload {};
+		};
+		
+		class DialogFactory {
+			file = "UI\DialogFactory\Functions";
+			class DialogFactory_OnInit {};
+			class DialogFactory_OnListChanged {};
+			class DialogFactory_OnEachFrame {};
+			class DialogFactory_OnLoad {};
+			class DialogFactory_OnUnload {};
+			class DialogFactory_PlaceOrder {};
 		};
 	};
 };

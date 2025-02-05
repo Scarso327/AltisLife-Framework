@@ -15,6 +15,13 @@ private _tickTime = _factory getVariable ["product_tick", 30];
 
 if (isNull _factory || { _quantity <= 0 } || { _tickTime <= 0 } || { !isClass _product } || { !(_factory getVariable ["locked", false]) }) exitWith {};
 
+private _requiredPower =  _factory getVariable ["product_power", 0];
+private _factoryPower = _factory getVariable ["power", 0];
+
+if (_factoryPower < _requiredPower) exitWith {
+	_this call ULP_SRV_fnc_endFactory;
+};
+
 // Shouldn't be possible but just in case
 private _cargoUser = _factory getVariable ["ULP_VirtualCargo_User", objNull];
 if !(isNull _cargoUser) exitWith {

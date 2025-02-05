@@ -11,7 +11,8 @@ _this params [
 ];
 
 [{ isNull (_this select 0) 
-	|| { !((_this select 0) getVariable ["locked", false]) } 
+	|| { !((_this select 0) getVariable ["locked", false]) }
+	|| { ((_this select 0) getVariable ["product_power", 0]) > ((_this select 0) getVariable ["power", 0]) }
 	|| { serverTime >= (_this select 1) } }, 
 	[_factory, (serverTime + _tickTime)], {
 	_this call ULP_SRV_fnc_tickFactory;

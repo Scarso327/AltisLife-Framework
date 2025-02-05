@@ -7,16 +7,12 @@ class CfgCapture {
 			class Marker {
 				markerType = "loc_Bunker";
 				markerColour = "ColorEast";
-				markerName = "criminal_hideout_1";
 				defaultName = "Criminal Hideout";
 			};
 			condition = "[""Hideout""] call ULP_fnc_hasGroupPerk";
 		};
 		class EastHideout : WestHideout {
 			displayName = "Eastern Criminal Hideout";
-			class Marker : Marker {
-				markerName = "criminal_hideout_2";
-			};
 		};
 
 		class WesternPowerStation {
@@ -26,7 +22,6 @@ class CfgCapture {
 			class Marker {
 				markerType = "loc_Power";
 				markerColour = "ColorIndependent";
-				markerName = "western_power_plant";
 				defaultName = "Western Power Station";
 			};
 			condition = "[] call ULP_fnc_isGroup";
@@ -34,7 +29,6 @@ class CfgCapture {
 		class EasternPowerStation : WesternPowerStation {
 			displayName = "Eastern Power Station";
 			class Marker : Marker {
-				markerName = "eastern_power_plant";
 				defaultName = "Eastern Power Station";
 			};
 		};

@@ -25,3 +25,4 @@
 #include "DialogPollingStation\DialogPollingStation.hpp"
 #include "DialogMailBox\DialogMailBox.hpp"
 #include "DialogMedicMap\DialogMedicMap.hpp"
+#include "DialogFactory\DialogFactory.hpp"

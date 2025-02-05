@@ -145,10 +145,10 @@ class CfgInteractions {
 			condition = "private _stretcher = attachedTo _this; !isNull _stretcher && { _stretcher isKindOf ""Land_Stretcher_01_F"" }";
 		};
 
-		class PutInNearbyVehicle : TakeOffStretcher {
+		class PutInNearbyVehicle : Revive {
 			title = "Put In Vehicle";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
-			onClick = "private _vehicle = (nearestObjects[_this param [0, player, [objNull]], [""Car""], 5]) param [0, objNull]; if (isNull _vehicle || { !(_vehicle in ULP_Keys) }) exitWith { [""You must take them to a vehicle you have keys for to put it...""] call ULP_fnc_hint; }; if !(((fullCrew _vehicle) findIf { isNull (_x param [0, objNull]) }) isEqualTo -1) exitWith { [""This vehicle has no empty seats..""] call ULP_fnc_hint; }; if (_this call ULP_fnc_toggleOnStretcher) then { [_vehicle, _this select 0] remoteExecCall [""ULP_fnc_putVehicleUnit"", _this select 0]; [format [""You have put %1 into a vehicle..."", [_this select 0, true] call ULP_fnc_getName]] call ULP_fnc_hint; }; closeDialog 0;";
+			onClick = "private _vehicle = (nearestObjects[_this param [0, player, [objNull]], [""Car""], 5]) param [0, objNull]; if (isNull _vehicle || { !(_vehicle in ULP_Keys) }) exitWith { [""You must take them to a vehicle you have keys for to put it...""] call ULP_fnc_hint; }; if !(((fullCrew _vehicle) findIf { isNull (_x param [0, objNull]) }) isEqualTo -1) exitWith { [""This vehicle has no empty seats..""] call ULP_fnc_hint; }; if (isNull (attachedTo _this) || { _this call ULP_fnc_toggleOnStretcher }) then { [_vehicle, _this select 0] remoteExecCall [""ULP_fnc_putVehicleUnit"", _this select 0]; [format [""You have put %1 into a vehicle..."", [_this select 0, true] call ULP_fnc_getName]] call ULP_fnc_hint; }; closeDialog 0;";
 		};
 
 		class AdministerBlood : Revive {

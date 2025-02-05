@@ -116,7 +116,7 @@ class CfgFactions {
 				hasWatch = true;
 				hasRadio = true;
 			};
-			virtualItems[] = { { "Identification", "[name player] call ULP_fnc_stripString" }, { "MediKit", 1 }, { "AutomatedExternalDefibrillator", 1 }, { "PanicButton", 1 } };
+			virtualItems[] = { { "Identification", "[name player] call ULP_fnc_stripString" }, { "MediKit", 1 }, { "Defibrillator", 1 }, { "PanicButton", 1 } };
 		};
 	};
 

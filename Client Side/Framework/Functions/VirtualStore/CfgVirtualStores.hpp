@@ -22,7 +22,7 @@ class CfgVirtualStores {
 			//class Epinephrine {};
 			class FirstAidKit {};
 			class MediKit {};
-			class AutomatedExternalDefibrillator {};
+			class Defibrillator {};
 			class Stretcher {};
 			class TapeSign_F {};
 			//class PlasticBarrier_02_yellow_F {};
@@ -64,7 +64,7 @@ class CfgVirtualStores {
 			//class Epinephrine {};
 			class FirstAidKit {};
 			class MediKit {};
-			class AutomatedExternalDefibrillator {};
+			class Defibrillator {};
 			class Stretcher {};
 			class TapeSign_F {};
 			//class PlasticBarrier_02_yellow_F {};
@@ -98,7 +98,7 @@ class CfgVirtualStores {
 			//class Epinephrine {};
 			class FirstAidKit {};
 			class MediKit {};
-			class AutomatedExternalDefibrillator {};
+			class Defibrillator {};
 			class TapeSign_F {};
 			//class PlasticBarrier_02_yellow_F {};
 			//class PlasticBarrier_02_grey_F {};
@@ -280,7 +280,7 @@ class CfgVirtualStores {
 			class Morphine {};
 			class Epinephrine {};
 			class FirstAidKit {};
-			class AutomatedExternalDefibrillator {};
+			class Defibrillator {};
 		};
 	};
 

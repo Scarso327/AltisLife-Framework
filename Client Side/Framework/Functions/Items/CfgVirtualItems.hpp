@@ -745,8 +745,8 @@ class CfgVirtualItems {
 		weight = 3;
 		class Settings : Settings {};
 	};
-	class AutomatedExternalDefibrillator : MediKit {
-		displayName = "Automated External Defibrillator";
+	class Defibrillator : MediKit {
+		displayName = "Defibrillator";
 		description = "A portable electronic device that automatically diagnoses life-threatening cardiac arrhythmias.";
 		icon = "Data\Icons\defibrillator.paa";
 		buyPrice = 22600;

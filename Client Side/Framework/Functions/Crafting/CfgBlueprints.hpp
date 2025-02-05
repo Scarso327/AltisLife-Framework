@@ -16,13 +16,14 @@ class CfgBlueprints {
 			time = 2;
 		};
 		class B_Plank : B_Clay {
-			icon = "Data\Icons\wood.paa";
+			icon = "Data\Icons\plank.paa";
 			displayName = "Plank";
 			materials[] = { {"Wood", 2} };
 			item = "Plank";
 		};
 		class B_Rubber : B_Clay {
 			displayName = "Rubber";
+			icon = "Data\Icons\rubber.paa";
 			materials[] = { {"Wood", 6} };
 			item = "Rubber";
 			workbench = true;
@@ -30,12 +31,14 @@ class CfgBlueprints {
 		};
 		class B_RubberSheet : B_Rubber {
 			displayName = "Rubber Sheet";
+			icon = "Data\Icons\rubberSheet.paa";
 			materials[] = { {"Rubber", 4} };
 			item = "RubberSheet";
 			time = 12;
 		};
 		class B_SteelBar : B_Rubber {
 			displayName = "Steel Bar";
+			icon = "Data\Icons\ingot.paa";
 			materials[] = { 
 				{"IronBar", 2},
 				{"ProcessedOil", 1}
@@ -45,11 +48,12 @@ class CfgBlueprints {
 		};
 		class B_GlassPanel : B_Rubber {
 			displayName = "Glass Panel";
+			icon = "Data\Icons\glass.paa";
 			materials[] = { {"Glass", 4} };
 			item = "GlassPanel";
 			time = 4;
 		};
-		class B_ReinforcedGlassPanel : B_Rubber {
+		class B_ReinforcedGlassPanel : B_GlassPanel {
 			displayName = "Reinforced Glass Panel";
 			materials[] = { 
 				{"GlassPanel", 2},
@@ -61,6 +65,7 @@ class CfgBlueprints {
 		};
 		class B_CopperWiring : B_Rubber {
 			displayName = "Copper Wiring";
+			icon = "Data\Icons\copperWiring.paa";
 			materials[] = { 
 				{"CopperBar", 4},
 				{"Rubber", 3}
@@ -70,6 +75,7 @@ class CfgBlueprints {
 		};
 		class B_CopperPlate : B_Rubber {
 			displayName = "Copper Plate";
+			icon = "Data\Icons\metalPlate.paa";
 			materials[] = { {"CopperBar", 4} };
 			item = "CopperPlate";
 			time = 4;
@@ -91,12 +97,14 @@ class CfgBlueprints {
 		};
 		class B_PackedOil : B_Clay {
 			displayName = "Packed Oil";
+			icon = "Data\Icons\oil.paa";
 			materials[] = { {"ProcessedOil", 8} };
 			item = "PackedOil";
 			time = 5;
 		};
 		class B_DiamondDrillBit : B_Rubber {
 			displayName = "DiamondDrillBit";
+			icon = "Data\Icons\drillBit.paa";
 			materials[] = { 
 				{"SteelPlate", 2},
 				{"SilverBar", 2},
@@ -107,6 +115,7 @@ class CfgBlueprints {
 		};
 		class B_ExplosiveMaterials : B_Rubber {
 			displayName = "Explosive Materials";
+			icon = "Data\Icons\explosiveMaterials.paa";
 			materials[] = { 
 				{"CopperWiring", 32},
 				{"IronPlate", 12},
@@ -341,15 +350,15 @@ class CfgBlueprints {
 			};
 			item = "MediKit";
 		};
-		class B_AutomatedExternalDefibrillator : B_FirstAidKit {
+		class B_Defibrillator : B_FirstAidKit {
 			icon = "Data\Icons\defibrillator.paa";
-			displayName = "Automated External Defibrillator";
+			displayName = "Defibrillator";
 			materials[] = {
 				{"CopperWiring", 4}, 
 				{"SilverPlate", 2},
 				{"FlawlessDiamond", 1} 
 			};
-			item = "AutomatedExternalDefibrillator";
+			item = "Defibrillator";
 			time = 20;
 		};
 	};
@@ -358,7 +367,7 @@ class CfgBlueprints {
 		displayName = "Gems";
 
 		class B_FlawlessDiamond {
-			icon = "Data\Icons\diamond.paa";
+			icon = "Data\Icons\gem.paa";
 			displayName = "Flawless Diamond";
 			description = "A collection of gems crafted togther to become flawless";
 			materials[] = { {"CutDiamond", 5} };
@@ -368,19 +377,19 @@ class CfgBlueprints {
 			time = 6;
 		};
 		class B_FlawlessEmerald : B_FlawlessDiamond {
-			icon = "Data\Icons\diamond.paa";
+			icon = "Data\Icons\gem.paa";
 			displayName = "Flawless Emerald";
 			materials[] = { {"CutDiamond", 5} };
 			item = "FlawlessEmerald";
 		};
 		class B_FlawlessSapphire : B_FlawlessDiamond {
-			icon = "Data\Icons\diamond.paa";
+			icon = "Data\Icons\gem.paa";
 			displayName = "Flawless Sapphire";
 			materials[] = { {"CutDiamond", 5} };
 			item = "FlawlessSapphire";
 		};
 		class B_FlawlessRuby : B_FlawlessDiamond {
-			icon = "Data\Icons\diamond.paa";
+			icon = "Data\Icons\gem.paa";
 			displayName = "Flawless Ruby";
 			materials[] = { {"CutDiamond", 5} };
 			item = "FlawlessRuby";
@@ -480,7 +489,7 @@ class CfgBlueprints {
 		displayName = "Electronics";
 
 		class B_Capacitor {
-			icon = "Data\Icons\miningRig.paa";
+			icon = "Data\Icons\capacitor.paa";
 			displayName = "Capacitor";
 			description = "A component used for crafting electronics";
 			materials[] = { {"SilverBar", 2} };
@@ -490,7 +499,7 @@ class CfgBlueprints {
 			time = 2;
 		};
 		class B_ElectronicCircuit : B_Capacitor {
-			icon = "Data\Icons\miningRig.paa";
+			icon = "Data\Icons\electronicCircuit.paa";
 			displayName = "Electronic Circuit";
 			materials[] = { 
 				{"CopperWiring", 2}, 
@@ -498,8 +507,7 @@ class CfgBlueprints {
 			};
 			item = "Electronic Circuit";
 		};
-		class B_PrintedCircuitBoard : B_Capacitor {
-			icon = "Data\Icons\miningRig.paa";
+		class B_PrintedCircuitBoard : B_ElectronicCircuit {
 			displayName = "Electronic Circuit";
 			materials[] = { 
 				{"CopperBar", 2}, 
@@ -551,7 +559,7 @@ class CfgBlueprints {
 			time = 3;
 		};
 		class B_SolidStateDrive : B_Motherboard {
-			icon = "Data\Icons\ram.paa";
+			icon = "Data\Icons\ssd.paa";
 			displayName = "Solid State Drive";
 			materials[] = { 
 				{"PrintedCircuitBoard", 1},
@@ -571,7 +579,7 @@ class CfgBlueprints {
 			time = 5;
 		};
 		class B_Laptop : B_Motherboard {
-			icon = "Data\Icons\psu.paa";
+			icon = "Data\Icons\laptop.paa";
 			displayName = "Laptop";
 			description = "An electronic sold at Altis Electronics";
 			materials[] = { 
@@ -585,7 +593,7 @@ class CfgBlueprints {
 			time = 15;
 		};
 		class B_Desktop : B_Laptop {
-			icon = "Data\Icons\psu.paa";
+			icon = "Data\Icons\desktop.paa";
 			displayName = "Desktop";
 			materials[] = { 
 				{"CentralProcessingUnit", 1},

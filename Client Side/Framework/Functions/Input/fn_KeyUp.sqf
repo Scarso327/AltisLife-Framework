@@ -262,6 +262,8 @@ switch (_code) do {
                 private _vehicle = _cars param [0, objNull];
                 if (isNull _vehicle) exitWith {};
 
+                [_veh, "anprSound", 50, 1] remoteExecCall ["ULP_fnc_say3D"];
+
                 [format ["<t color='#316dff' size='1.5' align='center'>ANPR</t><br/><t color='#f9f2f2' size='1' align='center'>Requesting DVLA Information....</t>"]] call ULP_fnc_hint;
                 [1, [_vehicle], {
                     _this params [ "_vehicle" ];

@@ -42,4 +42,10 @@ class CfgSounds {
         sound[] = {"\Data\Sounds\handCuff.ogg", 0.5, 1};
         titles[] = {};
     };
+
+    class anprSound {
+        name = "anprSound";
+        sound[] = {"\Data\Sounds\anpr.ogg", 0.75, 1};
+        titles[] = {};
+    };
 };

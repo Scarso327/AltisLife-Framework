@@ -88,7 +88,7 @@ class CfgSettings {
     class Remotes {
         class Sound {
             maxDistance = 100;
-            sounds[] = { "taserSound", "unlockCarSound", "lockCarSound", "panicButton", "handCuff" };
+            sounds[] = { "taserSound", "unlockCarSound", "lockCarSound", "panicButton", "handCuff", "anprSound" };
         };
     };
 

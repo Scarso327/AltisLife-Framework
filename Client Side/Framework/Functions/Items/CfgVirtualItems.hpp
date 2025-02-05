@@ -2,7 +2,7 @@ class CfgVirtualItems {
 	// Fresh Food
 	class FreshApple {
 		displayName = "Fresh Apples";
-		description = "Fresh fruit picked from local trees and sold at markets.";
+		description = "Fresh fruit picked from local trees and sold at markets";
 		icon = "Data\Icons\freshApples.paa";
 		buyPrice = -1;
 		sellPrice = 45;
@@ -33,8 +33,8 @@ class CfgVirtualItems {
 	
 	// Regular Food
 	class Apple {
-		displayName = "Bought Apple";
-		description = "A regular piece of fruit bought at a general market.";
+		displayName = "Apple";
+		description = "Regular food that keeps you well fed";
 		icon = "Data\Icons\apple.paa";
 		buyPrice = 90;
 		sellPrice = 45;
@@ -55,7 +55,7 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 	class Peach : Apple {
-		displayName = "Bought Peach";
+		displayName = "Peach";
 		icon = "Data\Icons\peach.paa";
 		buyPrice = 102;
 		sellPrice = 51;
@@ -65,7 +65,6 @@ class CfgVirtualItems {
 	};
 	class Bacon : Apple {
 		displayName = "Bacon";
-		description = "Regular food bought at various points around Altis.";
 		icon = "Data\Icons\bacon.paa";
 		buyPrice = 130;
 		sellPrice = 65;
@@ -152,7 +151,7 @@ class CfgVirtualItems {
 	// Regular Drinks
 	class Water {
 		displayName = "Water";
-		description = "A regular drink used to keep you hydrated.";
+		description = "A regular drink used to keep you hydrated";
 		icon = "Data\Icons\bottle.paa";
 		buyPrice = 10;
 		sellPrice = 5;
@@ -197,7 +196,7 @@ class CfgVirtualItems {
 	// Energy Drinks
 	class Redbull {
 		displayName = "Redbull";
-		description = "An energy drink designed to give a person faster reactions.";
+		description = "An energy drink designed to give a person faster reactions";
 		icon = "Data\Icons\can.paa";
 		buyPrice = 2100;
 		sellPrice = 1050;
@@ -221,7 +220,7 @@ class CfgVirtualItems {
 	// Alcoholic Drinks
 	class Beer {
 		displayName = "Beer";
-		description = "An alcoholic drink that causes uncomfortable side effects.";
+		description = "An alcoholic drink that causes uncomfortable side effects";
 		icon = "Data\Icons\beer.paa";
 		buyPrice = 290;
 		sellPrice = 145;
@@ -246,20 +245,12 @@ class CfgVirtualItems {
 		icon = "Data\Icons\schnapps.paa";
 		buyPrice = 580;
 		sellPrice = 290;
-		class Settings {
-			onMarket = true;
-			isIllegal = false;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
+		class Settings : Settings { 
+			onMarket = true; 
+			isEventItem = true;
 		};
-		class Sustain {
-			hunger = 0;
-			thirst = 10;
-		};
+		class Sustain : Sustain {};
 		class Events : Events {};
-		conditions = "true";
 	};
 	class Gin : Beer {
 		displayName = "Gin";
@@ -267,10 +258,7 @@ class CfgVirtualItems {
 		buyPrice = 375;
 		sellPrice = 188;
 		class Settings : Settings {};
-		class Sustain {
-			hunger = 0;
-			thirst = 10;
-		};
+		class Sustain : Sustain {};
 		class Events : Events {};
 	};
 	class Whiskey : Beer {
@@ -279,17 +267,14 @@ class CfgVirtualItems {
 		buyPrice = 495;
 		sellPrice = 248;
 		class Settings : Settings {};
-		class Sustain {
-			hunger = 0;
-			thirst = 10;
-		};
+		class Sustain : Sustain {};
 		class Events : Events {};
 	};
 
 	// XP Rewards
 	class TinyXPReward {
 		displayName = "Tiny XP Reward";
-		description = "A bottle that, when used, will provide valuable experience.";
+		description = "A bottle that will provide valuable experience";
 		icon = "Data\Icons\xpReward.paa";
 		buyPrice = -1;
 		sellPrice = -1;
@@ -307,25 +292,21 @@ class CfgVirtualItems {
 	};
 	class SmallXPReward : TinyXPReward {
 		displayName = "Small XP Reward";
-		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
 		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [500, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
 	class MediumXPReward : TinyXPReward {
 		displayName = "Medium XP Reward";
-		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
 		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [1000, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
 	class LargeXPReward : TinyXPReward {
 		displayName = "Large XP Reward";
-		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
 		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [5000, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
 	class HugeXPReward : TinyXPReward {
 		displayName = "Huge XP Reward";
-		icon = "Data\Icons\xpReward.paa";
 		class Settings : Settings {};
 		class Events { onUse = "if ([(_this select 0), 1, true] call ULP_fnc_handleItem) then { [10000, ""Used XP Reward""] call ULP_fnc_addXP; };"; };
 	};
@@ -333,7 +314,7 @@ class CfgVirtualItems {
 	// Event Triggers
 	class AirdropTrigger {
 		displayName = "Airdrop Trigger";
-		description = "An item used to trigger a specific island event.";
+		description = "An item used to trigger a specific event";
 		icon = "Data\Icons\airdropTrigger.paa";
 		buyPrice = -1;
 		sellPrice = -1;
@@ -360,8 +341,8 @@ class CfgVirtualItems {
 	// General Items
 	class DroppedMoney {
 		displayName = "£%1";
-		description = "Money found in body bags dropped by the dead.";
-		icon = "Data\Icons\oldCoin.paa";
+		description = "Money found in body bags";
+		icon = "Data\Icons\cash.paa";
 		buyPrice = -1;
 		sellPrice = -1;
 		weight = 0;
@@ -377,7 +358,7 @@ class CfgVirtualItems {
 
 	class Identification {
 		displayName = "%1's ID";
-		description = "A card containing a person's identifity. However, these are easily forged.";
+		description = "A card containing a person's identifity";
 		icon = "Data\Icons\identification.paa";
 		buyPrice = 75000;
 		sellPrice = -1;
@@ -398,7 +379,7 @@ class CfgVirtualItems {
 
 	class Pickaxe {
 		displayName = "Pickaxe";
-		description = "A simple tool used for harvesting minerals.";
+		description = "A tool used for gathering items";
 		icon = "Data\Icons\pickaxe.paa";
 		buyPrice = 1200;
 		sellPrice = 600;
@@ -411,12 +392,6 @@ class CfgVirtualItems {
 			isEventItem = false;
 			isSystemItem = false;
 		};
-		class Deconstruction {
-			time = 20;
-			workbench = false;
-			blueprints[] = { { "Tools", "B_Pickaxe" } };
-			materials[] = { {"IronBar", 1}, {"Wood", 1} };
-		};
 		conditions = "true";
 	};
 	class LumberAxe : Pickaxe {
@@ -425,12 +400,6 @@ class CfgVirtualItems {
 		buyPrice = 1180;
 		sellPrice = 590;
 		class Settings : Settings {};
-		class Deconstruction {
-			time = 20;
-			workbench = false;
-			blueprints[] = { { "Tools", "B_LuberAxe" } };
-			materials[] = { {"IronBar", 1}, {"Wood", 1} };
-		};
 	};
 	class Shovel : Pickaxe {
 		displayName = "Shovel";
@@ -438,12 +407,6 @@ class CfgVirtualItems {
 		buyPrice = 1100;
 		sellPrice = 550;
 		class Settings : Settings {};
-		class Deconstruction {
-			time = 20;
-			workbench = false;
-			blueprints[] = { { "Tools", "B_Shovel" } };
-			materials[] = { {"Wood", 1} };
-		};
 	};
 	class Extractor : Pickaxe {
 		displayName = "Extractor";
@@ -451,108 +414,80 @@ class CfgVirtualItems {
 		buyPrice = 1950;
 		sellPrice = 975;
 		class Settings : Settings {};
-		class Deconstruction {
-			time = 20;
-			workbench = false;
-			blueprints[] = { { "Tools", "B_Extractor" } };
-			materials[] = { {"IronBar", 2}, {"SilverBar", 1} };
-		};
 	};
 	class FishingNet : Pickaxe {
 		displayName = "Fishing Net";
-		description = "A net designed to be deployed from a boat and catch fish.";
+		description = "A net designed to be deployed from a boat and catch fish";
 		icon = "Data\Icons\fishingNet.paa";
 		buyPrice = 750;
 		sellPrice = 375;
 		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_dropFishingNet;"; };
-		class Deconstruction {
-			time = 30;
-			workbench = false;
-			blueprints[] = { { "Tools", "B_FishingNet" } };
-			materials[] = { {"Rope", 2} };
-		};
 	};
 	class FuelCan : Pickaxe {
 		displayName = "Fuel Can";
-		description = "This can be used to refuel your vehicle anywhere.";
+		description = "Used to refuel your vehicle";
 		icon = "Data\Icons\fuelCan.paa";
 		buyPrice = 3000;
 		sellPrice = 1500;
 		weight = 12;
 		class Settings : Settings {};
-		class Deconstruction {
-			time = 30;
-			workbench = false;
-			blueprints[] = { { "Tools", "B_FuelCan" } };
-			materials[] = { {"IronBar", 3} };
-		};
 	};
-	class Breathalyser : Pickaxe { // TODO
+	class Breathalyser : Pickaxe {
 		displayName = "Breathalyser";
-		description = "Used to determin whether or not someone is under the influence.";
+		description = "A device used to measure current levels of intoxication";
 		icon = "Data\Icons\breathalyser.paa";
 		buyPrice = 8400;
 		sellPrice = 4200;
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class PanicButton : Pickaxe {
-		displayName = "Panic Button";
-		description = "When pressed this will alert the police that you require immedate assistance.";
-		icon = "Data\Icons\panicButton.paa";
-		buyPrice = 900;
-		sellPrice = 450;
-		weight = 0;
-		class Settings : Settings {};
-		class Deconstruction {
-			time = 60;
-			workbench = true;
-			blueprints[] = { { "PoliceEquipment", "B_PanicButton" } };
-			materials[] = { {"CopperBar", 10}, {"SilverBar", 8} };
-		};
-		class Events { onUse = "[] call ULP_fnc_panic;"; };
-	};
 	class Ziptie : Pickaxe {
 		displayName = "Ziptie";
-		description = "A tool used to retain others.";
+		description = "Used to restrain players when handcuffs aren't an option";
 		icon = "Data\Icons\ziptie.paa";
 		buyPrice = 13500;
 		sellPrice = 6750;
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class Blindfold : Pickaxe { // TODO
+	class Blindfold : Pickaxe {
 		displayName = "Blindfold";
-		description = "A tool used to blindfold others.";
+		description = "Used to blindfold others";
 		icon = "Data\Icons\blindfold.paa";
 		buyPrice = 17000;
 		sellPrice = 8500;
 		weight = 1;
 		class Settings : Settings {};
-		conditions = "[player, [""Civilian""]] call ULP_fnc_isFaction || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 	};
-	class Stinger {
+	class Toolbox : Pickaxe {
+		displayName = "Toolbox";
+		description = "A box of tools used to deconstruct items into their core components";
+		icon = "Data\Icons\toolbox.paa";
+		buyPrice = 25000;
+		sellPrice = 12500;
+		weight = 4;
+		class Settings : Settings {};
+	};
+	class Stinger : Pickaxe {
 		displayName = "Stinger";
-		description = "A deployable strip of spikes used to puncute a vehicle's tryes.";
+		description = "A deployable strip of spikes used to puncute a vehicle's tryes";
 		icon = "Data\Icons\stinger.paa";
 		buyPrice = 8400;
 		sellPrice = 2200;
 		weight = 10;
-		class Settings {
-			onMarket = false;
-			isIllegal = true;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
+		class Settings : Settings { isIllegal = true; };
 		class Deconstruction {
-			time = 30;
+			time = 45;
 			workbench = true;
-			blueprints[] = { { "Tools", "B_MakeshiftStinger" } };
-			materials[] = { {"SteelBar", 22} };
+			blueprints[] = { { "HandheldTools", "B_MakeshiftStinger" } };
+			materials[] = { 
+				{"SteelBar", 8},
+				{"IronBar", 8}, 
+				{"SteelPlate", 4}, 
+				{"FlawlessDiamond", 2}
+			};
 		};
 		class Events { onUse = "_this call ULP_fnc_spikeStrip;"; };
 		conditions = "true";
@@ -560,63 +495,54 @@ class CfgVirtualItems {
 	class MakeshiftStinger : Stinger {
 		displayName = "Makeshift Stinger";
 		class Settings : Settings {};
+		class Events : Events {};
 	};
 	class VehicleClamp : Stinger {
 		displayName = "Vehicle Clamp";
-		description = "A deployable clamp used to prevent a vehicle's movement.";
+		description = "A deployable clamp used to prevent a vehicle's movement";
 		icon = "Data\Icons\vehicleClamp.paa";
 		buyPrice = 18200;
 		sellPrice = 9700;
 		weight = 8;
-		class Settings : Settings {};
+		class Settings : Pickaxe {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
 	};
-	class Lighter : Stinger {
+	class Lighter : Pickaxe {
 		displayName = "Lighter";
-		description = "A simple lighter used to create fire.";
+		description = "A simple lighter used to create fire";
 		icon = "Data\Icons\lighter.paa";
 		buyPrice = 890;
 		sellPrice = 445;
 		weight = 1;
 		class Settings : Settings {};
-		class Events {};
-		class Deconstruction {
-			time = 10;
-			workbench = false;
-			blueprints[] = { { "Tools", "B_Lighter" } };
-			materials[] = { {"Iron", 1} };
-		};
 	};
-	class Lockpick : Stinger {
+	class Lockpick : Pickaxe {
 		displayName = "Lockpick";
-		description = "A tool used to pick the locks of vehicles and handcuffs.";
+		description = "Used to pick the locks of vehicles and handcuffs";
 		icon = "Data\Icons\lockpick.paa";
 		buyPrice = 2500;
 		sellPrice = 1250;
 		weight = 1;
 		class Settings : Settings {};
-		class Events {};
-		class Deconstruction {
-			time = 10;
-			workbench = false;
-			blueprints[] = { { "Tools", "B_Lockpick" } };
-			materials[] = { {"Iron", 2} };
-		};
 	};
-	class BoltCutter : Stinger {
+	class BoltCutter : Pickaxe {
 		displayName = "Bolt Cutter";
-		description = "A tool used to cut strong locks found on properties, airdrops and strong doors.";
+		description = "Used to cut locks found on properties, airdrops and shipwrecks";
 		icon = "Data\Icons\boltCutter.paa";
 		buyPrice = 345000;
 		sellPrice = 172500;
 		weight = 8;
-		class Settings : Settings {};
+		class Settings : Settings { isIllegal = true; };
 		class Events { onUse = "[] call ULP_fnc_boltcut;"; };
 		class Deconstruction {
 			time = 40;
 			workbench = false;
-			blueprints[] = { { "Tools", "B_BoltCutter" } };
-			materials[] = { {"Iron", 8} };
+			blueprints[] = { { "HandheldTools", "B_BoltCutter" } };
+			materials[] = { 
+				{"SteelPlate", 2},
+				{"Wood", 1},
+				{"Rubber", 1}
+			};
 		};
 	};
 	class BigRedKey : BoltCutter {
@@ -628,77 +554,50 @@ class CfgVirtualItems {
 		class Events : Events {};
 		conditions = "[""Police_Main"", 5] call ULP_fnc_hasAccess";
 	};
-	class signalJammer : Stinger { // TODO (crafting)
-		displayName = "Signal Jammer";
-		description = "A tool used to jam any electronic singals within a limited radius.";
-		icon = "Data\Icons\signalJammer.paa";
-		buyPrice = 110300;
-		sellPrice = 55150;
-		weight = 2;
-		class Settings : Settings {};
-	};
-	class HackingDevice : Stinger {
-		displayName = "Hacking Device";
-		description = "A tool used to hack various systems and malicously gain access to said systems.";
-		icon = "Data\Icons\hackingDevice.paa";
-		buyPrice = 475000;
-		sellPrice = 237500;
-		weight = 1;
-		class Settings : Settings {};
-		class Events {};
-		class Deconstruction {
-			time = 120;
-			workbench = true;
-			blueprints[] = { { "Tools", "B_HackingDevice" } };
-			materials[] = { {"Silver", 4}, {"CutDiamond", 2} };
-		};
-	};
-	class ExplosiveCharge : Stinger {
+	class ExplosiveCharge : Pickaxe {
 		displayName = "Explosive Charge";
-		description = "A tool used to destroy fortified locks.";
+		description = "Used to destroy fortified locks";
 		icon = "Data\Icons\explosiveCharge.paa";
 		buyPrice = 750000;
 		sellPrice = 375000;
 		weight = 3;
-		class Settings : Settings {};
-		class Events {};
+		class Settings : Settings { isIllegal = true; };
 		class Deconstruction {
 			time = 180;
 			workbench = true;
-			blueprints[] = { { "Tools", "B_ExplosiveCharge" } };
-			materials[] = { {"ExplosiveMaterials", 4}, {"Coal", 7}, {"CutDiamond", 3} };
+			blueprints[] = { { "HandheldTools", "B_ExplosiveCharge" } };
+			materials[] = { 
+				{"SteelPlate", 6},
+				{"CopperWiring", 4}, 
+				{"ExplosiveMaterials", 1}, 
+				{"SilverPlate", 1}
+			};
 		};
 	};
-	class IndustrialDrill : ExplosiveCharge {
+	class IndustrialDrill : Pickaxe {
 		displayName = "Industrial Drill";
 		icon = "Data\Icons\industrialDrill.paa";
+		description = "Used to break heavily reinforced locks";
 		buyPrice = 600000;
 		sellPrice = 300000;
 		weight = 16;
-		class Settings : Settings {};
+		class Settings : Settings { isIllegal = true; };
 		class Events { onUse = "[] call ULP_fnc_drill;"; };
 		class Deconstruction {
 			time = 180;
 			workbench = true;
-			blueprints[] = { { "Tools", "B_IndustrialDrill" } };
-			materials[] = { {"IronBar", 8}, {"CutDiamond", 2} };
+			blueprints[] = { { "HandheldTools", "B_IndustrialDrill" } };
+			materials[] = { 
+				{"SteelPlate", 4},
+				{"ProcessedOil", 2}
+			};
 		};
 	};
-	class Toolbox : Stinger {
-		displayName = "Toolbox";
-		description = "A box of tools used to deconstruct items into their core components.";
-		icon = "Data\Icons\toolbox.paa";
-		buyPrice = 25000;
-		sellPrice = 12500;
-		weight = 4;
-		class Settings : Settings {};
-		class Events {};
-	};
 
-	// Medical Equipment
-	class Painkillers { // TODO (Will give health immedately after use)
+	// Medical Supplies
+	class Painkillers {
 		displayName = "Painkillers";
-		description = "Two pills that restore a small amount of health.";
+		description = "Two pills that restore a small amount of health";
 		icon = "Data\Icons\painkillers.paa";
 		buyPrice = 800;
 		sellPrice = 400;
@@ -715,7 +614,7 @@ class CfgVirtualItems {
 	};
 	class Bandage : Painkillers {
 		displayName = "Generic Bandage";
-		description = "Used as a crafting supply for medical equipment.";
+		description = "Used as a crafting material for medical equipment";
 		icon = "Data\Icons\bandage.paa";
 		buyPrice = 850;
 		sellPrice = 425;
@@ -724,32 +623,32 @@ class CfgVirtualItems {
 	class FieldDressing : Bandage {
 		displayName = "Field Dressing";
 		icon = "Data\Icons\fieldDressing.paa";
-		description = "A bandage best used for treating abrasions.";
+		description = "A bandage best used for treating abrasions";
 	};
 	class Packing : Bandage {
 		displayName = "Packing Bandage";
 		icon = "Data\Icons\packingBandage.paa";
-		description = "A bandage best used for treating abrasions and avulsions.";
+		description = "A bandage best used for treating abrasions and avulsions";
 		buyPrice = 1000;
 		sellPrice = 655;
 	};
 	class Elastic : Bandage {
 		displayName = "Elastic Bandage";
 		icon = "Data\Icons\elasticBandage.paa";
-		description = "A bandage best used for treating abrasions and lacerations.";
+		description = "A bandage best used for treating abrasions and lacerations";
 		buyPrice = 1085;
 		sellPrice = 750;
 	};
 	class QuickClot : Bandage {
 		displayName = "QuikClot";
 		icon = "Data\Icons\quikClot.paa";
-		description = "A bandage best used for treating abrasions and lacersations..";
+		description = "A bandage best used for treating abrasions and lacersations";
 		buyPrice = 345;
 		sellPrice = 125;
 	};
 	class BloodBag : Painkillers {
 		displayName = "Blood Bag";
-		description = "Used to prevent an incapacitated person from bleeding out.";
+		description = "Used to prevent an incapacitated person from bleeding out";
 		icon = "Data\Icons\bloodbag.paa";
 		buyPrice = 1000;
 		sellPrice = 500;
@@ -758,7 +657,7 @@ class CfgVirtualItems {
 	};
 	class Morphine : Painkillers {
 		displayName = "Morphine";
-		description = "Used to raise a person's heart rate in order to revive them.";
+		description = "Used to lower a person's heart rate in order to revive them";
 		icon = "Data\Icons\injector.paa";
 		buyPrice = 1200;
 		sellPrice = 600;
@@ -766,12 +665,12 @@ class CfgVirtualItems {
 	};
 	class Epinephrine : Morphine {
 		displayName = "Epinephrine";
-		description = "Used to lower a person's heart rate in order to revive them.";
+		description = "Used to raise a person's heart rate in order to revive them";
 		class Settings : Settings {};
 	};
 	class FirstAidKit : Painkillers {
 		displayName = "First Aid Kit";
-		description = "A kit containing various medical tools that can provide assistance.";
+		description = "A kit containing various medical tools that can provide assistance";
 		icon = "Data\Icons\firstAidKit.paa";
 		buyPrice = 1500;
 		sellPrice = 750;
@@ -786,9 +685,9 @@ class CfgVirtualItems {
 		weight = 3;
 		class Settings : Settings {};
 	};
-	class AutomatedExternalDefibrillator : MediKit {
-		displayName = "Automated External Defibrillator";
-		description = "A portable electronic device that automatically diagnoses life-threatening cardiac arrhythmias.";
+	class Defibrillator : MediKit {
+		displayName = "Defibrillator";
+		description = "A device that diagnoses life-threatening cardiac arrhythmias";
 		icon = "Data\Icons\defibrillator.paa";
 		buyPrice = 22600;
 		sellPrice = 11300;
@@ -799,7 +698,7 @@ class CfgVirtualItems {
 	// Placeable Items
 	class TapeSign_F { 
 		displayName = "Red-White Tape";
-		description = "A bundled up item ready to be placed.";
+		description = "A bundled up item ready to be placed";
 		icon = "Data\Icons\roadBarrier.paa";
 		buyPrice = 500;
 		sellPrice = 250;
@@ -813,7 +712,7 @@ class CfgVirtualItems {
 			isSystemItem = false;
 		};
 		class Events { onUse = "[""TapeSign"", _this select 0] call ULP_fnc_placeObject;"; };
-		conditions = "true";
+		conditions = "[player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { ULP_Level >= 3 }";
 	};
 	class PlasticBarrier_02_yellow_F : TapeSign_F { 
 		displayName = "Plastic Barrier (Medium, Yellow)";
@@ -901,183 +800,42 @@ class CfgVirtualItems {
 	};
 	class Stretcher : TapeSign_F {
 		displayName = "Stretcher";
-		description = "A stretcher is a lightweight, portable frame used to carry injured or incapacitated individuals.";
+		description = "A stretcher is a lightweight, portable frame used to carry injured or incapacitated individuals";
 		icon = "Data\Icons\stretcher.paa";
 		buyPrice = 12500;
 		sellPrice = 4350;
 		weight = 5;
 		class Events { onUse = "[""Stretcher"", _this select 0] call ULP_fnc_placeObject;"; };
-		conditions = "[player, [""Police"", ""Medic""]] call ULP_fnc_isFaction || { ULP_Level >= 3 }";
 	};
 
-	// Farming Items (TODO - Farmers' Market, Tractor)
-	class FarmingEquipment { // TODO (crafting)
-		displayName = "Farming Equipment";
-		description = "A set of tools used for farming in specialised warehouses.";
-		icon = "Data\Icons\farmingEquipment.paa";
-		buyPrice = 8900;
-		sellPrice = 4450;
-		weight = 8;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
-		conditions = "true";
-	};
-	class FertileSoil : FarmingEquipment { // TODO
-		displayName = "Fertile Soil";
-		description = "A small packet of seeds ready to be planted in fertile soil in a specialised warehouse.";
-		icon = "Data\Icons\fertileSoil.paa";
-		buyPrice = 1230;
-		sellPrice = 615;
-		weight = 4;
-		class Settings : Settings {};
-	};
-	class CropSeeds : FertileSoil { // TODO
-		displayName = "Crop Seeds";
-		description = "A small packet of seeds ready to be planted in fertile soil in a specialised warehouse.";
-		icon = "Data\Icons\seeds.paa";
-		buyPrice = 900;
-		sellPrice = 450;
-		class Settings : Settings {};
-	};
-
-	// Computer Components (TODO - some store for all this)
-	class MiningRig { // TODO (crafting)
-		displayName = "Mining Rig";
-		description = "A constructed rig for mining crypto in specialised warehouses.";
-		icon = "Data\Icons\miningRig.paa";
+	// Major Crime Items
+	class MarkedGold {
+		displayName = "Marked Gold";
+		description = "Gold from the HM Treasury marked with the King's Cypher";
+		icon = "Data\Icons\ingot.paa";
 		buyPrice = -1;
-		sellPrice = -1;
-		weight = 4;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
-		conditions = "true";
-	};
-	class Motherboard : MiningRig { // TODO (crafting)
-		displayName = "Motherboard";
-		description = "A component used for crafting mining rigs.";
-		icon = "Data\Icons\motherboard.paa";
-		weight = 1;
-		class Settings : Settings {};
-	};
-	class CPU : Motherboard { // TODO (crafting)
-		displayName = "CPU";
-		icon = "Data\Icons\cpu.paa";
-		class Settings : Settings {};
-	};
-	class GPU : Motherboard { // TODO (crafting)
-		displayName = "GPU";
-		icon = "Data\Icons\gpu.paa";
-		class Settings : Settings {};
-	};
-	class RAM : Motherboard { // TODO (crafting)
-		displayName = "RAM";
-		icon = "Data\Icons\ram.paa";
-		class Settings : Settings {};
-	};
-	class PSU : Motherboard { // TODO (crafting)
-		displayName = "PSU";
-		icon = "Data\Icons\psu.paa";
-		class Settings : Settings {};
-	};
-
-	// Misc. Run Items
-	class StolenCargo {
-		displayName = "Stolen Cargo";
-		description = "Sealed cargo crates filled with stolen goods.";
-		icon = "Data\Icons\crate.paa";
-		buyPrice = -1;
-		sellPrice = 71360;
-		weight = 28;
+		sellPrice = 250000;
+		weight = 16;
 		class Settings {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
-			isEventItem = true;
-			isSystemItem = true;
+			isEventItem = false;
+			isSystemItem = false;
 			canSlingLoad = false;
 		};
 		conditions = "true";
 	};
-	class FreightCargo : StolenCargo {
-		displayName = "Freight Cargo";
-		description = "Sealed cargo crates filled with freight cargo.";
-		icon = "Data\Icons\freightCargo.paa";
-		sellPrice = 35680;
-		weight = 24;
-		class Settings : Settings {
-			isIllegal = false;
-		};
-	};
-	class SeizedContraband : StolenCargo {
-		displayName = "Seized Contraband";
-		description = "Contraband seized by the Police and stored in Evidence Storage.";
-		icon = "Data\Icons\seizedContraband.paa";
-		sellPrice = 237600;
-		weight = 4;
-		class Settings : Settings {
-			isSystemItem = false;
-		};
-	};
-	class SpaceCapsuleDataDrive : SeizedContraband {
-		displayName = "Space Capsule Date Drive";
-		description = "A data drive from a space capsule containing unknown secrets.";
-		icon = "Data\Icons\drive.paa";
-		sellPrice = 20000000;
-		weight = 25;
-		class Settings : Settings {};
-	};
-	class SmallGalleryPiece : SeizedContraband {
-		displayName = "Small Gallery Piece";
-		description = "A piece of art commonly stored in the Altis Gallery.";
-		icon = "Data\Icons\galleryPiece.paa";
-		sellPrice = 365000;
-		weight = 6;
-		class Settings : Settings {};
-	};
-	class MediumGalleryPiece : SmallGalleryPiece {
-		displayName = "Medium Gallery Piece";
-		icon = "Data\Icons\galleryPiece.paa";
-		sellPrice = 496000;
-		weight = 10;
-		class Settings : Settings {};
-	};
-	class LargeGalleryPiece : SmallGalleryPiece {
-		displayName = "Large Gallery Piece";
-		icon = "Data\Icons\galleryPiece.paa";
-		sellPrice = 732500;
-		weight = 14;
-		class Settings : Settings {};
-	};
-	class MarkedGold : SeizedContraband {
-		displayName = "Marked Gold";
-		description = "A marked gold bar that is commonly stored in the HM Treasury.";
-		icon = "Data\Icons\ingot.paa";
-		sellPrice = 250000;
-		weight = 16;
-		class Settings : Settings {};
-	};
 	class UnmarkedGold : MarkedGold {
 		displayName = "Unmarked Gold";
-		description = "An marked gold bar that has been debranded by a Goldsmith.";
+		description = "Gold from the HM Treasury that's been debranded";
 		sellPrice = 700000;
 		class Settings : Settings {};
 	};
-	class EncryptedDrive : SeizedContraband {
+	class EncryptedDrive : MarkedGold {
 		displayName = "Encrypted Drive";
-		description = "An encrypted drive containing secrect files taken from the HMS Liberty's command deck.";
+		description = "An encrypted drive from the HMS Liberty's command deck";
 		icon = "Data\Icons\drive.paa";
 		sellPrice = 400000;
 		weight = 8;
@@ -1085,16 +843,50 @@ class CfgVirtualItems {
 	};
 	class DecryptedDrive : EncryptedDrive {
 		displayName = "Decrypted Drive";
-		description = "An Decrypted drive containing secrect files taken from the HMS Liberty's command deck.";
-		icon = "Data\Icons\drive.paa";
+		description = "A decrypted drive from the HMS Liberty's command deck";
 		sellPrice = 1000000;
 		class Settings : Settings {};
 	};
+	class SpaceCapsuleDataDrive : DecryptedDrive {
+		displayName = "Space Capsule Date Drive";
+		description = "A data drive from a space capsule containing unknown secrets";
+		sellPrice = 20000000;
+		weight = 25;
+		class Settings : Settings {};
+	};
+	class SeizedContraband : MarkedGold {
+		displayName = "Seized Contraband";
+		description = "Contraband seized by the Police and stored in a secure facility";
+		icon = "Data\Icons\seizedContraband.paa";
+		sellPrice = 237600;
+		weight = 4;
+		class Settings : Settings {};
+	};
+	class LargeGalleryPiece : MarkedGold {
+		displayName = "Large Gallery Piece";
+		description = "A piece of art displayed in the Art Gallery";
+		icon = "Data\Icons\galleryPiece.paa";
+		sellPrice = 732500;
+		weight = 14;
+		class Settings : Settings {};
+	};
+	class MediumGalleryPiece : LargeGalleryPiece {
+		displayName = "Medium Gallery Piece";
+		sellPrice = 496000;
+		weight = 10;
+		class Settings : Settings {};
+	};
+	class SmallGalleryPiece : LargeGalleryPiece {
+		displayName = "Small Gallery Piece";
+		sellPrice = 365000;
+		weight = 6;
+		class Settings : Settings {};
+	};
 
-	// Legal Unprocessed
+	// Unprocessed Materials
 	class Tobacco {
 		displayName = "Tobacco";
-		description = "A common leaf that can be processed into cigarettes or cigars.";
+		description = "A leaf that can be processed into cigarettes or cigars";
 		icon = "Data\Icons\tobacco.paa";
 		buyPrice = -1;
 		sellPrice = -1;
@@ -1109,69 +901,40 @@ class CfgVirtualItems {
 		};
 		conditions = "true";
 	};
-	class Clay : Tobacco {
-		displayName = "Clay";
-		description = "A simple material used for crafting.";
-		icon = "Data\Icons\clay.paa";
-		weight = 1;
-		class Settings : Settings {};
-	};
-	class Wood : Tobacco {
-		displayName = "Wood";
-		description = "A simple piece of wood commonly found in crafting recipies.";
-		icon = "Data\Icons\wood.paa";
-		sellPrice = 450;
-		weight = 2;
-		class Settings {
-			onMarket = true;
-			isIllegal = false;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
-	};
-	class Plank : Wood {
-		displayName = "Plank";
-		description = "A simple plank made from ordinary wood.";
-		icon = "Data\Icons\wood.paa";
-		sellPrice = 1350;
-		weight = 2;
-		class Settings {
-			onMarket = true;
-			isIllegal = false;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = true;
-			isSystemItem = false;
-		};
-	};
-	class Rope : Tobacco {
-		displayName = "Rope";
-		description = "A simple piece of rope commonly found in crafting recipies.";
-		icon = "Data\Icons\rope.paa";
-		weight = 1;
-		class Settings : Settings {};
-	};
-	class DrillBit : Tobacco {
-		displayName = "Drill Bit";
-		description = "A strong drill bit commonly found in crafting recipies.";
-		icon = "Data\Icons\drillBit.paa";
-		weight = 1;
-		class Settings : Settings {};
-	};
 	class Rock : Tobacco {
 		displayName = "Rock";
-		description = "A simple rock commonly gathered from the HMP Yard.";
+		description = "A rock mined at His Majesty's pleasure";
 		icon = "Data\Icons\ore.paa";
 		sellPrice = 3;
 		weight = 3;
 		class Settings : Settings {};
 		conditions = "ULP_Imprisioned";
 	};
+	class Coal : Tobacco {
+		displayName = "Coal";
+		description = "A lump of coal sold at the Coal Plant without processing";
+		icon = "Data\Icons\ore.paa";
+		buyPrice = -1;
+		sellPrice = 2400;
+		weight = 4;
+		class Settings : Settings {
+			onMarket = true;
+			isSavable = true;
+			isEventItem = true;
+		};
+	};
+	class Coral : Coal {
+		displayName = "Coral";
+		description = "Coral gathered and sold near Kavala without processing";
+		icon = "Data\Icons\coral.paa";
+		sellPrice = 6700;
+		weight = 7;
+		class Settings : Settings { isIllegal = true; };
+		conditions = "true";
+	};
 	class CopperOre : Tobacco {
 		displayName = "Copper Ore";
-		description = "Ore collected from a mineral mine.";
+		description = "Ore mined with a pickaxe and requiring processing";
 		icon = "Data\Icons\ore.paa";
 		weight = 3;
 		class Settings : Settings {};
@@ -1187,49 +950,49 @@ class CfgVirtualItems {
 		weight = 5;
 		class Settings : Settings {};
 	};
-	class Sand : Tobacco {
+	class UraniumOre : CopperOre {
+		displayName = "Uranium Ore";
+		icon = "Data\Icons\ore.paa";
+		weight = 6;
+		class Settings : Settings { isIllegal = true; };
+	};
+	class Sand : CopperOre {
 		displayName = "Sand";
-		description = "Grains of sand that can be processed into glass.";
+		description = "Sand gathered with a shovel and requiring processing";
 		icon = "Data\Icons\sand.paa";
 		weight = 2;
 		class Settings : Settings {};
 	};
-	class UnrefinedSalt : Tobacco {
+	class UnrefinedSalt : CopperOre {
 		displayName = "Unrefined Salt";
-		description = "Salt gathered from the salt flats.";
+		description = "Salt mined with a pickaxe and requiring processing";
 		icon = "Data\Icons\saltUnrefined.paa";
 		weight = 3;
 		class Settings : Settings {};
 	};
-	class UnprocessedOil : Tobacco {
+	class UnprocessedOil : CopperOre {
 		displayName = "Unrefinded Oil";
-		description = "Unrefinded oil extracted from an oil well.";
-		icon = "Data\Icons\oilUnrefinded.paa";
+		description = "Oil drilled with an extractor, requiring a fliud track and processing";
+		icon = "Data\Icons\liquid.paa";
 		weight = 6;
 		class Settings : Settings {};
 	};
 	class UncutDiamond : CopperOre {
 		displayName = "Diamond Ore";
 		icon = "Data\Icons\ore.paa";
+		description = "A gem mined with a pickaxe and requiring processing";
 		class Settings : Settings {};
 	};
 	class UncutBloodDiamond : CopperOre {
 		displayName = "Blood Diamond Ore";
 		icon = "Data\Icons\ore.paa";
-		class Settings : Settings {
-			onMarket = true;
-			isIllegal = true;
-			isSavable = false;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
+		class Settings : Settings { isIllegal = true; };
 	};
 
-	// Legal Processed
+	// Processed Materials
 	class Cigarette {
 		displayName = "Cigarette";
-		description = "A roll of tobacco that can be sold or smoked.";
+		description = "A roll of tobacco that can be sold or smoked";
 		icon = "Data\Icons\cigarette.paa";
 		buyPrice = 5700;
 		sellPrice = 2850;
@@ -1251,19 +1014,11 @@ class CfgVirtualItems {
 		sellPrice = 3360;
 		class Settings : Settings {};
 	};
-	class Coal : Cigarette {
-		displayName = "Coal";
-		description = "A simple lump of coal that can be sold at the Coal Plant.";
-		icon = "Data\Icons\ore.paa";
-		buyPrice = -1;
-		sellPrice = 2400;
-		weight = 4;
-		class Settings : Settings {};
-	};
-	class CopperBar : Coal {
+	class CopperBar : Cigarette {
 		displayName = "Copper Bar";
-		description = "A processed metal bar.";
+		description = "A metal bar sold at Altis Metal Exports";
 		icon = "Data\Icons\ingot.paa";
+		buyPrice = -1;
 		sellPrice = 1900;
 		weight = 2;
 		class Settings : Settings {};
@@ -1278,14 +1033,16 @@ class CfgVirtualItems {
 		sellPrice = 7350;
 		class Settings : Settings {};
 	};
-	class SteelBar : CopperBar {
-		displayName = "Steel Bar";
-		sellPrice = 9670;
-		class Settings : Settings {};
+	class UraniumBar : CopperBar {
+		displayName = "Uranium Bar";
+		description = "A metal bar sold at its own trader";
+		sellPrice = 22150;
+		weight = 3;
+		class Settings : Settings { isIllegal = true; };
 	};
 	class Glass : CopperBar {
 		displayName = "Glass";
-		description = "Strong glass that is ready to be sold.";
+		description = "Basically just hot sand that can be sold";
 		icon = "Data\Icons\glass.paa";
 		sellPrice = 2450;
 		weight = 1;
@@ -1293,96 +1050,50 @@ class CfgVirtualItems {
 	};
 	class RefinedSalt : CopperBar {
 		displayName = "Refined Salt";
-		description = "Refined salt that is ready to be sold.";
+		description = "Refined blocks salt ready to be sold";
 		icon = "Data\Icons\saltRefined.paa";
 		sellPrice = 3200;
 		class Settings : Settings {};
 	};
 	class ProcessedOil : CopperBar {
 		displayName = "Refinded Oil";
-		description = "Refinded oil that remains completely flammable.";
-		icon = "Data\Icons\oilRefinded.paa";
+		description = "Refinded oil that has been barreled and ready to be sold";
+		icon = "Data\Icons\oil.paa";
 		sellPrice = 9850;
 		weight = 4;
 		class Settings : Settings {};
 	};
 	class CutDiamond : CopperBar {
 		displayName = "Cut Diamond";
-		description = "A finely cut diamond that women appear to love.";
-		icon = "Data\Icons\diamond.paa";
+		description = "A finely cut gem ready to be sold";
+		icon = "Data\Icons\gem.paa";
 		sellPrice = 6100;
 		class Settings : Settings {};
 	};
 	class CutBloodDiamond : CutDiamond {
 		displayName = "Cut Blood Diamond";
-		description = "A finely cut diamond that women appear to love.";
-		icon = "Data\Icons\diamond.paa";
+		icon = "Data\Icons\gem.paa";
 		sellPrice = 9500;
-		class Settings {
-			onMarket = true;
-			isIllegal = true;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = true;
-			isSystemItem = false;
-		};
+		class Settings : Settings { isIllegal = true; };
 	};
 
-	// Illegal Unprocessed
-	class UraniumOre : CopperOre {
-		displayName = "Uranium Ore";
-		icon = "Data\Icons\ore.paa";
-		weight = 6;
-		class Settings {
-			onMarket = false;
-			isIllegal = true;
-			isSavable = false;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
-	};
-	class ExplosiveMaterials : UraniumOre {
-		displayName = "Explosive Materials";
-		description = "A collection of explosive materials that are commonly found in crafting recipies.";
-		icon = "Data\Icons\explosiveMaterials.paa";
-		weight = 6;
-		class Settings : Settings {};
-		class Deconstruction {
-			time = 180;
-			workbench = true;
-			blueprints[] = { { "CraftingMaterials", "B_ExplosiveMaterials" } };
-			materials[] = { {"IronBar", 32}, {"ProcessedOil", 9} };
-		};
-	};
-	class Corn : UraniumOre {
-		displayName = "Corn";
-		description = "An item that remain illegal due to the popularity of moonshine.";
-		icon = "Data\Icons\corn.paa";
-		weight = 3;
-		class Settings : Settings {};
-	};
-	class EphedrineBarrel : CopperOre {
-		displayName = "Ephedrine Barrel";
-		description = "The base material in making crystal meth.";
-		icon = "Data\Icons\methUnprocessed.paa";
-		buyPrice = 6050;
-		weight = 12;
-		class Settings {
-			onMarket = false;
-			isIllegal = true;
-			isSavable = false;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
-	};
-	class UnprocessedWeed : UraniumOre {
+	// Unprocessed Drugs
+	class UnprocessedWeed {
 		displayName = "Unprocessed Weed";
-		description = "A drug, useless until processed.";
+		description = "An item that requires processing into a drug";
 		icon = "Data\Icons\weedUnprocessed.paa";
+		buyPrice = -1;
+		sellPrice = -1;
 		weight = 4;
-		class Settings : Settings {};
+		class Settings {
+			onMarket = false;
+			isIllegal = true;
+			isSavable = false;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		conditions = "true";
 	};
 	class UnprocessedHeroin : UnprocessedWeed {
 		displayName = "Opium";
@@ -1396,36 +1107,26 @@ class CfgVirtualItems {
 		weight = 6;
 		class Settings : Settings {};
 	};
-	class WeaponParts : UnprocessedHeroin {
-		displayName = "Weapon Parts";
-		description = "Parts used to assemble weapons at weapons processing";
-		icon = "Data\Icons\weaponParts.paa";
-		buyPrice = 5900;
-		weight = 6;
+	class EphedrineBarrel : UnprocessedWeed {
+		displayName = "Ephedrine Barrel";
+		description = "The base material in making crystal meth";
+		icon = "Data\Icons\methUnprocessed.paa";
+		buyPrice = 6050;
+		weight = 12;
+		class Settings : Settings { onMarket = true; };
+	};
+	class Corn : UnprocessedWeed {
+		displayName = "Corn";
+		description = "The base material in making moonshine";
+		icon = "Data\Icons\corn.paa";
+		weight = 3;
 		class Settings : Settings {};
 	};
 
-	// Illegal Processed
-	class Coral {
-		displayName = "Coral";
-		description = "Coral gathered from the coral reef near Kavala.";
-		icon = "Data\Icons\coral.paa";
-		buyPrice = -1;
-		sellPrice = 6700;
-		weight = 7;
-		class Settings {
-			onMarket = true;
-			isIllegal = true;
-			isSavable = false;
-			isScripted = false;
-			isEventItem = true;
-			isSystemItem = false;
-		};
-		conditions = "true";
-	};
-	class ProcessedWeed : Coral {
+	// Processed Drugs
+	class ProcessedWeed {
 		displayName = "Processed Weed";
-		description = "Processed drugs that can be used or sold/bought at a drug dealer.";
+		description = "A drugs sold at a Drug Dealer";
 		icon = "Data\Icons\weedProcessed.paa";
 		buyPrice = 10020;
 		sellPrice = 3340;
@@ -1438,6 +1139,7 @@ class CfgVirtualItems {
 			isEventItem = true;
 			isSystemItem = false;
 		};
+		conditions = "true";
 	};
 	class ProcessedHeroin : ProcessedWeed {
 		displayName = "Processed Heroin";
@@ -1479,29 +1181,11 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
-	class UraniumBar : ProcessedWeed {
-		displayName = "Uranium Bar";
-		description = "An extremely dangeous mineral processed from a radiation zone.";
-		icon = "Data\Icons\ingot.paa";
-		buyPrice = -1;
-		sellPrice = 22150;
-		weight = 3;
-		class Settings : Settings {};
-	};
-	class WeaponCrate : ProcessedWeed {
-		displayName = "Weapon Crate";
-		description = "A crate packed with assembled weapons ready to be sold near the Church Arms Cartel";
-		icon = "Data\Icons\weaponCrate.paa";
-		buyPrice = -1;
-		sellPrice = 58700;
-		weight = 5;
-		class Settings : Settings {};
-	};
 
-	// Illegal Purified
+	// Purified Drugs
 	class PurifiedWeed {
 		displayName = "Purified Weed";
-		description = "The highest quaility drugs on Altis made for an increased profit.";
+		description = "A purified drug made when the Northern Drug Cartel is owned";
 		icon = "Data\Icons\weedProcessed.paa";
 		buyPrice = 13527;
 		sellPrice = 4509;
@@ -1549,10 +1233,68 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 	};
 
+	// Weapons
+	class WeaponParts {
+		displayName = "Weapon Parts";
+		description = "Parts processed when the Church Arms Cartel is owned";
+		icon = "Data\Icons\weaponParts.paa";
+		buyPrice = 5900;
+		sellPrice = -1;
+		weight = 6;
+		class Settings {
+			onMarket = true;
+			isIllegal = true;
+			isSavable = false;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		conditions = "true";
+	};
+	class WeaponCrate : WeaponParts {
+		displayName = "Weapon Crate";
+		description = "Processed and sold when Church Arms Cartel is owned";
+		icon = "Data\Icons\weaponCrate.paa";
+		buyPrice = -1;
+		sellPrice = 58700;
+		weight = 5;
+		class Settings : Settings {
+			isSavable = true;
+			isEventItem = true;
+		};
+	};
+
+	// Cargo Mission Items
+	class FreightCargo {
+		displayName = "Freight Cargo";
+		description = "Crates designed only for vehicles containing valuables";
+		icon = "Data\Icons\freightCargo.paa";
+		buyPrice = -1;
+		sellPrice = 35680;
+		weight = 24;
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = false;
+			isScripted = false;
+			isEventItem = true;
+			isSystemItem = true;
+			canSlingLoad = false;
+		};
+		conditions = "true";
+	};
+	class StolenCargo : FreightCargo {
+		displayName = "Stolen Cargo";
+		icon = "Data\Icons\crate.paa";
+		sellPrice = 71360;
+		weight = 28;
+		class Settings { isIllegal = true; };
+	};
+
 	// Raw Fish
 	class Salema_F_Raw {
 		displayName = "Raw Salema";
-		description = "Raw fish that can be sold at a fish market or cooked at a public cookhouse.";
+		description = "Raw fish sold at a Fish Market or cooked at a Cookhouse";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = -1;
 		sellPrice = 450;
@@ -1593,14 +1335,14 @@ class CfgVirtualItems {
 	};
 	class Turtle_F_Raw : Salema_F_Raw {
 		displayName = "Turtle";
+		description = "Turtles shot, caught and later sold at a dealer";
 		icon = "Data\Icons\turtle.paa";
 		sellPrice = 28500;
 		weight = 5;
-		class Settings {
+		class Settings : Settings {
 			onMarket = true;
 			isIllegal = true;
 			isSavable = true;
-			isScripted = false;
 			isEventItem = true;
 		};
 	};
@@ -1608,7 +1350,7 @@ class CfgVirtualItems {
 	// Cooked Fish
 	class CookedSalema {
 		displayName = "Cooked Salema";
-		description = "Cooked fish that can be sold at a fish market.";
+		description = "Cooked fish sold at a Fish Market";
 		icon = "Data\Icons\fish.paa";
 		buyPrice = 2250;
 		sellPrice = 1125;
@@ -1654,10 +1396,165 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 	};
 
+	// Crafting Materials
+	class Clay {
+		displayName = "Clay";
+		description = "A material used in crafting";
+		icon = "Data\Icons\clay.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 1;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		conditions = "true";
+	};
+	class Wood : Clay {
+		displayName = "Wood";
+		icon = "Data\Icons\wood.paa";
+		sellPrice = 450;
+		weight = 2;
+		class Settings : Settings {};
+	};
+	class Plank : Clay {
+		displayName = "Plank";
+		description = "A material used in crafting or sold at the Market";
+		icon = "Data\Icons\plank.paa";
+		sellPrice = 1350;
+		weight = 2;
+		class Settings {
+			onMarket = true;
+			isEventItem = true;
+		};
+	};
+	class Rubber : Clay {
+		displayName = "Rubber";
+		icon = "Data\Icons\rubber.paa";
+		class Settings : Settings {};
+	};
+	class RubberSheet : Clay {
+		displayName = "Rubber Sheet";
+		icon = "Data\Icons\rubberSheet.paa";
+		class Settings : Settings {};
+	};
+	class SteelBar : Clay {
+		displayName = "Steel Bar";
+		icon = "Data\Icons\ingot.paa";
+		weight = 2;
+		class Settings : Settings {};
+	};
+	class GlassPanel : Clay {
+		displayName = "Glass Panel";
+		icon = "Data\Icons\glass.paa";
+		class Settings : Settings {};
+	};
+	class ReinforcedGlassPanel : GlassPanel {
+		displayName = "Reinforced Glass Panel";
+		class Settings : Settings {};
+	};
+	class CopperWiring : Clay {
+		displayName = "Copper Wiring";
+		icon = "Data\Icons\copperWiring.paa";
+		class Settings : Settings {};
+	};
+	class CopperPlate : Clay {
+		displayName = "Copper Plate";
+		icon = "Data\Icons\metalPlate.paa";
+		class Settings : Settings {};
+	};
+	class IronPlate : CopperPlate {
+		displayName = "Iron Plate";
+		class Settings : Settings {};
+	};
+	class SilverPlate : CopperPlate {
+		displayName = "Silver Plate";
+		class Settings : Settings {};
+	};
+	class SteelPlate : CopperPlate {
+		displayName = "Steel Plate";
+		class Settings : Settings {};
+	};
+	class PackedOil : CopperPlate {
+		displayName = "Packed Oil";
+		icon = "Data\Icons\oil.paa";
+		class Settings : Settings {};
+	};
+	class DiamondDrillBit : Clay {
+		displayName = "Diamond Drill Bit";
+		icon = "Data\Icons\drillBit.paa";
+		class Settings : Settings {};
+	};
+	class ExplosiveMaterials : Clay {
+		displayName = "Explosive Materials";
+		icon = "Data\Icons\explosiveMaterials.paa";
+		weight = 3;
+		class Settings : Settings {};
+		class Deconstruction {
+			time = 90;
+			workbench = true;
+			blueprints[] = { { "CraftingMaterials", "B_ExplosiveMaterials" } };
+			materials[] = { 
+				{"CopperWiring", 16},
+				{"IronPlate", 6},
+				{"UraniumBar", 4},
+				{"SteelPlate", 2},
+				{"PackedOil", 2}
+			};
+		};
+	};
+
 	// Archaeology Items
+	class SurveyingEquipment {
+		displayName = "Surveying Equipment";
+		description = "Equipment used to survey a dig site to locate artifacts";
+		icon = "Data\Icons\surveyingEquipment.paa";
+		buyPrice = 28900;
+		sellPrice = 14450;
+		weight = 6;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_surveySite;"; };
+		class Deconstruction {
+			time = 25;
+			workbench = true;
+			blueprints[] = { { "HandheldTools", "B_SurveyingEquipment" } };
+			materials[] = { 
+				{"SilverPlate", 1}, 
+				{"GlassPanel", 1}
+			};
+		};
+		conditions = "true";
+	};
+	class ArchaeologistsEquipment : SurveyingEquipment {
+		displayName = "Archaeologists' Equipment";
+		description = "Equipment used to dig artifacts from dig sites";
+		icon = "Data\Icons\archaeologistsEquipment.paa";
+		buyPrice = 24500;
+		sellPrice = 12250;
+		class Settings : Settings {};
+		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_digSite;"; };
+		class Deconstruction {
+			time = 25;
+			workbench = true;
+			blueprints[] = { { "HandheldTools", "B_ArchaeologistsEquipment" } };
+			materials[] = { {"IronPlate", 1} };
+		};
+	};
+
 	class CommonMap {
 		displayName = "Common Map";
-		description = "A map containing various known artifact sites across Altis.";
+		description = "A map containing of artifact sites across Altis";
 		icon = "Data\Icons\map.paa";
 		buyPrice = 20000;
 		sellPrice = 10000;
@@ -1693,13 +1590,21 @@ class CfgVirtualItems {
 		class Events { onUse = "[""Legendary""] call ULP_fnc_getSite;"; };
 	};
 
-	class CommonMapFragment : UncommonMap {
+	class CommonMapFragment {
 		displayName = "Common Map Fragment";
-		description = "A map fragment containing uncompleted map.";
+		description = "A fragment of an incomplete map";
 		icon = "Data\Icons\mapFragment.paa";
+		buyPrice = -1;
 		sellPrice = 15000;
-		class Settings : Settings {};
-		class Events { onUse = ""; };
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		conditions = "true";
 	};
 	class UncommonMapFragment : CommonMapFragment {
 		displayName = "Uncommon Map Fragment";
@@ -1717,51 +1622,9 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 	};
 
-	class SurveyingEquipment {
-		displayName = "Surveying Equipment";
-		description = "Equipment used to survey a dig site in order to locate artifacts.";
-		icon = "Data\Icons\surveyingEquipment.paa";
-		buyPrice = 28900;
-		sellPrice = 14450;
-		weight = 8;
-		class Settings {
-			onMarket = false;
-			isIllegal = false;
-			isSavable = true;
-			isScripted = false;
-			isEventItem = false;
-			isSystemItem = false;
-		};
-		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_surveySite;"; };
-		class Deconstruction {
-			time = 120;
-			workbench = true;
-			blueprints[] = { { "Tools", "B_SurveyingEquipment" } };
-			materials[] = { {"CopperBar", 2}, {"SilverBar", 1} };
-		};
-		conditions = "true";
-	};
-	class ArchaeologistsEquipment : SurveyingEquipment {
-		displayName = "Archaeologists' Equipment";
-		description = "Equipment used to carefully dig up artifacts from dig sites.";
-		icon = "Data\Icons\archaeologistsEquipment.paa";
-		buyPrice = 24500;
-		sellPrice = 12250;
-		weight = 6;
-		class Settings : Settings {};
-		class Events { onUse = "[ULP_Archaeology] call ULP_fnc_digSite;"; };
-		class Deconstruction {
-			time = 120;
-			workbench = true;
-			blueprints[] = { { "Tools", "B_ArchaeologistsEquipment" } };
-			materials[] = { {"IronBar", 4}, {"Wood", 2}, {"Rock", 1} };
-		};
-	};
-
-	/// Common Rewards
 	class OldCoin {
 		displayName = "Old Coin";
-		description = "Artifact collected from dig sites and sold at Altis Archaeologists.";
+		description = "An artifact sold at Altis Archaeologists";
 		icon = "Data\Icons\oldCoin.paa";
 		buyPrice = -1;
 		sellPrice = 7287;
@@ -1829,7 +1692,6 @@ class CfgVirtualItems {
 		sellPrice = 1939000;
 		class Settings : Settings {};
 	};
-	/// Uncommon Rewards
 	class PetrifiedShield : OldCoin {
 		displayName = "Petrified Shield";
 		icon = "Data\Icons\petrifiedShield.paa";
@@ -1869,7 +1731,6 @@ class CfgVirtualItems {
 		sellPrice = 246100;
 		class Settings : Settings {};
 	};
-	/// Rare Rewards
 	class EmeraldAmulet : OldCoin {
 		displayName = "Emerald Amulet";
 		icon = "Data\Icons\emeraldAmulet.paa";
@@ -1908,6 +1769,293 @@ class CfgVirtualItems {
 		displayName = "Restored Timepiece";
 		sellPrice = 464100;
 		weight = 1;
+		class Settings : Settings {};
+	};
+
+	// Electronics
+	class Capacitor {
+		displayName = "Capacitor";
+		description = "A component used for crafting electronics";
+		icon = "Data\Icons\capacitor.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 1;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		conditions = "true";
+	};
+	class ElectronicCircuit : Capacitor {
+		displayName = "Electronic Circuit";
+		icon = "Data\Icons\electronicCircuit.paa";
+		class Settings : Settings {};
+	};
+	class PrintedCircuitBoard : Capacitor {
+		displayName = "Printed Circuit Board";
+		icon = "Data\Icons\electronicCircuit.paa";
+		class Settings : Settings {};
+	};
+	class Motherbord : Capacitor {
+		displayName = "Motherbord";
+		icon = "Data\Icons\motherbord.paa";
+		class Settings : Settings {};
+	};
+	class CentralProcessingUnit : Capacitor {
+		displayName = "Central Processing Unit";
+		icon = "Data\Icons\cpu.paa";
+		class Settings : Settings {};
+	};
+	class GraphicsProcessingUnit : Capacitor {
+		displayName = "Graphics Processing Unit";
+		icon = "Data\Icons\gpu.paa";
+		weight = 2;
+		class Settings : Settings {};
+	};
+	class RandomAccessMemory : Capacitor {
+		displayName = "Random Access Memory";
+		icon = "Data\Icons\ram.paa";
+		class Settings : Settings {};
+	};
+	class SolidStateDrive : Capacitor {
+		displayName = "Solid State Drive";
+		icon = "Data\Icons\ssd.paa";
+		class Settings : Settings {};
+	};
+	class PowerSupplyUnit : Capacitor {
+		displayName = "Power Supply Unit";
+		icon = "Data\Icons\psu.paa";
+		weight = 2;
+		class Settings : Settings {};
+	};
+	class Laptop : Capacitor {
+		displayName = "Laptop";
+		description = "An electronic sold at Altis Electronics";
+		icon = "Data\Icons\laptop.paa";
+		sellPrice = 10000;
+		weight = 10;
+		class Settings {
+			onMarket = true;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+	};
+	class Desktop : Laptop {
+		displayName = "Desktop";
+		icon = "Data\Icons\desktop.paa";
+		sellPrice = 10000;
+		weight = 15;
+		class Settings : Settings {};
+	};
+	class MiningRig : Laptop {
+		displayName = "Mining Rig";
+		icon = "Data\Icons\miningRig.paa";
+		sellPrice = 10000;
+		weight = 64;
+		class Settings : Settings {};
+	};
+	class SignalJammer : Laptop {
+		displayName = "Signal Jammer";
+		icon = "Data\Icons\signalJammer.paa";
+		weight = 1;
+		sellPrice = 55150;
+		class Settings : Settings {};
+	};
+	class HackingDevice : Laptop {
+		displayName = "Hacking Device";
+		description = "A tool used to gain access to Major Crime sites";
+		icon = "Data\Icons\hackingDevice.paa";
+		buyPrice = 475000;
+		sellPrice = 237500;
+		weight = 1;
+		class Settings : Settings {};
+		class Deconstruction {
+			time = 100;
+			workbench = true;
+			blueprints[] = { { "Electronics", "B_HackingDevice" } };
+			materials[] = { 
+				{"ElectronicCircuit", 1}
+			};
+		};
+	};
+	class PanicButton : Capacitor {
+		displayName = "Panic Button";
+		description = "A tool that will send an alert to the Police";
+		icon = "Data\Icons\panicButton.paa";
+		buyPrice = 900;
+		sellPrice = 450;
+		weight = 1;
+		class Settings : Settings {};
+		class Deconstruction {
+			time = 45;
+			workbench = false;
+			blueprints[] = { { "Electronics", "B_PanicButton" } };
+			materials[] = { 
+				{"CopperWiring", 1},
+				{"SilverPlate", 1},
+				{"GlassPanel", 1}
+			};
+		};
+		class Events { onUse = "[] call ULP_fnc_panic;"; };
+	};
+
+	// Vehicle Components
+	class Tyre {
+		displayName = "Tyre";
+		description = "A component used for crafting vehicles";
+		icon = "Data\Icons\tyre.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 5;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		conditions = "true";
+	};
+	class ReinforcedTyre : Tyre {
+		displayName = "Reinforced Tyre";
+		weight = 10;
+		class Settings : Settings {};
+	};
+	class LightArmourPlate : Tyre {
+		displayName = "Light Armour Plate";
+		icon = "Data\Icons\armourPlate.paa";
+		class Settings : Settings {};
+	};
+	class HeavyArmourPlate : LightArmourPlate {
+		displayName = "Heavy Armour Plate";
+		weight = 15;
+		class Settings : Settings {};
+	};
+	class SmallCargoBed : Tyre {
+		displayName = "Small Cargo Bed";
+		icon = "Data\Icons\cargoBed.paa";
+		weight = 10;
+		class Settings : Settings {};
+	};
+	class LargeCargoBed : SmallCargoBed {
+		displayName = "Large Cargo Bed";
+		weight = 20;
+		class Settings : Settings {};
+	};
+	class GuidanceSystem : Tyre {
+		displayName = "Guidance System";
+		icon = "Data\Icons\guidanceSystem.paa";
+		class Settings : Settings {};
+	};
+	class EngineComponent : Tyre {
+		displayName = "Engine Component";
+		icon = "Data\Icons\engineComponent.paa";
+		weight = 20;
+		class Settings : Settings {};
+	};
+	class BasicFlightInstruments : Tyre {
+		displayName = "Basic Flight Instruments";
+		icon = "Data\Icons\flightInstruments.paa";
+		class Settings : Settings {};
+	};
+	class AdvancedFlightInstruments : BasicFlightInstruments {
+		displayName = "Advanced Flight Instruments";
+		class Settings : Settings {};
+	};
+	class VehicleParts : Tyre {
+		displayName = "VehicleParts";
+		icon = "Data\Icons\vehicleParts.paa";
+		weight = 3;
+		class Settings : Settings {};
+	};
+	class SimpleVehicleComponent : Tyre {
+		displayName = "Simple Vehicle Component";
+		icon = "Data\Icons\vehicleComponent.paa";
+		class Settings : Settings {};
+	};
+	class ImprovedVehicleComponent : SimpleVehicleComponent {
+		displayName = "Improved Vehicle Component";
+		weight = 10;
+		class Settings : Settings {};
+	};
+	class PerfectedVehicleComponent : SimpleVehicleComponent {
+		displayName = "Perfected Vehicle Component";
+		weight = 15;
+		class Settings : Settings {};
+	};
+
+	// Vehicle Upgrades
+	class ImprovedStorageUpgrade {
+		displayName = "Improved Storage Upgrade";
+		description = "Increases storage by 10%";
+		icon = "Data\Icons\improvedStorageUpgrade.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 10;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		conditions = "true";
+	};
+	class ImprovedLocksUpgrade : ImprovedStorageUpgrade {
+		displayName = "Improved Locks Upgrade";
+		description = "Increases the time it takes to lockpick by 50%";
+		icon = "Data\Icons\improvedLocksUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class ImprovedHullUpgrade : ImprovedStorageUpgrade {
+		displayName = "Improved Hull Upgrade";
+		description = "Increases hull armour value by 25%";
+		icon = "Data\Icons\improvedHullUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class ImprovedTyresUpgrade : ImprovedStorageUpgrade {
+		displayName = "Improved Tyres Upgrade";
+		description = "Increases tyre armour value by 25%";
+		icon = "Data\Icons\tyre.paa";
+		class Settings : Settings {};
+	};
+	class performanceEngineUpgrade : ImprovedStorageUpgrade {
+		displayName = "Performance Engine Upgrade";
+		description = "Increases acceleration by 10% & top speed by 5% [Mutually exclusive with Efficient Engine]";
+		icon = "Data\Icons\improvedEngineUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class efficientEngineUpgrade : ImprovedStorageUpgrade {
+		displayName = "Efficient Engine Upgrade";
+		description = "Decreases fuel consumption by 30% [Mutually exclusive with Performance Engine]";
+		icon = "Data\Icons\improvedEngineUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class StongCasingUpgrade : ImprovedStorageUpgrade {
+		displayName = "Stong Casing Upgrade";
+		description = "Increases chop process by 50%";
+		icon = "Data\Icons\stongCasingUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class TrackingDeviceUpgrade : ImprovedStorageUpgrade {
+		displayName = "Tracking Device Upgrade";
+		description = "Updates the vehicle's location on map every 15 seconds";
+		icon = "Data\Icons\trackingDeviceUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class ClonedPlatesUpgrade : ImprovedStorageUpgrade {
+		displayName = "Cloned Plates Upgrade";
+		description = "Randomises the vehicle's plate for ANPR systems";
+		icon = "Data\Icons\clonedPlatesUpgrade.paa";
 		class Settings : Settings {};
 	};
 };

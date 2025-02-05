@@ -72,6 +72,7 @@ class CfgFunctions {
 
 		class Utility {
 			file = "Functions\Utility";
+			class chance {};
 			class directCall {};
 			class waitExecute {};
 			class waitUntilExecute {};
@@ -93,6 +94,13 @@ class CfgFunctions {
 			class allMembers {};
 			class onlineFaction {};
 			class canResetLoadout {};
+		};
+
+		class Factories {
+			file = "Functions\Factories";
+			class powerFactory {};
+			class setFactoryPower {};
+			class salvageVehicle {};
 		};
 
 		class Functions {
@@ -484,6 +492,9 @@ class CfgFunctions {
 			file = "Functions\Map";
 			class createSimpleObject {};
 			class addMarket {};
+			class addFactory {};
+			class addPowerStation {};
+			class addCapture {};
 			class addStore {};
 			class addGarage {};
 			class addGarageStore {};
@@ -807,6 +818,7 @@ class CfgFunctions {
 		class Capture {
 			file = "Functions\Capture";
 			class capture {};
+			class neutralise {};
 			class ownsSite {};
 		};
 
@@ -872,6 +884,7 @@ class CfgFunctions {
 			class inputLimit {};
 			class placeholder {};
 			class setToTextHeight {};
+			class createDialog {};
 		};
 
 		class RscLayers {
@@ -934,6 +947,24 @@ class CfgFunctions {
 			class RscProgress_OnInit {};
 			class RscProgress_OnLoad {};
 			class RscProgress_OnUnload {};
+		};
+		
+		class DialogFactory {
+			file = "UI\DialogFactory\Functions";
+			class DialogFactory_OnInit {};
+			class DialogFactory_OnListChanged {};
+			class DialogFactory_OnEachFrame {};
+			class DialogFactory_OnLoad {};
+			class DialogFactory_OnUnload {};
+			class DialogFactory_PlaceOrder {};
+		};
+		
+		class DialogSalvageFactory {
+			file = "UI\DialogSalvageFactory\Functions";
+			class DialogSalvageFactory_OnInit {};
+			class DialogSalvageFactory_OnEachFrame {};
+			class DialogSalvageFactory_OnLoad {};
+			class DialogSalvageFactory_OnUnload {};
 		};
 	};
 };

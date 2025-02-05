@@ -1,0 +1,65 @@
+/*
+** Author: Jack "Scarso" Farhall
+** Description: 
+*/
+#include "\life_server\script_macros.hpp"
+scopeName "fn_startFactory";
+
+_this params [
+	["_factory", objNull, [objNull]],
+	["_unit", objNull, [objNull]],
+	["_product", "", [""]],
+	["_params", [], [[]]]
+];
+
+private _factoryCfgName = _factory getVariable ["factory", ""];
+
+private _factoryCfg = missionConfigFile >> "CfgFactories" >> worldName >> _factoryCfgName;
+private _productCfg = _factoryCfg >> "Products" >> _product;
+
+if (isNull _factory || { isNull _unit } || { _params isEqualTo [] } || { !isClass _productCfg } || { _factoryCfgName isEqualTo "" }) exitWith {};
+
+private _requiredPower = if (isNumber (_productCfg >> "requiredPower")) then {
+	getNumber (_productCfg >> "requiredPower")
+} else {
+	getNumber (_factoryCfg >> "requiredPower")
+};
+
+private _factoryPower = _factory getVariable ["power", 0];
+
+if (_factoryPower < _requiredPower) exitWith {
+	["FactoryStarted", [
+		format ["This product requires <t color='#B92DE0'>tier %1</t> power, this factory currently has <t color='#B92DE0'>tier %2</t> power.", _requiredPower, _factoryPower]
+	]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+};
+
+private _cooldown = _factory getVariable ["cooldown", 0];
+if (_cooldown > serverTime) exitWith {
+	["FactoryStarted", [
+		format ["The factory has recently finished an order and is on cooldown, it's be available in <t color='#B92DE0'>%1</t> seconds.", [round (_cooldown - serverTime)] call ULP_fnc_numberText]
+	]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+};
+
+if (_factory getVariable ["locked", false]) exitWith {
+	["FactoryStarted", ["The factory is already processing a request"]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+};
+
+_factory setVariable ["locked", true, true];
+
+private _cargoUser = _factory getVariable ["ULP_VirtualCargo_User", objNull];
+if !(isNull _cargoUser) exitWith {
+	_factory setVariable ["locked", nil, true];
+	["FactoryStarted", ["Someone is accessing the storage so the factory can't start"]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+};
+
+private _totalTicks = [_factory, _unit, _productCfg, _params] call compile getText (_factoryCfg >> "Events" >> "onStart");
+if (_totalTicks isEqualTo 0) exitWith { _factory setVariable ["locked", nil, true]; };
+
+_factory setVariable ["product_order", [_productCfg, _requiredPower, _totalTicks, serverTime], true];
+
+private _source = createSoundSource ["Factory_Processing", getPosATL _factory, [], 0];
+_factory setVariable ["sound", _source];
+
+[_factory] call ULP_SRV_fnc_addFactoryTick;
+
+["FactoryStarted", [format ["Your order is being processed."]]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];

@@ -62,4 +62,11 @@ class CfgSFX
 		sounds[] = { sound0 };
 		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
 	};
+
+	class Factory_Processing
+	{
+		sound0[] = {"\Data\Sounds\factoryProcessing.ogg", 5, 1, 200, 1, 0, 0, 0};
+		sounds[] = { sound0 };
+		empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+	};
 };

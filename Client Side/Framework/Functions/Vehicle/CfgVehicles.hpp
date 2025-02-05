@@ -15,8 +15,7 @@ class CfgVehicles {
 			"StolenCargo",
 			"FreightCargo",
 
-			"UnprocessedOil",
-			"ProcessedOil"
+			"UnprocessedOil"
 		};
 		class Textures {};
 	};
@@ -25,8 +24,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"FreightCargo",
 
-			"UnprocessedOil",
-			"ProcessedOil"
+			"UnprocessedOil"
 		};
 	};
 
@@ -38,8 +36,7 @@ class CfgVehicles {
 		repairTime = 15;
 		chopKeepChance = 85;
 		blacklistedItems[] = { 
-			"UnprocessedOil",
-			"ProcessedOil"
+			"UnprocessedOil"
 		};
 		class Textures {};
 	};
@@ -1901,4 +1898,5 @@ class CfgVehicles {
 	class Siren_7 { sound = "Siren_7"; };
 	class Siren_8 { sound = "Siren_8"; };
 	class Siren_9 { sound = "Siren_9"; };
+	class Factory_Processing { sound = "Factory_Processing"; };
 };

@@ -1076,6 +1076,11 @@ class CfgVirtualItems {
 		sellPrice = 9500;
 		class Settings : Settings { isIllegal = true; };
 	};
+	class FlawlessDiamond : CutDiamond {
+		displayName = "Flawless Diamond";
+		sellPrice = 48750;
+		class Settings : Settings { isEventItem = false; };
+	};
 
 	// Unprocessed Drugs
 	class UnprocessedWeed {

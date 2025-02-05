@@ -376,24 +376,6 @@ class CfgBlueprints {
 			workbench = true;
 			time = 6;
 		};
-		class B_FlawlessEmerald : B_FlawlessDiamond {
-			icon = "Data\Icons\gem.paa";
-			displayName = "Flawless Emerald";
-			materials[] = { {"CutDiamond", 5} };
-			item = "FlawlessEmerald";
-		};
-		class B_FlawlessSapphire : B_FlawlessDiamond {
-			icon = "Data\Icons\gem.paa";
-			displayName = "Flawless Sapphire";
-			materials[] = { {"CutDiamond", 5} };
-			item = "FlawlessSapphire";
-		};
-		class B_FlawlessRuby : B_FlawlessDiamond {
-			icon = "Data\Icons\gem.paa";
-			displayName = "Flawless Ruby";
-			materials[] = { {"CutDiamond", 5} };
-			item = "FlawlessRuby";
-		};
 	};
 
 	class Archaeology {

@@ -212,6 +212,9 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_startFactory {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_saveVehicleUpgrades {
+            allowedTargets = SERVER;
+        };
 
         class bis_fnc_debugconsoleexec {};
     };

@@ -38,6 +38,7 @@ class CfgFunctions {
             class destroyVehicle {};
             class transferVehicle {};
             class isAtGarageLimit {};
+            class saveVehicleUpgrades {};
         };
 
         class DatabaseGroup {

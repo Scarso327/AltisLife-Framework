@@ -27,3 +27,4 @@
 #include "DialogMedicMap\DialogMedicMap.hpp"
 #include "DialogFactory\DialogFactory.hpp"
 #include "DialogSalvageFactory\DialogSalvageFactory.hpp"
+#include "DialogVehicleTuning\DialogVehicleTuning.hpp"

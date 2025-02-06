@@ -64,14 +64,24 @@ class DialogGarage {
 			SAFEZONE_H(0.352);
 		};
 
-		class VehicleInformation : Life_RscStructuredText {
-			idc = 3503;
-			text = "";
-			colorBackground[] = INNER_BODY_COLOUR;
+		class VehicleInformationView : Life_RscControlsGroup {
+			idc = -1;
 			SAFEZONE_X(0.5790625);
 			SAFEZONE_Y(0.291 + MARGIN_Y);
 			SAFEZONE_W(0.12203125);
 			SAFEZONE_H(0.385);
+
+			class Controls {
+				class VehicleInformation : Life_RscStructuredText {
+					idc = 3503;
+					text = "";
+					colorBackground[] = INNER_BODY_COLOUR;
+					y = 0;
+					x = 0;
+					SAFEZONE_W(0.12203125);
+					SAFEZONE_H(0.385);
+				};
+			};
 		};
 
 		class Texture : Life_RscStructuredText {

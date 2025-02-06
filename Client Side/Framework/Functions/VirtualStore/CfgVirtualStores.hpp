@@ -1,6 +1,6 @@
 class CfgVirtualStores {
 	class Police {
-		storeName = "Personal Equipment Store";
+		storeName = "Equipment Store";
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};
@@ -18,31 +18,14 @@ class CfgVirtualStores {
 			//class Painkillers {};
 			class FieldDressing {};
 			class BloodBag {};
-			//class Morphine {};
-			//class Epinephrine {};
-			class FirstAidKit {};
 			class MediKit {};
 			class Defibrillator {};
 			class Stretcher {};
-			class TapeSign_F {};
-			//class PlasticBarrier_02_yellow_F {};
-			//class PlasticBarrier_02_grey_F {};
-			//class PlasticBarrier_03_orange_F {};
-			//class PlasticBarrier_03_blue_F {};
-			//class RoadBarrier_small_F {};
-			//class RoadBarrier_F {};
-			class RoadCone_F {};
-			class RoadCone_L_F {};
-			class Land_PortableLight_single_F {};
-			class Land_PortableLight_double_F {};
-			//class TargetP_Inf4_F {};
-			//class TargetP_Civ_F {};
-			//class TargetP_Civ3_F {};
 		};
 	};
 
 	class Medic {
-		storeName = "Personal Equipment Store";
+		storeName = "Equipment Store";
 		conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};
@@ -62,25 +45,14 @@ class CfgVirtualStores {
 			class BloodBag {};
 			//class Morphine {};
 			//class Epinephrine {};
-			class FirstAidKit {};
 			class MediKit {};
 			class Defibrillator {};
 			class Stretcher {};
-			class TapeSign_F {};
-			//class PlasticBarrier_02_yellow_F {};
-			//class PlasticBarrier_02_grey_F {};
-			//class PlasticBarrier_03_orange_F {};
-			//class PlasticBarrier_03_blue_F {};
-			//class RoadBarrier_small_F {};
-			//class RoadBarrier_F {};
-			class RoadCone_F {};
-			class RoadCone_L_F {};
-			class Land_PortableLight_single_F {};
-			class Land_PortableLight_double_F {};
 		};
 	};
+
 	class Hato {
-		storeName = "Personal Equipment Store";
+		storeName = "Equipment Store";
 		conditions = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};
@@ -94,22 +66,74 @@ class CfgVirtualStores {
 			class VehicleClamp {};
 			class FieldDressing {};
 			class BloodBag {};
-			//class Morphine {};
-			//class Epinephrine {};
-			class FirstAidKit {};
 			class MediKit {};
 			class Defibrillator {};
-			class TapeSign_F {};
-			//class PlasticBarrier_02_yellow_F {};
-			//class PlasticBarrier_02_grey_F {};
-			//class PlasticBarrier_03_orange_F {};
-			//class PlasticBarrier_03_blue_F {};
-			//class RoadBarrier_small_F {};
-			//class RoadBarrier_F {};
+		};
+	};
+
+	class Placeables {
+		storeName = "Placeables Store";
+		conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
+		class Items {
+			// Cones
 			class RoadCone_F {};
 			class RoadCone_L_F {};
+			class Pole_F {};
+
+			// Portable Lights
 			class Land_PortableLight_single_F {};
 			class Land_PortableLight_double_F {};
+			class Land_PortableLight_02_single_yellow_F {};
+			class Land_PortableLight_02_double_yellow_F {};
+			class Land_PortableLight_02_quad_yellow_F {};
+
+			// Gates
+			class Land_BarGate_F {};
+			class Land_RoadBarrier_01_F {};
+
+			// Barriers
+			class TapeSign_F {};
+			class RoadBarrier_F {};
+			class RoadBarrier_small_F {};
+			class PlasticBarrier_03_orange_F {};
+			class PlasticBarrier_03_blue_F {};
+			class PlasticBarrier_02_yellow_F {};
+			class PlasticBarrier_02_grey_F {};
+			class Land_CncBarrier_F {};
+			class Land_CncBarrier_stripes_F {};
+
+			// Sandbags
+			class Land_SandbagBarricade_01_half_F {};
+			class Land_BagFence_Long_F {};
+			class Land_BagFence_Short_F {};
+			class Land_BagFence_Round_F {};
+
+			// Hedgehogs
+			class Land_CzechHedgehog_01_old_F {};
+
+			// Camping
+			class Land_CampingTable_white_F {};
+			class Land_CampingTable_small_white_F {};
+			class Land_CampingChair_V2_white_F {};
+			class Land_FieldToilet_F {};
+
+			// Targets
+			class Target_F {};
+			class Land_Target_Dueling_01_F {};
+			class Scarecrow_01_F {};
+
+			// Flags
+			class Flag_UK_F {};
+			class Flag_AltisColonial_F {};
+			class Flag_RedCrystal_F {};
+
+			// Lights
+			class PortableHelipadLight_01_yellow_F {};
+			class PortableHelipadLight_01_white_F {};
+			class PortableHelipadLight_01_red_F {};
+			class PortableHelipadLight_01_green_F {};
+			class PortableHelipadLight_01_blue_F {};
+			class PortableHelipadLight_01_F {};
 		};
 	};
 

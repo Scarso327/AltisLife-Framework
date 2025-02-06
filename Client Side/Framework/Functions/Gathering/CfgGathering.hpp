@@ -120,6 +120,7 @@ class CfgGathering {
 		leveling[] = { 5, "Gathering", 100 };
 	};
 	class Uranium : Coral {
+		hidden[] = {};
 		areas[] = { { "uranium_mine", 20 } };
 		items[] = { { "UraniumOre", 100 } };
 		leveling[] = { 10, "Gathering", 70 };

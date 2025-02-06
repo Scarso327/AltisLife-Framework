@@ -17,7 +17,7 @@ scopeName "fn_preInitFactories";
 	if (_siteName isEqualTo "" || { isNull _unit } || { _station isEqualTo "" }) exitWith {};
 
 	[format [
-		"<t color='#ff0000' size='1.5px'>Power Redirected<br/></t><t color='#ffffff' size='1px'><t color='#B92DE0'>%1</t> has redirected power <t color='#B92DE0'>%2</t>.",
+		"<t color='#ff0000' size='1.5px'>Power Redirected<br/></t><t color='#ffffff' size='1px'><t color='#B92DE0'>%1</t> has redirected power to <t color='#B92DE0'>%2</t>.",
 		name _unit, _toName
 	]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;

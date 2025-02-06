@@ -1,7 +1,7 @@
 class CfgSettings {
     developers[] = { "76561198092567307", "76561197971322689" };
     
-    framework_version = "1.2.12.1";
+    framework_version = "1.3.0";
 
     total_maxWeight = 5;
 

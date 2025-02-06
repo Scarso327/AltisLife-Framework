@@ -18,7 +18,7 @@ _shipwreck addAction [
 	"Claim Shipwreck", {
 		_this params [ "_shipwreck", "", "_actionId" ];
 
-		["Claiming Shipwreck", 200, [_shipwreck, _actionId], { true }, {
+		["Claiming Shipwreck", 200, [_shipwreck, _actionId], { (player distance _shipwreck) <= 50 }, {
 			_this params [ "_shipwreck", "_actionId" ];
 
 			_shipwreck removeAction _actionId;
@@ -26,5 +26,5 @@ _shipwreck addAction [
 
 			[player, _shipwreck] remoteExecCall ["ULP_SRV_fnc_claimShipwreck", RSERV];
 		}, {}] call ULP_UI_fnc_startProgress;
-	}, nil, 8, true, true, "", "true", 20
+	}, nil, 8, true, true, "", "true", 30
 ];

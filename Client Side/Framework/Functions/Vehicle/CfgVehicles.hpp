@@ -1428,7 +1428,7 @@ class CfgVehicles {
 	class C_Boat_Transport_02_F : BaseShip {
 		description = "The Naval Special Warfare Rigid Hull Inflatable Boat is a fast, high-buoyancy all weather boat designed to transport a fully equipped team of eight-men and three crew members.";
 		buyPrice = 297600;
-		virtualSpace = 150;
+		virtualSpace = 125;
 		class Textures {
 			class Civilian : BaseTexture {}; 
 			class Police : PoliceTexture {

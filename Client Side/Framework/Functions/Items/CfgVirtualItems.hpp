@@ -1976,9 +1976,9 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 	};
 	class VehicleParts : Tyre {
-		displayName = "VehicleParts";
+		displayName = "Vehicle Parts";
 		icon = "Data\Icons\vehicleParts.paa";
-		weight = 3;
+		weight = 1;
 		class Settings : Settings {};
 	};
 	class SimpleVehicleComponent : Tyre {

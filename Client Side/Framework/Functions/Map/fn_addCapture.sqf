@@ -27,6 +27,7 @@ if (isServer) then {
 	_marker setMarkerType getText (_cfg >> "Marker" >> "markerType");
 	_marker setMarkerColor getText (_cfg >> "Marker" >> "markerColour");
 	_marker setMarkerText getText (_cfg >> "Marker" >> "defaultName");
+	_marker setMarkerSize [0.8, 0.8];
 };
 
 _trader setVariable ["marker", _marker];

@@ -27,6 +27,7 @@ if (isServer) then {
 	_marker setMarkerType getText (missionConfigFile >> "CfgFactories" >> "markerType");
 	_marker setMarkerColor getText (missionConfigFile >> "CfgFactories" >> "colourDefault");
 	_marker setMarkerText getText (_cfg >> "displayName");
+	_marker setMarkerSize [0.8, 0.8];
 
 	_trader setVariable ["factory_onTick", compileFinal getText (_cfg >> "Events" >> "onTick")];
 	_trader setVariable ["factory_preTickCondition", compileFinal getText (_cfg >> "Events" >> "preTickCondition")];

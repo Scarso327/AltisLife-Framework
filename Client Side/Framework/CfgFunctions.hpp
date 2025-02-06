@@ -466,6 +466,7 @@ class CfgFunctions {
 			class removeVehicleClamp {};
 			class hasTyreDamage {};
 			class hasVehicleUpgrade {};
+			class setVehicleUpgrade {};
 		};
 
 		class VehicleEvents {
@@ -513,6 +514,7 @@ class CfgFunctions {
 			class isATM {};
 			class lockForFactions {};
 			class sit {};
+			class addVehicleTuning {};
 		};
 		
 		class Garage {
@@ -969,6 +971,15 @@ class CfgFunctions {
 			class DialogSalvageFactory_OnEachFrame {};
 			class DialogSalvageFactory_OnLoad {};
 			class DialogSalvageFactory_OnUnload {};
+		};
+		
+		class DialogVehicleTuning {
+			file = "UI\DialogVehicleTuning\Functions";
+			class DialogVehicleTuning_OnInit {};
+			class DialogVehicleTuning_OnLoad {};
+			class DialogVehicleTuning_OnUnload {};
+			class DialogVehicleTuning_ApplyUpgrade {};
+			class DialogVehicleTuning_OnListChanged {};
 		};
 	};
 };

@@ -18,7 +18,13 @@ if (_vehicle in ULP_Keys) exitWith {
 	["You already have keys for this vehicle"] call ULP_fnc_hint;
 };
 
-private _time = ["SpeedyLocksmith", round (40 + (random 25))] call ULP_fnc_activatePerk;
+private _time = round (40 + (random 25));
+
+if ([_vehicle, "ImprovedLocksUpgrade"] call ULP_fnc_hasVehicleUpgrade) then {
+    _time = _time + (_time * 0.5);
+};
+
+_time = ["SpeedyLocksmith", _time] call ULP_fnc_activatePerk;
 
 if ([] call ULP_fnc_isGroup) then {
 	private _buff = [group player, "Lockpicking"] call ULP_fnc_groupBuff;

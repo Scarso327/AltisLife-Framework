@@ -55,6 +55,10 @@ if (_near isEqualTo []) exitWith {
 		_time = _time + getNumber (_missionCfg >> "chopTime");
 	};
 
+	if ([_vehicle, "StongCasingUpgrade"] call ULP_fnc_hasVehicleUpgrade) then {
+		_time = _time + (_time * 0.5);
+	};
+
 	if !([format["Chopping %1", _name], _time, [_vehicle, _missionCfg, _name], {
 		!(isNull (_this select 0)) && { alive (_this select 0) } && { (player distance (_this select 0)) <= 15 }
 	}, {

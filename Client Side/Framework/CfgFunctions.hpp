@@ -476,6 +476,7 @@ class CfgFunctions {
 			class onVehicleKilled {};
 			class onVehicleEngine {};
 			class onVehicleRopeAttach {};
+			class onVehicleHandleDamage {};
 		};
 
 		class VehicleStore {

@@ -93,12 +93,14 @@ class CfgGathering {
 		leveling[] = { 3, "Gathering", 100 };
 	};
 	class Oil : BaseMine {
+		actionTitle = "Extracting";
 		reqItems[] = { "Extractor" };
 		areas[] = { { "oil_extraction", 20 } };
 		items[] = { { "UnprocessedOil", 100 } };
 		leveling[] = { 5, "Gathering", 100 };
 	};
 	class Sand : Oil {
+		actionTitle = "Shovelling";
 		reqItems[] = { "Shovel" };
 		areas[] = { { "sand_mine", 20 } };
 		items[] = { { "Sand", 100 } };
@@ -118,7 +120,6 @@ class CfgGathering {
 		leveling[] = { 5, "Gathering", 100 };
 	};
 	class Uranium : Coral {
-		hidden[] = {};
 		areas[] = { { "uranium_mine", 20 } };
 		items[] = { { "UraniumOre", 100 } };
 		leveling[] = { 10, "Gathering", 70 };

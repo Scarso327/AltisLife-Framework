@@ -28,6 +28,9 @@ if (_code in (actionKeys "NightVision") && { [goggles player] call ULP_fnc_isNig
 switch (_code) do {
     if (isDowned(player)) then {
         _handled = true;
+        case D: {
+            [] call ULP_fnc_disputePlayer;
+        };
         case F: {
             if (_shift && {missionNamespace getVariable ["ULP_CanRespawn", false] }) then {
                 if (((["Medic"] call ULP_fnc_allMembers) findIf { !(player isEqualTo _x) && { (player distance _x) <= 300 } }) > -1) exitWith {

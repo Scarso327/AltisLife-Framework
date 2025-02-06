@@ -183,6 +183,7 @@ class CfgFunctions {
 			class setOverweight {};
 			class hasComms {};
 			class postInitPlayer { postInit	= 1; };
+			class disputePlayer {};
 		};
 
 		class PlayerActions {

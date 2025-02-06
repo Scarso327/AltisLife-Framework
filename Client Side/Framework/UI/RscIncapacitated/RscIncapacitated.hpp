@@ -72,5 +72,11 @@ class RscIncapacitated {
             w = 0.4125 * safezoneW;
             h = 0.044 * safezoneH;
         };
+
+        class DisputeHint : RequestMedic {
+            idc = -1;
+            text = "<t align='left' size='1'>Press <t color='#8A2BE2'>D</t> to open dispute menu";
+            x = 0 * safezoneW + safezoneX;
+        };
     };
 };

@@ -31,7 +31,7 @@ private _id = ["vehicles"] call ULP_SRV_fnc_getNextId;
 
 // Insert...
 [format[
-	"INSERT INTO `vehicles` (`id`, `pid`, `faction`, `classname`, `type`, `texture`, `active`) VALUES ('%1', '%2', '%3', '%4', '%5', '%6', '%7');", 
+	"INSERT INTO `vehicles` (`id`, `pid`, `faction`, `classname`, `type`, `texture`, `active`, `upgrades`) VALUES ('%1', '%2', '%3', '%4', '%5', '%6', '%7', '""[]""');", 
 	[_id, ""] call ULP_fnc_numberText, _steamid, _faction, _class, _type, _texture, _active
 ], 1] call DB_fnc_asyncCall;
 

@@ -14,6 +14,7 @@ _this params [
 	["_point", [[0, 0, 0], 0], [[]]],
 	["_texture", "", [""]],
 	["_id", -1, [0]],
+	["_upgrades", createHashMap, [createHashMap]],
 	["_owner", [getPlayerUID player, [profileName, [player] call ULP_fnc_getFaction]], [[]]],
 	["_hint", hasInterface, [true]]
 ];
@@ -33,6 +34,10 @@ if (_id >= 0) then {
 
 if (_owner isEqualType ["", "", ""]) then {
 	_vehicle setVariable ["vehicle_owners", createHashMapFromArray [_owner], true];
+};
+
+if !(_upgrades isEqualTo createHashMap) then {
+	_vehicle setVariable ["vehicle_upgrades", _upgrades, true];
 };
 
 [_vehicle, _texture] call ULP_fnc_skinVehicle;

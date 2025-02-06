@@ -36,7 +36,7 @@ private _possibleConversions = [];
 private _maxPossibleQuantity = selectMin _possibleConversions;
 
 if (_maxPossibleQuantity isEqualTo 0) exitWith {
-	["You don't have enough materials to place an order for this product"] call ULP_fnc_hint;
+	["The factory doesn't have enough materials to place an order for this product. You can press <t color='#B92DE0'>T</t> to place items into it."] call ULP_fnc_hint;
 };
 
 [

@@ -13,7 +13,7 @@ private _order = _factory getVariable ["product_order", []];
 private _productCfg = _order param [0, configNull, [configNull]];
 
 private _startTime = serverTime;
-private _tickEndTime = _startTime + 30;
+private _tickEndTime = _startTime + getNumber (_productCfg >> "tickTime");
 
 _order set [3, _startTime];
 

@@ -60,8 +60,17 @@ if (_near isEqualTo []) exitWith {
 
 	if !(isClass (_factoryCfg >> "Products" >> _vehicleTypeOf)) exitWith { ["This vehicle can't be salvaged"] call ULP_fnc_hint; };
 
+	player setVariable ["salvageFactory", _factory];
+
 	["FactoryStarted", { 
 		[_this param [0, ""]] call ULP_fnc_hint; 
+
+		private _factory = player getVariable ["salvageFactory", objNull];
+
+		if (!isNull _factory && { _factory getVariable ["locked", false] }) then {
+			["DialogSalvageFactory", [_factory]] call ULP_UI_fnc_createDialog;
+			player setVariable ["salvageFactory", nil];
+		};
 	}, true] call ULP_fnc_addEventHandler; 
 	
 	[_factory, player, _vehicleTypeOf, [_vehicle]] remoteExecCall ["ULP_SRV_fnc_startFactory", RSERV];

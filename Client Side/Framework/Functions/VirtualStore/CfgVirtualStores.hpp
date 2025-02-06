@@ -367,6 +367,7 @@ class CfgVirtualStores {
 		class Items {
 			class CutDiamond {};
 			class CutBloodDiamond {};
+			class FlawlessDiamond {};
 		};
 	};
 

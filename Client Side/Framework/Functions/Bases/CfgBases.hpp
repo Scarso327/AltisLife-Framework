@@ -5,6 +5,7 @@ class CfgBases {
 	RedzoneKillReward = 15000;
 	BidIncrement = 1000000;
 	StartingBid = 9000000; // StartingBid = BidIncrement + StartingBid
+	GangWarsOnlyMarkers[] = { "rebel_outpost_3", "greenzone_06" };
 
 	class North {
 		icon = "Data\UI\Spawns\base.paa";

@@ -45,10 +45,9 @@ if (missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) then
 			];
 
 			if (isNull _unit 
-				|| { !(isPlayer _unit) } 
 				|| { !(["redzone_"] call ULP_fnc_isUnitsInZone) } 
-				|| { (currentWeapon _unit) isEqualTo "" } 
-				|| { [group player, _unit] call ULP_fnc_inGroup }) exitWith {};
+				|| { [group player, _unit] call ULP_fnc_inGroup }
+				|| { !(missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) }) exitWith {};
 
 			private _reward = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillReward");
 

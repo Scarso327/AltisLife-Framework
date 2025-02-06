@@ -93,7 +93,6 @@ if (ULP_FirstSpawn) then {
 	[false, true] call ULP_fnc_initPlayer;
 };
 
-player allowDammage true;
 [] call ULP_fnc_setOverweight;
 
 if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {

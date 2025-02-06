@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_spawnMenu";
 
+player allowDammage true;
+
 if (ULP_FirstSpawn) then {
 	if ([player, ["Civilian"]] call ULP_fnc_isFaction && { !([] call ULP_fnc_isGovernor) } && { !([] call ULP_fnc_isUndercover) } && { ((missionNamespace getVariable ["ULP_SRV_Setting_Governor", []]) param [1, ""]) isEqualTo (getPlayerUID player) }) then {
 		missionNamespace setVariable ["ULP_IsGovernor", compileFinal "true"];

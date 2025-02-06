@@ -8,7 +8,7 @@ class CfgSettings {
     sync_delay = 5 * 60;
     abort_delay = 10;
 
-    starting_bank = 125000;
+    starting_bank = 150000;
     paycheck_period = 15;
 
     buffedSellIncrease = 1.5;

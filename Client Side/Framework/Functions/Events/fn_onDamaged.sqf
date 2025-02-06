@@ -45,7 +45,8 @@ if !(isNull _source) then {
 
 	if (isClass _weaponNonLethalCfg 
 		&& { !isArray (_weaponNonLethalCfg >> "projectiles") 
-			|| { _projectile in getArray (_weaponNonLethalCfg >> "projectiles") } }) exitWith {
+			|| { _projectile in getArray (_weaponNonLethalCfg >> "projectiles") } }
+		&& { !(_unit isEqualTo _source) }) exitWith {
 
 		private _hasInjuryThreshold = isNumber (_weaponNonLethalCfg >> "injuryThreshold");
 		private _hasMetInjuryThreshold = !_hasInjuryThreshold || { _damage >= getNumber (_weaponNonLethalCfg >> "injuryThreshold") };

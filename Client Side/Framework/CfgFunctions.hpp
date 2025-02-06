@@ -184,6 +184,7 @@ class CfgFunctions {
 			class hasComms {};
 			class postInitPlayer { postInit	= 1; };
 			class disputePlayer {};
+			class jump {};
 		};
 
 		class PlayerActions {

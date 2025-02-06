@@ -293,7 +293,12 @@ switch (_code) do {
 
         if (!(isNull _veh) && { !_shift } && { !_ctrlKey } && { !_alt } && { [] call ULP_fnc_isStaff } && { [player] call ULP_fnc_onDuty } && { ["Vehicle", false] call ULP_fnc_checkPower } && { [_veh, ["LandVehicle", "Air", "Ship"]] call ULP_fnc_isKindOf }) then {
             player setVariable ["delete_delay", time + 3];
-            deleteVehicle _veh;
+
+            if !((_veh getVariable ["vehicle_id", -1]) isEqualTo -1) then {
+                [_veh] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
+            } else {
+                deleteVehicle _veh;
+            };
 
             [getPlayerUID player, "Admin", ["VehicleDelete", serverTime, [getPos _veh, _veh getVariable ["vehicle_id", -1]]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
         };

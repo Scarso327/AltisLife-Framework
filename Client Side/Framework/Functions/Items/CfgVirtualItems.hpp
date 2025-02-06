@@ -470,41 +470,14 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 	};
-	class Stinger : Pickaxe {
-		displayName = "Stinger";
-		description = "A deployable strip of spikes used to puncute a vehicle's tryes";
-		icon = "Data\Icons\stinger.paa";
-		buyPrice = 8400;
-		sellPrice = 2200;
-		weight = 10;
-		class Settings : Settings { isIllegal = true; };
-		class Deconstruction {
-			time = 45;
-			workbench = true;
-			blueprints[] = { { "HandheldTools", "B_MakeshiftStinger" } };
-			materials[] = { 
-				{"SteelBar", 8},
-				{"IronBar", 8}, 
-				{"SteelPlate", 4}, 
-				{"FlawlessDiamond", 2}
-			};
-		};
-		class Events { onUse = "_this call ULP_fnc_spikeStrip;"; };
-		conditions = "true";
-	};
-	class MakeshiftStinger : Stinger {
-		displayName = "Makeshift Stinger";
-		class Settings : Settings {};
-		class Events : Events {};
-	};
-	class VehicleClamp : Stinger {
+	class VehicleClamp : Pickaxe {
 		displayName = "Vehicle Clamp";
 		description = "A deployable clamp used to prevent a vehicle's movement";
 		icon = "Data\Icons\vehicleClamp.paa";
 		buyPrice = 18200;
 		sellPrice = 9700;
 		weight = 8;
-		class Settings : Pickaxe {};
+		class Settings : Settings {};
 		class Events { onUse = "[] call ULP_fnc_clampVehicle;"; };
 	};
 	class Lighter : Pickaxe {
@@ -696,13 +669,48 @@ class CfgVirtualItems {
 	};
 
 	// Placeable Items
-	class TapeSign_F { 
-		displayName = "Red-White Tape";
-		description = "A bundled up item ready to be placed";
-		icon = "Data\Icons\roadBarrier.paa";
-		buyPrice = 500;
-		sellPrice = 250;
-		weight = 4;
+	class Stinger  {
+		displayName = "Stinger";
+		description = "A deployable strip of spikes used to puncute a vehicle's tryes";
+		icon = "Data\Icons\stinger.paa";
+		buyPrice = 8400;
+		sellPrice = 2200;
+		weight = 10;
+		class Settings {
+			onMarket = false;
+			isIllegal = true;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		class Deconstruction {
+			time = 45;
+			workbench = true;
+			blueprints[] = { { "HandheldTools", "B_MakeshiftStinger" } };
+			materials[] = { 
+				{"SteelBar", 8},
+				{"IronBar", 8}, 
+				{"SteelPlate", 4}, 
+				{"FlawlessDiamond", 2}
+			};
+		};
+		class Events { onUse = "_this call ULP_fnc_spikeStrip;"; };
+		conditions = "true";
+	};
+	class MakeshiftStinger : Stinger {
+		displayName = "Makeshift Stinger";
+		class Settings : Settings {};
+		class Events : Events {};
+	};
+
+	class Stretcher {
+		displayName = "Stretcher";
+		description = "A stretcher is a lightweight, portable frame used to carry injured or incapacitated individuals";
+		icon = "Data\Icons\stretcher.paa";
+		buyPrice = 12500;
+		sellPrice = 4350;
+		weight = 5;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;
@@ -711,101 +719,317 @@ class CfgVirtualItems {
 			isEventItem = false;
 			isSystemItem = false;
 		};
-		class Events { onUse = "[""TapeSign"", _this select 0] call ULP_fnc_placeObject;"; };
-		conditions = "[player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { ULP_Level >= 3 }";
+		class Deconstruction {
+			time = 15;
+			workbench = true;
+			blueprints[] = { { "MedicalSupplies", "B_Stretcher" } };
+			materials[] = { 
+				{"Bandage", 5},
+				{"SteelBar", 2}, 
+				{"SilverPlate", 1}
+			};
+		};
+		class Events { onUse = "[""Stretcher"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { ULP_Level >= 5 }";
 	};
-	class PlasticBarrier_02_yellow_F : TapeSign_F { 
-		displayName = "Plastic Barrier (Medium, Yellow)";
-		buyPrice = 3100;
-		sellPrice = 1550;
-		weight = 8;
-		class Settings : Settings {};
-	};
-	class PlasticBarrier_02_grey_F : PlasticBarrier_02_yellow_F { 
-		displayName = "Plastic Barrier (Medium, Gray)";
-		class Settings : Settings {};
-	};
-	class PlasticBarrier_03_orange_F : TapeSign_F { 
-		displayName = "Plastic Barrier (Large, Orange)";
-		buyPrice = 3500;
-		sellPrice = 1750;
-		weight = 12;
-		class Settings : Settings {};
-	};
-	class PlasticBarrier_03_blue_F : PlasticBarrier_03_orange_F { 
-		displayName = "Plastic Barrier (Large, Blue)";
-		class Settings : Settings {};
-	};
-	class RoadBarrier_small_F : TapeSign_F { 
-		displayName = "Road Barrier (Small)";
-		buyPrice = 3600;
-		sellPrice = 1800;
-		weight = 4;
-		class Settings : Settings {};
-	};
-	class RoadBarrier_F : TapeSign_F { 
-		displayName = "Road Barrier (Large)";
-		buyPrice = 4300;
-		sellPrice = 2150;
-		weight = 6;
-		class Settings : Settings {};
-	};
-	class RoadCone_F : TapeSign_F { 
+
+	class RoadCone_F : Stretcher { 
 		displayName = "Road Cone";
+		description = "A bundled up item ready to be placed";
 		icon = "Data\Icons\cone.paa";
 		buyPrice = 800;
 		sellPrice = 400;
 		weight = 3;
 		class Settings : Settings {};
-		class Events { onUse = "[""RoadCone"", _this select 0] call ULP_fnc_placeObject;"; };
+		class Deconstruction {};
+		class Events { onUse = "[""RoadCone_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class RoadCone_L_F : RoadCone_F { 
 		displayName = "Road Cone (Light)";
 		buyPrice = 900;
 		sellPrice = 450;
+		weight = 4;
 		class Settings : Settings {};
-		class Events { onUse = "[""RoadConeWithLight"", _this select 0] call ULP_fnc_placeObject;"; };
+		class Events { onUse = "[""RoadCone_L_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class Land_PortableLight_single_F : TapeSign_F { 
+	class Pole_F : RoadCone_F { 
+		displayName = "Pole";
+		buyPrice = 300;
+		sellPrice = 150;
+		weight = 2;
+		class Settings : Settings {};
+		class Events { onUse = "[""Pole_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class Land_PortableLight_single_F : RoadCone_F { 
 		displayName = "Portable Light (Single)";
 		icon = "Data\Icons\portableLight.paa";
 		buyPrice = 1500;
 		sellPrice = 750;
 		weight = 6;
 		class Settings : Settings {};
-		class Events { onUse = "[""SinglePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
+		class Events { onUse = "[""Land_PortableLight_single_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 	class Land_PortableLight_double_F : Land_PortableLight_single_F { 
 		displayName = "Portable Light (Double)";
 		buyPrice = 1700;
 		sellPrice = 850;
 		class Settings : Settings {};
-		class Events { onUse = "[""DoublePortableLight"", _this select 0] call ULP_fnc_placeObject;"; };
+		class Events { onUse = "[""Land_PortableLight_double_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class TargetP_Inf4_F : TapeSign_F { 
-		displayName = "Pop-Up Target (Hostile)";
-		icon = "Data\Icons\popupTarget.paa";
-		buyPrice = 1000;
-		sellPrice = 500;
+	class Land_PortableLight_02_single_yellow_F : Land_PortableLight_single_F { 
+		displayName = "Portable Lamp (Single, Yellow)";
+		buyPrice = 800;
+		sellPrice = 400;
+		weight = 4;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_PortableLight_02_single_yellow_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_PortableLight_02_double_yellow_F : Land_PortableLight_02_single_yellow_F { 
+		displayName = "Portable Lamp (Double, Yellow)";
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_PortableLight_02_double_yellow_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_PortableLight_02_quad_yellow_F : Land_PortableLight_02_single_yellow_F { 
+		displayName = "Portable Lamp (Quad, Yellow)";
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_PortableLight_02_quad_yellow_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class Land_BarGate_F : RoadCone_F { 
+		displayName = "Bar Gate";
+		icon = "Data\Icons\barGate.paa";
+		buyPrice = 18000;
+		sellPrice = 9000;
+		weight = 24;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_BarGate_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_RoadBarrier_01_F : Land_BarGate_F { 
+		displayName = "Bar Gate (V2)";
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_RoadBarrier_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class TapeSign_F : RoadCone_F { 
+		displayName = "Red-White Tape";
+		icon = "Data\Icons\roadBarrier.paa";
+		buyPrice = 500;
+		sellPrice = 250;
+		weight = 4;
+		class Settings : Settings {};
+		class Events { onUse = "[""TapeSign_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class RoadBarrier_F : TapeSign_F { 
+		displayName = "Road Barrier";
+		buyPrice = 4300;
+		sellPrice = 2150;
 		weight = 6;
 		class Settings : Settings {};
+		class Events { onUse = "[""RoadBarrier_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class TargetP_Civ_F : TargetP_Inf4_F { 
-		displayName = "Pop-Up Target (Friendly)";
+	class RoadBarrier_small_F : RoadBarrier_F { 
+		displayName = "Road Barrier (Small)";
+		buyPrice = 3600;
+		sellPrice = 1800;
+		weight = 4;
 		class Settings : Settings {};
+		class Events { onUse = "[""RoadBarrier_small_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class TargetP_Civ3_F : TargetP_Inf4_F { 
-		displayName = "Pop-Up Target (Hostage)";
+	class PlasticBarrier_03_orange_F : RoadBarrier_F { 
+		displayName = "Plastic Barrier (Large, Orange)";
+		buyPrice = 3500;
+		sellPrice = 1750;
+		weight = 12;
 		class Settings : Settings {};
+		class Events { onUse = "[""PlasticBarrier_03_orange_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class Stretcher : TapeSign_F {
-		displayName = "Stretcher";
-		description = "A stretcher is a lightweight, portable frame used to carry injured or incapacitated individuals";
-		icon = "Data\Icons\stretcher.paa";
-		buyPrice = 12500;
-		sellPrice = 4350;
+	class PlasticBarrier_03_blue_F : PlasticBarrier_03_orange_F { 
+		displayName = "Plastic Barrier (Large, Blue)";
+		class Settings : Settings {};
+		class Events { onUse = "[""PlasticBarrier_03_blue_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class PlasticBarrier_02_yellow_F : RoadBarrier_F { 
+		displayName = "Plastic Barrier (Medium, Yellow)";
+		buyPrice = 3100;
+		sellPrice = 1550;
+		weight = 8;
+		class Settings : Settings {};
+		class Events { onUse = "[""PlasticBarrier_02_yellow_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class PlasticBarrier_02_grey_F : PlasticBarrier_02_yellow_F { 
+		displayName = "Plastic Barrier (Medium, Grey)";
+		class Settings : Settings {};
+		class Events { onUse = "[""PlasticBarrier_02_grey_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_CncBarrier_F : RoadBarrier_F { 
+		displayName = "Concrete Barrier";
+		buyPrice = 8000;
+		sellPrice = 4000;
+		weight = 10;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_CncBarrier_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_CncBarrier_stripes_F : Land_CncBarrier_F { 
+		displayName = "Concrete Barrier (Stripes)";
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_CncBarrier_stripes_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class Land_SandbagBarricade_01_half_F : RoadCone_F { 
+		displayName = "Sandbag Barricade (Short)";
+		icon = "Data\Icons\sandbag.paa";
+		buyPrice = 6000;
+		sellPrice = 3000;
 		weight = 5;
-		class Events { onUse = "[""Stretcher"", _this select 0] call ULP_fnc_placeObject;"; };
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_SandbagBarricade_01_half_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_BagFence_Long_F : Land_SandbagBarricade_01_half_F { 
+		displayName = "Sandbag Wall (Long)";
+		buyPrice = 4000;
+		sellPrice = 2000;
+		weight = 4;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_BagFence_Long_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_BagFence_Short_F : Land_BagFence_Long_F { 
+		displayName = "Sandbag Wall (Short)";
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_BagFence_Short_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_BagFence_Round_F : Land_BagFence_Long_F { 
+		displayName = "Sandbag Wall (Round)";
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_BagFence_Round_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class Land_CzechHedgehog_01_old_F : RoadCone_F { 
+		displayName = "Czech Hedgehog";
+		icon = "Data\Icons\hedgehog.paa";
+		buyPrice = 16000;
+		sellPrice = 8000;
+		weight = 10;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_CzechHedgehog_01_old_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class Land_CampingTable_white_F : RoadCone_F { 
+		displayName = "Comping Table (White)";
+		icon = "Data\Icons\table.paa";
+		buyPrice = 2000;
+		sellPrice = 1000;
+		weight = 6;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_CampingTable_white_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_CampingTable_small_white_F : Land_CampingTable_white_F { 
+		displayName = "Comping Table (Small, White)";
+		buyPrice = 1500;
+		sellPrice = 750;
+		weight = 4;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_CampingTable_small_white_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_CampingChair_V2_white_F : RoadCone_F { 
+		displayName = "Comping Chair (White)";
+		icon = "Data\Icons\chair.paa";
+		buyPrice = 900;
+		sellPrice = 450;
+		weight = 3;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_CampingChair_V2_white_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_FieldToilet_F : RoadCone_F { 
+		displayName = "Field Toilet";
+		icon = "Data\Icons\toilet.paa";
+		buyPrice = 1800;
+		sellPrice = 900;
+		weight = 10;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_FieldToilet_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class Target_F : RoadCone_F { 
+		displayName = "Simple Target";
+		icon = "Data\Icons\target.paa";
+		buyPrice = 900;
+		sellPrice = 450;
+		weight = 5;
+		class Settings : Settings {};
+		class Events { onUse = "[""Target_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Land_Target_Dueling_01_F : Target_F { 
+		displayName = "Dueling Target";
+		buyPrice = 200;
+		sellPrice = 100;
+		weight = 4;
+		class Settings : Settings {};
+		class Events { onUse = "[""Land_Target_Dueling_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Scarecrow_01_F : RoadCone_F { 
+		displayName = "Scarecrow";
+		icon = "Data\Icons\scarecrow.paa";
+		buyPrice = 100;
+		sellPrice = 50;
+		weight = 3;
+		class Settings : Settings {};
+		class Events { onUse = "[""Scarecrow_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class Flag_UK_F : RoadCone_F { 
+		displayName = "Flag (UK)";
+		icon = "Data\Icons\flag.paa";
+		buyPrice = 900;
+		sellPrice = 450;
+		weight = 3;
+		class Settings : Settings {};
+		class Events { onUse = "[""Flag_UK_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Flag_AltisColonial_F : Flag_UK_F { 
+		displayName = "Flag (Altis Colonial)";
+		class Settings : Settings {};
+		class Events { onUse = "[""Flag_AltisColonial_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class Flag_RedCrystal_F : Flag_UK_F { 
+		displayName = "Flag (Red Crystal)";
+		class Settings : Settings {};
+		class Events { onUse = "[""Flag_RedCrystal_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+
+	class PortableHelipadLight_01_yellow_F : RoadCone_F { 
+		displayName = "Portable Light (Yellow)";
+		icon = "Data\Icons\portableLamp.paa";
+		buyPrice = 400;
+		sellPrice = 200;
+		weight = 1;
+		class Settings : Settings {};
+		class Events { onUse = "[""PortableHelipadLight_01_yellow_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class PortableHelipadLight_01_white_F : PortableHelipadLight_01_yellow_F { 
+		displayName = "Portable Light (White)";
+		class Settings : Settings {};
+		class Events { onUse = "[""PortableHelipadLight_01_white_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class PortableHelipadLight_01_red_F : PortableHelipadLight_01_yellow_F { 
+		displayName = "Portable Light (Red)";
+		class Settings : Settings {};
+		class Events { onUse = "[""PortableHelipadLight_01_red_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class PortableHelipadLight_01_green_F : PortableHelipadLight_01_yellow_F { 
+		displayName = "Portable Light (Green)";
+		class Settings : Settings {};
+		class Events { onUse = "[""PortableHelipadLight_01_green_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class PortableHelipadLight_01_blue_F : PortableHelipadLight_01_yellow_F { 
+		displayName = "Portable Light (Blue)";
+		class Settings : Settings {};
+		class Events { onUse = "[""PortableHelipadLight_01_blue_F"", _this select 0] call ULP_fnc_placeObject;"; };
+	};
+	class PortableHelipadLight_01_F : PortableHelipadLight_01_yellow_F { 
+		displayName = "Portable Light (Pink)";
+		class Settings : Settings {};
+		class Events { onUse = "[""PortableHelipadLight_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
 
 	// Major Crime Items

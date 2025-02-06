@@ -361,6 +361,17 @@ class CfgBlueprints {
 			item = "Defibrillator";
 			time = 20;
 		};
+		class B_Stretcher : B_FirstAidKit {
+			icon = "Data\Icons\stretcher.paa";
+			displayName = "Stretcher";
+			materials[] = {
+				{"Bandage", 10},
+				{"SteelBar", 4},
+				{"SilverPlate", 3} 
+			};
+			item = "Stretcher";
+			time = 15;
+		};
 	};
 
 	class Gems {

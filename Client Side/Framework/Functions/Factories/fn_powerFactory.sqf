@@ -68,5 +68,7 @@ private _factories = ((allMissionObjects "Land_InfoStand_V1_F") select { !isNil 
 		[_factory, _powerTier] call ULP_fnc_setFactoryPower;
 
 		[format ["You have successfully redirect <t color='#B92DE0'>%1</t> to power <t color='#B92DE0'>%2</t>",  getText (_stationCfg >> "displayName"), _factoryName]] call ULP_fnc_hint;
+
+		["PowerRedirected", [_location, player, _factoryName], true] call ULP_fnc_invokeEvent;
 	}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress)
 }, false] call ULP_fnc_selectObject;

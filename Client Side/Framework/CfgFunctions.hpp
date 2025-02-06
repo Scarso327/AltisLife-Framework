@@ -101,6 +101,7 @@ class CfgFunctions {
 			class powerFactory {};
 			class setFactoryPower {};
 			class salvageVehicle {};
+			class preInitFactories { preInit=1; };
 		};
 
 		class Functions {
@@ -820,6 +821,7 @@ class CfgFunctions {
 			class capture {};
 			class neutralise {};
 			class ownsSite {};
+			class preInitCapture { preInit=1; };
 		};
 
 		class Government {

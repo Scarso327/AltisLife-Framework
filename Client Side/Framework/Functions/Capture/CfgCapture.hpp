@@ -2,7 +2,7 @@ class CfgCapture {
 	class Altis {
 		class WestHideout {
 			displayName = "Western Criminal Hideout";
-			time = 180;
+			time = 90;
 			cooldown = 180;
 			class Marker {
 				markerType = "loc_Bunker";
@@ -17,7 +17,7 @@ class CfgCapture {
 
 		class WesternPowerStation {
 			displayName = "Western Power Station";
-			time = 180;
+			time = 120;
 			cooldown = 300;
 			class Marker {
 				markerType = "loc_Power";

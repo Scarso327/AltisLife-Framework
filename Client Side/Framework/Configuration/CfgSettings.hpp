@@ -41,10 +41,13 @@ class CfgSettings {
             condition = "true";
         };
         class Discord : Hello {
-            items[] = {"""Join us:""", """discord.gg/mantlenetwork"""};
+            items[] = {"""Join us""", """discord.gg/mantlenetwork"""};
         };
         class Development : Hello {
             items[] = {"""Development Team""", """Scarso and Lewis"""};
+        };
+        class Threat : Hello  {
+            items[] = {"""Threat Level""", "getArray (missionConfigFile >> ""CfgSettings"" >> ""threatLevels"") select (call (missionNamespace getVariable [""ULP_SRV_Setting_ThreatLevel"", {0}]))"};
         };
         class Governor  {
             items[] = {"(missionNamespace getVariable [""ULP_SRV_Setting_Governor"", []]) param [0, """"]"};

@@ -29,11 +29,18 @@ class CfgHousing {
 		class BaseHouse {
 			icon = "Data\UI\Spawns\house.paa";
 			sellMultiplier = 0.25;
-			breakIn = 5 * 60;
 			canShare = true;
 			canSpawn = true;
 			disabledUpgrades[] = {};
 			condition = "true";
+
+			class BreakIn {
+				breakIn = 5 * 60;
+				onBreakInStart = "[""BreakIn"", format [""A house is being broken into!""]] call ULP_fnc_sendMessage";
+				onBreakIn = "[""BreakIn"", format [""A house has been broken into!""]] call ULP_fnc_sendMessage";
+				onFail = "[""<t color='#B92DE0'>5</t> Police or the <t color='#B92DE0'>Owner</t> must be online to break in...""] call ULP_fnc_hint;";
+				condition = "([[""Police""]] call ULP_fnc_onlineFaction) >= 5 || { [_this] call ULP_fnc_isHouseOwnerOnline }";
+			};
 		};
 
 		class Land_Slub_House02_F : BaseHouse {
@@ -137,7 +144,9 @@ class CfgHousing {
 		class Land_LightHouse_F : BaseHouse {
 			icon = "Data\UI\Spawns\lighthouse.paa";
 			price = 165000000;
-			breakIn = 10 * 60;
+			class BreakIn : BreakIn {
+				breakIn = 10 * 60;
+			};
 			canShare = false;
 			spawnPos[] = {0.598145,-2.52051,-11.5156};
 			
@@ -150,7 +159,9 @@ class CfgHousing {
 		class C_Boat_Civil_04_F : BaseHouse {
 			icon = "Data\UI\Spawns\boat.paa";
 			price = 151000000;
-			breakIn = 10 * 60;
+			class BreakIn : BreakIn {
+				breakIn = 10 * 60;
+			};
 			canShare = false;
 			spawnPos[] = {-2.46826,-7.74512,-7.68176};
 			
@@ -164,7 +175,9 @@ class CfgHousing {
 		class Land_i_Shed_Ind_F : BaseHouse {
 			icon = "Data\UI\Spawns\warehouse.paa";
 			price = 27500000;
-			breakIn = 10 * 60;
+			class BreakIn : BreakIn {
+				breakIn = 10 * 60;
+			};
 			spawnPos[] = {5.79297,3.77783,-1.68354};
 			onBought = "[""BuyWarehouse""] call ULP_fnc_achieve;";
 			
@@ -181,7 +194,9 @@ class CfgHousing {
 		class Land_Cargo_Tower_V1_F : BaseHouse {
 			icon = "Data\UI\Spawns\dmt.paa";
 			price = 104896000;
-			breakIn = 15 * 60;
+			class BreakIn : BreakIn {
+				breakIn = 15 * 60;
+			};
 			spawnPos[] = {15171.1,15339,12.8876};
 			condition = "[] call ULP_fnc_isGroup && { [""DMT""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			
@@ -196,7 +211,9 @@ class CfgHousing {
 		class Land_MilOffices_V1_F : BaseHouse {
 			icon = "Data\UI\Spawns\office.paa";
 			price = 97350000;
-			breakIn = 15 * 60;
+			class BreakIn : BreakIn {
+				breakIn = 15 * 60;
+			};
 			spawnPos[] = {15177.2,15386.7,3.29152};
 			condition = "[] call ULP_fnc_isGroup && { [""MilitaryOffices""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			
@@ -207,7 +224,9 @@ class CfgHousing {
 		};
 		class Land_Offices_01_V1_F : Land_MilOffices_V1_F {
 			price = 121455000;
-			breakIn = 15 * 60;
+			class BreakIn : BreakIn {
+				breakIn = 15 * 60;
+			};
 			spawnPos[] = {15177.2,15461.1,7.97687};
 			condition = "[] call ULP_fnc_isGroup && { [""OfficeBuilding""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			class Storage {

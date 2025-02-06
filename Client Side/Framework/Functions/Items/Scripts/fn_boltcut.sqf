@@ -36,13 +36,24 @@ if ([] call ULP_fnc_isGroup) then {
 	if (_buff > 0) then { _time = _time - (_time * _buff); };
 };
 
-private _breakInCfg = _object getVariable ["breakInConfig", configNull];
+private _housingBreakInCfg = missionConfigFile >> "CfgHousing" >> "Houses" >> typeOf _object >> "BreakIn";
+
+private _breakInCfg = _object getVariable ["breakInConfig", (if (isClass _housingBreakInCfg) then {
+	_housingBreakInCfg
+} else {
+	configNull
+})];
+
 if !(isNull _breakInCfg) then {
 	_time = getNumber (_breakInCfg >> "breakIn");
 	_onBreakIn = getText (_breakInCfg >> "onBreakIn");
-	if !(call compile getText (_breakInCfg >> "condition")) exitWith {
-		call compile getText (_breakInCfg >> "onFail");
+	if !(_object call compile getText (_breakInCfg >> "condition")) exitWith {
+		_object call compile getText (_breakInCfg >> "onFail");
 		false breakOut "fn_boltcut";
+	};
+
+	if (isText (_breakInCfg >> "onBreakInStart")) then {
+		_object call compile getText (_breakInCfg >> "onBreakInStart");
 	};
 };
 

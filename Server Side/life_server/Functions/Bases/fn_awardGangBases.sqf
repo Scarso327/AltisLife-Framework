@@ -49,3 +49,5 @@ if !(missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) exi
 } forEach ("isClass _x && { [getNumber (_x >> ""includeBidding"")] call ULP_fnc_bool }" configClasses (missionConfigFile >> "CfgBases"));
 
 missionNamespace setVariable ["ULP_SRV_Setting_BaseBidsActive", false, true];
+
+[] call ULP_SRV_fnc_setBaseMarkers;

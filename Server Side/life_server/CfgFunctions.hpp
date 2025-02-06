@@ -169,6 +169,7 @@ class CfgFunctions {
             class initBases {};
             class awardGangBases {};
             class addBaseBid {};
+            class setBaseMarkers {};
         };
 
         class Gathering {

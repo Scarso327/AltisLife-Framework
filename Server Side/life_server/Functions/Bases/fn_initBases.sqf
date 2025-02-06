@@ -81,3 +81,5 @@ if (([] call ULP_SRV_fnc_getDayName) isEqualTo getText (missionConfigFile >> "Cf
 
 	missionNamespace setVariable [format ["ULP_SRV_Base_%1", configName _x], _flag, true];
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgBases"));
+
+[] call ULP_SRV_fnc_setBaseMarkers;

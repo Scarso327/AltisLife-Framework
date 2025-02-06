@@ -21,12 +21,11 @@ if (_factory getVariable ["locked", false]) exitWith {
 };
 
 private _near = ((_factory nearEntities [["Car", "Air", "Ship"], 15]) select {
-	!([_x] call ULP_fnc_getVehicleOwner isEqualTo "") &&
-	{ !([player, _x] call ULP_fnc_isVehicleOwner) }
+	!([_x] call ULP_fnc_getVehicleOwner isEqualTo "")
 });
 
 if (_near isEqualTo []) exitWith {
-	["There are no vehicles nearby to salvage!"] call ULP_fnc_hint;
+	["There are no vehicles nearby that can be salvaged!"] call ULP_fnc_hint;
 };
 
 [(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), (_near apply { 

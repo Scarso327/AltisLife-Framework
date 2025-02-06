@@ -14,4 +14,14 @@ _this params [
 ];
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
-_container getVariable ["ULP_VirtualSpace", [0, getNumber (_containerCfg >> "virtualSpace")] select (isClass  _containerCfg)];
+private _maxLoad = 0;
+
+if (isClass _containerCfg) then {
+	_maxLoad = getNumber (_containerCfg >> "virtualSpace");
+
+	if ([_container, "ImprovedStorageUpgrade"] call ULP_fnc_hasVehicleUpgrade) exitWith {
+		_maxLoad = round (_maxLoad + (_maxLoad * 0.1));
+	};
+};
+
+_container getVariable ["ULP_VirtualSpace", _maxLoad];

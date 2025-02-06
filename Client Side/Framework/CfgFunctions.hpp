@@ -465,6 +465,7 @@ class CfgFunctions {
 			class isVehicleStationary {};
 			class removeVehicleClamp {};
 			class hasTyreDamage {};
+			class hasVehicleUpgrade {};
 		};
 
 		class VehicleEvents {

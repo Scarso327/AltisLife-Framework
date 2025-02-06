@@ -42,17 +42,22 @@ if (serverTime < _cooldown) exitWith {
 	// Verify...
 	if !([] call ULP_fnc_isGroup) exitWith { ["You must be in a group to capture this site..."] call ULP_fnc_hint; };
 
+	private _siteName = getText (_cfg >> "displayName");
+	private _groupTag = [] call ULP_fnc_groupTag;
+
 	_location setVariable ["site_owner_id", ([] call ULP_fnc_groupId), true];
-	[format ["You have successfully captured <t color='#B92DE0'>%1</t>", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
+	[format ["You have successfully captured <t color='#B92DE0'>%1</t>", _siteName]] call ULP_fnc_hint;
 	[100, "Captured Site"] call ULP_fnc_addXP;
 
 	if (isClass (_cfg >> "Marker")) then {
 		private _marker = _location getVariable ["marker", ""];
 		private _defaultName = getText (_cfg >> "Marker" >> "defaultName");
 
-		_marker setMarkerText format ["%1 | %2", _defaultName, [] call ULP_fnc_groupTag];
+		_marker setMarkerText format ["%1 | %2", _defaultName, _groupTag];
 	};
 
 	[(group player), "Hideout"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
-	[getPlayerUID player, "CaptureHideout", [getText (_cfg >> "displayName")]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+	[getPlayerUID player, "CaptureHideout", [_siteName]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+
+	["SiteCaptured", [_location, _groupTag], true] call ULP_fnc_invokeEvent;
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress)

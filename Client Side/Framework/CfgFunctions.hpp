@@ -697,6 +697,7 @@ class CfgFunctions {
 			class renameHouse {};
 			class isHouseGarage {};
 			class getHouseGarageSpawn {};
+			class isHouseOwnerOnline {};
 		};
 
 		class Missions {

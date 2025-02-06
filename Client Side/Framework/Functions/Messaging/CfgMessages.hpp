@@ -97,6 +97,7 @@ class CfgMessages {
 		displayName = "Dispute";
 		ignoreStreamer = true;
 		ignoreComms = true;
+		confirmSend = false;
 		condition = "false";
 	};
 

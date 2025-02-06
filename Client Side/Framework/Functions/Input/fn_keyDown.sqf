@@ -48,6 +48,23 @@ if (isDowned(player)) then {
         case _viewToggle: { _handled = false };
     };
 } else {
+    if (_code in (actionKeys "GetOver") && { !([] call ULP_fnc_isInputBlocked) }) then {
+        if (_shift 
+            && { !(animationState player isEqualTo "AovrPercMrunSrasWrflDf") } 
+            && { isTouchingGround player } 
+            && { !isForcedWalk player }
+            && { (stance player) isEqualTo "STAND" } 
+            && { (speed player) > 2 } 
+            && { !ULP_Imprisioned } 
+            && { ((velocity player) select 2) < 2.5} 
+            && { ULP_Ability_Cooldown < time }) then {
+            ULP_Ability_Cooldown = time + 1.5;
+            _handled = true;
+
+            [player] remoteExecCall ["ULP_fnc_jump", RANY];
+        };
+    };
+
     switch (_code) do {
         case B: {
             if (_shift && { !_ctrlKey }) then {

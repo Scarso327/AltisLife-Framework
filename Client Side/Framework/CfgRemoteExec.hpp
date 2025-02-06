@@ -33,6 +33,7 @@ class CfgRemoteExec {
         class ULP_fnc_spikeVehicle {};
         class ULP_fnc_flipVehicle {};
         class ULP_fnc_switchMove {};
+        class ULP_fnc_jump {};
 
         class ULP_fnc_createVehicle {
             allowedTargets = CLIENT;

@@ -73,7 +73,7 @@ class CfgVirtualStores {
 
 	class Placeables {
 		storeName = "Placeables Store";
-		conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
+		conditions = "[player, [""Police""]] call ULP_fnc_isFaction || [player, [""Medic""]] call ULP_fnc_isFaction || [player, [""Hato""]] call ULP_fnc_isFaction";
 		class Items {
 			// Cones
 			class RoadCone_F {};

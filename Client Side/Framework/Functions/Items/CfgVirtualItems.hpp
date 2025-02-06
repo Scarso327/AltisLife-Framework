@@ -754,7 +754,6 @@ class CfgVirtualItems {
 	};
 	class Pole_F : RoadCone_F { 
 		displayName = "Pole";
-		icon = "Data\Icons\pole.paa";
 		buyPrice = 300;
 		sellPrice = 150;
 		weight = 2;
@@ -780,7 +779,6 @@ class CfgVirtualItems {
 	};
 	class Land_PortableLight_02_single_yellow_F : Land_PortableLight_single_F { 
 		displayName = "Portable Lamp (Single, Yellow)";
-		icon = "Data\Icons\portableLamp.paa";
 		buyPrice = 800;
 		sellPrice = 400;
 		weight = 4;
@@ -815,16 +813,15 @@ class CfgVirtualItems {
 
 	class TapeSign_F : RoadCone_F { 
 		displayName = "Red-White Tape";
-		icon = "Data\Icons\tapeBarrier.paa";
+		icon = "Data\Icons\roadBarrier.paa";
 		buyPrice = 500;
 		sellPrice = 250;
 		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[""TapeSign_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class RoadBarrier_F : RoadCone_F { 
+	class RoadBarrier_F : TapeSign_F { 
 		displayName = "Road Barrier";
-		icon = "Data\Icons\roadBarrier.paa";
 		buyPrice = 4300;
 		sellPrice = 2150;
 		weight = 6;

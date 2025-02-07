@@ -552,4 +552,14 @@ class CfgVirtualStores {
 			class BrokenTimepiece {};
 		};
 	};
+
+	class Electronics {
+		storeName = "Electronics Trader";
+		class Items {
+			class MiningRig {};
+			class Desktop {};
+			class Laptop {};
+			class SignalJammer {};
+		};
+	};
 };

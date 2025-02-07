@@ -58,13 +58,13 @@ class CfgProfessions {
 
 	class Crafting : Repairing {
 		displayName = "Crafting";
-		icon = "Data\UI\Professions\archeology.paa";
+		icon = "Data\UI\Professions\crafting.paa";
 		effectDescription = "Decreases the time it takes to craft by %1%2";
 	};
 
 	class Reviving : Repairing {
 		displayName = "Reviving";
-		icon = "Data\UI\Professions\archeology.paa";
+		icon = "Data\UI\Professions\reviving.paa";
 		effectDescription = "Decreases the time it takes to revive by %1%2";
 	};
 };

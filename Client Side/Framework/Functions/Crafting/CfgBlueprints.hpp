@@ -7,7 +7,7 @@ class CfgBlueprints {
 			displayName = "Clay";
 			description = "A material used for almost exclusively for crafting";
 			materials[] = { 
-				{"Sand", 2}, 
+				{"Sand", 1}, 
 				{"Water", 1} 
 			};
 			item = "Clay";
@@ -24,7 +24,7 @@ class CfgBlueprints {
 		class B_Rubber : B_Clay {
 			displayName = "Rubber";
 			icon = "Data\Icons\rubber.paa";
-			materials[] = { {"Wood", 6} };
+			materials[] = { {"Wood", 3} };
 			item = "Rubber";
 			workbench = true;
 			time = 3;
@@ -32,7 +32,7 @@ class CfgBlueprints {
 		class B_RubberSheet : B_Rubber {
 			displayName = "Rubber Sheet";
 			icon = "Data\Icons\rubberSheet.paa";
-			materials[] = { {"Rubber", 4} };
+			materials[] = { {"Rubber", 2} };
 			item = "RubberSheet";
 			time = 12;
 		};
@@ -40,7 +40,7 @@ class CfgBlueprints {
 			displayName = "Steel Bar";
 			icon = "Data\Icons\ingot.paa";
 			materials[] = { 
-				{"IronBar", 2},
+				{"IronBar", 1},
 				{"ProcessedOil", 1}
 			};
 			item = "SteelBar";
@@ -49,7 +49,7 @@ class CfgBlueprints {
 		class B_GlassPanel : B_Rubber {
 			displayName = "Glass Panel";
 			icon = "Data\Icons\glass.paa";
-			materials[] = { {"Glass", 4} };
+			materials[] = { {"Glass", 2} };
 			item = "GlassPanel";
 			time = 4;
 		};
@@ -68,7 +68,7 @@ class CfgBlueprints {
 			icon = "Data\Icons\copperWiring.paa";
 			materials[] = { 
 				{"CopperBar", 4},
-				{"Rubber", 3}
+				{"Rubber", 2}
 			};
 			item = "CopperWiring";
 			time = 6;
@@ -76,29 +76,29 @@ class CfgBlueprints {
 		class B_CopperPlate : B_Rubber {
 			displayName = "Copper Plate";
 			icon = "Data\Icons\metalPlate.paa";
-			materials[] = { {"CopperBar", 4} };
+			materials[] = { {"CopperBar", 3} };
 			item = "CopperPlate";
 			time = 4;
 		};
 		class B_IronPlate : B_CopperPlate {
 			displayName = "Iron Plate";
-			materials[] = { {"IronBar", 4} };
+			materials[] = { {"IronBar", 3} };
 			item = "IronPlate";
 		};
 		class B_SilverPlate : B_CopperPlate {
 			displayName = "Silver Plate";
-			materials[] = { {"SilverBar", 4} };
+			materials[] = { {"SilverBar", 3} };
 			item = "SilverPlate";
 		};
 		class B_SteelPlate : B_CopperPlate {
 			displayName = "Steel Plate";
-			materials[] = { {"SteelBar", 4} };
+			materials[] = { {"SteelBar", 3} };
 			item = "SteelPlate";
 		};
 		class B_PackedOil : B_Clay {
 			displayName = "Packed Oil";
 			icon = "Data\Icons\oil.paa";
-			materials[] = { {"ProcessedOil", 8} };
+			materials[] = { {"ProcessedOil", 5} };
 			item = "PackedOil";
 			time = 5;
 		};

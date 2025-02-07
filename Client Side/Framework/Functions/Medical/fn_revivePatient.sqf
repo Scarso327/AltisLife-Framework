@@ -38,6 +38,9 @@ closeDialog 0;
 
 private _time = ["LifeSaver", 10] call ULP_fnc_activatePerk;
 
+private _profCal = ["Reviving"] call ULP_fnc_getProfessionCalculation;
+if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
+
 [format ["Reviving %1", [_unit, true] call ULP_fnc_getName], _time, [_unit], { isDowned(_this select 0) && { (player distance (_this select 0)) < 5 } }, {
 	_this params [ "_unit" ];
 
@@ -54,6 +57,8 @@ private _time = ["LifeSaver", 10] call ULP_fnc_activatePerk;
 	};
 
 	["LifeSaver"] call ULP_fnc_achieve;
+
+	["Reviving", 1, 50] call ULP_fnc_increaseProfession;
 	[100, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addXP;
 
 	["RevivedSomeone", [_unit]] call ULP_fnc_invokeEvent;

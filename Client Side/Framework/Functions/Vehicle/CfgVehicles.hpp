@@ -6,7 +6,7 @@ class CfgVehicles {
 
 	class Base {
 		virtualSpace = 0;
-		garageLimit = 5;
+		garageLimit = 10;
 		fuelConsumptionRate = 1.25;
 		isHouse = false;
 		canTransfer = true;
@@ -29,7 +29,7 @@ class CfgVehicles {
 	};
 
 	class BaseTruck : Base {
-		garageLimit = 2;
+		garageLimit = 4;
 		fuelConsumptionRate = 1.40;
 		enableRope = false;
 		garageDelay = 15;
@@ -42,7 +42,7 @@ class CfgVehicles {
 	};
 
 	class BaseAir : Base {
-		garageLimit = 2;
+		garageLimit = 4;
 		fuelConsumptionRate = 1.35;
 		garageDelay = 20;
 		repairTime = 20;
@@ -736,7 +736,7 @@ class CfgVehicles {
 		description = "The Prowler is agile, lightly armored and uses speed, maneuverability, and off-road mobility to avoid threats.";
 		buyPrice = 580000;
 		virtualSpace = 50;
-		garageLimit = 3;
+		garageLimit = 6;
 		class Textures {
 			class Police : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\prowler.paa" }; 
@@ -785,7 +785,7 @@ class CfgVehicles {
 		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
 		buyPrice = 675000;
 		virtualSpace = 50;
-		garageLimit = 3;
+		garageLimit = 6;
 		class Textures {
 			class Police : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\qilin.paa" }; 
@@ -820,7 +820,7 @@ class CfgVehicles {
 		description = "The Hunter is a MRAP vehicle with an armored hull that can withstand light weapons and offers a powerful engine.";
 		buyPrice = 9800000;
 		virtualSpace = 65;
-		garageLimit = 2;
+		garageLimit = 4;
 		garageDelay = 15;
 		repairTime = 20;
 		chopKeepChance = 95;
@@ -1147,6 +1147,7 @@ class CfgVehicles {
 		virtualSpace = 150;
 		crushTime = 240;
 		chopTime = 300;
+		garageLimit = 1;
 	};
 
 	class B_Truck_01_mover_F : BaseTruck {
@@ -1467,7 +1468,7 @@ class CfgVehicles {
 		description = "The SDV is a manned submersible vehicle used to transport teams of divers over long distances under water.ply or using their own SCUBA gear.";
 		buyPrice = 389500;
 		virtualSpace = 5;
-		garageLimit = 1;
+		garageLimit = 2;
 		class Textures {
 			class Police : PoliceTextureBase {
 				displayName = "MPU"; 
@@ -1490,7 +1491,7 @@ class CfgVehicles {
 		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
 		buyPrice = 465000;
 		virtualSpace = 5;
-		garageLimit = 3;
+		garageLimit = 6;
 		retrievalPerc = 0.02;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
@@ -1683,7 +1684,7 @@ class CfgVehicles {
 	class O_Heli_Transport_04_black_F : BaseAir {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
-		garageLimit = 1;
+		garageLimit = 2;
 		crushTime = 60;
 		chopTime = 300;
 		class Textures {
@@ -1732,7 +1733,7 @@ class CfgVehicles {
 		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
 		virtualSpace = 500;
-		garageLimit = 1;
+		garageLimit = 2;
 		crushTime = 60;
 		chopTime = 300;
 		class Textures {

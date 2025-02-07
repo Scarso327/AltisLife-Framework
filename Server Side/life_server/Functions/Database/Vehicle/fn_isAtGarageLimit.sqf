@@ -24,6 +24,6 @@ _query params [
 ];
 
 private _garageLimit = getNumber (missionConfigFile >> "CfgVehicles" >> _class >> "garageLimit");
-if (_hasVehicleCollectorPerk) then { _garageLimit = _garageLimit + 1 };
+if (_hasVehicleCollectorPerk) then { _garageLimit = _garageLimit * 2 };
 
 (_vehicleCount >= _garageLimit)

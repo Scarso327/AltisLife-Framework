@@ -2,7 +2,10 @@ class CfgBases {
 	// Bidding info...
 	Day = "Saturday";
 	Restart[] = {18, 21};
-	RedzoneKillReward = 15000;
+
+	RedzoneKillMoney = 20000;
+	RedzoneKillXP = 20;
+
 	BidIncrement = 1000000;
 	StartingBid = 9000000; // StartingBid = BidIncrement + StartingBid
 	GangWarsOnlyMarkers[] = { "rebel_outpost_3", "greenzone_06" };

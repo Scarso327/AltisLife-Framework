@@ -501,7 +501,7 @@ class CfgBlueprints {
 			item = "Electronic Circuit";
 		};
 		class B_PrintedCircuitBoard : B_ElectronicCircuit {
-			displayName = "Electronic Circuit";
+			displayName = "Printed Circuit Board";
 			materials[] = { 
 				{"CopperBar", 2}, 
 				{"RubberSheet", 1}

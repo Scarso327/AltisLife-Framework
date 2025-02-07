@@ -43,7 +43,7 @@ class CfgLicenses {
     class Home : Driving {
         displayName = "Homeowner's Approval";
         description = "The base requirement for purchasing a property";
-        buyPrice = 5000000;
+        buyPrice = 3500000;
         class Settings : Settings {};
     };
 
@@ -150,7 +150,7 @@ class CfgLicenses {
 
     class Iron : BaseLicense {
         displayName = "Iron Processing";
-        buyPrice = 500000;
+        buyPrice = 400000;
         class Settings {};
     };
 
@@ -180,7 +180,7 @@ class CfgLicenses {
 
     class Uranium : BaseLicense {
         displayName = "Uranium Processing";
-        buyPrice = 1750000;
+        buyPrice = 2000000;
         class Settings {};
     };
 
@@ -216,7 +216,7 @@ class CfgLicenses {
 
     class Weapons : BaseLicense {
         displayName = "Weapons Processing";
-        buyPrice = 2000000;
+        buyPrice = 2500000;
         class Settings {};
     };
 };

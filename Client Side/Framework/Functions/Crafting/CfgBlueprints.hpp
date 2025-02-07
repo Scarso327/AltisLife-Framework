@@ -639,7 +639,7 @@ class CfgBlueprints {
 			time = 100;
 		};
 		class B_PanicButton : B_HackingDevice {
-			icon = "Data\Icons\pPanicButton.paa";
+			icon = "Data\Icons\panicButton.paa";
 			displayName = "Panic Button";
 			description = "A tool that will send an alert to the Police";
 			materials[] = { 

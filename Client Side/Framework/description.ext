@@ -4,7 +4,6 @@ disableRandomization[]= { "All" };
 // Should change to something unique to your server
 missionGroup = "MantlesAltisLife";
 
-skipLobby = 1;
 saving = 0;
 unsafeCVL = 1;
 enableDebugConsole[] = { "76561198092567307", "76561197971322689" };

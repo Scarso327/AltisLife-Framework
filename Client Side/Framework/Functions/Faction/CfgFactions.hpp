@@ -5,8 +5,11 @@ class CfgFactions {
 	class Police {
 		shortName = "Police";
 		displayName = "Altis Police Constabulary";
+		selectionImage = "Data\UI\Factions\police.paa";
+		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0, 0.3, 0.6, 1 };
 		pay = 10200;
+		sideChannel = false;
 		jointChannel = true;
 		imprison = true;
 		hasRedzoneNlr = true;
@@ -67,8 +70,11 @@ class CfgFactions {
 	class Medic {
 		shortName = "Medic";
 		displayName = "Altis Ambulance Service";
+		selectionImage = "Data\UI\Factions\medic.paa";
+		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0, 0.5, 0, 1 };
 		pay = 11600;
+		sideChannel = false;
 		jointChannel = true;
 		hasRedzoneNlr = false;
 
@@ -123,8 +129,11 @@ class CfgFactions {
 	class Hato {
 		shortName = "HATO";
 		displayName = "Highways Agency";
+		selectionImage = "Data\UI\Factions\hato.paa";
+		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0.7, 0.6, 0, 1 };
 		pay = 10060;
+		sideChannel = false;
 		jointChannel = true;
 		hasRedzoneNlr = false;
 		
@@ -173,8 +182,11 @@ class CfgFactions {
 	class Civilian {
 		shortName = "Civilian";
 		displayName = "Civilian";
+		selectionImage = "Data\UI\Factions\civ.paa";
+		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0.4, 0, 0.5, 1 };
 		pay = 3750;
+		sideChannel = true;
 		imprisoned = true;
 		hasRedzoneNlr = false;
 		

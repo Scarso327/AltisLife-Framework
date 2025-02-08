@@ -984,5 +984,14 @@ class CfgFunctions {
 			class DialogVehicleTuning_ApplyUpgrade {};
 			class DialogVehicleTuning_OnListChanged {};
 		};
+		
+		class DialogFactionSelection {
+			file = "UI\DialogFactionSelection\Functions";
+			class DialogFactionSelection_OnInit {};
+			class DialogFactionSelection_OnLoad {};
+			class DialogFactionSelection_OnUnload {};
+			class DialogFactionSelection_PlayVideo {};
+			class DialogFactionSelection_Select {};
+		};
 	};
 };

@@ -28,3 +28,4 @@
 #include "DialogFactory\DialogFactory.hpp"
 #include "DialogSalvageFactory\DialogSalvageFactory.hpp"
 #include "DialogVehicleTuning\DialogVehicleTuning.hpp"
+#include "DialogFactionSelection\DialogFactionSelection.hpp"

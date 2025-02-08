@@ -27,6 +27,7 @@ class CfgFunctions {
             class queryPlayerInfo {};
             class savePlayerInfo {};
             class savePlayerState {};
+            class insertPlayerInfo {};
         };
 
         class DatabaseVehicle {
@@ -110,6 +111,7 @@ class CfgFunctions {
             class initRadios {};
             class addRadio {};
             class removeRadio {};
+            class setSideChannel {};
         };
 
         class Events {
@@ -133,6 +135,7 @@ class CfgFunctions {
 
         class Group {
             file = "\life_server\Functions\Group";
+            class addToFactionGroup {};
             class handleGroupFunds {};
         };
 

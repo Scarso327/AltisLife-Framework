@@ -174,6 +174,8 @@ TON_fnc_playtime_values_request = [];
 publicVariable "TON_fnc_playtime_values";
 publicVariable "TON_fnc_playtime_values_request";
 
+ULP_FactionGroups = createHashMap;
+
 /* Tell clients that the server is ready and is accepting queries */
 life_server_isReady = true;
 publicVariable "life_server_isReady";

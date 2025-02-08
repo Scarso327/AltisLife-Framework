@@ -2,6 +2,7 @@
 ** Author: Jack "Scarso" Farhall
 ** Description: 
 */
+#include "..\..\script_macros.hpp"
 scopeName "fn_initEventHandlers";
 
 inGameUISetEventHandler["PrevAction", "_this call ULP_fnc_onPrevAction"];
@@ -86,7 +87,7 @@ player addEventHandler ["InventoryClosed", { _this call ULP_fnc_InventoryClosed 
 
 	switch (format["%1_%2", _category, _option]) do {
 		case "General_NightLight": { if (hasInterface && { !(isNil "ULP_NightLight") }) then { ULP_NightLight setLightBrightness _newSetting; }; };
-		case "HUD_SideChat": { 1 enableChannel ([_newSetting] call ULP_fnc_bool); };
+		case "HUD_SideChat": { [player, [_newSetting] call ULP_fnc_bool] remoteExecCall ["ULP_SRV_fnc_setSideChannel", RSERV]; };
 		case "HUD_EnableHUD": {
 			if (_newSetting isEqualTo 1) then {
 				[] call ULP_UI_fnc_openHUD;

@@ -23,7 +23,7 @@ player allowDammage false;
 [] call ULP_fnc_initSurvival;
 
 0 enableChannel [false, false];
-1 enableChannel [[["SideChat", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool, false];
+1 enableChannel [false, false];
 2 enableChannel [false, false];
 
 ["Waiting For Server"] call ULP_fnc_logIt;
@@ -39,6 +39,11 @@ waitUntil { !isNil { player getVariable "faction" } };
 [] call ULP_fnc_getPlayerInfo;
 
 waitUntil { ULP_Loaded };
+
+private _isSideChannelEnalbed = [["SideChat", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool;
+if (_isSideChannelEnalbed) then {
+	[player] remoteExecCall ["ULP_SRV_fnc_setSideChannel", RSERV];
+};
 
 ["Checking Whitelisting"] call ULP_fnc_logIt;
 private _factionCfg = missionConfigFile >> "CfgFactions" >> [player] call ULP_fnc_getFaction;

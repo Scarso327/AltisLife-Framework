@@ -111,6 +111,7 @@ class CfgFunctions {
             class initRadios {};
             class addRadio {};
             class removeRadio {};
+            class setSideChannel {};
         };
 
         class Events {

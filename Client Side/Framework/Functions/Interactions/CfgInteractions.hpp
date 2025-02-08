@@ -76,6 +76,7 @@ class CfgInteractions {
 		};
 		class SeizeCash : RobCash {
 			title = "Seize Cash";
+			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [player] call ULP_fnc_onDuty } }";
 		};
 		class InventoryCheck : Unrestrain {

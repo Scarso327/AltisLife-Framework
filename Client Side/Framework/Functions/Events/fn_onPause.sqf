@@ -29,6 +29,7 @@ with missionNamespace do {
 	_abortButton ctrlSetEventHandler["ButtonClick", "with missionNamespace do {
 		[] call ULP_fnc_syncPlayerInfo;
 		
+		[""ReturnedToLobby"", [name player]] remoteExecCall [""ULP_fnc_chatMessage"", -2];
 		[getPlayerUID player, ""ReturnedToLobby"", [getPos player]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];
 
 		[""Abort"", true, false] call BIS_fnc_endMission; 

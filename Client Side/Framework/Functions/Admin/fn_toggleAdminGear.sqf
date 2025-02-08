@@ -50,6 +50,7 @@ if ([player] call ULP_fnc_onDuty) then {
 	player linkItem "ItemMap";
 	player linkItem "ItemCompass";
 	player linkItem "ItemWatch";
+	player linkItem "ItemRadio";
 	player addWeaponGlobal "Rangefinder";
 
 	player setDamage 0;

@@ -59,7 +59,9 @@ if (_remove) then {
 	ULP_CarryWeight = _newWeight;
 } else {
 	private _newWeight = ULP_CarryWeight + _weight;
-	if (!_ignoreCarry && { _newWeight > _maxWeight }) exitWith { false breakOut "fn_handleItem" };
+	private _maxWeight = [] call ULP_fnc_maxCarry;
+
+	if (!_ignoreCarry && { isNil "_maxWeight" || { _newWeight > _maxWeight } }) exitWith { false breakOut "fn_handleItem" };
 
 	if (_isItemScripted) then {
 		if (_curData isEqualTo 0) then {

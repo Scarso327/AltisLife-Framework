@@ -420,6 +420,27 @@ class CfgPerks {
 		onActivated = "((random 100) max 1)";
 	};
 
+	class SkilledCraftsman {
+		icon = "Data\UI\Perks\shadyTrader.paa";
+		displayName = "Skilled Craftsman";
+		description = "Increase the speed you craft by %1%2";
+		removalMultiplier = 5;
+		class Leveling {
+			maxLevel = 3;
+			xpLevel = 100;
+			xpMultipler = 2;
+			levelCalculation = "10 * (_this select 0)";
+		};
+		class Requirements {
+			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			level = 17;
+			prestige = 0;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "_params + (_params * (_bonus / 100))";
+	};
+
 	class ShadyTrader {
 		icon = "Data\UI\Perks\shadyTrader.paa";
 		displayName = "Shady Trader";
@@ -486,7 +507,7 @@ class CfgPerks {
 	class VehicleCollector {
 		icon = "Data\UI\Perks\vehicleCollector.paa";
 		displayName = "Vehicle Collector";
-		description = "Increases the garage limit of each vehicle type by 1";
+		description = "Doubles the garage limit of each vehicle";
 		removalMultiplier = 10;
 		class Requirements {
 			factions[] = { "Civilian" };

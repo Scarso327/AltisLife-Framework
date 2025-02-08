@@ -9,4 +9,4 @@ scopeName "fn_getPerkLimit";
 private _limit = getNumber (missionConfigFile >> "CfgPerks" >> "baseLimit") + (floor (ULP_Level / 10) min 0);
 
 // Every 2 prestige levels you get another slot... (Oh and ensure we add a cap so it doesn't get stupid...)
-((_limit + floor (ULP_Prestige / 2)) min getNumber (missionConfigFile >> "CfgPerks" >> "maxLimit"))
+((_limit + ULP_Prestige) min getNumber (missionConfigFile >> "CfgPerks" >> "maxLimit"))

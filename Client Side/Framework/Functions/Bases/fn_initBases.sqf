@@ -49,11 +49,12 @@ if (missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) then
 				|| { [group player, _unit] call ULP_fnc_inGroup }
 				|| { !(missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) }) exitWith {};
 
-			private _reward = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillReward");
+			private _money = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillMoney");
+			private _xp = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillXP");
 
-			[5, "Redzone Kill"] call ULP_fnc_addXP;
+			[_xp, "Redzone Kill"] call ULP_fnc_addXP;
 
-			if ([_reward, true, "Gang Wars Kill"] call ULP_fnc_addMoney) then {
+			if ([_money, true, "Gang Wars Kill"] call ULP_fnc_addMoney) then {
 				[format ["You have recieved <t color='#B92DE0'>%1%2</t> for killing someone in a redzone during gang wars...", "£", [_reward] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 		}] call ULP_fnc_addEventHandler;

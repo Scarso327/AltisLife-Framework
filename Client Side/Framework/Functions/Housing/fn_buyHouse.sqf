@@ -31,7 +31,7 @@ if !(["Home"] call ULP_fnc_hasLicense) exitWith {
 	["You require homeowner's approval to buy a house."] call ULP_fnc_hint;
 };
 
-if (_house getVariable ["blacklisted", false]) exitWith {
+if (_house getVariable ["blacklisted", false] || { ["redzone_", [_house]] call ULP_fnc_isUnitsInZone }) exitWith {
 	["This house is <t color='#B92DE0'>blacklisted</t>."] call ULP_fnc_hint;
 };
 

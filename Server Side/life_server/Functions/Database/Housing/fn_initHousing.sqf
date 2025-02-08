@@ -20,7 +20,8 @@ ULP_SRV_Houses = [];
 {
 	_x params ["_id", "_pid", "_gangId", "_ownerName", "_classname", "_pos", "_name", "_storage", "_virtualStorage", "_shared"];
 
-	if (isClass (missionConfigFile >> "CfgHousing" >> "Houses" >> _classname)) then {
+	private _houseCfg = missionConfigFile >> "CfgHousing" >> "Houses" >> _classname;
+	if (isClass _houseCfg) then {
 		// Convert Datatypes...
 		_pos = [_pos] call DB_fnc_mresToArray;
 		_storage = [_storage] call DB_fnc_mresToArray;
@@ -32,9 +33,13 @@ ULP_SRV_Houses = [];
 		if (isNull _house || { _house in ULP_SRV_Houses }) then {
 			[format ["House wasn't found: %1 at %2 (%3, %4)", _classname, _pos, _id, (_house in ULP_SRV_Houses)]] call ULP_fnc_logIt;
 		} else {
-			if (_house getVariable ["blacklisted", false]) then {
+			if (_house getVariable ["blacklisted", false] || { ["redzone_", [_house]] call ULP_fnc_isUnitsInZone }) then {
+				private _value = getNumber (_houseCfg >> "price");
+
+				[_pid, "Money", "House Blacklisted", _value] call ULP_SRV_fnc_addMail;
+
 				[format["UPDATE `houses` SET `sold`='1' WHERE `id`='%1'", [_id, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
-				[_steamid, "House", ["Blacklisted", getPos _house, [0, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
+				[_pid, "House", ["Blacklisted", getPos _house, [_value, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
 			} else {
 				[_house, [_id, [_pid, _gangId, _ownerName], _shared, _name, _storage, _virtualStorage]] call ULP_SRV_fnc_setupHouse;
 			};

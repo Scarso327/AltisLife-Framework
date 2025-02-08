@@ -45,12 +45,15 @@ if !(_profession isEqualTo []) then {
 	if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
 };
 
-[format["%1 Item(s)", getText(_cfg >> "processTitle")], _time, [getPos player, _items, _materials, _cfg, _profession, _leveling], { (player distance (_this select 0)) <= 5 }, {
-	_this params [ "", "_items", "_materials", "_cfg", "_profession", "_leveling" ];
+[format["%1 Item(s)", getText(_cfg >> "processTitle")], _time, [getPos player, _items, _conversion, _materials, _cfg, _profession, _leveling], { (player distance (_this select 0)) <= 5 }, {
+	_this params [ "", "_items", "_expectedConversion", "_materials", "_cfg", "_profession", "_leveling" ];
 
 	// Redo here just in case they somehow changed something?
-    private _conversion = [_materials] call ULP_fnc_calcMaxConversion;
-	if (_conversion <= 0) exitWith {};
+	// Make sure to only take a max of whatever we decided to take before
+    private _conversion = ([_materials] call ULP_fnc_calcMaxConversion) min _expectedConversion;
+	if (_conversion < _expectedConversion) exitWith {
+		["You lost some items during processing from when it started so it failed"] call ULP_fnc_hint;
+	};
 
 	{
 		_x params ["_item", "_amount"];

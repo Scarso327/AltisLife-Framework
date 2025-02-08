@@ -163,7 +163,7 @@ class CfgRandomEvents {
 			class C_3 : C_1 { position[] = {16598.7,19040,0}; };
 			class C_4 : C_1 { position[] = {12811.7,16674.4,0}; };
 			class C_5 : C_1 { position[] = {12445.1,15198.7,0}; };
-			class C_6 : C_1 { position[] = {10240.3,14842.2,0}; };
+			class C_6 : C_1 { position[] = {11432.2,14245}; };
 			class C_7 : C_1 { position[] = {7889.41,14626.5,0}; };
 			class C_8 : C_1 { position[] = {4215.98,15055.8,0}; };
 			class C_9 : C_1 { position[] = {3058.21,13196.5,0}; };

@@ -10,6 +10,8 @@ _this params [
 	["_add", true, [false]]
 ];
 
+private _radio = format ["%1Side", [_unit] call ULP_fnc_getFaction];
+
 if (isNull _unit || { !(_radio in ULP_CustomChannels) }) exitWith {};
 
 private _radio = ULP_CustomChannels get _radio;

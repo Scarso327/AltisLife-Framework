@@ -135,6 +135,7 @@ class CfgFunctions {
 
         class Group {
             file = "\life_server\Functions\Group";
+            class addToFactionGroup {};
             class handleGroupFunds {};
         };
 

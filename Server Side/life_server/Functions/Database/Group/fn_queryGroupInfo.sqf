@@ -11,7 +11,10 @@ _this params [
 	["_faction", configNull, [configNull]]
 ];
 
-if !(isClass (_faction >> "Groups")) exitWith { false };
+if !(isClass (_faction >> "Groups")) exitWith {
+	[_unit] call ULP_SRV_fnc_addToFactionGroup;
+	false
+};
 
 private _steamid = getPlayerUID _unit;
 if (isNull _unit || { _steamid isEqualTo "" } || { _groupid <= 0 }) exitWith { false };

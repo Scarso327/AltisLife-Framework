@@ -40,8 +40,7 @@ waitUntil { !isNil { player getVariable "faction" } };
 
 waitUntil { ULP_Loaded };
 
-private _isSideChannelEnalbed = [["SideChat", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool;
-if (_isSideChannelEnalbed) then {
+if ([["SideChat", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool) then {
 	[player] remoteExecCall ["ULP_SRV_fnc_setSideChannel", RSERV];
 };
 

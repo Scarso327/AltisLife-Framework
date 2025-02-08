@@ -16,4 +16,4 @@ ULP_FailedEventId = ["PlayerInformationQueryFailed", {
 	endMission "InitFailed";
 }, true] call ULP_fnc_addEventHandler;
 
-[player] remoteExec ["ULP_SRV_fnc_queryPlayerInfo", RSERV];
+[player] remoteExecCall ["ULP_SRV_fnc_queryPlayerInfo", RSERV];

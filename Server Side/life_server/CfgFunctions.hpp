@@ -27,6 +27,7 @@ class CfgFunctions {
             class queryPlayerInfo {};
             class savePlayerInfo {};
             class savePlayerState {};
+            class insertPlayerInfo {};
         };
 
         class DatabaseVehicle {

@@ -30,6 +30,12 @@ player allowDammage false;
 
 waitUntil { !isNil "life_server_isReady" };
 
+if (isNil { player getVariable "faction" }) then {
+	["DialogFactionSelection"] call ULP_UI_fnc_createDialog;
+};
+
+waitUntil { !isNil { player getVariable "faction" } };
+
 [] call ULP_fnc_getPlayerInfo;
 
 waitUntil { ULP_Loaded };

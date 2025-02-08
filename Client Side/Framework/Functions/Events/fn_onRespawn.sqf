@@ -25,5 +25,9 @@ ULP_Respawned = true;
 
 player playMove "AmovPercMstpSnonWnonDnon";
 
+if ([["SideChat", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool) then {
+	[_unit] remoteExecCall ["ULP_SRV_fnc_setSideChannel", RSERV];
+};
+
 [] call ULP_fnc_setLoadout;
 [] call ULP_fnc_syncPlayerInfo;

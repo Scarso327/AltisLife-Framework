@@ -892,7 +892,6 @@ class CfgClothesStore {
 			class U_B_CombatUniform_mcam {};
 			class U_B_CombatUniform_mcam_vest {};
 			class U_B_CombatUniform_mcam_tshirt {};
-			class U_B_HeliPilotCoveralls {};
 		};
 
 		class Headgear {
@@ -904,7 +903,6 @@ class CfgClothesStore {
 			class H_Booniehat_khk {};
 			class H_ShemagOpen_khk {};
 			class H_PASGT_basic_black_F {};
-			class H_PilotHelmetHeli_B {};
 			class H_HelmetIA {};
 			class H_HelmetB_light {};
 		};

@@ -10,7 +10,7 @@ class CfgGroups {
 	class Name {
 		MinLength = 6;
     	MaxLength = 30;
-		Blacklisted[] = { "Altis Police Contabulary", "Altis Police Service", "Altis Police", "National Health Service", "Altis Ambulance Service", "Highways Agency", "Civilian", "Mantle", "Mantle Network" };
+		Blacklisted[] = { "Altis Police Contabulary", "Altis Police Service", "Altis Police", "Masked Player", "Police", "Medic", "Hato", "National Health Service", "Altis Ambulance Service", "Highways Agency", "Civilian", "Mantle", "Mantle Network" };
 	};
 
 	ranks[] = { "PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"  };

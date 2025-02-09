@@ -67,6 +67,19 @@ class CfgVehicles {
 		};
 	};
 
+	class BaseHeli : BaseAir {
+		class Actions {
+			class PilotEject {
+				actionTitle = "Eject";
+				actionCode = "moveOut (_this select 1)";
+				params[] = {};
+				priority = 6.1;
+				condition = "_target isEqualTo (vehicle _this) && { (locked _target) isEqualTo 0 } && { ((driver _target) isEqualTo _this) }";
+				radius = 25;
+			};
+		};
+	};
+
 	// LIGHTS --------------------------------------------------------------------------------------
 	class PoliceColour {
 		leftColour[] = {0.1, 0.1, 20};
@@ -101,7 +114,7 @@ class CfgVehicles {
 				actionCode = "[] call ULP_fnc_openPNC";
 				params[] = {};
 				priority = 1;
-				condition = "_target isEqualTo (vehicle _this) && { ([player, [""Police""]] call ULP_fnc_isFaction) || ((driver _this) isEqualTo _target) }";
+				condition = "_target isEqualTo (vehicle _this) && { ([_this, [""Police""]] call ULP_fnc_isFaction) || ((driver _target) isEqualTo _this) }";
 				radius = 25;
 			};
 		};
@@ -1478,7 +1491,7 @@ class CfgVehicles {
 	};
 
 	// HELICOPTERS --------------------------------------------------------------------------------------
-	class B_UAV_01_F : BaseAir {
+	class B_UAV_01_F : BaseHeli {
 		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
 		buyPrice = 98700;
 	};
@@ -1487,7 +1500,7 @@ class CfgVehicles {
 		buyPrice = 109700;
 	};
 	
-	class C_Heli_Light_01_civil_F : BaseAir {
+	class C_Heli_Light_01_civil_F : BaseHeli {
 		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
 		buyPrice = 465000;
 		virtualSpace = 5;
@@ -1561,7 +1574,7 @@ class CfgVehicles {
 	};
 	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 580000; };
 
-	class O_Heli_Light_02_unarmed_F : BaseAir {
+	class O_Heli_Light_02_unarmed_F : BaseHeli {
 		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
 		buyPrice = 1850000;
 		virtualSpace = 25;
@@ -1584,7 +1597,7 @@ class CfgVehicles {
 		};
 	};
 
-	class I_Heli_light_03_unarmed_F : BaseAir {
+	class I_Heli_light_03_unarmed_F : BaseHeli {
 		description = "The WY-55 Hellcat is a multipurpose helicopter, most suited for utility and limited transport.";
 		buyPrice = 2130000;
 		virtualSpace = 20;
@@ -1613,7 +1626,7 @@ class CfgVehicles {
 		};
 	};
 
-	class B_Heli_Transport_01_F : BaseAir {
+	class B_Heli_Transport_01_F : BaseHeli {
 		description = "The UH-80 Ghost Hawk is a medium-lift utility helicopter with stealth design.";
 		buyPrice = 19450000;
 		virtualSpace = 30;
@@ -1632,7 +1645,7 @@ class CfgVehicles {
 		};
 	};
 
-	class I_Heli_Transport_02_F : BaseAir {
+	class I_Heli_Transport_02_F : BaseHeli {
 		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
 		buyPrice = 13240000;
 		virtualSpace = 160;
@@ -1681,7 +1694,7 @@ class CfgVehicles {
 		};
 	};
 
-	class O_Heli_Transport_04_black_F : BaseAir {
+	class O_Heli_Transport_04_black_F : BaseHeli {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
 		garageLimit = 2;
@@ -1729,7 +1742,7 @@ class CfgVehicles {
 		};
 	};
 
-	class B_Heli_Transport_03_unarmed_F : BaseAir {
+	class B_Heli_Transport_03_unarmed_F : BaseHeli {
 		description = "A twin-engine, tandem rotor heavy-lift helicopter. Its primary role is the transportation of troops, vehicles and cargo.";
 		buyPrice = 33400750;
 		virtualSpace = 500;
@@ -1755,7 +1768,7 @@ class CfgVehicles {
 		};
 	};
 
-	class B_Heli_Attack_01_F : BaseAir {
+	class B_Heli_Attack_01_F : BaseHeli {
 		description = "A two-seat reconnaissance and target designation helicopter used to seek targets for gunships.";
 		buyPrice = 146560000;
 		garageLimit = 1;

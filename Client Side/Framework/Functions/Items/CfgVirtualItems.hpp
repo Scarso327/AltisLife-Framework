@@ -1517,7 +1517,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\crate.paa";
 		sellPrice = 71360;
 		weight = 28;
-		class Settings { isIllegal = true; };
+		class Settings : Settings { isIllegal = true; };
 	};
 
 	// Raw Fish

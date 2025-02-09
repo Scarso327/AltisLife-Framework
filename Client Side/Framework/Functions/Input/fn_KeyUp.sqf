@@ -28,7 +28,7 @@ if (_code in (actionKeys "NightVision") && { [goggles player] call ULP_fnc_isNig
 switch (_code) do {
     if (isDowned(player)) then {
         _handled = true;
-        case D: {
+        case Y: {
             [] call ULP_fnc_disputePlayer;
         };
         case F: {

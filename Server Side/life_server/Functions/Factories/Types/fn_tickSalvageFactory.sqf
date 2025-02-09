@@ -23,6 +23,21 @@ private _materials = getArray (_product >> "materials");
 	[_factory, _item, _amount, false, true] call ULP_fnc_addToCargo;
 } forEach _materials;
 
+private _cfg = missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle);
+
+if (isClass _cfg) then {
+	private _chopValue = getNumber (_cfg >> "buyPrice") * ([
+			getNumber (missionConfigFile >> "CfgVehicles" >> "chopPerc"),
+			getNumber (_cfg >> "chopPerc")
+		] select (isNumber (_cfg >> "chopPerc")));
+
+	if (_chopValue > 0) then {
+		_chopValue = _chopValue * 1.25;
+
+		[_factory, "DroppedMoney", [str _chopValue], true, true] call ULP_fnc_addToCargo;
+	};
+};
+
 private _id = _vehicle getVariable ["vehicle_id", -1];
 deleteVehicle _vehicle;
 

@@ -10,7 +10,6 @@ params [
   ["_params", [], [[]]]
 ];
 
-
 switch _mode do {
 	case "init": {
     	_params params [["_chair", cursorObject, [objNull]], ["_unit", player, [objNull]]];
@@ -29,7 +28,14 @@ switch _mode do {
 
     	_player setPos (getPosATL _chair);
     	_player setDir ((getDir _chair) - 180);
-    	_player setPosATL [getPosATL _player # 0, getPosATL _player # 1, (getPosATL _player # 2)];
+		
+		private _offset = switch (typeOf _chair) do {
+			case "Land_RattanChair_01_F": { -1 };
+			default { 0 };
+		};
+
+		private _playerPos = getPosATL _player;
+    	_player setPosATL [_playerPos # 0, _playerPos # 1, (_playerPos # 2) + _offset];
 
     	_player addAction ["Stand Up", {(_this # 3) params ["_chair", "_player"]; ["standUp", [_chair, _player, _this # 2]] call ULP_fnc_sit}, [_chair, _player]];
  	};

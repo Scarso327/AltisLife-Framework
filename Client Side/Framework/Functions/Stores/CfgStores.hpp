@@ -1,6 +1,6 @@
 class CfgStores {
-	maxCarts = 2;
-	extraDonatorCarts = 3;
+	maxCarts = 4;
+	extraDonatorCarts = 5;
 	maxCartNameLength = 128;
 
 	#include "Clothing\CfgClothesStore.hpp"

@@ -75,18 +75,16 @@ private _factionIdc = IDD_FACTION_SELECTION + 1;
 		_ctrlButton ctrlAddEventHandler [
 			_x,
 			{
-				with uiNamespace do {
-					private _ctrlButton = _this select 0;
-					private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
-					private _ctrlPicture = _ctrlGroup controlsGroupCtrl IDC_MAIN_SPOTLIGHT_PICTURE;
-					private _ctrlHover = _ctrlGroup controlsGroupCtrl IDC_MAIN_SPOTLIGHT_HOVER;
-					private _ctrlGroupPos = ctrlPosition _ctrlGroup;
+				private _ctrlButton = _this select 0;
+				private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
+				private _ctrlPicture = _ctrlGroup controlsGroupCtrl IDC_MAIN_SPOTLIGHT_PICTURE;
+				private _ctrlHover = _ctrlGroup controlsGroupCtrl IDC_MAIN_SPOTLIGHT_HOVER;
+				private _ctrlGroupPos = ctrlPosition _ctrlGroup;
 
-					_ctrlHover ctrlSetFade 0;
-					_ctrlHover ctrlCommit 0.1;
+				_ctrlHover ctrlSetFade 0;
+				_ctrlHover ctrlCommit 0.1;
 
-					// [ctrlParentControlsGroup _ctrlPicture, true] call ULP_UI_fnc_DialogFactionSelection_PlayVideo;
-				};
+				[ctrlParentControlsGroup _ctrlPicture, true] call ULP_UI_fnc_DialogFactionSelection_PlayVideo;
 			}
 		];
 	} forEach ["mouseEnter","setFocus"];
@@ -95,20 +93,18 @@ private _factionIdc = IDD_FACTION_SELECTION + 1;
 		_ctrlButton ctrlAddEventHandler [
 			_x,
 			{
-				with uiNamespace do {
-					private _ctrlButton = _this select 0;
-					private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
-					private _ctrlPicture = _ctrlGroup controlsGroupCtrl IDC_MAIN_SPOTLIGHT_PICTURE;
-					private _ctrlHover = _ctrlGroup controlsGroupCtrl IDC_MAIN_SPOTLIGHT_HOVER;
-					private _ctrlGroupPos = ctrlPosition _ctrlGroup;
+				private _ctrlButton = _this select 0;
+				private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
+				private _ctrlPicture = _ctrlGroup controlsGroupCtrl IDC_MAIN_SPOTLIGHT_PICTURE;
+				private _ctrlHover = _ctrlGroup controlsGroupCtrl IDC_MAIN_SPOTLIGHT_HOVER;
+				private _ctrlGroupPos = ctrlPosition _ctrlGroup;
 
-					_ctrlPicture ctrlSetTextColor [1, 1, 1, 1];
+				_ctrlPicture ctrlSetTextColor [1, 1, 1, 1];
 
-					_ctrlHover ctrlSetFade 1;
-					_ctrlHover ctrlCommit 0.1;
+				_ctrlHover ctrlSetFade 1;
+				_ctrlHover ctrlCommit 0.1;
 
-					// [_ctrlGroup, false] call ULP_UI_fnc_DialogFactionSelection_PlayVideo;
-				};
+				[_ctrlGroup, false] call ULP_UI_fnc_DialogFactionSelection_PlayVideo;
 			}
 		];
 	} foreach ["mouseExit","killFocus"];

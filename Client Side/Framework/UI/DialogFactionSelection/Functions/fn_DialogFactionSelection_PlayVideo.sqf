@@ -33,7 +33,7 @@ if (_file isEqualTo "") exitwith {};
 private _ctrlVideo = controlNull;
 
 if (_play) then {
-	_ctrlVideo = (ctrlParent _ctrlGroup) ctrlcreate ["RscVideo", 222, _ctrlGroup];
+	_ctrlVideo = (ctrlParent _ctrlGroup) ctrlCreate ["Life_RscVideo", 222, _ctrlGroup];
 
 	_ctrlVideo ctrlSetText _file;
 	_ctrlVideo ctrlSetPosition ctrlPosition _ctrlVideoSource;
@@ -47,9 +47,7 @@ if (_play) then {
 	_ctrlVideo ctrladdeventhandler [
 		"videoStopped",
 		{
-			with uiNamespace do {
-				[ctrlParentControlsGroup (_this select 0), true] call ULP_UI_fnc_DialogFactionSelection_PlayVideo;
-			};
+			[ctrlParentControlsGroup (_this select 0), true] call ULP_UI_fnc_DialogFactionSelection_PlayVideo;
 		}
 	];
 };

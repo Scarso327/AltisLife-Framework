@@ -39,8 +39,14 @@ _cfg params [
 	"", "_missionCfg", "_picture", "_name", "_topSpeed", "_armor", "_seats", "_power", "_fuel"
 ];
 
+private _retrievalPercentage = if (isNumber (_missionCfg >> "retrievalPerc")) then {
+	getNumber(_missionCfg >> "retrievalPerc")
+} else {
+	getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc")
+};
+
 private _retrievalPrice = [
-	round (getNumber(_missionCfg >> "buyPrice") * getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc")),
+	round (getNumber(_missionCfg >> "buyPrice") * _retrievalPercentage),
 	(_list lbValue _index)
 ] select (_impound);
 

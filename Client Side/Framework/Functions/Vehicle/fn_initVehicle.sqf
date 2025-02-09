@@ -41,7 +41,13 @@ _vehicle addEventHandler ["Deleted", { _this call ULP_fnc_onVehicleDeleted }];
 _vehicle addEventHandler ["RopeAttach", { _this call ULP_fnc_onVehicleRopeAttach }];
 _vehicle addEventHandler ["HandleDamage", { _this call ULP_fnc_onVehicleHandleDamage }];
 
-private _vehActions = _cfg >> "Textures" >> (_vehicle getVariable ["texture", ""]) >> "Actions";
+private _textureActionsCfg = _cfg >> "Textures" >> (_vehicle getVariable ["texture", ""]) >> "Actions";
+
+private _vehActions = if (isClass _textureActionsCfg) then {
+	_textureActionsCfg
+} else {
+	_cfg >> "Actions"
+};
 
 if (isClass _vehActions) then {
 	{ _vehicle removeAction _x; } forEach (_vehicle getVariable ["vehicle_actions", []]);

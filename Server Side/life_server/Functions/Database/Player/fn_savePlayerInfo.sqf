@@ -20,6 +20,11 @@ private _name = name _unit;
 private _steamid = getPlayerUID _unit;
 private _faction = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc_getFaction;
 
+private _session = _unit getVariable "session";
+if (isNil "_session" || { !((_session getOrDefault ["SteamID", ""]) isEqualTo _steamid) }) exitWith {
+	[format ["Failed to savePlayerInfo for %1, requested %2", _steamid, _this]] call ULP_fnc_logIt;
+};
+
 if !(isClass _faction) exitWith {};
 
 if !([_unit, [_unit, "Cash"] call ULP_SRV_fnc_getSessionField, _cash] call ULP_SRV_fnc_validateField) exitWith {};

@@ -25,6 +25,11 @@ _faction = missionConfigFile >> "CfgFactions" >> _faction;
 // We only allow _player to be steamid if state 12 which is set group info
 if (_steamid isEqualTo "" || { _player isEqualType objNull && { !(isClass (_faction)) } } || { _player isEqualType "" && { !(_state isEqualTo 12) } }) exitWith {};
 
+private _session = _unit getVariable "session";
+if (isNil "_session" || { !((_session getOrDefault ["SteamID", ""]) isEqualTo _steamid) }) exitWith {
+	[format ["Failed to savePlayerInfo for %1, requested %2", _steamid, _this]] call ULP_fnc_logIt;
+};
+
 private _query = switch (_state) do {
 	case 0: { format["`%1licenses`='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
 	case 1: {

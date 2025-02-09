@@ -36,7 +36,12 @@ if ([] call ULP_fnc_isGroup) then {
 	if (_buff > 0) then { _time = _time - (_time * _buff); };
 };
 
-private _housingBreakInCfg = missionConfigFile >> "CfgHousing" >> "Houses" >> typeOf _object >> "BreakIn";
+private _storageHouse = _object getVariable ["building", objNull];
+private _housingBreakInCfg = missionConfigFile >> "CfgHousing" >> "Houses" >> (if (isNull _storageHouse) then {
+	typeOf _object
+} else {
+	typeOf _storageHouse
+}) >> "BreakIn";
 
 private _breakInCfg = _object getVariable ["breakInConfig", (if (isClass _housingBreakInCfg) then {
 	_housingBreakInCfg

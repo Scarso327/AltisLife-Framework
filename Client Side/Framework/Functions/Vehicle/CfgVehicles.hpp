@@ -747,7 +747,7 @@ class CfgVehicles {
 
 	class B_CTRG_LSV_01_light_F : Base {
 		description = "The Prowler is agile, lightly armored and uses speed, maneuverability, and off-road mobility to avoid threats.";
-		buyPrice = 580000;
+		buyPrice = 380000;
 		virtualSpace = 50;
 		garageLimit = 6;
 		class Textures {
@@ -792,11 +792,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 		};
 	};
-	class B_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 585000; };
+	class B_LSV_01_unarmed_black_F : B_CTRG_LSV_01_light_F { buyPrice = 385000; };
 
 	class O_LSV_02_unarmed_F : Base {
 		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
-		buyPrice = 675000;
+		buyPrice = 475000;
 		virtualSpace = 50;
 		garageLimit = 6;
 		class Textures {
@@ -857,7 +857,7 @@ class CfgVehicles {
 
 	class O_MRAP_02_F : B_MRAP_01_F {
 		description = "The Ifrit is a MRAP vehicle designed and manufactured in Russia. Its strengths lie in reliability in extreme weather conditions and crew protection.";
-		buyPrice = 7500000;
+		buyPrice = 5500000;
 		virtualSpace = 65;
 		canTransfer = false;
 		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }";
@@ -921,7 +921,7 @@ class CfgVehicles {
 
 	class I_MRAP_03_F : B_MRAP_01_F {
 		description = "The Strider is a medium all-terrain vehicle with amphibious capability and enhanced crew protection, designed for reconnaissance and troop transport roles.";
-		buyPrice = 5750000;
+		buyPrice = 3550000;
 		virtualSpace = 65;
 		class Textures {
 			class Tan : BaseTexture { 

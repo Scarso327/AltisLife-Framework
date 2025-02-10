@@ -25,13 +25,13 @@ private _query = [
 
 _query = _query joinString " ";
 
-private _result = [_query, 2] call DB_fnc_asyncCall;
-private _playerData = false;
-
 private _attempts = _unit getVariable ["queryAttempts", 0];
+if (_attempts >= 3) exitWith {
+	["Failed to query player data after attempts"] call ULP_fnc_logIt;
+	["PlayerInformationQueryFailed", []] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+};
 
-if (_playerData isEqualType [] || { _attempts >= 3 }) exitWith {};
-
+private _playerData = false;
 private _result = [_query, 2] call DB_fnc_asyncCall;
 
 if (_result isEqualType "" || { _result isEqualTo [] }) exitWith {

@@ -16,7 +16,7 @@ class CfgFactories {
 			class Products {
 				// Vehicle Components
 				class Tyre {
-					tickTime = 15;
+					tickTime = 5;
 					materials[] = { 
 						{ "RubberSheet", 2 },
 						{ "SteelPlate", 1 }
@@ -24,10 +24,10 @@ class CfgFactories {
 				};
 				class ReinforcedTyre {
 					requiredPower = 2;
-					tickTime = 30;
+					tickTime = 10;
 					materials[] = { 
-						{ "RubberSheet", 4 },
-						{ "SteelPlate", 3 },
+						{ "RubberSheet", 2 },
+						{ "SteelPlate", 2 },
 						{ "FlawlessDiamond", 1 }
 					};
 				};
@@ -39,33 +39,33 @@ class CfgFactories {
 				};
 				class HeavyArmourPlate {
 					requiredPower = 2;
-					tickTime = 30;
+					tickTime = 20;
 					materials[] = { 
-						{ "SteelPlate", 24 },
+						{ "SteelPlate", 16 },
 						{ "FlawlessDiamond", 4 }
 					};
 				};
 				class SmallCargoBed {
-					tickTime = 15;
+					tickTime = 10;
 					materials[] = { 
-						{ "Plank", 12 },
+						{ "Plank", 8 },
 						{ "SteelPlate", 4 }
 					};
 				};
 				class LargeCargoBed {
 					requiredPower = 2;
-					tickTime = 30;
+					tickTime = 20;
 					materials[] = { 
-						{ "Plank", 32 },
-						{ "SteelPlate", 8 }
+						{ "Plank", 24 },
+						{ "SteelPlate", 6 }
 					};
 				};
 				class GuidanceSystem {
 					tickTime = 20;
 					materials[] = { 
-						{ "SilverPlate", 6 },
-						{ "FlawlessDiamond", 5 },
-						{ "CopperPlate", 4 },
+						{ "SilverPlate", 4 },
+						{ "FlawlessDiamond", 3 },
+						{ "CopperPlate", 2 },
 						{ "CopperWiring", 8 }
 					};
 				};

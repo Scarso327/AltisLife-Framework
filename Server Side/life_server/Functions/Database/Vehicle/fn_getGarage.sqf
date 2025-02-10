@@ -19,7 +19,7 @@ if !(_steamid isEqualTo "" && { isClass (missionConfigFile >> "CfgFactions" >> _
 		format["'%1'", _x]
 	}) joinString ", ";
 
-	private _query = [format["SELECT `id`, `classname`, `type`, `texture`, `impound`, `faction`, `upgrades` FROM `vehicles` WHERE `type` IN (%1) AND `pid`='%2' AND `faction`='%3' AND `active`='0' AND `sold`='0' AND `impound`%4'0'",
+	private _query = [format["SELECT `id`, `classname`, `type`, `texture`, `impound`, `faction`, `upgrades`, `ignoreCondtions` FROM `vehicles` WHERE `type` IN (%1) AND `pid`='%2' AND `faction`='%3' AND `active`='0' AND `sold`='0' AND `impound`%4'0'",
 		_types, _steamid, _faction, ([">=", ">"] select (_impounded))
 	], 2, true] call DB_fnc_asyncCall;
 

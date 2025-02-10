@@ -22,12 +22,12 @@ private _vehInfo = _display getVariable ["selected", []];
 if (_vehInfo isEqualTo []) exitWith {};
 
 _vehInfo params [
-	"_id", "_classname", "_texture", "_price", "", "", "_upgrades"
+	"_id", "_classname", "_texture", "_price", "", "", "_upgrades", "_ignoreCondtions"
 ];
 
 private _cfg = missionConfigFile >> "CfgVehicles" >> _classname;
 
-if !(call compile getText(_cfg >> "conditions")) exitWith {
+if (!([_ignoreCondtions] call ULP_fnc_bool) && { !(call compile getText(_cfg >> "conditions")) }) exitWith {
 	["This vehicle has special requirements you no longer meet."] call ULP_fnc_hint;
 };
 

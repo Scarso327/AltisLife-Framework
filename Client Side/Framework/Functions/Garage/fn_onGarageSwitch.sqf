@@ -29,7 +29,7 @@ _itemData = parseSimpleArray _itemData;
 private _impound = _display getVariable ["impound", false];
 
 _itemData params [
-	"_id", "_classname", "_texture", "_impoundFee", "_faction", "_upgrades"
+	"_id", "_classname", "_texture", "_impoundFee", "_faction", "_upgrades", "_ignoreCondtions"
 ];
 
 private _cfg = [_classname] call ULP_fnc_vehicleCfg;
@@ -58,6 +58,7 @@ _itemData set [3, _retrievalPrice];
 _itemData set [4, _index];
 _itemData set [5, _faction];
 _itemData set [6, _upgrades];
+_itemData set [7, _ignoreCondtions];
 
 _display setVariable ["selected", _itemData];
 

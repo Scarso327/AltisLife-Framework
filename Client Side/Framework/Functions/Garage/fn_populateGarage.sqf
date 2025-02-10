@@ -26,7 +26,7 @@ private _index = -1;
 
 {
 	_x params [
-		"_id", "_classname", "", "_texture", ["_fee", 0, [0]], "_faction", "_upgrades"
+		"_id", "_classname", "", "_texture", ["_fee", 0, [0]], "_faction", "_upgrades", "_ignoreCondtions"
 	];
 
 	_vehicleCfg = [_classname] call ULP_fnc_vehicleCfg;
@@ -40,7 +40,7 @@ private _index = -1;
 
 		_index = _list lbAdd _name;
 		_list lbSetPicture[_index, _picture];
-		_list lbSetData[_index, str [_id, _classname, _texture, _fee, _faction, _upgrades]];
+		_list lbSetData[_index, str [_id, _classname, _texture, _fee, _faction, _upgrades, _ignoreCondtions]];
 
 		if (_fee > 0) then {
 			if !(_impound) then {

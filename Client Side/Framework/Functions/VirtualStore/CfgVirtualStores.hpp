@@ -141,12 +141,13 @@ class CfgVirtualStores {
 		storeName = "General Market";
 		conditions = "true";
 		class Items {
+			class Water {};
 			class FreshApple {};
 			class Apple {};
 			class FreshPeach {};
 			class Peach {};
 			class Bacon {};
-			class Water {};
+			class SausageRoll {};
 			class Pickaxe {};
 			class LumberAxe {};
             class Extractor {};
@@ -550,6 +551,7 @@ class CfgVirtualStores {
 			class HandSmoothedRunestone {};
 			class JeweledNecklace {};
 			class BrokenTimepiece {};
+			class RestoredTimepiece {};
 		};
 	};
 

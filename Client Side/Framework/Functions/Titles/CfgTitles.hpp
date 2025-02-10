@@ -39,6 +39,10 @@ class CfgTitles {
 		displayName = "Girl's Best Friend";
 		description = "Held a diamond in your hand";
 	};
+	class Vegan {
+		displayName = "VEEgan";
+		description = "Eaten.. erm... VEEgan sausage rolls";
+	};
 	class Salty {
 		displayName = "Extremely Salty";
 		description = "You've become extremely salty";

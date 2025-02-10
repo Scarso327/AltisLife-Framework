@@ -75,6 +75,18 @@ class CfgVirtualItems {
 		};
 		class Events : Events {};
 	};
+	class SausageRoll : Apple {
+		displayName = "VEEgan Sausage Roll";
+		icon = "Data\Icons\sausageRoll.paa";
+		buyPrice = 150;
+		sellPrice = 75;
+		class Settings : Settings {};
+		class Sustain {
+			hunger = 40;
+			thirst = 0;
+		};
+		class Events : Events { onUse = "[""Vegan""] call ULP_fnc_achieve; [(_this select 0)] call ULP_fnc_addSustenance;"; };
+	};
 	class Burger : Bacon {
 		displayName = "Burger";
 		icon = "Data\Icons\burger.paa";
@@ -237,7 +249,7 @@ class CfgVirtualItems {
 			hunger = 0;
 			thirst = 10;
 		};
-		class Events { onUse = "[(_this select 0)] call ULP_fnc_addSustenance;"; };
+		class Events { onUse = "[""FirstDrink""] call ULP_fnc_achieve; [(_this select 0)] call ULP_fnc_addSustenance;"; };
 		conditions = "true";
 	};
 	class Schnapps : Beer {
@@ -336,6 +348,13 @@ class CfgVirtualItems {
 		icon = "Data\Icons\shipwreckTrigger.paa";
 		class Settings : Settings {};
 		class Events { onUse = "[_this # 0, missionConfigFile >> ""CfgRandomEvents"" >> ""Shipwreck""] call ULP_fnc_triggerEvent"; };
+	};
+
+	class PopupTrigger : AirdropTrigger {
+		displayName = "Popup Trigger";
+		icon = "Data\Icons\popupTrigger.paa";
+		class Settings : Settings {};
+		class Events { onUse = "[_this # 0, missionConfigFile >> ""CfgRandomEvents"" >> ""PopupCartel""] call ULP_fnc_triggerEvent"; };
 	};
 
 	// General Items

@@ -25,6 +25,12 @@ class CfgAchievements {
 		displayName = "First Steps";
 		description = "Spawned for the first time";
 	};
+	class Vegan : BuyVehicle {
+		icon = "Data\UI\Achievements\vegan.paa";
+		displayName = "Veegan";
+		description = "I've also eaten... erm... VEEgan sausage rolls";
+		onUnlocked = "[""Vegan""] call ULP_fnc_unlockTitle;";
+	};
 
 	class Blindfold : BaseAchivement100 {
 		icon = "\A3\ui_f_orange\data\CfgHints\codeofconduct3_ca.paa";

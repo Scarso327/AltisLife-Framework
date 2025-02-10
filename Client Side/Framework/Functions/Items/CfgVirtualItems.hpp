@@ -350,6 +350,13 @@ class CfgVirtualItems {
 		class Events { onUse = "[_this # 0, missionConfigFile >> ""CfgRandomEvents"" >> ""Shipwreck""] call ULP_fnc_triggerEvent"; };
 	};
 
+	class PopupTrigger : AirdropTrigger {
+		displayName = "Popup Trigger";
+		icon = "Data\Icons\popupTrigger.paa";
+		class Settings : Settings {};
+		class Events { onUse = "[_this # 0, missionConfigFile >> ""CfgRandomEvents"" >> ""PopupCartel""] call ULP_fnc_triggerEvent"; };
+	};
+
 	// General Items
 	class DroppedMoney {
 		displayName = "£%1";

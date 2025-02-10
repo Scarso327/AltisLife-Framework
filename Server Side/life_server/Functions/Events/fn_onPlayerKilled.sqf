@@ -43,6 +43,4 @@ if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } 
 			})] call ULP_SRV_fnc_reputation;
 		};
 	};
-
-	["KilledSomeone", [_unit]] remoteExecCall ["ULP_fnc_invokeEvent", _killer];
 };

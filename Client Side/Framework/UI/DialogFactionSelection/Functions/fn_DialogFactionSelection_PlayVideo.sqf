@@ -13,8 +13,6 @@ scopeName "fn_DialogFactionSelection_PlayVideo";
 #define IDC_MAIN_SPOTLIGHT_TEXT		1028
 #define IDC_MAIN_SPOTLIGHT_TEXTBCG	1029
 
-[format ["Video: %1", _this]] call ULP_fnc_logIt;
-
 _this params [ "_ctrlGroup", "_play" ];
 
 if (isNull _ctrlGroup) exitWith {};

@@ -38,25 +38,28 @@ if (missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) then
 				_flag setVariable ["bidAction", _bidAction];
 			};
 		} forEach ("[getNumber (_x >> ""includeBidding"")] call ULP_fnc_bool" configClasses (missionConfigFile >> "CfgBases"));
-
-		["KilledSomeone", {
-			_this params [
-				["_unit", objNull, [objNull]]
-			];
-
-			if (isNull _unit 
-				|| { !(["redzone_"] call ULP_fnc_isUnitsInZone) } 
-				|| { [group player, _unit] call ULP_fnc_inGroup }
-				|| { !(missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) }) exitWith {};
-
-			private _money = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillMoney");
-			private _xp = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillXP");
-
-			[_xp, "Redzone Kill"] call ULP_fnc_addXP;
-
-			if ([_money, true, "Gang Wars Kill"] call ULP_fnc_addMoney) then {
-				[format ["You have recieved <t color='#B92DE0'>%1%2</t> for killing someone in a redzone during gang wars...", "£", [_reward] call ULP_fnc_numberText]] call ULP_fnc_hint;
-			};
-		}] call ULP_fnc_addEventHandler;
 	};
 };
+
+["Incapacitated", {
+	_this params [
+		["_unit", objNull, [objNull]],
+		["_killer", objNull, [objNull]]
+	];
+
+	if (isNull _unit 
+		|| { _unit isEqualTo _killer } 
+		|| { !(_killer isEqualTo player) } 
+		|| { [group _killer, _unit] call ULP_fnc_inGroup }
+		|| { !(["redzone_syndicate_"] call ULP_fnc_isUnitsInZone 
+			|| { ["redzone_"] call ULP_fnc_isUnitsInZone && { missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false] } }) }) exitWith {};
+			
+	private _money = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillMoney");
+	private _xp = getNumber (missionConfigFile >> "CfgBases" >> "RedzoneKillXP");
+
+	if ([_money, true, "Redzone Kill Reward"] call ULP_fnc_addMoney) then {
+		[_xp, "Redzone Kill"] call ULP_fnc_addXP;
+
+		[format ["<t color='#B92DE0'>%1%2</t> has been deposited into your bank for killing someone in a redzone during gang wars or at a syndicate location...", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
+	};
+}] call ULP_fnc_addEventHandler;

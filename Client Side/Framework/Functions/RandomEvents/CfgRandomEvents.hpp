@@ -143,10 +143,12 @@ class CfgRandomEvents {
 	};
 
 	class PopupCartel : Airdrop {
-		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 20";
+		SpawnCondition = "([[""Civilian""]] call ULP_fnc_onlineFaction) >= 20";
 		NotifyDelay = 10 * 60;
 		Cooldown = 25 * 60;
 		RandomAddition = 10 * 60;
+		SyndicateChance = 0.4;
+		SyndicateCondition = "([[""Civilian""]] call ULP_fnc_onlineFaction) >= 50";
 		class Events : Events {
 			class OnSpawn { code = "_this call ULP_fnc_onPopupCartelSpawn;"; };
 			class OnClaimed { code = "_this params [[""_message"", """", [""""]], [""_reward"", -1, [0]]]; [_reward, false, ""Popup Cartel""] call ULP_fnc_addMoney; if (_reward > 0) then { [400, ""Captured Popup Cartel""] call ULP_fnc_addXP; }; [_message] call ULP_fnc_hint;"; };
@@ -157,18 +159,19 @@ class CfgRandomEvents {
 		class Locations {
 			class C_1 {
 				position[] = {9210.5,19276.3,0};
+				captureRadius = 50;
 				radius = 200;
 			};
 			class C_2 : C_1 { position[] = {14206.9,21219,0}; };
 			class C_3 : C_1 { position[] = {16598.7,19040,0}; };
 			class C_4 : C_1 { position[] = {12811.7,16674.4,0}; };
 			class C_5 : C_1 { position[] = {12445.1,15198.7,0}; };
-			class C_6 : C_1 { position[] = {11432.2,14245}; };
+			class C_6 : C_1 { position[] = {11432.2,14245,0}; };
 			class C_7 : C_1 { position[] = {7889.41,14626.5,0}; };
 			class C_8 : C_1 { position[] = {4215.98,15055.8,0}; };
 			class C_9 : C_1 { position[] = {3058.21,13196.5,0}; };
 			class C_10 : C_1 { position[] = {8316.54,10060.8,0}; };
-			class C_11 : C_1 { position[] = {8228.12,10893.9}; };
+			class C_11 : C_1 { position[] = {8228.12,10893.9,0}; };
 			class C_12 : C_1 { position[] = {18371.3,15505.3,0}; };
 			class C_13 : C_1 { position[] = {23008.3,7254.5,0}; };
 			class C_14 : C_1 { position[] = {21329.2,17220.2,0}; };

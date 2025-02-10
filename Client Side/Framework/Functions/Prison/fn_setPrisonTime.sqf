@@ -56,7 +56,7 @@ private _max =
 				default { "ArrestLow" };
 			})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 
-			[200, "Arrested Player"] call ULP_fnc_addXP;
+			[300, "Arrested Player"] call ULP_fnc_addXP;
 			["FirstArrest"] call ULP_fnc_achieve; 
 		};
 

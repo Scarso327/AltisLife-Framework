@@ -31,7 +31,7 @@ if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
 		
 		[player, "IssueTicket"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 
-		[25, "Issued Ticket"] call ULP_fnc_addXP;
+		[30, "Issued Ticket"] call ULP_fnc_addXP;
 		
 		["FirstTicket"] call ULP_fnc_achieve;
 

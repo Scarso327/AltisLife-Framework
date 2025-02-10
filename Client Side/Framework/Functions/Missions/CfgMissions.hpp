@@ -83,7 +83,7 @@ class CfgMissions {
 		};
 		class Rewards {
 			moneyReward = 4;
-			xpReward = 150;
+			xpReward = 200;
 		};
 		class Messages {
 			onFinishWithoutMission = "You don't have any packages to deliver here...";
@@ -189,7 +189,7 @@ class CfgMissions {
 		};
 		class Rewards {
 			moneyReward = 1;
-			xpReward = 100;
+			xpReward = 150;
 		};
 		class Messages {
 			onFinishWithoutMission = "You can't complete a patrol as you haven't been assigned any...";
@@ -387,7 +387,7 @@ class CfgMissions {
 		};
 		class Rewards {
 			moneyReward = 5;
-			xpReward = 100;
+			xpReward = 300;
 		};
 		class Messages {
 			onFinishWithoutMission = "You don't have any packages to deliver here...";

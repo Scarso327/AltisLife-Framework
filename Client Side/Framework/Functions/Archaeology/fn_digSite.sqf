@@ -69,7 +69,7 @@ if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
 	[format ["You have finished digging and found <t color='#B92DE0'>%1</t>", _given]] call ULP_fnc_hint;
 
 	["Archeology", 1, 50] call ULP_fnc_increaseProfession;
-	[100, "Archaeological Dig"] call ULP_fnc_addXP;
+	[150, "Archaeological Dig"] call ULP_fnc_addXP;
 
 	["Archaeologist"] call ULP_fnc_achieve;
 	

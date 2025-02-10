@@ -149,7 +149,7 @@ class CfgRandomEvents {
 		RandomAddition = 10 * 60;
 		class Events : Events {
 			class OnSpawn { code = "_this call ULP_fnc_onPopupCartelSpawn;"; };
-			class OnClaimed { code = "_this params [[""_message"", """", [""""]], [""_reward"", -1, [0]]]; [_reward, false, ""Popup Cartel""] call ULP_fnc_addMoney; if (_reward > 0) then { [300, ""Captured Popup Cartel""] call ULP_fnc_addXP; }; [_message] call ULP_fnc_hint;"; };
+			class OnClaimed { code = "_this params [[""_message"", """", [""""]], [""_reward"", -1, [0]]]; [_reward, false, ""Popup Cartel""] call ULP_fnc_addMoney; if (_reward > 0) then { [400, ""Captured Popup Cartel""] call ULP_fnc_addXP; }; [_message] call ULP_fnc_hint;"; };
 		};
 		class ServerFunctions : ServerFunctions {
 			onSpawn = "_this call ULP_SRV_fnc_popupCartel;";

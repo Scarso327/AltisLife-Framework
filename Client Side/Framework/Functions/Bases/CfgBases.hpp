@@ -4,7 +4,7 @@ class CfgBases {
 	Restart[] = {18, 21};
 
 	RedzoneKillMoney = 20000;
-	RedzoneKillXP = 20;
+	RedzoneKillXP = 25;
 
 	BidIncrement = 1000000;
 	StartingBid = 9000000; // StartingBid = BidIncrement + StartingBid

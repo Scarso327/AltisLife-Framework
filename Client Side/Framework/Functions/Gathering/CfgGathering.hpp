@@ -7,7 +7,7 @@ class CfgGathering {
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Gathering", 1, 100 };
-		leveling[] = { 3, "Gathering", 100 };
+		leveling[] = { 5, "Gathering", 100 };
 		condition = "true";
 	};
 	class BaseMine : BaseGather {
@@ -27,7 +27,7 @@ class CfgGathering {
 			chance = 0.9;
 			randomAmount[] = { 1, 3, 5 };
 			profession[] = { "Fishing", 1, 100 };
-			leveling[] = { 2, "Fishing", 100 };
+			leveling[] = { 5, "Fishing", 100 };
 		};
 	};
 
@@ -77,7 +77,7 @@ class CfgGathering {
 		hidden[] = { "Police" };
 		areas[] = { { "coral_reef", 20 } };
 		items[] = { { "Coral", 100 } };
-		leveling[] = { 2, "Gathering", 100 };
+		leveling[] = { 6, "Gathering", 100 };
 	};
 	class Copper : BaseMine {
 		areas[] = { { "copper_mine", 20 } };
@@ -90,14 +90,12 @@ class CfgGathering {
 	class Iron : BaseMine {
 		areas[] = { { "iron_mine", 20 } };
 		items[] = { { "IronOre", 100 } };
-		leveling[] = { 3, "Gathering", 100 };
 	};
 	class Oil : BaseMine {
 		actionTitle = "Extracting";
 		reqItems[] = { "Extractor" };
 		areas[] = { { "oil_extraction", 20 } };
 		items[] = { { "UnprocessedOil", 100 } };
-		leveling[] = { 5, "Gathering", 100 };
 	};
 	class Sand : Oil {
 		actionTitle = "Shovelling";
@@ -112,12 +110,12 @@ class CfgGathering {
 	class Diamond : BaseMine {
 		areas[] = { { "diamond_mine", 20 } };
 		items[] = { { "UncutDiamond", 100 } };
-		leveling[] = { 4, "Gathering", 100 };
+		leveling[] = { 6, "Gathering", 100 };
 	};
 	class BloodDiamond : Coral {
 		areas[] = { { "blood_diamond_mine", 20 } };
 		items[] = { { "UncutBloodDiamond", 100 } };
-		leveling[] = { 5, "Gathering", 100 };
+		leveling[] = { 10, "Gathering", 100 };
 	};
 	class Uranium : Coral {
 		hidden[] = {};

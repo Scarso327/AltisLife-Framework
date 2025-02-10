@@ -7,7 +7,7 @@ class CfgProcessing {
 		reqItems[] = {};
 		reqLicenses[] = {};
 		profession[] = { "Processing", 1, 100 };
-		leveling[] = { 3, "Processing", 100 };
+		leveling[] = { 5, "Processing", 100 };
 	};
 	class BaseCook : BaseProcess {
 		processTitle = "Cooking";
@@ -95,7 +95,7 @@ class CfgProcessing {
 		processTime = 6;
 		materials[] = { { "WeaponParts", 2 } };
 		items[] = { { "WeaponCrate", 1 } };
-		leveling[] = { 5, "Processing", 100 };
+		leveling[] = { 8, "Processing", 100 };
 		reqLicenses[] = { "Weapons" };
 	};
 
@@ -105,7 +105,7 @@ class CfgProcessing {
 		processTitle = "Purifing";
 		materials[] = { { "ProcessedWeed", 1 } };
 		items[] = { { "PurifiedWeed", 1 } };
-		leveling[] = { 5, "Processing", 100 };
+		leveling[] = { 10, "Processing", 100 };
 	};
 	class PurifiedHeroin : PurifiedWeed {
 		materials[] = { { "ProcessedHeroin", 1 } };
@@ -148,7 +148,7 @@ class CfgProcessing {
 	class Uranium : BaseSmelt {
 		materials[] = { { "UraniumOre", 1 } };
 		items[] = { { "UraniumBar", 1 } };
-		leveling[] = { 5, "Processing", 100 };
+		leveling[] = { 10, "Processing", 100 };
 		reqLicenses[] = { "Uranium" };
 		processTime = 10;
 	};
@@ -163,7 +163,7 @@ class CfgProcessing {
 	class Oil : Salt {
 		materials[] = { { "UnprocessedOil", 1 } };
 		items[] = { { "ProcessedOil", 1 } };
-		leveling[] = { 5, "Processing", 100 };
+		leveling[] = { 8, "Processing", 100 };
 		reqLicenses[] = { "Oil" };
 	};
 
@@ -177,7 +177,7 @@ class CfgProcessing {
 	class BloodDiamond : Diamond {
 		materials[] = { { "UncutBloodDiamond", 1 } };
 		items[] = { { "CutBloodDiamond", 1 } };
-		leveling[] = { 5, "Processing", 100 };
+		leveling[] = { 10, "Processing", 100 };
 	};
 
 	// Majors

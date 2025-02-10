@@ -62,7 +62,7 @@ if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 
 
 			[player, "ImpoundVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 			
-			[50, "Impounded Vehicle"] call ULP_fnc_addXP;
+			[75, "Impounded Vehicle"] call ULP_fnc_addXP;
 
 			["FirstImpound"] call ULP_fnc_achieve;
 

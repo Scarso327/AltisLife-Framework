@@ -35,7 +35,7 @@ class CfgCrimes {
 					classname = "Land_Dome_Big_F";
 					position[] = {16019, 16953.4, 0};
 					class BreakIn : BreakIn {
-						breakIn = 300;
+						breakIn = 180;
 					};
 				};
 				class DomeTwo : DomeOne { position[] = {16015.1, 17043.1, 0}; };

@@ -62,7 +62,7 @@ class CfgCrimes {
 			};
 			class Items {
 				class MarkedGold {
-					amount = 40;
+					amount = 20;
 					extra = "((count playableUnits) / 4) + ((time / 2) / 240)";
 				};
 			};
@@ -99,8 +99,8 @@ class CfgCrimes {
 			};
 			class Items {
 				class EncryptedDrive {
-					amount = 8;
-					extra = "((count playableUnits) / 4) + ((time / 4) / 240)";
+					amount = 2;
+					extra = "((count playableUnits) / 4) + ((time / 8) / 240)";
 				};
 			};
 		};
@@ -136,8 +136,8 @@ class CfgCrimes {
 			};
 			class Items {
 				class SeizedContraband {
-					amount = 30;
-					extra = "((count playableUnits) / 2) + ((time / 2) / 240)";
+					amount = 50;
+					extra = "count playableUnits + ((time / 2) / 240)";
 				};
 			};
 		};

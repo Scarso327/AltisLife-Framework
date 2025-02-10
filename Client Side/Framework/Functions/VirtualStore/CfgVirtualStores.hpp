@@ -551,6 +551,7 @@ class CfgVirtualStores {
 			class HandSmoothedRunestone {};
 			class JeweledNecklace {};
 			class BrokenTimepiece {};
+			class RestoredTimepiece {};
 		};
 	};
 

@@ -68,7 +68,7 @@ private _name = getText (_cfg >> "displayName");
 
 				[format ["You've crafted %2 %1(s)...", _name, [_amount] call ULP_fnc_numberText]] call ULP_fnc_hint;
 
-				["Crafting", 1, 50] call ULP_fnc_increaseProfession;
+				["Crafting", 1, 75] call ULP_fnc_increaseProfession;
 
 				[true] call ULP_fnc_saveGear;
 				[getPlayerUID player, "Craft", [_name, _amount]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

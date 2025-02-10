@@ -1812,7 +1812,7 @@ class CfgVirtualItems {
 		class Events { onUse = "[""Rare""] call ULP_fnc_getSite;"; };
 	};
 	class LegendaryMap : UncommonMap {
-		displayName = "Rare Map";
+		displayName = "Legendary Map";
 		sellPrice = 312500;
 		class Settings : Settings {};
 		class Events { onUse = "[""Legendary""] call ULP_fnc_getSite;"; };

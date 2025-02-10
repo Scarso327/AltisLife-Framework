@@ -1,6 +1,6 @@
 class CfgFactions {
 	defaultFaction = "Civilian";
-	fallbackPay = 4600;
+	fallbackPay = 5000;
 
 	class Police {
 		shortName = "Police";
@@ -8,7 +8,7 @@ class CfgFactions {
 		selectionImage = "Data\UI\Factions\police.paa";
 		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0, 0.3, 0.6, 1 };
-		pay = 10200;
+		pay = 12000;
 		sideChannel = false;
 		jointChannel = true;
 		imprison = true;
@@ -17,12 +17,12 @@ class CfgFactions {
 		class Whitelisting {
 			class Main {
 				queryIndex = 26;
-				payMulti = 0.1;
+				payMulti = 0.15;
 				required = 1;
 			};
 			class COL {
 				queryIndex = 27;
-				payMulti = 0.2;
+				payMulti = 0.25;
 			};
 			class NPAS { queryIndex = 28; };
 			class SCO { queryIndex = 29; };
@@ -73,7 +73,7 @@ class CfgFactions {
 		selectionImage = "Data\UI\Factions\medic.paa";
 		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0, 0.5, 0, 1 };
-		pay = 11600;
+		pay = 13500;
 		sideChannel = false;
 		jointChannel = true;
 		hasRedzoneNlr = false;
@@ -81,14 +81,14 @@ class CfgFactions {
 		class Whitelisting {
 			class Main {
 				queryIndex = 26;
-				payMulti = 0.15;
+				payMulti = 0.25;
 				required = 1;
 			};
 			class AA { queryIndex = 27; };
 			class HART { queryIndex = 28; };
 			class HR {
 				queryIndex = 29;
-				payMulti = 0.2;
+				payMulti = 0.25;
 			};
 		};
 
@@ -132,7 +132,7 @@ class CfgFactions {
 		selectionImage = "Data\UI\Factions\hato.paa";
 		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0.7, 0.6, 0, 1 };
-		pay = 10060;
+		pay = 15000;
 		sideChannel = false;
 		jointChannel = true;
 		hasRedzoneNlr = false;
@@ -140,7 +140,7 @@ class CfgFactions {
 		class Whitelisting {
 			class Main {
 				queryIndex = 26;
-				payMulti = 0.4;
+				payMulti = 0.5;
 				required = 1;
 			};
 		};
@@ -185,7 +185,7 @@ class CfgFactions {
 		selectionImage = "Data\UI\Factions\civ.paa";
 		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0.4, 0, 0.5, 1 };
-		pay = 3750;
+		pay = 5000;
 		sideChannel = true;
 		imprisoned = true;
 		hasRedzoneNlr = false;

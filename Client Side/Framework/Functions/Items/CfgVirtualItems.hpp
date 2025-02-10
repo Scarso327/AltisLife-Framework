@@ -249,7 +249,7 @@ class CfgVirtualItems {
 			hunger = 0;
 			thirst = 10;
 		};
-		class Events { onUse = "[(_this select 0)] call ULP_fnc_addSustenance;"; };
+		class Events { onUse = "[""FirstDrink""] call ULP_fnc_achieve; [(_this select 0)] call ULP_fnc_addSustenance;"; };
 		conditions = "true";
 	};
 	class Schnapps : Beer {

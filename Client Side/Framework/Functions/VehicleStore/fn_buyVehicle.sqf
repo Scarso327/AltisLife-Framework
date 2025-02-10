@@ -77,7 +77,7 @@ if (isClass _textureCfg) then {
 							"", "", "", ["_name", "Unknown", [""]], "", "", "", "", ""
 						];
 
-						private _limit = getNumber (missionConfigFile >> "CfgVehicles" >> (_params select 0) >> "garageLimit");
+						private _limit = (getNumber (missionConfigFile >> "CfgVehicles" >> (_params select 0) >> "garageLimit")) + ULP_Prestige;
 						if (["VehicleCollector"] call ULP_fnc_hasPerk) then { _limit = _limit * 2 };
 						
 						[_price, false, "Limit Refund"] call ULP_fnc_addMoney;

@@ -23,7 +23,7 @@ _query params [
 	["_vehicleCount", 0, [0]]
 ];
 
-private _garageLimit = getNumber (missionConfigFile >> "CfgVehicles" >> _class >> "garageLimit");
+private _garageLimit = (getNumber (missionConfigFile >> "CfgVehicles" >> _class >> "garageLimit")) + ULP_Prestige;
 if (_hasVehicleCollectorPerk) then { _garageLimit = _garageLimit * 2 };
 
 (_vehicleCount >= _garageLimit)

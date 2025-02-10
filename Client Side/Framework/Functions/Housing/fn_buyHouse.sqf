@@ -39,7 +39,7 @@ if !(call compile getText (missionConfigFile >> "CfgHousing" >> "Houses" >> (typ
 	["You're unable to purchase this house at this time..."] call ULP_fnc_hint;
 };
 
-private _limit = getNumber (missionConfigFile >> "CfgHousing" >> "houseLimit");
+private _limit = (getNumber (missionConfigFile >> "CfgHousing" >> "houseLimit")) + ULP_Prestige;
 if (["LandLord"] call ULP_fnc_hasPerk) then { _limit = _limit + 1 };
 if ((count ([_house] call ULP_fnc_ownedHouses)) >= _limit) exitWith {
 	[format ["You have already reached the limit of <t color='#B92DE0'>%1</t> for owned properties.", _limit]] call ULP_fnc_hint;

@@ -71,7 +71,7 @@ if !([format["%1 %2", ["Repairing", "Patching"] select (_isPatching), _name], _t
 	};
 
 	if (time >= (_vehicle getVariable ["ProfessionCooldown", time - 120])) then {
-		["Repairing", 1, 40] call ULP_fnc_increaseProfession;
+		["Repairing", 1, 75] call ULP_fnc_increaseProfession;
 		_vehicle setVariable ["ProfessionCooldown", time + 120];
 	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {

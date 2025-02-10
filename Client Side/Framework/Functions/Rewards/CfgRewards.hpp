@@ -5,7 +5,7 @@ class CfgRewards {
 			onRewarded = "[(_this select 1), true, ""Reward""] call ULP_fnc_addMoney; format[""%1%2"", ""£"", [(_this select 1)] call ULP_fnc_numberText]";
 		};
 		class XP : CASH {
-			onRewarded = "[(_this select 1), ""Reward"", 100] call ULP_fnc_addXP; format[""%1 XP"", [(_this select 1)] call ULP_fnc_numberText]";
+			onRewarded = "[(_this select 1), ""Reward"", 300] call ULP_fnc_addXP; format[""%1 XP"", [(_this select 1)] call ULP_fnc_numberText]";
 		};
 		class TEXTURE : CASH {
 			onRewarded = "_this call ULP_fnc_grantTexture";

@@ -27,14 +27,14 @@ class CfgBlueprints {
 			materials[] = { {"Wood", 3} };
 			item = "Rubber";
 			workbench = true;
-			time = 3;
+			time = 2;
 		};
 		class B_RubberSheet : B_Rubber {
 			displayName = "Rubber Sheet";
 			icon = "Data\Icons\rubberSheet.paa";
 			materials[] = { {"Rubber", 2} };
 			item = "RubberSheet";
-			time = 12;
+			time = 3;
 		};
 		class B_SteelBar : B_Rubber {
 			displayName = "Steel Bar";
@@ -51,7 +51,7 @@ class CfgBlueprints {
 			icon = "Data\Icons\glass.paa";
 			materials[] = { {"Glass", 2} };
 			item = "GlassPanel";
-			time = 4;
+			time = 2;
 		};
 		class B_ReinforcedGlassPanel : B_GlassPanel {
 			displayName = "Reinforced Glass Panel";
@@ -61,52 +61,51 @@ class CfgBlueprints {
 				{"FlawlessDiamond", 1}
 			};
 			item = "ReinforcedGlassPanel";
-			time = 17;
+			time = 4;
 		};
 		class B_CopperWiring : B_Rubber {
 			displayName = "Copper Wiring";
 			icon = "Data\Icons\copperWiring.paa";
 			materials[] = { 
-				{"CopperBar", 4},
-				{"Rubber", 2}
+				{"CopperBar", 2},
+				{"Rubber", 1}
 			};
 			item = "CopperWiring";
-			time = 6;
+			time = 3;
 		};
 		class B_CopperPlate : B_Rubber {
 			displayName = "Copper Plate";
 			icon = "Data\Icons\metalPlate.paa";
-			materials[] = { {"CopperBar", 3} };
+			materials[] = { {"CopperBar", 2} };
 			item = "CopperPlate";
-			time = 4;
+			time = 2;
 		};
 		class B_IronPlate : B_CopperPlate {
 			displayName = "Iron Plate";
-			materials[] = { {"IronBar", 3} };
+			materials[] = { {"IronBar", 2} };
 			item = "IronPlate";
 		};
 		class B_SilverPlate : B_CopperPlate {
 			displayName = "Silver Plate";
-			materials[] = { {"SilverBar", 3} };
+			materials[] = { {"SilverBar", 2} };
 			item = "SilverPlate";
 		};
 		class B_SteelPlate : B_CopperPlate {
 			displayName = "Steel Plate";
-			materials[] = { {"SteelBar", 3} };
+			materials[] = { {"SteelBar", 2} };
 			item = "SteelPlate";
 		};
 		class B_PackedOil : B_Clay {
 			displayName = "Packed Oil";
 			icon = "Data\Icons\oil.paa";
-			materials[] = { {"ProcessedOil", 5} };
+			materials[] = { {"ProcessedOil", 4} };
 			item = "PackedOil";
-			time = 5;
+			time = 4;
 		};
 		class B_DiamondDrillBit : B_Rubber {
 			displayName = "DiamondDrillBit";
 			icon = "Data\Icons\drillBit.paa";
 			materials[] = { 
-				{"SteelPlate", 2},
 				{"SilverBar", 2},
 				{"FlawlessDiamond", 1}
 			};
@@ -138,12 +137,12 @@ class CfgBlueprints {
 			description = "A box of tools used to deconstruct items into their core components";
 			materials[] = { 
 				{"IronBar", 3},
-				{"Wood", 2}
+				{"Wood", 1}
 			};
 			item = "Toolbox";
 			isDefault = true;
 			workbench = false;
-			time = 15;
+			time = 10;
 		};
 		class B_Lockpick : B_Toolbox {
 			icon = "Data\Icons\lockpick.paa";
@@ -151,14 +150,14 @@ class CfgBlueprints {
 			description = "A tool used to pick the locks of vehicles and handcuffs";
 			materials[] = { {"IronBar", 2} };
 			item = "Lockpick";
-			time = 4;
+			time = 2;
 		};
 		class B_Lighter : B_Lockpick {
 			icon = "Data\Icons\lighter.paa";
 			displayName = "Lighter";
 			description = "A simple lighter used to create fire";
 			materials[] = { 
-				{"IronBar", 3}, 
+				{"IronBar", 2}, 
 				{"ProcessedOil", 1} 
 			};
 			item = "Lighter";
@@ -489,13 +488,13 @@ class CfgBlueprints {
 			item = "Capacitor";
 			isDefault = true;
 			workbench = true;
-			time = 2;
+			time = 1;
 		};
 		class B_ElectronicCircuit : B_Capacitor {
 			icon = "Data\Icons\electronicCircuit.paa";
 			displayName = "Electronic Circuit";
 			materials[] = { 
-				{"CopperWiring", 2}, 
+				{"CopperWiring", 1}, 
 				{"CopperPlate", 1}
 			};
 			item = "Electronic Circuit";
@@ -503,7 +502,7 @@ class CfgBlueprints {
 		class B_PrintedCircuitBoard : B_ElectronicCircuit {
 			displayName = "Printed Circuit Board";
 			materials[] = { 
-				{"CopperBar", 2}, 
+				{"CopperBar", 1}, 
 				{"RubberSheet", 1}
 			};
 			item = "Electronic Circuit";
@@ -605,7 +604,7 @@ class CfgBlueprints {
 			materials[] = { 
 				{"CentralProcessingUnit", 1},
 				{"RandomAccessMemory", 4},
-				{"GraphicsProcessingUnit", 25},
+				{"GraphicsProcessingUnit", 20},
 				{"Motherbord", 1},
 				{"SolidStateDrive", 5},
 				{"PowerSupplyUnit", 10}

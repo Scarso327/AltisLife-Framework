@@ -57,7 +57,7 @@ if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
 		[format ["You've surveyed a <t color='#B92DE0'>%1 archeology site</t> and found a better area to search...", configName _cfg]] call ULP_fnc_hint;
 	};
 
-	["Archeology", 1, 50] call ULP_fnc_increaseProfession;
+	["Archeology", 1, 75] call ULP_fnc_increaseProfession;
 	
 	_task setSimpleTaskDestination _pos;
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

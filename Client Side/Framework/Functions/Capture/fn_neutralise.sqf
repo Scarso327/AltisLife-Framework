@@ -33,7 +33,7 @@ if (_owner isEqualTo -1) exitWith {
 	_location setVariable ["site_owner_id", nil, true];
 
 	[format ["You have successfully neutralised <t color='#B92DE0'>%1</t>", getText (_cfg >> "displayName")]] call ULP_fnc_hint;
-	[100, "Neutralised Site"] call ULP_fnc_addXP;
+	[150, "Neutralised Site"] call ULP_fnc_addXP;
 
 	if (isClass (_cfg >> "Marker")) then {
 		private _marker = _location getVariable ["marker", ""];

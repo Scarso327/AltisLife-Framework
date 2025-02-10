@@ -58,8 +58,8 @@ if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
 
 	["LifeSaver"] call ULP_fnc_achieve;
 
-	["Reviving", 1, 50] call ULP_fnc_increaseProfession;
-	[100, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addXP;
+	["Reviving", 1, 75] call ULP_fnc_increaseProfession;
+	[150, format ["Reviving %1", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_addXP;
 
 	["RevivedSomeone", [_unit]] call ULP_fnc_invokeEvent;
 

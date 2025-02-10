@@ -47,7 +47,7 @@ if (serverTime < _cooldown) exitWith {
 
 	_location setVariable ["site_owner_id", ([] call ULP_fnc_groupId), true];
 	[format ["You have successfully captured <t color='#B92DE0'>%1</t>", _siteName]] call ULP_fnc_hint;
-	[100, "Captured Site"] call ULP_fnc_addXP;
+	[150, "Captured Site"] call ULP_fnc_addXP;
 
 	if (isClass (_cfg >> "Marker")) then {
 		private _marker = _location getVariable ["marker", ""];

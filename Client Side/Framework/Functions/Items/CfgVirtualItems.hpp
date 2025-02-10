@@ -75,6 +75,18 @@ class CfgVirtualItems {
 		};
 		class Events : Events {};
 	};
+	class SausageRoll : Apple {
+		displayName = "VEEgan Sausage Roll";
+		icon = "Data\Icons\sausageRoll.paa";
+		buyPrice = 150;
+		sellPrice = 75;
+		class Settings : Settings {};
+		class Sustain {
+			hunger = 40;
+			thirst = 0;
+		};
+		class Events : Events { onUse = "[""Vegan""] call ULP_fnc_achieve; [(_this select 0)] call ULP_fnc_addSustenance;"; };
+	};
 	class Burger : Bacon {
 		displayName = "Burger";
 		icon = "Data\Icons\burger.paa";

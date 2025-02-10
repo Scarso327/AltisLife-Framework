@@ -65,6 +65,9 @@ if (isClass _textureCfg) then {
 		if ([_faction, "vehicles"] call ULP_fnc_factionFree || { [_buyPrice, false, format ["Purchased %1", _name]] call ULP_fnc_removeMoney }) exitWith {
 
 			if ([_faction, "vehicles"] call ULP_fnc_factionPresistant) then {
+				private _limit = (getNumber (_missionCfg >> "garageLimit")) + ULP_Prestige;
+				if (["VehicleCollector"] call ULP_fnc_hasPerk) then { _limit = _limit * 2 };
+
 				["VehicleBought", {
 					_this params [
 						["_params", [], [[]]],
@@ -91,11 +94,12 @@ if (isClass _textureCfg) then {
 				[
 					_buyPrice, 
 					getPlayerUID player, 
-					profileName, _faction, 
+					profileName, 
+					_faction, 
 					configName _missionCfg, 
-					_spawn, 
 					_texture, 
-					["VehicleCollector"] call ULP_fnc_hasPerk
+					_spawn, 
+					_limit
 				] remoteExecCall ["ULP_SRV_fnc_createVehicle", RSERV];
 			} else {
 				[configName _missionCfg, _spawn, _texture] call ULP_fnc_createVehicle;

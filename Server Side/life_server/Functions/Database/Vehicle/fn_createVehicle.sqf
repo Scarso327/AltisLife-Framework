@@ -11,16 +11,14 @@ _this params [
 	["_name", "", [""]],
 	["_faction", "", [""]],
 	["_class", "", [""]],
-	["_spawn", [[0, 0, 0], 0], [[]]],
 	["_texture", "", [""]],
-	["_hasVehicleCollectorPerk", false, [true]],
-	["_ignoreGarageLimit", false, [true]],
-	["_active", 1, [0]]
+	["_spawn", [[0, 0, 0], 0], [[]]],
+	["_garageLimit", -1, [0]]
 ];
 
 if (_steamid isEqualTo "" || { _name isEqualTo "" } || { !(isClass (missionConfigFile >> "CfgFactions" >> _faction))}) exitWith {};
 
-if ([_class, _steamid, _faction, _hasVehicleCollectorPerk, _ignoreGarageLimit] call ULP_SRV_fnc_isAtGarageLimit) exitWith {
+if ([_class, _steamid, _faction, _garageLimit] call ULP_SRV_fnc_isAtGarageLimit) exitWith {
 	["VehicleBought", [[_class], true, _price]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 };
 
@@ -32,7 +30,7 @@ private _id = ["vehicles"] call ULP_SRV_fnc_getNextId;
 // Insert...
 [format[
 	"INSERT INTO `vehicles` (`id`, `pid`, `faction`, `classname`, `type`, `texture`, `active`, `upgrades`) VALUES ('%1', '%2', '%3', '%4', '%5', '%6', '%7', '""[]""');", 
-	[_id, ""] call ULP_fnc_numberText, _steamid, _faction, _class, _type, _texture, _active
+	[_id, ""] call ULP_fnc_numberText, _steamid, _faction, _class, _type, _texture, [1, 0] select (_spawn isEqualTo [])
 ], 1] call DB_fnc_asyncCall;
 
 ["VehicleBought", [[_class, _spawn, _texture, _id]]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

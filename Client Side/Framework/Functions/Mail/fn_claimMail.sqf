@@ -63,13 +63,10 @@ switch (_type) do {
 			[
 				0, 
 				getPlayerUID player, 
-				profileName, _faction, 
+				profileName, 
+				_faction, 
 				_className, 
-				[], 
-				_texture, 
-				false,
-				true,
-				0
+				_texture
 			] remoteExecCall ["ULP_SRV_fnc_createVehicle", RSERV];
 		};
 

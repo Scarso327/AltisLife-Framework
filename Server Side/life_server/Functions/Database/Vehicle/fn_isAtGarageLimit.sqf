@@ -9,11 +9,10 @@ _this params [
 	["_className", "", [""]],
 	["_steamId", "", [""]],
 	["_faction", "", [""]],
-	["_hasVehicleCollectorPerk", false, [true]],
-	["_ignoreGarageLimit", false, [true]]
+	["_garageLimit", -1, [0]]
 ];
 
-if (_ignoreGarageLimit) exitWith { false };
+if (_garageLimit isEqualTo -1) exitWith { false };
 
 if (_className isEqualTo "" || { _steamId isEqualTo "" } || { _faction isEqualTo "" }) exitWith { true };
 
@@ -22,8 +21,5 @@ private _query = [format["SELECT count(`id`) FROM `vehicles` WHERE `pid`='%1' AN
 _query params [
 	["_vehicleCount", 0, [0]]
 ];
-
-private _garageLimit = (getNumber (missionConfigFile >> "CfgVehicles" >> _class >> "garageLimit")) + ULP_Prestige;
-if (_hasVehicleCollectorPerk) then { _garageLimit = _garageLimit * 2 };
 
 (_vehicleCount >= _garageLimit)

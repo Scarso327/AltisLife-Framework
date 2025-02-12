@@ -186,11 +186,11 @@ class CfgItemsStore {
 			class 30Rnd_65x39_caseless_msbs_mag { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
 			class 30Rnd_65x39_caseless_msbs_mag_Tracer { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }"; };
 			class 30Rnd_65x39_caseless_black_mag { 
-				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
+				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class 30Rnd_65x39_caseless_black_mag {}; }; 
 			};
 			class 30Rnd_65x39_caseless_black_mag_Tracer { 
-				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
+				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) }";
 				class textures { class 30Rnd_65x39_caseless_black_mag_Tracer {}; }; 
 			};
 			class 100Rnd_65x39_caseless_black_mag {

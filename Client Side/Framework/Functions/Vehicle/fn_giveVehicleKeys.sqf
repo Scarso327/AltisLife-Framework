@@ -28,7 +28,7 @@ if (isNull _unit || { !(isPlayer _unit) } || { (player distance _unit) > 5 }) ex
 	private _list = _display displayCtrl 4509;
 
 	private _vehicle = (_list lbData (lbCurSel _list)) call BIS_fnc_objectFromNetId;
-	if (isNull _vehicle) exitWith { ["You didn't select a vehicle to chop!"] call ULP_fnc_hint; };
+	if (isNull _vehicle) exitWith { ["You didn't select a vehicle to give this person keys for!"] call ULP_fnc_hint; };
 
 	private _cfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
 	if (isNull _vehicle || { _cfg isEqualTo [] }) exitWith {};

@@ -469,6 +469,7 @@ class CfgFunctions {
 			class hasTyreDamage {};
 			class hasVehicleUpgrade {};
 			class setVehicleUpgrade {};
+			class pushVehicle {};
 		};
 
 		class VehicleEvents {

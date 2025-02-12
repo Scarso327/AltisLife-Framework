@@ -277,6 +277,12 @@ class CfgInteractions {
 			condition = "!(_this in ULP_Keys) && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
 		};
 
+		class Push : Repair {
+			title = "Push";
+			onClick = "closeDialog 0; _this call ULP_fnc_pushVehicle";
+			condition = "local _this && { alive _this } && { (crew _this) isEqualTo [] } && { (speed _this) <= 3 } && { [_this, [""Plane"", ""Ship""]] call ULP_fnc_isKindOf }";
+		};
+
 		class Registration : Repair {
 			title = "Registration";
 			onClick = "closeDialog 0; [(_this select 0)] call ULP_fnc_vehicleRegistration";

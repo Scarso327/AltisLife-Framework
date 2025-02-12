@@ -48,7 +48,7 @@ if !([format["Storing %1", _name], _time, [_vehicle, _name], {
 		["Vehicle has been stored."] call ULP_fnc_hint;
 	};
 
-	["Garaged", [_owner param [0, "Someone"], _name, [player, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+	["Garaged", [_owner param [0, "Someone"], _name, [player, false, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't garage a vehicle while performing another action!"] call ULP_fnc_hint;
 };

@@ -25,8 +25,7 @@ scopeName "fn_cleanup";
 						|| { !((crew _vehicle) isEqualTo []) } 
 						|| { ((_vehicle getVariable ["engineLastOffTime", 0]) + _engineOffCheckTime) > serverTime }) exitWith {};
 
-					[_vehicle] call ULP_SRV_fnc_storeVehicle;
-					_cleaned = true;
+					_cleaned = [_vehicle] call ULP_SRV_fnc_storeVehicle;
 				};
 
 				if ([_vehicle] call ULP_fnc_isPlaceable || { _vehicle isKindOf "Land_Bodybag_01_black_F" }) then {

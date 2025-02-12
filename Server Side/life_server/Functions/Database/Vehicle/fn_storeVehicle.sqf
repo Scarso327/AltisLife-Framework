@@ -10,10 +10,10 @@ _this params [
 	["_impoundFee", 0, [0]]
 ];
 
-if (isNull _vehicle) exitWith {};
+if (isNull _vehicle) exitWith { false };
 
 private _id = _vehicle getVariable ["vehicle_id", -1];
-if (_id < 0) exitWith {};
+if (_id < 0) exitWith { false };
 
 [format[
 	"UPDATE `vehicles` SET `active`='0', `impound`='%2' WHERE `id`='%1'", 
@@ -22,4 +22,8 @@ if (_id < 0) exitWith {};
 
 deleteVehicle _vehicle;
 
-["VehicleStored"] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
+if (isRemoteExecuted) then {
+	["VehicleStored"] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
+};
+
+true

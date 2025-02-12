@@ -2275,13 +2275,13 @@ class CfgVirtualItems {
 		icon = "Data\Icons\tyre.paa";
 		class Settings : Settings {};
 	};
-	class performanceEngineUpgrade : ImprovedStorageUpgrade {
+	class PerformanceEngineUpgrade : ImprovedStorageUpgrade {
 		displayName = "Performance Engine Upgrade";
 		description = "Increases acceleration by 10% & top speed by 5% [Mutually exclusive with Efficient Engine]";
 		icon = "Data\Icons\improvedEngineUpgrade.paa";
 		class Settings : Settings {};
 	};
-	class efficientEngineUpgrade : ImprovedStorageUpgrade {
+	class EfficientEngineUpgrade : ImprovedStorageUpgrade {
 		displayName = "Efficient Engine Upgrade";
 		description = "Decreases fuel consumption by 30% [Mutually exclusive with Performance Engine]";
 		icon = "Data\Icons\improvedEngineUpgrade.paa";

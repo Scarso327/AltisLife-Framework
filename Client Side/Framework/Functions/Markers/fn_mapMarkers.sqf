@@ -24,6 +24,12 @@ switch ([player] call ULP_fnc_getFaction) do {
 	};
 };
 
+_objects append (ULP_Keys select {
+	[_x, "TrackingDeviceUpgrade"] call ULP_fnc_hasVehicleUpgrade 
+		&& { !(_x in _objects) }
+		&& { (_objects arrayIntersect (crew _x)) isEqualTo [] }
+});
+
 {
 	if (_x in _included) exitWith {};
 
@@ -56,7 +62,7 @@ switch ([player] call ULP_fnc_getFaction) do {
 	} else {
 		_map drawIcon [
 			getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "icon"), 
-			[0.50, 0.50, 0.50, 1.00],
+			[[0.50, 0.50, 0.50, 1.00], [0, 0.901, 0.074, 1]] select (_x in ULP_Keys),
 			getPosVisual _x, 26, 26, getDirVisual _x, "", 1
 		];
 	};

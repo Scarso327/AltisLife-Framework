@@ -31,11 +31,12 @@ class CfgFactions {
 			class RPU { queryIndex = 32; };
 			class SFO { queryIndex = 33; };
 			class UC { queryIndex = 34; };
+			class SEG { queryIndex = 35; };
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "cop_";
-			customQuery = ", cop_blacklisted, coplevel, collevel, npaslevel, scolevel, ncalevel, mpulevel, rpulevel, sfolevel, uclevel";
+			customQuery = ", cop_blacklisted, coplevel, collevel, npaslevel, scolevel, ncalevel, mpulevel, rpulevel, sfolevel, uclevel, seglevel";
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};

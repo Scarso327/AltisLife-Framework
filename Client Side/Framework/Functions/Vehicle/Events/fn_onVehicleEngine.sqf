@@ -10,7 +10,9 @@ _this params [
 	["_engineOn", false, [true]]
 ];
 
-if (local _vehicle && { _engineOn }) then {
+if !(local _vehicle) exitWith {};
+
+if (_engineOn) then {
 	if ([player] call ULP_fnc_isRestrained) exitWIth {
 		_vehicle engineOn false;
 	};
@@ -50,5 +52,15 @@ if (local _vehicle && { _engineOn }) then {
 				};
 			}, {}, false
 		] call ULP_fnc_confirm;
+	};
+
+	if (isEngineOn _vehicle && { !(isNil { _vehicle getVariable "engineLastOffTime" }) }) then {
+		_vehicle setVariable ["engineLastOffTime", nil, true];
+	};
+} else {
+	private _engineLastOffTime = _vehicle getVariable ["engineLastOffTime", 0];
+
+	if ((_engineLastOffTime + 60) <= serverTime) then {
+		_vehicle setVariable ["engineLastOffTime", serverTime, true];
 	};
 };

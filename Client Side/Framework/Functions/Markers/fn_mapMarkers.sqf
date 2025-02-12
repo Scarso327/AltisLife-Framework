@@ -18,12 +18,16 @@ switch ([player] call ULP_fnc_getFaction) do {
 		});
 	};
 	case "Hato": {
-		// TODO : HATO Inactive Vehicles...
+		_objects append ((entities "Car") select {
+			(crew _x) isEqualTo [] && { (_x getVariable ["engineLastOffTime", 0]) + (10 * 60) <= serverTime }
+		});
 	};
 };
 
 {
-	if (isPlayer _x) then {
+	if (_x in _included) exitWith {};
+
+	if (_x isKindOf "Man") then {
 		if ([_x] call ULP_fnc_hasComms || { isDowned(_x) && ([player, ["Medic"]] call ULP_fnc_isFaction) }) then {
 			if (isNull (objectParent _x)) then {
 				_map drawIcon [
@@ -35,22 +39,27 @@ switch ([player] call ULP_fnc_getFaction) do {
 				];
 			} else {
 				private _vehicle = vehicle _x;
-				if !(_vehicle in _included) then {
-					_included pushBack _vehicle;
+				private _crew = crew _vehicle;
 
-					private _cCount = count (crew _vehicle);
-					private _unit = (crew _vehicle) param [0, objNull];
-					_map drawIcon [
-						getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "icon"), 
-						[_unit, true] call ULP_fnc_getTagColour,
-						getPosVisual _vehicle, 26, 26, getDirVisual _vehicle, 
-						format ["%1%2", [_unit] call ULP_fnc_getName, ["", format [" +%1", _cCount - 1]] select (_cCount > 1)], 
-						1, 0.06, 'RobotoCondensed', 'right'
-					];
-				};
+				private _cCount = count _crew;
+				private _unit = _crew param [0, objNull];
+
+				_map drawIcon [
+					getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "icon"), 
+					[_unit, true] call ULP_fnc_getTagColour,
+					getPosVisual _vehicle, 26, 26, getDirVisual _vehicle, 
+					format ["%1%2", [_unit] call ULP_fnc_getName, ["", format [" +%1", _cCount - 1]] select (_cCount > 1)], 
+					1, 0.06, 'RobotoCondensed', 'right'
+				];
 			};
 		};
 	} else {
-		// TODO : HATO Inactive Vehicles...
+		_map drawIcon [
+			getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "icon"), 
+			[0.50, 0.50, 0.50, 1.00],
+			getPosVisual _x, 26, 26, getDirVisual _x, "", 1
+		];
 	};
-} forEach _objects;
+
+	nil
+} count _objects;

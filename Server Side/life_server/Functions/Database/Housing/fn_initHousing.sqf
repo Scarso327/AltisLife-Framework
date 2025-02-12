@@ -28,7 +28,7 @@ ULP_SRV_Houses = [];
 		_virtualStorage = [_virtualStorage] call DB_fnc_mresToArray;
 		_shared = [_shared] call ULP_fnc_bool;
 
-		private _house = (_pos nearObjects [_classname, 5]) param [0, objNull];
+		private _house = (_pos nearObjects [_classname, 10]) param [0, objNull];
 		
 		if (isNull _house || { _house in ULP_SRV_Houses }) then {
 			[format ["House wasn't found: %1 at %2 (%3, %4)", _classname, _pos, _id, (_house in ULP_SRV_Houses)]] call ULP_fnc_logIt;

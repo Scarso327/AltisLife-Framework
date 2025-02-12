@@ -164,8 +164,9 @@ if !(_items isEqualTo []) then {
 
 /* Miscellaneous mission-required stuff */
 
+["Enqueuing Cleanup Script..."] call ULP_fnc_logIt;
+[] call ULP_SRV_fnc_cleanup;
 cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
-cleanup = [] spawn TON_fnc_cleanup;
 
 TON_fnc_playtime_values = [];
 TON_fnc_playtime_values_request = [];

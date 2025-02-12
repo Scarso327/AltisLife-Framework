@@ -9,7 +9,7 @@ _this params [
 	["_vehicle", objNull, [objNull]]
 ];
 
-if (isNull _vehicle || { !(local _vehicle) } || { (speed _vehicle) > 3 }) exitWith { false };
+if (isNull _vehicle || { !(local _vehicle) } || { (speed _vehicle) > 3 } || { !((crew _vehicle) isEqualTo []) }) exitWith { false };
 
 private _speed = 3;
 private _velocity = velocity _vehicle;

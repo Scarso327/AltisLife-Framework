@@ -280,7 +280,7 @@ class CfgInteractions {
 		class Push : Repair {
 			title = "Push";
 			onClick = "closeDialog 0; _this call ULP_fnc_pushVehicle";
-			condition = "local _this && { alive _this } && { (speed _this) <= 3 } && { [_this, [""Plane"", ""Ship""]] call ULP_fnc_isKindOf }";
+			condition = "local _this && { alive _this } && { (crew _this) isEqualTo [] } && { (speed _this) <= 3 } && { [_this, [""Plane"", ""Ship""]] call ULP_fnc_isKindOf }";
 		};
 
 		class Registration : Repair {

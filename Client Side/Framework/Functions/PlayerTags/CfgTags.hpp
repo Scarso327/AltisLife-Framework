@@ -10,7 +10,7 @@ class CfgTags {
 					"PolicePCSO",
 					"PolicePPC",
 					"PolicePC",
-					"PoliceSPC",
+					"PoliceSC",
 					"PolicePS",
 					"PolicePI",
 					"PoliceCI",

@@ -67,6 +67,15 @@ if (isNumber (_cfg >> "enableRope")) then {
 	_vehicle enableRopeAttach ([getNumber (_cfg >> "enableRope")] call ULP_fnc_bool);
 };
 
-if (isNumber (_cfg >> "fuelConsumptionRate")) then {
-	_vehicle setFuelConsumptionCoef getNumber (_cfg >> "fuelConsumptionRate");
+private _fuelConsumptionRateCoef =
+	if (isNumber (_cfg >> "fuelConsumptionRate")) then {
+		getNumber (_cfg >> "fuelConsumptionRate")
+	} else {
+		getFuelConsumptionCoef _vehicle
+	};
+
+if ([_vehicle, "EfficientEngineUpgrade"] call ULP_fnc_hasVehicleUpgrade) then {
+	_fuelConsumptionRateCoef = _fuelConsumptionRateCoef - (_fuelConsumptionRateCoef * 0.3);
 };
+
+_vehicle setFuelConsumptionCoef _fuelConsumptionRateCoef;

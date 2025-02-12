@@ -227,6 +227,11 @@ class CfgFunctions {
             class tickComponentFactory {};
             class tickSalvageFactory {};
         };
+
+        class Cleanup {
+            file = "\life_server\Functions\Cleanup";
+            class cleanup {};
+        };
     };
 
     class MySQL_Database {
@@ -243,11 +248,6 @@ class CfgFunctions {
 
     class TON_System {
         tag = "TON";
-        class Systems {
-            file = "\life_server\Functions\Systems";
-            class cleanup {};
-        };
-
         class PlayTime {
             file = "\life_server\Functions\PlayTime";
             class setPlayTime {};

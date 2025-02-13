@@ -37,16 +37,7 @@ if ([] call ULP_UI_fnc_isProgress) then {
 };
 
 if (isDowned(player)) then { 
-    _handled = true;
-
-    if (_code in (actionKeys "pushToTalk")) then { _handled = false; };
-
-    private _viewToggle = ACT_KEY("personView", NUMENTER);
-
-    // Available Incapacitated Inputs...
-    switch (_code) do {
-        case _viewToggle: { _handled = false };
-    };
+    _handled = !(_code in (actionKeys "pushToTalk" + actionKeys "PrevChannel" + actionKeys "NextChannel" + actionKeys "Chat" + actionKeys "PersonView"));
 } else {
     if (_code in (actionKeys "GetOver") && { !([] call ULP_fnc_isInputBlocked) }) then {
         if (_shift 

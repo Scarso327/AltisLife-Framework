@@ -479,6 +479,7 @@ class CfgFunctions {
 			class onVehicleEngine {};
 			class onVehicleRopeAttach {};
 			class onVehicleHandleDamage {};
+			class onVehicleLocal {};
 		};
 
 		class VehicleStore {

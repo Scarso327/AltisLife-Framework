@@ -40,6 +40,7 @@ _vehicle addEventHandler ["Killed", { _this call ULP_fnc_onVehicleKilled }];
 _vehicle addEventHandler ["Deleted", { _this call ULP_fnc_onVehicleDeleted }];
 _vehicle addEventHandler ["RopeAttach", { _this call ULP_fnc_onVehicleRopeAttach }];
 _vehicle addEventHandler ["HandleDamage", { _this call ULP_fnc_onVehicleHandleDamage }];
+_vehicle addEventHandler ["Local", { _this call ULP_fnc_onVehicleLocal }];
 
 private _textureActionsCfg = _cfg >> "Textures" >> (_vehicle getVariable ["texture", ""]) >> "Actions";
 

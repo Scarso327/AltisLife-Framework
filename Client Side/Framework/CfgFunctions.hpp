@@ -683,6 +683,7 @@ class CfgFunctions {
 			class nearestStretcher {};
 			class toggleOnStretcher {};
 			class preInitMedical { preInit = 1; };
+			class setMedicalAssignment {};
 		};
 
 		class MedicMap {

@@ -94,10 +94,12 @@ if (_damage >= 1) then {
 
 	_damage = 0.99; // They're hurt... 1 or over would kill them...
 
-	// If they're already downed, kill them...
-	if (isDowned(_unit)) then {
-		// Checks...
-		if (isNull _source || { _projectile isEqualTo "" } || { diag_tickTime - (_unit getVariable ["Incap_time", 0]) < 2 } || { _part in ["arms", "legs", "hands"] }) exitWith {};
+	// Incap or wounded state = allow death
+	if (isDowned(_unit) || { _unit getVariable ["Wounded", false] }) then {
+		// Checks but only if incap...
+		if (isDowned(_unit) && { 
+			isNull _source || { _projectile isEqualTo "" } || { diag_tickTime - (_unit getVariable ["Incap_time", 0]) < 2 } || { _part in ["arms", "legs", "hands"] }
+		}) exitWith {};
 
 		_damage = 1; // Kill them...
 	} else {

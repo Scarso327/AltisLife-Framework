@@ -27,6 +27,7 @@ class CfgSettings {
         // Left is no medics - right is medics
         AllowBleedoutPercentage[] = { 0.75, 0.4 };
         BleedOutTime = 20 * 60;
+        CivilianBleedOutRemainingAllowRevival = 19 * 60;
         RedzonePercentage = 0.1;
 
         /* Blood */

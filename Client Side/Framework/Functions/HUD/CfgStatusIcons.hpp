@@ -23,4 +23,9 @@ class CfgStatusIcons {
 		icon = "Data\UI\noCommunications.paa";
 		condition = "!([player] call ULP_fnc_hasComms)";
 	};
+
+	class Wounded : Base {
+		icon = "";
+		condition = "player getVariable [""Wounded"", false]";
+	};
 };

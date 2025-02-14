@@ -931,6 +931,7 @@ class CfgFunctions {
 		class RscIncapacitated {
 			file = "UI\RscIncapacitated\Functions";
 			class RscIncapacitated_OnEachFrame {};
+			class RscIncapacitated_OnInit {};
 			class RscIncapacitated_OnLoad {};
 			class RscIncapacitated_OnUnload {};
 		};

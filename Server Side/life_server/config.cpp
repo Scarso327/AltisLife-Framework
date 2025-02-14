@@ -89,23 +89,26 @@ class CfgPatches {
             class Imprisoned : Spawn {};
             class Robbery : Spawn {};
             class Craft : Spawn {};
-            class Bleedout : Spawn {};
             class Election : Spawn {};
             class BaseBid : Spawn {};
             class Injured : Spawn {};
+            class Loot : Spawn {};
+
+            class Group {
+                params = 3;
+            };
+            class Bleedout : Group {};
+            class Admin : Group {};
+            class House : Group {};
+            class InjuredBy : Group {};
+
+            class Executed {
+                params = 4;
+            };
 
             class Money {
                 params = 5;
             };
-
-            class Executed {
-                params = 3;
-            };
-            class Loot : Spawn {};
-            class Group : Executed {};
-            class Admin : Executed {};
-            class House : Executed {};
-            class InjuredBy : Executed {};
 
             class Mail {
                 params = 6;

@@ -7,6 +7,10 @@ class CfgChat {
 		};
 		class Bleedout : Injured {
 			message = "%1 bled out...";
+			condition = "[[""EnableMessagesBleedout"", ""Chat""] call ULP_fnc_getOption] call ULP_fnc_bool";
+		};
+		class Suicide : Bleedout {
+			message = "%1 killed themselves...";
 		};
 		class ReturnedToLobby : Injured {
 			message = "%1 returned to the lobby";
@@ -19,6 +23,10 @@ class CfgChat {
 		};
 		class InjuredBy : Executed {
 			message = "%1 was seriously injured by %2";
+			condition = "[[""EnableMessagesIncapacitated"", ""Chat""] call ULP_fnc_getOption] call ULP_fnc_bool";
+		};
+		class Killed : Executed {
+			message = "%1 was killed by %2";
 		};
 		class Revived : Executed {
 			message = "%1 was revived by %2";

@@ -16,20 +16,32 @@ if !(_this params [
 if ([_medic] call ULP_fnc_onDuty) then {
 	["You were revived by an admin..."] call ULP_fnc_hint;
 } else {
-	[format ["You have been revived by <t color='#B92DE0'>%1</t>", [_medic, true] call ULP_fnc_getName]] call ULP_fnc_hint;
+	if (_medic isEqualTo player) exitWith {};
+
+	private _isWounded = (!([_medic, ["Medic"]] call ULP_fnc_isFaction) && { !(([["Medic"]] call ULP_fnc_onlineFaction) isEqualTo 0) });
+
+	[(if (_isWounded) then {
+		format ["You have been revived by <t color='#B92DE0'>%1</t>. As they aren't a medic, you're now in a wounded state and must seek out medical assistance", [_medic, true] call ULP_fnc_getName]
+	} else {
+		format ["You have been revived by <t color='#B92DE0'>%1</t>", [_medic, true] call ULP_fnc_getName]
+	})] call ULP_fnc_hint;
+
+	private _unitRep = player getVariable ["reputation", 0];
+
+	[_medic, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
+		case (_unitRep >= 500): { "ReviveHigh" };
+		case (_unitRep > -500): { "ReviveNorm" };
+		default { "ReviveLow" };
+	})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+	
+	if (_isWounded) then {
+		player setVariable ["Wounded", true, true];
+		[player, 17, true] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
+	};
 };
 
-if !(player isEqualTo _medic) then {
+if !(_medic isEqualTo player) then {
 	["Revived", [name player, [[_medic, true] call ULP_fnc_getName, "an admin"] select ([_medic] call ULP_fnc_onDuty)]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
-
-	if !([_medic] call ULP_fnc_onDuty) then {
-		private _unitRep = player getVariable ["reputation", 0];
-		[_medic, missionConfigFile >> "CfgReputation" >> "Types" >> (switch (true) do {
-			case (_unitRep >= 500): { "ReviveHigh" };
-			case (_unitRep > -500): { "ReviveNorm" };
-			default { "ReviveLow" };
-		})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
-	};
 };
 
 // Make sure we're no longer attached!
@@ -39,6 +51,7 @@ if (!isNull _stretcher && { _stretcher isKindOf "Land_Stretcher_01_F" }) then {
 };
 
 player setVariable ["IncapacitatedWounds", nil, true];
+player setVariable ["IncapacitatedBleedOutTime", nil, true];
 player setVariable ["IncapacitatedByGroup", nil, true];
 player setVariable ["AssignedMedic", nil, true];
 

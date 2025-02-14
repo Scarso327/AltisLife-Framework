@@ -30,11 +30,15 @@ _objects append (ULP_Keys select {
 		&& { (_objects arrayIntersect (crew _x)) isEqualTo [] }
 });
 
+private _isMedic = [player, ["Medic"]] call ULP_fnc_isFaction;
+
 {
 	if (_x in _included) exitWith {};
 
+	private _isMedicAndTargetIncap = (isDowned(_x) && { _isMedic });
+
 	if (_x isKindOf "Man") then {
-		if ([_x] call ULP_fnc_hasComms || { isDowned(_x) && ([player, ["Medic"]] call ULP_fnc_isFaction) }) then {
+		if ([_x] call ULP_fnc_hasComms || { _isMedicAndTargetIncap }) then {
 			if (isNull (objectParent _x)) then {
 				_map drawIcon [
 					["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa"] select (isDowned(_x)), 
@@ -43,6 +47,16 @@ _objects append (ULP_Keys select {
 					[_x] call ULP_fnc_getName, 
 					1, 0.06, 'RobotoCondensed', 'right'
 				];
+
+				if (_isMedicAndTargetIncap) then {
+					_map drawIcon [
+						"\a3\Data_f\clear_empty.paa", 
+						[_x] call ULP_fnc_getTagColour, 
+						getPosVisual _x, 26, 26, getDirVisual _x,  
+						[(_x getVariable ["IncapacitatedBleedOutTime", serverTime + 10]) - serverTime, "MM:SS"] call BIS_fnc_secondsToString, 
+						1, 0.06, 'RobotoCondensed', 'left'
+					];
+				};
 			} else {
 				private _vehicle = vehicle _x;
 				private _crew = crew _vehicle;

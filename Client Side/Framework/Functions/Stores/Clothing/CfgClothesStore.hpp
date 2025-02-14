@@ -330,6 +330,7 @@ class CfgClothesStore {
 			class G_B_Diving { condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F {};
 			class G_RegulatorMask_F { condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; };
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {

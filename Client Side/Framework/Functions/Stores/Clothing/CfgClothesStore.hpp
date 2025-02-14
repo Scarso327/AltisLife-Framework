@@ -31,7 +31,7 @@ class CfgClothesStore {
 			};
 			class U_B_GhillieSuit {
 				displayName = "SCO19 Ghillie Suit";
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_BG_Guerrilla_6_1 { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };

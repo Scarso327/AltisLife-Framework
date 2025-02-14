@@ -54,9 +54,9 @@ class CfgVehicleStores {
 		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
 		class Vehicles {
-			class B_UAV_01_F { 
-				condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess";
-			};
+			//class B_UAV_01_F { 
+				//condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess";
+			//};
 			class C_Heli_Light_01_civil_F {
 				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
@@ -168,10 +168,10 @@ class CfgVehicleStores {
 		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
-			class C_UAV_06_medical_F {
-				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
+			//class C_UAV_06_medical_F {
+				//condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
+				//class Textures {};
+			//};
 			class C_Heli_Light_01_civil_F {
 				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
 				class Textures {};

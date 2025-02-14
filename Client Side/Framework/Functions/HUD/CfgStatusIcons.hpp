@@ -14,10 +14,10 @@ class CfgStatusIcons {
 		condition = "isForcedWalk player";
 	};
 
-	class RevivedRecently : Base {
-		icon = "Data\UI\reviveCooldown.paa";
-		condition = "localNamespace getVariable [""ULP_LastRevived"", -300] > (time - 300)";
-	};
+	// class RevivedRecently : Base {
+	// 	icon = "Data\UI\reviveCooldown.paa";
+	// 	condition = "localNamespace getVariable [""ULP_LastRevived"", -300] > (time - 300)";
+	// };
 
 	class NoCommunications : Base {
 		icon = "Data\UI\noCommunications.paa";
@@ -25,7 +25,7 @@ class CfgStatusIcons {
 	};
 
 	class Wounded : Base {
-		icon = "";
+		icon = "Data\UI\reviveCooldown.paa";
 		condition = "player getVariable [""Wounded"", false]";
 	};
 };

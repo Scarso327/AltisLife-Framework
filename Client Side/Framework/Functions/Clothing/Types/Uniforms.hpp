@@ -559,6 +559,11 @@ class U_Rangemaster : U_C_Poor_1 {
 			textures[] = { "Data\Textures\Uniforms\Police\Ranks\PCSO.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
+		class SEG {
+			displayName = "Special Escort Group";
+			textures[] = { "Data\Textures\Uniforms\Police\Units\SEG.paa" };
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SEG"", 1] call ULP_fnc_hasAccess }";
+		};
 	};
 };
 

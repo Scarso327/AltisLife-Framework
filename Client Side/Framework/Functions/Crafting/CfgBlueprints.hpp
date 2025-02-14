@@ -497,7 +497,7 @@ class CfgBlueprints {
 				{"CopperWiring", 1}, 
 				{"CopperPlate", 1}
 			};
-			item = "Electronic Circuit";
+			item = "ElectronicCircuit";
 		};
 		class B_PrintedCircuitBoard : B_ElectronicCircuit {
 			displayName = "Printed Circuit Board";
@@ -505,7 +505,7 @@ class CfgBlueprints {
 				{"CopperBar", 1}, 
 				{"RubberSheet", 1}
 			};
-			item = "Electronic Circuit";
+			item = "PrintedCircuitBoard";
 		};
 		class B_Motherboard : B_Capacitor {
 			icon = "Data\Icons\motherboard.paa";

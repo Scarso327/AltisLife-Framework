@@ -16,7 +16,7 @@ class CfgClothesStore {
 			class U_O_PilotCoveralls { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class U_B_CTRG_Soldier_F {
 				displayName = "SCO19 Uniform";
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
 				class textures { class SCO19 {}; };
 			};
 			class U_B_CTRG_Soldier_3_F {
@@ -31,7 +31,7 @@ class CfgClothesStore {
 			};
 			class U_B_GhillieSuit {
 				displayName = "SCO19 Ghillie Suit";
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
 				class textures { class SCO19 {}; };
 			};
 			class U_BG_Guerrilla_6_1 { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
@@ -152,7 +152,7 @@ class CfgClothesStore {
 				class Textures { class V_PlateCarrier1_blk {}; };
 			};
 			class V_PlateCarrier2_blk {
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 3] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] || { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false] } } }";
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 3] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] || { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false] } } }";
 				class Textures { class V_PlateCarrier2_blk {}; };
 			};
 			class V_RebreatherB {
@@ -317,7 +317,6 @@ class CfgClothesStore {
 				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; 
 				class Textures { class H_PASGT_basic_olive_F {}; };
 			};
-			class G_Tactical_Clear {};
 		};
 
 		class Facewear {
@@ -331,6 +330,7 @@ class CfgClothesStore {
 			class G_B_Diving { condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; };
 			class G_Respirator_white_F {};
 			class G_RegulatorMask_F { condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; };
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {

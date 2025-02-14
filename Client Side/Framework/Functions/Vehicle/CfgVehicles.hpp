@@ -603,7 +603,7 @@ class CfgVehicles {
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
-				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess }";
 				anpr = true;
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
 				class Lights : PoliceColour {

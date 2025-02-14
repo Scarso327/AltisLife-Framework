@@ -152,7 +152,7 @@ class CfgClothesStore {
 				class Textures { class V_PlateCarrier1_blk {}; };
 			};
 			class V_PlateCarrier2_blk {
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 3] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] || { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false] } } }";
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 3] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] || { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false] } } }";
 				class Textures { class V_PlateCarrier2_blk {}; };
 			};
 			class V_RebreatherB {
@@ -317,7 +317,6 @@ class CfgClothesStore {
 				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; 
 				class Textures { class H_PASGT_basic_olive_F {}; };
 			};
-			class G_Tactical_Clear {};
 		};
 
 		class Facewear {

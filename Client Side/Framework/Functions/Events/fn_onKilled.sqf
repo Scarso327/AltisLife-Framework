@@ -39,7 +39,8 @@ ULP_CarryWeight = 0;
 
 // Death Screen...
 ["RscIncapacitated"] call ULP_UI_fnc_destroyLayer;
-"WaitToRespawn" cutText ["<t color='#ffffff' font='PuristaLight' size='2px'>YOU HAVE DIED</t>", "BLACK", -1, false, true];
+"WaitToRespawn" cutText ["<t color='#ffffff' font='PuristaLight' size='2px'>YOU HAVE DIED</t>", "BLACK FADED", -1, false, true];
+"WaitToRespawn" cutFadeOut 9999999;
 
 [getPos _unit] call ULP_fnc_addNLR;
 
@@ -47,8 +48,12 @@ ULP_Respawned = false;
 ULP_CanRespawn = nil;
 
 player setVariable ["IncapacitatedWounds", nil, true];
+player setVariable ["IncapacitatedBleedOutTime", nil, true];
 player setVariable ["IncapacitatedByGroup", nil, true];
 player setVariable ["AssignedMedic", nil, true];
+player setVariable ["Wounded", nil, true];
+
+[player, 17, false] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 
 ["Died", [_unit, _killer], true] call ULP_fnc_invokeEvent;
 

@@ -164,6 +164,18 @@ class CfgInteractions {
 			condition = "[_this] call ULP_fnc_hasComms && { [player, [""Police""]] call ULP_fnc_isFaction || { [(_this getVariable [""IncapacitatedByGroup"", grpNull]), player] call ULP_fnc_inGroup } }";
 		};
 
+		class SetAssigned {
+			title = "Set Assigned";
+			factions[] = { "Medic" };
+			onClick = "closeDialog 0; _this call ULP_fnc_setMedicalAssignment";
+			condition = "isNull (_this getVariable [""AssignedMedic"", objNull])";
+		};
+
+		class SetUnAssigned : SetAssigned {
+			title = "Set Unassigned";
+			condition = "((_this getVariable [""AssignedMedic"", objNull]) isEqualTo player)";
+		};
+
 		// Admin Commands...
 		class AdminRevive : Revive {
 			title = "Admin Revive";

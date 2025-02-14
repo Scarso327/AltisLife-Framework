@@ -33,6 +33,16 @@ if ([] call ULP_fnc_isEscorting) then {
 	ULP_Escort = nil;
 };
 
+[] call ULP_fnc_onUnrestrained;
+player setVariable ["surrender", nil];
+
+if (visibleMap) then {
+	openMap false; 
+};
+
+[] spawn ULP_UI_fnc_closeDialogs; // Makes sure all dialogs are closed...
+[] call ULP_fnc_stopPlacement;
+
 private _deathMessage = format["<t align='center' size='2'>You killed yourself</t>"];
 
 // Notify the server...
@@ -59,20 +69,6 @@ if (!isNull _killer && { isPlayer _killer } && { !(_killer isEqualTo _unit) }) t
 	[getPlayerUID _unit, "Injured", [getPos _unit, getUnitLoadout _unit]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 };
 
-localNamespace setVariable ["ULP_DeathMessage", _deathMessage];
-
-[] call ULP_fnc_onUnrestrained;
-player setVariable ["surrender", nil];
-
-if (visibleMap) then {
-	openMap false; 
-};
-
-[["RscHUD"] call ULP_UI_fnc_getLayer] call ULP_UI_fnc_closeHUD;
-[] spawn ULP_UI_fnc_closeDialogs; // Makes sure all dialogs are closed...
-[] call ULP_fnc_wipeEffects;
-[] call ULP_fnc_stopPlacement;
-
 private _wounds = createHashMap;
 private _possibleWounds = ("isClass _x" configClasses (missionConfigFile >> "CfgMedical" >> "Damage"));
 private _totalWounds = 0;
@@ -96,6 +92,6 @@ private _totalWounds = 0;
 player setVariable ["IncapacitatedWounds", _wounds, true];
 ["Incapacitated", [_unit, _killer], true] call ULP_fnc_invokeEvent;
 
-if (["RscIncapacitated", "PLAIN", 3] call ULP_UI_fnc_createLayer) then {
+if (["RscIncapacitated", "PLAIN", 3, [_deathMessage]] call ULP_UI_fnc_createLayer) then {
 	ULP_CanRespawn = false;
 };

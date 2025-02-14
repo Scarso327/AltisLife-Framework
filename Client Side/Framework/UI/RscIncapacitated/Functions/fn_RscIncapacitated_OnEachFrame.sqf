@@ -21,7 +21,7 @@ if !(alive player || { isDowned(player) }) exitWith {
 	["RscIncapacitated"] call ULP_UI_fnc_destroyLayer;
 };
 
-private _endTime = _display getVariable ["endTime", time + 10];
+private _endTime = _display getVariable ["endTime", serverTime + 10];
 
 // My time has come...
 if (time >= _endTime) exitWith {
@@ -29,7 +29,7 @@ if (time >= _endTime) exitWith {
 	["RscIncapacitated"] call ULP_UI_fnc_destroyLayer;
 };
 
-_progressBar progressSetPosition (1 - ((time - _startTime) / (_endTime - _startTime)));
+_progressBar progressSetPosition (1 - ((serverTime - _startTime) / (_endTime - _startTime)));
 
 private _medicsOnline = count (["Medic"] call ULP_fnc_allMembers);
 private _assignedMedic = player getVariable ["AssignedMedic", objNull];

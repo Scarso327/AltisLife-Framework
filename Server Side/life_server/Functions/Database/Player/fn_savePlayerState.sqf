@@ -67,6 +67,7 @@ private _query = switch (_state) do {
 		format["`%1gear`='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray]
 	};
 	case 16: { format["`%1stats`='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
+	case 17: { format["`%1wounded`='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call ULP_fnc_bool] };
 	default { "" };
 };
 

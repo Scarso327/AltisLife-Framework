@@ -18,7 +18,7 @@ if !(isClass _factionCfg) exitWith {};
 private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex");
 
 private _query = [
-	format["SELECT `uid`, `pid`, `group_id`, `cash`, `bankacc`, `playtime`, `insert_time`, `adminlevel`, `eventslevel`, `donorlevel`, `%1licenses`, `%1gear`, `%1stats`, `professions`, `prestige`, `level`, `xp`, `achievements`, `%1daily_tasks`, `%1weekly_tasks`, `textures`, `titles`, `%1perks`, `reputation`, `blueprints`", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
+	format["SELECT `uid`, `pid`, `group_id`, `cash`, `bankacc`, `playtime`, `insert_time`, `adminlevel`, `eventslevel`, `donorlevel`, `%1licenses`, `%1gear`, `%1stats`, `professions`, `prestige`, `level`, `xp`, `achievements`, `%1daily_tasks`, `%1weekly_tasks`, `textures`, `titles`, `%1perks`, `reputation`, `blueprints`, `%1wounded`", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
 	format["FROM `players` WHERE `pid`='%1'", _uid]
 ];
@@ -54,8 +54,8 @@ private _hashmapsToCreate = [13, 18, 19, 20, 22, 24];
 private _factionMaps = getArray (_factionCfg >> "DatabaseInfo" >> "mapIndexes");
 if !(_factionMaps isEqualTo []) then { _arraysToConvert append _factionMaps; };
 
-// (Blacklist / Arrest Status)
-private _boolsToConvert = [25];
+// Wounded Status, (Blacklist / Arrest Status)
+private _boolsToConvert = [25, 26];
 private _factionBools = getArray (_factionCfg >> "DatabaseInfo" >> "boolIndexes");
 if !(_factionBools isEqualTo []) then { _arraysToConvert append _factionBools; };
 

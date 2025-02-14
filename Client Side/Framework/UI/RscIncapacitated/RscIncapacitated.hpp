@@ -5,6 +5,7 @@ class RscIncapacitated {
 	movingEnable = 0;
 	fadein = 0;
 	fadeout = 0;
+    onInit = "_this call ULP_UI_fnc_RscIncapacitated_OnInit";
     onLoad = "_this call ULP_UI_fnc_RscIncapacitated_OnLoad";
 	onUnload = "_this call ULP_UI_fnc_RscIncapacitated_OnUnload";
   	objects[]={};

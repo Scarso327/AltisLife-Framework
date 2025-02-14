@@ -9,13 +9,15 @@ class CfgAdmin {
 		class Camera : Suit {};
 		class Teleport : Suit {};
 		class Invis : Suit {};
-		class RemovePlaceable : Suit {};
-		class Compensate : Suit {};
+		class RemovePlaceable : Suit {
+			condition = "((call ULP_Staff) > 1)";
+		};
+		class Compensate : RemovePlaceable {};
 
 		// ADMINISTRATOR (L3)
 		class Vehicle {
 			message = "You must be the Events Team Lead or an Administrator to use this ability...";
-			condition = "((call ULP_Staff) > 2) || { ((call ULP_Event) > 1) }";
+			condition = "((call ULP_Staff) > 2)";
 		};
 		class Medical : Vehicle {};
 		class Restrain : Vehicle {};

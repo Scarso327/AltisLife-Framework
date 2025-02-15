@@ -17,7 +17,7 @@ class CfgRemoteExec {
         class ULP_fnc_say3D {};
 
         class ULP_fnc_chatMessage {};
-        class ULP_fnc_restrain {};
+        class ULP_fnc_setRestrainedState {};
         class ULP_fnc_onKnocked {};
         class ULP_fnc_setPlayerInfo {};
         class ULP_fnc_initVehicle {};

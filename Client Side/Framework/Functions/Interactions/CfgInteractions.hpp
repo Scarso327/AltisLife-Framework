@@ -47,6 +47,12 @@ class CfgInteractions {
 			onClick = "[_this select 0, player, false] call ULP_fnc_restrain; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup } || { [player] call ULP_fnc_onDuty } }";
 		};
+		class Lockpick : Unrestrain {
+			title = "Lockpick";
+			factions[] = { "Civilian" };
+			onClick = "_this call ULP_fnc_lockpick";
+			condition = "[_this] call ULP_fnc_isRestrained && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
+		};
 		class Escort : Unrestrain {
 			title = "Escort";
 			onClick = "[_this select 0, player, true] call ULP_fnc_escort; closeDialog 0;";
@@ -285,7 +291,7 @@ class CfgInteractions {
 
 		class Lockpick : Repair {
 			title = "Lockpick";
-			onClick = "_this call ULP_fnc_lockpickVehicle";
+			onClick = "_this call ULP_fnc_lockpick";
 			condition = "!(_this in ULP_Keys) && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
 		};
 

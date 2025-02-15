@@ -17,4 +17,7 @@ if (isNull _incapUi) exitWith {};
 
 [[format ["<t color='#B92DE0'>%1</t> has administered you blood and so your bleedout has been extended...", name _medic], "You have received more blood and so your bleedout has been extended..."] select (isNull _medic)] call ULP_fnc_hint;
 
-_incapUi setVariable ["endTime", (_incapUi getVariable ["endTime", time + 10]) + _increase];
+private _newEndTime = (_incapUi getVariable ["endTime", serverTime + 10]) + _increase;
+
+player setVariable ["IncapacitatedBleedOutTime", _newEndTime, true];
+_incapUi setVariable ["endTime", _newEndTime];

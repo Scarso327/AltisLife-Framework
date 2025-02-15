@@ -51,7 +51,6 @@ class CfgFunctions {
 			class onNextAction {};
 			class onPrevAction {};
 			class onPause {};
-			class onRestrain {};
 			class onIncapacitated {};
 			class onKilled {};
 			class onRespawn {};
@@ -151,6 +150,7 @@ class CfgFunctions {
 			class spikeStrip {};
 			class triggerEvent {};
 			class dropFishingNet {};
+			class lockpick {};
 		};
 
 		class Input {
@@ -185,6 +185,7 @@ class CfgFunctions {
 			class postInitPlayer { postInit	= 1; };
 			class disputePlayer {};
 			class jump {};
+			class setRestrainedState {};
 		};
 
 		class PlayerActions {
@@ -438,7 +439,6 @@ class CfgFunctions {
 			class chopVehicle {};
 			class createVehicle {};
 			class clampVehicle {};
-			class lockpickVehicle {};
 			class initVehicle {};
 			class skinVehicle {};
 			class vehicleCfg {};

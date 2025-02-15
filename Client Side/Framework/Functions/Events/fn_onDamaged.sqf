@@ -26,14 +26,11 @@ if ([_unit] call ULP_fnc_onDuty || { [_unit] call ULP_fnc_isKnocked }) exitWith 
 
 if (!(isNull (objectParent _unit)) && { (vehicle _unit) isKindOf "LandVehicle" }) then {
 	private _multiplier = [
-		1.25,
-		1
+		1.2,
+		0.6
 	] select (_unit getVariable["seatBelt", false]);
 
-	_damage = (_originalDamage + ((_damage - _originalDamage) * _multiplier)) * ([
-		1.1,
-		0.9
-	] select ((speed (vehicle _unit)) <= 80));
+	_damage = (_originalDamage + ((_damage - _originalDamage) * _multiplier));
 };
 
 if !(isNull _source) then {

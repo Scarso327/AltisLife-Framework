@@ -19,7 +19,8 @@ private _pos = getArray (_location >> "position");
 private _captureRadius = getNumber (_location >> "captureRadius");
 private _radius = getNumber (_location >> "radius");
 
-private _isSyndicate = [getNumber (_cfg >> "SyndicateChance")] call ULP_fnc_chance && { call compile getText (_cfg >> "SyndicateCondition") };
+private _isSyndicate = ([getNumber (_cfg >> "SyndicateChance")] call ULP_fnc_chance && { call compile getText (_cfg >> "SyndicateCondition") }
+	|| { missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false] });
 private _popupName = (["Popup Cartel", "Popup Syndicate"] select (_isSyndicate));
 
 private _area = createMarker [format["redzone_%1_capture_popup_cartel_area_%2", (["popup", "syndicate"] select (_isSyndicate)), time], _pos];

@@ -524,6 +524,31 @@ class CfgClothesStore {
 		};
 	};
 
+	class Gun {
+		storeName = "Gun Store Clothing";
+		condition = "[""Handgun""] call ULP_fnc_hasLicense || { [""SMG""] call ULP_fnc_hasLicense }";
+		class Uniforms {};
+
+		class Headgear {
+			class H_Cap_blk {
+				class Textures {
+					class H_Cap_marshal {};
+				};
+			};
+		};
+
+		class Facewear {};
+
+		class Vests {
+			class V_LegStrapBag_black_F {};
+			class V_Pocketed_black_F {};
+			class V_Rangemaster_belt {};
+			class V_BandollierB_blk {};
+		};
+
+		class Backpacks {};
+	};
+
 	class Hunting {
 		storeName = "Hunting Clothing Store";
 		condition = "[""Hunting""] call ULP_fnc_hasLicense";

@@ -26,12 +26,7 @@ if (_enable) then {
 				private _dist = _unit distance player;
 
 				if (!(_veh isEqualTo (vehicle player)) && { !(_veh in _included) } && { _dist <= _maxDist } && { [_unit] call ULP_fnc_hasComms }) then {
-					(if (isDowned(_unit)) then {
-						[[0.9 , 0, 0, 0.7], "\a3\ui_f\data\igui\cfg\revive\overlayiconsgroup\f75_ca.paa"]
-						} else {
-							[([_unit] call ULP_fnc_getIndicatorColour), "\a3\ui_f\data\IGUI\Cfg\Cursors\select_ca.paa"]
-						}) params [ "_hex", "_icon" ];
-
+					private _hex = ([_unit] call ULP_fnc_getIndicatorColour);
 					private _text = [0.9, 0.9, 0.9, 1];
 					private _name = name _x;
 
@@ -52,10 +47,14 @@ if (_enable) then {
 
 					{ _x set [3, linearConversion [_maxDist / 1.2, _maxDist, _dist, 1, 0, true]]; } forEach [_hex, _text];
 
-					drawIcon3D [ _icon, _hex, _pos, .9, .9, 0 ];
+					drawIcon3D [ "\a3\ui_f\data\IGUI\Cfg\Cursors\select_ca.paa", _hex, _pos, .9, .9, 0 ];
 
 					if (_includeName) then {
 						drawIcon3D [ "", _text, _pos, 1, 1, 0, name _x, 0, 0.027, "RobotoCondensedBold" ];
+					};
+
+					if (isDowned(_unit)) then {
+						drawIcon3D [ "\a3\ui_f\data\IGUI\Cfg\Cursors\unitInjured_ca.paa", _hex, _pos, 1.26, 1.26, 0 ];
 					};
 				};
 			} forEach _units;

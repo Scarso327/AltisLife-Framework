@@ -9,6 +9,8 @@ _this params [
 	["_unit", objNull, [objNull]]
 ];
 
+if (isDowned(_unit)) exitWith { [0.9 , 0, 0, 0.7] };
+
 private _cfg = missionConfigFile >> "CfgIndicators" >> ([_unit] call ULP_fnc_getFaction) >> (uniform _unit);
 if (isClass _cfg && { [["EnableFactionColouring", "Indicators"] call ULP_fnc_getOption] call ULP_fnc_bool }) exitWith { getArray (_cfg >> "colour") };
 

@@ -199,7 +199,10 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
         };
         class Rebel_02 : Rebel_01 { marker = "civ_spawn_rebel_02"; };
-        class Rebel_03 : Rebel_01 { marker = "civ_spawn_rebel_03"; };
+        class Rebel_03 : Rebel_01 { 
+            displayName = "Rebel FOB";
+            marker = "civ_spawn_rebel_03"; 
+        };
         class Blackmarket : Rebel_01 {
             displayName = "Blackmarket";
             marker = "civ_spawn_blackmarket";

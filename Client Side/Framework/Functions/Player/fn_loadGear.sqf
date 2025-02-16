@@ -33,6 +33,8 @@ if !(_uniform isEqualTo "") then {
 if !(_backpack isEqualTo "") then {
     ULP_BackpackTexture = _backpack;
     [unitBackpack player, typeOf (unitBackpack player), backpackContainer player, _backpack] call ULP_fnc_setTextures;
+} else {
+    [] call ULP_fnc_setHideBackpack;
 };
 
 { [(_x select 0), (_x select 1), false, true] call ULP_fnc_handleItem } count _yItems;

@@ -47,5 +47,5 @@ if !(isNull _resetCtrl) then {
 	_resetCtrl ctrlEnable false;
 };
 
+(missionProfileNamespace setVariable [format["ULP_Options_%1_%2", _category, _option], _default]);
 ["OptionChanged", [_option, _category, _default, [_option, _category, _default] call ULP_fnc_getOption]] call ULP_fnc_invokeEvent;
-(missionProfileNamespace setVariable [format["ULP_Options_%1_%2", _category, _option], _default])

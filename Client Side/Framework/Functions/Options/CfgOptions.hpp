@@ -37,6 +37,13 @@ class CfgOptions {
 			type = "DROPDOWN";
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
+
+		class DetailMode : EnableWelcome {
+			name = "Detail Mode";
+			tooltip = "Allows you to set detail mode, low is only active in redzones.";
+			type = "DROPDOWN";
+			values[] = { { {"Low", 2}, {"Normal", 1}, {"High", 0} }, 1 };
+		};
 	};
 
 	class Audio {

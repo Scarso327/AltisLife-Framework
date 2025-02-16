@@ -124,6 +124,7 @@ if (hasInterface && { isClass (_mapCfg >> "Lighting") }) then {
 [[["EnableIndicators", "Indicators"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_groupIndicators;
 enableEnvironment [true, [["EnableAmbientSounds", "Audio"] call ULP_fnc_getOption] call ULP_fnc_bool];
 [] call ULP_fnc_setViewDistance;
+[] call ULP_fnc_setDetailMode;
 
 showHud [
 	true, // scriptedHUD

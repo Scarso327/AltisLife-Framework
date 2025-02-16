@@ -192,6 +192,13 @@ class CfgSpawns {
             icon = "Data\UI\Spawns\news.paa";
             conditions = "[""News""] call ULP_fnc_hasLicense";
         };
+        class IDAP : BaseSpawn {
+            displayName = "IDAP HQ";
+            marker = "civ_spawn_idap";
+            icon = "Data\UI\Spawns\idap.paa";
+            conditions = "[""IDAP""] call ULP_fnc_hasLicense && { ULP_Reputation >= 750 }";
+        };
+
         class Rebel_01 : BaseSpawn {
             displayName = "Rebel Outpost";
             marker = "civ_spawn_rebel_01";

@@ -69,10 +69,10 @@ if !(_profession isEqualTo []) then {
 
 	["You've successfully processed your materials!"] call ULP_fnc_hint;
 
-	if (time >= (player getVariable ["ProcessCooldown", time - 30])) then {
+	if (time >= (player getVariable ["ProcessCooldown", time - 15])) then {
 		if !(_profession isEqualTo []) then { _profession call ULP_fnc_increaseProfession; };
 		if !(_leveling isEqualTo []) then { _leveling call ULP_fnc_addXP; };
-		player setVariable ["ProcessCooldown", time + 30];
+		player setVariable ["ProcessCooldown", time + 15];
 	};
 }] call ULP_UI_fnc_startProgress;
 

@@ -17,10 +17,4 @@ private _maxLevel = getNumber (_cfg >> "maxLevel");
 
 if (_level isEqualTo _maxLevel) exitWith { 0 };
 
-private _requirement = getNumber (_cfg >> "xpLevel");
-
-if (_level > 1) then {
-	_requirement = _requirement * (getNumber (_cfg >> "xpMultipler") * _level);
-};
-
-_requirement
+getNumber (_cfg >> "xpLevel")

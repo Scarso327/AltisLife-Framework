@@ -28,10 +28,6 @@ private _max = getNumber (_cfg >> "maxLevel");
 	"_level", "_xp"
 ];
 
-if (_level > 1) then {
-	_requirement = _requirement * (getNumber (_cfg >> "xpMultipler") * _level);
-};
-
 private _previousLevel = _level;
 _xp = _xp + _amount;
 

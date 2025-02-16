@@ -13,9 +13,6 @@ private _professionsMaxed = true;
 	([configName _x] call ULP_fnc_getProfessionLevel) params ["_level", "_points"];
 
 	private _requirement = getNumber (_x >> "xpLevel");
-	if (_level > 0) then {
-		_requirement = _requirement * (getNumber (_x >> "xpMultipler") * _level);
-	};
 
 	if !(_level isEqualTo getNumber (_x >> "maxLevel") && { _points isEqualTo _requirement }) exitWith {
 		_professionsMaxed = false;

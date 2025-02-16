@@ -71,7 +71,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 4;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
@@ -92,7 +91,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 4;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "10 * (_this select 0)";
 		};
 		class Requirements {
@@ -113,7 +111,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 4;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
@@ -179,7 +176,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 3;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "20 * (_this select 0)";
 		};
 		class Requirements {
@@ -200,7 +196,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 3;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "10 * (_this select 0)";
 		};
 		class Requirements {
@@ -221,7 +216,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 3;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "5 * (_this select 0)";
 		};
 		class Requirements {
@@ -242,7 +236,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 3;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
@@ -263,7 +256,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 2;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
@@ -284,7 +276,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 5;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "10 * (_this select 0)";
 		};
 		class Requirements {
@@ -305,7 +296,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 4;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "15 * (_this select 0)";
 		};
 		class Requirements {
@@ -341,7 +331,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 5;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "5 * (_this select 0)";
 		};
 		class Requirements {
@@ -362,7 +351,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 2;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "15 * (_this select 0)";
 		};
 		class Requirements {
@@ -428,7 +416,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 3;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "10 * (_this select 0)";
 		};
 		class Requirements {
@@ -449,7 +436,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 2;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "5 * (_this select 0)";
 		};
 		class Requirements {
@@ -470,7 +456,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 5;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "3 * (_this select 0)";
 		};
 		class Requirements {
@@ -491,7 +476,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 2;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
@@ -542,7 +526,6 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 4;
 			xpLevel = 100;
-			xpMultipler = 2;
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {

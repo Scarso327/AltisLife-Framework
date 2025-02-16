@@ -1,7 +1,7 @@
 class CfgProgression {
 	class Leveling {
 		baseXp = 750;
-		xpMultiplier = 1.8;
+		xpMultiplier = 1.2;
 		maxLevel = 30;
 	};
 

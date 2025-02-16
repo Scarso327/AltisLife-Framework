@@ -1537,6 +1537,13 @@ class CfgVirtualItems {
 		weight = 28;
 		class Settings : Settings { isIllegal = true; };
 	};
+	class HumanitarianSupplies : FreightCargo {
+		displayName = "Humanitarian Supplies";
+		icon = "Data\Icons\humanitarianSupplies.paa";
+		sellPrice = 0;
+		weight = 1;
+		class Settings : Settings {};
+	};
 
 	// Raw Fish
 	class Salema_F_Raw {

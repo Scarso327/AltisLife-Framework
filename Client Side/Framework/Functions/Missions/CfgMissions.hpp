@@ -459,4 +459,45 @@ class CfgMissions {
 		};
 		class Messages : Messages {};
 	};
+
+	class HumanitarianMission : CorporateFreight {
+		name = "Humanitarian Mission";
+		description = "You need to deliver supplies to %1";
+		condition = "[""IDAP""] call ULP_fnc_hasLicense";
+		vehicleRequirement[] = { { "Car" }, 10 };
+		cargoItem = "HumanitarianSupplies";
+		class Locations {
+			class IDAP_HQ {
+				pos = "idap_camp";
+				name = "IDAP HQ";
+			};
+			class IDAP_Camp_1 {
+				pos = "idap_camp_1";
+				name = "Southern Island Camp";
+			};
+			class IDAP_Camp_2 {
+				pos = "idap_camp_2";
+				name = "Oreokastro Camp";
+			};
+			class IDAP_Camp_3 {
+				pos = "idap_camp_3";
+				name = "Feres Camp";
+			};
+			class IDAP_Camp_4 {
+				pos = "idap_camp_4";
+				name = "Molos Camp";
+			};
+		};
+		class Rewards {
+			moneyReward = 6;
+			xpReward = 1000;
+		};
+		class Messages {
+			onFinishWithoutMission = "You don't have any supplies to deliver here...";
+			onAlreadyHas = "You already have a humanitarian mission active, complete it before requesting another...";
+			onNoLocations = "There are currently no humanitarian missions available for pickup, please try again alter...";
+			onAssigned = "Your truck has been filled with supplies, deliver it to <t color='#B92DE0'>%1</t>";
+			onFinished = "You have successfully delivered the supplies, you have been paid <t color='#B92DE0'>£%1</t>";
+		};
+	};
 };

@@ -17,22 +17,34 @@ class CfgClothesStore {
 			class U_B_CTRG_Soldier_F {
 				displayName = "SCO19 Uniform";
 				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
-				class textures { class SCO19 {}; };
+				class textures { 
+					class SCO19 {}; 
+					class AFO {};
+				};
 			};
 			class U_B_CTRG_Soldier_3_F {
 				displayName = "SCO19 Uniform (Rolled)";
 				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
-				class textures { class SCO19 {}; };
+				class textures { 
+					class SCO19 {}; 
+					class AFO {};
+				};
 			};
 			class U_B_CTRG_Soldier_2_Arid_F {
 				displayName = "SCO19 Command Uniform";
 				condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess";
-				class textures { class SCO19 {}; };
+				class textures { 
+					class SCO19 {}; 
+					class AFO {};
+				};
 			};
 			class U_B_GhillieSuit {
 				displayName = "SCO19 Ghillie Suit";
 				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
-				class textures { class SCO19 {}; };
+				class textures { 
+					class SCO19 {}; 
+					class AFO {};
+				};
 			};
 			class U_BG_Guerrilla_6_1 { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
 			class U_O_R_Gorka_01_black_F { 
@@ -189,86 +201,6 @@ class CfgClothesStore {
 			};
 			class B_SCBA_01_F { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
 			class B_CombinationUnitRespiration_01_F { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
-		};
-	};
-
-	class PoliceUM {
-		storeName = "Equipment Store";
-		condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
-		class Uniforms {
-			class U_C_Mechanic_01_F {};
-			class U_C_ArtTShirt_01_v1_F {};
-			class U_I_C_Soldier_Bandit_3_F {};
-			class U_IG_Guerilla1_1 {
-				class Textures {
-					class U_IG_Guerilla2_2 {};
-					class U_IG_Guerilla2_1 : U_IG_Guerilla2_2 {};
-					class U_IG_Guerilla2_3 : U_IG_Guerilla2_2 {};
-				};
-			};
-			class U_I_L_Uniform_01_tshirt_skull_F {};
-		};
-
-		class Headgear {
-			class H_WirelessEarpiece_F {};
-			class H_Bandanna_gry {};
-			class H_Cap_blk {};
-			class H_Hat_grey {};
-			class H_Watchcap_blk {};
-			class H_Booniehat_khk {};
-		};
-
-		class Facewear {
-			class G_WirelessEarpiece_F {};
-			class G_Aviator {};
-			class G_Squares {
-				class Textures {
-					class G_Squares {};
-					class G_Squares_Tinted : G_Squares {};
-				};
-			};
-			class G_Spectacles {};
-			class G_Shades_Black {};
-			class G_Sport_Red {};
-			class G_Lady_Blue {};
-			class G_Respirator_white_F {};
-			class G_Bandanna_aviator { 
-				class Textures {
-					class G_Bandanna_aviator {};
-					class G_Bandanna_sport : G_Bandanna_aviator {};
-					class G_Bandanna_beast : G_Bandanna_aviator {};
-					class G_Bandanna_blk : G_Bandanna_aviator {};
-				};
-			};
-		};
-
-		class Vests {
-			class V_LegStrapBag_black_F {
-				class Textures { class V_LegStrapBag_black_F {}; };
-			};
-			class V_Rangemaster_belt {};
-			class V_BandollierB_blk {
-				class Textures { class V_BandollierB_blk {}; };
-			};
-			class V_TacVest_blk_POLICE {
-				class Textures {};
-			};
-			class V_PlateCarrier1_blk {
-				class Textures { class V_PlateCarrier1_blk {}; };
-			};
-			class V_PlateCarrier2_blk {
-				class Textures { class V_PlateCarrier2_blk {}; };
-			};
-		};
-
-		class Backpacks {
-			class B_LegStrapBag_black_F {};
-			class B_Messenger_Black_F {};
-			class B_AssaultPack_blk {};
-			class B_FieldPack_blk {};
-			class B_Kitbag_cbr {};
-			class B_TacticalPack_blk {};
-			class B_Carryall_cbr {};
 		};
 	};
 

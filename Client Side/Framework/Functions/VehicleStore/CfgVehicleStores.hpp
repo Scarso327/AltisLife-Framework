@@ -130,19 +130,23 @@ class CfgVehicleStores {
 				class Textures {}; 
 			};
 			class B_GEN_Van_02_transport_F { 
-				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures {}; 
 			};
 			class B_GEN_Van_02_vehicle_F { 
-				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
+				condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures {}; 
 			};
 			class C_SUV_01_F {
 				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
+			class C_Hatchback_01_F {
+				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
+				class Textures {};
+			};
 			class C_Hatchback_01_sport_F {
-				condition = "[""Medic_Main"", 4] call ULP_fnc_hasAccess";
+				condition = "[""Medic_HART"", 2] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			/*class C_Offroad_01_comms_F { // TODO TEXTURE
@@ -150,7 +154,7 @@ class CfgVehicleStores {
 				class Textures {};
 			};*/
 			class C_Offroad_02_unarmed_F {
-				condition = "[""Medic_Main"", 6] call ULP_fnc_hasAccess";
+				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
 				class Textures {};
 			};
 			/*class C_Van_01_box_F { // TODO TEXTURE

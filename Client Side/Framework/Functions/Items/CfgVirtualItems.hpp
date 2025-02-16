@@ -2047,9 +2047,9 @@ class CfgVirtualItems {
 		icon = "Data\Icons\electronicCircuit.paa";
 		class Settings : Settings {};
 	};
-	class Motherbord : Capacitor {
-		displayName = "Motherbord";
-		icon = "Data\Icons\motherbord.paa";
+	class Motherboard : Capacitor {
+		displayName = "Motherboard";
+		icon = "Data\Icons\motherboard.paa";
 		class Settings : Settings {};
 	};
 	class CentralProcessingUnit : Capacitor {

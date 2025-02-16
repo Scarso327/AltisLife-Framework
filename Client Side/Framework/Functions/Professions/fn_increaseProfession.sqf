@@ -25,10 +25,6 @@ private _max = getNumber (_cfg >> "maxLevel");
 	"_level", "_points"
 ];
 
-if (_level > 0) then {
-	_requirement = _requirement * (getNumber (_cfg >> "xpMultipler") * _level);
-};
-
 _amount = round (["QuickLearner", _amount] call ULP_fnc_activatePerk);
 
 private _previousLevel = _level;

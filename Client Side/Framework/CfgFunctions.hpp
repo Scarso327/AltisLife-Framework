@@ -406,6 +406,7 @@ class CfgFunctions {
 			class resetOption {};
 			class getDefaultOption {};
 			class setViewDistance {};
+			class setDetailMode {};
 		};
 
 		class Selects {

@@ -222,7 +222,7 @@ class CfgAchievements {
 	class JoinAA : BaseAchivement200 {
 		icon = "Data\UI\Achievements\AA.paa";
 		displayName = "Air Saviour";
-		description = "Joined the Altis Air Ambulance";
+		description = "Joined the Helicopter Emergency Medical Service";
 	};
 	class JoinCOL : BaseAchivement200 {
 		icon = "Data\UI\Achievements\COL.paa";

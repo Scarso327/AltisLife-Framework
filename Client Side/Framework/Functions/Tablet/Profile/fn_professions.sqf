@@ -50,9 +50,6 @@ private _yInc = false;
 
 	private _maxLevel = getNumber (_x >> "maxLevel");
 	private _requirement = getNumber (_x >> "xpLevel");
-	if (_level > 0) then {
-		_requirement = _requirement * (getNumber (_x >> "xpMultipler") * _level);
-	};
 
 	private _iconCtrl = _professionCtrl controlsGroupCtrl 101;
 	_iconCtrl ctrlSetText getText (_x >> "icon");

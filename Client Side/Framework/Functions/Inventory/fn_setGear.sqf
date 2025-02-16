@@ -81,6 +81,8 @@ if (_itemType isEqualTo "Magazine") then {
 			if !(_item isEqualTo _texture) then {
 				ULP_BackpackTexture = _texture;
 				[unitBackpack player, typeOf (unitBackpack player), backpackContainer player, _texture] call ULP_fnc_setTextures;
+			} else {
+				[] call ULP_fnc_setHideBackpack;
 			};
 			
 			true breakOut "fn_setGear";

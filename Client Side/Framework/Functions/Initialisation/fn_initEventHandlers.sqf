@@ -88,6 +88,7 @@ player addEventHandler ["InventoryClosed", { _this call ULP_fnc_InventoryClosed 
 	switch (format["%1_%2", _category, _option]) do {
 		case "General_NightLight": { if (hasInterface && { !(isNil "ULP_NightLight") }) then { ULP_NightLight setLightBrightness _newSetting; }; };
 		case "General_DetailMode": { [] call ULP_fnc_setDetailMode; };
+		case "General_EnableInvisBackpack": { [] call ULP_fnc_setHideBackpack; };
 		case "HUD_SideChat": { [player, [_newSetting] call ULP_fnc_bool] remoteExecCall ["ULP_SRV_fnc_setSideChannel", RSERV]; };
 		case "HUD_EnableHUD": {
 			if (_newSetting isEqualTo 1) then {

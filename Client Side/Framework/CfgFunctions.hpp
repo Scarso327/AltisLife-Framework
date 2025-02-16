@@ -128,7 +128,8 @@ class CfgFunctions {
 			class isGas {};
 			class isMask {};
 			class isNightVision {};
-			class preInitClothing { preInit=1; }
+			class preInitClothing { preInit=1; };
+			class setHideBackpack {};
 		};
 
 		class Items {

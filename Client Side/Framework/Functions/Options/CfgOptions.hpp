@@ -38,6 +38,11 @@ class CfgOptions {
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 		};
 
+		class EnableInvisBackpack : EnableAutoDecline {
+			name = "Enable Invisible Backpack";
+			tooltip = "When enabled, your backpack will be invisible to you.";
+		};
+
 		class DetailMode : EnableWelcome {
 			name = "Detail Mode";
 			tooltip = "Allows you to set detail mode, low is only active in redzones.";

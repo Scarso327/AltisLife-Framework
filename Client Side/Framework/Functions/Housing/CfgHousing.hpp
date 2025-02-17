@@ -96,6 +96,13 @@ class CfgHousing {
 		class Land_i_House_Small_02_V2_F : Land_i_House_Small_02_V1_F {};
 		class Land_i_House_Small_02_V3_F : Land_i_House_Small_02_V1_F {};
 
+		class Land_i_House_Small_02_b_blue_F : Land_i_House_Small_02_V1_F {};
+		class Land_i_House_Small_02_b_pink_F : Land_i_House_Small_02_V1_F {};
+		class Land_i_House_Small_02_b_whiteblue_F : Land_i_House_Small_02_V1_F {};
+		class Land_i_House_Small_02_b_white_F : Land_i_House_Small_02_V1_F {};
+		class Land_i_House_Small_02_b_brown_F : Land_i_House_Small_02_V1_F {};
+		class Land_i_House_Small_02_b_yellow_F : Land_i_House_Small_02_V1_F {};
+
 		class Land_i_House_Small_01_V1_F : BaseHouse {
 			price = 6250000;
 			spawnPos[] = {-1.41695,-1.80029,-1.04134};
@@ -107,6 +114,13 @@ class CfgHousing {
 		};
 		class Land_i_House_Small_01_V2_F : Land_i_House_Small_01_V1_F {};
 		class Land_i_House_Small_01_V3_F : Land_i_House_Small_01_V1_F {};
+
+		class Land_i_House_Small_01_b_blue_F : Land_i_House_Small_01_V1_F {};
+		class Land_i_House_Small_01_b_pink_F : Land_i_House_Small_01_V1_F {};
+		class Land_i_House_Small_01_b_whiteblue_F : Land_i_House_Small_01_V1_F {};
+		class Land_i_House_Small_01_b_white_F : Land_i_House_Small_01_V1_F {};
+		class Land_i_House_Small_01_b_brown_F : Land_i_House_Small_01_V1_F {};
+		class Land_i_House_Small_01_b_yellow_F : Land_i_House_Small_01_V1_F {};
 
 		class Land_i_House_Small_03_V1_F : BaseHouse {
 			price = 6250000;
@@ -130,6 +144,13 @@ class CfgHousing {
 		class Land_i_House_Big_02_V2_F : Land_i_House_Big_02_V1_F {};
 		class Land_i_House_Big_02_V3_F : Land_i_House_Big_02_V1_F {};
 
+		class Land_i_House_Big_02_b_blue_F : Land_i_House_Big_02_V1_F {};
+		class Land_i_House_Big_02_b_pink_F : Land_i_House_Big_02_V1_F {};
+		class Land_i_House_Big_02_b_whiteblue_F : Land_i_House_Big_02_V1_F {};
+		class Land_i_House_Big_02_b_white_F : Land_i_House_Big_02_V1_F {};
+		class Land_i_House_Big_02_b_brown_F : Land_i_House_Big_02_V1_F {};
+		class Land_i_House_Big_02_b_yellow_F : Land_i_House_Big_02_V1_F {};
+
 		class Land_i_House_Big_01_V1_F : BaseHouse {
 			price = 9400000;
 			spawnPos[] = {-0.25415,5.96484,0.855064};
@@ -141,6 +162,13 @@ class CfgHousing {
 		};
 		class Land_i_House_Big_01_V2_F : Land_i_House_Big_01_V1_F {};
 		class Land_i_House_Big_01_V3_F : Land_i_House_Big_01_V1_F {};
+
+		class Land_i_House_Big_01_b_blue_F : Land_i_House_Big_01_V1_F {};
+		class Land_i_House_Big_01_b_pink_F : Land_i_House_Big_01_V1_F {};
+		class Land_i_House_Big_01_b_whiteblue_F : Land_i_House_Big_01_V1_F {};
+		class Land_i_House_Big_01_b_white_F : Land_i_House_Big_01_V1_F {};
+		class Land_i_House_Big_01_b_brown_F : Land_i_House_Big_01_V1_F {};
+		class Land_i_House_Big_01_b_yellow_F : Land_i_House_Big_01_V1_F {};
 
 		class Land_LightHouse_F : BaseHouse {
 			icon = "Data\UI\Spawns\lighthouse.paa";

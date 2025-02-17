@@ -219,6 +219,12 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_setSideChannel {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_startGroupAlliance {
+            allowedTargets = SERVER;
+        };
+        class ULP_SRV_fnc_endGroupAlliance {
+            allowedTargets = SERVER;
+        };
 
         class bis_fnc_debugconsoleexec {};
     };

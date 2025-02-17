@@ -13,7 +13,8 @@ if (canSuspend) exitWith {
 
 _this params [
 	["_text", "", [""]],
-	["_header", "", [""]]
+	["_header", "", [""]],
+	["_sound", "FD_Timer_F", [""]]
 ];
 
 private _display = ["RscHints"] call ULP_UI_fnc_getLayer;
@@ -40,6 +41,8 @@ _message ctrlSetFade 1;
 _message ctrlCommit 0;
 
 _message setVariable ["duraction", diag_tickTime + 10];
+
+if !(_sound isEqualTo "") then { playSound _sound; };
 
 private _hints = + (_display getVariable ["hints", []]);
 

@@ -6,18 +6,20 @@ class GroupPages : Life_RscToolbox {
 	colorSelectedBg[] = INNER_BODY_COLOUR;
 	SAFEZONE_X(UI_X);
 	SAFEZONE_Y(UI_Y);
-	SAFEZONE_W(((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2));
+	SAFEZONE_W(((UI_WIDTH - 0.01) / 1.5) - (MARGIN_X / 2));
 	SAFEZONE_H(MARGIN_Y * 3);
-	columns = 3;
+	columns = 4;
 	fade = 0;
 	strings[] = {
 		"Overview",
 		"Progression",
+		"Alliances",
 		"Settings"
 	};
 	tooltips[] = {
 		"Overview",
 		"Progression",
+		"Alliances",
 		"Settings"
 	};
 };
@@ -261,4 +263,80 @@ class ChangeRankChangeRank : ChangeTax {
 	text = "<t align = 'center'>Set Promote Rank</t>";
 	onButtonClick = "[_this select 0, ""rank""] call ULP_fnc_setRankPermission;";
 	SAFEZONE_Y((UI_Y + (0.022 * 7)) + (MARGIN_Y * 4) + ((MARGIN_Y / 2) * 4));
+};
+
+class GroupAlliancesBackground : Life_RscText {
+	idc = 23099;
+	colorBackground[] = INNER_BODY_COLOUR;
+	text = "";
+    SAFEZONE_X(UI_X);
+	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H((UI_HEIGHT - (0.022 * 2)) - (MARGIN_Y * 4));
+};
+
+class GroupAlliancesHeaderBackground : Life_RscText {
+	idc = 23100;
+	colorBackground[] = { 0, 0, 0, 1 };
+	text = "";
+    SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H(0.022);
+};
+
+class GroupAlliancesListHeader: Life_RscListNBox {
+	idc = 23101;
+    SAFEZONE_X(UI_X);
+	SAFEZONE_Y(UI_Y + (MARGIN_Y * 3));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H(0.022);
+	text = "";	
+	rowHeight = 0.04;
+	sizeEx = 0.038;
+	columns[] = { 0 };
+	drawSideArrows = false;
+	idcLeft = -1;
+	idcRight = -1;
+	disableOverflow = 1;
+
+	class Items {
+		class Member {
+			text = "Group Name";
+			value = 0;
+		};
+	};
+};
+
+class GroupAlliancesList: Life_RscListNBox {
+    idc = 23102;
+	colorBackground[] = INNER_BODY_COLOUR;
+	onLBSelChanged = "";
+    rowHeight = 0.09;
+    sizeEx = 0.033;
+    SAFEZONE_X(UI_X);
+	SAFEZONE_Y((UI_Y + 0.022) + (MARGIN_Y * 3));
+	SAFEZONE_W(UI_WIDTH);
+	SAFEZONE_H((UI_HEIGHT - (0.022 * 2)) - (MARGIN_Y * 4));
+	columns[] = { 0 };
+	drawSideArrows = false;
+	idcLeft = -1;
+	idcRight = -1;
+};
+
+class NewAllianceButton : ULP_RscButtonClean {
+	idc = 23103;
+	text = "<t align = 'center'>New Alliance</t>";
+	onButtonClick = "_this call ULP_fnc_startGroupAlliance";
+	SAFEZONE_X(UI_X);
+	SAFEZONE_Y((UI_Y + (UI_HEIGHT - (0.022 * 3))) + (MARGIN_Y * 4));
+	SAFEZONE_W((((UI_WIDTH - 0.01) / 2) - (MARGIN_X / 2)) / 2);
+	SAFEZONE_H(0.022);
+};
+
+class EndAllianceButton : NewAllianceButton {
+	idc = 23104;
+	text = "<t align = 'center'>End Alliance</t>";
+	onButtonClick = "_this call ULP_fnc_endGroupAlliance";
+	SAFEZONE_X(UI_X + ((((UI_WIDTH - 0.01) / 2)) / 2));
 };

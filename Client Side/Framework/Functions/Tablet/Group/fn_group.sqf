@@ -27,7 +27,8 @@ _display setVariable ["group_check", ([[_display], {
 private _toolbox = _display displayCtrl 23061;
 
 switch (lbCurSel _toolbox) do {
-	case 2: { ["GroupSettings"] call ULP_fnc_setScreen; };
+	case 3: { ["GroupSettings"] call ULP_fnc_setScreen; };
+	case 2: { ["GroupAlliances"] call ULP_fnc_setScreen; };
 	case 1: { ["GroupProgression"] call ULP_fnc_setScreen; };
 	default { ["GroupOverview"] call ULP_fnc_setScreen; };
 };

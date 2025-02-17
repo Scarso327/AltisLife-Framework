@@ -144,3 +144,52 @@ scopeName "fn_initGroups";
 	[_group, "SoldLegalItems", _groupXp] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
 	[format ["You got <t color='#B92DE0'>%1</t> Group XP for this sale", [_groupXp] call ULP_fnc_numberText]] call ULP_fnc_hint;
 }] call ULP_fnc_addEventHandler;
+
+["GroupAllianceInvite", {
+	_this params [
+		["_group", grpNull, [grpNull]],
+		["_unit", objNull, [objNull]]
+	];
+
+	if (isNull _group || { isNull _unit } || { !([] call ULP_fnc_isGroup) } || { !([_group] call ULP_fnc_isGroup) }) exitWith {};
+
+	[
+		(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), "Confirmation", ["Accept", "Decline"],
+		format ["<t color='#B92DE0'>%1</t> has invited your group to an alliance with <t color='#B92DE0'>%2</t>, do you accept?", name _unit, [_group] call ULP_fnc_getGroupName], [_group, _unit],
+		{
+			_this params [ "_group", "_unit" ];
+
+			[_group, group player] remoteExecCall ["ULP_SRV_fnc_startGroupAlliance", RSERV];
+		}, {
+			private _unit = _this param [1, objNull];
+			if (isNull _unit) exitWith {};
+			["GroupAllianceRejected", [player]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+		}, false
+	] call ULP_fnc_confirm;
+}] call ULP_fnc_addEventHandler;
+
+["GroupAllianceRejected", {
+	_this params [
+		["_unit", objNull, [objNull]]
+	];
+
+	if (isNull _unit) exitWith {};
+
+	[format ["<t color='#B92DE0'>%1</t> has declined the group alliance invite you sent them!", name _unit]] call ULP_fnc_hint;
+}] call ULP_fnc_addEventHandler;
+
+["GroupAllianceStarted", {
+	_this params [
+		["_groupName", "", [""]]
+	];
+
+	[format ["Your group alliance has started an alliance with <t color='#B92DE0'>%1</t>", _groupName]] call ULP_fnc_hint;
+}] call ULP_fnc_addEventHandler;
+
+["GroupAllianceEnded", {
+	_this params [
+		["_groupName", "", [""]]
+	];
+
+	[format ["Your group alliance with <t color='#B92DE0'>%1</t> has ended", _groupName]] call ULP_fnc_hint;
+}] call ULP_fnc_addEventHandler;

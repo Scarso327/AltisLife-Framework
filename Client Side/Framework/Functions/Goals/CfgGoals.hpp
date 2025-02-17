@@ -283,50 +283,77 @@ class CfgGoals {
 				getQuantity = "_this params [ ""_cfgItem"", ""_eventParams"" ]; _eventParams params [ ""_eventItem"", ""_eventAmount"" ];  if !(_eventItem isEqualTo _cfgItem) exitWith { 0 }; _eventAmount";
 			};
 		};
-
+		class SellPlank : SellSchnapps {
+			item = "Plank";
+			title = "Sell Planks";
+		};
 		class SellCigarette : SellSchnapps {
 			item = "Cigarette";
 			title = "Sell Cigarettes";
 		};
-
 		class SellCigar : SellSchnapps {
 			item = "Cigar";
 			title = "Sell Cigars";
 		};
-
+		class SellCoal : SellSchnapps {
+			item = "Coal";
+			title = "Sell Coal";
+		};
 		class SellCopper : SellSchnapps {
 			item = "CopperBar";
 			title = "Sell Copper";
 		};
-
 		class SellSilver : SellSchnapps {
 			item = "SilverBar";
 			title = "Sell Silver";
 		};
-
 		class SellIron : SellSchnapps {
 			item = "IronBar";
 			title = "Sell Iron";
 		};
-
-		class SellSand : SellSchnapps {
+		class SellGlass : SellSchnapps {
 			item = "Glass";
 			title = "Sell Glass";
 		};
-
 		class SellSalt : SellSchnapps {
 			item = "RefinedSalt";
 			title = "Sell Salt";
 		};
-
 		class SellDiamond : SellSchnapps {
 			item = "CutDiamond";
 			title = "Sell Diamond";
 		};
-
+		class SellDiamond : SellSchnapps {
+			item = "ProcessedOil";
+			title = "Sell Oil";
+		};
+		class SellCoral : SellSchnapps {
+			item = "Coral";
+			title = "Sell Coral";
+		};
+		class SellWeed : SellSchnapps {
+			item = "ProcessedWeed";
+			title = "Sell Weed";
+		};
+		class SellHeroin : SellSchnapps {
+			item = "ProcessedHeroin";
+			title = "Sell Heroin";
+		};
+		class SellCocaine : SellSchnapps {
+			item = "ProcessedCocaine";
+			title = "Sell Cocaine";
+		};
+		class SellMeth : SellSchnapps {
+			item = "ProcessedMeth";
+			title = "Sell Meth";
+		};
 		class SellMoonshine : SellSchnapps {
 			item = "Moonshine";
 			title = "Sell Moonshine";
+		};
+		class SellUranium : SellSchnapps {
+			item = "UraniumBar";
+			title = "Sell Uranium";
 		};
 	};
 };

@@ -2333,7 +2333,7 @@ class CfgVirtualItems {
 	};
 	class CentralAlarmUpgrade : PersonalAlarmUpgrade {
 		displayName = "Central Alarm Upgrade";
-		description = "Notifies the police when someone are breaking into your property";
+		description = "Notifies your group when someone are breaking into your property";
 		class Settings : Settings {};
 	};
 	class ImprovedDoorsUpgrade : PersonalAlarmUpgrade {

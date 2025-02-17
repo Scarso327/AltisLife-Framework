@@ -344,9 +344,5 @@ class CfgGoals {
 			item = "Moonshine";
 			title = "Sell Moonshine";
 		};
-		class SellUranium : SellSchnapps {
-			item = "UraniumBar";
-			title = "Sell Uranium";
-		};
 	};
 };

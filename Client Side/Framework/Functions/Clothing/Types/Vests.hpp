@@ -321,7 +321,7 @@ class V_PlateCarrierL_CTRG : V_PlateCarrier1_blk {};
 
 class V_PlateCarrier2_blk : V_SmershVest_01_F {
 	displayName = "Carrier Rig";
-	price = 105000;
+	price = 70000;
 	virtualSpace = 25;
 	class Textures {
 		class V_PlateCarrier2_blk {

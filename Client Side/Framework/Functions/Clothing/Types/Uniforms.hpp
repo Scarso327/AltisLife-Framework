@@ -302,7 +302,7 @@ class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F {};
 
 class U_O_R_Gorka_01_black_F : U_C_Poor_1 {
 	displayName = "Tracksuit";
-	price = 15000;
+	price = 25000;
 	reputation = true;
 	virtualSpace = 8;
 	class Textures {
@@ -917,7 +917,7 @@ class U_B_T_Solider_AR_F : U_B_CombatUniform_mcam {};
 
 class U_B_CTRG_Soldier_F : U_B_survival_uniform {
 	displayName = "Stealth Uniform";
-	price = 45000;
+	price = 35000;
 	virtualSpace = 4;
 	class Textures {
 		// Police
@@ -1093,7 +1093,7 @@ class U_B_CTRG_Soldier_urb_2_F : U_B_CTRG_Soldier_2_Arid_F {};
 
 class U_B_GhillieSuit : U_B_survival_uniform {
 	displayName = "Half-Ghillies";
-	price = 100000;
+	price = 65000;
 	virtualSpace = 4;
 	isMask = true;
 	class Textures {
@@ -1156,7 +1156,7 @@ class U_B_T_Sniper_F : U_B_GhillieSuit {};
 
 class U_B_FullGhillie_ard : U_B_GhillieSuit {
 	displayName = "Full-Ghillies";
-	price = 150000;
+	price = 100000;
 	class Textures {
 		class U_B_FullGhillie_ard { 
 			displayName = "Arid"; 
@@ -1173,7 +1173,7 @@ class U_B_T_FullGhillie_tna_F : U_B_FullGhillie_ard {};
 
 class U_B_HeliPilotCoveralls : U_B_survival_uniform {
 	displayName = "Flight Clothes";
-	price = 5000;
+	price = 3000;
 	virtualSpace = 4;
 	class Textures {
 		class U_B_HeliPilotCoveralls { 

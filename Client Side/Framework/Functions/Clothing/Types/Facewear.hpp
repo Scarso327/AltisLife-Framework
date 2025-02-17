@@ -198,7 +198,7 @@ class G_Blindfold_01_white_F : G_Blindfold_01_black_F {};
 
 class G_Bandanna_aviator : G_WirelessEarpiece_F {
 	displayName = "Bandanna";
-	price = 2500;
+	price = 1500;
 	reputation = true;
 	isMask = true;
 	class Textures {
@@ -246,7 +246,7 @@ class G_Bandanna_Vampire_01 : G_Bandanna_aviator {};
 
 class G_Balaclava_blk : G_Bandanna_aviator {
 	displayName = "Balaclava";
-	price = 5000;
+	price = 2500;
 	class Textures {
 		class G_Balaclava_blk {
 			displayName = "Black";
@@ -293,7 +293,7 @@ class G_Balaclava_TI_tna_F : G_Balaclava_TI_blk_F {};
 
 class G_Balaclava_TI_G_blk_F : G_Bandanna_aviator {
 	displayName = "Stealth Balaclava (NVG)";
-	price = 50000;
+	price = 35000;
 	isNV = true;
 	class Textures {
 		class G_Balaclava_TI_G_blk_F {
@@ -307,7 +307,7 @@ class G_Balaclava_TI_G_tna_F : G_Balaclava_TI_G_blk_F {};
 
 class G_Tactical_Clear : G_WirelessEarpiece_F {
 	displayName = "Tactical Glasses NVG";
-	price = 35000;
+	price = 20000;
 	reputation = true;
 	isNV = true;
 	class Textures {

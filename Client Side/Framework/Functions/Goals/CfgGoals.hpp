@@ -218,37 +218,30 @@ class CfgGoals {
 
 		class ArrestPeople {
 			item = ""; // For goals like these we don't provide an item, the field is still required
-			icon = "Data\UI\Goals\arrests.paa"; // Optional override
+			icon = "Data\UI\Goals\arrests.paa";
 			title = "Arrest Criminals";
 			basePayout = 50000;
 			maxPayout = 500000;
-			tiers[] = { 25, 100, 200 };
-			duration = 14; 
+			tiers[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+			duration = 7; 
 			factions[] = { "Police" };
 			class Event {
 				eventType = "ArrestedSomeone";
 				getQuantity = "1";
 			};
 		};
-
 		class IssueTickets : ArrestPeople {
 			title = "Issue Paid Tickets";
-			maxPayout = 5000000;
-			tiers[] = { 5000000, 7000000, 10000000 };
+			tiers[] = { 2000000, 4000000, 6000000, 8000000, 10000000, 12000000, 14000000, 16000000, 18000000, 20000000 };
 			class Event {
 				eventType = "TicketPaid";
 				getQuantity = "(_this select 1) params [ """", ""_amount"", ""_paid"" ]; if !(_paid) exitWith { 0 }; _amount";
 			};
 		};
-
-		class RevivePeople {
-			item = ""; // For goals like these we don't provide an item, the field is still required
-			icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa"; // Optional override
+		class RevivePeople : ArrestPeople {
+			icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa"; 
 			title = "Revive People";
-			basePayout = 50000;
-			maxPayout = 500000;
-			tiers[] = { 25, 100, 200 };
-			duration = 7; 
+			tiers[] = { 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 };
 			factions[] = { "Medic" };
 			class Event {
 				eventType = "RevivedSomeone";

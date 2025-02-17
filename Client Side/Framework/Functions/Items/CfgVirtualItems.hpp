@@ -2284,7 +2284,7 @@ class CfgVirtualItems {
 	};
 	class PerformanceEngineUpgrade : ImprovedStorageUpgrade {
 		displayName = "Performance Engine Upgrade";
-		description = "Increases acceleration by 10% & top speed by 5% [Mutually exclusive with Efficient Engine]";
+		description = "Increases acceleration by 10% and top speed by 5% [Mutually exclusive with Efficient Engine]";
 		icon = "Data\Icons\improvedEngineUpgrade.paa";
 		class Settings : Settings {};
 	};

@@ -384,6 +384,14 @@ class CfgMissions {
 				pos = "freight_mission_2";
 				name = "Sofia Freight Yard";
 			};
+			class Athira_Freight {
+				pos = "freight_mission_3";
+				name = "Athira Freight Yard";
+			};
+			class Pyrgos_Freight {
+				pos = "freight_mission_4";
+				name = "Pyrgos Freight Yard";
+			};
 		};
 		class Rewards {
 			moneyReward = 5;

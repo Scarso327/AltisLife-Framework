@@ -1014,23 +1014,38 @@ class CfgVehicles {
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
-				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_black_co.paa" }; 
+				textures[] = { 
+					"\a3\soft_f_gamma\Van_01\Data\van_01_ext_black_co.paa", 
+					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa"
+				}; 
 			};
 			class White : BaseTexture { 
 				displayName = "White";
-				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa" }; 
+				textures[] = { 
+					"\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa", 
+					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa" 
+				}; 
 			};
 			class Red : BaseTexture { 
 				displayName = "Red";
-				textures[] = { "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa" }; 
+				textures[] = { 
+					"\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa", 
+					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_red_CO.paa" 
+				}; 
 			};
 			class Brown : BaseTexture { 
 				displayName = "Brown";
-				textures[] = { "\a3\soft_f_exp\van_01\data\van_01_ext_brn_co.paa" }; 
+				textures[] = { 
+					"\a3\soft_f_exp\van_01\data\van_01_ext_brn_co.paa", 
+					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_IG_CO.paa"  
+				}; 
 			};
 			class Olive : BaseTexture { 
 				displayName = "Olive";
-				textures[] = { "\a3\soft_f_exp\van_01\data\van_01_ext_oli_co.paa" }; 
+				textures[] = { 
+					"\a3\soft_f_exp\van_01\data\van_01_ext_oli_co.paa", 
+					"\a3\soft_f_gamma\Van_01\Data\Van_01_tank_IG_CO.paa"  
+				}; 
 			};
 		};
 	};
@@ -1062,10 +1077,8 @@ class CfgVehicles {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
 				textures[] = { 
-					"\a3\soft_f_orange\Truck_02\Data\truck_02_int_IDAP_CO.paa", 
-					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa", 
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa",
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kuz_IDAP_CO.paa", 
-					"\a3\soft_f_orange\Truck_02\Data\truck_02_water_IDAP_CO.paa"
 				 }; 
 			};
 		};
@@ -1079,10 +1092,9 @@ class CfgVehicles {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
 				textures[] = { 
-					"\a3\soft_f_orange\Truck_02\Data\truck_02_int_IDAP_CO.paa", 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa", 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kuz_IDAP_CO.paa", 
-					"\a3\soft_f_orange\Truck_02\Data\truck_02_water_IDAP_CO.paa"
+					"\a3\soft_f_orange\Truck_02\Data\truck_02_int_IDAP_CO.paa"
 				 }; 
 			};
 		};
@@ -1094,15 +1106,29 @@ class CfgVehicles {
 			"StolenCargo",
 			"FreightCargo"
 		};
+		class Textures {
+			class Orange : BaseTexture {
+				displayName = "Orange"; 
+				textures[] = { 
+					"\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa", 
+					"\a3\soft_f_beta\Truck_02\data\truck_02_fuel_co.paa"
+				 }; 
+			};
+			class Blue : BaseTexture { 
+				displayName = "Blue";
+				textures[] = { 
+					"\a3\soft_f_beta\truck_02\data\truck_02_kab_blue_co.paa",
+					"\a3\soft_f_beta\truck_02\data\truck_02_fuel_co.paa"
+				};
+			}; 
+		};
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
 				textures[] = { 
-					"\a3\soft_f_orange\Truck_02\Data\truck_02_int_IDAP_CO.paa", 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_kab_IDAP_CO.paa", 
-					"\a3\soft_f_orange\Truck_02\Data\truck_02_kuz_IDAP_CO.paa", 
 					"\a3\soft_f_orange\Truck_02\Data\truck_02_water_IDAP_CO.paa"
 				 }; 
 			};
@@ -1129,8 +1155,7 @@ class CfgVehicles {
 				textures[] = { 
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa",
 					"\a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa",
-					"\a3\soft_f_exp\truck_03\data\truck_03_cargo_ghex_co.paa",
-					"\a3\soft_f_exp\truck_03\data\truck_03_cover_ghex_co.paa"
+					"\a3\soft_f_exp\truck_03\data\truck_03_cargo_ghex_co.paa"
 				};
 			}; 
 		};
@@ -1138,6 +1163,24 @@ class CfgVehicles {
 	class O_Truck_03_covered_F : O_Truck_03_transport_F {
 		buyPrice = 988600;
 		virtualSpace = 410;
+		class Textures {
+			class BrownHex : BaseTexture {
+				displayName = "Brown Hex"; 
+				textures[] = { 
+					"\a3\soft_f_epc\truck_03\data\truck_03_ext01_co.paa",
+					"\a3\soft_f_epc\truck_03\data\truck_03_ext02_co.paa",
+					"\a3\soft_f_epc\truck_03\data\truck_03_cover_co.paa"
+				 }; 
+			};
+			class GreenHex : BaseTexture { 
+				displayName = "Green Hex";
+				textures[] = { 
+					"\a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa",
+					"\a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa",
+					"\a3\soft_f_exp\truck_03\data\truck_03_cover_ghex_co.paa"
+				};
+			}; 
+		};
 	};
 	class O_Truck_03_repair_F : O_Truck_03_transport_F {
 		buyPrice = 1398000;
@@ -1153,6 +1196,24 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
+		};
+		class Textures {
+			class BrownHex : BaseTexture {
+				displayName = "Brown Hex"; 
+				textures[] = { 
+					"\a3\soft_f_epc\truck_03\data\truck_03_ext01_co.paa",
+					"\a3\soft_f_epc\truck_03\data\truck_03_ext02_co.paa",
+					"\a3\soft_f_epc\truck_03\data\truck_03_fuel_co.paa"
+				 }; 
+			};
+			class GreenHex : BaseTexture { 
+				displayName = "Green Hex";
+				textures[] = { 
+					"\a3\soft_f_exp\truck_03\data\truck_03_ext01_ghex_co.paa",
+					"\a3\soft_f_exp\truck_03\data\truck_03_ext02_ghex_co.paa",
+					"\a3\soft_f_exp\truck_03\data\truck_03_fuel_ghex_co.paa"
+				};
+			}; 
 		};
 	};
 	class O_Truck_03_device_F : O_Truck_03_transport_F {

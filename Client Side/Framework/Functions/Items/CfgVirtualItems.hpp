@@ -2312,4 +2312,70 @@ class CfgVirtualItems {
 		icon = "Data\Icons\clonedPlatesUpgrade.paa";
 		class Settings : Settings {};
 	};
+
+	// Housing Upgrades
+	class PersonalAlarmUpgrade {
+		displayName = "Improved Storage Upgrade";
+		description = "Notifies you when someone is breaking into your property";
+		icon = "Data\Icons\personalAlarmUpgrade.paa";
+		buyPrice = -1;
+		sellPrice = -1;
+		weight = 20;
+		class Settings {
+			onMarket = false;
+			isIllegal = false;
+			isSavable = true;
+			isScripted = false;
+			isEventItem = false;
+			isSystemItem = false;
+		};
+		conditions = "true";
+	};
+	class CentralAlarmUpgrade : PersonalAlarmUpgrade {
+		displayName = "Central Alarm Upgrade";
+		description = "Notifies the police when someone are breaking into your property";
+		class Settings : Settings {};
+	};
+	class ImprovedDoorsUpgrade : PersonalAlarmUpgrade {
+		displayName = "Improved Doors Upgrade";
+		description = "Increases the time to break door locks by 50%";
+		icon = "Data\Icons\improvedDoorsUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class BulletproofWindowsUpgrade : PersonalAlarmUpgrade {
+		displayName = "Bulletproof Windows Upgrade";
+		description = "Increases the armour value of glass windows 25%";
+		icon = "Data\Icons\bulletproofGlassUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class ImprovedContainerUpgrade : PersonalAlarmUpgrade {
+		displayName = "Improved Container Upgrade";
+		description = "Increases vItem storage by 10%";
+		icon = "Data\Icons\improvedStorageUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class SingalJammerUpgrade : PersonalAlarmUpgrade {
+		displayName = "Singal Jammer Upgrade";
+		description = "Blocks GPS and radio signals inside your property";
+		icon = "Data\Icons\singalJammerUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class PersonalFridgeUpgrade : PersonalAlarmUpgrade {
+		displayName = "Personal Fridge Upgrade";
+		description = "Provides access to a fridge, providing food and hydration";
+		icon = "Data\Icons\personalFridgeUpgrade.paa";
+		class Settings : Settings {};
+	};
+	class PersonalWorkbenchUpgade : PersonalAlarmUpgrade {
+		displayName = "Personal Workbench Upgade";
+		description = "Provides access to a workbench";
+		icon = "Data\Icons\personalWorkbenchUpgade.paa";
+		class Settings : Settings {};
+	};
+	class PersonalMailboxUpgrade : PersonalAlarmUpgrade {
+		displayName = "Personal Mailbox Upgrade";
+		description = "Provides access to a mailbox";
+		icon = "Data\Icons\personalMailboxUpgrade.paa";
+		class Settings : Settings {};
+	};
 };

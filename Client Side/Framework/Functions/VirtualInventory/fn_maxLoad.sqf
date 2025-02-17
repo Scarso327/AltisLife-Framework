@@ -19,7 +19,8 @@ private _maxLoad = 0;
 if (isClass _containerCfg) then {
 	_maxLoad = getNumber (_containerCfg >> "virtualSpace");
 
-	if ([_container, "ImprovedStorageUpgrade"] call ULP_fnc_hasVehicleUpgrade) exitWith {
+	if ([_container, "ImprovedStorageUpgrade"] call ULP_fnc_hasUpgrade 
+		|| { [(_container getVariable ["building", objNull]), "ImprovedContainerUpgrade"] call ULP_fnc_hasUpgrade }) exitWith {
 		_maxLoad = round (_maxLoad + (_maxLoad * 0.1));
 	};
 };

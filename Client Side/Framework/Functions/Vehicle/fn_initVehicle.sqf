@@ -75,7 +75,7 @@ private _fuelConsumptionRateCoef =
 		getFuelConsumptionCoef _vehicle
 	};
 
-if ([_vehicle, "EfficientEngineUpgrade"] call ULP_fnc_hasVehicleUpgrade) then {
+if ([_vehicle, "EfficientEngineUpgrade"] call ULP_fnc_hasUpgrade) then {
 	_fuelConsumptionRateCoef = _fuelConsumptionRateCoef - (_fuelConsumptionRateCoef * 0.3);
 };
 

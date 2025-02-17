@@ -164,14 +164,14 @@ class CfgFactories {
 						{ "SteelPlate", 4 }
 					};
 				};
-				class PerformanceEngineUpgrade : ImprovedStorageUpgrade {
-					materials[] = { 
-						{ "CopperWiring", 4 },
-						{ "FlawlessDiamond", 2 },
-						{ "EngineComponent", 2 },
-						{ "PackedOil", 2 }
-					};
-				};
+				// class PerformanceEngineUpgrade : ImprovedStorageUpgrade {
+				// 	materials[] = { 
+				// 		{ "CopperWiring", 4 },
+				// 		{ "FlawlessDiamond", 2 },
+				// 		{ "EngineComponent", 2 },
+				// 		{ "PackedOil", 2 }
+				// 	};
+				// };
 				class EfficientEngineUpgrade : ImprovedStorageUpgrade {
 					materials[] = { 
 						{ "PackedOil", 4 },
@@ -200,6 +200,80 @@ class CfgFactories {
 						{ "SignalJammer", 1 }
 					};
 				};
+
+				// Housing Upgrades
+				class PersonalAlarmUpgrade {
+					requiredPower = 2;
+					tickTime = 120;
+					materials[] = { 
+						{ "ElectronicCircuit", 3 },
+						{ "FlawlessDiamond", 2 },
+						{ "CopperWiring", 2 },
+						{ "ReinforcedGlassPanel", 1 },
+						{ "Laptop", 1 }
+					};
+				};
+				class CentralAlarmUpgrade : PersonalAlarmUpgrade {
+					materials[] = { 
+						{ "ElectronicCircuit", 3 },
+						{ "FlawlessDiamond", 3 },
+						{ "CopperWiring", 2 },
+						{ "ReinforcedGlassPanel", 1 },
+						{ "Laptop", 1 },
+						{ "PanicButton", 1 }
+					};
+				};
+				class ImprovedDoorsUpgrade : PersonalAlarmUpgrade {
+					materials[] = { 
+						{ "SilverPlate", 8 },
+						{ "RubberSheet", 8 },
+						{ "HeavyArmourPlate", 4 }
+					};
+				};
+				// class BulletproofWindowsUpgrade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "ReinforcedGlassPanel", 12 },
+				// 		{ "HeavyArmourPlate", 2 }
+				// 	};
+				// };
+				class ImprovedContainerUpgrade : PersonalAlarmUpgrade {
+					materials[] = { 
+						{ "SteelPlate", 4 },
+						{ "LargeCargoBed", 4 },
+						{ "SmallCargoBed", 2 }
+					};
+				};
+				// class SingalJammerUpgrade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "ElectronicCircuit", 4 },
+				// 		{ "CopperWiring", 2 },
+				// 		{ "FlawlessDiamond", 1 },
+				// 		{ "ReinforcedGlassPanel", 1 },
+				// 		{ "Laptop", 1 },
+				// 		{ "SignalJammer", 1 }
+				// 	};
+				// };
+				// class PersonalFridgeUpgrade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "CopperPlate", 2 },
+				// 		{ "GlassPanel", 2 },
+				// 		{ "RubberSheet", 1 }
+				// 	};
+				// };
+				// class PersonalWorkbenchUpgade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "Toolbox", 4 },
+				// 		{ "IronPlate", 4 },
+				// 		{ "HeavyArmourPlate", 1 }
+				// 	};
+				// };
+				// class PersonalMailboxUpgrade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "FlawlessDiamond", 4 },
+				// 		{ "PrintedCircuitBoard", 2 },
+				// 		{ "Desktop", 1 }
+				// 	};
+				// };
 			};
 		};
 

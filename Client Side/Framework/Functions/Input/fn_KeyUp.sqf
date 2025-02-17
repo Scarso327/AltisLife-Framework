@@ -275,7 +275,7 @@ switch (_code) do {
 
                     private _owner = (((_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, []]) param [0, "Unknown"]);
 
-                    if ([_vehicle, "ClonedPlatesUpgrade"] call ULP_fnc_hasVehicleUpgrade) then {
+                    if ([_vehicle, "ClonedPlatesUpgrade"] call ULP_fnc_hasUpgrade) then {
                         _owner = [selectRandom allPlayers, false, true] call ULP_fnc_getName;
                     };
 

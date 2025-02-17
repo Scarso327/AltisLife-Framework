@@ -93,8 +93,9 @@ class CfgWorlds {
 #include "Functions\Tablet\CfgTablet.hpp"
 #include "Functions\Titles\CfgTitles.hpp"
 #include "Functions\Vehicle\CfgVehicles.hpp"
-#include "Functions\Vehicle\CfgVehicleUpgrades.hpp"
 #include "Functions\VehicleStore\CfgVehicleStores.hpp"
+#include "Functions\Upgrades\CfgHousingUpgrades.hpp"
+#include "Functions\Upgrades\CfgVehicleUpgrades.hpp"
 
 class CfgServer {
     DatabaseName = "altislife";

@@ -15,6 +15,11 @@ COLLATE='utf8mb4_general_ci'
 ENGINE=InnoDB
 ;
 
+ALTER TABLE `houses`
+	ADD COLUMN `upgrades` TEXT NOT NULL AFTER `virtualStorage`;
+
+UPDATE `houses` SET `upgrades` = '"[]"';
+
 DELIMITER //
 CREATE PROCEDURE `deleteOldAlliances`()
 BEGIN

@@ -14,7 +14,7 @@ if (isNull _vehicle) exitWith {};
 private _id = _vehicle getVariable ["vehicle_id", -1];
 if (_id < 0) exitWith {};
 
-private _upgrades = _vehicle getVariable ["vehicle_upgrades", createHashMap];
+private _upgrades = _vehicle getVariable ["object_upgrades", createHashMap];
 
 [format[
 	"UPDATE `vehicles` SET `upgrades`='%2' WHERE `id`='%1'", 

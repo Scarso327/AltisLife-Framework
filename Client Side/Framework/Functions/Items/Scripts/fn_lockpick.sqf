@@ -29,7 +29,7 @@ if ([_target, ["Car", "Air", "Ship", "Armored", "Submarine"]] call ULP_fnc_isKin
 		false breakOut "fn_lockpick";
 	};
 
-	if ([_target, "ImprovedLocksUpgrade"] call ULP_fnc_hasVehicleUpgrade) then {
+	if ([_target, "ImprovedLocksUpgrade"] call ULP_fnc_hasUpgrade) then {
 		_time = _time + (_time * 0.5);
 	};
 

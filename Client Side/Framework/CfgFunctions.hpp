@@ -472,8 +472,6 @@ class CfgFunctions {
 			class isVehicleStationary {};
 			class removeVehicleClamp {};
 			class hasTyreDamage {};
-			class hasVehicleUpgrade {};
-			class setVehicleUpgrade {};
 			class pushVehicle {};
 		};
 
@@ -714,6 +712,7 @@ class CfgFunctions {
 			class isHouseGarage {};
 			class getHouseGarageSpawn {};
 			class isHouseOwnerOnline {};
+			class houseBreakInAlert {};
 		};
 
 		class Missions {
@@ -887,6 +886,13 @@ class CfgFunctions {
 			class isPlaceable {};
 			class isDragging {};
 		};
+
+		class Upgrades {
+			file = "Functions\Upgrades";
+			class hasUpgrade {};
+			class setUpgrade {};
+			class upgradeCfg {};
+		};
 	};
 
 	class ULP_Functions_UI {
@@ -987,13 +993,13 @@ class CfgFunctions {
 			class DialogSalvageFactory_OnUnload {};
 		};
 		
-		class DialogVehicleTuning {
-			file = "UI\DialogVehicleTuning\Functions";
-			class DialogVehicleTuning_OnInit {};
-			class DialogVehicleTuning_OnLoad {};
-			class DialogVehicleTuning_OnUnload {};
-			class DialogVehicleTuning_ApplyUpgrade {};
-			class DialogVehicleTuning_OnListChanged {};
+		class DialogUpgrades {
+			file = "UI\DialogUpgrades\Functions";
+			class DialogUpgrades_OnInit {};
+			class DialogUpgrades_OnLoad {};
+			class DialogUpgrades_OnUnload {};
+			class DialogUpgrades_ApplyUpgrade {};
+			class DialogUpgrades_OnListChanged {};
 		};
 		
 		class DialogFactionSelection {

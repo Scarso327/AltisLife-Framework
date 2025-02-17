@@ -3,17 +3,21 @@
 ** Description: 
 */
 #include "..\..\..\script_macros.hpp"
-scopeName "fn_DialogVehicleTuning_OnListChanged";
+scopeName "fn_DialogUpgrades_OnListChanged";
 
 _this params [ "_list", "_index" ];
 
 if (isNull _list || { _index isEqualTo -1 }) exitWith {};
 
 private _display = ctrlParent _list;
+private _object = _display getVariable ["selectedObject", objNull];
+
+if (isNull _object) exitWith {}; // wtf?
+
 private _info = _display displayCtrl 5702;
 
 private _data = _list lbData _index;
-private _cfg = missionConfigFile >> "CfgVehicleUpgrades" >> _data;
+private _cfg = ([_object] call ULP_fnc_upgradeCfg) >> _data;
 if !(isClass _cfg) exitWith {};
 
 private _required = [];

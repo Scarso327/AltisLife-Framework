@@ -316,7 +316,7 @@ class CfgGoals {
 			item = "CutDiamond";
 			title = "Sell Diamond";
 		};
-		class SellDiamond : SellSchnapps {
+		class SellOil : SellSchnapps {
 			item = "ProcessedOil";
 			title = "Sell Oil";
 		};

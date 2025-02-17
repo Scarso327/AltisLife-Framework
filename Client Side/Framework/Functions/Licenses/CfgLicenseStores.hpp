@@ -108,11 +108,11 @@ class CfgLicenseStores {
 		licenses[] = { "Home" };
 	};
 
-	class Handgun {
-		title = "Handgun Store";
+	class Gun {
+		title = "Gun Store";
 		factions[] = { "Civilian", "Medic", "Hato" };
-		condition = "!([""Handgun""] call ULP_fnc_hasLicense)";
-		licenses[] = { "Handgun" };
+		condition = "!([""Handgun""] call ULP_fnc_hasLicense) || { !([""SMG""] call ULP_fnc_hasLicense) }";
+		licenses[] = { "Handgun", "SMG" };
 	};
 
 	class Security {

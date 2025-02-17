@@ -281,10 +281,14 @@ class CfgItemsStore {
 		};
 	};
 
-	class Handgun {
-		storeName = "Handgun Store";
-		condition = "[""Handgun""] call ULP_fnc_hasLicense";
-		class Rifles {};
+	class Gun {
+		storeName = "Gun Store";
+		condition = "[""Handgun""] call ULP_fnc_hasLicense || { [""SMG""] call ULP_fnc_hasLicense }";
+		class Rifles {
+			class hgun_PDW2000_F { condition = "[""SMG""] call ULP_fnc_hasLicense"; };
+			class SMG_05_F { condition = "[""SMG""] call ULP_fnc_hasLicense"; };
+			class SMG_02_F { condition = "[""SMG""] call ULP_fnc_hasLicense"; };
+		};
 		class Pistols {
 			class hgun_Pistol_01_F {};
 			class hgun_Rook40_F {};
@@ -292,10 +296,15 @@ class CfgItemsStore {
 			class hgun_Pistol_heavy_01_F {};
 			class hgun_Pistol_heavy_02_F {};
 		};
-		class Attachments {};
+		class Attachments {
+			class optic_Aco { condition = "[""SMG""] call ULP_fnc_hasLicense"; };
+			class optic_Holosight { condition = "[""SMG""] call ULP_fnc_hasLicense"; };
+		};
 		class Magazines {
 			class 10Rnd_9x21_Mag {};
 			class 16Rnd_9x21_Mag {};
+			class 30Rnd_9x21_Mag { condition = "[""SMG""] call ULP_fnc_hasLicense"; };
+			class 30Rnd_9x21_Mag_SMG_02 { condition = "[""SMG""] call ULP_fnc_hasLicense"; };
 			class 9Rnd_45ACP_Mag {};
 			class 11Rnd_45ACP_Mag {};
 			class 6Rnd_45ACP_Cylinder {};

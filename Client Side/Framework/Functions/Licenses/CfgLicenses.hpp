@@ -84,6 +84,13 @@ class CfgLicenses {
         class Settings : Settings {};
     };
 
+    class SMG : Driving {
+        displayName = "SMG Certificate";
+        description = "Certification permitting the ownership of a SMG";
+        buyPrice = 100000;
+        class Settings : Settings {};
+    };
+
     class Security : Driving {
         displayName = "Security Contractor";
         description = "Certification as a Security Contractor for a company";

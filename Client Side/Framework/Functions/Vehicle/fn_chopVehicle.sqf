@@ -55,7 +55,7 @@ if (_near isEqualTo []) exitWith {
 		_time = _time + getNumber (_missionCfg >> "chopTime");
 	};
 
-	if ([_vehicle, "StongCasingUpgrade"] call ULP_fnc_hasVehicleUpgrade) then {
+	if ([_vehicle, "StongCasingUpgrade"] call ULP_fnc_hasUpgrade) then {
 		_time = _time + (_time * 0.5);
 	};
 

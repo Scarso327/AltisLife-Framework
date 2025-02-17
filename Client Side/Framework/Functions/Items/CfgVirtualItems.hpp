@@ -2315,7 +2315,7 @@ class CfgVirtualItems {
 
 	// Housing Upgrades
 	class PersonalAlarmUpgrade {
-		displayName = "Improved Storage Upgrade";
+		displayName = "Personal Alarm Upgrade";
 		description = "Notifies you when someone is breaking into your property";
 		icon = "Data\Icons\personalAlarmUpgrade.paa";
 		buyPrice = -1;

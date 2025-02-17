@@ -220,6 +220,11 @@ class CfgInteractions {
 			condition = "[_this, player, false] call ULP_fnc_isHouseOwner";
 		};
 
+		class UpgradeHouse : SellHouse {
+			title = "Upgrade House";
+			onClick = "closeDialog 0; [""DialogUpgrades"", _this] call ULP_UI_fnc_createDialog;";
+		};
+
 		class VehicleGarage {
 			title = "Vehicle Garage";
 			factions[] = { "Civilian" };

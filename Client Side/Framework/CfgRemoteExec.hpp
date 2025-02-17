@@ -216,6 +216,9 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_saveVehicleUpgrades {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_saveHouseUpgrades {
+            allowedTargets = SERVER;
+        };
         class ULP_SRV_fnc_setSideChannel {
             allowedTargets = SERVER;
         };

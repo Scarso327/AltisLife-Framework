@@ -11,14 +11,14 @@ if (canSuspend) exitWith {
 
 ["Setting Up Housing..."] call ULP_fnc_logIt;
 
-private _query = ["SELECT `houses`.`id`, `houses`.`pid`, `players`.`group_id`, `players`.`name`, `houses`.`classname`, `houses`.`pos`, `houses`.`name`, `houses`.`storage`, `houses`.`virtualStorage`, `houses`.`shared` FROM `houses` INNER JOIN `players` ON `players`.`pid` = `houses`.`pid` WHERE `houses`.`sold`='0'", 2, true] call DB_fnc_asyncCall;
+private _query = ["SELECT `houses`.`id`, `houses`.`pid`, `players`.`group_id`, `players`.`name`, `houses`.`classname`, `houses`.`pos`, `houses`.`name`, `houses`.`storage`, `houses`.`virtualStorage`, `houses`.`upgrades`, `houses`.`shared` FROM `houses` INNER JOIN `players` ON `players`.`pid` = `houses`.`pid` WHERE `houses`.`sold`='0'", 2, true] call DB_fnc_asyncCall;
 
 if (_query isEqualTo "" || { _query isEqualTo [] }) exitWith { 0 };
 
 ULP_SRV_Houses = [];
 
 {
-	_x params ["_id", "_pid", "_gangId", "_ownerName", "_classname", "_pos", "_name", "_storage", "_virtualStorage", "_shared"];
+	_x params ["_id", "_pid", "_gangId", "_ownerName", "_classname", "_pos", "_name", "_storage", "_virtualStorage", "_upgrades", "_shared"];
 
 	private _houseCfg = missionConfigFile >> "CfgHousing" >> "Houses" >> _classname;
 	if (isClass _houseCfg) then {
@@ -26,6 +26,7 @@ ULP_SRV_Houses = [];
 		_pos = [_pos] call DB_fnc_mresToArray;
 		_storage = [_storage] call DB_fnc_mresToArray;
 		_virtualStorage = [_virtualStorage] call DB_fnc_mresToArray;
+		_upgrades = createHashMapFromArray ([_upgrades] call DB_fnc_mresToArray);
 		_shared = [_shared] call ULP_fnc_bool;
 
 		private _house = (_pos nearObjects [_classname, 10]) param [0, objNull];
@@ -41,7 +42,7 @@ ULP_SRV_Houses = [];
 				[format["UPDATE `houses` SET `sold`='1' WHERE `id`='%1'", [_id, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
 				[_pid, "House", ["Blacklisted", getPos _house, [_value, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
 			} else {
-				[_house, [_id, [_pid, _gangId, _ownerName], _shared, _name, _storage, _virtualStorage]] call ULP_SRV_fnc_setupHouse;
+				[_house, [_id, [_pid, _gangId, _ownerName], _shared, _name, _storage, _virtualStorage, _upgrades]] call ULP_SRV_fnc_setupHouse;
 			};
 		};
 	} else {

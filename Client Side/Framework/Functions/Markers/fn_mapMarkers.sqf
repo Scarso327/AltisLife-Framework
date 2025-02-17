@@ -25,7 +25,7 @@ switch ([player] call ULP_fnc_getFaction) do {
 };
 
 _objects append (ULP_Keys select {
-	[_x, "TrackingDeviceUpgrade"] call ULP_fnc_hasVehicleUpgrade 
+	[_x, "TrackingDeviceUpgrade"] call ULP_fnc_hasUpgrade 
 		&& { !(_x in _objects) }
 		&& { (_objects arrayIntersect (crew _x)) isEqualTo [] }
 });

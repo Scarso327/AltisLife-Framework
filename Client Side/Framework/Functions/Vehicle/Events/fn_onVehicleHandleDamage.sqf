@@ -22,7 +22,7 @@ private _currentDamage = if (_index isEqualTo -1) then {
     _vehicle getHitIndex _index
 };
 
-if ([_vehicle, "ImprovedHullUpgrade"] call ULP_fnc_hasVehicleUpgrade 
+if ([_vehicle, "ImprovedHullUpgrade"] call ULP_fnc_hasUpgrade 
     && { !(_projectile isEqualTo "") }
     && { !((toLower _hitPoint) isEqualTo "hithull") }) exitWith {
     private _difference = _damage - _currentDamage;
@@ -30,7 +30,7 @@ if ([_vehicle, "ImprovedHullUpgrade"] call ULP_fnc_hasVehicleUpgrade
     _currentDamage + (_difference - (_difference * 0.25))
 };
 
-if ([_vehicle, "ImprovedTyresUpgrade"] call ULP_fnc_hasVehicleUpgrade 
+if ([_vehicle, "ImprovedTyresUpgrade"] call ULP_fnc_hasUpgrade 
     && { !(_projectile isEqualTo "") }
     && { !(((toLower _hitPoint) find "wheel") isEqualTo -1) }) exitWith {
     private _difference = _damage - _currentDamage;

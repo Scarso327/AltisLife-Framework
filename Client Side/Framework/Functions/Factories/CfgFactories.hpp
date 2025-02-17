@@ -164,14 +164,14 @@ class CfgFactories {
 						{ "SteelPlate", 4 }
 					};
 				};
-				class PerformanceEngineUpgrade : ImprovedStorageUpgrade {
-					materials[] = { 
-						{ "CopperWiring", 4 },
-						{ "FlawlessDiamond", 2 },
-						{ "EngineComponent", 2 },
-						{ "PackedOil", 2 }
-					};
-				};
+				// class PerformanceEngineUpgrade : ImprovedStorageUpgrade {
+				// 	materials[] = { 
+				// 		{ "CopperWiring", 4 },
+				// 		{ "FlawlessDiamond", 2 },
+				// 		{ "EngineComponent", 2 },
+				// 		{ "PackedOil", 2 }
+				// 	};
+				// };
 				class EfficientEngineUpgrade : ImprovedStorageUpgrade {
 					materials[] = { 
 						{ "PackedOil", 4 },
@@ -230,12 +230,12 @@ class CfgFactories {
 						{ "HeavyArmourPlate", 4 }
 					};
 				};
-				class BulletproofWindowsUpgrade : PersonalAlarmUpgrade {
-					materials[] = { 
-						{ "ReinforcedGlassPanel", 12 },
-						{ "HeavyArmourPlate", 2 }
-					};
-				};
+				// class BulletproofWindowsUpgrade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "ReinforcedGlassPanel", 12 },
+				// 		{ "HeavyArmourPlate", 2 }
+				// 	};
+				// };
 				class ImprovedContainerUpgrade : PersonalAlarmUpgrade {
 					materials[] = { 
 						{ "SteelPlate", 4 },

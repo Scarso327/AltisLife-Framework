@@ -3,11 +3,11 @@
 ** Description: 
 */
 #include "..\..\..\script_macros.hpp"
-scopeName "fn_DialogVehicleTuning_OnLoad";
+scopeName "fn_DialogUpgrades_OnLoad";
 
 _this params [ "_display" ];
 
 if (isNull _display) exitWith {};
 
 disableSerialization;
-uiNamespace setVariable ["DialogVehicleTuning", _display];
+uiNamespace setVariable ["DialogUpgrades", _display];

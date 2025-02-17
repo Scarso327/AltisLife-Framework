@@ -37,7 +37,7 @@ if (_owner isEqualType ["", "", ""]) then {
 };
 
 if !(_upgrades isEqualTo createHashMap) then {
-	_vehicle setVariable ["vehicle_upgrades", _upgrades, true];
+	_vehicle setVariable ["object_upgrades", _upgrades, true];
 };
 
 [_vehicle, _texture] call ULP_fnc_skinVehicle;

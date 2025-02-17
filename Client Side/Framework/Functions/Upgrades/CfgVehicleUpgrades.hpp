@@ -36,7 +36,7 @@ class CfgVehicleUpgrades {
 		description = "Decreases fuel consumption by <t color='#B92DE0'>30%</t> [Mutually exclusive with Performance Engine]";
 		materials[] = { { "EfficientEngineUpgrade", 1 } };
 		onApplied = "private _fuelConsumptionRateCoef = getFuelConsumptionCoef _this; _fuelConsumptionRateCoef = _fuelConsumptionRateCoef - (_fuelConsumptionRateCoef * 0.3); _this setFuelConsumptionCoef _fuelConsumptionRateCoef;";
-		condition = "!([_this, ""PerformanceEngineUpgrade""] call ULP_fnc_hasVehicleUpgrade)";
+		condition = "!([_this, ""PerformanceEngineUpgrade""] call ULP_fnc_hasUpgrade)";
 	};
 
 	class StongCasingUpgrade : ImprovedStorageUpgrade {

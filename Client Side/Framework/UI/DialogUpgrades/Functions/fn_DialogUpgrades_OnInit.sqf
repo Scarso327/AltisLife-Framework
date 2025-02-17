@@ -3,12 +3,18 @@
 ** Description: 
 */
 #include "..\..\..\script_macros.hpp"
-scopeName "fn_DialogVehicleTuning_OnInit";
+scopeName "fn_DialogUpgrades_OnInit";
 disableSerialization;
 
-_this params [ "_display" ];
+_this params [ "_display", "_params" ];
 
 if (isNull _display) exitWith {};
+
+_params params [
+	["_object", objNull, [objNull]]
+];
+
+_display setVariable ["selectedObject", _object];
 
 private _list = _display displayCtrl 5701;
 
@@ -19,4 +25,4 @@ private _list = _display displayCtrl 5701;
 	private _index = _list lbAdd _name;
 	_list lbSetPicture [_index, _picture];
 	_list lbSetData [_index, configName _x];
-} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgVehicleUpgrades"));
+} forEach ("isClass _x" configClasses ([_object] call ULP_fnc_upgradeCfg));

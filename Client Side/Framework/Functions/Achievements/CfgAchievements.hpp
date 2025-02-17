@@ -426,7 +426,7 @@ class CfgAchievements {
 	};
 	class Radiation : BaseMysteryAchivement200 {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Chat_ca.paa";
-		displayName = "Goodbye Fatherhood";
+		displayName = "Irradiated";
 		description = "Experienced the effects of radiation poisoning";
 		onUnlocked = "[""Radiation""] call ULP_fnc_unlockTitle;";
 	};

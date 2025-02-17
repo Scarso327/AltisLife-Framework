@@ -280,8 +280,8 @@ class H_Beret_blk : H_HeadBandage_clean_F {
 			condition = "[""Medic_Main"", 6] call ULP_fnc_hasAccess";
 		};
 		class H_Beret_CSAT_01_F : H_Beret_blk {
-			displayName = "HART Beret";
-			condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
+			displayName = "HEMS Beret";
+			condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
 		};
 	};
 };

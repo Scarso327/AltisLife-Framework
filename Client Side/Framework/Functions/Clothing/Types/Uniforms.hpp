@@ -322,17 +322,17 @@ class U_O_R_Gorka_01_black_F : U_C_Poor_1 {
 		class Paramedic {
 			displayName = "Paramedic";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" };
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess || { [""Medic_Main"", 2] call ULP_fnc_hasAccess } }";
 		};
 		class Doctor {
 			displayName = "Medical Advisor";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 4] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess || { [""Medic_Main"", 4] call ULP_fnc_hasAccess } }";
 		};
 		class Commander {
 			displayName = "Incident Commander";
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess || { [""Medic_Main"", 5] call ULP_fnc_hasAccess } }";
 		};
 		/*class HART {
 			displayName = "Hazardous Area Response";
@@ -922,14 +922,13 @@ class U_B_CTRG_Soldier_F : U_B_survival_uniform {
 	class Textures {
 		// Police
 		class SCO19 {
-			displayName = "SCO19 Uniform";
+			displayName = "SCO19";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
-		class AFO {
-			displayName = "AFO Uniform";
+		class AFO : SCO19 {
+			displayName = "AFO";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\AFO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
 		};
 
 		// Civilian
@@ -981,14 +980,13 @@ class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {
 	class Textures {
 		// Police
 		class SCO19 {
-			displayName = "SCO19 Uniform";
+			displayName = "SCO19";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 1] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
-		class AFO {
-			displayName = "AFO Uniform";
+		class AFO : SCO19 {
+			displayName = "AFO";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\AFO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
 		};
 
 		// Civilian
@@ -1040,14 +1038,13 @@ class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {
 	class Textures {
 		// Police
 		class SCO19 {
-			displayName = "SCO19 Uniform";
+			displayName = "SCO19";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 3] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
-		class AFO {
-			displayName = "AFO Uniform";
+		class AFO : SCO19 {
+			displayName = "AFO";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\AFO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
 		};
 
 		// Civilian
@@ -1102,14 +1099,13 @@ class U_B_GhillieSuit : U_B_survival_uniform {
 	class Textures {
 		// Police
 		class SCO19 {
-			displayName = "SCO19 Ghillie";
+			displayName = "SCO19";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\SCO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 2] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		};
-		class AFO {
-			displayName = "AFO Uniform";
+		class AFO : SCO19 {
+			displayName = "AFO";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\AFO.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_SCO"", 2] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
 		};
 
 		// Civilian

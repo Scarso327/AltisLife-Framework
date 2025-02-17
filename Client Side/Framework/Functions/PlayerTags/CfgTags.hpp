@@ -147,7 +147,7 @@ class CfgTags {
 		};
 		class MedicCommander {
 			icon = "Data\Tags\Ranks\Medic\commander.paa";
-			subtitle = "Incident Commander";
+			subtitle = "Consultant";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 5] call ULP_fnc_hasAccess }";
 		};
 		class MedicDoctor {
@@ -166,7 +166,7 @@ class CfgTags {
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class MedicTechnician {
-			subtitle = "Medical Technician";
+			subtitle = "Student Paramedic";
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 

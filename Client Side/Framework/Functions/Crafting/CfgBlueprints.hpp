@@ -433,7 +433,7 @@ class CfgBlueprints {
 			description = "A restored artifact that can be sold for a greater profit";
 			materials[] = { 
 				{"Clay", 4}, 
-				{"BrokenPot", 13} 
+				{"BrokenPot", 1} 
 			};
 			item = "RestoredPot";
 			workbench = true;

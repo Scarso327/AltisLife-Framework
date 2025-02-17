@@ -418,7 +418,7 @@ class H_RacingHelmet_1_F : H_RacingHelmet_1_black_F {};
 
 class H_PASGT_basic_black_F : H_HeadBandage_clean_F {
 	displayName = "Basic Helmet";
-	price = 10000;
+	price = 5000;
 	reputation = true;
 	class Textures {
 		class H_PASGT_basic_black_F {
@@ -478,14 +478,14 @@ class H_CrewHelmetHeli_I : H_PilotHelmetHeli_B {};
 
 class H_HelmetIA : H_HeadBandage_clean_F {
 	displayName = "IA Combat Helmet";
-	price = 25000;
+	price = 10000;
 	reputation = true;
 	class Textures {};
 };
 
 class H_HelmetB_light : H_HelmetIA {
 	displayName = "Light Combat Helment";
-	price = 25000;
+	price = 10000;
 	reputation = true;
 	class Textures {
 		class H_HelmetB_light {
@@ -512,7 +512,7 @@ class H_HelmetB_light_wdl : H_HelmetB_light {};
 
 class H_HelmetB : H_HelmetB_light {
 	displayName = "Combat Helment";
-	price = 40000;
+	price = 20000;
 	class Textures {
 		class H_HelmetB {
 			displayName = "Green";
@@ -542,7 +542,7 @@ class H_HelmetB_plain_wdl : H_HelmetB {};
 
 class H_HelmetSpecB : H_HelmetB_light {
 	displayName = "Enhanced Combat Helment";
-	price = 75000;
+	price = 50000;
 	class Textures {
 		class H_HelmetSpecB {
 			displayName = "Green";
@@ -568,7 +568,7 @@ class H_HelmetSpecB_wdl : H_HelmetSpecB {};
 
 class H_HelmetB_TI_arid_F : H_HelmetB_light {
 	displayName = "Stealth Combat Helment";
-	price = 90000;
+	price = 75000;
 	isMask = true;
 	class Textures {
 		class H_HelmetB_TI_arid_F {
@@ -582,7 +582,7 @@ class H_HelmetB_TI_tna_F : H_HelmetB_TI_arid_F {};
 
 class H_HelmetHBK_F : H_HelmetB_light {
 	displayName = "Advanced Modular Helmet";
-	price = 40000;
+	price = 25000;
 	class Textures {
 		class H_HelmetHBK_F {
 			displayName = "Olive";
@@ -602,7 +602,7 @@ class H_HelmetHBK_chops_F : H_HelmetHBK_F {};
 
 class H_HelmetAggressor_F : H_HelmetB_light {
 	displayName = "Avenger Helmet";
-	price = 70000;
+	price = 50000;
 	class Textures {
 		class H_HelmetAggressor_F {
 			displayName = "Olive";

@@ -1,13 +1,13 @@
 class acc_flashlight {
-	price = 130;
+	price = 117;
 	reputation = true;
 	class Textures {};
 };
-class acc_flashlight_pistol : acc_flashlight { price = 70; };
-class acc_pointer_IR : acc_flashlight { price = 1620; };
+class acc_flashlight_pistol : acc_flashlight { price = 63; };
+class acc_pointer_IR : acc_flashlight { price = 1458; };
 
 class optic_MRD {
-	price = 980;
+	price = 882;
 	reputation = true;
 	class Textures {
 		class optic_MRD {
@@ -25,7 +25,7 @@ class optic_Yorris : optic_MRD { price = 985; };
 
 class optic_Aco {
     displayName = "ACO";
-	price = 1450;
+	price = 1305;
 	reputation = true;
 	class Textures {
 		class optic_Aco {
@@ -43,7 +43,7 @@ class optic_ACO_grn_smg : optic_Aco {};
 
 class optic_Holosight {
     displayName = "Holosight";
-	price = 1760;
+	price = 1584;
 	reputation = true;
 	class Textures {
 		class optic_Holosight {
@@ -72,7 +72,7 @@ class optic_Holosight_arid_F : optic_Holosight {};
 
 class optic_ico_01_black_f {
     displayName = "Promet Modular Sight";
-	price = 7800;
+	price = 7020;
 	reputation = true;
 	class Textures {
 		class optic_ico_01_black_f {
@@ -88,7 +88,7 @@ class optic_ico_01_camo_f : optic_ico_01_black_f {};
 
 class optic_Hamr {
     displayName = "RCO";
-	price = 7800;
+	price = 7020;
 	reputation = true;
 	class Textures {
 		class optic_Hamr {
@@ -101,14 +101,14 @@ class optic_Hamr {
 class optic_Hamr_khk_F : optic_Hamr {};
 
 class optic_MRCO {
-	price = 8630;
+	price = 7767;
 	reputation = true;
 	class Textures {};
 };
 
 class optic_Arco {
     displayName = "ARCO";
-	price = 14950;
+	price = 13455;
 	reputation = true;
 	class Textures {
 		class optic_Arco {
@@ -131,7 +131,7 @@ class optic_Arco_arid_F : optic_Arco {};
 
 class optic_ERCO_blk_F {
     displayName = "ERCO";
-	price = 15320;
+	price = 13788;
 	reputation = true;
 	class Textures {
 		class optic_ERCO_blk_F {
@@ -150,7 +150,7 @@ class optic_ERCO_snd_F : optic_ERCO_blk_F {};
 
 class optic_DMS {
     displayName = "DMS";
-	price = 415000;
+	price = 373500;
 	reputation = true;
 	class Textures {
 		class optic_DMS {
@@ -168,14 +168,14 @@ class optic_DMS_ghex_F : optic_DMS {};
 class optic_DMS_weathered_F : optic_DMS {};
 
 class optic_NVS {
-	price = 380200;
+	price = 342180;
 	reputation = true;
 	class Textures {};
 };
 
 class optic_SOS {
     displayName = "SOS";
-	price = 434500;
+	price = 391050;
 	reputation = true;
 	class Textures {
 		class optic_SOS {
@@ -192,7 +192,7 @@ class optic_SOS_khk_F : optic_SOS {};
 
 class optic_KHS_blk {
     displayName = "KHS";
-	price = 735400;
+	price = 661860;
 	reputation = true;
 	class Textures {
 		class optic_KHS_blk {
@@ -213,7 +213,7 @@ class optic_KHS_old : optic_KHS_blk {};
 
 class optic_AMS {
     displayName = "AMS";
-	price = 805300;
+	price = 724770;
 	reputation = true;
 	class Textures {
 		class optic_AMS {
@@ -232,7 +232,7 @@ class optic_AMS_snd : optic_AMS {};
 
 class optic_LRPS {
     displayName = "LRPS";
-	price = 1140600;
+	price = 1026540;
 	reputation = true;
 	class Textures {
 		class optic_LRPS {
@@ -251,21 +251,21 @@ class optic_LRPS_ghex_F : optic_LRPS {};
 
 class muzzle_snds_L {
     displayName = "9mm Suppressor";
-	price = 14800;
+	price = 13320;
 	reputation = true;
 	class Textures {};
 };
 
 class muzzle_snds_acp {
     displayName = ".45mm Suppressor";
-	price = 14950;
+	price = 13455;
 	reputation = true;
 	class Textures {};
 };
 
 class muzzle_snds_M {
 	displayName = "5.56mm Suppressor";
-    price = 66700;
+    price = 60030;
 	reputation = true;
 	class Textures {
         class muzzle_snds_M {
@@ -284,14 +284,14 @@ class muzzle_snds_m_snd_F : muzzle_snds_M {};
 
 class muzzle_snds_570 {
     displayName = "5.7mm Suppressor";
-	price = 73450;
+	price = 66105;
 	reputation = true;
 	class Textures {};
 };
 
 class muzzle_snds_58_blk_F {
     displayName = "5.8mm Stealth Suppressor";
-	price = 87900;
+	price = 79110;
 	reputation = true;
 	class Textures {
         class muzzle_snds_58_blk_F {
@@ -310,7 +310,7 @@ class muzzle_snds_58_hex_F : muzzle_snds_58_blk_F {};
 
 class muzzle_snds_H {
     displayName = "6.5mm Suppressor";
-	price = 162300;
+	price = 146070;
 	reputation = true;
 	class Textures {
         class muzzle_snds_H {
@@ -329,7 +329,7 @@ class muzzle_snds_H_snd_F : muzzle_snds_H {};
 
 class muzzle_snds_65_TI_blk_F {
     displayName = "6.5mm Stealth Suppressor";
-	price = 192450;
+	price = 173205;
 	reputation = true;
 	class Textures {
         class muzzle_snds_65_TI_blk_F {
@@ -348,7 +348,7 @@ class muzzle_snds_65_TI_hex_F : muzzle_snds_65_TI_blk_F {};
 
 class muzzle_snds_B {
     displayName = "7.62mm Suppressor";
-	price = 460300;
+	price = 414270;
 	reputation = true;
 	class Textures {
         class muzzle_snds_B {
@@ -371,7 +371,7 @@ class muzzle_snds_B_arid_F : muzzle_snds_B {};
 
 class bipod_01_F_blk {
     displayName = "Bipod";
-	price = 540;
+	price = 486;
 	reputation = true;
 	class Textures {
         class bipod_01_F_blk {

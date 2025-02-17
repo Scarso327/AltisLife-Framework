@@ -157,19 +157,19 @@ class CfgLicenses {
 
     class Iron : BaseLicense {
         displayName = "Iron Processing";
-        buyPrice = 400000;
+        buyPrice = 200000;
         class Settings {};
     };
 
     class Salt : BaseLicense {
         displayName = "Salt Processing";
-        buyPrice = 350000;
+        buyPrice = 150000;
         class Settings {};
     };
 
     class Sand : BaseLicense {
         displayName = "Sand Processing";
-        buyPrice = 100000;
+        buyPrice = 90000;
         class Settings {};
     };
 
@@ -193,13 +193,13 @@ class CfgLicenses {
 
     class Weed : BaseLicense {
         displayName = "Weed Processing";
-        buyPrice = 150000;
+        buyPrice = 120000;
         class Settings {};
     };
 
     class Heroin : BaseLicense {
         displayName = "Heroin Processing";
-        buyPrice = 500000;
+        buyPrice = 350000;
         class Settings {};
     };
 

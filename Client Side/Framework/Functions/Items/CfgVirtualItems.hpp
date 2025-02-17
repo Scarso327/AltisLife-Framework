@@ -2269,6 +2269,12 @@ class CfgVirtualItems {
 		icon = "Data\Icons\improvedHullUpgrade.paa";
 		class Settings : Settings {};
 	};
+	class BulletproofGlassUpgrade : ImprovedStorageUpgrade {
+		displayName = "Bulletproof Glass Upgrade";
+		description = "Increases glass armour value by 25%";
+		icon = "Data\Icons\bulletproofGlassUpgrade.paa";
+		class Settings : Settings {};
+	};
 	class ImprovedTyresUpgrade : ImprovedStorageUpgrade {
 		displayName = "Improved Tyres Upgrade";
 		description = "Increases tyre armour value by 25%";

@@ -14,6 +14,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo",
+			"HumanitarianSupplies",
 
 			"UnprocessedOil"
 		};
@@ -23,6 +24,7 @@ class CfgVehicles {
 	class BaseShip : Base {
 		blacklistedItems[] = { 
 			"FreightCargo",
+			"HumanitarianSupplies",
 
 			"UnprocessedOil"
 		};
@@ -36,6 +38,8 @@ class CfgVehicles {
 		repairTime = 15;
 		chopKeepChance = 85;
 		blacklistedItems[] = { 
+			"HumanitarianSupplies",
+
 			"UnprocessedOil"
 		};
 		class Textures {};
@@ -52,6 +56,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo",
+			"HumanitarianSupplies",
 
 			"Turtle_F_Raw",
 
@@ -464,6 +469,12 @@ class CfgVehicles {
 	};
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
 	class C_IDAP_Offroad_01_F : C_Offroad_01_F {
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+
+			"UnprocessedOil"
+		};
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -550,6 +561,12 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F {
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+
+			"UnprocessedOil"
+		};
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -723,6 +740,13 @@ class CfgVehicles {
 		virtualSpace = 150;
 	};
 	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+			"HumanitarianSupplies",
+
+			"UnprocessedOil"
+		};
 		class Textures {
 			class IDAP : BaseTexture { 
 				displayName = "IDAP";
@@ -736,6 +760,12 @@ class CfgVehicles {
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
 	class C_IDAP_Van_02_vehicle_F : C_Van_02_vehicle_F {
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+
+			"UnprocessedOil"
+		};
 		class Textures {
 			class IDAP : BaseTexture { 
 				displayName = "IDAP";
@@ -1073,6 +1103,7 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Truck_02_transport_F : I_Truck_02_transport_F {
+		blacklistedItems[] = {  "UnprocessedOil" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1088,6 +1119,7 @@ class CfgVehicles {
 		virtualSpace = 350;
 	};
 	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {
+		blacklistedItems[] = {  "UnprocessedOil" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1124,6 +1156,7 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
+		blacklistedItems[] = {  "UnprocessedOil" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 

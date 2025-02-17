@@ -15,7 +15,7 @@ if (_enable) then {
 	ULP_Draw3d_Indicators = addMissionEventHandler["Draw3D", {
 		if ([] call ULP_fnc_hasComms) then {
 			private _included = [];
-			private _units = units (group player);
+			private _units = [] call ULP_fnc_groupUnits;
 
 			private _maxDist = ["IndicatorDistance", "Indicators"] call ULP_fnc_getOption;
 			private _includeName = [["EnableNamesOnIndicators", "Indicators"] call ULP_fnc_getOption] call ULP_fnc_bool;

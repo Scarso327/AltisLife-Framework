@@ -348,6 +348,9 @@ class CfgFunctions {
 			class settings {};
 			class changeTax {};
 			class setRankPermission {};
+			class alliances {};
+			class endGroupAlliance {};
+			class startGroupAlliance {};
 		};
 
 		class TabletKeys {
@@ -571,6 +574,8 @@ class CfgFunctions {
 			class groupBuff {};
 			class isSecurity {};
 			class isGroupOwner {};
+			class alliedGroups {};
+			class groupUnits {};
 		};
 
 		class NLR {

@@ -123,6 +123,15 @@ class CfgTablet {
 		onload = "_this call ULP_fnc_progression";
 	};
 
+	class GroupAlliances : Group {
+		pageTitle = "Group - Alliances";
+		pageIdcs[] = {
+			23061, 23099, 23100, 23101, 23102, 23103, 23104
+		};
+		onload = "_this call ULP_fnc_alliances";
+		onUnload = "[""GroupAllianceStarted"", _this getVariable [""AllianceStartedEventHandler"", -1]] call ULP_fnc_removeEventHandler; [""GroupAllianceEnded"", _this getVariable [""AllianceEndedEventHandler"", -1]] call ULP_fnc_removeEventHandler; _this setVariable [""alliance_processing"", nil]; _this setVariable [""AllianceStartedEventHandler"", nil]; _this setVariable [""AllianceEndedEventHandler"", nil];";
+	};
+
 	class GroupSettings : Group {
 		pageTitle = "Group - Settings";
 		pageIdcs[] = {

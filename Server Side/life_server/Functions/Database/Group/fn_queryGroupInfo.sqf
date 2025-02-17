@@ -84,6 +84,23 @@ if (isNull _group) then {
 
 			_group setVariable ["group_members", _hash, true];
 		};
+
+		private _alliances = [format ["SELECT `group_a_id`, `groupa`.`name`, `group_b_id`, `groupb`.`name` FROM `group_alliances` INNER JOIN `groups` `groupa` ON `groupa`.`id` = `group_alliances`.`group_a_id` INNER JOIN `groups` `groupb` ON `groupb`.`id` = `group_alliances`.`group_b_id` WHERE `group_a_id` = '%1' OR `group_b_id` = '%1'", _groupid], 2, true] call DB_fnc_asyncCall;
+		if !(_alliances isEqualTo []) then {
+			private _hash = createHashMap;
+
+			{
+				_x params [ "_groupAId", "_groupAName", "_groupBId", "_groupBName" ];
+
+				if (_groupAId isEqualTo _groupid) then {
+					_hash set [_groupBId, _groupBName];
+				} else {
+					_hash set [_groupAId, _groupAName];
+				};
+			} forEach _alliances;
+
+			_group setVariable ["group_alliances", _hash, true];
+		};
 		
 		_queryBuffs = [_queryBuffs] call DB_fnc_mresToArray;
 		if !(_queryBuffs isEqualTo []) then {

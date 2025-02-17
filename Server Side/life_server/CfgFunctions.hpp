@@ -56,6 +56,7 @@ class CfgFunctions {
             class addGroupMember {};
             class getGroupFunds {};
             class setGroupPermissions {};
+            class handleGroupAlliance {};
         };
 
         class DatabaseHousing {
@@ -137,6 +138,8 @@ class CfgFunctions {
             file = "\life_server\Functions\Group";
             class addToFactionGroup {};
             class handleGroupFunds {};
+            class startGroupAlliance {};
+            class endGroupAlliance {};
         };
 
         class Containers {

@@ -9,7 +9,7 @@ private _map = _this select 0;
 if (isNull _map || { !([] call ULP_fnc_hasComms) }) exitWith {};
 
 private _included = [];
-private _objects = units (group player);
+private _objects = [] call ULP_fnc_groupUnits;
 
 switch ([player] call ULP_fnc_getFaction) do {
 	case "Medic": {

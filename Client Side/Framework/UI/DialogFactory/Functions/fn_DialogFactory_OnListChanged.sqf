@@ -45,9 +45,10 @@ private _requiredPower = if (isNumber (_productCfg >> "requiredPower")) then {
 };
 
 _info ctrlSetStructuredText parsetext format [
-	"<br/><img image = '%1' align='center' size='3.5' /><br/><t align = 'center' size = '1.5'>%2</t><br/><t align = 'left' size = '1'>Required Power: <t color='#B92DE0'>Tier %3</t><br/>You can press <t color='#B92DE0'>T</t> to access the factories inventory when outside this menu.<br/><br/>Materials:<br/><t size='0.8'>%4</t></t>", 
+	"<br/><img image = '%1' align='center' size='3.5' /><br/><t align = 'center' size = '1.5'>%2</t><br/><t align = 'left' size = '1'>%3<br/><br/>Required Power: <t color='#B92DE0'>Tier %4</t><br/>You can press <t color='#B92DE0'>T</t> to access the factories inventory when outside this menu.<br/><br/>Materials:<br/><t size='0.8'>%5</t></t>", 
 	getText(_itemCfg >> "icon"), 
 	getText(_itemCfg >> "displayName"), 
+	getText(_itemCfg >> "description"), 
 	_requiredPower,
 	(_required joinString "<br/>")
 ];

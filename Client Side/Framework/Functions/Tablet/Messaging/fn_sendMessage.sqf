@@ -8,7 +8,7 @@ scopeName "fn_sendMessage";
 _this params [
 	["_type", configNull, [configNull, ""]],
 	["_message", "", [""]],
-	["_targets", "", ["", objNull]]
+	["_targets", "", ["", objNull, []]]
 ];
 
 if (_type isEqualType "") then { _type = missionConfigFile >> "CfgMessages" >> _type; };
@@ -17,7 +17,8 @@ if (_targets isEqualTo "" && { isClass _type }) then { _targets = getText (_type
 if (!isClass _type || 
 	{ _message isEqualTo "" } || 
 	{ _targets isEqualType "" && { _targets isEqualTo "" } } || 
-	{ _targets isEqualType objNull && { isNull _targets } }
+	{ _targets isEqualType objNull && { isNull _targets } } || 
+	{ _targets isEqualType [] && { _targets isEqualTo [] } }
 ) exitWith { false };
 
 if (_targets isEqualType "") then {

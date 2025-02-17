@@ -712,6 +712,7 @@ class CfgFunctions {
 			class isHouseGarage {};
 			class getHouseGarageSpawn {};
 			class isHouseOwnerOnline {};
+			class houseBreakInAlert {};
 		};
 
 		class Missions {

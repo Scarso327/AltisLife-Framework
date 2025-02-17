@@ -243,37 +243,37 @@ class CfgFactories {
 						{ "SmallCargoBed", 2 }
 					};
 				};
-				class SingalJammerUpgrade : PersonalAlarmUpgrade {
-					materials[] = { 
-						{ "ElectronicCircuit", 4 },
-						{ "CopperWiring", 2 },
-						{ "FlawlessDiamond", 1 },
-						{ "ReinforcedGlassPanel", 1 },
-						{ "Laptop", 1 },
-						{ "SignalJammer", 1 }
-					};
-				};
-				class PersonalFridgeUpgrade : PersonalAlarmUpgrade {
-					materials[] = { 
-						{ "CopperPlate", 2 },
-						{ "GlassPanel", 2 },
-						{ "RubberSheet", 1 }
-					};
-				};
-				class PersonalWorkbenchUpgade : PersonalAlarmUpgrade {
-					materials[] = { 
-						{ "Toolbox", 4 },
-						{ "IronPlate", 4 },
-						{ "HeavyArmourPlate", 1 }
-					};
-				};
-				class PersonalMailboxUpgrade : PersonalAlarmUpgrade {
-					materials[] = { 
-						{ "FlawlessDiamond", 4 },
-						{ "PrintedCircuitBoard", 2 },
-						{ "Desktop", 1 }
-					};
-				};
+				// class SingalJammerUpgrade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "ElectronicCircuit", 4 },
+				// 		{ "CopperWiring", 2 },
+				// 		{ "FlawlessDiamond", 1 },
+				// 		{ "ReinforcedGlassPanel", 1 },
+				// 		{ "Laptop", 1 },
+				// 		{ "SignalJammer", 1 }
+				// 	};
+				// };
+				// class PersonalFridgeUpgrade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "CopperPlate", 2 },
+				// 		{ "GlassPanel", 2 },
+				// 		{ "RubberSheet", 1 }
+				// 	};
+				// };
+				// class PersonalWorkbenchUpgade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "Toolbox", 4 },
+				// 		{ "IronPlate", 4 },
+				// 		{ "HeavyArmourPlate", 1 }
+				// 	};
+				// };
+				// class PersonalMailboxUpgrade : PersonalAlarmUpgrade {
+				// 	materials[] = { 
+				// 		{ "FlawlessDiamond", 4 },
+				// 		{ "PrintedCircuitBoard", 2 },
+				// 		{ "Desktop", 1 }
+				// 	};
+				// };
 			};
 		};
 

@@ -143,7 +143,7 @@ class CfgItemsStore {
 			};
 			class optic_ERCO_blk_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class optic_DMS {
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { [""Police_Main"", 7] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
+				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { [""Police_SEG"", 3] call ULP_fnc_hasAccess } || { [""Police_Main"", 7] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
 				class textures { class optic_DMS {}; };
 			};
 			class optic_AMS {

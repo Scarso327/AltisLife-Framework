@@ -14,30 +14,43 @@ if (isNull _box) exitWith {
 	["HouseStorage", [_house, objNull]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 };
 
-private _container = createVehicle [typeOf _box, [0,0,0], [], 0, "CAN_COLLIDE"];
-_container hideObjectGlobal true;
+// Stupid but works to limit ability for people to open two "fresh" ones at the same time
+// Should probably develop a queue system?
+private _randomDelay = random 3;
 
-_container setVariable ["storage_box", _box];
+[_randomDelay, [_house, _box], {
+	_this params [ "_house", "_box" ];
 
-clearWeaponCargoGlobal _container;
-clearItemCargoGlobal _container;
-clearMagazineCargoGlobal _container;
-clearBackpackCargoGlobal _container;
+	private _container = _box getVariable ["container", objNull];
 
-{
-	private _type = _forEachIndex;
+	if !(isNull _container) exitWith {
+		["HouseStorage", [_house, _container]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
+	};
+
+	private _container = createVehicle [typeOf _box, getPosATL _box, [], 0, "CAN_COLLIDE"];
+	_container allowDamage false;
+	_container hideObjectGlobal true;
+
+	_box setVariable ["container", _container];
+	_container setVariable ["storage_box", _box];
+
+	clearWeaponCargoGlobal _container;
+	clearItemCargoGlobal _container;
+	clearMagazineCargoGlobal _container;
+	clearBackpackCargoGlobal _container;
 
 	{
-		switch (_type) do {
-			case 0: { _container addItemCargoGlobal _x };
-			case 1: { _container addMagazineCargoGlobal _x };
-			case 2: { _container addWeaponCargoGlobal _x };
-			case 3: { _container addBackpackCargoGlobal _x };
-		};
-	} forEach _x;
-} forEach (_box getVariable ["ULP_PhysicalCargo", []]);
+		private _type = _forEachIndex;
 
-_container setPosASL AGLtoASL (getPos _box);
-_container setDir (getDir _box);
+		{
+			switch (_type) do {
+				case 0: { _container addItemCargoGlobal _x };
+				case 1: { _container addMagazineCargoGlobal _x };
+				case 2: { _container addWeaponCargoGlobal _x };
+				case 3: { _container addBackpackCargoGlobal _x };
+			};
+		} forEach _x;
+	} forEach (_box getVariable ["ULP_PhysicalCargo", []]);
 
-["HouseStorage", [_house, _container]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
+	["HouseStorage", [_house, _container]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
+}] call ULP_fnc_waitExecute;

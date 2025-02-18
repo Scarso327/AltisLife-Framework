@@ -10,7 +10,8 @@ if (canSuspend) exitWith {
 };
 
 _this params [
-	["_container", objNull, [objNull]]
+	["_container", objNull, [objNull]],
+	["_delete", false, [true]]
 ];
 
 private _box = _container getVariable ["storage_box", objNull];
@@ -41,5 +42,11 @@ _box setVariable ["ULP_PhysicalCargo", _storage];
 	], 1
 ] call DB_fnc_asyncCall;
 
-deleteVehicle _container;
+_container setVariable ["storageLastSaved", time];
+
+if (_delete) then {
+	_box setVariable ["container", nil];
+	deleteVehicle _container;
+};
+
 true

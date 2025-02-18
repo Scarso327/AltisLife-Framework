@@ -44,6 +44,24 @@ private _lastCtrlPos = ctrlPosition controlNull;
 
 				private _optionValue = [configName _option, configName _category, _defaultValue] call ULP_fnc_getOption;
 
+				_slider ctrlAddEventHandler ["SliderPosChanged", {
+					_this params [
+						["_slider", controlNull, [controlNull]],
+						["_value", 0, [0]]
+					];
+					
+					[_slider, _value, _slider getVariable "default"] call ULP_fnc_setOption;
+
+					private _formatFnc = _slider getVariable ["format", { _this }];
+					_slider ctrlSetTooltip format ["%1", (_value call _formatFnc)];
+				}];
+
+				if (isText (_option >> "format")) then {
+					_slider setVariable ["format", compileFinal getText (_option >> "format")];
+				};
+
+				_slider setVariable ["default", _defaultValue];
+
 				_slider sliderSetRange _boundaries;
 				_slider sliderSetPosition _optionValue;
 				_slider sliderSetSpeed _speed;
@@ -52,16 +70,8 @@ private _lastCtrlPos = ctrlPosition controlNull;
 					_isDefault = false;
 				};
 
-				_slider ctrlAddEventHandler ["SliderPosChanged", {
-					_this params [
-						["_slider", controlNull, [controlNull]],
-						["_value", 0, [0]]
-					];
-					
-					[_slider, _value, _combo getVariable "default"] call ULP_fnc_setOption;
-				}];
-
-				_slider setVariable ["default", _defaultValue];
+				private _formatFnc = _slider getVariable ["format", { _this }];
+				_slider ctrlSetTooltip format ["%1", (_optionValue call _formatFnc)];
 
 				_optionCtrlRaw
 			};

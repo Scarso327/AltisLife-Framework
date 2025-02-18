@@ -28,6 +28,7 @@ class CfgOptions {
 			name = "Ambient Night Light";
 			tooltip = "This is the level of light that will light up the map during night.";
 			type = "SLIDER";
+			format = "format [""%1%2"", round ((_this / 0.5) * 100), ""%""]";
 			values[] = { { 0, 0.5 }, 0.5, { 0.1, 0.1 } };
 		};
 
@@ -58,6 +59,7 @@ class CfgOptions {
 			name = "Effects Volume";
 			tooltip = "This is the effects volume that will be used when using ear plugs.";
 			type = "SLIDER";
+			format = "format [""%1%2"", round (_this * 100), ""%""]";
 			values[] = { { 0, 1 }, 0.25, { 0.1, 0.1 } };
 			condition = "true";
 		};
@@ -65,8 +67,6 @@ class CfgOptions {
 		class MusicFade : EffectsFade {
 			name = "Music Volume";
 			tooltip = "This is the music volume that will be used when using ear plugs.";
-			type = "SLIDER";
-			values[] = { { 0, 1 }, 0.25, { 0.1, 0.1 } };
 		};
 
 		class EnableMessageAlert : EffectsFade {
@@ -89,20 +89,21 @@ class CfgOptions {
 
 		class FootViewDistance {
 			name = "View Distance on Foot";
-			tooltip = "This is your view distance while on foot. (500 - 10000m)";
+			tooltip = "This is your view distance while on foot. (500 - 10,000m)";
 			type = "SLIDER";
+			format = "[_this] call ULP_fnc_numberText";
 			values[] = { { 500, 10000 }, 3000, { 1, 1 } };
 			condition = "true";
 		};
 
 		class LandViewDistance : FootViewDistance {
 			name = "View Distance in Land Vehicle";
-			tooltip = "This is your view distance while in land vehicle. (500 - 10000m)";
+			tooltip = "This is your view distance while in land vehicle. (500 - 10,000m)";
 		};
 
 		class AirViewDistance : FootViewDistance {
 			name = "View Distance in Air Vehicle";
-			tooltip = "This is your view distance while in air vehicle. (500 - 10000m)";
+			tooltip = "This is your view distance while in air vehicle. (500 - 10,000m)";
 		};
 	};
 
@@ -174,6 +175,7 @@ class CfgOptions {
 			name = "Indicators Distance";
 			tooltip = "This is the distance at which group indicators will be shown. (20 - 6000m)";
 			type = "SLIDER";
+			format = "[_this] call ULP_fnc_numberText";
 			values[] = { { 20, 6000 }, 2000, { 1, 1, 1 } };
 		};
 	};

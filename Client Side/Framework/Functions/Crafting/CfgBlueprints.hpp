@@ -577,7 +577,7 @@ class CfgBlueprints {
 			materials[] = { 
 				{"CentralProcessingUnit", 1},
 				{"RandomAccessMemory", 1},
-				{"Motherbord", 1},
+				{"Motherboard", 1},
 				{"SolidStateDrive", 1},
 				{"PowerSupplyUnit", 1}
 			};
@@ -591,7 +591,7 @@ class CfgBlueprints {
 				{"CentralProcessingUnit", 1},
 				{"RandomAccessMemory", 2},
 				{"GraphicsProcessingUnit", 2},
-				{"Motherbord", 1},
+				{"Motherboard", 1},
 				{"SolidStateDrive", 2},
 				{"PowerSupplyUnit", 1}
 			};
@@ -605,7 +605,7 @@ class CfgBlueprints {
 				{"CentralProcessingUnit", 1},
 				{"RandomAccessMemory", 4},
 				{"GraphicsProcessingUnit", 20},
-				{"Motherbord", 1},
+				{"Motherboard", 1},
 				{"SolidStateDrive", 5},
 				{"PowerSupplyUnit", 10}
 			};

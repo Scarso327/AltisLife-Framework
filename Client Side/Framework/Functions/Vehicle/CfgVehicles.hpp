@@ -1602,6 +1602,9 @@ class CfgVehicles {
 		retrievalPerc = 0.02;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; };
+			class PoliceSEG : PoliceTextureBase { 
+				conditions = "[""Police_SEG"", 1] call ULP_fnc_hasAccess";
+				textures[] = { "Data\Textures\Vehicles\Air\Police\PMHummingbird.paa" }; };
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
 			class TotalRed : BaseTexture {
 				displayName = "Total Red"; 

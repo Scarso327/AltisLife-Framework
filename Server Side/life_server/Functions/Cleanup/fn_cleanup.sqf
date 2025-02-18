@@ -9,28 +9,38 @@ scopeName "fn_cleanup";
 	private _totalCleanedUp = 
 		({
 			private _vehicle = _x;
+
 			private _cleaned = false;
 
-			if (!alive _vehicle || { (playableUnits findIf { (_vehicle distance _x) <= 600 }) isEqualTo -1 }) then {
-				if ([_vehicle, ["Car", "Air", "Ship", "Armored", "Submarine"]] call ULP_fnc_isKindOf) exitWith {
-					private _id = _vehicle getVariable ["vehicle_id", -1];
+			if !(isNil { _x getVariable "storage_box" }) then {
 
-					private _sinceLastEngineOffTime = switch (true) do {
-						case (["redzone_", [_vehicle]] call ULP_fnc_isUnitsInZone): { 5 * 60 };
-						case (([["Hato"]] call ULP_fnc_onlineFaction) > 0): { 30 * 60 };
-						default { 10 * 60 };
+				// 5 minutes since save + no one nearby = save and delete
+				if ((_x getVariable ["storageLastSaved", time]) <= (time - (5 * 60)) && { (playableUnits findIf { (_container distance _x) <= 20 }) isEqualTo -1 }) then {
+					_cleaned = [_vehicle, true] call ULP_SRV_fnc_saveStorage;
+				};
+			} else {
+
+				if (!alive _vehicle || { (playableUnits findIf { (_vehicle distance _x) <= 600 }) isEqualTo -1 }) then {
+					if ([_vehicle, ["Car", "Air", "Ship", "Armored", "Submarine"]] call ULP_fnc_isKindOf) exitWith {
+						private _id = _vehicle getVariable ["vehicle_id", -1];
+
+						private _sinceLastEngineOffTime = switch (true) do {
+							case (["redzone_", [_vehicle]] call ULP_fnc_isUnitsInZone): { 5 * 60 };
+							case (([["Hato"]] call ULP_fnc_onlineFaction) > 0): { 30 * 60 };
+							default { 10 * 60 };
+						};
+
+						if (_id isEqualTo -1 
+							|| { !((crew _vehicle) isEqualTo []) } 
+							|| { ((_vehicle getVariable ["engineLastOffTime", 0]) + _engineOffCheckTime) > serverTime }) exitWith {};
+
+						_cleaned = [_vehicle] call ULP_SRV_fnc_storeVehicle;
 					};
 
-					if (_id isEqualTo -1 
-						|| { !((crew _vehicle) isEqualTo []) } 
-						|| { ((_vehicle getVariable ["engineLastOffTime", 0]) + _engineOffCheckTime) > serverTime }) exitWith {};
-
-					_cleaned = [_vehicle] call ULP_SRV_fnc_storeVehicle;
-				};
-
-				if ([_vehicle] call ULP_fnc_isPlaceable || { _vehicle isKindOf "Land_Bodybag_01_black_F" }) then {
-					deleteVehicle _vehicle;
-					_cleaned = true;
+					if ([_vehicle] call ULP_fnc_isPlaceable || { _vehicle isKindOf "Land_Bodybag_01_black_F" }) then {
+						deleteVehicle _vehicle;
+						_cleaned = true;
+					};
 				};
 			};
 

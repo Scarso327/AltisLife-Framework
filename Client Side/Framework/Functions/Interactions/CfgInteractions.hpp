@@ -245,7 +245,7 @@ class CfgInteractions {
 			title = "Open Storage";
 			factions[] = { "Police", "Medic", "Hato", "Civilian" };
 			onClick = "if ((missionNamespace getVariable [""ULP_HouseStorageEvent"", -1]) > -1) exitWith { [""A request is already active...""] call ULP_fnc_hint; }; ULP_HouseStorageEvent = [""HouseStorage"", { _this params [ ""_house"", ""_storage"" ]; ULP_HouseStorageEvent = nil; if (isNull _house || { (player distance _house) > 15 }) exitWith { [""You're too far away from the house to access the physical storage...""] call ULP_fnc_hint; }; if (isNull _storage) exitWith { [""This house doesn't have physical storage...""] call ULP_fnc_hint; }; player action [""gear"", _storage]; }, true] call ULP_fnc_addEventHandler; [(_this select 0) getVariable [""building"", objNull]] remoteExecCall [""ULP_SRV_fnc_getStorage"", 2]; [""Requesting Physical Storage...""] call ULP_fnc_hint; closeDialog 0;";
-			condition = "[_this getVariable [""building"", objNull], player, false] call ULP_fnc_isHouseOwner && { (player distance _this) <= 2 }";
+			condition = "(player distance _this) <= 2 && { [_this getVariable [""building"", objNull], player] call ULP_fnc_isHouseOwner || { !(_container getVariable [""locked"", false]) } }";
 		};
 	};
 

@@ -34,6 +34,9 @@ if !(isNull _resetCtrl) then {
 	switch (getText (_class >> "type")) do {
 		case "SLIDER" : {
 			_valueCtrl sliderSetPosition _default;
+
+			private _formatFnc = _valueCtrl getVariable ["format", { _this }];
+			_valueCtrl ctrlSetTooltip format ["%1", (_default call _formatFnc)];
 		};
 		case "DROPDOWN" : {
 			for "_i" from 0 to (lbSize _valueCtrl) do {

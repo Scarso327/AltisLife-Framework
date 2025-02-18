@@ -32,7 +32,7 @@ private _time = getNumber ([_cfg, "NotifyDelay"] call ULP_SRV_fnc_getEventParam)
 	private _pos = getArray (_location >> "position");
 	private _radius = getNumber (_location >> "radius");
 
-	private _area = createMarker [format["airdrop_area_%1", time], _pos];
+	private _area = createMarker [format["redzone_airdrop_area_%1", time], _pos];
 	_area setMarkerShape "ELLIPSE";
 	_area setMarkerBrush "FDIAGONAL";
 	_area setMarkerSize [_radius, _radius];

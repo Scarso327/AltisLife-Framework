@@ -2013,7 +2013,11 @@ class CfgVehicles {
 	class Land_PlasticCase_01_large_F : Land_PlasticCase_01_small_F { virtualSpace = 3000; }; // Small House
 	class Land_PlasticCase_01_large_gray_F : Land_PlasticCase_01_small_F { virtualSpace = 2000; }; // Lighthouse
 	class B_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 6000; }; // Big House
-	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F { virtualSpace = 10000; }; // Warehouse / Boat
+	// Warehouse / Boat
+	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F {
+		virtualSpace = 10000;
+		supply = "B_supplyCrate_F";
+	};
 	class Land_Cargo20_grey_F : Land_PlasticCase_01_small_F { virtualSpace = 40000; }; // Military Offices
 	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; }; // DMT
 	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 1800; }; // Office Building

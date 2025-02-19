@@ -28,9 +28,6 @@ if (_state isEqualTo 1) then {
 	missionNamespace setVariable [format ["ULP_SRV_Crime_%1", _crime], nil, true];
 };
 
-diag_log _this;
-diag_log _loot;
-
 if (isNull _overrideVault) then {
 	{
 		private _building = _x;

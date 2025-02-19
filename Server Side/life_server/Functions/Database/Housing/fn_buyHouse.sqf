@@ -38,7 +38,7 @@ private _id = ["houses"] call ULP_SRV_fnc_getNextId;
 
 // Insert...
 [format[
-	"INSERT INTO `houses` (`id`, `pid`, `classname`, `pos`, `storage`, `virtualStorage`) VALUES ('%1', '%2', '%3', '%4', '""[]""', '""[]""');", 
+	"INSERT INTO `houses` (`id`, `pid`, `classname`, `pos`, `storage`, `virtualStorage`, `upgrades`) VALUES ('%1', '%2', '%3', '%4', '""[]""', '""[]""', '""[]""');", 
 	[_id, ""] call ULP_fnc_numberText, _steamid, (typeOf _house), [getPos _house] call DB_fnc_mresArray
 ], 1] call DB_fnc_asyncCall;
 

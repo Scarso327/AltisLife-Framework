@@ -225,6 +225,13 @@ class CfgInteractions {
 			onClick = "closeDialog 0; [""DialogUpgrades"", _this] call ULP_UI_fnc_createDialog;";
 		};
 
+		class MailBox {
+			title = "Mail Box";
+			factions[] = { "Civilian" };
+			onClick = "closeDialog 0; _this call ULP_fnc_openMailBox";
+			condition = "[_this] call ULP_fnc_isHouseOwner && { [_this, ""PersonalMailboxUpgrade""] call ULP_fnc_hasUpgrade }";
+		};
+
 		class VehicleGarage {
 			title = "Vehicle Garage";
 			factions[] = { "Civilian" };

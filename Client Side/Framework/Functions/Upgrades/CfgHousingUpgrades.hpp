@@ -25,4 +25,10 @@ class CfgHousingUpgrades {
 		description = "Increases vItem storage by <t color='#B92DE0'>10%</t>";
 		materials[] = { { "ImprovedContainerUpgrade", 1 } };
 	};
+	class PersonalMailboxUpgrade : PersonalAlarmUpgrade {
+		icon = "Data\Icons\personalMailboxUpgrade.paa";
+		displayName = "Personal Mailbox Upgrade";
+		description = "Provides access to a mailbox";
+		materials[] = { { "PersonalMailboxUpgrade", 1 } };
+	};
 };

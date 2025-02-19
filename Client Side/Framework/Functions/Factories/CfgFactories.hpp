@@ -267,13 +267,13 @@ class CfgFactories {
 				// 		{ "HeavyArmourPlate", 1 }
 				// 	};
 				// };
-				// class PersonalMailboxUpgrade : PersonalAlarmUpgrade {
-				// 	materials[] = { 
-				// 		{ "FlawlessDiamond", 4 },
-				// 		{ "PrintedCircuitBoard", 2 },
-				// 		{ "Desktop", 1 }
-				// 	};
-				// };
+				class PersonalMailboxUpgrade : PersonalAlarmUpgrade {
+					materials[] = { 
+						{ "FlawlessDiamond", 4 },
+						{ "PrintedCircuitBoard", 2 },
+						{ "Desktop", 1 }
+					};
+				};
 			};
 		};
 

@@ -154,8 +154,13 @@ class CfgFactories {
 				};
 				class ImprovedHullUpgrade : ImprovedStorageUpgrade {
 					materials[] = { 
+						{ "HeavyArmourPlate", 4 }
+					};
+				};
+				class BulletproofGlassUpgrade : ImprovedStorageUpgrade {
+					materials[] = { 
 						{ "ReinforcedGlassPanel", 4 },
-						{ "HeavyArmourPlate", 2 }
+						{ "HeavyArmourPlate", 1 }
 					};
 				};
 				class ImprovedTyresUpgrade : ImprovedStorageUpgrade {

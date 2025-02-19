@@ -27,7 +27,14 @@ private _randomDelay = random 3;
 		["HouseStorage", [_house, _container]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
 	};
 
-	private _container = createVehicle [typeOf _box, getPosATL _box, [], 0, "CAN_COLLIDE"];
+	private _containerType = typeOf _box;
+	private _containerCfg = missionConfigFile >> "CfgVehicles" >> _containerType;
+
+	if (isText (_containerCfg >> "supply")) then {
+		_containerType = getText (_containerCfg >> "supply");
+	};
+
+	private _container = createVehicle [_containerType, getPosATL _box, [], 0, "CAN_COLLIDE"];
 	_container allowDamage false;
 	_container hideObjectGlobal true;
 

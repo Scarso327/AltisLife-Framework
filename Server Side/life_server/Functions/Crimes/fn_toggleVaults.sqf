@@ -28,6 +28,9 @@ if (_state isEqualTo 1) then {
 	missionNamespace setVariable [format ["ULP_SRV_Crime_%1", _crime], nil, true];
 };
 
+diag_log _this;
+diag_log _loot;
+
 if (isNull _overrideVault) then {
 	{
 		private _building = _x;
@@ -54,7 +57,7 @@ if (isNull _overrideVault) then {
 						_items pushBack [_item, round (_amount * _perc)];
 					} forEach _loot;
 
-					_vault setVariable ["locked", false, true];
+					_vault setVariable ["locked", nil, true];
 
 					_vault setVariable ["ULP_VirtualCargo", (createHashMapFromArray _items), true];
 				};
@@ -64,8 +67,10 @@ if (isNull _overrideVault) then {
 } else {
 	if (_loot isEqualTo []) then {
 		_overrideVault setVariable ["ULP_VirtualCargo", nil, true];
+		_overrideVault setVariable ["locked", true, true];
 	} else {
 		_overrideVault setVariable ["ULP_VirtualCargo", (createHashMapFromArray _loot), true];
+		_overrideVault setVariable ["locked", nil, true];
 	};
 };
 

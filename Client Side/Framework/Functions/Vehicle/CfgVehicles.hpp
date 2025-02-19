@@ -2023,7 +2023,9 @@ class CfgVehicles {
 		virtualSpace = 10000;
 		supply = "B_supplyCrate_F";
 	};
-	class Land_Cargo20_grey_F : Land_PlasticCase_01_small_F { virtualSpace = 40000; }; // Military Offices
+	// Needed for evidence locker as it needs virtual space
+	class Land_Cargo20_red_F : Land_Cargo20_white_F {};
+	class Land_Cargo20_grey_F : Land_Cargo20_white_F { virtualSpace = 40000; }; // Military Offices
 	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; }; // DMT
 	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 1800; }; // Office Building
 

@@ -105,8 +105,9 @@ switch (_mode) do {
 
 		[false] call ULP_fnc_playerTags;
 		[false] call ULP_fnc_groupIndicators;
+		[["RscHUD"] call ULP_UI_fnc_getLayer] call ULP_UI_fnc_closeHUD;
 
-		uiNamespace setVariable ["admin_each_frame", ([_display, { ["eachFrame", [_this, _thisEventHandler]] call ULP_fnc_adminCamera; }] call ULP_fnc_addEachFrame)];
+		uiNamespace setVariable ["admin_each_frame", ([_display, { ["eachFrame", [_this, _thisEventHandler]] call ULP_fnc_adminCamera; }, 1] call ULP_fnc_addEachFrame)];
 
 		[getPlayerUID player, "Admin", ["AdminCamera", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	};
@@ -177,9 +178,7 @@ switch (_mode) do {
 			[_id] call ULP_fnc_removeEachFrame;
 		};
 
-		if !((count allPlayers) isEqualTo (count (uiNamespace getVariable ["list_players", []]))) then {
-			["updateList", [(_display displayCtrl 602) controlsGroupCtrl 101]] call ULP_fnc_adminCamera;
-		};
+		["updateList", [(_display displayCtrl 602) controlsGroupCtrl 101]] call ULP_fnc_adminCamera;
 	};
 
 	case "mapDraw": {
@@ -285,27 +284,64 @@ switch (_mode) do {
 			["_ctrl", controlNull, [controlNull]]
 		];
 
-		tvClear _ctrl;
+		private _display = ctrlParent _ctrl;
 
-		private _players = [];
+		private _groups = [];
+		private _newGroups = [];
+		private _oldGroups = _display getVariable ["groups", []];
 
 		{
-			private _cfg = _x;
-			private _parent = _ctrl tvAdd [[], getText(_cfg >> "displayName")];
-			_ctrl tvSetPicture [[_parent], "\a3\ui_f_curator\data\Displays\RscDisplayCurator\side_west_ca.paa"];
-			_ctrl tvSetPictureColor [[_parent], getArray(_cfg >> "colour")];
+			private _group = _x;
+			private _units = ((units _group) select { isPlayer _x });
+
+			if !(_units isEqualTo []) then {
+				if ((_oldGroups findIf { (_x select 0) isEqualTo _group }) isEqualTo -1) then {
+					_newGroups pushBackUnique _group;
+				};
+
+				_groups pushBack [_group, _units];
+			};
+		} forEach allGroups;
+
+		if !(_groups isEqualTo _oldGroups) then {
 
 			{
-				_players pushBackUnique _x;
+				private _parent = _ctrl tvAdd [[], groupId _x];
+				_ctrl tvSetData [[_parent], _x call BIS_fnc_netId];
+				_ctrl tvSetPicture [[_parent], "\a3\ui_f_curator\data\Displays\RscDisplayCurator\side_west_ca.paa"];
+			} forEach _newGroups;
 
-				private _member = _ctrl tvAdd [[_parent], [_x] call ULP_fnc_getName];
-				_ctrl tvSetData [[_parent, _member], _x call BIS_fnc_netId];
-				_ctrl tvSetPicture [[_parent, _member], [getText(configFile >> "CfgVehicles" >> typeOf _x >> "icon")] call BIS_fnc_textureVehicleIcon];
-				_ctrl tvSetPictureColor [[_parent, _member], getArray(_cfg >> "colour")];
-			} forEach ([configName _x] call ULP_fnc_allMembers);
-		} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgFactions"));
+			for "_i" from 0 to ((_ctrl tvCount []) - 1) do {
+				private _groupPath = [_i];
+				private _group = (_ctrl tvData _groupPath) call BIS_fnc_groupFromNetId;
+				private _units = units _group;
 
-		uiNamespace setVariable ["list_players", _players];
+				if (isNull _group || { _units isEqualTo [] }) then {
+					_ctrl tvDelete _groupPath;
+				} else {
+					for "_y" from 0 to ((_ctrl tvCount _groupPath) - 1) do {
+						private _unitPath = _groupPath + [_y];
+						private _unit = (_ctrl tvData _unitPath) call BIS_fnc_objectFromNetId;
+
+						if (isNull _unit || { !(_unit in _units) }) then {
+							_ctrl tvDelete _unitPath;
+						};
+
+						_units = _units - [_unit];
+					};
+
+					{
+						private _member = _ctrl tvAdd [_groupPath, [_x, false, true] call ULP_fnc_getName];
+						private _unitPath = _groupPath + [_member];
+
+						_ctrl tvSetData [_unitPath, _x call BIS_fnc_netId];
+						_ctrl tvSetPicture [_unitPath, [getText(configFile >> "CfgVehicles" >> typeOf _x >> "icon")] call BIS_fnc_textureVehicleIcon];
+					} forEach _units;
+				};
+			};
+
+			_display setVariable ["groups", _groups];
+		};
 	};
 
 	case "keyDown": {
@@ -323,17 +359,27 @@ switch (_mode) do {
 					if (time < (player getVariable ["tp_cooldown", 0])) exitWith {};
 					player setVariable ["tp_cooldown", time + 1];
 
+					private _camera = uiNamespace getVariable ["admin_camera", objNull];
 					private _object = vehicle player;
-					private _pos = screenToWorld [0.5, 0.5];
 
-					if (_object isKindOf "Air") then {
-						_pos set [2, (getPosATL _object) select 2];
+					private _surfaces = lineIntersectsSurfaces [getPosASL _camera, AGLtoASL screenToWorld [0.5,0.5]];
+					private _worldPos = if (_surfaces isEqualTo []) then {
+						screenToWorld [0.5,0.5]
+					} else {
+						ASLtoAGL (_surfaces select 0 select 0)
 					};
 
-					_object setPosATL _pos;
-					_object setVelocity [0, 0, 0];
+					// Maintain Altitude
+					private _alt = if !(_object isEqualTo player) then {
+						((getPosATL _object) select 2)
+					} else {
+						_worldPos select 2
+					};
 
-					[getPlayerUID player, "Admin", ["AdminTeleport", serverTime, [getPlayerUID player, _pos]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+					_object setPosATL [_worldPos select 0, _worldPos select 1, _alt];
+					_object setVelocity [0,0,0];
+
+					[getPlayerUID player, "Admin", ["AdminTeleport", serverTime, [getPlayerUID player, _worldPos]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 					_handled = true;
 				};
@@ -535,5 +581,9 @@ switch (_mode) do {
 
 		[[["EnablePlayerTags", "HUD"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_playerTags;
 		[[["EnableIndicators", "Indicators"] call ULP_fnc_getOption] call ULP_fnc_bool] call ULP_fnc_groupIndicators;
+
+		if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
+			[] call ULP_UI_fnc_openHUD;
+		};
 	};
 };

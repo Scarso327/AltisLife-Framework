@@ -53,12 +53,15 @@ class CfgSpawns {
             marker = "apc_spawn_agios";
             icon = "Data\UI\Spawns\agios.paa";
         };
-        class SegHouse : BaseSpawn {
+        class SegKavala : BaseSpawn {
+            displayName = "10 Kavala Street";
+            marker = "civ_spawn_seg_kav";
+            icon = "Data\UI\Spawns\government.paa";
+            conditions = "[""Police_SEG"", 1] call ULP_fnc_hasAccess";
+        };
+        class SegHouse : SegKavala {
             displayName = "SEG Safehouse";
             marker = "apc_spawn_seg";
-            icon = "Data\UI\Spawns\government.paa";
-            radius = 1;
-            conditions = "[""Police_SEG"", 1] call ULP_fnc_hasAccess";
         };
         class UndercoverHeadquarters : SegHouse {
             displayName = "NCA Covert Headquarters";

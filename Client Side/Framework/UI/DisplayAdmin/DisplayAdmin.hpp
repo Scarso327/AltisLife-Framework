@@ -111,5 +111,18 @@ class DisplayAdmin {
 			onButtonClick = "[""action"", [""Eject""]] call ULP_fnc_adminCamera;";
             SAFEZONE_X(HORIZONTAL_GRID_X(0.5 - (BUTTON_GROUP_W / 2), BUTTON_W, 3));
         };
+
+        class TargetText : Life_RscStructuredText {
+            idc = 609;
+            text = "No Target";
+            x = 0.386562 * safezoneW + safezoneX;
+            y = 0.895 * safezoneH + safezoneY;
+            w = 0.226875 * safezoneW;
+            h = 0.022 * safezoneH;
+			class Attributes
+			{
+				align = "center";
+			};
+        };
     };
 };

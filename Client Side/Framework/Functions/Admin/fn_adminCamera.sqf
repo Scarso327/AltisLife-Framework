@@ -5,6 +5,7 @@
 #include "..\..\script_macros.hpp"
 #include "..\..\dikCodes.hpp"
 scopeName "fn_adminCamera";
+disableSerialization;
 
 if (canSuspend) exitWith {
     [ULP_fnc_adminCamera, _this] call ULP_fnc_directCall;
@@ -108,6 +109,30 @@ switch (_mode) do {
 		[["RscHUD"] call ULP_UI_fnc_getLayer] call ULP_UI_fnc_closeHUD;
 
 		uiNamespace setVariable ["admin_each_frame", ([_display, { ["eachFrame", [_this, _thisEventHandler]] call ULP_fnc_adminCamera; }, 1] call ULP_fnc_addEachFrame)];
+		uiNamespace setVariable ["admin_each_frame_cursor", ([_display, {
+			getMousePosition params [ "_x", "_y" ];
+			private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
+
+			private _intersections = [_x, _y, _focus, vehicle _focus] call BIS_fnc_getIntersectionsUnderCursor;
+			private _cursorObject = (_intersections param [0, []]) param [3, objNull];
+
+			if !(_cursorObject isKindOf "Man") then {
+				_cursorObject = (crew _cursorObject) param [0, objNull];
+			};
+			
+			_this setVariable ["cursorTarget", _cursorObject];
+
+			diag_log _cursorObject;
+			diag_log _this;
+
+			private _selectedText = _this displayCtrl 609;
+			
+			_selectedText ctrlSetStructuredText parseText (if (isNull _focus) then {
+				"No Target"
+			} else {
+				format ["Target: <t color = '#8A2BE2'>%1</t>", name _focus];
+			});
+		}] call ULP_fnc_addEachFrame)];
 
 		[getPlayerUID player, "Admin", ["AdminCamera", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	};
@@ -263,10 +288,19 @@ switch (_mode) do {
 			"_ctrl", "_button", "_xPos", "_yPos", "", "_ctrlKey"
 		];
 
-		private _ctrlMap = (ctrlParent _ctrl) displayCtrl 601;
+		private _display = ctrlParent _ctrl;
+
+		private _ctrlMap = _display displayCtrl 601;
 		if (ctrlShown _ctrlMap) exitWith {}; // Map has it's own...
 		
 		switch (_button) do {
+			case 0: {
+				private _cursorTarget = _display getVariable ["cursorTarget", objNull];
+
+				if (!isNull _cursorTarget && { isPlayer _cursorTarget }) then {
+					["SetCameraTarget", [_cursorTarget]] call ULP_fnc_adminCamera;
+				};
+			};
 			case 1: {
 				if ((uiNamespace getVariable ["admin_camera_mode", "free"]) isEqualTo "free") then {
 					private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
@@ -311,7 +345,7 @@ switch (_mode) do {
 				_ctrl tvSetPicture [[_parent], "\a3\ui_f_curator\data\Displays\RscDisplayCurator\side_west_ca.paa"];
 			} forEach _newGroups;
 
-			for "_i" from 0 to ((_ctrl tvCount []) - 1) do {
+			for "_i" from ((_ctrl tvCount []) - 1) to 0 step -1 do {
 				private _groupPath = [_i];
 				private _group = (_ctrl tvData _groupPath) call BIS_fnc_groupFromNetId;
 				private _units = units _group;
@@ -319,7 +353,7 @@ switch (_mode) do {
 				if (isNull _group || { _units isEqualTo [] }) then {
 					_ctrl tvDelete _groupPath;
 				} else {
-					for "_y" from 0 to ((_ctrl tvCount _groupPath) - 1) do {
+					for "_y" from ((_ctrl tvCount _groupPath) - 1) to 0 step -1 do {
 						private _unitPath = _groupPath + [_y];
 						private _unit = (_ctrl tvData _unitPath) call BIS_fnc_objectFromNetId;
 
@@ -355,34 +389,32 @@ switch (_mode) do {
 			case SPACE: {
 				if !(["Teleport"] call ULP_fnc_checkPower) exitWith {};
 
-				if (_ctrlKey) then {
-					if (time < (player getVariable ["tp_cooldown", 0])) exitWith {};
-					player setVariable ["tp_cooldown", time + 1];
+				if (time < (player getVariable ["tp_cooldown", 0])) exitWith {};
+				player setVariable ["tp_cooldown", time + 1];
 
-					private _camera = uiNamespace getVariable ["admin_camera", objNull];
-					private _object = vehicle player;
+				private _camera = uiNamespace getVariable ["admin_camera", objNull];
+				private _object = vehicle player;
 
-					private _surfaces = lineIntersectsSurfaces [getPosASL _camera, AGLtoASL screenToWorld [0.5,0.5]];
-					private _worldPos = if (_surfaces isEqualTo []) then {
-						screenToWorld [0.5,0.5]
-					} else {
-						ASLtoAGL (_surfaces select 0 select 0)
-					};
-
-					// Maintain Altitude
-					private _alt = if !(_object isEqualTo player) then {
-						((getPosATL _object) select 2)
-					} else {
-						_worldPos select 2
-					};
-
-					_object setPosATL [_worldPos select 0, _worldPos select 1, _alt];
-					_object setVelocity [0,0,0];
-
-					[getPlayerUID player, "Admin", ["AdminTeleport", serverTime, [getPlayerUID player, _worldPos]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
-
-					_handled = true;
+				private _surfaces = lineIntersectsSurfaces [getPosASL _camera, AGLtoASL screenToWorld [0.5,0.5]];
+				private _worldPos = if (_surfaces isEqualTo []) then {
+					screenToWorld [0.5,0.5]
+				} else {
+					ASLtoAGL (_surfaces select 0 select 0)
 				};
+
+				// Maintain Altitude
+				private _alt = if !(_object isEqualTo player) then {
+					((getPosATL _object) select 2)
+				} else {
+					_worldPos select 2
+				};
+
+				_object setPosATL [_worldPos select 0, _worldPos select 1, _alt];
+				_object setVelocity [0,0,0];
+
+				[getPlayerUID player, "Admin", ["AdminTeleport", serverTime, [getPlayerUID player, _worldPos]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+
+				_handled = true;
 			};
 
 			case M: {
@@ -575,6 +607,17 @@ switch (_mode) do {
 
 		removeMissionEventHandler ["Draw3D", (uiNamespace getVariable ["admin_esp", -1])];
 		[uiNamespace getVariable ["admin_each_frame", -1]] call ULP_fnc_removeEachFrame;
+		[uiNamespace getVariable ["admin_each_frame_cursor", -1]] call ULP_fnc_removeEachFrame;
+		
+		uiNamespace setVariable ["admin_camera", nil];
+		uiNamespace setVariable ['admin_camera_manual', nil];
+		uiNamespace setVariable ["admin_camera_map", nil];
+		uiNamespace setVariable ["admin_camera_mouse", nil];
+		uiNamespace setVariable ["admin_camera_mode", nil];
+		uiNamespace setVariable ["admin_camera_target", nil];
+		uiNamespace setVariable ["admin_each_frame", nil];
+		uiNamespace setVariable ["admin_each_frame_cursor", nil];
+		uiNamespace setVariable ["admin_esp", nil];
 
 		uiNamespace setVariable ['DisplayAdmin', nil];
 		player switchCamera "INTERNAL";

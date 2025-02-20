@@ -122,9 +122,6 @@ switch (_mode) do {
 			
 			_this setVariable ["cursorTarget", _cursorObject];
 
-			diag_log _cursorObject;
-			diag_log _this;
-
 			private _selectedText = _this displayCtrl 609;
 			
 			_selectedText ctrlSetStructuredText parseText (if (isNull _focus) then {

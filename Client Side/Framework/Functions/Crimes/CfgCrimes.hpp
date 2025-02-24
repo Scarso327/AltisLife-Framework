@@ -4,7 +4,7 @@ class CfgCrimes {
 			title = "HM Treasury";
 			description = "Located near the island’s main airfield, the HM Treasury of Altis is a heavily fortified hub of economic governance. Housed within a modern, reinforced concrete structure, it oversees public finances, currency stability, and economic policy for the island.<br /><br />Protected by high-security measures, the treasury ensures the safety of vital financial operations while maintaining close ties to Altis’s strategic infrastructure. Despite its utilitarian design, the institution symbolizes resilience and stability, safeguarding the island’s economic future amidst a volatile geopolitical landscape.";
 			factions[] = { "Civilian" };
-			cooldown = 1000;
+			cooldown = 1800;
 			class Stages {
 				class Hack {
 					displayName = "Hacking Vault Security";
@@ -71,12 +71,12 @@ class CfgCrimes {
 			title = "HMS Liberty";
 			description = "The HMS Liberty, a British Navy destroyer, now lies abandoned after colliding with treacherous rocks off the coast of Altis. Once a symbol of naval power, the vessel’s rusting hull juts from the shallow waters, a stark reminder of its untimely demise.<br /><br />Amidst the wreckage lies a server housing valuable encrypted drives, a potential goldmine for those daring enough to retrieve them. These drives can be sold as-is for their raw value or decrypted to unlock and sell their sensitive data for an even greater reward. The HMS Liberty’s perilous location and decaying structure make it a challenging but lucrative target for opportunists.";
 			factions[] = { "Civilian" };
-			cooldown = 1000;
+			cooldown = 1800;
 			class Stages {
 				class Hack {
 					displayName = "Disabling Server Security";
 					description = "On the bridge of the abandoned HMS Liberty, a server containing valuable drives awaits. To access it, a <font color='#B92DE0'>hacking device</font> must be used to disable the server’s security systems, unlocking the drives for retrieval.";
-					time = 1200;
+					time = 1500;
 					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""Systems on HM Liberty are being tampered with!""], _targets] call ULP_fnc_sendMessage; [""You have begun disabling the server's security systems, police has been notified!""] call ULP_fnc_hint;";
 					onCompleted = "[""HMSLiberty"", 1, hms_liberty_server] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
 					onEachFrame = "hms_liberty_server animateSource [""server_move_source"", (_this / 100)];";
@@ -108,7 +108,7 @@ class CfgCrimes {
 			title = "Police Evidence Storage";
 			description = "Located south of Kavala, the Police Evidence Locker is a heavily guarded facility storing all the island's confiscated evidence. Within its walls lies a trove of contraband, ranging from illegal substances to rare items, all of which fetch a high price on the black market.<br /><br />Breaking into the locker requires bypassing reinforced security systems and evading patrols. For those bold enough to succeed, the rewards can be immense, making it a prime target for opportunistic criminals.";
 			factions[] = { "Civilian" };
-			cooldown = 1000;
+			cooldown = 1800;
 			class Stages {
 				class Drill {
 					displayName = "Drilling into Evidence Vault";
@@ -138,51 +138,6 @@ class CfgCrimes {
 				class SeizedContraband {
 					amount = 50;
 					extra = "count playableUnits + ((time / 2) / 240)";
-				};
-			};
-		};
-		class ResearchFacility {
-			title = "Research Storage";
-			description = "Hidden beneath the waves of the Pygros Gulf, this secretive underwater research facility is shrouded in mystery, rumored to be conducting experiments on alien technology. Accessible only by diving or specialized submersibles, the facility’s reinforced structure is designed to withstand immense pressure and conceal its operations.<br /><br />Inside, advanced labs and secured compartments hint at groundbreaking discoveries, with whispers of extraterrestrial artifacts locked behind high-security doors. For those willing to brave the depths, the potential to uncover and profit from the facility’s secrets is as alluring as it is dangerous.";
-			factions[] = { "Civilian" };
-			cooldown = 1000;
-			class Stages {
-				class Drill {
-					displayName = "Drilling into Storage Vault";
-					description = "Accessing the vault requires the use of an <font color='#B92DE0'>industrial drill</font> to breach its reinforced walls. Inside, the contents can be sold to foreign agents for an extraordinary profit, making it a high-risk but highly lucrative target for daring infiltrators.";
-					time = 1200;
-					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Underwater Research Facility is being illegally accessed!""], _targets] call ULP_fnc_sendMessage; [""You have begun drilling into the underwater research facility, police has been notified!""] call ULP_fnc_hint;";
-					onCompleted = "[""ResearchFacility"", 1, researchFacilityCapsule] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
-					onEachFrame = "";
-					onProgressStop = "";
-					onFail = "[(switch (false) do { case ((count ([""Police""] call ULP_fnc_allMembers)) >= 15) : { ""There must be at least <t color='#B92DE0'>15 police officers</t> to start this crime..."" }; case ([""IndustrialDrill""] call ULP_fnc_hasItem < 1) : { ""You need an industrial drill to perform this action..."" }; default { ""Valut security has already been disabled..."" }; })] call ULP_fnc_hint;";
-					condition = "!(missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false]) && { [""IndustrialDrill""] call ULP_fnc_hasItem > 0 }";
-				};
-			};
-			class Buildings {
-				class OuterDome {
-					classname = "Land_Dome_Big_F";
-					position[] = {24842,13219.9,0};
-					class BreakIn {
-						breakIn = 300;
-						onBreakIn = "if (([""SilentLocksmith"", (random 1)] call ULP_fnc_activatePerk) < 0.8) exitWith {}; private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""A door at the underwater research facility has been broken into!""], _targets] call ULP_fnc_sendMessage; [""You accidently tripped an alarm while breaking the lock, police have been alerted!""] call ULP_fnc_hint;";
-						onFail = "[""There must be at least 15 police officers to start this crime...""] call ULP_fnc_hint;";
-						condition = "(count ([""Police""] call ULP_fnc_allMembers)) >= 15 || { missionNamespace getVariable [""ULP_SRV_Crime_ResearchFacility"", false] }";
-					};
-				};
-				class InnerDome {
-					classname = "Land_Dome_Small_F";
-					position[] = {24844.1,13219.7,0};
-				};
-				class InnerVault {
-					classname = "Land_Research_HQ_F";
-					position[] = {24844.1,13219.7,0};
-				};
-			};
-			class Items {
-				class SpaceCapsuleDataDrive {
-					amount = 1;
-					extra = "0";
 				};
 			};
 		};

@@ -65,13 +65,27 @@ class CfgPatches {
                 constant = false;
                 global = true;
             };
+            class Season {
+                type = "NUMBER";
+                default = "1";
+                constant = false;
+                global = false;
+            };
+            class NextSeason {
+                type = "STRING";
+                default = "2025-02-23";
+                constant = false;
+                global = false;
+            };
         };
         
         class EventLogs {
             class Dispute { 
                 params = 1;
             };
-            class Revive : Dispute {};
+            class Revive : Dispute {
+                isStat = 1;
+            };
             class CaptureHideout : Dispute {};
             class SeizeComms : Dispute {};
             class NLR : Dispute {};
@@ -91,19 +105,26 @@ class CfgPatches {
             class Craft : Spawn {};
             class Election : Spawn {};
             class BaseBid : Spawn {};
-            class Injured : Spawn {};
+            class Injured : Spawn {
+                isStat = 1;
+            };
             class Loot : Spawn {};
 
             class Group {
                 params = 3;
             };
-            class Bleedout : Group {};
+            class Bleedout : Group {
+                isStat = 1;
+            };
             class Admin : Group {};
             class House : Group {};
-            class InjuredBy : Group {};
+            class InjuredBy : Group {
+                isStat = 1;
+            };
 
             class Executed {
                 params = 4;
+                isStat = 1;
             };
 
             class Money {

@@ -236,6 +236,12 @@ class CfgFunctions {
             file = "\life_server\Functions\Cleanup";
             class cleanup {};
         };
+
+        class Stats {
+            file = "\life_server\Functions\Stats";
+            class initStats {};
+            class increaseStat {};
+        };
     };
 
     class MySQL_Database {

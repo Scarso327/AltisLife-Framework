@@ -27,3 +27,5 @@ if (isNumber (_cfg >> "params") && { !((count _params) isEqualTo getNumber (_cfg
 		[_params] call DB_fnc_mresArray
 	], 1
 ] call DB_fnc_asyncCall;
+
+[_steamid, _event] call ULP_SRV_fnc_increaseStat;

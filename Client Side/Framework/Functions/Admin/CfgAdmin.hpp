@@ -22,6 +22,7 @@ class CfgAdmin {
 		class Medical : Vehicle {};
 		class Restrain : Vehicle {};
 		class Imprison : Vehicle {};
+		class Housing : Vehicle {};
 
 		// HEAD ADMINISTRATOR (L4)
 		// COMMUNITY BOARD (L5)

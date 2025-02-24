@@ -228,6 +228,9 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_endGroupAlliance {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_getStats {
+            allowedTargets = SERVER;
+        };
 
         class bis_fnc_debugconsoleexec {};
     };

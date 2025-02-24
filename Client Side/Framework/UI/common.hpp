@@ -1979,3 +1979,38 @@ class ULP_RscMainMenuSpotlight: Life_RscControlsGroupNoScrollbars
 		};
 	};
 };
+
+class ULP_RedzoneHud : Life_RscControlsGroupNoScrollbars {
+    SAFEZONE_X((1 - 0.12375012375) - MARGIN_X);
+    SAFEZONE_Y(((1 - (BUTTON_H * 6)) - MARGIN_Y) - MARGIN_Y);
+    SAFEZONE_W(0.12375012375);
+    SAFEZONE_H(BUTTON_H * 2);
+    fade=1;
+
+    class Controls {
+        class BarBackground: Life_RscText {
+            idc = 101;
+            colorBackground[] = {0.1,0.1,0.1,0.85};
+            SAFEZONE_W(0.12375012375);
+            SAFEZONE_H(BUTTON_H * 2);
+        };
+
+        class HeaderText : Life_RscStructuredText {
+            idc = 102;
+            text = "<t align='left' size='1'>Kills</t><t align='right' size='1'>Deaths</t>";
+            colorBackground[] = { 0.06, 0.06, 0.06, 0.85 };
+            y = 0;
+            SAFEZONE_W(0.12375012375);
+            SAFEZONE_H(BUTTON_H);
+        };
+
+        class StatusText : Life_RscStructuredText {
+            idc = 103;
+            text = "<t align='left' size='1'>0</t><t align='right' size='1'>0</t>";
+            colorBackground[] = {0, 0, 0, 0};
+            y = BUTTON_H * safezoneH;
+            SAFEZONE_W(0.12375012375);
+            SAFEZONE_H(BUTTON_H);
+        };
+    };
+};

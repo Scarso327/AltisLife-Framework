@@ -241,6 +241,7 @@ class CfgFunctions {
             file = "\life_server\Functions\Stats";
             class initStats {};
             class increaseStat {};
+            class getStats {};
         };
     };
 

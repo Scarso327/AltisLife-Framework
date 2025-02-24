@@ -17,3 +17,7 @@ if !(_eventhandler isEqualTo -1) then { ["OnXPIncreased", _eventhandler] call UL
 
 private _money = _display getVariable ["money", -1];
 if !(_money isEqualTo -1) then { ["MoneyChanged", _money] call ULP_fnc_removeEventHandler; };
+
+["EnteredRedzone", _display getVariable ["EnteredRedzoneEvent", -1]] call ULP_fnc_removeEventHandler;
+["LeftRedzone", _display getVariable ["LeftRedzoneEvent", -1]] call ULP_fnc_removeEventHandler;
+["Incapacitated", _display getVariable ["IncapacitatedEvent", -1]] call ULP_fnc_removeEventHandler;

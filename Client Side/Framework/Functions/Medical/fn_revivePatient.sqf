@@ -77,7 +77,7 @@ if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
 	["RevivedSomeone", [_unit]] call ULP_fnc_invokeEvent;
 
 	[player] remoteExecCall ["ULP_fnc_revived", _unit];
-	[getPlayerUID player, "Revive", [_unit]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+	[getPlayerUID player, "Revive", [getPlayerUID _unit]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 }, {
 	_this params [ "_unit" ];
 

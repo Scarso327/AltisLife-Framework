@@ -24,8 +24,13 @@ if (isNumber (_cfg >> "params") && { !((count _params) isEqualTo getNumber (_cfg
 	format ["INSERT INTO `logs` (`event`, `pid`, `content`) VALUES('%1', '%2', '%3')",
 		_event,
 		_steamid,
+		// TODO: Use https://community.bistudio.com/wiki/toJSON to save this is a format I can query
+		// Comment in fn_increaseStat so I can just query logs
 		[_params] call DB_fnc_mresArray
 	], 1
 ] call DB_fnc_asyncCall;
 
-[_steamid, _event] call ULP_SRV_fnc_increaseStat;
+private _statParams = [_steamid];
+_statParams append _params;
+
+[_event, _statParams] call ULP_SRV_fnc_increaseStat;

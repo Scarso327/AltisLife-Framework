@@ -84,7 +84,10 @@ class CfgPatches {
                 params = 1;
             };
             class Revive : Dispute {
-                isStat = 1;
+                class Stats {
+                    players = "createHashMapFromArray [[""Revives"", [_this select 0]], [""Revived"", [_this select 1]]]";
+                    amount = 1;
+                };
             };
             class CaptureHideout : Dispute {};
             class SeizeComms : Dispute {};
@@ -106,25 +109,28 @@ class CfgPatches {
             class Election : Spawn {};
             class BaseBid : Spawn {};
             class Injured : Spawn {
-                isStat = 1;
+                class Stats {
+                    players = "createHashMapFromArray [[""Deaths"", [_this select 0]]]";
+                    amount = 1;
+                };
             };
             class Loot : Spawn {};
 
             class Group {
                 params = 3;
             };
-            class Bleedout : Group {
-                isStat = 1;
-            };
+            class Bleedout : Group {};
             class Admin : Group {};
             class House : Group {};
             class InjuredBy : Group {
-                isStat = 1;
+                class Stats {
+                    players = "createHashMapFromArray [[""Deaths"", [_this select 0]], [""Kills"", [_this select 1]]]";
+                    amount = 1;
+                };
             };
 
             class Executed {
                 params = 4;
-                isStat = 1;
             };
 
             class Money {

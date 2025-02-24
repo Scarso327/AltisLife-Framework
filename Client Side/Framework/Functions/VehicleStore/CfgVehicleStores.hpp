@@ -379,7 +379,7 @@ class CfgVehicleStores {
 			class C_IDAP_Truck_02_transport_F {};
 			class C_IDAP_Truck_02_F {};
 			class C_IDAP_Truck_02_water_F {};
-			class C_IDAP_Heli_Transport_02_F {};
+			//class C_IDAP_Heli_Transport_02_F {};
 		};
 	};
 

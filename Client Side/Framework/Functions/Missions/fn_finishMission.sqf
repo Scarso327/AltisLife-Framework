@@ -37,6 +37,11 @@ if !(_onFinished isEqualTo "") then {
 
 if !(_eachFrame isEqualTo -1) then { [_eachFrame] call ULP_fnc_removeEachFrame; };
 
+if ([] call ULP_fnc_isGroup) then {
+	private _buff = [group player, "Missions"] call ULP_fnc_groupBuff;
+	if (_buff > 0) then { _reward = _reward + (_reward * _buff); };
+};
+
 _task setTaskState "Succeeded";
 ["TaskMaster"] call ULP_fnc_achieve;
 

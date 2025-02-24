@@ -73,7 +73,7 @@ if (_reward > 0) then {
 
 	if ([] call ULP_fnc_isGroup) then {
 		private _buff = [group player, "Missions"] call ULP_fnc_groupBuff;
-		if (_buff > 0) then { _reward = _reward * (1 + _buff); };
+		if (_buff > 0) then { _reward = _reward + (_reward * _buff); };
 	};
 
 	_reward = round (_reward * (player distance _pos));

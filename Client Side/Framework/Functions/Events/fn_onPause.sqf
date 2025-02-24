@@ -16,7 +16,7 @@ with missionNamespace do {
 
 	[_saveButton] call ULP_UI_fnc_setSyncButton;
 
-	private _canInteract = !([] call ULP_fnc_isInputBlocked);
+	private _canInteract = !([] call ULP_fnc_isInputBlocked || { ULP_Imprisioned });
 
 	_respawnButton ctrlEnable _canInteract;
 

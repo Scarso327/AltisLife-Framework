@@ -29,7 +29,7 @@ if !(isClass _prison) exitWith { false };
 if (_escaped) then {
 	["You've escaped from prison!"] call ULP_fnc_hint;
 
-	[getPlayerUID player, "CommonLaw", "EscapeCustody", "Escaped HMP Altis"] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+	[getPlayerUID _unit, "CommonLaw", "EscapeCustody", "Escaped HMP Altis"] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 } else {
 	getArray (_prison >> "release") params ["_pos", "_dir"];
 	_unit setPos _pos;
@@ -38,7 +38,7 @@ if (_escaped) then {
 	["You've served your sentence and been released!"] call ULP_fnc_hint;
 	[_prison >> "ReleaseLoadout"] call ULP_fnc_setCfgLoadout;
 
-	[getPlayerUID player] remoteExecCall ["ULP_SRV_fnc_clearWarrants", RSERV];
+	[getPlayerUID _unit] remoteExecCall ["ULP_SRV_fnc_clearWarrants", RSERV];
 };
 
 ULP_Prison_Time = 0;

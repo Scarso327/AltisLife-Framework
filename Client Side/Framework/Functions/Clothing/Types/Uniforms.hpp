@@ -310,7 +310,7 @@ class U_O_R_Gorka_01_black_F : U_C_Poor_1 {
 		class RPU {
 			displayName = "RPU";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\RPU_tracksuit.paa" };
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RPU"", 1] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_RPU"", 2] call ULP_fnc_hasAccess }";
 		};
 		class NCA {
 			displayName = "NCA";

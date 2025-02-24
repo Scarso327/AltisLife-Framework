@@ -152,6 +152,19 @@ class CfgBlueprints {
 			item = "Lockpick";
 			time = 2;
 		};
+		class B_SnapGun : B_Toolbox {
+			icon = "Data\Icons\snapGun.paa";
+			displayName = "Snap Gun";
+			description = "A tool used to pick the locks of vehicles and handcuffs, but doesn't break";
+			materials[] = { 
+				{"SteelBar", 2},
+				{"FlawlessDiamond", 1} 
+			};
+			item = "SnapGun";
+			isDefault = false;
+			workbench = true;
+			time = 15;
+		};
 		class B_Lighter : B_Lockpick {
 			icon = "Data\Icons\lighter.paa";
 			displayName = "Lighter";

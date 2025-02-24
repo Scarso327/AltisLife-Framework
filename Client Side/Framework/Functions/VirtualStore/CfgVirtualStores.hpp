@@ -13,7 +13,7 @@ class CfgVirtualStores {
 			class PanicButton {};
 			class Stinger {};
 			class Blindfold {};
-			class Lockpick {};
+			class SnapGun {};
 			class BigRedKey {};
 			//class Painkillers {};
 			class FieldDressing {};
@@ -36,7 +36,7 @@ class CfgVirtualStores {
 			class Sweetie {};
 			class FuelCan {};
 			class PanicButton {};
-			class Lockpick {};
+			class SnapGun {};
 			//class Painkillers {};
 			class FieldDressing {};
 			class Elastic {};
@@ -62,7 +62,7 @@ class CfgVirtualStores {
 			class Redbull {};
 			class FuelCan {};
 			class PanicButton {};
-			class Lockpick {};
+			class SnapGun {};
 			class VehicleClamp {};
 			class FieldDressing {};
 			class BloodBag {};

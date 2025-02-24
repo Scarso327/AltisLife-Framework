@@ -51,7 +51,7 @@ class CfgInteractions {
 			title = "Lockpick";
 			factions[] = { "Civilian" };
 			onClick = "_this call ULP_fnc_lockpick";
-			condition = "[_this] call ULP_fnc_isRestrained && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
+			condition = "[_this] call ULP_fnc_isRestrained && { [""Lockpick""] call ULP_fnc_hasItem > 0 || { [""SnapGun""] call ULP_fnc_hasItem > 0 } }";
 		};
 		class Escort : Unrestrain {
 			title = "Escort";
@@ -182,7 +182,7 @@ class CfgInteractions {
 			condition = "((_this getVariable [""AssignedMedic"", objNull]) isEqualTo player)";
 		};
 
-		// Admin Commands...
+		// Admin Commands
 		class AdminRevive : Revive {
 			title = "Admin Revive";
 			onClick = "[player] remoteExecCall [""ULP_fnc_revived"", _this select 0]; (_this select 0) setDamage 0; [format[""You've revived this player using admin powers...""]] call ULP_fnc_hint; [getPlayerUID player, ""Admin"", [""AdminRevive"", serverTime, [name (_this select 0)]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2]; closeDialog 0;";
@@ -311,7 +311,7 @@ class CfgInteractions {
 		class Lockpick : Repair {
 			title = "Lockpick";
 			onClick = "_this call ULP_fnc_lockpick";
-			condition = "!(_this in ULP_Keys) && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
+			condition = "!(_this in ULP_Keys) && { [""Lockpick""] call ULP_fnc_hasItem > 0 || { [""SnapGun""] call ULP_fnc_hasItem > 0 } }";
 		};
 
 		class Push : Repair {

@@ -517,6 +517,20 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
+	class SnapGun : Lockpick {
+		displayName = "Snap Gun";
+		description = "Used to pick the locks of vehicles and handcuffs, but cannot break";
+		icon = "Data\Icons\snapGun.paa";
+		buyPrice = 20000;
+		sellPrice = 10000;
+		class Settings : Settings { isIllegal = true; };
+		class Deconstruction {
+			time = 15;
+			workbench = true;
+			blueprints[] = { { "HandheldTools", "B_SnapGun" } };
+			materials[] = { {"SteelBar", 2} };
+		};
+	};
 	class BoltCutter : Pickaxe {
 		displayName = "Bolt Cutter";
 		description = "Used to cut locks found on properties, airdrops and shipwrecks";

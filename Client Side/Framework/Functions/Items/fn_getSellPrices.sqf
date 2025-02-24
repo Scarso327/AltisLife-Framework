@@ -38,7 +38,7 @@ if (_sellPrice > 0) then {
 							_sellPrice = _sellPrice * getNumber (_x >> "Drug" >> "extraPay");
 						} else {
 							private _tax = _sellPrice * getNumber (_x >> "Drug" >> "saleTax");
-							_cartelTaxes pushBack [_owner, _tax];
+							_cartelTaxes pushBack [_owner call BIS_fnc_netId, _tax];
 							_sellPrice = _sellPrice - _tax;
 						};
 					};

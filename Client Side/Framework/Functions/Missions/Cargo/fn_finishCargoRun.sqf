@@ -46,6 +46,36 @@ if !(_countRemoved isEqualTo _expectedQuantity) exitWith {
 };
 
 private _secondaryReward = getNumber (missionConfigFile >> "CfgVirtualItems" >> _item >> "sellPrice") * _countRemoved;
+
+if (_item isEqualTo (missionNamespace getVariable ["ULP_SRV_Setting_BuffedItem", ""])) then { _secondaryReward = _secondaryReward * getNumber(missionConfigFile >> "CfgSettings" >> "buffedSellIncrease"); };
+if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _secondaryReward = _secondaryReward * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "sellIncrease"); };
+
+if (_isLegal) then {
+	_secondaryReward = ["LegalTrader", _secondaryReward, false] call ULP_fnc_activatePerk;
+	_secondaryReward = [_secondaryReward] call ULP_fnc_taxPrice;
+} else {
+	_secondaryReward = ["ShadyTrader", _secondaryReward, false] call ULP_fnc_activatePerk;
+
+	{
+		private _object = missionNamespace getVariable [format["ULP_SRV_Cartel_%1", configName _x], objNull];
+
+		if !(isNull _object) then {
+			private _owner = (_object getVariable ["owner", []]) param [0, grpNull];
+			if !(isNull _owner) then {
+				if (isClass (_x >> "Drug")) then {
+					if (_owner isEqualTo (group player)) then {
+						_secondaryReward = _secondaryReward * getNumber (_x >> "Drug" >> "extraPay");
+					} else {
+						private _tax = _secondaryReward * getNumber (_x >> "Drug" >> "saleTax");
+						_cartelTaxes pushBack [_owner, _tax];
+						_secondaryReward = _secondaryReward - _tax;
+					};
+				};
+			};
+		};
+	} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgCartels" >> "Fixed"));
+};
+
 private _gangTax = _secondaryReward * ([] call ULP_fnc_groupTax);
 
 if ([] call ULP_fnc_isGroup && { _gangTax > 0 }) then {

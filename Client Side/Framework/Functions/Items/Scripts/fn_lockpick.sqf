@@ -56,8 +56,6 @@ if ([] call ULP_fnc_isGroup) then {
 	if (_buff > 0) then { _time = _time - (_time * _buff); };
 };
 
-if !(_hasSnap) then { ["Lockpick", 1, true] call ULP_fnc_handleItem };
-
 [format["Lockpicking %1", _name], _time, [_target, _name, _isVehicle], { (player distance (_this select 0)) <= 5 }, {
 	_this params [
 		["_target", objNull, [objNull]],
@@ -69,36 +67,38 @@ if !(_hasSnap) then { ["Lockpick", 1, true] call ULP_fnc_handleItem };
 		["You can't lockpick something that has been destroyed..."] call ULP_fnc_hint;
 	};
 
-	if (0.7 <= (random 1)) then {
-		if (_isVehicle) exitWith {
-			[getPlayerUID player, "TheftAct", "S25", 
-				format [
-					"Vehicle: %1 (%2)", _name, 
-					getText (missionConfigFile >> "CfgVehicles" >> (typeOf _target) >> "Textures" >> (_target getVariable ["texture", ""]) >> "displayName")
-				]
-			] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
-			
-			[format ["You have successfully picked <t color='#B92DE0'>%1's</t> lock and gained forged keys...", _name]] call ULP_fnc_hint;
-			ULP_Keys pushBackUnique _target;
-			["LockpickVeh"] call ULP_fnc_achieve;
-		};
+	if (_hasSnap || { ["Lockpick", 1, true] call ULP_fnc_handleItem }) then {
+		if (0.7 <= (random 1)) then {
+			if (_isVehicle) exitWith {
+				[getPlayerUID player, "TheftAct", "S25", 
+					format [
+						"Vehicle: %1 (%2)", _name, 
+						getText (missionConfigFile >> "CfgVehicles" >> (typeOf _target) >> "Textures" >> (_target getVariable ["texture", ""]) >> "displayName")
+					]
+				] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+				
+				[format ["You have successfully picked <t color='#B92DE0'>%1's</t> lock and gained forged keys...", _name]] call ULP_fnc_hint;
+				ULP_Keys pushBackUnique _target;
+				["LockpickVeh"] call ULP_fnc_achieve;
+			};
 
-		if !([_target] call ULP_fnc_isRestrained) exitWith {
-			["This person is no longer restrained"] call ULP_fnc_hint;
-		};
+			if !([_target] call ULP_fnc_isRestrained) exitWith {
+				["This person is no longer restrained"] call ULP_fnc_hint;
+			};
 
-		[_target, player, false] remoteExecCall ["ULP_fnc_setRestrainedState", _target];
-		[format ["You have successfully picked <t color='#B92DE0'>%1's</t> lock and released them...", _name]] call ULP_fnc_hint;
-	} else {
-		if (_isVehicle) then {
-			[getPlayerUID player, "RoadsAct", "Section1", 
-				format [
-					"Attempted Lock Picking of Vehicle: %1 (%2)", _name, 
-					getText (missionConfigFile >> "CfgVehicles" >> (typeOf _target) >> "Textures" >> (_target getVariable ["texture", ""]) >> "displayName")
-				]
-			] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
-		};
+			[_target, player, false] remoteExecCall ["ULP_fnc_setRestrainedState", _target];
+			[format ["You have successfully picked <t color='#B92DE0'>%1's</t> lock and released them...", _name]] call ULP_fnc_hint;
+		} else {
+			if (_isVehicle) then {
+				[getPlayerUID player, "RoadsAct", "Section1", 
+					format [
+						"Attempted Lock Picking of Vehicle: %1 (%2)", _name, 
+						getText (missionConfigFile >> "CfgVehicles" >> (typeOf _target) >> "Textures" >> (_target getVariable ["texture", ""]) >> "displayName")
+					]
+				] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
+			};
 
-		["The lockpick broke while attempting to pick the lock..."] call ULP_fnc_hint;
+			["The lockpick broke while attempting to pick the lock..."] call ULP_fnc_hint;
+		};
 	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;

@@ -78,14 +78,17 @@ if (_remove) then {
 				[_sellPrice, false, format["Sold %1 %2(s)", _value, _name]] call ULP_fnc_addMoney;
 
 				{
-					_x params [ "_group", "_price" ];
-					if ([_group] call ULP_fnc_isGroup) then {
-						[_group, round (_price * _value), true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
+					_x params [ "_groupNetId", "_price" ];
+
+					private _group = _groupNetId call BIS_fnc_groupFromNetId;
+
+					if (!isNull _group && { [_group] call ULP_fnc_isGroup }) then {
+						[[_group] call ULP_fnc_groupId, round (_price * _value), true] remoteExecCall ["ULP_SRV_fnc_updateGroupFunds", RSERV];
 					};
 				} forEach _cartels;
 
 				if ([] call ULP_fnc_isGroup && { _gangTax > 0 }) then {
-					[group player, _gangTax, true] remoteExecCall ["ULP_SRV_fnc_handleGroupFunds", RSERV];
+					[[] call ULP_fnc_groupId, _gangTax, true] remoteExecCall ["ULP_SRV_fnc_updateGroupFunds", RSERV];
 					[format["You have sold %1 %2(s) for <t color='#B92DE0'>£%3</t> and £%4 was taken as tax by your group!", _value, _name, [_sellPrice] call ULP_fnc_numberText, [_gangTax] call ULP_fnc_numberText]] call ULP_fnc_hint;
 				} else {
 					[format["You have sold %1 %2(s) for <t color='#B92DE0'>£%3</t>!", _value, _name, [_sellPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;

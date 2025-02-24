@@ -17,7 +17,10 @@ if !(_this params [
 private _items = + ULP_Inventory;
 if ((count _items) isEqualTo 0) exitWith { false };
 
-private _bodyBag = createSimpleObject ["Land_Bodybag_01_black_F", AGLtoASL _pos];
+private _safePos = [_pos, 0.5, 3] call BIS_fnc_findSafePos;
+_safePos set [2, 0];
+
+private _bodyBag = createSimpleObject ["Land_Bodybag_01_black_F", AGLtoASL _safePos];
 _bodyBag setDir _dir;
 
 {

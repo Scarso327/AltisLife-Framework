@@ -35,6 +35,6 @@ if !([player, ["Police"]] call ULP_fnc_isFaction) exitWith {
 		
 		["FirstTicket"] call ULP_fnc_achieve;
 
-		[getPlayerUID player, "Ticketed", [_unit, _fine]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+		[getPlayerUID player, "Ticketed", [getPlayerUID _unit, _fine]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	}, false
 ] call ULP_fnc_selectNumber;

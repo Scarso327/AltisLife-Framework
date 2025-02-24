@@ -139,6 +139,7 @@ if !(_items isEqualTo []) then {
     missionNamespace setVariable ["ULP_SRV_Setting_BuffedItem", configName (selectRandom _items), true];
 };
 
+_date call ULP_SRV_fnc_initStats;
 [] call ULP_SRV_fnc_initRadios;
 [] call ULP_SRV_fnc_initEvents;
 [] call ULP_SRV_fnc_initCrimes;

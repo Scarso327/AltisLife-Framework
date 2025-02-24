@@ -477,7 +477,7 @@ class U_C_IDAP_Man_shorts_F : U_C_Poor_1 {
 	class Textures {
 		class U_C_IDAP_Man_shorts_F { 
 			displayName = "Polo, Shorts"; 
-			condition = "true";
+			condition = "[""IDAP""] call ULP_fnc_hasLicense";
 		};
 		class U_C_IDAP_Man_casual_F : U_C_IDAP_Man_shorts_F { displayName = "Polo"; };
 		class U_C_IDAP_Man_cargo_F : U_C_IDAP_Man_shorts_F { displayName = "Cargo"; };

@@ -82,9 +82,12 @@ class H_Cap_blk : H_HeadBandage_clean_F {
 		class H_Cap_grn_BI : H_Cap_usblack { displayName = "BI"; };
 		class H_Cap_blk_ION : H_Cap_usblack { displayName = "ION"; };
 		class H_Cap_blk_CMMG : H_Cap_usblack { displayName = "CMMG"; };
-		class H_Cap_Black_IDAP_F : H_Cap_usblack { displayName = "IDAP (Black)"; };
-		class H_Cap_White_IDAP_F : H_Cap_usblack { displayName = "IDAP (White)"; };
-		class H_Cap_Orange_IDAP_F : H_Cap_usblack { displayName = "IDAP (Orange)"; };
+		class H_Cap_Black_IDAP_F : H_Cap_usblack { 
+			displayName = "IDAP (Black)"; 
+			condition = "[""IDAP""] call ULP_fnc_hasLicense";
+		};
+		class H_Cap_White_IDAP_F : H_Cap_Black_IDAP_F { displayName = "IDAP (White)"; };
+		class H_Cap_Orange_IDAP_F : H_Cap_Black_IDAP_F { displayName = "IDAP (Orange)"; };
 		class H_Cap_surfer : H_Cap_usblack { displayName = "Surfer"; };
 		class H_Cap_police : H_Cap_blk {
 			displayName = "Police";

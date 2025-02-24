@@ -870,6 +870,7 @@ class CfgVehicles {
 		crushTime = 240;
 		chopTime = 300;
 		retrievalPerc = 0.01;
+		turrets[] = {};
 		class Textures {
 			class Police : PoliceTexture {
 				textures[] = {

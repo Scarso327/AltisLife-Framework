@@ -26,7 +26,7 @@ if !(missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false]) exi
 
 	if !([_id, _bid, false] call ULP_SRV_fnc_updateGroupFunds) exitWith { [format ["Failed to award gang base to %1 due to funds", _id]] call ULP_fnc_logIt; };
 
-	[_ownerId, "BaseBid", ["Winner", [_id,  [_bid, ""] call ULP_fnc_numberText]]] call ULP_SRV_fnc_logPlayerEvent;
+	[_ownerId, "BaseBid", ["Winner", _id,  [_bid, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
 
 	_flag setVariable ["owner", _id, true];
 

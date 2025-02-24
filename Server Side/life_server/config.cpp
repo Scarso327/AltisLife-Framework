@@ -81,64 +81,107 @@ class CfgPatches {
         
         class EventLogs {
             class Dispute { 
-                params = 1;
+                params[] = { "player" };
             };
-            class Revive : Dispute {
-                class Stats {
-                    players = "createHashMapFromArray [[""Revives"", [_this select 0]], [""Revived"", [_this select 1]]]";
-                    amount = 1;
-                };
+            class Revive : Dispute {};
+
+            class CaptureHideout {
+                params[] = { "siteName" };
             };
-            class CaptureHideout : Dispute {};
-            class SeizeComms : Dispute {};
-            class NLR : Dispute {};
-            class Cartel : Dispute {};
-            class Misc : Dispute {};
-            class ReturnedToLobby : Dispute {};
-            class ScriptLog : Dispute {};
+
+            class NLR {
+                params[] = { "position" };
+            };
+            class ReturnedToLobby : NLR {};
+
+            class ScriptLog  {
+                params[] = { "script" };
+            };
 
             class Spawn {
-                params = 2;
+                params[] = { "name", "position" };
             };
-            class Goal : Spawn {};
-            class Mission : Spawn {};
-            class Ticketed : Spawn {};
-            class Imprisoned : Spawn {};
-            class Robbery : Spawn {};
-            class Craft : Spawn {};
-            class Election : Spawn {};
-            class BaseBid : Spawn {};
-            class Injured : Spawn {
-                class Stats {
-                    players = "createHashMapFromArray [[""Deaths"", [_this select 0]]]";
-                    amount = 1;
-                };
+
+
+            class Goal {
+                params[] = { "title", "tier" };
             };
-            class Loot : Spawn {};
+
+            class Mission {
+                params[] = { "title", "tier" };
+            };
+
+            class Ticketed {
+                params[] = { "player", "fine" };
+            };
+
+            class Imprisoned {
+                params[] = { "player", "duration" };
+            };
+
+            class Robbery {
+                params[] = { "player", "cash" };
+            };
+
+            class Craft {
+                params[] = { "item", "amount" };
+            };
+
+            class Injured {
+                params[] = { "position", "loadout" };
+            };
+
+            class Loot {
+                params[] = { "type", "loot" };
+            };
+
+            class Election {
+                params[] = { "name", "steamid", "votes" };
+            };
+
+            class BaseBid {
+                params[] = { "type", "groupid", "bid" };
+            };
 
             class Group {
-                params = 3;
+                params[] = { "type", "groupid", "funds" };
             };
-            class Bleedout : Group {};
-            class Admin : Group {};
-            class House : Group {};
-            class InjuredBy : Group {
-                class Stats {
-                    players = "createHashMapFromArray [[""Deaths"", [_this select 0]], [""Kills"", [_this select 1]]]";
-                    amount = 1;
-                };
+
+            class Bleedout {
+                params[] = { "position", "loadout", "isWounded" };
+            };
+
+            class Admin {
+                params[] = { "type", "time", "params" };
+            };
+
+            class House {
+                params[] = { "type", "position", "value" };
+            };
+
+            class InjuredBy {
+                params[] = { "killer", "position", "loadout", "isRedzone" };
             };
 
             class Executed {
-                params = 4;
+                params[] = { "killer", "position", "loadout", "isWounded" };
             };
 
             class Money {
-                params = 5;
+                params[] = { "type", "action", "total", "amount", "reason" };
             };
 
             class Mail {
-                params = 6;
+                params[] = { "id", "type", "className", "data", "totalAmount", "claimedAmount" };
+            };
+        };
+
+        class Stats {
+            class Kills {
+                query = "SELECT COUNT(*) FROM `logs` WHERE `jsonContent` IS NOT NULL AND `season`='%1' AND `event`='InjuredBy' AND JSON_VALUE(`jsonContent`, '$.killer') = '%2' AND JSON_VALUE(`jsonContent`, '$.isRedzone') = 'true'";
+            };
+            class Deaths {
+                query = "SELECT COUNT(*) FROM `logs` WHERE `jsonContent` IS NOT NULL AND `season`='%1' AND `event`='InjuredBy' AND `pid` = '%2' AND JSON_VALUE(`jsonContent`, '$.isRedzone') = 'true'";
             };
         };
 

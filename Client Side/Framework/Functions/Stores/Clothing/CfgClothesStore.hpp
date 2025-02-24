@@ -734,9 +734,7 @@ class CfgClothesStore {
 		};
 
 		class Headgear {
-			class H_Cap_Black_IDAP_F {};
-			class H_Cap_White_IDAP_F {};
-			class H_Cap_Orange_IDAP_F {};
+			class H_Cap_blk {};
 		};
 
 		class Facewear {
@@ -757,7 +755,11 @@ class CfgClothesStore {
 		};
 
 		class Backpacks {
-			class B_Messenger_IDAP_F {};
+			class B_Messenger_Black_F {
+				class Textures {
+					class B_Messenger_IDAP_F {};
+				};
+			};
 		};
 	};
 

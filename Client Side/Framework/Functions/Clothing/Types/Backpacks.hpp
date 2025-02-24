@@ -27,6 +27,10 @@ class B_Messenger_Black_F : B_LegStrapBag_black_F {
 		class B_Messenger_Gray_F : B_Messenger_Black_F { displayName = "Gray"; };
 		class B_Messenger_Coyote_F : B_Messenger_Black_F { displayName = "Coyote"; };
 		class B_Messenger_Olive_F : B_Messenger_Black_F { displayName = "Olive"; };
+		class B_Messenger_IDAP_F : B_Messenger_Black_F { 
+			displayName = "IDAP"; 
+			condition = "[""IDAP""] call ULP_fnc_hasLicense";
+		};
 	};
 };
 class B_Messenger_Gray_F : B_Messenger_Black_F {};

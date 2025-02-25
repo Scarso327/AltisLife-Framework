@@ -112,6 +112,9 @@ if !(isNil { _display getVariable "spinsLeft" }) exitWith {};
 						["You didn't win anything, better luck next time"] call ULP_fnc_hint;
 					};
 
+					private _casinoProfit = _bet - _winnings;
+					[_casinoProfit] remoteExecCall ["ULP_SRV_fnc_updateCasinoVault", RSERV];
+
 					_button ctrlEnable true;
 				};
 			}, 0.1] call ULP_fnc_addEachFrame)];

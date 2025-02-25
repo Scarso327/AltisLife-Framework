@@ -48,5 +48,6 @@ private _textureName = getText(_missionCfg >> "Textures" >> _texture >> "display
 		[_list, 0] call ULP_fnc_onGarageSwitch;
 
 		[format ["You have destroyed your <t color='#B92DE0'>%1</t> (<t color='#B92DE0'>%2</t>)", _name, _textureName]] call ULP_fnc_hint;
+		[getPlayerUID player, "Destroy", [_name, _textureName]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 	}, {}, false
 ] call ULP_fnc_confirm;

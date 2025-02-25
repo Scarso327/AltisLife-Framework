@@ -34,3 +34,5 @@ if ([[player] call ULP_fnc_getFaction, "vehicles"] call ULP_fnc_factionPresistan
 
 deleteVehicle _vehicle;
 ["Vehicle has been stored."] call ULP_fnc_hint;
+
+[getPlayerUID player, "Store", [_vehicle, _location]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

@@ -100,6 +100,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 		_group setVariable ["group_viewablefunds", nil, true];
 		_group setVariable ["group_funds", nil];
 		_group setVariable ["group_premium", nil, true];
+		_group setVariable ["group_progression", nil, true];
 	};
 
 	_id = _queryId;

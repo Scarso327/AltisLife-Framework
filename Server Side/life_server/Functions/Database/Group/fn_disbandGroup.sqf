@@ -12,7 +12,7 @@ _this params [
 
 private _groupid = [_group] call ULP_fnc_groupId;
 
-if (_groupid isEqualTo -1) exitWith {};
+if (_groupid isEqualTo -1 || { _group getVariable ["group_premium", false] }) exitWith {};
 
 [format["UPDATE `candidates` SET `candidates`.`active`='0' FROM `candidates` INNER JOIN `players` ON `candidates`.`pid` = `players`.`pid` WHERE `players`.`group_id`='%1';", [_groupid, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
 [format["UPDATE `groups` SET `active`='0' WHERE `id`='%1'", [_groupid, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;

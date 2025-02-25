@@ -16,7 +16,7 @@ if (!(_force) && { time < (player getVariable ["admin_cooldown", 0]) }) exitWith
 	["You've changed into admin gear recently, please wait before trying again."] call ULP_fnc_hint;
 	false
 };
-player setVariable ["admin_cooldown", time + 3];
+player setVariable ["admin_cooldown", time + 0.5];
 
 if ([player] call ULP_fnc_onDuty) then {
 	CASH = ULP_NormalCash;

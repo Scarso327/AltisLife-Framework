@@ -25,12 +25,12 @@ class 30Rnd_9x21_Mag_SMG_02 : BaseMagazine { price = 360; };
 class 30Rnd_9x21_Mag_SMG_02_Tracer_Red : BaseMagazine { 
 	price = 360;
 	class Textures {
-		class 30Rnd_556x45_Stanag_Tracer_Red {
+		class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {
 			displayName = "Red";
 			condition = "true";
 		};
-		class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Yellow"; };
-		class 30Rnd_9x21_Mag_SMG_02_Tracer_Green : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Green"; };
+		class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow : 30Rnd_9x21_Mag_SMG_02_Tracer_Red { displayName = "Yellow"; };
+		class 30Rnd_9x21_Mag_SMG_02_Tracer_Green : 30Rnd_9x21_Mag_SMG_02_Tracer_Red { displayName = "Green"; };
 	};
 };
 class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow : 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};

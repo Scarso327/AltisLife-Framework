@@ -140,7 +140,7 @@ switch (_code) do {
                 ["You've recently changed your visibility, please wait before trying again..."] call ULP_fnc_hint;
                 false
             };
-            player setVariable ["admin_invis_cooldown", time + 2];
+            player setVariable ["admin_invis_cooldown", time + 0.5];
 
             [player, !(isObjectHidden player)] remoteExecCall ["ULP_SRV_fnc_hidePlayer", RSERV];
             [getPlayerUID player, "Admin", ["AdminInvisibility", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
@@ -166,7 +166,7 @@ switch (_code) do {
                         [format ["You have spawned in <t color='#B92DE0'>%1%2</t>", "£", [_value] call ULP_fnc_numberText]] call ULP_fnc_hint;
 
                         [getPlayerUID player, "Admin", ["AdminCompensate", serverTime, [_value]]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
-                        player setVariable ["admin_comp_cooldown", time + 5];
+                        player setVariable ["admin_comp_cooldown", time + 0.5];
                     };
                 }, false
             ] call ULP_fnc_selectNumber;
@@ -208,7 +208,7 @@ switch (_code) do {
                     ["You've revived and healed everyone..."] call ULP_fnc_hint;
 
                     [getPlayerUID player, "Admin", ["AdminMassRevive", serverTime, []]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
-                    player setVariable ["admin_mass_cooldown", time + 15];
+                    player setVariable ["admin_mass_cooldown", time + 2];
                 }, {}, false
             ] call ULP_fnc_confirm;
         };
@@ -219,7 +219,7 @@ switch (_code) do {
             if (time < (player getVariable ["uc_cooldown", 0])) exitWith {
                 ["You've changed your identity recently, please wait before trying again..."] call ULP_fnc_hint;
             };
-            player setVariable ["uc_cooldown", time + 3];
+            player setVariable ["uc_cooldown", time + 1];
 
             if ([player, ["Civilian"]] call ULP_fnc_isFaction) then {
                 [player, "Police"] call ULP_fnc_setFaction;
@@ -294,7 +294,7 @@ switch (_code) do {
         if (time < (player getVariable ["delete_delay", 0])) exitWith {};
 
         if (!(isNull _veh) && { !_shift } && { !_ctrlKey } && { !_alt } && { [] call ULP_fnc_isStaff } && { [player] call ULP_fnc_onDuty } && { ["Vehicle", false] call ULP_fnc_checkPower } && { [_veh, ["LandVehicle", "Air", "Ship"]] call ULP_fnc_isKindOf }) then {
-            player setVariable ["delete_delay", time + 3];
+            player setVariable ["delete_delay", time + 0.5];
 
             if !((_veh getVariable ["vehicle_id", -1]) isEqualTo -1) then {
                 [_veh] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];

@@ -149,7 +149,7 @@ switch (_mode) do {
 		private _focus = ["GetCameraTarget"] call ULP_fnc_adminCamera;
 		if (isNull _focus) exitWith { ["You need to select someone to preform this action on..."] call ULP_fnc_hint; };
 
-		player setVariable ["admin_action_cooldown", time + 2];
+		player setVariable ["admin_action_cooldown", time + 1];
 
 		switch (_type) do {
 			case "Eject": {

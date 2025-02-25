@@ -29,3 +29,4 @@
 #include "DialogSalvageFactory\DialogSalvageFactory.hpp"
 #include "DialogUpgrades\DialogUpgrades.hpp"
 #include "DialogFactionSelection\DialogFactionSelection.hpp"
+#include "DialogGambleSlots\DialogGambleSlots.hpp"

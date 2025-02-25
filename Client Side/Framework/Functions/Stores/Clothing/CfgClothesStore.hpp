@@ -200,7 +200,7 @@ class CfgClothesStore {
 				class Textures { class B_CivilianBackpack_01_Everyday_Black_F {}; };
 			};
 			class B_SCBA_01_F { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
-			class B_CombinationUnitRespiration_01_F { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
+			class B_CominationUnitRespirator_01_F { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
 		};
 	};
 
@@ -286,7 +286,7 @@ class CfgClothesStore {
 				class Textures { class INVIS {}; };
 			};
 			class B_SCBA_01_F { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
-			class B_CombinationUnitRespiration_01_F { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
+			class B_CominationUnitRespirator_01_F { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
 		};
 	};
 

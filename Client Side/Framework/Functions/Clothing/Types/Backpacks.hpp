@@ -45,8 +45,8 @@ class B_SCBA_01_F : B_LegStrapBag_black_F {
 	class Textures {};
 };
 
-class B_CombinationUnitRespiration_01_F : B_SCBA_01_F {
-	displayName = "Combination Unit Respiration";
+class B_CominationUnitRespirator_01_F : B_SCBA_01_F {
+	displayName = "Combination Unit Respirator";
 	price = 10000;
 	class Textures {};
 };

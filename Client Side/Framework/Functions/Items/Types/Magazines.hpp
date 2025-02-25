@@ -84,7 +84,10 @@ class 30Rnd_556x45_Stanag_Tracer_Red : RepMagazine {
 			condition = "true";
 		};
 		class 30Rnd_556x45_Stanag_Tracer_Yellow : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Yellow"; };
-		class 30Rnd_556x45_Stanag_Tracer_Green : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Rubber Bullets"; };
+		class 30Rnd_556x45_Stanag_Tracer_Green : 30Rnd_556x45_Stanag_Tracer_Red { 
+			displayName = "Rubber Bullets"; 
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+		};
 	};
 };
 class 30Rnd_556x45_Stanag_Tracer_Yellow : 30Rnd_556x45_Stanag_Tracer_Red {};

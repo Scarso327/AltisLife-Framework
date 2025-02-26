@@ -9,13 +9,11 @@ class CfgVirtualStores {
 			class Tea {};
 			class Redbull {};
 			class FuelCan {};
-			//class Breathalyser {};
 			class PanicButton {};
 			class Stinger {};
 			class Blindfold {};
 			class Lockpick {};
 			class BigRedKey {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class BloodBag {};
 			class MediKit {};
@@ -24,7 +22,7 @@ class CfgVirtualStores {
 		};
 	};
 
-	class Medic {
+	class Medic : Police {
 		storeName = "Equipment Store";
 		conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Items {
@@ -37,22 +35,18 @@ class CfgVirtualStores {
 			class FuelCan {};
 			class PanicButton {};
 			class Lockpick {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class Elastic {};
 			class Packing {};
 			class QuickClot {};
 			class BloodBag {};
-			//class Morphine {};
-			//class Epinephrine {};
 			class MediKit {};
 			class Defibrillator {};
 			class Stretcher {};
 		};
 	};
 
-	class Hato {
-		storeName = "Equipment Store";
+	class Hato : Police {
 		conditions = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};
@@ -137,6 +131,34 @@ class CfgVirtualStores {
 		};
 	};
 
+	class Dunamis {
+		storeName = "Dunamis Market";
+		conditions = "[] call ULP_fnc_isDunamis";
+		class Items {
+			class RationPack {};
+			class Water {};
+			class Redbull {};
+			class Pickaxe {};
+			class LumberAxe {};
+            class Extractor {};
+			class Shovel {};
+			class FishingNet {};
+			class FuelCan {};
+			class Ziptie {};
+			class Blindfold {};
+			class Lighter {};
+			class Lockpick {};
+			class Toolbox {};
+			class BoltCutter {};
+			class HackingDevice {};
+			class ExplosiveCharge {};
+			class IndustrialDrill {};
+			class FieldDressing {};
+			class FirstAidKit {};
+			class MediKit {};
+		};
+	};
+
 	class Civilian {
 		storeName = "General Market";
 		conditions = "true";
@@ -192,7 +214,6 @@ class CfgVirtualStores {
 			class Ziptie {};
 			class Blindfold {};
 			class Lockpick {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class FirstAidKit {};
 		};
@@ -210,7 +231,6 @@ class CfgVirtualStores {
 			class Blindfold {};
 			class Lockpick {};
 			class BoltCutter {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class FirstAidKit {};
 		};
@@ -231,31 +251,15 @@ class CfgVirtualStores {
 			class HackingDevice {};
 			class ExplosiveCharge {};
 			class IndustrialDrill {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class FirstAidKit {};
 		};
 	};
 
-	class Base : Rebel {
+	class Base : Blackmarket {
 		storeName = "Gang Base Market";
 		conditions = "true";
-		class Items {
-			class RationPack {};
-			class Water {};
-			class Redbull {};
-			class FuelCan {};
-			class Ziptie {};
-			class Blindfold {};
-			class Lockpick {};
-			class BoltCutter {};
-			class HackingDevice {};
-			class ExplosiveCharge {};
-			class IndustrialDrill {};
-			//class Painkillers {};
-			class FieldDressing {};
-			class FirstAidKit {};
-		};
+		class Items : Items {};
 	};
 
 	class Burger {
@@ -462,16 +466,6 @@ class CfgVirtualStores {
 		conditions = "true";
 		class Items {
 			class WeaponParts {};
-		};
-	};
-
-	class Art {
-		storeName = "Art Dealer";
-		conditions = "true";
-		class Items {
-			//class SmallGalleryPiece {};
-			//class MediumGalleryPiece {};
-			//class LargeGalleryPiece {};
 		};
 	};
 

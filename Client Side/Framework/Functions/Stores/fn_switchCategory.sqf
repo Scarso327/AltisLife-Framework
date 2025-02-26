@@ -59,11 +59,16 @@ if ((count _items) isEqualTo 0) exitWith {
 		getNumber ((_itemCfg select 2) >> "virtualSpace")
 	];
 
+	private _price = ([
+		(_itemCfg select 6),
+		getNumber (_x >> "price")
+	] select (isNumber (_x >> "price")));
+
 	private _item = _itemList lbAdd (_itemInfo select 1);
 	
 	_itemList lbSetTooltip [_item, (_itemInfo select 1)];
 	_itemList lbSetPicture [_item, (_itemInfo select 2)];
-	_itemList lbSetValue [_item, (_itemCfg select 6)];
+	_itemList lbSetValue [_item, _price];
 	_itemList lbSetData [_item, (str _itemInfo)];
 
 	if !(_dlcPicture isEqualTo "") then {

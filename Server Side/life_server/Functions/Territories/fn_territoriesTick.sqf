@@ -13,7 +13,7 @@ missionNamespace setVariable ["ULP_SRV_TerritoriesNextTime", serverTime + _tickD
 
 [ _tickDelay, [] , {
 
-
+	diag_log "tick";
 
 	[] call ULP_SRV_fnc_territoriesTick; // Restart tick...
 }] call ULP_fnc_waitExecute;

@@ -1,5 +1,5 @@
 class CfgTerritories {
-	tickTime = 10 * 60;
+	tickTime = 1 * 60;
 	class Altis {
 		class ParosCheckpoint {
 			flagPos[] = { 21313.9, 17212.6, 0 };

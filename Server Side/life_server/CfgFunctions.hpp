@@ -245,7 +245,7 @@ class CfgFunctions {
 
         class Territories {
             file = "\life_server\Functions\Territories";
-            class preInitTerritories { preInit=1; };
+            class postInitTerritories { postInit=1; };
             class territoriesTick {};
         };
     };

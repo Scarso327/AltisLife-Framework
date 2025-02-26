@@ -3,9 +3,9 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_preInitTerritories";
+scopeName "fn_postInitTerritories";
 
-["Pre-Initialising Territories..."] call ULP_fnc_logIt;
+["Post-Initialising Territories..."] call ULP_fnc_logIt;
 
 private _territories = [];
 
@@ -13,7 +13,6 @@ private _territories = [];
 	private _cfg = _x;
 
 	private _flag = createVehicle ["Flag_Syndikat_F", getArray (_cfg >> "flagPos"), [], 0, "CAN_COLLIDE"];
-	_flag setDir _dir;
 	_flag allowDamage false;
 	_flag enableDynamicSimulation true;
 
@@ -27,6 +26,9 @@ private _territories = [];
 		private _container = createVehicle ["Land_Cargo10_red_F", _pos, [], 0, "CAN_COLLIDE"];
 		_container setPosATL _pos;
 		_container setDir _dir;
+
+		_container allowDamage false;
+		_container enableSimulation false;
 
 		_container setVariable ["Territory", configName _cfg, true];
 

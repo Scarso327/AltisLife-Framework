@@ -10,7 +10,7 @@ _this params [
 ];
 
 if !(isNil { _object getVariable "Territory" }) exitWith {
-	format ["Resupply in %1", [(ULP_SRV_TerritoriesNextTime + 60) - serverTime, "MM:SS"] call BIS_fnc_secondsToString]
+	format ["Resupply in %1", [ULP_SRV_TerritoriesNextTime - serverTime, "MM:SS"] call BIS_fnc_secondsToString]
 };
 
 (_object getVariable ["subtitle", ""])

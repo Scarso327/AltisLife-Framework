@@ -900,6 +900,7 @@ class CfgFunctions {
 			class drawMapTerritories {};
 			class postInitTerritories { postInit=1; };
 			class curTerritory {};
+			class isTerritoryContainer {};
 		};
 	};
 

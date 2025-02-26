@@ -18,6 +18,8 @@ private _territories = [];
 
 	_flag setVariable ["config", configName _cfg, true];
 
+	private _sites = [];
+
 	{
 		getArray (_x >> "pos") params [
 			"_pos", ["_dir", 0, [0]]
@@ -30,11 +32,16 @@ private _territories = [];
 		_container allowDamage false;
 		_container enableSimulation false;
 
-		_container setVariable ["Territory", configName _cfg, true];
+		_container setVariable ["Territory", _flag, true];
+		_container setVariable ["SiteCfg", _x];
 
 		_container setVariable ["hasPlayerTags", true, true];
 		_container setVariable ["name", getText (_x >> "displayName"), true];
+
+		_sites pushBack _container;
 	} forEach ("isClass _x" configClasses (_cfg >> "Sites"));
+
+	_flag setVariable ["sites", _sites];
 
 	_territories pushBack _flag;
 } forEach ("isClass _x" configClasses (missionConfigFile >> "CfgTerritories" >> worldName));

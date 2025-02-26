@@ -16,6 +16,7 @@ class CfgTerritories {
 					displayName = "Weed Processing";
 					pos[] = { { 23742.6, 15853.4, 0 }, 350 };
 					items[] = { "ProcessedWeed" };
+					amount = "10 + ((count playableUnits) * 0.25)"
 				};
 			};
 		};

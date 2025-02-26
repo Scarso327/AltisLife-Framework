@@ -821,14 +821,38 @@ class U_I_CombatUniform : U_B_survival_uniform {
 	price = 1500;
 	virtualSpace = 4;
 	class Textures {
+		// Civilian
 		class U_I_CombatUniform { 
 			displayName = "AAF (Base)"; 
 			condition = "true";
 		};
-		class U_I_CombatUniform_shortsleeve : U_I_CombatUniform { displayName = "AAF (Rolled)"; };
+
+		// Group
+		class NUMS : U_I_CombatUniform {
+			displayName = "NUMS";
+			textures[] = { "Data\Textures\Groups\NUMS\U_B_CTRG_Soldier_F.paa" };
+			condition = "[115] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
-class U_I_CombatUniform_shortsleeve : U_I_CombatUniform {};
+
+class U_I_CombatUniform_shortsleeve : U_I_CombatUniform {
+	displayName = "Combat Fatigues (Rolled)";
+	class Textures {
+		// Civilian
+		class U_I_CombatUniform_shortsleeve { 
+			displayName = "AAF (Rolled)"; 
+			condition = "true";
+		};
+
+		// Group
+		class NUMS : U_I_CombatUniform_shortsleeve {
+			displayName = "NUMS";
+			textures[] = { "Data\Textures\Groups\NUMS\U_B_CTRG_Soldier_F.paa" };
+			condition = "[115] call ULP_fnc_isGroupPremium";
+		};
+	};
+};
 
 class U_B_CombatUniform_mcam : U_B_survival_uniform {
 	displayName = "Combat Clothes";

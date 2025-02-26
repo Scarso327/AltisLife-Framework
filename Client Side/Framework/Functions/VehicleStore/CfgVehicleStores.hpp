@@ -10,114 +10,48 @@ class CfgVehicleStores {
 		factions[] = { "Police" };
 		class Vehicles {
 			class C_Quadbike_01_F {
-				class Textures { 
-					class Black {}; 
-					class White {}; 
-				};
+				class Textures { class Black {}; };
 			};
-			class C_SUV_01_F {
-				condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class C_Offroad_02_unarmed_F {
-				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class C_Hatchback_01_sport_F {
-				condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class B_GEN_Van_02_transport_F {
-				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }";
-				class Textures {};
-			};
-			class B_GEN_Van_02_vehicle_F {
-				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }";
-				class Textures {};
-			};
-			class B_LSV_01_unarmed_black_F {
-				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class O_LSV_02_unarmed_F {
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 6] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }";
-				class Textures {};
-			};
-			class B_MRAP_01_F {
-				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
+			class C_SUV_01_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
+			class C_Offroad_02_unarmed_F { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess"; };
+			class C_Hatchback_01_sport_F { condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess"; };
+			class B_GEN_Van_02_transport_F { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }"; };
+			class B_GEN_Van_02_vehicle_F { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }"; };
+			class B_LSV_01_unarmed_black_F { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
+			class O_LSV_02_unarmed_F { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 6] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }"; };
+			class B_MRAP_01_F { condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess"; };
 		};
 	};
 
 	class PoliceAir : Base {
 		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
+		conditions = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
 		class Vehicles {
-			//class B_UAV_01_F { 
-				//condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess";
-			//};
-			class C_Heli_Light_01_civil_F {
-				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class B_Heli_Light_01_F {
-				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class I_Heli_light_03_unarmed_F {
-				condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class O_Heli_Light_02_unarmed_F {
-				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class O_Heli_Transport_04_black_F { 
-				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; 
-				class Textures {};
-			};
-			class O_Heli_Transport_04_covered_black_F { 
-				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; 
-				class Textures {};
-			};
+			class C_Heli_Light_01_civil_F {};
+			class B_Heli_Light_01_F {};
+			class I_Heli_light_03_unarmed_F {};
+			class O_Heli_Light_02_unarmed_F { condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; };
+			class O_Heli_Transport_04_black_F { condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; };
+			class O_Heli_Transport_04_covered_black_F { condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; };
 			class B_Heli_Transport_03_unarmed_F { 
 				condition = "[""Police_NPAS"", 2] call ULP_fnc_hasAccess"; 
-				class Textures {
-					class Black {};
-				};
+				class Textures { class Black {}; };
 			};
-			class B_Heli_Transport_01_F { 
-				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess"; 
-				class Textures {};
-			};
-			class I_Heli_light_03_F {
-				condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
+			class B_Heli_Transport_01_F { condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess"; };
+			class I_Heli_light_03_F { condition = "[""Police_NPAS"", 3] call ULP_fnc_hasAccess"; };
 		};
 	};
 
 	class PoliceBoat : Base {
 		storeName = "Police Vehicle Store";
 		factions[] = { "Police" };
+		conditions = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] } }";
 		class Vehicles {
-			class C_Boat_Civil_01_police_F {
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 2] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] } }";
-				class Textures {};
-			};
-			class C_Boat_Transport_02_F {
-				condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class B_Boat_Armed_01_minigun_F {
-				condition = "[""Police_MPU"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class B_SDV_01_F {
-				condition = "[""Police_MPU"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
+			class C_Boat_Civil_01_police_F {};
+			class C_Boat_Transport_02_F { condition = "[""Police_MPU"", 1] call ULP_fnc_hasAccess"; };
+			class B_Boat_Armed_01_minigun_F { condition = "[""Police_MPU"", 2] call ULP_fnc_hasAccess"; };
+			class B_SDV_01_F { condition = "[""Police_MPU"", 2] call ULP_fnc_hasAccess"; };
 		};
 	};
 
@@ -125,77 +59,26 @@ class CfgVehicleStores {
 		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
-			class C_Van_02_medevac_F { 
-				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
-				class Textures {}; 
-			};
-			class B_GEN_Van_02_transport_F { 
-				condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess";
-				class Textures {}; 
-			};
-			class B_GEN_Van_02_vehicle_F { 
-				condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess";
-				class Textures {}; 
-			};
-			class C_SUV_01_F {
-				condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class C_Hatchback_01_F {
-				condition = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class C_Hatchback_01_sport_F {
-				condition = "[""Medic_HART"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			/*class C_Offroad_01_comms_F { // TODO TEXTURE
-				condition = "[""Medic_Main"", 5] call ULP_fnc_hasAccess";
-				class Textures {};
-			};*/
-			class C_Offroad_02_unarmed_F {
-				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			/*class C_Van_01_box_F { // TODO TEXTURE
-				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class O_Truck_03_repair_F { // TODO TEXTURE
-				condition = "[""Medic_Main"", 7] call ULP_fnc_hasAccess";
-				class Textures {};
-			};*/
+			class C_Van_02_medevac_F {};
+			class B_GEN_Van_02_transport_F { condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess"; };
+			class B_GEN_Van_02_vehicle_F { condition = "[""Medic_Main"", 3] call ULP_fnc_hasAccess"; };
+			class C_SUV_01_F { condition = "[""Medic_Main"", 2] call ULP_fnc_hasAccess"; };
+			class C_Hatchback_01_F {};
+			class C_Hatchback_01_sport_F { condition = "[""Medic_HART"", 2] call ULP_fnc_hasAccess"; };
+			class C_Offroad_02_unarmed_F { condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess"; };
 		};
 	};
 
 	class MedicAir : Base {
 		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
+		conditions = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
 		class Vehicles {
-			//class C_UAV_06_medical_F {
-				//condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
-				//class Textures {};
-			//};
-			class C_Heli_Light_01_civil_F {
-				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class B_Heli_Light_01_F {
-				condition = "[""Medic_AA"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class O_Heli_Light_02_unarmed_F {
-				condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class O_Heli_Transport_04_medevac_black_F {
-				condition = "[""Medic_AA"", 3] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class I_Heli_Transport_02_F {
-				condition = "[""Medic_AA"", 3] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
+			class C_Heli_Light_01_civil_F {};
+			class B_Heli_Light_01_F { condition = "[""Medic_AA"", 2] call ULP_fnc_hasAccess"; };
+			class O_Heli_Light_02_unarmed_F {};
+			class O_Heli_Transport_04_medevac_black_F { condition = "[""Medic_AA"", 3] call ULP_fnc_hasAccess"; };
+			class I_Heli_Transport_02_F { condition = "[""Medic_AA"", 3] call ULP_fnc_hasAccess"; };
 		};
 	};
 
@@ -203,14 +86,8 @@ class CfgVehicleStores {
 		storeName = "Medic Vehicle Store";
 		factions[] = { "Medic" };
 		class Vehicles {
-			class C_Boat_Civil_01_F {
-				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
-			class I_C_Boat_Transport_02_F {
-				condition = "[""Medic_HART"", 1] call ULP_fnc_hasAccess";
-				class Textures {};
-			};
+			class C_Boat_Civil_01_F {};
+			class I_C_Boat_Transport_02_F {};
 		};
 	};
 
@@ -218,25 +95,52 @@ class CfgVehicleStores {
 		storeName = "HATO Vehicle Store";
 		factions[] = { "Hato" };
 		class Vehicles {
-			class C_Offroad_01_repair_F {
-				class Textures {};
+			class C_Offroad_01_repair_F {};
+			class C_Van_02_service_F {};
+			class B_Truck_01_mover_F {};
+			class B_Truck_01_flatbed_F {};
+			class C_SUV_01_F { condition = "[""Hato_Main"", 2] call ULP_fnc_hasAccess"; };
+			class C_Hatchback_01_sport_F { condition = "[""Hato_Main"", 3] call ULP_fnc_hasAccess"; };
+		};
+	};
+
+	class Dunamis : Base {
+		storeName = "Dunamis Vehicle Store";
+		conditions = "[] call ULP_fnc_isDunamis";
+		class Vehicles {
+			class C_Hatchback_01_F { 
+				class Textures { class DMS {}; }; 
 			};
-			class C_Van_02_service_F {
-				class Textures {};
-			};
-			class B_Truck_01_mover_F {
-				class Textures {};
-			};
-			class B_Truck_01_flatbed_F {
-				class Textures {};
+			class C_Hatchback_01_sport_F { 
+				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
+				class Textures { class DMS {}; };
 			};
 			class C_SUV_01_F {
-				condition = "[""Hato_Main"", 2] call ULP_fnc_hasAccess";
-				class Textures {};
+				class Textures { class DMS {}; };
 			};
-			class C_Hatchback_01_sport_F {
-				condition = "[""Hato_Main"", 3] call ULP_fnc_hasAccess";
-				class Textures {};
+			class C_Offroad_01_F {
+				class Textures { class DMS {}; };
+			};
+			class B_G_Offroad_01_armed_F { 
+				condition = "([] call ULP_fnc_getGroupRank) >= 6"; 
+				class Textures { class DMS {}; };
+			};
+			class C_Offroad_02_unarmed_F { 
+				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+				class Textures { class DMS {}; };
+			};
+			class O_LSV_02_unarmed_F { 
+				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
+				class Textures { class DMS {}; };
+			};
+			class B_Heli_Light_01_F {
+				class Textures { class DMS {}; };
+			};
+			class I_Heli_light_03_unarmed_F {
+				class Textures { class DMS {}; };
+			};
+			class O_Heli_Light_02_unarmed_F {
+				class Textures { class DMS {}; };
 			};
 		};
 	};
@@ -379,7 +283,6 @@ class CfgVehicleStores {
 			class C_IDAP_Truck_02_transport_F {};
 			class C_IDAP_Truck_02_F {};
 			class C_IDAP_Truck_02_water_F {};
-			//class C_IDAP_Heli_Transport_02_F {};
 		};
 	};
 

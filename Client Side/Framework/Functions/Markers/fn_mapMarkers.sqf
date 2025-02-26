@@ -5,7 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_mapMarkers";
 
-private _map = _this select 0;
+_this params [ "_map" ];
+
 if (isNull _map || { !([] call ULP_fnc_hasComms) }) exitWith {};
 
 private _included = [];

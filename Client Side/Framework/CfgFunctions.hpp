@@ -266,6 +266,7 @@ class CfgFunctions {
 			class getTagColour {};
 			class getTagPos {};
 			class initTags {};
+			class getSubTitle {};
 		};
 
 		class Licenses {
@@ -892,6 +893,13 @@ class CfgFunctions {
 			class hasUpgrade {};
 			class setUpgrade {};
 			class upgradeCfg {};
+		};
+
+		class Territories {
+			file = "Functions\Territories";
+			class drawMapTerritories {};
+			class postInitTerritories { postInit=1; };
+			class curTerritory {};
 		};
 	};
 

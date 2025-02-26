@@ -242,6 +242,12 @@ class CfgFunctions {
             class initStats {};
             class getStats {};
         };
+
+        class Territories {
+            file = "\life_server\Functions\Territories";
+            class preInitTerritories { preInit=1; };
+            class territoriesTick {};
+        };
     };
 
     class MySQL_Database {

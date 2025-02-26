@@ -32,5 +32,23 @@ class CfgCapture {
 				defaultName = "Eastern Power Station";
 			};
 		};
+
+		class ParosCheckpoint {
+			displayName = "Abandoned Checkpoint";
+			time = 10;
+			cooldown = 180;
+			class Marker {
+				markerType = "MinefieldAP";
+				markerColour = "ColorEast";
+				defaultName = "Abandoned Checkpoint";
+			};
+			condition = "[] call ULP_fnc_isGroup";
+		};
+		class SouthParos : ParosCheckpoint {
+			displayName = "South Paros";
+			class Marker : Marker {
+				defaultName = "South Paros";
+			};
+		};
 	};
 };

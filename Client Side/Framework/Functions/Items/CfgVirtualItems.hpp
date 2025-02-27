@@ -1391,8 +1391,8 @@ class CfgVirtualItems {
 	class ProcessedHeroin : ProcessedWeed {
 		displayName = "Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 26550;
-		sellPrice = 8850;
+		buyPrice = 35550;
+		sellPrice = 11850;
 		weight = 4;
 		class Settings : Settings {};
 	};

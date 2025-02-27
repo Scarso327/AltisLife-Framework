@@ -736,6 +736,12 @@ class CfgVehicles {
 		buyPrice = 68000;
 		virtualSpace = 90;
 		enableRope = false;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+
+			"UnprocessedOil"
+		};
 		class Textures {
 			// Police
 			class PoliceWhite : PoliceTexture { 

@@ -79,14 +79,14 @@ class CfgGroups {
 				class HEMTTs {
 					displayName = "HEMTT Trucks";
 					icon = "Data\UI\GroupPerks\HEMTTs.paa";
-					description = "Grants your members access to all variants of the HEMTT Transports.";
+					description = "Grants your members access to the HEMTT Transports.";
 					level = 2;
 				};
 
-				class Governor {
-					displayName = "Governorship";
-					icon = "Data\UI\GroupPerks\governor.paa";
-					description = "Your members have the ability to run for governor.";
+				class FuelHaul {
+					displayName = "Fuel Hauling";
+					icon = "Data\UI\GroupPerks\fuelHaul.paa";
+					description = "Grants your members access to fuel trucks and fuel hauling missions.";
 					level = 3;
 				};
 

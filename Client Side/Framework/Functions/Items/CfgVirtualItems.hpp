@@ -1217,7 +1217,7 @@ class CfgVirtualItems {
 		displayName = "Unrefinded Oil";
 		description = "Oil drilled with an extractor, requiring a fliud track and processing";
 		icon = "Data\Icons\liquid.paa";
-		weight = 6;
+		weight = 4;
 		class Settings : Settings {};
 	};
 	class UncutDiamond : CopperOre {
@@ -1301,8 +1301,9 @@ class CfgVirtualItems {
 		displayName = "Refinded Oil";
 		description = "Refinded oil that has been barreled and ready to be sold";
 		icon = "Data\Icons\oil.paa";
+		buyPrice = 41063;
 		sellPrice = 13688;
-		weight = 4;
+		weight = 3;
 		class Settings : Settings {};
 	};
 	class CutDiamond : CopperBar {
@@ -1532,6 +1533,7 @@ class CfgVirtualItems {
 	};
 	class StolenCargo : FreightCargo {
 		displayName = "Stolen Cargo";
+		description = "Clearly stolen cargo that can be smuggled";
 		icon = "Data\Icons\crate.paa";
 		sellPrice = 89200;
 		weight = 28;
@@ -1539,8 +1541,17 @@ class CfgVirtualItems {
 	};
 	class HumanitarianSupplies : FreightCargo {
 		displayName = "Humanitarian Supplies";
+		description = "Supplies intended for those most in need of aid";
 		icon = "Data\Icons\humanitarianSupplies.paa";
 		sellPrice = 0;
+		weight = 1;
+		class Settings : Settings {};
+	};
+	class Fuel : FreightCargo {
+		displayName = "Fuel";
+		description = "Fuel that needs to be transported to fuel stations";
+		icon = "Data\Icons\fuel.paa";
+		sellPrice = 4350;
 		weight = 1;
 		class Settings : Settings {};
 	};

@@ -800,7 +800,7 @@ class CfgClothesStore {
 
 	class IDAP {
 		storeName = "IDAP Clothing Store";
-		condition = "[""IDAP""] call ULP_fnc_hasLicense";
+		condition = "[""IDAP""] call ULP_fnc_hasLicense && { ULP_Reputation >= 0 }";
 		class Uniforms {
 			class U_C_IDAP_Man_shorts_F {};
 		};

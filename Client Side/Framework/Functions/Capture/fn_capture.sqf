@@ -36,7 +36,7 @@ if (serverTime < _cooldown) exitWith {
 	false
 };
 
-([format ["Capturing %1", getText(_cfg >> "displayName")], getNumber (_cfg >> "time"), [_location, _cfg], { (player distance (_this select 0)) <= 5 }, {
+([format ["Capturing %1", getText(_cfg >> "displayName")], getNumber (_cfg >> "time"), [_location, _cfg], { (player distance (_this select 0)) <= 30 }, {
 	_this params [ "_location", "_cfg" ];
 
 	// Verify...

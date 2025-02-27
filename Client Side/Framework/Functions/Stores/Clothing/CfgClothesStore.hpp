@@ -429,6 +429,7 @@ class CfgClothesStore {
 			class H_Watchcap_blk {};
 			class H_Booniehat_khk {};
 			class H_ShemagOpen_khk {};
+			class H_Beret_blk { condition = "([] call ULP_fnc_getGroupRank) >= 5"; };
 			class H_PASGT_basic_black_F { price = 2500; };
 			class H_HelmetIA { price = 5000; };
 			class H_HelmetB_light { price = 5000; };

@@ -282,9 +282,11 @@ class H_Beret_blk : H_HeadBandage_clean_F {
 			displayName = "Department Head";
 			condition = "[""Medic_Main"", 6] call ULP_fnc_hasAccess";
 		};
+
+		// Civilian Faction
 		class H_Beret_CSAT_01_F : H_Beret_blk {
-			displayName = "HEMS Beret";
-			condition = "[""Medic_AA"", 1] call ULP_fnc_hasAccess";
+			displayName = "Dunamis Beret";
+			condition = "[] call ULP_fnc_isDunamis";
 		};
 	};
 };

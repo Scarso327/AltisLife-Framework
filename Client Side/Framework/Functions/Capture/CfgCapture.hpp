@@ -11,9 +11,7 @@ class CfgCapture {
 			};
 			condition = "[""Hideout""] call ULP_fnc_hasGroupPerk";
 		};
-		class EastHideout : WestHideout {
-			displayName = "Eastern Criminal Hideout";
-		};
+		class EastHideout : WestHideout { displayName = "Eastern Criminal Hideout"; };
 
 		class WesternPowerStation {
 			displayName = "Western Power Station";
@@ -28,27 +26,52 @@ class CfgCapture {
 		};
 		class EasternPowerStation : WesternPowerStation {
 			displayName = "Eastern Power Station";
-			class Marker : Marker {
-				defaultName = "Eastern Power Station";
-			};
+			class Marker : Marker { defaultName = "Eastern Power Station"; };
 		};
 
 		class ParosCheckpoint {
-			displayName = "Abandoned Checkpoint";
-			time = 10;
-			cooldown = 180;
+			displayName = "Paros Checkpoint";
+			time = 300;
+			cooldown = 300;
 			class Marker {
 				markerType = "MinefieldAP";
 				markerColour = "ColorEast";
-				defaultName = "Abandoned Checkpoint";
+				defaultName = "Paros Checkpoint";
 			};
 			condition = "[] call ULP_fnc_isGroup";
 		};
-		class SouthParos : ParosCheckpoint {
-			displayName = "South Paros";
-			class Marker : Marker {
-				defaultName = "South Paros";
-			};
+		class WesternHills : ParosCheckpoint {
+			displayName = "Western Hills";
+			time = 180;
+			class Marker : Marker { defaultName = "Western Hills"; };
+		};
+		class SouthernCoast : WesternHills {
+			displayName = "Southern Coast";
+			class Marker : Marker { defaultName = "Southern Coast"; };
+		};
+		class SaltFlats : WesternHills {
+			displayName = "Salt Flats";
+			class Marker : Marker { defaultName = "Salt Flats"; };
+		};
+		class GhostHotel : WesternHills {
+			displayName = "Ghost Hotel";
+			class Marker : Marker { defaultName = "Ghost Hotel"; };
+		};
+		class SofiaTown : ParosCheckpoint {
+			displayName = "Sofia Town";
+			class Marker : Marker { defaultName = "Sofia Town"; };
+		};
+		class NorthernForest : WesternHills {
+			displayName = "Northern Forest";
+			class Marker : Marker { defaultName = "Northern Forest"; };
+		};
+		class MolosRegion : WesternHills {
+			displayName = "Molos Region";
+			class Marker : Marker { defaultName = "Molos Region"; };
+		};
+		class NorthernAirfield : ParosCheckpoint {
+			displayName = "Northern Airfield";
+			class Marker : Marker { defaultName = "Northern Airfield"; };
 		};
 	};
 };

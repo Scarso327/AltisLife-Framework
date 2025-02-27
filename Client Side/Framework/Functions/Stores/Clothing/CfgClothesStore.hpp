@@ -1077,10 +1077,99 @@ class CfgClothesStore {
 	class Base : Blackmarket {
 		storeName = "Gang Base Clothing Store";
 		condition = "true";
-		class Uniforms : Uniforms {};
-		class Headgear : Headgear {};
-		class Facewear : Facewear {};
-		class Vests : Vests {};
-		class Backpacks : Backpacks {};
+		class Uniforms {
+			class U_C_Poor_1 {};
+			class U_C_Farmer {};
+			class U_C_Mechanic_01_F {};
+			class U_I_C_Soldier_Bandit_1_F {};
+			class U_I_C_Soldier_Bandit_3_F {};
+			class U_IG_Guerilla1_1 {};
+			class U_BG_Guerrilla_6_1 {};
+			class U_C_HunterBody_grn {};
+			class U_C_E_LooterJacket_01_F {};
+			class U_O_R_Gorka_01_black_F {};
+			class U_I_C_Soldier_Para_1_F {};
+			class U_I_E_Uniform_01_F {};
+			class U_I_CombatUniform {};
+			class U_I_CombatUniform_shortsleeve {};
+			class U_B_CombatUniform_mcam {};
+			class U_B_CombatUniform_mcam_vest {};
+			class U_B_CombatUniform_mcam_tshirt {};
+			class U_B_survival_uniform {};
+			class U_B_CTRG_Soldier_F {};
+			class U_B_CTRG_Soldier_3_F {};
+			class U_B_CTRG_Soldier_2_Arid_F {};
+			class U_B_GhillieSuit {};
+			class U_B_FullGhillie_ard {};
+			class U_B_HeliPilotCoveralls {};
+			class U_C_CBRN_Suit_01_White_F {};
+		};
+
+		class Headgear {
+			class H_HeadBandage_clean_F {};
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_MilCap_gry {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+			class H_ShemagOpen_khk {};
+			class H_PASGT_basic_black_F {};
+			class H_PilotHelmetHeli_B {};
+			class H_HelmetIA {};
+			class H_HelmetB_light {};
+			class H_HelmetB {};
+			class H_HelmetSpecB {};
+			class H_HelmetB_TI_arid_F {};
+			class H_HelmetHBK_F {};
+			class H_HelmetAggressor_F {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F {};
+			class G_Aviator {};
+			class G_Squares {};
+			class G_Spectacles {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+			class G_Blindfold_01_black_F {};
+			class G_Bandanna_aviator {};
+			class G_Balaclava_blk {};
+			class G_Balaclava_TI_blk_F {};
+			class G_Balaclava_TI_G_blk_F {};
+			class G_RegulatorMask_F {};
+			class G_AirPurifyingRespirator_01_F {};
+			class G_Tactical_Clear {};
+		};
+
+		class Vests {
+			class V_LegStrapBag_black_F {};
+			class V_Pocketed_black_F {};
+			class V_Rangemaster_belt {};
+			class V_BandollierB_blk {};
+			class V_HarnessO_brn {};
+			class V_TacVestIR_blk {};
+			class V_Chestrig_blk {};
+			class V_TacChestrig_cbr_F {};
+			class V_SmershVest_01_F {};
+			class V_TacVest_blk {};
+			class V_PlateCarrierIA1_dgtl {};
+			class V_CarrierRigKBT_01_Olive_F {};
+			class V_CarrierRigKBT_01_light_Olive_F {};
+			class V_PlateCarrier1_blk {};
+			class V_PlateCarrier2_blk {};
+		};
+		
+		class Backpacks {
+			class B_LegStrapBag_black_F {};
+			class B_AssaultPack_blk {};
+			class B_FieldPack_blk {};
+			class B_Kitbag_cbr {};
+			class B_TacticalPack_blk {};
+			class B_Carryall_cbr {};
+			class B_ViperLightHarness_blk_F {};
+			class B_ViperHarness_blk_F {};
+			class B_RadioBag_01_black_F {};
+			class B_SCBA_01_F {};
+		};
 	};
 };

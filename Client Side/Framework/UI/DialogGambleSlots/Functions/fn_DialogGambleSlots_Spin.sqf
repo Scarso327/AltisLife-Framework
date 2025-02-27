@@ -3,7 +3,7 @@
 ** Description: 
 */
 #include "..\..\..\script_macros.hpp"
-#define ICON_ARRAY ["Data\Icons\airdropTrigger.paa", "Data\Icons\coinBundle.paa", "Data\Icons\gem.paa", "Data\Icons\ingot.paa", "Data\Icons\ore.paa", "Data\Icons\turtle.paa", "Data\Icons\xpReward.paa"]
+#define ICON_ARRAY ["Data\UI\Gambling\lemon.paa", "Data\UI\Gambling\plum.paa", "Data\UI\Gambling\cherries.paa", "Data\UI\Gambling\watermelon.paa", "Data\UI\Gambling\bar.paa", "Data\UI\Gambling\seven.paa", "Data\UI\Gambling\diamond.paa"]
 #define SANDWICH_BASE 800
 #define NEIGHBOUR_BASE 1000
 #define PRECEDING_BASE 2300

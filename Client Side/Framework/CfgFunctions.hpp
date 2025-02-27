@@ -575,6 +575,7 @@ class CfgFunctions {
 			class isGroupOwner {};
 			class alliedGroups {};
 			class groupUnits {};
+			class isDunamis {};
 		};
 
 		class NLR {

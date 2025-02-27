@@ -242,6 +242,11 @@ class CfgFunctions {
             class initStats {};
             class getStats {};
         };
+        
+        class Gambling {
+            file = "\life_server\Functions\Gambling";
+            class updateCasinoVault {};
+        };
     };
 
     class MySQL_Database {

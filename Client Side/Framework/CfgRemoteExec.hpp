@@ -234,6 +234,9 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_getStats {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_updateCasinoVault {
+            allowedTargets = SERVER;
+        };
 
         class bis_fnc_debugconsoleexec {};
     };

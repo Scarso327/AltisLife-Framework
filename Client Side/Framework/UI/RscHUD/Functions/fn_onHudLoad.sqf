@@ -95,7 +95,7 @@ private _onEnteredRedzone = {
 		}] call ULP_fnc_addEventHandler)];
 	}, true] call ULP_fnc_addEventHandler;
 
-	[player, ["Kills", "Deaths"]] remoteExecCall ["ULP_SRV_fnc_getStats", 2];
+	[player, ["Kills", "Deaths"]] remoteExecCall ["ULP_SRV_fnc_getStats", RSERV];
 
 	private _redzoneUi = _display ctrlCreate ["ULP_RedzoneHud", -1];
 	_display setVariable ["redzone_hud", _redzoneUi];

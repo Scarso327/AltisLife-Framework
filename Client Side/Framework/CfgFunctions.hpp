@@ -497,7 +497,7 @@ class CfgFunctions {
 			file = "Functions\Mail";
 			class openMailBox {};
 			class claimMail {};
-		}
+		};
 
 		class Map {
 			file = "Functions\Map";
@@ -523,6 +523,7 @@ class CfgFunctions {
 			class lockForFactions {};
 			class sit {};
 			class addVehicleTuning {};
+			class addGambling {};
 		};
 		
 		class Garage {
@@ -1010,6 +1011,11 @@ class CfgFunctions {
 			class DialogFactionSelection_OnUnload {};
 			class DialogFactionSelection_PlayVideo {};
 			class DialogFactionSelection_Select {};
+		};
+		
+		class DialogGambleSlots {
+			file = "UI\DialogGambleSlots\Functions";
+			class DialogGambleSlots_Spin {};
 		};
 	};
 };

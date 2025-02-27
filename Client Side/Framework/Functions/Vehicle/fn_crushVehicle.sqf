@@ -53,11 +53,14 @@ if !([format["Crushing %1", _name], _time, [_vehicle, _name, _fee], {
 
 	deleteVehicle _vehicle;
 
-	[player, "CrushVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+	[player, missionConfigFile >> "CfgReputation" >> "Types" >> "CrushVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 
 	["FirstCrush"] call ULP_fnc_achieve;
 
 	["Vehicle has been crushed!"] call ULP_fnc_hint;
+
+	[getPlayerUID player, "CrushVeh", [_vehicle, getPlayerUID _owner]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+
 	["Crushed", [_owner param [0, "Someone"], _name, [player, false, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't crush a vehicle while performing another action!"] call ULP_fnc_hint;

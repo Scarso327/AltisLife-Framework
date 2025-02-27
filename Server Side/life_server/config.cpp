@@ -183,6 +183,18 @@ class CfgPatches {
                 params[] = { "veh", "player" };
             };
 
+            class ImpoundVeh {
+                params[] = { "veh", "fee" };
+            };
+
+            class CrushVeh {
+                params[] = { "veh", "owner" };
+            };
+
+            class ChopVeh {
+                params[] = { "veh", "owner" };
+            };
+
             class DestroyVeh {
                 params[] = { "veh", "texture" };
             };

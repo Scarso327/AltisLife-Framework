@@ -81,7 +81,7 @@ if (_near isEqualTo []) exitWith {
 		deleteVehicle _vehicle;
 
 		[_chopValue, false, format["Chopped %1", _name]] call ULP_fnc_addMoney;
-		[player, "ChopVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+		[player, missionConfigFile >> "CfgReputation" >> "Types" >> "ChopVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 		["ChopVeh"] call ULP_fnc_achieve;
 
 		if (_id >= 0) then {
@@ -100,6 +100,8 @@ if (_near isEqualTo []) exitWith {
 
 			[_id] remoteExecCall ["ULP_SRV_fnc_destroyVehicle", RSERV];
 		};
+
+		[getPlayerUID player, "ChopVeh", [_vehicle, getPlayerUID _owner]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 		[format["You've chopped <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2%3</t>.", _name, "£", [_chopValue] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	}, { ["You must stay near the vehicle to chop it..."] call ULP_fnc_hint; }, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {

@@ -60,7 +60,7 @@ if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 
 
 			private _owner = (_vehicle getVariable ["vehicle_owners", createHashMap]) getOrDefault [[_vehicle] call ULP_fnc_getVehicleOwner, []];
 
-			[player, "ImpoundVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+			[player, missionConfigFile >> "CfgReputation" >> "Types" >> "ImpoundVehicle"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 			
 			[75, "Impounded Vehicle"] call ULP_fnc_addXP;
 
@@ -69,6 +69,8 @@ if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 
 			[format["You've requested an impounded for <t color='#B92DE0'>%1</t> with a fee of <t color='#B92DE0'>%2%3</t>.", _name, "£", [_fee] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			["VehicleStored", { ["Vehicle has been impounded."] call ULP_fnc_hint; }, true] call ULP_fnc_addEventHandler;
 			[_vehicle, _fee] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
+
+			[getPlayerUID player, "ImpoundVeh", [_vehicle, _fee]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 			["Impounded", [_owner param [0, "Someone"], _name, [player, false, true] call ULP_fnc_getName, format ["%1%2", "£", [_fee] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 		}, {}] call ULP_UI_fnc_startProgress) exitWith {

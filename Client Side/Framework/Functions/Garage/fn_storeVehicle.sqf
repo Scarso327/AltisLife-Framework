@@ -28,10 +28,11 @@ if ([[player] call ULP_fnc_getFaction, "vehicles"] call ULP_fnc_factionPresistan
 		_this params [ "", "_vehicle" ];
 
 		["VehicleStored", { ["Vehicle has been stored."] call ULP_fnc_hint; }, true] call ULP_fnc_addEventHandler;
+		[_vehicle] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
 	}, {}] call ULP_UI_fnc_startProgress;
 };
 
 deleteVehicle _vehicle;
 ["Vehicle has been stored."] call ULP_fnc_hint;
 
-[getPlayerUID player, "Store", [_vehicle, _location]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+[getPlayerUID player, "StoreVeh", [_vehicle, _location]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

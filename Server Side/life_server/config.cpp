@@ -175,6 +175,10 @@ class CfgPatches {
                 params[] = { "id", "type", "className", "data", "totalAmount", "claimedAmount" };
             };
 
+            class StoreVeh {
+                params[] = { "veh", "location" };
+            };
+
             class TransferVeh {
                 params[] = { "veh", "player" };
             };

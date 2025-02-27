@@ -61,7 +61,7 @@ class DialogGambleSlots {
 
 		class SlotOne : Life_RscPictureKeepAspect {
 			idc = 5902;
-			text = "Data\Icons\airdropTrigger.paa";
+			text = "Data\UI\Gambling\lemon.paa";
 			SAFEZONE_X(UI_X + MARGIN_X);
 			SAFEZONE_Y((BODY_Y + MARGIN_Y));
 			SAFEZONE_W(SLOT_WIDTH);
@@ -70,13 +70,13 @@ class DialogGambleSlots {
 
 		class SlotTwo : SlotOne {
 			idc = 5903;
-			text = "Data\Icons\airdropTrigger.paa";
+			text = "Data\UI\Gambling\diamond.paa";
 			SAFEZONE_X((UI_X + (MARGIN_X * 2)) + SLOT_WIDTH);
 		};
 
 		class SlotThree : SlotOne {
 			idc = 5904;
-			text = "Data\Icons\airdropTrigger.paa";
+			text = "Data\UI\Gambling\watermelon.paa";
 			SAFEZONE_X((UI_X + (MARGIN_X * 3)) + (SLOT_WIDTH * 2));
 		};
 		

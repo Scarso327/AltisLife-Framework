@@ -2164,7 +2164,11 @@ class CfgVehicles {
 	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; }; // DMT
 	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 1800; }; // Office Building
 
-	class Land_CargoBox_V1_F : Land_Bodybag_01_black_F { requireItems = true; };
+	class Land_CargoBox_V1_F : Base {
+		virtualSpace = 1;
+		garageLimit = 0;
+		requireItems = true; 
+	};
 	class Land_PortableServer_01_black_F : Land_CargoBox_V1_F {};
 
 	// SOUNDS --------------------------------------------------------------------------------------

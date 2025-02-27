@@ -6,7 +6,7 @@
 scopeName "fn_drill";
 
 private _object = cursorObject;
-if (isNull _object || { (player distance _object) > 5 } || { _object getVariable ["locked", false] }) exitWith {
+if (isNull _object || { (player distance _object) > 5 } || { !(_object getVariable ["locked", false]) }) exitWith {
 	["You're either not close enough to something you can drill into or it's already been opened..."] call ULP_fnc_hint;
 };
 

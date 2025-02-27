@@ -2101,7 +2101,7 @@ class CfgVirtualItems {
 		displayName = "Laptop";
 		description = "An electronic sold at Altis Electronics";
 		icon = "Data\Icons\laptop.paa";
-		sellPrice = 348984;
+		sellPrice = 654345;
 		weight = 10;
 		class Settings {
 			onMarket = true;
@@ -2115,14 +2115,14 @@ class CfgVirtualItems {
 	class Desktop : Laptop {
 		displayName = "Desktop";
 		icon = "Data\Icons\desktop.paa";
-		sellPrice = 704296;
+		sellPrice = 1056444;
 		weight = 15;
 		class Settings : Settings {};
 	};
 	class MiningRig : Laptop {
 		displayName = "Mining Rig";
 		icon = "Data\Icons\miningRig.paa";
-		sellPrice = 3974765;
+		sellPrice = 5962147;
 		weight = 64;
 		class Settings : Settings {};
 	};
@@ -2130,7 +2130,7 @@ class CfgVirtualItems {
 		displayName = "Signal Jammer";
 		icon = "Data\Icons\signalJammer.paa";
 		weight = 1;
-		sellPrice = 55150;
+		sellPrice = 82725;
 		class Settings : Settings {};
 	};
 	class HackingDevice : Laptop {

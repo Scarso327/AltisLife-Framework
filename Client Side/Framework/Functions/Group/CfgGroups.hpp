@@ -157,10 +157,10 @@ class CfgGroups {
 			class HoldingCartel { amount = 10; };
 			class Cartel { amount = 25; };
 			class Hideout : Cartel {};
-			class Popup : Cartel { amount = 50; };
+			class Popup : Cartel { amount = 80; };
 			class Airdrop : Popup {};
 			class Shipwreck : Popup {};
-			class CargoRun { amount = 10; };
+			class CargoRun { amount = 25; };
 			class Election { amount = 500; }; // TODONOW
 			class Rigging { amount = 35; };
 			class BaseBid : Election {}; // TODONOW
@@ -168,7 +168,7 @@ class CfgGroups {
 			class Robbery : CargoRun {};
 			class SoldLegalItems : CargoRun {
 				amount = 0;
-				amountPerItem = 0.3; // This is a unique setting for this category
+				amountPerItem = 0.4; // This is a unique setting for this category
 			};
 		};
 	};

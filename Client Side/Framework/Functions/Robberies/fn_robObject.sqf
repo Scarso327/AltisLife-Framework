@@ -80,7 +80,7 @@ private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [
 		]
 	] remoteExecCall ["ULP_SRV_fnc_addWarrant", RSERV];
 
-	[player, "RobStore"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+	[player, missionConfigFile >> "CfgReputation" >> "Types" >> "RobStore"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 
 	[format["You have robbed this store for £%1.", [_money] call ULP_fnc_numberText]] call ULP_fnc_achieve;
 	[getPlayerUID player, "Robbery", [_customName, _money]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

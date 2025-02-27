@@ -174,6 +174,14 @@ class CfgPatches {
             class Mail {
                 params[] = { "id", "type", "className", "data", "totalAmount", "claimedAmount" };
             };
+
+            class TransferVeh {
+                params[] = { "veh", "player", "loadout", "isRedzone" };
+            };
+
+            class DestroyVeh {
+                params[] = { "veh", "texture" };
+            };
         };
 
         class Stats {

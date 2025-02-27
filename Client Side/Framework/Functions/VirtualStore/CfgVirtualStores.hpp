@@ -22,6 +22,47 @@ class CfgVirtualStores {
 		};
 	};
 
+	class PoliceEvidence {
+		storeName = "Evidence Store";
+		conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
+		class Items {
+			// Tools
+			class Ziptie { sellPrice = 675; };
+			class Blindfold { sellPrice = 850; };
+			class Lockpick { sellPrice = 125; };
+			class SnapGun { sellPrice = 3000; };
+			class BoltCutter { sellPrice = 17250; };
+			class HackingDevice { sellPrice = 23750; };
+			class ExplosiveCharge { sellPrice = 37500; };
+			class IndustrialDrill { sellPrice = 30000; };
+
+			// Runs
+			class Turtle_F_Raw { sellPrice = 3563; };
+			class Coral { sellPrice = 838; };
+			class ProcessedWeed { sellPrice = 743; };
+			class ProcessedHeroin { sellPrice = 1185; };
+			class ProcessedCocaine { sellPrice = 1931; };
+			class Moonshine { sellPrice = 868; };
+			class ProcessedMeth { sellPrice = 3813; };
+			class PurifiedWeed { sellPrice = 964; };
+			class PurifiedHeroin { sellPrice = 1695; };
+			class PurifiedCocaine { sellPrice = 2532; };
+			class PurifiedMoonshine { sellPrice = 1106; };
+			class PurifiedMeth { sellPrice = 5247; };
+			class Ecstasy { sellPrice = 656; };
+			class CutBloodDiamond { sellPrice = 1188; };
+			class UraniumBar { sellPrice = 2769; };
+			class WeaponCrate { sellPrice = 7338; };
+
+			// Majors
+			class MarkedGold { sellPrice = 31250; };
+			class UnmarkedGold { sellPrice = 87500; };
+			class EncryptedDrive { sellPrice = 50000; };
+			class DecryptedDrive { sellPrice = 125000; };
+			class SeizedContraband { sellPrice = 29700; };
+		};
+	};
+
 	class Medic : Police {
 		storeName = "Equipment Store";
 		conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";

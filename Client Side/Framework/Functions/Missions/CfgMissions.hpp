@@ -406,6 +406,123 @@ class CfgMissions {
 		};
 	};
 
+	class FuelHauling : CorporateFreight {
+		name = "Fuel Hauling";
+		description = "You need to deliver fuel to %1";
+		condition = "[""FuelHaul""] call ULP_fnc_hasGroupPerk";
+		vehicleRequirement[] = { { "Car" }, 30 };
+		cargoItem = "Fuel";
+		class Locations {
+			// Collection Point
+			class Fuel_Storage {
+				pos = "Fuel_Storage";
+				name = "Fuel Storage";
+			};
+			
+			// Fuel Stations
+			class fuel_station_01 {
+				pos = "fuel_station_01";
+				name = "Aggelorchori Fuel";
+			};
+			class fuel_station_02 {
+				pos = "fuel_station_02";
+				name = "South Kavala Fuel";
+			};
+			class fuel_station_03 {
+				pos = "fuel_station_03";
+				name = "Stadium Fuel";
+			};
+			class fuel_station_04 {
+				pos = "fuel_station_04";
+				name = "Kore Fuel";
+			};
+			class fuel_station_05 {
+				pos = "fuel_station_05";
+				name = "Agios Fuel";
+			};
+			class fuel_station_06 {
+				pos = "fuel_station_06";
+				name = "Lakka Fuel";
+			};
+			class fuel_station_07 {
+				pos = "fuel_station_07";
+				name = "Telos Fuel";
+			};
+			class fuel_station_08 {
+				pos = "fuel_station_08";
+				name = "Airport Fuel";
+			};
+			class fuel_station_09 {
+				pos = "fuel_station_09";
+				name = "Gravia Fuel";
+			};
+			class fuel_station_10 {
+				pos = "fuel_station_10";
+				name = "Charkia Fuel";
+			};
+			class fuel_station_11 {
+				pos = "fuel_station_11";
+				name = "Paros Fuel";
+			};
+			class fuel_station_12 {
+				pos = "fuel_station_12";
+				name = "North Pyrgos Fuel";
+			};
+			class fuel_station_13 {
+				pos = "fuel_station_13";
+				name = "Athira Fuel";
+			};
+			class fuel_station_14 {
+				pos = "fuel_station_14";
+				name = "Pyrgos Fuel";
+			};
+			class fuel_station_15 {
+				pos = "fuel_station_15";
+				name = "North Kavala Fuel";
+			};
+			class fuel_station_16 {
+				pos = "fuel_station_16";
+				name = "Chalkeia Fuel";
+			};
+			class fuel_station_17 {
+				pos = "fuel_station_17";
+				name = "Selakano Fuel";
+			};
+			class fuel_station_18 {
+				pos = "fuel_station_18";
+				name = "Ioannina Fuel";
+			};
+			class fuel_station_19 {
+				pos = "fuel_station_19";
+				name = "Sofia Fuel";
+			};
+			class fuel_station_20 {
+				pos = "fuel_station_20";
+				name = "Syrta Fuel";
+			};
+			class fuel_station_21 {
+				pos = "fuel_station_21";
+				name = "Neochori Fuel";
+			};
+			class fuel_station_22 {
+				pos = "fuel_station_22";
+				name = "Zaros Fuel";
+			};
+		};
+		class Rewards {
+			moneyReward = 65;
+			xpReward = 400;
+			repReward = false;
+		};
+		class Messages {
+			onFinishWithoutMission = "You don't have any fuel to deliver here...";
+			onAlreadyHas = "You already have a fuel hauling mission active, complete it before requesting another...";
+			onNoLocations = "There are currently no fuel hauling missions available for pickup, please try again alter...";
+			onAssigned = "Your truck has been filled with fuel, deliver it to <t color='#B92DE0'>%1</t>";
+			onFinished = "You have successfully delivered the fuel, you have been paid <t color='#B92DE0'>£%1</t>";
+		};
+	};
+
 	class CriminalSmuggling : CorporateFreight {
 		name = "Cargo Smuggling";
 		description = "You need to deliver the given stolen cargo to %1";

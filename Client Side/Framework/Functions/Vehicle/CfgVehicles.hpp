@@ -15,6 +15,7 @@ class CfgVehicles {
 			"StolenCargo",
 			"FreightCargo",
 			"HumanitarianSupplies",
+			"Fuel",
 
 			"UnprocessedOil"
 		};
@@ -25,6 +26,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"FreightCargo",
 			"HumanitarianSupplies",
+			"Fuel",
 
 			"UnprocessedOil"
 		};
@@ -39,6 +41,7 @@ class CfgVehicles {
 		chopKeepChance = 85;
 		blacklistedItems[] = { 
 			"HumanitarianSupplies",
+			"Fuel",
 
 			"UnprocessedOil"
 		};
@@ -57,6 +60,7 @@ class CfgVehicles {
 			"StolenCargo",
 			"FreightCargo",
 			"HumanitarianSupplies",
+			"Fuel",
 
 			"Turtle_F_Raw",
 
@@ -1120,6 +1124,7 @@ class CfgVehicles {
 	class C_Van_01_fuel_F : C_Van_01_transport_F {
 		buyPrice = 200000;
 		virtualSpace = 100;
+		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -1217,9 +1222,11 @@ class CfgVehicles {
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 750000;
 		virtualSpace = 300;
+		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
 		blacklistedItems[] = { 
 			"StolenCargo",
-			"FreightCargo"
+			"FreightCargo",
+			"HumanitarianSupplies"
 		};
 		class Textures {
 			class Orange : BaseTexture {
@@ -1239,7 +1246,14 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
-		blacklistedItems[] = {  "UnprocessedOil" };
+		blacklistedItems[] = {  
+			"StolenCargo",
+			"FreightCargo",
+			"HumanitarianSupplies",
+			"Fuel",
+
+			"UnprocessedOil" 
+		};
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1309,9 +1323,11 @@ class CfgVehicles {
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
 		buyPrice = 1500000;
 		virtualSpace = 450;
+		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
 		blacklistedItems[] = { 
 			"StolenCargo",
-			"FreightCargo"
+			"FreightCargo",
+			"HumanitarianSupplies"
 		};
 		class Textures {
 			class BrownHex : BaseTexture {
@@ -1476,9 +1492,11 @@ class CfgVehicles {
 	class B_Truck_01_fuel_F : B_Truck_01_transport_F {
 		buyPrice = 3000000;
 		virtualSpace = 750;
+		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk && { [""FuelHaul""] call ULP_fnc_hasGroupPerk } || { [""HGVDriver""] call ULP_fnc_hasPerk && { [""LiquidTransporter""] call ULP_fnc_hasPerk } }";
 		blacklistedItems[] = { 
 			"StolenCargo",
-			"FreightCargo"
+			"FreightCargo",
+			"HumanitarianSupplies"
 		};
 		class Textures {
 			class Sand : BaseTexture {

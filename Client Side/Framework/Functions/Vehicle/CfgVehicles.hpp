@@ -2152,6 +2152,7 @@ class CfgVehicles {
 	class Land_PlasticCase_01_large_F : Land_PlasticCase_01_small_F { virtualSpace = 3000; }; // Small House
 	class Land_PlasticCase_01_large_gray_F : Land_PlasticCase_01_small_F { virtualSpace = 2000; }; // Lighthouse
 	class B_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 6000; }; // Big House
+	class Land_Cargo10_red_F : Land_PlasticCase_01_small_F { virtualSpace = 6000; };
 	// Warehouse / Boat
 	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F {
 		virtualSpace = 10000;

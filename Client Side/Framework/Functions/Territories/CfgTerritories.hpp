@@ -3,7 +3,9 @@ class CfgTerritories {
 
 	class Altis {
 		class ParosCheckpoint {
+			displayName = "Paros Checkpoint";
 			flagPos[] = { 21349,17207.6,0 };
+			centrePos[] = { 21349,17207.6,0 };
 			borderVertices[] = {
 				{20184.1,17290.6,0}, // 77
 				{21017,16738.6,0}, // 78
@@ -27,13 +29,15 @@ class CfgTerritories {
 					displayName = "Weapons Crate";
 					pos[] = { { 21351.5,17211.5,0 }, 56 };
 					items[] = { "WeaponCrate" };
-					amount = "2 + ((count playableUnits) * 0.125)"
+					amount = "2 + ((count playableUnits) * 0.125)";
 				};
 			};
 		};
 
 		class WesternHills {
+			displayName = "Western Hills";
 			flagPos[] = { 20346,18769.2,0 };
+			centrePos[] = { 21005.9,18810.1,0 };
 			borderVertices[] = {
 				{20024.3,17456.5,0}, // 75
 				{20316.9,17462.3,0}, // 74
@@ -62,13 +66,15 @@ class CfgTerritories {
 					displayName = "Uranium Crate";
 					pos[] = { { 20341.5,18766,0 }, 56 };
 					items[] = { "UraniumBar" };
-					amount = "6 + ((count playableUnits) * 0.4)"
+					amount = "6 + ((count playableUnits) * 0.4)";
 				};
 			};
 		};
 
 		class SouthernCoast {
+			displayName = "Southern Coast";
 			flagPos[] = { 24018.5,15465.1,0 };
+			centrePos[] = { 23004.2,16704.9,0 };
 			borderVertices[] = {
 				{21399.6,16446.7,0}, // 85
 				{21472,16497.6,0}, //84
@@ -103,13 +109,15 @@ class CfgTerritories {
 					displayName = "Fragments Crate";
 					pos[] = { { 23259.6,20041.9,0 }, 48 };
 					items[] = { "LegendaryMapFragment" };
-					amount = "1 + ((count playableUnits) * 0.025)"
+					amount = "1 + ((count playableUnits) * 0.025)";
 				};
 			};
 		};
 
 		class SaltFlats {
+			displayName = "Salt Flats";			
 			flagPos[] = { 23259.3,20037.3,0 };
+			centrePos[] = { 23854.4,18816.3,0 };
 			borderVertices[] = {
 				{22329.6,18445.8,0}, // 67
 				{22545.9,18276.2,0}, // 97
@@ -132,13 +140,15 @@ class CfgTerritories {
 					displayName = "Uranium Crate";
 					pos[] = { { 24011.2,15463.1,0 }, 56 };
 					items[] = { "RefinedSalt" };
-					amount = "30 + ((count playableUnits) * 1.5)"
+					amount = "30 + ((count playableUnits) * 1.5)";
 				};
 			};
 		};
 
 		class GhostHotel {
+			displayName = "Ghost Hotel";
 			flagPos[] = { 21932.9,20989.2,0 };
+			centrePos[] = { 22410.5,20956.8,0 };
 			borderVertices[] = {
 				{22775.2,20063.4,0}, // 104
 				{21727.1,20051.1,0}, // 61
@@ -162,13 +172,15 @@ class CfgTerritories {
 					displayName = "Diamond Crate";
 					pos[] = { { 21931.5,20995.9,0 }, 43 };
 					items[] = { "CutBloodDiamond" };
-					amount = "15 + ((count playableUnits) * 0.6)"
+					amount = "15 + ((count playableUnits) * 0.6)";
 				};
 			};
 		};
 
 		class SofiaTown {
+			displayName = "Sofia Town";
 			flagPos[] = { 25308.6,21810.3,0 };
+			centrePos[] = { 27002.1,20857.7,0 };
 			borderVertices[] = {
 				{23381.4,20640.9,0}, // 109
 				{23588.9,20851.8,0}, // 111
@@ -193,13 +205,15 @@ class CfgTerritories {
 					displayName = "Experience Crate";
 					pos[] = { { 25314.7,21814.8,0 }, 91 };
 					items[] = { "TinyXPReward" };
-					amount = "3 + ((count playableUnits) * 0.05)"
+					amount = "3 + ((count playableUnits) * 0.05)";
 				};
 			};
 		};
 
 		class NorthernForest {
+			displayName = "Northern Forest";			
 			flagPos[] = { 23346.5,24187,0 };
+			centrePos[] = { 24026.3,22748.1,0 };
 			borderVertices[] = {
 				{21826.4,21800.3,0}, // 129
 				{22614.3,21667.6,0}, // 131
@@ -232,13 +246,15 @@ class CfgTerritories {
 					displayName = "Parts Crate";
 					pos[] = { { 23348.6,24179.7,0 }, 91 };
 					items[] = { "VehicleParts" };
-					amount = "4 + (count playableUnits)"
+					amount = "4 + (count playableUnits)";
 				};
 			};
 		};
 
 		class MolosRegion {
+			displayName = "Molos Region";
 			flagPos[] = { 27801.6,22254.7,0 };
+			centrePos[] = { 26700.6,23627.7,0 };
 			borderVertices[] = {
 				{25572.2,22032.8,0}, // 172
 				{26260.1,21450.5,0}, // 174
@@ -266,13 +282,15 @@ class CfgTerritories {
 					displayName = "Ecstasy Crate";
 					pos[] = { { 27812.3,22251.2,0 }, 85 };
 					items[] = { "Ecstasy" };
-					amount = "35 + ((count playableUnits) * 1.15)"
+					amount = "35 + ((count playableUnits) * 1.15)";
 				};
 			};
 		};
 
 		class NorthernAirfield {
+			displayName = "Northern Airfield";
 			flagPos[] = { 28309.5,25771,0 };
+			centrePos[] = { 26754.5,24625.5,0 };
 			borderVertices[] = {
 				{27756.7,24140.6,0}, // 181
 				{27019,24001.9,0}, // 191
@@ -292,7 +310,7 @@ class CfgTerritories {
 					displayName = "Gold Crate";
 					pos[] = { { 28304.7,25777.8,0 }, 59 };
 					items[] = { "MarkedGold" };
-					amount = "1 + ((count playableUnits) * 0.015)"
+					amount = "1 + ((count playableUnits) * 0.015)";
 				};
 			};
 		};

@@ -30,6 +30,11 @@ if !(_selected isEqualTo "") then {
 			_display setVariable ["spawn", getMarkerPos _selected];
 			[(_display displayCtrl 3001), [_time, 0.05, getMarkerPos _selected]] call ULP_UI_fnc_setMapPosition;
 		};
+		case 3: {
+			private _pos = parseSimpleArray _selected;
+			_display setVariable ["spawn", _pos];
+			[(_display displayCtrl 3001), [_time, 0.05, _pos]] call ULP_UI_fnc_setMapPosition;
+		};
 		default {
 			private _cfg = missionConfigFile >> "CfgSpawns" >> worldName >> _selected;
 			_display setVariable ["spawn", _cfg];

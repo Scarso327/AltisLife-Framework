@@ -71,6 +71,6 @@ if !([getNumber (_missionCfg >> "canTransfer")] call ULP_fnc_bool) exitWith {
 	[player, _player, _vehId, _classname, _faction] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];
 	[format ["Requesting transfer of your <t color='#B92DE0'>%1</t> to <t color='#B92DE0'>%2</t>...", _name, name _player]] call ULP_fnc_hint;
 
-	[getPlayerUID player, "TransferVeh", [_name, _player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
+	[getPlayerUID player, "TransferVeh", [_name, getPlayerUID _player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 }, false, false] call ULP_fnc_selectPlayer;

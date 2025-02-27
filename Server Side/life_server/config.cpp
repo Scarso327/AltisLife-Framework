@@ -176,7 +176,7 @@ class CfgPatches {
             };
 
             class TransferVeh {
-                params[] = { "veh", "player", "loadout", "isRedzone" };
+                params[] = { "veh", "player" };
             };
 
             class DestroyVeh {

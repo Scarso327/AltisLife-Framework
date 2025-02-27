@@ -77,6 +77,12 @@ class CfgPatches {
                 constant = false;
                 global = false;
             };
+            class CasinoVault {
+                type = "NUMBER";
+                default = "1000000";
+                constant = false;
+                global = false;
+            };
         };
         
         class EventLogs {

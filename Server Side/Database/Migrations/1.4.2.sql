@@ -2,3 +2,5 @@ ALTER TABLE `groups`
 	CHANGE COLUMN `level` `level` INT NULL DEFAULT '1' AFTER `name`;
 
 UPDATE `groups` SET `groups`.`level` = `groups`.`level` + 1 WHERE `groups`.`level` != 5
+
+INSERT INTO `settings` (`setting`, `value`) VALUES ('CasinoVault', '1000000');

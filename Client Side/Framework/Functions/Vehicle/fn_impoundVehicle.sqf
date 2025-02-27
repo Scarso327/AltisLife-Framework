@@ -70,6 +70,8 @@ if ([] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty }) then { _time = 
 			["VehicleStored", { ["Vehicle has been impounded."] call ULP_fnc_hint; }, true] call ULP_fnc_addEventHandler;
 			[_vehicle, _fee] remoteExecCall ["ULP_SRV_fnc_storeVehicle", RSERV];
 
+			[round (_fee / 2), true, format ["%1's Impound Fee", _owner]] call ULP_fnc_addMoney;
+
 			["Impounded", [_owner param [0, "Someone"], _name, [player, false, true] call ULP_fnc_getName, format ["%1%2", "£", [_fee] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 		}, {}] call ULP_UI_fnc_startProgress) exitWith {
 			["You can't impound a vehicle while performing another action!"] call ULP_fnc_hint;

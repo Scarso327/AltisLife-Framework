@@ -274,7 +274,7 @@ class CfgVehicleStores {
 
 	class IDAP : Base {
 		storeName = "IDAP Vehicles";
-		conditions = "[""IDAP""] call ULP_fnc_hasLicense";
+		conditions = "[""IDAP""] call ULP_fnc_hasLicense && { ULP_Reputation >= 500 }";
 		class Vehicles {
 			class C_IDAP_Offroad_01_F {};
 			class C_IDAP_Offroad_02_unarmed_F {};

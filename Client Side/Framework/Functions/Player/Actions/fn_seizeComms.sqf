@@ -22,7 +22,7 @@ if !(_unit isEqualTo player) then {
 	["You have destroyed this person's communications..."] call ULP_fnc_hint;
 
 	if !([player, ["Police"]] call ULP_fnc_isFaction) then {
-		[player, "SeizeComms"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+		[player, missionConfigFile >> "CfgReputation" >> "Types" >> "SeizeComms"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 	};
 
 	["SeizedComms"] call ULP_fnc_achieve;

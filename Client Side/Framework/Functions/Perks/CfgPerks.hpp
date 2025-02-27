@@ -208,6 +208,21 @@ class CfgPerks {
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
+	class LiquidTransporter {
+		icon = "Data\UI\GroupPerks\fuelHaul.paa";
+		displayName = "Liquid Transporter";
+		description = "Unlocks the ability to purchase fuel trucks outside of a Company Group";
+		removalMultiplier = 10;
+		class Requirements {
+			factions[] = { "Civilian" };
+			level = 9;
+			prestige = 0;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "";
+	};
+
 	class LegalTrader {
 		icon = "Data\UI\Perks\legalTrader.paa";
 		displayName = "Legal Trader";

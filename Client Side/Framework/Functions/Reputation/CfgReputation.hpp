@@ -46,5 +46,8 @@ class CfgReputation {
 		// Government
 		class Vote { reason = "have supported democracy by voting"; change = 50; };
 		class Rig { reason = "have tried to sabotage democracy"; change = -100; };
+
+		// Missions
+		class Mission { reason = "have completed a mission"; change = 30; };
 	};
 };

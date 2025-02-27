@@ -300,7 +300,21 @@ class CfgVirtualStores {
 	class Base : Blackmarket {
 		storeName = "Gang Base Market";
 		conditions = "true";
-		class Items : Items {};
+		class Items {
+			class RationPack {};
+			class Water {};
+			class Redbull {};
+			class FuelCan {};
+			class Ziptie {};
+			class Blindfold {};
+			class Lockpick {};
+			class BoltCutter {};
+			class HackingDevice {};
+			class ExplosiveCharge {};
+			class IndustrialDrill {};
+			class FieldDressing {};
+			class FirstAidKit {};
+		};
 	};
 
 	class Burger {

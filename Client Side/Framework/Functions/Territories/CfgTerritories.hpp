@@ -177,7 +177,7 @@ class CfgTerritories {
 		class SofiaTown {
 			displayName = "Sofia Town";
 			flagPos[] = { 25308.6,21810.3,0 };
-			centrePos[] = { 27002.1,20857.7,0 };
+			centrePos[] = { 25305.7,20673.5,0 };
 			borderVertices[] = {
 				{23381.4,20640.9,0}, // 109
 				{23399,21276.1,0}, // 135
@@ -208,7 +208,7 @@ class CfgTerritories {
 		class NorthernForest {
 			displayName = "Northern Forest";			
 			flagPos[] = { 23346.5,24187,0 };
-			centrePos[] = { 24026.3,22748.1,0 };
+			centrePos[] = { 24437.1,23572.8,0 };
 			borderVertices[] = {
 				{21826.4,21800.3,0}, // 129
 				{22614.3,21667.6,0}, // 131

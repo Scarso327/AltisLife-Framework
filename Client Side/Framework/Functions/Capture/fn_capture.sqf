@@ -60,4 +60,4 @@ if (serverTime < _cooldown) exitWith {
 	[getPlayerUID player, "CaptureHideout", [_siteName]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 
 	["SiteCaptured", [_location, _groupTag], true] call ULP_fnc_invokeEvent;
-}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress)
+}, {}] call ULP_UI_fnc_startProgress)

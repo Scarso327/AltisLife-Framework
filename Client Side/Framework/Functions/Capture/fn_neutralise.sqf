@@ -43,4 +43,4 @@ if (_owner isEqualTo -1) exitWith {
 	};
 
 	["SiteNeutralised", [_location, player], true] call ULP_fnc_invokeEvent;
-}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress)
+}, {}] call ULP_UI_fnc_startProgress)

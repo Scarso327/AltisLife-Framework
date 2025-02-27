@@ -125,7 +125,7 @@ class CfgLicenses {
     class Blackmarket : BaseLicense {
         displayName = "Blackmarket Access";
         description = "Purchased access to utilise blackmarket supplies on Altis";
-        buyPrice = 15000000;
+        buyPrice = 700000;
         class Settings {};
         conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
     };

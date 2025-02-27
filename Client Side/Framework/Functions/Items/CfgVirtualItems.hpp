@@ -521,8 +521,8 @@ class CfgVirtualItems {
 		displayName = "Snap Gun";
 		description = "Used to pick the locks of vehicles and handcuffs, but cannot break";
 		icon = "Data\Icons\snapGun.paa";
-		buyPrice = 20000;
-		sellPrice = 10000;
+		buyPrice = 60000;
+		sellPrice = 30000;
 		class Settings : Settings { isIllegal = true; };
 		class Deconstruction {
 			time = 15;

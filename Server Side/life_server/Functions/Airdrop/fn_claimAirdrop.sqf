@@ -46,6 +46,8 @@ if ([_unit, ["Civilian"]] call ULP_fnc_isFaction) then {
 	["OnClaimedShipwreck", [
 		"<t color='#ff0000' size='1.5px'>Airdrop Claimed<br/></t><t color='#ffffff' size='1px'>You have destroyed the airdrop!"
 	]] remoteExecCall ["ULP_fnc_invokeEvent", _unit];
+
+	[getPlayerUID _unit, "Money", "Airdrop Destruction Bonus", 100000] call ULP_SRV_fnc_addMail;
 };
 
 [(group _unit), "Airdrop"] call ULP_SRV_fnc_addGroupXP;

@@ -84,6 +84,7 @@ class CfgMissions {
 		class Rewards {
 			moneyReward = 4;
 			xpReward = 200;
+			repReward = false;
 		};
 		class Messages {
 			onFinishWithoutMission = "You don't have any packages to deliver here...";
@@ -190,6 +191,7 @@ class CfgMissions {
 		class Rewards {
 			moneyReward = 2;
 			xpReward = 150;
+			repReward = false;
 		};
 		class Messages {
 			onFinishWithoutMission = "You can't complete a patrol as you haven't been assigned any...";
@@ -333,6 +335,7 @@ class CfgMissions {
 		class Rewards {
 			moneyReward = 0;
 			xpReward = 0;
+			repReward = false;
 		};
 		class Messages {
 			onFinishWithoutMission = "You can't survey this location as you haven't been assigned it...";
@@ -396,6 +399,7 @@ class CfgMissions {
 		class Rewards {
 			moneyReward = 5;
 			xpReward = 300;
+			repReward = false;
 		};
 		class Messages {
 			onFinishWithoutMission = "You don't have any packages to deliver here...";
@@ -430,6 +434,7 @@ class CfgMissions {
 		class Rewards {
 			moneyReward = 0;
 			xpReward = 150;
+			repReward = false;
 		};
 		class Messages {
 			onFinishWithoutMission = "You don't have any stolen cargo to deliver here...";
@@ -464,6 +469,7 @@ class CfgMissions {
 		class Rewards {
 			moneyReward = 0;
 			xpReward = 300;
+			repReward = false;
 		};
 		class Messages : Messages {};
 	};
@@ -499,6 +505,7 @@ class CfgMissions {
 		class Rewards {
 			moneyReward = 6;
 			xpReward = 1000;
+			repReward = true;
 		};
 		class Messages {
 			onFinishWithoutMission = "You don't have any supplies to deliver here...";

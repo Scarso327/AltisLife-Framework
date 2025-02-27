@@ -48,6 +48,9 @@ private _message = format["Completed a %1", getText (_typeCfg >> "name")];
 private _xp = getNumber (_typeCfg >> "Rewards" >> "xpReward");
 if (_xp > 0) then { [_xp, _message] call ULP_fnc_addXP; };
 
+private _rep = [getNumber (_typeCfg >> "Rewards" >> "repReward")] call ULP_fnc_bool;
+if (_rep) then { [player, missionConfigFile >> "CfgReputation" >> "Types" >> "Mission"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV]; };
+
 private _msg = getText (_typeCfg >> "Messages" >> "onFinished");
 if !(_msg isEqualTo "") then {
 	[format [getText (_typeCfg >> "Messages" >> "onFinished"), [_reward] call ULP_fnc_numberText]] call ULP_fnc_hint;

@@ -59,6 +59,13 @@ if !([format["Crushing %1", _name], _time, [_vehicle, _name, _fee], {
 
 	["Vehicle has been crushed!"] call ULP_fnc_hint;
 	["Crushed", [_owner param [0, "Someone"], _name, [player, false, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+
+	private _crushValue = getNumber (_cfg >> "buyPrice") * ([
+		getNumber (missionConfigFile >> "CfgVehicles" >> "crushPerc"),
+		getNumber (_cfg >> "crushPerc")
+	] select (isNumber (_cfg >> "crushPerc")));
+
+	[round _crushValue, true, format ["%1's Crush Value", _owner]] call ULP_fnc_addMoney;
 }, {}] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't crush a vehicle while performing another action!"] call ULP_fnc_hint;
 };

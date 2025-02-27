@@ -1,6 +1,7 @@
 class CfgVehicles {
 	retrievalPerc = 0.02;
 	chopKeepChance = 80;
+	crushPerc = 0.1;
 	chopPerc = 0.35;
 	chopTime = 300;
 

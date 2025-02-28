@@ -9,10 +9,7 @@ class CfgAdmin {
 		class Camera : Suit {};
 		class Teleport : Suit {};
 		class Invis : Suit {};
-		class RemovePlaceable : Suit {
-			condition = "((call ULP_Staff) > 1)";
-		};
-		class Compensate : RemovePlaceable {};
+		class Compensate : Suit { condition = "((call ULP_Staff) > 1)"; };
 
 		// ADMINISTRATOR (L3)
 		class Vehicle {
@@ -23,6 +20,7 @@ class CfgAdmin {
 		class Restrain : Vehicle {};
 		class Imprison : Vehicle {};
 		class Housing : Vehicle {};
+		class RemovePlaceable : Vehicle {};
 
 		// HEAD ADMINISTRATOR (L4)
 		// COMMUNITY BOARD (L5)

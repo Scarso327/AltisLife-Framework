@@ -1,3 +1,3 @@
 //regex
 1 ""
-5 "" !B_(OutdoorPack|AssaultPack|TacticalPack|Kitbag|FieldPack|Bergen|Carryall|Viper(|Light)Harness)_(blk|khk|dgtl|rgr|sgg|cbr|oli|mcamo|ocamo|oucamo|tna|ghex|hex)  !B_Parachute !B_SCBA_01_F !B_(LegStrapBag|Messenger)_([Bb]lack|Gray|[Cc]oyote|[Oo]live|IDAP) !B_CivilianBackpack_01_(Everyday|Sport)_(Black|Astra|Vrana|Blue|Green|Red)
+5 "" !B_(OutdoorPack|AssaultPack|TacticalPack|Kitbag|FieldPack|Bergen|Carryall|Viper(|Light)Harness)_(blk|khk|dgtl|rgr|sgg|cbr|oli|mcamo|ocamo|oucamo|tna|ghex|hex)  !B_RadioBag_01_(black|digi|eaf|ghex|hex|mtp|tropic|wdl)_F  !B_Parachute !B_SCBA_01_F !B_(LegStrapBag|Messenger)_([Bb]lack|Gray|[Cc]oyote|[Oo]live|IDAP) !B_CivilianBackpack_01_(Everyday|Sport)_(Black|Astra|Vrana|Blue|Green|Red)

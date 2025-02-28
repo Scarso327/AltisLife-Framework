@@ -155,7 +155,7 @@ switch (_code) do {
             };
 
             [
-                (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, 3000000], [],
+                (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, 5000000], [],
                 {
                     _this params [
                         ["_display", displayNull, [displayNull]],

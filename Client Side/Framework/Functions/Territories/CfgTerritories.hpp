@@ -27,7 +27,7 @@ class CfgTerritories {
 			class Sites {
 				class WeaponCrate {
 					displayName = "Weapons Crate";
-					pos[] = { { 21351.5,17211.5,0 }, 56 };
+					pos[] = { { 20952.8,17421.2,0 }, 181 };
 					items[] = { "WeaponCrate" };
 					amount = "2 + ((count playableUnits) * 0.125)";
 				};
@@ -64,7 +64,7 @@ class CfgTerritories {
 			class Sites {
 				class UraniumBar {
 					displayName = "Uranium Crate";
-					pos[] = { { 20341.5,18766,0 }, 56 };
+					pos[] = { { 20898,19246.2,0 }, 280 };
 					items[] = { "UraniumBar" };
 					amount = "6 + ((count playableUnits) * 0.4)";
 				};
@@ -105,11 +105,11 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class RefinedSalt {
-					displayName = "Salt Crate";
-					pos[] = { { 24011.2,15463.1,0 }, 56 };
-					items[] = { "RefinedSalt" };
-					amount = "30 + ((count playableUnits) * 1.5)";
+				class LegendaryMapFragment {
+					displayName = "Fragments Crate";
+					pos[] = { { 22208.5,16808.5,0 }, 302 };
+					items[] = { "LegendaryMapFragment" };
+					amount = "1 + ((count playableUnits) * 0.025)";
 				};
 			};
 		};
@@ -137,11 +137,17 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class LegendaryMapFragment {
-					displayName = "Fragments Crate";
-					pos[] = { { 23259.6,20041.9,0 }, 48 };
-					items[] = { "LegendaryMapFragment" };
-					amount = "1 + ((count playableUnits) * 0.025)";
+				class RefinedSalt1 {
+					displayName = "Salt Crate";
+					pos[] = { { 22970.3,18891.8,0 }, 211 };
+					items[] = { "RefinedSalt" };
+					amount = "30 + ((count playableUnits) * 1.35)";
+				};
+				class RefinedSalt2 {
+					displayName = "Salt Crate";
+					pos[] = { { 22981.5,18894.4,0 }, 287 };
+					items[] = { "RefinedSalt" };
+					amount = "30 + ((count playableUnits) * 1.35)";
 				};
 			};
 		};
@@ -168,8 +174,8 @@ class CfgTerritories {
 			class Sites {
 				class CutBloodDiamond {
 					displayName = "Diamond Crate";
-					pos[] = { { 21931.5,20995.9,0 }, 43 };
-					items[] = { "CutBloodDiamond" };
+					pos[] = { { 21594.1,21268,0 }, 53 };
+					items[] = { "CutBloodDiamond", "CutDiamond" };
 					amount = "15 + ((count playableUnits) * 0.6)";
 				};
 			};
@@ -197,9 +203,15 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class TinyXPReward {
-					displayName = "Experience Crate";
-					pos[] = { { 25314.7,21814.8,0 }, 91 };
+				class TinyXPReward1 {
+					displayName = "XP Crate";
+					pos[] = { { 24551.5,21082,0 }, 335 };
+					items[] = { "TinyXPReward" };
+					amount = "3 + ((count playableUnits) * 0.05)";
+				};
+				class TinyXPReward2 {
+					displayName = "XP Crate";
+					pos[] = { { 26034.7,19711.7,0 }, 154 };
 					items[] = { "TinyXPReward" };
 					amount = "3 + ((count playableUnits) * 0.05)";
 				};
@@ -234,7 +246,7 @@ class CfgTerritories {
 			class Sites {
 				class VehicleParts {
 					displayName = "Parts Crate";
-					pos[] = { { 23348.6,24179.7,0 }, 91 };
+					pos[] = { { 24877.5,22346.6,0 }, 300 };
 					items[] = { "VehicleParts" };
 					amount = "4 + (count playableUnits)";
 				};
@@ -297,7 +309,7 @@ class CfgTerritories {
 			class Sites {
 				class MarkedGold {
 					displayName = "Gold Crate";
-					pos[] = { { 28304.7,25777.8,0 }, 59 };
+					pos[] = { { 27624.1,24598,0 }, 278 };
 					items[] = { "MarkedGold" };
 					amount = "1 + ((count playableUnits) * 0.015)";
 				};

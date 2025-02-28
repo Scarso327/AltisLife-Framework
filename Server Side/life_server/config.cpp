@@ -79,7 +79,7 @@ class CfgPatches {
             };
             class CasinoVault {
                 type = "NUMBER";
-                default = "1000000";
+                default = "10000000";
                 constant = false;
                 global = false;
             };

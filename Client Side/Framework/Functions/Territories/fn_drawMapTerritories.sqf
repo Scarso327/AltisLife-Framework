@@ -48,7 +48,7 @@ private _mousePos = _map ctrlMapScreenToWorld getMousePosition;
 			_map drawTriangle [
 				[_p1, _p2, getArray (_cfg >> "centrePos")],
 				_colour,
-				format ["#(rgb,1,1,1)color(%1,%2,%3,%4)", _colour select 0, _colour select 1, _colour select 2, _colour select 3]
+				format["#(rgb,1,1,1)color(1,1,1,%1)", _alpha]
 			];
 		};
 	};

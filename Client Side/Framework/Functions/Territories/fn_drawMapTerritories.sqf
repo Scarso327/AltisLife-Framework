@@ -28,7 +28,7 @@ private _mousePos = _map ctrlMapScreenToWorld getMousePosition;
 
 		private _colour = switch (true) do {
 			case (_isOwner): { [0, 0.6, 0, 1] };
-			case (_isOwned): { [0.6, 0, 0, 1] };
+			case (_isOwned): { [0.94, 0.51, 0.19, 1] };
 			default { [0, 0, 0, 1] };
 		};
 

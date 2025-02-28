@@ -4,10 +4,10 @@
 */
 #include "..\..\..\script_macros.hpp"
 #define ICON_ARRAY ["Data\UI\Gambling\lemon.paa", "Data\UI\Gambling\plum.paa", "Data\UI\Gambling\cherries.paa", "Data\UI\Gambling\watermelon.paa", "Data\UI\Gambling\bar.paa", "Data\UI\Gambling\seven.paa", "Data\UI\Gambling\diamond.paa"]
-#define SANDWICH_BASE 800
-#define NEIGHBOUR_BASE 1000
-#define PRECEDING_BASE 2300
-#define EQUAL_BASE 5000
+#define SANDWICH_BASE 600
+#define NEIGHBOUR_BASE 800
+#define PRECEDING_BASE 1500
+#define EQUAL_BASE 3000
 
 scopeName "fn_DialogGambleSlots_Spin";
 
@@ -21,7 +21,7 @@ private _display = ctrlParent _button;
 if !(isNil { _display getVariable "spinsLeft" }) exitWith {};
 
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1000, 100000], [_display, _button],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1000, 1000000], [_display, _button],
 	{
 		_this params [
 			["_display", displayNull, [displayNull]],
@@ -30,15 +30,16 @@ if !(isNil { _display getVariable "spinsLeft" }) exitWith {};
 			["_bet", 1, [0]]
 		];
 
-		if (_bet > (BANK * 0.5)) exitWith {
+		if (_bet > (BANK * 0.3)) exitWith {
 			["You can't bet more than half your bank balance"] call ULP_fnc_hint;
 		};
 
 		if ([_bet, false, "Gambling Bet"] call ULP_fnc_removeMoney) then {
-			_display setVariable ["eachFrame", ([[_display, _button, 30 + round(random 30), _bet], {
+			_display setVariable ["eachFrame", ([[_display, _button, 30 + round(random 60), _bet], {
 				_this params [ "_display", "_button", "_totalSpins", "_bet" ];
 
 				if (isNull _display) exitWith {
+					[_bet, false, "Slots Refund"] call ULP_fnc_addMoney;
 					[_thisEventHandler] call ULP_fnc_removeEachFrame;
 				};
 

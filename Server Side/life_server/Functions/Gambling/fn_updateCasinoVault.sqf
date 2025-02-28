@@ -9,10 +9,6 @@ _this params [
 	["_change", 0, [0]]
 ];
 
-if (_change > 0) then {
-	_change = round (_change * 0.7);
-};
-
 private _amount = missionNamespace getVariable ["ULP_SRV_Setting_CasinoVault", 0];
 _amount = _amount + _change;
 

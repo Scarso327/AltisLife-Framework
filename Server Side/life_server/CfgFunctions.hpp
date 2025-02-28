@@ -251,6 +251,7 @@ class CfgFunctions {
         
         class Gambling {
             file = "\life_server\Functions\Gambling";
+            class resetCasinoVault {};
             class updateCasinoVault {};
         };
     };

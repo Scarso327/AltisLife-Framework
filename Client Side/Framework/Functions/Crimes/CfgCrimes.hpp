@@ -173,7 +173,7 @@ class CfgCrimes {
 			};
 			class Items {
 				class DroppedMoney {
-					extra = "[str (missionNamespace getVariable [""ULP_SRV_Setting_CasinoVault"", 1000000])]";
+					extra = "[] call ULP_SRV_fnc_resetCasinoVault; [str (missionNamespace getVariable [""ULP_SRV_Setting_CasinoVault"", 1000000])]";
 				};
 			};
 		};

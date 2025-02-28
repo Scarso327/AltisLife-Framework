@@ -65,10 +65,14 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 8906; 
 			};
+			class Corn { sellPrice = 868; };
 			class Coral { 
 				buyPrice = -1;
 				sellPrice = 2094; 
 			};
+			class UnprocessedWeed { sellPrice = 743; };
+			class UnprocessedHeroin { sellPrice = 1185; };
+			class UnprocessedCocaine { sellPrice = 1931; };
 			class ProcessedWeed { 
 				buyPrice = -1;
 				sellPrice = 1856; 
@@ -88,6 +92,10 @@ class CfgVirtualStores {
 			class ProcessedMeth { 
 				buyPrice = -1;
 				sellPrice = 9531; 
+			};
+			class Ecstasy { 
+				buyPrice = -1;
+				sellPrice = 1641; 
 			};
 			class PurifiedWeed { 
 				buyPrice = -1;
@@ -109,43 +117,21 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 13117; 
 			};
-			class Ecstasy { 
-				buyPrice = -1;
-				sellPrice = 1641; 
-			};
+			class UncutBloodDiamond { sellPrice = 1188; };
 			class CutBloodDiamond { 
 				buyPrice = -1;
 				sellPrice = 2969; 
 			};
+			class EphedrineBarrel { sellPrice = 3050; };
+			class UraniumOre { sellPrice = 2769; };
 			class UraniumBar { 
 				buyPrice = -1;
 				sellPrice = 6922; 
 			};
+			class WeaponParts { sellPrice = 7338; };
 			class WeaponCrate { 
 				buyPrice = -1;
 				sellPrice = 18344; 
-			};
-
-			// Majors
-			class MarkedGold { 
-				buyPrice = -1;
-				sellPrice = 31250; 
-			};
-			class UnmarkedGold { 
-				buyPrice = -1;
-				sellPrice = 87500; 
-			};
-			class EncryptedDrive { 
-				buyPrice = -1;
-				sellPrice = 50000; 
-			};
-			class DecryptedDrive { 
-				buyPrice = -1;
-				sellPrice = 125000; 
-			};
-			class SeizedContraband { 
-				buyPrice = -1;
-				sellPrice = 29700; 
 			};
 		};
 	};

@@ -27,39 +27,126 @@ class CfgVirtualStores {
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		class Items {
 			// Tools
-			class Ziptie { sellPrice = 675; };
-			class Blindfold { sellPrice = 850; };
-			class Lockpick { sellPrice = 125; };
-			class SnapGun { sellPrice = 3000; };
-			class BoltCutter { sellPrice = 17250; };
-			class HackingDevice { sellPrice = 23750; };
-			class ExplosiveCharge { sellPrice = 37500; };
-			class IndustrialDrill { sellPrice = 30000; };
+			class Ziptie { 
+				buyPrice = -1;
+				sellPrice = 1688; 
+			};
+			class Blindfold { 
+				buyPrice = -1;
+				sellPrice = 2125; 
+			};
+			class Lockpick { 
+				buyPrice = -1;
+				sellPrice = 313; 
+			};
+			class SnapGun { 
+				buyPrice = -1;
+				sellPrice = 7500; 
+			};
+			class BoltCutter { 
+				buyPrice = -1;
+				sellPrice = 43125; 
+			};
+			class HackingDevice { 
+				buyPrice = -1;
+				sellPrice = 59375; 
+			};
+			class ExplosiveCharge { 
+				buyPrice = -1;
+				sellPrice = 93750; 
+			};
+			class IndustrialDrill { 
+				buyPrice = -1;
+				sellPrice = 75000; 
+			};
 
 			// Runs
-			class Turtle_F_Raw { sellPrice = 3563; };
-			class Coral { sellPrice = 838; };
-			class ProcessedWeed { sellPrice = 743; };
-			class ProcessedHeroin { sellPrice = 1185; };
-			class ProcessedCocaine { sellPrice = 1931; };
-			class Moonshine { sellPrice = 868; };
-			class ProcessedMeth { sellPrice = 3813; };
-			class PurifiedWeed { sellPrice = 964; };
-			class PurifiedHeroin { sellPrice = 1695; };
-			class PurifiedCocaine { sellPrice = 2532; };
-			class PurifiedMoonshine { sellPrice = 1106; };
-			class PurifiedMeth { sellPrice = 5247; };
-			class Ecstasy { sellPrice = 656; };
-			class CutBloodDiamond { sellPrice = 1188; };
-			class UraniumBar { sellPrice = 2769; };
-			class WeaponCrate { sellPrice = 7338; };
+			class Turtle_F_Raw { 
+				buyPrice = -1;
+				sellPrice = 8906; 
+			};
+			class Coral { 
+				buyPrice = -1;
+				sellPrice = 2094; 
+			};
+			class ProcessedWeed { 
+				buyPrice = -1;
+				sellPrice = 1856; 
+			};
+			class ProcessedHeroin { 
+				buyPrice = -1;
+				sellPrice = 2963; 
+			};
+			class ProcessedCocaine { 
+				buyPrice = -1;
+				sellPrice = 4828; 
+			};
+			class Moonshine { 
+				buyPrice = -1;
+				sellPrice = 2764; 
+			};
+			class ProcessedMeth { 
+				buyPrice = -1;
+				sellPrice = 9531; 
+			};
+			class PurifiedWeed { 
+				buyPrice = -1;
+				sellPrice = 2409; 
+			};
+			class PurifiedHeroin { 
+				buyPrice = -1;
+				sellPrice = 4237; 
+			};
+			class PurifiedCocaine { 
+				buyPrice = -1;
+				sellPrice = 6330; 
+			};
+			class PurifiedMoonshine { 
+				buyPrice = -1;
+				sellPrice = 2764; 
+			};
+			class PurifiedMeth { 
+				buyPrice = -1;
+				sellPrice = 13117; 
+			};
+			class Ecstasy { 
+				buyPrice = -1;
+				sellPrice = 1641; 
+			};
+			class CutBloodDiamond { 
+				buyPrice = -1;
+				sellPrice = 2969; 
+			};
+			class UraniumBar { 
+				buyPrice = -1;
+				sellPrice = 6922; 
+			};
+			class WeaponCrate { 
+				buyPrice = -1;
+				sellPrice = 18344; 
+			};
 
 			// Majors
-			class MarkedGold { sellPrice = 31250; };
-			class UnmarkedGold { sellPrice = 87500; };
-			class EncryptedDrive { sellPrice = 50000; };
-			class DecryptedDrive { sellPrice = 125000; };
-			class SeizedContraband { sellPrice = 29700; };
+			class MarkedGold { 
+				buyPrice = -1;
+				sellPrice = 31250; 
+			};
+			class UnmarkedGold { 
+				buyPrice = -1;
+				sellPrice = 87500; 
+			};
+			class EncryptedDrive { 
+				buyPrice = -1;
+				sellPrice = 50000; 
+			};
+			class DecryptedDrive { 
+				buyPrice = -1;
+				sellPrice = 125000; 
+			};
+			class SeizedContraband { 
+				buyPrice = -1;
+				sellPrice = 29700; 
+			};
 		};
 	};
 

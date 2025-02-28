@@ -1551,7 +1551,7 @@ class CfgVirtualItems {
 		displayName = "Fuel";
 		description = "Fuel that needs to be transported to fuel stations";
 		icon = "Data\Icons\fuel.paa";
-		sellPrice = 4350;
+		sellPrice = 1088;
 		weight = 1;
 		class Settings : Settings {};
 	};

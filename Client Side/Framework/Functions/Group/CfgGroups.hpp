@@ -160,7 +160,7 @@ class CfgGroups {
 			class Popup : Cartel { amount = 80; };
 			class Airdrop : Popup {};
 			class Shipwreck : Popup {};
-			class CargoRun { amount = 25; };
+			class CargoRun { amount = 45; };
 			class Election { amount = 500; }; // TODONOW
 			class Rigging { amount = 35; };
 			class BaseBid : Election {}; // TODONOW

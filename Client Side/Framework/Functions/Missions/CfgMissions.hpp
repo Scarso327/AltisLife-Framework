@@ -510,7 +510,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 65;
+			moneyReward = 85;
 			xpReward = 400;
 			repReward = false;
 		};

@@ -105,11 +105,11 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class LegendaryMapFragment {
-					displayName = "Fragments Crate";
-					pos[] = { { 23259.6,20041.9,0 }, 48 };
-					items[] = { "LegendaryMapFragment" };
-					amount = "1 + ((count playableUnits) * 0.025)";
+				class RefinedSalt {
+					displayName = "Salt Crate";
+					pos[] = { { 24011.2,15463.1,0 }, 56 };
+					items[] = { "RefinedSalt" };
+					amount = "30 + ((count playableUnits) * 1.5)";
 				};
 			};
 		};
@@ -137,11 +137,11 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class RefinedSalt {
-					displayName = "Uranium Crate";
-					pos[] = { { 24011.2,15463.1,0 }, 56 };
-					items[] = { "RefinedSalt" };
-					amount = "30 + ((count playableUnits) * 1.5)";
+				class LegendaryMapFragment {
+					displayName = "Fragments Crate";
+					pos[] = { { 23259.6,20041.9,0 }, 48 };
+					items[] = { "LegendaryMapFragment" };
+					amount = "1 + ((count playableUnits) * 0.025)";
 				};
 			};
 		};

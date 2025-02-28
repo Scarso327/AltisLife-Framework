@@ -122,13 +122,19 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 2969; 
 			};
-			class EphedrineBarrel { sellPrice = 3050; };
+			class EphedrineBarrel { 
+				buyPrice = -1;
+				sellPrice = 3050; 
+			};
 			class UraniumOre { sellPrice = 2769; };
 			class UraniumBar { 
 				buyPrice = -1;
 				sellPrice = 6922; 
 			};
-			class WeaponParts { sellPrice = 7338; };
+			class WeaponParts { 
+				buyPrice = -1;
+				sellPrice = 7338; 
+			};
 			class WeaponCrate { 
 				buyPrice = -1;
 				sellPrice = 18344; 

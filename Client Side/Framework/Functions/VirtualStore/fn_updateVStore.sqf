@@ -34,7 +34,10 @@ private _sellPrice = -1;
 		_itemIcon = getText (_cfg >> "icon");
 		_itemName = getText (_cfg >> "displayName");
 		_itemCount = (0 max ([_itemClass] call ULP_fnc_hasItem));
-		_buyPrice = getNumber (_cfg >> "buyPrice");
+		_buyPrice = ([
+			getNumber (_cfg >> "buyPrice"),
+			getNumber (_x >> "buyPrice")
+		] select (isNumber (_x >> "buyPrice")));
 		_sellPrice = ([
 			getNumber (_cfg >> "sellPrice"),
 			getNumber (_x >> "sellPrice")

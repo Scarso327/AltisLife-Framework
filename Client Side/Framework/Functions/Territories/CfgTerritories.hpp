@@ -269,7 +269,7 @@ class CfgTerritories {
 			class Sites {
 				class Ecstasy {
 					displayName = "Ecstasy Crate";
-					pos[] = { { 27812.3,22251.2,0 }, 85 };
+					pos[] = { { 26295.3,23369.8,0 }, 106 };
 					items[] = { "Ecstasy" };
 					amount = "35 + ((count playableUnits) * 1.15)";
 				};

@@ -164,6 +164,7 @@ class CfgVirtualStores {
 			class FuelCan {};
 			class PanicButton {};
 			class SnapGun {};
+			class Lockpick {};
 			class FieldDressing {};
 			class Elastic {};
 			class Packing {};

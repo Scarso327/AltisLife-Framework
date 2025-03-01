@@ -350,6 +350,7 @@ class CfgItemsStore {
 			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 			class muzzle_snds_M { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""SilentKiller""] call ULP_fnc_hasPerk }"; };
 			class muzzle_snds_570 { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""SilentKiller""] call ULP_fnc_hasPerk }"; };
+			class muzzle_snds_58_blk_F { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""SilentKiller""] call ULP_fnc_hasPerk }"; };
 		};
 		class Magazines {
 			class 16Rnd_9x21_Mag { price = 51; };
@@ -912,6 +913,7 @@ class CfgItemsStore {
 			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 			class muzzle_snds_M { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 			class muzzle_snds_570 { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
+			class muzzle_snds_58_blk_F { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 		};
 
 		class Magazines {

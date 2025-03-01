@@ -1435,8 +1435,8 @@ class CfgVirtualItems {
 		displayName = "Purified Weed";
 		description = "A purified drug made when the Northern Drug Cartel is owned";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 22275;
-		sellPrice = 7425;
+		buyPrice = 28908;
+		sellPrice = 9636;
 		weight = 3;
 		class Settings {
 			onMarket = true;

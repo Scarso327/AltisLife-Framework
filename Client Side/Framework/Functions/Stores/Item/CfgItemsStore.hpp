@@ -416,6 +416,7 @@ class CfgItemsStore {
 			class Binocular {};
 			class Rangefinder {};
 			class NVGoggles {};
+			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel > 0"; };
 			class ToolKit {};
 		};
 	};
@@ -838,6 +839,7 @@ class CfgItemsStore {
 			class ItemGPS {};
 			class ItemRadio {};
 			class NVGoggles {};
+			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel > 0"; };
 			class Binocular {};
 			class ToolKit {};
 			class Chemlight_green {};
@@ -968,6 +970,7 @@ class CfgItemsStore {
 			class ItemGPS {};
 			class ItemRadio {};
 			class NVGoggles {};
+			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel > 0"; };
 			class Binocular {};
 			class Rangefinder {};
 			class ToolKit {};
@@ -1093,6 +1096,7 @@ class CfgItemsStore {
 			class ItemGPS {};
 			class ItemRadio {};
 			class NVGoggles {};
+			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel > 0"; };
 			class Binocular {};
 			class Rangefinder {};
 			class ToolKit {};

@@ -9,13 +9,12 @@ class CfgVirtualStores {
 			class Tea {};
 			class Redbull {};
 			class FuelCan {};
-			//class Breathalyser {};
 			class PanicButton {};
 			class Stinger {};
 			class Blindfold {};
 			class SnapGun {};
+			class Lockpick {};
 			class BigRedKey {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class BloodBag {};
 			class MediKit {};
@@ -24,7 +23,135 @@ class CfgVirtualStores {
 		};
 	};
 
-	class Medic {
+	class PoliceEvidence {
+		storeName = "Evidence Store";
+		conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
+		class Items {
+			// Tools
+			class Ziptie { 
+				buyPrice = -1;
+				sellPrice = 1688; 
+			};
+			class Blindfold { 
+				buyPrice = -1;
+				sellPrice = 2125; 
+			};
+			class Lockpick { 
+				buyPrice = -1;
+				sellPrice = 313; 
+			};
+			class SnapGun { 
+				buyPrice = -1;
+				sellPrice = 7500; 
+			};
+			class BoltCutter { 
+				buyPrice = -1;
+				sellPrice = 43125; 
+			};
+			class HackingDevice { 
+				buyPrice = -1;
+				sellPrice = 59375; 
+			};
+			class ExplosiveCharge { 
+				buyPrice = -1;
+				sellPrice = 93750; 
+			};
+			class IndustrialDrill { 
+				buyPrice = -1;
+				sellPrice = 75000; 
+			};
+
+			// Runs
+			class Turtle_F_Raw { 
+				buyPrice = -1;
+				sellPrice = 8906; 
+			};
+			class Coral { 
+				buyPrice = -1;
+				sellPrice = 2094; 
+			};
+			class ProcessedWeed { 
+				buyPrice = -1;
+				sellPrice = 1856; 
+			};
+			class ProcessedHeroin { 
+				buyPrice = -1;
+				sellPrice = 2963; 
+			};
+			class ProcessedCocaine { 
+				buyPrice = -1;
+				sellPrice = 4828; 
+			};
+			class Moonshine { 
+				buyPrice = -1;
+				sellPrice = 2764; 
+			};
+			class ProcessedMeth { 
+				buyPrice = -1;
+				sellPrice = 9531; 
+			};
+			class PurifiedWeed { 
+				buyPrice = -1;
+				sellPrice = 2409; 
+			};
+			class PurifiedHeroin { 
+				buyPrice = -1;
+				sellPrice = 4237; 
+			};
+			class PurifiedCocaine { 
+				buyPrice = -1;
+				sellPrice = 6330; 
+			};
+			class PurifiedMoonshine { 
+				buyPrice = -1;
+				sellPrice = 2764; 
+			};
+			class PurifiedMeth { 
+				buyPrice = -1;
+				sellPrice = 13117; 
+			};
+			class Ecstasy { 
+				buyPrice = -1;
+				sellPrice = 1641; 
+			};
+			class CutBloodDiamond { 
+				buyPrice = -1;
+				sellPrice = 2969; 
+			};
+			class UraniumBar { 
+				buyPrice = -1;
+				sellPrice = 6922; 
+			};
+			class WeaponCrate { 
+				buyPrice = -1;
+				sellPrice = 18344; 
+			};
+
+			// Majors
+			class MarkedGold { 
+				buyPrice = -1;
+				sellPrice = 31250; 
+			};
+			class UnmarkedGold { 
+				buyPrice = -1;
+				sellPrice = 87500; 
+			};
+			class EncryptedDrive { 
+				buyPrice = -1;
+				sellPrice = 50000; 
+			};
+			class DecryptedDrive { 
+				buyPrice = -1;
+				sellPrice = 125000; 
+			};
+			class SeizedContraband { 
+				buyPrice = -1;
+				sellPrice = 29700; 
+			};
+		};
+	};
+
+	class Medic : Police {
 		storeName = "Equipment Store";
 		conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Items {
@@ -37,22 +164,18 @@ class CfgVirtualStores {
 			class FuelCan {};
 			class PanicButton {};
 			class SnapGun {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class Elastic {};
 			class Packing {};
 			class QuickClot {};
 			class BloodBag {};
-			//class Morphine {};
-			//class Epinephrine {};
 			class MediKit {};
 			class Defibrillator {};
 			class Stretcher {};
 		};
 	};
 
-	class Hato {
-		storeName = "Equipment Store";
+	class Hato : Police {
 		conditions = "[player, [""Hato""]] call ULP_fnc_isFaction";
 		class Items {
 			class RationPack {};
@@ -137,6 +260,34 @@ class CfgVirtualStores {
 		};
 	};
 
+	class Dunamis {
+		storeName = "Dunamis Market";
+		conditions = "[] call ULP_fnc_isDunamis";
+		class Items {
+			class RationPack {};
+			class Water {};
+			class Redbull {};
+			class Pickaxe {};
+			class LumberAxe {};
+            class Extractor {};
+			class Shovel {};
+			class FishingNet {};
+			class FuelCan {};
+			class Ziptie {};
+			class Blindfold {};
+			class Lighter {};
+			class Lockpick {};
+			class Toolbox {};
+			class BoltCutter {};
+			class HackingDevice {};
+			class ExplosiveCharge {};
+			class IndustrialDrill {};
+			class FieldDressing {};
+			class FirstAidKit {};
+			class MediKit {};
+		};
+	};
+
 	class Civilian {
 		storeName = "General Market";
 		conditions = "true";
@@ -192,7 +343,6 @@ class CfgVirtualStores {
 			class Ziptie {};
 			class Blindfold {};
 			class Lockpick {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class FirstAidKit {};
 		};
@@ -210,7 +360,6 @@ class CfgVirtualStores {
 			class Blindfold {};
 			class Lockpick {};
 			class BoltCutter {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class FirstAidKit {};
 		};
@@ -231,13 +380,12 @@ class CfgVirtualStores {
 			class HackingDevice {};
 			class ExplosiveCharge {};
 			class IndustrialDrill {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class FirstAidKit {};
 		};
 	};
 
-	class Base : Rebel {
+	class Base : Blackmarket {
 		storeName = "Gang Base Market";
 		conditions = "true";
 		class Items {
@@ -252,7 +400,6 @@ class CfgVirtualStores {
 			class HackingDevice {};
 			class ExplosiveCharge {};
 			class IndustrialDrill {};
-			//class Painkillers {};
 			class FieldDressing {};
 			class FirstAidKit {};
 		};
@@ -462,16 +609,6 @@ class CfgVirtualStores {
 		conditions = "true";
 		class Items {
 			class WeaponParts {};
-		};
-	};
-
-	class Art {
-		storeName = "Art Dealer";
-		conditions = "true";
-		class Items {
-			//class SmallGalleryPiece {};
-			//class MediumGalleryPiece {};
-			//class LargeGalleryPiece {};
 		};
 	};
 

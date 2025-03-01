@@ -1,6 +1,7 @@
 class CfgVehicles {
 	retrievalPerc = 0.02;
 	chopKeepChance = 80;
+	crushPerc = 0.1;
 	chopPerc = 0.35;
 	chopTime = 300;
 
@@ -15,6 +16,7 @@ class CfgVehicles {
 			"StolenCargo",
 			"FreightCargo",
 			"HumanitarianSupplies",
+			"Fuel",
 
 			"UnprocessedOil"
 		};
@@ -25,6 +27,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"FreightCargo",
 			"HumanitarianSupplies",
+			"Fuel",
 
 			"UnprocessedOil"
 		};
@@ -39,6 +42,7 @@ class CfgVehicles {
 		chopKeepChance = 85;
 		blacklistedItems[] = { 
 			"HumanitarianSupplies",
+			"Fuel",
 
 			"UnprocessedOil"
 		};
@@ -57,6 +61,7 @@ class CfgVehicles {
 			"StolenCargo",
 			"FreightCargo",
 			"HumanitarianSupplies",
+			"Fuel",
 
 			"Turtle_F_Raw",
 
@@ -227,6 +232,7 @@ class CfgVehicles {
 		buyPrice = 17450;
 		virtualSpace = 25;
 		class Textures {
+			// Police
 			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_white.paa" }; 
@@ -333,6 +339,8 @@ class CfgVehicles {
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 				class Lights : Lights {};
 			};
+
+			// Medic
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\hatchback.paa" }; 
 				class Lights : MedicColour {
@@ -340,6 +348,8 @@ class CfgVehicles {
 					rightPos[] = {-0.52002,1.75732,-0.94257};
 				};
 			};
+
+			// Highways
 			class Hato : HatoTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\hatchback.paa" }; 
 				class Lights : HatoColour {
@@ -347,6 +357,8 @@ class CfgVehicles {
 					rightPos[] = {-0.52002,1.75732,-0.94257};
 				};
 			};
+
+			// Civilian
 			class Black : BaseTexture {
 				displayName = "Black";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
@@ -407,6 +419,13 @@ class CfgVehicles {
 				displayName = "Orange Sport";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 			};
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\hatchback.paa" };
+			};
 		};
 	};
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 276500; };
@@ -416,6 +435,7 @@ class CfgVehicles {
 		buyPrice = 35800;
 		virtualSpace = 60;
 		class Textures {
+			// Civilian
 			class White : BaseTexture {
 				displayName = "White"; 
 				textures[] = { 
@@ -451,6 +471,15 @@ class CfgVehicles {
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa" 
 				}; 
 			};
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\offroad.paa" };
+			};
+
+			// Groups
 			class Ridge : BaseTexture { 
 				displayName = "Ridge";
 				locked = true;
@@ -488,10 +517,13 @@ class CfgVehicles {
 		buyPrice = 39100;
 		virtualSpace = 75;
 		class Textures {
+			// Highways
 			class Hato : HatoTexture { 
 				displayName = "HATO"; 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\offroad.paa" }; 
 			};
+
+			// Civilian
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = {
@@ -518,6 +550,7 @@ class CfgVehicles {
 		buyPrice = 31750;
 		virtualSpace = 55;
 		class Textures {
+			// Police
 			class Police : PoliceTexture { 
 				displayName = "General Response";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\MB4.paa" };
@@ -526,6 +559,8 @@ class CfgVehicles {
 					rightPos[] = {-0.844727,1.82861,-0.379596};
 				};
 			};
+
+			// Medic
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\MB4.paa" }; 
 				class Lights : MedicColour {
@@ -533,6 +568,8 @@ class CfgVehicles {
 					rightPos[] = {-0.844727,1.82861,-0.379596};
 				};
 			};
+
+			// Civilian
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa" }; 
@@ -553,6 +590,15 @@ class CfgVehicles {
 				displayName = "Orange";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa" }; 
 			};
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\mb4.paa" };
+			};
+
+			// Groups
 			class Ridge : BaseTexture { 
 				displayName = "Ridge";
 				locked = true;
@@ -591,6 +637,7 @@ class CfgVehicles {
 		buyPrice = 54200;
 		virtualSpace = 45;
 		class Textures {
+			// Police
 			class PoliceWhite : PoliceTexture { 
 				displayName = "General Response";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_white.paa" };
@@ -643,6 +690,8 @@ class CfgVehicles {
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" }; 
 				class Lights : Lights {};
 			};
+
+			// Medic
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\SUV.paa" }; 
 				class Lights : MedicColour {
@@ -650,6 +699,8 @@ class CfgVehicles {
 					rightPos[] = {-0.396484,2.22119,-0.531462};
 				};
 			};
+
+			// Highways
 			class Hato : HatoTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\SUV.paa" }; 
 				class Lights : HatoColour {
@@ -657,6 +708,8 @@ class CfgVehicles {
 					rightPos[] = {-0.396484,2.22119,-0.531462};
 				};
 			};
+
+			// Civilian
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
@@ -673,6 +726,13 @@ class CfgVehicles {
 				displayName = "Orange";
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" };
 			};
+
+			// CIvilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\suv.paa" };
+			};
 		};
 	};
 
@@ -681,7 +741,14 @@ class CfgVehicles {
 		buyPrice = 68000;
 		virtualSpace = 90;
 		enableRope = false;
+		blacklistedItems[] = { 
+			"StolenCargo",
+			"FreightCargo",
+
+			"UnprocessedOil"
+		};
 		class Textures {
+			// Police
 			class PoliceWhite : PoliceTexture { 
 				displayName = "Public Order";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\van.paa" }; 
@@ -703,16 +770,22 @@ class CfgVehicles {
 				displayName = "Orange";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_Orange_CO.paa" }; 
 			};
+
+			// Medic
 			class Medic : MedicTexture { 
 				displayName = "Ambulance"; 
 				conditions = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\van.paa" }; 
 			};
+
+			// Highways
 			class Hato : HatoTexture { 
 				displayName = "HATO"; 
 				conditions = "[""Hato_Main"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Hato\van.paa" }; 
 			};
+
+			// Civilian
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_black_CO.paa" }; 
@@ -732,6 +805,13 @@ class CfgVehicles {
 			class Press : BaseTexture { 
 				displayName = "Press";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_AAN_CO.paa" }; 
+			};
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\van.paa" };
 			};
 		};
 	};
@@ -781,6 +861,7 @@ class CfgVehicles {
 		virtualSpace = 50;
 		garageLimit = 6;
 		class Textures {
+			// Police
 			class Police : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\prowler.paa" }; 
 				class Lights : PoliceColour {
@@ -788,6 +869,8 @@ class CfgVehicles {
 					rightPos[] = {-0.681152,2.01074,-0.930151};
 				};
 			};
+
+			// Civilian
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { 
@@ -830,6 +913,7 @@ class CfgVehicles {
 		virtualSpace = 50;
 		garageLimit = 6;
 		class Textures {
+			// Police
 			class Police : PoliceTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Police\qilin.paa" }; 
 				class Lights : PoliceColour {
@@ -837,6 +921,8 @@ class CfgVehicles {
 					rightPos[] = {-0.943359,2.02881,-0.398304};
 				};
 			};
+
+			// Civilian
 			class Black : BaseTexture { 
 				displayName = "Black";
 				textures[] = { "\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_01_black_CO.paa", }; 
@@ -850,6 +936,13 @@ class CfgVehicles {
 			class ChromeRed : BaseChromeRed {};
 			class ChromeSilver : BaseChromeSilver {};
 			class ChromeGold : BaseChromeGold {};
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\qilin.paa" };
+			};
 		};
 	};
 	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { 
@@ -1038,6 +1131,7 @@ class CfgVehicles {
 	class C_Van_01_fuel_F : C_Van_01_transport_F {
 		buyPrice = 200000;
 		virtualSpace = 100;
+		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -1135,9 +1229,11 @@ class CfgVehicles {
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 750000;
 		virtualSpace = 300;
+		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
 		blacklistedItems[] = { 
 			"StolenCargo",
-			"FreightCargo"
+			"FreightCargo",
+			"HumanitarianSupplies"
 		};
 		class Textures {
 			class Orange : BaseTexture {
@@ -1157,7 +1253,14 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
-		blacklistedItems[] = {  "UnprocessedOil" };
+		blacklistedItems[] = {  
+			"StolenCargo",
+			"FreightCargo",
+			"HumanitarianSupplies",
+			"Fuel",
+
+			"UnprocessedOil" 
+		};
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1227,9 +1330,11 @@ class CfgVehicles {
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
 		buyPrice = 1500000;
 		virtualSpace = 450;
+		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
 		blacklistedItems[] = { 
 			"StolenCargo",
-			"FreightCargo"
+			"FreightCargo",
+			"HumanitarianSupplies"
 		};
 		class Textures {
 			class BrownHex : BaseTexture {
@@ -1394,9 +1499,11 @@ class CfgVehicles {
 	class B_Truck_01_fuel_F : B_Truck_01_transport_F {
 		buyPrice = 3000000;
 		virtualSpace = 750;
+		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk && { [""FuelHaul""] call ULP_fnc_hasGroupPerk } || { [""HGVDriver""] call ULP_fnc_hasPerk && { [""LiquidTransporter""] call ULP_fnc_hasPerk } }";
 		blacklistedItems[] = { 
 			"StolenCargo",
-			"FreightCargo"
+			"FreightCargo",
+			"HumanitarianSupplies"
 		};
 		class Textures {
 			class Sand : BaseTexture {
@@ -1460,10 +1567,6 @@ class CfgVehicles {
 		buyPrice = 14300;
 		virtualSpace = 5;
 		class Textures {
-			class Police : PoliceTextureBase {
-				displayName = "MPU"; 
-				textures[] = { "Data\Textures\Vehicles\Sea\Police\scooter.paa" }; 
-			};
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { 
@@ -1602,6 +1705,7 @@ class CfgVehicles {
 		garageLimit = 6;
 		retrievalPerc = 0.02;
 		class Textures {
+			// Police
 			class Police : PoliceTextureBase { 
 				displayName = "NPAS"; 
 				textures[] = { "Data\Textures\Vehicles\Air\Police\hummingbird.paa" }; 
@@ -1611,7 +1715,11 @@ class CfgVehicles {
 				conditions = "[""Police_SEG"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Air\Police\PMHummingbird.paa" }; 
 			};
+
+			// Medic
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\hummingbird.paa" }; };
+
+			// Civilian
 			class TotalRed : BaseTexture {
 				displayName = "Total Red"; 
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa" }; 
@@ -1673,6 +1781,13 @@ class CfgVehicles {
 			class ChromeRed : BaseChromeRed {};
 			class ChromeSilver : BaseChromeSilver {};
 			class ChromeGold : BaseChromeGold {};
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\hummingbird.paa" };
+			};
 		};
 	};
 	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 580000; };
@@ -1685,6 +1800,8 @@ class CfgVehicles {
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
 			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
+
+			// Civilian
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_CO.paa" }; 
@@ -1697,6 +1814,13 @@ class CfgVehicles {
 				displayName = "White / Blue";
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa" };
 			}; 
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\orca.paa" };
+			};
 		};
 	};
 
@@ -1709,6 +1833,8 @@ class CfgVehicles {
 		chopTime = 300;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" }; };
+
+			// Civilian
 			class Black : BaseTexture {
 				displayName = "Black"; 
 				textures[] = { "#(rgb,8,8,3)color(0.03,0.03,0.03,1)" }; 
@@ -1716,6 +1842,13 @@ class CfgVehicles {
 			class Green : BaseTexture {
 				displayName = "Green"; 
 				textures[] = { "\a3\air_f_epb\Heli_Light_03\data\Heli_Light_03_base_CO.paa" }; 
+			};
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { "Data\Textures\Groups\DMS\Vehicles\hellcat.paa" };
 			};
 		};
 	};
@@ -2019,6 +2152,7 @@ class CfgVehicles {
 	class Land_PlasticCase_01_large_F : Land_PlasticCase_01_small_F { virtualSpace = 3000; }; // Small House
 	class Land_PlasticCase_01_large_gray_F : Land_PlasticCase_01_small_F { virtualSpace = 2000; }; // Lighthouse
 	class B_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 6000; }; // Big House
+	class Land_Cargo10_red_F : Land_PlasticCase_01_small_F { virtualSpace = 6000; };
 	// Warehouse / Boat
 	class Land_Cargo20_white_F : Land_PlasticCase_01_small_F {
 		virtualSpace = 10000;
@@ -2030,7 +2164,11 @@ class CfgVehicles {
 	class CargoNet_01_box_F : Land_PlasticCase_01_small_F { virtualSpace = 20000; }; // DMT
 	class C_IDAP_supplyCrate_F : Land_PlasticCase_01_small_F { virtualSpace = 1800; }; // Office Building
 
-	class Land_CargoBox_V1_F : Land_Bodybag_01_black_F { requireItems = true; };
+	class Land_CargoBox_V1_F : Base {
+		virtualSpace = 1;
+		garageLimit = 0;
+		requireItems = true; 
+	};
 	class Land_PortableServer_01_black_F : Land_CargoBox_V1_F {};
 
 	// SOUNDS --------------------------------------------------------------------------------------

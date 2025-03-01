@@ -17,6 +17,7 @@ addMissionEventHandler ["Map", {
 
 			(_display displayCtrl 112) ctrlSetText "mantlenetwork.co.uk";
 			(_display displayCtrl 51) ctrlAddEventHandler ["Draw", ULP_fnc_mapMarkers];
+			(_display displayCtrl 51) ctrlAddEventHandler ["Draw", ULP_fnc_drawMapTerritories];
 		};
 	};
 }];

@@ -242,6 +242,18 @@ class CfgFunctions {
             class initStats {};
             class getStats {};
         };
+      
+        class Territories {
+            file = "\life_server\Functions\Territories";
+            class postInitTerritories { postInit=1; };
+            class territoriesTick {};
+        };
+        
+        class Gambling {
+            file = "\life_server\Functions\Gambling";
+            class resetCasinoVault {};
+            class updateCasinoVault {};
+        };
     };
 
     class MySQL_Database {

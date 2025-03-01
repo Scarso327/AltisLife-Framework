@@ -45,7 +45,11 @@ ULP_SRV_Crimes = createHashMap;
 				} forEach getArray (_x >> "vaults");
 					
 				_building setVariable ["vaults", _vaults];
-				_building setVariable ["block_boltcutter", true, true];
+
+				if (!isClass (_x >> "BreakIn")) then {
+					_building setVariable ["block_boltcutter", true, true];
+				};
+				
 				_buildings pushBack _building;		
 			};
 			

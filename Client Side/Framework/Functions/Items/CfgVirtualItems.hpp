@@ -1231,7 +1231,7 @@ class CfgVirtualItems {
 		displayName = "Unrefinded Oil";
 		description = "Oil drilled with an extractor, requiring a fliud track and processing";
 		icon = "Data\Icons\liquid.paa";
-		weight = 6;
+		weight = 4;
 		class Settings : Settings {};
 	};
 	class UncutDiamond : CopperOre {
@@ -1315,8 +1315,9 @@ class CfgVirtualItems {
 		displayName = "Refinded Oil";
 		description = "Refinded oil that has been barreled and ready to be sold";
 		icon = "Data\Icons\oil.paa";
+		buyPrice = 41063;
 		sellPrice = 13688;
-		weight = 4;
+		weight = 3;
 		class Settings : Settings {};
 	};
 	class CutDiamond : CopperBar {
@@ -1386,11 +1387,11 @@ class CfgVirtualItems {
 
 	// Processed Drugs
 	class ProcessedWeed {
-		displayName = "Processed Weed";
+		displayName = "Weed";
 		description = "A drugs sold at a Drug Dealer";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 16275;
-		sellPrice = 5425;
+		buyPrice = 22275;
+		sellPrice = 7425;
 		weight = 3;
 		class Settings {
 			onMarket = true;
@@ -1403,18 +1404,18 @@ class CfgVirtualItems {
 		conditions = "true";
 	};
 	class ProcessedHeroin : ProcessedWeed {
-		displayName = "Processed Heroin";
+		displayName = "Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 26550;
-		sellPrice = 8850;
+		buyPrice = 35550;
+		sellPrice = 11850;
 		weight = 4;
 		class Settings : Settings {};
 	};
 	class ProcessedCocaine : ProcessedWeed {
-		displayName = "Processed Cocaine";
+		displayName = "Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 42938;
-		sellPrice = 14313;
+		buyPrice = 57936;
+		sellPrice = 19312;
 		weight = 5;
 		class Settings : Settings {};
 	};
@@ -1429,8 +1430,8 @@ class CfgVirtualItems {
 	class Moonshine : ProcessedWeed {
 		displayName = "Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 25125;
-		sellPrice = 8375;
+		buyPrice = 26025;
+		sellPrice = 8675;
 		weight = 2;
 		class Settings : Settings {};
 	};
@@ -1448,8 +1449,8 @@ class CfgVirtualItems {
 		displayName = "Purified Weed";
 		description = "A purified drug made when the Northern Drug Cartel is owned";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 16909;
-		sellPrice = 5636;
+		buyPrice = 22275;
+		sellPrice = 7425;
 		weight = 3;
 		class Settings {
 			onMarket = true;
@@ -1464,32 +1465,32 @@ class CfgVirtualItems {
 	class PurifiedHeroin : PurifiedWeed {
 		displayName = "Purified Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 35843;
-		sellPrice = 11948;
+		buyPrice = 50841;
+		sellPrice = 16947;
 		weight = 4;
 		class Settings : Settings {};
 	};
 	class PurifiedCocaine : PurifiedWeed {
 		displayName = "Purified Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 57964;
-		sellPrice = 19321;
+		buyPrice = 75963;
+		sellPrice = 25321;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class PurifiedMeth : PurifiedWeed {
 		displayName = "Purified Meth";
 		icon = "Data\Icons\methProcessed.paa";
-		buyPrice = 139406;
-		sellPrice = 46469;
+		buyPrice = 157404;
+		sellPrice = 52468;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class PurifiedMoonshine : PurifiedWeed {
 		displayName = "Purified Moonshine";
 		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 30169;
-		sellPrice = 10056;
+		buyPrice = 33168;
+		sellPrice = 11056;
 		weight = 1;
 		class Settings : Settings {};
 	};
@@ -1546,6 +1547,7 @@ class CfgVirtualItems {
 	};
 	class StolenCargo : FreightCargo {
 		displayName = "Stolen Cargo";
+		description = "Clearly stolen cargo that can be smuggled";
 		icon = "Data\Icons\crate.paa";
 		sellPrice = 89200;
 		weight = 28;
@@ -1553,8 +1555,17 @@ class CfgVirtualItems {
 	};
 	class HumanitarianSupplies : FreightCargo {
 		displayName = "Humanitarian Supplies";
+		description = "Supplies intended for those most in need of aid";
 		icon = "Data\Icons\humanitarianSupplies.paa";
 		sellPrice = 0;
+		weight = 1;
+		class Settings : Settings {};
+	};
+	class Fuel : FreightCargo {
+		displayName = "Fuel";
+		description = "Fuel that needs to be transported to fuel stations";
+		icon = "Data\Icons\fuel.paa";
+		sellPrice = 1088;
 		weight = 1;
 		class Settings : Settings {};
 	};
@@ -2104,7 +2115,7 @@ class CfgVirtualItems {
 		displayName = "Laptop";
 		description = "An electronic sold at Altis Electronics";
 		icon = "Data\Icons\laptop.paa";
-		sellPrice = 348984;
+		sellPrice = 654345;
 		weight = 10;
 		class Settings {
 			onMarket = true;
@@ -2118,14 +2129,14 @@ class CfgVirtualItems {
 	class Desktop : Laptop {
 		displayName = "Desktop";
 		icon = "Data\Icons\desktop.paa";
-		sellPrice = 704296;
+		sellPrice = 1056444;
 		weight = 15;
 		class Settings : Settings {};
 	};
 	class MiningRig : Laptop {
 		displayName = "Mining Rig";
 		icon = "Data\Icons\miningRig.paa";
-		sellPrice = 3974765;
+		sellPrice = 5962147;
 		weight = 64;
 		class Settings : Settings {};
 	};
@@ -2133,7 +2144,7 @@ class CfgVirtualItems {
 		displayName = "Signal Jammer";
 		icon = "Data\Icons\signalJammer.paa";
 		weight = 1;
-		sellPrice = 55150;
+		sellPrice = 82725;
 		class Settings : Settings {};
 	};
 	class HackingDevice : Laptop {

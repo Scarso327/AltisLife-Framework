@@ -22,15 +22,14 @@ class 16Rnd_9x21_Mag : BaseMagazine { price = 102; };
 class 30Rnd_9x21_Mag : BaseMagazine { price = 204; };
 
 class 30Rnd_9x21_Mag_SMG_02 : BaseMagazine { price = 360; };
-class 30Rnd_9x21_Mag_SMG_02_Tracer_Red : BaseMagazine { 
-	price = 360;
+class 30Rnd_9x21_Mag_SMG_02_Tracer_Red : 30Rnd_9x21_Mag_SMG_02 { 
 	class Textures {
-		class 30Rnd_556x45_Stanag_Tracer_Red {
+		class 30Rnd_9x21_Mag_SMG_02_Tracer_Red {
 			displayName = "Red";
 			condition = "true";
 		};
-		class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Yellow"; };
-		class 30Rnd_9x21_Mag_SMG_02_Tracer_Green : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Green"; };
+		class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow : 30Rnd_9x21_Mag_SMG_02_Tracer_Red { displayName = "Yellow"; };
+		class 30Rnd_9x21_Mag_SMG_02_Tracer_Green : 30Rnd_9x21_Mag_SMG_02_Tracer_Red { displayName = "Green"; };
 	};
 };
 class 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow : 30Rnd_9x21_Mag_SMG_02_Tracer_Red {};
@@ -41,8 +40,7 @@ class 9Rnd_45ACP_Mag : BaseMagazine { price = 99; };
 class 11Rnd_45ACP_Mag : BaseMagazine { price = 132; };
 
 class 30Rnd_45ACP_Mag_SMG_01 : BaseMagazine { price = 516; };
-class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green : RepMagazine { 
-	price = 516;
+class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green : 30Rnd_45ACP_Mag_SMG_01 { 
 	class Textures {
 		class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green {
 			displayName = "Green";
@@ -76,41 +74,42 @@ class 50Rnd_570x28_SMG_03 : RepMagazine { price = 1584; };
 class 20Rnd_556x45_UW_mag : RepMagazine { price = 15000; };
 
 class 30Rnd_556x45_Stanag : RepMagazine { price = 1380; };
-class 30Rnd_556x45_Stanag_Tracer_Red : RepMagazine { 
-	price = 1380;
+class 30Rnd_556x45_Stanag_Tracer_Red : 30Rnd_556x45_Stanag { 
 	class Textures {
 		class 30Rnd_556x45_Stanag_Tracer_Red {
 			displayName = "Red";
 			condition = "true";
 		};
 		class 30Rnd_556x45_Stanag_Tracer_Yellow : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Yellow"; };
-		class 30Rnd_556x45_Stanag_Tracer_Green : 30Rnd_556x45_Stanag_Tracer_Red { displayName = "Rubber Bullets"; };
+		class 30Rnd_556x45_Stanag_Tracer_Green : 30Rnd_556x45_Stanag_Tracer_Red { 
+			displayName = "Rubber Bullets"; 
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+		};
 	};
 };
 class 30Rnd_556x45_Stanag_Tracer_Yellow : 30Rnd_556x45_Stanag_Tracer_Red {};
 class 30Rnd_556x45_Stanag_Tracer_Green : 30Rnd_556x45_Stanag_Tracer_Red {};
 
 class 150Rnd_556x45_Drum_Mag_F : RepMagazine { price = 9780; };
-class 150Rnd_556x45_Drum_Mag_Tracer_F : RepMagazine { price = 9780; };
+class 150Rnd_556x45_Drum_Mag_Tracer_F : 150Rnd_556x45_Drum_Mag_F {};
 
 class 200Rnd_556x45_Box_F : RepMagazine { price = 17200; };
 
 // 5.8mm
 class 30Rnd_580x42_Mag_F : RepMagazine { price = 1650; };
-class 30Rnd_580x42_Mag_Tracer_F : RepMagazine { price = 1650; };
+class 30Rnd_580x42_Mag_Tracer_F : 30Rnd_580x42_Mag_F { price = 1650; };
 
 class 100Rnd_580x42_Mag_F : RepMagazine { price = 11340; };
-class 100Rnd_580x42_Mag_Tracer_F : RepMagazine { price = 11340; };
+class 100Rnd_580x42_Mag_Tracer_F : RepMagazine {};
 
 // 6.5mm
 class 20Rnd_650x39_Cased_Mag_F : RepMagazine { price = 1680; };
 
 class 30Rnd_65x39_caseless_green : RepMagazine { price = 1680; };
-class 30Rnd_65x39_caseless_green_mag_Tracer : RepMagazine { price = 1680; };
-
+class 30Rnd_65x39_caseless_green_mag_Tracer : 30Rnd_65x39_caseless_green {};
 
 class 30Rnd_65x39_caseless_msbs_mag : RepMagazine { price = 1842; };
-class 30Rnd_65x39_caseless_msbs_mag_Tracer : RepMagazine { price = 1842; };
+class 30Rnd_65x39_caseless_msbs_mag_Tracer : 30Rnd_65x39_caseless_msbs_mag {};
 
 class 30Rnd_65x39_caseless_black_mag : RepMagazine {
 	price = 2094;
@@ -129,8 +128,7 @@ class 30Rnd_65x39_caseless_black_mag : RepMagazine {
 class 30Rnd_65x39_caseless_mag : 30Rnd_65x39_caseless_black_mag {};
 class 30Rnd_65x39_caseless_khaki_mag : 30Rnd_65x39_caseless_black_mag {};
 
-class 30Rnd_65x39_caseless_black_mag_Tracer : RepMagazine { 
-	price = 2094;
+class 30Rnd_65x39_caseless_black_mag_Tracer : 30Rnd_65x39_caseless_black_mag { 
 	class Textures {
 		class 30Rnd_65x39_caseless_black_mag_Tracer {
 			displayName = "Black";
@@ -163,8 +161,7 @@ class 100Rnd_65x39_caseless_black_mag : RepMagazine {
 class 100Rnd_65x39_caseless_mag : 100Rnd_65x39_caseless_black_mag {};
 class 100Rnd_65x39_caseless_khaki_mag : 100Rnd_65x39_caseless_black_mag {};
 
-class 100Rnd_65x39_caseless_black_mag_tracer : RepMagazine { 
-	price = 14160;
+class 100Rnd_65x39_caseless_black_mag_tracer : 100Rnd_65x39_caseless_black_mag { 
 	class Textures {
 		class 100Rnd_65x39_caseless_black_mag_tracer {
 			displayName = "Black";
@@ -200,10 +197,10 @@ class 20Rnd_762x51_Mag : RepMagazine { price = 5940; };
 class 30Rnd_762x39_Mag_F : RepMagazine { price = 8640; };
 
 class 30Rnd_762x39_AK12_Mag_F : RepMagazine { price = 8868; };
-class 30Rnd_762x39_AK12_Mag_Tracer_F : RepMagazine { price = 8868; };
+class 30Rnd_762x39_AK12_Mag_Tracer_F : 30Rnd_762x39_AK12_Mag_F {};
 
 class 75Rnd_762x39_Mag_F : RepMagazine { price = 29625; };
-class 75Rnd_762x39_Mag_Tracer_F : RepMagazine { price = 29625; };
+class 75Rnd_762x39_Mag_Tracer_F : 75Rnd_762x39_Mag_F {};
 
 class 150Rnd_762x54_Box : RepMagazine { price = 36675; };
 

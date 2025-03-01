@@ -202,6 +202,7 @@ class CfgSpawns {
             conditions = "[""IDAP""] call ULP_fnc_hasLicense && { ULP_Reputation >= 750 }";
         };
 
+        // Rebel/Blackmarket
         class Rebel_01 : BaseSpawn {
             displayName = "Rebel Outpost";
             marker = "civ_spawn_rebel_01";
@@ -217,6 +218,17 @@ class CfgSpawns {
             displayName = "Blackmarket";
             marker = "civ_spawn_blackmarket";
             conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] } && { [""Blackmarketer""] call ULP_fnc_hasPerk || { [""Blackmarket""] call ULP_fnc_hasGroupPerk } }";
+        };
+
+        // Civilian Faction
+        class DMS_Safehouse : Rebel_01 {
+            displayName = "Dunamis Safehouse";
+            marker = "dms_spawn_01";
+            conditions = "[] call ULP_fnc_isDunamis";
+        };
+        class DMS_Camp : DMS_Safehouse {
+            displayName = "Dunamis Camp";
+            marker = "dms_spawn_02";
         };
     };
 

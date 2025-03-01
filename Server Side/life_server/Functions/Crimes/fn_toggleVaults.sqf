@@ -20,7 +20,14 @@ if ((count _info) < 1) exitWith { false };
 private _loot = [];
 if (_state isEqualTo 1) then {
 	{
-		_loot pushBack [configName _x, round (getNumber (_x >> "amount") + (call compile getText (_x >> "extra")))];
+		private _extra = call compile getText (_x >> "extra");
+		private _amount = if (isNumber (_x >> "amount")) then {
+			round ((getNumber (_x >> "amount")) + _extra)
+		} else {
+			_extra
+		};
+
+		_loot pushBack [configName _x, _amount];
 	} forEach ("isClass _x" configClasses (_cfg >> "Items"));
 
 	missionNamespace setVariable [format ["ULP_SRV_Crime_%1", _crime], true, true];

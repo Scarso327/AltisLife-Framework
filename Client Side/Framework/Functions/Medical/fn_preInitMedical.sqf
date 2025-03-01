@@ -12,7 +12,7 @@ scopeName "fn_preInitMedical";
 
 	// Reset Wounded State
 	if (!isNull _unit && { [_unit, ["Medic"]] call ULP_fnc_isFaction } && { player getVariable ["Wounded", false] }) then {
-		player getVariable ["Wounded", nil, true];
+		player setVariable ["Wounded", nil, true];
 		[player, 17, false] remoteExecCall ["ULP_SRV_fnc_savePlayerState", RSERV];
 	};
 

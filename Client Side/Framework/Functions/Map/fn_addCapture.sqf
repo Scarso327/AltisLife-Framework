@@ -31,3 +31,4 @@ if (isServer) then {
 };
 
 _trader setVariable ["marker", _marker];
+missionNamespace setVariable [_capture, _trader];

@@ -14,4 +14,4 @@ if (_object isKindOf "Man") exitWith {
 	[(_headPos select 0) - 0.03, (_headPos select 1), (_headPos select 2) + 0.5]
 };
 
-[0, 0, 1]
+[0, 0, 2]

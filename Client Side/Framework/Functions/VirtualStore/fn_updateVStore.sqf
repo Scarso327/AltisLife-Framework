@@ -34,8 +34,14 @@ private _sellPrice = -1;
 		_itemIcon = getText (_cfg >> "icon");
 		_itemName = getText (_cfg >> "displayName");
 		_itemCount = (0 max ([_itemClass] call ULP_fnc_hasItem));
-		_buyPrice = getNumber (_cfg >> "buyPrice");
-		_sellPrice = getNumber (_cfg >> "sellPrice");
+		_buyPrice = ([
+			getNumber (_cfg >> "buyPrice"),
+			getNumber (_x >> "buyPrice")
+		] select (isNumber (_x >> "buyPrice")));
+		_sellPrice = ([
+			getNumber (_cfg >> "sellPrice"),
+			getNumber (_x >> "sellPrice")
+		] select (isNumber (_x >> "sellPrice")));
 
 		([_itemClass, _buyPrice, _sellPrice, !([getNumber (_cfg >> "Settings" >> "isIllegal")] call ULP_fnc_bool)] call ULP_fnc_getSellPrices) params [
 			["_sellPrice", _sellPrice, [0]], ["_gangTax", 0, [0]], ["_cartels", [], [[]]]

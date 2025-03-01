@@ -33,7 +33,7 @@ if !([format["Administering Blood to %1", _name], _time, [_unit, _name], {
 
 	private _unitRep = _unit getVariable ["reputation", 0];
 	if (_unitRep >= 500) then {
-		[_medic, "BloodHigh"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
+		[_medic, missionConfigFile >> "CfgReputation" >> "Types" >> "BloodHigh"] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 	};
 	
 	["GivenBlood"] call ULP_fnc_achieve;

@@ -3,7 +3,7 @@
 ** Description: 
 */
 #include "..\..\script_macros.hpp"
-scopeName "fn_ownsBase";
+scopeName "fn_ownsSite";
 
 _this params [
 	["_location", objNull, [objNull, ""]],

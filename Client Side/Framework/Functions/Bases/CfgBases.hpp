@@ -1,7 +1,7 @@
 class CfgBases {
 	// Bidding info...
 	Day = "Saturday";
-	Restart[] = {18, 21};
+	Restart[] = {18, 20};
 
 	RedzoneKillMoney = 20000;
 	RedzoneKillXP = 25;

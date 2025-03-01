@@ -1,7 +1,6 @@
 class CfgHousing {
 	nameLength = 32;
 	houseLimit = 5;
-	policeBreakInAmount = 10;
 	
 	class Houses {
 		// GARAGES
@@ -40,7 +39,7 @@ class CfgHousing {
 				onBreakInStart = "_this call ULP_fnc_houseBreakInAlert;";
 				onBreakIn = "[_this, ""A house has been broken into!""] call ULP_fnc_houseBreakInAlert;";
 				onFail = "[format [""<t color='#B92DE0'>%1</t> Police or the <t color='#B92DE0'>Owner</t> must be online to break in..."", getNumber (missionConfigFile >> ""CfgHousing"" >> ""policeBreakInAmount"")]] call ULP_fnc_hint;";
-				condition = "([[""Police""]] call ULP_fnc_onlineFaction) >= getNumber (missionConfigFile >> ""CfgHousing"" >> ""policeBreakInAmount"") || { [_this] call ULP_fnc_isHouseOwnerOnline }";
+				condition = "[_this] call ULP_fnc_isHouseOwnerOnline";
 			};
 		};
 

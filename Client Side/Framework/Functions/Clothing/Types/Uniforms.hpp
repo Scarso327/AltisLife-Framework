@@ -170,7 +170,7 @@ class U_C_Uniform_Scientist_02_F : U_C_Scientist{};
 class U_C_Uniform_Scientist_02_formal_F : U_C_Scientist{};
 
 class U_I_C_Soldier_Bandit_1_F : U_C_Poor_1 {
-	displayName = "Banit Clothes";
+	displayName = "Bandit Clothes";
 	price = 150;
 	virtualSpace = 4;
 	class Textures {
@@ -192,6 +192,7 @@ class U_I_C_Soldier_Bandit_3_F : U_C_Poor_1 {
 	price = 150;
 	virtualSpace = 4;
 	class Textures {
+		// Civilian
 		class U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Brown"; 
 			condition = "true";
@@ -212,6 +213,13 @@ class U_I_C_Soldier_Bandit_3_F : U_C_Poor_1 {
 		class Yellow : Black { 
 			displayName = "Yellow"; 
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_5_F_1_co.paa" };
+		};
+
+		// Civilian Faction
+		class DMS : U_I_C_Soldier_Bandit_3_F {
+			displayName = "Dunamis";
+			textures[] = { "Data\Textures\Groups\DMS\Uniforms\4.paa" };
+			condition = "[] call ULP_fnc_isDunamis";
 		};
 	};
 };
@@ -264,7 +272,19 @@ class U_IG_Guerilla1_1 : U_C_Poor_1 {
 	};
 };
 class U_IG_Guerilla1_2_F : U_IG_Guerilla1_1 {};
-class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 {};
+class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 {
+	class Textures {
+		class U_IG_Guerilla2_1 { 
+			displayName = "Plain, Dark";
+			condition = "true";
+		};
+		class DMS : U_IG_Guerilla2_1 {
+			displayName = "Dunamis";
+			textures[] = { "Data\Textures\Groups\DMS\Uniforms\2.paa" };
+			condition = "[] call ULP_fnc_isDunamis";
+		};
+	};
+};
 class U_IG_Guerilla2_2 : U_IG_Guerilla1_1 {};
 class U_IG_Guerilla2_3 : U_IG_Guerilla1_1 {};
 class U_IG_Guerilla3_1 : U_IG_Guerilla1_1 {};
@@ -334,11 +354,6 @@ class U_O_R_Gorka_01_black_F : U_C_Poor_1 {
 			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
 			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess || { [""Medic_Main"", 5] call ULP_fnc_hasAccess } }";
 		};
-		/*class HART {
-			displayName = "Hazardous Area Response";
-			textures[] = { "Data\Textures\Uniforms\Medic\tracksuit.paa" }; // TODO
-			condition = "[player, [""Medic""]] call ULP_fnc_isFaction && { [""Medic_HART"", 1] call ULP_fnc_hasAccess }";
-		};*/
 
 		// Highways
 		class Hato {
@@ -376,9 +391,33 @@ class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
 		};
 	};
 };
-class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F {};
+class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F {
+	class Textures {
+		class U_I_C_Soldier_Para_2_F { 
+			displayName = "Jacket"; 
+			condition = "true";
+		};
+		class DMS : U_I_C_Soldier_Para_2_F {
+			displayName = "Dunamis";
+			textures[] = { "Data\Textures\Groups\DMS\Uniforms\5.paa" };
+			condition = "[] call ULP_fnc_isDunamis";
+		};
+	};
+};
 class U_I_C_Soldier_Para_3_F : U_I_C_Soldier_Para_1_F {};
-class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F {};
+class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F {
+	class Textures {
+		class U_I_C_Soldier_Para_4_F { 
+			displayName = "Tank Top"; 
+			condition = "true";
+		};
+		class DMS : U_I_C_Soldier_Para_4_F {
+			displayName = "Dunamis";
+			textures[] = { "Data\Textures\Groups\DMS\Uniforms\1.paa" };
+			condition = "[] call ULP_fnc_isDunamis";
+		};
+	};
+};
 class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F {};
 
 class U_I_E_Uniform_01_F : U_O_R_Gorka_01_black_F {
@@ -603,12 +642,26 @@ class U_B_GEN_Commander_F : U_C_Poor_1 {
 };
 
 class U_BG_Guerrilla_6_1 : U_B_GEN_Commander_F {
-	displayName = "NCA Jumper";
+	displayName = "Worn Jumper";
 	class Textures {
+		// Police
 		class NCA {
 			displayName = "NCA";
 			textures[] = { "Data\Textures\Uniforms\Police\Units\NCA_main.paa" };
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
+		};
+
+		// Civilian
+		class U_BG_Guerrilla_6_1 { 
+			displayName = "Green";
+			condition = "true"; 
+		};
+
+		// Civilian Faction
+		class DMS : U_BG_Guerrilla_6_1 {
+			displayName = "Dunamis";
+			textures[] = { "Data\Textures\Groups\DMS\Uniforms\3.paa" };
+			condition = "[] call ULP_fnc_isDunamis";
 		};
 	};
 };
@@ -768,14 +821,38 @@ class U_I_CombatUniform : U_B_survival_uniform {
 	price = 1500;
 	virtualSpace = 4;
 	class Textures {
+		// Civilian
 		class U_I_CombatUniform { 
 			displayName = "AAF (Base)"; 
 			condition = "true";
 		};
-		class U_I_CombatUniform_shortsleeve : U_I_CombatUniform { displayName = "AAF (Rolled)"; };
+
+		// Group
+		class NUMS : U_I_CombatUniform {
+			displayName = "NUMS";
+			textures[] = { "Data\Textures\Groups\NUMS\U_B_CTRG_Soldier_F.paa" };
+			condition = "[115] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
-class U_I_CombatUniform_shortsleeve : U_I_CombatUniform {};
+
+class U_I_CombatUniform_shortsleeve : U_I_CombatUniform {
+	displayName = "Combat Fatigues (Rolled)";
+	class Textures {
+		// Civilian
+		class U_I_CombatUniform_shortsleeve { 
+			displayName = "AAF (Rolled)"; 
+			condition = "true";
+		};
+
+		// Group
+		class NUMS : U_I_CombatUniform_shortsleeve {
+			displayName = "NUMS";
+			textures[] = { "Data\Textures\Groups\NUMS\U_B_CTRG_Soldier_F.paa" };
+			condition = "[115] call ULP_fnc_isGroupPremium";
+		};
+	};
+};
 
 class U_B_CombatUniform_mcam : U_B_survival_uniform {
 	displayName = "Combat Clothes";

@@ -26,7 +26,7 @@ if (_owner isEqualTo -1) exitWith {
 	false
 };
 
-([format ["Neutralising %1", getText(_cfg >> "displayName")], getNumber (_cfg >> "time"), [_location, _cfg], { (player distance (_this select 0)) <= 5 }, {
+([format ["Neutralising %1", getText(_cfg >> "displayName")], getNumber (_cfg >> "time"), [_location, _cfg], { (player distance (_this select 0)) <= 30 }, {
 	_this params [ "_location", "_cfg" ];
 
 	_location setVariable ["timeout", serverTime + (getNumber (_cfg >> "cooldown")), true];
@@ -43,4 +43,4 @@ if (_owner isEqualTo -1) exitWith {
 	};
 
 	["SiteNeutralised", [_location, player], true] call ULP_fnc_invokeEvent;
-}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress)
+}, {}] call ULP_UI_fnc_startProgress)

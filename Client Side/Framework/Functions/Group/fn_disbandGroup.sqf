@@ -14,6 +14,11 @@ if !([] call ULP_fnc_isGroupOwner) exitWith {
 	false
 };
 
+if (_group getVariable ["group_premium", false]) exitWith {
+	["Premium groups can't be manually disbanded!"] call ULP_fnc_hint;
+	false
+};
+
 if !(isNil "ULP_DisbandEvent") then { ["GroupDisbanded", ULP_DisbandEvent] call ULP_fnc_removeEventHandler; ULP_DisbandEvent = nil; };
 
 ULP_DisbandEvent = ["GroupDisbanded", {

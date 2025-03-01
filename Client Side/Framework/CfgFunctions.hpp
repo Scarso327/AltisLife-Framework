@@ -266,6 +266,7 @@ class CfgFunctions {
 			class getTagColour {};
 			class getTagPos {};
 			class initTags {};
+			class getSubTitle {};
 		};
 
 		class Licenses {
@@ -497,7 +498,7 @@ class CfgFunctions {
 			file = "Functions\Mail";
 			class openMailBox {};
 			class claimMail {};
-		}
+		};
 
 		class Map {
 			file = "Functions\Map";
@@ -523,6 +524,7 @@ class CfgFunctions {
 			class lockForFactions {};
 			class sit {};
 			class addVehicleTuning {};
+			class addGambling {};
 		};
 		
 		class Garage {
@@ -574,6 +576,7 @@ class CfgFunctions {
 			class isGroupOwner {};
 			class alliedGroups {};
 			class groupUnits {};
+			class isDunamis {};
 		};
 
 		class NLR {
@@ -893,6 +896,14 @@ class CfgFunctions {
 			class setUpgrade {};
 			class upgradeCfg {};
 		};
+
+		class Territories {
+			file = "Functions\Territories";
+			class drawMapTerritories {};
+			class postInitTerritories { postInit=1; };
+			class curTerritory {};
+			class isTerritoryContainer {};
+		};
 	};
 
 	class ULP_Functions_UI {
@@ -1009,6 +1020,11 @@ class CfgFunctions {
 			class DialogFactionSelection_OnUnload {};
 			class DialogFactionSelection_PlayVideo {};
 			class DialogFactionSelection_Select {};
+		};
+		
+		class DialogGambleSlots {
+			file = "UI\DialogGambleSlots\Functions";
+			class DialogGambleSlots_Spin {};
 		};
 	};
 };

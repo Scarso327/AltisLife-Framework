@@ -15,4 +15,4 @@ if (isNull _object) exitWith {};
 private _colour = _object getVariable ["colour", ""];
 if (_allowCustom && { !(_colour isEqualTo "") }) exitWith { _colour };
 
-getArray(missionConfigFile >> "CfgTags" >> (["baseColour", "friendColour"] select (!(isNull _object) && { _object in (units (group player)) })))
+getArray(missionConfigFile >> "CfgTags" >> (["baseColour", "friendColour"] select (!isNull _object && { _object in (units (group player)) || { !(_object isKindOf "Man") } })))

@@ -4,7 +4,7 @@ class CfgItemsStore {
 	itemCfg = "CfgItems";
 
 	class Police {
-		storeName = "Police Equipment Store";
+		storeName = "Equipment Store";
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
 		class Rifles {
 			// SPECIAL
@@ -259,6 +259,159 @@ class CfgItemsStore {
 			class Rangefinder {};
 			class ToolKit {};
 			class Chemlight_green {};
+		};
+	};
+
+	class Dunamis {
+		storeName = "Dunamis Equipment Store";
+		condition = "[] call ULP_fnc_isDunamis";
+		class Rifles {
+			// SMGs
+			class SMG_02_F { price = 55370; };
+			class hgun_PDW2000_F { price = 48672; };
+			class SMG_05_F { price = 50720; };
+			class SMG_01_F { price = 57564; };
+
+			// Special
+			class arifle_SDAR_F {};
+
+			// Rifles
+			class arifle_Mk20_plain_F { price = 85615; };
+			class arifle_SPAR_01_blk_F { price = 100708; };
+			class arifle_CTAR_hex_F { price = 115596; };
+			class arifle_MSBS65_black_F { 
+				price = 160853;
+				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+			};
+			class arifle_MSBS65_Mark_F { 
+				price = 160751;
+				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+			};
+			class arifle_MX_Black_F { 
+				price = 172395;
+				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+			};
+			class arifle_MXM_Black_F { 
+				price = 188865;
+				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+			};
+			class arifle_Katiba_F { 
+				price = 163215;
+				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+			};
+			class arifle_ARX_blk_F { 
+				price = 202905;
+				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
+			};
+			class arifle_AK12_F { 
+				price = 292005;
+				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
+			};
+
+			// Support Weapons
+			class arifle_SPAR_02_blk_F { 
+				price = 117293;
+				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
+			};
+			class arifle_CTARS_blk_F { 
+				price = 128349;
+				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+			};
+			class arifle_MX_SW_Black_F { 
+				price = 222548;
+				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
+			};
+		};
+		class Pistols {
+			class hgun_Rook40_F { price = 17609; };
+			class hgun_Pistol_heavy_01_F { price = 25126; };
+			class hgun_Pistol_heavy_02_F { 
+				price = 35861;
+				condition = "([] call ULP_fnc_getGroupRank) >= 7"; 
+			};
+		};
+		class Attachments {
+			// Rail
+			class bipod_01_F_blk {};
+			class acc_flashlight_pistol {};
+			class acc_flashlight {};
+			class acc_pointer_IR {};
+
+			// Sights
+			class optic_Yorris {};
+			class optic_Aco {};
+			class optic_Holosight {};
+			class optic_Hamr {};
+			class optic_Arco {};
+			class optic_ERCO_blk_F {};
+
+			// Barrel
+			class muzzle_snds_L { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
+			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
+			class muzzle_snds_M { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""SilentKiller""] call ULP_fnc_hasPerk }"; };
+			class muzzle_snds_570 { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""SilentKiller""] call ULP_fnc_hasPerk }"; };
+		};
+		class Magazines {
+			class 16Rnd_9x21_Mag { price = 51; };
+			class 30Rnd_9x21_Mag { price = 102; };
+			class 30Rnd_9x21_Mag_SMG_02 { price = 180; };
+			class 30Rnd_9x21_Mag_SMG_02_Tracer_Red : 30Rnd_9x21_Mag_SMG_02 {};
+			class 9Rnd_45ACP_Mag { price = 50; };
+			class 11Rnd_45ACP_Mag { price = 66; };
+			class 30Rnd_45ACP_Mag_SMG_01 { price = 258; };
+			class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green : 30Rnd_45ACP_Mag_SMG_01 {};
+			class 6Rnd_45ACP_Cylinder { 
+				price = 57; 
+				condition = "([] call ULP_fnc_getGroupRank) >= 7";
+			};
+			class 20Rnd_556x45_UW_mag {};
+			class 30Rnd_556x45_Stanag { price = 690; };
+			class 30Rnd_556x45_Stanag_Tracer_Red : 30Rnd_556x45_Stanag {};
+			class 150Rnd_556x45_Drum_Mag_F { 
+				price = 4890; 
+				condition = "([] call ULP_fnc_getGroupRank) >= 4";
+			};
+			class 150Rnd_556x45_Drum_Mag_Tracer_F : 150Rnd_556x45_Drum_Mag_F {};
+
+			class 30Rnd_580x42_Mag_F { price = 825; };
+			class 30Rnd_580x42_Mag_Tracer_F : 30Rnd_580x42_Mag_F {};
+
+			class 30Rnd_65x39_caseless_green { 
+				price = 915; 
+				condition = "([] call ULP_fnc_getGroupRank) >= 2";
+			};
+			class 30Rnd_65x39_caseless_green_mag_Tracer : 30Rnd_65x39_caseless_green {};
+			class 30Rnd_65x39_caseless_msbs_mag { 
+				price = 921; 
+				condition = "([] call ULP_fnc_getGroupRank) >= 3";
+			};
+			class 30Rnd_65x39_caseless_msbs_mag_Tracer : 30Rnd_65x39_caseless_msbs_mag {};
+			class 30Rnd_65x39_caseless_black_mag { 
+				price = 1047; 
+				condition = "([] call ULP_fnc_getGroupRank) >= 2";
+			};
+			class 30Rnd_65x39_caseless_black_mag_Tracer : 30Rnd_65x39_caseless_black_mag {};
+			class 100Rnd_65x39_caseless_black_mag { 
+				price = 7080; 
+				condition = "([] call ULP_fnc_getGroupRank) >= 5";
+			};
+			class 100Rnd_65x39_caseless_black_mag_tracer : 100Rnd_65x39_caseless_black_mag {};
+			class 30Rnd_762x39_AK12_Mag_F { 
+				price = 4434;
+				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
+			};
+			class 30Rnd_762x39_AK12_Mag_Tracer_F : 30Rnd_762x39_AK12_Mag_F {};
+		};
+		class Items {
+			class ItemMap {};
+			class ItemCompass {};
+			class ItemWatch {};
+			class ItemGPS {};
+			class ItemRadio {};
+			class Binocular {};
+			class Rangefinder {};
+			class NVGoggles {};
+			class ToolKit {};
 		};
 	};
 
@@ -737,10 +890,13 @@ class CfgItemsStore {
 		};
 
 		class Attachments {
+			// Rail
 			class bipod_01_F_blk {};
 			class acc_flashlight {};
 			class acc_flashlight_pistol {};
 			class acc_pointer_IR {};
+
+			// Sights
 			class optic_MRD {};
 			class optic_Aco {};
 			class optic_Holosight {};
@@ -750,6 +906,8 @@ class CfgItemsStore {
 			class optic_Arco {};
 			class optic_ERCO_blk_F {};
 			class optic_DMS_weathered_F {};
+
+			// Barrel
 			class muzzle_snds_L { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 			class muzzle_snds_M { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };

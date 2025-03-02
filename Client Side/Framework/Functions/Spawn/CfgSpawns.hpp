@@ -53,6 +53,12 @@ class CfgSpawns {
             marker = "apc_spawn_agios";
             icon = "Data\UI\Spawns\agios.paa";
         };
+         class NpasBase : Police {
+            displayName = "NPAS Base";
+            marker = "apc_spawn_npas";
+            icon = "Data\UI\Spawns\warehouse.paa";
+            conditions = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess";
+        };
         class SegKavala : BaseSpawn {
             displayName = "10 Kavala Street";
             marker = "civ_spawn_seg_kav";

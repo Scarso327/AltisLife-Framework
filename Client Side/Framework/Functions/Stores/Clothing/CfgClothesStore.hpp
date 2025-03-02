@@ -189,6 +189,7 @@ class CfgClothesStore {
 	};
 
 	class PoliceUnmarked : Police {
+		condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_NCA"", 1] call ULP_fnc_hasAccess }";
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};

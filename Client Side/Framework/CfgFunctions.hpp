@@ -525,6 +525,7 @@ class CfgFunctions {
 			class sit {};
 			class addVehicleTuning {};
 			class addGambling {};
+			class setTraderName {};
 		};
 		
 		class Garage {

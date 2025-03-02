@@ -13,8 +13,9 @@ _this params [
 	["_store", "", [""]]
 ];
 
-private _cfgCondition = missionConfigFile >> "CfgProcessingStores" >> _store;
-if (isNull _trader || { _title isEqualTo "" } || { !(isClass _cfgCondition) }) exitWith {};
-_cfgCondition = getText(_cfgCondition >> "condition");
+private _cfg = missionConfigFile >> "CfgProcessingStores" >> _store;
+if (isNull _trader || { _title isEqualTo "" } || { !(isClass _cfg) }) exitWith {};
 
-_trader addAction [format["%1", _title], { (_this select 3) call ULP_fnc_openProcessing }, _store, 1.5, true, true, "", _cfgCondition, 3];
+_trader addAction [format["%1", _title], { (_this select 3) call ULP_fnc_openProcessing }, _store, 1.5, true, true, "", getText(_cfg >> "condition"), 3];
+
+[_trader, getText (_cfg >> "title")] call ULP_fnc_setTraderName;

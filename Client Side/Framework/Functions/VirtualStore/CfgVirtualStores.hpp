@@ -155,14 +155,14 @@ class CfgVirtualStores {
 			class FuelCan {};
 			class PanicButton {};
 			class Lockpick {};
-			class FieldDressing {};
-			class Elastic {};
-			class Packing {};
-			class QuickClot {};
-			class BloodBag {};
-			class MediKit {};
-			class Defibrillator {};
-			class Stretcher {};
+			class FieldDressing { buyPrice = 0; };
+			class Elastic { buyPrice = 0; };
+			class Packing { buyPrice = 0; };
+			class QuickClot { buyPrice = 0; };
+			class BloodBag { buyPrice = 0; };
+			class MediKit { buyPrice = 0; };
+			class Defibrillator { buyPrice = 0; };
+			class Stretcher { buyPrice = 0; };
 		};
 	};
 
@@ -176,8 +176,8 @@ class CfgVirtualStores {
 			class Redbull {};
 			class FuelCan {};
 			class PanicButton {};
-			class Lockpick {};
-			class VehicleClamp {};
+			class Lockpick { buyPrice = 0; };
+			class VehicleClamp { buyPrice = 0; };
 			class FieldDressing {};
 			class BloodBag {};
 			class MediKit {};

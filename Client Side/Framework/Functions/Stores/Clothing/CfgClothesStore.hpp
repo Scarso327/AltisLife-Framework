@@ -188,6 +188,76 @@ class CfgClothesStore {
 		};
 	};
 
+	class PoliceUnmarked : Police {
+		class Uniforms {
+			class U_C_Poor_1 {};
+			class U_C_Farmer {};
+			class U_C_Mechanic_01_F {};
+			class U_C_Poloshirt_blue {};
+			class U_C_Man_casual_1_F {};
+			class U_C_ArtTShirt_01_v1_F {};
+			class U_C_Man_casual_6_F {};
+			class U_C_man_sport_1_F {};
+			class U_C_Scientist {};
+			class U_I_C_Soldier_Bandit_1_F {};
+			class U_I_C_Soldier_Bandit_3_F {};
+			class U_C_E_LooterJacket_01_F {};
+			class U_O_R_Gorka_01_black_F {};
+			class U_I_C_Soldier_Para_1_F {};
+			class U_I_E_Uniform_01_F {};
+		};
+
+		class Headgear {
+			class H_WirelessEarpiece_F {};
+			class H_Bandanna_gry {};
+			class H_Cap_blk {};
+			class H_MilCap_gry {};
+			class H_Hat_grey {};
+			class H_StrawHat {};
+			class H_Watchcap_blk {};
+			class H_Booniehat_khk {};
+		};
+
+		class Facewear {
+			class G_WirelessEarpiece_F {};
+			class G_Aviator {};
+			class G_Squares {};
+			class G_Spectacles {};
+			class G_Shades_Black {};
+			class G_Sport_Red {};
+			class G_Lady_Blue {};
+			class G_Respirator_white_F {};
+			class G_Bandanna_aviator {};
+			class G_Tactical_Clear {};
+		};
+
+		class Vests {
+			class V_LegStrapBag_black_F {};
+			class V_Pocketed_black_F {};
+			class V_Rangemaster_belt {};
+			class V_BandollierB_blk {};
+			class V_HarnessO_brn {};
+			class V_TacVestIR_blk {};
+			class V_Chestrig_blk {};
+			class V_TacChestrig_cbr_F {};
+			class V_SmershVest_01_F {};
+			class V_TacVest_blk {};
+			class V_PlateCarrier1_blk {};
+		};
+
+		class Backpacks {
+			class B_LegStrapBag_black_F {};
+			class B_Messenger_Black_F {};
+			class B_AssaultPack_blk {};
+			class B_FieldPack_blk {};
+			class B_Kitbag_cbr {};
+			class B_TacticalPack_blk {};
+			class B_CivilianBackpack_01_Everyday_Black_F {};
+			class B_CivilianBackpack_01_Sport_Blue_F {};
+			class B_Carryall_cbr {};
+		};
+	};
+
 	class Medic : Police {
 		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
 		class Uniforms {

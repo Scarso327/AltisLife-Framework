@@ -20,7 +20,7 @@ if (_enable) then {
 				&& { !(cameraOn isEqualTo _x) || { ["ShowOwnTags", "HUD"] call ULP_fnc_getOption isEqualTo 1 } }
 		}) apply {
 			[
-				_x, [_x] call ULP_fnc_getTagPos, (cameraOn distance _x), (_x getVariable ["icon", ""]), 
+				_x, [_x] call ULP_fnc_getTagPos, (cameraOn distance _x), [_x] call ULP_fnc_getTagIcon, 
 				[_x, true] call ULP_fnc_getName, [_x] call ULP_fnc_getSubTitle, (_x getVariable ["title", ""])
 			]
 		};

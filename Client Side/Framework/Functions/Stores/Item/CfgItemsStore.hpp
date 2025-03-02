@@ -379,6 +379,7 @@ class CfgItemsStore {
 			class 100Rnd_580x42_Mag_F { 
 				price = 5670;
 				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+			};
 			class 100Rnd_580x42_Mag_Tracer_F : 100Rnd_580x42_Mag_F {};
 
 			class 30Rnd_65x39_caseless_green { 

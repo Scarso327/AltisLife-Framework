@@ -29,7 +29,7 @@ class CfgTerritories {
 					displayName = "Weapons Crate";
 					pos[] = { { 20952.8,17421.2,0 }, 181 };
 					items[] = { "WeaponCrate" };
-					amount = "2 + ((count playableUnits) * 0.125)";
+					amount = "2 + ((count playableUnits) * 0.05)";
 				};
 			};
 		};
@@ -66,7 +66,7 @@ class CfgTerritories {
 					displayName = "Uranium Crate";
 					pos[] = { { 20898,19246.2,0 }, 280 };
 					items[] = { "UraniumBar" };
-					amount = "6 + ((count playableUnits) * 0.4)";
+					amount = "6 + ((count playableUnits) * 0.2)";
 				};
 			};
 		};
@@ -109,7 +109,7 @@ class CfgTerritories {
 					displayName = "Fragments Crate";
 					pos[] = { { 22208.5,16808.5,0 }, 302 };
 					items[] = { "LegendaryMapFragment" };
-					amount = "1 + ((count playableUnits) * 0.025)";
+					amount = "1 + ((count playableUnits) * 0.015)";
 				};
 			};
 		};
@@ -170,7 +170,7 @@ class CfgTerritories {
 					displayName = "Diamond Crate";
 					pos[] = { { 21594.1,21268,0 }, 53 };
 					items[] = { "CutBloodDiamond", "CutDiamond" };
-					amount = "15 + ((count playableUnits) * 0.6)";
+					amount = "15 + ((count playableUnits) * 0.5)";
 				};
 			};
 		};
@@ -271,7 +271,7 @@ class CfgTerritories {
 					displayName = "Ecstasy Crate";
 					pos[] = { { 26295.3,23369.8,0 }, 106 };
 					items[] = { "Ecstasy" };
-					amount = "35 + ((count playableUnits) * 1.15)";
+					amount = "35 + ((count playableUnits) * 1.125)";
 				};
 			};
 		};

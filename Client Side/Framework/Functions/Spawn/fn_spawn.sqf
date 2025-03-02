@@ -89,6 +89,8 @@ if (ULP_FirstSpawn) then {
 	if (["Medic_AA", 1] call ULP_fnc_hasAccess) then { ["JoinAA"] call ULP_fnc_achieve; };
 
 	if (["Hato_Main", 1] call ULP_fnc_hasAccess) then { ["JoinHATO"] call ULP_fnc_achieve; };
+
+	setCurrentChannel 5;
 } else {
 	[false, true] call ULP_fnc_initPlayer;
 };

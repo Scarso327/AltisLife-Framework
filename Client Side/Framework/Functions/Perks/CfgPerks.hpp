@@ -48,21 +48,6 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class CompletedCV {
-		icon = "Data\UI\Perks\completedCV.paa";
-		displayName = "Completed CV";
-		description = "Allows you to get employed at various job sites";
-		removalMultiplier = 2;
-		class Requirements {
-			factions[] = { "Civilian" };
-			level = 3;
-			prestige = 0;
-			profession[] = {};
-		};
-		onChanged = "";
-		onActivated = "";
-	};
-
 	class GeneralMechanic {
 		icon = "Data\UI\Perks\generalMechanic.paa";
 		displayName = "General Mechanic";

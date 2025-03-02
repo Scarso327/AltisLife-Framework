@@ -53,7 +53,6 @@ class CfgLicenses {
         buyPrice = 35000;
         onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
-        conditions = "[""CompletedCV""] call ULP_fnc_hasPerk";
     };
 
     class Solicitor : Taxi {

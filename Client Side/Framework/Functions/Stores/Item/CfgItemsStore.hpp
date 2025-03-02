@@ -350,6 +350,7 @@ class CfgItemsStore {
 			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 			class muzzle_snds_M { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""SilentKiller""] call ULP_fnc_hasPerk }"; };
 			class muzzle_snds_570 { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""SilentKiller""] call ULP_fnc_hasPerk }"; };
+			class muzzle_snds_58_blk_F { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""SilentKiller""] call ULP_fnc_hasPerk }"; };
 		};
 		class Magazines {
 			class 16Rnd_9x21_Mag { price = 51; };
@@ -375,6 +376,10 @@ class CfgItemsStore {
 
 			class 30Rnd_580x42_Mag_F { price = 825; };
 			class 30Rnd_580x42_Mag_Tracer_F : 30Rnd_580x42_Mag_F {};
+			class 100Rnd_580x42_Mag_F { 
+				price = 5670;
+				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+			class 100Rnd_580x42_Mag_Tracer_F : 100Rnd_580x42_Mag_F {};
 
 			class 30Rnd_65x39_caseless_green { 
 				price = 915; 
@@ -411,6 +416,7 @@ class CfgItemsStore {
 			class Binocular {};
 			class Rangefinder {};
 			class NVGoggles {};
+			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel > 0"; };
 			class ToolKit {};
 		};
 	};
@@ -833,6 +839,7 @@ class CfgItemsStore {
 			class ItemGPS {};
 			class ItemRadio {};
 			class NVGoggles {};
+			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel > 0"; };
 			class Binocular {};
 			class ToolKit {};
 			class Chemlight_green {};
@@ -912,6 +919,7 @@ class CfgItemsStore {
 			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 			class muzzle_snds_M { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 			class muzzle_snds_570 { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
+			class muzzle_snds_58_blk_F { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
 		};
 
 		class Magazines {
@@ -962,6 +970,7 @@ class CfgItemsStore {
 			class ItemGPS {};
 			class ItemRadio {};
 			class NVGoggles {};
+			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel > 0"; };
 			class Binocular {};
 			class Rangefinder {};
 			class ToolKit {};
@@ -1087,6 +1096,7 @@ class CfgItemsStore {
 			class ItemGPS {};
 			class ItemRadio {};
 			class NVGoggles {};
+			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel > 0"; };
 			class Binocular {};
 			class Rangefinder {};
 			class ToolKit {};

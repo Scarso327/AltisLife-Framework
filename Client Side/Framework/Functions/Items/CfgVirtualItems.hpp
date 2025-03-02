@@ -672,8 +672,8 @@ class CfgVirtualItems {
 	class MediKit : FirstAidKit {
 		displayName = "MediKit";
 		icon = "Data\Icons\mediKit.paa";
-		buyPrice = 18700;
-		sellPrice = 9350;
+		buyPrice = 28700;
+		sellPrice = 14350;
 		weight = 3;
 		class Settings : Settings {};
 	};
@@ -681,8 +681,8 @@ class CfgVirtualItems {
 		displayName = "Defibrillator";
 		description = "A device that diagnoses life-threatening cardiac arrhythmias";
 		icon = "Data\Icons\defibrillator.paa";
-		buyPrice = 22600;
-		sellPrice = 11300;
+		buyPrice = 32600;
+		sellPrice = 16300;
 		weight = 3;
 		class Settings : Settings {};
 	};
@@ -1435,8 +1435,8 @@ class CfgVirtualItems {
 		displayName = "Purified Weed";
 		description = "A purified drug made when the Northern Drug Cartel is owned";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 22275;
-		sellPrice = 7425;
+		buyPrice = 28908;
+		sellPrice = 9636;
 		weight = 3;
 		class Settings {
 			onMarket = true;

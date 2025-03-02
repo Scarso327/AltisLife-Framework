@@ -42,18 +42,17 @@ class CfgCapture {
 		};
 		class WesternHills : ParosCheckpoint {
 			displayName = "Western Hills";
-			time = 180;
 			class Marker : Marker { defaultName = "Western Hills"; };
 		};
-		class SouthernCoast : WesternHills {
+		class SouthernCoast : ParosCheckpoint {
 			displayName = "Southern Coast";
 			class Marker : Marker { defaultName = "Southern Coast"; };
 		};
-		class SaltFlats : WesternHills {
+		class SaltFlats : ParosCheckpoint {
 			displayName = "Salt Flats";
 			class Marker : Marker { defaultName = "Salt Flats"; };
 		};
-		class GhostHotel : WesternHills {
+		class GhostHotel : ParosCheckpoint {
 			displayName = "Ghost Hotel";
 			class Marker : Marker { defaultName = "Ghost Hotel"; };
 		};
@@ -61,11 +60,11 @@ class CfgCapture {
 			displayName = "Sofia Town";
 			class Marker : Marker { defaultName = "Sofia Town"; };
 		};
-		class NorthernForest : WesternHills {
+		class NorthernForest : ParosCheckpoint {
 			displayName = "Northern Forest";
 			class Marker : Marker { defaultName = "Northern Forest"; };
 		};
-		class MolosRegion : WesternHills {
+		class MolosRegion : ParosCheckpoint {
 			displayName = "Molos Region";
 			class Marker : Marker { defaultName = "Molos Region"; };
 		};

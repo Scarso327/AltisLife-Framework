@@ -393,6 +393,7 @@ class CfgVirtualStores {
 			class IndustrialDrill {};
 			class FieldDressing {};
 			class FirstAidKit {};
+			class MediKit {};
 		};
 	};
 
@@ -443,6 +444,7 @@ class CfgVirtualStores {
 			class Morphine {};
 			class Epinephrine {};
 			class FirstAidKit {};
+			class MediKit {};
 			class Defibrillator {};
 		};
 	};

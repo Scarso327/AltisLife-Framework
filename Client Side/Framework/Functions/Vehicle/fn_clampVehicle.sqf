@@ -55,6 +55,9 @@ closeDialog 0;
 			if (["VehicleClamp", 1, true] call ULP_fnc_handleItem) then {
 				_vehicle setVariable ["clamp_fine", [profileName, getPlayerUID player, _fine], true];
 				[format ["You have clamped <t color='#B92DE0'>%1</t> for <t color='#B92DE0'>%2%3</t>...", _cfg param [5, "Vehicle"], "£", [_fine] call ULP_fnc_numberText]] call ULP_fnc_hint;
+
+				[50, "Clamped Vehicle"] call ULP_fnc_addXP;
+				[round (_fine * 0.75), true, format ["Clamping a %1", _vehicle]] call ULP_fnc_addMoney;
 			
 				["ClampVeh"] call ULP_fnc_achieve;
 			} else {

@@ -21,3 +21,5 @@ _trader addAction ["<t color='#B528D0'>[GOV]</t> Rig Polling Station", { _this c
 
 _trader addAction ["<t color='#B528D0'>[GOV]</t> Election Enlistment", { [] call ULP_fnc_enlist }, 
 	nil, 1.5, true, true, "", "!(missionNamespace getVariable [""ULP_SRV_Setting_Election"", false])", 5];
+
+[_trader, "Polling Office"] call ULP_fnc_setTraderName;

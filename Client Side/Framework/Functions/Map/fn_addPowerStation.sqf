@@ -16,3 +16,5 @@ if (isNull _trader || { !isClass _cfg }) exitWith {};
 _trader setVariable ["powerStation", _powerStation];
 
 _trader addAction ["<t color='#B92DE0'>[Civilian]</t> Rediect Power", { _this call ULP_fnc_powerFactory }, [], 1, true, true, "", getText (_cfg >> "condition"), 3];
+
+[_trader, getText (_cfg >> "displayName")] call ULP_fnc_setTraderName;

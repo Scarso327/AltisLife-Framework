@@ -20,11 +20,14 @@ _this params [
 
 if (isNull _trader || { _title isEqualTo "" } || { _condition isEqualTo "" }) exitWith {};
 
-_trader addAction [format["%1 %2 %3", _title, 
-([
+private _name = format ["%1 %2", ([
 	"Vehicle",
 	_types select 0
 ] select ((count _types) isEqualTo 1)), ([
 	"Garage",
 	"Impound"
-] select (_impound))], { (_this select 3) call ULP_fnc_openGarage }, [_types, _pos, _impound], 1.5, true, true, "", _condition, 3];
+] select (_impound))];
+
+_trader addAction [format["%1 %2", _title, _name], { (_this select 3) call ULP_fnc_openGarage }, [_types, _pos, _impound], 1.5, true, true, "", _condition, 3];
+
+[_trader, _name] call ULP_fnc_setTraderName;

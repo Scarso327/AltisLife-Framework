@@ -139,6 +139,62 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 18344; 
 			};
+	class PoliceTradeGoods {
+		storeName = "Trade Goods";
+		conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
+		class Items {
+			class FreshApple {
+				buyPrice = 56;
+				sellPrice = 56; 
+			};
+			class FreshPeach {
+				buyPrice = 64;
+				sellPrice = 64; 
+			};
+			class Cigarette { 
+				buyPrice = 3563;
+				sellPrice = 3563; 
+			};
+			class Cigarette { 
+				buyPrice = 3563;
+				sellPrice = 3563; 
+			};
+			class Cigarette { 
+				buyPrice = 3563;
+				sellPrice = 3563; 
+			};
+			class Cigar { 
+				buyPrice = 3360;
+				sellPrice = 3360; 
+			};
+			class CopperBar { 
+				buyPrice = 2375;
+				sellPrice = 2375; 
+			};
+			class SilverBar { 
+				buyPrice = 2750;
+				sellPrice = 2750; 
+			};
+			class IronBar { 
+				buyPrice = 9188;
+				sellPrice = 9188; 
+			};
+			class Glass { 
+				buyPrice = 3188;
+				sellPrice = 3188; 
+			};
+			class RefinedSalt { 
+				buyPrice = 4000;
+				sellPrice = 4000; 
+			};
+			class ProcessedOil { 
+				buyPrice = 41063;
+				sellPrice = 41063; 
+			};
+			class CutDiamond { 
+				buyPrice = 8125;
+				sellPrice = 8125; 
+			};
 		};
 	};
 

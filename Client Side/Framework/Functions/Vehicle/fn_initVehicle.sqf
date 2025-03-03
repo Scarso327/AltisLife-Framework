@@ -29,9 +29,9 @@ if (local _vehicle) then {
     };
 
 	[_vehicle] call ULP_fnc_setVehicleAmmo;
+	_vehicle addItemCargoGlobal ["ToolKit", 1];
 
 	[_vehicle] remoteExecCall ["ULP_fnc_initVehicle", -clientOwner];
-
 	_vehicle setVariable["jipReady", true, true];
 };
 

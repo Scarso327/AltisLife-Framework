@@ -24,9 +24,10 @@ _point params [
 ];
 
 private _vehicle = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
-_vehicle allowDammage false;
 _vehicle setDir _dir;
 _vehicle lock 2;
+
+ULP_Keys pushBackUnique _vehicle;
 
 if (_id >= 0) then {
 	_vehicle setVariable ["vehicle_id", _id, true];
@@ -40,13 +41,11 @@ if !(_upgrades isEqualTo createHashMap) then {
 	_vehicle setVariable ["object_upgrades", _upgrades, true];
 };
 
-[_vehicle, _texture] call ULP_fnc_skinVehicle;
+[_vehicle, _texture] spawn ULP_fnc_skinVehicle;
 [_vehicle] call ULP_fnc_initVehicle;
-
-_vehicle allowDammage true;
-_vehicle addItemCargoGlobal ["ToolKit", 1];
-ULP_Keys pushBackUnique _vehicle;
 
 if (_hint) then {
 	["Your vehicle is now ready..."] call ULP_fnc_hint;
 };
+
+_vehicle

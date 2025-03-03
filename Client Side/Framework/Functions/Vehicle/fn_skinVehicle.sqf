@@ -49,4 +49,16 @@ if (isArray (_textureCfg >> "animations")) then {
 	} forEach getArray(_textureCfg >> "animations");
 };
 
+if (isArray (_textureCfg >> "upgrades")) then {
+	private _upgrades = createHashMap;
+
+	{
+		_upgrades set [_x, true];
+	} forEach getArray(_textureCfg >> "upgrades");
+
+	if !(_upgrades isEqualTo createHashMap) then {
+		_vehicle setVariable ["object_upgrades", _upgrades, true];
+	};
+};
+
 _vehicle setVariable ["texture", _texture, !_local];

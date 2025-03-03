@@ -117,6 +117,7 @@ class CfgVehicles {
 	// Base without siren or lights (for helis)
 	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
+		upgrades[] = { "TrackingDeviceUpgrade" };
 		class Siren { SFX[] = { "Siren_1", "Siren_2", "Siren_5" }; };
 		class Actions {
 			class PNC {

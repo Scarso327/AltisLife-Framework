@@ -578,6 +578,10 @@ class CfgMissions {
 				pos = "smuggling_location_air_4";
 				name = "Molos Airfield";
 			};
+			class Almyra_Airfield {
+				pos = "smuggling_location_air_5";
+				name = "Almyra Airfield";
+			};
 		};
 		class Rewards {
 			moneyReward = 0;

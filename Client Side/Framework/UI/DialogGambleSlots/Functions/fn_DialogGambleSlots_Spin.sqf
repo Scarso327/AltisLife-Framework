@@ -39,7 +39,6 @@ if !(isNil { _display getVariable "spinsLeft" }) exitWith {};
 				_this params [ "_display", "_button", "_totalSpins", "_bet" ];
 
 				if (isNull _display) exitWith {
-					[_bet, false, "Slots Refund"] call ULP_fnc_addMoney;
 					[_thisEventHandler] call ULP_fnc_removeEachFrame;
 				};
 
@@ -121,6 +120,7 @@ if !(isNil { _display getVariable "spinsLeft" }) exitWith {};
 			}, 0.1] call ULP_fnc_addEachFrame)];
 		} else {
 			[format ["You can't afford to bet <t color='#B92DE0'>%1%2</t>", "£", [_bet] call ULP_fnc_numberText]] call ULP_fnc_hint;
+			_button ctrlEnable true;
 		};
 	}, false
 ] call ULP_fnc_selectNumber;

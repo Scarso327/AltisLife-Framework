@@ -169,14 +169,6 @@ class CfgVirtualStores {
 				buyPrice = 3563;
 				sellPrice = 3563; 
 			};
-			class Cigarette { 
-				buyPrice = 3563;
-				sellPrice = 3563; 
-			};
-			class Cigarette { 
-				buyPrice = 3563;
-				sellPrice = 3563; 
-			};
 			class Cigar { 
 				buyPrice = 3360;
 				sellPrice = 3360; 

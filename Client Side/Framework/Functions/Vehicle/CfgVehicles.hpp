@@ -752,6 +752,7 @@ class CfgVehicles {
 			class PoliceWhite : PoliceTexture { 
 				displayName = "Public Order";
 				textures[] = { "Data\Textures\Vehicles\Land\Police\van.paa" }; 
+				animations[] = { { "beacon_front_hide", 0 }, { "beacon_rear_hide", 0 }, { "lights_em_hide", 0 } };
 			};
 			class UnmarkedBlack : PoliceTexture {
 				displayName = "Black";
@@ -776,6 +777,7 @@ class CfgVehicles {
 				displayName = "Ambulance"; 
 				conditions = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\van.paa" }; 
+				animations[] = { { "beacon_front_hide", 0 }, { "beacon_rear_hide", 0 }, { "LED_lights_hide", 0 }, { "lights_em_hide", 0 } };
 			};
 
 			// Highways

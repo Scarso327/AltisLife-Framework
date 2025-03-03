@@ -5,6 +5,10 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_skinVehicle";
 
+if (canSuspend) exitWith {
+    [ULP_fnc_skinVehicle, _this] call ULP_fnc_directCall;
+};
+
 _this params [
 	["_vehicle", objNull, [objNull]],
 	["_texture", "", [""]],
@@ -33,6 +37,16 @@ if (isArray (_textureCfg >> "materials")) then {
 			_vehicle setObjectMaterialGlobal [_forEachIndex, _x];
 		};
 	} forEach getArray(_textureCfg >> "materials");
+};
+
+if (isArray (_textureCfg >> "animations")) then {
+	{
+		_x params [ "_animationName", "_animationState" ];
+
+		if !((_vehicle animationSourcePhase _animationName) isEqualTo _animationState) then {
+			_vehicle animateSource [_animationName, _animationState, true];
+		};
+	} forEach getArray(_textureCfg >> "animations");
 };
 
 _vehicle setVariable ["texture", _texture, !_local];

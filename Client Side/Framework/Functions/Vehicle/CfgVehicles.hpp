@@ -12,6 +12,7 @@ class CfgVehicles {
 		isHouse = false;
 		canTransfer = true;
 		conditions = "true";
+		inventory[] = { { "FirstAidKit", 2 } };
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo",
@@ -117,7 +118,10 @@ class CfgVehicles {
 	// Base without siren or lights (for helis)
 	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
-		upgrades[] = { "TrackingDeviceUpgrade" };
+		upgrades[] = { 
+			"TrackingDeviceUpgrade",
+			"ImprovedLocksUpgrade" 
+		};
 		class Siren { SFX[] = { "Siren_1", "Siren_2", "Siren_5" }; };
 		class Actions {
 			class PNC {
@@ -139,7 +143,10 @@ class CfgVehicles {
 
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
-		inventory[] = { { "FieldDressing", 10 }, { "Packing", 10 }, { "Elastic", 10 }, { "QuickClot", 10 }, { "BloodBag", 2 } };
+		upgrades[] = { 
+			"TrackingDeviceUpgrade",
+			"ImprovedStorageUpgrade" 
+		};
 		class Siren { SFX[] = { "Siren_6", "Siren_4", "Siren_3" }; };
 		class Actions {
 			class NHSDispatcher {
@@ -160,6 +167,10 @@ class CfgVehicles {
 
 	class HatoTexture : BaseTexture {
 		factions[] = { "Hato" };
+		upgrades[] = { 
+			"TrackingDeviceUpgrade",
+			"ImprovedStorageUpgrade" 
+		};
 		remoteGates = true;
 		class Siren {};
 		class Lights : HatoColour {};
@@ -256,6 +267,10 @@ class CfgVehicles {
 				displayName = "ANPR Interceptor";
 				anpr = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Police\hatchback_ANPR.paa" }; 
+				inventory[] = { 
+					{ "Stinger", 1 },
+					{ "RoadCone_F", 4 }
+				};
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
 					rightPos[] = {-0.52002,1.75732,-0.94257};
@@ -266,6 +281,10 @@ class CfgVehicles {
 				anpr = true;
 				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_RPU"", 1] call ULP_fnc_hasAccess && { [""Police_NCA"", 1] call ULP_fnc_hasAccess } }";
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa" };
+				inventory[] = { 
+					{ "Stinger", 1 },
+					{ "RoadCone_F", 4 }
+				};
 				class Lights : PoliceColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
 					rightPos[] = {-0.52002,1.75732,-0.94257};
@@ -345,6 +364,11 @@ class CfgVehicles {
 			// Medic
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\hatchback.paa" }; 
+				inventory[] = { 
+					{ "Packing", 10 }, 
+					{ "Elastic", 12 },  
+					{ "BloodBag", 1 } 
+				};
 				class Lights : MedicColour {
 					leftPos[] = {0.458496,1.77002,-0.899953};
 					rightPos[] = {-0.52002,1.75732,-0.94257};
@@ -565,6 +589,11 @@ class CfgVehicles {
 			// Medic
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\MB4.paa" }; 
+				inventory[] = { 
+					{ "Packing", 25 }, 
+					{ "Elastic", 25 },  
+					{ "BloodBag", 2 } 
+				};
 				class Lights : MedicColour {
 					leftPos[] = {0.757324,1.83252,-0.379596};
 					rightPos[] = {-0.844727,1.82861,-0.379596};
@@ -662,6 +691,10 @@ class CfgVehicles {
 				conditions = "[""Police_RPU"", 1] call ULP_fnc_hasAccess";
 				anpr = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Police\SUV_ANPR.paa" };
+				inventory[] = { 
+					{ "Stinger", 1 },
+					{ "RoadCone_F", 4 }
+				};
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
 					rightPos[] = {-0.396484,2.22119,-0.531462};
@@ -672,6 +705,10 @@ class CfgVehicles {
 				conditions = "[""Police_RPU"", 2] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess }";
 				anpr = true;
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa" }; 
+				inventory[] = { 
+					{ "Stinger", 1 },
+					{ "RoadCone_F", 4 }
+				};
 				class Lights : PoliceColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
 					rightPos[] = {-0.396484,2.22119,-0.531462};
@@ -696,6 +733,11 @@ class CfgVehicles {
 			// Medic
 			class Medic : MedicTexture { 
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\SUV.paa" }; 
+				inventory[] = { 
+					{ "Packing", 20 }, 
+					{ "Elastic", 20 },  
+					{ "BloodBag", 2 } 
+				};
 				class Lights : MedicColour {
 					leftPos[] = {0.370605,2.22021,-0.531462};
 					rightPos[] = {-0.396484,2.22119,-0.531462};
@@ -779,6 +821,11 @@ class CfgVehicles {
 				displayName = "Ambulance"; 
 				conditions = "[""Medic_Main"", 1] call ULP_fnc_hasAccess";
 				textures[] = { "Data\Textures\Vehicles\Land\Medic\van.paa" }; 
+				inventory[] = { 
+					{ "Packing", 30 }, 
+					{ "Elastic", 50 },  
+					{ "BloodBag", 5 } 
+				};
 				animations[] = { { "beacon_front_hide", 0 }, { "beacon_rear_hide", 0 }, { "LED_lights_hide", 0 }, { "lights_em_hide", 0 } };
 			};
 
@@ -974,6 +1021,12 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Land\Police\hunter_01.paa",
 					"Data\Textures\Vehicles\Land\Police\hunter_02.paa"
 				}; 
+				upgrades[] = { 
+					"TrackingDeviceUpgrade",
+					"ImprovedLocksUpgrade",
+					"ImprovedHullUpgrade",
+					"ImprovedTyresUpgrade" 
+				};
 				class Siren { SFX[] = { "Siren_7", "Siren_8", "Siren_9" }; };
 				class Lights : PoliceColour {
 					leftPos[] = {0.95459,-2.73975,0.559029};
@@ -1803,7 +1856,14 @@ class CfgVehicles {
 		retrievalPerc = 0.02;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
-			class Medic : MedicTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" }; };
+			class Medic : MedicTextureBase { 
+				textures[] = { "Data\Textures\Vehicles\Air\Medic\orca.paa" };
+				inventory[] = { 
+					{ "Packing", 10 }, 
+					{ "Elastic", 12 },  
+					{ "BloodBag", 1 } 
+				}; 
+			};
 
 			// Civilian
 			class Black : BaseTexture {
@@ -1898,6 +1958,11 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Air\Medic\mohawk_02.paa",
 					"Data\Textures\Vehicles\Air\Medic\mohawk_03.paa"
 				}; 
+				inventory[] = { 
+					{ "Packing", 60 }, 
+					{ "Elastic", 80 },  
+					{ "BloodBag", 10 } 
+				}; 
 			};
 			class Ion : BaseTexture {
 				displayName = "Ion"; 
@@ -1977,6 +2042,11 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Air\Medic\taru_02.paa", 
 					"Data\Textures\Vehicles\Air\Medic\taru_03.paa", 
 					"Data\Textures\Vehicles\Air\Medic\taru_04.paa"
+				}; 
+				inventory[] = { 
+					{ "Packing", 10 }, 
+					{ "Elastic", 20 },  
+					{ "BloodBag", 10 } 
 				}; 
 			};
 		};

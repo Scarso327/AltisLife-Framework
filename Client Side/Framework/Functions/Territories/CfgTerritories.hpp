@@ -137,15 +137,9 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class RefinedSalt1 {
+				class RefinedSalt {
 					displayName = "Salt Crate";
 					pos[] = { { 22970.3,18891.8,0 }, 211 };
-					items[] = { "RefinedSalt" };
-					amount = "30 + ((count playableUnits) * 1.35)";
-				};
-				class RefinedSalt2 {
-					displayName = "Salt Crate";
-					pos[] = { { 22981.5,18894.4,0 }, 287 };
 					items[] = { "RefinedSalt" };
 					amount = "30 + ((count playableUnits) * 1.35)";
 				};
@@ -203,12 +197,6 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class TinyXPReward1 {
-					displayName = "XP Crate";
-					pos[] = { { 24551.5,21082,0 }, 335 };
-					items[] = { "TinyXPReward" };
-					amount = "3 + ((count playableUnits) * 0.05)";
-				};
 				class TinyXPReward2 {
 					displayName = "XP Crate";
 					pos[] = { { 26034.7,19711.7,0 }, 154 };
@@ -281,7 +269,7 @@ class CfgTerritories {
 			class Sites {
 				class Ecstasy {
 					displayName = "Ecstasy Crate";
-					pos[] = { { 27812.3,22251.2,0 }, 85 };
+					pos[] = { { 26295.3,23369.8,0 }, 106 };
 					items[] = { "Ecstasy" };
 					amount = "35 + ((count playableUnits) * 1.15)";
 				};

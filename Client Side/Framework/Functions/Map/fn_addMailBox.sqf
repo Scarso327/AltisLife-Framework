@@ -12,3 +12,5 @@ _this params [
 ];
 
 _trader addAction ["<t color='#B92DE0'>[Civilian]</t> Mail Box", { [(_this select 3)] call ULP_fnc_openMailBox }, _cfg, 1, true, true, "", "[_this, [""Civilian""]] call ULP_fnc_isFaction", 3];
+
+[_trader, "Post Office"] call ULP_fnc_setTraderName;

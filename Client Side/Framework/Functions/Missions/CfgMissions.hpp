@@ -129,10 +129,6 @@ class CfgMissions {
 				pos = "altis_international";
 				name = "Altis International";
 			};
-			class AbandonedCheckpoint {
-				pos = "abandoned_checkpoint";
-				name = "Abandoned Checkpoint";
-			};
 			class HuntingCamp {
 				pos = "hunting_camp";
 				name = "Hunting Camp";
@@ -514,7 +510,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 65;
+			moneyReward = 85;
 			xpReward = 400;
 			repReward = false;
 		};

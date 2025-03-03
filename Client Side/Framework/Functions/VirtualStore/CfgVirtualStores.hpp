@@ -66,10 +66,14 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 8906; 
 			};
+			class Corn { sellPrice = 868; };
 			class Coral { 
 				buyPrice = -1;
 				sellPrice = 2094; 
 			};
+			class UnprocessedWeed { sellPrice = 743; };
+			class UnprocessedHeroin { sellPrice = 1185; };
+			class UnprocessedCocaine { sellPrice = 1931; };
 			class ProcessedWeed { 
 				buyPrice = -1;
 				sellPrice = 1856; 
@@ -89,6 +93,10 @@ class CfgVirtualStores {
 			class ProcessedMeth { 
 				buyPrice = -1;
 				sellPrice = 9531; 
+			};
+			class Ecstasy { 
+				buyPrice = -1;
+				sellPrice = 1641; 
 			};
 			class PurifiedWeed { 
 				buyPrice = -1;
@@ -110,43 +118,27 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 13117; 
 			};
-			class Ecstasy { 
-				buyPrice = -1;
-				sellPrice = 1641; 
-			};
+			class UncutBloodDiamond { sellPrice = 1188; };
 			class CutBloodDiamond { 
 				buyPrice = -1;
 				sellPrice = 2969; 
 			};
+			class EphedrineBarrel { 
+				buyPrice = -1;
+				sellPrice = 3050; 
+			};
+			class UraniumOre { sellPrice = 2769; };
 			class UraniumBar { 
 				buyPrice = -1;
 				sellPrice = 6922; 
 			};
+			class WeaponParts { 
+				buyPrice = -1;
+				sellPrice = 7338; 
+			};
 			class WeaponCrate { 
 				buyPrice = -1;
 				sellPrice = 18344; 
-			};
-
-			// Majors
-			class MarkedGold { 
-				buyPrice = -1;
-				sellPrice = 31250; 
-			};
-			class UnmarkedGold { 
-				buyPrice = -1;
-				sellPrice = 87500; 
-			};
-			class EncryptedDrive { 
-				buyPrice = -1;
-				sellPrice = 50000; 
-			};
-			class DecryptedDrive { 
-				buyPrice = -1;
-				sellPrice = 125000; 
-			};
-			class SeizedContraband { 
-				buyPrice = -1;
-				sellPrice = 29700; 
 			};
 		};
 	};
@@ -165,14 +157,14 @@ class CfgVirtualStores {
 			class PanicButton {};
 			class SnapGun {};
 			class Lockpick {};
-			class FieldDressing {};
-			class Elastic {};
-			class Packing {};
-			class QuickClot {};
-			class BloodBag {};
-			class MediKit {};
-			class Defibrillator {};
-			class Stretcher {};
+			class FieldDressing { buyPrice = 0; };
+			class Elastic { buyPrice = 0; };
+			class Packing { buyPrice = 0; };
+			class QuickClot { buyPrice = 0; };
+			class BloodBag { buyPrice = 0; };
+			class MediKit { buyPrice = 0; };
+			class Defibrillator { buyPrice = 0; };
+			class Stretcher { buyPrice = 0; };
 		};
 	};
 
@@ -186,8 +178,8 @@ class CfgVirtualStores {
 			class Redbull {};
 			class FuelCan {};
 			class PanicButton {};
-			class SnapGun {};
-			class VehicleClamp {};
+			class SnapGun { buyPrice = 0; };
+			class VehicleClamp { buyPrice = 0; };
 			class FieldDressing {};
 			class BloodBag {};
 			class MediKit {};
@@ -403,6 +395,7 @@ class CfgVirtualStores {
 			class IndustrialDrill {};
 			class FieldDressing {};
 			class FirstAidKit {};
+			class MediKit {};
 		};
 	};
 
@@ -453,6 +446,7 @@ class CfgVirtualStores {
 			class Morphine {};
 			class Epinephrine {};
 			class FirstAidKit {};
+			class MediKit {};
 			class Defibrillator {};
 		};
 	};

@@ -47,3 +47,5 @@ _trader addAction ["<t color='#B92DE0'>[Civilian]</t> Vehicle Tuning", {
 			["DialogUpgrades", [_vehicle]] call ULP_UI_fnc_createDialog;
 		}, false] call ULP_fnc_selectObject;
 }, [], 1, true, true, "", "isNull (objectParent _this) && { [_this, [""Civilian""]] call ULP_fnc_isFaction }", 3];
+
+[_trader, "Vehicle Tuning"] call ULP_fnc_setTraderName;

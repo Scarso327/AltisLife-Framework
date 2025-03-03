@@ -105,6 +105,7 @@ class CfgProcessing {
 		processTitle = "Purifing";
 		materials[] = { { "ProcessedWeed", 1 } };
 		items[] = { { "PurifiedWeed", 1 } };
+		profession[] = { "Processing", 3, 100 };
 		leveling[] = { 10, "Processing", 100 };
 	};
 	class PurifiedHeroin : PurifiedWeed {
@@ -148,6 +149,7 @@ class CfgProcessing {
 	class Uranium : BaseSmelt {
 		materials[] = { { "UraniumOre", 1 } };
 		items[] = { { "UraniumBar", 1 } };
+		profession[] = { "Processing", 2, 100 };
 		leveling[] = { 10, "Processing", 100 };
 		reqLicenses[] = { "Uranium" };
 		processTime = 10;
@@ -163,6 +165,7 @@ class CfgProcessing {
 	class Oil : Salt {
 		materials[] = { { "UnprocessedOil", 1 } };
 		items[] = { { "ProcessedOil", 1 } };
+		profession[] = { "Processing", 2, 100 };
 		leveling[] = { 8, "Processing", 100 };
 		reqLicenses[] = { "Oil" };
 	};
@@ -177,6 +180,7 @@ class CfgProcessing {
 	class BloodDiamond : Diamond {
 		materials[] = { { "UncutBloodDiamond", 1 } };
 		items[] = { { "CutBloodDiamond", 1 } };
+		profession[] = { "Processing", 2, 100 };
 		leveling[] = { 10, "Processing", 100 };
 	};
 
@@ -186,6 +190,7 @@ class CfgProcessing {
 		processTitle = "Debranding";
 		materials[] = { { "MarkedGold", 1 } };
 		items[] = { { "UnmarkedGold", 1 } };
+		profession[] = { "Processing", 5, 100 };
 		leveling[] = { 10, "Processing", 100 };
 	};
 	class Secrets : Gold {

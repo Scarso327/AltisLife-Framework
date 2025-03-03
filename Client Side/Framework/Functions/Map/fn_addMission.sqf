@@ -23,3 +23,5 @@ _trader addAction [format["%1 Request %2", _prefix, _title], { (_this select 3) 
 if (_allowFinish) then {
 	_trader addAction [format["%1 Finish %2", _prefix, _title], { (_this select 3) call ULP_fnc_finishMission }, [_type], 1.5, true, true, "", "true", 3];
 };
+
+[_trader, _title] call ULP_fnc_setTraderName;

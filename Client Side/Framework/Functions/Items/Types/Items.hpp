@@ -38,6 +38,22 @@ class NVGoggles {
 class NVGoggles_OPFOR : NVGoggles {};
 class NVGoggles_INDEP : NVGoggles {};
 
+class O_NVGoggles_grn_F : NVGoggles {
+	displayName = "Compact Night Vision Goggles";
+	class Textures {
+        class O_NVGoggles_grn_F {
+			displayName = "Green";
+            condition = "true";
+		};
+		class O_NVGoggles_urb_F : O_NVGoggles_grn_F { displayName = "Urban"; };
+        class O_NVGoggles_hex_F : O_NVGoggles_grn_F { displayName = "Hex"; };
+		class O_NVGoggles_ghex_F : O_NVGoggles_grn_F { displayName = "Green Hex"; };
+    };	
+};
+class O_NVGoggles_urb_F : O_NVGoggles_grn_F {};
+class O_NVGoggles_hex_F : O_NVGoggles_grn_F {};
+class O_NVGoggles_ghex_F : O_NVGoggles_grn_F {};
+
 class Chemlight_green {
 	displayName = "Chemlight";
 	price = 6000;

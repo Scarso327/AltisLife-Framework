@@ -96,8 +96,10 @@ class CfgGathering {
 		reqItems[] = { "Extractor" };
 		areas[] = { { "oil_extraction", 20 } };
 		items[] = { { "UnprocessedOil", 100 } };
+		leveling[] = { 8, "Gathering", 100 };
+		profession[] = { "Mining", 5, 100 };
 	};
-	class Sand : Oil {
+	class Sand : BaseMine {
 		actionTitle = "Shovelling";
 		reqItems[] = { "Shovel" };
 		areas[] = { { "sand_mine", 20 } };

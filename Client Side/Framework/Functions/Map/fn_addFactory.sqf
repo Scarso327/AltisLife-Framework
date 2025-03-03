@@ -34,3 +34,5 @@ if (isServer) then {
 };
 
 _trader setVariable ["marker", _marker];
+
+[_trader, getText (_cfg >> "displayName")] call ULP_fnc_setTraderName;

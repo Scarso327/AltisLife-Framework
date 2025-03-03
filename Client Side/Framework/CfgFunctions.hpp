@@ -187,6 +187,8 @@ class CfgFunctions {
 			class disputePlayer {};
 			class jump {};
 			class setRestrainedState {};
+			class isHobo {};
+			class isStillHobo {};
 		};
 
 		class PlayerActions {
@@ -267,6 +269,7 @@ class CfgFunctions {
 			class getTagPos {};
 			class initTags {};
 			class getSubTitle {};
+			class getTagIcon {};
 		};
 
 		class Licenses {
@@ -525,6 +528,7 @@ class CfgFunctions {
 			class sit {};
 			class addVehicleTuning {};
 			class addGambling {};
+			class setTraderName {};
 		};
 		
 		class Garage {

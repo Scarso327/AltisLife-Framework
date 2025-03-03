@@ -139,6 +139,7 @@ class CfgVehicles {
 
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
+		inventory[] = { { "FieldDressing", 10 }, { "Packing", 10 }, { "Elastic", 10 }, { "QuickClot", 10 }, { "BloodBag", 2 } };
 		class Siren { SFX[] = { "Siren_6", "Siren_4", "Siren_3" }; };
 		class Actions {
 			class NHSDispatcher {

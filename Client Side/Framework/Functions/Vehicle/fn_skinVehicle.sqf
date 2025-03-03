@@ -57,7 +57,20 @@ if (isArray (_textureCfg >> "upgrades")) then {
 	} forEach getArray(_textureCfg >> "upgrades");
 
 	if !(_upgrades isEqualTo createHashMap) then {
-		_vehicle setVariable ["object_upgrades", _upgrades, true];
+		_vehicle setVariable ["object_upgrades", _upgrades, !_local];
+	};
+};
+
+if (isArray (_textureCfg >> "inventory")) then {
+	private _cargo = createHashMap;
+
+	{
+		_x params [ "_item", "_quantity" ];
+		_cargo set [_item, _quantity];
+	} forEach getArray(_textureCfg >> "inventory");
+
+	if !(_cargo isEqualTo createHashMap) then {
+		_vehicle setVariable ["ULP_VirtualCargo", _cargo, !_local];
 	};
 };
 

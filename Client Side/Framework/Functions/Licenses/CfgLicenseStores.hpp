@@ -9,17 +9,17 @@ class CfgLicenseStores {
 	class Taxi {
 		title = "Taxi Altis";
 		factions[] = { "Civilian" };
-		condition = "[""CompletedCV""] call ULP_fnc_hasPerk && { !([""Taxi""] call ULP_fnc_hasLicense) }";
+		condition = "!([""Taxi""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Taxi" };
 	};
 	class Solicitor : Taxi {
 		title = "Altis Solicitors";
-		condition = "[""CompletedCV""] call ULP_fnc_hasPerk && { !([""Solicitor""] call ULP_fnc_hasLicense) }";
+		condition = "!([""Solicitor""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Solicitor" };
 	};
 	class News : Taxi {
 		title = "AAN World News";
-		condition = "[""CompletedCV""] call ULP_fnc_hasPerk && { !([""News""] call ULP_fnc_hasLicense) }";
+		condition = "!([""News""] call ULP_fnc_hasLicense)";
 		licenses[] = { "News" };
 	};
 	class IDAP : Taxi {

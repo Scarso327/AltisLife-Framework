@@ -155,7 +155,7 @@ switch (_code) do {
             };
 
             [
-                (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, 3000000], [],
+                (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, 5000000], [],
                 {
                     _this params [
                         ["_display", displayNull, [displayNull]],
@@ -293,7 +293,9 @@ switch (_code) do {
 
         if (time < (player getVariable ["delete_delay", 0])) exitWith {};
 
-        if (!(isNull _veh) && { !_shift } && { !_ctrlKey } && { !_alt } && { [] call ULP_fnc_isStaff } && { [player] call ULP_fnc_onDuty } && { ["Vehicle", false] call ULP_fnc_checkPower } && { [_veh, ["LandVehicle", "Air", "Ship"]] call ULP_fnc_isKindOf }) then {
+        if (!(isNull _veh) && { !_shift } && { !_ctrlKey } && { !_alt } && { [] call ULP_fnc_isStaff } 
+            && { [player] call ULP_fnc_onDuty } && { ["Vehicle", false] call ULP_fnc_checkPower }
+            && { [_veh, ["LandVehicle", "Air", "Ship", "Land_Bodybag_01_black_F"]] call ULP_fnc_isKindOf }) then {
             player setVariable ["delete_delay", time + 0.5];
 
             if !((_veh getVariable ["vehicle_id", -1]) isEqualTo -1) then {

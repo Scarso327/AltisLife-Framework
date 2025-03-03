@@ -102,6 +102,18 @@ switch (configName _factionCfg) do {
 		if (_copLevel > 0 && { _ucLevel > 0 }) then {
 			ULP_UCLevels = [_copLevel, _ucLevel];
 		};
+
+		// New player check
+
+		if ([] call ULP_fnc_isHobo) then {
+			player setVariable ["isHobo", true, true];
+
+			ULP_HoboEventHandlers = [];
+
+			ULP_HoboEventHandlers pushBack ["MoneyChanged", (["MoneyChanged", { [] call ULP_fnc_isStillHobo; }] call ULP_fnc_addEventHandler)];
+			ULP_HoboEventHandlers pushBack ["OnXPIncreased", (["OnXPIncreased", { [] call ULP_fnc_isStillHobo; }] call ULP_fnc_addEventHandler)];
+			ULP_HoboEventHandlers pushBack ["LicenseBought", (["LicenseBought", { [] call ULP_fnc_isStillHobo; }] call ULP_fnc_addEventHandler)];
+		};
 	};
 };
 

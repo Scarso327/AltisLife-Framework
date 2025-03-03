@@ -48,21 +48,6 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class CompletedCV {
-		icon = "Data\UI\Perks\completedCV.paa";
-		displayName = "Completed CV";
-		description = "Allows you to get employed at various job sites";
-		removalMultiplier = 2;
-		class Requirements {
-			factions[] = { "Civilian" };
-			level = 3;
-			prestige = 0;
-			profession[] = {};
-		};
-		onChanged = "";
-		onActivated = "";
-	};
-
 	class GeneralMechanic {
 		icon = "Data\UI\Perks\generalMechanic.paa";
 		displayName = "General Mechanic";
@@ -89,7 +74,7 @@ class CfgPerks {
 		description = "Increases your impounding and crushing speeds by %1%2";
 		removalMultiplier = 1;
 		class Leveling {
-			maxLevel = 4;
+			maxLevel = 5;
 			xpLevel = 100;
 			levelCalculation = "10 * (_this select 0)";
 		};
@@ -126,10 +111,25 @@ class CfgPerks {
 	class GovernmentBonus {
 		icon = "Data\UI\Perks\governmentBonus.paa";
 		displayName = "Government Pay";
-		description = "Increases your base paycheck by 10%";
+		description = "Increases your base paycheck by 25%";
 		removalMultiplier = 1;
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			level = 7;
+			prestige = 0;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "";
+	};
+
+	class WideTraveller {
+		icon = "Data\UI\Perks\wideTraveller.paa";
+		displayName = "Wide Traveller";
+		description = "Allows you to spawn in Sofia, Agios and Neochori";
+		removalMultiplier = 5;
+		class Requirements {
+			factions[] = { "Civilian" };
 			level = 7;
 			prestige = 0;
 			profession[] = {};
@@ -153,21 +153,6 @@ class CfgPerks {
 		onActivated = "";
 	};
 
-	class WideTraveller {
-		icon = "Data\UI\Perks\wideTraveller.paa";
-		displayName = "Wide Traveller";
-		description = "Allows you to spawn in Sofia, Agios and Neochori";
-		removalMultiplier = 5;
-		class Requirements {
-			factions[] = { "Civilian" };
-			level = 7;
-			prestige = 0;
-			profession[] = {};
-		};
-		onChanged = "";
-		onActivated = "";
-	};
-
 	class SpeedyLocksmith {
 		icon = "Data\UI\Perks\speedyLocksmith.paa";
 		displayName = "Speedy Locksmith";
@@ -176,7 +161,7 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 3;
 			xpLevel = 100;
-			levelCalculation = "20 * (_this select 0)";
+			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
@@ -194,7 +179,7 @@ class CfgPerks {
 		description = "Decreases the time it takes to garage a vehicle by %1%2";
 		removalMultiplier = 2;
 		class Leveling {
-			maxLevel = 3;
+			maxLevel = 5;
 			xpLevel = 100;
 			levelCalculation = "10 * (_this select 0)";
 		};
@@ -429,7 +414,7 @@ class CfgPerks {
 		description = "Increase the speed you craft by %1%2";
 		removalMultiplier = 5;
 		class Leveling {
-			maxLevel = 3;
+			maxLevel = 5;
 			xpLevel = 100;
 			levelCalculation = "10 * (_this select 0)";
 		};

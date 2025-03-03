@@ -32,5 +32,6 @@ if ([_license, (_list lbValue _curSel)] call ULP_fnc_addLicense) then {
 	};
 
 	["You've bought this license."] call ULP_fnc_hint;
+	["LicenseBought"] call ULP_fnc_invokeEvent;
 	[] call ULP_fnc_listLicenses;
 };

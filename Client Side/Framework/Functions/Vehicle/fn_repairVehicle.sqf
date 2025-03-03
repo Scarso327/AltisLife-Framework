@@ -29,6 +29,8 @@ if (isNumber (_missionCfg >> "repairTime")) then {
 	_time = _time + getNumber (_missionCfg >> "repairTime");
 };
 
+if ([player, ["Hato"]] call ULP_fnc_isFaction) then { _time = _time / 2; };
+
 private _profession = ["Repairing"] call ULP_fnc_getProfessionCalculation;
 if (_profession > 0) then {
 	_time = _time - (_time * (_profession / 100));
@@ -72,6 +74,12 @@ if !([format["%1 %2", ["Repairing", "Patching"] select (_isPatching), _name], _t
 
 	if (time >= (_vehicle getVariable ["ProfessionCooldown", time - 120])) then {
 		["Repairing", 1, 75] call ULP_fnc_increaseProfession;
+		
+		if ([player, ["Hato"]] call ULP_fnc_isFaction && { !(_vehicle in ULP_Keys) }) then {
+			[20, "Repaired Vehicle"] call ULP_fnc_addXP;
+			[5000, true, format ["Repairing a %1", _vehicle]] call ULP_fnc_addMoney;
+		};
+
 		_vehicle setVariable ["ProfessionCooldown", time + 120];
 	};
 }, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress) exitWith {

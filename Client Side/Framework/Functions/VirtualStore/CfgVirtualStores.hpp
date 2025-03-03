@@ -139,6 +139,20 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 18344; 
 			};
+
+			// Majors
+			class MarkedGold { sellPrice = 31250; }; // 10%
+			class UnmarkedGold { sellPrice = 43750; }; // 5%
+			class EncryptedDrive { sellPrice = 0; };
+			class DecryptedDrive { sellPrice = 0; };
+			class SpaceCapsuleDataDrive { sellPrice = 0; };
+			class SeizedContraband { sellPrice = 0; };
+			class LargeGalleryPiece { sellPrice = 0; };
+			class MediumGalleryPiece { sellPrice = 0; };
+			class SmallGalleryPiece { sellPrice = 0; };
+		};
+	};
+
 	class PoliceTradeGoods {
 		storeName = "Trade Goods";
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";

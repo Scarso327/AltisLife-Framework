@@ -79,6 +79,8 @@ class CfgFunctions {
 			class inString {};
 			class isKindOf {};
 			class execNextFrame {};
+			class getNearestLocation {};
+			class getCompassDir {};
 		};
 
 		class Faction {

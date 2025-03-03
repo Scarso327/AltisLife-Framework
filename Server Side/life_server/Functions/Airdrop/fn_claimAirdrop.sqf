@@ -22,10 +22,13 @@ if (_airdrop getVariable ["locked", false]) exitWith {
 
 deleteVehicle _airdrop;
 
+private _message = format ["<t color='#ff0000' size='1.5px'>Airdrop Claimed<br/></t><t color='#ffffff' size='1px'>%1 has claimed the airdrop!", name _unit];
+
 // Notify everyone else...
 ["OnClaimedAirdrop", [
-	format ["<t color='#ff0000' size='1.5px'>Airdrop Claimed<br/></t><t color='#ffffff' size='1px'>%1 has claimed the airdrop!", name _unit]
+	_message
 ]] remoteExecCall ["ULP_fnc_invokeEvent", (allPlayers select { !(_x isEqualType _unit) })];
+["OnClaimedAirdrop", [ _message ]] call ULP_fnc_invokeEvent;
 
 if ([_unit, ["Civilian"]] call ULP_fnc_isFaction) then {
 	private _loot = [

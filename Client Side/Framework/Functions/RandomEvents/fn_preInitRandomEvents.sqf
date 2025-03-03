@@ -4,6 +4,8 @@
 */
 scopeName "fn_preInitRandomEvents";
 
+if !(hasInterface) exitWith {};
+
 ["Pre-Initialising Server Events", true] call ULP_fnc_logIt;
 
 {

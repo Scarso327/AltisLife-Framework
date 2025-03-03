@@ -46,7 +46,7 @@ _obj setVariable ["area", _captureArea, true];
 
 ["OnSpawnPopupCartel", [
 	_obj, _captureRadius, format["<t color='#ff0000' size='1.5px'>%1<br/></t><t color='#ffffff' size='1px'>The %1 capture zone has spawned! The location has been marked on your map.", _popupName]
-]] remoteExecCall ["ULP_fnc_invokeEvent", -2, "PopupCartelSpawn"];
+]] remoteExecCall ["ULP_fnc_invokeEvent", RANY, "PopupCartelSpawn"];
 
 private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup" >> "duration");
 
@@ -90,7 +90,8 @@ private _endTime = time + getNumber(missionConfigFile >> "CfgCartels" >> "Popup"
 	};
 
 	["OnClaimedPopupCartel", [ _message ]] remoteExecCall ["ULP_fnc_invokeEvent", allUnits select { isPlayer _x && { !(_x in _units) } }];
-	
+	["OnClaimedPopupCartel", [ _message ]] call ULP_fnc_invokeEvent;
+
 	deleteMarker _marker;
 	deleteMarker _captureArea;
 	deleteMarker _area;

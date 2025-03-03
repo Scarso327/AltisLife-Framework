@@ -10,7 +10,7 @@ class CfgCrimes {
 					displayName = "Hacking Vault Security";
 					description = "To breach the vault’s defenses, two outer military offices must first be accessed using <font color='#B92DE0'>bolt cutters</font>. Inside, a <font color='#B92DE0'>hacking device</font> can be deployed to disable the vault’s main security system. Once disabled, the inner domes can be bolt cut and entered, granting access to the vault's contents.";
 					time = 600;
-					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Vault Security System at HM Treasury is being tampered with!""], _targets] call ULP_fnc_sendMessage; [""You have begun disabling the vault security, police has been notified!""] call ULP_fnc_hint;"; // Notify Police...
+					onStarted = "[""CrimeBreakIn"", [player, ""HM Treasury""], true] call ULP_fnc_invokeEvent; [""You have begun disabling the vault security, police has been notified!""] call ULP_fnc_hint;"; // Notify Police...
 					onCompleted = "[""HMTreasury"", 1] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the vault security system...""] call ULP_fnc_hint;"; // Call to fill vaults, allow vaults to be drilled...
 					onEachFrame = "";
 					onProgressStop = "";
@@ -77,7 +77,7 @@ class CfgCrimes {
 					displayName = "Disabling Server Security";
 					description = "On the bridge of the abandoned HMS Liberty, a server containing valuable drives awaits. To access it, a <font color='#B92DE0'>hacking device</font> must be used to disable the server’s security systems, unlocking the drives for retrieval.";
 					time = 1500;
-					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""Systems on HM Liberty are being tampered with!""], _targets] call ULP_fnc_sendMessage; [""You have begun disabling the server's security systems, police has been notified!""] call ULP_fnc_hint;";
+					onStarted = "[""CrimeBreakIn"", [player, ""HMS Liberty""], true] call ULP_fnc_invokeEvent; [""You have begun disabling the server's security systems, police has been notified!""] call ULP_fnc_hint;";
 					onCompleted = "[""HMSLiberty"", 1, hms_liberty_server] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
 					onEachFrame = "hms_liberty_server animateSource [""server_move_source"", (_this / 100)];";
 					onProgressStop = "hms_liberty_server animateSource [""server_move_source"", 0]";
@@ -114,7 +114,7 @@ class CfgCrimes {
 					displayName = "Drilling into Evidence Vault";
 					description = "To access the vault, an <font color='#B92DE0'>industrial drill</font> is required to breach its reinforced walls, adding an extra layer of difficulty to the heist. For those daring enough to break in, the payoff can be substantial, but the risks are just as high.";
 					time = 600;
-					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Police Evidence Storage Vault is being illegally accessed!""], _targets] call ULP_fnc_sendMessage; [""You have begun drilling into the evidence storage vault, police has been notified!""] call ULP_fnc_hint;";
+					onStarted = "[""CrimeBreakIn"", [player, ""Police Evidence Storage""], true] call ULP_fnc_invokeEvent; [""You have begun drilling into the evidence storage vault, police has been notified!""] call ULP_fnc_hint;";
 					onCompleted = "[""PoliceEvidenceStorage"", 1, evidence_storage_vault] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully disabled the server's security system...""] call ULP_fnc_hint;";
 					onEachFrame = "";
 					onProgressStop = "";
@@ -151,7 +151,7 @@ class CfgCrimes {
 					displayName = "Drilling into the Vault";
 					description = "To access the vault, an <font color='#B92DE0'>industrial drill</font> is required to breach its reinforced walls, adding an extra layer of difficulty to the heist. For those daring enough to break in, the payoff can be substantial, but the risks are just as high.";
 					time = 1200;
-					onStarted = "private _cfg = missionConfigFile >> ""CfgMessages"" >> ""BreakIn""; private _targets = getText (_cfg >> ""targets""); [_cfg, format [""The Casino Vault is being illegally accessed!""], _targets] call ULP_fnc_sendMessage; [""You have begun drilling into the casino vault, police has been notified!""] call ULP_fnc_hint;";
+					onStarted = "[""CrimeBreakIn"", [player, ""Casino Vault""], true] call ULP_fnc_invokeEvent; [""You have begun drilling into the casino vault, police has been notified!""] call ULP_fnc_hint;";
 					onCompleted = "[""CasinoVault"", 1, casino_vault] remoteExecCall [""ULP_SRV_fnc_toggleVaults"", 2]; [""You have successfully drilled into the casino vault...""] call ULP_fnc_hint;";
 					onEachFrame = "";
 					onProgressStop = "";

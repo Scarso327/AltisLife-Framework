@@ -1,151 +1,154 @@
 class CfgLicenseStores {
 	class DVLA {
-		title = "Driver and Vehicle Licensing Agency";
+		title = "DVLA";
 		factions[] = { "Civilian" };
 		condition = "!([""Driving""] call ULP_fnc_hasLicense) || { !([""Trucking""] call ULP_fnc_hasLicense) } || { !([""Boating""] call ULP_fnc_hasLicense) } || { !([""Piloting""] call ULP_fnc_hasLicense) }";
 		licenses[] = { "Driving", "Trucking", "Boating", "Piloting" };
 	};
 
-	class Taxi {
+	class Taxi : DVLA {
 		title = "Taxi Altis";
-		factions[] = { "Civilian" };
 		condition = "!([""Taxi""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Taxi" };
 	};
-	class Solicitor : Taxi {
+	class Solicitor : DVLA {
 		title = "Altis Solicitors";
 		condition = "!([""Solicitor""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Solicitor" };
 	};
-	class News : Taxi {
+	class News : DVLA {
 		title = "AAN World News";
 		condition = "!([""News""] call ULP_fnc_hasLicense)";
 		licenses[] = { "News" };
 	};
-	class IDAP : Taxi {
+	class IDAP : DVLA {
 		title = "IDAP Volunteer";
 		condition = "!([""IDAP""] call ULP_fnc_hasLicense) && { ULP_Reputation >= 0 }";
 		licenses[] = { "IDAP" };
 	};
 
-	class Process {
-		title = "Processing Site";
-		factions[] = { "Civilian" };
-	};
-	class Schnapps : Process { 
+	class Schnapps : DVLA { 
+		title = "Schnapps Processing";
 		condition = "!([""Schnapps""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Schnapps" }; 
 	};
-	class Tobacco : Process { 
+	class Tobacco : DVLA { 
+		title = "Tobacco Processing";
 		condition = "!([""Tobacco""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Tobacco" }; 
 	};
-	class Copper : Process { 
+	class Copper : DVLA { 
+		title = "Copper Processing";
 		condition = "!([""Copper""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Copper" }; 
 	};
-	class Silver : Process { 
+	class Silver : DVLA { 
+		title = "Silver Processing";
 		condition = "!([""Silver""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Silver" }; 
 	};
-	class Iron : Process { 
+	class Iron : DVLA { 
+		title = "Iron Processing";
 		condition = "!([""Iron""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Iron" }; 
 	};
-	class Uranium : Process { 
+	class Uranium : DVLA { 
+		title = "Uranium Processing";
 		condition = "!([""Uranium""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Uranium" }; 
 	};
-	class Diamond : Process { 
+	class Diamond : DVLA { 
+		title = "Diamond Processing";
 		condition = "!([""Diamond""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Diamond" }; 
 	};
-	class Salt : Process { 
+	class Salt : DVLA { 
+		title = "Salt Processing";
 		condition = "!([""Salt""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Salt" }; 
 	};
-	class Sand : Process { 
+	class Sand : DVLA { 
+		title = "Sand Processing";
 		condition = "!([""Sand""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Sand" }; 
 	};
-	class Oil : Process { 
+	class Oil : DVLA { 
+		title = "Oil Processing";
 		condition = "!([""Oil""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Oil" }; 
 	};
-	class Weed : Process { 
+	class Weed : DVLA { 
+		title = "Weed Processing";
 		condition = "!([""Weed""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Weed" }; 
 	};
-	class Heroin : Process { 
+	class Heroin : DVLA { 
+		title = "Heroin Processing";
 		condition = "!([""Heroin""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Heroin" }; 
 	};
-	class Cocaine : Process {
+	class Cocaine : DVLA {
+		title = "Cocaine Processing";
 		condition = "!([""Cocaine""] call ULP_fnc_hasLicense)"; 
 		licenses[] = { "Cocaine" }; 
 	};
-	class Meth : Process { 
+	class Meth : DVLA { 
+		title = "Meth Processing";
 		condition = "!([""Meth""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Meth" }; 
 	};
-	class Moonshine : Process { 
+	class Moonshine : DVLA { 
+		title = "Moonshine Processing";
 		condition = "!([""Moonshine""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Moonshine" }; 
 	};
-	class Weapons : Process { 
+	class Weapons : DVLA { 
+		title = "Weapons Processing";
 		condition = "!([""Weapons""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Weapons" }; 
 	};
-	class MultiDrug : Process {
+	class MultiDrug : DVLA {
+		title = "Multi-Drug Processing";
 		condition = "!([""Weed""] call ULP_fnc_hasLicense) || { !([""Heroin""] call ULP_fnc_hasLicense) } || { !([""Cocaine""] call ULP_fnc_hasLicense) } || { !([""ULP_fnc_hasLicense""] call ULP_fnc_hasLicense) } || { !([""Moonshine""] call ULP_fnc_hasLicense) }";
 		licenses[] = { "Weed", "Heroin", "Cocaine", "Meth", "Moonshine" };
 	};
 
-	class Home {
+	class Home : DVLA {
 		title = "Homeowner's Association";
-		factions[] = { "Civilian" };
 		condition = "!([""Home""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Home" };
 	};
 
-	class Gun {
+	class Gun : DVLA {
 		title = "Gun Store";
-		factions[] = { "Civilian", "Medic", "Hato" };
 		condition = "!([""Handgun""] call ULP_fnc_hasLicense) || { !([""SMG""] call ULP_fnc_hasLicense) }";
 		licenses[] = { "Handgun", "SMG" };
 	};
-
-	class Security {
+	class Security : DVLA {
 		title = "Security Contractors";
-		factions[] = { "Civilian" };
 		condition = "!([""Security""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Security" };
 	};
-
-	class Protection {
+	class Protection : DVLA {
 		title = "Government Protection";
-		factions[] = { "Civilian" };
 		condition = "!([""Protection""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Protection" };
 	};
 
-	class Hunting {
+	class Hunting : DVLA {
 		title = "Hutning Camp";
-		factions[] = { "Civilian" };
 		condition = "!([""Hunting""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Hunting" };
 	};
 
-	class Rebel {
+	class Rebel : DVLA {
 		title = "Rebel Access";
-		factions[] = { "Civilian" };
 		condition = "!([""Rebel""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Rebel" };
 	};
 
-	class Blackmarket {
+	class Blackmarket : DVLA {
 		title = "Blackmarket Access";
-		factions[] = { "Civilian" };
 		condition = "[""Rebel""] call ULP_fnc_hasLicense && { !([""Blackmarket""] call ULP_fnc_hasLicense) } && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		licenses[] = { "Blackmarket" };
 	};

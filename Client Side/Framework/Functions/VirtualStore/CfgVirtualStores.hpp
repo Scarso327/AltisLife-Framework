@@ -178,7 +178,7 @@ class CfgVirtualStores {
 			class Redbull {};
 			class FuelCan {};
 			class PanicButton {};
-			class Lockpick { buyPrice = 0; };
+			class SnapGun { buyPrice = 0; };
 			class VehicleClamp { buyPrice = 0; };
 			class FieldDressing {};
 			class BloodBag {};

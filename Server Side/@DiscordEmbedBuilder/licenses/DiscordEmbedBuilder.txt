@@ -1,0 +1,16 @@
+Copyright (c) 2020 ConnorAU
+    Github: https://github.com/ConnorAU/SQFDiscordEmbedBuilder
+    Discord: https://discord.gg/DMkxetD
+
+1. You are permitted to:
+    a. Modify the material
+
+2. You are not permitted to:
+    a. Redistribute the material via any medium
+	b. Use the material for commercial or monetization purposes
+
+3. Conditions of use:
+    a. All credit attribution to the original author must remain unmodified
+
+4. Disclaimer:
+    a. This material is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the material or the use or other dealings in the material.

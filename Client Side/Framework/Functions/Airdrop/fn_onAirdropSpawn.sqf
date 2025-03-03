@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_onAirdropSpawn";
 
+if !(hasInterface) exitWith {};
+
 _this params [
 	["_airdrop", objNull, [objNull]],
 	["_message", "", [""]]

@@ -254,6 +254,13 @@ class CfgFunctions {
             class resetCasinoVault {};
             class updateCasinoVault {};
         };
+        
+        class Notifications {
+            file = "\life_server\Functions\Notifications";
+            class sendNotification {};
+            class postInitNotifications { postInit=1; };
+            class buildEventNotification {};
+        };
     };
 
     class MySQL_Database {

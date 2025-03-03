@@ -192,6 +192,7 @@ class CfgPatches {
         };
 
         #include "Functions\Gathering\CfgGathering.hpp"
+        #include "Functions\Notifications\CfgNotifications.hpp"
     };
 };
 

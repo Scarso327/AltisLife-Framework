@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_onShipwreckSpawn";
 
+if !(hasInterface) exitWith {};
+
 _this params [
 	["_shipwreck", objNull, [objNull]],
 	["_message", "", [""]]

@@ -63,7 +63,7 @@ private _time = getNumber ([_cfg, "NotifyDelay"] call ULP_SRV_fnc_getEventParam)
 
 	private _jipId = ["OnSpawnAirdrop", [
 		_crate, "<t color='#ff0000' size='1.5px'>Airdrop<br/></t><t color='#ffffff' size='1px'>The supplies have been dropped! The location has been marked on your map."
-	]] remoteExecCall ["ULP_fnc_invokeEvent", -2, true];
+	]] remoteExecCall ["ULP_fnc_invokeEvent", RANY, true];
 
 	if (isNil _result) then {
 		[format ["fn_airdrop: remoteExecCall returned '%1' result", _jipId]] call ULP_fnc_logIt;

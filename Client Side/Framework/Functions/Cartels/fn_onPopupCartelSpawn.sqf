@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_onPopupCartelSpawn";
 
+if !(hasInterface) exitWith {};
+
 _this params [
 	["_popupObj", objNull, [objNull]],
 	["_radius", 250, [0]],

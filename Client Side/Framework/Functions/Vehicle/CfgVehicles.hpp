@@ -117,7 +117,10 @@ class CfgVehicles {
 	// Base without siren or lights (for helis)
 	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
-		upgrades[] = { "TrackingDeviceUpgrade" };
+		upgrades[] = { 
+			"TrackingDeviceUpgrade",
+			"ImprovedLocksUpgrade" 
+		};
 		class Siren { SFX[] = { "Siren_1", "Siren_2", "Siren_5" }; };
 		class Actions {
 			class PNC {
@@ -139,6 +142,10 @@ class CfgVehicles {
 
 	class MedicTextureBase : BaseTexture {
 		factions[] = { "Medic" };
+		upgrades[] = { 
+			"TrackingDeviceUpgrade",
+			"ImprovedStorageUpgrade" 
+		};
 		class Siren { SFX[] = { "Siren_6", "Siren_4", "Siren_3" }; };
 		class Actions {
 			class NHSDispatcher {
@@ -159,6 +166,10 @@ class CfgVehicles {
 
 	class HatoTexture : BaseTexture {
 		factions[] = { "Hato" };
+		upgrades[] = { 
+			"TrackingDeviceUpgrade", 
+			"ImprovedStorageUpgrade"
+		};
 		remoteGates = true;
 		class Siren {};
 		class Lights : HatoColour {};
@@ -973,6 +984,12 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Land\Police\hunter_01.paa",
 					"Data\Textures\Vehicles\Land\Police\hunter_02.paa"
 				}; 
+				upgrades[] = { 
+					"TrackingDeviceUpgrade",
+					"ImprovedLocksUpgrade",
+					"ImprovedHullUpgrade",
+					"ImprovedTyresUpgrade"
+				};
 				class Siren { SFX[] = { "Siren_7", "Siren_8", "Siren_9" }; };
 				class Lights : PoliceColour {
 					leftPos[] = {0.95459,-2.73975,0.559029};

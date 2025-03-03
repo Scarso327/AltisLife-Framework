@@ -831,6 +831,7 @@ class CfgFunctions {
 		class Crimes {
 			file = "Functions\Crimes";
 			class triggerStage {};
+			class postInitCrimes { postInit=1; };
 		};
 
 		class Crafting {

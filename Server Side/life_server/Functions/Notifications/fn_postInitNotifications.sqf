@@ -5,6 +5,17 @@
 #include "\life_server\script_macros.hpp"
 scopeName "fn_postInitNotifications";
 
+["CrimeBreakIn", {
+	_this params [
+		["_unit", objNull, [objNull]],
+		["_crime", "", [""]]
+	];
+
+	if (isNull _unit || { _crime isEqualTo "" }) exitWith {};
+
+	[_crime, format ["%1 is breaking into %2!", [_unit, false, true] call ULP_fnc_getName, _crime]] call ULP_SRV_fnc_sendNotification;
+}] call ULP_fnc_addEventHandler;
+
 ["PowerRedirected", {
 	_this params [
 		["_location", objNull, [objNull]],

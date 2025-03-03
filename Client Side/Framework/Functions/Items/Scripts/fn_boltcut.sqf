@@ -43,7 +43,7 @@ private _housingBreakInCfg = missionConfigFile >> "CfgHousing" >> "Houses" >> (i
 	typeOf _storageHouse
 }) >> "BreakIn";
 
-private _breakInCfg = _object getVariable ["breakInConfig", (if (isClass _housingBreakInCfg) then {
+private _breakInCfg = _object getVariable ["breakInConfig", (if (isClass _housingBreakInCfg && { isNil { _object getVariable "locked_doors" } }) then {
 	_housingBreakInCfg
 } else {
 	configNull

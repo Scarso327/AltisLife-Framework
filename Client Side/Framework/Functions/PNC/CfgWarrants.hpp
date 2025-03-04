@@ -1,5 +1,5 @@
 class CfgWarrants {
-    NoteLength = 128;
+    NoteLength = 280;
     
     class CommonLaw {
         displayName = "Common Law";

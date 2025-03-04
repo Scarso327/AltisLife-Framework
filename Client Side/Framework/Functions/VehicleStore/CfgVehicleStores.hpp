@@ -366,4 +366,24 @@ class CfgVehicleStores {
 			class O_T_VTOL_02_vehicle_F {};
 		};
 	};
+
+	class GangWars : Base {
+		storeName = "Gang Wars Vehicles";
+		conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+		class Vehicles {
+			class C_Quadbike_01_F {};
+			class C_Offroad_01_F {};
+			class C_Offroad_01_covered_F {};
+			class C_Offroad_01_comms_F {};
+			class C_Offroad_02_unarmed_F {};
+			class I_C_Offroad_02_LMG_F {};
+			class B_CTRG_LSV_01_light_F {};
+			class B_LSV_01_unarmed_black_F {};
+			class O_LSV_02_unarmed_F {};
+			class O_MRAP_02_F {};
+			class I_MRAP_03_F {};
+			class B_Heli_Light_01_F {};
+			class O_Heli_Transport_04_black_F {};
+		};
+	};
 };

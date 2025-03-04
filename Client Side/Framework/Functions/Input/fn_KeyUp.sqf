@@ -246,8 +246,7 @@ switch (_code) do {
                     private _anim = getText(missionConfigFile >> "CfgSettings" >> "Gates" >> (typeOf _x) >> "anim");
 
                     if ([player, (_x getVariable ["gate_factions", []])] call ULP_fnc_isFaction) then {
-                        _x 
-                         [_anim, ([1, 0] select ((_x animationPhase _anim) isEqualTo 1))];
+                        _x animate [_anim, ([1, 0] select ((_x animationPhase _anim) isEqualTo 1))];
                     };
                 } forEach (nearestObjects [player, (("isClass _x" configClasses (missionConfigFile >> "CfgSettings" >> "Gates")) apply { configName _x }), 15]);
             };

@@ -97,6 +97,7 @@ class CfgWorlds {
 #include "Functions\Upgrades\CfgHousingUpgrades.hpp"
 #include "Functions\Upgrades\CfgVehicleUpgrades.hpp"
 #include "Functions\Territories\CfgTerritories.hpp"
+#include "Functions\Tutorial\CfgTutorial.hpp"
 
 class CfgServer {
     DatabaseName = "altislife";

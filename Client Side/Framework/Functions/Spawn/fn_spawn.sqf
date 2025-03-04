@@ -65,6 +65,10 @@ if (ULP_FirstSpawn) then {
 		] call ULP_fnc_waitExecute;
 	};
 
+	if ([] call ULP_fnc_shouldDoTutorial) then {
+		[] call ULP_fnc_startTutorial;
+	};
+
 	["FirstSpawn"] call ULP_fnc_achieve;
 
 	if ([] call ULP_fnc_donatorLevel > 0) then { ["Donator"] call ULP_fnc_unlockTitle; };

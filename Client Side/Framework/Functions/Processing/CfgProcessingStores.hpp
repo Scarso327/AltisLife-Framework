@@ -41,6 +41,7 @@ class CfgProcessingStores {
 	};
 	class MultiDrug : Base {
 		title = "Multi-Drug Processing";
+		condition = "[""SofiaTown""] call ULP_fnc_ownsSite";
 		processes[] = { "Weed", "Heroin", "Cocaine", "Meth", "Moonshine" };
 	};
 	class Purifier : Base {

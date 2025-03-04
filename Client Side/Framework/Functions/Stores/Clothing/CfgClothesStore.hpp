@@ -506,6 +506,10 @@ class CfgClothesStore {
 			class H_HelmetIA { price = 5000; };
 			class H_HelmetB_light { price = 5000; };
 			class H_HelmetB { price = 10000; };
+			class H_HelmetSpecB { 
+				price = 25000; 
+				condition = "[""ParosCheckpoint""] call ULP_fnc_ownsSite";
+			};
 		};
 
 		class Facewear {
@@ -551,7 +555,7 @@ class CfgClothesStore {
 			class B_Carryall_cbr {};
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
-			class B_RadioBag_01_black_F {};
+			class B_RadioBag_01_black_F { condition = "[""ParosCheckpoint""] call ULP_fnc_ownsSite"; };
 			class B_SCBA_01_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
 			class B_CominationUnitRespirator_01_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
 		};

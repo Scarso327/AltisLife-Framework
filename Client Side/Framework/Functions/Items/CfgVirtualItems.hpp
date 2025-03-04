@@ -1555,6 +1555,14 @@ class CfgVirtualItems {
 		weight = 3;
 		class Settings : Settings {};
 	};
+	class DunamisPropaganda : FreightCargo {
+		displayName = "Dunamis Propaganda";
+		description = "Dunamis Propaganda intended for regional sympathisers";
+		icon = "Data\Icons\dunamisPropaganda.paa";
+		sellPrice = 1150;
+		weight = 1;
+		class Settings : Settings {};
+	};
 	class Fuel : FreightCargo {
 		displayName = "Fuel";
 		description = "Fuel that needs to be transported to fuel stations";

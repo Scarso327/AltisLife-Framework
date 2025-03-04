@@ -122,7 +122,7 @@ class CfgVehicleStores {
 				class Textures { class DMS {}; };
 			};
 			class B_G_Offroad_01_armed_F { 
-				condition = "([] call ULP_fnc_getGroupRank) >= 6"; 
+				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""NorthernForest""] call ULP_fnc_ownsSite }"; 
 				class Textures { class DMS {}; };
 			};
 			class C_Offroad_02_unarmed_F { 
@@ -133,13 +133,22 @@ class CfgVehicleStores {
 				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
 				class Textures { class DMS {}; };
 			};
+			class O_LSV_02_armed_black_F { 
+				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""NorthernForest""] call ULP_fnc_ownsSite }"; 
+				class Textures { class DMS {}; };
+			};
+			class O_MRAP_02_F { 
+				condition = "([] call ULP_fnc_getGroupRank) >= 7 && { [""NorthernForest""] call ULP_fnc_ownsSite }"; 
+				class Textures { class DMS {}; };
+			};
 			class B_Heli_Light_01_F {
 				class Textures { class DMS {}; };
 			};
-			class I_Heli_light_03_unarmed_F {
+			class O_Heli_Light_02_unarmed_F {
 				class Textures { class DMS {}; };
 			};
-			class O_Heli_Light_02_unarmed_F {
+			class I_Heli_light_03_unarmed_F {
+				condition = "[""NorthernAirfield""] call ULP_fnc_ownsSite";
 				class Textures { class DMS {}; };
 			};
 		};

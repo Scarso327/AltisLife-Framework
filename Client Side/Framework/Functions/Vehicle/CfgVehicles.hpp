@@ -1041,8 +1041,9 @@ class CfgVehicles {
 		buyPrice = 5500000;
 		virtualSpace = 65;
 		canTransfer = false;
-		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }";
+		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk } || { [] call ULP_fnc_isDunamis }";
 		class Textures {
+			// Civilian
 			class Hex : BaseTexture { 
 				displayName = "Hex";
 				textures[] = { 
@@ -1095,6 +1096,16 @@ class CfgVehicles {
 				materials[] = { 
 					"Data\Textures\Vehicles\Global\Chrome\gold.rvmat",
 					"Data\Textures\Vehicles\Global\Chrome\gold.rvmat"  
+				};
+			};
+
+			// Civilian Faction
+			class DMS : BaseTexture {
+				displayName = "DMS";
+				conditions = "[] call ULP_fnc_isDunamis";
+				textures[] = { 
+					"Data\Textures\Groups\DMS\Vehicles\ifrit_01.paa",
+					"Data\Textures\Groups\DMS\Vehicles\ifrit_02.paa"
 				};
 			};
 		};

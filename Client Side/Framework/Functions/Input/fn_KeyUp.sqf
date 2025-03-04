@@ -14,6 +14,7 @@ _this params [
 private _handled = false;
 
 private _seatKey = ACT_KEY("User1", B);
+private _redBullKey = ACT_KEY("User9", K);
 private _interactionKey = ACT_KEY("User10", LWINDOWS);
 private _anprKey = ACT_KEY("User11", NUMSLASH);
 
@@ -285,6 +286,12 @@ switch (_code) do {
                     ]] call ULP_fnc_hint;
                 }] call ULP_fnc_waitExecute;
             };
+        };
+    };
+
+    case _redBullKey: {
+        if (["Redbull", 1, true] call ULP_fnc_handleItem) then {
+            ["Redbull", 1] call compile getText (missionConfigFile >> "CfgVirtualItems" >> "RedBull" >> "Events" >> "onUse");
         };
     };
 

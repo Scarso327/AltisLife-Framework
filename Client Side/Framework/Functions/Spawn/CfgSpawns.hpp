@@ -3,7 +3,7 @@ class CfgSpawns {
         factions[] = { "Civilian" };
         buildings[] = {};
         radius = 100;
-        conditions = "true";
+        conditions = "!([] call ULP_fnc_shouldDoTutorial)";
     };
     class Police : BaseSpawn { factions[] = { "Police" }; };
     class HATO : BaseSpawn { factions[] = { "Hato" }; };
@@ -155,6 +155,7 @@ class CfgSpawns {
             displayName = "Kavala";
             marker = "civ_spawn_kavala";
             icon = "Data\UI\Spawns\kavala.paa";
+            conditions = "true";
         };
         class Athira : Civilian {
             displayName = "Athira";

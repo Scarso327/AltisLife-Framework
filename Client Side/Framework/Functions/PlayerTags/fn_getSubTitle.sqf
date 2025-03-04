@@ -13,4 +13,8 @@ if !(isNil { _object getVariable "Territory" }) exitWith {
 	format ["Resupply in %1", [ULP_SRV_TerritoriesNextTime - serverTime, "MM:SS"] call BIS_fnc_secondsToString]
 };
 
+if ([_object] call ULP_fnc_isOnTutorial) exitWith {
+	"On Tutorial"
+};
+
 (_object getVariable ["subtitle", ""])

@@ -911,6 +911,15 @@ class CfgFunctions {
 			class curTerritory {};
 			class isTerritoryContainer {};
 		};
+
+		class Tutorial {
+			file = "Functions\Tutorial";
+			class startTutorial {};
+			class finishTutorial {};
+			class isOnTutorial {};
+			class triggerTutorialStage {};
+			class shouldDoTutorial {};
+		};
 	};
 
 	class ULP_Functions_UI {

@@ -331,7 +331,7 @@ class CfgPerks {
 		class Leveling {
 			maxLevel = 5;
 			xpLevel = 100;
-			levelCalculation = "5 * (_this select 0)";
+			levelCalculation = "20 * (_this select 0)";
 		};
 		class Requirements {
 			factions[] = { "Civilian", "Police", "Medic", "Hato" };
@@ -340,7 +340,7 @@ class CfgPerks {
 			profession[] = {};
 		};
 		onChanged = "";
-		onActivated = "_params + (_params * (_bonus / 100))";
+		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
 	class SlightofHand {

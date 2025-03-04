@@ -122,7 +122,7 @@ class CfgVehicleStores {
 				class Textures { class DMS {}; };
 			};
 			class B_G_Offroad_01_armed_F { 
-				condition = "([] call ULP_fnc_getGroupRank) >= 6"; 
+				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
 				class Textures { class DMS {}; };
 			};
 			class C_Offroad_02_unarmed_F { 
@@ -134,6 +134,8 @@ class CfgVehicleStores {
 				class Textures { class DMS {}; };
 			};
 			class B_Heli_Light_01_F {
+			class O_LSV_02_armed_black_F { 
+				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
 				class Textures { class DMS {}; };
 			};
 			class I_Heli_light_03_unarmed_F {

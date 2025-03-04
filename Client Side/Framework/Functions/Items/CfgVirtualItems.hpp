@@ -1316,7 +1316,7 @@ class CfgVirtualItems {
 	class CutBloodDiamond : CutDiamond {
 		displayName = "Cut Blood Diamond";
 		icon = "Data\Icons\gem.paa";
-		sellPrice = 11875;
+		sellPrice = 17813;
 		class Settings : Settings { isIllegal = true; };
 	};
 	class FlawlessDiamond : CutDiamond {

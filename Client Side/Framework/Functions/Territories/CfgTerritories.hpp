@@ -170,7 +170,7 @@ class CfgTerritories {
 					displayName = "Diamond Crate";
 					pos[] = { { 21594.1,21268,0 }, 53 };
 					items[] = { "CutBloodDiamond", "CutDiamond" };
-					amount = "15 + ((count playableUnits) * 0.5)";
+					amount = "10 + ((count playableUnits) * 0.35)";
 				};
 			};
 		};

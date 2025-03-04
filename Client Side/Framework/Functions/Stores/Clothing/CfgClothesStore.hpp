@@ -475,19 +475,22 @@ class CfgClothesStore {
 				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
 				class Textures { class DMS {}; };
 			};
-			class U_BG_Guerrilla_6_1 {
+			class U_I_C_Soldier_Para_1_F  {
 				price = 0;
 				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
-				class Textures { class DMS {}; };
-			};
-			class U_I_C_Soldier_Bandit_3_F {
-				price = 0;
-				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
-				class Textures { class DMS {}; };
+				class Textures { 
+					class DMS1 {}; 
+					class DMS2 {};
+				};
 			};
 			class U_I_C_Soldier_Para_2_F  {
 				price = 0;
 				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
+				class Textures { class DMS {}; };
+			};
+			class U_I_E_Uniform_01_F  {
+				price = 0;
+				condition = "([] call ULP_fnc_getGroupRank) >= 6"; 
 				class Textures { class DMS {}; };
 			};
 			class U_C_CBRN_Suit_01_White_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };

@@ -192,7 +192,6 @@ class U_I_C_Soldier_Bandit_3_F : U_C_Poor_1 {
 	price = 150;
 	virtualSpace = 4;
 	class Textures {
-		// Civilian
 		class U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Brown"; 
 			condition = "true";
@@ -213,13 +212,6 @@ class U_I_C_Soldier_Bandit_3_F : U_C_Poor_1 {
 		class Yellow : Black { 
 			displayName = "Yellow"; 
 			textures[] = { "\A3\Characters_F_exp\Civil\Data\U_C_Man_casual_5_F_1_co.paa" };
-		};
-
-		// Civilian Faction
-		class DMS : U_I_C_Soldier_Bandit_3_F {
-			displayName = "Dunamis";
-			textures[] = { "Data\Textures\Groups\DMS\Uniforms\4.paa" };
-			condition = "[] call ULP_fnc_isDunamis";
 		};
 	};
 };
@@ -389,6 +381,22 @@ class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
 			displayName = "Shorts"; 
 			condition = "[] call ULP_fnc_donatorLevel > 0";
 		};
+		class DMS1 : U_I_C_Soldier_Para_1_F {
+			displayName = "Dunamis SGT";
+			textures[] = { 
+				"Data\Textures\Groups\DMS\Uniforms\3_1.paa", 
+				"Data\Textures\Groups\DMS\Uniforms\3_2.paa"
+			};
+			condition = "[] call ULP_fnc_isDunamis && { ([] call ULP_fnc_getGroupRank) >= 3 }";
+		};
+		class DMS2 : U_I_C_Soldier_Para_1_F {
+			displayName = "Dunamis SSGT";
+			textures[] = { 
+				"Data\Textures\Groups\DMS\Uniforms\4_1.paa", 
+				"Data\Textures\Groups\DMS\Uniforms\3_2.paa"
+			};
+			condition = "[] call ULP_fnc_isDunamis && { ([] call ULP_fnc_getGroupRank) >= 4 }";
+		};
 	};
 };
 class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F {
@@ -399,7 +407,10 @@ class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F {
 		};
 		class DMS : U_I_C_Soldier_Para_2_F {
 			displayName = "Dunamis";
-			textures[] = { "Data\Textures\Groups\DMS\Uniforms\5.paa" };
+			textures[] = { 
+				"Data\Textures\Groups\DMS\Uniforms\5_1.paa", 
+				"Data\Textures\Groups\DMS\Uniforms\4_1.paa"
+			};
 			condition = "[] call ULP_fnc_isDunamis";
 		};
 	};
@@ -413,7 +424,10 @@ class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F {
 		};
 		class DMS : U_I_C_Soldier_Para_4_F {
 			displayName = "Dunamis";
-			textures[] = { "Data\Textures\Groups\DMS\Uniforms\1.paa" };
+			textures[] = { 
+				"Data\Textures\Groups\DMS\Uniforms\1_1.paa", 
+				"Data\Textures\Groups\DMS\Uniforms\1_2.paa"
+			};
 			condition = "[] call ULP_fnc_isDunamis";
 		};
 	};
@@ -436,6 +450,14 @@ class U_I_E_Uniform_01_F : U_O_R_Gorka_01_black_F {
 		class U_I_E_Uniform_01_officer_F : U_I_E_Uniform_01_F { 
 			displayName = "Officer"; 
 			condition = "[] call ULP_fnc_donatorLevel > 0";
+		};
+		class DMS : U_I_E_Uniform_01_F {
+			displayName = "Dunamis";
+			textures[] = { 
+				"Data\Textures\Groups\DMS\Uniforms\6_1.paa", 
+				"Data\Textures\Groups\DMS\Uniforms\6_2.paa"
+			};
+			condition = "[] call ULP_fnc_isDunamis";
 		};
 	};
 };
@@ -655,13 +677,6 @@ class U_BG_Guerrilla_6_1 : U_B_GEN_Commander_F {
 		class U_BG_Guerrilla_6_1 { 
 			displayName = "Green";
 			condition = "true"; 
-		};
-
-		// Civilian Faction
-		class DMS : U_BG_Guerrilla_6_1 {
-			displayName = "Dunamis";
-			textures[] = { "Data\Textures\Groups\DMS\Uniforms\3.paa" };
-			condition = "[] call ULP_fnc_isDunamis";
 		};
 	};
 };

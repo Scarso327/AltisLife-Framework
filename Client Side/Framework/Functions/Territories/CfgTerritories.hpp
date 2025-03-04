@@ -26,10 +26,10 @@ class CfgTerritories {
 
 			class Sites {
 				class WeaponCrate {
-					displayName = "Weapons Crate";
+					displayName = "Weapon Parts";
 					pos[] = { { 20952.8,17421.2,0 }, 181 };
-					items[] = { "WeaponCrate" };
-					amount = "2 + ((count playableUnits) * 0.05)";
+					items[] = { "WeaponParts" };
+					amount = "4 + ((count playableUnits) * 0.1)";
 				};
 			};
 		};
@@ -233,7 +233,7 @@ class CfgTerritories {
 
 			class Sites {
 				class VehicleParts {
-					displayName = "Parts Crate";
+					displayName = "Vehicle Parts";
 					pos[] = { { 24877.5,22346.6,0 }, 300 };
 					items[] = { "VehicleParts" };
 					amount = "4 + (count playableUnits)";

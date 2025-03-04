@@ -459,6 +459,19 @@ class CfgVirtualStores {
 		};
 	};
 
+	class GangWars : Blackmarket {
+		storeName = "Gang Wars Market";
+		conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+		class Items {
+			class RationPack {};
+			class Water {};
+			class Redbull {};
+			class Lockpick {};
+			class FirstAidKit {};
+			class MediKit {};
+		};
+	};
+
 	class Burger {
 		storeName = "Redburger";
 		conditions = "true";

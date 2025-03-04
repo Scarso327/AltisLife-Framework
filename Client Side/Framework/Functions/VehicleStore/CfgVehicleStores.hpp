@@ -137,6 +137,11 @@ class CfgVehicleStores {
 				class Textures { class DMS {}; };
 			};
 			class I_Heli_light_03_unarmed_F {
+			class O_MRAP_02_F { 
+				condition = "([] call ULP_fnc_getGroupRank) >= 7 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
+				class Textures { class DMS {}; };
+			};
+			class B_Heli_Light_01_F {
 				class Textures { class DMS {}; };
 			};
 			class O_Heli_Light_02_unarmed_F {

@@ -1547,6 +1547,14 @@ class CfgVirtualItems {
 		weight = 1;
 		class Settings : Settings {};
 	};
+	class Foodstuffs : FreightCargo {
+		displayName = "Foodstuffs";
+		description = "Foodstuffs intended for local supermarkets";
+		icon = "Data\Icons\foodstuffs.paa";
+		sellPrice = 1300;
+		weight = 3;
+		class Settings : Settings {};
+	};
 	class Fuel : FreightCargo {
 		displayName = "Fuel";
 		description = "Fuel that needs to be transported to fuel stations";

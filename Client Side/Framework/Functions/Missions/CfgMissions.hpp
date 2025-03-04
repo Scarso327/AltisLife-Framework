@@ -523,6 +523,52 @@ class CfgMissions {
 		};
 	};
 
+	class FoodDelivery : CorporateFreight {
+		name = "Food Delivery";
+		description = "You need to deliver the given foodstuffs to %1";
+		condition = "true";
+		timeDivisionAmount = 1;
+		vehicleRequirement[] = { { "Car" }, 25 };
+		cargoItem = "Foodstuffs";
+		class Locations {
+			// Collection Point
+			class Food_Shipment {
+				pos = "Food_Shipment";
+				name = "Food Shipment";
+			};
+			
+			// Supermarkets
+			class supermarket {
+				pos = "supermarket";
+				name = "Kore Supermarket";
+			};
+			class supermarket_1 {
+				pos = "supermarket_1";
+				name = "Agios Supermarket";
+			};
+			class supermarket_2 {
+				pos = "supermarket_2";
+				name = "Lakka Supermarket";
+			};
+			class supermarket_3 {
+				pos = "supermarket_3";
+				name = "Telos Supermarket";
+			};
+		};
+		class Rewards {
+			moneyReward = 15;
+			xpReward = 250;
+			repReward = false;
+		};
+		class Messages {
+			onFinishWithoutMission = "You don't have any foodstuffs to deliver here...";
+			onAlreadyHas = "You already have a food delivery active, complete it before requesting another...";
+			onNoLocations = "There are currently no food deliveries available for pickup, please try again alter...";
+			onAssigned = "Your vehicle has been filled with foodstuffs, deliver it to <t color='#B92DE0'>%1</t>";
+			onFinished = "You have successfully delivered the foodstuffs, you have been paid <t color='#B92DE0'>£%1</t>";
+		};
+	};
+
 	class CriminalSmuggling : CorporateFreight {
 		name = "Cargo Smuggling";
 		description = "You need to deliver the given stolen cargo to %1";

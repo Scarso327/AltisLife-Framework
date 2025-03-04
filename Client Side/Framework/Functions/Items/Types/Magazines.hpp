@@ -178,8 +178,7 @@ class 100Rnd_65x39_caseless_mag_Tracer : 100Rnd_65x39_caseless_black_mag_tracer 
 class 100Rnd_65x39_caseless_khaki_mag_tracer : 100Rnd_65x39_caseless_black_mag_tracer {};
 
 class 200Rnd_65x39_cased_Box : RepMagazine { price = 19830; };
-class 200Rnd_65x39_cased_Box_Tracer : RepMagazine { 
-	price = 19830; 
+class 200Rnd_65x39_cased_Box_Tracer : 200Rnd_65x39_cased_Box { 
 	class Textures {
 		class 200Rnd_65x39_cased_Box_Tracer {
 			displayName = "Yellow";

@@ -142,13 +142,13 @@ class CfgLicenseStores {
 	};
 
 	class Rebel : DVLA {
-		title = "Rebel Access";
+		title = "Rebel";
 		condition = "!([""Rebel""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Rebel" };
 	};
 
 	class Blackmarket : DVLA {
-		title = "Blackmarket Access";
+		title = "Blackmarket";
 		condition = "[""Rebel""] call ULP_fnc_hasLicense && { !([""Blackmarket""] call ULP_fnc_hasLicense) } && { [""Blackmarketer""] call ULP_fnc_hasPerk || [""Blackmarket""] call ULP_fnc_hasGroupPerk }";
 		licenses[] = { "Blackmarket" };
 	};

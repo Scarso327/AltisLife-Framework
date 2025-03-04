@@ -490,6 +490,7 @@ class CfgClothesStore {
 				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
 				class Textures { class DMS {}; };
 			};
+			class U_C_CBRN_Suit_01_White_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
 		};
 
 		class Headgear {
@@ -519,6 +520,8 @@ class CfgClothesStore {
 			class G_Balaclava_TI_blk_F {};
 			class G_Balaclava_TI_G_blk_F {};
 			class G_Tactical_Clear {};
+			class G_RegulatorMask_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
+			class G_AirPurifyingRespirator_01_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
 		};
 
 		class Vests {
@@ -549,6 +552,8 @@ class CfgClothesStore {
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
 			class B_RadioBag_01_black_F {};
+			class B_SCBA_01_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
+			class B_CominationUnitRespirator_01_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
 		};
 	};
 

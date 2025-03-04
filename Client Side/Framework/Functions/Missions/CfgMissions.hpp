@@ -569,6 +569,60 @@ class CfgMissions {
 		};
 	};
 
+	class DunamisPropagandaMission : CorporateFreight {
+		name = "Propaganda Mission";
+		description = "You need to deliver the given propaganda material to %1";
+		condition = "[] call ULP_fnc_isDunamis";
+		timeDivisionAmount = 1;
+		vehicleRequirement[] = { { "Car" }, 35 };
+		cargoItem = "DunamisPropaganda";
+		class Locations {
+			// Collection Point
+			class dms_mission_1 {
+				pos = "dms_mission_1";
+				name = "Dunamis Camp";
+			};
+			
+			// Sympathisers
+			class dms_mission_2 {
+				pos = "dms_mission_2";
+				name = "Athira Sympathiser";
+			};
+			class dms_mission_3 {
+				pos = "dms_mission_3";
+				name = "Pyrgos Sympathiser";
+			};
+			class dms_mission_4 {
+				pos = "dms_mission_4";
+				name = "Neochori Sympathiser";
+			};
+			class dms_mission_5 {
+				pos = "dms_mission_5";
+				name = "Agios Sympathiser";
+			};
+			class dms_mission_6 {
+				pos = "dms_mission_6";
+				name = "Zaros Sympathiser";
+			};
+			class dms_mission_7 {
+				pos = "dms_mission_7";
+				name = "Kavala Sympathiser";
+			};
+		};
+		class Rewards {
+			moneyReward = 15;
+			xpReward = 450;
+			repReward = false;
+		};
+		class Messages {
+			onFinishWithoutMission = "You don't have any propaganda to deliver here...";
+			onAlreadyHas = "You already have a propaganda delivery, complete it before requesting another...";
+			onNoLocations = "There are currently propaganda material available for pickup, please try again alter...";
+			onAssigned = "Your vehicle has been filled with propaganda material, deliver it to <t color='#B92DE0'>%1</t>";
+			onFinished = "You have successfully delivered the propaganda material, you have been paid <t color='#B92DE0'>£%1</t>";
+		};
+	};
+
 	class CriminalSmuggling : CorporateFreight {
 		name = "Cargo Smuggling";
 		description = "You need to deliver the given stolen cargo to %1";

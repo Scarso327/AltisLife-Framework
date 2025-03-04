@@ -18,6 +18,7 @@ class CfgVehicles {
 			"FreightCargo",
 			"HumanitarianSupplies",
 			"Fuel",
+			"DunamisPropaganda",
 
 			"UnprocessedOil"
 		};
@@ -30,6 +31,7 @@ class CfgVehicles {
 			"HumanitarianSupplies",
 			"Fuel",
 			"Foodstuffs",
+			"DunamisPropaganda",
 
 			"UnprocessedOil"
 		};
@@ -45,6 +47,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"HumanitarianSupplies",
 			"Fuel",
+			"DunamisPropaganda",
 
 			"UnprocessedOil"
 		};
@@ -65,6 +68,7 @@ class CfgVehicles {
 			"HumanitarianSupplies",
 			"Fuel",
 			"Foodstuffs",
+			"DunamisPropaganda",
 
 			"Turtle_F_Raw",
 
@@ -790,6 +794,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo",
+			"Fuel",
 
 			"UnprocessedOil"
 		};
@@ -896,6 +901,7 @@ class CfgVehicles {
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo",
+			"Fuel",
 
 			"UnprocessedOil"
 		};

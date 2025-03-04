@@ -29,6 +29,7 @@ class CfgVehicles {
 			"FreightCargo",
 			"HumanitarianSupplies",
 			"Fuel",
+			"Foodstuffs",
 
 			"UnprocessedOil"
 		};
@@ -63,6 +64,7 @@ class CfgVehicles {
 			"FreightCargo",
 			"HumanitarianSupplies",
 			"Fuel",
+			"Foodstuffs",
 
 			"Turtle_F_Raw",
 

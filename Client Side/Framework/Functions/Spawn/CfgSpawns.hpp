@@ -236,6 +236,11 @@ class CfgSpawns {
             displayName = "Dunamis Camp";
             marker = "dms_spawn_02";
         };
+        class DMS_FOB : DMS_Safehouse {
+            displayName = "Dunamis FOB";
+            marker = "dms_spawn_03";
+            conditions = "[] call ULP_fnc_isDunamis && { ([] call ULP_fnc_getGroupRank) >= 2 }";
+        };
     };
 
     class Malden {

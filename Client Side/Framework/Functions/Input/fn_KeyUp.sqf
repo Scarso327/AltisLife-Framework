@@ -14,6 +14,7 @@ _this params [
 private _handled = false;
 
 private _seatKey = ACT_KEY("User1", B);
+private _redBullKey = ACT_KEY("User9", K);
 private _interactionKey = ACT_KEY("User10", LWINDOWS);
 private _anprKey = ACT_KEY("User11", NUMSLASH);
 
@@ -245,7 +246,8 @@ switch (_code) do {
                     private _anim = getText(missionConfigFile >> "CfgSettings" >> "Gates" >> (typeOf _x) >> "anim");
 
                     if ([player, (_x getVariable ["gate_factions", []])] call ULP_fnc_isFaction) then {
-                        _x animate [_anim, ([1, 0] select ((_x animationPhase _anim) isEqualTo 1))];
+                        _x 
+                         [_anim, ([1, 0] select ((_x animationPhase _anim) isEqualTo 1))];
                     };
                 } forEach (nearestObjects [player, (("isClass _x" configClasses (missionConfigFile >> "CfgSettings" >> "Gates")) apply { configName _x }), 15]);
             };
@@ -285,6 +287,12 @@ switch (_code) do {
                     ]] call ULP_fnc_hint;
                 }] call ULP_fnc_waitExecute;
             };
+        };
+    };
+
+    case _redBullKey: {
+        if (["Redbull", 1, true] call ULP_fnc_handleItem) then {
+            ["Redbull", 1] call compile getText (missionConfigFile >> "CfgVirtualItems" >> "RedBull" >> "Events" >> "onUse");
         };
     };
 

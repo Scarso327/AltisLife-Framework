@@ -659,14 +659,6 @@ class CfgVirtualStores {
 		};
 	};
 
-	class WeaponParts {
-		storeName = "Weapon Parts";
-		conditions = "true";
-		class Items {
-			class WeaponParts {};
-		};
-	};
-
 	class Drug {
 		storeName = "Drug Dealer";
 		conditions = "true";
@@ -686,8 +678,8 @@ class CfgVirtualStores {
 	};
 
 	class Weapons {
-		storeName = "Weapon Parts";
-		conditions = "[""Church""] call ULP_fnc_ownsCartel";
+		storeName = "Weapons Dealer";
+		conditions = "true";
 		class Items {
 			class WeaponCrate {};
 		};

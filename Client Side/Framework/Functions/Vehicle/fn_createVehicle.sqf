@@ -41,7 +41,7 @@ if !(_upgrades isEqualTo createHashMap) then {
 	_vehicle setVariable ["object_upgrades", _upgrades, true];
 };
 
-[_vehicle, _texture] spawn ULP_fnc_skinVehicle;
+[_vehicle, _texture] call ULP_fnc_skinVehicle;
 [_vehicle] call ULP_fnc_initVehicle;
 
 if (_hint) then {

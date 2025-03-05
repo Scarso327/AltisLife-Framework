@@ -10,7 +10,7 @@ _this params [
 ];
 
 private _building = if ([_object] call ULP_fnc_isHouseStorage) then {
-	_object getVariable "_container"
+	_object getVariable "building"
 } else {
 	_object
 };

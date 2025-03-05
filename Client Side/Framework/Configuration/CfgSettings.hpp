@@ -21,7 +21,6 @@ class CfgSettings {
         profChanceIncrease = 1.30;
         xpIncrease = 1.25;
         payIncrease = 1.25;
-
     };
 
     class CfgMedical {

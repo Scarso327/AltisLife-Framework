@@ -2,7 +2,7 @@
 class CfgSettings {
     developers[] = { "76561198092567307", "76561197971322689" };
     
-    framework_version = "1.5.1";
+    framework_version = "1.5.1.1";
 
     total_maxWeight = 5;
 
@@ -21,6 +21,7 @@ class CfgSettings {
         profChanceIncrease = 1.30;
         xpIncrease = 1.25;
         payIncrease = 1.25;
+
     };
 
     class CfgMedical {

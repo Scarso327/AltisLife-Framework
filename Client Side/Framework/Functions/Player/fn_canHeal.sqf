@@ -23,6 +23,6 @@ _this params [
 		&& { (player distance _target) <= 3 } 
 	} }
 	&& {
-		((["FirstAidKit"] call ULP_fnc_hasItem) > 0 && { ((damage _target) > 0.25) }) 
-		|| ((["MediKit"] call ULP_fnc_hasItem) > 0 && { ((damage _target) >= 0.01) || { [player, ["Medic"]] call ULP_fnc_isFaction && { _target getVariable ["Wounded", false] } } })
+		((["FirstAidKit"] call ULP_fnc_hasItem) > 0 && { ((damage _target) > 0.25) || { (player getHit "Legs") >= 0.5 } }) 
+		|| ((["MediKit"] call ULP_fnc_hasItem) > 0 && { ((damage _target) > 0) || { [player, ["Medic"]] call ULP_fnc_isFaction && { _target getVariable ["Wounded", false] } } })
 	})

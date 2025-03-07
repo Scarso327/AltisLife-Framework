@@ -26,6 +26,8 @@ if !([format["Healing %1", name _target], _time, [_target, _hasMedkit], { [(_thi
 	if (_newDamage < _currentDamage) then {
 		_target setDamage _newDamage;
 	};
+	
+	_target setHit ["Legs", 0];
 
 	[format ["You've healed <t color='#B92DE0'>%1</t>!", name _target]] call ULP_fnc_hint;
 

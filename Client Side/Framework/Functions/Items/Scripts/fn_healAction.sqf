@@ -20,7 +20,13 @@ if !([format["Healing %1", name _target], _time, [_target, _hasMedkit], { [(_thi
 
 	if !(_hasMedkit) then { ["FirstAidKit", 1, true] call ULP_fnc_handleItem; };
 
-	_target setDamage ([["FirstAider", 0.25] call ULP_fnc_activatePerk, 0] select (_hasMedkit));
+	private _newDamage = ([["FirstAider", 0.25] call ULP_fnc_activatePerk, 0] select (_hasMedkit));
+	private _currentDamage = damage _target;
+
+	if (_newDamage < _currentDamage) then {
+		_target setDamage _newDamage;
+	};
+
 	[format ["You've healed <t color='#B92DE0'>%1</t>!", name _target]] call ULP_fnc_hint;
 
 	private _payOut = ["Revival", 5000] call ULP_fnc_getLegislation;

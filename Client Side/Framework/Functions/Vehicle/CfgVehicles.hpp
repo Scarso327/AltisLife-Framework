@@ -1956,8 +1956,8 @@ class CfgVehicles {
 		class Textures {
 			class Police : PoliceTextureBase {
 				turrets[] = { 
-					{ { 1 },  { "LMG_Minigun_Transport" },  { "2000Rnd_65x39_Belt_Tracer_Red" } },
-					{ { 2 },  { "LMG_Minigun_Transport2" },  { "2000Rnd_65x39_Belt_Tracer_Red" } }
+					{ { 1 },  { "LMG_coax" },  { "2000Rnd_762x51_Belt_T_Red" } },
+					{ { 2 },  { "LMG_coax" },  { "2000Rnd_762x51_Belt_T_Red" } }
 				};
 			};
 			class Civilian : BaseTexture {};

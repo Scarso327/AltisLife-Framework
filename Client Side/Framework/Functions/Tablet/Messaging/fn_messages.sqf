@@ -90,7 +90,8 @@ switch (lbCurSel _toolbox) do {
 		if ((_display getVariable ["MessageRecievedEvent", -1]) isEqualTo -1) then {
 			_display setVariable ["MessageRecievedEvent", (["MessageReceived", {
 				private _display = findDisplay 23000;
-				if (isNull _display && { !((lbCUrSel (_display displayCtrl 23036)) isEqualTo 1) }) exitWith {
+				private _ctrlToolbox = _display displayCtrl 23036;
+				if (isNull _ctrlToolbox || { !ctrlShown _ctrlToolbox } || { !((lbCUrSel _ctrlToolbox) isEqualTo 1) }) exitWith {
 					[_event, _eventId] call ULP_fnc_removeEventHandler;
 				};
 

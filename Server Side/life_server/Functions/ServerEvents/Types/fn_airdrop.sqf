@@ -46,16 +46,14 @@ private _time = getNumber ([_cfg, "NotifyDelay"] call ULP_SRV_fnc_getEventParam)
 
 	// Parachute...
 	private _para = createVehicle ["B_parachute_02_F", _pos, [], 0, "FLY"];
-	_para allowDamage false;
-
-	// Crate...
-	private _crate = createVehicle ["O_CargoNet_01_ammo_F", position _para, [], 0, "FLY"];
-	_crate setVariable ["locked", true, true];
-	_crate attachTo [_para, [0, 0, 0]];
-	_crate allowDamage false;
-
 	private _paraPos = getPosATL _para;
 	_para setPosATL [_paraPos select 0, _paraPos select 1, 1000];
+
+	// Crate...
+	private _crate = createVehicle ["O_CargoNet_01_ammo_F", position _para, [], 0, "NONE"];
+	_crate attachTo [_para, [0, 0, 0]];
+	_crate allowDamage false;
+	_crate setVariable ["locked", true, true];
 
 	clearWeaponCargoGlobal _crate;
 	clearMagazineCargoGlobal _crate;
@@ -71,7 +69,7 @@ private _time = getNumber ([_cfg, "NotifyDelay"] call ULP_SRV_fnc_getEventParam)
 
 	[
 		// TODO: Currently the crate looks like it never attaches, this check is likely issue. Leaving for now as it's functional
-		{ ((getPos (_this select 0) select 2) <= 1) || { isNil "_this select 1" } }, [_crate, _para, _area, _marker, _jipId, _shouldLoop], {
+		{ ((getPos (_this select 0) select 2) <= 1) || { isNil { _this select 1 } } }, [_crate, _para, _area, _marker, _jipId, _shouldLoop], {
 			private _crate = _this select 0;
 
 			detach _crate;

@@ -1,4 +1,5 @@
 #define UI_X 0.29375
+#define UI_X_INNER (UI_X + MARGIN_X)
 #define UI_WIDTH 0.4125
 #define INNER_UI_WIDTH (UI_WIDTH - MARGIN_X)
 #define BODY_HEIGHT 0.407
@@ -28,6 +29,17 @@ class DialogGarage {
             SAFEZONE_Y(0.291);
 			SAFEZONE_W(UI_WIDTH);
 			SAFEZONE_H(BODY_HEIGHT);
+        };
+
+		class ShareText : Life_RscStructuredText {
+            idc = -1;
+            text = "<t align = 'right'>Share Keys w/ Nearby Group</t>";
+			enable = 0;
+            colorBackground[] = INNER_BODY_COLOUR;
+            SAFEZONE_X(0.5790625);
+            SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - (MARGIN_Y * 2)) - BUTTON_H);
+			SAFEZONE_W(0.12203125);
+			SAFEZONE_H(BUTTON_H);
         };
 
 		class Footer : Life_RscText {
@@ -69,7 +81,7 @@ class DialogGarage {
 			SAFEZONE_X(0.5790625);
 			SAFEZONE_Y(0.291 + MARGIN_Y);
 			SAFEZONE_W(0.12203125);
-			SAFEZONE_H(0.385);
+			SAFEZONE_H(0.352);
 
 			class Controls {
 				class VehicleInformation : Life_RscStructuredText {
@@ -79,7 +91,7 @@ class DialogGarage {
 					y = 0;
 					x = 0;
 					SAFEZONE_W(0.12203125);
-					SAFEZONE_H(0.385);
+					SAFEZONE_H(0.352);
 				};
 			};
 		};
@@ -121,6 +133,14 @@ class DialogGarage {
             SAFEZONE_X(0.64265625 - (0.0584375 * 2) - (MARGIN_X * 2));
             SAFEZONE_Y(0.698 + BUTTON_MARGIN_Y);
 			SAFEZONE_W(0.0584375);
+			SAFEZONE_H(BUTTON_H);
+        };
+
+        class ShareTextCB : Life_Checkbox {
+            idc = 3508;
+            SAFEZONE_X(0.5790625);
+            SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - (MARGIN_Y * 2)) - BUTTON_H);
+			SAFEZONE_W(MARGIN_X * 2);
 			SAFEZONE_H(BUTTON_H);
         };
 	};

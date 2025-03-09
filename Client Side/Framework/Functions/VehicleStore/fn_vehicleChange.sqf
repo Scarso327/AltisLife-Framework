@@ -66,19 +66,19 @@ private _buyPrice = getNumber(_missionCfg >> "buyPrice");
 private _retrievalPrice = round (_buyPrice * getNumber(missionConfigFile >> "CfgVehicles" >> "retrievalPerc"));
 
 _settings ctrlSetStructuredText parseText format ["
-<br/><br/><br/>
-<img image = '%1' align='center' size='3.5' /> <br/>
-<t align = 'center' size = '1.5'>%2</t><br/>
-<t align = 'left' size = '1'><br/>%3</t>", _picture, _name, getText(_missionCfg >> "description")];
+	<br/><br/><br/>
+	<img image = '%1' align='center' size='3.5' /> <br/>
+	<t align = 'center' size = '1.5'>%2</t><br/>
+	<t align = 'left' size = '1'><br/>%3</t>", _picture, _name, getText(_missionCfg >> "description")];
 
 _info ctrlSetStructuredText parseText format ["<t align = 'left' size = '1'>Buy Price <t align='right'>%1</t></t>
-<t align = 'left' size = '1'><br/>Retrieval Price <t align='right'>%2</t></t>
-<t align = 'left' size = '1'><br/>Virtual Item Space <t align='right'>%3</t></t>
-<t align = 'left' size = '1'><br/>Top Speed <t align='right'>%4 km/h</t></t>
-<t align = 'left' size = '1'><br/>Armor Level <t align='right'>%5</t></t>
-<t align = 'left' size = '1'><br/>Seats <t align='right'>%6</t></t>
-<t align = 'left' size = '1'><br/>Horse Power <t align='right'>%7 bhp</t></t>
-<t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%8</t></t>", 
-([format["£%1", [_buyPrice] call ULP_fnc_numberText], "-"] select (_buyPrice < 1)),
-([format["£%1", [_retrievalPrice] call ULP_fnc_numberText], "-"] select (_retrievalPrice < 1)), 
-getNumber(_missionCfg >> "virtualSpace"), _topSpeed, _armor, _seats + 1, _power, _fuel];
+	<t align = 'left' size = '1'><br/>Retrieval Price <t align='right'>%2</t></t>
+	<t align = 'left' size = '1'><br/>Virtual Item Space <t align='right'>%3</t></t>
+	<t align = 'left' size = '1'><br/>Top Speed <t align='right'>%4 km/h</t></t>
+	<t align = 'left' size = '1'><br/>Armor Level <t align='right'>%5</t></t>
+	<t align = 'left' size = '1'><br/>Seats <t align='right'>%6</t></t>
+	<t align = 'left' size = '1'><br/>Horse Power <t align='right'>%7 bhp</t></t>
+	<t align = 'left' size = '1'><br/>Fuel Capacity <t align='right'>%8</t></t>", 
+	([format["£%1", [_buyPrice] call ULP_fnc_numberText], "-"] select (_buyPrice < 1)),
+	([format["£%1", [_retrievalPrice] call ULP_fnc_numberText], "-"] select (_retrievalPrice < 1)), 
+	getNumber(_missionCfg >> "virtualSpace"), _topSpeed, _armor, _seats + 1, _power, _fuel];

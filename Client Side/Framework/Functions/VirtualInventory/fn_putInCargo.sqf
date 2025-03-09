@@ -10,7 +10,8 @@ if (canSuspend) exitWith {
 };
 
 _this params [
-	["_ctrl", controlNull, [controlNull]]
+	["_ctrl", controlNull, [controlNull]],
+	["_useMaxCarry", false, [true]]
 ];
 
 private _display = ctrlParent _ctrl;
@@ -73,37 +74,44 @@ if (_maxCarry <= 0) exitWith {
 	["This vehicle doesn't enough inventory space to fit even one of these items!"] call ULP_fnc_hint;
 };
 
-[
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, (_count min _maxCarry)], [_display, _container, _item, _data],
-	{
-		_this params [
-			["_display", displayNull, [displayNull]],
-			["_container", objNull, [objNull]],
-			["_item", "", [""]],
-			["_data", 1, [0, "", []]],
-			"",
-			["_value", 1, [0]]
-		];
+private _maxValue = _count min _maxCarry;
 
-		if (isNull _display || { _item isEqualTo "" }) exitWith {};
+private _select = {
+	_this params [
+		["_display", displayNull, [displayNull]],
+		["_container", objNull, [objNull]],
+		["_item", "", [""]],
+		["_data", 1, [0, "", []]],
+		"",
+		["_value", 1, [0]]
+	];
 
-		private _name = getText (missionConfigFile >> "CfgVirtualItems" >> _item >> "displayName");
-		if ([getNumber (missionConfigFile >> "CfgVirtualItems" >> _item >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
-			_value = _data;
-			_name = format [_name, _value];
-		};
+	if (isNull _display || { _item isEqualTo "" }) exitWith {};
 
-		if ([_container, _item, _value] call ULP_fnc_addToCargo) then {
-			if ([_item, _value, true] call ULP_fnc_handleItem) then {
-				[format["You have put <t color='#B92DE0'>%1 %2(s)</t> into this container.", _value, _name]] call ULP_fnc_hint;
-				[_display, 0] call ULP_fnc_updateInventory;
-				[_display, 1] call ULP_fnc_updateInventory;
-			} else {
-				[_container, _item, _value] call ULP_fnc_removeFromCargo;
-				[format["You don't have %1 %2(s) to put in this container!", _value, _name]] call ULP_fnc_hint;
-			};
+	private _name = getText (missionConfigFile >> "CfgVirtualItems" >> _item >> "displayName");
+	if ([getNumber (missionConfigFile >> "CfgVirtualItems" >> _item >> "Settings" >> "isScripted")] call ULP_fnc_bool) then {
+		_value = _data;
+		_name = format [_name, _value];
+	};
+
+	if ([_container, _item, _value] call ULP_fnc_addToCargo) then {
+		if ([_item, _value, true] call ULP_fnc_handleItem) then {
+			[format["You have put <t color='#B92DE0'>%1 %2(s)</t> into this container.", _value, _name]] call ULP_fnc_hint;
+			[_display, 0] call ULP_fnc_updateInventory;
+			[_display, 1] call ULP_fnc_updateInventory;
 		} else {
-			[format["This container doesn't have enough space to take <t color='#B92DE0'>%1 %2(s)</t>!", _value, _name]] call ULP_fnc_hint;
+			[_container, _item, _value] call ULP_fnc_removeFromCargo;
+			[format["You don't have %1 %2(s) to put in this container!", _value, _name]] call ULP_fnc_hint;
 		};
-	}, false
+	} else {
+		[format["This container doesn't have enough space to take <t color='#B92DE0'>%1 %2(s)</t>!", _value, _name]] call ULP_fnc_hint;
+	};
+};
+
+if (_useMaxCarry) exitWith {
+	[_display, _container, _item, _data, displayNull, _maxValue] call _select;
+};
+
+[
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _maxValue], [_display, _container, _item, _data], _select, false
 ] call ULP_fnc_selectNumber;

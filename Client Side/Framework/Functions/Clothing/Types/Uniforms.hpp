@@ -68,7 +68,7 @@ class U_C_ConstructionCoverall_Black_F : U_C_WorkerOveralls {
 		class U_C_ConstructionCoverall_Blue_F : U_C_ConstructionCoverall_Black_F { displayName = "Blue"; };
 		class U_C_ConstructionCoverall_Vrana_F : U_C_ConstructionCoverall_Black_F { 
 			displayName = "Vrana"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};
 };
@@ -105,7 +105,7 @@ class U_C_ArtTShirt_01_v1_F : U_C_Poor_1 {
 	class Textures {
 		class U_C_ArtTShirt_01_v1_F { 
 			displayName = "Art of War"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class U_C_ArtTShirt_01_v2_F : U_C_ArtTShirt_01_v1_F { displayName = "Drones"; };
 		class U_C_ArtTShirt_01_v3_F : U_C_ArtTShirt_01_v1_F { displayName = "Waltham Robotics"; };
@@ -198,7 +198,7 @@ class U_I_C_Soldier_Bandit_3_F : U_C_Poor_1 {
 		};
 		class Black : U_I_C_Soldier_Bandit_3_F { 
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";  
+			condition = "[] call ULP_fnc_donatorLevel >= 2";  
 			textures[] = { "\A3\Characters_F_exp\Syndikat\Data\U_I_C_Soldier_Bandit_2_F_2_co.paa" };
 		};
 		class Red : Black { 
@@ -234,7 +234,7 @@ class U_IG_Guerilla1_1 : U_C_Poor_1 {
 		class Blackwing : U_IG_Guerilla1_1 {
 			displayName = "Blackwing";
 			textures[] = { "\a3\characters_f_gamma\Civil\Data\c_cloth1_black.paa" };
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class Black : Blackwing {
 			displayName = "Black";
@@ -303,7 +303,7 @@ class U_C_E_LooterJacket_01_F : U_C_Poor_1 {
 		class U_I_L_Uniform_01_tshirt_olive_F : U_C_E_LooterJacket_01_F { displayName = "T-Shirt, Olive"; };
 		class U_I_L_Uniform_01_tshirt_skull_F : U_C_E_LooterJacket_01_F { 
 			displayName = "T-Shirt, Skull"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};
 };
@@ -379,7 +379,7 @@ class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
 		class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F { displayName = "Tank Top"; };
 		class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F { 
 			displayName = "Shorts"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class DMS1 : U_I_C_Soldier_Para_1_F {
 			displayName = "Dunamis SGT";
@@ -449,7 +449,7 @@ class U_I_E_Uniform_01_F : U_O_R_Gorka_01_black_F {
 		class U_I_E_Uniform_01_tanktop_F : U_I_E_Uniform_01_F { displayName = "Tank Top"; };
 		class U_I_E_Uniform_01_officer_F : U_I_E_Uniform_01_F { 
 			displayName = "Officer"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class DMS : U_I_E_Uniform_01_F {
 			displayName = "Dunamis";
@@ -514,7 +514,7 @@ class U_C_Driver_1_black : U_C_Poor_1 {
 		class U_C_Driver_1_orange : U_C_Driver_1_black { displayName = "Orange"; };
 		class U_C_Driver_1 : U_C_Driver_1_black { 
 			displayName = "Fuel"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class U_C_Driver_2 : U_C_Driver_1 { displayName = "Bluking"; };
 		class U_C_Driver_3 : U_C_Driver_1 { displayName = "Redstone"; };
@@ -731,7 +731,7 @@ class U_C_FormalSuit_01_black_F : U_C_Poor_1 {
 		class U_C_FormalSuit_01_blue_F : U_C_FormalSuit_01_black_F { displayName = "Blue"; };
 		class U_C_FormalSuit_01_khaki_F : U_C_FormalSuit_01_black_F { 
 			displayName = "Khaki";
-			condition = "[] call ULP_fnc_donatorLevel > 0";  
+			condition = "[] call ULP_fnc_donatorLevel >= 2";  
 		};
 	};
 };

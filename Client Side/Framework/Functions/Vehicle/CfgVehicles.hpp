@@ -1062,7 +1062,7 @@ class CfgVehicles {
 			class GoldLine : BaseTexture { 
 				displayName = "Gold Line";
 				buyPrice = 450000;
-				condition = "[] call ULP_fnc_donatorLevel > 0"; 
+				condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 				textures[] = { 
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_01.paa",
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\goldLine_02.paa"

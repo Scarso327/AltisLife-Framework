@@ -66,7 +66,7 @@ class B_AssaultPack_blk : B_LegStrapBag_black_F {
 		class B_AssaultPack_sgg : B_AssaultPack_blk { displayName = "Sage"; };
 		class B_AssaultPack_wdl_F : B_AssaultPack_blk { 
 			displayName = "Woodland"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class B_AssaultPack_eaf_F : B_AssaultPack_wdl_F { displayName = "Geometric"; };
 	};
@@ -112,7 +112,7 @@ class B_Kitbag_cbr : B_LegStrapBag_black_F {
 		class B_Kitbag_sgg : B_Kitbag_cbr { displayName = "Sage"; };
 		class B_Kitbag_mcamo : B_Kitbag_cbr { 
 			displayName = "MTP"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};
 };
@@ -148,7 +148,7 @@ class B_CivilianBackpack_01_Everyday_Black_F : B_LegStrapBag_black_F {
 		};
 		class B_CivilianBackpack_01_Everyday_Astra_F : B_CivilianBackpack_01_Everyday_Black_F { 
 			displayName = "Astra"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class B_CivilianBackpack_01_Everyday_Vrana_F : B_CivilianBackpack_01_Everyday_Astra_F { displayName = "Vrana"; };
 	};
@@ -192,7 +192,7 @@ class B_Carryall_cbr : B_LegStrapBag_black_F {
 		class B_Carryall_green_F : B_Carryall_cbr { displayName = "Green"; };
 		class B_Carryall_wdl_F : B_Carryall_cbr { 
 			displayName = "Woodland"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 		class B_Carryall_eaf_F : B_Carryall_wdl_F { displayName = "Geometric"; };
 		class B_Carryall_ghex_F : B_Carryall_wdl_F { displayName = "Green Hex"; };
@@ -202,7 +202,7 @@ class B_Carryall_cbr : B_LegStrapBag_black_F {
 		class B_Carryall_taiga_F : B_Carryall_wdl_F { displayName = "Taiga"; };
 		class B_Carryall_blk : B_Carryall_wdl_F { 
 			displayName = "Black"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 	};
 };

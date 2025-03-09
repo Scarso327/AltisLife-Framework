@@ -123,7 +123,7 @@ class V_HarnessO_brn : V_LegStrapBag_black_F {
 		class V_HarnessO_ghex_F : V_HarnessO_brn { displayName = "Green Hex"; };
 		class V_HarnessOGL_brn : V_HarnessO_brn { 
 			displayName = "Brown (GL)";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class V_HarnessOGL_gry : V_HarnessO_brn { displayName = "Gray (GL)"; };
 		class V_HarnessOGL_ghex_F : V_HarnessO_brn { displayName = "Green Hex (GL)"; };
@@ -188,7 +188,7 @@ class V_SmershVest_01_F : V_LegStrapBag_black_F {
 		};
 		class V_SmershVest_01_radio_F : V_SmershVest_01_F { 
 			displayName = "Default w/radio"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};
 };
@@ -205,7 +205,7 @@ class V_DeckCrew_white_F : V_SmershVest_01_F {
 		};
 		class V_DeckCrew_blue_F : V_DeckCrew_white_F { 
 			displayName = "Blue"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 		class V_DeckCrew_red_F : V_DeckCrew_blue_F { displayName = "Red"; };
 		class V_DeckCrew_green_F : V_DeckCrew_blue_F { displayName = "Green"; };
@@ -235,7 +235,7 @@ class V_TacVest_blk : V_SmershVest_01_F {
 		class V_TacVest_oli : V_TacVest_blk { displayName = "Olive"; };
 		class V_TacVest_camo : V_TacVest_blk { 
 			displayName = "Camo"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 		class V_TacVest_blk_POLICE : V_TacVest_blk { 
 			displayName = "Police"; 
@@ -298,7 +298,7 @@ class V_PlateCarrier1_blk : V_SmershVest_01_F {
 	class Textures {
 		class V_PlateCarrier1_blk {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction } || { [] call ULP_fnc_isProtection } || { [] call ULP_fnc_isSecurity }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction } || { [] call ULP_fnc_isProtection } || { [] call ULP_fnc_isSecurity }";
 		};
 		class V_PlateCarrier1_rgr : V_PlateCarrier1_blk { 
 			displayName = "Green"; 
@@ -308,7 +308,7 @@ class V_PlateCarrier1_blk : V_SmershVest_01_F {
 		class V_PlateCarrier1_wdl : V_PlateCarrier1_rgr { displayName = "Woodland"; };
 		class V_PlateCarrier1_tna_F : V_PlateCarrier1_rgr { 
 			displayName = "Tropic"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 		class V_PlateCarrierL_CTRG : V_PlateCarrier1_tna_F { displayName = "CTRG"; };
 	};
@@ -326,7 +326,7 @@ class V_PlateCarrier2_blk : V_SmershVest_01_F {
 	class Textures {
 		class V_PlateCarrier2_blk {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class V_PlateCarrier2_rgr : V_PlateCarrier2_blk { 
 			displayName = "Green"; 
@@ -336,7 +336,7 @@ class V_PlateCarrier2_blk : V_SmershVest_01_F {
 		class V_PlateCarrier2_wdl : V_PlateCarrier2_rgr { displayName = "Woodland"; };
 		class V_PlateCarrier2_tna_F : V_PlateCarrier2_rgr { 
 			displayName = "Tropic"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";  
+			condition = "[] call ULP_fnc_donatorLevel >= 2";  
 		};
 		class V_PlateCarrierH_CTRG : V_PlateCarrier2_tna_F { displayName = "CTRG"; };
 	};

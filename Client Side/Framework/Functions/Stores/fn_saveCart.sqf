@@ -15,8 +15,10 @@ private _allSavedCarts = + (missionProfileNamespace getVariable ["ULP_SavedCarts
 private _savedCarts = _allSavedCarts getOrDefault [_storeCfgName, createHashMap];
 
 private _maxCarts = (getNumber (missionConfigFile >> "CfgStores" >> "maxCarts")) + ULP_Prestige;
-if ([] call ULP_fnc_donatorLevel > 0) then {
+if ([] call ULP_fnc_donatorLevel >= 1) then {
 	_maxCarts = _maxCarts + getNumber (missionConfigFile >> "CfgStores" >> "extraDonatorCarts");
+
+	if ([] call ULP_fnc_donatorLevel >= 2) then { _maxCarts = _maxCarts * 2; };
 };
 
 if ((count _savedCarts) >= _maxCarts) exitWith {

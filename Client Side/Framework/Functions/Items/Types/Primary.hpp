@@ -31,7 +31,7 @@ class SMG_03C_black {
 	class Textures {
 		class SMG_03C_black {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class SMG_03C_TR_black : SMG_03C_black {  displayName = "Black TR"; };
 		class SMG_03C_khaki : SMG_03C_black { 
@@ -60,7 +60,7 @@ class SMG_03_black {
 	class Textures {
 		class SMG_03_black {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class SMG_03_TR_black : SMG_03_black { displayName = "Black TR"; };
 		class SMG_03_khaki : SMG_03_black { 
@@ -135,7 +135,7 @@ class arifle_Mk20C_plain_F {
 		};
 		class arifle_Mk20C_F : arifle_Mk20C_plain_F { 
 			displayName = "Camo"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 	};
 };
@@ -152,7 +152,7 @@ class arifle_Mk20_plain_F {
 		};
 		class arifle_Mk20_F : arifle_Mk20_plain_F { 
 			displayName = "Camo"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 	};
 };
@@ -169,7 +169,7 @@ class arifle_Mk20_GL_plain_F {
 		};
 		class arifle_Mk20_GL_F : arifle_Mk20_GL_plain_F { 
 			displayName = "Camo"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 	};
 };
@@ -182,7 +182,7 @@ class arifle_SPAR_01_blk_F {
 	class Textures {
 		class arifle_SPAR_01_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_SPAR_01_khk_F : arifle_SPAR_01_blk_F { 
 			displayName = "Khaki";
@@ -201,7 +201,7 @@ class arifle_SPAR_01_GL_blk_F {
 	class Textures {
 		class arifle_SPAR_01_GL_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_SPAR_01_GL_khk_F : arifle_SPAR_01_GL_blk_F { 
 			displayName = "Khaki"; 
@@ -220,7 +220,7 @@ class arifle_SPAR_02_blk_F {
 	class Textures {
 		class arifle_SPAR_02_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_SPAR_02_khk_F : arifle_SPAR_02_blk_F { 
 			displayName = "Khaki"; 
@@ -245,7 +245,7 @@ class arifle_CTAR_blk_F {
 	class Textures {
 		class arifle_CTAR_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_CTAR_ghex_F : arifle_CTAR_blk_F { 
 			displayName = "Green Hex"; 
@@ -264,7 +264,7 @@ class arifle_CTAR_GL_blk_F {
 	class Textures {
 		class arifle_CTAR_GL_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_CTAR_GL_ghex_F : arifle_CTAR_GL_blk_F { 
 			displayName = "Green Hex";
@@ -283,7 +283,7 @@ class arifle_CTARS_blk_F {
 	class Textures {
 		class arifle_CTARS_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_CTARS_ghex_F : arifle_CTARS_blk_F { 
 			displayName = "Green Hex";
@@ -302,7 +302,7 @@ class srifle_DMR_07_blk_F {
 	class Textures {
 		class srifle_DMR_07_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class srifle_DMR_07_ghex_F : srifle_DMR_07_blk_F { 
 			displayName = "Green Hex"; 
@@ -339,7 +339,7 @@ class arifle_MSBS65_black_F {
 	class Textures {
 		class arifle_MSBS65_black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MSBS65_F : arifle_MSBS65_black_F { 
 			displayName = "Green"; 
@@ -360,7 +360,7 @@ class arifle_MSBS65_GL_black_F {
 	class Textures {
 		class arifle_MSBS65_GL_black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MSBS65_GL_F : arifle_MSBS65_GL_black_F { 
 			displayName = "Green"; 
@@ -381,7 +381,7 @@ class arifle_MSBS65_UBS_black_F {
 	class Textures {
 		class arifle_MSBS65_UBS_black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MSBS65_UBS_F : arifle_MSBS65_UBS_black_F { 
 			displayName = "Green"; 
@@ -402,7 +402,7 @@ class arifle_MSBS65_Mark_black_F {
 	class Textures {
 		class arifle_MSBS65_Mark_black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MSBS65_Mark_F : arifle_MSBS65_Mark_black_F { 
 			displayName = "Green"; 
@@ -423,7 +423,7 @@ class arifle_MXC_Black_F {
 	class Textures {
 		class arifle_MXC_Black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MXC_F : arifle_MXC_Black_F { 
 			displayName = "Sand";
@@ -442,7 +442,7 @@ class arifle_MX_Black_F {
 	class Textures {
 		class arifle_MX_Black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MX_F : arifle_MX_Black_F { 
 			displayName = "Sand"; 
@@ -461,7 +461,7 @@ class arifle_MX_GL_Black_F {
 	class Textures {
 		class arifle_MX_GL_Black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MX_GL_F : arifle_MX_GL_Black_F { 
 			displayName = "Sand";
@@ -480,7 +480,7 @@ class arifle_MXM_Black_F {
 	class Textures {
 		class arifle_MXM_Black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MXM_F : arifle_MXM_Black_F { 
 			displayName = "Sand"; 
@@ -499,7 +499,7 @@ class arifle_MX_SW_Black_F {
 	class Textures {
 		class arifle_MX_SW_Black_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_MX_SW_F : arifle_MX_SW_Black_F { 
 			displayName = "Sand";
@@ -518,7 +518,7 @@ class arifle_ARX_blk_F {
 	class Textures {
 		class arifle_ARX_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_ARX_ghex_F : arifle_ARX_blk_F { 
 			displayName = "Green Hex";
@@ -541,7 +541,7 @@ class LMG_Mk200_F {
 		};
 		class LMG_Mk200_black_F : LMG_Mk200_F { 
 			displayName = "Black"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};
 };
@@ -560,7 +560,7 @@ class arifle_AK12U_F {
 	class Textures {
 		class arifle_AK12U_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class arifle_AK12U_lush_F : arifle_AK12U_F { 
 			displayName = "Lush"; 
@@ -579,7 +579,7 @@ class arifle_AK12_F {
 	class Textures {
 		class arifle_AK12_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class arifle_AK12_lush_F : arifle_AK12_F { 
 			displayName = "Lush";
@@ -604,7 +604,7 @@ class arifle_SPAR_03_blk_F {
 	class Textures {
 		class arifle_SPAR_03_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class arifle_SPAR_03_khk_F : arifle_SPAR_03_blk_F { 
 			displayName = "Khaki"; 
@@ -648,7 +648,7 @@ class srifle_DMR_03_F {
 	class Textures {
 		class srifle_DMR_03_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class srifle_DMR_03_khaki_F : srifle_DMR_03_F { 
 			displayName = "Khaki"; 
@@ -677,7 +677,7 @@ class srifle_DMR_04_F {
 	class Textures {
 		class srifle_DMR_04_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class srifle_DMR_04_Tan_F : srifle_DMR_04_F { 
 			displayName = "Tan"; 
@@ -694,7 +694,7 @@ class srifle_DMR_02_F {
 	class Textures {
 		class srifle_DMR_02_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class srifle_DMR_02_sniper_F : srifle_DMR_02_F { 
 			displayName = "Sand"; 
@@ -713,7 +713,7 @@ class srifle_DMR_05_blk_F {
 	class Textures {
 		class srifle_DMR_02_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class srifle_DMR_05_tan_f : srifle_DMR_02_F { 
 			displayName = "Tan";
@@ -732,7 +732,7 @@ class srifle_LRR_F {
 	class Textures {
 		class srifle_LRR_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class srifle_LRR_tna_F : srifle_LRR_F { 
 			displayName = "Tropic"; 

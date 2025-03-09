@@ -18,6 +18,7 @@ private _group = ULP_FactionGroups getOrDefault [_faction, grpNull];
 if (isNull _group) then {
 	_group = createGroup [side _unit, false];
 	_group setGroupIdGlobal [getText (missionConfigFile >> "CfgFactions" >> _faction >> "shortName")];
+	_group setVariable ["faction", _faction];
 
 	ULP_FactionGroups set [_faction, _group];
 };

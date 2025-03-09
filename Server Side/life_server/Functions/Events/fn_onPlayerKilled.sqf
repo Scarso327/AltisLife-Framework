@@ -10,6 +10,11 @@ _this params [
 ];
 
 private _isWounded = _unit getVariable ["Wounded", false];
+private _wasKilledByPolice = ((group _killer) getVariable ["faction", ""]) isEqualTo "Police";
+
+if ([_unit, ["Civilian"]] call ULP_fnc_isFaction && { _wasKilledByPolice }) then {
+	[getPlayerUID _unit] call ULP_SRV_fnc_clearWarrants;
+};
 
 // Notify the server...
 if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } || { !(_killer isKindOf "Man") }) then {
@@ -24,7 +29,7 @@ if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } 
 			format ["Suspected Weapon: %1", ([currentWeapon _killer] call ULP_fnc_itemCfg) param [5, "Unknown"]]
 		] call ULP_SRV_fnc_addWarrant;
 	};
-	
+
 	[["Executed", "Killed"] select (_isWounded), [[_unit, false, true] call ULP_fnc_getName, [_killer, false, true] call ULP_fnc_getName]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 	[getPlayerUID _unit, "Executed", [getPlayerUID _killer, getPos _unit, getUnitLoadout _unit, _isWounded]] call ULP_SRV_fnc_logPlayerEvent;
 

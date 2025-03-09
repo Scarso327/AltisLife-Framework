@@ -467,6 +467,7 @@ class CfgFunctions {
 			class setVehicleAmmo {};
 			class isVehicleOwner {};
 			class getVehicleOwner {};
+			class getVehicleOwnerName {};
 			class vehicleRegistration {};
 			class clearCargo {};
 			class unlockTexture {};

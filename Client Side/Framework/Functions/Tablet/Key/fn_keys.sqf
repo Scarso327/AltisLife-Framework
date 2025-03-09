@@ -81,7 +81,7 @@ switch (lbCurSel _toolbox) do {
 
 					_distance = round (player distance _x);
 					
-					_item = _keyList lbAdd _name;
+					_item = _keyList lbAdd format ["%1 [%2]", _name, [_x] call ULP_fnc_getVehicleOwnerName];
 					_keyList lbSetData [_item, _x call BIS_fnc_netId]; // Uses BIS_fnc_netId as it can work in SP for testing + saves parseing an object to string...
 					_keyList lbSetTooltip [_item, format["Distance: %1m", [[_distance] call ULP_fnc_numberText, ">100"] select (_distance >= 100)]];
 

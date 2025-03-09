@@ -24,16 +24,17 @@ class CfgLicenses {
         description = "The base requirement for purchasing a goods vehicle";
         buyPrice = 75000;
         class Settings : Settings {};
+        conditions = "[""Driving""] call ULP_fnc_hasLicense && { !([] call ULP_fnc_isOnTutorial) }";
     };
 
-    class Boating : Driving {
+    class Boating : Trucking {
         displayName = "Boating Licence";
         description = "The base requirement for purchasing a boat";
         buyPrice = 6500;
         class Settings : Settings {};
     };
 
-    class Piloting : Driving {
+    class Piloting : Trucking {
         displayName = "Piloting Licence";
         description = "The base requirement for purchasing a helicopter/plane";
         buyPrice = 600000;

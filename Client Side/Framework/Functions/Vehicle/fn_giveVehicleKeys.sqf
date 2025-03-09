@@ -13,7 +13,7 @@ if (isNull _unit || { !(isPlayer _unit) } || { (player distance _unit) > 5 }) ex
 
 [(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), (ULP_Keys apply { 
 	([typeOf _x] call ULP_fnc_vehicleCfg) params [  "", "_missionCfg", "", "_name" ]; 
-	[_picture, _name, _x call BIS_fnc_netId, 0];
+	[_picture, format ["%1 (%2m)", _name, (player distance _x)], _x call BIS_fnc_netId, 0];
 }), ["Give", "Cancel"], [_unit], {
 	_this params [
 		["_unit", objNull, [objNull]],

@@ -71,8 +71,8 @@ if (ULP_FirstSpawn) then {
 
 	["FirstSpawn"] call ULP_fnc_achieve;
 
-	if ([] call ULP_fnc_donatorLevel > 0) then { ["Donator"] call ULP_fnc_unlockTitle; };
-	if ([] call ULP_fnc_donatorLevel > 1) then { ["Investor"] call ULP_fnc_unlockTitle; };
+	if ([] call ULP_fnc_donatorLevel >= 1) then { ["Donator"] call ULP_fnc_unlockTitle; };
+	if ([] call ULP_fnc_donatorLevel >= 2) then { ["Investor"] call ULP_fnc_unlockTitle; };
 
 	if (((call ULP_Staff) > 1) || { ((call ULP_Event) > 1) }) then { ["JoinStaff"] call ULP_fnc_achieve; };
 

@@ -23,7 +23,7 @@ class G_Squares : G_WirelessEarpiece_F {
 		};
 		class G_Squares_Tinted : G_Squares { 
 			displayName = "Tinted";
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 	};
 };
@@ -39,7 +39,7 @@ class G_Spectacles : G_WirelessEarpiece_F {
 		};
 		class G_Spectacles_Tinted : G_Spectacles { 
 			displayName = "Tinted"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 	};
 };
@@ -173,7 +173,7 @@ class G_AirPurifyingRespirator_01_F : G_RegulatorMask_F {
 		};
 		class G_AirPurifyingRespirator_02_black_F : G_AirPurifyingRespirator_01_F { 
 			displayName = "Black"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class G_AirPurifyingRespirator_02_olive_F : G_AirPurifyingRespirator_02_black_F { displayName = "Olive"; };
 		class G_AirPurifyingRespirator_02_sand_F : G_AirPurifyingRespirator_02_black_F { displayName = "Sand"; };
@@ -213,7 +213,7 @@ class G_Bandanna_aviator : G_WirelessEarpiece_F {
 		class G_Bandanna_oli : G_Bandanna_aviator { displayName = "Olive"; };
 		class G_Bandanna_beast : G_Bandanna_aviator { 
 			displayName = "Beast";
-			condition = "[] call ULP_fnc_donatorLevel > 0";  
+			condition = "[] call ULP_fnc_donatorLevel >= 2";  
 		};
 		class G_Bandanna_BlueFlame1 : G_Bandanna_beast { displayName = "Blue Flame"; };
 		class G_Bandanna_BlueFlame2 : G_Bandanna_beast { displayName = "Blue Flames"; };
@@ -257,7 +257,7 @@ class G_Balaclava_blk : G_Bandanna_aviator {
 		class G_Balaclava_oli : G_Balaclava_blk { displayName = "Olive"; };
 		class G_Balaclava_BlueStrips : G_Balaclava_blk { 
 			displayName = "Blue Stripe"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class G_Balaclava_Flecktarn : G_Balaclava_BlueStrips { displayName = "Flecktarn"; };
 		class G_Balaclava_Halloween_01 : G_Balaclava_BlueStrips { displayName = "Halloween"; };
@@ -317,7 +317,7 @@ class G_Tactical_Clear : G_WirelessEarpiece_F {
 		};
 		class G_Tactical_Black : G_Tactical_Clear { 
 			displayName = "Black"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 	};
 };

@@ -778,6 +778,7 @@ class CfgVirtualItems {
 		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Pole_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 
 	class Land_PortableLight_single_F : RoadCone_F { 
@@ -803,6 +804,7 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_PortableLight_02_single_yellow_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 	class Land_PortableLight_02_double_yellow_F : Land_PortableLight_02_single_yellow_F { 
 		displayName = "Portable Lamp (Double, Yellow)";
@@ -828,6 +830,7 @@ class CfgVirtualItems {
 		displayName = "Bar Gate (V2)";
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_RoadBarrier_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 
 	class TapeSign_F : RoadCone_F { 
@@ -867,6 +870,7 @@ class CfgVirtualItems {
 		displayName = "Plastic Barrier (Large, Blue)";
 		class Settings : Settings {};
 		class Events { onUse = "[""PlasticBarrier_03_blue_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 	class PlasticBarrier_02_yellow_F : RoadBarrier_F { 
 		displayName = "Plastic Barrier (Medium, Yellow)";
@@ -880,6 +884,7 @@ class CfgVirtualItems {
 		displayName = "Plastic Barrier (Medium, Grey)";
 		class Settings : Settings {};
 		class Events { onUse = "[""PlasticBarrier_02_grey_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 	class Land_CncBarrier_F : RoadBarrier_F { 
 		displayName = "Concrete Barrier";
@@ -893,6 +898,7 @@ class CfgVirtualItems {
 		displayName = "Concrete Barrier (Stripes)";
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_CncBarrier_stripes_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 
 	class Land_SandbagBarricade_01_half_F : RoadCone_F { 
@@ -977,6 +983,7 @@ class CfgVirtualItems {
 		weight = 5;
 		class Settings : Settings {};
 		class Events { onUse = "[""Target_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 	class Land_Target_Dueling_01_F : Target_F { 
 		displayName = "Dueling Target";
@@ -985,6 +992,7 @@ class CfgVirtualItems {
 		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_Target_Dueling_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 	class Scarecrow_01_F : RoadCone_F { 
 		displayName = "Scarecrow";
@@ -994,6 +1002,7 @@ class CfgVirtualItems {
 		weight = 3;
 		class Settings : Settings {};
 		class Events { onUse = "[""Scarecrow_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 
 	class Flag_UK_F : RoadCone_F { 
@@ -1009,11 +1018,13 @@ class CfgVirtualItems {
 		displayName = "Flag (Altis Colonial)";
 		class Settings : Settings {};
 		class Events { onUse = "[""Flag_AltisColonial_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 	class Flag_RedCrystal_F : Flag_UK_F { 
 		displayName = "Flag (Red Crystal)";
 		class Settings : Settings {};
 		class Events { onUse = "[""Flag_RedCrystal_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
 
 	class PortableHelipadLight_01_yellow_F : RoadCone_F { 
@@ -1029,23 +1040,24 @@ class CfgVirtualItems {
 		displayName = "Portable Light (White)";
 		class Settings : Settings {};
 		class Events { onUse = "[""PortableHelipadLight_01_white_F"", _this select 0] call ULP_fnc_placeObject;"; };
+		conditions = "[] call ULP_fnc_donatorLevel >= 3";
 	};
-	class PortableHelipadLight_01_red_F : PortableHelipadLight_01_yellow_F { 
+	class PortableHelipadLight_01_red_F : PortableHelipadLight_01_white_F { 
 		displayName = "Portable Light (Red)";
 		class Settings : Settings {};
 		class Events { onUse = "[""PortableHelipadLight_01_red_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class PortableHelipadLight_01_green_F : PortableHelipadLight_01_yellow_F { 
+	class PortableHelipadLight_01_green_F : PortableHelipadLight_01_white_F { 
 		displayName = "Portable Light (Green)";
 		class Settings : Settings {};
 		class Events { onUse = "[""PortableHelipadLight_01_green_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class PortableHelipadLight_01_blue_F : PortableHelipadLight_01_yellow_F { 
+	class PortableHelipadLight_01_blue_F : PortableHelipadLight_01_white_F { 
 		displayName = "Portable Light (Blue)";
 		class Settings : Settings {};
 		class Events { onUse = "[""PortableHelipadLight_01_blue_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
-	class PortableHelipadLight_01_F : PortableHelipadLight_01_yellow_F { 
+	class PortableHelipadLight_01_F : PortableHelipadLight_01_white_F { 
 		displayName = "Portable Light (Pink)";
 		class Settings : Settings {};
 		class Events { onUse = "[""PortableHelipadLight_01_F"", _this select 0] call ULP_fnc_placeObject;"; };

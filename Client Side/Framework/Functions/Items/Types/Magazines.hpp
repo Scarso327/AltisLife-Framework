@@ -116,7 +116,7 @@ class 30Rnd_65x39_caseless_black_mag : RepMagazine {
 	class Textures {
 		class 30Rnd_65x39_caseless_black_mag {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class 30Rnd_65x39_caseless_mag : 30Rnd_65x39_caseless_black_mag { 
 			displayName = "Sand"; 
@@ -132,7 +132,7 @@ class 30Rnd_65x39_caseless_black_mag_Tracer : 30Rnd_65x39_caseless_black_mag {
 	class Textures {
 		class 30Rnd_65x39_caseless_black_mag_Tracer {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class 30Rnd_65x39_caseless_mag_Tracer : 30Rnd_65x39_caseless_black_mag_Tracer { 
 			displayName = "Sand"; 
@@ -149,7 +149,7 @@ class 100Rnd_65x39_caseless_black_mag : RepMagazine {
 	class Textures {
 		class 100Rnd_65x39_caseless_black_mag {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class 100Rnd_65x39_caseless_mag : 100Rnd_65x39_caseless_black_mag { 
 			displayName = "Sand"; 
@@ -165,7 +165,7 @@ class 100Rnd_65x39_caseless_black_mag_tracer : 100Rnd_65x39_caseless_black_mag {
 	class Textures {
 		class 100Rnd_65x39_caseless_black_mag_tracer {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class 100Rnd_65x39_caseless_mag_Tracer : 100Rnd_65x39_caseless_black_mag_tracer { 
 			displayName = "Sand"; 
@@ -225,7 +225,7 @@ class UGL_FlareWhite_F : BaseMagazine {
 		};
 		class UGL_FlareGreen_F : UGL_FlareWhite_F { 
 			displayName = "Green";
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 		class UGL_FlareRed_F : UGL_FlareGreen_F { displayName = "Red"; };
 		class UGL_FlareYellow_F : UGL_FlareGreen_F { displayName = "Yellow"; };
@@ -245,7 +245,7 @@ class 1Rnd_Smoke_Grenade_shell : RepMagazine {
 		};
 		class 1Rnd_SmokeGreen_Grenade_shell : 1Rnd_Smoke_Grenade_shell { 
 			displayName = "Green";
-			condition = "[] call ULP_fnc_donatorLevel > 0";  
+			condition = "[] call ULP_fnc_donatorLevel >= 2";  
 		};
 		class 1Rnd_SmokeYellow_Grenade_shell : 1Rnd_SmokeGreen_Grenade_shell { displayName = "Yellow"; };
 		class 1Rnd_SmokePurple_Grenade_shell : 1Rnd_SmokeGreen_Grenade_shell { displayName = "Purple"; };

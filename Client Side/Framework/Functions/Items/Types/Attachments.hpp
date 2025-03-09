@@ -16,7 +16,7 @@ class optic_MRD {
 		};
 		class optic_MRD_black : optic_MRD { 
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 	};
 };
@@ -53,7 +53,7 @@ class optic_Holosight {
         class optic_Holosight_smg : optic_Holosight { displayName = "Brown (SMG)"; };
 		class optic_Holosight_blk_F : optic_Holosight { 
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }"; 
 		};
         class optic_Holosight_smg_blk_F : optic_Holosight_blk_F { displayName = "Black (SMG)"; };
         class optic_Holosight_khk_F : optic_Holosight { displayName = "Khaki"; };
@@ -117,7 +117,7 @@ class optic_Arco {
 		};
         class optic_Arco_blk_F : optic_Arco { 
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";  
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";  
 		};
 		class optic_Arco_ghex_F : optic_Arco { displayName = "Green Hex"; };
         class optic_Arco_lush_F : optic_Arco { displayName = "Lush"; };
@@ -136,7 +136,7 @@ class optic_ERCO_blk_F {
 	class Textures {
 		class optic_ERCO_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }"; 
 		};
         class optic_ERCO_khk_F : optic_ERCO_blk_F { 
 			displayName = "Khaki";
@@ -155,7 +155,7 @@ class optic_DMS {
 	class Textures {
 		class optic_DMS {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class optic_DMS_ghex_F : optic_DMS { 
 			displayName = "Green Hex";
@@ -180,7 +180,7 @@ class optic_SOS {
 	class Textures {
 		class optic_SOS {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
         class optic_SOS_khk_F : optic_SOS { 
 			displayName = "Khaki"; 
@@ -197,7 +197,7 @@ class optic_KHS_blk {
 	class Textures {
 		class optic_KHS_blk {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
         class optic_KHS_hex : optic_KHS_blk { 
 			displayName = "Hex"; 
@@ -218,7 +218,7 @@ class optic_AMS {
 	class Textures {
 		class optic_AMS {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class optic_AMS_khk : optic_AMS { 
 			displayName = "Khaki"; 
@@ -237,7 +237,7 @@ class optic_LRPS {
 	class Textures {
 		class optic_LRPS {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
         class optic_LRPS_tna_F : optic_LRPS { 
 			displayName = "Tropic"; 
@@ -270,7 +270,7 @@ class muzzle_snds_M {
 	class Textures {
         class muzzle_snds_M {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_m_khk_F : muzzle_snds_M { 
 			displayName = "Khaki"; 
@@ -296,7 +296,7 @@ class muzzle_snds_58_blk_F {
 	class Textures {
         class muzzle_snds_58_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_58_ghex_F : muzzle_snds_58_blk_F { 
 			displayName = "Green Hex";
@@ -315,7 +315,7 @@ class muzzle_snds_H {
 	class Textures {
         class muzzle_snds_H {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_H_khk_F : muzzle_snds_H { 
 			displayName = "Khaki";
@@ -334,7 +334,7 @@ class muzzle_snds_65_TI_blk_F {
 	class Textures {
         class muzzle_snds_65_TI_blk_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_65_TI_ghex_F : muzzle_snds_65_TI_blk_F { 
 			displayName = "Green Hex";
@@ -353,7 +353,7 @@ class muzzle_snds_B {
 	class Textures {
         class muzzle_snds_B {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class muzzle_snds_B_khk_F : muzzle_snds_B { 
 			displayName = "Khaki";
@@ -376,7 +376,7 @@ class bipod_01_F_blk {
 	class Textures {
         class bipod_01_F_blk {
 			displayName = "Black [NATO]";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
         class bipod_02_F_blk : bipod_01_F_blk { displayName = "Black [CSAT]"; };
 		class bipod_03_F_blk : bipod_01_F_blk { displayName = "Black [AAF]"; };

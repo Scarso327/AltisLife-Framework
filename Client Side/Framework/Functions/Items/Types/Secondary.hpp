@@ -21,7 +21,7 @@ class hgun_P07_F : hgun_Pistol_Signal_F {
 		};
 		class hgun_P07_blk_F : hgun_P07_F {
 			displayName = "Black";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};	
 };
@@ -36,7 +36,7 @@ class hgun_Pistol_heavy_01_F : hgun_Pistol_Signal_F {
 		};
 		class hgun_Pistol_heavy_01_green_F : hgun_Pistol_heavy_01_F {
 			displayName = "Green";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};	
 };

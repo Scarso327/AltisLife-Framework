@@ -37,7 +37,7 @@ class H_Bandanna_gry : H_HeadBandage_clean_F {
 		class H_Bandanna_camo : H_Bandanna_gry { displayName = "Camo"; };
 		class H_Bandanna_mcamo : H_Bandanna_gry { 
 			displayName = "MTP";
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 		class H_Bandanna_surfer : H_Bandanna_mcamo { displayName = "Surfer"; };
 		class H_Bandanna_surfer_blk : H_Bandanna_mcamo { displayName = "Surfer, Black"; };
@@ -73,7 +73,7 @@ class H_Cap_blk : H_HeadBandage_clean_F {
 		class H_Cap_press : H_Cap_blk { displayName = "Press"; };
 		class H_Cap_usblack : H_Cap_blk { 
 			displayName = "US (Black)";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class H_Cap_tan_specops_US : H_Cap_usblack { displayName = "US (MTP)"; };
 		class H_Cap_khaki_specops_UK : H_Cap_usblack { displayName = "UK"; };
@@ -128,7 +128,7 @@ class H_MilCap_gry : H_HeadBandage_clean_F {
 		class H_MilCap_grn : H_MilCap_gry { displayName = "Green"; };
 		class H_MilCap_wdl : H_MilCap_gry { 
 			displayName = "Woodland";
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class H_MilCap_ghex_F : H_MilCap_wdl { displayName = "Green Hex"; };
 		class H_MilCap_ocamo : H_MilCap_wdl { displayName = "Hex"; };
@@ -163,7 +163,7 @@ class H_Hat_grey : H_HeadBandage_clean_F {
 		class H_Hat_tan : H_Hat_grey { displayName = "Tan"; };
 		class H_Hat_checker : H_Hat_grey { 
 			displayName = "Checker";
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 		class H_Hat_camo : H_Hat_checker { displayName = "Camo"; };
 	};
@@ -197,7 +197,7 @@ class H_Hat_Safari_sand_F : H_HeadBandage_clean_F {
 		};
 		class H_Hat_Safari_olive_F : H_Hat_Safari_sand_F { 
 			displayName = "Olive"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 	};
 };
@@ -233,7 +233,7 @@ class H_Booniehat_khk : H_HeadBandage_clean_F {
 		class H_Booniehat_tan : H_Booniehat_khk { displayName = "Tan"; };
 		class H_Booniehat_mcamo : H_Booniehat_khk { 
 			displayName = "MTP"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class H_Booniehat_dgtl : H_Booniehat_mcamo { displayName = "Digital"; };
 		class H_Booniehat_wdl : H_Booniehat_mcamo { displayName = "Woodland"; };
@@ -310,7 +310,7 @@ class H_ShemagOpen_khk : H_HeadBandage_clean_F {
 		class H_Shemag_olive : H_ShemagOpen_khk { displayName = "Olive"; };
 		class H_Shemag_olive_hs : H_ShemagOpen_khk { 
 			displayName = "Olive (Headset)";
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 	};
 };
@@ -403,7 +403,7 @@ class H_RacingHelmet_1_black_F : H_HeadBandage_clean_F {
 		class H_RacingHelmet_1_yellow_F : H_RacingHelmet_1_black_F { displayName = "Yellow"; };
 		class H_RacingHelmet_4_F : H_RacingHelmet_1_black_F { 
 			displayName = "Vrana";
-			condition = "[] call ULP_fnc_donatorLevel > 0"; 
+			condition = "[] call ULP_fnc_donatorLevel >= 2"; 
 		};
 		class H_RacingHelmet_3_F : H_RacingHelmet_4_F { displayName = "Redstone"; };
 		class H_RacingHelmet_2_F : H_RacingHelmet_4_F { displayName = "Bluking"; };
@@ -445,7 +445,7 @@ class H_PASGT_basic_black_F : H_HeadBandage_clean_F {
 		class H_PASGT_basic_blue_press_F : H_PASGT_basic_black_F { displayName = "Press"; };
 		class H_PASGT_neckprot_blue_press_F : H_PASGT_basic_black_F { 
 			displayName = "Press (Neck Protection)"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};
 };
@@ -469,7 +469,7 @@ class H_PilotHelmetHeli_B : H_HeadBandage_clean_F {
 		class H_PilotHelmetHeli_I : H_PilotHelmetHeli_B { displayName = "Pilot (Digi)"; };
 		class H_CrewHelmetHeli_B : H_PilotHelmetHeli_B { 
 			displayName = "Crew (Black)";
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }  || { [player, [""Medic""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }  || { [player, [""Medic""]] call ULP_fnc_isFaction }";
 		};
 		class H_CrewHelmetHeli_O : H_CrewHelmetHeli_B { displayName = "Crew Olive)"; };
 		class H_CrewHelmetHeli_I : H_CrewHelmetHeli_B { displayName = "Crew (Digi)"; };
@@ -499,7 +499,7 @@ class H_HelmetB_light : H_HelmetIA {
 		};
 		class H_HelmetB_light_black : H_HelmetB_light { 
 			displayName = "Black"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class H_HelmetB_light_desert : H_HelmetB_light { displayName = "Desert"; };
 		class H_HelmetB_light_sand : H_HelmetB_light { displayName = "Sand"; };
@@ -525,7 +525,7 @@ class H_HelmetB : H_HelmetB_light {
 		};
 		class H_HelmetB_plain_blk : H_HelmetB { 
 			displayName = "Black"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class H_HelmetB_desert : H_HelmetB { displayName = "Desert"; };
 		class H_HelmetB_sand : H_HelmetB { displayName = "Sand"; };
@@ -555,7 +555,7 @@ class H_HelmetSpecB : H_HelmetB_light {
 		};
 		class H_HelmetSpecB_blk : H_HelmetSpecB { 
 			displayName = "Black"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0 || { [player, [""Police""]] call ULP_fnc_isFaction }";
+			condition = "[] call ULP_fnc_donatorLevel >= 2 || { [player, [""Police""]] call ULP_fnc_isFaction }";
 		};
 		class H_HelmetSpecB_paint2 : H_HelmetSpecB { displayName = "Desert"; };
 		class H_HelmetSpecB_sand : H_HelmetSpecB { displayName = "Sand"; };
@@ -596,7 +596,7 @@ class H_HelmetHBK_F : H_HelmetB_light {
 		class H_HelmetHBK_headset_F : H_HelmetHBK_F { displayName = "Headset"; };
 		class H_HelmetHBK_ear_F : H_HelmetHBK_F { 
 			displayName = "Ear Protectors"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 		class H_HelmetHBK_chops_F : H_HelmetHBK_ear_F { displayName = "Chops"; };
 	};
@@ -616,7 +616,7 @@ class H_HelmetAggressor_F : H_HelmetB_light {
 		class H_HelmetAggressor_cover_F : H_HelmetAggressor_F { displayName = "Covered"; };
 		class H_HelmetAggressor_cover_taiga_F : H_HelmetAggressor_F { 
 			displayName = "Taiga"; 
-			condition = "[] call ULP_fnc_donatorLevel > 0";
+			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
 	};
 };

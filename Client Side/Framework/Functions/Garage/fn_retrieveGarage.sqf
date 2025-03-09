@@ -16,6 +16,8 @@ _this params [
 private _display = ctrlParent _button;
 if (isNull _display) exitWith {};
 
+private _shareKeys = cbChecked (_display displayCtrl 3508);
+
 private _impound = _display getVariable ["impound", false];
 
 private _vehInfo = _display getVariable ["selected", []];
@@ -49,8 +51,12 @@ if (isNil "_spawn") exitWith {
 if ([_price, true, (["Garage Retrieval Fees", "Vehicle Impound Fees"] select (_impound))] call ULP_fnc_removeMoney) exitWith {
 	closeDialog 0;
 
-	[_classname, _spawn, _texture, _id, _upgrades] call ULP_fnc_createVehicle;
+	private _vehicle = [_classname, _spawn, _texture, _id, _upgrades] call ULP_fnc_createVehicle;
 	[_id] remoteExecCall ["ULP_SRV_fnc_retrieveVehicle", RSERV];
+
+	if (_shareKeys) then {
+		[_vehicle] call ULP_fnc_shareVehicleKeysNearby;
+	};
 };
 
 [format["You can't afford to retrieve this vehicle. You need £%1.", [_price] call ULP_fnc_numberText]] call ULP_fnc_hint;

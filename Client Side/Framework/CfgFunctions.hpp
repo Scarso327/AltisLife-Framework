@@ -479,6 +479,7 @@ class CfgFunctions {
 			class removeVehicleClamp {};
 			class hasTyreDamage {};
 			class pushVehicle {};
+			class shareVehicleKeysNearby {};
 		};
 
 		class VehicleEvents {

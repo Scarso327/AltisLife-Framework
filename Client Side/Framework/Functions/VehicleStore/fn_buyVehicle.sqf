@@ -45,6 +45,8 @@ if (isClass _textureCfg) then {
 	{	
 		_this params [ "_display", "_missionCfg", "_buyPrice", "_texture" ];
 
+		private _shareKeys = cbChecked (_display displayCtrl 3409);
+
 		private _spawns = _display getVariable ["spawns", []];
 
 		_spawns = _spawns apply {
@@ -71,6 +73,7 @@ if (isClass _textureCfg) then {
 				["VehicleBought", {
 					_this params [
 						["_params", [], [[]]],
+						["_shareKeys", false, [true]],
 						["_limitReached", false, [true]],
 						["_price", 0, [0]]
 					];
@@ -88,7 +91,11 @@ if (isClass _textureCfg) then {
 							format ["You've been refunded <t color='#B92DE0'>%1%2</t> for %3 as you've reached the max garagable limit of <t color='#B92DE0'>%4</t>...", "£", [_price] call ULP_fnc_numberText, _name, [_limit] call ULP_fnc_numberText]] select (_price > 0))] call ULP_fnc_hint;
 					};
 
-					_params call ULP_fnc_createVehicle;
+					private _vehicle = _params call ULP_fnc_createVehicle;
+
+					if (_shareKeys) then {
+						[_vehicle] call ULP_fnc_shareVehicleKeysNearby;
+					};
 				}, true] call ULP_fnc_addEventHandler;
 
 				[
@@ -99,10 +106,15 @@ if (isClass _textureCfg) then {
 					configName _missionCfg, 
 					_texture, 
 					_spawn, 
-					_limit
+					_limit,
+					_shareKeys
 				] remoteExecCall ["ULP_SRV_fnc_createVehicle", RSERV];
 			} else {
-				[configName _missionCfg, _spawn, _texture] call ULP_fnc_createVehicle;
+				private _vehicle = [configName _missionCfg, _spawn, _texture] call ULP_fnc_createVehicle;
+
+				if (_shareKeys) then {
+					[_vehicle] call ULP_fnc_shareVehicleKeysNearby;
+				};
 			};
 
 			["BuyVehicle"] call ULP_fnc_achieve;

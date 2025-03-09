@@ -40,6 +40,16 @@ class DialogGenericStore {
 			SAFEZONE_H((BODY_HEIGHT - (MARGIN_Y * 2)) - ((BUTTON_H + BUTTON_MARGIN_Y) * 2));
         };
 
+        class OverrideText : Life_RscStructuredText {
+            idc = -1;
+            text = "<t align = 'right'>Override Gear</t>";
+            colorBackground[] = INNER_BODY_COLOUR;
+            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
+            SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - (MARGIN_Y * 2)) - BUTTON_H);
+			SAFEZONE_W(CONTENT_W);
+			SAFEZONE_H(BUTTON_H);
+        };
+
 		class Footer : Life_RscText {
             idc = -1;
             colorBackground[] = FOOTER_COLOUR;
@@ -170,18 +180,9 @@ class DialogGenericStore {
 			SAFEZONE_H(BUTTON_H);
         };
 
-        class OverrideText : Life_RscStructuredText {
-            idc = -1;
-            text = "<t align = 'right'>Override Gear</t>";
-            colorBackground[] = INNER_BODY_COLOUR;
-            SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
-            SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - (MARGIN_Y * 2)) - BUTTON_H);
-			SAFEZONE_W(CONTENT_W);
-			SAFEZONE_H(BUTTON_H);
-        };
-
         class OverrideCB : Life_Checkbox {
             idc = 3114;
+            checked = 1;
             SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
             SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - (MARGIN_Y * 2)) - BUTTON_H);
 			SAFEZONE_W(MARGIN_X * 2);

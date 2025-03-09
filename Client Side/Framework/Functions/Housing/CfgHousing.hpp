@@ -225,7 +225,7 @@ class CfgHousing {
 			class BreakIn : BreakIn {
 				breakIn = 15 * 60;
 			};
-			spawnPos[] = {15171.1,15339,12.8876};
+			spawnPos[] = {0,0,0};
 			condition = "[] call ULP_fnc_isGroup && { [""DMT""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			
 			class Storage {
@@ -242,7 +242,7 @@ class CfgHousing {
 			class BreakIn : BreakIn {
 				breakIn = 15 * 60;
 			};
-			spawnPos[] = {15177.2,15386.7,3.29152};
+			spawnPos[] = {0,0,0};
 			condition = "[] call ULP_fnc_isGroup && { [""MilitaryOffices""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			
 			class Storage {
@@ -255,7 +255,7 @@ class CfgHousing {
 			class BreakIn : BreakIn {
 				breakIn = 15 * 60;
 			};
-			spawnPos[] = {15177.2,15461.1,7.97687};
+			spawnPos[] = {0,0,0};
 			condition = "[] call ULP_fnc_isGroup && { [""OfficeBuilding""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			class Storage {
 				object = "C_IDAP_supplyCrate_F";

@@ -65,7 +65,7 @@ if (ULP_FirstSpawn) then {
 		] call ULP_fnc_waitExecute;
 	};
 
-	if ([] call ULP_fnc_shouldDoTutorial) then {
+	if !(isNil "ULP_DoTutorial") then {
 		[] call ULP_fnc_startTutorial;
 	};
 

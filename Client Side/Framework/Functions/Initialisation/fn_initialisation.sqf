@@ -145,7 +145,7 @@ showCommandingMenu "";
 ["Finishing Initialisation"] call ULP_fnc_logIt;
 
 if (isNil "ULP_UCLevels") then {
-	[] call ULP_fnc_spawnMenu;
+	["DialogWelcome"] call ULP_UI_fnc_createDialog;
 } else {
 	ULP_UCLevels params [ "_cop", "_uc" ];
 
@@ -159,8 +159,8 @@ if (isNil "ULP_UCLevels") then {
 			missionNamespace setVariable ["Police_Main", compileFinal (str _cop)];
 			missionNamespace setVariable ["Police_UC", compileFinal (str _uc)];
 			
-			[] call ULP_fnc_spawnMenu;
-		}, { [] call ULP_fnc_spawnMenu; }, false
+			["DialogWelcome"] call ULP_UI_fnc_createDialog;
+		}, { ["DialogWelcome"] call ULP_UI_fnc_createDialog; }, false
 	] call ULP_fnc_confirm;
 };
 

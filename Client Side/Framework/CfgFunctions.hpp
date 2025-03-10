@@ -1044,5 +1044,12 @@ class CfgFunctions {
 			file = "UI\DialogGambleSlots\Functions";
 			class DialogGambleSlots_Spin {};
 		};
+		
+		class DialogWelcome {
+			file = "UI\DialogWelcome\Functions";
+			class DialogWelcome_OnInit {};
+			class DialogWelcome_OnLoad {};
+			class DialogWelcome_OnUnload {};
+		};
 	};
 };

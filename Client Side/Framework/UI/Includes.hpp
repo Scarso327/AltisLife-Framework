@@ -30,3 +30,4 @@
 #include "DialogUpgrades\DialogUpgrades.hpp"
 #include "DialogFactionSelection\DialogFactionSelection.hpp"
 #include "DialogGambleSlots\DialogGambleSlots.hpp"
+#include "DialogWelcome\DialogWelcome.hpp"

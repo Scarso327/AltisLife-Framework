@@ -435,6 +435,7 @@ class CfgVirtualStores {
 			class IndustrialDrill {};
 			class FieldDressing {};
 			class FirstAidKit {};
+			class MediKit {};
 		};
 	};
 

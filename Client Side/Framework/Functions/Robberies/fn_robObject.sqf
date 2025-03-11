@@ -72,7 +72,7 @@ private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [
 		[(group player), "Robbery"] remoteExecCall ["ULP_SRV_fnc_addGroupXP", RSERV];
 	};
 
-	[getPlayerUID player, "TheftAct", "S8",
+	[player, "TheftAct", "S8",
 		format [
 			"%2%3 | Suspected Weapon: %1", 
 			_suspectedWeapon,
@@ -93,7 +93,7 @@ private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [
 	_object setVariable["robber", nil, true];
 	deleteMarker _marker;
 
-	[getPlayerUID player, "CriminalAttempts", "Section1",
+	[player, "CriminalAttempts", "Section1",
 		format [
 			"Attempted Robbery of %2%3 | Suspected Weapon: %1", 
 			_suspectedWeapon,

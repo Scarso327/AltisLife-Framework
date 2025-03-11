@@ -18,7 +18,7 @@ if (_object isKindOf "Man" && { isPlayer _object }) exitWith {
 		default { _object getVariable ["name", name _object] };
 	};
 
-	if ([_object, ["Police", "Hato", "Medic"]] call ULP_fnc_isFaction) then {
+	if ([_object, ["Police", "Hato", "Medic", "Dunamis"]] call ULP_fnc_isFaction) then {
 		_name = format ["[%1] %2", getText (missionConfigFile >> "CfgFactions" >> ([_object] call ULP_fnc_getFaction) >> "shortName"), _name];
 	} else {
 		private _tag = [group _object] call ULP_fnc_groupTag;

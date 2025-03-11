@@ -84,10 +84,16 @@ ULP_Prestige = _prestige;
 ULP_Level = _level;
 ULP_XP = _xp;
 
+_stats params [
+	["_hunger", 100, [0]],
+	["_thirst", 100, [0]],
+	["_damage", 0, [0]]
+];
+
 // Set saved survival statistics....
-ULP_Survival_Hunger = (_stats select 0);
-ULP_Survival_Thirst = (_stats select 1);
-player setDamage (_stats select 2);
+ULP_Survival_Hunger = _hunger;
+ULP_Survival_Thirst = _thirst;
+player setDamage _damage;
 
 // TODO : Handle Blacklisting...
 
@@ -114,6 +120,10 @@ switch (configName _factionCfg) do {
 			ULP_HoboEventHandlers pushBack ["OnXPIncreased", (["OnXPIncreased", { [] call ULP_fnc_isStillHobo; }] call ULP_fnc_addEventHandler)];
 			ULP_HoboEventHandlers pushBack ["LicenseBought", (["LicenseBought", { [] call ULP_fnc_isStillHobo; }] call ULP_fnc_addEventHandler)];
 		};
+	};
+	case "Dunamis": {
+		ULP_Imprisioned = _bool;
+		ULP_Prison_Time = _playerData select 27;
 	};
 };
 

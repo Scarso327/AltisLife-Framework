@@ -4,6 +4,8 @@
 */
 scopeName "fn_isFaction";
 
+diag_log _this;
+
 _this params [
 	["_object", objNull, [objNull]],
 	["_factions", [], [[]]]

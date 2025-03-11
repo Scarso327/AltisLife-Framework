@@ -1,6 +1,6 @@
 class CfgStatusIcons {
 	class Base {
-		factions[] = { "Civilian", "Police", "Medic", "Hato" };
+		factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 		condition = "true";
 	};
 

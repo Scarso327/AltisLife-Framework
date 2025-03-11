@@ -9,7 +9,7 @@ class CfgPerks {
 		description = "Automatically applies your seatbelt";
 		removalMultiplier = 1;
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 1;
 			prestige = 0;
 			profession[] = {};
@@ -24,7 +24,7 @@ class CfgPerks {
 		description = "Slows your hunger and dehydration gain by 50%";
 		removalMultiplier = 1;
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 2;
 			prestige = 0;
 			profession[] = {};
@@ -39,7 +39,7 @@ class CfgPerks {
 		description = "Increases your Item carry limit by 25%";
 		removalMultiplier = 1;
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 2;
 			prestige = 0;
 			profession[] = {};
@@ -59,7 +59,7 @@ class CfgPerks {
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic" };
+			factions[] = { "Civilian", "Police", "Medic", "Dunamis" };
 			level = 5;
 			prestige = 0;
 			profession[] = { "Repairing", 1 };
@@ -99,7 +99,7 @@ class CfgPerks {
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 6;
 			prestige = 0;
 			profession[] = {};
@@ -114,7 +114,7 @@ class CfgPerks {
 		description = "Increases your base paycheck by 25%";
 		removalMultiplier = 1;
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 7;
 			prestige = 0;
 			profession[] = {};
@@ -129,7 +129,7 @@ class CfgPerks {
 		description = "Allows you to spawn in Sofia, Agios and Neochori";
 		removalMultiplier = 5;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 7;
 			prestige = 0;
 			profession[] = {};
@@ -144,7 +144,7 @@ class CfgPerks {
 		description = "You will spawn with a Map, Radio and GPS";
 		removalMultiplier = 3;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 8;
 			prestige = 0;
 			profession[] = {};
@@ -164,7 +164,7 @@ class CfgPerks {
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 8;
 			prestige = 0;
 			profession[] = {};
@@ -184,7 +184,7 @@ class CfgPerks {
 			levelCalculation = "10 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Hato" };
+			factions[] = { "Civilian", "Police", "Hato", "Dunamis" };
 			level = 9;
 			prestige = 0;
 			profession[] = {};
@@ -199,7 +199,7 @@ class CfgPerks {
 		description = "Unlocks the ability to purchase fuel trucks outside of a Company Group";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 9;
 			prestige = 0;
 			profession[] = {};
@@ -219,7 +219,7 @@ class CfgPerks {
 			levelCalculation = "5 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 10;
 			prestige = 0;
 			profession[] = {};
@@ -239,7 +239,7 @@ class CfgPerks {
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 11;
 			prestige = 0;
 			profession[] = { "Repairing", 3 };
@@ -259,7 +259,7 @@ class CfgPerks {
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 11;
 			prestige = 0;
 			profession[] = {};
@@ -279,7 +279,7 @@ class CfgPerks {
 			levelCalculation = "10 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 12;
 			prestige = 0;
 			profession[] = {};
@@ -299,7 +299,7 @@ class CfgPerks {
 			levelCalculation = "15 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 13;
 			prestige = 0;
 			profession[] = {};
@@ -314,7 +314,7 @@ class CfgPerks {
 		description = "Decreases garage retrieval fees by 50%";
 		removalMultiplier = 5;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 13;
 			prestige = 0;
 			profession[] = {};
@@ -334,7 +334,7 @@ class CfgPerks {
 			levelCalculation = "20 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 14;
 			prestige = 0;
 			profession[] = {};
@@ -354,7 +354,7 @@ class CfgPerks {
 			levelCalculation = "15 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police" };
+			factions[] = { "Civilian", "Police", "Dunamis" };
 			level = 14;
 			prestige = 0;
 			profession[] = {};
@@ -369,7 +369,7 @@ class CfgPerks {
 		description = "Gain the ability to restrain without carrying zipties";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 15;
 			prestige = 0;
 			profession[] = {};
@@ -384,7 +384,7 @@ class CfgPerks {
 		description = "Allows you to forge fake IDs";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 15;
 			prestige = 0;
 			profession[] = {};
@@ -399,7 +399,7 @@ class CfgPerks {
 		description = "Gain the chance of keeping a vehicle when chopping";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 16;
 			prestige = 0;
 			profession[] = {};
@@ -419,7 +419,7 @@ class CfgPerks {
 			levelCalculation = "10 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 17;
 			prestige = 0;
 			profession[] = {};
@@ -439,7 +439,7 @@ class CfgPerks {
 			levelCalculation = "5 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 18;
 			prestige = 0;
 			profession[] = {};
@@ -459,7 +459,7 @@ class CfgPerks {
 			levelCalculation = "3 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 18;
 			prestige = 0;
 			profession[] = { "Repairing", 3 };
@@ -479,7 +479,7 @@ class CfgPerks {
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 20;
 			prestige = 0;
 			profession[] = {};
@@ -494,7 +494,7 @@ class CfgPerks {
 		description = "Doubles the garage limit of each vehicle";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 22;
 			prestige = 0;
 			profession[] = {};
@@ -509,7 +509,7 @@ class CfgPerks {
 		description = "Allows you to purchase an additional property";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 23;
 			prestige = 0;
 			profession[] = {};
@@ -529,7 +529,7 @@ class CfgPerks {
 			levelCalculation = "25 * (_this select 0)";
 		};
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 25;
 			prestige = 0;
 			profession[] = {};
@@ -544,7 +544,7 @@ class CfgPerks {
 		description = "Permits access to the Blackmarket";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 25;
 			prestige = 0;
 			profession[] = {};
@@ -559,7 +559,7 @@ class CfgPerks {
 		description = "Unlocks the ability to purchase HEMTTs outside of a Company Group";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 26;
 			prestige = 0;
 			profession[] = {};
@@ -574,7 +574,7 @@ class CfgPerks {
 		description = "Increases the amount of profession's XP gained by 10%";
 		removalMultiplier = 5;
 		class Requirements {
-			factions[] = { "Civilian", "Police", "Medic", "Hato" };
+			factions[] = { "Civilian", "Police", "Medic", "Hato", "Dunamis" };
 			level = 27;
 			prestige = 0;
 			profession[] = {};
@@ -589,7 +589,7 @@ class CfgPerks {
 		description = "Unlocks the ability to purchase Ifrits outside of a Criminal Group";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 28;
 			prestige = 0;
 			profession[] = {};
@@ -604,7 +604,7 @@ class CfgPerks {
 		description = "Permits access to purchase sound suppressors";
 		removalMultiplier = 10;
 		class Requirements {
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			level = 30;
 			prestige = 0;
 			profession[] = {};

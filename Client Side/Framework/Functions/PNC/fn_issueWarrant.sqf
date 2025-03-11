@@ -16,7 +16,7 @@ _this params [
 private _display = ctrlParent _ctrl;
 if (isNull _display || { !([player, ["Police"]] call ULP_fnc_isFaction) }) exitWith {};
 
-[(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), ["Civilian"], [_display], {
+[(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), ["Civilian", "Dunamis"], [_display], {
 	_this params [
 		["_pnc", displayNull, [displayNull]],
 		["_display", displayNull, [displayNull]]
@@ -49,7 +49,7 @@ if (isNull _display || { !([player, ["Police"]] call ULP_fnc_isFaction) }) exitW
 				[format ["The note can't be longer than %1 characters...", [_max] call ULP_fnc_numberText]] call ULP_fnc_hint;
 			};
 
-			private _params = [getPlayerUID _unit];
+			private _params = [_unit];
 			_params append (parseSimpleArray _type);
 			_params append [_note, name player];
 

@@ -1,6 +1,6 @@
 class CfgProcessingStores {
 	class Base {
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		condition = "true";
 	};
 

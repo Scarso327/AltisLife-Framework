@@ -38,7 +38,7 @@ if (isNull _unit || { _crime isEqualTo "" } || { _crimeId isEqualTo -1 }) exitWi
 		_display setVariable ["crime_cfg_name", nil];
 		_display setVariable ["selected_crime_id", nil];
 
-		[getPlayerUID _unit, _act, _crime, _crimeId] remoteExecCall ["ULP_SRV_fnc_deleteCrime", RSERV];
+		[_unit, _act, _crime, _crimeId] remoteExecCall ["ULP_SRV_fnc_deleteCrime", RSERV];
 
 		private _group = _display displayCtrl 4703;
 

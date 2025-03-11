@@ -3,7 +3,7 @@ class CfgCrimes {
 		class HMTreasury {
 			title = "HM Treasury";
 			description = "Located near the island’s main airfield, the HM Treasury of Altis is a heavily fortified hub of economic governance. Housed within a modern, reinforced concrete structure, it oversees public finances, currency stability, and economic policy for the island.<br /><br />Protected by high-security measures, the treasury ensures the safety of vital financial operations while maintaining close ties to Altis’s strategic infrastructure. Despite its utilitarian design, the institution symbolizes resilience and stability, safeguarding the island’s economic future amidst a volatile geopolitical landscape.";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			cooldown = 1800;
 			class Stages {
 				class Hack {
@@ -70,7 +70,7 @@ class CfgCrimes {
 		class HMSLiberty {
 			title = "HMS Liberty";
 			description = "The HMS Liberty, a British Navy destroyer, now lies abandoned after colliding with treacherous rocks off the coast of Altis. Once a symbol of naval power, the vessel’s rusting hull juts from the shallow waters, a stark reminder of its untimely demise.<br /><br />Amidst the wreckage lies a server housing valuable encrypted drives, a potential goldmine for those daring enough to retrieve them. These drives can be sold as-is for their raw value or decrypted to unlock and sell their sensitive data for an even greater reward. The HMS Liberty’s perilous location and decaying structure make it a challenging but lucrative target for opportunists.";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			cooldown = 1800;
 			class Stages {
 				class Hack {
@@ -107,7 +107,7 @@ class CfgCrimes {
 		class PoliceEvidenceStorage {
 			title = "Police Evidence Storage";
 			description = "Located south of Kavala, the Police Evidence Locker is a heavily guarded facility storing all the island's confiscated evidence. Within its walls lies a trove of contraband, ranging from illegal substances to rare items, all of which fetch a high price on the black market.<br /><br />Breaking into the locker requires bypassing reinforced security systems and evading patrols. For those bold enough to succeed, the rewards can be immense, making it a prime target for opportunistic criminals.";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			cooldown = 1800;
 			class Stages {
 				class Drill {
@@ -144,7 +144,7 @@ class CfgCrimes {
 		class CasinoVault {
 			title = "Casino Vault";
 			description = "";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			cooldown = 1800;
 			class Stages {
 				class Drill {

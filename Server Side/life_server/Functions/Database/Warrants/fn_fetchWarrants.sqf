@@ -5,7 +5,10 @@
 #include "\life_server\script_macros.hpp"
 scopeName "fn_fetchWarrants";
 
-private _units = ["Civilian"] call ULP_fnc_allMembers;
+private _units = (allPlayers select {
+	[_x, ["Civilian", "Dunamis"]] call ULP_fnc_isFaction
+});
+
 private _warrants = createHashMap;
 
 if !(_units isEqualTo []) then {

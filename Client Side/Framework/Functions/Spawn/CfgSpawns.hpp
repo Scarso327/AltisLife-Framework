@@ -1,6 +1,6 @@
 class CfgSpawns {
     class BaseSpawn {
-        factions[] = { "Civilian" };
+        factions[] = { "Civilian", "Dunamis" };
         buildings[] = {};
         radius = 100;
         conditions = "!([] call ULP_fnc_shouldDoTutorial)";

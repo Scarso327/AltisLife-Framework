@@ -38,7 +38,7 @@ class CfgRobberies {
 		name = "Regional Bank";
 		time = 10 * 60;
 		timeout = 30 * 60;
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		reward[] = { 200000, 500000 };
 		leveling[] = { { 300, 500 }, "Robbed Regional Bank", 100 };
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 5";

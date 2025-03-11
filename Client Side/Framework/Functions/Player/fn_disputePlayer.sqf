@@ -10,7 +10,7 @@ if (time < (missionNamespace getVariable ["ULP_LastDispute", 0])) exitWith {
 	false
 };
 
-[ (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), ["Police", "Medic", "Civilian"], [], {
+[ (findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), ["Police", "Medic", "Hato", "Civilian", "Dunamis"], [], {
 	_this params [
 		["_selectDisplay", displayNull, [displayNull]]
 	];

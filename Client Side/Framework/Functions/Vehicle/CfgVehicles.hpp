@@ -115,7 +115,7 @@ class CfgVehicles {
 	class BaseTexture {
 		displayName = "Default";
 		buyPrice = 0;
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		textures[] = {};
 		locked = false;
 		conditions = "true";

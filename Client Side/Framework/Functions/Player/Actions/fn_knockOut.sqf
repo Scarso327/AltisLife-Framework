@@ -30,11 +30,11 @@ if ([player, "AwopPercMstpSgthWrflDnon_End2"] call ULP_fnc_switchMove) exitWith 
 	[0.08, _target, { [player] remoteExecCall ["ULP_fnc_onKnocked", _this] }] call ULP_fnc_waitExecute;
 	["KnockOut"] call ULP_fnc_achieve;
 
-	if ([player, ["Civilian"]] call ULP_fnc_isFaction) then {
+	if ([player, ["Civilian", "Dunamis"]] call ULP_fnc_isFaction) then {
 		private _section = 
-			if !([_target, ["Civilian"]] call ULP_fnc_isFaction) then { "S38" } else { "S47" };
+			if !([_target, ["Civilian", "Dunamis"]] call ULP_fnc_isFaction) then { "S38" } else { "S47" };
 
-		[getPlayerUID player, "OffencesAct", _section, 
+		[player, "OffencesAct", _section, 
 			format [
 				"Suspected Weapon: %1", 
 				([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"]

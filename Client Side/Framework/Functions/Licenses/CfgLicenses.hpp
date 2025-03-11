@@ -1,6 +1,6 @@
 class CfgLicenses {
     class BaseLicense {
-        factions[] = { "Civilian" };
+        factions[] = { "Civilian", "Dunamis" };
         description = "The base requirement for the processing of goods";
         class Settings {
             isVisible = false;

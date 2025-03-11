@@ -2,4 +2,5 @@
 1 ""
 2 "ulp_srv_fnc_queryplayerinfo"
 3 "bis_fnc_effectkilled"
+3 "ulp_fnc_chatmessage \[\"ReturnedToLobby\""
 7 "" !="\w+?_fnc_\w+? \[[\S\s]*\]" !ULP_fnc_setFaction 

@@ -40,7 +40,6 @@ class CfgFactions {
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};
-			timeIndex = 0;
 		};
 
 		class Persistance {
@@ -99,7 +98,6 @@ class CfgFactions {
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};
-			timeIndex = 1;
 		};
 
 		class Persistance {
@@ -152,7 +150,6 @@ class CfgFactions {
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};
-			timeIndex = 2;
 		};
 
 		class Persistance {
@@ -179,6 +176,56 @@ class CfgFactions {
 			virtualItems[] = { { "Identification", "[name player] call ULP_fnc_stripString" }, { "PanicButton", 1 } };
 		};
 	};
+	
+	class Dunamis {
+		shortName = "Dunamis";
+		displayName = "Dunamis";
+		selectionImage = "Data\UI\Factions\civ.paa";
+		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
+		colour[] = { 0.4, 0, 0.5, 1 };
+		pay = 5000;
+		sideChannel = true;
+		imprisoned = true;
+		hasRedzoneNlr = false;
+
+		class Whitelisting {
+			class Main {
+				queryIndex = 28;
+				payMulti = 0.15;
+				required = 1;
+			};
+		};
+
+		class DatabaseInfo {
+			queryPrefix = "dms_";
+			customQuery = ", dms_arrested, dms_prison_timer, dmslevel";
+			arrayIndexes[] = {};
+			mapIndexes[] = {};
+			boolIndexes[] = {};
+		};
+
+		class Persistance {
+			vehicles = true;
+		};
+		
+		class Loadout {
+			canRestLoadout = false;
+			class Uniforms {
+				class U_C_Poor_1 {};
+				class U_C_Poloshirt_blue {};
+				class U_C_Man_casual_1_F {};
+				class U_C_Man_casual_6_F {};
+			};
+			class LinkedItems {
+				hasMap = true;
+				hasGPS = false;
+				hasCompass = true;
+				hasWatch = true;
+				hasRadio = true;
+			};
+			virtualItems[] = { { "Identification", "[name player] call ULP_fnc_stripString" } };
+		};
+	};
 
 	class Civilian {
 		shortName = "Civilian";
@@ -195,11 +242,10 @@ class CfgFactions {
 		class Housing {};
 		class DatabaseInfo {
 			queryPrefix = "civ_";
-			customQuery = ", arrested, prison_timer, coplevel, uclevel";
+			customQuery = ", civ_arrested, civ_prison_timer, coplevel, uclevel";
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};
-			timeIndex = 3;
 		};
 
 		class Persistance {

@@ -35,19 +35,14 @@ _gear = [_gear] call DB_fnc_mresArray;
 _licenses = [_licenses] call DB_fnc_mresArray;
 _stats = [_stats] call DB_fnc_mresArray;
 
-private _playtime = [];
-private _timeIndex = (TON_fnc_playtime_values_request findIf { (_x select 0) isEqualTo _steamid });
+private _playtime = _unit getVariable ["playTime", 0];
+private _timePlayed = round ((time - (_unit getVariable ["joinTime", 0])) / 60);
 
-if (_timeIndex > -1) then {
-	_playtime = (TON_fnc_playtime_values_request select _timeIndex) select 1;
-	_playtime set[getNumber(_faction >> "DatabaseInfo" >> "timeIndex"), [_steamid] call TON_fnc_getPlayTime];
-};
-
-_playtime = [_playtime] call DB_fnc_mresArray;
+private _newPlayTime = _playtime + _timePlayed;
 
 [
 	format [
-		"UPDATE `players` SET `name`='%2', `cash`='%3', `bankacc`='%4', `%1gear`='%5', `%1licenses`='%6', `%1stats`='%7', `playtime`='%8' WHERE `pid`='%9'",
-		getText(_faction >> "DatabaseInfo" >> "queryPrefix"), _name, _cash, _bank, _gear, _licenses, _stats, _playtime, _steamid
+		"UPDATE `players` SET `name`='%2', `cash`='%3', `bankacc`='%4', `%1gear`='%5', `%1licenses`='%6', `%1stats`='%7', `%1playtime`='%8' WHERE `pid`='%9'",
+		getText(_faction >> "DatabaseInfo" >> "queryPrefix"), _name, _cash, _bank, _gear, _licenses, _stats, _newPlayTime, _steamid
 	], 1
 ] call DB_fnc_asyncCall;

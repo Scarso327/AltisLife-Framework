@@ -14,7 +14,7 @@ if !(hasInterface) exitWith {};
 [ { ULP_Loaded }, _this, {
 	_this params [
 		["_object", objNull, [objNull]],
-		["_factions", ["Civilian"], [[]]],
+		["_factions", ["Civilian", "Dunamis"], [[]]],
 		["_doorsToLock", [], [[]]]
 	];
 

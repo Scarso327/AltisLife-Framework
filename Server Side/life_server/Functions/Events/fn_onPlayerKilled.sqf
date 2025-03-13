@@ -12,8 +12,8 @@ _this params [
 private _isWounded = _unit getVariable ["Wounded", false];
 private _wasKilledByPolice = ((group _killer) getVariable ["faction", ""]) isEqualTo "Police";
 
-if ([_unit, ["Civilian"]] call ULP_fnc_isFaction && { _wasKilledByPolice }) then {
-	[getPlayerUID _unit] call ULP_SRV_fnc_clearWarrants;
+if ([_unit, ["Civilian", "Dunamis"]] call ULP_fnc_isFaction && { _wasKilledByPolice }) then {
+	[_unit] call ULP_SRV_fnc_clearWarrants;
 };
 
 // Notify the server...
@@ -23,7 +23,7 @@ if (isNull _killer || { (getPlayerUID _unit) isEqualTo (getPlayerUID _killer) } 
 } else {
 	if ([_killer, ["Civilian"]] call ULP_fnc_isFaction) then {
 		[
-			getPlayerUID _killer, 
+			_killer, 
 			"OffencesAct", 
 			"S1", 
 			format ["Suspected Weapon: %1", ([currentWeapon _killer] call ULP_fnc_itemCfg) param [5, "Unknown"]]

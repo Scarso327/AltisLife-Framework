@@ -1,7 +1,7 @@
 class CfgLicenseStores {
 	class DVLA {
 		title = "DVLA";
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		condition = "!([""Driving""] call ULP_fnc_hasLicense) || { !([""Trucking""] call ULP_fnc_hasLicense) } || { !([""Boating""] call ULP_fnc_hasLicense) } || { !([""Piloting""] call ULP_fnc_hasLicense) }";
 		licenses[] = { "Driving", "Trucking", "Boating", "Piloting" };
 	};

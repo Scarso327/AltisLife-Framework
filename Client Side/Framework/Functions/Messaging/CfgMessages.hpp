@@ -4,7 +4,7 @@ class CfgMessages {
 	class Message {
 		picture = "\a3\3den\data\Cfg3DEN\Comment\texture_ca.paa";
 		displayName = "Private Message";
-		sendTo[] = { "Police", "Medic", "Hato", "Civilian" };
+		sendTo[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 		ignoreStreamer = false;
 		ignoreComms = false;
 		alertSound = true;

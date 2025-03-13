@@ -274,13 +274,4 @@ class CfgFunctions {
             class mresString {};
         };
     };
-
-    class TON_System {
-        tag = "TON";
-        class PlayTime {
-            file = "\life_server\Functions\PlayTime";
-            class setPlayTime {};
-            class getPlayTime {};
-        };
-    };
 };

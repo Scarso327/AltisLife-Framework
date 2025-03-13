@@ -13,7 +13,7 @@ _this params [
 	["_trader", player, [objNull]]
 ];
 
-if !([player, ["Civilian"]] call ULP_fnc_isFaction) exitWith {
+if !([player, ["Civilian", "Dunamis"]] call ULP_fnc_isFaction) exitWith {
 	["Only civilians can access this!"] call ULP_fnc_hint;
 };
 

@@ -44,6 +44,8 @@ if !([_unit] call ULP_fnc_onDuty) then {
 	[_unit, 15, _assumedGear] call ULP_SRV_fnc_savePlayerState;
 };
 
+_unit setVariable ["joinTime", nil];
+_unit setVariable ["playTime", nil];
 _unit setVariable ["session", nil];
 _unit setVariable ["reputation", nil];
 

@@ -15,10 +15,8 @@ private _uid = getPlayerUID _unit;
 private _factionCfg = missionConfigFile >> "CfgFactions" >> [_unit] call ULP_fnc_getFaction;
 if !(isClass _factionCfg) exitWith {};
 
-private _playTimeIndex = getNumber(_factionCfg >> "DatabaseInfo" >> "timeIndex");
-
 private _query = [
-	format["SELECT `uid`, `pid`, `group_id`, `cash`, `bankacc`, `playtime`, `insert_time`, `adminlevel`, `eventslevel`, `donorlevel`, `%1licenses`, `%1gear`, `%1stats`, `professions`, `prestige`, `level`, `xp`, `achievements`, `%1daily_tasks`, `%1weekly_tasks`, `textures`, `titles`, `%1perks`, `reputation`, `blueprints`, `%1wounded`", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
+	format["SELECT `uid`, `pid`, `group_id`, `cash`, `bankacc`, `%1playtime`, `insert_time`, `adminlevel`, `eventslevel`, `donorlevel`, `%1licenses`, `%1gear`, `%1stats`, `professions`, `prestige`, `level`, `xp`, `achievements`, `%1daily_tasks`, `%1weekly_tasks`, `textures`, `titles`, `%1perks`, `reputation`, `blueprints`, `%1wounded`", getText(_factionCfg >> "DatabaseInfo" >> "queryPrefix")],
 	getText(_factionCfg >> "DatabaseInfo" >> "customQuery"),
 	format["FROM `players` WHERE `pid`='%1'", _uid]
 ];
@@ -44,8 +42,8 @@ if (_result isEqualType "" || { _result isEqualTo [] }) exitWith {
 // Player save found, time to convert data types etc...
 private _newResult = _result;
 
-// Playtime, Licenses, Gear, Stats, Professions, Achievements, Daily Tasks, Weekly Tasks, Textures, Titles, Perks, Blueprints
-private _arraysToConvert = [5, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22, 24];
+// Licenses, Gear, Stats, Professions, Achievements, Daily Tasks, Weekly Tasks, Textures, Titles, Perks, Blueprints
+private _arraysToConvert = [10, 11, 12, 13, 17, 18, 19, 20, 21, 22, 24];
 private _factionArrays = getArray (_factionCfg >> "DatabaseInfo" >> "arrayIndexes");
 if !(_factionArrays isEqualTo []) then { _arraysToConvert append _factionArrays; };
 
@@ -63,20 +61,6 @@ if !(_factionBools isEqualTo []) then { _arraysToConvert append _factionBools; }
 { _newResult set [_x, [(_result select _x)] call DB_fnc_mresToArray] } forEach _arraysToConvert;
 { _newResult set [_x, [(_result select _x), 1] call ULP_fnc_bool] } forEach _boolsToConvert;
 { _newResult set [_x, createHashMapFromArray (_newResult select _x)]; } forEach _hashmapsToCreate;
-
-// Setup playtime tracking...
-private _playtime = _newResult select 5;
-private _index = TON_fnc_playtime_values_request find [_uid, _playtime];
-
-if !(_index isEqualTo -1) then {
-	TON_fnc_playtime_values_request set[_index, -1];
-	TON_fnc_playtime_values_request = TON_fnc_playtime_values_request - [-1];
-	TON_fnc_playtime_values_request pushBack [_uid, _playtime];
-} else {
-	TON_fnc_playtime_values_request pushBack [_uid, _playtime];
-};
-
-[_uid, (_playtime select _playTimeIndex)] call TON_fnc_setPlayTime;
 
 // Groups + Housing
 private _group = [_unit, _result select 2, _factionCfg] call ULP_SRV_fnc_queryGroupInfo;

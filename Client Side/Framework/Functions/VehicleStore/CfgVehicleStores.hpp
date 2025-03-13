@@ -1,6 +1,6 @@
 class CfgVehicleStores {
 	class Base {
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		licenses[] = {};
 		conditions = "true";
 	};

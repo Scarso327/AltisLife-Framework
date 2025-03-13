@@ -169,13 +169,6 @@ _date call ULP_SRV_fnc_initStats;
 [] call ULP_SRV_fnc_cleanup;
 cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
 
-TON_fnc_playtime_values = [];
-TON_fnc_playtime_values_request = [];
-
-//Just incase the Headless Client connects before anyone else
-publicVariable "TON_fnc_playtime_values";
-publicVariable "TON_fnc_playtime_values_request";
-
 ULP_FactionGroups = createHashMap;
 
 /* Tell clients that the server is ready and is accepting queries */

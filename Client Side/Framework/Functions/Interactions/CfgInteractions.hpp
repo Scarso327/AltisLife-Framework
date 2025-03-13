@@ -2,14 +2,14 @@ class CfgInteractions {
 	class Placeable {
 		class Remove {
 			title = "Remove Placeable";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_removeObject; closeDialog 0;";
 			condition = "isNull (_this getVariable [""unitDragging"", objNull]) && { [player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { [] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""RemovePlaceable"", false] call ULP_fnc_checkPower } } }";
 		};
 
 		class Drag {
 			title = "Drag Placeable";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "[_this select 0, ""Stretcher""] call ULP_fnc_dragPlaceable; closeDialog 0;";
 			condition = "_this isKindOf ""Land_Stretcher_01_F"" && { isNull (_this getVariable [""unitDragging"", objNull]) } && { [player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { [] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""RemovePlaceable"", false] call ULP_fnc_checkPower } } }";
 		};
@@ -18,7 +18,7 @@ class CfgInteractions {
 	class Person {
 		class GiveKeys {
 			title = "Give Keys";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_giveVehicleKeys";
 			condition = "!([player] call ULP_fnc_isRestrained)";
 		};
@@ -37,7 +37,7 @@ class CfgInteractions {
 
 		class RobCash {
 			title = "Rob Cash";
-			factions[] = { "Medic", "Hato", "Civilian" };
+			factions[] = { "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "[0, _this] call ULP_fnc_robMoney; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isKnocked || { [_this] call ULP_fnc_isSurrendered } || { [_this] call ULP_fnc_isRestrained && (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) }";
 		};
@@ -49,7 +49,7 @@ class CfgInteractions {
 		};
 		class Lockpick : Unrestrain {
 			title = "Lockpick";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_lockpick";
 			condition = "[_this] call ULP_fnc_isRestrained && { [""Lockpick""] call ULP_fnc_hasItem > 0 }";
 		};
@@ -82,7 +82,7 @@ class CfgInteractions {
 		};
 		class SeizeCash : RobCash {
 			title = "Seize Cash";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			condition = "[_this] call ULP_fnc_isRestrained && { [player, [""Police""]] call ULP_fnc_isFaction || { [player] call ULP_fnc_onDuty } }";
 		};
 		class InventoryCheck : Unrestrain {
@@ -118,7 +118,7 @@ class CfgInteractions {
 		// Admin Commands...
 		class AdminHeal {
 			title = "Admin Heal";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "(_this select 0) setDamage 0; [format[""You've healed this player using admin powers...""]] call ULP_fnc_hint; [getPlayerUID player, ""Admin"", [""AdminHeal"", serverTime, [name (_this select 0)]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2]; closeDialog 0;";
 			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { (damage _this) > 0 } && { [""Medical"", false] call ULP_fnc_checkPower }";
 		};
@@ -127,7 +127,7 @@ class CfgInteractions {
 	class PersonMedical {
 		class Revive {
 			title = "Open Vitals";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_openMedical";
 			condition = "true";
 		};
@@ -140,21 +140,21 @@ class CfgInteractions {
 
 		class PutOnStretcher {
 			title = "Put On Stretcher";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_toggleOnStretcher; closeDialog 0;";
 			condition = "private _stretcher = [_this] call ULP_fnc_nearestStretcher; !isNull (_stretcher) && { (animationState _this) in [""unconsciousrevivedefault"", ""deadstate""] } && { isNull (_stretcher getVariable [""unitAttached"", objNull]) }";
 		};
 
 		class TakeOffStretcher : PutOnStretcher {
 			title = "Take Off Stretcher";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_toggleOnStretcher; closeDialog 0;";
 			condition = "private _stretcher = attachedTo _this; !isNull _stretcher && { _stretcher isKindOf ""Land_Stretcher_01_F"" }";
 		};
 
 		class PutInNearbyVehicle : Revive {
 			title = "Put In Vehicle";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "private _unit = _this param [0, player, [objNull]]; private _vehicle = (nearestObjects[_unit, [""Car""], 5]) param [0, objNull]; if (isNull _vehicle || { !(_vehicle in ULP_Keys) }) exitWith { [""You must take them to a vehicle you have keys for to put it...""] call ULP_fnc_hint; }; if !(((fullCrew _vehicle) findIf { isNull (_x param [0, objNull]) }) isEqualTo -1) exitWith { [""This vehicle has no empty seats..""] call ULP_fnc_hint; }; if (isNull (attachedTo _unit) || { _this call ULP_fnc_toggleOnStretcher }) then { [_vehicle, _unit] remoteExecCall [""ULP_fnc_putVehicleUnit"", _unit]; [format [""You have put %1 into a vehicle..."", [_unit, true] call ULP_fnc_getName]] call ULP_fnc_hint; }; closeDialog 0;";
 		};
 
@@ -193,7 +193,7 @@ class CfgInteractions {
 	class PersonEscortOnly {
 		class StopEscort {
 			title = "Stop Escorting";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "[_this select 0, player, false] call ULP_fnc_escort; closeDialog 0;";
 			condition = "[_this] call ULP_fnc_isRestrained && { [_this] call ULP_fnc_isEscorted }";
 		};
@@ -206,7 +206,7 @@ class CfgInteractions {
 	class House {
 		class BuyHouse {
 			title = "Buy House";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_buyHouse;";
 			condition = "isClass (missionConfigFile >> ""CfgFactions"" >> [player] call ULP_fnc_getFaction >> ""Housing"") && { !([_this] call ULP_fnc_isHouseOwned) } && { !(_this getVariable [""blacklisted"", false]) } && { !([""redzone_"", [_this]] call ULP_fnc_isUnitsInZone) }";
 		};
@@ -215,7 +215,7 @@ class CfgInteractions {
 	class HouseOwner {
 		class SellHouse {
 			title = "Sell House";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_sellHouse;";
 			condition = "[_this, player, false] call ULP_fnc_isHouseOwner";
 		};
@@ -227,21 +227,21 @@ class CfgInteractions {
 
 		class MailBox {
 			title = "Mail Box";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			onClick = "closeDialog 0; _this call ULP_fnc_openMailBox";
 			condition = "[_this] call ULP_fnc_isHouseOwner && { [_this, ""PersonalMailboxUpgrade""] call ULP_fnc_hasUpgrade }";
 		};
 
 		class VehicleGarage {
 			title = "Vehicle Garage";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			onClick = "closeDialog 0; [{ !dialog }, _this, { [[""Car""], [[_this select 0] call ULP_fnc_getHouseGarageSpawn]] call ULP_fnc_openGarage; }] call ULP_fnc_waitUntilExecute;";
 			condition = "[_this] call ULP_fnc_isHouseOwner && { [_this] call ULP_fnc_isHouseGarage }";
 		};
 
 		class StoreVehicle {
 			title = "Store Vehicle";
-			factions[] = { "Civilian" };
+			factions[] = { "Civilian", "Dunamis" };
 			onClick = "closeDialog 0; [_this select 0, [""Car""]] call ULP_fnc_storeVehicle;";
 			condition = "[_this] call ULP_fnc_isHouseOwner && { [_this] call ULP_fnc_isHouseGarage } && { (player distance _this) <= 10 }";
 		};
@@ -250,7 +250,7 @@ class CfgInteractions {
 	class HouseStorage {
 		class OpenStorage {
 			title = "Open Storage";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "if ((missionNamespace getVariable [""ULP_HouseStorageEvent"", -1]) > -1) exitWith { [""A request is already active...""] call ULP_fnc_hint; }; ULP_HouseStorageEvent = [""HouseStorage"", { _this params [ ""_house"", ""_storage"" ]; ULP_HouseStorageEvent = nil; if (isNull _house || { (player distance _house) > 15 }) exitWith { [""You're too far away from the house to access the physical storage...""] call ULP_fnc_hint; }; if (isNull _storage) exitWith { [""This house doesn't have physical storage...""] call ULP_fnc_hint; }; player action [""gear"", _storage]; }, true] call ULP_fnc_addEventHandler; [(_this select 0) getVariable [""building"", objNull]] remoteExecCall [""ULP_SRV_fnc_getStorage"", 2]; [""Requesting Physical Storage...""] call ULP_fnc_hint; closeDialog 0;";
 			condition = "(player distance _this) <= 3 && { [_this getVariable [""building"", objNull], player] call ULP_fnc_isHouseOwner || { !(_this getVariable [""locked"", false]) } || { [] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Housing"", false] call ULP_fnc_checkPower } } }";
 		};
@@ -285,7 +285,7 @@ class CfgInteractions {
 
 		class Repair {
 			title = "Repair";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "_this call ULP_fnc_repairVehicle";
 			condition = """ToolKit"" in (items player)";
 		};
@@ -368,7 +368,7 @@ class CfgInteractions {
 		// Admin Commands
 		class AdminRepair {
 			title = "Admin Repair";
-			factions[] = { "Police", "Medic", "Hato", "Civilian" };
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
 			onClick = "(_this select 0) setDamage 0; [format[""You've repaired this vehicle using admin powers.""]] call ULP_fnc_hint; [getPlayerUID player, ""Admin"", [""AdminRepair"", serverTime, [(_this select 0) getVariable [""vehicle_id"", -1]]]] remoteExecCall [""ULP_SRV_fnc_logPlayerEvent"", 2];";
 			condition = "[] call ULP_fnc_isStaff && { [player] call ULP_fnc_onDuty } && { [""Vehicle"", false] call ULP_fnc_checkPower }";
 		};

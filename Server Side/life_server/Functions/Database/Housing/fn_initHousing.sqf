@@ -29,7 +29,7 @@ ULP_SRV_Houses = [];
 		_upgrades = createHashMapFromArray ([_upgrades] call DB_fnc_mresToArray);
 		_shared = [_shared] call ULP_fnc_bool;
 
-		private _house = (_pos nearObjects [_classname, 15]) param [0, objNull];
+		private _house = nearestObject [_pos, _classname];
 		
 		if (isNull _house || { _house in ULP_SRV_Houses }) then {
 			[format ["House wasn't found: %1 at %2 (%3, %4)", _classname, _pos, _id, (_house in ULP_SRV_Houses)]] call ULP_fnc_logIt;

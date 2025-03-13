@@ -42,3 +42,28 @@ SET
 
 ALTER TABLE `players` CHANGE COLUMN `arrested` `civ_arrested` TINYINT NOT NULL DEFAULT '0' AFTER `civ_weekly_tasks`,
 CHANGE COLUMN `prison_timer` `civ_prison_timer` INT NOT NULL DEFAULT '0' AFTER `civ_arrested`;
+
+CREATE TABLE `players_playtime` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`pid` VARCHAR(17) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`cop_playtime` INT NOT NULL DEFAULT '0',
+	`med_playtime` INT NOT NULL DEFAULT '0',
+	`hato_playtime` INT NOT NULL DEFAULT '0',
+	`civ_playtime` INT NOT NULL DEFAULT '0',
+	`dms_playtime` INT NOT NULL DEFAULT '0',
+	`when` TIMESTAMP NOT NULL DEFAULT (now()),
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `FK_players_playtime` (`pid`) USING BTREE,
+	CONSTRAINT `FK_players_playtime` FOREIGN KEY (`pid`) REFERENCES `players` (`pid`) ON UPDATE NO ACTION ON DELETE CASCADE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+;
+
+DELIMITER //
+CREATE PROCEDURE `processPlaytime`()
+BEGIN
+	INSERT INTO `players_playtime` (`pid`, `cop_playtime`, `med_playtime`, `hato_playtime`, `civ_playtime`, `dms_playtime`)
+		SELECT `pid`, `cop_playtime`, `med_playtime`, `hato_playtime`, `civ_playtime`, `dms_playtime` FROM `players`;
+END//
+DELIMITER ;

@@ -180,7 +180,7 @@ class CfgFactions {
 	class Dunamis {
 		shortName = "Dunamis";
 		displayName = "Dunamis";
-		selectionImage = "Data\UI\Factions\civ.paa";
+		selectionImage = "Data\UI\Factions\dms.paa";
 		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
 		colour[] = { 0.4, 0, 0.5, 1 };
 		pay = 5000;

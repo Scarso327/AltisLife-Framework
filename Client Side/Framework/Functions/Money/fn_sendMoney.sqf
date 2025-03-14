@@ -19,6 +19,10 @@ if (isNull _unit || { _unit isEqualTo player } || { [] call ULP_fnc_isRestrained
 	["You have to be close, unrestrained and not surrendering to give cash..."] call ULP_fnc_hint;
 };
 
+if (_bank && { [] call ULP_fnc_isHobo }) exitWith {
+	["You don't meet the requirements to wire transfer money"] call ULP_fnc_hint;
+};
+
 if (_amount < 1) exitWith {
 	["You have no money to give at this time..."] call ULP_fnc_hint;
 };

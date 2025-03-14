@@ -15,7 +15,7 @@ _this params [
 	["_bank", false, [true]]
 ];
 
-if (isNull _unit || { _unit isEqualTo player } || { _amount < 1 }) exitWith {};
+if (isNull _unit || { _unit isEqualTo player } || { _amount < 1 } || { _unit getVariable ["isHobo", false] }) exitWith {};
 
 private _message = format ["%1 has %2 you <t color='#B92DE0'>%3%4</t>", name _unit, ["given", "transferred"] select (_bank), "£", [_amount] call ULP_fnc_numberText];
 

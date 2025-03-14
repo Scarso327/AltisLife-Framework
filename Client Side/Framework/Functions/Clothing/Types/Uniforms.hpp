@@ -387,7 +387,7 @@ class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
 				"Data\Textures\Groups\DMS\Uniforms\3_1.paa", 
 				"Data\Textures\Groups\DMS\Uniforms\3_2.paa"
 			};
-			condition = "[] call ULP_fnc_isDunamis && { ([] call ULP_fnc_getGroupRank) >= 3 }";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class DMS2 : U_I_C_Soldier_Para_1_F {
 			displayName = "Dunamis SSGT";
@@ -395,7 +395,7 @@ class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
 				"Data\Textures\Groups\DMS\Uniforms\4_1.paa", 
 				"Data\Textures\Groups\DMS\Uniforms\3_2.paa"
 			};
-			condition = "[] call ULP_fnc_isDunamis && { ([] call ULP_fnc_getGroupRank) >= 4 }";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 	};
 };

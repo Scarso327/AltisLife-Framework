@@ -1867,6 +1867,15 @@ class CfgVehicles {
 		};
 	};
 	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 580000; };
+	class B_Heli_Light_01_armed_F : C_Heli_Light_01_civil_F { 
+		buyPrice = 9050000; 
+		garageLimit = 1;
+		class Textures : Textures {
+			class DMS : DMS {
+				turrets[] = { { { -1 },  { "M134_minigun" },  { "5000Rnd_762x51_Yellow_Belt" } } };
+			};
+		};
+	};
 
 	class O_Heli_Light_02_unarmed_F : BaseHeli {
 		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";

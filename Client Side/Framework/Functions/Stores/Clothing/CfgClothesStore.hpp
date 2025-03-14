@@ -472,12 +472,12 @@ class CfgClothesStore {
 			};
 			class U_IG_Guerilla2_1 {
 				price = 0;
-				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+				condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class U_I_C_Soldier_Para_1_F  {
 				price = 0;
-				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; 
 				class Textures { 
 					class DMS1 {}; 
 					class DMS2 {};
@@ -485,15 +485,15 @@ class CfgClothesStore {
 			};
 			class U_I_C_Soldier_Para_2_F  {
 				price = 0;
-				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class U_I_E_Uniform_01_F  {
 				price = 0;
-				condition = "([] call ULP_fnc_getGroupRank) >= 6"; 
+				condition = "[""Dunamis_Main"", 6] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
-			class U_C_CBRN_Suit_01_White_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
+			class U_C_CBRN_Suit_01_White_F {};
 		};
 
 		class Headgear {
@@ -504,14 +504,14 @@ class CfgClothesStore {
 			class H_Watchcap_blk {};
 			class H_Booniehat_khk {};
 			class H_ShemagOpen_khk {};
-			class H_Beret_blk { condition = "([] call ULP_fnc_getGroupRank) >= 5"; };
+			class H_Beret_blk { condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess"; };
 			class H_PASGT_basic_black_F { price = 2500; };
 			class H_HelmetIA { price = 5000; };
 			class H_HelmetB_light { price = 5000; };
 			class H_HelmetB { price = 10000; };
 			class H_HelmetSpecB { 
 				price = 25000; 
-				condition = "[""ParosCheckpoint""] call ULP_fnc_ownsSite";
+				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";
 			};
 		};
 

@@ -283,82 +283,87 @@ class CfgItemsStore {
 			class arifle_TRG20_F { price = 84474; };
 			class arifle_Mk20C_plain_F { price = 82485; };
 			class arifle_Mk20_plain_F { price = 85615; };
-			class arifle_SPAR_01_blk_F { price = 100708; };
-			class arifle_CTAR_hex_F { price = 115596; };
-			class srifle_DMR_07_blk_F { price = 137633; };
+			class arifle_SPAR_01_blk_F { 
+				price = 100708; 
+				condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess";
+			};
+			class arifle_CTAR_hex_F { 
+				price = 115596; 
+				condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess";
+			};
+			class srifle_DMR_07_blk_F { 
+				price = 137633; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
+			};
 			class arifle_MSBS65_black_F { 
 				price = 160853;
-				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
 			};
 			class arifle_MSBS65_Mark_F { 
 				price = 160751;
-				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess";
 			};
 			class arifle_MXC_Black_F { 
 				price = 133130;
-				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
 			};
 			class arifle_MX_Black_F { 
 				price = 172395;
-				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; 
 			};
 			class arifle_MXM_Black_F { 
 				price = 188865;
-				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
 			};
 			class arifle_Katiba_C_F { 
 				price = 157667;
-				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; 
 			};
 			class arifle_Katiba_F { 
 				price = 163215;
-				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
 			};
 			class arifle_ARX_blk_F { 
 				price = 202905;
-				condition = "([] call ULP_fnc_getGroupRank) >= 4 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess";
 			};
 			class srifle_DMR_01_F { 
 				price = 232956;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
+				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";
 			};
 			class arifle_AK12U_F { 
 				price = 279045;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
+				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";
 			};
 			class arifle_AK12_F { 
 				price = 292005;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
+				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";
 			};
 			class srifle_DMR_06_olive_F { 
 				price = 301320;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
-			};
-			class srifle_DMR_04_F { 
-				price = 801405;
-				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
+				condition = "[""Dunamis_Main"", 7] call ULP_fnc_hasAccess";
 			};
 
 			// Support Weapons
 			class LMG_03_F { 
 				price = 186586;
-				condition = "([] call ULP_fnc_getGroupRank) >= 4 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess";
 			};
 			class arifle_SPAR_02_blk_F { 
 				price = 117293;
-				condition = "([] call ULP_fnc_getGroupRank) >= 3"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
 			};
 			class arifle_CTARS_blk_F { 
 				price = 128349;
-				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
 			};
 			class arifle_MX_SW_Black_F { 
 				price = 222548;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
+				condition = "[""Dunamis_Main"", 6] call ULP_fnc_hasAccess";
 			};
 			class LMG_Mk200_F { 
 				price = 314888;
-				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
+				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess";
 			};
 		};
 		class Pistols {
@@ -368,7 +373,7 @@ class CfgItemsStore {
 			class hgun_Pistol_heavy_01_F { price = 25126; };
 			class hgun_Pistol_heavy_02_F { 
 				price = 35861;
-				condition = "([] call ULP_fnc_getGroupRank) >= 7"; 
+				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess"; 
 			};
 		};
 		class Attachments {
@@ -387,14 +392,15 @@ class CfgItemsStore {
 			class optic_MRCO {};
 			class optic_Arco {};
 			class optic_ERCO_blk_F {};
-			class optic_DMS { condition = "[""ParosCheckpoint""] call ULP_fnc_ownsSite"; };
+			class optic_DMS { condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess"; };
+			class optic_KHS_blk { condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";};
 
 			// Barrel
-			class muzzle_snds_L { condition = "[""GhostHotel""] call ULP_fnc_ownsSite"; };
-			class muzzle_snds_acp { condition = "[""GhostHotel""] call ULP_fnc_ownsSite"; };
-			class muzzle_snds_M { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""GhostHotel""] call ULP_fnc_ownsSite }"; };
-			class muzzle_snds_570 { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""GhostHotel""] call ULP_fnc_ownsSite }"; };
-			class muzzle_snds_58_blk_F { condition = "([] call ULP_fnc_getGroupRank) >= 3 &&  { [""GhostHotel""] call ULP_fnc_ownsSite }"; };
+			class muzzle_snds_L {};
+			class muzzle_snds_acp {};
+			class muzzle_snds_M { condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_570 { condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_58_blk_F { condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; };
 		};
 		class Magazines {
 			class 10Rnd_9x21_Mag { price = 39; };
@@ -406,10 +412,7 @@ class CfgItemsStore {
 			class 11Rnd_45ACP_Mag { price = 66; };
 			class 30Rnd_45ACP_Mag_SMG_01 { price = 258; };
 			class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green : 30Rnd_45ACP_Mag_SMG_01 {};
-			class 6Rnd_45ACP_Cylinder { 
-				price = 57; 
-				condition = "([] call ULP_fnc_getGroupRank) >= 7";
-			};
+			class 6Rnd_45ACP_Cylinder { price = 57; };
 			class 2Rnd_12Gauge_Pellets { price = 360; };
 			class 2Rnd_12Gauge_Slug { price = 405; };
 			class 30Rnd_545x39_Mag_F { price = 690; };
@@ -417,73 +420,32 @@ class CfgItemsStore {
 			class 20Rnd_556x45_UW_mag {};
 			class 30Rnd_556x45_Stanag { price = 690; };
 			class 30Rnd_556x45_Stanag_Tracer_Red : 30Rnd_556x45_Stanag {};
-			class 150Rnd_556x45_Drum_Mag_F { 
-				price = 4890; 
-				condition = "([] call ULP_fnc_getGroupRank) >= 3";
-			};
+			class 150Rnd_556x45_Drum_Mag_F { price = 4890; };
 			class 150Rnd_556x45_Drum_Mag_Tracer_F : 150Rnd_556x45_Drum_Mag_F {};
-			class 200Rnd_556x45_Box_F { 
-				price = 6450; 
-				condition = "([] call ULP_fnc_getGroupRank) >= 4 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }";
-			};
+			class 200Rnd_556x45_Box_F { price = 6450; };
 
 			class 30Rnd_580x42_Mag_F { price = 825; };
 			class 30Rnd_580x42_Mag_Tracer_F : 30Rnd_580x42_Mag_F {};
-			class 100Rnd_580x42_Mag_F { 
-				price = 5670;
-				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
-			};
+			class 100Rnd_580x42_Mag_F { price = 5670; };
 			class 100Rnd_580x42_Mag_Tracer_F : 100Rnd_580x42_Mag_F {};
 
 			class 20Rnd_650x39_Cased_Mag_F { price = 840; };
-			class 30Rnd_65x39_caseless_green { 
-				price = 915; 
-				condition = "([] call ULP_fnc_getGroupRank) >= 2";
-			};
+			class 30Rnd_65x39_caseless_green { price = 915; };
 			class 30Rnd_65x39_caseless_green_mag_Tracer : 30Rnd_65x39_caseless_green {};
-			class 30Rnd_65x39_caseless_msbs_mag { 
-				price = 921; 
-				condition = "([] call ULP_fnc_getGroupRank) >= 3";
-			};
+			class 30Rnd_65x39_caseless_msbs_mag { price = 921; };
 			class 30Rnd_65x39_caseless_msbs_mag_Tracer : 30Rnd_65x39_caseless_msbs_mag {};
-			class 30Rnd_65x39_caseless_black_mag { 
-				price = 1047; 
-				condition = "([] call ULP_fnc_getGroupRank) >= 2";
-			};
+			class 30Rnd_65x39_caseless_black_mag { price = 1047; };
 			class 30Rnd_65x39_caseless_black_mag_Tracer : 30Rnd_65x39_caseless_black_mag {};
-			class 100Rnd_65x39_caseless_black_mag { 
-				price = 7080; 
-				condition = "([] call ULP_fnc_getGroupRank) >= 5";
-			};
+			class 100Rnd_65x39_caseless_black_mag { price = 7080; };
 			class 100Rnd_65x39_caseless_black_mag_tracer : 100Rnd_65x39_caseless_black_mag {};
-			class 200Rnd_65x39_cased_Box { 
-				price = 9915; 
-				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }";
-			};
+			class 200Rnd_65x39_cased_Box { price = 9915; };
 			class 200Rnd_65x39_cased_Box_Tracer : 200Rnd_65x39_cased_Box {};
 
-			class 10Rnd_762x54_Mag { 
-				price = 1440;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
-			};
-			class 10Rnd_Mk14_762x51_Mag { 
-				price = 1608;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
-			};
-			class 20Rnd_762x51_Mag {
-				price = 2970;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
-			};
-			class 30Rnd_762x39_AK12_Mag_F { 
-				price = 4434;
-				condition = "([] call ULP_fnc_getGroupRank) >= 5"; 
-			};
+			class 10Rnd_762x54_Mag { price = 1440; };
+			class 10Rnd_Mk14_762x51_Mag { price = 1608; };
+			class 20Rnd_762x51_Mag { price = 2970; };
+			class 30Rnd_762x39_AK12_Mag_F { price = 4434; };
 			class 30Rnd_762x39_AK12_Mag_Tracer_F : 30Rnd_762x39_AK12_Mag_F {};
-
-			class 10Rnd_127x54_Mag {
-				price = 21619;
-				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""ParosCheckpoint""] call ULP_fnc_ownsSite }"; 
-			};
 		};
 		class Items {
 			class ItemMap {};
@@ -496,7 +458,7 @@ class CfgItemsStore {
 			class NVGoggles {};
 			class O_NVGoggles_grn_F { condition = "[] call ULP_fnc_donatorLevel >= 2"; };
 			class Chemlight_green {};
-			class SmokeShell { condition = "[""GhostHotel""] call ULP_fnc_ownsSite"; };
+			class SmokeShell {};
 			class ToolKit {};
 		};
 	};

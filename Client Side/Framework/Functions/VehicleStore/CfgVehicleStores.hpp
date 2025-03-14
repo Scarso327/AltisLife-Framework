@@ -108,47 +108,48 @@ class CfgVehicleStores {
 		storeName = "Dunamis Vehicle Store";
 		conditions = "[] call ULP_fnc_isDunamis";
 		class Vehicles {
-			class C_Hatchback_01_F { 
-				class Textures { class DMS {}; }; 
-			};
 			class C_Hatchback_01_sport_F { 
-				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
+				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class C_SUV_01_F {
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
 				class Textures { class DMS {}; };
 			};
 			class C_Offroad_01_F {
 				class Textures { class DMS {}; };
 			};
 			class B_G_Offroad_01_armed_F { 
-				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""NorthernForest""] call ULP_fnc_ownsSite }"; 
+				condition = "[""Dunamis_Main"", 7] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class C_Offroad_02_unarmed_F { 
-				condition = "([] call ULP_fnc_getGroupRank) >= 2"; 
+				condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class O_LSV_02_unarmed_F { 
-				condition = "([] call ULP_fnc_getGroupRank) >= 4"; 
-				class Textures { class DMS {}; };
-			};
-			class O_LSV_02_armed_black_F { 
-				condition = "([] call ULP_fnc_getGroupRank) >= 6 && { [""NorthernForest""] call ULP_fnc_ownsSite }"; 
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class O_MRAP_02_F { 
-				condition = "([] call ULP_fnc_getGroupRank) >= 7 && { [""NorthernForest""] call ULP_fnc_ownsSite }"; 
+				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
+
 			class B_Heli_Light_01_F {
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; 
+				class Textures { class DMS {}; };
+			};
+			class B_Heli_Light_01_armed_F {
+				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class O_Heli_Light_02_unarmed_F {
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class I_Heli_light_03_unarmed_F {
-				condition = "[""NorthernAirfield""] call ULP_fnc_ownsSite";
+				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 		};

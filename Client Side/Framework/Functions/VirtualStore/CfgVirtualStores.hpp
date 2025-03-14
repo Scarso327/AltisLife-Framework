@@ -249,7 +249,7 @@ class CfgVirtualStores {
 
 	class Placeables {
 		storeName = "Placeables Store";
-		conditions = "[player, [""Police""]] call ULP_fnc_isFaction || { [player, [""Medic""]] call ULP_fnc_isFaction } || { [player, [""Hato""]] call ULP_fnc_isFaction } || { [] call ULP_fnc_isDunamis && { ([] call ULP_fnc_getGroupRank) >= 4 } }";
+		conditions = "[player, [""Police""]] call ULP_fnc_isFaction || { [player, [""Medic""]] call ULP_fnc_isFaction } || { [player, [""Hato""]] call ULP_fnc_isFaction } || { [] call ULP_fnc_isDunamis }";
 		class Items {
 			// Cones
 			class RoadCone_F {};

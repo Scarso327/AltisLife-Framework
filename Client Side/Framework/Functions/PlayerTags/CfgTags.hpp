@@ -44,6 +44,22 @@ class CfgTags {
 					"HatoOM"
 				};
 			};
+
+			class Dunamis {
+				Main[] = {
+					"DunamisPVT",
+					"DunamisPVT",
+					"DunamisPFC",
+					"DunamisCPL",
+					"DunamisSGT",
+					"DunamisSGTM",
+					"DunamisLT",
+					"DunamisCPT",
+					"DunamisMAJ",
+					"DunamisCOL",
+					"DunamisGEN"
+				};
+			};
 		};
 	};
 
@@ -190,6 +206,58 @@ class CfgTags {
 			icon = "Data\Tags\Ranks\Hato\TO.paa";
 			subtitle = "Traffic Officer";
 			condition = "[player, [""Hato""]] call ULP_fnc_isFaction && { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
+		};
+
+		// Dunamis
+		class DunamisGEN {
+			icon = "Data\Tags\Ranks\Dunamis\GEN.paa";
+			subtitle = "General";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 10] call ULP_fnc_hasAccess }";
+		};
+		class DunamisCOL {
+			icon = "Data\Tags\Ranks\Dunamis\COL.paa";
+			subtitle = "Colonel";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 9] call ULP_fnc_hasAccess }";
+		};
+		class DunamisMAJ {
+			icon = "Data\Tags\Ranks\Dunamis\MAJ.paa";
+			subtitle = "Major";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 8] call ULP_fnc_hasAccess }";
+		};
+		class DunamisCPT {
+			icon = "Data\Tags\Ranks\Dunamis\CPT.paa";
+			subtitle = "Captain";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 7] call ULP_fnc_hasAccess }";
+		};
+		class DunamisLT {
+			icon = "Data\Tags\Ranks\Dunamis\LT.paa";
+			subtitle = "Lieutenant";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 6] call ULP_fnc_hasAccess }";
+		};
+		class DunamisSGTM {
+			icon = "Data\Tags\Ranks\Dunamis\SGTM.paa";
+			subtitle = "Sergeant Major";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 5] call ULP_fnc_hasAccess }";
+		};
+		class DunamisSGT {
+			icon = "Data\Tags\Ranks\Dunamis\SGT.paa";
+			subtitle = "Sergeant";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 4] call ULP_fnc_hasAccess }";
+		};
+		class DunamisCPL {
+			icon = "Data\Tags\Ranks\Dunamis\CPL.paa";
+			subtitle = "Corporal";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 3] call ULP_fnc_hasAccess }";
+		};
+		class DunamisPFC {
+			icon = "Data\Tags\Ranks\Dunamis\PFC.paa";
+			subtitle = "Private First Class";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 2] call ULP_fnc_hasAccess }";
+		};
+		class DunamisPVT {
+			icon = "Data\Tags\Ranks\Dunamis\PVT.paa";
+			subtitle = "Private";
+			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 1] call ULP_fnc_hasAccess }";
 		};
 
 		// Civilian Donators

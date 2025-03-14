@@ -230,7 +230,7 @@ class CfgHousing {
 			
 			class Storage {
 				object = "CargoNet_01_box_F";
-				position[] = {{15171.1,15338,12.8852}, 0};
+				position[] = {{-4.5,0,0}, 0};
 			};
 		};
 		class Land_Cargo_Tower_V2_F : Land_Cargo_Tower_V1_F {};
@@ -246,8 +246,8 @@ class CfgHousing {
 			condition = "[] call ULP_fnc_isGroup && { [""MilitaryOffices""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			
 			class Storage {
-				object = "Land_Cargo20_grey_F";
-				position[] = {{15193.8,15391.7,3.28908}, 0};
+				object = "CargoNet_01_box_F";
+				position[] = {{0,-2,-2.5}, 0};
 			};
 		};
 		class Land_Offices_01_V1_F : Land_MilOffices_V1_F {
@@ -255,11 +255,11 @@ class CfgHousing {
 			class BreakIn : BreakIn {
 				breakIn = 15 * 60;
 			};
-			spawnPos[] = {0,0,0};
+			spawnPos[] = {0,2,0.5};
 			condition = "[] call ULP_fnc_isGroup && { [""OfficeBuilding""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			class Storage {
-				object = "C_IDAP_supplyCrate_F";
-				position[] = {{15183.3,15467.3,7.97443}, 0};
+				object = "CargoNet_01_box_F";
+				position[] = {{9,3,-7}, 0};
 			};
 		};
 	};

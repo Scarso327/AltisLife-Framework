@@ -28,23 +28,23 @@ if (_steamid isEqualTo "" || { _player isEqualType objNull && { !(isClass (_fact
 private _query = switch (_state) do {
 	case 0: { format["`%1licenses`='%2'", getText(_faction >> "DatabaseInfo" >> "queryPrefix"), [_data] call DB_fnc_mresArray] };
 	case 1: {
-		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_increase", true, [false]], ["_reason", "", [""]]];
-		if !([_player, [_player, "Cash"] call ULP_SRV_fnc_getSessionField, _total, _amount, _increase] call ULP_SRV_fnc_validateField) exitWith { "" };
+		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_reason", "", [""]]];
+		if !([_player, [_player, "Cash"] call ULP_SRV_fnc_getSessionField, _total, _amount] call ULP_SRV_fnc_validateField) exitWith { "" };
 		[_player, "Cash", _total] call ULP_SRV_fnc_setSessionField;
 
 		_total = [_total, ""] call ULP_fnc_numberText;
 
-		[_steamid, "Money", ["Cash", (["Removed", "Added"] select (_increase)), _total, [_amount, ""] call ULP_fnc_numberText, _reason]] call ULP_SRV_fnc_logPlayerEvent;
+		[_steamid, "Money", ["Cash", (["Removed", "Added"] select (_amount > 0)), _total, [_amount, ""] call ULP_fnc_numberText, _reason]] call ULP_SRV_fnc_logPlayerEvent;
 		format["`cash`='%1'", _total]
 	};
 	case 2:  {
-		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_increase", true, [false]], ["_reason", "", [""]]];
-		if !([_player, [_player, "Bank"] call ULP_SRV_fnc_getSessionField, _total, _amount, _increase] call ULP_SRV_fnc_validateField) exitWith { "" };
+		_data params [["_total", 0, [0]], ["_amount", 0, [0]], ["_reason", "", [""]]];
+		if !([_player, [_player, "Bank"] call ULP_SRV_fnc_getSessionField, _total, _amount] call ULP_SRV_fnc_validateField) exitWith { "" };
 		[_player, "Bank", _total] call ULP_SRV_fnc_setSessionField;
 
 		_total = [_total, ""] call ULP_fnc_numberText;
 
-		[_steamid, "Money", ["Bank", (["Removed", "Added"] select (_increase)), _total, [_amount, ""] call ULP_fnc_numberText, _reason]] call ULP_SRV_fnc_logPlayerEvent;
+		[_steamid, "Money", ["Bank", (["Removed", "Added"] select (_amount > 0)), _total, [_amount, ""] call ULP_fnc_numberText, _reason]] call ULP_SRV_fnc_logPlayerEvent;
 		format["`bankacc`='%1'", _total]
 	};
 	case 3: { format["`professions`='%1'", [_data] call DB_fnc_mresArray] };

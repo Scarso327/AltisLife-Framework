@@ -9,17 +9,10 @@ _this params [
 	["_unit", objNull, [objNull]],
 	["_sessionTotal", 0, [0]],
 	["_total", 0, [0]],
-	["_amount", 0, [0]],
-	["_increase", true, [false]]
+	["_amount", 0, [0]]
 ];
 
-private _resultTotal = 
-	if (_increase) then {
-		_sessionTotal + _amount
-	} else {
-		_sessionTotal - _amount
-	};
-
+private _resultTotal = _sessionTotal + _amount;
 private _result = (_resultTotal isEqualTo _total);
 
 if !(_result) then {
@@ -28,7 +21,6 @@ if !(_result) then {
 		[_sessionTotal] call ULP_fnc_numberText,
 		[_total] call ULP_fnc_numberText,
 		[_amount] call ULP_fnc_numberText,
-		_increase,
 		[_resultTotal] call ULP_fnc_numberText
 	]] call ULP_fnc_logIt;
 

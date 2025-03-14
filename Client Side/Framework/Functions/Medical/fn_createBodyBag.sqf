@@ -9,19 +9,25 @@ if (canSuspend) exitWith {
     [ULP_fnc_createBodyBag, _this] call ULP_fnc_directCall;
 };
 
-if !(_this params [
-    ["_pos", [], [[]]],
-    ["_dir", 0, [0]]
-]) exitWith { false };
+_this params [
+    ["_unit", player, [objNull]]
+];
+
+if (isNull _unit) exitWith { false };
 
 private _items = + ULP_Inventory;
 if ((count _items) isEqualTo 0) exitWith { false };
 
-private _safePos = [_pos, 0.5, 3] call BIS_fnc_findSafePos;
+private _safePos = [_unit, 0.5, 4, 0, 0, 0, 0, [], [[0,0],[0,0]]] call BIS_fnc_findSafePos;
 _safePos set [2, 0];
 
+// Default pos found, need to decide something...
+if (_safePos isEqualTo [0,0,0]) then {
+    _safePos = _unit modelToWorld [0,3,0];
+};
+
 private _bodyBag = createSimpleObject ["Land_Bodybag_01_black_F", AGLtoASL _safePos];
-_bodyBag setDir _dir;
+_bodyBag setDir (getDir _unit);
 
 {
     [_bodyBag, _x, _y, true, true] call ULP_fnc_addToCargo;

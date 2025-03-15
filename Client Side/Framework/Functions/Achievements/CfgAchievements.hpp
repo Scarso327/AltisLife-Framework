@@ -8,6 +8,12 @@ class CfgAchievements {
 	class BaseMysteryAchivement1000 : BaseMysteryAchivement200 { leveling[] = { 1000, "Achievement Unlocked", 100 }; };
 
 	// Normal
+	class CompletedTutorial : BaseAchivement100 {
+		icon = "Data\UI\Perks\completedCV.paa";
+		displayName = "Ready To Roll";
+		description = "Completed the tutorial";
+		leveling[] = { 50, "Achievement Unlocked", 100 };
+	};
 	class BuyVehicle : BaseAchivement100 {
 		icon = "\A3\ui_f\data\GUI\Cfg\Hints\Driving_ca.paa";
 		displayName = "First Ride";

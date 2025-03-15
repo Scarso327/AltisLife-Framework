@@ -38,11 +38,13 @@ if !(isNull _source) then {
 	if ([_source] call ULP_fnc_isKnocked || { [_source] call ULP_fnc_isRestrained }) exitWith { _damage = _originalDamage; };
 
 	// 2. Check for Rubber / Taser as we want it to work with things like quad bikes
-	private _weaponNonLethalCfg = missionConfigFile >> "CfgItems" >> (currentWeapon _source) >> "NonLethal";
+	private _currentWeapon = currentWeapon _source;
+	private _weaponNonLethalCfg = missionConfigFile >> "CfgItems" >> _currentWeapon >> "NonLethal";
 
 	if (isClass _weaponNonLethalCfg 
-		&& { !isArray (_weaponNonLethalCfg >> "projectiles") 
-			|| { _projectile in getArray (_weaponNonLethalCfg >> "projectiles") } }
+		&& { !(_currentWeapon isEqualTo "") } 
+		&& { _projectile in getArray (_weaponNonLethalCfg >> "projectiles") } 
+		&& { isPlayer _source } 
 		&& { !(_unit isEqualTo _source) }) exitWith {
 
 		private _hasInjuryThreshold = isNumber (_weaponNonLethalCfg >> "injuryThreshold");

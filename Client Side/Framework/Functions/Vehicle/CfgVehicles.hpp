@@ -121,7 +121,7 @@ class CfgVehicles {
 		conditions = "true";
 	};
 
-	// Base without siren or lights (for helis)
+	// Base without lights (for helis)
 	class PoliceTextureBase : BaseTexture {
 		factions[] = { "Police" };
 		upgrades[] = { 
@@ -136,6 +136,14 @@ class CfgVehicles {
 				params[] = {};
 				priority = 1;
 				condition = "_target isEqualTo (vehicle _this) && { ([_this, [""Police""]] call ULP_fnc_isFaction) || ((driver _target) isEqualTo _this) }";
+				radius = 25;
+			};
+			class PilotEject {
+				actionTitle = "Eject";
+				actionCode = "moveOut (_this select 1)";
+				params[] = {};
+				priority = 6.1;
+				condition = "_target isEqualTo (vehicle _this) && { (locked _target) isEqualTo 0 } && { ((driver _target) isEqualTo _this) }";
 				radius = 25;
 			};
 		};

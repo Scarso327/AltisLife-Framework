@@ -182,7 +182,7 @@ class CfgFactions {
 		displayName = "Dunamis";
 		selectionImage = "Data\UI\Factions\dms.paa";
 		selectionVideo = "\a3\Ui_f\Video\spotlight_2.ogv";
-		colour[] = { 0.4, 0, 0.5, 1 };
+		colour[] = { 0.5, 0, 0, 1 };
 		pay = 5000;
 		sideChannel = true;
 		imprisoned = true;

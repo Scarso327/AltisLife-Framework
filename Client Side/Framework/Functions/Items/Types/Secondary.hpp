@@ -11,6 +11,7 @@ class hgun_P07_F : hgun_Pistol_Signal_F {
 	price = 32130;
 	class NonLethal {
 		distance = 20;
+		projectiles[] = { "B_9x21_Ball" };
 		sound[] = { "taserSound", 50, 1 };
 		hasTaserReload = true;
 	};

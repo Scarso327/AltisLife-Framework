@@ -1,7 +1,7 @@
 class CfgProcessing {
 	class BaseProcess {
 		processTitle = "Processing";
-		processTime = 3;
+		processTime = 2;
 		factions[] = { "Civilian", "Dunamis" };
 		hidden[] = {};
 		reqItems[] = {};
@@ -11,7 +11,7 @@ class CfgProcessing {
 	};
 	class BaseCook : BaseProcess {
 		processTitle = "Cooking";
-		processTime = 3;
+		processTime = 2;
 		profession[] = { "Cooking", 1, 100 };
 	};
 	class BaseSmelt : BaseProcess {
@@ -101,7 +101,7 @@ class CfgProcessing {
 
 	// Purifing
 	class PurifiedWeed : BaseProcess {
-		processTime = 6;
+		processTime = 4;
 		processTitle = "Purifing";
 		materials[] = { { "ProcessedWeed", 1 } };
 		items[] = { { "PurifiedWeed", 1 } };

@@ -34,7 +34,7 @@ for "_i" from 1 to (getNumber(configFile >> "CfgVehicles" >> (typeOf _house) >> 
 };
 
 private _cfg = missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _house);
-if (isClass (_cfg >> "Storage")) then {
+if (isClass (_cfg >> "Storage") && { !(["greenzone_", [_house]] call ULP_fnc_isUnitsInZone) }) then {
 	getArray (_cfg >> "Storage" >> "position") params [
 		"_pos", ["_dir", 0, [0]]
 	];

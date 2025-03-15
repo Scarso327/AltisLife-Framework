@@ -12,6 +12,7 @@ class CfgSettings {
     starting_bank = 150000;
     paycheck_period = 15;
 
+    numberOfBuffedItems = 3;
     buffedSellIncrease = 1.5;
 
     disabledDamageInGreenzone = true;

@@ -2,7 +2,7 @@ class CfgGathering {
 	class BaseGather {
 		actionTitle = "Gathering";
 		gatherTime = 1;
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		hidden[] = {};
 		reqItems[] = {};
 		reqLicenses[] = {};

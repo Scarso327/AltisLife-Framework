@@ -17,7 +17,7 @@ class CfgCartels {
 
 		class Northern {
 			name = "Northern Drug Cartel";
-			factions[] = { "Police", "Civilian" };
+			factions[] = { "Police", "Civilian", "Dunamis" };
 			position[] = {14295, 13029, 0};
 			zoneRadius = 50;
 			kosRadius = 300;
@@ -29,7 +29,7 @@ class CfgCartels {
 
 		class Southern {
 			name = "Southern Drug Cartel";
-			factions[] = { "Police", "Civilian" };
+			factions[] = { "Police", "Civilian", "Dunamis" };
 			position[] = {11194, 8717, 0};
 			zoneRadius = 75;
 			kosRadius = 0;
@@ -41,7 +41,7 @@ class CfgCartels {
 
 		class Church {
 			name = "Church Arms Cartel";
-			factions[] = { "Police", "Civilian" };
+			factions[] = { "Police", "Civilian", "Dunamis" };
 			position[] = {8926, 7493, 0};
 			zoneRadius = 50;
 			kosRadius = 0;
@@ -53,7 +53,7 @@ class CfgCartels {
 
 		class Zaros {
 			name = "Zaros Bay Cartel";
-			factions[] = { "Police", "Civilian" };
+			factions[] = { "Police", "Civilian", "Dunamis" };
 			position[] = {10037, 10130, 0};
 			zoneRadius = 40;
 			kosRadius = 0;
@@ -69,7 +69,7 @@ class CfgCartels {
 
 		class Pefkas {
 			name = "Pefkas Bay Cartel";
-			factions[] = { "Police", "Civilian" };
+			factions[] = { "Police", "Civilian", "Dunamis" };
 			position[] = {20600, 20116, 0};
 			zoneRadius = 50;
 			kosRadius = 300;

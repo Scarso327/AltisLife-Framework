@@ -5,7 +5,7 @@ class CfgRobberies {
 		name = "Fuel Station";
 		time = 5 * 60;
 		timeout = 3 * 60;
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		reward[] = { 50000, 85000 };
 		leveling[] = { { 50, 100 }, "Robbed Fuel Station", 100 };
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 3";
@@ -16,7 +16,7 @@ class CfgRobberies {
 		name = "Supermarket";
 		time = 7 * 60;
 		timeout = 5 * 60;
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		reward[] = { 80000, 100000 };
 		leveling[] = { { 100, 200 }, "Robbed Supermarket", 100 };
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 4";
@@ -27,7 +27,7 @@ class CfgRobberies {
 		name = "Jewellery Store";
 		time = 8 * 60;
 		timeout = 15 * 60;
-		factions[] = { "Civilian" };
+		factions[] = { "Civilian", "Dunamis" };
 		reward[] = { 150000, 250000 };
 		leveling[] = { { 150, 250 }, "Robbed Jewellery Store", 100 };
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 4";

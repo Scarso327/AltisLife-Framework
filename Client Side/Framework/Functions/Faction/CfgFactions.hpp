@@ -13,6 +13,7 @@ class CfgFactions {
 		jointChannel = true;
 		imprison = true;
 		hasRedzoneNlr = true;
+		limit = 20;
 
 		class Whitelisting {
 			class Main {
@@ -187,6 +188,7 @@ class CfgFactions {
 		sideChannel = true;
 		imprisoned = true;
 		hasRedzoneNlr = false;
+		limit = 20;
 
 		class Whitelisting {
 			class Main {

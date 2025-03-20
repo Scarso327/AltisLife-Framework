@@ -21,7 +21,7 @@ if !(_units isEqualTo []) then {
 	};
 
 	{
-		_x params [ "_id", "_pid", "_act", "_crime", "_info", "_insert" ];
+		_x params [ "_id", "_pid", "_faction", "_act", "_crime", "_info", "_insert" ];
 
 		_info = [_info] call DB_fnc_mresToArray;
 

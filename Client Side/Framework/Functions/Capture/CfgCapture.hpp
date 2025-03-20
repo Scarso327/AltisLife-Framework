@@ -31,7 +31,7 @@ class CfgCapture {
 
 		class WesternRegion {
 			displayName = "Western Region";
-			time = 300;
+			time = 120;
 			cooldown = 300;
 			class Marker {
 				markerType = "MinefieldAP";

@@ -69,6 +69,6 @@ private _sellPrice = -1;
 if ((lbSize _list) > 0) then {
 	_list lnbSetCurSelRow (_display getVariable ["lastSel", 0]);
 } else {
-	_list lnbAddRow "No Items...";
+	_list lnbAddRow ["No Items..."];
 	_info ctrlSetStructuredText parseText "";
 };

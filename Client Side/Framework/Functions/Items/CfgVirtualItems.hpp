@@ -749,7 +749,7 @@ class CfgVirtualItems {
 			};
 		};
 		class Events { onUse = "[""Stretcher"", _this select 0] call ULP_fnc_placeObject;"; };
-		conditions = "[player, [""Police"", ""Medic"", ""Hato""]] call ULP_fnc_isFaction || { ULP_Level >= 5 }";
+		conditions = "[player, [""Police"", ""Medic"", ""Hato"", ""Dunamis""]] call ULP_fnc_isFaction || { ULP_Level >= 5 }";
 	};
 
 	class RoadCone_F : Stretcher { 

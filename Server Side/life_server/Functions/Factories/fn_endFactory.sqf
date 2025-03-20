@@ -27,3 +27,6 @@ _factory setVariable ["product_order", nil, true];
 deleteVehicle (_factory getVariable ["sound", objNull]);
 
 _factory setVariable ["cooldown", diag_tickTime + 30];
+
+private _nearbyUnits = playableUnits select { (_x distance _factory) <= 50 };
+["FactoryFinished", [ _factory ]] remoteExecCall ["ULP_fnc_invokeEvent", _nearbyUnits];

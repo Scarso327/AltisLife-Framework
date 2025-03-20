@@ -39,3 +39,13 @@ scopeName "fn_preInitFactories";
 
 	[_currentTarget, - getNumber (_stationCfg >> "tier")] call ULP_fnc_setFactoryPower;
 }] call ULP_fnc_addEventHandler;
+
+["FactoryFinished", {
+	_this params [
+		["_factory", objNull, [objNull]]
+	];
+
+	if (isNull _factory) exitWith {};
+
+	["The nearby factory has finished processing it's recent order"] call ULP_fnc_hint;
+}] call ULP_fnc_addEventHandler;

@@ -29,48 +29,24 @@ class CfgCapture {
 			class Marker : Marker { defaultName = "Eastern Power Station"; };
 		};
 
-		class ParosCheckpoint {
-			displayName = "Paros Checkpoint";
+		class WesternRegion {
+			displayName = "Western Region";
 			time = 300;
 			cooldown = 300;
 			class Marker {
 				markerType = "MinefieldAP";
 				markerColour = "ColorEast";
-				defaultName = "Paros Checkpoint";
+				defaultName = "Western Region";
 			};
 			condition = "[] call ULP_fnc_isGroup";
 		};
-		class WesternHills : ParosCheckpoint {
-			displayName = "Western Hills";
-			class Marker : Marker { defaultName = "Western Hills"; };
+		class NorthEasternRegion : WesternRegion {
+			displayName = "North-Eastern Region";
+			class Marker : Marker { defaultName = "North-Eastern Region"; };
 		};
-		class SouthernCoast : ParosCheckpoint {
-			displayName = "Southern Coast";
-			class Marker : Marker { defaultName = "Southern Coast"; };
-		};
-		class SaltFlats : ParosCheckpoint {
-			displayName = "Salt Flats";
-			class Marker : Marker { defaultName = "Salt Flats"; };
-		};
-		class GhostHotel : ParosCheckpoint {
-			displayName = "Ghost Hotel";
-			class Marker : Marker { defaultName = "Ghost Hotel"; };
-		};
-		class SofiaTown : ParosCheckpoint {
-			displayName = "Sofia Town";
-			class Marker : Marker { defaultName = "Sofia Town"; };
-		};
-		class NorthernForest : ParosCheckpoint {
-			displayName = "Northern Forest";
-			class Marker : Marker { defaultName = "Northern Forest"; };
-		};
-		class MolosRegion : ParosCheckpoint {
-			displayName = "Molos Region";
-			class Marker : Marker { defaultName = "Molos Region"; };
-		};
-		class NorthernAirfield : ParosCheckpoint {
-			displayName = "Northern Airfield";
-			class Marker : Marker { defaultName = "Northern Airfield"; };
+		class SouthEasternRegion : WesternRegion {
+			displayName = "South-Eastern Region";
+			class Marker : Marker { defaultName = "South-Eastern Region"; };
 		};
 	};
 };

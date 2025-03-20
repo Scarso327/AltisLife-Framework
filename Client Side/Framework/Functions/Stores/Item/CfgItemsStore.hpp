@@ -285,85 +285,93 @@ class CfgItemsStore {
 			class arifle_Mk20_plain_F { price = 85615; };
 			class arifle_SPAR_01_blk_F { 
 				price = 100708; 
-				condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_CTAR_hex_F { 
 				price = 115596; 
-				condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class srifle_DMR_07_blk_F { 
 				price = 137633; 
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_MSBS65_black_F { 
 				price = 160853;
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_MSBS65_Mark_F { 
 				price = 160751;
-				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_MXC_Black_F { 
 				price = 133130;
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_MX_Black_F { 
 				price = 172395;
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }"; 
 			};
 			class arifle_MXM_Black_F { 
 				price = 188865;
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_Katiba_C_F { 
 				price = 157667;
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }"; 
 			};
 			class arifle_Katiba_F { 
 				price = 163215;
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_ARX_blk_F { 
 				price = 202905;
-				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class srifle_DMR_01_F { 
 				price = 232956;
-				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_AK12U_F { 
 				price = 279045;
-				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_AK12_F { 
 				price = 292005;
-				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class srifle_DMR_06_olive_F { 
 				price = 301320;
-				condition = "[""Dunamis_Main"", 7] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 7] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
+			};
+			class srifle_EBR_F { 
+				price = 323757;
+				condition = "[""Dunamis_Commando"", 2] call ULP_fnc_hasAccess";
+			};
+			class srifle_DMR_03_F { 
+				price = 344979;
+				condition = "[""Dunamis_Commando"", 2] call ULP_fnc_hasAccess";
 			};
 
 			// Support Weapons
 			class LMG_03_F { 
 				price = 186586;
-				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_SPAR_02_blk_F { 
 				price = 117293;
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_CTARS_blk_F { 
 				price = 128349;
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class arifle_MX_SW_Black_F { 
 				price = 222548;
-				condition = "[""Dunamis_Main"", 6] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Main"", 6] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }";
 			};
 			class LMG_Mk200_F { 
 				price = 314888;
-				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Commando"", 3] call ULP_fnc_hasAccess";
 			};
 		};
 		class Pistols {
@@ -392,15 +400,15 @@ class CfgItemsStore {
 			class optic_MRCO {};
 			class optic_Arco {};
 			class optic_ERCO_blk_F {};
-			class optic_DMS { condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess"; };
-			class optic_KHS_blk { condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";};
+			class optic_DMS { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
+			class optic_KHS_blk { condition = "[""Dunamis_Commando"", 2] call ULP_fnc_hasAccess"; };
 
 			// Barrel
-			class muzzle_snds_L {};
-			class muzzle_snds_acp {};
-			class muzzle_snds_M { condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess"; };
-			class muzzle_snds_570 { condition = "[""Dunamis_Main"", 2] call ULP_fnc_hasAccess"; };
-			class muzzle_snds_58_blk_F { condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_L { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_acp { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_M { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_570 { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
+			class muzzle_snds_58_blk_F { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
 		};
 		class Magazines {
 			class 10Rnd_9x21_Mag { price = 39; };

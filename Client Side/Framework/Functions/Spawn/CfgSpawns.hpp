@@ -8,6 +8,7 @@ class CfgSpawns {
     class Police : BaseSpawn { factions[] = { "Police" }; };
     class HATO : BaseSpawn { factions[] = { "Hato" }; };
     class Medic : BaseSpawn { factions[] = { "Medic" }; };
+    class DMS : BaseSpawn { factions[] = { "Dunamis" }; };
     class Civilian : BaseSpawn {
         buildings[] = {
             "Land_i_Shop_01_V1_F",
@@ -42,11 +43,6 @@ class CfgSpawns {
             displayName = "Athira Station";
             marker = "apc_spawn_athira";
             icon = "Data\UI\Spawns\athira.paa";
-        };
-        class PyrgosStation : Police {
-            displayName = "Pyrgos Station";
-            marker = "apc_spawn_pyrgos";
-            icon = "Data\UI\Spawns\pyrgos.paa";
         };
         class AgiosStation : Police {
             displayName = "Agios Station";
@@ -128,6 +124,11 @@ class CfgSpawns {
             marker = "hato_spawn_agios";
             icon = "Data\UI\Spawns\agios.paa";
         };
+        class HatoRodopoli : HATO {
+            displayName = "Rodopoli Facility";
+            marker = "hato_spawn_rodopoli";
+            icon = "Data\UI\Spawns\warehouse.paa";
+        };
 
         // Government
         class GovernorResidence : BaseSpawn {
@@ -144,10 +145,6 @@ class CfgSpawns {
             displayName = "Kavala Safehouse";
             marker = "civ_spawn_kavSafehouse";
             conditions = "[] call ULP_fnc_isGovernor || { [] call ULP_fnc_isProtection && { [""GovernmentSafehouses""] call ULP_fnc_hasGroupPerk } }";
-        };
-        class PyrgosSafehouse : KavalaSafehouse {
-            displayName = "Pyrgos Safehouse";
-            marker = "civ_spawn_pyrSafehouse";
         };
         
         // Civilian
@@ -227,20 +224,25 @@ class CfgSpawns {
             conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] } && { [""Blackmarketer""] call ULP_fnc_hasPerk || { [""Blackmarket""] call ULP_fnc_hasGroupPerk } }";
         };
 
-        // Civilian Faction
-        class DMS_Safehouse : Rebel_01 {
-            displayName = "Dunamis Safehouse";
-            marker = "dms_spawn_01";
-            conditions = "[] call ULP_fnc_isDunamis";
+        // Dunamis
+        class OldPyrgosStation : DMS {
+            displayName = "Old Pyrgos Station";
+            marker = "dms_spawn_04";
+            icon = "Data\UI\Spawns\pyrgos.paa";
         };
-        class DMS_Camp : DMS_Safehouse {
-            displayName = "Dunamis Camp";
+
+        class SofiaOutpost : DMS {
+            displayName = "Sofia Outpost";
+            marker = "dms_spawn_01";
+            icon = "Data\UI\Spawns\sofia.paa";
+        };
+        class ZarosOutpost : SofiaOutpost {
+            displayName = "Zaros Outpost";
             marker = "dms_spawn_02";
         };
-        class DMS_FOB : DMS_Safehouse {
-            displayName = "Dunamis FOB";
+        class OreokastroOutpost : SofiaOutpost {
+            displayName = "Oreokastro Outpost";
             marker = "dms_spawn_03";
-            conditions = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 2] call ULP_fnc_hasAccess }";
         };
     };
 

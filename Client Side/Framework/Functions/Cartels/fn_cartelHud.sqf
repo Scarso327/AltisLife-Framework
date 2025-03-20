@@ -75,7 +75,7 @@ switch (_mode) do {
 					case !(isNull (objectParent player)): { "IN VEHICLE" };
 					case ([player] call ULP_fnc_onDuty): { "ON DUTY" };
 					case ((currentWeapon player) in getArray(missionConfigFile >> "CfgSettings" >> "doesntThreaten")): { "UNARMED" };
-					case (count ([_area, allPlayers, ["Police", "Civilian"], { !(_this in (units (group player))) }] call ULP_fnc_unitsInZone) > 0): { "CONTESTED" };
+					case (count ([_area, allPlayers, ["Police", "Civilian", "Dunamis"], { !(_this in (units (group player))) }] call ULP_fnc_unitsInZone) > 0): { "CONTESTED" };
 					default { "CAPTURING" }
 				};
 

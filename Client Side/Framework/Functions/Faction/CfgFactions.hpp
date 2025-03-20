@@ -209,10 +209,6 @@ class CfgFactions {
 		class Persistance {
 			vehicles = true;
 		};
-
-		class Free {
-			vehicles = true;
-		};
 		
 		class Loadout {
 			canRestLoadout = false;

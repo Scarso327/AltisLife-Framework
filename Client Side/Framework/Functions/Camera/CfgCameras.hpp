@@ -98,5 +98,26 @@ class CfgCameras {
 				};
 			};
 		};
+
+		class BorderWall {
+			condition = "true";
+			class Cameras {
+				class CheckpointCrossing {
+					name = "Checkpoint Crossing";
+					position[] = {17332.8,13572,15.9168};
+					target[] = {17355,13612.4,0};
+				};
+				class DoridaGate {
+					name = "Dorida Gate";
+					position[] = {19356.2,13328.8,7.28428};
+					target[] = {19356.1,13341.8,0};
+				};
+				class CoastalGate {
+					name = "Coastal Gate";
+					position[] = {22463.9,13848.7,7.10514};
+					target[] = {22465.4,13858.4,0};
+				};
+			};
+		};
 	};
 };

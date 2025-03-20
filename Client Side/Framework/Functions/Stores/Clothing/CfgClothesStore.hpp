@@ -511,7 +511,7 @@ class CfgClothesStore {
 			class H_HelmetB { price = 10000; };
 			class H_HelmetSpecB { 
 				price = 25000; 
-				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess";
+				condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess";
 			};
 		};
 
@@ -527,8 +527,8 @@ class CfgClothesStore {
 			class G_Balaclava_TI_blk_F {};
 			class G_Balaclava_TI_G_blk_F {};
 			class G_Tactical_Clear {};
-			class G_RegulatorMask_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
-			class G_AirPurifyingRespirator_01_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
+			class G_RegulatorMask_F { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
+			class G_AirPurifyingRespirator_01_F { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
 		};
 
 		class Vests {
@@ -558,9 +558,9 @@ class CfgClothesStore {
 			class B_Carryall_cbr {};
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
-			class B_RadioBag_01_black_F { condition = "[""ParosCheckpoint""] call ULP_fnc_ownsSite"; };
-			class B_SCBA_01_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
-			class B_CominationUnitRespirator_01_F { condition = "[""WesternHills""] call ULP_fnc_ownsSite"; };
+			class B_RadioBag_01_black_F {};
+			class B_SCBA_01_F { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
+			class B_CominationUnitRespirator_01_F { condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; };
 		};
 	};
 

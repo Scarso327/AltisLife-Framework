@@ -109,7 +109,7 @@ class CfgVehicleStores {
 		conditions = "[] call ULP_fnc_isDunamis";
 		class Vehicles {
 			class C_Hatchback_01_sport_F { 
-				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_Commando"", 1] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class C_SUV_01_F {
@@ -120,7 +120,7 @@ class CfgVehicleStores {
 				class Textures { class DMS {}; };
 			};
 			class B_G_Offroad_01_armed_F { 
-				condition = "[""Dunamis_Main"", 7] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_Main"", 7] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 2] call ULP_fnc_hasAccess }"; 
 				class Textures { class DMS {}; };
 			};
 			class C_Offroad_02_unarmed_F { 
@@ -128,28 +128,28 @@ class CfgVehicleStores {
 				class Textures { class DMS {}; };
 			};
 			class O_LSV_02_unarmed_F { 
-				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess || { [""Dunamis_Commando"", 1] call ULP_fnc_hasAccess }"; 
 				class Textures { class DMS {}; };
 			};
 			class O_MRAP_02_F { 
-				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_Commando"", 2] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 
 			class B_Heli_Light_01_F {
-				condition = "[""Dunamis_Main"", 3] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_AirWing"", 1] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class B_Heli_Light_01_armed_F {
-				condition = "[""Dunamis_Main"", 8] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_AirWing"", 3] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class O_Heli_Light_02_unarmed_F {
-				condition = "[""Dunamis_Main"", 4] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_AirWing"", 1] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 			class I_Heli_light_03_unarmed_F {
-				condition = "[""Dunamis_Main"", 5] call ULP_fnc_hasAccess"; 
+				condition = "[""Dunamis_AirWing"", 2] call ULP_fnc_hasAccess"; 
 				class Textures { class DMS {}; };
 			};
 		};

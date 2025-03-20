@@ -196,11 +196,14 @@ class CfgFactions {
 				payMulti = 0.15;
 				required = 1;
 			};
+			class Commando { queryIndex = 29; };
+			class Hammerhead { queryIndex = 30; };
+			class AirWing { queryIndex = 31; };
 		};
 
 		class DatabaseInfo {
 			queryPrefix = "dms_";
-			customQuery = ", dms_arrested, dms_prison_timer, dmslevel";
+			customQuery = ", dms_arrested, dms_prison_timer, dmslevel, dmscomlevel, dmshammerlevel, dmsairlevel";
 			arrayIndexes[] = {};
 			mapIndexes[] = {};
 			boolIndexes[] = {};

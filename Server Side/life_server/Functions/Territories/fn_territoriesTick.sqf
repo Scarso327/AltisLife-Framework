@@ -24,7 +24,9 @@ missionNamespace setVariable ["ULP_SRV_TerritoriesNextTime", serverTime + _tickD
 
 			private _amount = round ([] call compile getText (_cfg >> "amount"));
 
-			[_x, _item, _amount] call ULP_fnc_addToCargo;
+			if (_amount > 0) then {
+				[_x, _item, _amount] call ULP_fnc_addToCargo;
+			};
 		} forEach _sites;
 
 		nil

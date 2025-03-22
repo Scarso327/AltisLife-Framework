@@ -22,7 +22,7 @@ class CfgLicenses {
     class Trucking : Driving {
         displayName = "Trucking Licence";
         description = "The base requirement for purchasing a goods vehicle";
-        buyPrice = 75000;
+        buyPrice = 50000;
         class Settings : Settings {};
         conditions = "[""Driving""] call ULP_fnc_hasLicense && { !([] call ULP_fnc_isOnTutorial) }";
     };
@@ -37,21 +37,21 @@ class CfgLicenses {
     class Piloting : Trucking {
         displayName = "Piloting Licence";
         description = "The base requirement for purchasing a helicopter/plane";
-        buyPrice = 600000;
+        buyPrice = 500000;
         class Settings : Settings {};
     };
 
     class Home : Driving {
         displayName = "Homeowner's Approval";
         description = "The base requirement for purchasing a property";
-        buyPrice = 3500000;
+        buyPrice = 3000000;
         class Settings : Settings {};
     };
 
     class Taxi : Driving {
         displayName = "Taxi Altis Worker";
         description = "Approved to operate as a taxi driver on Altis";
-        buyPrice = 35000;
+        buyPrice = 25000;
         onBought = "[""Employment""] call ULP_fnc_achieve;";
         class Settings : Settings {};
     };
@@ -59,14 +59,14 @@ class CfgLicenses {
     class Solicitor : Taxi {
         displayName = "Altis Solicitors";
         description = "Approved to operate as a solicitor on Altis";
-        buyPrice = 2000000;
+        buyPrice = 30000;
         class Settings : Settings {};
     };
 
     class News : Taxi {
         displayName = "AAN World News Reporter";
         description = "Approved to operate as a news reporter on Altis";
-        buyPrice = 700000;
+        buyPrice = 30000;
         class Settings : Settings {};
     };
 

@@ -18,7 +18,7 @@ class B_LegStrapBag_olive_F : B_LegStrapBag_black_F {};
 class B_Messenger_Black_F : B_LegStrapBag_black_F {
 	displayName = "Messenger Bag";
 	price = 1000;
-	virtualSpace = 15;
+	virtualSpace = 14;
 	class Textures {
 		class B_Messenger_Black_F {
 			displayName = "Black";
@@ -54,7 +54,7 @@ class B_CominationUnitRespirator_01_F : B_SCBA_01_F {
 class B_AssaultPack_blk : B_LegStrapBag_black_F {
 	displayName = "Assault Pack";
 	price = 1300;
-	virtualSpace = 19;
+	virtualSpace = 16;
 	class Textures {
 		class B_AssaultPack_blk {
 			displayName = "Black";
@@ -81,7 +81,7 @@ class B_AssaultPack_eaf_F : B_AssaultPack_blk {};
 class B_FieldPack_blk : B_LegStrapBag_black_F {
 	displayName = "Field Pack";
 	price = 2000;
-	virtualSpace = 22;
+	virtualSpace = 16;
 	class Textures {
 		class B_FieldPack_blk {
 			displayName = "Black";
@@ -124,7 +124,7 @@ class B_Kitbag_mcamo : B_Kitbag_cbr {};
 class B_TacticalPack_blk : B_LegStrapBag_black_F {
 	displayName = "Tactical Pack";
 	price = 3500;
-	virtualSpace = 26;
+	virtualSpace = 20;
 	class Textures {
 		class B_TacticalPack_blk {
 			displayName = "Black";
@@ -140,7 +140,7 @@ class B_TacticalPack_rgr : B_TacticalPack_blk {};
 class B_CivilianBackpack_01_Everyday_Black_F : B_LegStrapBag_black_F {
 	displayName = "Civilian Pack";
 	price = 2000;
-	virtualSpace = 25;
+	virtualSpace = 20;
 	class Textures {
 		class B_CivilianBackpack_01_Everyday_Black_F {
 			displayName = "Black";
@@ -173,7 +173,7 @@ class B_CivilianBackpack_01_Sport_Red_F : B_CivilianBackpack_01_Sport_Blue_F {};
 class B_Carryall_cbr : B_LegStrapBag_black_F {
 	displayName = "Carryall";
 	price = 5000;
-	virtualSpace = 30;
+	virtualSpace = 25;
 	class Textures {
 		// Factions
 		class INVIS {
@@ -221,7 +221,7 @@ class B_ViperLightHarness_blk_F : B_LegStrapBag_black_F {
 	displayName = "Light Viper Harness";
 	price = 3500;
 	reputation = true;
-	virtualSpace = 24;
+	virtualSpace = 16;
 	class Textures {
 		class B_ViperLightHarness_blk_F {
 			displayName = "Black";
@@ -237,7 +237,7 @@ class B_ViperLightHarness_oli_F : B_ViperLightHarness_blk_F {};
 class B_ViperHarness_blk_F : B_ViperLightHarness_blk_F {
 	displayName = "Viper Harness";
 	price = 4000;
-	virtualSpace = 27;
+	virtualSpace = 24;
 	class Textures {
 		class B_ViperHarness_blk_F {
 			displayName = "Black";
@@ -253,7 +253,7 @@ class B_ViperHarness_oli_F : B_ViperHarness_blk_F {};
 class B_Bergen_mcamo_F : B_LegStrapBag_black_F {
 	displayName = "Bergen";
 	price = 12500;
-	virtualSpace = 40;
+	virtualSpace = 30;
 	class Textures {	
 		// Factions
 		class INVIS {

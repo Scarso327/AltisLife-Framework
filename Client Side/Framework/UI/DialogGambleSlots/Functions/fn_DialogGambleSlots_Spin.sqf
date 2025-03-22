@@ -32,6 +32,7 @@ if !(isNil { _display getVariable "spinsLeft" }) exitWith {};
 
 		if (_bet > (BANK * 0.3)) exitWith {
 			["You can't bet more than half your bank balance"] call ULP_fnc_hint;
+			_button ctrlEnable true;
 		};
 
 		if ([_bet, false, "Gambling Bet"] call ULP_fnc_removeMoney) then {

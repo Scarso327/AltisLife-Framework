@@ -9,7 +9,7 @@ class CfgSettings {
     sync_delay = 5 * 60;
     abort_delay = 10;
 
-    starting_bank = 150000;
+    starting_bank = 200000;
     paycheck_period = 15;
 
     numberOfBuffedItems = 3;

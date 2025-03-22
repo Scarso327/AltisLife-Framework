@@ -25,17 +25,23 @@ if !((count _params) isEqualTo (count _paramKeys)) exitWith {
 private _hashMapParams = createHashMap;
 
 {
-	_hashMapParams set [_x, _params select _forEachIndex];
+	private _value = _params select _forEachIndex;
+
+	_value = switch (true) do {
+		case (_value isEqualType ""): { [_value regexReplace ["<[^>]*>", ""]] call DB_fnc_mresString };
+		default { _value };
+	};
+
+	_hashMapParams set [_x, _value];
 } forEach _paramKeys;
 
 private _jsonContent = toJSON _hashMapParams;
 private _season = missionNamespace getVariable ["ULP_SRV_Setting_Season", 1];
 
 [
-	format ["INSERT INTO `logs` (`event`, `pid`, `content`, `jsonContent`, `season`) VALUES('%1', '%2', '%3', '%4', '%5')",
+	format ["INSERT INTO `logs` (`event`, `pid`, `jsonContent`, `season`) VALUES('%1', '%2', '%3', '%4')",
 		_event,
 		_steamid,
-		[_params] call DB_fnc_mresArray,
 		_jsonContent,
 		[_season, ""] call ULP_fnc_numberText
 	], 1

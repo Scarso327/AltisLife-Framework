@@ -97,11 +97,6 @@ class CfgLicenseStores {
 		condition = "!([""Meth""] call ULP_fnc_hasLicense)";
 		licenses[] = { "Meth" }; 
 	};
-	class Moonshine : DVLA { 
-		title = "Moonshine Processing";
-		condition = "!([""Moonshine""] call ULP_fnc_hasLicense)";
-		licenses[] = { "Moonshine" }; 
-	};
 	class Weapons : DVLA { 
 		title = "Weapons Processing";
 		condition = "!([""Weapons""] call ULP_fnc_hasLicense)";
@@ -109,8 +104,8 @@ class CfgLicenseStores {
 	};
 	class MultiDrug : DVLA {
 		title = "Multi-Drug Processing";
-		condition = "!([""Weed""] call ULP_fnc_hasLicense) || { !([""Heroin""] call ULP_fnc_hasLicense) } || { !([""Cocaine""] call ULP_fnc_hasLicense) } || { !([""ULP_fnc_hasLicense""] call ULP_fnc_hasLicense) } || { !([""Moonshine""] call ULP_fnc_hasLicense) }";
-		licenses[] = { "Weed", "Heroin", "Cocaine", "Meth", "Moonshine" };
+		condition = "!([""Weed""] call ULP_fnc_hasLicense) || { !([""Heroin""] call ULP_fnc_hasLicense) } || { !([""Cocaine""] call ULP_fnc_hasLicense) } || { !([""ULP_fnc_hasLicense""] call ULP_fnc_hasLicense) }";
+		licenses[] = { "Weed", "Heroin", "Cocaine", "Meth" };
 	};
 
 	class Home : DVLA {

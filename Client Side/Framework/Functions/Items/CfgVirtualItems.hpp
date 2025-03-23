@@ -1375,13 +1375,6 @@ class CfgVirtualItems {
 		weight = 12;
 		class Settings : Settings { onMarket = true; };
 	};
-	class Corn : UnprocessedWeed {
-		displayName = "Corn";
-		description = "The base material in making moonshine";
-		icon = "Data\Icons\corn.paa";
-		weight = 3;
-		class Settings : Settings {};
-	};
 
 	// Processed Drugs
 	class ProcessedWeed {
@@ -1423,14 +1416,6 @@ class CfgVirtualItems {
 		buyPrice = 114375;
 		sellPrice = 38125;
 		weight = 5;
-		class Settings : Settings {};
-	};
-	class Moonshine : ProcessedWeed {
-		displayName = "Moonshine";
-		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 26025;
-		sellPrice = 8675;
-		weight = 2;
 		class Settings : Settings {};
 	};
 	class Ecstasy : ProcessedWeed {
@@ -1482,14 +1467,6 @@ class CfgVirtualItems {
 		buyPrice = 157404;
 		sellPrice = 52468;
 		weight = 5;
-		class Settings : Settings {};
-	};
-	class PurifiedMoonshine : PurifiedWeed {
-		displayName = "Purified Moonshine";
-		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 33168;
-		sellPrice = 11056;
-		weight = 1;
 		class Settings : Settings {};
 	};
 

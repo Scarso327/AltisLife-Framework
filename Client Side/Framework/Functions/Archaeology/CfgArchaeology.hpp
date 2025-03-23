@@ -42,7 +42,6 @@ class CfgArchaeology {
 			{ 0.90, { "Coal", 7 } },
 			{ 0.90, { "ReligiousTotem", 1 } },
 			{ 0.90, { "StrongMetalRing", 1 } },
-			{ 0.90, { "Moonshine", 3 } },
 			{ 0.92, { "UncutDiamond", 8 } },
 			{ 0.92, { "Turtle_F_Raw", 2 } },
 			{ 0.92, { "EmeraldAmulet", 1 } },
@@ -74,7 +73,6 @@ class CfgArchaeology {
 			{ 0.92, { "Turtle_F_Raw", 5 } },
 			{ 0.92, { "UncutDiamond", 12 } },
 			{ 0.93, { "BrokenTimepiece", 1 } },
-			{ 0.96, { "Moonshine", 4 } },
 			{ 0.97, { "JeweledNecklace", 1 } },
 			{ 0.99, { "UnmarkedGold", 1 } }
 		};

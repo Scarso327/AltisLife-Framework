@@ -85,11 +85,6 @@ class CfgProcessing {
 		items[] = { { "ProcessedMeth", 1 } };
 		reqLicenses[] = { "Meth" };
 	};
-	class Moonshine : BaseProcess {
-		materials[] = { { "Corn", 1 } };
-		items[] = { { "Moonshine", 1 } };
-		reqLicenses[] = { "Moonshine" };
-	};
 	
   	class Weapons : BaseProcess {
 		processTime = 6;
@@ -119,10 +114,6 @@ class CfgProcessing {
 	class PurifiedMeth : PurifiedWeed {
 		materials[] = { { "ProcessedMeth", 1 } };
 		items[] = { { "PurifiedMeth", 1 } };
-	};
-	class PurifiedMoonshine : PurifiedWeed {
-		materials[] = { { "Moonshine", 1 } };
-		items[] = { { "PurifiedMoonshine", 1 } };
 	};
 
 	// Smelting

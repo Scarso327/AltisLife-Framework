@@ -239,8 +239,6 @@ class CfgLoot {
 			chance = 0.20;
 			class Gin { amount = 42; };
 			class Whiskey { amount = 39; };
-			class Moonshine { amount = 26; };
-			class PurifiedMoonshine { amount = 34; };
 		};
 
 		class MedicalEquipment {

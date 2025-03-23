@@ -215,12 +215,6 @@ class CfgLicenses {
         class Settings {};
     };
 
-    class Moonshine : BaseLicense {
-        displayName = "Moonshine Processing";
-        buyPrice = 1300000;
-        class Settings {};
-    };
-
     class Weapons : BaseLicense {
         displayName = "Weapons Processing";
         buyPrice = 2500000;

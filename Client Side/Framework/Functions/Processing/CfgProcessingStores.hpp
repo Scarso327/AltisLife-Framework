@@ -35,17 +35,13 @@ class CfgProcessingStores {
 		title = "Meth Processing";
 		processes[] = { "Meth" };
 	};
-	class Moonshine : Base {
-		title = "Moonshine Processing";
-		processes[] = { "Moonshine" };
-	};
 	class MultiDrug : Base {
 		title = "Multi-Drug Processing";
-		processes[] = { "Weed", "Heroin", "Cocaine", "Meth", "Moonshine" };
+		processes[] = { "Weed", "Heroin", "Cocaine", "Meth" };
 	};
 	class Purifier : Base {
 		title = "Drugs Purifier";
-		processes[] = { "PurifiedWeed", "PurifiedHeroin", "PurifiedCocaine", "PurifiedMeth", "PurifiedMoonshine" };
+		processes[] = { "PurifiedWeed", "PurifiedHeroin", "PurifiedCocaine", "PurifiedMeth" };
 		condition = "[""Northern""] call ULP_fnc_ownsCartel";
 	};
 

@@ -65,7 +65,6 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 8906; 
 			};
-			class Corn { sellPrice = 868; };
 			class Coral { 
 				buyPrice = -1;
 				sellPrice = 2094; 
@@ -84,10 +83,6 @@ class CfgVirtualStores {
 			class ProcessedCocaine { 
 				buyPrice = -1;
 				sellPrice = 4828; 
-			};
-			class Moonshine { 
-				buyPrice = -1;
-				sellPrice = 2764; 
 			};
 			class ProcessedMeth { 
 				buyPrice = -1;
@@ -108,10 +103,6 @@ class CfgVirtualStores {
 			class PurifiedCocaine { 
 				buyPrice = -1;
 				sellPrice = 6330; 
-			};
-			class PurifiedMoonshine { 
-				buyPrice = -1;
-				sellPrice = 2764; 
 			};
 			class PurifiedMeth { 
 				buyPrice = -1;
@@ -685,8 +676,6 @@ class CfgVirtualStores {
 			class PurifiedCocaine {};
 			class ProcessedMeth {};
 			class PurifiedMeth {};
-			class Moonshine {};
-			class PurifiedMoonshine {};
 			class Ecstasy {};
 		};
 	};

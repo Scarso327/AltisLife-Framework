@@ -51,8 +51,11 @@ switch (_mode) do {
 		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
 
 		private _cash = + CASH;
-		if (_cash > 0 && { [_cash, false, format ["%2 By %1", name _unit, ["Robbed", "Seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_removeMoney }) then {
+		private _amountRobbed = 0;
+		
+		if ([_cash, false, format ["%2 By %1", name _unit, ["Robbed", "Seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_removeMoney) then {
 			[format ["%1 has %4 <t color='#B92DE0'>%2%3</t> from your person", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText, ["robbed", "seized"] select ([_unit, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
+			_amountRobbed = _cash;
 		};
 
 		_unit setVariable ["robbed_me", time];

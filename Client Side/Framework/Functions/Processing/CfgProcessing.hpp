@@ -168,12 +168,6 @@ class CfgProcessing {
 		items[] = { { "CutDiamond", 1 } };
 		reqLicenses[] = { "Diamond" };
 	};
-	class BloodDiamond : Diamond {
-		materials[] = { { "UncutBloodDiamond", 1 } };
-		items[] = { { "CutBloodDiamond", 1 } };
-		profession[] = { "Processing", 2, 100 };
-		leveling[] = { 10, "Processing", 100 };
-	};
 
 	// Majors
 	class Gold : BaseProcess {

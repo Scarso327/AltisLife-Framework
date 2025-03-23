@@ -1238,11 +1238,6 @@ class CfgVirtualItems {
 		description = "A gem mined with a pickaxe and requiring processing";
 		class Settings : Settings {};
 	};
-	class UncutBloodDiamond : CopperOre {
-		displayName = "Blood Diamond Ore";
-		icon = "Data\Icons\ore.paa";
-		class Settings : Settings { isIllegal = true; };
-	};
 
 	// Processed Materials
 	class Cigarette {

@@ -108,7 +108,6 @@ class CfgVirtualStores {
 				buyPrice = -1;
 				sellPrice = 13117; 
 			};
-			class UncutBloodDiamond { sellPrice = 1781; };
 			class CutBloodDiamond { 
 				buyPrice = -1;
 				sellPrice = 2969; 

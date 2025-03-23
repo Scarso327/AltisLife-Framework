@@ -112,7 +112,7 @@ class CfgGathering {
 	};
 	class BloodDiamond : Coral {
 		areas[] = { { "blood_diamond_mine", 20 } };
-		items[] = { { "UncutBloodDiamond", 100 } };
+		items[] = { { "CutBloodDiamond", 100 } };
 		leveling[] = { 10, "Gathering", 100 };
 	};
 	class Uranium : Coral {

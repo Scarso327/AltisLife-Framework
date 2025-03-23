@@ -31,3 +31,4 @@
 #include "DialogFactionSelection\DialogFactionSelection.hpp"
 #include "DialogGambleSlots\DialogGambleSlots.hpp"
 #include "DialogWelcome\DialogWelcome.hpp"
+#include "DialogObjectPreview\DialogObjectPreview.hpp"

@@ -115,6 +115,16 @@ class DialogVehicleStore {
 			SAFEZONE_H(BUTTON_H);
         };*/
 
+		class PreviewButton : Life_RscButtonCenter {
+            idc = 3410;
+            text = "<t align = 'center'>Preview</t>";
+			onButtonClick = "_this call ULP_fnc_previewTexture;";
+            SAFEZONE_X(0.5790625);
+            SAFEZONE_Y(0.698 + BUTTON_MARGIN_Y);
+			SAFEZONE_W(0.0584375);
+			SAFEZONE_H(BUTTON_H);
+        };
+
 		class BuyButton : Life_RscButtonCenter {
             idc = 3407;
             text = "<t align = 'center'>Buy</t>";

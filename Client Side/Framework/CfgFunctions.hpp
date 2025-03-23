@@ -499,6 +499,7 @@ class CfgFunctions {
 			class vehicleStore {};
 			class vehicleChange {};
 			class switchTexture {};
+			class previewTexture {};
 		};
 
 		class Mail {
@@ -1050,6 +1051,13 @@ class CfgFunctions {
 			class DialogWelcome_OnInit {};
 			class DialogWelcome_OnLoad {};
 			class DialogWelcome_OnUnload {};
+		};
+		
+		class DialogObjectPreview {
+			file = "UI\DialogObjectPreview\Functions";
+			class DialogObjectPreview_OnInit {};
+			class DialogObjectPreview_OnLoad {};
+			class DialogObjectPreview_OnUnload {};
 		};
 	};
 };

@@ -200,6 +200,14 @@ class CfgFactories {
 						{ "SignalJammer", 1 }
 					};
 				};
+				class AutomaticLoaderUpgrade : ImprovedStorageUpgrade {
+					materials[] = { 
+						{ "CopperWiring", 5 },
+						{ "CopperPlate", 2 },
+						{ "LargeCargoBed", 1 },
+						{ "CentralProcessingUnit", 1 }
+					};
+				};
 
 				// Housing Upgrades
 				class PersonalAlarmUpgrade {

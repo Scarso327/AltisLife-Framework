@@ -59,4 +59,11 @@ class CfgVehicleUpgrades {
 		description = "Randomises the vehicle's plate for ANPR systems";
 		materials[] = { { "ClonedPlatesUpgrade", 1 } };
 	};
+
+	class AutomaticLoaderUpgrade : ImprovedStorageUpgrade {
+		icon = "Data\Icons\clonedPlatesUpgrade.paa";
+		displayName = "Automatic Loader Upgrade";
+		description = "Allows the vehicle's contents to be automatically processed";
+		materials[] = { { "AutomaticLoaderUpgrade", 1 } };
+	};
 };

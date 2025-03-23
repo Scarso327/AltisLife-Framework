@@ -82,8 +82,8 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 4;
-			xpReward = 200;
+			moneyReward = 5;
+			xpReward = 250;
 			repReward = false;
 		};
 		class Messages {
@@ -173,7 +173,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 2;
+			moneyReward = 3;
 			xpReward = 150;
 			repReward = false;
 		};
@@ -381,7 +381,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 5;
+			moneyReward = 55;
 			xpReward = 300;
 			repReward = false;
 		};
@@ -498,7 +498,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 85;
+			moneyReward = 70;
 			xpReward = 400;
 			repReward = false;
 		};
@@ -544,7 +544,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 15;
+			moneyReward = 18;
 			xpReward = 250;
 			repReward = false;
 		};
@@ -598,8 +598,8 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 15;
-			xpReward = 450;
+			moneyReward = 12;
+			xpReward = 350;
 			repReward = false;
 		};
 		class Messages {
@@ -708,7 +708,7 @@ class CfgMissions {
 			};
 		};
 		class Rewards {
-			moneyReward = 6;
+			moneyReward = 0;
 			xpReward = 1000;
 			repReward = true;
 		};

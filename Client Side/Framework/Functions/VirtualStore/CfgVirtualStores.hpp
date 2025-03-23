@@ -67,26 +67,26 @@ class CfgVirtualStores {
 			};
 			class Coral { 
 				buyPrice = -1;
-				sellPrice = 2094; 
+				sellPrice = 919; 
 			};
-			class UnprocessedWeed { sellPrice = 743; };
-			class UnprocessedHeroin { sellPrice = 1185; };
-			class UnprocessedCocaine { sellPrice = 1931; };
+			class UnprocessedWeed { sellPrice = 343; };
+			class UnprocessedHeroin { sellPrice = 585; };
+			class UnprocessedCocaine { sellPrice = 720; };
 			class ProcessedWeed { 
 				buyPrice = -1;
-				sellPrice = 1856; 
+				sellPrice = 856; 
 			};
 			class ProcessedHeroin { 
 				buyPrice = -1;
-				sellPrice = 2963; 
+				sellPrice = 1463; 
 			};
 			class ProcessedCocaine { 
 				buyPrice = -1;
-				sellPrice = 4828; 
+				sellPrice = 1800; 
 			};
 			class ProcessedMeth { 
 				buyPrice = -1;
-				sellPrice = 9531; 
+				sellPrice = 4531; 
 			};
 			class Ecstasy { 
 				buyPrice = -1;
@@ -94,32 +94,32 @@ class CfgVirtualStores {
 			};
 			class PurifiedWeed { 
 				buyPrice = -1;
-				sellPrice = 2409; 
+				sellPrice = 2569; 
 			};
 			class PurifiedHeroin { 
 				buyPrice = -1;
-				sellPrice = 4237; 
+				sellPrice = 4388; 
 			};
 			class PurifiedCocaine { 
 				buyPrice = -1;
-				sellPrice = 6330; 
+				sellPrice = 5400; 
 			};
 			class PurifiedMeth { 
 				buyPrice = -1;
-				sellPrice = 13117; 
+				sellPrice = 13594; 
 			};
 			class CutBloodDiamond { 
 				buyPrice = -1;
-				sellPrice = 2969; 
+				sellPrice = 613; 
 			};
 			class EphedrineBarrel { 
 				buyPrice = -1;
-				sellPrice = 3050; 
+				sellPrice = 4500; 
 			};
-			class UraniumOre { sellPrice = 2769; };
+			class UraniumOre { sellPrice = 1230; };
 			class UraniumBar { 
 				buyPrice = -1;
-				sellPrice = 6922; 
+				sellPrice = 3075; 
 			};
 			class WeaponParts { 
 				buyPrice = -1;
@@ -148,20 +148,16 @@ class CfgVirtualStores {
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		class Items {
 			class FreshApple {
-				buyPrice = 56;
-				sellPrice = 56; 
+				buyPrice = 140;
+				sellPrice = 140; 
 			};
 			class FreshPeach {
-				buyPrice = 64;
-				sellPrice = 64; 
+				buyPrice = 155;
+				sellPrice = 155; 
 			};
 			class Cigarette { 
-				buyPrice = 3563;
-				sellPrice = 3563; 
-			};
-			class Cigar { 
-				buyPrice = 3360;
-				sellPrice = 3360; 
+				buyPrice = 3290;
+				sellPrice = 3290; 
 			};
 			class CopperBar { 
 				buyPrice = 2375;
@@ -172,24 +168,24 @@ class CfgVirtualStores {
 				sellPrice = 2750; 
 			};
 			class IronBar { 
-				buyPrice = 9188;
-				sellPrice = 9188; 
+				buyPrice = 7187;
+				sellPrice = 7187; 
 			};
 			class Glass { 
-				buyPrice = 3188;
-				sellPrice = 3188; 
+				buyPrice = 1200;
+				sellPrice = 1200; 
 			};
 			class RefinedSalt { 
-				buyPrice = 4000;
-				sellPrice = 4000; 
+				buyPrice = 3000;
+				sellPrice = 3000; 
 			};
 			class ProcessedOil { 
-				buyPrice = 41063;
-				sellPrice = 41063; 
+				buyPrice = 7050;
+				sellPrice = 7050; 
 			};
 			class CutDiamond { 
-				buyPrice = 8125;
-				sellPrice = 8125; 
+				buyPrice = 4600;
+				sellPrice = 4600; 
 			};
 		};
 	};

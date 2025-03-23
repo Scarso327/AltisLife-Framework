@@ -36,9 +36,9 @@ if ([] call ULP_fnc_isHobo && { [player, ["Civilian"]] call ULP_fnc_isFaction } 
 		if (isNull _continueButton) exitWith { [_thisEventHandler] call ULP_fnc_removeEachFrame; };
 
 		if (time < _delay) then {
-			_continueButton ctrlSetText format["Continue (%1)", [_delay - time, "SS.MS"] call BIS_fnc_secondsToString];
+			_continueButton ctrlSetStructuredText parseText format["<t align = 'center'>Continue (%1)</t>", [_delay - time, "SS.MS"] call BIS_fnc_secondsToString];
 		} else {
-			_continueButton ctrlSetText "Continue";
+			_continueButton ctrlSetStructuredText parseText "<t align = 'center'>Continue</t>";
 			_continueButton ctrlEnable true;
 			[_thisEventHandler] call ULP_fnc_removeEachFrame;
 		};

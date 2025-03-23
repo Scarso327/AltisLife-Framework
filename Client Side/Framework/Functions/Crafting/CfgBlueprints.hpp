@@ -24,17 +24,15 @@ class CfgBlueprints {
 		class B_Rubber : B_Clay {
 			displayName = "Rubber";
 			icon = "Data\Icons\rubber.paa";
-			materials[] = { {"Wood", 3} };
+			materials[] = { {"Wood", 2} };
 			item = "Rubber";
 			workbench = true;
-			time = 2;
 		};
 		class B_RubberSheet : B_Rubber {
 			displayName = "Rubber Sheet";
 			icon = "Data\Icons\rubberSheet.paa";
 			materials[] = { {"Rubber", 2} };
 			item = "RubberSheet";
-			time = 3;
 		};
 		class B_SteelBar : B_Rubber {
 			displayName = "Steel Bar";
@@ -44,7 +42,7 @@ class CfgBlueprints {
 				{"ProcessedOil", 1}
 			};
 			item = "SteelBar";
-			time = 3;
+			time = 2;
 		};
 		class B_GlassPanel : B_Rubber {
 			displayName = "Glass Panel";
@@ -61,24 +59,22 @@ class CfgBlueprints {
 				{"FlawlessDiamond", 1}
 			};
 			item = "ReinforcedGlassPanel";
-			time = 4;
+			time = 3;
 		};
 		class B_CopperWiring : B_Rubber {
 			displayName = "Copper Wiring";
 			icon = "Data\Icons\copperWiring.paa";
 			materials[] = { 
-				{"CopperBar", 2},
+				{"CopperBar", 1},
 				{"Rubber", 1}
 			};
 			item = "CopperWiring";
-			time = 3;
 		};
 		class B_CopperPlate : B_Rubber {
 			displayName = "Copper Plate";
 			icon = "Data\Icons\metalPlate.paa";
 			materials[] = { {"CopperBar", 2} };
 			item = "CopperPlate";
-			time = 2;
 		};
 		class B_IronPlate : B_CopperPlate {
 			displayName = "Iron Plate";
@@ -98,9 +94,9 @@ class CfgBlueprints {
 		class B_PackedOil : B_Clay {
 			displayName = "Packed Oil";
 			icon = "Data\Icons\oil.paa";
-			materials[] = { {"ProcessedOil", 4} };
+			materials[] = { {"ProcessedOil", 3} };
 			item = "PackedOil";
-			time = 4;
+			time = 3;
 		};
 		class B_DiamondDrillBit : B_Rubber {
 			displayName = "DiamondDrillBit";
@@ -110,7 +106,7 @@ class CfgBlueprints {
 				{"FlawlessDiamond", 1}
 			};
 			item = "DiamondDrillBit";
-			time = 10;
+			time = 8;
 		};
 		class B_ExplosiveMaterials : B_Rubber {
 			displayName = "Explosive Materials";
@@ -136,7 +132,7 @@ class CfgBlueprints {
 			displayName = "Toolbox";
 			description = "A box of tools used to deconstruct items into their core components";
 			materials[] = { 
-				{"IronBar", 3},
+				{"IronBar", 2},
 				{"Wood", 1}
 			};
 			item = "Toolbox";
@@ -157,7 +153,7 @@ class CfgBlueprints {
 			displayName = "Lighter";
 			description = "A simple lighter used to create fire";
 			materials[] = { 
-				{"IronBar", 2}, 
+				{"IronBar", 1}, 
 				{"ProcessedOil", 1} 
 			};
 			item = "Lighter";
@@ -206,7 +202,7 @@ class CfgBlueprints {
 			displayName = "Extractor";
 			description = "A tool used for extracting oil";
 			materials[] = { 
-				{"SteelBar", 3}, 
+				{"SteelBar", 2}, 
 				{"SilverBar", 2}, 
 				{"Wood", 2} 
 			};
@@ -217,7 +213,7 @@ class CfgBlueprints {
 			displayName = "Bolt Cutter";
 			description = "A tool used to cut strong locks found on properties, airdrops and shipwrecks";
 			materials[] = { 
-				{"SteelPlate", 4},
+				{"SteelPlate", 2},
 				{"Wood", 2},
 				{"Rubber", 2},
 				{"FlawlessDiamond", 1}
@@ -231,8 +227,8 @@ class CfgBlueprints {
 			icon = "Data\Icons\industrialDrill.paa";
 			displayName = "Industrial Drill";
 			materials[] = { 
-				{"SteelPlate", 8},
-				{"ProcessedOil", 4}, 
+				{"SteelPlate", 4},
+				{"ProcessedOil", 2}, 
 				{"DiamondDrillBit", 1}
 			};
 			item = "IndustrialDrill";
@@ -243,8 +239,8 @@ class CfgBlueprints {
 			displayName = "Explosive Charge";
 			description = "A tool used to destroy fortified locks";
 			materials[] = { 
-				{"SteelPlate", 12},
-				{"CopperWiring", 8}, 
+				{"SteelPlate", 8},
+				{"CopperWiring", 4}, 
 				{"ExplosiveMaterials", 2}, 
 				{"SilverPlate", 2}, 
 				{"RestoredTimepiece", 1}
@@ -257,9 +253,8 @@ class CfgBlueprints {
 			displayName = "Makeshift Stinger";
 			description = "A deployable strip of spikes used to puncute a vehicle's tryes";
 			materials[] = { 
-				{"SteelBar", 16},
-				{"IronBar", 16}, 
-				{"SteelPlate", 8}, 
+				{"SteelBar", 8},
+				{"IronBar", 8}, 
 				{"FlawlessDiamond", 4}
 			};
 			item = "MakeshiftStinger";
@@ -341,9 +336,9 @@ class CfgBlueprints {
 			icon = "Data\Icons\mediKit.paa";
 			displayName = "MediKit";
 			materials[] = { 
-				{"Bandage", 10},
-				{"Painkillers", 5}, 
-				{"BloodBag", 3},
+				{"Bandage", 8},
+				{"Painkillers", 4}, 
+				{"BloodBag", 2},
 				{"Morphine", 2}, 
 				{"Epinephrine", 1} 
 			};
@@ -353,8 +348,8 @@ class CfgBlueprints {
 			icon = "Data\Icons\defibrillator.paa";
 			displayName = "Defibrillator";
 			materials[] = {
-				{"CopperWiring", 4}, 
-				{"SilverPlate", 2},
+				{"CopperWiring", 3}, 
+				{"SilverPlate", 1},
 				{"FlawlessDiamond", 1} 
 			};
 			item = "Defibrillator";
@@ -366,7 +361,7 @@ class CfgBlueprints {
 			materials[] = {
 				{"Bandage", 10},
 				{"SteelBar", 4},
-				{"SilverPlate", 3} 
+				{"SilverPlate", 2} 
 			};
 			item = "Stretcher";
 			time = 15;
@@ -432,7 +427,7 @@ class CfgBlueprints {
 			displayName = "Restored Pot";
 			description = "A restored artifact that can be sold for a greater profit";
 			materials[] = { 
-				{"Clay", 4}, 
+				{"Clay", 2}, 
 				{"BrokenPot", 1} 
 			};
 			item = "RestoredPot";
@@ -442,7 +437,7 @@ class CfgBlueprints {
 			icon = "Data\Icons\sharpStoneKnife.paa";
 			displayName = "Sharpended Knife";
 			materials[] = { 
-				{"IronBar", 2}, 
+				{"IronBar", 1}, 
 				{"BluntStoneKnife", 1}
 			};
 			item = "SharpStoneKnife";
@@ -470,7 +465,6 @@ class CfgBlueprints {
 			displayName = "Restored Timepiece";
 			materials[] = { 
 				{"BrokenTimepiece", 1}, 
-				{"SilverBar", 1}, 
 				{"CutDiamond", 1}
 			};
 			item = "RestoredTimepiece";
@@ -484,7 +478,7 @@ class CfgBlueprints {
 			icon = "Data\Icons\capacitor.paa";
 			displayName = "Capacitor";
 			description = "A component used for crafting electronics";
-			materials[] = { {"SilverBar", 2} };
+			materials[] = { {"SilverBar", 1} };
 			item = "Capacitor";
 			isDefault = true;
 			workbench = true;
@@ -511,7 +505,7 @@ class CfgBlueprints {
 			icon = "Data\Icons\motherboard.paa";
 			displayName = "Motherboard";
 			materials[] = { 
-				{"PrintedCircuitBoard", 3},
+				{"PrintedCircuitBoard", 2},
 				{"CopperWiring", 2} 
 			};
 			item = "Motherboard";
@@ -532,7 +526,7 @@ class CfgBlueprints {
 			icon = "Data\Icons\gpu.paa";
 			displayName = "Graphics Processing Unit";
 			materials[] = { 
-				{"ElectronicCircuit", 3},
+				{"ElectronicCircuit", 2},
 				{"PrintedCircuitBoard", 2},
 				{"Capacitor", 2},
 				{"CopperWiring", 1}
@@ -643,8 +637,7 @@ class CfgBlueprints {
 			description = "A tool that will send an alert to the Police";
 			materials[] = { 
 				{"CopperWiring", 2},
-				{"SilverPlate", 2},
-				{"GlassPanel", 2},
+				{"GlassPanel", 1},
 				{"CopperPlate", 1}
 			};
 			item = "PanicButton";

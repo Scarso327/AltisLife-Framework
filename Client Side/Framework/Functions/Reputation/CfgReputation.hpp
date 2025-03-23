@@ -48,6 +48,6 @@ class CfgReputation {
 		class Rig { reason = "have tried to sabotage democracy"; change = -100; };
 
 		// Missions
-		class Mission { reason = "have completed a mission"; change = 30; };
+		class Mission { reason = "have completed a mission"; change = 50; };
 	};
 };

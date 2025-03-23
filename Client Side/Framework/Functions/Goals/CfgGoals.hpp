@@ -65,12 +65,6 @@ class CfgGoals {
 				tiers[] = { 100, 300, 500 };
 			};
 
-			class GatherCorn : GatherApple {
-				item = "Corn";
-				title = "Gather Corn";
-				description = "Gather Corn before today's end!";
-			};
-
 			class MineCoal : GatherApple {
 				item = "Coal";
 				title = "Mine Coal";
@@ -204,12 +198,6 @@ class CfgGoals {
 				title = "Sell Diamond";
 				description = "Sell Diamond before the week's end!";
 			};
-
-			class SellMoonshine : SellSchnapps {
-				item = "Moonshine";
-				title = "Sell Moonshine";
-				description = "Sell Moonshine before the week's end!";
-			};
 		};
 	};
 
@@ -339,10 +327,6 @@ class CfgGoals {
 		class SellMeth : SellSchnapps {
 			item = "ProcessedMeth";
 			title = "Sell Meth";
-		};
-		class SellMoonshine : SellSchnapps {
-			item = "Moonshine";
-			title = "Sell Moonshine";
 		};
 	};
 };

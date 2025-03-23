@@ -50,20 +50,16 @@ class CfgGathering {
 		areas[] = { { "tobacco_field", 20 } };
 		items[] = { { "Tobacco", 100 } };
 	};
-	class Corn : BaseGather {
+	class Weed : BaseGather {
 		hidden[] = { "Police" };
-		areas[] = { { "corn_field", 20 } };
-		items[] = { { "Corn", 100 } };
-	};
-	class Weed : Corn {
 		areas[] = { { "weed_field", 20 } };
 		items[] = { { "UnprocessedWeed", 100 } };
 	};
-	class Heroin : Corn {
+	class Heroin : Weed {
 		areas[] = { { "heroin_field", 20 } };
 		items[] = { { "UnprocessedHeroin", 100 } };
 	};
-	class Cocaine : Corn {
+	class Cocaine : Weed {
 		areas[] = { { "cocaine_field", 20 } };
 		items[] = { { "UnprocessedCocaine", 100 } };
 	};
@@ -116,7 +112,7 @@ class CfgGathering {
 	};
 	class BloodDiamond : Coral {
 		areas[] = { { "blood_diamond_mine", 20 } };
-		items[] = { { "UncutBloodDiamond", 100 } };
+		items[] = { { "CutBloodDiamond", 100 } };
 		leveling[] = { 10, "Gathering", 100 };
 	};
 	class Uranium : Coral {

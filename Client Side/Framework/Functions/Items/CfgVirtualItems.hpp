@@ -5,7 +5,7 @@ class CfgVirtualItems {
 		description = "Fresh fruit picked from local trees and sold at markets";
 		icon = "Data\Icons\freshApples.paa";
 		buyPrice = -1;
-		sellPrice = 56;
+		sellPrice = 140;
 		weight = 1;
 		class Settings {
 			onMarket = true;
@@ -25,7 +25,7 @@ class CfgVirtualItems {
 	class FreshPeach : FreshApple {
 		displayName = "Fresh Peaches";
 		icon = "Data\Icons\freshPeaches.paa";
-		sellPrice = 64;
+		sellPrice = 155;
 		class Settings : Settings {};
 		class Sustain : Sustain {};
 		class Events : Events {};
@@ -255,8 +255,8 @@ class CfgVirtualItems {
 	class Schnapps : Beer {
 		displayName = "Schnapps";
 		icon = "Data\Icons\schnapps.paa";
-		buyPrice = 725;
-		sellPrice = 363;
+		buyPrice = 860;
+		sellPrice = 430;
 		class Settings : Settings { 
 			onMarket = true; 
 			isEventItem = true;
@@ -1170,7 +1170,7 @@ class CfgVirtualItems {
 		description = "A lump of coal sold at the Coal Plant without processing";
 		icon = "Data\Icons\ore.paa";
 		buyPrice = -1;
-		sellPrice = 3000;
+		sellPrice = 2400;
 		weight = 4;
 		class Settings : Settings {
 			onMarket = true;
@@ -1182,7 +1182,7 @@ class CfgVirtualItems {
 		displayName = "Coral";
 		description = "Coral gathered and sold near Kavala without processing";
 		icon = "Data\Icons\coral.paa";
-		sellPrice = 8375;
+		sellPrice = 3675;
 		weight = 7;
 		class Settings : Settings { isIllegal = true; };
 		conditions = "true";
@@ -1226,7 +1226,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 	};
 	class UnprocessedOil : CopperOre {
-		displayName = "Unrefinded Oil";
+		displayName = "Unrefined Oil";
 		description = "Oil drilled with an extractor, requiring a fliud track and processing";
 		icon = "Data\Icons\liquid.paa";
 		weight = 4;
@@ -1238,11 +1238,6 @@ class CfgVirtualItems {
 		description = "A gem mined with a pickaxe and requiring processing";
 		class Settings : Settings {};
 	};
-	class UncutBloodDiamond : CopperOre {
-		displayName = "Blood Diamond Ore";
-		icon = "Data\Icons\ore.paa";
-		class Settings : Settings { isIllegal = true; };
-	};
 
 	// Processed Materials
 	class Cigarette {
@@ -1250,7 +1245,7 @@ class CfgVirtualItems {
 		description = "A roll of tobacco that can be sold or smoked";
 		icon = "Data\Icons\cigarette.paa";
 		buyPrice = -1;
-		sellPrice = 3563;
+		sellPrice = 3290;
 		weight = 3;
 		class Settings {
 			onMarket = true;
@@ -1265,8 +1260,8 @@ class CfgVirtualItems {
 	class Cigar : Cigarette {
 		displayName = "Cigar";
 		icon = "Data\Icons\cigar.paa";
-		sellPrice = 3360;
-		class Settings : Settings {};
+		sellPrice = 3750;
+		class Settings : Settings { isIllegal = true; };
 	};
 	class CopperBar : Cigarette {
 		displayName = "Copper Bar";
@@ -1284,56 +1279,63 @@ class CfgVirtualItems {
 	};
 	class IronBar : CopperBar {
 		displayName = "Iron Bar";
-		sellPrice = 9188;
+		sellPrice = 7187;
 		class Settings : Settings {};
 	};
 	class UraniumBar : CopperBar {
 		displayName = "Uranium Bar";
 		description = "A metal bar sold at its own trader";
-		sellPrice = 27688;
+		sellPrice = 12300;
 		weight = 3;
-		class Settings : Settings { isIllegal = true; };
+		class Settings : Settings { 
+			isIllegal = true; 
+			isEventItem = false;
+		};
 	};
 	class Glass : CopperBar {
 		displayName = "Glass";
 		description = "Basically just hot sand that can be sold";
 		icon = "Data\Icons\glass.paa";
-		sellPrice = 3188;
+		buyPrice = 2400;
+		sellPrice = 1200;
 		weight = 1;
-		class Settings : Settings {};
+		class Settings : Settings { isEventItem = false; };
 	};
 	class RefinedSalt : CopperBar {
 		displayName = "Refined Salt";
 		description = "Refined blocks salt ready to be sold";
 		icon = "Data\Icons\saltRefined.paa";
-		sellPrice = 4000;
+		sellPrice = 3000;
 		class Settings : Settings {};
 	};
 	class ProcessedOil : CopperBar {
-		displayName = "Refinded Oil";
-		description = "Refinded oil that has been barreled and ready to be sold";
+		displayName = "Refined Oil";
+		description = "Refined oil that has been barreled and ready to be sold";
 		icon = "Data\Icons\oil.paa";
-		buyPrice = 41063;
-		sellPrice = 13688;
+		buyPrice = 21150;
+		sellPrice = 7050;
 		weight = 3;
-		class Settings : Settings {};
+		class Settings : Settings { isEventItem = false; };
 	};
 	class CutDiamond : CopperBar {
 		displayName = "Cut Diamond";
 		description = "A finely cut gem ready to be sold";
 		icon = "Data\Icons\gem.paa";
-		sellPrice = 8125;
+		sellPrice = 4600;
 		class Settings : Settings {};
 	};
 	class CutBloodDiamond : CutDiamond {
 		displayName = "Cut Blood Diamond";
 		icon = "Data\Icons\gem.paa";
 		sellPrice = 17813;
-		class Settings : Settings { isIllegal = true; };
+		class Settings : Settings { 
+			isIllegal = true;
+			isEventItem = false;
+		};
 	};
 	class FlawlessDiamond : CutDiamond {
 		displayName = "Flawless Diamond";
-		sellPrice = 60938;
+		sellPrice = 32200;
 		class Settings : Settings { isEventItem = false; };
 	};
 
@@ -1371,16 +1373,9 @@ class CfgVirtualItems {
 		displayName = "Ephedrine Barrel";
 		description = "The base material in making crystal meth";
 		icon = "Data\Icons\methUnprocessed.paa";
-		buyPrice = 6050;
-		weight = 12;
+		buyPrice = 4500;
+		weight = 8;
 		class Settings : Settings { onMarket = true; };
-	};
-	class Corn : UnprocessedWeed {
-		displayName = "Corn";
-		description = "The base material in making moonshine";
-		icon = "Data\Icons\corn.paa";
-		weight = 3;
-		class Settings : Settings {};
 	};
 
 	// Processed Drugs
@@ -1388,8 +1383,8 @@ class CfgVirtualItems {
 		displayName = "Weed";
 		description = "A drugs sold at a Drug Dealer";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 22275;
-		sellPrice = 7425;
+		buyPrice = 10275;
+		sellPrice = 3425;
 		weight = 3;
 		class Settings {
 			onMarket = true;
@@ -1404,33 +1399,25 @@ class CfgVirtualItems {
 	class ProcessedHeroin : ProcessedWeed {
 		displayName = "Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 35550;
-		sellPrice = 11850;
+		buyPrice = 17550;
+		sellPrice = 5850;
 		weight = 4;
 		class Settings : Settings {};
 	};
 	class ProcessedCocaine : ProcessedWeed {
 		displayName = "Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 57936;
-		sellPrice = 19312;
+		buyPrice = 21600;
+		sellPrice = 7200;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class ProcessedMeth : ProcessedWeed {
 		displayName = "Meth";
 		icon = "Data\Icons\methProcessed.paa";
-		buyPrice = 114375;
-		sellPrice = 38125;
+		buyPrice = 54600;
+		sellPrice = 18125;
 		weight = 5;
-		class Settings : Settings {};
-	};
-	class Moonshine : ProcessedWeed {
-		displayName = "Moonshine";
-		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 26025;
-		sellPrice = 8675;
-		weight = 2;
 		class Settings : Settings {};
 	};
 	class Ecstasy : ProcessedWeed {
@@ -1447,8 +1434,8 @@ class CfgVirtualItems {
 		displayName = "Purified Weed";
 		description = "A purified drug made when the Northern Drug Cartel is owned";
 		icon = "Data\Icons\weedProcessed.paa";
-		buyPrice = 28908;
-		sellPrice = 9636;
+		buyPrice = 30825;
+		sellPrice = 10275;
 		weight = 3;
 		class Settings {
 			onMarket = true;
@@ -1463,33 +1450,25 @@ class CfgVirtualItems {
 	class PurifiedHeroin : PurifiedWeed {
 		displayName = "Purified Heroin";
 		icon = "Data\Icons\heroinProcessed.paa";
-		buyPrice = 50841;
-		sellPrice = 16947;
+		buyPrice = 52650;
+		sellPrice = 17550;
 		weight = 4;
 		class Settings : Settings {};
 	};
 	class PurifiedCocaine : PurifiedWeed {
 		displayName = "Purified Cocaine";
 		icon = "Data\Icons\cocaineProcessed.paa";
-		buyPrice = 75963;
-		sellPrice = 25321;
+		buyPrice = 64800;
+		sellPrice = 21600;
 		weight = 5;
 		class Settings : Settings {};
 	};
 	class PurifiedMeth : PurifiedWeed {
 		displayName = "Purified Meth";
 		icon = "Data\Icons\methProcessed.paa";
-		buyPrice = 157404;
-		sellPrice = 52468;
+		buyPrice = 163125;
+		sellPrice = 54375;
 		weight = 5;
-		class Settings : Settings {};
-	};
-	class PurifiedMoonshine : PurifiedWeed {
-		displayName = "Purified Moonshine";
-		icon = "Data\Icons\moonshine.paa";
-		buyPrice = 33168;
-		sellPrice = 11056;
-		weight = 1;
 		class Settings : Settings {};
 	};
 
@@ -1498,11 +1477,11 @@ class CfgVirtualItems {
 		displayName = "Weapon Parts";
 		description = "Parts processed when the Church Arms Cartel is owned";
 		icon = "Data\Icons\weaponParts.paa";
-		buyPrice = 5900;
+		buyPrice = -1;
 		sellPrice = -1;
 		weight = 6;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
@@ -1518,10 +1497,7 @@ class CfgVirtualItems {
 		buyPrice = -1;
 		sellPrice = 73375;
 		weight = 5;
-		class Settings : Settings {
-			isSavable = true;
-			isEventItem = true;
-		};
+		class Settings : Settings { isSavable = true; };
 	};
 
 	// Cargo Mission Items
@@ -1530,14 +1506,14 @@ class CfgVirtualItems {
 		description = "Crates designed only for vehicles containing valuables";
 		icon = "Data\Icons\freightCargo.paa";
 		buyPrice = -1;
-		sellPrice = 44600;
+		sellPrice = 15700;
 		weight = 24;
 		class Settings {
 			onMarket = true;
 			isIllegal = false;
 			isSavable = false;
 			isScripted = false;
-			isEventItem = true;
+			isEventItem = false;
 			isSystemItem = true;
 			canSlingLoad = false;
 		};
@@ -1563,7 +1539,7 @@ class CfgVirtualItems {
 		displayName = "Foodstuffs";
 		description = "Foodstuffs intended for local supermarkets";
 		icon = "Data\Icons\foodstuffs.paa";
-		sellPrice = 1300;
+		sellPrice = 450;
 		weight = 3;
 		class Settings : Settings {};
 	};
@@ -1571,7 +1547,7 @@ class CfgVirtualItems {
 		displayName = "Dunamis Propaganda";
 		description = "Dunamis Propaganda intended for regional sympathisers";
 		icon = "Data\Icons\dunamisPropaganda.paa";
-		sellPrice = 1150;
+		sellPrice = 0;
 		weight = 1;
 		class Settings : Settings {};
 	};
@@ -1579,7 +1555,7 @@ class CfgVirtualItems {
 		displayName = "Fuel";
 		description = "Fuel that needs to be transported to fuel stations";
 		icon = "Data\Icons\fuel.paa";
-		sellPrice = 1088;
+		sellPrice = 600;
 		weight = 1;
 		class Settings : Settings {};
 	};

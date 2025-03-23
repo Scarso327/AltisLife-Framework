@@ -6,7 +6,7 @@ class CfgArchaeology {
 		rewards[] = {
 			{ 0, { "OldCoin", 3 } },
 			{ 0.55, { "Coal", 6 } },
-			{ 0.55, { "UncommonMapFragment", 1 } },
+			{ 0.55, { "UncommonMapFragment", 2 } },
 			{ 0.70, { "CommonMapFragment", 2 } },
 			{ 0.72, { "BrokenPot", 1 } },
 			{ 0.77, { "BluntStoneKnife", 1 } },
@@ -25,11 +25,11 @@ class CfgArchaeology {
 	class Uncommon {
 		surveyTime[] = { 30, 40 };
 		surveyTimes = 2;
-		give[] = { 4, 5 };
+		give[] = { 2, 4 };
 		rewards[] = {
 			{ 0.10, { "OldCoin", 4 } },
 			{ 0.55, { "FossilisedBone", 2 } },
-			{ 0.62, { "UncommonMapFragment", 2 } },
+			{ 0.62, { "UncommonMapFragment", 3 } },
 			{ 0.62, { "RareMapFragment", 2 } },
 			{ 0.64, { "BrokenPot", 1 } },
 			{ 0.66, { "CommonMapFragment", 3 } },
@@ -53,7 +53,7 @@ class CfgArchaeology {
 	class Rare {
 		surveyTime[] = { 40, 50 };
 		surveyTimes = 3;
-		give[] = { 6, 8 };
+		give[] = { 3, 5 };
 		rewards[] = {
 			{ 0.20, { "OldCoin", 8 } },
 			{ 0.45, { "FossilisedBone", 3 } },
@@ -61,7 +61,7 @@ class CfgArchaeology {
 			{ 0.45, { "WeatheredSculpture", 2 } },
 			{ 0.58, { "UncommonMapFragment", 3 } },
 			{ 0.58, { "AncientAmber", 2 } },
-			{ 0.60, { "RareMapFragment", 2 } },
+			{ 0.60, { "RareMapFragment", 3 } },
 			{ 0.62, { "UnidentifiedSkull", 1 } },
 			{ 0.67, { "ReligiousTotem", 2 } },
 			{ 0.72, { "StrongMetalRing", 2 } },
@@ -80,8 +80,8 @@ class CfgArchaeology {
 
 	class Legendary {
 		surveyTime[] = { 50, 60 };
-		surveyTimes = 5;
-		give[] = { 8, 12 };
+		surveyTimes = 3;
+		give[] = { 5, 10 };
 		rewards[] = {
 			{ 0.42, { "PetrifiedShield", 2 } },
 			{ 0.44, { "WeatheredSculpture", 2 } },

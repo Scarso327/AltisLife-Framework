@@ -113,14 +113,6 @@ class CfgMissions {
 				pos = "car_dealership_athira_01";
 				name = "Central Athira";
 			};
-			class CityOfPyrgos {
-				pos = "civ_spawn_pyrgos";
-				name = "City of Pyrgos";
-			};
-			class TownOfSofia {
-				pos = "civ_spawn_sofia";
-				name = "Town of Sofia";
-			};
 			class AgiosCenter {
 				pos = "civ_spawn_agios";
 				name = "Agios Center";
@@ -158,10 +150,6 @@ class CfgMissions {
 			class WesternRegionalBank {
 				pos = "regional_bank_01";
 				name = "Western Regional Bank";
-			};
-			class EasternRegionalBank {
-				pos = "regional_bank_02";
-				name = "Eastern Regional Bank";
 			};
 
 			// MAJOR CRIME SITES

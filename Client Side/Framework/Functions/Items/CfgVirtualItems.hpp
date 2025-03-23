@@ -1477,11 +1477,11 @@ class CfgVirtualItems {
 		displayName = "Weapon Parts";
 		description = "Parts processed when the Church Arms Cartel is owned";
 		icon = "Data\Icons\weaponParts.paa";
-		buyPrice = 5900;
+		buyPrice = -1;
 		sellPrice = -1;
 		weight = 6;
 		class Settings {
-			onMarket = true;
+			onMarket = false;
 			isIllegal = true;
 			isSavable = false;
 			isScripted = false;
@@ -1497,10 +1497,7 @@ class CfgVirtualItems {
 		buyPrice = -1;
 		sellPrice = 73375;
 		weight = 5;
-		class Settings : Settings {
-			isSavable = true;
-			isEventItem = true;
-		};
+		class Settings : Settings { isSavable = true; };
 	};
 
 	// Cargo Mission Items

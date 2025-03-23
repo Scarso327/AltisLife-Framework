@@ -65,11 +65,11 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class LegendaryMapFragment {
-					displayName = "Fragments Crate";
+				class WeaponParts {
+					displayName = "Weapon Parts Crate";
 					pos[] = { { 11741.8,9305.01,0 }, 55 };
-					items[] = { "LegendaryMapFragment" };
-					amount = "(count playableUnits) * 0.06";
+					items[] = { "WeaponParts" };
+					amount = "(count playableUnits) * 0.01";
 				};
 			};
 		};

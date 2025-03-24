@@ -66,6 +66,9 @@ class CfgSettings {
             };
             condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] || { missionNamespace getVariable [""ULP_SRV_Setting_Election"", false] }";
         };
+        class Investors : Hello {
+            items[] = {"""Investors""", """Tropical, Tom Skyline"""};
+        };
     };
 
     class NLR {

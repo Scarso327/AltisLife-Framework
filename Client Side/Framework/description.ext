@@ -24,7 +24,8 @@ class CfgWorlds {
 		pictureMap = "";
 		pictureShot = "data\load.paa";
 		loadingTexts[] = { 
-			
+			"Watch one of our investors @ youtube.com/lttropical",
+			"Watch out for Tom Skyline, he's a known felon"
 		};
 	};
 };

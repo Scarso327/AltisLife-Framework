@@ -370,6 +370,8 @@ class CfgFactories {
 					tickTime = 600;
 					materials[] = { { "VehicleParts", 383 }, { "HeavyArmourPlate", 4 }, { "ReinforcedTyre", 4 }, { "ReinforcedGlassPanel", 6 } };
 				};
+				class B_AFV_Wheeled_01_cannon_F : I_MRAP_03_F = { materials[] = { { "VehicleParts", 4520 }, { "HeavyArmourPlate", 16 }, { "ReinforcedTyre", 4 }, { "EngineComponent", 2 } }; };
+				class I_LT_01_scout_F : I_MRAP_03_F = { materials[] = { { "VehicleParts", 1343 }, { "HeavyArmourPlate", 6 }, { "EngineComponent", 4 } }; };
 				class O_Truck_03_device_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 480 }, { "ReinforcedGlassPanel", 4 }, { "HeavyArmourPlate", 2 }, { "ReinforcedTyre", 4 }, { "EngineComponent", 1 }, { "LargeCargoBed", 1 } }; };
 				class O_MRAP_02_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 500 }, { "HeavyArmourPlate", 4 }, { "ReinforcedTyre", 4 }, { "ReinforcedGlassPanel", 6 } }; };
 				class B_MRAP_01_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 653 }, { "HeavyArmourPlate", 4 }, { "ReinforcedTyre", 4 }, { "ReinforcedGlassPanel", 6 } }; };

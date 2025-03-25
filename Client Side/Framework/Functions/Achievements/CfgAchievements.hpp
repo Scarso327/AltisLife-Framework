@@ -566,4 +566,8 @@ class CfgAchievements {
 		displayName = "Nando's Shack";
 		description = "You have visited Tom Skyline's Nando's Shack";
 	};
+	class RyanDelta : CharityWorker {
+		displayName = "The Great Orator";
+		description = "You have visited the ruins of an ancient theatre";
+	};
 };

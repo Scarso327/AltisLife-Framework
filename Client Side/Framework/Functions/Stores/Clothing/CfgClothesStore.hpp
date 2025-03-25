@@ -1002,6 +1002,7 @@ class CfgClothesStore {
 			class U_B_CombatUniform_mcam {};
 			class U_B_CombatUniform_mcam_vest {};
 			class U_B_CombatUniform_mcam_tshirt {};
+			class U_B_Wetsuit { condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]"; };
 		};
 
 		class Headgear {
@@ -1027,6 +1028,7 @@ class CfgClothesStore {
 			class G_Blindfold_01_black_F {};
 			class G_Bandanna_aviator {};
 			class G_Balaclava_blk {};
+			class G_B_Diving { condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]"; };
 		};
 
 		class Vests {
@@ -1044,6 +1046,7 @@ class CfgClothesStore {
 			class V_CarrierRigKBT_01_Olive_F {};
 			class V_CarrierRigKBT_01_light_Olive_F {};
 			class V_PlateCarrier1_blk {};
+			class V_RebreatherB { condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]"; };
 		};
 		
 		class Backpacks {
@@ -1087,6 +1090,7 @@ class CfgClothesStore {
 			class U_B_FullGhillie_ard {};
 			class U_B_HeliPilotCoveralls {};
 			class U_C_CBRN_Suit_01_White_F {};
+			class U_B_Wetsuit { condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]"; };
 		};
 
 		class Headgear {
@@ -1123,6 +1127,7 @@ class CfgClothesStore {
 			class G_RegulatorMask_F {};
 			class G_AirPurifyingRespirator_01_F {};
 			class G_Tactical_Clear {};
+			class G_B_Diving { condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]"; };
 		};
 
 		class Vests {
@@ -1141,6 +1146,7 @@ class CfgClothesStore {
 			class V_CarrierRigKBT_01_light_Olive_F {};
 			class V_PlateCarrier1_blk {};
 			class V_PlateCarrier2_blk {};
+			class V_RebreatherB { condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]"; };
 		};
 		
 		class Backpacks {
@@ -1153,6 +1159,7 @@ class CfgClothesStore {
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
 			class B_RadioBag_01_black_F {};
+			class B_B_Parachute_02_F {};
 			class B_SCBA_01_F {};
 		};
 	};
@@ -1252,6 +1259,7 @@ class CfgClothesStore {
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
 			class B_RadioBag_01_black_F {};
+			class B_B_Parachute_02_F {};
 			class B_SCBA_01_F {};
 		};
 	};
@@ -1284,6 +1292,7 @@ class CfgClothesStore {
 			class U_B_GhillieSuit {};
 			class U_B_FullGhillie_ard {};
 			class U_B_HeliPilotCoveralls {};
+			class U_B_Wetsuit {};
 		};
 
 		class Headgear {
@@ -1318,6 +1327,7 @@ class CfgClothesStore {
 			class G_Balaclava_TI_blk_F {};
 			class G_Balaclava_TI_G_blk_F {};
 			class G_Tactical_Clear {};
+			class G_B_Diving {};
 		};
 
 		class Vests {
@@ -1336,6 +1346,7 @@ class CfgClothesStore {
 			class V_CarrierRigKBT_01_light_Olive_F {};
 			class V_PlateCarrier1_blk {};
 			class V_PlateCarrier2_blk {};
+			class V_RebreatherB {};
 		};
 		
 		class Backpacks {
@@ -1348,6 +1359,7 @@ class CfgClothesStore {
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
 			class B_RadioBag_01_black_F {};
+			class B_B_Parachute_02_F {};
 		};
 	};
 };

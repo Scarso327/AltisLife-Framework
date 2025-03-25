@@ -210,6 +210,374 @@ class CfgFactories {
 			};
 		};
 
+		class WeaponsFactory {
+			displayName = "Weapons Factory";
+			requiredPower = 1;
+			class Events {
+				onOpen = "[""DialogFactory"", _this] call ULP_UI_fnc_createDialog";
+				onStart = "_this call ULP_SRV_fnc_startComponentFactory";
+				onTick = "_this call ULP_SRV_fnc_tickComponentFactory";
+				preTickCondition = "true";
+			};
+			class Products {
+				// Weapons
+				class LMG_Zafir_F {
+					tickTime = 180;
+					requiredPower = 2;
+					materials[] = { 
+						{ "SteelPlate", 12 },
+						{ "FlawlessDiamond", 2 },
+						{ "WeaponParts", 20 },
+						{ "DecryptedDrive", 1 },
+					};
+				};
+				class srifle_DMR_04_Tan_F {
+					tickTime = 180;
+					requiredPower = 2;
+					materials[] = { 
+						{ "SteelPlate", 8 },
+						{ "CopperPlate", 12 },
+						{ "RubberSheet", 24 },
+						{ "FlawlessDiamond", 6 },
+						{ "WeaponParts", 16 }
+					};
+				};
+				class srifle_DMR_02_sniper_F {
+					tickTime = 180;
+					requiredPower = 2;
+					materials[] = { 
+						{ "SteelPlate", 14 },
+						{ "SilverPlate", 16 },
+						{ "CopperPlate", 6 },
+						{ "FlawlessDiamond", 2 },
+						{ "WeaponParts", 18 },
+						{ "UnmarkedGold", 1 }
+					};
+				};
+				class srifle_DMR_05_tan_f {
+					tickTime = 180;
+					requiredPower = 2;
+					materials[] = { 
+						{ "SteelPlate", 14 },
+						{ "SilverPlate", 16 },
+						{ "FlawlessDiamond", 4 },
+						{ "WeaponParts", 18 },
+						{ "UnmarkedGold", 1 }
+					};
+				};
+				class srifle_LRR_F {
+					tickTime = 180;
+					requiredPower = 3;
+					materials[] = { 
+						{ "SteelPlate", 16 },
+						{ "SilverPlate", 12 },
+						{ "FlawlessDiamond", 4 },
+						{ "WeaponParts", 26 },
+						{ "UnmarkedGold", 2 }
+					};
+				};
+
+				// Attachments
+				class muzzle_snds_L {
+					tickTime = 60;
+					materials[] = { 
+						{ "RubberSheet", 4 },
+						{ "CopperPlate", 2 },
+						{ "FlawlessDiamond", 1 }
+					};
+				};
+				class muzzle_snds_acp {
+					tickTime = 60;
+					materials[] = { 
+						{ "RubberSheet", 4 },
+						{ "CopperPlate", 2 },
+						{ "FlawlessDiamond", 1 }
+					};
+				};
+				class muzzle_snds_M {
+					tickTime = 60;
+					materials[] = { 
+						{ "RubberSheet", 6 },
+						{ "CopperPlate", 2 },
+						{ "FlawlessDiamond", 1 }
+					};
+				};
+				class muzzle_snds_570 {
+					tickTime = 60;
+					materials[] = { 
+						{ "RubberSheet", 4 },
+						{ "CopperPlate", 2 },
+						{ "FlawlessDiamond", 1 }
+					};
+				};
+				class muzzle_snds_H {
+					tickTime = 60;
+					requiredPower = 2;
+					materials[] = { 
+						{ "RubberSheet", 12 },
+						{ "CopperPlate", 3 },
+						{ "SilverPlate", 1 },
+						{ "FlawlessDiamond", 3 },
+						{ "ProcessedOil", 2 }
+					};
+				};
+				class muzzle_snds_B {
+					tickTime = 90;
+					requiredPower = 3;
+					materials[] = { 
+						{ "RubberSheet", 24 },
+						{ "SilverPlate", 4 },
+						{ "FlawlessDiamond", 6 },
+						{ "ProcessedOil", 3 },
+						{ "AncientAmber", 1 }
+					};
+				};
+				class optic_KHS_old {
+					tickTime = 60;
+					requiredPower = 2;
+					materials[] = { 
+						{ "ReinforcedGlassPanel", 1 },
+						{ "SteelPlate", 2 },
+						{ "FlawlessDiamond", 2 },
+						{ "AncientAmber", 1 }
+					};
+				};
+				class optic_LRPS {
+					tickTime = 90;
+					requiredPower = 3;
+					materials[] = { 
+						{ "ReinforcedGlassPanel", 3 },
+						{ "SteelPlate", 2 },
+						{ "SilverPlate", 1 },
+						{ "FlawlessDiamond", 5 },
+						{ "UnmarkedGold", 1 }
+					};
+				};
+
+				// Magazines
+				class 150Rnd_762x54_Box {
+					tickTime = 60;
+					requiredPower = 2;
+					materials[] = { 
+						{ "PackedOil", 4 },
+						{ "Coal", 16 },
+						{ "Sand", 16 },
+						{ "CutBloodDiamond", 4 }
+					};
+				};
+				class 10Rnd_93x64_DMR_05_Mag {
+					tickTime = 60;
+					requiredPower = 2;
+					materials[] = { 
+						{ "PackedOil", 6 },
+						{ "Coal", 12 },
+						{ "Sand", 12 },
+						{ "CutBloodDiamond", 6 }
+					};
+				};
+				class 10Rnd_127x54_Mag {
+					tickTime = 60;
+					requiredPower = 2;
+					materials[] = { 
+						{ "PackedOil", 6 },
+						{ "Coal", 4 },
+						{ "Sand", 4 },
+						{ "CutBloodDiamond", 12 },
+						{ "AncientAmber", 1 }
+					};
+				};
+				class 10Rnd_338_Mag {
+					tickTime = 60;
+					requiredPower = 2;
+					materials[] = { 
+						{ "PackedOil", 6 },
+						{ "Coal", 12 },
+						{ "Sand", 12 },
+						{ "CutBloodDiamond", 6 }
+					};
+				};
+				class 7Rnd_408_Mag {
+					tickTime = 60;
+					requiredPower = 2;
+					materials[] = { 
+						{ "PackedOil", 12 },
+						{ "Coal", 16 },
+						{ "Sand", 16 },
+						{ "CutBloodDiamond", 14 },
+						{ "UnmarkedGold", 1 }
+					};
+				};
+				class 10Rnd_50BW_Mag_F {
+					tickTime = 60;
+					requiredPower = 3;
+					materials[] = { 
+						{ "PackedOil", 4 },
+						{ "ExplosiveMaterials", 1 },
+						{ "DecryptedDrive", 1 }
+					};
+				};
+
+				// CBRN Equipment
+				class U_C_CBRN_Suit_01_Blue_F {
+					tickTime = 180;
+					materials[] = { 
+						{ "FlawlessDiamond", 4 },
+						{ "Capacitor", 6 },
+						{ "CopperWiring", 2 }
+					};
+				};
+				class G_RegulatorMask_F {
+					tickTime = 120;
+					materials[] = { 
+						{ "FlawlessDiamond", 2 },
+						{ "GlassPanel", 2 },
+						{ "Rubber", 2 }
+					};
+				};
+			};
+		};
+
+		class VehicleFactory {
+			displayName = "Vehicle Factory";
+			requiredPower = 1;
+			class Events {
+				onOpen = "[""DialogFactory"", _this] call ULP_UI_fnc_createDialog";
+				onStart = "_this call ULP_SRV_fnc_startComponentFactory";
+				onTick = "_this call ULP_SRV_fnc_tickComponentFactory";
+				preTickCondition = "true";
+			};
+			class Products {
+				class I_C_Offroad_02_LMG_F {
+					tickTime = 120;
+					materials[] = { 
+						{ "Tyre", 4 },
+						{ "GlassPanel", 4 },
+						{ "IronPlate", 4 },
+						{ "EngineComponent", 1 },
+						{ "WeaponParts", 2 },
+						{ "SimpleVehicleComponent", 4 }
+					};
+				};
+				class B_G_Offroad_01_armed_F {
+					tickTime = 180;
+					materials[] = { 
+						{ "Tyre", 4 },
+						{ "GlassPanel", 4 },
+						{ "IronPlate", 6 },
+						{ "EngineComponent", 1 },
+						{ "WeaponParts", 4 },
+						{ "ImprovedVehicleComponent", 2 }
+					};
+				};
+				class B_CTRG_LSV_01_light_F {
+					tickTime = 120;
+					materials[] = { 
+						{ "Tyre", 4 },
+						{ "SteelBar", 4 },
+						{ "EngineComponent", 1 },
+						{ "SimpleVehicleComponent", 6 }
+					};
+				};
+				class B_LSV_01_unarmed_black_F {
+					tickTime = 180;
+					materials[] = { 
+						{ "Tyre", 4 },
+						{ "LightArmourPlate", 4 },
+						{ "EngineComponent", 1 },
+						{ "SimpleVehicleComponent", 6 }
+					};
+				};
+				class O_LSV_02_unarmed_F {
+					tickTime = 180;
+					materials[] = { 
+						{ "ReinforcedTyre", 4 },
+						{ "HeavyArmourPlate", 2 },
+						{ "EngineComponent", 1 },
+						{ "ImprovedVehicleComponent", 6 }
+					};
+				};
+				class O_LSV_02_armed_black_F {
+					tickTime = 180;
+					materials[] = { 
+						{ "ReinforcedTyre", 4 },
+						{ "HeavyArmourPlate", 2 },
+						{ "EngineComponent", 1 },
+						{ "WeaponParts", 4 },
+						{ "ImprovedVehicleComponent", 6 }
+					};
+				};
+				class I_MRAP_03_F {
+					tickTime = 300;
+					requiredPower = 2;
+					materials[] = { 
+						{ "ReinforcedTyre", 4 },
+						{ "ReinforcedGlassPanel", 6 },
+						{ "HeavyArmourPlate", 4 },
+						{ "EngineComponent", 2 },
+						{ "PerfectedVehicleComponent", 8 }
+					};
+				};
+				class O_MRAP_02_F {
+					tickTime = 300;
+					requiredPower = 2;
+					materials[] = { 
+						{ "ReinforcedTyre", 4 },
+						{ "ReinforcedGlassPanel", 8 },
+						{ "HeavyArmourPlate", 6 },
+						{ "EngineComponent", 2 },
+						{ "PerfectedVehicleComponent", 10 }
+					};
+				};
+				class O_Truck_03_device_F {
+					tickTime = 600;
+					requiredPower = 3;
+					materials[] = { 
+						{ "ReinforcedTyre", 6 },
+						{ "ReinforcedGlassPanel", 4 },
+						{ "HeavyArmourPlate", 4 },
+						{ "EngineComponent", 4 },
+						{ "CentralProcessingUnit", 3 },
+						{ "MiningRig", 2 },
+						{ "PerfectedVehicleComponent", 12 }
+					};
+				};
+				class I_Heli_light_03_unarmed_F {
+					tickTime = 300;
+					requiredPower = 2;
+					materials[] = { 
+						{ "GlassPanel", 4 },
+						{ "LightArmourPlate", 2 },
+						{ "EngineComponent", 2 },
+						{ "AdvancedFlightInstruments", 2 },
+						{ "ImprovedVehicleComponent", 8 }
+					};
+				};
+				class O_T_VTOL_02_infantry_F {
+					tickTime = 600;
+					requiredPower = 3;
+					materials[] = { 
+						{ "ReinforcedGlassPanel", 2 },
+						{ "HeavyArmourPlate", 4 },
+						{ "EngineComponent", 4 },
+						{ "AdvancedFlightInstruments", 4 },
+						{ "PerfectedVehicleComponent", 24 }
+					};
+				};
+				class O_T_VTOL_02_vehicle_F {
+					tickTime = 600;
+					requiredPower = 3;
+					materials[] = { 
+						{ "ReinforcedGlassPanel", 2 },
+						{ "HeavyArmourPlate", 4 },
+						{ "EngineComponent", 4 },
+						{ "LargeCargoBed", 2 },
+						{ "AdvancedFlightInstruments", 4 },
+						{ "PerfectedVehicleComponent", 26 }
+					};
+				};
+			};
+		};
+
 		class SalvageYard {
 			displayName = "Salvage Yard";
 			requiredPower = 1;

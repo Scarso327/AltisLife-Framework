@@ -49,10 +49,10 @@ class CfgGroups {
 					level = 3;
 				};
 
-				class Governor {
-					displayName = "Governorship";
-					icon = "Data\UI\GroupPerks\governor.paa";
-					description = "Your members have the ability to run for governor.";
+				class Smuggling {
+					displayName = "Smuggling";
+					icon = "Data\UI\GroupPerks\smuggling.paa";
+					description = "Grants your members access to smuggling missions.";
 					level = 4;
 				};
 

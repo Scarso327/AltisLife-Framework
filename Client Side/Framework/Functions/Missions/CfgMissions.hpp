@@ -614,7 +614,7 @@ class CfgMissions {
 	class CriminalSmuggling : CorporateFreight {
 		name = "Cargo Smuggling";
 		description = "You need to deliver the given stolen cargo to %1";
-		condition = "true";
+		condition = "[""Smuggling""] call ULP_fnc_hasGroupPerk";
 		timeDivisionAmount = 4;
 		vehicleRequirement[] = { { "Ship" }, 50 };
 		cargoItem = "StolenCargo";

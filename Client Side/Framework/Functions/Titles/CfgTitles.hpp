@@ -18,12 +18,12 @@ class CfgTitles {
 		description = "Apart of the Mantle team";
 	};
 	class Donator {
-		displayName = "Community Donator";
-		description = "Donated £10 or more to this community";
+		displayName = "Subscriber";
+		description = "Supports the community as a subscriber";
 	};
 	class Investor {
-		displayName = "Community Investor";
-		description = "Invested £100 or more to this community";
+		displayName = "Investor";
+		description = "Supports the community as an investor";
 	};
 
     // Regular Titles
@@ -255,12 +255,10 @@ class CfgTitles {
 	class Freddie : Scarso { displayName = "Chicken Deboner"; };
 
 	// Investor Titles
-	class Investors {
-		displayName = "";
-		description = "Congratulations! You spent over £100 for this...";
+	class Tropical {
+		displayName = "44th on top";
+		description = "Thank you for supporting Mantle Network as an investor";
 	};
-	class FreddieDavis : Investors { displayName = "pick a title you dipshit"; }; // 76561198148735922
-	class BoughNoggeye : Investors { displayName = "Iceland > UK"; }; // 76561198274139057
-	class KitKnight : Investors { displayName = "Waifu"; }; // 76561199048455932
-	class Hector : Investors { displayName = "Belle Delphine's Husband"; }; // 76561198112667237
+	class TomSkyline : Tropical { displayName = "Red Bra Enthusiast"; };
+	class RyanDelta : Tropical { displayName = "The Great Orator"; };
 };

@@ -555,4 +555,19 @@ class CfgAchievements {
 		description = "Prestiged for the first time";
 		onUnlocked = "[""Prestige""] call ULP_fnc_unlockTitle;";
 	};
+
+	// Investor Achievements
+	class Tropical : BaseMysteryAchivement1000 {
+		icon = "Data\UI\Achievements\investor.paa";
+		displayName = "Charity Worker";
+		description = "Given another player £5,000,000 in one go";
+	};
+	class TomSkyline : CharityWorker {
+		displayName = "Nando's Shack";
+		description = "You have visited Tom Skyline's Nando's Shack";
+	};
+	class RyanDelta : CharityWorker {
+		displayName = "The Great Orator";
+		description = "You have visited the ruins of an ancient theatre";
+	};
 };

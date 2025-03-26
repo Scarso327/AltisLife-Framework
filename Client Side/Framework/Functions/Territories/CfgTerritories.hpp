@@ -69,7 +69,7 @@ class CfgTerritories {
 					displayName = "Weapon Parts Crate";
 					pos[] = { { 11741.8,9305.01,0 }, 55 };
 					items[] = { "WeaponParts" };
-					amount = "(count playableUnits) * 0.01";
+					amount = "(count playableUnits) * 0.1";
 				};
 			};
 		};

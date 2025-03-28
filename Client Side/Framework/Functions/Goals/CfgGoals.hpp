@@ -204,6 +204,7 @@ class CfgGoals {
 	class Community {
 		amountPerFaction[] =  { { "Police", 2 }, { "Medic", 1 }, { "Hato", 1 }, { "Civilian", 2 } };
 
+		// Police Goals
 		class ArrestPeople {
 			item = ""; // For goals like these we don't provide an item, the field is still required
 			icon = "Data\UI\Goals\arrests.paa";
@@ -226,6 +227,34 @@ class CfgGoals {
 				getQuantity = "(_this select 1) params [ """", ""_amount"", ""_paid"" ]; if !(_paid) exitWith { 0 }; _amount";
 			};
 		};
+		
+		class SeizeWeed {
+			item = "ProcessedWeed";
+			title = "Seize Weed";
+			basePayout = 300000;
+			maxPayout = 2500000;
+			tiers[] = { 300, 500, 750, 1000, 1500 };
+			duration = 7;
+			factions[] = { "Police" };
+			class Event {
+				eventType = "SoldVirtualItem";
+				getQuantity = "_this params [ ""_cfgItem"", ""_eventParams"" ]; _eventParams params [ ""_eventItem"", ""_eventAmount"" ];  if !(_eventItem isEqualTo _cfgItem) exitWith { 0 }; _eventAmount";
+			};
+		};
+		class SeizeHeroin : SeizeWeed {
+			item = "ProcessedHeroin";
+			title = "Seize Heroin";
+		};
+		class SeizeCocaine : SeizeWeed {
+			item = "ProcessedCocaine";
+			title = "Seize Cocaine";
+		};
+		class SeizeCocaine : SeizeWeed {
+			item = "ProcessedMeth";
+			title = "Seize Meth";
+		};
+
+		// Medic Goals
 		class RevivePeople : ArrestPeople {
 			icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\heal_ca.paa"; 
 			title = "Revive People";

@@ -17,7 +17,7 @@ private _factoryCfgName = _factory getVariable ["factory", ""];
 private _factoryCfg = missionConfigFile >> "CfgFactories" >> worldName >> _factoryCfgName;
 private _productCfg = _factoryCfg >> "Products" >> _product;
 
-if (isNull _factory || { isNull _unit } || { _params isEqualTo [] } || { !isClass _productCfg } || { _factoryCfgName isEqualTo "" }) exitWith {};
+if (isNull _factory || { isNull _unit } || { !isClass _productCfg } || { _factoryCfgName isEqualTo "" }) exitWith {};
 
 private _requiredPower = if (isNumber (_productCfg >> "requiredPower")) then {
 	getNumber (_productCfg >> "requiredPower")
@@ -56,6 +56,7 @@ private _totalTicks = [_factory, _unit, _productCfg, _params] call compile getTe
 if (_totalTicks isEqualTo 0) exitWith { _factory setVariable ["locked", nil, true]; };
 
 _factory setVariable ["product_order", [_productCfg, _requiredPower, _totalTicks, serverTime], true];
+_factory setVariable ["product_owner", _unit, true];
 
 private _source = createSoundSource ["Factory_Processing", getPosATL _factory, [], 0];
 _factory setVariable ["sound", _source];

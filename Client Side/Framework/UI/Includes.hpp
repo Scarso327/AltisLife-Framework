@@ -32,3 +32,4 @@
 #include "DialogGambleSlots\DialogGambleSlots.hpp"
 #include "DialogWelcome\DialogWelcome.hpp"
 #include "DialogObjectPreview\DialogObjectPreview.hpp"
+#include "DialogVehicleFactory\DialogVehicleFactory.hpp"

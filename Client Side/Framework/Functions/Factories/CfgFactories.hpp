@@ -441,9 +441,9 @@ class CfgFactories {
 			displayName = "Vehicle Factory";
 			requiredPower = 1;
 			class Events {
-				onOpen = "[""DialogFactory"", _this] call ULP_UI_fnc_createDialog";
-				onStart = "_this call ULP_SRV_fnc_startComponentFactory";
-				onTick = "_this call ULP_SRV_fnc_tickComponentFactory";
+				onOpen = "[""DialogVehicleFactory"", _this] call ULP_UI_fnc_createDialog";
+				onStart = "_this call ULP_SRV_fnc_startVehicleFactory";
+				onTick = "_this call ULP_SRV_fnc_tickVehicleFactory";
 				preTickCondition = "true";
 			};
 			class Products {

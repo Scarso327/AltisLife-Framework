@@ -249,7 +249,7 @@ class CfgGoals {
 			item = "ProcessedCocaine";
 			title = "Seize Cocaine";
 		};
-		class SeizeCocaine : SeizeWeed {
+		class SeizeMeth : SeizeWeed {
 			item = "ProcessedMeth";
 			title = "Seize Meth";
 		};

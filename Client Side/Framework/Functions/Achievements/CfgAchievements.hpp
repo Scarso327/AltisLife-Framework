@@ -562,11 +562,11 @@ class CfgAchievements {
 		displayName = "Charity Worker";
 		description = "Given another player £5,000,000 in one go";
 	};
-	class TomSkyline : CharityWorker {
+	class TomSkyline : Tropical {
 		displayName = "Nando's Shack";
 		description = "You have visited Tom Skyline's Nando's Shack";
 	};
-	class RyanDelta : CharityWorker {
+	class RyanDelta : Tropical {
 		displayName = "The Great Orator";
 		description = "You have visited the ruins of an ancient theatre";
 	};

@@ -52,6 +52,9 @@ if (!(isClass _item) || { !(isClass _woundCfg) }) exitWith {
 private _itemCfg = ((createHashMapFromArray getArray (_woundCfg >> "items")) getOrDefault [_bandage, [0, 0.5]]) params [ "_time", "_chance" ];
 _time = _time + getNumber (_woundCfg >> "time");
 
+private _profCal = ["Reviving"] call ULP_fnc_getProfessionCalculation;
+if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
+
 closeDialog 0;
 
 [format ["Applying %1", getText (_item >> "displayName")], _time, [_item, _unit, _chance, _limb, _wound], { isDowned(_this select 1) && { (player distance (_this select 1)) < 5 } }, {

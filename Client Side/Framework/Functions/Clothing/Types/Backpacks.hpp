@@ -302,7 +302,7 @@ class B_RadioBag_01_mtp_F : B_RadioBag_01_black_F {};
 class B_RadioBag_01_tropic_F : B_RadioBag_01_black_F {};
 class B_RadioBag_01_wdl_F : B_RadioBag_01_black_F {};
 
-class B_B_Parachute_02_F : B_LegStrapBag_black_F {
+class B_Parachute : B_LegStrapBag_black_F {
 	displayName = "Parachute";
 	price = 10000;
 	virtualSpace = 0;

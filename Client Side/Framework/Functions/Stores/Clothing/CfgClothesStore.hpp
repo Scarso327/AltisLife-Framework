@@ -1159,7 +1159,7 @@ class CfgClothesStore {
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
 			class B_RadioBag_01_black_F {};
-			class B_B_Parachute_02_F {};
+			class B_Parachute {};
 			class B_SCBA_01_F {};
 		};
 	};
@@ -1259,7 +1259,7 @@ class CfgClothesStore {
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
 			class B_RadioBag_01_black_F {};
-			class B_B_Parachute_02_F {};
+			class B_Parachute {};
 			class B_SCBA_01_F {};
 		};
 	};
@@ -1359,7 +1359,7 @@ class CfgClothesStore {
 			class B_ViperLightHarness_blk_F {};
 			class B_ViperHarness_blk_F {};
 			class B_RadioBag_01_black_F {};
-			class B_B_Parachute_02_F {};
+			class B_Parachute {};
 		};
 	};
 };

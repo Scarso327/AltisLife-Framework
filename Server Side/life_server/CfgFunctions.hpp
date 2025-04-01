@@ -32,7 +32,7 @@ class CfgFunctions {
 
         class DatabaseVehicle {
             file = "\life_server\Functions\Database\Vehicle";
-            class createVehicle {};
+            class insertVehicle {};
             class storeVehicle {};
             class getGarage {};
             class retrieveVehicle {};
@@ -198,6 +198,7 @@ class CfgFunctions {
         class Vehicle {
             file = "\life_server\Functions\Vehicle";
             class registerStinger {};
+            class createVehicle {};
         };
 
         class Government {
@@ -228,8 +229,10 @@ class CfgFunctions {
             file = "\life_server\Functions\Factories\Types";
             class startComponentFactory {};
             class startSalvageFactory {};
+            class startVehicleFactory {};
             class tickComponentFactory {};
             class tickSalvageFactory {};
+            class tickVehicleFactory {};
         };
 
         class Cleanup {

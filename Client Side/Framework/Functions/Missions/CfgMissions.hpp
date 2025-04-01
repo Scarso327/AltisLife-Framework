@@ -355,7 +355,7 @@ class CfgMissions {
 		name = "Corporate Freight";
 		description = "You need to deliver the given corporate freight to %1";
 		factions[] = { "Civilian" };
-		condition = "[""Freight""] call ULP_fnc_hasGroupPerk";
+		condition = "[""Freight""] call ULP_fnc_hasGroupPerk && { ULP_Reputation >= 0 }";
 		eachFrame = "_this call ULP_fnc_onEachFrameCargoRun";
 		onClaimed = "";
 		onFinished = "_this call ULP_fnc_finishCargoRun";
@@ -397,7 +397,7 @@ class CfgMissions {
 	class FuelHauling : CorporateFreight {
 		name = "Fuel Hauling";
 		description = "You need to deliver fuel to %1";
-		condition = "[""FuelHaul""] call ULP_fnc_hasGroupPerk";
+		condition = "[""FuelHaul""] call ULP_fnc_hasGroupPerk && { ULP_Reputation >= 0 }";
 		vehicleRequirement[] = { { "Car" }, 30 };
 		cargoItem = "Fuel";
 		class Locations {

@@ -19,6 +19,7 @@ class CfgProfessions {
 		icon = "Data\UI\Professions\gathering.paa";
 		effectDescription = "Decreases the time it takes to gather by %1%2";
 		effectCalculation = "5 * (_this select 0)";
+		maxLevel = 10;
 	};
 
 	class Mining : Repairing {
@@ -26,6 +27,7 @@ class CfgProfessions {
 		icon = "Data\UI\Professions\mining.paa";
 		effectDescription = "Decreases the time it takes to mine by %1%2";
 		effectCalculation = "5 * (_this select 0)";
+		maxLevel = 10;
 	};
 
 	class Processing : Repairing {

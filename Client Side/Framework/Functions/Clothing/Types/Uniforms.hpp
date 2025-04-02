@@ -785,11 +785,6 @@ class U_B_survival_uniform : U_C_Poor_1 {
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
 		};
-		class Relic : U_B_survival_uniform {
-			displayName = "Relic";
-			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
-		};
 		class 44th : U_B_survival_uniform {
 			displayName = "44th";
 			textures[] = { "Data\Textures\Groups\44th\U_B_CTRG_Soldier_F.paa" };
@@ -868,11 +863,6 @@ class U_B_CombatUniform_mcam : U_B_survival_uniform {
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
 		};
-		class Relic : U_B_CombatUniform_mcam {
-			displayName = "Relic";
-			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
-		};
 		class 44th : U_B_CombatUniform_mcam {
 			displayName = "44th";
 			textures[] = { "Data\Textures\Groups\44th\U_B_CTRG_Soldier_F.paa" };
@@ -900,11 +890,6 @@ class U_B_CombatUniform_mcam_vest : U_B_CombatUniform_mcam {
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
 		};
-		class Relic : U_B_CombatUniform_mcam_vest {
-			displayName = "Relic";
-			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
-		};
 		class 44th : U_B_CombatUniform_mcam_vest {
 			displayName = "44th";
 			textures[] = { "Data\Textures\Groups\44th\U_B_CTRG_Soldier_F.paa" };
@@ -931,11 +916,6 @@ class U_B_CombatUniform_mcam_tshirt : U_B_CombatUniform_mcam {
 			displayName = "Ridge";
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
-		};
-		class Relic : U_B_CombatUniform_mcam_tshirt {
-			displayName = "Relic";
-			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
 		};
 		class 44th : U_B_CombatUniform_mcam_tshirt {
 			displayName = "44th";
@@ -977,11 +957,6 @@ class U_B_CTRG_Soldier_F : U_B_survival_uniform {
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
 		};
-		class Relic : U_B_CTRG_Soldier_F {
-			displayName = "Relic";
-			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
-		};
 		class 44th : U_B_CombatUniform_mcam {
 			displayName = "44th";
 			textures[] = { "Data\Textures\Groups\44th\U_B_CTRG_Soldier_F.paa" };
@@ -1020,11 +995,6 @@ class U_B_CTRG_Soldier_3_F : U_B_CTRG_Soldier_F {
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
 		};
-		class Relic : U_B_CTRG_Soldier_3_F {
-			displayName = "Relic";
-			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
-		};
 		class 44th : U_B_CTRG_Soldier_3_F {
 			displayName = "44th";
 			textures[] = { "Data\Textures\Groups\44th\U_B_CTRG_Soldier_F.paa" };
@@ -1062,11 +1032,6 @@ class U_B_CTRG_Soldier_2_Arid_F : U_B_CTRG_Soldier_F {
 			displayName = "Ridge";
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
-		};
-		class Relic : U_B_CTRG_Soldier_2_Arid_F {
-			displayName = "Relic";
-			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
 		};
 		class 44th : U_B_CTRG_Soldier_2_Arid_F {
 			displayName = "44th";
@@ -1109,11 +1074,6 @@ class U_B_GhillieSuit : U_B_survival_uniform {
 			displayName = "Ridge";
 			textures[] = { "Data\Textures\Groups\Ridge\U_B_CTRG_Soldier_F.paa" };
 			condition = "[1] call ULP_fnc_isGroupPremium";
-		};
-		class Relic : U_B_GhillieSuit {
-			displayName = "Relic";
-			textures[] = { "Data\Textures\Groups\Relic\U_B_CTRG_Soldier_F.paa" };
-			condition = "[27] call ULP_fnc_isGroupPremium";
 		};
 		class 44th : U_B_GhillieSuit {
 			displayName = "44th";

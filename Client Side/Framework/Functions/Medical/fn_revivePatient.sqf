@@ -48,6 +48,8 @@ closeDialog 0;
 
 private _time = ["LifeSaver", 10] call ULP_fnc_activatePerk;
 
+if ([player, ["Medic"]] call ULP_fnc_isFaction) then { _time = _time * 0.7; };
+
 private _profCal = ["Reviving"] call ULP_fnc_getProfessionCalculation;
 if (_profCal > 0) then { _time = _time - (_time * (_profCal / 100)); };
 

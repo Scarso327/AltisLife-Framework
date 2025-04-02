@@ -11,6 +11,11 @@ class CfgRobberies {
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 3";
 		onFail = "[""There must be at least <t color='#B92DE0'>3 officers</t> online to rob this site!""] call ULP_fnc_hint;";
 	};
+	class DunamisFuelStation : FuelStation {
+		factions[] = { "Civilian" };
+		condition = "[[""Dunamis""]] call ULP_fnc_onlineFaction >= 3";
+		onFail = "[""There must be at least <t color='#B92DE0'>3 Dunamis</t> online to rob this site!""] call ULP_fnc_hint;";
+	};
 
 	class Supermarket {
 		name = "Supermarket";
@@ -43,5 +48,10 @@ class CfgRobberies {
 		leveling[] = { { 300, 500 }, "Robbed Regional Bank", 100 };
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 5";
 		onFail = "[""There must be at least <t color='#B92DE0'>5 officers</t> online to rob this site!""] call ULP_fnc_hint;";
+	};
+	class DunamisBank : RegionalBank {
+		factions[] = { "Civilian" };
+		condition = "[[""Dunamis""]] call ULP_fnc_onlineFaction >= 5";
+		onFail = "[""There must be at least <t color='#B92DE0'>5 Dunamis</t> online to rob this site!""] call ULP_fnc_hint;";
 	};
 };

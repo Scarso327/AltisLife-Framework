@@ -1327,7 +1327,7 @@ class CfgVirtualItems {
 	class CutBloodDiamond : CutDiamond {
 		displayName = "Cut Blood Diamond";
 		icon = "Data\Icons\gem.paa";
-		sellPrice = 17813;
+		sellPrice = 2450;
 		class Settings : Settings { 
 			isIllegal = true;
 			isEventItem = false;

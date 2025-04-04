@@ -1059,5 +1059,15 @@ class CfgFunctions {
 			class DialogObjectPreview_OnLoad {};
 			class DialogObjectPreview_OnUnload {};
 		};
+		
+		class DialogVehicleFactory {
+			file = "UI\DialogVehicleFactory\Functions";
+			class DialogVehicleFactory_OnInit {};
+			class DialogVehicleFactory_OnListChanged {};
+			class DialogVehicleFactory_OnEachFrame {};
+			class DialogVehicleFactory_OnLoad {};
+			class DialogVehicleFactory_OnUnload {};
+			class DialogVehicleFactory_PlaceOrder {};
+		};
 	};
 };

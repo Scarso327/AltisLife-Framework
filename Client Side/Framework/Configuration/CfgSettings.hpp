@@ -2,7 +2,7 @@
 class CfgSettings {
     developers[] = { "76561198092567307", "76561197971322689" };
     
-    framework_version = "1.5.5";
+    framework_version = "1.5.6";
 
     total_maxWeight = 5;
 
@@ -67,7 +67,7 @@ class CfgSettings {
             condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] || { missionNamespace getVariable [""ULP_SRV_Setting_Election"", false] }";
         };
         class Investors : Hello {
-            items[] = {"""Investors""", """Tropical, Tom Skyline & Ryan Delta"""};
+            items[] = {"""Investors""", """Tropical, Tom Skyline, and Ryan Delta"""};
         };
     };
 

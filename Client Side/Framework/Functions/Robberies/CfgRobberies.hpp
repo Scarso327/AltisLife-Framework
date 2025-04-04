@@ -5,17 +5,24 @@ class CfgRobberies {
 		name = "Fuel Station";
 		time = 5 * 60;
 		timeout = 3 * 60;
+		alertType = "Robbery";
 		factions[] = { "Civilian", "Dunamis" };
 		reward[] = { 50000, 85000 };
 		leveling[] = { { 50, 100 }, "Robbed Fuel Station", 100 };
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 3";
 		onFail = "[""There must be at least <t color='#B92DE0'>3 officers</t> online to rob this site!""] call ULP_fnc_hint;";
 	};
+	class DunamisFuelStation : FuelStation {
+		factions[] = { "Civilian" };
+		condition = "[[""Dunamis""]] call ULP_fnc_onlineFaction >= 3";
+		onFail = "[""There must be at least <t color='#B92DE0'>3 Dunamis</t> online to rob this site!""] call ULP_fnc_hint;";
+	};
 
 	class Supermarket {
 		name = "Supermarket";
 		time = 7 * 60;
 		timeout = 5 * 60;
+		alertType = "Robbery";
 		factions[] = { "Civilian", "Dunamis" };
 		reward[] = { 80000, 100000 };
 		leveling[] = { { 100, 200 }, "Robbed Supermarket", 100 };
@@ -27,6 +34,7 @@ class CfgRobberies {
 		name = "Jewellery Store";
 		time = 8 * 60;
 		timeout = 15 * 60;
+		alertType = "Robbery";
 		factions[] = { "Civilian", "Dunamis" };
 		reward[] = { 150000, 250000 };
 		leveling[] = { { 150, 250 }, "Robbed Jewellery Store", 100 };
@@ -38,10 +46,17 @@ class CfgRobberies {
 		name = "Regional Bank";
 		time = 10 * 60;
 		timeout = 30 * 60;
+		alertType = "Robbery";
 		factions[] = { "Civilian", "Dunamis" };
 		reward[] = { 200000, 500000 };
 		leveling[] = { { 300, 500 }, "Robbed Regional Bank", 100 };
 		condition = "[[""Police""]] call ULP_fnc_onlineFaction >= 5";
 		onFail = "[""There must be at least <t color='#B92DE0'>5 officers</t> online to rob this site!""] call ULP_fnc_hint;";
+	};
+	class DunamisBank : RegionalBank {
+		alertType = "DMSRobbery";
+		factions[] = { "Civilian" };
+		condition = "[[""Dunamis""]] call ULP_fnc_onlineFaction >= 5";
+		onFail = "[""There must be at least <t color='#B92DE0'>5 Dunamis</t> online to rob this site!""] call ULP_fnc_hint;";
 	};
 };

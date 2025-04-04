@@ -694,7 +694,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\stinger.paa";
 		buyPrice = 8400;
 		sellPrice = 8400;
-		weight = 10;
+		weight = 5;
 		class Settings {
 			onMarket = false;
 			isIllegal = true;
@@ -729,7 +729,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\stretcher.paa";
 		buyPrice = 12500;
 		sellPrice = 12500;
-		weight = 5;
+		weight = 3;
 		class Settings {
 			onMarket = false;
 			isIllegal = false;
@@ -758,7 +758,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\cone.paa";
 		buyPrice = 800;
 		sellPrice = 800;
-		weight = 3;
+		weight = 2;
 		class Settings : Settings {};
 		class Deconstruction {};
 		class Events { onUse = "[""RoadCone_F"", _this select 0] call ULP_fnc_placeObject;"; };
@@ -767,7 +767,6 @@ class CfgVirtualItems {
 		displayName = "Road Cone (Light)";
 		buyPrice = 900;
 		sellPrice = 900;
-		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[""RoadCone_L_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -775,7 +774,6 @@ class CfgVirtualItems {
 		displayName = "Pole";
 		buyPrice = 300;
 		sellPrice = 300;
-		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Pole_F"", _this select 0] call ULP_fnc_placeObject;"; };
 		conditions = "[] call ULP_fnc_donatorLevel >= 3";
@@ -786,7 +784,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\portableLight.paa";
 		buyPrice = 1500;
 		sellPrice = 1500;
-		weight = 6;
+		weight = 3;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_PortableLight_single_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -801,7 +799,7 @@ class CfgVirtualItems {
 		displayName = "Portable Lamp (Single, Yellow)";
 		buyPrice = 800;
 		sellPrice = 800;
-		weight = 4;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_PortableLight_02_single_yellow_F"", _this select 0] call ULP_fnc_placeObject;"; };
 		conditions = "[] call ULP_fnc_donatorLevel >= 3";
@@ -822,7 +820,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\barGate.paa";
 		buyPrice = 18000;
 		sellPrice = 18000;
-		weight = 24;
+		weight = 12;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_BarGate_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -838,7 +836,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\roadBarrier.paa";
 		buyPrice = 500;
 		sellPrice = 500;
-		weight = 4;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""TapeSign_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -846,7 +844,7 @@ class CfgVirtualItems {
 		displayName = "Road Barrier";
 		buyPrice = 4300;
 		sellPrice = 4300;
-		weight = 6;
+		weight = 3;
 		class Settings : Settings {};
 		class Events { onUse = "[""RoadBarrier_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -854,7 +852,7 @@ class CfgVirtualItems {
 		displayName = "Road Barrier (Small)";
 		buyPrice = 3600;
 		sellPrice = 3600;
-		weight = 4;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""RoadBarrier_small_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -862,7 +860,7 @@ class CfgVirtualItems {
 		displayName = "Plastic Barrier (Large, Orange)";
 		buyPrice = 3500;
 		sellPrice = 3500;
-		weight = 12;
+		weight = 6;
 		class Settings : Settings {};
 		class Events { onUse = "[""PlasticBarrier_03_orange_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -876,7 +874,7 @@ class CfgVirtualItems {
 		displayName = "Plastic Barrier (Medium, Yellow)";
 		buyPrice = 3100;
 		sellPrice = 3100;
-		weight = 8;
+		weight = 4;
 		class Settings : Settings {};
 		class Events { onUse = "[""PlasticBarrier_02_yellow_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -906,7 +904,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\sandbag.paa";
 		buyPrice = 6000;
 		sellPrice = 6000;
-		weight = 5;
+		weight = 3;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_SandbagBarricade_01_half_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -914,7 +912,7 @@ class CfgVirtualItems {
 		displayName = "Sandbag Wall (Long)";
 		buyPrice = 4000;
 		sellPrice = 4000;
-		weight = 4;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_BagFence_Long_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -934,7 +932,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\hedgehog.paa";
 		buyPrice = 16000;
 		sellPrice = 16000;
-		weight = 10;
+		weight = 5;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_CzechHedgehog_01_old_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -944,7 +942,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\table.paa";
 		buyPrice = 2000;
 		sellPrice = 2000;
-		weight = 6;
+		weight = 3;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_CampingTable_white_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -952,7 +950,7 @@ class CfgVirtualItems {
 		displayName = "Comping Table (Small, White)";
 		buyPrice = 1500;
 		sellPrice = 1500;
-		weight = 4;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_CampingTable_small_white_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -961,7 +959,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\chair.paa";
 		buyPrice = 900;
 		sellPrice = 900;
-		weight = 3;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_CampingChair_V2_white_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -970,7 +968,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\toilet.paa";
 		buyPrice = 1800;
 		sellPrice = 1800;
-		weight = 10;
+		weight = 5;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_FieldToilet_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -980,7 +978,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\target.paa";
 		buyPrice = 900;
 		sellPrice = 900;
-		weight = 5;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Target_F"", _this select 0] call ULP_fnc_placeObject;"; };
 		conditions = "[] call ULP_fnc_donatorLevel >= 3";
@@ -989,7 +987,7 @@ class CfgVirtualItems {
 		displayName = "Dueling Target";
 		buyPrice = 200;
 		sellPrice = 200;
-		weight = 4;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Land_Target_Dueling_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
 		conditions = "[] call ULP_fnc_donatorLevel >= 3";
@@ -999,7 +997,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\scarecrow.paa";
 		buyPrice = 100;
 		sellPrice = 100;
-		weight = 3;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Scarecrow_01_F"", _this select 0] call ULP_fnc_placeObject;"; };
 		conditions = "[] call ULP_fnc_donatorLevel >= 3";
@@ -1010,7 +1008,7 @@ class CfgVirtualItems {
 		icon = "Data\Icons\flag.paa";
 		buyPrice = 900;
 		sellPrice = 900;
-		weight = 3;
+		weight = 2;
 		class Settings : Settings {};
 		class Events { onUse = "[""Flag_UK_F"", _this select 0] call ULP_fnc_placeObject;"; };
 	};
@@ -1327,7 +1325,7 @@ class CfgVirtualItems {
 	class CutBloodDiamond : CutDiamond {
 		displayName = "Cut Blood Diamond";
 		icon = "Data\Icons\gem.paa";
-		sellPrice = 17813;
+		sellPrice = 2450;
 		class Settings : Settings { 
 			isIllegal = true;
 			isEventItem = false;

@@ -8,12 +8,12 @@ class CfgRandomEvents {
 	InitialDelay = 3 * 60;
 	
 	class Airdrop {
-		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 30";
+		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 20";
 		NotifyDelay = 10 * 60;
 		Cooldown = 40 * 60;
 		RandomAddition = 20 * 60;
 		class BaseWars {
-			SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 15";
+			SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
 			NotifyDelay = 5 * 60;
 			Cooldown = 20 * 60;
 			RandomAddition = 5 * 60;
@@ -97,7 +97,7 @@ class CfgRandomEvents {
 	};
 
 	class Shipwreck : Airdrop {
-		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 20";
+		SpawnCondition = "(count ([""Civilian""] call ULP_fnc_allMembers)) >= 10";
 		NotifyDelay = 10 * 60;
 		Cooldown = 15 * 60;
 		RandomAddition = 15 * 60;
@@ -148,7 +148,7 @@ class CfgRandomEvents {
 		Cooldown = 25 * 60;
 		RandomAddition = 10 * 60;
 		SyndicateChance = 0.4;
-		SyndicateCondition = "([[""Civilian""]] call ULP_fnc_onlineFaction) >= 50";
+		SyndicateCondition = "([[""Civilian""]] call ULP_fnc_onlineFaction) >= 30";
 		class Events : Events {
 			class OnSpawn { code = "_this call ULP_fnc_onPopupCartelSpawn;"; };
 			class OnClaimed { code = "_this params [[""_message"", """", [""""]], [""_reward"", -1, [0]]]; [_reward, false, ""Popup Cartel""] call ULP_fnc_addMoney; if (_reward > 0) then { [400, ""Captured Popup Cartel""] call ULP_fnc_addXP; }; [_message] call ULP_fnc_hint;"; };

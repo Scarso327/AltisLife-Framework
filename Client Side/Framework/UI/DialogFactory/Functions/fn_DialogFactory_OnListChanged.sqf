@@ -3,7 +3,7 @@
 ** Description: 
 */
 #include "..\..\..\script_macros.hpp"
-scopeName "fn_DialogMedicMap_OnListChanged";
+scopeName "fn_DialogFactory_OnListChanged";
 
 _this params [ "_list", "_index" ];
 

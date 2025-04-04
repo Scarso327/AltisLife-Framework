@@ -11,6 +11,7 @@ class CfgVehicles {
 		fuelConsumptionRate = 1.25;
 		isHouse = false;
 		canTransfer = true;
+		canChop = true;
 		conditions = "true";
 		inventory[] = { { "FirstAidKit", 2 } };
 		blacklistedItems[] = { 
@@ -884,6 +885,7 @@ class CfgVehicles {
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
 	class C_Van_02_medevac_F : C_Van_02_transport_F {
 		virtualSpace = 150;
+		canChop = false;
 	};
 	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {
 		blacklistedItems[] = { 
@@ -1776,6 +1778,7 @@ class CfgVehicles {
 	class B_UAV_01_F : BaseHeli {
 		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
 		buyPrice = 98700;
+		canChop = false;
 	};
 	class C_UAV_06_medical_F : B_UAV_01_F {
 		description = "This commercial off-the-shelf utility drone uses 6 rotors to transport small payloads inside its external cargo case.";
@@ -2071,6 +2074,7 @@ class CfgVehicles {
 	class O_Heli_Transport_04_medevac_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11983000;
 		virtualSpace = 40;
+		canChop = false;
 		class Textures {
 			class Medic : MedicTextureBase {
 				textures[] = { 
@@ -2120,12 +2124,14 @@ class CfgVehicles {
 		garageLimit = 1;
 		crushTime = 60;
 		chopTime = 300;
+		canChop = false;
 	};
 
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
 		description = "A multipurpose successor to the Mi-24, the Mi-48 Kajman (designated 'Hornet') is a large gunship and attack helicopter with troop transport capacity for 8 passengers";
 		buyPrice = 212340000;
 		virtualSpace = 30;
+		canChop = false;
 	};
 
 	// PLANES --------------------------------------------------------------------------------------
@@ -2184,6 +2190,7 @@ class CfgVehicles {
 		retrievalPerc = 0.0025;
 		pylons[] = { "", "", "", "", "", "", "", "", "", "", "", "", "" };
 		turrets[] = {};
+		canChop = false;
 	};
 	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { 
 		description = "The A-149 Gryphon is a fourth-generation, single-seat, single-engine, and all-weather tactical fighter jet.";
@@ -2216,14 +2223,14 @@ class CfgVehicles {
 	// CONTAINERS --------------------------------------------------------------------------------------
 	class B_Slingload_01_Cargo_F : Base {
 		description = "";
-		buyPrice = 0;
+		buyPrice = 1000000;
 		virtualSpace = 250;
 		garageLimit = 1;
 	};
 	class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {
 		description = "";
-		buyPrice = 0;
-		virtualSpace = 100;
+		buyPrice = 1000000;
+		virtualSpace = 125;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -2232,13 +2239,13 @@ class CfgVehicles {
 
 	class Land_Pod_Heli_Transport_04_box_black_F : B_Slingload_01_Cargo_F {
 		description = "";
-		buyPrice = 0;
-		virtualSpace = 125;
+		buyPrice = 1000000;
+		virtualSpace = 200;
 	};
 	class Land_Pod_Heli_Transport_04_fuel_black_F : B_Slingload_01_Cargo_F {
 		description = "";
-		buyPrice = 0;
-		virtualSpace = 50;
+		buyPrice = 1000000;
+		virtualSpace = 100;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"

@@ -23,6 +23,7 @@ _factory setVariable ["ULP_VirtualCargo",
 
 _factory setVariable ["locked", nil, true];
 _factory setVariable ["product_order", nil, true];
+_factory setVariable ["product_owner", nil, true];
 
 deleteVehicle (_factory getVariable ["sound", objNull]);
 

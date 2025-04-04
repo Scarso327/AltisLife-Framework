@@ -125,6 +125,11 @@ class CfgMessages {
 		onRecieved = "private _sender = _this select 0; if (isNull _sender || { _sender isEqualTo player }) exitWith {};";
 	};
 
+	class DMSRobbery : Robbery {
+		sender = "DMS Tip Line";
+		targets = "[""Dunamis""] call ULP_fnc_allMembers";
+	};
+
 	class BreakIn : Panic {
 		displayName = "Break In";
 		sender = "House Break In";

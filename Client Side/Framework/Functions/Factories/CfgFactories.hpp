@@ -447,6 +447,23 @@ class CfgFactories {
 				preTickCondition = "true";
 			};
 			class Products {
+				class B_Slingload_01_Cargo_F {
+					tickTime = 180;
+					materials[] = { 
+						{ "LightArmourPlate", 4 },
+						{ "SimpleVehicleComponent", 1 },
+						{ "ImprovedVehicleComponent", 2 }
+					};
+				};
+				class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {};
+				class Land_Pod_Heli_Transport_04_box_black_F {
+					tickTime = 180;
+					materials[] = { 
+						{ "LightArmourPlate", 4 },
+						{ "ImprovedVehicleComponent", 2 }
+					};
+				};
+				class Land_Pod_Heli_Transport_04_fuel_black_F : Land_Pod_Heli_Transport_04_box_black_F {};
 				class I_C_Offroad_02_LMG_F {
 					tickTime = 120;
 					materials[] = { 

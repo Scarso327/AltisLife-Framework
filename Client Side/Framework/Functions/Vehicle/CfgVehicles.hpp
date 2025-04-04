@@ -2223,14 +2223,14 @@ class CfgVehicles {
 	// CONTAINERS --------------------------------------------------------------------------------------
 	class B_Slingload_01_Cargo_F : Base {
 		description = "";
-		buyPrice = 0;
+		buyPrice = 1000000;
 		virtualSpace = 250;
 		garageLimit = 1;
 	};
 	class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {
 		description = "";
-		buyPrice = 0;
-		virtualSpace = 100;
+		buyPrice = 1000000;
+		virtualSpace = 125;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"
@@ -2239,13 +2239,13 @@ class CfgVehicles {
 
 	class Land_Pod_Heli_Transport_04_box_black_F : B_Slingload_01_Cargo_F {
 		description = "";
-		buyPrice = 0;
-		virtualSpace = 125;
+		buyPrice = 1000000;
+		virtualSpace = 200;
 	};
 	class Land_Pod_Heli_Transport_04_fuel_black_F : B_Slingload_01_Cargo_F {
 		description = "";
-		buyPrice = 0;
-		virtualSpace = 50;
+		buyPrice = 1000000;
+		virtualSpace = 100;
 		blacklistedItems[] = { 
 			"StolenCargo",
 			"FreightCargo"

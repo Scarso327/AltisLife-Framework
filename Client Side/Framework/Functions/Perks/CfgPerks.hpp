@@ -468,6 +468,21 @@ class CfgPerks {
 		onActivated = "_params - (_params * (_bonus / 100))";
 	};
 
+	class HGVDriver {
+		icon = "Data\UI\GroupPerks\HEMTTs.paa";
+		displayName = "HGV Driver";
+		description = "Unlocks the ability to purchase HEMTTs outside of a Company Group";
+		removalMultiplier = 10;
+		class Requirements {
+			factions[] = { "Civilian", "Dunamis" };
+			level = 19;
+			prestige = 0;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "";
+	};
+
 	class BoltCutter {
 		icon = "Data\UI\Perks\boltCutter.paa";
 		displayName = "Bolt Cutter";
@@ -546,21 +561,6 @@ class CfgPerks {
 		class Requirements {
 			factions[] = { "Civilian", "Dunamis" };
 			level = 25;
-			prestige = 0;
-			profession[] = {};
-		};
-		onChanged = "";
-		onActivated = "";
-	};
-
-	class HGVDriver {
-		icon = "Data\UI\GroupPerks\HEMTTs.paa";
-		displayName = "HGV Driver";
-		description = "Unlocks the ability to purchase HEMTTs outside of a Company Group";
-		removalMultiplier = 10;
-		class Requirements {
-			factions[] = { "Civilian", "Dunamis" };
-			level = 26;
 			prestige = 0;
 			profession[] = {};
 		};

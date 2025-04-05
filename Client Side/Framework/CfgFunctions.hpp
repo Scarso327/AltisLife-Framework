@@ -214,6 +214,8 @@ class CfgFunctions {
 			class openProcessing {};
 			class selectProcess {};	
 			class calcMaxConversion {};
+			class calcMaxConversionVehicle {};
+			class vehicleProcess {};
 		};
 
 		class Database {

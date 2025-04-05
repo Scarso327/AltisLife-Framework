@@ -293,7 +293,7 @@ class CfgInteractions {
 		class StopMining : StartMining {
 			title = "Stop Gathering";
 			onClick = "_this call ULP_fnc_stopVehicleGather";
-			condition = "_this in ULP_Keys && { [_this] call ULP_fnc_canVehicleGather } && { [_this] call ULP_fnc_isVehicleGathering } && { (_vehicle getVariable [""mining"", objNull]) isEqualTo player }";
+			condition = "_this in ULP_Keys && { [_this] call ULP_fnc_canVehicleGather } && { [_this] call ULP_fnc_isVehicleGathering } && { (_this getVariable [""mining"", objNull]) isEqualTo player }";
 		};
 
 		class Repair {

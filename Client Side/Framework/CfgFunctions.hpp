@@ -313,6 +313,10 @@ class CfgFunctions {
 			class getGatherZone {};
 			class catchFish {};
 			class initGathering {};
+			class canVehicleGather {};
+			class isVehicleGathering {};
+			class startVehicleGather {};
+			class stopVehicleGather {};
 		};
 
 		class Tablet {

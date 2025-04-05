@@ -2325,6 +2325,12 @@ class CfgVirtualItems {
 		icon = "Data\Icons\clonedPlatesUpgrade.paa";
 		class Settings : Settings {};
 	};
+	class AutomaticLoaderUpgrade : ImprovedStorageUpgrade {
+		displayName = "Automatic Loader Upgrade";
+		description = "Allows the vehicle's contents to be automatically processed";
+		icon = "Data\Icons\clonedPlatesUpgrade.paa";
+		class Settings : Settings {};
+	};
 
 	// Housing Upgrades
 	class PersonalAlarmUpgrade {

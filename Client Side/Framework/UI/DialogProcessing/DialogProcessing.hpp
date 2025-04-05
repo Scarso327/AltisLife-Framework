@@ -52,6 +52,16 @@ class DialogProcessing {
 			SAFEZONE_H(BODY_HEIGHT - (MARGIN_Y * 2));
 		};
 
+		class SelectVehicle : Life_RscButtonCenter {
+			idc = 4004;
+			text = "<t align = 'center'>Vehicle</t>";
+			onButtonClick = "_this call ULP_fnc_vehicleProcess;";
+			SAFEZONE_X((UI_X + UI_WIDTH - ((UI_WIDTH / 4) * 2)) - (MARGIN_X * 2));
+			SAFEZONE_Y((BODY_Y + BODY_HEIGHT) + BUTTON_MARGIN_Y);
+			SAFEZONE_W((UI_WIDTH / 4));
+			SAFEZONE_H(0.022);
+		};
+
 		class Select : Life_RscButtonCenter {
 			idc = 4002;
 			text = "<t align = 'center'>Process</t>";

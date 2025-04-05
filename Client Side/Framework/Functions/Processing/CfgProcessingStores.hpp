@@ -42,7 +42,6 @@ class CfgProcessingStores {
 	class Purifier : Base {
 		title = "Drugs Purifier";
 		processes[] = { "PurifiedWeed", "PurifiedHeroin", "PurifiedCocaine", "PurifiedMeth" };
-		condition = "[""Northern""] call ULP_fnc_ownsCartel";
 	};
 
 	// Mining

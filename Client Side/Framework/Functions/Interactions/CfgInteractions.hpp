@@ -283,6 +283,19 @@ class CfgInteractions {
 
 	class Vehicle {
 
+		class StartMining {
+			title = "Start Gathering";
+			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };
+			onClick = "_this call ULP_fnc_startVehicleGather";
+			condition = "_this in ULP_Keys && { [_this] call ULP_fnc_canVehicleGather } && { !([_this] call ULP_fnc_isVehicleGathering) }";
+		};
+
+		class StopMining : StartMining {
+			title = "Stop Gathering";
+			onClick = "_this call ULP_fnc_stopVehicleGather";
+			condition = "_this in ULP_Keys && { [_this] call ULP_fnc_canVehicleGather } && { [_this] call ULP_fnc_isVehicleGathering } && { (_vehicle getVariable [""mining"", objNull]) isEqualTo player }";
+		};
+
 		class Repair {
 			title = "Repair";
 			factions[] = { "Police", "Medic", "Hato", "Civilian", "Dunamis" };

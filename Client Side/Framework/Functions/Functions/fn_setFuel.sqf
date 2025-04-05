@@ -11,6 +11,7 @@ _this params [
 ];
 
 if !(isClass (missionConfigFile >> "CfgVehicles" >> (typeOf _vehicle))) exitWith { false };
+if !(local _vehicle) exitWith { _this remoteExecCall ["ULP_fnc_setFuel", _vehicle]; true };
 
 _vehicle setFuel _fuel;
 true

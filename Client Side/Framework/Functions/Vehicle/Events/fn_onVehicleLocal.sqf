@@ -17,3 +17,7 @@ if (isServer && { _isLocal } && { isEngineOn _vehicle }) then {
 if (isNull (driver _vehicle) && { !(isNull (_vehicle getVariable ["siren", objNull])) }) then {
 	[_vehicle, [], false] call ULP_fnc_vehicleSiren;
 };
+
+if ([_vehicle] call ULP_fnc_isVehicleGathering) then {
+	[_vehicle] call ULP_fnc_stopVehicleGather;
+};

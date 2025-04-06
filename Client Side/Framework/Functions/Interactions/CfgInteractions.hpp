@@ -167,7 +167,7 @@ class CfgInteractions {
 		class InventoryCheck : Revive {
 			title = "Check Inventory";
 			onClick = "player action [""Gear"", cursorObject]; closeDialog 0;";
-			condition = "[""PerkConfigName""] call ULP_fnc_hasPerk && { [player, [""Police""]] call ULP_fnc_isFaction || { [(_this getVariable [""IncapacitatedByGroup"", grpNull]), player] call ULP_fnc_inGroup } }";
+			condition = "[""GraveRobber""] call ULP_fnc_hasPerk && { [player, [""Police""]] call ULP_fnc_isFaction || { [(_this getVariable [""IncapacitatedByGroup"", grpNull]), player] call ULP_fnc_inGroup } }";
 		};
 
 		class SeizeCommunications : Revive {

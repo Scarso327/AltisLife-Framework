@@ -288,6 +288,21 @@ class CfgPerks {
 		onActivated = "_params + (_params * (_bonus / 100))";
 	};
 
+	class GraveRobber {
+		icon = "Data\UI\GroupPerks\successfulRobber.paa";
+		displayName = "Grave Robber";
+		description = "Unlocks the ability to access a player's inventory once downed";
+		removalMultiplier = 5;
+		class Requirements {
+			factions[] = { "Civilian", "Dunamis" };
+			level = 12;
+			prestige = 1;
+			profession[] = {};
+		};
+		onChanged = "";
+		onActivated = "";
+	};
+
 	class RapidSurveyor {
 		icon = "Data\UI\Perks\rapidSurveyor.paa";
 		displayName = "Rapid Surveyor";

@@ -33,3 +33,4 @@
 #include "DialogWelcome\DialogWelcome.hpp"
 #include "DialogObjectPreview\DialogObjectPreview.hpp"
 #include "DialogVehicleFactory\DialogVehicleFactory.hpp"
+#include "DialogPvpVote\DialogPvpVote.hpp"

@@ -264,6 +264,20 @@ class CfgFunctions {
             class postInitNotifications { postInit=1; };
             class buildEventNotification {};
         };
+        
+        class PVP {
+            file = "\life_server\Functions\PVP";
+            class initPvpModes {};
+            class startPvpModeVoting {};
+            class finishPvpModeVoting {};
+            class castPvpModeVote {};
+        };
+        
+        class PVPConflict {
+            file = "\life_server\Functions\PVP\Conflict";
+            class startConflict {};
+            class stopConflict {};
+        };
     };
 
     class MySQL_Database {

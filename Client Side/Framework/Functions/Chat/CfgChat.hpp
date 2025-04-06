@@ -91,5 +91,9 @@ class CfgChat {
 		class SteamID : Players {
 			action = "[""Steam ID:"", format [""%1"", getPlayerUID player]]";
 		};
+
+		class Vote : Players {
+			action = "[""DialogPvpVote"", _this] call ULP_UI_fnc_createDialog";
+		};
 	};
 };

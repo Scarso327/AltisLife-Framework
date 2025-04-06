@@ -46,6 +46,7 @@ if ((count ([_house] call ULP_fnc_ownedHouses)) >= _limit) exitWith {
 };
 
 private _money = getNumber (missionConfigFile >> "CfgHousing" >> "Houses" >> (typeOf _house) >> "price");
+if (["TaxFreeHousing"] call ULP_fnc_hasGroupPerk) then { _money = _money + 0.8 };
 
 _objectCfg params [ "", "", "", "_name" ];
 

@@ -45,6 +45,13 @@ private _message = format["Completed a %1", getText (_typeCfg >> "name")];
 
 [_reward, false, _message] call ULP_fnc_addMoney;
 
+if (["PoliticalSavings"] call ULP_fnc_hasGroupPerk) then {
+	_groupReward = _reward * 0.25;
+
+	[[] call ULP_fnc_groupId, _groupReward, true] remoteExecCall ["ULP_SRV_fnc_updateGroupFunds", RSERV];
+	[format ["Due to your group level, <t color='#B92DE0'>%1%2</t> has been given as a bonus and added to your group funds", "£", [_groupReward] call ULP_fnc_numberText]] call ULP_fnc_hint;
+};
+
 private _xp = getNumber (_typeCfg >> "Rewards" >> "xpReward");
 if (_xp > 0) then { [_xp, _message] call ULP_fnc_addXP; };
 

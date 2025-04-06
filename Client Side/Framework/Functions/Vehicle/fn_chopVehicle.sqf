@@ -94,6 +94,8 @@ if (_near isEqualTo []) exitWith {
 					getNumber (missionConfigFile >> "CfgVehicles" >> "chopKeepChance"),
 					getNumber (_cfg >> "chopKeepChance")
 				] select (isNumber (_cfg >> "chopKeepChance")));
+
+				if (["VehicleReclaimer"] call ULP_fnc_hasGroupPerk) then { _chance = _chance * 1.1; };
 				
 				if ((["UncertainMind", 0] call ULP_fnc_activatePerk) > _chance) then {
 					[_owner, player, _id] remoteExecCall ["ULP_SRV_fnc_transferVehicle", RSERV];

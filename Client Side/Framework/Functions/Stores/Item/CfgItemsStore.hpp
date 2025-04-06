@@ -725,7 +725,7 @@ class CfgItemsStore {
 
 	class Safehouse {
 		storeName = "Safehouse Store";
-		condition = "[] call ULP_fnc_isProtection && { [""GovernmentSafehouses""] call ULP_fnc_hasGroupPerk }";
+		condition = "[] call ULP_fnc_isProtection && { [""GovernmenSafehousestSafehouses""] call ULP_fnc_hasGroupPerk }";
 		class Rifles {
 			class hgun_PDW2000_F { price = 0; };
 		};

@@ -49,6 +49,9 @@ private _targets = getText (_msg >> "targets");
 
 private _suspectedWeapon = ([currentWeapon player] call ULP_fnc_itemCfg) param [5, "Unknown"];
 
+private _time = getNumber (_cfg >> "time");
+if (["IntimidatingRobber"] call ULP_fnc_hasGroupPerk) then { _time = _time * 0.8; };
+
 [format["Robbing %1%2", _customName, getText (_cfg >> "name")], getNumber (_cfg >> "time"), [_object, _marker, _cfg, _customName, _suspectedWeapon, _intersetObject2], {
 	_this params [ "_object", "", "", "", "", "_intersetObject2" ];
 

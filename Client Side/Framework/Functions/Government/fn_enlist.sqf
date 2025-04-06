@@ -13,7 +13,7 @@ if (!([player, ["Civilian"]] call ULP_fnc_isFaction) || { [] call ULP_fnc_isUnde
 	["You must be a civilian to enlist in the next election..."] call ULP_fnc_hint;
 };
 
-if !([] call ULP_fnc_isGroup || { ["Governor"] call ULP_fnc_hasGroupPerk }) exitWith {
+if !([] call ULP_fnc_isGroup || { ["Governorship"] call ULP_fnc_hasGroupPerk }) exitWith {
 	["Your group doesn't have the ability to run for governor..."] call ULP_fnc_hint;
 };
 

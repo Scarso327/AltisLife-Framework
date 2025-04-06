@@ -22,6 +22,8 @@ if (canSuspend) exitWith {
 				private _amount = [getText (_goalCfg >> "item"), _params] call compile getText (_goalCfg >> "Event" >> "getQuantity");
 				if (_amount <= 0) exitWith {};
 
+				if (["GoalContributions"] call ULP_fnc_hasGroupPerk) then { _amount = round(_amount * 1.25); };
+
 				[player, _x, _amount] remoteExecCall ["ULP_SRV_fnc_addCommunityGoalContribution", RSERV];
 			};
 		} forEach + ((missionNamespace getVariable ["ULP_CommunityGoals", createHashMap]) getOrDefault [_event, []]);

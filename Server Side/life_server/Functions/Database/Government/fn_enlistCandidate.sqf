@@ -11,7 +11,7 @@ _this params [
 
 if (isNull _candidate) exitWith { false };
 
-if !([group _candidate] call ULP_fnc_isGroup || { ["Governor", group _candidate] call ULP_fnc_hasGroupPerk }) exitWith {
+if !([group _candidate] call ULP_fnc_isGroup || { ["Governorship", group _candidate] call ULP_fnc_hasGroupPerk }) exitWith {
 	["Enlistment", ["Your group doesn't have the ability to run for governor..."]] remoteExecCall ["ULP_fnc_invokeEvent", _candidate];
 };
 

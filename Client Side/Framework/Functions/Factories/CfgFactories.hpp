@@ -458,15 +458,16 @@ class CfgFactories {
 				class B_Slingload_01_Cargo_F {
 					tickTime = 180;
 					materials[] = { 
+						{ "LargeCargoBed", 8 },
 						{ "LightArmourPlate", 4 },
-						{ "SimpleVehicleComponent", 1 },
-						{ "ImprovedVehicleComponent", 2 }
+						{ "PerfectedVehicleComponent", 2 }
 					};
 				};
 				class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {};
 				class Land_Pod_Heli_Transport_04_box_black_F {
 					tickTime = 180;
 					materials[] = { 
+						{ "LargeCargoBed", 6 },
 						{ "LightArmourPlate", 4 },
 						{ "ImprovedVehicleComponent", 2 }
 					};

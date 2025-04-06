@@ -1672,6 +1672,22 @@ class CfgVehicles {
 		};
 	};
 
+	// ARMOURED -----------------------------------------------------------------------------------
+	class B_AFV_Wheeled_01_cannon_F : Base {
+		description = "The Rhino MGS is a wheeled tank destroyer designed for easy transportation to crisis regions. Its lightweight 120mm connon uses all convetional rounds and has an effective range of up to 8km.";
+		buyPrice = 67800000;
+		virtualSpace = 30;
+		garageLimit = 1;
+		canTransfer = false;
+		canChop = false;
+		turrets[] = {};
+	};
+	class I_LT_01_scout_F : B_AFV_Wheeled_01_cannon_F {
+		description = "The AWC 300 Nyx is a small and lightly armoured tracked vehicle equipped with a powerful radar, capable of detecting threats from great distances.";
+		buyPrice = 20150000;
+		virtualSpace = 5;
+	};
+
 	// BOATS --------------------------------------------------------------------------------------
 	class C_Scooter_Transport_01_F : BaseShip {
 		description = "A Personal WaterCraft of sit-down type. Its powerful engine and great maneuverability make this craft a lot of fun to drive.";

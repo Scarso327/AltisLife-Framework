@@ -702,10 +702,6 @@ class CfgFactories {
 				class B_Heli_Transport_01_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 1297 }, { "AdvancedFlightInstruments", 1 }, { "EngineComponent", 2 }, { "HeavyArmourPlate", 4 } }; };
 				class I_Heli_light_03_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 1563 }, { "AdvancedFlightInstruments", 2 }, { "EngineComponent", 2 }, { "LightArmourPlate", 4 } }; };
 				class B_Heli_Transport_03_unarmed_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 2227 }, { "AdvancedFlightInstruments", 2 }, { "EngineComponent", 2 }, { "LightArmourPlate", 4 } }; };
-				class B_T_VTOL_01_infantry_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 5033 }, { "ReinforcedGlassPanel", 14 }, { "AdvancedFlightInstruments", 4 }, { "GuidanceSystem", 2 }, { "EngineComponent", 6 }, { "LargeCargoBed", 8 } }; };
-				class B_T_VTOL_01_vehicle_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 5717 }, { "ReinforcedGlassPanel", 14 }, { "AdvancedFlightInstruments", 4 }, { "GuidanceSystem", 2 }, { "EngineComponent", 6 }, { "LargeCargoBed", 8 } }; };
-				class O_T_VTOL_02_infantry_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 7710 }, { "ReinforcedGlassPanel", 10 }, { "AdvancedFlightInstruments", 4 }, { "GuidanceSystem", 2 }, { "EngineComponent", 8 }, { "LargeCargoBed", 4 } }; };
-				class O_T_VTOL_02_vehicle_F : I_MRAP_03_F { materials[] = { { "VehicleParts", 8369 }, { "ReinforcedGlassPanel", 10 }, { "AdvancedFlightInstruments", 4 }, { "GuidanceSystem", 2 }, { "EngineComponent", 8 }, { "LargeCargoBed", 4 } }; };
 			};
 		};
 	};

@@ -1066,6 +1066,7 @@ class CfgVehicles {
 	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { 
 		buyPrice = 6590000; 
 		garageLimit = 1;
+		enableRope = false;
 	};
 
 	class B_MRAP_01_F : Base {

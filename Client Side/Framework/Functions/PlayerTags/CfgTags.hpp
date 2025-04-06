@@ -659,7 +659,7 @@ class CfgTags {
 			icons[] = { "ConservativeUnionistParty", "LabourParty", "LiberalDemocrats", "GreenParty", "ReformUK" };
 		};
 		class Investor {
-			icons[] = { "FreddieDavis", "BoughNoggeye", "KitKnight", "Hector" };
+			icons[] = { "Tropical", "TomSkyline" };
 		};
 		class Other {
 			icons[] = { "Alien", "Astronaut", "Commet", "Crown", "Diamond", "DNA", "Doughnut", "Eggplant", "Fighter", "Hamburger", "Heart", "Mars", "Moon", "Salt", "Satellite", "Saturn", "Server", "Shuttle", "Skull", "UN", "Weed", "World" };

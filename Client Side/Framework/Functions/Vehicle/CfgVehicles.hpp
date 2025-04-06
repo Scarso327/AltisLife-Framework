@@ -268,6 +268,12 @@ class CfgVehicles {
 				displayName = "Tan";
 				textures[] = { "\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -477,6 +483,12 @@ class CfgVehicles {
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 			};
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// Civilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -528,6 +540,12 @@ class CfgVehicles {
 					"\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa" 
 				}; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
 			class DMS : BaseTexture {
@@ -597,6 +615,12 @@ class CfgVehicles {
 					"\a3\soft_f_enoch\offroad_01\data\offroad_01_cover_grn_co.paa"
 				}; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 44450; };
@@ -652,6 +676,12 @@ class CfgVehicles {
 				displayName = "Orange";
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
 			class DMS : BaseTexture {
@@ -802,6 +832,12 @@ class CfgVehicles {
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" };
 			};
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// CIvilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -889,6 +925,12 @@ class CfgVehicles {
 				displayName = "Press";
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_AAN_CO.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
 			class DMS : BaseTexture {
@@ -1067,6 +1109,37 @@ class CfgVehicles {
 					rightPos[] = {-0.94873,-2.73975,0.557981};
 				};
 			};
+
+			class ChromeGreen : BaseChromeGreen {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\green.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\green.rvmat"
+				};
+			};
+			class ChromeBlue : BaseChromeBlue {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\blue.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\blue.rvmat"
+				};
+			};
+			class ChromeRed : BaseChromeRed {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\red.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\red.rvmat"
+				};
+			};
+			class ChromeSilver : BaseChromeSilver {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\silver.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\silver.rvmat"  
+				};
+			};
+			class ChromeGold : BaseChromeGold {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\gold.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\gold.rvmat"  
+				};
+			};
 		};
 	};
 
@@ -1102,6 +1175,7 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_02.paa"
 				}; 
 			};
+
 			class ChromeGreen : BaseChromeGreen {
 				materials[] = { 
 					"Data\Textures\Vehicles\Global\Chrome\green.rvmat",
@@ -1162,6 +1236,7 @@ class CfgVehicles {
 				locked = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
 			};
+
 			class ChromeGreen : BaseChromeGreen {};
 			class ChromeBlue : BaseChromeBlue {};
 			class ChromeRed : BaseChromeRed {};
@@ -1188,6 +1263,12 @@ class CfgVehicles {
 				displayName = "Green";
 				textures[] = { "\a3\soft_f_enoch\tractor_01\data\tractor_01_2_green_co.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -1718,6 +1799,12 @@ class CfgVehicles {
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_Yellow_co.paa"
 				};
 			}; 
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -1735,6 +1822,12 @@ class CfgVehicles {
 			class Civilian : BaseTexture {}; 
 			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Sea\Police\motorboat.paa" }; };
 			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Sea\Medic\motorboat.paa" }; };
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
@@ -1752,6 +1845,12 @@ class CfgVehicles {
 				}; 
 			};
 			class Medic : MedicTexture {};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 	class I_C_Boat_Transport_02_F : C_Boat_Transport_02_F {};
@@ -1787,6 +1886,12 @@ class CfgVehicles {
 				displayName = "MPU"; 
 				textures[] = { "Data\Textures\Vehicles\Sea\Police\sdv.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -1879,6 +1984,7 @@ class CfgVehicles {
 				displayName = "Wasp";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa" };
 			}; 
+
 			class ChromeGreen : BaseChromeGreen {};
 			class ChromeBlue : BaseChromeBlue {};
 			class ChromeRed : BaseChromeRed {};
@@ -1934,6 +2040,12 @@ class CfgVehicles {
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa" };
 			}; 
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// Civilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -1962,6 +2074,12 @@ class CfgVehicles {
 				displayName = "Green"; 
 				textures[] = { "\a3\air_f_epb\Heli_Light_03\data\Heli_Light_03_base_CO.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
 			class DMS : BaseTexture {
@@ -1997,6 +2115,12 @@ class CfgVehicles {
 				};
 			};
 			class Civilian : BaseTexture {};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 

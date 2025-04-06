@@ -203,14 +203,38 @@ class CfgVirtualStores {
 			class FuelCan {};
 			class PanicButton {};
 			class Lockpick {};
-			class FieldDressing { buyPrice = 0; };
-			class Elastic { buyPrice = 0; };
-			class Packing { buyPrice = 0; };
-			class QuickClot { buyPrice = 0; };
-			class BloodBag { buyPrice = 0; };
-			class MediKit { buyPrice = 0; };
-			class Defibrillator { buyPrice = 0; };
-			class Stretcher { buyPrice = 0; };
+			class FieldDressing { 
+				buyPrice = 0; 
+				sellPrice = 0;
+			};
+			class Elastic { 
+				buyPrice = 0; 
+				sellPrice = 0;
+			};
+			class Packing { 
+				buyPrice = 0; 
+				sellPrice = 0;
+			};
+			class QuickClot { 
+				buyPrice = 0; 
+				sellPrice = 0;
+			};
+			class BloodBag { 
+				buyPrice = 0; 
+				sellPrice = 0;
+			};
+			class MediKit { 
+				buyPrice = 0; 
+				sellPrice = 0;
+			};
+			class Defibrillator { 
+				buyPrice = 0; 
+				sellPrice = 0;
+			};
+			class Stretcher { 
+				buyPrice = 0; 
+				sellPrice = 0; 
+			};
 		};
 	};
 
@@ -224,8 +248,14 @@ class CfgVirtualStores {
 			class Redbull {};
 			class FuelCan {};
 			class PanicButton {};
-			class Lockpick { buyPrice = 0; };
-			class VehicleClamp { buyPrice = 0; };
+			class Lockpick { 
+				buyPrice = 0; 
+				sellPrice = 0; 
+			};
+			class VehicleClamp { 
+				buyPrice = 0; 
+				sellPrice = 0; 
+			};
 			class FieldDressing {};
 			class BloodBag {};
 			class MediKit {};

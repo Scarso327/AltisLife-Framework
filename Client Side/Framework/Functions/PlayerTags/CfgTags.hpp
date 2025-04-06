@@ -10,8 +10,9 @@ class CfgTags {
 					"PolicePCSO",
 					"PolicePPC",
 					"PolicePC",
-					"PoliceSC",
+					"PoliceAPS",
 					"PolicePS",
+					"PoliceDS",
 					"PolicePI",
 					"PoliceCI",
 					"PoliceSU",
@@ -92,51 +93,56 @@ class CfgTags {
 		class PoliceCC {
 			icon = "Data\Tags\Ranks\Police\CC.paa";
 			subtitle = "Chief Constable";
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 11] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 12] call ULP_fnc_hasAccess }";
 		};
 		class PoliceDCC {
 			icon = "Data\Tags\Ranks\Police\DCC.paa";
 			subtitle = "Deputy Chief Constable";
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 11] call ULP_fnc_hasAccess }";
 		};
 		class PoliceCSU {
 			icon = "Data\Tags\Ranks\Police\CSU.paa";
 			subtitle = "Chief Superintendent";
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 9] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 10] call ULP_fnc_hasAccess }";
 		};
 		class PoliceSU {
 			icon = "Data\Tags\Ranks\Police\SU.paa";
 			subtitle = "Superintendent";
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 9] call ULP_fnc_hasAccess }";
 		};
 		class PoliceCI {
 			icon = "Data\Tags\Ranks\Police\CI.paa";
 			subtitle = "Chief Inspector";
-			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 7] call ULP_fnc_hasAccess }";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 8] call ULP_fnc_hasAccess }";
 		};
 		class PolicePI {
 			icon = "Data\Tags\Ranks\Police\PI.paa";
-			subtitle = "Police Inspector";
+			subtitle = "Inspector";
+			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 7] call ULP_fnc_hasAccess }";
+		};
+		class PoliceDS {
+			icon = "Data\Tags\Ranks\Police\PS.paa";
+			subtitle = "Desk Sergeant";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 6] call ULP_fnc_hasAccess }";
 		};
 		class PolicePS {
 			icon = "Data\Tags\Ranks\Police\PS.paa";
-			subtitle = "Police Sergeant";
+			subtitle = "Sergeant";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
 		};
-		class PoliceSC  {
-			icon = "Data\Tags\Ranks\Police\SC.paa";
-			subtitle = "Senior Police Constable";
+		class PoliceAPS  {
+			icon = "Data\Tags\Ranks\Police\APS.paa";
+			subtitle = "Acting Sergeant";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 4] call ULP_fnc_hasAccess }";
 		};
 		class PolicePC  {
 			icon = "Data\Tags\Ranks\Police\PC.paa";
-			subtitle = "Police Constable";
+			subtitle = "Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 3] call ULP_fnc_hasAccess }";
 		};
 		class PolicePPC  {
 			icon = "Data\Tags\Ranks\Police\PC.paa";
-			subtitle = "Probationary Police Constable";
+			subtitle = "Prob. Police Constable";
 			condition = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 2] call ULP_fnc_hasAccess }";
 		};
 		class PolicePCSO  {

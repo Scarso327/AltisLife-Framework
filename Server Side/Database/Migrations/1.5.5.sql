@@ -1,0 +1,1 @@
+UPDATE `players` SET `coplevel` = `coplevel` + 1  WHERE `coplevel` >= 5

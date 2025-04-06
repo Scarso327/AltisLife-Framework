@@ -270,7 +270,7 @@ class H_Beret_blk : H_HeadBandage_clean_F {
 		};
 		class H_Beret_EAF_01_F : H_Beret_blk {
 			displayName = "Spec. Command";
-			condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { [""Police_SEG"", 3] call ULP_fnc_hasAccess }";
+			condition = "[""Police_SCO"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 4] call ULP_fnc_hasAccess } || { [""Police_SEG"", 3] call ULP_fnc_hasAccess }";
 		};
 
 		// Altis Ambulance Service

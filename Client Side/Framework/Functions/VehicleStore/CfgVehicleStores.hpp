@@ -15,10 +15,10 @@ class CfgVehicleStores {
 			class C_SUV_01_F { condition = "[""Police_Main"", 2] call ULP_fnc_hasAccess"; };
 			class C_Offroad_02_unarmed_F { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess"; };
 			class C_Hatchback_01_sport_F { condition = "[""Police_RPU"", 1] call ULP_fnc_hasAccess"; };
-			class B_GEN_Van_02_transport_F { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }"; };
-			class B_GEN_Van_02_vehicle_F { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }"; };
-			class B_LSV_01_unarmed_black_F { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
-			class O_LSV_02_unarmed_F { condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 6] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }"; };
+			class B_GEN_Van_02_transport_F { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }"; };
+			class B_GEN_Van_02_vehicle_F { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_RPU"", 1] call ULP_fnc_hasAccess } || { [""Police_COL"", 1] call ULP_fnc_hasAccess }"; };
+			class B_LSV_01_unarmed_black_F { condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess"; };
+			class O_LSV_02_unarmed_F { condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess || { [""Police_Main"", 6] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }"; };
 			class B_MRAP_01_F { condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess"; };
 		};
 	};

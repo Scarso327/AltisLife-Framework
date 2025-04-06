@@ -1523,6 +1523,7 @@ class CfgVehicles {
 		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. There are several versions covering the basic transport functions.";
 		buyPrice = 478500;
 		virtualSpace = 10;
+		garageLimit = 1;
 		class Textures {
 			class Hato : HatoTexture { 
 				displayName = "HATO";

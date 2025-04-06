@@ -6,70 +6,66 @@ class CfgVehicles {
 	chopTime = 300;
 
 	class Base {
+		description = "";
 		virtualSpace = 0;
 		garageLimit = 10;
-		fuelConsumptionRate = 1.25;
+		fuelConsumptionRate = 1.5;
 		isHouse = false;
 		canTransfer = true;
 		canChop = true;
 		conditions = "true";
-		inventory[] = { { "FirstAidKit", 2 } };
+		inventory[] = { 
+			{ "FirstAidKit", 2 }, 
+			{ "Sweetie", 1 } 
+		};
 		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies",
-			"Fuel",
-			"DunamisPropaganda",
+			"UnprocessedOil",
 
-			"UnprocessedOil"
+			"HumanitarianSupplies",
+			"FreightCargo",
+			"StolenCargo",
+			"Fuel"
 		};
 		class Textures {};
 	};
 
 	class BaseShip : Base {
-		blacklistedItems[] = { 
-			"FreightCargo",
-			"HumanitarianSupplies",
-			"Fuel",
-			"Foodstuffs",
-			"DunamisPropaganda",
-
-			"UnprocessedOil"
-		};
-	};
-
-	class BaseTruck : Base {
-		garageLimit = 4;
-		fuelConsumptionRate = 1.40;
-		enableRope = false;
-		garageDelay = 15;
-		repairTime = 15;
-		chopKeepChance = 85;
-		blacklistedItems[] = { 
-			"HumanitarianSupplies",
-			"Fuel",
-			"DunamisPropaganda",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "StolenCargo" };
 		class Textures {};
 	};
 
-	class BaseAir : Base {
-		garageLimit = 4;
-		fuelConsumptionRate = 1.35;
-		garageDelay = 20;
-		repairTime = 20;
-		chopKeepChance = 90;
+	class BaseTruck : Base {
+		garageLimit = 5;
+		garageDelay = 10;
+		enableRope = false;
+		whitelistedItems[] = { "FreightCargo" };
+		class Textures {};
+	};
+
+	class BaseHeli : BaseTruck {
 		retrievalPerc = 0.005;
 		turrets[] = {};
 		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies",
-			"Fuel",
-			"Foodstuffs",
-			"DunamisPropaganda",
+			"Coal",
+			"Coral",
+			"Tobacco",
+			"Sand",
+
+			"CopperOre",
+			"SilverOre",
+			"IronOre",
+			"UraniumOre",
+			"UncutDiamond",
+			"CutBloodDiamond",
+			"UnrefinedSalt",
+			"UnprocessedOil",
+
+			"EphedrineBarrel",
+			"UnprocessedWeed",
+			"UnprocessedHeroin",
+			"UnprocessedCocaine",
+
+			"WeaponParts",
 
 			"Turtle_F_Raw",
 
@@ -81,11 +77,15 @@ class CfgVehicles {
 			"MarkedGold",
 			"UnmarkedGold",
 			"EncryptedDrive",
-			"DecryptedDrive"
-		};
-	};
+			"DecryptedDrive",
 
-	class BaseHeli : BaseAir {
+			"Foodstuffs",
+			"HumanitarianSupplies",
+			"DunamisPropaganda",
+			"FreightCargo",
+			"StolenCargo",
+			"Fuel"
+		};
 		class Actions {
 			class PilotEject {
 				actionTitle = "Eject";
@@ -96,6 +96,22 @@ class CfgVehicles {
 				radius = 25;
 			};
 		};
+	};
+
+	class BasePlane : BaseHeli {
+		garageLimit = 1;
+		retrievalPerc = 0.003;
+		canChop = false;
+		pylons[] = { "", "", "", "", "", "", "", "", "", "", "", "", "" };
+	};
+
+	class BaseContainer : Base {
+		buyPrice = 1000000;
+		chopKeepChance = 100;
+		chopPerc = 1;
+		garageLimit = 1;
+		canChop = false;
+		class Textures {};
 	};
 
 	// LIGHTS --------------------------------------------------------------------------------------

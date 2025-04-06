@@ -215,7 +215,6 @@ class CfgVehicleStores {
 			class O_Truck_03_covered_F {};
 			class O_Truck_03_ammo_F {};
 			class O_Truck_03_fuel_F {};
-			class O_Truck_03_device_F {};
 			class B_Truck_01_cargo_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
 			class B_Truck_01_transport_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
 			class B_Truck_01_covered_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
@@ -332,6 +331,7 @@ class CfgVehicleStores {
 			class C_Van_01_transport_F {};
 			class C_Van_01_box_F {};
 			class C_Van_01_fuel_F {};
+			class O_Truck_03_device_F {};
 			class B_Heli_Light_01_F {};
 			class I_Heli_light_03_unarmed_F {};
 			class O_Heli_Transport_04_black_F {};

@@ -155,7 +155,7 @@ class CfgVirtualItems {
 		class Settings : Settings {};
 		class Sustain {
 			hunger = 5;
-			thirst = 0;
+			thirst = 5;
 		};
 		class Events : Events {};
 	};

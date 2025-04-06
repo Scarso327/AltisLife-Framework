@@ -26,7 +26,7 @@ if (isNull _container ||
 
 private _containerCfg = missionConfigFile >> "CfgVehicles" >> (typeOf _container);
 
-if (_item in getArray (_containerCfg >> "blacklistedItems")) exitWith { false };
+if (_item in getArray (_containerCfg >> "blacklistedItems") && !(_item in getArray (_containerCfg >> "whitelistedItems"))) exitWith { false };
 
 private _cargo = _container getVariable ["ULP_VirtualCargo", createHashMap];
 

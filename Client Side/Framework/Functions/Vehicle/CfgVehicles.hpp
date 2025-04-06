@@ -1,75 +1,71 @@
 class CfgVehicles {
-	retrievalPerc = 0.02;
+	retrievalPerc = 0.01;
 	chopKeepChance = 80;
 	crushPerc = 0.1;
 	chopPerc = 0.35;
 	chopTime = 300;
 
 	class Base {
+		description = "";
 		virtualSpace = 0;
 		garageLimit = 10;
-		fuelConsumptionRate = 1.25;
+		fuelConsumptionRate = 1.5;
 		isHouse = false;
 		canTransfer = true;
 		canChop = true;
 		conditions = "true";
-		inventory[] = { { "FirstAidKit", 2 } };
+		inventory[] = { 
+			{ "FirstAidKit", 2 }, 
+			{ "Sweetie", 1 } 
+		};
 		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies",
-			"Fuel",
-			"DunamisPropaganda",
+			"UnprocessedOil",
 
-			"UnprocessedOil"
+			"HumanitarianSupplies",
+			"FreightCargo",
+			"StolenCargo",
+			"Fuel"
 		};
 		class Textures {};
 	};
 
 	class BaseShip : Base {
-		blacklistedItems[] = { 
-			"FreightCargo",
-			"HumanitarianSupplies",
-			"Fuel",
-			"Foodstuffs",
-			"DunamisPropaganda",
-
-			"UnprocessedOil"
-		};
-	};
-
-	class BaseTruck : Base {
-		garageLimit = 4;
-		fuelConsumptionRate = 1.40;
-		enableRope = false;
-		garageDelay = 15;
-		repairTime = 15;
-		chopKeepChance = 85;
-		blacklistedItems[] = { 
-			"HumanitarianSupplies",
-			"Fuel",
-			"DunamisPropaganda",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "StolenCargo" };
 		class Textures {};
 	};
 
-	class BaseAir : Base {
-		garageLimit = 4;
-		fuelConsumptionRate = 1.35;
-		garageDelay = 20;
-		repairTime = 20;
-		chopKeepChance = 90;
+	class BaseTruck : Base {
+		garageLimit = 5;
+		garageDelay = 10;
+		enableRope = false;
+		whitelistedItems[] = { "FreightCargo" };
+		class Textures {};
+	};
+
+	class BaseHeli : BaseTruck {
 		retrievalPerc = 0.005;
 		turrets[] = {};
 		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies",
-			"Fuel",
-			"Foodstuffs",
-			"DunamisPropaganda",
+			"Coal",
+			"Coral",
+			"Tobacco",
+			"Sand",
+
+			"CopperOre",
+			"SilverOre",
+			"IronOre",
+			"UraniumOre",
+			"UncutDiamond",
+			"CutBloodDiamond",
+			"UnrefinedSalt",
+			"UnprocessedOil",
+
+			"EphedrineBarrel",
+			"UnprocessedWeed",
+			"UnprocessedHeroin",
+			"UnprocessedCocaine",
+
+			"WeaponParts",
 
 			"Turtle_F_Raw",
 
@@ -81,11 +77,15 @@ class CfgVehicles {
 			"MarkedGold",
 			"UnmarkedGold",
 			"EncryptedDrive",
-			"DecryptedDrive"
-		};
-	};
+			"DecryptedDrive",
 
-	class BaseHeli : BaseAir {
+			"Foodstuffs",
+			"HumanitarianSupplies",
+			"DunamisPropaganda",
+			"FreightCargo",
+			"StolenCargo",
+			"Fuel"
+		};
 		class Actions {
 			class PilotEject {
 				actionTitle = "Eject";
@@ -96,6 +96,22 @@ class CfgVehicles {
 				radius = 25;
 			};
 		};
+	};
+
+	class BasePlane : BaseHeli {
+		garageLimit = 1;
+		retrievalPerc = 0.003;
+		canChop = false;
+		pylons[] = { "", "", "", "", "", "", "", "", "", "", "", "", "" };
+	};
+
+	class BaseContainer : Base {
+		buyPrice = 1000000;
+		chopKeepChance = 100;
+		chopPerc = 1;
+		garageLimit = 1;
+		canChop = false;
+		class Textures {};
 	};
 
 	// LIGHTS --------------------------------------------------------------------------------------
@@ -252,6 +268,12 @@ class CfgVehicles {
 				displayName = "Tan";
 				textures[] = { "\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -461,6 +483,12 @@ class CfgVehicles {
 				textures[] = { "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa" }; 
 			};
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// Civilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -513,6 +541,12 @@ class CfgVehicles {
 				}; 
 			};
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// Civilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -532,19 +566,11 @@ class CfgVehicles {
 		buyPrice = 4280000; 
 		virtualSpace = 20;
 		garageLimit = 1;
-		retrievalPerc = 0.05;
-		crushTime = 120;
-		chopTime = 120;
 		enableRope = false;
 	};
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
 	class C_IDAP_Offroad_01_F : C_Offroad_01_F {
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -581,6 +607,12 @@ class CfgVehicles {
 					"\a3\soft_f_enoch\offroad_01\data\offroad_01_cover_grn_co.paa"
 				}; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 	class C_Offroad_01_comms_F : C_Offroad_01_covered_F { buyPrice = 44450; };
@@ -637,6 +669,12 @@ class CfgVehicles {
 				textures[] = { "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa" }; 
 			};
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// Civilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -653,12 +691,7 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F {
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -672,9 +705,6 @@ class CfgVehicles {
 		buyPrice = 670300; 
 		virtualSpace = 45;
 		garageLimit = 1;
-		retrievalPerc = 0.05;
-		crushTime = 60;
-		chopTime = 120;
 		enableRope = false;
 	};
 
@@ -786,6 +816,12 @@ class CfgVehicles {
 				textures[] = { "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa" };
 			};
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// CIvilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -800,13 +836,6 @@ class CfgVehicles {
 		buyPrice = 68000;
 		virtualSpace = 90;
 		enableRope = false;
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"Fuel",
-
-			"UnprocessedOil"
-		};
 		class Textures {
 			// Police
 			class PoliceWhite : PoliceTexture { 
@@ -874,6 +903,12 @@ class CfgVehicles {
 				textures[] = { "\a3\soft_f_orange\van_02\data\van_body_AAN_CO.paa" }; 
 			};
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// Civilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -883,18 +918,9 @@ class CfgVehicles {
 		};
 	};
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
-	class C_Van_02_medevac_F : C_Van_02_transport_F {
-		virtualSpace = 150;
-		canChop = false;
-	};
+	class C_Van_02_medevac_F : C_Van_02_transport_F { virtualSpace = 150; };
 	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture { 
 				displayName = "IDAP";
@@ -908,13 +934,7 @@ class CfgVehicles {
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
 	class C_IDAP_Van_02_vehicle_F : C_Van_02_vehicle_F {
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"Fuel",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture { 
 				displayName = "IDAP";
@@ -928,7 +948,6 @@ class CfgVehicles {
 		description = "The Prowler is agile, lightly armored and uses speed, maneuverability, and off-road mobility to avoid threats.";
 		buyPrice = 380000;
 		virtualSpace = 50;
-		garageLimit = 6;
 		class Textures {
 			// Police
 			class Police : PoliceTexture { 
@@ -967,6 +986,7 @@ class CfgVehicles {
 					"\a3\soft_f_exp\lsv_01\data\nato_lsv_adds_olive_co.paa"
 				}; 
 			};
+
 			class ChromeGreen : BaseChromeGreen {};
 			class ChromeBlue : BaseChromeBlue {};
 			class ChromeRed : BaseChromeRed {};
@@ -980,7 +1000,6 @@ class CfgVehicles {
 		description = "Qilin offers safe and fast operating speeds with superior levels of mobility and maneuverability. It is adaptable to severe rugged and restrictive terrains.";
 		buyPrice = 475000;
 		virtualSpace = 50;
-		garageLimit = 6;
 		class Textures {
 			// Police
 			class Police : PoliceTexture { 
@@ -1000,6 +1019,7 @@ class CfgVehicles {
 				displayName = "Hex";
 				textures[] = { "\a3\soft_f_exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa", }; 
 			};
+
 			class ChromeGreen : BaseChromeGreen {};
 			class ChromeBlue : BaseChromeBlue {};
 			class ChromeRed : BaseChromeRed {};
@@ -1017,22 +1037,14 @@ class CfgVehicles {
 	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { 
 		buyPrice = 6590000; 
 		garageLimit = 1;
-		crushTime = 120;
-		chopTime = 120;
+		enableRope = false;
 	};
 
 	class B_MRAP_01_F : Base {
 		description = "The Hunter is a MRAP vehicle with an armored hull that can withstand light weapons and offers a powerful engine.";
 		buyPrice = 9800000;
 		virtualSpace = 65;
-		garageLimit = 4;
-		garageDelay = 15;
-		repairTime = 20;
-		chopKeepChance = 95;
-		crushTime = 240;
-		chopTime = 300;
-		retrievalPerc = 0.01;
-		// turrets[] = {};
+		garageLimit = 1;
 		class Textures {
 			class Police : PoliceTexture {
 				textures[] = {
@@ -1051,6 +1063,37 @@ class CfgVehicles {
 					rightPos[] = {-0.94873,-2.73975,0.557981};
 				};
 			};
+
+			class ChromeGreen : BaseChromeGreen {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\green.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\green.rvmat"
+				};
+			};
+			class ChromeBlue : BaseChromeBlue {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\blue.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\blue.rvmat"
+				};
+			};
+			class ChromeRed : BaseChromeRed {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\red.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\red.rvmat"
+				};
+			};
+			class ChromeSilver : BaseChromeSilver {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\silver.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\silver.rvmat"  
+				};
+			};
+			class ChromeGold : BaseChromeGold {
+				materials[] = { 
+					"Data\Textures\Vehicles\Global\Chrome\gold.rvmat",
+					"Data\Textures\Vehicles\Global\Chrome\gold.rvmat"  
+				};
+			};
 		};
 	};
 
@@ -1058,8 +1101,6 @@ class CfgVehicles {
 		description = "The Ifrit is a MRAP vehicle designed and manufactured in Russia. Its strengths lie in reliability in extreme weather conditions and crew protection.";
 		buyPrice = 5500000;
 		virtualSpace = 65;
-		canTransfer = false;
-		conditions = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk } || { [] call ULP_fnc_isDunamis }";
 		class Textures {
 			// Civilian
 			class Hex : BaseTexture { 
@@ -1086,6 +1127,7 @@ class CfgVehicles {
 					"Data\Textures\Vehicles\Land\Civilian\Ifrit\oil_02.paa"
 				}; 
 			};
+
 			class ChromeGreen : BaseChromeGreen {
 				materials[] = { 
 					"Data\Textures\Vehicles\Global\Chrome\green.rvmat",
@@ -1146,6 +1188,7 @@ class CfgVehicles {
 				locked = true;
 				textures[] = { "Data\Textures\Vehicles\Land\Civilian\Strider\asiimov.paa" }; 
 			};
+
 			class ChromeGreen : BaseChromeGreen {};
 			class ChromeBlue : BaseChromeBlue {};
 			class ChromeRed : BaseChromeRed {};
@@ -1172,6 +1215,12 @@ class CfgVehicles {
 				displayName = "Green";
 				textures[] = { "\a3\soft_f_enoch\tractor_01\data\tractor_01_2_green_co.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -1217,10 +1266,9 @@ class CfgVehicles {
 	class C_Van_01_fuel_F : C_Van_01_transport_F {
 		buyPrice = 200000;
 		virtualSpace = 100;
-		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo"
+		whitelistedItems[] = { 
+			"UnprocessedOil",
+			"Fuel" 
 		};
 		class Textures {
 			class Black : BaseTexture {
@@ -1284,7 +1332,7 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Truck_02_transport_F : I_Truck_02_transport_F {
-		blacklistedItems[] = {  "UnprocessedOil" };
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1300,7 +1348,7 @@ class CfgVehicles {
 		virtualSpace = 350;
 	};
 	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {
-		blacklistedItems[] = {  "UnprocessedOil" };
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1315,11 +1363,9 @@ class CfgVehicles {
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 750000;
 		virtualSpace = 300;
-		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies"
+		whitelistedItems[] = { 
+			"UnprocessedOil",
+			"Fuel" 
 		};
 		class Textures {
 			class Orange : BaseTexture {
@@ -1339,14 +1385,6 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
-		blacklistedItems[] = {  
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies",
-			"Fuel",
-
-			"UnprocessedOil" 
-		};
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1362,8 +1400,6 @@ class CfgVehicles {
 		description = "The Tempest is a 6x6 mine resistant standard transport truck. The modular design of the truck allows several transport versions.";
 		buyPrice = 850550;
 		virtualSpace = 370;
-		crushTime = 60;
-		chopTime = 120;
 		class Textures {
 			class BrownHex : BaseTexture {
 				displayName = "Brown Hex"; 
@@ -1416,11 +1452,9 @@ class CfgVehicles {
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
 		buyPrice = 1500000;
 		virtualSpace = 450;
-		conditions = "[""FuelHaul""] call ULP_fnc_hasGroupPerk || { [""LiquidTransporter""] call ULP_fnc_hasPerk }";
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies"
+		whitelistedItems[] = { 
+			"UnprocessedOil",
+			"Fuel" 
 		};
 		class Textures {
 			class BrownHex : BaseTexture {
@@ -1444,8 +1478,6 @@ class CfgVehicles {
 	class O_Truck_03_device_F : O_Truck_03_transport_F {
 		buyPrice = 7200000;
 		virtualSpace = 150;
-		crushTime = 240;
-		chopTime = 300;
 		garageLimit = 1;
 	};
 
@@ -1453,8 +1485,7 @@ class CfgVehicles {
 		description = "The Heavy Expanded Mobility Tactical Truck is an 8x8 diesel-powered off-road truck. There are several versions covering the basic transport functions.";
 		buyPrice = 478500;
 		virtualSpace = 10;
-		canTransfer = false;
-		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk } || { [""Hato_Main"", 1] call ULP_fnc_hasAccess }";
+		garageLimit = 1;
 		class Textures {
 			class Hato : HatoTexture { 
 				displayName = "HATO";
@@ -1515,8 +1546,6 @@ class CfgVehicles {
 	class B_Truck_01_transport_F : B_Truck_01_mover_F {
 		buyPrice = 1596500;
 		virtualSpace = 535;
-		crushTime = 60;
-		chopTime = 120;
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1585,11 +1614,9 @@ class CfgVehicles {
 	class B_Truck_01_fuel_F : B_Truck_01_transport_F {
 		buyPrice = 3000000;
 		virtualSpace = 750;
-		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk && { [""FuelHaul""] call ULP_fnc_hasGroupPerk } || { [""HGVDriver""] call ULP_fnc_hasPerk && { [""LiquidTransporter""] call ULP_fnc_hasPerk } }";
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies"
+		whitelistedItems[] = { 
+			"UnprocessedOil",
+			"Fuel" 
 		};
 		class Textures {
 			class Sand : BaseTexture {
@@ -1613,8 +1640,6 @@ class CfgVehicles {
 	class B_Truck_01_box_F : B_Truck_01_transport_F {
 		buyPrice = 2610000;
 		virtualSpace = 800;
-		crushTime = 120;
-		chopTime = 180;
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1652,6 +1677,7 @@ class CfgVehicles {
 		description = "A Personal WaterCraft of sit-down type. Its powerful engine and great maneuverability make this craft a lot of fun to drive.";
 		buyPrice = 14300;
 		virtualSpace = 5;
+		whitelistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -1702,6 +1728,12 @@ class CfgVehicles {
 					"\a3\boat_f_exp\scooter_transport_01\data\scooter_transport_01_vp_Yellow_co.paa"
 				};
 			}; 
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -1719,6 +1751,12 @@ class CfgVehicles {
 			class Civilian : BaseTexture {}; 
 			class Police : PoliceTexture { textures[] = { "Data\Textures\Vehicles\Sea\Police\motorboat.paa" }; };
 			class Medic : MedicTexture { textures[] = { "Data\Textures\Vehicles\Sea\Medic\motorboat.paa" }; };
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 	class C_Boat_Civil_01_police_F : C_Boat_Civil_01_F {};
@@ -1736,6 +1774,12 @@ class CfgVehicles {
 				}; 
 			};
 			class Medic : MedicTexture {};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 	class I_C_Boat_Transport_02_F : C_Boat_Transport_02_F {};
@@ -1745,10 +1789,6 @@ class CfgVehicles {
 		buyPrice = 14360500;
 		virtualSpace = 80;
 		garageLimit = 1;
-		repairTime = 15;
-		crushTime = 30;
-		chopKeepChance = 85;
-		chopTime = 120;
 		enableRope = false;
 		turrets[] = { { { 1 },  { "LMG_Minigun" },  { "2000Rnd_65x39_belt_Tracer_Red" } } };
 		class Textures {
@@ -1765,12 +1805,17 @@ class CfgVehicles {
 		description = "The SDV is a manned submersible vehicle used to transport teams of divers over long distances under water.ply or using their own SCUBA gear.";
 		buyPrice = 389500;
 		virtualSpace = 5;
-		garageLimit = 2;
 		class Textures {
 			class Police : PoliceTextureBase {
 				displayName = "MPU"; 
 				textures[] = { "Data\Textures\Vehicles\Sea\Police\sdv.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -1778,7 +1823,6 @@ class CfgVehicles {
 	class B_UAV_01_F : BaseHeli {
 		description = "The Darter AR-2 is a miniature remote-controlled quadcopter perfect for reconnaissance and surveillance.";
 		buyPrice = 98700;
-		canChop = false;
 	};
 	class C_UAV_06_medical_F : B_UAV_01_F {
 		description = "This commercial off-the-shelf utility drone uses 6 rotors to transport small payloads inside its external cargo case.";
@@ -1789,8 +1833,6 @@ class CfgVehicles {
 		description = "A light single-engine helicopter used in special operations by the US Army since the Vietnam War.";
 		buyPrice = 465000;
 		virtualSpace = 5;
-		garageLimit = 6;
-		retrievalPerc = 0.02;
 		class Textures {
 			// Police
 			class Police : PoliceTextureBase { 
@@ -1863,6 +1905,7 @@ class CfgVehicles {
 				displayName = "Wasp";
 				textures[] = { "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa" };
 			}; 
+
 			class ChromeGreen : BaseChromeGreen {};
 			class ChromeBlue : BaseChromeBlue {};
 			class ChromeRed : BaseChromeRed {};
@@ -1892,7 +1935,6 @@ class CfgVehicles {
 		description = "The PO-30 Orca is a transport and utility helicopter primarily developed for the Russian Air Force.";
 		buyPrice = 1850000;
 		virtualSpace = 25;
-		retrievalPerc = 0.02;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\orca.paa" }; };
 			class Medic : MedicTextureBase { 
@@ -1918,6 +1960,12 @@ class CfgVehicles {
 				textures[] = { "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa" };
 			}; 
 
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
+
 			// Civilian Faction
 			class DMS : BaseTexture {
 				displayName = "DMS";
@@ -1931,9 +1979,6 @@ class CfgVehicles {
 		description = "The WY-55 Hellcat is a multipurpose helicopter, most suited for utility and limited transport.";
 		buyPrice = 2130000;
 		virtualSpace = 20;
-		retrievalPerc = 0.02;
-		crushTime = 60;
-		chopTime = 300;
 		class Textures {
 			class Police : PoliceTextureBase { textures[] = { "Data\Textures\Vehicles\Air\Police\hellcat.paa" }; };
 
@@ -1946,6 +1991,12 @@ class CfgVehicles {
 				displayName = "Green"; 
 				textures[] = { "\a3\air_f_epb\Heli_Light_03\data\Heli_Light_03_base_CO.paa" }; 
 			};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
 			class DMS : BaseTexture {
@@ -1970,9 +2021,6 @@ class CfgVehicles {
 		buyPrice = 19450000;
 		virtualSpace = 30;
 		garageLimit = 1;
-		crushTime = 60;
-		chopTime = 300;
-		turrets[] = {};
 		class Textures {
 			class Police : PoliceTextureBase {
 				turrets[] = { 
@@ -1981,6 +2029,12 @@ class CfgVehicles {
 				};
 			};
 			class Civilian : BaseTexture {};
+
+			class ChromeGreen : BaseChromeGreen {};
+			class ChromeBlue : BaseChromeBlue {};
+			class ChromeRed : BaseChromeRed {};
+			class ChromeSilver : BaseChromeSilver {};
+			class ChromeGold : BaseChromeGold {};
 		};
 	};
 
@@ -1988,8 +2042,7 @@ class CfgVehicles {
 		description = "A successor to the wide-spread Merlin, the CH-49 Mohawk is a primary transport with many other versions, serving effectively in evac, anti-submarine warfare, or armed air support roles.";
 		buyPrice = 13240000;
 		virtualSpace = 160;
-		crushTime = 60;
-		chopTime = 300;
+		garageLimit = 2;
 		class Textures {
 			class Medic : MedicTextureBase {
 				textures[] = { 
@@ -2025,6 +2078,7 @@ class CfgVehicles {
 	};
 
 	class C_IDAP_Heli_Transport_02_F : I_Heli_Transport_02_F {
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -2042,8 +2096,6 @@ class CfgVehicles {
 		description = "The Mi-290 Taru is a heavy utility helicopter with coaxial rotors and a unique modular construction. Various mission pods allow the Taru to serve many different roles.";
 		buyPrice = 11350000;
 		garageLimit = 2;
-		crushTime = 60;
-		chopTime = 300;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -2051,10 +2103,7 @@ class CfgVehicles {
 			};
 		};
 	};
-	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F {
-		buyPrice = 11176500;
-		virtualSpace = 0;
-	};
+	class O_Heli_Transport_04_bench_black_F : O_Heli_Transport_04_black_F { buyPrice = 11176500; };
 	class O_Heli_Transport_04_covered_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 12670000;
 		virtualSpace = 35;
@@ -2070,11 +2119,14 @@ class CfgVehicles {
 	class O_Heli_Transport_04_fuel_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 13640000;
 		virtualSpace = 150;
+		whitelistedItems[] = { 
+			"UnprocessedOil", 
+			"Fuel"
+		};
 	};
 	class O_Heli_Transport_04_medevac_black_F : O_Heli_Transport_04_black_F {
 		buyPrice = 11983000;
 		virtualSpace = 40;
-		canChop = false;
 		class Textures {
 			class Medic : MedicTextureBase {
 				textures[] = { 
@@ -2097,8 +2149,6 @@ class CfgVehicles {
 		buyPrice = 33400750;
 		virtualSpace = 500;
 		garageLimit = 2;
-		crushTime = 60;
-		chopTime = 300;
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -2122,133 +2172,87 @@ class CfgVehicles {
 		description = "A two-seat reconnaissance and target designation helicopter used to seek targets for gunships.";
 		buyPrice = 146560000;
 		garageLimit = 1;
-		crushTime = 60;
-		chopTime = 300;
 		canChop = false;
+		canTransfer = false;
 	};
-
 	class O_Heli_Attack_02_F : B_Heli_Attack_01_F {
 		description = "A multipurpose successor to the Mi-24, the Mi-48 Kajman (designated 'Hornet') is a large gunship and attack helicopter with troop transport capacity for 8 passengers";
 		buyPrice = 212340000;
 		virtualSpace = 30;
-		canChop = false;
 	};
 
 	// PLANES --------------------------------------------------------------------------------------
-	class C_Plane_Civil_01_F : BaseAir {
+	class C_Plane_Civil_01_F : BasePlane {
 		description = "The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m).";
 		buyPrice = 1256000;
 		virtualSpace = 140;
-		retrievalPerc = 0.02;
-		blacklistedItems[] = { 
-			"FreightCargo",
-
-			"Turtle_F_Raw",
-
-			"SeizedContraband",
-			"SpaceCapsuleDataDrive",
-			"SmallGalleryPiece",
-			"MediumGalleryPiece",
-			"LargeGalleryPiece",
-			"MarkedGold",
-			"UnmarkedGold",
-			"EncryptedDrive",
-			"DecryptedDrive"
-		};
+		whitelistedItems[] = { "StolenCargo" };
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F { buyPrice = 1375000; };
 
-	class B_T_VTOL_01_infantry_F : BaseAir {
-		description = "The V-44X Blackfish’s third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";
+	class B_T_VTOL_01_infantry_F : BasePlane {
+		description = "The V-44X Blackfish's third-generation tilt-rotor VTOL technology allows this long endurance aircraft to conveniently utilize a wide range of airfields and runways.";
 		buyPrice = 75500000;
 		virtualSpace = 650;
-		garageLimit = 1;
-		retrievalPerc = 0.0025;
-		crushTime = 540;
-		chopTime = 900;
 	};
 	class B_T_VTOL_01_vehicle_F : B_T_VTOL_01_infantry_F {
 		buyPrice = 85750000;
 		virtualSpace = 700;
 	};
 
-	class O_T_VTOL_02_infantry_F : B_T_VTOL_01_infantry_F {
+	class O_T_VTOL_02_infantry_F : BasePlane {
 		description = "The most promising prototype built by CSAT engineers presents an extremely progressive design with many unique features and top-notch bleeding-edge technologies.";
 		buyPrice = 115650000;
 		virtualSpace = 180;
-		turrets[] = {};
 	};
 	class O_T_VTOL_02_vehicle_F : O_T_VTOL_02_infantry_F {
 		buyPrice = 125530000;
 		virtualSpace = 230;
 	};
 
-	class I_Plane_Fighter_03_CAS_F : BaseAir {
+	class I_Plane_Fighter_03_CAS_F : BasePlane {
 		description = "The A-143 Buzzard is a single seat, light, multipurpose combat aircraft able to carry a wide range of equipment and weaponry.";
 		buyPrice = 73350000;
-		garageLimit = 1;
-		retrievalPerc = 0.0025;
-		pylons[] = { "", "", "", "", "", "", "", "", "", "", "", "", "" };
-		turrets[] = {};
-		canChop = false;
 	};
-	class I_Plane_Fighter_04_F : I_Plane_Fighter_03_CAS_F { 
+	class I_Plane_Fighter_04_F : BasePlane { 
 		description = "The A-149 Gryphon is a fourth-generation, single-seat, single-engine, and all-weather tactical fighter jet.";
 		buyPrice = 75500000; 
 	};
 	
-	class B_Plane_CAS_01_F : I_Plane_Fighter_03_CAS_F { 
+	class B_Plane_CAS_01_F : BasePlane { 
 		description = "The A-164 Wipeout is a single-seat aircraft used for close air support and air interdiction.";
 		buyPrice = 90500000; 
 	};
-	class B_Plane_Fighter_01_F : I_Plane_Fighter_03_CAS_F { 
+	class B_Plane_Fighter_01_F : BasePlane { 
 		description = "The F/A-181 Black Wasp II is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet.";
 		buyPrice = 105500000; 
 	};
-	class B_Plane_Fighter_01_Stealth_F : B_Plane_Fighter_01_F { 
-		buyPrice = 115600000;
-	};
-	class O_Plane_CAS_02_F : I_Plane_Fighter_03_CAS_F { 
+	class B_Plane_Fighter_01_Stealth_F : B_Plane_Fighter_01_F { buyPrice = 115600000; };
+
+	class O_Plane_CAS_02_F : BasePlane { 
 		description = "The To-199 Neophron is a new addition to CSAT air forces. An agile single-seat aircraft is used for close air support but can also take down air threats.";
 		buyPrice = 86500000; 
 	};
-	class O_Plane_Fighter_02_F : I_Plane_Fighter_03_CAS_F { 
+	class O_Plane_Fighter_02_F : BasePlane { 
 		description = "The To-201 Shikra is a fifth-generation, single-seat, twin-engine, all-weather tactical fighter jet.";
 		buyPrice = 115500000;
 	};
-	class O_Plane_Fighter_02_Stealth_F : O_Plane_Fighter_02_F {
-		buyPrice = 130500000; 
-	};
+	class O_Plane_Fighter_02_Stealth_F : O_Plane_Fighter_02_F { buyPrice = 130500000; };
 
 	// CONTAINERS --------------------------------------------------------------------------------------
-	class B_Slingload_01_Cargo_F : Base {
-		description = "";
-		buyPrice = 1000000;
-		virtualSpace = 250;
-		garageLimit = 1;
-	};
-	class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {
-		description = "";
-		buyPrice = 1000000;
-		virtualSpace = 125;
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo"
+	class Land_Pod_Heli_Transport_04_box_black_F : BaseContainer { virtualSpace = 300; };
+	class Land_Pod_Heli_Transport_04_fuel_black_F : Land_Pod_Heli_Transport_04_box_black_F {
+		whitelistedItems[] = { 
+			"UnprocessedOil", 
+			"Fuel"
 		};
 	};
 
-	class Land_Pod_Heli_Transport_04_box_black_F : B_Slingload_01_Cargo_F {
-		description = "";
-		buyPrice = 1000000;
-		virtualSpace = 200;
-	};
-	class Land_Pod_Heli_Transport_04_fuel_black_F : B_Slingload_01_Cargo_F {
-		description = "";
-		buyPrice = 1000000;
-		virtualSpace = 100;
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo"
+	class B_Slingload_01_Cargo_F : BaseContainer { virtualSpace = 500; };
+	class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {
+		whitelistedItems[] = { 
+			"UnprocessedOil", 
+			"Fuel"
 		};
 	};
 

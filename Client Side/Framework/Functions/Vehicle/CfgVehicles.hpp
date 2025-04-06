@@ -570,12 +570,7 @@ class CfgVehicles {
 	};
 	class B_GEN_Offroad_01_gen_F : C_Offroad_01_F {};
 	class C_IDAP_Offroad_01_F : C_Offroad_01_F {
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -696,12 +691,7 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F {
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -846,13 +836,6 @@ class CfgVehicles {
 		buyPrice = 68000;
 		virtualSpace = 90;
 		enableRope = false;
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"Fuel",
-
-			"UnprocessedOil"
-		};
 		class Textures {
 			// Police
 			class PoliceWhite : PoliceTexture { 
@@ -937,13 +920,7 @@ class CfgVehicles {
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
 	class C_Van_02_medevac_F : C_Van_02_transport_F { virtualSpace = 150; };
 	class C_IDAP_Van_02_transport_F : C_Van_02_transport_F {
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture { 
 				displayName = "IDAP";
@@ -957,13 +934,7 @@ class CfgVehicles {
 	};
 	class B_GEN_Van_02_vehicle_F : C_Van_02_vehicle_F {};
 	class C_IDAP_Van_02_vehicle_F : C_Van_02_vehicle_F {
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"Fuel",
-
-			"UnprocessedOil"
-		};
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture { 
 				displayName = "IDAP";
@@ -1295,9 +1266,9 @@ class CfgVehicles {
 	class C_Van_01_fuel_F : C_Van_01_transport_F {
 		buyPrice = 200000;
 		virtualSpace = 100;
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo"
+		whitelistedItems[] = { 
+			"UnprocessedOil",
+			"Fuel" 
 		};
 		class Textures {
 			class Black : BaseTexture {
@@ -1361,7 +1332,7 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Truck_02_transport_F : I_Truck_02_transport_F {
-		blacklistedItems[] = {  "UnprocessedOil" };
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1377,7 +1348,7 @@ class CfgVehicles {
 		virtualSpace = 350;
 	};
 	class C_IDAP_Truck_02_F : I_Truck_02_covered_F {
-		blacklistedItems[] = {  "UnprocessedOil" };
+		whitelistedItems[] = { "HumanitarianSupplies" };
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1392,10 +1363,9 @@ class CfgVehicles {
 	class I_Truck_02_fuel_F : I_Truck_02_transport_F {
 		buyPrice = 750000;
 		virtualSpace = 300;
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies"
+		whitelistedItems[] = { 
+			"UnprocessedOil",
+			"Fuel" 
 		};
 		class Textures {
 			class Orange : BaseTexture {
@@ -1415,14 +1385,6 @@ class CfgVehicles {
 		};
 	};
 	class C_IDAP_Truck_02_water_F : I_Truck_02_fuel_F {
-		blacklistedItems[] = {  
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies",
-			"Fuel",
-
-			"UnprocessedOil" 
-		};
 		class Textures {
 			class IDAP : BaseTexture {
 				displayName = "IDAP"; 
@@ -1490,10 +1452,9 @@ class CfgVehicles {
 	class O_Truck_03_fuel_F : O_Truck_03_transport_F {
 		buyPrice = 1500000;
 		virtualSpace = 450;
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies"
+		whitelistedItems[] = { 
+			"UnprocessedOil",
+			"Fuel" 
 		};
 		class Textures {
 			class BrownHex : BaseTexture {
@@ -1585,7 +1546,6 @@ class CfgVehicles {
 	class B_Truck_01_transport_F : B_Truck_01_mover_F {
 		buyPrice = 1596500;
 		virtualSpace = 535;
-		chopTime = 120;
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1654,11 +1614,9 @@ class CfgVehicles {
 	class B_Truck_01_fuel_F : B_Truck_01_transport_F {
 		buyPrice = 3000000;
 		virtualSpace = 750;
-		conditions = "[""HEMTTs""] call ULP_fnc_hasGroupPerk && { [""FuelHaul""] call ULP_fnc_hasGroupPerk } || { [""HGVDriver""] call ULP_fnc_hasPerk && { [""LiquidTransporter""] call ULP_fnc_hasPerk } }";
-		blacklistedItems[] = { 
-			"StolenCargo",
-			"FreightCargo",
-			"HumanitarianSupplies"
+		whitelistedItems[] = { 
+			"UnprocessedOil",
+			"Fuel" 
 		};
 		class Textures {
 			class Sand : BaseTexture {
@@ -1682,7 +1640,6 @@ class CfgVehicles {
 	class B_Truck_01_box_F : B_Truck_01_transport_F {
 		buyPrice = 2610000;
 		virtualSpace = 800;
-		chopTime = 180;
 		class Textures {
 			class Sand : BaseTexture {
 				displayName = "Sand"; 
@@ -1720,6 +1677,7 @@ class CfgVehicles {
 		description = "A Personal WaterCraft of sit-down type. Its powerful engine and great maneuverability make this craft a lot of fun to drive.";
 		buyPrice = 14300;
 		virtualSpace = 5;
+		whitelistedItems[] = { "StolenCargo" };
 		class Textures {
 			class Black : BaseTexture {
 				displayName = "Black"; 
@@ -2228,21 +2186,7 @@ class CfgVehicles {
 		description = "The Caesar BTT is one of the fastest fixed-gear, single-engine piston aircraft, reaching a speed of 235 knots (435 km/h) true air speed at 25,000 feet (7,600 m).";
 		buyPrice = 1256000;
 		virtualSpace = 140;
-		blacklistedItems[] = { 
-			"FreightCargo",
-
-			"Turtle_F_Raw",
-
-			"SeizedContraband",
-			"SpaceCapsuleDataDrive",
-			"SmallGalleryPiece",
-			"MediumGalleryPiece",
-			"LargeGalleryPiece",
-			"MarkedGold",
-			"UnmarkedGold",
-			"EncryptedDrive",
-			"DecryptedDrive"
-		};
+		whitelistedItems[] = { "StolenCargo" };
 	};
 	class C_Plane_Civil_01_racing_F : C_Plane_Civil_01_F { buyPrice = 1375000; };
 

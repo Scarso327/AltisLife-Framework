@@ -30,7 +30,7 @@ if (_item isEqualTo "") exitWith {
 	["You need to selected something to put into this container!"] call ULP_fnc_hint;
 };
 
-if (_item in getArray (missionConfigFile >> "CfgVehicles" >> (typeOf _container) >> "blacklistedItems")) exitWith {
+if (_item in getArray (missionConfigFile >> "CfgVehicles" >> (typeOf _container) >> "blacklistedItems") && !(_item in getArray (missionConfigFile >> "CfgVehicles" >> (typeOf _container) >> "whitelistedItems"))) exitWith {
 	["This item can't be stored in this container..."] call ULP_fnc_hint;
 };
 

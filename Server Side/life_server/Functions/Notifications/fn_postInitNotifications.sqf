@@ -91,3 +91,13 @@ scopeName "fn_postInitNotifications";
 
 	["Conflict", format["A Conflict Zone has started at %1", _locationName], "990000"] call ULP_SRV_fnc_sendNotification;
 }] call ULP_fnc_addEventHandler;
+["onStopConflict", {
+	_this params [
+		["_group", grpNull, [grpNull]],
+		["_score", 0, [0]]
+	];
+
+	if (isNull _group) exitWith {};
+
+	["Conflict", format["%1 won the conflict with %2 points", groupId _group, _score]] call ULP_SRV_fnc_sendNotification;
+}] call ULP_fnc_addEventHandler;

@@ -10,8 +10,6 @@ _this params [
 	["_location", "", [""]]
 ];
 
-diag_log _this;
-
 private _modes = missionNamespace getVariable ["ULP_SRV_PvpModes", createHashMap];
 
 if (isNull _unit || { !isPlayer _unit } || { _modes isEqualTo createHashMap } || { !(_location in _modes) }) exitWith {};

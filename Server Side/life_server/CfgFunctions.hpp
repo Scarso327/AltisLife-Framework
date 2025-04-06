@@ -277,6 +277,8 @@ class CfgFunctions {
             file = "\life_server\Functions\PVP\Conflict";
             class startConflict {};
             class stopConflict {};
+            class spawnConflictNode {};
+            class onEachFrameConflict {};
         };
     };
 

@@ -21,7 +21,7 @@ _startTime params [ "_expectedHour", "_expectedMinute" ];
 	systemTime params [ "", "", "", "_hour", "_minute" ];
 	_this params [ "_expectedHour", "_expectedMinute" ];
 
-	_hour >= _expectedHour && { _minute >= _expectedMinute }
+	_hour isEqualTo _expectedHour && { _minute >= _expectedMinute }
 }, [_expectedHour, _expectedMinute], {
 	[] call ULP_SRV_fnc_startPvpModeVoting;
 }] call ULP_fnc_waitUntilExecute;

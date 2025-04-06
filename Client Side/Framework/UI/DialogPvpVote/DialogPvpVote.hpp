@@ -36,7 +36,7 @@ class DialogPvpVote {
             idc = 6302;
 			SAFEZONE_X(UI_X + (MARGIN_X * 2) + PERSON_LIST_W);
 			SAFEZONE_Y(BODY_Y + MARGIN_Y);
-			SAFEZONE_W(UI_WIDTH - (PERSON_LIST_W * 2));
+			SAFEZONE_W(UI_WIDTH - (MARGIN_X * 3) - PERSON_LIST_W);
 			SAFEZONE_H(BODY_HEIGHT - (MARGIN_Y * 2));
             maxSatelliteAlpha = 0.75;
             alphaFadeStartScale = 1.15;

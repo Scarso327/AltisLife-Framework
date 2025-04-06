@@ -41,6 +41,15 @@ missionNamespace setVariable ["ULP_SRV_PvpVotes", nil];
 missionNamespace setVariable ["ULP_PvpMode_VoteStartTime", nil, true];
 
 missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", _currentPvpMode];
+missionNamespace setVariable ["ULP_SRV_CurrentScores", createHashMap, true];
 
 private _onServerStart = compile getText (_mode >> "ServerEvents" >> "onStart");
+private _onServerEnd = compile getText (_mode >> "ServerEvents" >> "onStop");
+
 _location call _onServerStart;
+
+[getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxDuration"), _onServerEnd, {
+	if (isNil "ULP_SRV_CurrentPvpMode") exitWith {};
+
+	[] call _this;
+}] call ULP_fnc_waitExecute;

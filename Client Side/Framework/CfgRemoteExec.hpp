@@ -23,7 +23,13 @@ class CfgRemoteExec {
         class ULP_fnc_initVehicle {};
         class ULP_fnc_vehicleLights {};
         class ULP_fnc_invokeEvent {
-            validJipEvents[] = { "OnSpawnAirdrop", "OnSpawnShipwreck", "OnSpawnPopupCartel", "PvpVoteStarted" };
+            validJipEvents[] = { 
+                "OnSpawnAirdrop", 
+                "OnSpawnShipwreck", 
+                "OnSpawnPopupCartel", 
+                "PvpVoteStarted", 
+                "onConflictNodeSpawnedConflict" 
+            };
             jip = 1; // Used for stuff like airdrops
         };
         class ULP_fnc_receiveMessage {};

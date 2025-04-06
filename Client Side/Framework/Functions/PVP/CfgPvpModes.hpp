@@ -6,19 +6,24 @@ class CfgPvpModes {
 	class Modes {
 		class Conflict {
 			displayName = "Conflict";
+			markerColour = "Color3_FD_F";
 			maxScore = 3000;
 			maxDuration = 1 * 60 * 60; // In Seconds
+			tickDuration = 3 * 60; // In Seconds
 			class NodeTypes {
 				class LowTier {
 					displayName = "Low Tier";
+					marker = "mil_circle";
 					score = 300;
 				};
 				class MidTier {
 					displayName = "Mid Tier";
+					marker = "mil_objective";
 					score = 600;
 				};
 				class HighTier {
 					displayName = "High Tier";
+					marker = "mil_warning";
 					score = 1000;
 				};
 			};

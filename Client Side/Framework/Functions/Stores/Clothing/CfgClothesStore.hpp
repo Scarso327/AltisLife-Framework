@@ -16,7 +16,7 @@ class CfgClothesStore {
 			class U_O_PilotCoveralls { condition = "[""Police_NPAS"", 1] call ULP_fnc_hasAccess"; };
 			class U_B_CTRG_Soldier_F {
 				displayName = "SCO19 Uniform";
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
+				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess || { [""Police_SFO"", 1] call ULP_fnc_hasAccess }";
 				class textures { 
 					class SCO19 {}; 
 					class AFO {};
@@ -32,7 +32,7 @@ class CfgClothesStore {
 			};
 			class U_B_CTRG_Soldier_2_Arid_F {
 				displayName = "SCO19 Command Uniform";
-				condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO"", 4] call ULP_fnc_hasAccess";
 				class textures { 
 					class SCO19 {}; 
 					class AFO {};
@@ -40,15 +40,15 @@ class CfgClothesStore {
 			};
 			class U_B_GhillieSuit {
 				displayName = "SCO19 Ghillie Suit";
-				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess";
+				condition = "[""Police_SCO"", 3] call ULP_fnc_hasAccess";
 				class textures { 
 					class SCO19 {}; 
 					class AFO {};
 				};
 			};
-			class U_BG_Guerrilla_6_1 { condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; };
+			class U_BG_Guerrilla_6_1 { condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess"; };
 			class U_O_R_Gorka_01_black_F { 
-				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }"; 
+				condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess || { [""Police_RPU"", 2] call ULP_fnc_hasAccess }"; 
 				class textures { 
 					class RPU {}; 
 					class NCA {}; 
@@ -88,12 +88,12 @@ class CfgClothesStore {
 			};
 			class H_HelmetB_plain_blk { 
 				displayName = "Balistic Helmet";
-				condition = "[""Police_NCA"", 1] call ULP_fnc_hasAccess"; 
+				condition = "[""Police_NCA"", 2] call ULP_fnc_hasAccess"; 
 				class Textures { class H_HelmetB_plain_blk {}; };
 			};
 			class H_HelmetSpecB_blk { 
 				displayName = "Operation Helmet";
-				condition = "[""Police_SCO"", 1] call ULP_fnc_hasAccess || { [""Police_Main"", 4] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }"; 
+				condition = "[""Police_SCO"", 2] call ULP_fnc_hasAccess || { [""Police_Main"", 4] call ULP_fnc_hasAccess && { [""Police_SFO"", 1] call ULP_fnc_hasAccess } }"; 
 				class Textures { class H_HelmetSpecB_blk {}; };
 			};
 		};
@@ -148,7 +148,7 @@ class CfgClothesStore {
 				class Textures { class V_PlateCarrier1_blk {}; };
 			};
 			class V_PlateCarrier2_blk {
-				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 2] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false] } } }";
+				condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess } || { [""Police_Main"", 2] call ULP_fnc_hasAccess && { missionNamespace getVariable [""ULP_SRV_Crime_HMSLiberty"", false] || { missionNamespace getVariable [""ULP_SRV_Crime_HMTreasury"", false] } || { missionNamespace getVariable [""ULP_SRV_Crime_PoliceEvidenceStorage"", false] } } } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && (count ([""Police""] call ULP_fnc_allMembers)) < 8 }";
 				class Textures { class V_PlateCarrier2_blk {}; };
 			};
 			class V_RebreatherB {

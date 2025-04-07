@@ -18,7 +18,7 @@ if !(_query isEqualTo "" || { _query isEqualTo [] }) then {
 	_candidates = _query select {
 		_x params ["", "", "", "", "_groupType", "_groupLevel"];
 
-		private _groupTypeCfg = missionConfigFile >> "CfgGroups" >> "Types" >> _groupType >> "Perks" >> "Governor";
+		private _groupTypeCfg = missionConfigFile >> "CfgGroups" >> "Types" >> _groupType >> "Perks" >> "Governorship";
 
 		(isClass _groupTypeCfg && { getNumber (_groupTypeCfg >> "level") <= _groupLevel })
 	};

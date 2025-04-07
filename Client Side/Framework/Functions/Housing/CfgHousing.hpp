@@ -226,7 +226,7 @@ class CfgHousing {
 				breakIn = 15 * 60;
 			};
 			spawnPos[] = {0,0,0};
-			condition = "[] call ULP_fnc_isGroup && { [""DMT""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
+			condition = "[] call ULP_fnc_isGroup && { [""MilitaryTower""] call ULP_fnc_hasGroupPerk } && { [] call ULP_fnc_isGroupOwner }";
 			
 			class Storage {
 				object = "CargoNet_01_box_F";

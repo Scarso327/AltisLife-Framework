@@ -32,10 +32,11 @@ if (_sellPrice > 0) then {
 
 			if !(isNull _object) then {
 				private _owner = (_object getVariable ["owner", []]) param [0, grpNull];
-				if !(isNull _owner) then {
+				if !(isNull _owner) then { 
 					if (isClass (_x >> "Drug")) then {
 						if (_owner isEqualTo (group player)) then {
 							_sellPrice = _sellPrice * getNumber (_x >> "Drug" >> "extraPay");
+							if (["Freight"] call ULP_fnc_hasGroupPerk) then { _sellPrice = _sellPrice * 1.1; };
 						} else {
 							private _tax = _sellPrice * getNumber (_x >> "Drug" >> "saleTax");
 							_cartelTaxes pushBack [_owner call BIS_fnc_netId, _tax];

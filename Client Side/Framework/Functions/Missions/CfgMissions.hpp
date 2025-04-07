@@ -355,7 +355,7 @@ class CfgMissions {
 		name = "Corporate Freight";
 		description = "You need to deliver the given corporate freight to %1";
 		factions[] = { "Civilian" };
-		condition = "[""Freight""] call ULP_fnc_hasGroupPerk";
+		condition = "[""FreightMissions""] call ULP_fnc_hasGroupPerk";
 		eachFrame = "_this call ULP_fnc_onEachFrameCargoRun";
 		onClaimed = "";
 		onFinished = "_this call ULP_fnc_finishCargoRun";
@@ -397,7 +397,7 @@ class CfgMissions {
 	class FuelHauling : CorporateFreight {
 		name = "Fuel Hauling";
 		description = "You need to deliver fuel to %1";
-		condition = "[""FuelHaul""] call ULP_fnc_hasGroupPerk";
+		condition = "[""FuelHauling""] call ULP_fnc_hasGroupPerk";
 		vehicleRequirement[] = { { "Car" }, 30 };
 		cargoItem = "Fuel";
 		class Locations {
@@ -614,7 +614,7 @@ class CfgMissions {
 	class CriminalSmuggling : CorporateFreight {
 		name = "Cargo Smuggling";
 		description = "You need to deliver the given stolen cargo to %1";
-		condition = "true";
+		condition = "[""SeaSmuggling""] call ULP_fnc_hasGroupPerk";
 		timeDivisionAmount = 4;
 		vehicleRequirement[] = { { "Ship" }, 50 };
 		cargoItem = "StolenCargo";
@@ -647,6 +647,7 @@ class CfgMissions {
 	};
 
 	class CriminalSmugglingAir : CriminalSmuggling {
+		condition = "[""AirSmuggling""] call ULP_fnc_hasGroupPerk";
 		vehicleRequirement[] = { { "Plane" }, 50 };
 		timeDivisionAmount = 1;
 		class Locations {

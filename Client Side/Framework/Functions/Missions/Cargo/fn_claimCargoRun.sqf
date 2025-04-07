@@ -76,7 +76,7 @@ if (_missionType in ULP_Missions) exitWith {
 
 	private _vehicleCfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
 
-	if (_item in getArray ((_vehicleCfg select 1) >> "blacklistedItems")) exitWith {
+	if (_item in getArray ((_vehicleCfg select 1) >> "blacklistedItems") && !(_item in getArray ((_vehicleCfg select 1) >> "whitelistedItems"))) exitWith {
 		["This vehicle can't be used for this mission"] call ULP_fnc_hint;
 	};
 

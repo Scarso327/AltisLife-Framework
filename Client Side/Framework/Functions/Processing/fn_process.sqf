@@ -39,6 +39,7 @@ private _profession = getArray (_cfg >> "profession");
 private _leveling = getArray (_cfg >> "leveling");
 
 private _time = getNumber(_cfg >> "processTime") * _conversion;
+if (["IndustrialProcessing"] call ULP_fnc_hasGroupPerk) then { _time = _time * 0.9; };
 
 if !(_profession isEqualTo []) then {
 	private _profCal = [(_profession select 0)] call ULP_fnc_getProfessionCalculation;

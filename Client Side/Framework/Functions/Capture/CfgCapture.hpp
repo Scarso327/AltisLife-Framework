@@ -9,7 +9,7 @@ class CfgCapture {
 				markerColour = "ColorEast";
 				defaultName = "Criminal Hideout";
 			};
-			condition = "[""Hideout""] call ULP_fnc_hasGroupPerk";
+			condition = "[""CriminalHideouts""] call ULP_fnc_hasGroupPerk";
 		};
 		class EastHideout : WestHideout { displayName = "Eastern Criminal Hideout"; };
 

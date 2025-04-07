@@ -69,6 +69,7 @@ if (isClass _textureCfg) then {
 			if ([_faction, "vehicles"] call ULP_fnc_factionPresistant) then {
 				private _limit = (getNumber (_missionCfg >> "garageLimit")) + ULP_Prestige;
 				if (["VehicleCollector"] call ULP_fnc_hasPerk) then { _limit = _limit * 2 };
+				if (["CompanyCars"] call ULP_fnc_hasGroupPerk) then { _limit = _limit * 2 };
 
 				["VehicleBought", {
 					_this params [
@@ -85,6 +86,7 @@ if (isClass _textureCfg) then {
 
 						private _limit = (getNumber (missionConfigFile >> "CfgVehicles" >> (_params select 0) >> "garageLimit")) + ULP_Prestige;
 						if (["VehicleCollector"] call ULP_fnc_hasPerk) then { _limit = _limit * 2 };
+						if (["CompanyCars"] call ULP_fnc_hasGroupPerk) then { _limit = _limit * 2 };
 						
 						[_price, false, "Limit Refund"] call ULP_fnc_addMoney;
 						[([format ["Your purchase was unable to be made as you've reached the max garagable limit for %1 of <t color='#B92DE0'>%2</t>", _name, [_limit] call ULP_fnc_numberText], 

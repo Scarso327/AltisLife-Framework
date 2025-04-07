@@ -547,6 +547,10 @@ class CfgTags {
 			icon = "Data\Tags\Donator\Investor\tomSkyline.paa";
 			displayName = "Tom Skyline's";
 		};
+		class KitKnight : Alligator {
+			icon = "Data\Tags\Donator\Investor\kitKnight.paa";
+			displayName = "Kit Knight's";
+		};
 
 		/// Other
 		class Alien : Alligator  {
@@ -659,7 +663,7 @@ class CfgTags {
 			icons[] = { "ConservativeUnionistParty", "LabourParty", "LiberalDemocrats", "GreenParty", "ReformUK" };
 		};
 		class Investor {
-			icons[] = { "Tropical", "TomSkyline" };
+			icons[] = { "Tropical", "TomSkyline", "KitKnight" };
 		};
 		class Other {
 			icons[] = { "Alien", "Astronaut", "Commet", "Crown", "Diamond", "DNA", "Doughnut", "Eggplant", "Fighter", "Hamburger", "Heart", "Mars", "Moon", "Salt", "Satellite", "Saturn", "Server", "Shuttle", "Skull", "UN", "Weed", "World" };

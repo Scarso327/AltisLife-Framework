@@ -570,4 +570,8 @@ class CfgAchievements {
 		displayName = "The Great Orator";
 		description = "You have visited the ruins of an ancient theatre";
 	};
+	class KitKnight : Tropical {
+		displayName = "Femboy";
+		description = "You have visited the ruins of an ancient theatre";
+	};
 };

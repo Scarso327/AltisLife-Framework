@@ -26,7 +26,8 @@ class CfgWorlds {
 		loadingTexts[] = { 
 			"Watch one of our investors @ youtube.com/lttropical",
 			"Watch out for Tom Skyline, he's a known felon",
-			"The word is mightier than the bullet - speak before shooting"
+			"The word is mightier than the bullet - speak before shooting",
+			"Real eyes, realise, real lies"
 		};
 	};
 };

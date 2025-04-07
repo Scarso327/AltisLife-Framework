@@ -448,10 +448,6 @@ class CfgMissions {
 				pos = "fuel_station_10";
 				name = "Charkia Fuel";
 			};
-			class fuel_station_11 {
-				pos = "fuel_station_11";
-				name = "Paros Fuel";
-			};
 			class fuel_station_12 {
 				pos = "fuel_station_12";
 				name = "North Pyrgos Fuel";
@@ -475,14 +471,6 @@ class CfgMissions {
 			class fuel_station_17 {
 				pos = "fuel_station_17";
 				name = "Selakano Fuel";
-			};
-			class fuel_station_18 {
-				pos = "fuel_station_18";
-				name = "Ioannina Fuel";
-			};
-			class fuel_station_19 {
-				pos = "fuel_station_19";
-				name = "Sofia Fuel";
 			};
 			class fuel_station_20 {
 				pos = "fuel_station_20";
@@ -575,10 +563,6 @@ class CfgMissions {
 			class dms_mission_2 {
 				pos = "dms_mission_2";
 				name = "Athira Sympathiser";
-			};
-			class dms_mission_3 {
-				pos = "dms_mission_3";
-				name = "Pyrgos Sympathiser";
 			};
 			class dms_mission_4 {
 				pos = "dms_mission_4";

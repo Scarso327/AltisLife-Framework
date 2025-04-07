@@ -66,21 +66,5 @@ class CfgCartels {
 				secondaryDiscount = 0.1;
 			};
 		};
-
-		class Pefkas {
-			name = "Pefkas Bay Cartel";
-			factions[] = { "Police", "Civilian" };
-			position[] = {20600, 20116, 0};
-			zoneRadius = 50;
-			kosRadius = 300;
-			class Drug {
-				extraPay = 1.015;
-				saleTax = 0.025;
-			};
-			class Arms {
-				primaryDiscount = 0.025;
-				secondaryDiscount = 0.05;
-			};
-		};
 	};
 };

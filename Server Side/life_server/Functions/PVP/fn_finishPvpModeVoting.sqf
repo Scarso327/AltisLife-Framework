@@ -9,6 +9,7 @@ if (isNil "ULP_SRV_PvpModes") exitWith {
 	["PVP Mode vote finish failed because no vote is active..."] call ULP_fnc_logIt;
 };
 
+remoteExecCall ["", "PvpVoteStarted"]; // Remove JIP
 ["PvpVoteFinished", []] remoteExecCall ["ULP_fnc_invokeEvent", RANY];
 
 private _votes = values (missionNamespace getVariable ["ULP_SRV_PvpVotes", createHashMap]);

@@ -1,6 +1,6 @@
 class CfgPvpModes {
 	days[] = { "Saturday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
-	time[] = { 20, 15 }; // Hour, Minute
+	time[] = { 19, 15 }; // Hour, Minute
 	voteDuration = 2 * 60; // In Seconds
 
 	class Modes {
@@ -46,19 +46,23 @@ class CfgPvpModes {
 							class LocationOne {
 								displayName = "LocationOne";
 								position[] = { 7288.51,13952.9,0.00151062 };
+								radius = 100;
 							};
-							class LocationTwo {
+							class LocationTwo : LocationOne {
 								displayName = "LocationTwo";
 								position[] = { 6455.57,13771.9,0.001297 };
 							};
-							class LocationThree {
+							class LocationThree : LocationOne {
 								displayName = "LocationThree";
 								position[] = { 8317.06,13449.4,0.00215912 };
 							};
-							class LocationFour {
+							class LocationFour : LocationOne {
 								displayName = "LocationFour";
 								position[] = { 6425.35,14577.9,0.00155258 };
 							};
+						};
+						class Markers {
+
 						};
 					};
 				};

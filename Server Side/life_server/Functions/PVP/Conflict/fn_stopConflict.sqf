@@ -7,8 +7,10 @@ scopeName "fn_stopConflict";
 
 {
 	private _marker = _y getVariable ["marker", ""];
+	private _zone = _y getVariable ["zone", ""];
 
 	deleteMarker _marker;
+	deleteMarker _zone;
 	deleteVehicle _y;
 
 	remoteExecCall ["", _x]; // Remove JIP
@@ -20,6 +22,7 @@ missionNamespace setVariable ["ULP_SRV_PvpConflictTick", nil];
 missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", nil];
 
 [ULP_SRV_PvpConflictEachFrameHandle] call ULP_fnc_removeEachFrame;
+missionNamespace setVariable ["ULP_SRV_PvpConflictEachFrameHandle", nil];
 
 private _winnerGroupId = -1; 
 private _highest = 0;

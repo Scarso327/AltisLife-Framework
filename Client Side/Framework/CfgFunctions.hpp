@@ -857,6 +857,9 @@ class CfgFunctions {
 			class neutralise {};
 			class ownsSite {};
 			class preInitCapture { preInit=1; };
+			class zoneCapture {};
+			class addZoneCaptureEachFrame {};
+			class removeZoneCaptureEachFrame {};
 		};
 
 		class Government {

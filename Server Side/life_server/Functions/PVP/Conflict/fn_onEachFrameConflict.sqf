@@ -30,8 +30,14 @@ private _end = false;
 		} else {
 			private _location = _y getVariable ["location", configNull];
 			private _marker = _y getVariable ["marker", ""];
+			private _zone = _y getVariable ["area", ""];
+
+			diag_log _x;
+			diag_log _y;
+			diag_log _zone;
 
 			deleteMarker _marker;
+			deleteMarker _zone;
 			deleteVehicle _y;
 
 			remoteExecCall ["", _x];

@@ -1101,6 +1101,7 @@ class CfgVehicles {
 		description = "The Ifrit is a MRAP vehicle designed and manufactured in Russia. Its strengths lie in reliability in extreme weather conditions and crew protection.";
 		buyPrice = 5500000;
 		virtualSpace = 65;
+		turrets[] = {};
 		class Textures {
 			// Civilian
 			class Hex : BaseTexture { 
@@ -1175,6 +1176,7 @@ class CfgVehicles {
 		description = "The Strider is a medium all-terrain vehicle with amphibious capability and enhanced crew protection, designed for reconnaissance and troop transport roles.";
 		buyPrice = 3550000;
 		virtualSpace = 65;
+		turrets[] = {};
 		class Textures {
 			class Tan : BaseTexture { 
 				displayName = "Tan";

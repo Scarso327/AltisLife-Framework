@@ -261,4 +261,5 @@ class CfgTitles {
 	};
 	class TomSkyline : Tropical { displayName = "Red Bra Enthusiast"; };
 	class RyanDelta : Tropical { displayName = "The Great Orator"; };
+	class KitKnight : Tropical { displayName = "Waifu"; };
 };

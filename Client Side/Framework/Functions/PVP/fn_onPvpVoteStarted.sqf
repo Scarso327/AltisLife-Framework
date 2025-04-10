@@ -7,6 +7,8 @@ scopeName "fn_onPvpVoteStarted";
 
 if !(hasInterface) exitWith {};
 
+if !([["NotifyConflict", "Notifications"] call ULP_fnc_getOption] call ULP_fnc_bool) exitWith {};
+
 _this params [ "_modes" ];
 
 ULP_PVPModes = _modes;

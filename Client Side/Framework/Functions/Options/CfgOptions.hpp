@@ -180,8 +180,8 @@ class CfgOptions {
 		};
 	};
 
-	class Cartels {
-		title = "Cartels";
+	class Notifications {
+		title = "Notifications";
 
 		class NotifyPayment {
 			name = "Display Cartel Payments";
@@ -189,6 +189,11 @@ class CfgOptions {
 			type = "DROPDOWN";
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 			condition = "true";
+		};
+
+		class NotifyConflict : NotifyPayment {
+			name = "Display Conflict Messages";
+			tooltip = "When enabled, you'll recieve messages for conflict votes and updates.";
 		};
 	};
 

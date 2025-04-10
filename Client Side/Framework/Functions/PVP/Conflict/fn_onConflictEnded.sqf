@@ -10,7 +10,7 @@ _this params [
 	["_score", 0, [0]]
 ];
 
-if (!hasInterface) exitWith {};
+if (!hasInterface || { !([["NotifyConflict", "Notifications"] call ULP_fnc_getOption] call ULP_fnc_bool) }) exitWith {};
 
 if (isNull _group) exitWith {
 	["<t color='#ff0000' size='1.5px'>Conflict<br/></t><t color='#ffffff' size='1px'>The conflict ended with no winners"] call ULP_fnc_hint;

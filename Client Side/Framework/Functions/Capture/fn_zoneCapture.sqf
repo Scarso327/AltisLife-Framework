@@ -69,7 +69,7 @@ switch (_mode) do {
 			private _nextTick = _obj getVariable ["nextTick", diag_tickTime];
 			if (_nextTick > diag_tickTime || { !(_status isEqualTo "CAPTURING") }) exitWith {};
 
-			_obj setVariable ["nextTick", diag_tickTime + 2];
+			_obj setVariable ["nextTick", diag_tickTime + 0.5];
 
 			private _progress = _obj getVariable ["progress", 0];
 			_progress = _progress + 0.01;

@@ -22,9 +22,23 @@ switch (_mode) do {
 	case 0: {
 		if (_zoneName isEqualTo "") exitWith {};
 
+		if !(isNull _captureCtrl) then {
+			ctrlDelete _captureCtrl;
+		};
+
 		_captureCtrl = _display ctrlCreate ["ULP_CartelHud", -1];
 		_display setVariable ["zoneCaptureCtrl", _captureCtrl];
 		_captureCtrl ctrlCommit 0;
+
+		(ctrlPosition _captureCtrl) params ["", "_y", "", "_h"];
+
+		_captureCtrl ctrlSetPositionY ((0 * safezoneH + safezoneY) - _h);
+		_captureCtrl ctrlSetFade 1;
+		_captureCtrl ctrlCommit 0;
+
+		_captureCtrl ctrlSetPositionY _y;
+		_captureCtrl ctrlSetFade 0;
+		_captureCtrl ctrlCommit 0.5;
 
 		_captureCtrl setVariable ["zoneName", _zoneName];
 
@@ -88,8 +102,14 @@ switch (_mode) do {
 	case 1: {
 
 		if !(isNull _captureCtrl) then {
+			(ctrlPosition _captureCtrl) params ["", "", "", "_h"];
+
+			_captureCtrl ctrlSetPositionY ((0 * safezoneH + safezoneY) - _h);
+			_captureCtrl ctrlSetFade 1;
+			_captureCtrl ctrlCommit 0.5;
+
 			_zoneName = _captureCtrl getVariable ["zoneName", _zoneName];
-			ctrlDelete _captureCtrl;
+			[{ (ctrlFade _this) >= 1 }, _captureCtrl, { ctrlDelete _this; }] call ULP_fnc_waitUntilExecute;
 		};
 
 		_obj setVariable ["progress", nil];

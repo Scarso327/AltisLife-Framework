@@ -215,12 +215,12 @@ class CfgVehicleStores {
 			class O_Truck_03_covered_F {};
 			class O_Truck_03_ammo_F {};
 			class O_Truck_03_fuel_F {};
-			class B_Truck_01_cargo_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
-			class B_Truck_01_transport_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
-			class B_Truck_01_covered_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
-			class B_Truck_01_ammo_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
-			class B_Truck_01_fuel_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
-			class B_Truck_01_box_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk"; };
+			class B_Truck_01_cargo_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk }"; };
+			class B_Truck_01_transport_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk }"; };
+			class B_Truck_01_covered_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk }"; };
+			class B_Truck_01_ammo_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk }"; };
+			class B_Truck_01_fuel_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk }"; };
+			class B_Truck_01_box_F { condition = "[""HEMTTTrucks""] call ULP_fnc_hasGroupPerk || { [""HGVDriver""] call ULP_fnc_hasPerk }"; };
 		};
 	};
 
@@ -327,7 +327,7 @@ class CfgVehicleStores {
 			class B_CTRG_LSV_01_light_F {};
 			class B_LSV_01_unarmed_black_F {};
 			class O_LSV_02_unarmed_F {};
-			class O_MRAP_02_F { condition = "[""Ifrits""] call ULP_fnc_hasGroupPerk"; };
+			class O_MRAP_02_F { condition = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }"; };
 			class I_MRAP_03_F {};
 			class C_Van_01_transport_F {};
 			class C_Van_01_box_F {};
@@ -360,7 +360,7 @@ class CfgVehicleStores {
 			class B_LSV_01_unarmed_black_F {};
 			class O_LSV_02_armed_black_F {};
 			class O_LSV_02_unarmed_F {};
-			class O_MRAP_02_F { condition = "[""Ifrits""] call ULP_fnc_hasGroupPerk"; };
+			class O_MRAP_02_F { condition = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }"; };
 			class I_MRAP_03_F {};
 			class C_Van_01_transport_F {};
 			class C_Van_01_box_F {};
@@ -391,7 +391,7 @@ class CfgVehicleStores {
 			class B_CTRG_LSV_01_light_F {};
 			class B_LSV_01_unarmed_black_F {};
 			class O_LSV_02_unarmed_F {};
-			class O_MRAP_02_F { condition = "[""Ifrits""] call ULP_fnc_hasGroupPerk"; };
+			class O_MRAP_02_F { condition = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }"; };
 			class I_MRAP_03_F {};
 			class B_Heli_Light_01_F {};
 			class O_Heli_Transport_04_black_F {};

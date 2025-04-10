@@ -102,6 +102,9 @@ switch (_mode) do {
 	case 1: {
 
 		if !(isNull _captureCtrl) then {
+			private _uiZone = _captureCtrl getVariable ["zoneName", _zoneName];
+			if !(_uiZone isEqualTo _zoneName) exitWith {};
+
 			(ctrlPosition _captureCtrl) params ["", "", "", "_h"];
 
 			_captureCtrl ctrlSetPositionY ((0 * safezoneH + safezoneY) - _h);

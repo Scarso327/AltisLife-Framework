@@ -229,7 +229,7 @@ class CfgGroups {
 	class Leveling {
 		baseXp = 2500;
 		xpMultiplier = 1.35;
-		maxLevel = 5;
+		maxLevel = 10;
 
 		class XP {
 			class HoldingCartel { amount = 10; };

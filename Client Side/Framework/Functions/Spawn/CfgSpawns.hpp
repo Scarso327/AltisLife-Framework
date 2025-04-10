@@ -231,11 +231,12 @@ class CfgSpawns {
             icon = "Data\UI\Spawns\pyrgos.paa";
         };
 
-        class ZarosOutpost : SofiaOutpost {
+        class ZarosOutpost : OldPyrgosStation {
             displayName = "Zaros Outpost";
             marker = "dms_spawn_02";
+            icon = "Data\UI\Spawns\sofia.paa";
         };
-        class OreokastroOutpost : SofiaOutpost {
+        class OreokastroOutpost : OldPyrgosStation {
             displayName = "Oreokastro Outpost";
             marker = "dms_spawn_03";
         };

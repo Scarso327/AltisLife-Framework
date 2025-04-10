@@ -94,10 +94,11 @@ scopeName "fn_postInitNotifications";
 ["onStopConflict", {
 	_this params [
 		["_group", grpNull, [grpNull]],
-		["_score", 0, [0]]
+		["_score", 0, [0]],
+		["_reward", 0, [0]]
 	];
 
 	if (isNull _group) exitWith {};
 
-	["Conflict", format["%1 won the conflict with %2 points", groupId _group, _score]] call ULP_SRV_fnc_sendNotification;
+	["Conflict", format["%1 won the conflict with %2 points winning £%3", groupId _group, [_score] call ULP_fnc_numberText, [_reward] call ULP_fnc_numberText]] call ULP_SRV_fnc_sendNotification;
 }] call ULP_fnc_addEventHandler;

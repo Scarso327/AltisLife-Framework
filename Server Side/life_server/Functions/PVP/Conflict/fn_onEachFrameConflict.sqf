@@ -29,12 +29,9 @@ private _end = false;
 			_y setVariable ["score", _newScore, true];
 		} else {
 			private _location = _y getVariable ["location", configNull];
+			private _node = _y getVariable ["nodeCfgName", ""];
 			private _marker = _y getVariable ["marker", ""];
 			private _zone = _y getVariable ["area", ""];
-
-			diag_log _x;
-			diag_log _y;
-			diag_log _zone;
 
 			deleteMarker _marker;
 			deleteMarker _zone;
@@ -47,7 +44,7 @@ private _end = false;
 			[_x, _location] call ULP_SRV_fnc_spawnConflictNode;
 
 			// Only remove after spawning to ensure we don't respawn the same point
-			ULP_SRV_PvpConflictActiveLocations = ULP_SRV_PvpConflictActiveLocations - [_x];
+			ULP_SRV_PvpConflictActiveLocations = ULP_SRV_PvpConflictActiveLocations - [_node];
 		};
 
 		private _score = ULP_SRV_CurrentScores getOrDefault [_groupId, 0];

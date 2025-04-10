@@ -7,7 +7,7 @@ scopeName "fn_stopConflict";
 
 {
 	private _marker = _y getVariable ["marker", ""];
-	private _zone = _y getVariable ["zone", ""];
+	private _zone = _y getVariable ["area", ""];
 
 	deleteMarker _marker;
 	deleteMarker _zone;

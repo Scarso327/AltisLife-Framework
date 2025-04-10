@@ -84,7 +84,7 @@ class CfgGroups {
 				};
 				class TowerExpansion {
 					displayName = "Tower Expansion";
-					icon = "Data\UI\Perks\partCarrier.paa"; // DONE
+					icon = "Data\UI\Perks\partsCarrier.paa"; // DONE
 					description = "Unlocks a car garage and rebel stores";
 					level = 10;
 				};
@@ -151,7 +151,7 @@ class CfgGroups {
 				};
 				class OfficeExpansion {
 					displayName = "Office Expansion";
-					icon = "Data\UI\Perks\partCarrier.paa"; // DONE
+					icon = "Data\UI\Perks\partsCarrier.paa"; // DONE
 					description = "Unlocks a car garage and security stores";
 					level = 10;
 				};
@@ -218,7 +218,7 @@ class CfgGroups {
 				};
 				class HQExpansion {
 					displayName = "HQ Expansion";
-					icon = "Data\UI\Perks\partCarrier.paa"; // DONE
+					icon = "Data\UI\Perks\partsCarrier.paa"; // DONE
 					description = "Unlocks a car garage and protection stores";
 					level = 10;
 				};

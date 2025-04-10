@@ -5,6 +5,8 @@
 #include "..\..\script_macros.hpp"
 scopeName "fn_preInitCapture";
 
+ULP_ZoneCaptureEachFrameHandles = createHashMap;
+
 ["SiteCaptured", {
 	_this params [
 		["_location", objNull, [objNull]],

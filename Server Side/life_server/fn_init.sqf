@@ -159,6 +159,7 @@ _date call ULP_SRV_fnc_initStats;
 [] call ULP_SRV_fnc_initCartels;
 [] call ULP_SRV_fnc_initServerEvents;
 [] call ULP_SRV_fnc_initCommunityGoals;
+[] call ULP_SRV_fnc_initPvpModes;
 
 [] call ULP_SRV_fnc_handleFog;
 [] call ULP_SRV_fnc_handleRain;

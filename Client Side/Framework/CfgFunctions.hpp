@@ -857,6 +857,9 @@ class CfgFunctions {
 			class neutralise {};
 			class ownsSite {};
 			class preInitCapture { preInit=1; };
+			class zoneCapture {};
+			class addZoneCaptureEachFrame {};
+			class removeZoneCaptureEachFrame {};
 		};
 
 		class Government {
@@ -928,6 +931,21 @@ class CfgFunctions {
 			class isOnTutorial {};
 			class triggerTutorialStage {};
 			class shouldDoTutorial {};
+		};
+
+		class PVP {
+			file = "Functions\PVP";
+			class preInitPvpModes { preInit=1; };
+			class onPvpVoteStarted {};
+			class onPvpVoteFinished {};
+		};
+
+		class PVPConflict {
+			file = "Functions\PVP\Conflict";
+			class onConflictNodeSpawned {};
+			class onConflictNodeCaptured {};
+			class onConflictStarted {};
+			class onConflictEnded {};
 		};
 	};
 
@@ -1074,6 +1092,15 @@ class CfgFunctions {
 			class DialogVehicleFactory_OnLoad {};
 			class DialogVehicleFactory_OnUnload {};
 			class DialogVehicleFactory_PlaceOrder {};
+		};
+
+		class DialogPvpVote {
+			file = "UI\DialogPvpVote\Functions";
+			class DialogPvpVote_OnLoad {};
+			class DialogPvpVote_OnUnload {};
+			class DialogPvpVote_Vote {};
+			class DialogPvpVote_OnListChanged {};
+			class DialogPvpVote_OnMapDraw {};
 		};
 	};
 };

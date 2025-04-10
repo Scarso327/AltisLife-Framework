@@ -78,3 +78,26 @@ scopeName "fn_postInitNotifications";
 
 ["OnSpawnShipwreck", { [_this param [0, objNull, [objNull]], "Shipwreck"] call ULP_SRV_fnc_buildEventNotification; }] call ULP_fnc_addEventHandler;
 ["OnClaimedShipwreck", { ["Shipwreck", "The shipwreck has been claimed"] call ULP_SRV_fnc_sendNotification; }] call ULP_fnc_addEventHandler;
+
+["PvpVoteStarted", { ["PVP Vote", "Voting for the next PVP event has started", "1155CC"] call ULP_SRV_fnc_sendNotification; }] call ULP_fnc_addEventHandler;
+["onStartConflict", {
+	_this params [
+		["_locationCfg", configNull, [configNull]]
+	];
+
+	if (isNull _locationCfg) exitWith {};
+
+	private _locationName = getText (_locationCfg >> "displayName");
+
+	["Conflict", format["A Conflict Zone has started at %1", _locationName], "990000"] call ULP_SRV_fnc_sendNotification;
+}] call ULP_fnc_addEventHandler;
+["onStopConflict", {
+	_this params [
+		["_group", grpNull, [grpNull]],
+		["_score", 0, [0]]
+	];
+
+	if (isNull _group) exitWith {};
+
+	["Conflict", format["%1 won the conflict with %2 points", groupId _group, _score]] call ULP_SRV_fnc_sendNotification;
+}] call ULP_fnc_addEventHandler;

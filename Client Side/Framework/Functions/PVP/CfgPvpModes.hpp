@@ -42,6 +42,7 @@ class CfgPvpModes {
 				class Altis {
 					class TestLocation {
 						displayName = "Test Location";
+						position[] = { 7288.51, 13952.9, 0 };
 						class Nodes {
 							class LocationOne {
 								displayName = "LocationOne";
@@ -62,7 +63,13 @@ class CfgPvpModes {
 							};
 						};
 						class Markers {
-
+							class RedzoneExample {
+								position[] = { { 7288.51, 13952.9, 0 }, 0 };
+                                size[] = { 1000, 1000 };
+								shape = "RECTANGLE";
+								brush = "FDiagonal";
+								colour = "ColorRed";
+							};
 						};
 					};
 				};

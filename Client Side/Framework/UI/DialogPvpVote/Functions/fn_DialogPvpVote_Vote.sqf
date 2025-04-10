@@ -13,9 +13,9 @@ if (isNull _display) exitWith {};
 private _list = _display displayCtrl 6303;
 
 private _index = tvCurSel _list;
-private _selected = _list tvData _index;
+private _selected = parseSimpleArray (_list tvData _path);
 
-if (_selected isEqualTo "") exitWith {};
+if (_selected isEqualTo []) exitWith {};
 
 if ((_display getVariable ["Cooldown", 0]) > time) exitWith {
 	["Please wait before preforming this action again"] call ULP_fnc_hint;

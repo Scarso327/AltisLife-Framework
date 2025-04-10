@@ -34,6 +34,7 @@ class DialogPvpVote {
 
 		class MapView : Life_RscMapControl {
             idc = 6302;
+			onDraw = "_this call ULP_UI_fnc_DialogPvpVote_OnMapDraw";
 			SAFEZONE_X(UI_X + (MARGIN_X * 2) + PERSON_LIST_W);
 			SAFEZONE_Y(BODY_Y + MARGIN_Y);
 			SAFEZONE_W(UI_WIDTH - (MARGIN_X * 3) - PERSON_LIST_W);
@@ -73,6 +74,7 @@ class DialogPvpVote {
 		class ModeList : Life_RscTree {
 			idc = 6303;
 			colorBackground[] = INNER_BODY_COLOUR;
+			onTreeSelChanged = "_this call ULP_UI_fnc_DialogPvpVote_OnListChanged;";
 			SAFEZONE_X(UI_X + MARGIN_X);
 			SAFEZONE_Y(BODY_Y + MARGIN_Y);
 			SAFEZONE_W(PERSON_LIST_W);

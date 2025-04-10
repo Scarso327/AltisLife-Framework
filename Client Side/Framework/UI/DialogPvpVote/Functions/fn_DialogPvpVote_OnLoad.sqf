@@ -29,7 +29,7 @@ tvClear _list;
 	private _locationName = getText (_location >> "displayName");
 
 	private _index = _list tvAdd [[], format["%1 at %2", _modeName, _locationName]];
-	_list tvSetData [[_index], format["%1%2", configName _mode, configName _location]];
+	_list tvSetData [[_index], str [configName _mode, configName _location]];
 } forEach ULP_PVPModes;
 
 private _ctrlTitle = _display displayCtrl 6301;

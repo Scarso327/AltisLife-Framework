@@ -1100,6 +1100,8 @@ class CfgFunctions {
 			class DialogPvpVote_OnLoad {};
 			class DialogPvpVote_OnUnload {};
 			class DialogPvpVote_Vote {};
+			class DialogPvpVote_OnListChanged {};
+			class DialogPvpVote_OnMapDraw {};
 		};
 	};
 };

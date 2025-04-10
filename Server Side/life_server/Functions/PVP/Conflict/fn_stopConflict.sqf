@@ -25,12 +25,16 @@ missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", nil];
 missionNamespace setVariable ["ULP_SRV_PvpConflictEachFrameHandle", nil];
 
 private _winnerGroupId = -1; 
-private _highest = 0;
+
+private _maxScore = getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxScore");
+private _highestScore = 0;
+private _sumScore = 0;
 
 {
-	if (_y > _highest) then {
+	_sumScore = _sumScore + _y;
+	if (_y > _highestScore) then {
 		_winnerGroupId = _x;
-		_highest = _y;
+		_highestScore = _y;
 	};
 } forEach ULP_SRV_CurrentScores;
 
@@ -38,4 +42,17 @@ missionNamespace setVariable ["ULP_SRV_CurrentScores", nil];
 
 private _winningGroup = [_winnerGroupId] call ULP_fnc_getGroupById;
 
-["onStopConflict", [_winningGroup, _highest]] remoteExecCall ["ULP_fnc_invokeEvent", RANY];
+private _baseReward = getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "baseReward");
+private _multipliedReward = getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "multipliedReward");
+
+private _reward = _baseReward + (_multipliedReward * _sumScore * _highestScore / _maxScore);
+
+if !(isNull _winningGroup) then {
+	[_winnerGroupId, _reward, true] call ULP_SRV_fnc_updateGroupFunds;
+
+	{
+		[_winningGroup, configName _x, 0.05] call ULP_SRV_fnc_addGroupBuff;
+	} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgGroups" >> "Buffs"));
+};
+
+["onStopConflict", [_winningGroup, _highestScore, _reward]] remoteExecCall ["ULP_fnc_invokeEvent", RANY];

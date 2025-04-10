@@ -943,7 +943,6 @@ class CfgFunctions {
 		class PVPConflict {
 			file = "Functions\PVP\Conflict";
 			class onConflictNodeSpawned {};
-			class onConflictNodeCapturing {};
 			class onConflictNodeCaptured {};
 			class onConflictStarted {};
 			class onConflictEnded {};

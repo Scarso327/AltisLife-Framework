@@ -255,7 +255,7 @@ class CfgGroups {
 		class Missions {
 			displayName = "Increased Payout from Missions";
 			icon = "Data\UI\GroupBuffs\missions.paa";
-			max = 0.25;
+			max = 0.5;
 		};
 		class Lockpicking : Missions {
 			displayName = "Increased Lockpicking Speed";

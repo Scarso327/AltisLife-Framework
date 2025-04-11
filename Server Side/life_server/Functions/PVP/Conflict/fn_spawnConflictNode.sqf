@@ -11,7 +11,7 @@ _this params [
 ];
 
 private _node = selectRandom ("isClass _x && { !((configName _x) in ULP_SRV_PvpConflictActiveLocations) }" configClasses (_location >> "Nodes"));
-if (isNil "_node" || { _nodeName in ULP_SRV_PvpConflictNodes }) exitWith { false };
+if (isNil "_node" || { _nodeName in ULP_SRV_PvpConflictNodes }) exitWith { configNull };
 
 private _nodeColour = getText (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "markerColour");
 private _nodeType = selectRandom ("isClass _x" configClasses (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "NodeTypes"));
@@ -31,19 +31,17 @@ _marker setMarkerColor _nodeColour;
 _marker setMarkerSize [0.5, 0.5];
 _marker setMarkerText getText (_node >> "displayName");
 
-private _nodeCfgName = configName _node;
-
 private _obj = createSimpleObject ["A3\Weapons_f\empty.p3d", _pos, false];
 _obj setVariable ["node", _nodeName];
-_obj setVariable ["nodeCfgName", _nodeCfgName];
+_obj setVariable ["nodeCfg", _node, true];
 _obj setVariable ["location", _location];
 _obj setVariable ["marker", _marker];
 _obj setVariable ["area", _zone];
 _obj setVariable ["score", getNumber (_nodeType >> "score"), true];
 
 ULP_SRV_PvpConflictNodes set [_nodeName, _obj];
-ULP_SRV_PvpConflictActiveLocations pushBackUnique _nodeCfgName;
+ULP_SRV_PvpConflictActiveLocations pushBackUnique (configName _node);
 
 ["onConflictNodeSpawnedConflict", [_obj, _nodeName, _radius]] remoteExecCall ["ULP_fnc_invokeEvent", RANY, _nodeName];
 
-true
+_node

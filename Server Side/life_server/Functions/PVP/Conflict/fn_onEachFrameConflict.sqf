@@ -36,7 +36,8 @@ private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "does
 			_y setVariable ["score", _newScore, true];
 		} else {
 			private _location = _y getVariable ["location", configNull];
-			private _node = _y getVariable ["nodeCfgName", ""];
+			private _node = _y getVariable ["nodeCfg", configNull];
+			private _nodeName = configName _node;
 			private _marker = _y getVariable ["marker", ""];
 
 			deleteMarker _marker;
@@ -47,10 +48,12 @@ private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "does
 
 			ULP_SRV_PvpConflictNodes deleteAt _x;
 
-			[_x, _location] call ULP_SRV_fnc_spawnConflictNode;
+			private _nextNode = [_x, _location] call ULP_SRV_fnc_spawnConflictNode;
+
+			["onConflictNodeDepletedConflict", [_node, _nextNode]] remoteExecCall ["ULP_fnc_invokeEvent", RANY];
 
 			// Only remove after spawning to ensure we don't respawn the same point
-			ULP_SRV_PvpConflictActiveLocations = ULP_SRV_PvpConflictActiveLocations - [_node];
+			ULP_SRV_PvpConflictActiveLocations = ULP_SRV_PvpConflictActiveLocations - [_nodeName];
 		};
 
 		private _score = ULP_SRV_CurrentScores getOrDefault [_groupId, 0];

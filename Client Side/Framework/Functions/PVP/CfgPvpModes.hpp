@@ -32,6 +32,7 @@ class CfgPvpModes {
 			class Events {
 				onConflictNodeSpawned = "_this call ULP_fnc_onConflictNodeSpawned";
 				onConflictNodeCaptured = "_this call ULP_fnc_onConflictNodeCaptured";
+				onConflictNodeDepleted = "_this call ULP_fnc_onConflictNodeDepleted";
 				onStart = "_this call ULP_fnc_onConflictStarted";
 				onStop = "_this call ULP_fnc_onConflictEnded";
 			};

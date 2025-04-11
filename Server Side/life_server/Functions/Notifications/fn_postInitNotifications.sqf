@@ -91,6 +91,32 @@ scopeName "fn_postInitNotifications";
 
 	["Conflict", format["A Conflict Zone has started at %1", _locationName], "990000"] call ULP_SRV_fnc_sendNotification;
 }] call ULP_fnc_addEventHandler;
+["onConflictNodeCapturedConflict", {
+	_this params [
+		["_zone", objNull, [objNull]],
+		["_group", grpNull, [grpNull]]
+	];
+	
+	private _nodeCfg = _zone getVariable ["nodeCfg", configNull];
+	if (isNull _nodeCfg || { isNull _group }) exitWith {};
+
+	["Conflict", format ["%1 has been captured by %2", getText (_nodeCfg >> "displayName"), [_group] call ULP_fnc_getGroupName], "990000"] call ULP_SRV_fnc_sendNotification;
+}] call ULP_fnc_addEventHandler;
+["onConflictNodeDepletedConflict", {
+	_this params [
+		["_previousZone", configNull, [configNull]],
+		["_newZone", configNull, [configNull]]
+	];
+
+	if (isNull _previousZone) exitWith {};
+
+	if (isNull _newZone) exitWith {
+		["Conflict", format ["%1 has been fully depleted", getText (_previousZone >> "displayName")], "990000"] call ULP_SRV_fnc_sendNotification;
+	};
+
+	["Conflict", format ["%1 has been fully depleted, %2 has spawned in it's place!",
+		getText (_previousZone >> "displayName"), getText (_newZone >> "displayName")], "990000"] call ULP_SRV_fnc_sendNotification;
+}] call ULP_fnc_addEventHandler;
 ["onStopConflict", {
 	_this params [
 		["_group", grpNull, [grpNull]],

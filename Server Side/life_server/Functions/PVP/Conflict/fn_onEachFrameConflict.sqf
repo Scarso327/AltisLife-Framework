@@ -15,12 +15,19 @@ if (_tickTime > serverTime) exitWith {};
 private _maxScore = getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxScore");
 private _nodes = + ULP_SRV_PvpConflictNodes;
 private _end = false;
+private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "doesntThreaten");
 
 {
+	private _area = _y getVariable ["area", ""];
+
 	private _winner = _y getVariable ["object_owner", grpNull];
 	private _groupId = [_winner] call ULP_fnc_groupId;
 
-	if !(isNull _winner && { _groupId isEqualTo -1 }) then {
+	private _groupsInZone = (([_area, allPlayers, ["Civilian"], { !((currentWeapon _this) in _doesNotThreaten) }] call ULP_fnc_unitsInZone) select {
+		group _x
+	});
+
+	if (!isNull _winner && { !(_groupId isEqualTo -1) } && { (count (_groupsInZone arrayIntersect _groupsInZone)) <= 1 }) then {
 		private _zoneScore = _y getVariable ["score", 0];
 		private _scoreChange = 100 min _zoneScore;
 
@@ -31,10 +38,9 @@ private _end = false;
 			private _location = _y getVariable ["location", configNull];
 			private _node = _y getVariable ["nodeCfgName", ""];
 			private _marker = _y getVariable ["marker", ""];
-			private _zone = _y getVariable ["area", ""];
 
 			deleteMarker _marker;
-			deleteMarker _zone;
+			deleteMarker _area;
 			deleteVehicle _y;
 
 			remoteExecCall ["", _x];
@@ -58,4 +64,4 @@ private _end = false;
 	if (_end) exitWith { [] call ULP_SRV_fnc_stopConflict; };
 } forEach _nodes;
 
-missionNamespace setVariable ["ULP_SRV_PvpConflictTick", serverTime + getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "tickDuration")];
+missionNamespace setVariable ["ULP_SRV_PvpConflictTick", serverTime + getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "tickDuration"), true];

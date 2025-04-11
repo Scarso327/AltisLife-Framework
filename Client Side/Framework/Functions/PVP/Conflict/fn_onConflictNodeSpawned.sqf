@@ -24,5 +24,8 @@ _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
 _trigger setTriggerStatements ["this && { (vehicle player) in thisList }", "[thisTrigger getVariable ""zoneObject"", thisTrigger getVariable ""zoneName""] call ULP_fnc_zoneCapture;", "[thisTrigger getVariable ""zoneObject"", thisTrigger getVariable ""zoneName"", 1] call ULP_fnc_zoneCapture;"];
 
 _obj setVariable ["trigger", _trigger];
+_obj setVariable ["isConflictZone", true];
+_obj setVariable ["hasPlayerTags", true];
+_obj setVariable ["name", _nodeName];
 
 [{ isNull (_this select 0) }, [_obj, _trigger], { deleteVehicle (_this select 1); }] call ULP_fnc_waitUntilExecute;

@@ -17,6 +17,6 @@ for "_i" from 0 to 2 do {
 };
 
 missionNamespace setVariable ["ULP_SRV_PvpConflictStartTime", serverTime];
-missionNamespace setVariable ["ULP_SRV_PvpConflictTick", serverTime + getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "tickDuration")];
+missionNamespace setVariable ["ULP_SRV_PvpConflictTick", serverTime + getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "tickDuration"), true];
 
 ULP_SRV_PvpConflictEachFrameHandle = ([[], { [] call ULP_SRV_fnc_onEachFrameConflict; }] call ULP_fnc_addEachFrame);

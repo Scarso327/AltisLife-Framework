@@ -18,7 +18,7 @@ scopeName "fn_stopConflict";
 
 missionNamespace setVariable ["ULP_SRV_PvpConflictNodes", nil];
 missionNamespace setVariable ["ULP_SRV_PvpConflictActiveLocations", nil];
-missionNamespace setVariable ["ULP_SRV_PvpConflictTick", nil];
+missionNamespace setVariable ["ULP_SRV_PvpConflictTick", nil, true];
 missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", nil];
 
 [ULP_SRV_PvpConflictEachFrameHandle] call ULP_fnc_removeEachFrame;

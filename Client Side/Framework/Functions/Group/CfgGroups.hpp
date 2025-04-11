@@ -97,7 +97,7 @@ class CfgGroups {
 			class Perks {
 				class IndustrialProcessing {
 					displayName = "Industrial Processing"; // DONE
-					icon = "Data\UI\Perks\rapidSuveyor.paa"; // DONE
+					icon = "Data\UI\Perks\rapidSurveyor.paa"; // DONE
 					description = "Increases processing speed by 10%";
 					level = 1;
 				};

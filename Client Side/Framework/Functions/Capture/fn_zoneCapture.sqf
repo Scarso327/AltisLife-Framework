@@ -66,6 +66,7 @@ switch (_mode) do {
 			private _group = group player;
 
 			private _status = switch (true) do {
+				case !(([_area, allPlayers, ["Police", "Civilian", "Dunamis"], { !(_this in (units (group player))) && { !((currentWeapon _this) in _doesNotThreaten) } }] call ULP_fnc_unitsInZone) isEqualTo []): { "CONTESTED" };
 				case ((_obj getVariable ["object_owner", grpNull]) isEqualTo _group): {
 					_obj setVariable ["progress", nil];
 					"CAPTURED"
@@ -74,7 +75,6 @@ switch (_mode) do {
 				case !(isNull (objectParent player)): { "IN VEHICLE" };
 				case ([player] call ULP_fnc_onDuty): { "ON DUTY" };
 				case ((currentWeapon player) in _doesNotThreaten): { "UNARMED" };
-				case (count ([_area, allPlayers, ["Police", "Civilian", "Dunamis"], { !(_this in (units (group player))) && { !((currentWeapon _this) in _doesNotThreaten) } }] call ULP_fnc_unitsInZone) > 0): { "CONTESTED" };
 				default { "CAPTURING" };
 			};
 

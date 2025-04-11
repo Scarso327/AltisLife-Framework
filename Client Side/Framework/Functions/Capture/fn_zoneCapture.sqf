@@ -96,6 +96,9 @@ switch (_mode) do {
 
 			if (_progress >= 1 && { !((_obj getVariable ["object_owner", grpNull]) isEqualTo _group) }) then {
 				_obj setVariable ["object_owner", _group, true];
+
+				// TODO - This method is supposed to be "unique" so need to think about broadcasting this uniquely?
+				["onConflictNodeCapturedConflict", [_obj, _group], true] call ULP_fnc_invokeEvent;
 			};
 		}] call ULP_fnc_addEachFrame)] call ULP_fnc_addZoneCaptureEachFrame;
 	};

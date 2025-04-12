@@ -221,7 +221,7 @@ class CfgPvpModes {
 							class redzone_frini_16 : redzone_frini_1 { position[] = { { 12669.28,21002.27,0 }, 169.018 }; };
 							class redzone_frini_17 : redzone_frini_1 { position[] = { { 12472.232,21858.979,0 }, 344.667 }; };
 							class redzone_frini_18 : redzone_frini_1 { position[] = { { 12237.77,23007.23,0 }, 353.208 }; };
-							class redzone_frini_16 : redzone_frini_1 { 
+							class redzone_frini_26 : redzone_frini_1 { 
 								position[] = { { 12321.235,22430.76,0 }, 346.549 }; 
 								size[] = { 75, 150 };
 							};

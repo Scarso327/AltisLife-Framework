@@ -64,7 +64,7 @@ if (_near isEqualTo []) exitWith {
 	_vehicle setVariable ["locked", true, true];
 	_vehicle setVariable ["processor", player, true];
 
-	private _time = getNumber(_cfg >> "processTime") * _conversion * 3;
+	private _time = getNumber(_cfg >> "processTime") * _conversion * 1.8;
 
 	[format["%1 Item(s)", getText(_cfg >> "processTitle")], _time, [_vehicle, _items, _conversion, _materials, _cfg], { 
 		(speed (_this select 0)) isEqualTo 0 && { ((_this select 0) getVariable ["processor", objNull]) isEqualTo player } }, {

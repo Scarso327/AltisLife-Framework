@@ -938,6 +938,7 @@ class CfgFunctions {
 			class preInitPvpModes { preInit=1; };
 			class onPvpVoteStarted {};
 			class onPvpVoteFinished {};
+			class isPvpLocationActive {};
 		};
 
 		class PVPConflict {

@@ -476,9 +476,8 @@ class CfgVirtualStores {
 		};
 	};
 
-	class GangWars : Blackmarket {
-		storeName = "Gang Wars Market";
-		conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+	class PVP : Blackmarket {
+		storeName = "PVP Market";
 		class Items {
 			class RationPack {};
 			class Water {};

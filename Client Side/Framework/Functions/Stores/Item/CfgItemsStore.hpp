@@ -1163,9 +1163,9 @@ class CfgItemsStore {
 		};
 	};
 
-	class GangWars {
-		storeName = "Gang Wars Store";
-		condition = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+	class PVP {
+		storeName = "PVP Store";
+		condition = "true";
 		class Rifles {
 			class hgun_PDW2000_F {};
 			class SMG_02_F {};

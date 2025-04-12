@@ -1264,9 +1264,8 @@ class CfgClothesStore {
 		};
 	};
 
-	class GangWars : Blackmarket {
-		storeName = "Gang Wars Clothing Store";
-		condition = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+	class PVP : Blackmarket {
+		storeName = "PVP Clothing Store";
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};

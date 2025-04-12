@@ -378,9 +378,8 @@ class CfgVehicleStores {
 		};
 	};
 
-	class GangWars : Base {
-		storeName = "Gang Wars Vehicles";
-		conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
+	class PVP : Base {
+		storeName = "PVP Vehicles";
 		class Vehicles {
 			class C_Quadbike_01_F {};
 			class C_Offroad_01_F {};

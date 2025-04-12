@@ -668,7 +668,7 @@ class CfgMissions {
 		name = "Humanitarian Mission";
 		description = "You need to deliver supplies to %1";
 		condition = "[""IDAP""] call ULP_fnc_hasLicense";
-		vehicleRequirement[] = { { "Car", "Helicopter" }, 10, };
+		vehicleRequirement[] = { { "Car", "Helicopter" }, 10 };
 		cargoItem = "HumanitarianSupplies";
 		class Locations {
 			class IDAP_HQ {

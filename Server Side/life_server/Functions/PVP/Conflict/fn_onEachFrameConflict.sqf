@@ -14,6 +14,7 @@ if (_tickTime > serverTime) exitWith {};
 
 private _maxScore = getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxScore");
 private _nodes = + ULP_SRV_PvpConflictNodes;
+private _scores = + ULP_SRV_CurrentScores;
 private _end = false;
 private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "doesntThreaten");
 
@@ -56,10 +57,10 @@ private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "does
 			ULP_SRV_PvpConflictActiveLocations = ULP_SRV_PvpConflictActiveLocations - [_nodeName];
 		};
 
-		private _score = ULP_SRV_CurrentScores getOrDefault [_groupId, 0];
+		private _score = _scores getOrDefault [_groupId, 0];
 		_score = (_score + _scoreChange) min _maxScore;
 
-		ULP_SRV_CurrentScores set [_groupId, _score];
+		_scores set [_groupId, _score];
 
 		_end = _score isEqualTo _maxScore;
 	};
@@ -67,4 +68,5 @@ private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "does
 	if (_end) exitWith { [] call ULP_SRV_fnc_stopConflict; };
 } forEach _nodes;
 
+missionNamespace setVariable ["ULP_SRV_CurrentScores", _scores, true];
 missionNamespace setVariable ["ULP_SRV_PvpConflictTick", serverTime + getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "tickDuration"), true];

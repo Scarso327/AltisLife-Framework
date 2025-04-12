@@ -38,9 +38,9 @@ _display setVariable ["eachFrameHandle", ([[_display, _ctrlTitle], {
 	_this params [ "_display", "_ctrlTitle" ];
 
 	private _duration = getNumber (missionConfigFile >> "CfgPvpModes" >> "voteDuration");
-	private _timeLeft = ((missionNamespace getVariable ["ULP_PvpMode_VoteStartTime", serverTime]) + _duration) - serverTime;
+	private _timeLeft = (((missionNamespace getVariable ["ULP_PvpMode_VoteStartTime", serverTime]) + _duration) - serverTime) max 0;
 
-	_ctrlTitle ctrlSetText format ["PVP Voting - %1", [_timeLeft] call BIS_fnc_secondsToString];
+	_ctrlTitle ctrlSetText format ["PVP Voting - %1", [_timeLeft, "MM:SS"] call BIS_fnc_secondsToString];
 
 	if (isNil { missionNamespace getVariable "ULP_PVPModes" }) then {
 		_display closeDisplay 1;

@@ -1103,5 +1103,12 @@ class CfgFunctions {
 			class DialogPvpVote_OnListChanged {};
 			class DialogPvpVote_OnMapDraw {};
 		};
+
+		class DialogPvpScoreboard {
+			file = "UI\DialogPvpScoreboard\Functions";
+			class DialogPvpScoreboard_OnLoad {};
+			class DialogPvpScoreboard_OnUnload {};
+			class DialogPvpScoreboard_UpdateList {};
+		};
 	};
 };

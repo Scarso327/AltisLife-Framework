@@ -34,3 +34,4 @@
 #include "DialogObjectPreview\DialogObjectPreview.hpp"
 #include "DialogVehicleFactory\DialogVehicleFactory.hpp"
 #include "DialogPvpVote\DialogPvpVote.hpp"
+#include "DialogPvpScoreboard\DialogPvpScoreboard.hpp"

@@ -95,5 +95,10 @@ class CfgChat {
 		class Vote : Players {
 			action = "[""DialogPvpVote"", _this] call ULP_UI_fnc_createDialog";
 		};
+
+		class Scoreboard {
+			action = "[""DialogPvpScoreboard"", _this] call ULP_UI_fnc_createDialog";
+			condition = "!isNil { missionNamespace getVariable ""ULP_SRV_CurrentPvpMode"" }";
+		};
 	};
 };

@@ -14,13 +14,11 @@ _this params [
 ];
 
 private _display = ["RscHUD"] call ULP_UI_fnc_getLayer;
-if (isNull _display) exitWith {};
-
 private _captureCtrl = _display getVariable ["zoneCaptureCtrl", controlNull];
 
 switch (_mode) do {
 	case 0: {
-		if (_zoneName isEqualTo "") exitWith {};
+		if (isNull _display || { _zoneName isEqualTo "" }) exitWith {};
 
 		if !(isNull _captureCtrl) then {
 			ctrlDelete _captureCtrl;

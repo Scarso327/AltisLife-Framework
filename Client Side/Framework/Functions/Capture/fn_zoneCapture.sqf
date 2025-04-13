@@ -67,7 +67,10 @@ switch (_mode) do {
 			private _status = switch (true) do {
 				case !(([_area, allPlayers, ["Police", "Civilian", "Dunamis"], { !(_this in (units (group player))) && { !((currentWeapon _this) in _doesNotThreaten) } }] call ULP_fnc_unitsInZone) isEqualTo []): { "CONTESTED" };
 				case ((_obj getVariable ["object_owner", grpNull]) isEqualTo _group): {
-					_obj setVariable ["progress", nil];
+					if !((progressPosition _ctrlProgress) isEqualTo 1) then {
+						_obj setVariable ["progress", nil];
+						_ctrlProgress progressSetPosition 1;
+					};
 					"CAPTURED"
 				};
 				case (([] call ULP_fnc_groupId) isEqualTo -1): { "MUST BE IN GROUP" };

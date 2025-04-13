@@ -269,6 +269,13 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Blackmarket""] call ULP_fnc_isPvpLocationActive }";
         };
         class Blackmarket_2 : Blackmarket_1 { marker = "conflict_spawn_blackmarket_2"; };
+
+        class Pefkas_1 : Oreokastro_1 {
+            marker = "conflict_spawn_pefkas_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Pefkas""] call ULP_fnc_isPvpLocationActive }";
+        };
+        class Pefkas_2 : Blackmarket_1 { marker = "conflict_spawn_pefkas_2"; };
+        class Pefkas_3 : Blackmarket_1 { marker = "conflict_spawn_pefkas_3"; };
     };
 
     class Malden {

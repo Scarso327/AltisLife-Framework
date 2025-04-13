@@ -465,6 +465,94 @@ class CfgPvpModes {
 							class greenzone_blackmarket_2 : greenzone_blackmarket_1 { position[] = { { 18473.2,8836.48,0 }, 0 }; };
 						};
 					};
+
+					class Pefkas {
+						displayName = "Pefkas";
+						position[] = { 21615.6,19933.3,0 };
+						class Nodes {
+							class GhostHotel {
+								displayName = "Ghost Hotel";
+								position[] = { 21969.4,21021.2,0 };
+								radius = 100;
+							};
+							class BrokenTown : GhostHotel {
+								displayName = "Broken Town";
+								position[] = { 22434,20026,0 };
+							};
+							class HillsideChurch : GhostHotel {
+								displayName = "Hillside Church";
+								position[] = { 22256.2,19361,0 };
+							};
+							class HillsideSlums : GhostHotel {
+								displayName = "Hillside Slums";
+								position[] = { 21470.8,19548,0 };
+							};
+							class ResearchFacility : GhostHotel {
+								displayName = "Research Facility";
+								position[] = { 20893.2,19227.1,0 };
+							};
+							class Watchtower : GhostHotel {
+								displayName = "Watchtower";
+								position[] = { 20597.5,20114.3,0 };
+							};
+							class ObservationPost : GhostHotel {
+								displayName = "Observation Post";
+								position[] = { 20344.4,18768.7,0 };
+							};
+						};
+						class Markers {
+							// BORDER
+							class redzone_pefkas_1 {
+								position[] = { { 20802.752,21371.658,0 }, 62.284 };
+                                size[] = { 75, 500 };
+								shape = "RECTANGLE";
+								brush = "DiagGrid";
+								colour = "ColorEAST";
+								alpha = 1;
+							};
+							class redzone_pefkas_2 : redzone_pefkas_1 { position[] = { { 21711.69,21725.85,0 }, 74.958 }; };
+							class redzone_pefkas_3 : redzone_pefkas_1 { position[] = { { 22339.285,21450.72,0 }, 332.696 }; };
+							class redzone_pefkas_4 : redzone_pefkas_1 { position[] = { { 22852.28,20609.521,0 }, 324.599 }; };
+							class redzone_pefkas_5 : redzone_pefkas_1 { position[] = { { 222968.586,19798.05,0 }, 19.048 }; };
+							class redzone_pefkas_6 : redzone_pefkas_1 { position[] = { { 22495.871,18969.143,0 }, 40.333 }; };
+							class redzone_pefkas_7 : redzone_pefkas_1 { position[] = { { 21811.033,18258.46,0 }, 47.546 }; };
+							class redzone_pefkas_8 : redzone_pefkas_1 { position[] = { { 20987.732,17841.61,0 }, 78.772 }; };
+							class redzone_pefkas_9 : redzone_pefkas_1 { position[] = { { 20358.111,18152.215,0 }, 153.755 }; };
+							class redzone_pefkas_10 : redzone_pefkas_1 { position[] = { { 19860.645,19002.805,0 }, 325.628 }; };
+							class redzone_pefkas_11 : redzone_pefkas_1 { position[] = { { 19666.877,19855.881,0 }, 8.766 }; };
+							class redzone_pefkas_12 : redzone_pefkas_1 { position[] = { { 20019.744,20714.906,0 }, 36.454 }; };
+							class redzone_pefkas_13 : redzone_pefkas_1 { 
+								position[] = { { 20334.246,21122.715,0 }, 55.887 }; 
+								size[] = { 75, 50 };
+							};
+
+							// AREA
+							class redzone_pefkas_19 : redzone_pefkas_1 {
+								shape = "ELLIPSE";
+								position[] = { { 21052.275,18850.484,0 }, 0 };
+                                size[] = { 1000, 1000 };
+								alpha = 0;
+							};
+							class redzone_pefkas_20 : redzone_pefkas_19 { position[] = { { 20585.584,19695.893,0 }, 0 }; };
+							class redzone_pefkas_21 : redzone_pefkas_19 { position[] = { { 21722.1,19487.352,0 }, 0 }; };
+							class redzone_pefkas_22 : redzone_pefkas_19 { position[] = { { 22073.646,20042.498,0 }, 0 }; };
+							class redzone_pefkas_23 : redzone_pefkas_19 { position[] = { { 21666.813,20757.86,0 }, 0 }; };
+							class redzone_pefkas_24 : redzone_pefkas_19 { position[] = { { 21285.803,20527.29,0 }, 0 }; };
+							class redzone_pefkas_25 : redzone_pefkas_19 { position[] = { { 20825.158,20215.81,0 }, 0 }; };
+
+							// SPAWN
+							class greenzone_pefkas_1 {
+								position[] = { { 20010.6,18408.6,0 }, 0 };
+                                size[] = { 50, 50 };
+								shape = "ELLIPSE";
+								brush = "DiagGrid";
+								colour = "ColorGUER";
+								alpha = 1;
+							};
+							class greenzone_pefkas_2 : greenzone_pefkas_1 { position[] = { { 22326.2,18599.8,0 }, 0 }; };
+							class greenzone_pefkas_3 : greenzone_pefkas_1 { position[] = { { 22829.1,20959.9,0 }, 0 }; };
+						};
+					};
 				};
 			};
 		};

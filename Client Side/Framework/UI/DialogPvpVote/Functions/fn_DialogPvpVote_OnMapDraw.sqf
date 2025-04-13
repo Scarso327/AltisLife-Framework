@@ -20,7 +20,16 @@ if (isNull _selectedCfg) exitWith {};
 	
 	private _markerType = getText(_x >> "type");
 	private _markerShape = getText(_x >> "shape");
+
 	private _markerColour = getArray (configFile >> "CfgMarkerColors" >> (getText (_x >> "colour")) >> "color");
+
+	if ((_markerColour select 0) isEqualType "") then {
+		_markerColour = _markerColour apply { call compile _x };
+	};
+
+	if (isNumber (_x >> "alpha")) then {
+		_markerColour set [3, getNumber (_x >> "alpha")];
+	};
 
 	switch (_markerShape) do {
 		case "RECTANGLE": {

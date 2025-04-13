@@ -251,15 +251,24 @@ class CfgSpawns {
         class Oreokastro_2 : Oreokastro_1 { marker = "conflict_spawn_oreokastro_2"; };
         class Oreokastro_3 : Oreokastro_1 { marker = "conflict_spawn_oreokastro_3"; };
 
-        class Frini_1 : Oreokastro_1 { marker = "conflict_spawn_frini_1"; };
-        class Frini_2 : Oreokastro_1 { marker = "conflict_spawn_frini_2"; };
-        class Frini_3 : Oreokastro_1 { marker = "conflict_spawn_frini_3"; };
+        class Frini_1 : Oreokastro_1 {
+            marker = "conflict_spawn_frini_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Frini""] call ULP_fnc_isPvpLocationActive }";
+        };
+        class Frini_2 : Frini_1 { marker = "conflict_spawn_frini_2"; };
+        class Frini_3 : Frini_1 { marker = "conflict_spawn_frini_3"; };
 
-        class Molos_1 : Oreokastro_1 { marker = "conflict_spawn_molos_1"; };
-        class Molos_2 : Oreokastro_1 { marker = "conflict_spawn_molos_2"; };
+        class Molos_1 : Oreokastro_1 {
+            marker = "conflict_spawn_molos_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Molos""] call ULP_fnc_isPvpLocationActive }";
+        };
+        class Molos_2 : Molos_1 { marker = "conflict_spawn_molos_2"; };
 
-        class Blackmarket_1 : Oreokastro_1 { marker = "conflict_spawn_blackmarket_1"; };
-        class Blackmarket_2 : Oreokastro_1 { marker = "conflict_spawn_blackmarket_2"; };
+        class Blackmarket_1 : Oreokastro_1 {
+            marker = "conflict_spawn_blackmarket_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Blackmarket""] call ULP_fnc_isPvpLocationActive }";
+        };
+        class Blackmarket_2 : Blackmarket_1 { marker = "conflict_spawn_blackmarket_2"; };
     };
 
     class Malden {

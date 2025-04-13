@@ -37,12 +37,38 @@ if (isNull _mode || { isNull _location }) exitWith {
 	["PVP Mode vote finish failed to find a winner..."] call ULP_fnc_logIt;
 };
 
+private _markers = [];
+
+{
+	getArray (_x >> "position") params [ "_pos", "_dir" ];
+	getArray (_x >> "size") params [ "_sizeX", "_sizeY" ];
+	
+	private _markerShape = getText(_x >> "shape");
+
+	private _marker = createMarkerLocal [configName _x, _pos];
+
+	if (_markerShape in ["RECTANGLE", "ELLIPSE"]) then {
+		_marker setMarkerShapeLocal _markerShape;
+		_marker setMarkerBrushLocal getText(_x >> "brush");
+	} else {
+		_marker setMarkerTypeLocal getText(_x >> "type");
+	};
+
+	_marker setMarkerColorLocal getText (_x >> "colour");
+	_marker setMarkerSizeLocal [_sizeX, _sizeY];
+	_marker setMarkerDirLocal _dir;
+	_marker setMarkerAlpha getNumber (_x >> "alpha");
+
+	_markers pushBack _marker;
+} forEach ("isClass _x" configClasses (_location >> "Markers"));
+
 missionNamespace setVariable ["ULP_SRV_PvpModes", nil];
 missionNamespace setVariable ["ULP_SRV_PvpVotes", nil];
 missionNamespace setVariable ["ULP_PvpMode_VoteStartTime", nil, true];
 
 missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", _currentPvpMode, true];
 missionNamespace setVariable ["ULP_SRV_CurrentScores", createHashMap, true];
+missionNamespace setVariable ["ULP_SRV_PvpMarkers", _markers];
 
 private _onServerStart = compile getText (_mode >> "ServerEvents" >> "onStart");
 private _onServerEnd = compile getText (_mode >> "ServerEvents" >> "onStop");
@@ -54,6 +80,9 @@ _location call _onServerStart;
 
 	[] call _this;
 
+	{ deleteMarker _x; } forEach ULP_SRV_PvpMarkers;
+
 	missionNamespace setVariable ["ULP_SRV_CurrentScores", nil, true];
 	missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", nil, true];
+	missionNamespace setVariable ["ULP_SRV_PvpMarkers", nil];
 }] call ULP_fnc_waitExecute;

@@ -46,8 +46,8 @@ _vehicle setVariable ["miningEvh", [[_vehicle, _zone, _items, _weights, _time], 
 	if !([_vehicle] call ULP_fnc_isVehicleGathering 
 		&& { [_vehicle] call ULP_fnc_canVehicleGather }) exitWith { [_vehicle] call ULP_fnc_stopVehicleGather; };
 
-	if !([_vehicle, (_items selectRandomWeighted _weights), 1] call ULP_fnc_addToCargo) exitWith { [_vehicle] call ULP_fnc_stopVehicleGather; };
+	if !([_vehicle, (_items selectRandomWeighted _weights), round (random 10)] call ULP_fnc_addToCargo) exitWith { [_vehicle] call ULP_fnc_stopVehicleGather; };
 	
-	[_vehicle, (fuel _vehicle) - 0.05] call ULP_fnc_setFuel;
+	[_vehicle, (fuel _vehicle) - 0.02] call ULP_fnc_setFuel;
 	_vehicle setVariable ["nextMiningTime", diag_tickTime + _time];
 }] call ULP_fnc_addEachFrame];

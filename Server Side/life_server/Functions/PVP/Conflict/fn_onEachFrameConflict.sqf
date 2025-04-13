@@ -24,7 +24,7 @@ private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "does
 	private _winner = _y getVariable ["object_owner", grpNull];
 	private _groupId = [_winner] call ULP_fnc_groupId;
 
-	private _groupsInZone = (([_area, allPlayers, ["Civilian"], { !((currentWeapon _this) in _doesNotThreaten) }] call ULP_fnc_unitsInZone) select {
+	private _groupsInZone = (([_area, allPlayers, ["Civilian"], { !((currentWeapon _this) in _doesNotThreaten) }] call ULP_fnc_unitsInZone) apply {
 		group _x
 	});
 

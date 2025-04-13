@@ -292,7 +292,7 @@ class CfgPvpModes {
 								position[] = { 27361.6,24454.7,0 };
 							};
 							class CoastalChurch : SolarFarm {
-								displayName = "CoastalChurch";
+								displayName = "Coastal Church";
 								position[] = { 26191.2,24184.9,0 };
 							};
 							class Limnichori : SolarFarm {

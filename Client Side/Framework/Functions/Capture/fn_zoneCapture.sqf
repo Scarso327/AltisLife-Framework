@@ -57,11 +57,12 @@ switch (_mode) do {
 		[_zoneName, ([[_obj, _zoneName, _captureCtrl, _ctrlProgress, _ctrlStatusText, _ctrlScore], {
 			_this params [ "_obj", "_zoneName", "_captureCtrl", "_ctrlProgress", "_ctrlStatusText", "_ctrlScore" ];
 			
-			if (isNull _obj) exitWith {
+			private _area = format ["redzone_%1_zone", _zoneName];
+
+			if (isNull _obj || { !([_area] call ULP_fnc_isUnitsInZone) }) exitWith {
 				[_obj, _zoneName, 1] call ULP_fnc_zoneCapture;
 			};
 
-			private _area = format ["redzone_%1_zone", _zoneName];
 			private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "doesntThreaten");
 			private _group = group player;
 

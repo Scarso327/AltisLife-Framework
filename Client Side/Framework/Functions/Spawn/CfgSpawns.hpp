@@ -249,6 +249,7 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Oreokastro""] call ULP_fnc_isPvpLocationActive }";
         };
         class Oreokastro_2 : Oreokastro_1 { marker = "conflict_spawn_oreokastro_2"; };
+        class Oreokastro_3 : Oreokastro_1 { marker = "conflict_spawn_oreokastro_3"; };
 
         class Frini_1 : Oreokastro_1 {
             marker = "conflict_spawn_frini_1";

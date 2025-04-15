@@ -10,7 +10,6 @@ if (isNil "ULP_SRV_PvpModes") exitWith {
 };
 
 remoteExecCall ["", "PvpVoteStarted"]; // Remove JIP
-["PvpVoteFinished", []] remoteExecCall ["ULP_fnc_invokeEvent", RANY];
 
 private _votes = values (missionNamespace getVariable ["ULP_SRV_PvpVotes", createHashMap]);
 private _winningMode = [];
@@ -32,6 +31,8 @@ _currentPvpMode params [
 	["_mode", configNull, [configNull]],
 	["_location", configNull, [configNull]]
 ];
+
+["PvpVoteFinished", _currentPvpMode] remoteExecCall ["ULP_fnc_invokeEvent", RANY];
 
 if (isNull _mode || { isNull _location }) exitWith {
 	["PVP Mode vote finish failed to find a winner..."] call ULP_fnc_logIt;

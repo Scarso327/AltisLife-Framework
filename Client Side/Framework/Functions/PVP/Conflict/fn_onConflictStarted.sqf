@@ -9,7 +9,7 @@ _this params [
 	["_locationCfg", configNull, [configNull]]
 ];
 
-if (isNull _locationCfg || { !hasInterface } || { !([["NotifyConflict", "Notifications"] call ULP_fnc_getOption] call ULP_fnc_bool) }) exitWith {};
+if (isNull _locationCfg || { !hasInterface } || { !([["NotifyConflict", "PVP"] call ULP_fnc_getOption] call ULP_fnc_bool) }) exitWith {};
 
 private _locationName = getText (_locationCfg >> "displayName");
 private _maxScore = getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxScore");

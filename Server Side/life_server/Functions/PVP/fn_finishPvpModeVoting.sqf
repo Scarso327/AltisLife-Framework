@@ -46,7 +46,7 @@ private _markers = [];
 	
 	private _markerShape = getText(_x >> "shape");
 
-	private _marker = createMarkerLocal [configName _x, _pos];
+	private _marker = createMarkerLocal [format["pvp_%1", configName _x], _pos];
 
 	if (_markerShape in ["RECTANGLE", "ELLIPSE"]) then {
 		_marker setMarkerShapeLocal _markerShape;

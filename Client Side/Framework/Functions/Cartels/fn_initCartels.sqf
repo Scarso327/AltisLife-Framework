@@ -39,7 +39,7 @@ if !(hasInterface) exitWith {};
 
 	[getNumber (missionConfigFile >> "CfgCartels" >> "Fixed" >> "rewardXp"), format["holding %1", _cartel]] call ULP_fnc_addXP;
 
-	if ([["NotifyPayment", "Notifications"] call ULP_fnc_getOption] call ULP_fnc_bool) then {
+	if ([["NotifyPayment", "Cartels"] call ULP_fnc_getOption] call ULP_fnc_bool) then {
 		[format ["For holding <t color='#B92DE0'>%1</t> you've been paid <t color='#B92DE0'>%2%3</t> and your group has recieved <t color='#B92DE0'>%2%4</t>", _cartel, "£", [_personal] call ULP_fnc_numberText, [_group] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	};
 

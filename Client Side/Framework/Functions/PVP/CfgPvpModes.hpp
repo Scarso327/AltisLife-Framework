@@ -44,6 +44,7 @@ class CfgPvpModes {
 				class Altis {
 					class Oreokastro {
 						displayName = "Oreokastro";
+						teleportLocation = "conflict_spawn_oreokastro_1";
 						position[] = { 4590.34,21425.2,0 };
 						class Nodes {
 							class NorthernHouse {
@@ -161,6 +162,7 @@ class CfgPvpModes {
 
 					class Frini {
 						displayName = "Frini";
+						teleportLocation = "conflict_spawn_frini_1";
 						position[] = { 14452.3,21756.9,0 };
 						class Nodes {
 							class EasternChurch {
@@ -266,6 +268,7 @@ class CfgPvpModes {
 
 					class Molos {
 						displayName = "Molos";
+						teleportLocation = "conflict_spawn_molos_1";
 						position[] = { 26993.3,23201.6,0 };
 						class Nodes {
 							class SolarFarm {
@@ -364,6 +367,7 @@ class CfgPvpModes {
 
 					class Blackmarket {
 						displayName = "Blackmarket";
+						teleportLocation = "conflict_spawn_blackmarket_1";
 						position[] = { 20708.2,7877.76,0 };
 						class Nodes {
 							class WindFarm {
@@ -466,6 +470,7 @@ class CfgPvpModes {
 
 					class Pefkas {
 						displayName = "Pefkas";
+						teleportLocation = "conflict_spawn_pefkas_1";
 						position[] = { 21615.6,19933.3,0 };
 						class Nodes {
 							class GhostHotel {

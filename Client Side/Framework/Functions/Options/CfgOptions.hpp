@@ -180,8 +180,8 @@ class CfgOptions {
 		};
 	};
 
-	class Notifications {
-		title = "Notifications";
+	class Cartels {
+		title = "Cartels";
 
 		class NotifyPayment {
 			name = "Display Cartel Payments";
@@ -190,10 +190,23 @@ class CfgOptions {
 			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
 			condition = "true";
 		};
+	};
 
-		class NotifyConflict : NotifyPayment {
-			name = "Display Conflict Messages";
-			tooltip = "When enabled, you'll recieve messages for conflict votes and updates.";
+	class PVP {
+		title = "PVP";
+
+		class NotifyConflict {
+			name = "Display PVP Messages";
+			tooltip = "When enabled, you'll recieve messages for pvp mode votes and updates.";
+			type = "DROPDOWN";
+			values[] = { { {"Enabled", 1}, {"Disabled", 0} }, 1 };
+			condition = "true";
+		};
+
+		class Teleport : NotifyConflict {
+			name = "Teleport On Start";
+			tooltip = "Decides teleport behaviour. Manual will ask if you want to be teleported.";
+			values[] = { { {"Manual", 2}, {"Automatic", 1}, {"Disabled", 0} }, 2 };
 		};
 	};
 

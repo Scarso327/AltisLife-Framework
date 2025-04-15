@@ -12,7 +12,7 @@ _this params [
 	["_newZone", configNull, [configNull]]
 ];
 
-if (isNull _previousZone || { !([["NotifyConflict", "Notifications"] call ULP_fnc_getOption] call ULP_fnc_bool) }) exitWith {};
+if (isNull _previousZone || { !([["NotifyConflict", "PVP"] call ULP_fnc_getOption] call ULP_fnc_bool) }) exitWith {};
 
 if (isNull _newZone) exitWith {
 	[format ["<t color='#ff0000' size='1.5px'>Conflict<br/></t><t color='#ffffff' size='1px'><t color='#B92DE0'>%1</t> has been fully depleted", getText (_previousZone >> "displayName")]] call ULP_fnc_hint;

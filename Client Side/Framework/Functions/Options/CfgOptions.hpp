@@ -237,5 +237,10 @@ class CfgOptions {
 			name = "Enable Restraint Messages";
 			tooltip = "When enabled, restraint message will be dispalyed in chat.";
 		};
+
+		class EnableMessagesRob : EnableMessagesIncapacitated {
+			name = "Enable Robbery Messages";
+			tooltip = "When enabled, robbery message will be dispalyed in chat.";
+		};
 	};
 };

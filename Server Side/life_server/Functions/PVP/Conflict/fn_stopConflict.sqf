@@ -23,6 +23,9 @@ missionNamespace setVariable ["ULP_SRV_PvpConflictTick", nil, true];
 [ULP_SRV_PvpConflictEachFrameHandle] call ULP_fnc_removeEachFrame;
 missionNamespace setVariable ["ULP_SRV_PvpConflictEachFrameHandle", nil];
 
+["onConflictNodeCapturedConflict", ULP_SRV_PvpConflictNodeCaptureHandle] call ULP_fnc_removeEventHandler;
+missionNamespace setVariable ["ULP_SRV_PvpConflictNodeCaptureHandle", nil];
+
 private _winnerGroupId = -1; 
 
 private _maxScore = getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxScore");

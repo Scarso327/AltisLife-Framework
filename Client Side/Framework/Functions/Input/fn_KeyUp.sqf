@@ -96,6 +96,12 @@ switch (_code) do {
         if (_shift && { !([player] call ULP_fnc_isRestrained) } && { !([player] call ULP_fnc_isKnocked) } && { !([player] call ULP_fnc_isSurrendered) } && { (["PanicButton"] call ULP_fnc_hasItem) > 0 }) then {
             [] call ULP_fnc_panic;
         };
+
+        if (!isNull (["RscPvpScoreboard"] call ULP_UI_fnc_getLayer)) then {
+            ["RscPvpScoreboard"] call ULP_UI_fnc_destroyLayer;
+        };
+
+        _handled = true;
     };
 
     case T: {

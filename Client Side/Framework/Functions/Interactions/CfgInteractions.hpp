@@ -38,7 +38,7 @@ class CfgInteractions {
 		class RobCash {
 			title = "Rob Cash";
 			factions[] = { "Medic", "Hato", "Civilian", "Dunamis" };
-			onClick = "[0, _this] call ULP_fnc_robMoney; closeDialog 0;";
+			onClick = "closeDialog 0; [0, _this] call ULP_fnc_robMoney;";
 			condition = "[_this] call ULP_fnc_isKnocked || { [_this] call ULP_fnc_isSurrendered } || { [_this] call ULP_fnc_isRestrained && (([_this getVariable [""restrained"", objNull]] call ULP_fnc_getFaction) isEqualTo player || [group (_this getVariable [""restrained"", objNull]), player] call ULP_fnc_inGroup) }";
 		};
 

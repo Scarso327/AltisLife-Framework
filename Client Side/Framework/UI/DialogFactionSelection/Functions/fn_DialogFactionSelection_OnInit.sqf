@@ -25,25 +25,34 @@ private _factionIdc = IDD_FACTION_SELECTION + 1;
 {
 	private _ctrlGroup = _display ctrlCreate ["ULP_RscMainMenuSpotlight", _factionIdc];
 
-	// Hard coded for 5 factions
+	// Hard coded for 4 factions
 	// Lazy but works
 	private _xPos = switch (_forEachIndex) do {
-		case 0: { 0.5 - ((10 * (pixelW * pixelGridNoUIScale * 2)) * 1.5) - (2 * pixelW) };
-		case 2: { 0.5 + ((10 * (pixelW * pixelGridNoUIScale * 2)) * 0.5) + (2 * pixelW) };
-		case 3: { 0.5 - (1 * 10) * (pixelW * pixelGridNoUIScale * 2) - (2 * pixelW) };
-		case 4: { 0.5 };
-		default { 0.5 - ((10 * (pixelW * pixelGridNoUIScale * 2)) / 2) };
+		case 0: { 0.5 - (2 * 10) * (pixelW * pixelGridNoUIScale * 2) - (4 * pixelW) };
+		case 1: { 0.5 - (1 * 10) * (pixelW * pixelGridNoUIScale * 2) - (2 * pixelW) };
+		case 2: { 0.5 };
+		default { 0.5 + (1 * 10) * (pixelW * pixelGridNoUIScale * 2) + (2 * pixelW) };
 	};
+
+	// // Hard coded for 5 factions
+	// // Lazy but works
+	// private _xPos = switch (_forEachIndex) do {
+	// 	case 0: { 0.5 - ((10 * (pixelW * pixelGridNoUIScale * 2)) * 1.5) - (2 * pixelW) };
+	// 	case 2: { 0.5 + ((10 * (pixelW * pixelGridNoUIScale * 2)) * 0.5) + (2 * pixelW) };
+	// 	case 3: { 0.5 - (1 * 10) * (pixelW * pixelGridNoUIScale * 2) - (2 * pixelW) };
+	// 	case 4: { 0.5 };
+	// 	default { 0.5 - ((10 * (pixelW * pixelGridNoUIScale * 2)) / 2) };
+	// };
 	
-	private _yPos = switch (_forEachIndex) do {
-		case 3;
-		case 4: { 0.5 + (2 * pixelH) };
-		default { 0.5 - (10 * (pixelH * pixelGridNoUIScale * 2)) - (2 * pixelH) };
-	};
+	// private _yPos = switch (_forEachIndex) do {
+	// 	case 3;
+	// 	case 4: { 0.5 + (2 * pixelH) };
+	// 	default { 0.5 - (10 * (pixelH * pixelGridNoUIScale * 2)) - (2 * pixelH) };
+	// };
 
 	private _currentPosition = ctrlPosition _ctrlGroup;
 	_currentPosition set [0, _xPos];
-	_currentPosition set [1, _yPos];
+	// _currentPosition set [1, _yPos];
 
 	_ctrlGroup ctrlSetPosition _currentPosition;
 

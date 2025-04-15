@@ -1111,5 +1111,12 @@ class CfgFunctions {
 			class DialogPvpScoreboard_OnUnload {};
 			class DialogPvpScoreboard_UpdateList {};
 		};
+
+		class RscPvpScoreboard {
+			file = "UI\RscPvpScoreboard\Functions";
+			class RscPvpScoreboard_OnEachFrame {};
+			class RscPvpScoreboard_OnLoad {};
+			class RscPvpScoreboard_OnUnload {};
+		};
 	};
 };

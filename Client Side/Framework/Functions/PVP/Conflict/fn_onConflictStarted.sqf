@@ -14,4 +14,4 @@ if (isNull _locationCfg || { !hasInterface } || { !([["NotifyConflict", "PVP"] c
 private _locationName = getText (_locationCfg >> "displayName");
 private _maxScore = getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxScore");
 
-[format ["<t color='#ff0000' size='1.5px'>Conflict<br/></t><t color='#ffffff' size='1px'>A conflict has started at %1.<br/><br/>Capture and hold one of the nodes to increase your score. Once a node has been depleted a new one will spawn.<br/><br/>The first group to score <t color='#B92DE0'>%2</t> points wins.<br/><br/><t color='#B92DE0'>/scoreboard</t> to view progress", _locationName, _maxScore]] call ULP_fnc_hint;
+[format ["<t color='#ff0000' size='1.5px'>Conflict<br/></t><t color='#ffffff' size='1px'>A conflict has started at %1.<br/><br/>Capture and hold one of the nodes to increase your score. Once a node has been depleted a new one will spawn.<br/><br/>The first group to score <t color='#B92DE0'>%2</t> points wins.<br/><br/>Hold <t color='#B92DE0'>[J]</t> to view scoreboard", _locationName, _maxScore]] call ULP_fnc_hint;

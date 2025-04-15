@@ -3,4 +3,5 @@ class RscTitles {
     #include "RscProgress\RscProgress.hpp"
     #include "RscHUD\RscHUD.hpp"
     #include "RscHints\RscHints.hpp"
+    #include "RscPvpScoreboard\RscPvpScoreboard.hpp"
 };

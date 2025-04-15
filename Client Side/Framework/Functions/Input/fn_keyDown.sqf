@@ -215,6 +215,14 @@ if (isDowned(player)) then {
                 };
             };
         };
+
+        case J: {
+            if (!dialog && { !isNil { missionNamespace getVariable "ULP_SRV_CurrentScores" } } && { isNull (["RscPvpScoreboard"] call ULP_UI_fnc_getLayer) }) then {
+                ["RscPvpScoreboard", "PLAIN", 3] call ULP_UI_fnc_createLayer;
+            };
+
+            _handled = true;
+        };
     };
 };
 

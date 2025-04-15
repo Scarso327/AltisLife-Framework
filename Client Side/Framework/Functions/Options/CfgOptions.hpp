@@ -239,8 +239,8 @@ class CfgOptions {
 		};
 
 		class EnableMessagesRob : EnableMessagesIncapacitated {
-			name = "Enable Robbery Messages";
-			tooltip = "When enabled, robbery message will be dispalyed in chat.";
+			name = "Enable Robbery/Seized Messages";
+			tooltip = "When enabled, robbery/seized messages will be dispalyed in chat.";
 		};
 	};
 };

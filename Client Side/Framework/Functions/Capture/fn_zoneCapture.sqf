@@ -69,6 +69,7 @@ switch (_mode) do {
 				case ((_obj getVariable ["object_owner", grpNull]) isEqualTo _group): {
 					if !((progressPosition _ctrlProgress) isEqualTo 1) then {
 						_obj setVariable ["progress", nil];
+						_ctrlScore ctrlSetStructuredText parseText "<t align='center' size='1.5'>100%</t>";
 						_ctrlProgress progressSetPosition 1;
 					};
 					"CAPTURED"

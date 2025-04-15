@@ -490,11 +490,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\hatchback.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\hatchback.paa" };
+			// };
 		};
 	};
 	class C_Hatchback_01_sport_F : C_Hatchback_01_F { buyPrice = 276500; };
@@ -548,11 +548,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\offroad.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\offroad.paa" };
+			// };
 
 			// Groups
 			class Ridge : BaseTexture { 
@@ -676,11 +676,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\mb4.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\mb4.paa" };
+			// };
 
 			// Groups
 			class Ridge : BaseTexture { 
@@ -823,11 +823,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// CIvilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\suv.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\suv.paa" };
+			// };
 		};
 	};
 
@@ -910,11 +910,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\van.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\van.paa" };
+			// };
 		};
 	};
 	class B_GEN_Van_02_transport_F : C_Van_02_transport_F {};
@@ -1027,11 +1027,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\qilin.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\qilin.paa" };
+			// };
 		};
 	};
 	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { 
@@ -1161,14 +1161,14 @@ class CfgVehicles {
 			};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { 
-					"Data\Textures\Groups\DMS\Vehicles\ifrit_01.paa",
-					"Data\Textures\Groups\DMS\Vehicles\ifrit_02.paa"
-				};
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { 
+			// 		"Data\Textures\Groups\DMS\Vehicles\ifrit_01.paa",
+			// 		"Data\Textures\Groups\DMS\Vehicles\ifrit_02.paa"
+			// 	};
+			// };
 		};
 	};
 
@@ -1931,11 +1931,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\hummingbird.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\hummingbird.paa" };
+			// };
 		};
 	};
 	class B_Heli_Light_01_F : C_Heli_Light_01_civil_F { buyPrice = 580000; };
@@ -1985,11 +1985,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\orca.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\orca.paa" };
+			// };
 		};
 	};
 
@@ -2017,11 +2017,11 @@ class CfgVehicles {
 			class ChromeGold : BaseChromeGold {};
 
 			// Civilian Faction
-			class DMS : BaseTexture {
-				displayName = "DMS";
-				conditions = "[] call ULP_fnc_isDunamis";
-				textures[] = { "Data\Textures\Groups\DMS\Vehicles\hellcat.paa" };
-			};
+			// class DMS : BaseTexture {
+			// 	displayName = "DMS";
+			// 	conditions = "[] call ULP_fnc_isDunamis";
+			// 	textures[] = { "Data\Textures\Groups\DMS\Vehicles\hellcat.paa" };
+			// };
 		};
 	};
 	class I_Heli_light_03_F : I_Heli_light_03_unarmed_F {

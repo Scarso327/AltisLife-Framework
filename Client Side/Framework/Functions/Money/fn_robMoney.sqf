@@ -22,9 +22,11 @@ switch (_mode) do {
 		];
 
 		if (isNull _unit || { _unit isEqualTo player }) exitWith {};
+
+		private _action = ["Robbed", "Seized"] select ([player, ["Police"]] call ULP_fnc_isFaction);
 		
-		if (_cash > 0 && { [_cash, false, format ["%2 %1", name _unit, ["Robbed", "Seized"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_addMoney }) then {
-			[format ["You %4 %1's <t color='#B92DE0'>%2%3</t>", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText, ["robbed", "seized"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
+		if (_cash > 0 && { [_cash, false, format ["%2 %1", name _unit, _action]] call ULP_fnc_addMoney }) then {
+			[format ["You %4 %1's <t color='#B92DE0'>%2%3</t>", [_unit, true] call ULP_fnc_getName, "£", [_cash] call ULP_fnc_numberText, toLower _action]] call ULP_fnc_hint;
 
 			if !([player, ["Police"]] call ULP_fnc_isFaction) then {
 				private _unitRep = _unit getVariable ["reputation", 0];
@@ -35,6 +37,7 @@ switch (_mode) do {
 				})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 			};
 
+			[_action, [[player, true] call ULP_fnc_getName, [_unit, true] call ULP_fnc_getName], format ["%1%2", "£", [_cash] call ULP_fnc_numberText]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 			[getPlayerUID player, "Robbery", [getPlayerUID _unit, _cash]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 		} else {
 			[format ["%1 had no money to %2...", [_unit, true] call ULP_fnc_getName, ["rob", "seize"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;
@@ -60,7 +63,7 @@ switch (_mode) do {
 
 		_unit setVariable ["robbed_me", time];
 
-		[2, [player, _cash]] remoteExecCall ["ULP_fnc_robMoney", _unit];
+		[2, [player, _amountRobbed]] remoteExecCall ["ULP_fnc_robMoney", _unit];
 	};
 
 	default {
@@ -68,7 +71,10 @@ switch (_mode) do {
 			["_unit", objNull, [objNull]]
 		];
 
-		if (isNull _unit || { _unit isEqualTo player } || { [getNumber (missionConfigFile >> "CfgSettings" >> "disabledDamageInGreenzone")] call ULP_fnc_bool && { ["greenzone_", [_unit]] call ULP_fnc_isUnitsInZone } }) exitWith {};
+		if (isNull _unit || 
+			{ (_unit getVariable ["robbed_by_me", 0]) > (time - 2) } || 
+			{ _unit isEqualTo player } || 
+			{ [getNumber (missionConfigFile >> "CfgSettings" >> "disabledDamageInGreenzone")] call ULP_fnc_bool && { ["greenzone_", [_unit]] call ULP_fnc_isUnitsInZone } }) exitWith {};
 		
 		if (_unit getVariable ["robbing", false]) exitWith {
 			[format ["You're already %1 this person's cash...", ["robbing", "seizing"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;

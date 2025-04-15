@@ -69,6 +69,13 @@ class CfgChat {
 		class UnRestrained : Restrained {
 			message = "%1 was unrestrained by %2";
 		};
+		class Robbed : FinePaid {
+			message = "%1 robbed %3 from %2";
+			condition = "[[""EnableMessagesRob"", ""Chat""] call ULP_fnc_getOption] call ULP_fnc_bool";
+		};
+		class Seized : Robbed {
+			message = "%1 seized %3 from %2";
+		};
 	};
 	class Commands {
 		class Players {

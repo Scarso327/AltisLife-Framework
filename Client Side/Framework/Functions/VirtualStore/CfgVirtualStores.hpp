@@ -476,8 +476,9 @@ class CfgVirtualStores {
 		};
 	};
 
-	class PVP : Blackmarket {
+	class PVP {
 		storeName = "PVP Market";
+		conditions = "true";
 		class Items {
 			class RationPack {};
 			class Water {};

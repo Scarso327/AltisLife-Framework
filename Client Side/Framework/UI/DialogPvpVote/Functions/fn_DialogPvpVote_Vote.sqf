@@ -12,7 +12,7 @@ if (isNull _display) exitWith {};
 
 private _list = _display displayCtrl 6303;
 
-private _index = tvCurSel _list;
+private _path = tvCurSel _list;
 
 private _selected = parseSimpleArray (_list tvData _path);
 if (_selected isEqualTo []) exitWith {};

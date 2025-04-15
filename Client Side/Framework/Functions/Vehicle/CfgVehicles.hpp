@@ -1943,9 +1943,9 @@ class CfgVehicles {
 		buyPrice = 9050000; 
 		garageLimit = 1;
 		class Textures : Textures {
-			class DMS : DMS {
-				turrets[] = { { { -1 },  { "M134_minigun" },  { "5000Rnd_762x51_Yellow_Belt" } } };
-			};
+			// class DMS : DMS {
+			// 	turrets[] = { { { -1 },  { "M134_minigun" },  { "5000Rnd_762x51_Yellow_Belt" } } };
+			// };
 		};
 	};
 

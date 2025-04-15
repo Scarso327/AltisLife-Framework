@@ -20,3 +20,17 @@ missionNamespace setVariable ["ULP_SRV_PvpConflictStartTime", serverTime];
 missionNamespace setVariable ["ULP_SRV_PvpConflictTick", serverTime + getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "tickDuration"), true];
 
 ULP_SRV_PvpConflictEachFrameHandle = ([[], { [] call ULP_SRV_fnc_onEachFrameConflict; }] call ULP_fnc_addEachFrame);
+
+ULP_SRV_PvpConflictNodeCaptureHandle = (["onConflictNodeCapturedConflict", {
+	_this params [
+		["_zone", objNull, [objNull]],
+		["_group", grpNull, [grpNull]]
+	];
+
+	private _nodeCfg = _zone getVariable ["nodeCfg", configNull];
+	private _marker = _zone getVariable ["marker", ""];
+
+	if (isNull _nodeCfg || { _marker isEqualTo "" } || { isNull _group }) exitWith {};
+
+	_marker setMarkerText format ["%1 | %2", getText (_nodeCfg >> "displayName"), [_group] call ULP_fnc_groupTag];
+}] call ULP_fnc_addEventHandler);

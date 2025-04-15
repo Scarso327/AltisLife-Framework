@@ -270,11 +270,11 @@ class U_IG_Guerilla2_1 : U_IG_Guerilla1_1 {
 			displayName = "Plain, Dark";
 			condition = "true";
 		};
-		class DMS : U_IG_Guerilla2_1 {
-			displayName = "Dunamis";
-			textures[] = { "Data\Textures\Groups\DMS\Uniforms\2.paa" };
-			condition = "[] call ULP_fnc_isDunamis";
-		};
+		// class DMS : U_IG_Guerilla2_1 {
+		// 	displayName = "Dunamis";
+		// 	textures[] = { "Data\Textures\Groups\DMS\Uniforms\2.paa" };
+		// 	condition = "[] call ULP_fnc_isDunamis";
+		// };
 	};
 };
 class U_IG_Guerilla2_2 : U_IG_Guerilla1_1 {};
@@ -381,22 +381,22 @@ class U_I_C_Soldier_Para_1_F : U_O_R_Gorka_01_black_F {
 			displayName = "Shorts"; 
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
-		class DMS1 : U_I_C_Soldier_Para_1_F {
-			displayName = "Dunamis SGT";
-			textures[] = { 
-				"Data\Textures\Groups\DMS\Uniforms\3_1.paa", 
-				"Data\Textures\Groups\DMS\Uniforms\3_2.paa"
-			};
-			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 3] call ULP_fnc_hasAccess }";
-		};
-		class DMS2 : U_I_C_Soldier_Para_1_F {
-			displayName = "Dunamis SSGT";
-			textures[] = { 
-				"Data\Textures\Groups\DMS\Uniforms\4_1.paa", 
-				"Data\Textures\Groups\DMS\Uniforms\3_2.paa"
-			};
-			condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 4] call ULP_fnc_hasAccess }";
-		};
+		// class DMS1 : U_I_C_Soldier_Para_1_F {
+		// 	displayName = "Dunamis SGT";
+		// 	textures[] = { 
+		// 		"Data\Textures\Groups\DMS\Uniforms\3_1.paa", 
+		// 		"Data\Textures\Groups\DMS\Uniforms\3_2.paa"
+		// 	};
+		// 	condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 3] call ULP_fnc_hasAccess }";
+		// };
+		// class DMS2 : U_I_C_Soldier_Para_1_F {
+		// 	displayName = "Dunamis SSGT";
+		// 	textures[] = { 
+		// 		"Data\Textures\Groups\DMS\Uniforms\4_1.paa", 
+		// 		"Data\Textures\Groups\DMS\Uniforms\3_2.paa"
+		// 	};
+		// 	condition = "[] call ULP_fnc_isDunamis && { [""Dunamis_Main"", 4] call ULP_fnc_hasAccess }";
+		// };
 	};
 };
 class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F {
@@ -405,14 +405,14 @@ class U_I_C_Soldier_Para_2_F : U_I_C_Soldier_Para_1_F {
 			displayName = "Jacket"; 
 			condition = "true";
 		};
-		class DMS : U_I_C_Soldier_Para_2_F {
-			displayName = "Dunamis";
-			textures[] = { 
-				"Data\Textures\Groups\DMS\Uniforms\5_1.paa", 
-				"Data\Textures\Groups\DMS\Uniforms\4_1.paa"
-			};
-			condition = "[] call ULP_fnc_isDunamis";
-		};
+		// class DMS : U_I_C_Soldier_Para_2_F {
+		// 	displayName = "Dunamis";
+		// 	textures[] = { 
+		// 		"Data\Textures\Groups\DMS\Uniforms\5_1.paa", 
+		// 		"Data\Textures\Groups\DMS\Uniforms\4_1.paa"
+		// 	};
+		// 	condition = "[] call ULP_fnc_isDunamis";
+		// };
 	};
 };
 class U_I_C_Soldier_Para_3_F : U_I_C_Soldier_Para_1_F {};
@@ -422,14 +422,14 @@ class U_I_C_Soldier_Para_4_F : U_I_C_Soldier_Para_1_F {
 			displayName = "Tank Top"; 
 			condition = "true";
 		};
-		class DMS : U_I_C_Soldier_Para_4_F {
-			displayName = "Dunamis";
-			textures[] = { 
-				"Data\Textures\Groups\DMS\Uniforms\1_1.paa", 
-				"Data\Textures\Groups\DMS\Uniforms\1_2.paa"
-			};
-			condition = "[] call ULP_fnc_isDunamis";
-		};
+		// class DMS : U_I_C_Soldier_Para_4_F {
+		// 	displayName = "Dunamis";
+		// 	textures[] = { 
+		// 		"Data\Textures\Groups\DMS\Uniforms\1_1.paa", 
+		// 		"Data\Textures\Groups\DMS\Uniforms\1_2.paa"
+		// 	};
+		// 	condition = "[] call ULP_fnc_isDunamis";
+		// };
 	};
 };
 class U_I_C_Soldier_Para_5_F : U_I_C_Soldier_Para_1_F {};
@@ -451,14 +451,14 @@ class U_I_E_Uniform_01_F : U_O_R_Gorka_01_black_F {
 			displayName = "Officer"; 
 			condition = "[] call ULP_fnc_donatorLevel >= 2";
 		};
-		class DMS : U_I_E_Uniform_01_F {
-			displayName = "Dunamis";
-			textures[] = { 
-				"Data\Textures\Groups\DMS\Uniforms\6_1.paa", 
-				"Data\Textures\Groups\DMS\Uniforms\6_2.paa"
-			};
-			condition = "[] call ULP_fnc_isDunamis";
-		};
+		// class DMS : U_I_E_Uniform_01_F {
+		// 	displayName = "Dunamis";
+		// 	textures[] = { 
+		// 		"Data\Textures\Groups\DMS\Uniforms\6_1.paa", 
+		// 		"Data\Textures\Groups\DMS\Uniforms\6_2.paa"
+		// 	};
+		// 	condition = "[] call ULP_fnc_isDunamis";
+		// };
 	};
 };
 class U_I_E_Uniform_01_shortsleeve_F : U_I_E_Uniform_01_F {};

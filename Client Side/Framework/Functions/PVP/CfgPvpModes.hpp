@@ -148,15 +148,14 @@ class CfgPvpModes {
 
 							// SPAWN
 							class greenzone_oreokastro_1 {
-								position[] = { { 3362.12,19228.2,0 }, 0 };
+								position[] = { { 4072.19,20780.4,0 }, 0 };
                                 size[] = { 50, 50 };
 								shape = "ELLIPSE";
 								brush = "DiagGrid";
 								colour = "ColorGUER";
 								alpha = 1;
 							};
-							class greenzone_oreokastro_2 : greenzone_oreokastro_1 { position[] = { { 6719.678,19589.629,0 }, 0 }; };
-							class greenzone_oreokastro_3 : greenzone_oreokastro_1 { position[] = { { 6888.141,22174.035,0 }, 0 }; };
+							class greenzone_oreokastro_2 : greenzone_oreokastro_1 { position[] = { { 5091.51,20217.4,0 }, 0 }; };
 						};
 					};
 
@@ -254,15 +253,14 @@ class CfgPvpModes {
 
 							// SPAWN
 							class greenzone_frini_1 {
-								position[] = { { 12162.2,22217.6,0 }, 0 };
+								position[] = { { 15824.4,21724.7,0 }, 0 };
                                 size[] = { 50, 50 };
 								shape = "ELLIPSE";
 								brush = "DiagGrid";
 								colour = "ColorGUER";
 								alpha = 1;
 							};
-							class greenzone_frini_2 : greenzone_frini_1 { position[] = { { 14293.1,20169.3,0 }, 0 }; };
-							class greenzone_frini_3 : greenzone_frini_1 { position[] = { { 16100.1,20320.4,0 }, 0 }; };
+							class greenzone_frini_2 : greenzone_frini_1 { position[] = { { 12782.9,21801.7,0 }, 0 }; };
 						};
 					};
 
@@ -353,14 +351,14 @@ class CfgPvpModes {
 
 							// SPAWN
 							class greenzone_molos_1 {
-								position[] = { { 26263.8,20637.6,0 }, 0 };
+								position[] = { { 27838.1,23613.2,0 }, 0 };
                                 size[] = { 50, 50 };
 								shape = "ELLIPSE";
 								brush = "DiagGrid";
 								colour = "ColorGUER";
 								alpha = 1;
 							};
-							class greenzone_molos_2 : greenzone_molos_1 { position[] = { { 25302.4,22838,0 }, 0 }; };
+							class greenzone_molos_2 : greenzone_molos_1 { position[] = { { 26283.2,21597.3,0 }, 0 }; };
 						};
 					};
 
@@ -455,14 +453,14 @@ class CfgPvpModes {
 
 							// SPAWN
 							class greenzone_blackmarket_1 {
-								position[] = { { 20293.3,9881.85,0 }, 0 };
+								position[] = { { 21483.1,8404.15,0 }, 0 };
                                 size[] = { 50, 50 };
 								shape = "ELLIPSE";
 								brush = "DiagGrid";
 								colour = "ColorGUER";
 								alpha = 1;
 							};
-							class greenzone_blackmarket_2 : greenzone_blackmarket_1 { position[] = { { 18473.2,8836.48,0 }, 0 }; };
+							class greenzone_blackmarket_2 : greenzone_blackmarket_1 { position[] = { { 19642.2,7771.16,0 }, 0 }; };
 						};
 					};
 
@@ -542,15 +540,14 @@ class CfgPvpModes {
 
 							// SPAWN
 							class greenzone_pefkas_1 {
-								position[] = { { 20010.6,18408.6,0 }, 0 };
+								position[] = { { 21824.6,19304.2,0 }, 0 };
                                 size[] = { 50, 50 };
 								shape = "ELLIPSE";
 								brush = "DiagGrid";
 								colour = "ColorGUER";
 								alpha = 1;
 							};
-							class greenzone_pefkas_2 : greenzone_pefkas_1 { position[] = { { 22326.2,18599.8,0 }, 0 }; };
-							class greenzone_pefkas_3 : greenzone_pefkas_1 { position[] = { { 22829.1,20959.9,0 }, 0 }; };
+							class greenzone_pefkas_2 : greenzone_pefkas_1 { position[] = { { 20344.1,17806.7,0 }, 0 }; };
 						};
 					};
 				};

@@ -249,14 +249,12 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Oreokastro""] call ULP_fnc_isPvpLocationActive }";
         };
         class Oreokastro_2 : Oreokastro_1 { marker = "conflict_spawn_oreokastro_2"; };
-        class Oreokastro_3 : Oreokastro_1 { marker = "conflict_spawn_oreokastro_3"; };
 
         class Frini_1 : Oreokastro_1 {
             marker = "conflict_spawn_frini_1";
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Frini""] call ULP_fnc_isPvpLocationActive }";
         };
         class Frini_2 : Frini_1 { marker = "conflict_spawn_frini_2"; };
-        class Frini_3 : Frini_1 { marker = "conflict_spawn_frini_3"; };
 
         class Molos_1 : Oreokastro_1 {
             marker = "conflict_spawn_molos_1";
@@ -275,7 +273,6 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Pefkas""] call ULP_fnc_isPvpLocationActive }";
         };
         class Pefkas_2 : Pefkas_1 { marker = "conflict_spawn_pefkas_2"; };
-        class Pefkas_3 : Pefkas_1 { marker = "conflict_spawn_pefkas_3"; };
     };
 
     class Malden {

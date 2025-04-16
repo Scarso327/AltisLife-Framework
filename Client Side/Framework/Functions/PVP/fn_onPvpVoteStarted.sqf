@@ -11,6 +11,8 @@ if !([["NotifyConflict", "PVP"] call ULP_fnc_getOption] call ULP_fnc_bool) exitW
 
 _this params [ "_modes" ];
 
+missionNamespace setVariable ["ULP_PVPVoted", nil];
+
 ULP_PVPModes = _modes;
 
 private _duration = [getNumber (missionConfigFile >> "CfgPvpModes" >> "voteDuration"), "MM:SS"] call BIS_fnc_secondsToString;

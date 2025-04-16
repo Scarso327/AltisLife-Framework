@@ -22,6 +22,7 @@ if (canSuspend) exitWith {
 				private _amount = [getText (_goalCfg >> "item"), _params] call compile getText (_goalCfg >> "Event" >> "getQuantity");
 				if (_amount <= 0) exitWith {};
 
+				if (ULP_Prestige > 0) then { _amount = round(_amount + (ULP_Prestige * (_amount * 0.05))); };
 				if (["GoalContributions"] call ULP_fnc_hasGroupPerk) then { _amount = round(_amount * 1.25); };
 
 				[player, _x, _amount] remoteExecCall ["ULP_SRV_fnc_addCommunityGoalContribution", RSERV];

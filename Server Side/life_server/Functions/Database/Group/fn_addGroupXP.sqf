@@ -24,6 +24,8 @@ if (_xpAmount isEqualTo -1) then {
 
 if (_xpAmount <= 0) exitWith { false };
 
+if (ULP_Prestige > 0) then { _xpAmount = round(_xpAmount + (ULP_Prestige * (_xpAmount * 0.05))); };
+
 private _xp = round(([_group] call ULP_fnc_groupXP) + _xpAmount);
 
 private _previousLevel = [_group] call ULP_fnc_groupLevel;

@@ -27,6 +27,8 @@ if (["GovernmentSalary"] call ULP_fnc_hasGroupPerk) then { _pay = _pay * 2 };
 
 if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _pay = _pay * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "payIncrease"); };
 
+if (ULP_Prestige > 0) then { _pay = _pay + (ULP_Prestige * 2000) };
+
 _pay = [_pay] call ULP_fnc_taxPrice;
 
 (round _pay)

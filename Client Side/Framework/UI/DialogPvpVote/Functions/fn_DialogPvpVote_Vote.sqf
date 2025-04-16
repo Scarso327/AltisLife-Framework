@@ -26,3 +26,4 @@ _selected params [ "_modeCfgName", "_locationCfgName" ];
 [player, format["%1%2", _modeCfgName, _locationCfgName]] remoteExecCall ["ULP_SRV_fnc_castPvpModeVote", RSERV];
 ["Your vote has been cast"] call ULP_fnc_hint;
 _display setVariable ["Cooldown", time + 5];
+missionNamespace setVariable ["ULP_PVPVoted", true];

@@ -25,6 +25,8 @@ private _max = getNumber (_cfg >> "maxLevel");
 	"_level", "_points"
 ];
 
+if (ULP_Prestige > 0) then { _amount = _amount + (ULP_Prestige * (_amount * 0.05)); };
+
 _amount = round (["QuickLearner", _amount] call ULP_fnc_activatePerk);
 
 private _previousLevel = _level;

@@ -19,6 +19,7 @@ if (_xp isEqualType []) then {
 };
 
 if ((random 100) > _chance || { _xp < 1 }) exitWith { false };
+if (ULP_Prestige > 0) then { _xp = _xp + (ULP_Prestige * (_xp * 0.05)) };
 if (["ULP_SRV_Setting_DonationGoal"] call ULP_fnc_constant) then { _xp = _xp * getNumber(missionConfigFile >> "CfgSettings" >> "DonationRewards" >> "xpIncrease"); };
 if (["PartyExperience"] call ULP_fnc_hasGroupPerk) then { _xp = _xp * 1.2; };
 

@@ -99,6 +99,42 @@ class CfgTitles {
 		displayName = "The Prestige";
 		description = "Made the decision to start from scratch";
 	};
+	class Prestige1RP {
+		displayName = "Businessman";
+		description = "A roleplay title awarded to those who prestige";
+	};
+	class Prestige2 {
+		displayName = "Dedicated Player";
+		description = "Made the decision to start from scratch AGAIN";
+	};
+	class Prestige2RP {
+		displayName = "Entrepreneur";
+		description = "A roleplay title awarded to those who prestige";
+	};
+	class Prestige3 {
+		displayName = "Committed to Mantle";
+		description = "Started from scratch, not once, not twice, BUT THREE TIMES";
+	};
+	class Prestige3RP {
+		displayName = "Holy Figure";
+		description = "A roleplay title awarded to those who prestige";
+	};
+	class Prestige4 {
+		displayName = "Absolutely No Life";
+		description = "Started from scratch four times in a row";
+	};
+	class Prestige4RP {
+		displayName = "Saint";
+		description = "A roleplay title awarded to those who prestige";
+	};
+	class Prestige5 {
+		displayName = "What's grass?";
+		description = "Knowing what to expect, prestiged again, again, again, again and again";
+	};
+	class Prestige5RP {
+		displayName = "Adventurer";
+		description = "A roleplay title awarded to those who prestige";
+	};
 	class FanGirl {
 		displayName = "Fan Girl";
 		description = "simp";

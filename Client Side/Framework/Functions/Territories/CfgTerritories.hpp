@@ -69,7 +69,7 @@ class CfgTerritories {
 					displayName = "Weapon Parts Crate";
 					pos[] = { { 11741.8,9305.01,0 }, 55 };
 					items[] = { "WeaponParts" };
-					amount = "(count playableUnits) * 0.1";
+					amount = "(count playableUnits) * 0.15";
 				};
 			};
 		};
@@ -103,7 +103,7 @@ class CfgTerritories {
 				class TinyXPReward {
 					displayName = "XP Crate";
 					pos[] = { { 13795.6,6400.25,0 }, 0 };
-					items[] = { "TinyXPReward" };
+					items[] = { "SmallXPReward" };
 					amount = "(count playableUnits) * 0.25";
 				};
 			};

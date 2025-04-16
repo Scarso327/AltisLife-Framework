@@ -274,7 +274,7 @@ class CfgPerks {
 	};
 
 	class GraveRobber {
-		icon = "Data\UI\GroupPerks\successfulRobber.paa";
+		icon = "Data\UI\Achievements\successfulRobber.paa";
 		displayName = "Grave Robber";
 		description = "Unlocks the ability to access a player's inventory once downed";
 		removalMultiplier = 5;

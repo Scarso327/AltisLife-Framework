@@ -37,7 +37,7 @@ switch (_mode) do {
 				})] remoteExecCall ["ULP_SRV_fnc_reputation", RSERV];
 			};
 
-			[_action, [[player, true] call ULP_fnc_getName, [_unit, true] call ULP_fnc_getName], format ["%1%2", "£", [_cash] call ULP_fnc_numberText]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
+			[_action, [[player, true] call ULP_fnc_getName, [_unit, true] call ULP_fnc_getName, format ["%1%2", "£", [_cash] call ULP_fnc_numberText]]] remoteExecCall ["ULP_fnc_chatMessage", RCLIENT];
 			[getPlayerUID player, "Robbery", [getPlayerUID _unit, _cash]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
 		} else {
 			[format ["%1 had no money to %2...", [_unit, true] call ULP_fnc_getName, ["rob", "seize"] select ([player, ["Police"]] call ULP_fnc_isFaction)]] call ULP_fnc_hint;

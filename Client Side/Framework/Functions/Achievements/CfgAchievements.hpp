@@ -553,7 +553,27 @@ class CfgAchievements {
 		icon = "Data\UI\Achievements\prestige.paa";
 		displayName = "Prestigious";
 		description = "Prestiged for the first time";
-		onUnlocked = "[""Prestige""] call ULP_fnc_unlockTitle;";
+		onUnlocked = "[""Prestige""] call ULP_fnc_unlockTitle; [""Prestige1RP""] call ULP_fnc_unlockTitle;";
+	};
+	class Prestige2 : Prestige {
+		displayName = "Dedicated";
+		description = "Prestiged for a second time";
+		onUnlocked = "[""Prestige2""] call ULP_fnc_unlockTitle; [""Prestige2RP""] call ULP_fnc_unlockTitle;";
+	};
+	class Prestige3 : Prestige {
+		displayName = "Committed";
+		description = "Prestiged for A THIRD time";
+		onUnlocked = "[""Prestige3""] call ULP_fnc_unlockTitle; [""Prestige3RP""] call ULP_fnc_unlockTitle;";
+	};
+	class Prestige4 : Prestige {
+		displayName = "No Life";
+		description = "Prestiged for a fourth time";
+		onUnlocked = "[""Prestige4""] call ULP_fnc_unlockTitle; [""Prestige4RP""] call ULP_fnc_unlockTitle;";
+	};
+	class Prestige5 : Prestige {
+		displayName = "Touch Grass";
+		description = "Prestiged FIVES TIMES";
+		onUnlocked = "[""Prestige5""] call ULP_fnc_unlockTitle; [""Prestige5RP""] call ULP_fnc_unlockTitle;";
 	};
 
 	// Investor Achievements

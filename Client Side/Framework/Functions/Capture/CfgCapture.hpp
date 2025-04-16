@@ -48,5 +48,9 @@ class CfgCapture {
 			displayName = "South-Eastern Region";
 			class Marker : Marker { defaultName = "South-Eastern Region"; };
 		};
+		class MilitaryBase : WesternRegion {
+			displayName = "Military Base";
+			class Marker : Marker { defaultName = "Military Base"; };
+		};
 	};
 };

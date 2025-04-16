@@ -55,7 +55,7 @@ class CfgItemsStore {
 				class textures { class arifle_MX_Black_F {}; };
 			};
 			class arifle_MXM_Black_F {
-				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { [""Police_MPU"", 2] call ULP_fnc_hasAccess } || { [""Police_SEG"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && (count ([""Police""] call ULP_fnc_allMembers)) < 8 }";
+				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { [""Police_MPU"", 2] call ULP_fnc_hasAccess } || { [""Police_SEG"", 2] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) } || { ([[""Police""]] call ULP_fnc_allMembers) < 8 && { [""Police_Main"", 3] call ULP_fnc_hasAccess } }";
 				class textures { class arifle_MXM_Black_F {}; };
 			}; 
 			class arifle_MX_GL_Black_F {
@@ -67,7 +67,7 @@ class CfgItemsStore {
 				class textures { class arifle_MSBS65_black_F {}; };
 			};
 			class arifle_MSBS65_Mark_black_F {
-				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && (count ([""Police""] call ULP_fnc_allMembers)) < 8 }";
+				condition = "[""Police_Main"", 6] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 3] call ULP_fnc_hasAccess } || { ([""Police_Main"", 5] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) } || { ([[""Police""]] call ULP_fnc_allMembers) < 8 && { [""Police_Main"", 3] call ULP_fnc_hasAccess } }";
 				class textures { class arifle_MSBS65_Mark_black_F {}; };
 			};
 			class arifle_MSBS65_UBS_black_F {
@@ -192,10 +192,10 @@ class CfgItemsStore {
 			class 100Rnd_580x42_Mag_Tracer_F : 100Rnd_580x42_Mag_F {};
 			class 30Rnd_65x39_caseless_green { condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 2] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess }"; };
 			class 30Rnd_65x39_caseless_green_mag_Tracer : 30Rnd_65x39_caseless_green {};
-			class 30Rnd_65x39_caseless_msbs_mag { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && (count ([""Police""] call ULP_fnc_allMembers)) < 8 }"; };
+			class 30Rnd_65x39_caseless_msbs_mag { condition = "[""Police_Main"", 5] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 2] call ULP_fnc_hasAccess } || { [""Police_Main"", 4] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess } || { ([[""Police""]] call ULP_fnc_allMembers) < 8 && { [""Police_Main"", 3] call ULP_fnc_hasAccess } }"; };
 			class 30Rnd_65x39_caseless_msbs_mag_Tracer : 30Rnd_65x39_caseless_msbs_mag {};
 			class 30Rnd_65x39_caseless_black_mag { 
-				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 2] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && (count ([""Police""] call ULP_fnc_allMembers)) < 8 }";
+				condition = "[""Police_Main"", 4] call ULP_fnc_hasAccess || { [""Police_SCO"", 1] call ULP_fnc_hasAccess } || { [""Police_NCA"", 1] call ULP_fnc_hasAccess } || { [""Police_MPU"", 2] call ULP_fnc_hasAccess } || { [""Police_SEG"", 1] call ULP_fnc_hasAccess } || { ([""Police_Main"", 3] call ULP_fnc_hasAccess && [""Police_SFO"", 1] call ULP_fnc_hasAccess) } || { ([[""Police""]] call ULP_fnc_allMembers) < 8 && { [""Police_Main"", 3] call ULP_fnc_hasAccess } }";
 				class textures { class 30Rnd_65x39_caseless_black_mag {}; }; 
 			};
 			class 30Rnd_65x39_caseless_black_mag_Tracer : 30Rnd_65x39_caseless_black_mag { class textures { class 30Rnd_65x39_caseless_black_mag_Tracer {}; }; };

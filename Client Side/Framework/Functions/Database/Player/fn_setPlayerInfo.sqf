@@ -176,7 +176,7 @@ ULP_Gear = _gear;
 
 ULP_UnlockedTextures = _textures;
 ULP_Titles = _titles;
-ULP_Perks = _perks;
+ULP_Perks = createHashMapFromArray ((_perks toArray false) select { isClass (missionConfigFile >> "CfgPerks" >> (_x select 0)) });
 ULP_Reputation = _reputation;
 ULP_Blueprints = _blueprints;
 ULP_Wounded = _wounded;

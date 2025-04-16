@@ -26,8 +26,8 @@ if !(hasInterface) exitWith {};
 			|| { ["pvp_redzone_"] call ULP_fnc_isUnitsInZone }
 			|| { ["redzone_"] call ULP_fnc_isUnitsInZone && { missionNamespace getVariable ["ULP_SRV_Setting_BaseBidsActive", false] } }) }) exitWith {};
 			
-	private _money = getNumber (missionConfigFile >> "CfgBases" >> "CfgPvpModes");
-	private _xp = getNumber (missionConfigFile >> "CfgBases" >> "CfgPvpModes");
+	private _money = getNumber (missionConfigFile >> "CfgPvpModes" >> "redzoneKillMoney");
+	private _xp = getNumber (missionConfigFile >> "CfgPvpModes" >> "redzoneKillXP");
 
 	if ([_money, true, "PVP Event Kill Reward"] call ULP_fnc_addMoney) then {
 		[_xp, "PVP Event Kill"] call ULP_fnc_addXP;

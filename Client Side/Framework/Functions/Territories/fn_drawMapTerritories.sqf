@@ -20,6 +20,8 @@ private _mousePos = _map ctrlMapScreenToWorld getMousePosition;
 
 	if (isClass _cfg) then {
 		private _vertices = getArray (_cfg >> "borderVertices");
+		if (_vertices isEqualTo []) exitWith {};
+		
 		private _verticeCount = count _vertices;
 
 		private _isOwned = !((_x getVariable ["site_owner_id", -1]) isEqualTo -1);

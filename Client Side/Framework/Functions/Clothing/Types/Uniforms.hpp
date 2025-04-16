@@ -361,6 +361,13 @@ class U_O_R_Gorka_01_black_F : U_C_Poor_1 {
 		};
 		class U_O_R_Gorka_01_brown_F : U_O_R_Gorka_01_black_F { displayName = "Brown"; };
 		class U_O_R_Gorka_01_camo_F : U_O_R_Gorka_01_black_F { displayName = "Camo"; };
+
+		// Groups
+		class Sentinel : U_O_R_Gorka_01_black_F {
+			displayName = "Sentinel";
+			textures[] = { "Data\Textures\Groups\Sentinel\U_B_CTRG_Soldier_F.paa" };
+			condition = "[3] call ULP_fnc_isGroupPremium";
+		};
 	};
 };
 class U_O_R_Gorka_01_brown_F : U_O_R_Gorka_01_black_F {};

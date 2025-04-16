@@ -18,7 +18,7 @@ class CfgFactories {
 				class Tyre {
 					tickTime = 5;
 					materials[] = { 
-						{ "RubberSheet", 2 },
+						{ "Rubber", 2 },
 						{ "IronBar", 2 }
 					};
 				};
@@ -26,7 +26,7 @@ class CfgFactories {
 					requiredPower = 2;
 					tickTime = 10;
 					materials[] = { 
-						{ "Tyre", 4 },
+						{ "Tyre", 1 },
 						{ "SteelPlate", 1 }
 					};
 				};
@@ -39,14 +39,13 @@ class CfgFactories {
 					tickTime = 20;
 					materials[] = { 
 						{ "LightArmourPlate", 1 },
-						{ "FlawlessDiamond", 1 },
-						{ "SteelPlate", 2 },
+						{ "SteelPlate", 1 },
 					};
 				};
 				class SmallCargoBed {
 					tickTime = 10;
 					materials[] = { 
-						{ "Plank", 8 },
+						{ "Plank", 4 },
 						{ "IronPlate", 2 }
 					};
 				};
@@ -62,7 +61,6 @@ class CfgFactories {
 					tickTime = 20;
 					materials[] = { 
 						{ "SilverPlate", 1 },
-						{ "FlawlessDiamond", 4 },
 						{ "ElectronicCircuit", 2 }
 					};
 				};
@@ -71,15 +69,13 @@ class CfgFactories {
 					tickTime = 25;
 					materials[] = { 
 						{ "SteelPlate", 2 },
-						{ "CopperPlate", 1 },
 						{ "PackedOil", 4 }
 					};
 				};
 				class BasicFlightInstruments {
 					tickTime = 30;
 					materials[] = { 
-						{ "CentralProcessingUnit", 8 },
-						{ "GlassPanel", 2 },
+						{ "CentralProcessingUnit", 1 },
 						{ "GuidanceSystem", 1 }
 					};
 				};
@@ -88,36 +84,30 @@ class CfgFactories {
 					tickTime = 60;
 					materials[] = { 
 						{ "BasicFlightInstruments", 1 },
-						{ "FlawlessDiamond", 6 },
-						{ "SilverPlate", 2 },
-						{ "GlassPanel", 4 },
-						{ "GuidanceSystem", 1 }
+						{ "FlawlessDiamond", 4 }
 					};
 				};
 				class SimpleVehicleComponent {
 					tickTime = 10;
 					materials[] = { 
-						{ "VehicleParts", 4 },
-						{ "CopperPlate", 4 }
+						{ "VehicleParts", 2 },
+						{ "IronPlate", 2 }
 					};
 				};
 				class ImprovedVehicleComponent {
 					requiredPower = 2;
 					tickTime = 20;
 					materials[] = { 
-						{ "SimpleVehicleComponent", 4 },
-						{ "FlawlessDiamond", 2 },
-						{ "SilverPlate", 2 }
+						{ "SimpleVehicleComponent", 2 },
+						{ "SteelPlate", 2 }
 					};
 				};
 				class PerfectedVehicleComponent {
 					requiredPower = 3;
 					tickTime = 30;
 					materials[] = { 
-						{ "ImprovedVehicleComponent", 4 },
-						{ "FlawlessDiamond", 8 },
-						{ "PackedOil", 4 },
-						{ "SteelPlate", 2 }
+						{ "ImprovedVehicleComponent", 2 },
+						{ "FlawlessDiamond", 4 }
 					};
 				};
 
@@ -126,9 +116,7 @@ class CfgFactories {
 					requiredPower = 2;
 					tickTime = 120;
 					materials[] = { 
-						{ "SteelPlate", 4 },
-						{ "PackedOil", 4 },
-						{ "LargeCargoBed", 1 },
+						{ "LargeCargoBed", 2 },
 						{ "EngineComponent", 1 }
 					};
 				};
@@ -136,7 +124,6 @@ class CfgFactories {
 					requiredPower = 1;
 					materials[] = { 
 						{ "SilverPlate", 2 },
-						{ "LightArmourPlate", 2 },
 						{ "FlawlessDiamond", 1 }
 					};
 				};
@@ -167,15 +154,10 @@ class CfgFactories {
 				};
 				class ClonedPlatesUpgrade : ImprovedStorageUpgrade {
 					requiredPower = 1;
-					materials[] = { 
-						{ "CopperPlate", 1 },
-						{ "SignalJammer", 1 }
-					};
+					materials[] = { { "SignalJammer", 1 } };
 				};
 				class AutomaticLoaderUpgrade : ImprovedStorageUpgrade {
 					materials[] = { 
-						{ "CopperWiring", 5 },
-						{ "CopperPlate", 2 },
 						{ "LargeCargoBed", 1 },
 						{ "CentralProcessingUnit", 1 }
 					};
@@ -187,7 +169,6 @@ class CfgFactories {
 					tickTime = 120;
 					materials[] = { 
 						{ "ElectronicCircuit", 2 },
-						{ "ReinforcedGlassPanel", 1 },
 						{ "Laptop", 1 }
 					};
 				};
@@ -195,7 +176,6 @@ class CfgFactories {
 					requiredPower = 2;
 					materials[] = { 
 						{ "PersonalAlarmUpgrade", 1 },
-						{ "FlawlessDiamond", 2 },
 						{ "PanicButton", 1 }
 					};
 				};
@@ -204,16 +184,10 @@ class CfgFactories {
 				};
 				class ImprovedContainerUpgrade : PersonalAlarmUpgrade {
 					requiredPower = 2;
-					materials[] = { 
-						{ "SteelPlate", 6 },
-						{ "LargeCargoBed", 4 }
-					};
+					materials[] = { { "LargeCargoBed", 4 } };
 				};
 				class PersonalMailboxUpgrade : PersonalAlarmUpgrade {
-					materials[] = { 
-						{ "FlawlessDiamond", 4 },
-						{ "Desktop", 1 }
-					};
+					materials[] = { { "Desktop", 1 } };
 				};
 			};
 		};
@@ -459,8 +433,8 @@ class CfgFactories {
 					tickTime = 180;
 					materials[] = { 
 						{ "LargeCargoBed", 8 },
-						{ "LightArmourPlate", 4 },
-						{ "PerfectedVehicleComponent", 2 }
+						{ "HeavyArmourPlate", 2 },
+						{ "ImprovedVehicleComponent", 2 }
 					};
 				};
 				class B_Slingload_01_Fuel_F : B_Slingload_01_Cargo_F {};
@@ -478,9 +452,8 @@ class CfgFactories {
 					materials[] = { 
 						{ "Tyre", 4 },
 						{ "GlassPanel", 4 },
-						{ "IronPlate", 4 },
 						{ "EngineComponent", 1 },
-						{ "WeaponParts", 2 },
+						{ "WeaponParts", 4 },
 						{ "SimpleVehicleComponent", 4 }
 					};
 				};
@@ -489,9 +462,8 @@ class CfgFactories {
 					materials[] = { 
 						{ "Tyre", 4 },
 						{ "GlassPanel", 4 },
-						{ "IronPlate", 6 },
 						{ "EngineComponent", 1 },
-						{ "WeaponParts", 4 },
+						{ "WeaponParts", 10 },
 						{ "ImprovedVehicleComponent", 2 }
 					};
 				};
@@ -499,18 +471,17 @@ class CfgFactories {
 					tickTime = 120;
 					materials[] = { 
 						{ "Tyre", 4 },
-						{ "SteelBar", 4 },
 						{ "EngineComponent", 1 },
-						{ "SimpleVehicleComponent", 6 }
+						{ "SimpleVehicleComponent", 4 }
 					};
 				};
 				class B_LSV_01_unarmed_black_F {
 					tickTime = 180;
 					materials[] = { 
 						{ "Tyre", 4 },
-						{ "LightArmourPlate", 4 },
+						{ "LightArmourPlate", 2 },
 						{ "EngineComponent", 1 },
-						{ "SimpleVehicleComponent", 6 }
+						{ "SimpleVehicleComponent", 4 }
 					};
 				};
 				class O_LSV_02_unarmed_F {
@@ -519,7 +490,7 @@ class CfgFactories {
 						{ "ReinforcedTyre", 4 },
 						{ "HeavyArmourPlate", 2 },
 						{ "EngineComponent", 1 },
-						{ "ImprovedVehicleComponent", 6 }
+						{ "ImprovedVehicleComponent", 4 }
 					};
 				};
 				class O_LSV_02_armed_black_F {
@@ -528,7 +499,7 @@ class CfgFactories {
 						{ "ReinforcedTyre", 4 },
 						{ "HeavyArmourPlate", 2 },
 						{ "EngineComponent", 1 },
-						{ "WeaponParts", 4 },
+						{ "WeaponParts", 12 },
 						{ "ImprovedVehicleComponent", 6 }
 					};
 				};
@@ -537,10 +508,10 @@ class CfgFactories {
 					requiredPower = 2;
 					materials[] = { 
 						{ "ReinforcedTyre", 4 },
-						{ "ReinforcedGlassPanel", 6 },
+						{ "ReinforcedGlassPanel", 4 },
 						{ "HeavyArmourPlate", 4 },
 						{ "EngineComponent", 2 },
-						{ "PerfectedVehicleComponent", 8 }
+						{ "ImprovedVehicleComponent", 8 }
 					};
 				};
 				class O_MRAP_02_F {
@@ -548,10 +519,10 @@ class CfgFactories {
 					requiredPower = 2;
 					materials[] = { 
 						{ "ReinforcedTyre", 4 },
-						{ "ReinforcedGlassPanel", 8 },
+						{ "ReinforcedGlassPanel", 6 },
 						{ "HeavyArmourPlate", 6 },
-						{ "EngineComponent", 2 },
-						{ "PerfectedVehicleComponent", 10 }
+						{ "EngineComponent", 1 },
+						{ "PerfectedVehicleComponent", 6 }
 					};
 				};
 				class O_Truck_03_device_F {
@@ -559,22 +530,21 @@ class CfgFactories {
 					requiredPower = 3;
 					materials[] = { 
 						{ "ReinforcedTyre", 6 },
-						{ "ReinforcedGlassPanel", 4 },
+						{ "ReinforcedGlassPanel", 2 },
 						{ "HeavyArmourPlate", 4 },
 						{ "EngineComponent", 4 },
-						{ "CentralProcessingUnit", 3 },
-						{ "MiningRig", 2 },
-						{ "PerfectedVehicleComponent", 12 }
+						{ "MiningRig", 1 },
+						{ "PerfectedVehicleComponent", 8 }
 					};
 				};
 				class I_Heli_light_03_unarmed_F {
 					tickTime = 300;
 					requiredPower = 2;
 					materials[] = { 
-						{ "GlassPanel", 4 },
+						{ "GlassPanel", 2 },
 						{ "LightArmourPlate", 2 },
 						{ "EngineComponent", 2 },
-						{ "AdvancedFlightInstruments", 2 },
+						{ "AdvancedFlightInstruments", 1 },
 						{ "ImprovedVehicleComponent", 8 }
 					};
 				};
@@ -585,8 +555,8 @@ class CfgFactories {
 						{ "ReinforcedGlassPanel", 2 },
 						{ "HeavyArmourPlate", 4 },
 						{ "EngineComponent", 4 },
-						{ "AdvancedFlightInstruments", 4 },
-						{ "PerfectedVehicleComponent", 24 }
+						{ "AdvancedFlightInstruments", 2 },
+						{ "PerfectedVehicleComponent", 12 }
 					};
 				};
 				class O_T_VTOL_02_vehicle_F {
@@ -597,8 +567,8 @@ class CfgFactories {
 						{ "HeavyArmourPlate", 4 },
 						{ "EngineComponent", 4 },
 						{ "LargeCargoBed", 2 },
-						{ "AdvancedFlightInstruments", 4 },
-						{ "PerfectedVehicleComponent", 26 }
+						{ "AdvancedFlightInstruments", 2 },
+						{ "PerfectedVehicleComponent", 12 }
 					};
 				};
 			};

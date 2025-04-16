@@ -530,11 +530,7 @@ class CfgVirtualItems {
 			time = 40;
 			workbench = false;
 			blueprints[] = { { "HandheldTools", "B_BoltCutter" } };
-			materials[] = { 
-				{"SteelPlate", 2},
-				{"Wood", 1},
-				{"Rubber", 1}
-			};
+			materials[] = { {"SteelPlate", 2} };
 		};
 	};
 	class BigRedKey : BoltCutter {
@@ -559,10 +555,8 @@ class CfgVirtualItems {
 			workbench = true;
 			blueprints[] = { { "HandheldTools", "B_ExplosiveCharge" } };
 			materials[] = { 
-				{"SteelPlate", 6},
-				{"CopperWiring", 4}, 
-				{"ExplosiveMaterials", 1}, 
-				{"SilverPlate", 1}
+				{"SteelPlate", 2},
+				{"CopperWiring", 1}
 			};
 		};
 	};
@@ -579,10 +573,7 @@ class CfgVirtualItems {
 			time = 180;
 			workbench = true;
 			blueprints[] = { { "HandheldTools", "B_IndustrialDrill" } };
-			materials[] = { 
-				{"SteelPlate", 4},
-				{"ProcessedOil", 2}
-			};
+			materials[] = { {"SteelPlate", 1} };
 		};
 	};
 
@@ -708,10 +699,8 @@ class CfgVirtualItems {
 			workbench = true;
 			blueprints[] = { { "HandheldTools", "B_MakeshiftStinger" } };
 			materials[] = { 
-				{"SteelBar", 8},
-				{"IronBar", 8}, 
-				{"SteelPlate", 4}, 
-				{"FlawlessDiamond", 2}
+				{"SteelBar", 3},
+				{"IronBar", 1}
 			};
 		};
 		class Events { onUse = "_this call ULP_fnc_spikeStrip;"; };
@@ -742,11 +731,7 @@ class CfgVirtualItems {
 			time = 15;
 			workbench = true;
 			blueprints[] = { { "MedicalSupplies", "B_Stretcher" } };
-			materials[] = { 
-				{"Bandage", 5},
-				{"SteelBar", 2}, 
-				{"SilverPlate", 1}
-			};
+			materials[] = { {"SteelPlate", 1} };
 		};
 		class Events { onUse = "[""Stretcher"", _this select 0] call ULP_fnc_placeObject;"; };
 		conditions = "[player, [""Police"", ""Medic"", ""Hato"", ""Dunamis""]] call ULP_fnc_isFaction || { ULP_Level >= 5 }";
@@ -1704,11 +1689,6 @@ class CfgVirtualItems {
 		icon = "Data\Icons\rubber.paa";
 		class Settings : Settings {};
 	};
-	class RubberSheet : Clay {
-		displayName = "Rubber Sheet";
-		icon = "Data\Icons\rubberSheet.paa";
-		class Settings : Settings {};
-	};
 	class SteelBar : Clay {
 		displayName = "Steel Bar";
 		icon = "Data\Icons\ingot.paa";
@@ -1766,11 +1746,8 @@ class CfgVirtualItems {
 			workbench = true;
 			blueprints[] = { { "CraftingMaterials", "B_ExplosiveMaterials" } };
 			materials[] = { 
-				{"CopperWiring", 16},
-				{"IronPlate", 6},
-				{"UraniumBar", 4},
-				{"SteelPlate", 2},
-				{"PackedOil", 2}
+				{"CopperWiring", 8},
+				{"SteelPlate", 1}
 			};
 		};
 	};
@@ -1796,10 +1773,7 @@ class CfgVirtualItems {
 			time = 25;
 			workbench = true;
 			blueprints[] = { { "HandheldTools", "B_SurveyingEquipment" } };
-			materials[] = { 
-				{"SilverPlate", 1}, 
-				{"GlassPanel", 1}
-			};
+			materials[] = { {"SilverPlate", 1} };
 		};
 		conditions = "true";
 	};
@@ -1815,7 +1789,7 @@ class CfgVirtualItems {
 			time = 25;
 			workbench = true;
 			blueprints[] = { { "HandheldTools", "B_ArchaeologistsEquipment" } };
-			materials[] = { {"IronPlate", 1} };
+			materials[] = { {"SilverPlate", 1} };
 		};
 	};
 
@@ -2147,9 +2121,7 @@ class CfgVirtualItems {
 			time = 100;
 			workbench = true;
 			blueprints[] = { { "Electronics", "B_HackingDevice" } };
-			materials[] = { 
-				{"ElectronicCircuit", 1}
-			};
+			materials[] = { {"ElectronicCircuit", 1} };
 		};
 	};
 	class PanicButton : Capacitor {
@@ -2164,11 +2136,7 @@ class CfgVirtualItems {
 			time = 45;
 			workbench = false;
 			blueprints[] = { { "Electronics", "B_PanicButton" } };
-			materials[] = { 
-				{"CopperWiring", 1},
-				{"SilverPlate", 1},
-				{"GlassPanel", 1}
-			};
+			materials[] = { {"CopperWiring", 1} };
 		};
 		class Events { onUse = "[] call ULP_fnc_panic;"; };
 	};

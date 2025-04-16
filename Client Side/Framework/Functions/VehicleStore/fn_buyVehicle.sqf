@@ -67,7 +67,7 @@ if (isClass _textureCfg) then {
 		if ([_faction, "vehicles"] call ULP_fnc_factionFree || { [_buyPrice, false, format ["Purchased %1", _name]] call ULP_fnc_removeMoney }) exitWith {
 
 			if ([_faction, "vehicles"] call ULP_fnc_factionPresistant) then {
-				private _limit = (getNumber (_missionCfg >> "garageLimit")) + ULP_Prestige;
+				private _limit = (getNumber (_missionCfg >> "garageLimit")) + (ULP_Prestige * 2);
 				if (["VehicleCollector"] call ULP_fnc_hasPerk) then { _limit = _limit * 2 };
 				if (["CompanyCars"] call ULP_fnc_hasGroupPerk) then { _limit = _limit * 2 };
 

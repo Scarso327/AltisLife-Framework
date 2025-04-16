@@ -45,8 +45,9 @@ switch (_itemType) do {
 				{
 					_x params [ "_wep", "_attachments" ];
 
-					if !(_wep isEqualTo "" && { (count (_attachments param [1, []] param [(["AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "AccessoryBipod"] find _itemCategory)])) > 0 }) exitWith {
-						(_item in ([_wep, false, true] call ULP_fnc_compatibleItems)) breakOut "fn_canFitGear";
+					if (_item in ([_wep, false, true] call ULP_fnc_compatibleItems)
+						&& { _replace || { (_attachments param [(["AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "AccessoryBipod"] find _itemCategory)]) isEqualTo "" } }) exitWith {
+						true breakOut "fn_canFitGear";
 					};
 				} forEach [
 					[primaryWeapon player, primaryWeaponItems player],

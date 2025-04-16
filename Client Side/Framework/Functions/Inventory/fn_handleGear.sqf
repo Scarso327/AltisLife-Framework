@@ -14,9 +14,7 @@ _this params [
 (_item call BIS_fnc_itemType) params ["_itemType", "_itemCategory"];
 
 // Check for space, if there is just add it directly...
-if ([_item, _itemType, _itemCategory, _replace] call ULP_fnc_canFitGear) exitWith {
-	[_item, _itemType, _itemCategory, _texture] call ULP_fnc_setGear;
-};
+if ([_item, _itemType, _itemCategory, _replace] call ULP_fnc_canFitGear && { [_item, _itemType, _itemCategory, _texture] call ULP_fnc_setGear }) exitWith { true };
 
 private _container = (_item call {
 	if (player canAddItemToUniform _this) exitWith { uniformContainer player };

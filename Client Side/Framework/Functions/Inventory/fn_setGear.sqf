@@ -138,3 +138,5 @@ if (_itemType isEqualTo "Magazine") then {
 		};
 	};
 };
+
+false

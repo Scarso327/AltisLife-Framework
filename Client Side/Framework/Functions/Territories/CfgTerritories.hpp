@@ -117,8 +117,8 @@ class CfgTerritories {
 
 			class Sites {
 				class VehicleParts {
-					displayName = "Parts Crate";
-					pos[] = { { 12848.1,16679.9,0.478355 }, 32.661 };
+					displayName = "Vehicle Parts Crate";
+					pos[] = { { 12837.6,16671.2,0 }, 35.78 };
 					items[] = { "VehicleParts" };
 					amount = "2 + (count playableUnits)";
 				};

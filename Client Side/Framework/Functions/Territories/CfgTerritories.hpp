@@ -108,5 +108,21 @@ class CfgTerritories {
 				};
 			};
 		};
+
+		class MilitaryBase {
+			displayName = "Military Base";
+			flagPos[] = { 12843.7,16679.1,2.9479 };
+			centrePos[] = { 12843.7,16679.1,0 };
+			borderVertices[] = {};
+
+			class Sites {
+				class VehicleParts {
+					displayName = "Parts Crate";
+					pos[] = { { 12848.1,16679.9,0.478355 }, 32.661 };
+					items[] = { "VehicleParts" };
+					amount = "2 + (count playableUnits)";
+				};
+			};
+		};
 	};
 };

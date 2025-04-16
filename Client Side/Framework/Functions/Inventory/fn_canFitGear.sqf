@@ -45,8 +45,8 @@ switch (_itemType) do {
 				{
 					_x params [ "_wep", "_attachments" ];
 
-					if (_item in ([_wep, false, true] call ULP_fnc_compatibleItems)
-						&& { _replace || { (_attachments param [(["AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "AccessoryBipod"] find _itemCategory)]) isEqualTo "" } }) exitWith {
+					if (_item in ([_wep, false, true] call ULP_fnc_compatibleItems) 
+						&& { (_attachments param [(["AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "AccessoryBipod"] find _itemCategory)]) isEqualTo "" }) exitWith {
 						true breakOut "fn_canFitGear";
 					};
 				} forEach [

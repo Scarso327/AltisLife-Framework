@@ -4,7 +4,7 @@ class CfgPvpModes {
 	voteDuration = 2 * 60; // In Seconds
 	
 	redzoneKillMoney = 50000;
-	redzoneKillXP = 25;
+	redzoneKillXP = 30;
 
 	class Modes {
 		class Conflict {

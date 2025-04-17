@@ -28,12 +28,6 @@ class CfgBlueprints {
 			item = "Rubber";
 			workbench = true;
 		};
-		class B_RubberSheet : B_Rubber {
-			displayName = "Rubber Sheet";
-			icon = "Data\Icons\rubberSheet.paa";
-			materials[] = { {"Rubber", 2} };
-			item = "RubberSheet";
-		};
 		class B_SteelBar : B_Rubber {
 			displayName = "Steel Bar";
 			icon = "Data\Icons\ingot.paa";

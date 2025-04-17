@@ -33,10 +33,12 @@ scopeName "fn_cleanup";
 							default { 10 * 60 };
 						};
 
+						private _isEmpty = ((crew _vehicle) isEqualTo []);
+
 						if (_id isEqualTo -1 
-							|| { !((crew _vehicle) isEqualTo []) } 
+							|| { !_isEmpty } 
 							|| { ((_vehicle getVariable ["engineLastOffTime", 0]) + _engineOffCheckTime) > serverTime }) exitWith {
-								if (isEngineOn _vehicle) then {
+								if (_isEmpty && { isEngineOn _vehicle }) then {
 									_vehicle engineOn false;
 								};
 							};

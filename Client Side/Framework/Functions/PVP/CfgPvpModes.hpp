@@ -19,17 +19,17 @@ class CfgPvpModes {
 				class LowTier {
 					displayName = "Low Tier";
 					marker = "mil_circle";
-					score = 300;
+					score = 200;
 				};
 				class MidTier {
 					displayName = "Mid Tier";
 					marker = "mil_objective";
-					score = 600;
+					score = 400;
 				};
 				class HighTier {
 					displayName = "High Tier";
 					marker = "mil_warning";
-					score = 1000;
+					score = 600;
 				};
 			};
 			class Events {

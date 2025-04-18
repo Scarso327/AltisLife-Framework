@@ -227,8 +227,8 @@ class CfgGroups {
 	};
 
 	class Leveling {
-		baseXp = 2500;
-		xpMultiplier = 1.35;
+		baseXp = 1000;
+		xpMultiplier = 1.2;
 		maxLevel = 10;
 
 		class XP {

@@ -11,9 +11,9 @@ class CfgPvpModes {
 			displayName = "Conflict";
 			markerColour = "Color3_FD_F";
 			maxScore = 3000;
-			maxDuration = 1 * 60 * 75; // In Seconds
+			maxDuration = 1 * 60 * 90; // In Seconds
 			tickDuration = 2 * 60; // In Seconds
-			baseReward = 5000000;
+			baseReward = 10000000;
 			multipliedReward = 5000;
 			class NodeTypes {
 				class LowTier {

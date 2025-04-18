@@ -53,6 +53,20 @@ if !(isNull _winningGroup) then {
 	{
 		[_winningGroup, configName _x, 0.05] call ULP_SRV_fnc_addGroupBuff;
 	} forEach ("isClass _x" configClasses (missionConfigFile >> "CfgGroups" >> "Buffs"));
+	
+	// Reward all others
+	{
+		if !(_x isEqualTo _winnerGroupId) then {
+			private _reward = (_baseReward * 0.3) + (_multipliedReward * _sumScore * _y / _maxScore);
+			[_x, _reward, true] call ULP_SRV_fnc_updateGroupFunds;
+		};
+	} forEach ULP_SRV_CurrentScores;
 };
 
 ["onStopConflict", [_winningGroup, _highestScore, _reward]] remoteExecCall ["ULP_fnc_invokeEvent", RANY];
+
+{ deleteMarker _x; } forEach ULP_SRV_PvpMarkers;
+
+missionNamespace setVariable ["ULP_SRV_CurrentScores", nil, true];
+missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", nil, true];
+missionNamespace setVariable ["ULP_SRV_PvpMarkers", nil];

@@ -80,10 +80,4 @@ _location call _onServerStart;
 	if (isNil "ULP_SRV_CurrentPvpMode") exitWith {};
 
 	[] call _this;
-
-	{ deleteMarker _x; } forEach ULP_SRV_PvpMarkers;
-
-	missionNamespace setVariable ["ULP_SRV_CurrentScores", nil, true];
-	missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", nil, true];
-	missionNamespace setVariable ["ULP_SRV_PvpMarkers", nil];
 }] call ULP_fnc_waitExecute;

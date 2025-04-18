@@ -31,7 +31,7 @@ if !(hasInterface) exitWith {};
 
 	if ([_money, true, "PVP Event Kill Reward"] call ULP_fnc_addMoney) then {
 		[_xp, "PVP Event Kill"] call ULP_fnc_addXP;
-		[format ["<t color='#B92DE0'>%1%2</t> has been deposited into your bank for killing someone during a pvp event...", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
+		[format ["<t color='#B92DE0'>%1%2</t> has been deposited into your bank for killing someone during a PVP event...", "£", [_money] call ULP_fnc_numberText]] call ULP_fnc_hint;
 	};
 }] call ULP_fnc_addEventHandler;
 

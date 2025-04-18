@@ -10,9 +10,10 @@ scopeName "fn_addBank";
 
 _this params [
 	["_trader", objNull, [objNull]],
-	["_title", "Cash Machine", [""]]
+	["_title", "Cash Machine", [""]],
+	["_condition", "true", [""]]
 ];
 
 if (isNull _trader || { _title isEqualTo "" }) exitWith {};
 
-_trader addAction [_title, { [] call ULP_fnc_openBank }, nil, 1.5, true, true, "", "true", 3];
+_trader addAction [_title, { [] call ULP_fnc_openBank }, nil, 1.5, true, true, "", _condition, 3];

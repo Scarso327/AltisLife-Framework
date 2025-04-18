@@ -13,7 +13,7 @@ class CfgPvpModes {
 			maxScore = 3000;
 			maxDuration = 1 * 60 * 60; // In Seconds
 			tickDuration = 3 * 60; // In Seconds
-			baseReward = 5000000;
+			baseReward = 10000000;
 			multipliedReward = 5000;
 			class NodeTypes {
 				class LowTier {

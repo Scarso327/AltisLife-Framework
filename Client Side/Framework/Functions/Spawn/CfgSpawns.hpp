@@ -251,29 +251,17 @@ class CfgSpawns {
         class Oreokastro_2 : Oreokastro_1 { marker = "conflict_spawn_oreokastro_2"; };
         class Oreokastro_3 : Oreokastro_1 { marker = "conflict_spawn_oreokastro_3"; };
 
-        class Frini_1 : Oreokastro_1 {
-            marker = "conflict_spawn_frini_1";
-            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Frini""] call ULP_fnc_isPvpLocationActive }";
+        class PefkasBay_1 : Oreokastro_1 {
+            marker = "conflict_spawn_pefkasBay_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""PefkasBay""] call ULP_fnc_isPvpLocationActive }";
         };
-        class Frini_2 : Frini_1 { marker = "conflict_spawn_frini_2"; };
+        class PefkasBay_2 : PefkasBay_1 { marker = "conflict_spawn_pefkasBay_2"; };
 
-        class Molos_1 : Oreokastro_1 {
-            marker = "conflict_spawn_molos_1";
-            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Molos""] call ULP_fnc_isPvpLocationActive }";
+        class MolosBay_1 : Oreokastro_1 {
+            marker = "conflict_spawn_molosBay_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""MolosBay""] call ULP_fnc_isPvpLocationActive }";
         };
-        class Molos_2 : Molos_1 { marker = "conflict_spawn_molos_2"; };
-
-        class Blackmarket_1 : Oreokastro_1 {
-            marker = "conflict_spawn_blackmarket_1";
-            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Blackmarket""] call ULP_fnc_isPvpLocationActive }";
-        };
-        class Blackmarket_2 : Blackmarket_1 { marker = "conflict_spawn_blackmarket_2"; };
-
-        class Pefkas_1 : Oreokastro_1 {
-            marker = "conflict_spawn_pefkas_1";
-            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Pefkas""] call ULP_fnc_isPvpLocationActive }";
-        };
-        class Pefkas_2 : Pefkas_1 { marker = "conflict_spawn_pefkas_2"; };
+        class MolosBay_2 : MolosBay_1 { marker = "conflict_spawn_molosBay_2"; };
     };
 
     class Malden {

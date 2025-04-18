@@ -56,3 +56,9 @@ if !(isNull _winningGroup) then {
 };
 
 ["onStopConflict", [_winningGroup, _highestScore, _reward]] remoteExecCall ["ULP_fnc_invokeEvent", RANY];
+
+{ deleteMarker _x; } forEach ULP_SRV_PvpMarkers;
+
+missionNamespace setVariable ["ULP_SRV_CurrentScores", nil, true];
+missionNamespace setVariable ["ULP_SRV_CurrentPvpMode", nil, true];
+missionNamespace setVariable ["ULP_SRV_PvpMarkers", nil];

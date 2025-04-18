@@ -41,9 +41,6 @@ if (_near isEqualTo []) exitWith {
 	private _vehicle = (_list lbData (lbCurSel _list)) call BIS_fnc_objectFromNetId;
 	if (isNull _vehicle) exitWith { ["You didn't select a vehicle to chop!"] call ULP_fnc_hint; };
 
-	if !([getNumber (_missionCfg >> "canChop")] call ULP_fnc_bool) exitWith {
-		["This vehicle can't be chopped"] call ULP_fnc_hint;
-	};
 
 	private _cfg = [typeOf _vehicle] call ULP_fnc_vehicleCfg;
 	if (isNull _vehicle || { _cfg isEqualTo [] }) exitWith {};
@@ -53,6 +50,10 @@ if (_near isEqualTo []) exitWith {
 	];
 
 	if !(isClass _missionCfg) exitWith {};
+
+	if !([getNumber (_missionCfg >> "canChop")] call ULP_fnc_bool) exitWith {
+		["This vehicle can't be chopped"] call ULP_fnc_hint;
+	};
 
 	private _time = getNumber (missionConfigFile >> "CfgVehicles" >> "chopTime");
 	if (isNumber (_missionCfg >> "chopTime")) then {

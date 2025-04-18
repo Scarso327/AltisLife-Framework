@@ -5,7 +5,7 @@
 #include "\life_server\script_macros.hpp"
 scopeName "fn_cleanup";
 
-[5 * 60, [], {
+[15 * 60, [], {
 	private _totalCleanedUp = 
 		({
 			private _vehicle = _x;
@@ -19,29 +19,20 @@ scopeName "fn_cleanup";
 					_cleaned = [_vehicle, true] call ULP_SRV_fnc_saveStorage;
 				};
 			} else {
-				
-				private _isRedzone = ["redzone_", [_vehicle]] call ULP_fnc_isUnitsInZone;
-				private _distanceCheck = [600, 50] select (_isRedzone);
 
-				if (!alive _vehicle || { (playableUnits findIf { (_vehicle distance _x) <= _distanceCheck }) isEqualTo -1 }) then {
+				if (!alive _vehicle || { (playableUnits findIf { (_vehicle distance _x) <= 300 }) isEqualTo -1 }) then {
 					if ([_vehicle, ["Car", "Air", "Ship", "Armored", "Submarine"]] call ULP_fnc_isKindOf) exitWith {
 						private _id = _vehicle getVariable ["vehicle_id", -1];
 
 						private _sinceLastEngineOffTime = switch (true) do {
-							case (_isRedzone): { 2 * 60 };
+							case (["redzone_", [_vehicle]] call ULP_fnc_isUnitsInZone): { 5 * 60 };
 							case (([["Hato"]] call ULP_fnc_onlineFaction) > 0): { 30 * 60 };
 							default { 10 * 60 };
 						};
 
-						private _isEmpty = ((crew _vehicle) isEqualTo []);
-
 						if (_id isEqualTo -1 
-							|| { !_isEmpty } 
-							|| { ((_vehicle getVariable ["engineLastOffTime", 0]) + _engineOffCheckTime) > serverTime }) exitWith {
-								if (_isEmpty && { isEngineOn _vehicle }) then {
-									_vehicle engineOn false;
-								};
-							};
+							|| { !((crew _vehicle) isEqualTo []) } 
+							|| { ((_vehicle getVariable ["engineLastOffTime", 0]) + _engineOffCheckTime) > serverTime }) exitWith {};
 
 						_cleaned = [_vehicle] call ULP_SRV_fnc_storeVehicle;
 					};

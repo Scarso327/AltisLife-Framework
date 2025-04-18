@@ -32,7 +32,7 @@ class CfgTerritories {
 					displayName = "Ecstasy Crate";
 					pos[] = { { 9706.29,8733.28,0 }, 224 };
 					items[] = { "Ecstasy" };
-					amount = "(count playableUnits) * 0.5";
+					amount = "2 + ((count playableUnits) * 0.5)";
 				};
 			};
 		};
@@ -69,7 +69,7 @@ class CfgTerritories {
 					displayName = "Weapon Parts Crate";
 					pos[] = { { 11741.8,9305.01,0 }, 55 };
 					items[] = { "WeaponParts" };
-					amount = "(count playableUnits) * 0.15";
+					amount = "2 + ((count playableUnits) * 0.15)";
 				};
 			};
 		};
@@ -100,11 +100,11 @@ class CfgTerritories {
 			};
 
 			class Sites {
-				class TinyXPReward {
+				class SmallXPReward {
 					displayName = "XP Crate";
 					pos[] = { { 13795.6,6400.25,0 }, 0 };
 					items[] = { "SmallXPReward" };
-					amount = "(count playableUnits) * 0.25";
+					amount = "1 + ((count playableUnits) * 0.25)";
 				};
 			};
 		};

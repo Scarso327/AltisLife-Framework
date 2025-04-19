@@ -214,15 +214,17 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
         };
         class Rebel_02 : Rebel_01 { marker = "civ_spawn_rebel_02"; };
-        class Rebel_03 : Rebel_01 { 
-            displayName = "Rebel FOB";
-            marker = "civ_spawn_rebel_03"; 
-        };
         class Blackmarket : Rebel_01 {
             displayName = "Blackmarket";
             marker = "civ_spawn_blackmarket";
             conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] } && { [""Blackmarketer""] call ULP_fnc_hasPerk || { [""Blackmarket""] call ULP_fnc_hasGroupPerk } }";
         };
+
+        class GangWars_1 : Rebel_01 { 
+            displayName = "Gang Wars Spawn";
+            marker = "gang_wars_spawn_1"; 
+        };
+        class GangWars_2 : GangWars_1 { marker = "gang_wars_spawn_2"; };
 
         // Dunamis
         class OldPyrgosStation : DMS {

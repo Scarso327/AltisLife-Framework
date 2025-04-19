@@ -264,6 +264,20 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""MolosBay""] call ULP_fnc_isPvpLocationActive }";
         };
         class MolosBay_2 : MolosBay_1 { marker = "conflict_spawn_molosBay_2"; };
+
+        class MaziBay_1 : Oreokastro_1 {
+            marker = "conflict_spawn_maziBay_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""MaziBay""] call ULP_fnc_isPvpLocationActive }";
+        };
+        class MaziBay_2 : MaziBay_1 { marker = "conflict_spawn_maziBay_2"; };
+        class MaziBay_3 : MaziBay_1 { marker = "conflict_spawn_maziBay_3"; };
+
+        class Frini_1 : Oreokastro_1 {
+            marker = "conflict_spawn_frini_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Frini""] call ULP_fnc_isPvpLocationActive }";
+        };
+        class Frini_2 : Frini_1 { marker = "conflict_spawn_frini_2"; };
+        class Frini_3 : Frini_1 { marker = "conflict_spawn_frini_3"; };
     };
 
     class Malden {

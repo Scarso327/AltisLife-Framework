@@ -1264,8 +1264,9 @@ class CfgClothesStore {
 		};
 	};
 
-	class PVP : Blackmarket {
+	class PVP {
 		storeName = "PVP Clothing Store";
+		condition = "true";
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};

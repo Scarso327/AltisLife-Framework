@@ -214,15 +214,17 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] }";
         };
         class Rebel_02 : Rebel_01 { marker = "civ_spawn_rebel_02"; };
-        class Rebel_03 : Rebel_01 { 
-            displayName = "Rebel FOB";
-            marker = "civ_spawn_rebel_03"; 
-        };
         class Blackmarket : Rebel_01 {
             displayName = "Blackmarket";
             marker = "civ_spawn_blackmarket";
             conditions = "[""Blackmarket""] call ULP_fnc_hasLicense && { missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false] } && { [""Blackmarketer""] call ULP_fnc_hasPerk || { [""Blackmarket""] call ULP_fnc_hasGroupPerk } }";
         };
+
+        class GangWars_1 : Rebel_01 { 
+            displayName = "Gang Wars Spawn";
+            marker = "gang_wars_spawn_1"; 
+        };
+        class GangWars_2 : GangWars_1 { marker = "gang_wars_spawn_2"; };
 
         // Dunamis
         class OldPyrgosStation : DMS {
@@ -262,6 +264,20 @@ class CfgSpawns {
             conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""MolosBay""] call ULP_fnc_isPvpLocationActive }";
         };
         class MolosBay_2 : MolosBay_1 { marker = "conflict_spawn_molosBay_2"; };
+
+        class MaziBay_1 : Oreokastro_1 {
+            marker = "conflict_spawn_maziBay_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""MaziBay""] call ULP_fnc_isPvpLocationActive }";
+        };
+        class MaziBay_2 : MaziBay_1 { marker = "conflict_spawn_maziBay_2"; };
+        class MaziBay_3 : MaziBay_1 { marker = "conflict_spawn_maziBay_3"; };
+
+        class Frini_1 : Oreokastro_1 {
+            marker = "conflict_spawn_frini_1";
+            conditions = "[""Rebel""] call ULP_fnc_hasLicense && { [""Conflict"", ""Frini""] call ULP_fnc_isPvpLocationActive }";
+        };
+        class Frini_2 : Frini_1 { marker = "conflict_spawn_frini_2"; };
+        class Frini_3 : Frini_1 { marker = "conflict_spawn_frini_3"; };
     };
 
     class Malden {

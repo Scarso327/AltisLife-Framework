@@ -5,7 +5,7 @@ class CfgBases {
 
 	BidIncrement = 1000000;
 	StartingBid = 9000000; // StartingBid = BidIncrement + StartingBid
-	GangWarsOnlyMarkers[] = { "rebel_outpost_3", "greenzone_06", "chop_shop_red" };
+	GangWarsOnlyMarkers[] = { "spawn_1", "greenzone_09", "spawn_2", "greenzone_10", "chop_shop_red" };
 
 	class North {
 		icon = "Data\UI\Spawns\base.paa";
@@ -15,8 +15,8 @@ class CfgBases {
 		defaultGroupOwnerId = -1;
 	};
 
-	class South : North {
-		displayName = "South Base";
-		position[] = {{12295.3,8872.94,0.00119019}, 289.015};
-	};
+	// class South : North {
+	// 	displayName = "South Base";
+	// 	position[] = {{12295.3,8872.94,0.00119019}, 289.015};
+	// };
 };

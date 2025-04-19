@@ -343,107 +343,209 @@ class CfgPvpModes {
 						};
 					};
 
-					// class MaziBay {
-					// 	displayName = "Mazi Bay";
-					// 	teleportLocation = "conflict_spawn_maziBay_1";
-					// 	position[] = { 20683.1,7598.8,0 };
-					// 	class Nodes {
-					// 		class HilltopFOB {
-					// 			displayName = "Hilltop FOB";
-					// 			position[] = { 23038.086,7248.06,0 };
-					// 			radius = 20;
-					// 		};
-					// 		class SlumDistrict {
-					// 			displayName = "Slum District";
-					// 			position[] = { 20782.811,6677.967,0 };
-					// 			radius = 30;
-					// 		};
-					// 		class CoastalSlums : HilltopFOB {
-					// 			displayName = "Coastal Slums";
-					// 			position[] = { 18323.123,7889.507,0 };
-					// 		};
-					// 		class MilitaryBase : MolosIndustrial {
-					// 			displayName = "Military Base";
-					// 			position[] = { 25712.867,22913.186,0 };
-					// 		};
-					// 		class EasternCoast : MolosIndustrial {
-					// 			displayName = "Eastern Coast";
-					// 			position[] = { 27741.072,23494.992,0 };
-					// 		};
-					// 		class NorthernLighthouse {
-					// 			displayName = "Northern Lighthouse";
-					// 			position[] = { 28308.95,25778.387,0 };
-					// 			radius = 25;
-					// 		};
-					// 		class OldSaltProcessing : MolosIndustrial {
-					// 			displayName = "Old Salt Processing";
-					// 			position[] = { 27363.74,24458.799,0 };
-					// 		};
-					// 	};
-					// 	class Markers {
-					// 		// BORDER
-					// 		class redzone_maziBay_border_1 {
-					// 			position[] = { { 18408.363,8269.902,0 }, 57.712 };
-                    //             size[] = { 75, 500 };
-					// 			shape = "RECTANGLE";
-					// 			brush = "DiagGrid";
-					// 			colour = "ColorEAST";
-					// 			alpha = 1;
-					// 		};
-					// 		class redzone_maziBay_border_2 : redzone_maziBay_border_1 { position[] = { { 19256.285,8794.182,0 }, 58.815 }; };
-					// 		class redzone_maziBay_border_3 : redzone_maziBay_border_1 { position[] = { { 20138.242,9227.153,0 }, 68.900 }; };
-					// 		class redzone_maziBay_border_4 : redzone_maziBay_border_1 { position[] = { { 21079.316,9529.240,0 }, 75.522 }; };
-					// 		class redzone_maziBay_border_5 : redzone_maziBay_border_1 { position[] = { { 21825.027,9306.355,0 }, 317.740 }; };
-					// 		class redzone_maziBay_border_6 : redzone_maziBay_border_1 { position[] = { { 22535.738,8620.838,0 }, 310.222 }; };
-					// 		class redzone_maziBay_border_7 : redzone_maziBay_border_1 { position[] = { { 23158.82,7888.427,0 }, 329.016 }; };
-					// 		class redzone_maziBay_border_8 : redzone_maziBay_border_1 { position[] = { { 23300.871,7026.325,0 }, 12.289 }; };
-					// 		class redzone_maziBay_border_9 : redzone_maziBay_border_1 { position[] = { { 23034.984,6074.065,0 }, 18.883 }; };
-					// 		class redzone_maziBay_border_10 : redzone_maziBay_border_1 { position[] = { { 22620.22,5189.101,0 }, 31.333 }; };
-					// 		class redzone_maziBay_border_11 : redzone_maziBay_border_1 { position[] = { { 21922.488,4779.213,0 }, 87.836 }; };
-					// 		class redzone_maziBay_border_12 : redzone_maziBay_border_1 { position[] = { { 20966.482,4892.945,0 }, 105.730 }; };
-					// 		class redzone_maziBay_border_13 : redzone_maziBay_border_1 { position[] = { { 20019.887,5194.219,0 }, 109.500 }; };
-					// 		class redzone_maziBay_border_14 : redzone_maziBay_border_1 { position[] = { { 19072.703,5500.813,0 }, 106.330 }; };
-					// 		class redzone_maziBay_border_15 : redzone_maziBay_border_1 { position[] = { { 18407.684,6047.466,0 }, 332.495 }; };
-					// 		class redzone_maziBay_border_16 : redzone_maziBay_border_1 { position[] = { { 17910.848,6901.813,0 }, 327.171 }; };
-					// 		class redzone_maziBay_border_17 : redzone_maziBay_border_1 { 
-					// 			position[] = { { 17825.865,7644.127,0 }, 25.359 }; 
-					// 			size[] = { 75, 434.617 };
-					// 		};
+					class MaziBay {
+						displayName = "Mazi Bay";
+						teleportLocation = "conflict_spawn_maziBay_1";
+						position[] = { 20683.1,7598.8,0 };
+						class Nodes {
+							class HilltopFOB {
+								displayName = "Hilltop FOB";
+								position[] = { 23038.086,7248.06,0 };
+								radius = 20;
+							};
+							class SlumDistrict {
+								displayName = "Slum District";
+								position[] = { 20782.811,6677.967,0 };
+								radius = 30;
+							};
+							class CoastalSlums : HilltopFOB {
+								displayName = "Coastal Slums";
+								position[] = { 18323.123,7889.507,0 };
+							};
+							class FeresIndustrial : HilltopFOB {
+								displayName = "Feres Industrial";
+								position[] = { 21669.04,7793.098,0 };
+							};
+							class PanagiaIndustrial : SlumDistrict {
+								displayName = "Panagia Industrial";
+								position[] = { 20254.29,8827.530,0 };
+							};
+							class OldManor : SlumDistrict {
+								displayName = "Old Manor";
+								position[] = { 18920.639,6713.967,0 };
+							};
+							class CoastalRuins : HilltopFOB {
+								displayName = "Coastal Ruins";
+								position[] = { 22290.078,5082.461,0 };
+							};
+						};
+						class Markers {
+							// BORDER
+							class redzone_maziBay_border_1 {
+								position[] = { { 18408.363,8269.902,0 }, 57.712 };
+                                size[] = { 75, 500 };
+								shape = "RECTANGLE";
+								brush = "DiagGrid";
+								colour = "ColorEAST";
+								alpha = 1;
+							};
+							class redzone_maziBay_border_2 : redzone_maziBay_border_1 { position[] = { { 19256.285,8794.182,0 }, 58.815 }; };
+							class redzone_maziBay_border_3 : redzone_maziBay_border_1 { position[] = { { 20138.242,9227.153,0 }, 68.900 }; };
+							class redzone_maziBay_border_4 : redzone_maziBay_border_1 { position[] = { { 21079.316,9529.240,0 }, 75.522 }; };
+							class redzone_maziBay_border_5 : redzone_maziBay_border_1 { position[] = { { 21825.027,9306.355,0 }, 317.740 }; };
+							class redzone_maziBay_border_6 : redzone_maziBay_border_1 { position[] = { { 22535.738,8620.838,0 }, 310.222 }; };
+							class redzone_maziBay_border_7 : redzone_maziBay_border_1 { position[] = { { 23158.82,7888.427,0 }, 329.016 }; };
+							class redzone_maziBay_border_8 : redzone_maziBay_border_1 { position[] = { { 23300.871,7026.325,0 }, 12.289 }; };
+							class redzone_maziBay_border_9 : redzone_maziBay_border_1 { position[] = { { 23034.984,6074.065,0 }, 18.883 }; };
+							class redzone_maziBay_border_10 : redzone_maziBay_border_1 { position[] = { { 22620.22,5189.101,0 }, 31.333 }; };
+							class redzone_maziBay_border_11 : redzone_maziBay_border_1 { position[] = { { 21922.488,4779.213,0 }, 87.836 }; };
+							class redzone_maziBay_border_12 : redzone_maziBay_border_1 { position[] = { { 20966.482,4892.945,0 }, 105.730 }; };
+							class redzone_maziBay_border_13 : redzone_maziBay_border_1 { position[] = { { 20019.887,5194.219,0 }, 109.500 }; };
+							class redzone_maziBay_border_14 : redzone_maziBay_border_1 { position[] = { { 19072.703,5500.813,0 }, 106.330 }; };
+							class redzone_maziBay_border_15 : redzone_maziBay_border_1 { position[] = { { 18407.684,6047.466,0 }, 332.495 }; };
+							class redzone_maziBay_border_16 : redzone_maziBay_border_1 { position[] = { { 17910.848,6901.813,0 }, 327.171 }; };
+							class redzone_maziBay_border_17 : redzone_maziBay_border_1 { 
+								position[] = { { 17825.865,7644.127,0 }, 25.359 }; 
+								size[] = { 75, 434.617 };
+							};
 
-					// 		// AREA
-					// 		class redzone_maziBay_area_1 {
-					// 			position[] = { { 21854.193,07186.747,0 }, 0 };
-                    //             size[] = { 1500, 1500 };
-					// 			shape = "ELLIPSE";
-					// 			brush = "DiagGrid";
-					// 			colour = "ColorEAST";
-					// 			alpha = 0;
-					// 		};
-					// 		class redzone_maziBay_area_2 : redzone_maziBay_area_1 { position[] = { { 21254.18,6322.877,0 }, 0 }; };
-					// 		class redzone_maziBay_area_3 : redzone_maziBay_area_1 { position[] = { { 20256.572,6666.255,0 }, 0 }; };
-					// 		class redzone_maziBay_area_4 : redzone_maziBay_area_1 { position[] = { { 19924.037,7486.754,0 }, 0 }; };
-					// 		class redzone_maziBay_area_5 : redzone_maziBay_area_1 { 
-					// 			position[] = { { 21846.963,5712.019,0 }, 0 }; 
-					// 			size[] = { 1000, 1000 };
-					// 		};
-					// 		class redzone_maziBay_area_6 : redzone_maziBay_area_5 { position[] = { { 19237.275,6496.373,0 }, 0 }; };
-					// 		class redzone_maziBay_area_7 : redzone_maziBay_area_5 { position[] = { { 18734.855,7360.245,0 }, 0 }; };
-					// 		class redzone_maziBay_area_8 : redzone_maziBay_area_5 { position[] = { { 20310.785,8303.637,0 }, 0 }; };
-					// 		class redzone_maziBay_area_9 : redzone_maziBay_area_5 { position[] = { { 21212.928,8608.659,0 }, 0 }; };
+							// AREA
+							class redzone_maziBay_area_1 {
+								position[] = { { 21854.193,07186.747,0 }, 0 };
+                                size[] = { 1500, 1500 };
+								shape = "ELLIPSE";
+								brush = "DiagGrid";
+								colour = "ColorEAST";
+								alpha = 0;
+							};
+							class redzone_maziBay_area_2 : redzone_maziBay_area_1 { position[] = { { 21254.18,6322.877,0 }, 0 }; };
+							class redzone_maziBay_area_3 : redzone_maziBay_area_1 { position[] = { { 20256.572,6666.255,0 }, 0 }; };
+							class redzone_maziBay_area_4 : redzone_maziBay_area_1 { position[] = { { 19924.037,7486.754,0 }, 0 }; };
+							class redzone_maziBay_area_5 : redzone_maziBay_area_1 { 
+								position[] = { { 21846.963,5712.019,0 }, 0 }; 
+								size[] = { 1000, 1000 };
+							};
+							class redzone_maziBay_area_6 : redzone_maziBay_area_5 { position[] = { { 19237.275,6496.373,0 }, 0 }; };
+							class redzone_maziBay_area_7 : redzone_maziBay_area_5 { position[] = { { 18734.855,7360.245,0 }, 0 }; };
+							class redzone_maziBay_area_8 : redzone_maziBay_area_5 { position[] = { { 20310.785,8303.637,0 }, 0 }; };
+							class redzone_maziBay_area_9 : redzone_maziBay_area_5 { position[] = { { 21212.928,8608.659,0 }, 0 }; };
 
-					// 		// SPAWN
-					// 		class greenzone_maziBay_1 {
-					// 			position[] = { { 19637.7,7772.42,0 }, 0 };
-                    //             size[] = { 50, 50 };
-					// 			shape = "ELLIPSE";
-					// 			brush = "DiagGrid";
-					// 			colour = "ColorGUER";
-					// 			alpha = 1;
-					// 		};
-					// 		class greenzone_maziBay_2 : greenzone_maziBay_1 { position[] = { { 21482.6,8402.47,0 }, 0 }; };
-					// 		class greenzone_maziBay_3 : greenzone_maziBay_1 { position[] = { { 21879.3,6626,0 }, 0 }; };
-					// 	};
-					// };
+							// SPAWN
+							class greenzone_maziBay_1 {
+								position[] = { { 21483,8401.89,0 }, 0 };
+                                size[] = { 50, 50 };
+								shape = "ELLIPSE";
+								brush = "DiagGrid";
+								colour = "ColorGUER";
+								alpha = 1;
+							};
+							class greenzone_maziBay_2 : greenzone_maziBay_1 { position[] = { { 19638.2,7770.83,0 }, 0 }; };
+							class greenzone_maziBay_3 : greenzone_maziBay_1 { position[] = { { 21879.5,6624.61,0 }, 0 }; };
+						};
+					};
+
+					class Frini {
+						displayName = "Frini";
+						teleportLocation = "conflict_spawn_frini_1";
+						position[] = { 14610.4,21899.1,0 };
+						class Nodes {
+							class MilitaryBase {
+								displayName = "Military Base";
+								position[] = { 14209.157,21206.473,0 };
+								radius = 30;
+							};
+							class TownCentre : MilitaryBase {
+								displayName = "Town Centre";
+								position[] = { 14611.727,20773.826,0 };
+							};
+							class ForestCamp {
+								displayName = "Forest Camp";
+								position[] = { 14283.402,21832.576,0 };
+								radius = 10;
+							};
+							class OldHouse {
+								displayName = "Old House";
+								position[] = { 13445.446,22652.21,0 };
+								radius = 15;
+							};
+							class Ruins : MilitaryBase {
+								displayName = "Ruins";
+								position[] = { 15835.58,21266.387,0 };
+							};
+							class CoastalDefence : MilitaryBase {
+								displayName = "Coastal Defence";
+								position[] = { 15028.732,22741.316,0 };
+							};
+							class RandomHouse : OldHouse {
+								displayName = "Random House";
+								position[] = { 13445.246,21614.92,0 };
+							};
+						};
+						class Markers {
+							// BORDER
+							class redzone_frini_border_1 {
+								position[] = { { 17295.238,22223.703,0 }, 0 };
+                                size[] = { 75, 500 };
+								shape = "RECTANGLE";
+								brush = "DiagGrid";
+								colour = "ColorEAST";
+								alpha = 1;
+							};
+							class redzone_frini_border_2 : redzone_frini_border_1 { position[] = { { 17212.45,21550.764,0 }, 0 }; };
+							class redzone_frini_border_3 : redzone_frini_border_1 { position[] = { { 16420.078,20999.63,0 }, 0 }; };
+							class redzone_frini_border_4 : redzone_frini_border_1 { position[] = { { 15527.152,20562.26,0 }, 0 }; };
+							class redzone_frini_border_5 : redzone_frini_border_1 { position[] = { { 14612.598,20302.215,0 }, 0 }; };
+							class redzone_frini_border_6 : redzone_frini_border_1 { position[] = { { 13763.214,20536.396,0 }, 0 }; };
+							class redzone_frini_border_7 : redzone_frini_border_1 { position[] = { { 13008.367,21170.697,0 }, 0 }; };
+							class redzone_frini_border_8 : redzone_frini_border_1 { position[] = { { 12698.009,21956.697,0 }, 0 }; };
+							class redzone_frini_border_9 : redzone_frini_border_1 { position[] = { { 13022.678,22800.604,0 }, 0 }; };
+							class redzone_frini_border_10 : redzone_frini_border_1 { position[] = { { 13753.7,23406.39,0 }, 0 }; };
+							class redzone_frini_border_11 : redzone_frini_border_1 { position[] = { { 14658.131,23652.39,0 }, 0 }; };
+							class redzone_frini_border_12 : redzone_frini_border_1 { 
+								position[] = { { 15511.483,23315.885,0 }, 0 }; 
+								size[] = { 75, 557.886 };
+							};
+							class redzone_frini_border_13 : redzone_frini_border_1 { 
+								position[] = { { 16478.234,22782.566,0 }, 0 }; 
+								size[] = { 75, 614.904 };
+							};
+
+							// AREA
+							class redzone_frini_area_1 {
+								position[] = { { 14621.484,21751.717,0 }, 0 };
+                                size[] = { 1500, 1500 };
+								shape = "ELLIPSE";
+								brush = "DiagGrid";
+								colour = "ColorEAST";
+								alpha = 0;
+							};
+							class redzone_frini_area_2 : redzone_frini_area_1 { 
+								position[] = { { 13653.126,21885.37,0 }, 0 }; 
+								size[] = { 1000, 1000 };
+							};
+							class redzone_frini_area_3 : redzone_frini_area_2 { position[] = { { 13872.520,22311.553,0 }, 0 }; };
+							class redzone_frini_area_4 : redzone_frini_area_2 { position[] = { { 14379.394,22626.768,0 }, 0 }; };
+							class redzone_frini_area_5 : redzone_frini_area_2 { position[] = { { 14881.227,22629.295,0 }, 0 }; };
+							class redzone_frini_area_6 : redzone_frini_area_2 { position[] = { { 15786.542,21961.025,0 }, 0 }; };
+							class redzone_frini_area_7 : redzone_frini_area_2 { position[] = { { 15718.457,21718.934,0 }, 0 }; };
+							class redzone_frini_area_8 : redzone_frini_area_2 { 
+								position[] = { { 16575.855,21897.982,0 }, 0 }; 
+								size[] = { 750, 750 };
+							};
+
+							// SPAWN
+							class greenzone_frini_1 {
+								position[] = { { 13931.5,20873.3,0 }, 0 };
+                                size[] = { 50, 50 };
+								shape = "ELLIPSE";
+								brush = "DiagGrid";
+								colour = "ColorGUER";
+								alpha = 1;
+							};
+							class greenzone_frini_2 : greenzone_frini_1 { position[] = { { 13031.1,22146.4,0 }, 0 }; };
+							class greenzone_frini_3 : greenzone_frini_1 { position[] = { { 15822.8,21724.2,0 }, 0 }; };
+						};
+					};
 				};
 			};
 		};

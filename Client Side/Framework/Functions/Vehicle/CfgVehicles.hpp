@@ -1044,7 +1044,7 @@ class CfgVehicles {
 		description = "The Hunter is a MRAP vehicle with an armored hull that can withstand light weapons and offers a powerful engine.";
 		buyPrice = 9800000;
 		virtualSpace = 65;
-		garageLimit = 1;
+		garageLimit = 2;
 		class Textures {
 			class Police : PoliceTexture {
 				textures[] = {

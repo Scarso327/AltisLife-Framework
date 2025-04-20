@@ -22,7 +22,7 @@ class CfgHousingUpgrades {
 	class ImprovedContainerUpgrade : PersonalAlarmUpgrade {
 		icon = "Data\Icons\improvedStorageUpgrade.paa";
 		displayName = "Improved Container Upgrade";
-		description = "Increases vItem storage by <t color='#B92DE0'>10%</t>";
+		description = "Increases vItem storage by <t color='#B92DE0'>20%</t>";
 		materials[] = { { "ImprovedContainerUpgrade", 1 } };
 	};
 	class PersonalMailboxUpgrade : PersonalAlarmUpgrade {

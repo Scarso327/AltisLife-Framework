@@ -484,29 +484,29 @@ class CfgPvpModes {
 						class Markers {
 							// BORDER
 							class redzone_frini_border_1 {
-								position[] = { { 17295.238,22223.703,0 }, 0 };
+								position[] = { { 17295.238,22223.703,0 }, 327.570 };
                                 size[] = { 75, 500 };
 								shape = "RECTANGLE";
 								brush = "DiagGrid";
 								colour = "ColorEAST";
 								alpha = 1;
 							};
-							class redzone_frini_border_2 : redzone_frini_border_1 { position[] = { { 17212.45,21550.764,0 }, 0 }; };
-							class redzone_frini_border_3 : redzone_frini_border_1 { position[] = { { 16420.078,20999.63,0 }, 0 }; };
-							class redzone_frini_border_4 : redzone_frini_border_1 { position[] = { { 15527.152,20562.26,0 }, 0 }; };
-							class redzone_frini_border_5 : redzone_frini_border_1 { position[] = { { 14612.598,20302.215,0 }, 0 }; };
-							class redzone_frini_border_6 : redzone_frini_border_1 { position[] = { { 13763.214,20536.396,0 }, 0 }; };
-							class redzone_frini_border_7 : redzone_frini_border_1 { position[] = { { 13008.367,21170.697,0 }, 0 }; };
-							class redzone_frini_border_8 : redzone_frini_border_1 { position[] = { { 12698.009,21956.697,0 }, 0 }; };
-							class redzone_frini_border_9 : redzone_frini_border_1 { position[] = { { 13022.678,22800.604,0 }, 0 }; };
-							class redzone_frini_border_10 : redzone_frini_border_1 { position[] = { { 13753.7,23406.39,0 }, 0 }; };
-							class redzone_frini_border_11 : redzone_frini_border_1 { position[] = { { 14658.131,23652.39,0 }, 0 }; };
+							class redzone_frini_border_2 : redzone_frini_border_1 { position[] = { { 17212.45,21550.764,0 }, 46.4 }; };
+							class redzone_frini_border_3 : redzone_frini_border_1 { position[] = { { 16420.078,20999.63,0 }, 64.054 }; };
+							class redzone_frini_border_4 : redzone_frini_border_1 { position[] = { { 15527.152,20562.26,0 }, 63.729 }; };
+							class redzone_frini_border_5 : redzone_frini_border_1 { position[] = { { 14612.598,20302.215,0 }, 84.574 }; };
+							class redzone_frini_border_6 : redzone_frini_border_1 { position[] = { { 13763.214,20536.396,0 }, 126.352 }; };
+							class redzone_frini_border_7 : redzone_frini_border_1 { position[] = { { 13008.367,21170.697,0 }, 133.704 }; };
+							class redzone_frini_border_8 : redzone_frini_border_1 { position[] = { { 12698.009,21956.697,0 }, 3.208 }; };
+							class redzone_frini_border_9 : redzone_frini_border_1 { position[] = { { 13022.678,22800.604,0 }, 38.979 }; };
+							class redzone_frini_border_10 : redzone_frini_border_1 { position[] = { { 13753.7,23406.39,0 }, 61.692 }; };
+							class redzone_frini_border_11 : redzone_frini_border_1 { position[] = { { 14658.131,23652.39,0 }, 87.823 }; };
 							class redzone_frini_border_12 : redzone_frini_border_1 { 
-								position[] = { { 15511.483,23315.885,0 }, 0 }; 
+								position[] = { { 15511.483,23315.885,0 }, 132.95 }; 
 								size[] = { 75, 557.886 };
 							};
 							class redzone_frini_border_13 : redzone_frini_border_1 { 
-								position[] = { { 16478.234,22782.566,0 }, 0 }; 
+								position[] = { { 16478.234,22782.566,0 }, 105.929 }; 
 								size[] = { 75, 614.904 };
 							};
 

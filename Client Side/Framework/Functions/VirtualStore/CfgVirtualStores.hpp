@@ -473,6 +473,7 @@ class CfgVirtualStores {
 			class FieldDressing {};
 			class FirstAidKit {};
 			class MediKit {};
+			class VehicleParts {};
 		};
 	};
 

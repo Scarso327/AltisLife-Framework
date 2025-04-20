@@ -1051,20 +1051,29 @@ class CfgItemsStore {
 			class arifle_SDAR_F {};
 			class arifle_TRG20_F {};
 			class arifle_TRG21_F {};
+			class arifle_TRG21_GL_F {};
+			class arifle_Mk20C_plain_F {};
 			class arifle_Mk20_plain_F {};
+			class arifle_Mk20_GL_plain_F {};
 			class arifle_SPAR_01_blk_F {};
+			class arifle_SPAR_01_GL_blk_F {};
 			class arifle_SPAR_02_blk_F {};
 			class LMG_03_F {};
 			class arifle_CTAR_blk_F {};
+			class arifle_CTAR_GL_blk_F {};
 			class arifle_CTARS_blk_F {};
 			class srifle_DMR_07_blk_F {};
 			class arifle_Katiba_C_F {}; 
 			class arifle_Katiba_F {};
+			class arifle_Katiba_GL_F {};
 			class arifle_MSBS65_black_F {};
 			class arifle_MSBS65_Mark_black_F {};
+			class arifle_MSBS65_GL_black_F {};
+			class arifle_MSBS65_UBS_black_F {};
 			class arifle_MXC_Black_F {};
 			class arifle_MX_Black_F {};
 			class arifle_MXM_Black_F {};
+			class arifle_MX_GL_Black_F {};
 			class arifle_MX_SW_Black_F {};
 			class arifle_ARX_blk_F {};
 			class LMG_Mk200_F {};
@@ -1076,6 +1085,7 @@ class CfgItemsStore {
 			class srifle_DMR_06_olive_F {};
 			class srifle_EBR_F {};
 			class srifle_DMR_03_F {};
+			class srifle_DMR_04_F {};
 		};
 
 		class Pistols {
@@ -1088,9 +1098,11 @@ class CfgItemsStore {
 
 		class Attachments {
 			class bipod_01_F_blk {};
+
 			class acc_flashlight {};
 			class acc_flashlight_pistol {};
 			class acc_pointer_IR {};
+
 			class optic_MRD {};
 			class optic_Aco {};
 			class optic_Holosight {};
@@ -1099,11 +1111,18 @@ class CfgItemsStore {
 			class optic_MRCO {};
 			class optic_Arco {};
 			class optic_ERCO_blk_F {};
-			class optic_DMS_weathered_F {};
-			class muzzle_snds_L { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
-			class muzzle_snds_acp { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
-			class muzzle_snds_M { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
-			class muzzle_snds_570 { condition = "[""SilentKiller""] call ULP_fnc_hasPerk"; };
+			class optic_NVS {};
+			class optic_DMS {};
+			class optic_SOS {};
+			class optic_KHS_blk {};
+
+			class muzzle_snds_L {};
+			class muzzle_snds_acp {};
+			class muzzle_snds_M {};
+			class muzzle_snds_570 {};
+			class muzzle_snds_58_blk_F {};
+			class muzzle_snds_H {};
+			class muzzle_snds_65_TI_blk_F {};
 		};
 
 		class Magazines {
@@ -1145,6 +1164,13 @@ class CfgItemsStore {
 			class 10Rnd_762x54_Mag {};
 			class 20Rnd_762x51_Mag {};
 			class 30Rnd_762x39_Mag_F {};
+			class 10Rnd_127x54_Mag {};
+
+			class 6Rnd_12Gauge_Pellets {};
+			class 6Rnd_12Gauge_Slug {};
+
+			class UGL_FlareWhite_F {};
+			class 1Rnd_Smoke_Grenade_shell {};
 		};
 		
 		class Items {

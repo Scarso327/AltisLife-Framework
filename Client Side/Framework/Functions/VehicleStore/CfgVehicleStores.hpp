@@ -332,7 +332,6 @@ class CfgVehicleStores {
 			class C_Van_01_transport_F {};
 			class C_Van_01_box_F {};
 			class C_Van_01_fuel_F {};
-			class O_Truck_03_device_F {};
 			class B_Heli_Light_01_F {};
 			class I_Heli_light_03_unarmed_F {};
 			class O_Heli_Transport_04_black_F {};
@@ -341,8 +340,6 @@ class CfgVehicleStores {
 			class O_Heli_Transport_04_box_black_F {};
 			class O_Heli_Transport_04_ammo_black_F {};
 			class O_Heli_Transport_04_fuel_black_F {};
-			class O_T_VTOL_02_infantry_F {};
-			class O_T_VTOL_02_vehicle_F {};
 		};
 	};
 
@@ -360,11 +357,22 @@ class CfgVehicleStores {
 			class B_LSV_01_unarmed_black_F {};
 			class O_LSV_02_armed_black_F {};
 			class O_LSV_02_unarmed_F {};
-			class O_MRAP_02_F { condition = "[""Ifrits""] call ULP_fnc_hasGroupPerk || { [""PersonalTank""] call ULP_fnc_hasPerk }"; };
+			class O_MRAP_02_F {};
 			class I_MRAP_03_F {};
 			class C_Van_01_transport_F {};
 			class C_Van_01_box_F {};
 			class C_Van_01_fuel_F {};
+			class O_Truck_03_transport_F {};
+			class O_Truck_03_covered_F {};
+			class O_Truck_03_ammo_F {};
+			class O_Truck_03_fuel_F {};
+			class O_Truck_03_device_F {};
+			class B_Truck_01_cargo_F {};
+			class B_Truck_01_transport_F {};
+			class B_Truck_01_covered_F {};
+			class B_Truck_01_ammo_F {};
+			class B_Truck_01_fuel_F {};
+			class B_Truck_01_box_F {};
 			class B_Heli_Light_01_F {};
 			class I_Heli_light_03_unarmed_F {};
 			class O_Heli_Transport_04_black_F {};

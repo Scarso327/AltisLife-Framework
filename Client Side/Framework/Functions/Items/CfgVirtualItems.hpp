@@ -2208,6 +2208,7 @@ class CfgVirtualItems {
 	class VehicleParts : Tyre {
 		displayName = "Vehicle Parts";
 		icon = "Data\Icons\vehicleParts.paa";
+		buyPrice = 200000;
 		weight = 1;
 		class Settings : Settings {};
 	};

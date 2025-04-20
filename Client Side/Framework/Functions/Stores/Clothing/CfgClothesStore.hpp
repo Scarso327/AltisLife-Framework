@@ -362,7 +362,6 @@ class CfgClothesStore {
 			class H_Hat_grey {};
 			class H_Watchcap_blk {};
 			class H_Booniehat_khk {};
-			class G_Tactical_Clear {};
 		};
 
 		class Facewear {
@@ -441,6 +440,7 @@ class CfgClothesStore {
 			class G_Lady_Blue {};
 			class G_Respirator_white_F {};
 			class G_EyeProtectors_F {};
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {
@@ -745,6 +745,7 @@ class CfgClothesStore {
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
 			class G_Respirator_white_F {};
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {};
@@ -800,7 +801,9 @@ class CfgClothesStore {
 			class H_Watchcap_blk {};
 		};
 
-		class Facewear {};
+		class Facewear {
+			class G_Tactical_Clear {};
+		};
 
 		class Vests {
 			class V_TacVest_blk {
@@ -870,6 +873,7 @@ class CfgClothesStore {
 			class G_Sport_Red {};
 			class G_Lady_Blue {};
 			class G_Respirator_white_F {};
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {
@@ -902,6 +906,7 @@ class CfgClothesStore {
 			class G_Lady_Blue {};
 			class G_Respirator_white_F {};
 			class G_EyeProtectors_F {};
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {
@@ -955,6 +960,7 @@ class CfgClothesStore {
 			class G_Blindfold_01_black_F {};
 			class G_Bandanna_aviator {};
 			class G_Balaclava_blk {};
+			class G_Tactical_Clear {};
 		};
 
 		class Vests {
@@ -1028,6 +1034,7 @@ class CfgClothesStore {
 			class G_Blindfold_01_black_F {};
 			class G_Bandanna_aviator {};
 			class G_Balaclava_blk {};
+			class G_Tactical_Clear {};
 			class G_B_Diving { condition = "missionNamespace getVariable [""ULP_SRV_Setting_BaseBidsActive"", false]"; };
 		};
 

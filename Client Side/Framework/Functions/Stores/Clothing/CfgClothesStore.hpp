@@ -1326,7 +1326,7 @@ class CfgClothesStore {
 			class G_Balaclava_blk {};
 			class G_Balaclava_TI_blk_F {};
 			class G_Balaclava_TI_G_blk_F {};
-			class G_Tactical_Clear {};
+			class G_Tactical_Clear { price = 0; };
 			class G_B_Diving {};
 		};
 

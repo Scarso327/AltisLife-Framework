@@ -18,7 +18,7 @@ class Rangefinder : Binocular {
 
 class NVGoggles {
 	displayName = "Night Vision Goggles";
-	price = 45000;
+	price = 15000;
 	reputation = true;
 	class Textures {
         class NVGoggles {

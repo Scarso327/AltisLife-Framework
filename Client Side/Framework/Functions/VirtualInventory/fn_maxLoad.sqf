@@ -21,7 +21,7 @@ if (isClass _containerCfg) then {
 
 	if ([_container, "ImprovedStorageUpgrade"] call ULP_fnc_hasUpgrade 
 		|| { [(_container getVariable ["building", objNull]), "ImprovedContainerUpgrade"] call ULP_fnc_hasUpgrade }) exitWith {
-		_maxLoad = round (_maxLoad + (_maxLoad * 0.1));
+		_maxLoad = round (_maxLoad + (_maxLoad * 0.2));
 	};
 };
 

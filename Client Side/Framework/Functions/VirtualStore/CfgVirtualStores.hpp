@@ -481,12 +481,12 @@ class CfgVirtualStores {
 		storeName = "PVP Market";
 		conditions = "true";
 		class Items {
-			class RationPack {};
-			class Water {};
-			class Redbull {};
-			class Lockpick {};
-			class FirstAidKit {};
-			class MediKit {};
+			class RationPack { price = 0; };
+			class Water { price = 0; };
+			class Redbull { price = 0; };
+			class Lockpick { price = 0; };
+			class FirstAidKit { price = 0; };
+			class MediKit { price = 0; };
 		};
 	};
 

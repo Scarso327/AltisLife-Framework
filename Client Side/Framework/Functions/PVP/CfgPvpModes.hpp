@@ -10,7 +10,7 @@ class CfgPvpModes {
 		class Conflict {
 			displayName = "Conflict";
 			markerColour = "Color3_FD_F";
-			maxScore = 3000;
+			maxScore = 4000;
 			maxDuration = 2 * 60 * 60; // In Seconds
 			tickDuration = 2 * 60; // In Seconds
 			baseReward = 10000000;

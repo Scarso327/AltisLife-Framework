@@ -62,7 +62,7 @@ private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "does
 
 		_scores set [_groupId, _score];
 
-		_end = _score isEqualTo _maxScore;
+		_end = (_end || { _score isEqualTo _maxScore });
 	};
 } forEach _nodes;
 

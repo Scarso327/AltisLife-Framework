@@ -24,11 +24,9 @@ private _doesNotThreaten = getArray (missionConfigFile >> "CfgSettings" >> "does
 	private _winner = _y getVariable ["object_owner", grpNull];
 	private _groupId = [_winner] call ULP_fnc_groupId;
 
-	private _groupsInZone = (([_area, allPlayers, ["Civilian"], { !((currentWeapon _this) in _doesNotThreaten) }] call ULP_fnc_unitsInZone) apply {
-		group _x
-	});
+	private _contestingUnits = ([_area, allPlayers, ["Civilian"], { !((currentWeapon _this) in _doesNotThreaten) && { !((group _this) isEqualTo _winner) } }] call ULP_fnc_unitsInZone);
 
-	if (!isNull _winner && { !(_groupId isEqualTo -1) } && { (count (_groupsInZone arrayIntersect _groupsInZone)) <= 1 }) then {
+	if (!isNull _winner && { !(_groupId isEqualTo -1) } && { _contestingUnits isEqualTo [] }) then {
 		private _zoneScore = _y getVariable ["score", 0];
 		private _scoreChange = 100 min _zoneScore;
 

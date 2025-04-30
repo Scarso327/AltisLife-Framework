@@ -1,5 +1,5 @@
 class CfgPvpModes {
-	days[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Friday" };
+	days[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
 	time[] = { 20, 00 }; // Hour, Minute
 	voteDuration = 3 * 30; // In Seconds
 	

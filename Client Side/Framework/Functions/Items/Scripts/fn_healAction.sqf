@@ -40,7 +40,7 @@ if !([format["Healing %1", name _target], _time, [_target, _hasMedkit], { [(_thi
 	};
 
 	["Healed", [player]] remoteExecCall ["ULP_fnc_invokeEvent", _target];
-}, {}, ["GRAB", (["PRONE", "CROUCH"] select ((stance player) isEqualTo "STAND"))]] call ULP_UI_fnc_startProgress) exitWith {
+}, {}, ["GRAB", (["PRONE", "CROUCH"] select !((stance player) isEqualTo "PRONE"))]] call ULP_UI_fnc_startProgress) exitWith {
 	["You can't heal while doing something else..."] call ULP_fnc_hint;
 	false
 };

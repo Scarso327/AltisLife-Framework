@@ -83,10 +83,7 @@ switch (_mode) do {
 
 			_ctrlStatusText ctrlSetStructuredText parseText format ["<t align='center' size='1.25'>%1</t>", _status];
 
-			private _nextTick = _obj getVariable ["nextTick", diag_tickTime];
-			if (_nextTick > diag_tickTime || { !(_status isEqualTo "CAPTURING") }) exitWith {};
-
-			_obj setVariable ["nextTick", diag_tickTime + 0.5];
+			if !(_status isEqualTo "CAPTURING") exitWith {};
 
 			private _progress = _obj getVariable ["progress", 0];
 			_progress = _progress + 0.01;
@@ -103,7 +100,7 @@ switch (_mode) do {
 				// TODO - This method is supposed to be "unique" so need to think about broadcasting this uniquely?
 				["onConflictNodeCapturedConflict", [_obj, _group], true] call ULP_fnc_invokeEvent;
 			};
-		}] call ULP_fnc_addEachFrame)] call ULP_fnc_addZoneCaptureEachFrame;
+		}, 0.1] call ULP_fnc_addEachFrame)] call ULP_fnc_addZoneCaptureEachFrame;
 	};
 	case 1: {
 

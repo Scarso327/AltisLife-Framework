@@ -16,6 +16,11 @@ if (isNil "ULP_SRV_CurrentScores") exitWith {
 	["RscPvpScoreboard"] call ULP_UI_fnc_destroyLayer;
 };
 
+private _timeLeft = ((missionNamespace getVariable ["ULP_SRV_PvpConflictTick", serverTime]) - serverTime) max 0;
+
+private _ctrlHeader = _display displayCtrl 6402;
+_ctrlHeader ctrlSetStructuredText parseText format ["<t align='left' size='1'>Scoreboard</t><t align='right' size='1'>Points in %1</t>", [_timeLeft, "MM:SS"] call BIS_fnc_secondsToString];
+
 if ((_display getVariable ["lastList", createHashMap]) isEqualTo ULP_SRV_CurrentScores) exitWith {};
 
 private _ctrlList = _display displayCtrl 6401;

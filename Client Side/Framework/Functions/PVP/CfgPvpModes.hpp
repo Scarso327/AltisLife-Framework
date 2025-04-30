@@ -1,6 +1,6 @@
 class CfgPvpModes {
-	days[] = { "Sunday", "Wednesday", "Friday" };
-	time[] = { 19, 15 }; // Hour, Minute
+	days[] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Friday" };
+	time[] = { 20, 00 }; // Hour, Minute
 	voteDuration = 3 * 30; // In Seconds
 	
 	redzoneKillMoney = 50000;

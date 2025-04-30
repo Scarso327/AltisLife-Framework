@@ -565,6 +565,7 @@ class CfgVehicles {
 	class B_G_Offroad_01_armed_F : C_Offroad_01_F { 
 		buyPrice = 4280000; 
 		virtualSpace = 20;
+		retrievalPerc = 0.15;
 		garageLimit = 1;
 		enableRope = false;
 	};
@@ -704,6 +705,7 @@ class CfgVehicles {
 	class I_C_Offroad_02_LMG_F : C_Offroad_02_unarmed_F { 
 		buyPrice = 670300; 
 		virtualSpace = 45;
+		retrievalPerc = 0.1;
 		garageLimit = 1;
 		enableRope = false;
 	};
@@ -1037,6 +1039,7 @@ class CfgVehicles {
 	class O_LSV_02_armed_black_F : O_LSV_02_unarmed_F { 
 		buyPrice = 6590000; 
 		garageLimit = 1;
+		retrievalPerc = 0.15;
 		enableRope = false;
 	};
 

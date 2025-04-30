@@ -76,8 +76,13 @@ private _onServerEnd = compile getText (_mode >> "ServerEvents" >> "onStop");
 
 _location call _onServerStart;
 
-[getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxDuration"), _onServerEnd, {
-	if (isNil "ULP_SRV_CurrentPvpMode") exitWith {};
+private _startTime = serverTime;
+missionNamespace setVariable ["ULP_SRV_PvpModeStartTime", _startTime];
 
-	[] call _this;
+[getNumber (missionConfigFile >> "CfgPvpModes" >> "Modes" >> "Conflict" >> "maxDuration"), [_onServerEnd, _startTime], {
+	_this params [ "_onFinish", "_startTime" ];
+
+	if (isNil "ULP_SRV_CurrentPvpMode" || { !((missionNamespace getVariable ["ULP_SRV_PvpModeStartTime", 0]) isEqualTo _startTime) }) exitWith {};
+
+	[] call _onFinish;
 }] call ULP_fnc_waitExecute;

@@ -21,18 +21,6 @@ if (isNull _house || { !([_house] call ULP_fnc_isHouse) } || { [_house] call ULP
 
 private _steamid = getPlayerUID _buyer;
 
-// Check House Limit...
-private _query = [format["SELECT count(`id`) FROM `houses` WHERE `pid`='%1' AND `sold`='0'", _steamid], 2] call DB_fnc_asyncCall;
-
-_query params [
-	["_count", 0, [0]]
-];
-
-private _limit = getNumber (missionConfigFile >> "CfgHousing" >> "houseLimit");
-if (_count >= _limit) exitWith {
-	["HouseBought", [_house, false, format ["You have already reached the limit of %1 for owned houses...", _limit], _money]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];
-};
-
 // Get ID...
 private _id = ["houses"] call ULP_SRV_fnc_getNextId;
 

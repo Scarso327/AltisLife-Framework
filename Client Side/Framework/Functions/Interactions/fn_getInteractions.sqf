@@ -25,7 +25,7 @@ private _actions = missionConfigFile >> "CfgInteractions" >> (switch (true) do {
 		{ [_object, player] call ULP_fnc_isHouseOwner }
 	): { "HouseOwner" };
 	case ([_object] call ULP_fnc_isHouse): { "House" };
-	case (_type in ["Car", "Helicopter", "Plane", "Ship"] && { !(([_object] call ULP_fnc_getVehicleOwner) isEqualTo "") }): { "Vehicle" };
+	case (_type in ["Car", "Helicopter", "Plane", "Ship", "AmmoBox", "Tank", "WheeledAPC"] && { !(([_object] call ULP_fnc_getVehicleOwner) isEqualTo "") }): { "Vehicle" };
 	case (isPlayer _object && { isDowned(_object) }): { "PersonMedical" };
 	case (isPlayer _object && { [_object] call ULP_fnc_isEscorted } && { [] call ULP_fnc_isEscorting }): { "PersonEscortOnly" };
 	case (isPlayer _object): { "Person" };

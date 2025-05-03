@@ -54,6 +54,10 @@ if (_near isEqualTo []) exitWith {
 	if (_conversion <= 0) exitWith {
 		[format["You are missing the required materials to process here: <t color='#B92DE0'>%1</t>!", _materials]] call ULP_fnc_hint;
 	};
+
+	if (isEngineOn _vehicle) exitWith {
+		["The vehicle's engine must be off"] call ULP_fnc_hint;
+	};
 	
 	if !(isNull (_vehicle getVariable ["processor", objNull])) exitWith {
 		["Someone else is already processing this vehicle"] call ULP_fnc_hint;
@@ -67,7 +71,7 @@ if (_near isEqualTo []) exitWith {
 	private _time = getNumber(_cfg >> "processTime") * _conversion * 1.3;
 
 	[format["%1 Item(s)", getText(_cfg >> "processTitle")], _time, [_vehicle, _items, _conversion, _materials, _cfg], { 
-		(speed (_this select 0)) isEqualTo 0 && { ((_this select 0) getVariable ["processor", objNull]) isEqualTo player } }, {
+		!(isEngineOn _vehicle) && { ((_this select 0) getVariable ["processor", objNull]) isEqualTo player } }, {
 		_this params [ "_vehicle", "_items", "_expectedConversion", "_materials", "_cfg" ];
 
 		// Redo here just in case they somehow changed something?
@@ -112,5 +116,7 @@ if (_near isEqualTo []) exitWith {
 
 		_vehicle setVariable ["locked", nil, true];
 		_vehicle setVariable ["processor", nil, true];
+
+		["Someone else started processing this vehicle or the engine turned on"] call ULP_fnc_hint;
 	}] call ULP_UI_fnc_startProgress;
 }, false] call ULP_fnc_selectObject;

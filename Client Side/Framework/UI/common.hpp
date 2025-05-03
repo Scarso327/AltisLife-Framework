@@ -401,6 +401,7 @@ class Life_RscStructuredText {
     text = "";
     size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     colorText[] = {1, 1, 1, 1.0};
+    colorDisabled[] = {1, 1, 1, 0.75};
     shadow = 1;
 
     class Attributes {

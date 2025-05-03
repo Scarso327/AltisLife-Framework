@@ -2,6 +2,7 @@ class CfgVirtualStores {
 	class Police {
 		storeName = "Equipment Store";
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction";
+		allowPayByBank = true;
 		class Items {
 			class RationPack {};
 			class Doughnut {};
@@ -146,6 +147,7 @@ class CfgVirtualStores {
 	class PoliceTradeGoods {
 		storeName = "Trade Goods";
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction && { [""Police_Main"", 5] call ULP_fnc_hasAccess }";
+		allowPayByBank = true;
 		class Items {
 			class FreshApple {
 				buyPrice = 140;
@@ -193,6 +195,7 @@ class CfgVirtualStores {
 	class Medic : Police {
 		storeName = "Equipment Store";
 		conditions = "[player, [""Medic""]] call ULP_fnc_isFaction";
+		allowPayByBank = true;
 		class Items {
 			class RationPack {};
 			class Doughnut {};
@@ -240,6 +243,7 @@ class CfgVirtualStores {
 
 	class Hato : Police {
 		conditions = "[player, [""Hato""]] call ULP_fnc_isFaction";
+		allowPayByBank = true;
 		class Items {
 			class RationPack {};
 			class Doughnut {};
@@ -266,6 +270,7 @@ class CfgVirtualStores {
 	class Placeables {
 		storeName = "Placeables Store";
 		conditions = "[player, [""Police""]] call ULP_fnc_isFaction || { [player, [""Medic""]] call ULP_fnc_isFaction } || { [player, [""Hato""]] call ULP_fnc_isFaction } || { [] call ULP_fnc_isDunamis }";
+		allowPayByBank = true;
 		class Items {
 			// Cones
 			class RoadCone_F {};
@@ -480,6 +485,7 @@ class CfgVirtualStores {
 	class PVP {
 		storeName = "PVP Market";
 		conditions = "true";
+		allowPayByBank = true;
 		class Items {
 			class RationPack { price = 0; };
 			class Water { price = 0; };

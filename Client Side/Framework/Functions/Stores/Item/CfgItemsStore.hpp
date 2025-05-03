@@ -6,6 +6,7 @@ class CfgItemsStore {
 	class Police {
 		storeName = "Equipment Store";
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+		allowPayByBank = true;
 		class Rifles {
 			// SPECIAL
 			class arifle_Mk20C_plain_F {
@@ -234,6 +235,7 @@ class CfgItemsStore {
 
 	class Medic : Police {
 		condition = "[player, [""Medic""]] call ULP_fnc_isFaction";
+		allowPayByBank = true;
 		default = 4;
 		class Rifles {};
 		class Pistols {};
@@ -254,6 +256,7 @@ class CfgItemsStore {
 
 	class Hato : Medic {
 		condition = "[player, [""Hato""]] call ULP_fnc_isFaction";
+		allowPayByBank = true;
 		class Rifles {};
 		class Pistols {};
 		class Attachments {};
@@ -556,6 +559,7 @@ class CfgItemsStore {
 	class Security {
 		storeName = "Company Security Store";
 		condition = "[] call ULP_fnc_isSecurity";
+		allowPayByBank = true;
 		class Rifles {
 			class hgun_PDW2000_F { price = 60100; };
 			class SMG_05_F { price = 60075; };
@@ -641,6 +645,7 @@ class CfgItemsStore {
 	class Protection {
 		storeName = "Govenor Protection Store";
 		condition = "[] call ULP_fnc_isProtection";
+		allowPayByBank = true;
 		class Rifles {
 			class hgun_PDW2000_F { price = 60100; };
 			class SMG_05_F { price = 60075; };
@@ -726,6 +731,7 @@ class CfgItemsStore {
 	class Safehouse {
 		storeName = "Safehouse Store";
 		condition = "[] call ULP_fnc_isProtection && { [""GovernmenSafehousestSafehouses""] call ULP_fnc_hasGroupPerk }";
+		allowPayByBank = true;
 		class Rifles {
 			class hgun_PDW2000_F { price = 0; };
 		};
@@ -1192,6 +1198,7 @@ class CfgItemsStore {
 	class PVP {
 		storeName = "PVP Store";
 		condition = "true";
+		allowPayByBank = true;
 		class Rifles {
 			class hgun_PDW2000_F {};
 			class SMG_02_F {};

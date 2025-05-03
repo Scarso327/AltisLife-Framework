@@ -50,6 +50,16 @@ class DialogVirtualStore {
 			//0.385
         };
 
+        class PayWithBankText : Life_RscStructuredText {
+            idc = 3308;
+            text = "<t align = 'right'>Pay with Bank</t>";
+            colorBackground[] = INNER_BODY_COLOUR;
+            SAFEZONE_X(0.5790625);
+			SAFEZONE_Y(0.291 + (0.385 - BUTTON_H) + MARGIN_Y);
+			SAFEZONE_W(0.12203125);
+			SAFEZONE_H(BUTTON_H);
+        };
+
 		class Footer : Life_RscText {
             idc = -1;
             colorBackground[] = FOOTER_COLOUR;
@@ -118,7 +128,7 @@ class DialogVirtualStore {
 			SAFEZONE_X(0.5790625);
 			SAFEZONE_Y(0.291 + MARGIN_Y);
 			SAFEZONE_W(0.12203125);
-			SAFEZONE_H(0.385);
+			SAFEZONE_H((0.385 - MARGIN_Y) - BUTTON_H);
 		};
 
 		class BuyButton : Life_RscButtonCenter {
@@ -138,6 +148,15 @@ class DialogVirtualStore {
             SAFEZONE_X(0.64265625);
             SAFEZONE_Y(0.698 + BUTTON_MARGIN_Y);
 			SAFEZONE_W(0.0584375);
+			SAFEZONE_H(BUTTON_H);
+        };
+
+        class PayWithBankCB : Life_Checkbox {
+            idc = 3307;
+            checked = 1;
+			SAFEZONE_X(0.5790625);
+			SAFEZONE_Y(0.291 + (0.385 - BUTTON_H) + MARGIN_Y);
+			SAFEZONE_W(MARGIN_X * 2);
 			SAFEZONE_H(BUTTON_H);
         };
 	};

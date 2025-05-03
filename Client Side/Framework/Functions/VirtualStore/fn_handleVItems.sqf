@@ -49,8 +49,11 @@ if (_remove) then {
 	};
 };
 
+private _allowPayByBank = _display getVariable ["allowPayByBank", false];
+private _payByBank = _allowPayByBank && { cbChecked (_display displayCtrl 3307) };
+
 [
-	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _amount], [_curSel, _remove, _buyPrice, _sellPrice, _gangTax, _cartels],
+	(findDisplay getNumber(configFile >> "RscDisplayMission" >> "idd")), [1, _amount], [_curSel, _remove, _buyPrice, _sellPrice, _gangTax, _cartels, _payByBank],
 	{
 		_this params [
 			["_cfg", configNull, [configNull]],
@@ -59,6 +62,7 @@ if (_remove) then {
 			["_sellPrice", 0, [0]],
 			["_gangTax", 0, [0]],
 			["_cartels", [], [[]]],
+			["_payByBank", false, [true]],
 			["_display", displayNull, [displayNull]],
 			["_value", 1, [0]]
 		];
@@ -99,12 +103,12 @@ if (_remove) then {
 				[format["You don't have %1 %2(s) to sell!", _value, _name]] call ULP_fnc_hint;
 			};
 		} else {
-			if ([_buyPrice, false, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) then {
+			if ([_buyPrice, _payByBank, format["Purchased %1 %2(s)", _value, _name]] call ULP_fnc_removeMoney) then {
 				if ([configName _cfg, _value, false] call ULP_fnc_handleItem) then {
 					[format["You have bought %1 %2(s) for £%3!", _value, _name, [_buyPrice] call ULP_fnc_numberText]] call ULP_fnc_hint;
 					[true] call ULP_fnc_saveGear;
 				} else {
-					[_buyPrice, false] call ULP_fnc_addMoney; // Give them the money back, they didn't get what they paid for...
+					[_buyPrice, _payByBank] call ULP_fnc_addMoney; // Give them the money back, they didn't get what they paid for...
 					["You don't have enough inventory space!"] call ULP_fnc_hint;
 				};
 			} else {

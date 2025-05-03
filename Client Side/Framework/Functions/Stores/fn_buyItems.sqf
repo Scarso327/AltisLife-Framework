@@ -31,7 +31,12 @@ _ctrl ctrlEnable false;
 private _override = cbChecked (_display displayCtrl 3114);
 private _cartValue = _display getVariable "cartValue";
 
-if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) && { CASH < _cartValue }) then {
+private _allowPayByBank = _display getVariable ["allowPayByBank", false];
+private _payByBank = _allowPayByBank && { cbChecked (_display displayCtrl 3119) };
+
+private _money = [CASH, BANK] select (_payByBank);
+
+if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) && { _money < _cartValue }) then {
 	["You can't afford these items!"] call ULP_fnc_hint;
 } else {
 	private _itemsBought = 0;
@@ -69,7 +74,7 @@ if (!([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) &
 
 		// Pay for it and wipe total value...
 		if !([[player] call ULP_fnc_getFaction, "physical"] call ULP_fnc_factionFree) then {
-			[_cartValue, false, format ["Bought Items"]] call ULP_fnc_removeMoney;
+			[_cartValue, _payByBank, format ["Bought Items"]] call ULP_fnc_removeMoney;
 		};
 		_display setVariable ["cartValue", 0];
 

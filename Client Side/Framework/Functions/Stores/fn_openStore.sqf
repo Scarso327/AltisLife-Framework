@@ -21,8 +21,22 @@ if (createDialog "DialogGenericStore") then {
 
 	if (isNull _display) exitWith {};
 
+	private _allowPayByBank = [getNumber (_storeCfg >> "allowPayByBank")] call ULP_fnc_bool;
+
 	_display setVariable ["storeCfg", _cfg];
 	_display setVariable ["curStore", _storeCfg];
+	_display setVariable ["allowPayByBank", _allowPayByBank];
+
+	if !(_allowPayByBank) then {
+		private _checkbox = _display displayCtrl 3119;
+		private _paymentText = _display displayCtrl 3120;
+
+		_checkbox cbSetChecked false;
+		_checkbox ctrlEnable false;
+		_checkbox ctrlSetTooltip "This store doesn't support bank payments";
+
+		_paymentText ctrlEnable false;
+	};
 
 	private _idc = getNumber(_cfg >> "toolBoxIDC");
 

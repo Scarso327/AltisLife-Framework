@@ -170,7 +170,7 @@ class DialogGenericStore {
         };
 
         #define CART_LIST_Y (0.291 + MARGIN_Y)
-        #define CART_LIST_H ((BODY_HEIGHT - (MARGIN_Y * 2)) - ((BUTTON_H + BUTTON_MARGIN_Y) * 3))
+        #define CART_LIST_H ((BODY_HEIGHT - (MARGIN_Y * 3)) - ((BUTTON_H + BUTTON_MARGIN_Y) * 3))
 
 		class CartList : Life_RscListBox {
             idc = 3107;
@@ -185,7 +185,7 @@ class DialogGenericStore {
             idc = 3109;
             text = "<t align = 'center'>Remove From Cart</t>";
             SAFEZONE_X(HORIZONTAL_GRID_X(UI_X_INNER, CONTENT_W, 2));
-            SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - MARGIN_Y) - (BUTTON_H * 3) - BUTTON_MARGIN_Y);
+            SAFEZONE_Y(((0.291 + MARGIN_Y + BODY_HEIGHT) - (MARGIN_Y * 3)) - (BUTTON_H * 3) - BUTTON_MARGIN_Y);
 			SAFEZONE_W(CONTENT_W);
 			SAFEZONE_H(BUTTON_H);
         };

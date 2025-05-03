@@ -375,7 +375,7 @@ class CfgInteractions {
 		class PulloutOccupants : Repair {
 			title = "Pullout Occupants";
 			onClick = "if (_this call ULP_fnc_ejectVehicleCrew) then { closeDialog 0; };";
-			condition = "(speed _this) <= 4 && { _this in ULP_Keys || [player, [""Police"", ""Medic""]] call ULP_fnc_isFaction }";
+			condition = "(speed _this) <= 4 && { !((crew _this) isEqualTo []) } && { _this in ULP_Keys || [player, [""Police"", ""Medic""]] call ULP_fnc_isFaction }";
 		};
 
 		class Unflip : Repair {

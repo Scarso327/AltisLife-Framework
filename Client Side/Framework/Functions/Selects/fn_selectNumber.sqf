@@ -11,7 +11,7 @@ _this params [
 	["_params", [], [[]]],
 	["_onSelect", {}, [{}]],
 	["_tablet", true, [false]],
-	["_format", "[_this] call ULP_fnc_numberText", [""]],
+	["_format", "[_this select 1] call ULP_fnc_numberText", [""]],
 	["_allowManual", true, [false]]
 ];
 

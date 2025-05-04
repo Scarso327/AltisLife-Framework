@@ -11,14 +11,14 @@ if (canSuspend) exitWith {
 
 ["Setting Up Housing..."] call ULP_fnc_logIt;
 
-private _query = ["SELECT `houses`.`id`, `houses`.`pid`, `players`.`group_id`, `players`.`name`, `houses`.`classname`, `houses`.`pos`, `houses`.`name`, `houses`.`storage`, `houses`.`virtualStorage`, `houses`.`upgrades`, `houses`.`shared` FROM `houses` INNER JOIN `players` ON `players`.`pid` = `houses`.`pid` WHERE `houses`.`sold`='0'", 2, true] call DB_fnc_asyncCall;
+private _query = ["SELECT `houses`.`id`, `houses`.`pid`, `players`.`group_id`, `players`.`name`, `houses`.`classname`, `houses`.`pos`, `houses`.`name`, `houses`.`storage`, `houses`.`virtualStorage`, `houses`.`upgrades`, `houses`.`shared`, `houses`.`upkeepDaysLeft` FROM `houses` INNER JOIN `players` ON `players`.`pid` = `houses`.`pid` WHERE `houses`.`sold`='0'", 2, true] call DB_fnc_asyncCall;
 
 if (_query isEqualTo "" || { _query isEqualTo [] }) exitWith { 0 };
 
 ULP_SRV_Houses = [];
 
 {
-	_x params ["_id", "_pid", "_gangId", "_ownerName", "_classname", "_pos", "_name", "_storage", "_virtualStorage", "_upgrades", "_shared"];
+	_x params ["_id", "_pid", "_gangId", "_ownerName", "_classname", "_pos", "_name", "_storage", "_virtualStorage", "_upgrades", "_shared", "_upKeepDaysLeft"];
 
 	private _houseCfg = missionConfigFile >> "CfgHousing" >> "Houses" >> _classname;
 	if (isClass _houseCfg) then {
@@ -34,15 +34,24 @@ ULP_SRV_Houses = [];
 		if (isNull _house || { _house in ULP_SRV_Houses }) then {
 			[format ["House wasn't found: %1 at %2 (%3, %4)", _classname, _pos, _id, (_house in ULP_SRV_Houses)]] call ULP_fnc_logIt;
 		} else {
-			if (_house getVariable ["blacklisted", false] || { ["redzone_", [_house]] call ULP_fnc_isUnitsInZone }) then {
-				private _value = getNumber (_houseCfg >> "price");
+			private _value = getNumber (_houseCfg >> "price");
 
-				[_pid, "Money", "House Blacklisted", _value] call ULP_SRV_fnc_addMail;
+			switch (true) do {
+				case (_house getVariable ["blacklisted", false] || { ["redzone_", [_house]] call ULP_fnc_isUnitsInZone }): {
+					[_pid, "Money", "House Blacklisted", _value] call ULP_SRV_fnc_addMail;
 
-				[format["UPDATE `houses` SET `sold`='1' WHERE `id`='%1'", [_id, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
-				[_pid, "House", ["Blacklisted", getPos _house, [_value, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
-			} else {
-				[_house, [_id, [_pid, _gangId, _ownerName], _shared, _name, _storage, _virtualStorage, _upgrades]] call ULP_SRV_fnc_setupHouse;
+					[format["UPDATE `houses` SET `sold`='1' WHERE `id`='%1'", [_id, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
+					[_pid, "House", ["Blacklisted", getPos _house, [_value, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
+				};
+				case (_upKeepDaysLeft <= 0): {
+					[_pid, "Money", "House Upkeep Expired", _value] call ULP_SRV_fnc_addMail;
+
+					[format["UPDATE `houses` SET `sold`='1' WHERE `id`='%1'", [_id, ""] call ULP_fnc_numberText], 1] call DB_fnc_asyncCall;
+					[_pid, "House", ["House Upkeep Expired", getPos _house, [_value, ""] call ULP_fnc_numberText]] call ULP_SRV_fnc_logPlayerEvent;
+				};
+				default {
+					[_house, [_id, [_pid, _gangId, _ownerName], _shared, _name, _storage, _virtualStorage, _upgrades, _upKeepDaysLeft]] call ULP_SRV_fnc_setupHouse;
+				};
 			};
 		};
 	} else {

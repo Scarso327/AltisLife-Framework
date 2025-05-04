@@ -105,4 +105,9 @@ if (["EnableHUD", "HUD"] call ULP_fnc_getOption isEqualTo 1) then {
 	[] call ULP_UI_fnc_openHUD;
 };
 
+private _expiringHouses = ULP_Houses select { [_x, player, false] call ULP_fnc_isHouseOwner && { (_x getVariable ["building_days_left", 0]) <= 7 } };
+if !(_expiringHouses isEqualTo []) then {
+	[format ["You have <t color='#B92DE0'>%1</t> house(s) with less than 7 days upkeep remaining", count _expiringHouses]] call ULP_fnc_hint;
+};
+
 [getPlayerUID player, "Spawn", [_name, getPos player]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];

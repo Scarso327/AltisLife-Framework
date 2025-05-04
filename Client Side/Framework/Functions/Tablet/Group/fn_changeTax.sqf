@@ -48,5 +48,5 @@ if (time < (_group getVariable ["tax_last_changed", 0])) exitWith {
 		if !(isNull _display) then {
 			(_display displayCtrl 23088) ctrlSetStructuredText parseText format ["Group Tax<t align='right'>(%1%2)</t>", _tax, "%"];
 		};
-	}, true, "format [""%1%2"", [_this] call ULP_fnc_numberText, ""%""]", false
+	}, true, "format [""%1%2"", [_this select 1] call ULP_fnc_numberText, ""%""]", false
 ] call ULP_fnc_selectNumber;

@@ -63,7 +63,7 @@ _slider ctrlAddEventHandler ["SliderPosChanged", {
 
 	private _display = ctrlParent _ctrl;
 	private _input = _display displayCtrl 3209;
-	_input ctrlSetText (_val call compile (_display getVariable ["format", "[_this] call ULP_fnc_numberText"]));
+	_input ctrlSetText ([_display, _val] call compile (_display getVariable ["format", "[_this select 1] call ULP_fnc_numberText"]));
 }];
 
 _display setVariable ["params", _params];

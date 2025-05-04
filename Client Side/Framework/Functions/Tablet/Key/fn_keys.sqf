@@ -27,6 +27,9 @@ switch (lbCurSel _toolbox) do {
 		_carView ctrlShow false;
 		_houseList ctrlShow true;
 
+		private _upKeepRemainingCtrl = _houseView controlsGroupCtrl 105;
+		_upKeepRemainingCtrl ctrlSetStructuredText parseText "";
+
 		{
 			if !(isNull _x) then {
 				private _cfg = [typeOf _x] call ULP_fnc_vehicleCfg;

@@ -64,7 +64,7 @@ closeDialog 0;
 				["You need a clamp to clamp a vehicle..."] call ULP_fnc_numberText;
 			};
 		}, {}, ["GRAB", "CROUCH"]] call ULP_UI_fnc_startProgress;
-	}, false, "format [""%1%2"", ""£"", [_this] call ULP_fnc_numberText]", false
+	}, false, "format [""%1%2"", ""£"", [_this select 1] call ULP_fnc_numberText]", false
 ] call ULP_fnc_selectNumber;
 
 true

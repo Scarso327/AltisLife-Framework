@@ -26,4 +26,7 @@ _shareButton ctrlSetStructuredText parseText format["<t align = 'center'>%1</t>"
 	"Unshare"
 ] select ([_house] call ULP_fnc_isHouseShared)];
 
+private _upKeepRemainingCtrl = _houseView controlsGroupCtrl 105;
+_upKeepRemainingCtrl ctrlSetStructuredText parseText format ["You have <t color='#B92DE0'>%1</t> upkeep days left.", _house getVariable ["building_days_left", 0]];
+
 _display setVariable ["house", _house];

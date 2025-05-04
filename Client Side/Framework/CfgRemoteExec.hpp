@@ -246,6 +246,9 @@ class CfgRemoteExec {
         class ULP_SRV_fnc_castPvpModeVote {
             allowedTargets = SERVER;
         };
+        class ULP_SRV_fnc_saveHouseUpKeep {
+            allowedTargets = SERVER;
+        };
 
         class bis_fnc_debugconsoleexec {};
     };

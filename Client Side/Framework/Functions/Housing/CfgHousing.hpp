@@ -1,6 +1,8 @@
 class CfgHousing {
 	nameLength = 32;
 	houseLimit = 5;
+	initialUpKeepDays = 30;
+	maxUpKeepDays = 30;
 	
 	class Houses {
 		// GARAGES
@@ -8,6 +10,7 @@ class CfgHousing {
 			icon = "Data\UI\Spawns\garage.paa";
 			price = 4000000;
 			sellMultiplier = 0.1;
+			upKeepMultiplier = 0.005;
 			breakIn = 3 * 60;
 			canShare = false;
 			canSpawn = false;
@@ -29,6 +32,7 @@ class CfgHousing {
 		class BaseHouse {
 			icon = "Data\UI\Spawns\house.paa";
 			sellMultiplier = 0.25;
+			upKeepMultiplier = 0.005;
 			canShare = true;
 			canSpawn = true;
 			disabledUpgrades[] = {};
@@ -263,6 +267,4 @@ class CfgHousing {
 			};
 		};
 	};
-
-	class Upgrades {};
 };

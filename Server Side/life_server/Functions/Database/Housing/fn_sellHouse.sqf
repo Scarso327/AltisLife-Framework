@@ -48,6 +48,8 @@ private _money = round (getNumber (_cfg >> "price") * getNumber (_cfg >> "sellMu
 _house setVariable ["building_id", nil, true];
 _house setVariable ["building_owner", nil, true];
 _house setVariable ["building_shared", nil, true];
+_house setVariable ["building_days_left", nil, true];
+_house setVariable ["object_upgrades", nil, true];
 
 // Unlock Doors...
 for "_i" from 1 to (getNumber(configFile >> "CfgVehicles" >> (typeOf _house) >> "numberOfDoors")) do {
@@ -62,6 +64,8 @@ if !(isNull _storage) then {
 _house allowDamage true;
 
 ULP_SRV_Houses deleteAt (ULP_SRV_Houses find _house);
+
+_house setVariable ["building_storage", nil, true];
 
 ["CALL deleteOldHouses", 1] call DB_fnc_asyncCall;
 ["HouseSold", [_house, true, format["You have successfully sold this house for %1%2...", "£", [_money] call ULP_fnc_numberText], _money]] remoteExecCall ["ULP_fnc_invokeEvent", remoteExecutedOwner];

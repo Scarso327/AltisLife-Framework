@@ -107,6 +107,40 @@ class HouseView : Life_RscControlsGroup {
 				};
 			};
 		};
+		
+        class UpkeepRemainingText : Life_RscStructuredText {
+            idc = 105;
+            text = "You have <t color='#B92DE0'>%1</t> upkeep days left.";
+            colorBackground[] = HEADER_COLOUR;
+			w = 15.55 * GUI_GRID_CENTER_W;
+			h = SIZE_M * GUI_GRID_CENTER_H;
+			y = (SIZE_M * 3.5) * GUI_GRID_CENTER_H;
+        };
+
+		class PayUpKeepOption : Life_RscControlsGroupNoScrollbars {
+			idc = 104;
+			w = 15.55 * GUI_GRID_CENTER_W;
+			h = SIZE_M * GUI_GRID_CENTER_H;
+			y = (SIZE_M * 4.5) * GUI_GRID_CENTER_H;
+
+			class Controls {
+				class OptionName: Life_RscText {
+					idc = 101;
+					text = "Pay Upkeep";
+					tooltip = "Pay for extra upkeep days...";
+					w = (15.55 / 2) * GUI_GRID_CENTER_W;
+					h = SIZE_M * GUI_GRID_CENTER_H;
+				};
+				class OptionButton : ULP_RscButtonClean {
+					idc = 102;
+					text = "<t align = 'center'>Pay</t>";
+					onButtonClick = "private _house = (ctrlParent (_this select 0)) getVariable [""house"", objNull]; [_house] call ULP_fnc_payHouseUpKeep";
+					x = (15.55 - (15.55 / 2)) * GUI_GRID_CENTER_W;
+					w = (15.55 / 2) * GUI_GRID_CENTER_W;
+					h = SIZE_M * GUI_GRID_H;
+				};
+			};
+		};
 	};
 };
 

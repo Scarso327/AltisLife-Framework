@@ -72,6 +72,7 @@ class CfgFunctions {
             class getStorage {};
             class saveStorage {};
             class saveHouseUpgrades {};
+            class saveHouseUpKeep {};
         };
 
         class DatabaseWarrants {

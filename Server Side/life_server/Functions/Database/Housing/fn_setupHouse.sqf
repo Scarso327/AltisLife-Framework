@@ -11,7 +11,14 @@ _this params [
 ];
 
 _params params [
-	"_id", "_owner", ["_shared", false, [true]], ["_name", "", [""]], ["_pStorage", [], [[]]], ["_vStorage", [], [[]]], ["_upgrades", createHashMap, [createHashMap]]
+	"_id", 
+	"_owner", 
+	["_shared", false, [true]], 
+	["_name", "", [""]], 
+	["_pStorage", [], [[]]], 
+	["_vStorage", [], [[]]], 
+	["_upgrades", createHashMap, [createHashMap]],
+	["_upKeepDaysLeft", getNumber (missionConfigFile >> "CfgHousing" >> "initialUpKeepDays"), [0]]
 ];
 
 _house allowDamage false;
@@ -19,6 +26,7 @@ _house allowDamage false;
 _house setVariable ["building_id", _id, true];
 _house setVariable ["building_owner", _owner, true];
 _house setVariable ["building_shared", _shared, true];
+_house setVariable ["building_days_left", _upKeepDaysLeft, true];
 
 if !(_upgrades isEqualTo createHashMap) then {
 	_house setVariable ["object_upgrades", _upgrades, true];

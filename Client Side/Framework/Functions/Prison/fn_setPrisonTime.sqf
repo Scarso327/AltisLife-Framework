@@ -63,5 +63,5 @@ private _max =
 		["ArrestedSomeone", [_target, _duraction]] call ULP_fnc_invokeEvent;
 
 		[getPlayerUID player, "Imprisoned", [getPlayerUID _target, _duration]] remoteExecCall ["ULP_SRV_fnc_logPlayerEvent", RSERV];
-	}, false, "[_this, ""MM:SS""] call BIS_fnc_secondsToString", false
+	}, false, "[_this select 1, ""MM:SS""] call BIS_fnc_secondsToString", false
 ] call ULP_fnc_selectNumber;

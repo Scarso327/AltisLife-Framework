@@ -120,7 +120,7 @@ if (ULP_SRV_Setting_NextElection isEqualTo _date) then {
 
 ["Checking Personal Goals..."] call ULP_fnc_logIt;
 
-if !(ULP_SRV_Setting_Day isEqualTo _date) then { _routines append ["resetDailyGoals", "processPlaytime", "decreaseHousingUpKeepDays"]; };
+if !(ULP_SRV_Setting_Day isEqualTo _date) then { _routines append ["resetDailyGoals", "processPlaytime", "decreaseHousingUpKeepDays", "decreaseMailDaysUntilExpiry"]; };
 if !(ULP_SRV_Setting_Week isEqualTo ([] call ULP_SRV_fnc_getWeek)) then { _routines append ["resetWeeklyGoals", "resetGroupBuffs"]; };
 
 ["Running Routines..."] call ULP_fnc_logIt;

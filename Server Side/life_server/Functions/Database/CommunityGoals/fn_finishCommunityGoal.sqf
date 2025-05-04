@@ -24,7 +24,7 @@ if (_contributions isEqualType []) then {
 		private _myPayout = floor (_payout * (_contribution / (_progress max 1))); 
 
 		if (_myPayout > 0) then {
-			[_pid, "Money", "Community Goal Payout", _myPayout] call ULP_SRV_fnc_addMail;
+			[_pid, "Money", "Community Goal Payout", _myPayout, 0] call ULP_SRV_fnc_addMail;
 		};
 	} forEach _contributions;
 };

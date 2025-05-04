@@ -14,9 +14,9 @@ if (isNull _display) exitWith {};
 
 if (player getVariable ["claiming_mail", false]) exitWith { closeDialog 0; };
 
-private _list = _display displayCtrl 5302;
+private _list = _display displayCtrl 5303;
 
-private _selected = _list lbData (lbCurSel _list);
+private _selected = _list lnbData [lnbCurSelRow _list, 0];
 if (_selected isEqualTo "") exitWith {
 	["You must select an item to claim from your mail box"] call ULP_fnc_hint;
 };

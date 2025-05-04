@@ -48,6 +48,10 @@ player addEventHandler ["InventoryClosed", { _this call ULP_fnc_InventoryClosed 
 		_marker setMarkerTextLocal _name;
 	};
 
+	if ([["EnableStreamerMode"] call ULP_fnc_getOption] call ULP_fnc_bool) then {
+		_marker setMarkerAlphaLocal 0;
+	};
+
 	_house setVariable ["building_marker", _marker];
 }] call ULP_fnc_addEventHandler;
 
@@ -88,6 +92,15 @@ player addEventHandler ["InventoryClosed", { _this call ULP_fnc_InventoryClosed 
 	switch (format["%1_%2", _category, _option]) do {
 		case "General_NightLight": { if (hasInterface && { !(isNil "ULP_NightLight") }) then { ULP_NightLight setLightBrightness _newSetting; }; };
 		case "General_DetailMode": { [] call ULP_fnc_setDetailMode; };
+		case "General_EnableStreamerMode": {
+			{
+				private _marker = _x getVariable ["building_marker", ""];
+
+				if !(_marker isEqualTo "") then {
+					_marker setMarkerAlphaLocal ([1, 0] select ([_newSetting] call ULP_fnc_bool));
+				};
+			} forEach ULP_Houses;
+		};
 		case "General_EnableInvisBackpack": { [] call ULP_fnc_setHideBackpack; };
 		case "HUD_SideChat": { [player, [_newSetting] call ULP_fnc_bool] remoteExecCall ["ULP_SRV_fnc_setSideChannel", RSERV]; };
 		case "HUD_EnableHUD": {

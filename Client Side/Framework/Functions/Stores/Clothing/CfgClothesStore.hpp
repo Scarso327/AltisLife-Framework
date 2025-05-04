@@ -6,6 +6,7 @@ class CfgClothesStore {
 	class Police {
 		storeName = "Equipment Store";
 		condition = "[player, [""Police""]] call ULP_fnc_isFaction";
+		allowPayByBank = true;
 		class Uniforms {
 			class U_Rangemaster {};
 			class U_B_GEN_Commander_F { condition = "[""Police_COL"", 1] call ULP_fnc_hasAccess"; };
@@ -722,6 +723,7 @@ class CfgClothesStore {
 	class Governor {
 		storeName = "Governor's Clothing Store";
 		condition = "[] call ULP_fnc_isGovernor";
+		allowPayByBank = true;
 		class Uniforms {
 			class U_C_Man_casual_1_F {};
 			class U_OrestesBody {};
@@ -755,6 +757,7 @@ class CfgClothesStore {
 	class Protection {
 		storeName = "Govenor Protection Clothing";
 		condition = "[] call ULP_fnc_isProtection";
+		allowPayByBank = true;
 		class Uniforms {
 			class U_Marshal {};
 			class U_NikosAgedBody {};
@@ -793,6 +796,7 @@ class CfgClothesStore {
 	class Security {
 		storeName = "Security Contractor Clothing";
 		condition = "[] call ULP_fnc_isSecurity";
+		allowPayByBank = true;
 		class Uniforms {};
 
 		class Headgear {
@@ -1274,6 +1278,7 @@ class CfgClothesStore {
 	class PVP {
 		storeName = "PVP Clothing Store";
 		condition = "true";
+		allowPayByBank = true;
 		class Uniforms {
 			class U_C_Poor_1 {};
 			class U_C_Farmer {};

@@ -119,7 +119,7 @@ A highly configurable mission developed with inspiration from a variety of ArmA 
 ### Setting Up
 This is a very brief list of things you need to do to set up and play the mission.
 
-* You need a database that supports MySQL 8.0.13 or later to run the `altislife_mysql_8_0_13.sql` file found in `ServerSide/Database`.
+* You need a database that supports MySQL 8.0.13 or later to run the `altislife.sql` file found in `ServerSide/Database`.
   - You must use mysql_native_password for the user as EXTDB3 doesn't support the new security stuff.
   - The version is set as that's what we've developed with so can ensure support, others might work but if you encounter issues please switch.
   - If you're updating from a previous version all database changes are included in `ServerSide/Database/Migrations`. These might also be setup for older syntax

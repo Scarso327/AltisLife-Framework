@@ -25,7 +25,7 @@ private _scores = + ULP_SRV_CurrentScores;
 		[_y] call ULP_fnc_numberText
 	];
 
-	_list lnbSetData [[_row, 0], _x];
+	_list lnbSetData [[_row, 0], str _x];
 	_list lnbSetValue [[_row, 1], _y];
 } forEach _scores;
 

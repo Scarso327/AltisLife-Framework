@@ -71,6 +71,7 @@ class CfgFunctions {
 
 		class Utility {
 			file = "Functions\Utility";
+			class cacheGet {};
 			class chance {};
 			class directCall {};
 			class waitExecute {};

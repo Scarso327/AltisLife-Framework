@@ -41,14 +41,20 @@ ULP_executeNextFrameBufferA = ULP_executeNextFrameBufferB;
 ULP_executeNextFrameBufferB = [];
 ULP_nextFrameNumber = diag_frameNo + 1;
 
-{
-	ULP_waitUntilExecute deleteAt (ULP_waitUntilExecute find _x);
-	(_x select 1) call (_x select 2);
+private _delete = false;
 
-    nil
-} count + (ULP_waitUntilExecute select {
-	(_x select 1) call (_x select 0)
-});
+{
+	if ((_x select 1) call (_x select 0)) then {
+		ULP_waitUntilExecute set [_forEachIndex, objNull];
+		(_x select 1) call (_x select 2);
+
+		_delete = true;
+	};
+} forEach ULP_waitUntilExecute;
+
+if (_delete) then {
+	ULP_waitUntilExecute = ULP_waitUntilExecute - [objNull];
+};
 
 if !(hasInterface) exitWith {};
 

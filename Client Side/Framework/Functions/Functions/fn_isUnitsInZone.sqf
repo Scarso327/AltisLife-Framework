@@ -10,4 +10,9 @@ _this params [
 	["_units", [player], [[]]]
 ];
 
-((allMapMarkers select { [_marker, _x] call ULP_fnc_inString }) findIf { (count (_units inAreaArray _x)) > 0 } > -1)
+_marker = toLower _marker;
+
+(allMapMarkers findIf { 
+	(toLower _x) find _marker > -1 
+	&& { !((_units inAreaArray _x) isEqualTo []) } 
+} > -1)

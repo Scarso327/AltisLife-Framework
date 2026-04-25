@@ -4,8 +4,6 @@
 */
 scopeName "fn_onEachFrame";
 
-private _startTime = diag_tickTime;
-
 // See https://github.com/CBATeam/CBA_A3/wiki/Per-Frame-Handlers
 
  if (diag_frameNo != ULP_nextFrameNumber) then { ULP_nextFrameNumber = diag_frameNo };
@@ -58,7 +56,7 @@ if (_delete) then {
 	ULP_waitUntilExecute = ULP_waitUntilExecute - [objNull];
 };
 
-if !(hasInterface) exitWith { [format["Each Frame %1s", diag_tickTime - _startTime]] call ULP_fnc_logIt; };
+if !(hasInterface) exitWith {};
 
 private _isSpeaking = !isNull findDisplay 55;
 if !(player getVariable["speaking", false] isEqualTo _isSpeaking) then {
@@ -84,5 +82,3 @@ if ((missionNamespace getVariable ["InRedzoneCheckTime", -1]) <= time) then {
 if (commandingMenu != "") then {
     showCommandingMenu "";
 };
-
-[format["Each Frame %1s", diag_tickTime - _startTime]] call ULP_fnc_logIt;

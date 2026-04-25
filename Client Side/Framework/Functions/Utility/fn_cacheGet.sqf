@@ -10,9 +10,9 @@ _this params [
 	["_namespace", missionNamespace]
 ];
 
-if ((_namespace getVariable [_key, [0]]) select 0 > diag_tickTime) exitWith {
+if ((_namespace getVariable [_key, [-1]]) select 0 > diag_tickTime) exitWith {
 	// Cache hit, return the cached value
-	(_namespace getVariable [_key, [0]]) select 1
+	(_namespace getVariable _key) select 1
 };
 
 _call params [

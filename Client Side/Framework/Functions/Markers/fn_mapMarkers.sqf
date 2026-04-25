@@ -35,7 +35,7 @@ private _objects = [
 		});
 
 		_objects
-	}, []], "ULP_Cache_NameTags", 1] call ULP_fnc_cacheGet;
+	}, []], "ULP_Cache_Markers", 1] call ULP_fnc_cacheGet;
 
 private _isMedic = [player, ["Medic"]] call ULP_fnc_isFaction;
 

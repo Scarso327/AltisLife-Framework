@@ -22,17 +22,19 @@ if (_enable) then {
 						&& { !(cameraOn isEqualTo _x) || { ["ShowOwnTags", "HUD"] call ULP_fnc_getOption isEqualTo 1 } }
 				}) apply {
 					[
-						_x, [_x] call ULP_fnc_getTagPos, (cameraOn distance _x), [_x] call ULP_fnc_getTagIcon, 
-						[[ULP_fnc_getName, [_x, true]], "ULP_Cache_UnitName", 1, _x] call ULP_fnc_cacheGet, [_x] call ULP_fnc_getSubTitle, (_x getVariable ["title", ""])
+						_x, [_x] call ULP_fnc_getTagColour, [_x] call ULP_fnc_getTagIcon, [[ULP_fnc_getName, [_x, true]], "ULP_Cache_UnitName", 1, _x] call ULP_fnc_cacheGet, 
+						[_x] call ULP_fnc_getSubTitle, (_x getVariable ["title", ""])
 					]
 				}
 			}, []], "ULP_Cache_NameTags", 0.5] call ULP_fnc_cacheGet;
 
 		{
-			_x params ["_object", "_pos", "_distance", "_icon", "_name", "_subtitle", "_title"];
+			_x params ["_object", "_mainColour", "_icon", "_name", "_subtitle", "_title"];
 
-			private _mainColour = [_object] call ULP_fnc_getTagColour;
 			private _otherColour = getArray(missionConfigFile >> "CfgTags" >> "baseColour");
+
+			private _pos = [_object] call ULP_fnc_getTagPos;
+			private _distance = cameraOn distance _object;
 
 			_pos = _object modelToWorldVisual(_pos vectorAdd [0, 0, _distance * 0.02]);
 

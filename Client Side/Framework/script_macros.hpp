@@ -6,6 +6,7 @@
 
 //RemoteExec Macros
 #define RSERV 2 //Only server
+#define RHEADORSERV (missionNamespace getVariable ["ULP_HC_ID", RSERV]) // Either the headless client or server if no headless is present
 #define RCLIENT -2 //Except server
 #define RANY 0 //Global
 

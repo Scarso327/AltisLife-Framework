@@ -13,5 +13,9 @@ showHud false;
 showChat false;
 showCommandingMenu "";
 
+if (isClass (configFile >> "CfgPatches" >> "ULPHC")) exitWith {
+    [] call ULP_HC_fnc_init;
+};
+
 [] spawn ULP_fnc_initBriefing;
 [] spawn ULP_fnc_initialisation;

@@ -4,7 +4,7 @@ class CfgFunctions {
         tag = "ULP_HC";
 
 		class Root {
-			file = "\ulp_core";
+			file = "\ulp_hc";
 			class init {};
 		};
     };

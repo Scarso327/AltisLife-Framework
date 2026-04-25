@@ -14,8 +14,10 @@ if (_hcId == -1) exitWith {
 	false
 };
 
-ULP_HC_ID = -1;
-publicVariable "HC_READY";
+if (isNil { ULP_HC_ID }) exitWith {}; // We never registered one?
+
+ULP_HC_ID = nil;
+publicVariable "ULP_HC_ID";
 
 [format["Unregistered headless client with ID %1", _hcId]] call ULP_fnc_logIt;
 

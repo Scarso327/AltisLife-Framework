@@ -15,7 +15,7 @@ if (_hcId == -1) exitWith {
 };
 
 ULP_HC_ID = _hcId;
-publicVariable "HC_READY";
+publicVariable "ULP_HC_ID";
 
 [format["Registered headless client with ID %1", _hcId]] call ULP_fnc_logIt;
 

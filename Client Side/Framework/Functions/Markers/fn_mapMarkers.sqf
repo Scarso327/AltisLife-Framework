@@ -10,26 +10,32 @@ _this params [ "_map" ];
 if (isNull _map || { !([] call ULP_fnc_hasComms) }) exitWith {};
 
 private _included = [];
-private _objects = [] call ULP_fnc_groupUnits;
 
-switch ([player] call ULP_fnc_getFaction) do {
-	case "Medic": {
-		_objects append (allPlayers select {
-			isDowned(_x) && { !(_x in _objects) }
-		});
-	};
-	case "Hato": {
-		_objects append ((entities "Car") select {
-			(crew _x) isEqualTo [] && { (_x getVariable ["engineLastOffTime", 0]) + (10 * 60) <= serverTime }
-		});
-	};
-};
+private _objects = [
+	[{
+		private _objects = [] call ULP_fnc_groupUnits;
 
-_objects append (ULP_Keys select {
-	[_x, "TrackingDeviceUpgrade"] call ULP_fnc_hasUpgrade 
-		&& { !(_x in _objects) }
-		&& { (_objects arrayIntersect (crew _x)) isEqualTo [] }
-});
+		switch ([player] call ULP_fnc_getFaction) do {
+			case "Medic": {
+				_objects append (allPlayers select {
+					isDowned(_x) && { !(_x in _objects) }
+				});
+			};
+			case "Hato": {
+				_objects append ((entities "Car") select {
+					(crew _x) isEqualTo [] && { (_x getVariable ["engineLastOffTime", 0]) + (10 * 60) <= serverTime }
+				});
+			};
+		};
+
+		_objects append (ULP_Keys select {
+			[_x, "TrackingDeviceUpgrade"] call ULP_fnc_hasUpgrade 
+				&& { !(_x in _objects) }
+				&& { (_objects arrayIntersect (crew _x)) isEqualTo [] }
+		});
+
+		_objects
+	}, []], "ULP_Cache_NameTags", 1] call ULP_fnc_cacheGet;
 
 private _isMedic = [player, ["Medic"]] call ULP_fnc_isFaction;
 
@@ -61,6 +67,8 @@ private _isMedic = [player, ["Medic"]] call ULP_fnc_isFaction;
 			} else {
 				private _vehicle = vehicle _x;
 				private _crew = crew _vehicle;
+
+				_included append _crew;
 
 				private _cCount = count _crew;
 				private _unit = _crew param [0, objNull];

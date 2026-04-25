@@ -13,17 +13,20 @@ if !(isNil "ULP_Draw3d_Tags") then { removeMissionEventHandler ["Draw3D", ULP_Dr
 
 if (_enable) then {
 	ULP_Draw3d_Tags = addMissionEventHandler["Draw3D", {
-		private _objects = ((nearestObjects [ cameraOn, ["Man", "Land_InfoStand_V1_F", "Land_Cargo10_red_F"], 10 ]) select { 
-			(isPlayer _x || { _x getVariable ["hasPlayerTags", false] }) 
-				&& { !(isObjectHidden _x) } 
-				&& { !(lineIntersects [eyePos cameraOn, [eyePos _x select 0, eyePos _x select 1, (eyePos _x select 2) + 0.5], vehicle cameraOn, _x]) } 
-				&& { !(cameraOn isEqualTo _x) || { ["ShowOwnTags", "HUD"] call ULP_fnc_getOption isEqualTo 1 } }
-		}) apply {
-			[
-				_x, [_x] call ULP_fnc_getTagPos, (cameraOn distance _x), [_x] call ULP_fnc_getTagIcon, 
-				[_x, true] call ULP_fnc_getName, [_x] call ULP_fnc_getSubTitle, (_x getVariable ["title", ""])
-			]
-		};
+		private _objects = [
+			[{
+				((nearestObjects [ cameraOn, ["Man", "Land_InfoStand_V1_F", "Land_Cargo10_red_F"], 10 ]) select { 
+					(isPlayer _x || { _x getVariable ["hasPlayerTags", false] }) 
+						&& { !(isObjectHidden _x) } 
+						&& { !(lineIntersects [eyePos cameraOn, [eyePos _x select 0, eyePos _x select 1, (eyePos _x select 2) + 0.5], vehicle cameraOn, _x]) } 
+						&& { !(cameraOn isEqualTo _x) || { ["ShowOwnTags", "HUD"] call ULP_fnc_getOption isEqualTo 1 } }
+				}) apply {
+					[
+						_x, [_x] call ULP_fnc_getTagPos, (cameraOn distance _x), [_x] call ULP_fnc_getTagIcon, 
+						[[ULP_fnc_getName, [_x, true]], "ULP_Cache_UnitName", 1, _x] call ULP_fnc_cacheGet, [_x] call ULP_fnc_getSubTitle, (_x getVariable ["title", ""])
+					]
+				}
+			}, []], "ULP_Cache_NameTags", 0.5] call ULP_fnc_cacheGet;
 
 		{
 			_x params ["_object", "_pos", "_distance", "_icon", "_name", "_subtitle", "_title"];

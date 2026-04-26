@@ -6,6 +6,11 @@
 scopeName "fn_cleanup";
 
 [15 * 60, [], {
+	// If HATO is on we delay auto cleanup of vehicles
+	private _engineOffCheckTime = [
+		10 * 60, 
+		30 * 60] select (([["Hato"]] call ULP_fnc_onlineFaction) > 0);
+	
 	private _totalCleanedUp = 
 		({
 			private _vehicle = _x;
@@ -24,11 +29,10 @@ scopeName "fn_cleanup";
 					if ([_vehicle, ["Car", "Air", "Ship", "Armored", "Submarine"]] call ULP_fnc_isKindOf) exitWith {
 						private _id = _vehicle getVariable ["vehicle_id", -1];
 
-						private _sinceLastEngineOffTime = switch (true) do {
-							case (["redzone_", [_vehicle]] call ULP_fnc_isUnitsInZone): { 5 * 60 };
-							case (([["Hato"]] call ULP_fnc_onlineFaction) > 0): { 30 * 60 };
-							default { 10 * 60 };
-						};
+						private _sinceLastEngineOffTime = [
+							_engineOffCheckTime,
+							5 * 60
+						] select (["redzone_", [_vehicle]] call ULP_fnc_isUnitsInZone);
 
 						if (_id isEqualTo -1 
 							|| { !((crew _vehicle) isEqualTo []) } 

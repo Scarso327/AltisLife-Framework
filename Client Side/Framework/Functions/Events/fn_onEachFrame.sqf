@@ -69,14 +69,18 @@ if !(_gpsVisible isEqualTo (missionNamespace getVariable ["GPSVisible", false]))
 	["GPS", [_gpsVisible]] call ULP_fnc_invokeEvent;
 };
 
-if ((missionNamespace getVariable ["InRedzoneCheckTime", -1]) <= time) then {
+if ((missionNamespace getVariable ["InRedzoneCheckTime", -1]) <= diag_tickTime) then {
 	private _isInRedzone = ["redzone_"] call ULP_fnc_isUnitsInZone;
-	if !(_isInRedzone isEqualTo (missionNamespace getVariable ["InRedzone", false])) then {
+
+	if !(_isInRedzone isEqualTo (missionNamespace getVariable ["InRedzone", false])) exitWith {
 		missionNamespace setVariable ["InRedzone", _isInRedzone];
-		missionNamespace setVariable ["InRedzoneCheckTime", time + 3];
+		missionNamespace setVariable ["InRedzoneCheckTime", diag_tickTime + 3];
 
 		[["LeftRedzone", "EnteredRedzone"] select _isInRedzone, []] call ULP_fnc_invokeEvent;
 	};
+
+	// Avoid doing this check every frame
+	missionNamespace setVariable ["InRedzoneCheckTime", diag_tickTime + 0.5];
 };
 
 if (commandingMenu != "") then {

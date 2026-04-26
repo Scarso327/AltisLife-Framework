@@ -16,7 +16,9 @@ _this params [
 if (isNull _unit) exitWith { false };
 
 private _items = + ULP_Inventory;
-if ((count _items) isEqualTo 0) exitWith { false };
+private _cash = + CASH;
+
+if (_cash isEqualTo 0 && { _items isEqualTo createHashMap }) exitWith { false };
 
 private _safePos = [_unit, 0.5, 4, 0, 0, 0, 0, [], [[0,0],[0,0]]] call BIS_fnc_findSafePos;
 _safePos set [2, 0];
@@ -32,8 +34,6 @@ _bodyBag setDir (getDir _unit);
 {
     [_bodyBag, _x, _y, true, true] call ULP_fnc_addToCargo;
 } forEach _items;
-
-private _cash = + CASH;
 
 if (_cash > 0 && { [_cash, false, "Died"] call ULP_fnc_removeMoney }) then {
 	[_bodyBag, "DroppedMoney", [str _cash], true, true] call ULP_fnc_addToCargo;

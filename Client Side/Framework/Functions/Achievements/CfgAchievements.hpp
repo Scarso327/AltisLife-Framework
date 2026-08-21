@@ -451,7 +451,7 @@ class CfgAchievements {
 	class Brick : BaseMysteryAchivement1000 {
 		icon = "Data\UI\Perks\firstAider.paa";
 		displayName = "Brick Hospital";
-		description = "You have found the second home of Brick Haus";
+		description = "You have found the second home of Brick Haus. RIP Dylan.";
 		onUnlocked = "[""Brick""] call ULP_fnc_unlockTitle;";
 	};
 	class Carrier : BaseMysteryAchivement1000 {
